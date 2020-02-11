@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148291"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "70148291"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione di runtime per il **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli intervalli di statistiche di runtime precedenti. Per l'intervallo attualmente attivo possono essere presenti più righe che rappresentano le statistiche di runtime per il piano a cui fa riferimento **plan_id**, con il tipo di esecuzione rappresentato da **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altre rappresentano lo stato in memoria. Quindi, per ottenere lo stato effettivo per ogni intervallo è necessario aggregare le metriche, raggruppando per **plan_id**, **execution_type** e **runtime_stats_interval_id**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
-|**plan_id**|**bigint**|Chiave esterna. Join a [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Chiave esterna. Join a [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Chiave esterna. Join a [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Chiave esterna. Join a [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione della query:<br /><br /> 0-esecuzione regolare (completata correttamente)<br /><br /> 3-esecuzione interrotta dal client<br /><br /> 4-esecuzione interrotta eccezione|  
 |**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3-interrotto<br /><br /> 4-eccezione|  
 |**first_execution_time**|**datetimeoffset**|Primo tempo di esecuzione per il piano di query all'interno dell'intervallo di aggregazione. Si riferisce all'ora di fine dell'esecuzione della query.|  
@@ -93,11 +93,11 @@ ms.locfileid: "70148291"
 |**min_log_bytes_used**|**bigint**|Numero minimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**max_log_bytes_used**|**bigint**|Numero massimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**stdev_log_bytes_used**|**float**|Deviazione standard del numero di byte nel log del database usato da un piano di query, all'interno dell'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
-|**avg_tempdb_space_used**|**float**|Numero medio di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|Ultimo numero di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|Numero minimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|Numero massimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|Numero di letture di pagina deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_tempdb_space_used**|**float**|Numero medio di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]partire da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) e.|
+|**last_tempdb_space_used**|**bigint**|Ultimo numero di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]partire da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) e.|
+|**min_tempdb_space_used**|**bigint**|Numero minimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]partire da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) e.|
+|**max_tempdb_space_used**|**bigint**|Numero massimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]partire da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) e.|
+|**stdev_tempdb_space_used**|**float**|Numero di letture di pagina deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]partire da [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) e.|
 |**avg_page_server_io_reads**|**float**|Numero medio di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
 |**last_page_server_io_reads**|**bigint**|Ultimo numero di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
 |**min_page_server_io_reads**|**bigint**|Numero minimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
@@ -108,15 +108,15 @@ ms.locfileid: "70148291"
 È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_context_settings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Stored procedure di Archivio query - Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

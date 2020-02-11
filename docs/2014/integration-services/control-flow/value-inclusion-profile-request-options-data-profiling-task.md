@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829471"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
@@ -102,7 +102,7 @@ ms.locfileid: "62829471"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, **CompareOptions** è di sola lettura ed è impostato su **Default**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -110,7 +110,7 @@ ms.locfileid: "62829471"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -125,9 +125,9 @@ ms.locfileid: "62829471"
  **InclusionThresholdSetting**  
  Selezionare l'impostazione di soglia per ridefinire l'output del profilo. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **InclusionStrengthThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato solo se i valori del subset sono inclusi completamente nei valori del superset.|  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62829471"
  **SupersetColumnsKeyThresholdSetting**  
  Consente di specificare la soglia del superset. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
 |**Specified**|Consente di usare la soglia specificata in **SupersetColumnsKeyThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se l'attendibilità della chiave nella colonna del superset è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato solo se le colonne del superset rappresentano una chiave esatta nella colonna del superset.|  
   

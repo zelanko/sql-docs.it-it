@@ -18,13 +18,13 @@ ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030966"
 ---
-# <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
+# <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo ID di accesso remoto nel server locale. Ciò consente ai server remoti di connettersi ed eseguire chiamate di procedure remote.  
@@ -32,7 +32,7 @@ ms.locfileid: "68030966"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilizzare i server collegati e le stored procedure per i server collegati in alternativa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,25 +44,25 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @remoteserver **=** ] **'** _remoteserver_ **'**  
- Nome del server remoto a cui fa riferimento l'account di accesso remoto. *remoteserver* viene **sysname**, non prevede alcun valore predefinito. Se solo *remoteserver* è specificato, tutti gli utenti *remoteserver* vengono mappati a un account di accesso esistenti con lo stesso nome nel server locale. Il server deve essere noto al server locale. Viene aggiunto con sp_addserver. Quando gli utenti *remoteserver* connettersi al server locale in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connettono come account di accesso locale corrispondente al proprio account di accesso in *remoteserver* . *remoteserver* è il server che avvia la chiamata di procedura remota.  
+ [ @remoteserver **=** ] **'**_RemoteServer_**'**  
+ Nome del server remoto a cui fa riferimento l'account di accesso remoto. *RemoteServer* è di **tipo sysname**e non prevede alcun valore predefinito. Se si specifica solo *RemoteServer* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a account di accesso esistenti con lo stesso nome nel server locale. Il server deve essere noto al server locale. Il server viene aggiunto tramite sp_addserver. Quando gli utenti di *RemoteServer* si connettono al server locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue per eseguire una stored procedure remota, si connettono come account di accesso locale corrispondente al proprio account di accesso in *RemoteServer*. *RemoteServer* è il server che avvia la chiamata RPC.  
   
- [ @loginame **=** ] **'** _login_ **'**  
- ID dell'account di accesso dell'utente nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso*deve esistere già nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *account di accesso* è specificato, tutti gli utenti *remoteserver* viene eseguito il mapping a tale account di accesso locali specifici. Quando gli utenti *remoteserver* connettersi all'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connettono come *login*.  
+ [ @loginame **=** ] **'**_login_**'**  
+ ID dell'account di accesso dell'utente nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di **tipo sysname**e il valore predefinito è null. l' *account di accesso*deve esistere già nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]locale di. Se si specifica *login* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a tale account di accesso locale specifico. Quando gli utenti di *RemoteServer* si connettono all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza locale di per eseguire una stored procedure remota, si connettono come *account di accesso*.  
   
- [ @remotename **=** ] **'** _remote_name_ **'**  
- ID dell'account di accesso dell'utente nel server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL. *remote_name* deve essere presente nel *remoteserver*. Se *remote_name* è specificato, l'utente specifico *remote_name* viene eseguito il mapping a *account di accesso* nel server locale. Quando *remote_name* sul *remoteserver* si connette all'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connette come *login*. ID di accesso del *remote_name* può essere diverso dall'ID di accesso nel server remoto *login*.  
+ [ @remotename **=** ] **'**_remote_name_**'**  
+ ID dell'account di accesso dell'utente nel server remoto. *remote_name* è di **tipo sysname**e il valore predefinito è null. *remote_name* deve esistere in *RemoteServer*. Se *remote_name* viene specificato, viene eseguito il mapping del *remote_name* utente specifico all' *account di accesso* nel server locale. Quando *remote_name* su *RemoteServer* si connette all'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connette come *account di accesso*. L'ID di accesso di *remote_name* può essere diverso dall'ID di accesso nel server remoto, *login*.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- Per eseguire query distribuite, utilizzare la procedura sp_addlinkedsrvlogin.  
+## <a name="remarks"></a>Osservazioni  
+ Per eseguire query distribuite, utilizzare sp_addlinkedsrvlogin.  
   
- sp_addremotelogin non può essere utilizzata in una transazione definita dall'utente.  
+ La stored procedure sp_addremotelogin non può essere utilizzata in una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del sysadmin e securityadmin del server possono eseguire sp_addremotelogin.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server sysadmin o securityadmin possono eseguire sp_addremotelogin.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -88,15 +88,15 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

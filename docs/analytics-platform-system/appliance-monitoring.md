@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401420"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoraggio degli appliance per il sistema di piattaforma Analytics
@@ -63,7 +63,7 @@ Se la soluzione di monitoraggio non supporta le query\-Transact-SQL dirette oppu
    
 ## <a name="Tasks"></a>Attività di monitoraggio correlate  
   
-|Attività di monitoraggio|Description|  
+|Attività di monitoraggio|Descrizione|  
 |-------------------|---------------|  
 |Monitorare l'appliance usando la console di amministrazione.|[Monitorare l'appliance usando la console di amministrazione &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Monitorare l'appliance usando le visualizzazioni di sistema.|[Monitorare l'appliance usando le viste di sistema &#40;sistema della piattaforma di analisi&#41;](monitor-the-appliance-by-using-system-views.md)|  

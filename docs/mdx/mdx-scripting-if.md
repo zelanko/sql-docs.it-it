@@ -1,5 +1,5 @@
 ---
-title: Se l'istruzione (MDX MultiDimensional Expression) | Microsoft Docs
+title: Istruzione IF (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138686"
 ---
 # <a name="mdx-scripting---if"></a>Scripting MDX - IF
@@ -28,14 +28,14 @@ IF expression THEN assignment END IF
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
+ *espressione*  
  Espressione MDX (Multidimensional Expression) che restituisce un valore booleano, true o false.  
   
- *assignment*  
+ *assegnazione*  
  Espressione MDX che assegna un valore a un sottocubo o a una proprietà calcolata.  
   
-## <a name="remarks"></a>Note  
- Utilizzare l'istruzione IF per flusso di controllo, diversamente dal [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) (funzione) e il [istruzione CASE &#40;MDX&#41; ](../mdx/case-statement-mdx.md) che può essere utilizzato solo per restituire oggetti o valori.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare l'istruzione IF per il flusso di controllo, diversamente dalla funzione [IIf &#40;mdx&#41;](../mdx/iif-mdx.md) e dall' [istruzione case &#40;&#41;MDX](../mdx/case-statement-mdx.md) che possono essere utilizzati solo per restituire valori o oggetti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'ambito è limitato al livello Country della gerarchia Geography nella dimensione Customers. Se la misura corrente è Internet Sales Amount, Internet Sales Amount viene impostato su 10:  
@@ -47,6 +47,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

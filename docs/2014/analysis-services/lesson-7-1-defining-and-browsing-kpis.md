@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493789"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definizione ed esplorazione dei KPI
@@ -65,9 +65,9 @@ ms.locfileid: "69493789"
   
      Verrà visualizzato un modello KPI vuoto nel riquadro di visualizzazione, come illustrato nella figura seguente.  
   
-     ![Modello KPI vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l7-kpi-2.gif "Modello KPI vuoto nel riquadro di visualizzazione")  
+     ![Modello di indicatore KPI vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l7-kpi-2.gif "Modello di indicatore KPI vuoto nel riquadro di visualizzazione")  
   
-3.  Nella casella **nome** Digitare `Reseller Revenue`, quindi selezionare **Reseller Sales** nell'elenco **gruppo di misure associato** .  
+3.  Nella casella **nome** Digitare `Reseller Revenue`e quindi selezionare **Reseller Sales** nell'elenco **gruppo di misure associato** .  
   
 4.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Misure**e **Vendite rivenditore**e quindi trascinare la misura **Reseller Sales-Sales Amount** nella casella **Espressione valore** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493789"
   
 1.  Fare clic sul pulsante **Visualizzazione Form** nella barra degli strumenti della scheda **KPI** e fare clic sul pulsante **Nuovo indicatore KPI** .  
   
-2.  Nella casella **nome** Digitare `Product Gross Profit Margin`, quindi verificare che **\<All >** venga visualizzato nell'elenco gruppo di **misure associato** .  
+2.  Nella casella **nome** Digitare `Product Gross Profit Margin`, quindi verificare che ** \<tutti>** siano visualizzati nell'elenco gruppo di **misure associato** .  
   
 3.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** trascinare la misura **Total GPM** nella casella **Espressione valore** .  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493789"
   
 2.  Quando la distribuzione ha avuto esito positivo, fare clic su **Riconnetti** nella barra degli strumenti della scheda **KPI** e scegliere **Visualizzazione Esplorazione**.  
   
-     Viene visualizzato l'indicatore KPI `Product Gross Profit Margin` e viene visualizzato il valore KPI per **Q3 CY 2007** e il territorio di vendita **America del Nord** .  
+     Viene `Product Gross Profit Margin` visualizzato l'indicatore KPI e viene visualizzato il valore KPI per **Q3 CY 2007** e il **America del Nord** Sales Territory.  
   
 3.  Nel riquadro **Filtro** selezionare **Product** nell'elenco **Dimensione** , selezionare **Category** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , quindi selezionare **Bikes** nell'elenco **Espressione filtro** e infine fare clic su **OK**.  
   

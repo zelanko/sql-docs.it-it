@@ -1,5 +1,5 @@
 ---
-title: 'Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza | Microsoft Docs'
+title: 'SQL Server backup gestito in Azure: interoperabilità e coesistenza | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176070"
 ---
-# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza
-  In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Di seguito vengono descritte alcune di queste caratteristiche: Gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database e drop database.  
+# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: interoperabilità e coesistenza
+  In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tra cui gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database ed eliminazione del database.  
   
 ### <a name="alwayson-availability-groups"></a>Gruppi di disponibilità AlwaysOn  
  Gruppi di disponibilità AlwaysOn configurate come una soluzione solo Azure supportata per [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Le configurazioni del gruppo di disponibilità AlwaysOn ibride o solo in locale non sono supportate. Per altre informazioni e altre considerazioni, vedere [configurazione di SQL Server backup gestito in Azure per i gruppi di disponibilità](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mirroring del database  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato solo nel database principale. Se sia il server principale che il server mirror sono configurati per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il database con mirroring viene ignorato e non ne verrà eseguito il backup. Tuttavia, in caso di failover, tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà avviato il processo di backup dopo il completamento del cambio di ruolo da parte del mirror e quest'ultimo è online. I backup verranno archiviati in un nuovo contenitore in questo caso. Se il mirror non è configurato per utilizzare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in caso di failover non verrà eseguito alcun backup. È consigliabile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sia nel server principale che nel server mirror in modo tale che i backup possano continuare in caso di failover.  
+ 
+  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato solo nel database principale. Se sia il server principale che il server mirror sono configurati per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il database con mirroring viene ignorato e non ne verrà eseguito il backup. Tuttavia, in caso di failover, tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà avviato il processo di backup dopo il completamento del cambio di ruolo da parte del mirror e quest'ultimo è online. I backup verranno archiviati in un nuovo contenitore in questo caso. Se il mirror non è configurato per utilizzare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in caso di failover non verrà eseguito alcun backup. È consigliabile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sia nel server principale che nel server mirror in modo tale che i backup possano continuare in caso di failover.  
   
 > [!TIP]  
 >  Se si crea un database con mirroring in un'istanza con le impostazioni predefinite di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], può essere preferibile disabilitare le impostazioni predefinite dell'istanza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in modo da non essere applicate al database con mirroring, e quindi riabilitare le impostazioni predefinite dell'istanza dopo aver configurato il server principale e mirror.  
@@ -39,7 +40,7 @@ ms.locfileid: "70176070"
  Non è possibile configurare il log shipping e [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per lo stesso database contemporaneamente. Questa operazione avrà effetto sulla recuperabilità del database utilizzando entrambe le funzionalità.  
   
 ### <a name="ad-hoc-backups-using-transact-sql-and-sql-server-management-studio"></a>Backup ad hoc tramite Transact-SQL e SQL Server Management Studio  
- I backup ad hoc o eseguiti una volta creati esternamente a [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tramite Transact-SQL o SQL Server Management Studio possono influire sul processo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a seconda del tipo di backup e dei supporti di archiviazione utilizzati. I backup del log in un account di archiviazione di Azure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] diverso rispetto a quello che usa, o qualsiasi altra destinazione rispetto al servizio di archiviazione BLOB di Azure, provocheranno un'interrotta di catena di log. Si consiglia di utilizzare il stored procedure [Transact-SQL &#40;&#41; smart_admin. sp_backup_on_demand](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) per avviare un [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] backup nei database abilitati. È possibile avviare un backup completo del database o un backup del log tramite questa stored procedure.  
+ I backup ad hoc o eseguiti una volta creati esternamente a [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tramite Transact-SQL o SQL Server Management Studio possono influire sul processo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a seconda del tipo di backup e dei supporti di archiviazione utilizzati. I backup del log in un account di archiviazione di Azure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] diverso rispetto a quello che usa, o qualsiasi altra destinazione rispetto al servizio di archiviazione BLOB di Azure, provocheranno un'interrotta di catena di log. È consigliabile utilizzare il [smart_admin. sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) stored procedure per avviare un backup nei database [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitati. È possibile avviare un backup completo del database o un backup del log tramite questa stored procedure.  
   
 ### <a name="drop-database-and-detach-database"></a>Elimina database e Scollega database  
  Se un database con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitato viene scollegato o eliminato, sebbene non siano possibili backup aggiuntivi, i backup precedenti rimangono nella risorsa di archiviazione finché il periodo di memorizzazione non è scaduto, vale a dire quando i backup verranno eliminati.  
@@ -57,6 +58,6 @@ ms.locfileid: "70176070"
   
  **Strumenti o script di terze parti:** Qualsiasi strumento o script di terze parti che esegue backup del log che causa il troncamento del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]log non è compatibile con e non è supportato.  
   
- Se è stata [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitata per un'istanza di database e si vuole eseguire un backup ad hoc, è possibile usare il stored procedure [Transact- &#40;SQL&#41; smart_admin. sp_backup_on_demand](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) come descritto nella sezione precedente. Se inoltre si ha l'esigenza di pianificare o eseguire backup periodici all'esterno di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], è possibile utilizzare Backup di sola copia.  Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+ Se è stata [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitata un'istanza di database e si desidera eseguire un backup ad hoc, è possibile utilizzare il [smart_admin. sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) stored procedure come descritto nella sezione precedente. Se inoltre si ha l'esigenza di pianificare o eseguire backup periodici all'esterno di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], è possibile utilizzare Backup di sola copia.  Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
   

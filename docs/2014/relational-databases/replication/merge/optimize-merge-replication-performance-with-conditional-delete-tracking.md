@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210697"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Ottimizzazione delle prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni
@@ -44,12 +44,12 @@ ms.locfileid: "68210697"
 > [!IMPORTANT]  
 >  Se nel server di pubblicazione prosegue l'attività, è necessario verificare che le eliminazioni che dovrebbero essere propagate ai Sottoscrittori non abbiano luogo mentre il rilevamento delle eliminazioni è disabilitato.  
   
- **Per specificare di non rilevare le eliminazioni**  
+ **Per specificare che le eliminazioni non devono essere rilevate**  
   
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Disattivare del rilevamento delle eliminazioni per gli articoli di merge &#40;programmazione Transact-SQL della replica&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni degli articoli per la replica di tipo merge](article-options-for-merge-replication.md)   
- [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](optimize-merge-replication-performance-with-download-only-articles.md)  
+ [Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

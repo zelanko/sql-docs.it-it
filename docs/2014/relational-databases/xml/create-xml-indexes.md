@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637761"
 ---
 # <a name="create-xml-indexes"></a>Creazione di indici XML
@@ -44,7 +44,7 @@ ms.locfileid: "62637761"
   
 -   Per i nomi degli indici XML primari vengono applicate le stesse restrizioni valide per i nomi delle viste.  
   
- Non è possibile creare un indice XML in un' `xml` colonna in una vista, di tipo in un **tabella** variabile valutata a livello con `xml` colonne di tipo o `xml` variabili di tipo.  
+ Non è possibile creare un indice XML in `xml` una colonna di tipo in una vista, in una variabile con valori di **tabella** con `xml` colonne di tipo o variabili di `xml` tipo.  
   
 -   Per modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato, o viceversa, tramite l'opzione ALTER TABLE ALTER COLUMN, nella colonna non deve esistere alcun indice XML. In caso contrario, è necessario eliminarlo prima di provare a modificare il tipo della colonna.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62637761"
   
  Quando si crea o si ricrea un indice XML primario in una colonna con tipo di dati XML che contiene valori dei tipi XML Schema **xs:date** o **xs:dateTime** o dei relativi sottotipi, non meno recenti di un anno, la creazione dell'indice non riuscirà in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono consentiti questi valori, quindi questo problema può verificarsi quando si creano indici in un database generato in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../xml/compare-typed-xml-to-untyped-xml.md).  
   
-### <a name="example-creating-a-primary-xml-index"></a>Esempio: Creazione di un indice XML primario  
+### <a name="example-creating-a-primary-xml-index"></a>Esempio: creazione di un indice XML primario  
  Nella maggior parte degli esempi viene utilizzata la tabella T (pk INT PRIMARY KEY, xCol XML), che include una colonna XML non tipizzata. Gli esempi possono essere estesi senza difficoltà ai dati XML tipizzati. Per semplicità vengono descritte le query per le istanze di dati XML, come illustrato nel codice seguente:  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  I valori restituiti nella colonna **seconday_type_desc** possono essere NULL, PATH, VALUE o PROPERTY. Per l'indice XML primario, il valore restituito è NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Esempio: Creazione di indici XML secondari  
+### <a name="example-creating-secondary-xml-indexes"></a>Esempio: creazione di indici XML secondari  
  Nell'esempio seguente viene illustrata la creazione di indici XML secondari. Vengono inoltre fornite informazioni sugli indici XML creati.  
   
 ```  

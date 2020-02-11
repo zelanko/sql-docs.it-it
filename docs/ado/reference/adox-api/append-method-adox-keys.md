@@ -1,5 +1,5 @@
 ---
-title: Append (metodo) (oggetti Key ADOX) | Microsoft Docs
+title: Metodo Append (chiavi ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967295"
 ---
 # <a name="append-method-adox-keys"></a>Metodo Append (raccolta Keys ADOX)
-Aggiunge un nuovo [Key](../../../ado/reference/adox-api/key-object-adox.md) dell'oggetto per il [chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) raccolta.  
+Aggiunge un nuovo oggetto [chiave](../../../ado/reference/adox-api/key-object-adox.md) alla raccolta di [chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,33 +34,33 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Key*  
- Il **chiave** il nome della chiave da creare e aggiungere o oggetto da accodare.  
+ *Chiave*  
+ Oggetto **chiave** da accodare o nome della chiave da creare e aggiungere.  
   
  *KeyType*  
- facoltativo. Oggetto **lungo** valore che specifica il tipo di chiave. Il *Key* parametro corrisponde al [tipo](../../../ado/reference/adox-api/type-property-key-adox.md) proprietà di un **chiave** oggetto.  
+ Facoltativa. Valore **Long** che specifica il tipo di chiave. Il parametro *Key* corrisponde alla proprietà [Type](../../../ado/reference/adox-api/type-property-key-adox.md) di un oggetto **Key** .  
   
  *Colonna*  
- facoltativo. Oggetto **stringa** valore che specifica il nome della colonna da indicizzare. Il *colonne* parametro corrisponde al valore della [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto.  
+ Facoltativa. Valore **stringa** che specifica il nome della colonna da indicizzare. Il parametro *Columns* corrisponde al valore della proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) di un oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
  *RelatedTable*  
- facoltativo. Oggetto **stringa** valore che specifica il nome della tabella correlata. Il *RelatedTable* parametro corrisponde al valore della **nome** proprietà di un [tabella](../../../ado/reference/adox-api/table-object-adox.md) oggetto.  
+ Facoltativa. Valore **stringa** che specifica il nome della tabella correlata. Il parametro *RelatedTable* corrisponde al valore della proprietà **Name** di un oggetto [Table](../../../ado/reference/adox-api/table-object-adox.md) .  
   
  *RelatedColumn*  
- Facoltativo. Oggetto **stringa** valore che specifica il nome della colonna correlata per un vincolo foreign key. Il *RelatedColumn* parametro corrisponde al valore delle **Name** proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto.  
+ Facoltativa. Valore **stringa** che specifica il nome della colonna correlata per una chiave esterna. Il parametro *RelatedColumn* corrisponde al valore della proprietà **Name** di un oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
-## <a name="remarks"></a>Note  
- Il *colonne* parametro può accettare il nome di una colonna o una matrice di nomi di colonna.  
+## <a name="remarks"></a>Osservazioni  
+ Il parametro *Columns* può assumere il nome di una colonna o una matrice di nomi di colonna.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Raccolta Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append oggetti Key (metodo), tipo di chiave, RelatedColumn, RelatedTable e UpdateRule (esempio di proprietà (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Group ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append (metodo) (oggetti Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (metodo) (User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Esempio di proprietà Method Append, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (gruppi ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Metodo Append (indici ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Metodo Append (utenti ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Metodo Append (raccolta Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

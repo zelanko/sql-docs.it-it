@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983073"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, un indice, una colonna, un tipo di dati alias o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definito dall'utente Common Language Runtime (CLR).  
+  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, un indice, una colonna, un tipo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dati alias o un tipo definito dall'utente Common Language Runtime (CLR).  
   
 > [!CAUTION]  
 >  La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. È consigliabile evitare di utilizzare questa istruzione per rinominare stored procedure, trigger, funzioni definite dall'utente o viste. In alternativa, eliminare l'oggetto e ricrearlo con il nuovo nome.  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@objname =] '*object_name*'  
+ [ @objname = ] '*object_name*'  
  Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* o *schema. Table. Column*. Se l'oggetto da rinominare è un indice, *object_name* deve essere nel formato *Table. index* o *schema. Table. index*. Se l'oggetto da rinominare è un vincolo, *object_name* deve essere nel formato *schema. vincolo*.  
   
  Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
- [@newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  Nuovo nome dell'oggetto specificato. *new_name* deve essere un nome costituito da una parte e deve rispettare le regole per gli identificatori. *newname* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  I nomi di trigger non possono iniziare con # o ##.  
   
- [@objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  Tipo dell'oggetto da rinominare. *object_type* è di tipo **varchar (13)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
 |valore|Descrizione|  
@@ -67,10 +67,10 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
 |INDEX|Indice definito dall'utente. Se si rinomina un indice con statistiche, vengono automaticamente rinominate anche le statistiche.|  
 |OBJECT|Elemento di un tipo rilevato in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). È ad esempio possibile utilizzare OBJECT per rinominare oggetti che includono vincoli (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), tabelle utente e regole.|  
-|STATISTICS|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
+|STATISTICS|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]successive e.<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
 |USERDATATYPE|[Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) aggiunti mediante l'esecuzione di [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -99,8 +99,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>b. Ridenominazione di una colonna  
- Nell'esempio seguente viene rinominata la colonna `TerritoryID` nella tabella `SalesTerritory` per `TerrID`.  
+### <a name="b-renaming-a-column"></a>B. Ridenominazione di una colonna  
+ Nell'esempio seguente la `TerritoryID` colonna della `SalesTerritory` tabella viene rinominata in `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -207,6 +207,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure &#40;di motore di database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attributi
+title: Attributes
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728748"
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
@@ -35,17 +35,17 @@ ms.locfileid: "73728748"
   
  ![Entità Master Data Services rappresentata come tabella](../master-data-services/media/mds-conc-entity-table.gif "Entità Master Data Services rappresentata come tabella")  
   
- Quando si crea un'entità che contiene molti attributi, è possibile organizzare gli attributi in gruppi di attributi. Per altre informazioni, vedere [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Quando si crea un'entità che contiene molti attributi, è possibile organizzare gli attributi in gruppi di attributi. Per altre informazioni, vedere [Gruppi di attributi &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Attributi obbligatori  
  Quando si crea un'entità, gli attributi Name e Code vengono creati automaticamente. L'attributo Code richiede un valore che deve essere univoco all'interno dell'entità. Gli attributi Name e Code non possono essere rimossi.  
   
-## <a name="attribute-types"></a>Tipi di attributi  
+## <a name="attribute-types"></a>Tipi di attributo  
  Sono disponibili tre tipi di attributi:  
   
 -   Attributi in formato libero che consentono l'immissione in formato libero di testo, numeri, date o collegamenti.  
   
--   Attributi basati su dominio, che vengono popolati dalle entità. Per altre informazioni, vedere [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Attributi basati su dominio, che vengono popolati dalle entità. Per altre informazioni, vedere [Attributi basati su dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Attributi di file che vengono utilizzati per archiviare file, documenti o immagini. Gli attributi di file hanno lo scopo di favorire la coerenza dei dati richiedendo che i file abbiano un'estensione specifica. Non è possibile garantire che gli attributi di file impediscano ad un utente malintenzionato di caricare un file di tipo diverso.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728748"
 ## <a name="attribute-examples"></a>Esempi di attributo  
  Nell'esempio seguente l'entità dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella delle entità del prodotto bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella delle entità del prodotto bike")  
+ ![Tabella dell'entità relativa al prodotto biciclette](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità relativa al prodotto biciclette")  
   
  Nell'esempio seguente l'entità Product include:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73728748"
   
  Subcategory è un'entità utilizzata come attributo basato su dominio di Product. Category è un'entità utilizzata come attributo basato su dominio di Subcategory. Come l'entità Product, le entità Category e Subcategory includono ciascuna gli attributi predefiniti Name e Code.  
   
- ![Struttura ad albero dell'entità Product](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità Product")  
+ ![Struttura ad albero dell'entità relativa al prodotto](../master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità relativa al prodotto")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -86,8 +86,8 @@ ms.locfileid: "73728748"
 |Creare un nuovo attributo di collegamento in formato libero.|[Creare un attributo di collegamento &#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
 |Creare un nuovo attributo di file.|[Creare un attributo di file &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Creare un nuovo attributo basato su dominio.|[Creare un attributo basato su dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Modificare il nome di un attributo esistente.|[Modificare il nome e il tipo di dati di un attributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Modificare il nome di un attributo esistente.|[Modificare il nome di un attributo e il tipo di dati &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
+|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi a un gruppo di Rilevamento modifiche &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Eliminare un attributo esistente.|[Eliminare un attributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |Modificare l'ordine degli attributi.|[Modificare l'ordine degli attributi](../master-data-services/change-the-order-of-attributes.md)|  
 |Creare un attributo di data|[Creare un attributo di data &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
@@ -100,5 +100,5 @@ ms.locfileid: "73728748"
   
 -   [Membri &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+-   [Autorizzazioni foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

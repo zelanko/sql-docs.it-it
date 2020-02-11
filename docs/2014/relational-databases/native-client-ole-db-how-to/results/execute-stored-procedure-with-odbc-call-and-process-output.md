@@ -1,5 +1,5 @@
 ---
-title: Eseguire una Stored Procedure (con sintassi ODBC CALL) ed elaborare i codici restituiti e parametri di Output (OLE DB) | Microsoft Docs
+title: Eseguire una stored procedure (usando la sintassi ODBC CALL) ed elaborare i codici restituiti e i parametri di output (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206687"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Eseguire una stored procedure mediante la sintassi dell'istruzione ODBC RPC ed elaborare i codici restituiti e i parametri di output (OLE DB)
@@ -32,7 +32,8 @@ ms.locfileid: "68206687"
   
 2.  Creare un set di associazioni (uno per ogni marcatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-3.  Creare una funzione di accesso per i parametri definiti tramite il metodo `IAccessor::CreateAccessor`. `CreateAccessor` consente di creare una funzione di accesso da un set di associazioni.  
+3.  Creare una funzione di accesso per i parametri definiti tramite il metodo `IAccessor::CreateAccessor`. 
+  `CreateAccessor` consente di creare una funzione di accesso da un set di associazioni.  
   
 4.  Completare la struttura DBPARAMS.  
   
@@ -354,6 +355,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Procedure per l'elaborazione dei risultati &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

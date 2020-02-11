@@ -1,5 +1,5 @@
 ---
-title: Un Provider Microsoft OLE DB semplice | Microsoft Docs
+title: Provider semplice Microsoft OLE DB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,44 +15,44 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926601"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Simple Provider Microsoft OLE DB
-Il Microsoft OLE DB semplici Provider (OSP) consente di ADO accedere ai dati per il quale un provider è stata scritta usando la [OLE DB semplici Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider di semplici sono utili per accedere alle origini dati che richiedono il supporto OLE DB solo fondamentale, ad esempio le matrici in memoria o documenti XML.
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Microsoft OLE DB Simple Provider
+Microsoft OLE DB Simple Provider (OSP) consente a ADO di accedere a tutti i dati per i quali un provider è stato scritto utilizzando [OLE DB Simple Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider semplici sono destinati ad accedere alle origini dati che richiedono solo il supporto OLE DB fondamentale, ad esempio matrici in memoria o documenti XML.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a OLE DB semplici Provider DLL, impostare il *Provider* argomento per il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
+ Per connettersi all'OLE DB DLL del provider semplice, impostare l'argomento del *provider* sulla proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSDAOSP
 ```
 
- Questo valore può anche essere impostato o letto usando il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà.
+ Questo valore può essere impostato o letto anche usando la proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) .
 
- È possibile connettersi a un provider semplice che è stato registrato come provider OLE DB completo usando il nome del provider registrato, determinato dal writer del provider.
+ È possibile connettersi a provider semplici che sono stati registrati come provider OLE DB completi usando il nome del provider registrato, determinato dal writer del provider.
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
- Una stringa di connessione tipica per questo provider è:
+ Una stringa di connessione tipica per questo provider è la seguente:
 
 ```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- La stringa è costituita da queste parole chiave:
+ La stringa è costituita dalle parole chiave seguenti:
 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
-|**Provider**|Specifica il provider OLE DB per SQL Server.|
-|**Data Source**|Specifica il nome di un server.|
+|**Provider**|Specifica il provider di OLE DB per SQL Server.|
+|**Origine dati**|Specifica il nome di un server.|
 
 ## <a name="xml-document-example"></a>Esempio di documento XML
- Di OLE DB semplici Provider (OSP) in MDAC 2.7 o versioni successive e Windows Data Access Components (Windows DAC) è stata migliorata per supportare l'apertura ADO gerarchica **recordset** rispetto ai file XML arbitrari. Questi file XML possono contenere lo schema di persistenza XML ADO, ma non è obbligatorio. Questa è stata implementata tramite la connessione di OSP per il **MSXML2.DLL**; pertanto **il file Msxml2.dll sia** o versione successiva è obbligatorio.
+ Il provider di OLE DB Simple Provider (OSP) in MDAC 2,7 o versioni successive e Windows Data Access Components (Windows DAC) è stato migliorato per supportare l'apertura di **Recordset** ADO gerarchici su file XML arbitrari. Questi file XML possono contenere lo schema di persistenza XML ADO, ma non è obbligatorio. Questa operazione è stata implementata connettendo il OSP a **file Msxml2. dll**; è quindi necessario **file Msxml2. dll** o versione successiva.
 
- Il **portfolio. XML** file usato nell'esempio seguente contiene la struttura seguente:
+ Il file **portfolio. XML** usato nell'esempio seguente contiene l'albero seguente:
 
 ```console
 Portfolio
@@ -65,9 +65,9 @@ Portfolio
          WebSite
 ```
 
- Gli oggetti DSO XML utilizza euristica incorporata per convertire i nodi in un albero XML in capitoli gerarchico **Recordset**.
+ Il DSO XML utilizza l'euristica incorporata per convertire i nodi in un albero XML in capitoli in un **Recordset**gerarchico.
 
- Usando questi euristica incorporata, l'albero XML viene convertito in un a due livelli gerarchici **Recordset** nel formato seguente:
+ Utilizzando queste euristiche predefinite, l'albero XML viene convertito in un **Recordset** gerarchico a due livelli nel formato seguente:
 
 ```console
 Parent Recordset
@@ -76,28 +76,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- Si noti che i tag di Portfolio e informazioni non vengano rappresentati nella gerarchica **Recordset**. Per una spiegazione delle modalità di DSO XML di conversione degli alberi XML gerarchico **recordset**, vedere le seguenti regole. La colonna $Text è descritto nella sezione seguente.
+ Si noti che i tag portfolio e info non sono rappresentati nel **Recordset**gerarchico. Per una spiegazione del modo in cui il DSO XML converte gli alberi XML in **Recordset**gerarchici, vedere le regole seguenti. La colonna $Text viene illustrata nella sezione seguente.
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Regole per l'assegnazione di elementi e attributi XML da colonne e righe
- Gli oggetti DSO XML segue una procedura per l'assegnazione di elementi e attributi alle colonne e righe nelle applicazioni con associazione a dati. XML viene modellato come un albero con un unico tag che contiene l'intera gerarchia. Ad esempio, una descrizione XML di un libro può contenere tag capitolo, figura tag e i tag di sezione. Il livello più alto sarà il tag della Rubrica, contenente il capitolo di sottoelementi, la figura e sezione. Quando gli oggetti DSO XML esegue il mapping di elementi XML in righe e colonne, i sottoelementi, non l'elemento di livello superiore, vengono convertiti.
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Regole per l'assegnazione di elementi e attributi XML a colonne e righe
+ Il DSO XML segue una procedura per l'assegnazione di elementi e attributi a colonne e righe nelle applicazioni con associazione a dati. XML viene modellato come albero con un tag che contiene l'intera gerarchia. Una descrizione XML di un libro, ad esempio, può contenere tag capitolo, tag figure e tag section. Al livello più alto, si tratta del tag Book, contenente il capitolo, la figura e la sezione dei sottoelementi. Quando il DSO XML esegue il mapping degli elementi XML a righe e colonne, i sottoelementi, non l'elemento di primo livello, vengono convertiti.
 
- Gli oggetti DSO XML utilizza questa procedura per la conversione dei sottoelementi:
+ Il DSO XML utilizza questa procedura per la conversione dei sottoelementi:
 
--   Ogni sottoelemento e attributo corrisponde a una colonna in alcune **Recordset** nella gerarchia.
+-   Ogni sottoelemento e attributo corrisponde a una colonna in alcuni **Recordset** della gerarchia.
 
--   Il nome della colonna è identico al nome del sottoelemento o attributo, a meno che l'elemento padre ha un attributo e un sottoelemento con lo stesso nome, nel qual caso un "!" viene anteposta al nome di colonna del sottoelemento.
+-   Il nome della colonna corrisponde al nome del sottoelemento o dell'attributo, a meno che l'elemento padre non abbia un attributo e un sottoelemento con lo stesso nome, nel qual caso un "!" viene anteposto al nome della colonna del sottoelemento.
 
--   Ogni colonna può essere un *semplice* colonna contiene valori scalari (in genere le stringhe) o una **Recordset** colonna che contiene figlio **recordset**.
+-   Ogni colonna è una colonna *semplice* che contiene valori scalari (in genere stringhe) o una colonna **Recordset** contenente **Recordset**figlio.
 
 -   Le colonne corrispondenti agli attributi sono sempre semplici.
 
--   Sono colonne corrispondono ai sottoelementi **Recordset** colonne se il sottoelemento ha un proprio sottoelementi o attributi (o entrambi), o padre del sottoelemento ha più di un'istanza del sottoelemento come elemento figlio. In caso contrario, la colonna è semplice.
+-   Le colonne che corrispondono ai sottoelementi sono colonne del **Recordset** se il sottoelemento ha i propri sottoelementi o attributi (o entrambi) oppure il padre del sottoelemento ha più di un'istanza del sottoelemento come figlio. In caso contrario, la colonna è semplice.
 
--   Quando sono presenti più istanze di un sottoelemento (padri differenti), la relativa colonna è una **Recordset** colonna se *qualsiasi* delle istanze implica una **Recordset** colonna; relativo è semplice colonna solo se *tutti* istanze implicano una colonna semplice.
+-   Quando sono presenti più istanze di un sottoelemento (in padri diversi), la relativa colonna è **** una colonna recordset *se una delle istanze* implica una colonna **Recordset** ; la colonna è semplice solo se *tutte le* istanze implicano una colonna semplice.
 
--   Tutti i **recordset** dispone di una colonna aggiuntiva denominata $Text.
+-   Tutti i **Recordset** hanno una colonna aggiuntiva denominata $text.
 
- Il codice che serve per creare un **Recordset** è come segue:
+ Il codice necessario per costruire un **Recordset** è il seguente:
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -111,7 +111,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  Il percorso del file di dati può essere specificato usando quattro diverse convenzioni di denominazione.
+>  È possibile specificare il percorso del file di dati utilizzando quattro diverse convenzioni di denominazione.
 
 ```vb
 'HTTP://
@@ -124,24 +124,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- Non appena il **Recordset** è stato aperto, il consueto ADO **Recordset** comandi di navigazione possono essere utilizzati.
+ Non appena il **Recordset** è stato aperto, è possibile utilizzare i normali comandi di spostamento del **Recordset** ADO.
 
- **Recordset** generati dal OSP presentano alcune limitazioni:
+ I **Recordset** generati da OSP presentano alcune limitazioni:
 
 -   I cursori client (**adUseClient**) non sono supportati.
 
--   Gerarchica **recordset** creati nel corso del arbitrario XML non può essere reso persistente utilizzando **Recordset. Save**.
+-   I **Recordset** gerarchici creati sul codice XML arbitrario non possono essere salvati in modo permanente utilizzando **Recordset. Save**.
 
--   **Recordset** creato con il OSP sono di sola lettura.
+-   I **Recordset** creati con OSP sono di sola lettura.
 
--   Il XMLDSO aggiunge una colonna aggiuntiva dei dati ($Text) a ognuno **Recordset** nella gerarchia.
+-   XMLDSO aggiunge una colonna aggiuntiva di dati ($Text) a ogni **Recordset** nella gerarchia.
 
- Per altre informazioni sui Provider OLE DB semplici, vedere [compilazione di un Provider semplice](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Per ulteriori informazioni sull'OLE DB provider semplice, vedere [compilazione di un provider semplice](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
 
 ## <a name="code-example"></a>Esempio di codice
- Il codice di Visual Basic seguente illustra l'apertura di un file XML arbitrario, costruzione di un modello gerarchico **Recordset**e in modo ricorsivo la scrittura di ogni record della ognuno **Recordset** alla finestra di debug.
+ Il codice di Visual Basic seguente illustra l'apertura di un file XML arbitrario, la costruzione di un **Recordset**gerarchico e la scrittura ricorsiva di ogni record di ogni **Recordset** nella finestra di debug.
 
- Ecco un semplice file XML che contiene le quotazioni di borsa. Il codice seguente usa questo file per costruire un a due livelli gerarchici **Recordset**.
+ Di seguito è riportato un semplice file XML che contiene le quotazioni azionarie. Il codice seguente usa questo file per costruire un **Recordset**gerarchico a due livelli.
 
 ```xml
 <portfolio>
@@ -184,7 +184,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- Di seguito sono sub (routine) due Visual Basic. La prima crea il **Recordset** e lo passa al *WalkHier* sub routine, illustra in modo che in modo ricorsivo verso il basso della gerarchia, la scrittura di ogni **campo** in ogni record in ogni **Recordset** alla finestra di debug.
+ Di seguito sono riportate due Visual Basic sottoprocedure. Il primo crea il **Recordset** e lo passa alla procedura secondaria *WalkHier* , che esamina in modo ricorsivo la gerarchia, scrivendo ogni **campo** di ogni record in ogni **Recordset** nella finestra di debug.
 
 ```vb
 Private Sub BrowseHierRecordset()

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889869"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea un nuovo modello di data mining basato su una struttura di data mining esistente.  Quando si utilizza l'istruzione **ALTER MINING STRUCTURE** per creare un nuovo modello di data mining, la struttura deve essere già esistente. Al contrario, quando si utilizza l'istruzione [create Mining Model &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), si crea un modello e si genera automaticamente la struttura di data mining sottostante.  
+  Crea un nuovo modello di data mining basato su una struttura di data mining esistente.  Quando si utilizza l'istruzione **ALTER MINING STRUCTURE** per creare un nuovo modello di data mining, la struttura deve essere già esistente. Al contrario, quando si utilizza l'istruzione, [creare un modello di data mining &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), si crea un modello e si genera automaticamente la struttura di data mining sottostante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,19 +51,19 @@ USING <algorithm> [(<parameter list>)]
  *criteri di filtro annidati*  
  Espressione di filtro applicata alle colonne di una tabella nidificata.  
   
- *algorithm*  
+ *algoritmo*  
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
->  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite il [set di righe DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di, vedere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di, vedere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
- facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se la struttura di data mining contiene chiavi composte, il modello di data mining dovrà includere tutte le colonne chiave definite nella struttura.  
   
  Se il modello non richiede una colonna stimabile, come ad esempio i modelli compilati utilizzando gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering, non sarà necessario includere una definizione di colonna nell'istruzione. Tutti gli attributi nel modello risultante verranno gestiti come input.  
@@ -103,18 +103,19 @@ USING <algorithm> [(<parameter list>)]
  È possibile definire un'espressione di filtro che viene applicata alla tabella nidificata aggiungendo un'espressione di criteri di filtro dopo la definizione di colonna della tabella nidificata.  
   
 ### <a name="modeling-flags"></a>Flag di modellazione  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i flag di modellazione seguenti per l'utilizzo nelle colonne del modello di data mining:  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i flag di modellazione seguenti per l'utilizzo nelle colonne del modello di data mining:  
   
 > [!NOTE]  
 >  Il flag di modellazione NOT_NULL si applica alla colonna della struttura di data mining. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
 |||  
 |-|-|  
-|Nome|Definizione|  
-|**REGRESSOR**|Indica che l'algoritmo può utilizzare la colonna specificata nella formula di regressione degli algoritmi di regressione.|  
+|Termine|Definizione|  
+|**REGRESSORE**|Indica che l'algoritmo può utilizzare la colonna specificata nella formula di regressione degli algoritmi di regressione.|  
 |**MODEL_EXISTENCE_ONLY**|Indica che i valori per la colonna di attributi sono meno importanti rispetto alla presenza dell'attributo.|  
   
- È invece possibile definire più flag di modellazione per una stessa colonna. Per ulteriori informazioni sull'utilizzo dei flag di modellazione, vedere [flag &#40;di&#41;modellazione DMX](../dmx/modeling-flags-dmx.md).  
+ È invece possibile definire più flag di modellazione per una stessa colonna. Per ulteriori informazioni sull'utilizzo dei flag di modellazione, vedere [flag di modellazione &#40;&#41;DMX ](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Clausola di stima  
  La clausola di stima consente di descrivere la modalità di utilizzo della colonna di stima. Nella tabella seguente sono elencate le clausole possibili.  
@@ -127,9 +128,9 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Espressioni di criteri di filtro  
  È possibile definire un filtro per limitare i case utilizzati nel modello di data mining. Il filtro può essere applicato alle colonne nella tabella del case, alle righe nella tabella nidificata o a entrambe.  
   
- Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati usando gli operatori logici comuni: AND, OR e NOT.  
+ Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati utilizzando gli operatori logici comuni: AND, OR e NOT.  
   
- Per ulteriori informazioni sui filtri utilizzati con i modelli di data mining, vedere [filtri &#40;per i modelli di&#41;Data mining Analysis Services di data mining](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Per ulteriori informazioni sui filtri utilizzati con i modelli di data mining, vedere [filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Le colonne di un filtro devono essere colonne della struttura di data mining. Non è possibile creare un filtro su una colonna del modello o una colonna in forma di alias.  
@@ -137,7 +138,7 @@ USING <algorithm> [(<parameter list>)]
  Per ulteriori informazioni sulla sintassi e sugli operatori DMX, vedere [colonne del modello di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Elenco delle definizioni di parametro  
- È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco dei parametri associati a ogni algoritmo, vedere algoritmi di [data mining &#40;Analysis Services-Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ È possibile modificare le prestazioni e le funzionalità di un modello aggiungendo parametri dell'algoritmo all'elenco di parametri. I parametri che è possibile utilizzare variano in base all'algoritmo specificato nella clausola USING. Per un elenco dei parametri associati a ogni algoritmo, vedere algoritmi di [data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  La sintassi dell'elenco dei parametri è la seguente:  
   
@@ -145,8 +146,8 @@ USING <algorithm> [(<parameter list>)]
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>Esempio 1: Aggiungere un modello a una struttura  
- Nell'esempio seguente viene aggiunto un modello di data mining Naive Bayes alla **nuova** struttura di data mining mailing e viene limitato il numero massimo di stati degli attributi a 50.  
+## <a name="example-1-add-a-model-to-a-structure"></a>Esempio 1: Aggiunta di un modello a una struttura  
+ Nell'esempio seguente viene aggiunto un modello di data mining Naive Bayes alla nuova struttura di data mining **mailing** e viene limitato il numero massimo di stati degli attributi a 50.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -160,8 +161,8 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Esempio 2: Aggiungere un modello filtrato a una struttura  
- Nell'esempio seguente viene aggiunto un modello `Naive Bayes Women`di data mining alla **nuova** struttura di data mining mailing. Il nuovo modello presenta la stessa struttura di base del modello di data mining aggiunto nell'esempio 1, ma i case della struttura di data mining sono limitati ai clienti di sesso femminile di età superiore a 50 anni.  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Esempio 2: Aggiunta di un modello filtrato a una struttura  
+ Nell'esempio seguente viene aggiunto un modello `Naive Bayes Women`di data mining alla nuova struttura di data mining **mailing** . Il nuovo modello presenta la stessa struttura di base del modello di data mining aggiunto nell'esempio 1, ma i case della struttura di data mining sono limitati ai clienti di sesso femminile di età superiore a 50 anni.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -176,8 +177,8 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Esempio 3: Aggiungere un modello filtrato a una struttura con una tabella nidificata  
- Nell'esempio seguente viene aggiunto un modello di data mining a una versione modificata della struttura di data mining Market Basket. La struttura di data mining utilizzata nell'esempio è stata modificata per aggiungere una colonna **Region** , che contiene gli attributi per l'area Customer e una colonna del **gruppo Income** , che categorizza il reddito dei clienti usando i valori **High**, **moderate** o **basso**.  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Esempio 3: Aggiunta di un modello filtrato a una struttura con una tabella nidificata  
+ Nell'esempio seguente viene aggiunto un modello di data mining a una versione modificata della struttura di data mining Market Basket. La struttura di data mining utilizzata nell'esempio è stata modificata per aggiungere una colonna **Region** , che contiene gli attributi per l'area Customer e una colonna del **gruppo Income** , che categorizza il reddito dei clienti usando i valori **High**, **moderate**o **low**.  
   
  La struttura di data mining include anche una tabella nidificata in cui sono elencati gli elementi acquistati dal cliente.  
   
@@ -201,8 +202,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni DMX per &#40;la&#41; definizione dei dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
- [Istruzioni di manipolazione &#40;dei&#41; dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

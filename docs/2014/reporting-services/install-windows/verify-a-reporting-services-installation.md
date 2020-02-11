@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108571"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -30,7 +30,7 @@ ms.locfileid: "66108571"
   
  In questo argomento sono contenute le informazioni indicate di seguito.  
   
--   [Verificare l'installazione in modalità SharePoint](#bkmk_sharepointmode)  
+-   [Verifica dell'installazione in modalità SharePoint](#bkmk_sharepointmode)  
   
 -   [Verificare un'installazione in modalità nativa](#bkmk_nativemode)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66108571"
   
 2.  Verificare che il **Servizio SQL Server Reporting Services** sia installato e **In esecuzione** .  
   
-     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per altre informazioni, vedere la sezione "Installare e avviare il Reporting Services SharePoint Service" del [installare Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Se non si visualizza il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nell'elenco, verificare che il servizio sia installato. Per ulteriori informazioni, vedere la sezione "installare e avviare il servizio Reporting Services SharePoint" di [installare Reporting Services modalità SharePoint per sharepoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>Per verificare l'applicazione di servizio  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66108571"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Per verificare i tipi di contenuto di un server di report  
   
-1.  Per verificare o aggiungere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipi di contenuto del server di report, vedere [Aggiungi tipi di contenuto Server di Report in una raccolta di &#40;Reporting Services in modalità integrata SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Per verificare o aggiungere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipi di contenuto del server di report, vedere [aggiungere tipi di contenuto del server di report a una raccolta &#40;Reporting Services in modalità integrata SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Per verificare la possibilità di avviare Generatore report  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108571"
   
 2.  Aprire l'applicazione console Servizi e verificare che il servizio del server di report sia in esecuzione. Per visualizzare lo stato del servizio del server di report, fare clic sul menu **Start**, scegliere **Pannello di controllo**, fare doppio clic su **Strumenti di amministrazione**, quindi su **Servizi**. Attendere che venga visualizzato l'elenco dei servizi e scorrerlo fino a **Report Server (MSSQLSERVER)** . Verificare che lo stato sia **Avviato**.  
   
-3.  Aprire un browser e immettere l'URL del server di report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per il server di report durante l'installazione. Per impostazione predefinita, la directory virtuale del server di report è denominata **ReportServer**. Per verificare l'installazione del server di report, è possibile usare l'URL http:// *\<nome computer>* /ReportServer *\<_nome istanza>* . L'URL sarà diverso se il server di report è stato installato come istanza denominata. Per altre informazioni sul formato dell'URL, vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Se si è un amministratore locale in Windows Vista o Windows Server 2008, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Aprire un browser e immettere l'URL del server di report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per il server di report durante l'installazione. Per impostazione predefinita, la directory virtuale del server di report è denominata **ReportServer**. Per verificare l'installazione del server di report, è possibile utilizzare l'URL seguente: http://*\<nome computer>*/ReportServer*\<_instance nome>*. L'URL sarà diverso se il server di report è stato installato come istanza denominata. Per altre informazioni sul formato dell'URL, vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Se si è un amministratore locale in Windows Vista o Windows Server 2008, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Eseguire alcuni report per testare il funzionamento del server di report. Per questo passaggio è possibile creare un report di esempio da un'esercitazione. Per altre informazioni, vedere [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108571"
   
 1.  Aprire un browser e immettere l'URL di Gestione report nella barra degli indirizzi. L'indirizzo è composto dal nome del server e dal nome della directory virtuale specificati per Gestione report durante l'installazione o nella pagina URL Gestione report dello strumento di configurazione di Reporting Services. Per impostazione predefinita, la directory virtuale di Gestione report è **Reports**. Per verificare l'installazione di Gestione report, è possibile utilizzare l'URL seguente:  
   
-     http:// *\<nome computer>* /Reports *\<_nome istanza>* .  
+     http://*\<nome computer>*/Reports*\<_instance nome>*.  
   
 2.  Utilizzare Gestione report per creare una nuova cartella o caricare un file per testare se le definizioni vengono passate al database del server di report. L'esito positivo di queste operazioni indica il corretto funzionamento della connessione.  
   

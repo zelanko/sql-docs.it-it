@@ -1,5 +1,5 @@
 ---
-title: Chiamare SQLColumns in una tabella con colonne di tipo Sparse | Microsoft Docs
+title: Chiamare SQLColumns in una tabella con colonne di tipo sparse | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126204"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chiamare SQLColumns su un tabella con colonne di tipo sparse
@@ -22,7 +22,7 @@ ms.locfileid: "63126204"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse in SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Per ulteriori informazioni sulla funzionalità colonne di tipo sparse, vedere [supporto di colonne di tipo sparse in SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C++. Modificare "MyServer" impostando un nome di server valido. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h. Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

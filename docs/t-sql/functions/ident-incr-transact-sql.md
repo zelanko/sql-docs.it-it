@@ -20,10 +20,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843684"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
@@ -53,7 +53,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente può vis
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. Restituzione del valore di incremento per una tabella specificata  
+### <a name="a-returning-the-increment-value-for-a-specified-table"></a>R. Restituzione del valore di incremento per una tabella specificata  
  Nell'esempio seguente viene restituito il valore di incremento per la tabella `Person.Address` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

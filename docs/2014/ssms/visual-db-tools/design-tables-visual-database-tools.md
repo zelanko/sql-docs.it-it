@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316144"
 ---
 # <a name="design-tables-visual-database-tools"></a>Progettazione di tabelle (Visual Database Tools)
   In Progettazione tabelle è disponibile un'intera finestra per la progettazione di una singola tabella. Negli argomenti elencati in questa sezione viene descritto come utilizzare Progettazione tabelle per creare e modificare le tabelle di database.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Aprire Progettazione tabelle &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Apri Progettazione tabelle &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritto come aprire una tabella di database nuova o esistente.  
   
- [Salvataggio del lavoro in Progettazione tabelle &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
+ [Salvare il lavoro in Progettazione tabelle &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  Viene descritto come salvare le modifiche apportate a tabelle specifiche o a tutte le tabelle aperte in Progettazione tabelle.  
   
   

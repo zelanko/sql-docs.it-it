@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016971"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
@@ -22,16 +22,16 @@ ms.locfileid: "68016971"
   
  MDX supporta gli operatori logici elencati nella tabella seguente.  
   
-|Operator|Descrizione|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
 |[IS](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
 |[NOT](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
-|[OR](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
+|[o](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
 |[XOR](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

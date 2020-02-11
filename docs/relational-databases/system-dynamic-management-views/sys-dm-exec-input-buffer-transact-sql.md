@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74097867"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -54,17 +54,17 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 |Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|Tipo di evento nel buffer di input per lo SPID specificato.|
-|**parameters**|**smallint**|Tutti i parametri forniti per l'istruzione.|
+|**parametri**|**smallint**|Tutti i parametri forniti per l'istruzione.|
 |**event_info**|**nvarchar(max)**|Testo dell'istruzione nel buffer di input per lo SPID specificato.|
 
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente dispone dell'autorizzazione VIEW SERVER STATE, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; in caso contrario, l'utente visualizzerà solo la sessione corrente.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente dispone dell'autorizzazione View Server state, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. in caso contrario, l'utente visualizzerà solo la sessione corrente.
 
 > [!IMPORTANT]
 > L'esecuzione di questa DMV al di fuori di SQL Server Management Studio rispetto SQL Server senza autorizzazioni VIEW SERVER STATE, ad esempio in un trigger, stored procedure o Function, genera un errore di autorizzazione nel database master.
 
-In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se l'utente è il proprietario del database, l'utente visualizzerà tutte le sessioni in esecuzione nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; in caso contrario, l'utente visualizzerà solo la sessione corrente.
+In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se l'utente è il proprietario del database, l'utente visualizzerà tutte le sessioni in esecuzione [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nel; in caso contrario, l'utente visualizzerà solo la sessione corrente.
 
 > [!IMPORTANT]
 > L'esecuzione di questa DMV all'esterno dei SQL Server Management Studio nel database SQL di Azure senza autorizzazioni del proprietario, ad esempio in un trigger, stored procedure o funzione, genera un errore di autorizzazione nel database master.
@@ -75,7 +75,7 @@ Questa funzione a gestione dinamica può essere usata insieme a sys. dm_exec_ses
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-simple-example"></a>A. Esempio semplice
+### <a name="a-simple-example"></a>R. Esempio semplice
 
 Nell'esempio seguente viene illustrato il passaggio di un ID di sessione (SPID) e di un ID richiesta alla funzione.
 
@@ -84,7 +84,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```
 
-### <a name="b-using-cross-apply-to-additional-information"></a>b. Utilizzo di Cross Apply per informazioni aggiuntive
+### <a name="b-using-cross-apply-to-additional-information"></a>B. Utilizzo di Cross Apply per informazioni aggiuntive
 
 Nell'esempio seguente viene elencato il buffer di input per le sessioni con ID sessione maggiore di 50.
 

@@ -1,5 +1,5 @@
 ---
-title: Tipo di proprietà (colonna) (ADOX) | Microsoft Docs
+title: Proprietà Type (Column) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,20 +20,20 @@ ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965023"
 ---
 # <a name="type-property-column-adox"></a>Proprietà Type (Column) (ADOX)
 Indica il tipo di dati di una colonna.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un **lungo** valore che può essere uno delle [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) costanti. Il valore predefinito è **adVarWChar**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore **Long** che può essere una delle costanti [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) . Il valore predefinito è **adVarWChar**.  
   
-## <a name="remarks"></a>Note  
- Questa proprietà è di lettura/scrittura finché il [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto viene aggiunto a una raccolta o a un altro oggetto, dopo il quale è di sola lettura.  
+## <a name="remarks"></a>Osservazioni  
+ Questa proprietà è di lettura/scrittura finché l'oggetto [colonna](../../../ado/reference/adox-api/column-object-adox.md) non viene accodato a una raccolta o a un altro oggetto, dopo il quale è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

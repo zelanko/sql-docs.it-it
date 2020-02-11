@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071820"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
-  Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per altre informazioni, vedere [costrutti supportati in Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+  Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per ulteriori informazioni, vedere [costrutti supportati nelle stored procedure compilate in modo nativo](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Esistono, tuttavia, alcune funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che sono supportate solo per le stored procedure compilate in modo nativo:  
   
@@ -55,11 +55,12 @@ go
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle cui viene fatto riferimento nella procedura devono includere il nome dello schema e i caratteri jolly (\*) non sono consentiti nelle query. `SCHEMABINDING` è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|`EXECUTE AS`|Le stored procedure compilate in modo nativo non supportano `EXECUTE AS CALLER`, ovvero il contesto di esecuzione predefinito. Di conseguenza, è necessario specificare il contesto di esecuzione. Le opzioni `EXECUTE AS OWNER`, `EXECUTE AS` *utente*, e `EXECUTE AS SELF` sono supportati.|  
-|`BEGIN ATOMIC`|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> `TRANSACTION ISOLATION LEVEL` (Indici per tabelle con ottimizzazione per la memoria). Visualizzare [livelli di isolamento delle transazioni](../../database-engine/transaction-isolation-levels.md) per i livelli di isolamento supportati.<br /><br /> `LANGUAGE` (Indici per tabelle con ottimizzazione per la memoria). Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
+|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle a cui viene fatto riferimento nella procedura devono includere il nome dello schema e\*i caratteri jolly () non sono consentiti nelle query. 
+  `SCHEMABINDING` è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`EXECUTE AS`|Le stored procedure compilate in modo nativo non supportano `EXECUTE AS CALLER`, ovvero il contesto di esecuzione predefinito. Di conseguenza, è necessario specificare il contesto di esecuzione. Sono supportate `EXECUTE AS OWNER`le `EXECUTE AS`opzioni, *User*e `EXECUTE AS SELF` .|  
+|`BEGIN ATOMIC`|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Vedere [livelli di isolamento delle transazioni](../../database-engine/transaction-isolation-levels.md) per i livelli di isolamento supportati.<br /><br /> `LANGUAGE`. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
   
- In relazione a `EXECUTE AS` e agli account di accesso di Windows, può verificarsi un errore a causa della rappresentazione eseguita tramite `EXECUTE AS`. Se un account utente utilizza l'autenticazione di Windows, è necessario che vi sia attendibilità totale tra l'account del servizio utilizzato per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il dominio dell'account di accesso di Windows. Se non vi è attendibilità totale, viene restituito il messaggio di errore seguente quando si crea un compilate in modo nativo stored procedure: Messaggio 15404, non è stato possibile ottenere informazioni su Windows NT gruppo/utente 'username', codice di errore 0x5.  
+ In relazione a `EXECUTE AS` e agli account di accesso di Windows, può verificarsi un errore a causa della rappresentazione eseguita tramite `EXECUTE AS`. Se un account utente utilizza l'autenticazione di Windows, è necessario che vi sia attendibilità totale tra l'account del servizio utilizzato per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il dominio dell'account di accesso di Windows. Se non è presente alcuna attendibilità totale, quando si crea una stored procedure compilata in modo nativo viene restituito il messaggio di errore seguente: messaggio 15404, non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT ' username ', codice di errore 0x5.  
   
  Per risolvere l'errore, utilizzare una delle soluzioni seguenti:  
   
@@ -69,7 +70,7 @@ go
   
 -   Utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Durante la creazione di una stored procedure compilata in modo nativo, potrebbe essere visualizzato l'errore 15517. Per altre informazioni, vedere [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md).  
+ Durante la creazione di una stored procedure compilata in modo nativo, potrebbe essere visualizzato l'errore 15517. Per ulteriori informazioni, vedere [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md).  
   
 ## <a name="updating-a-natively-compiled-stored-procedure"></a>Aggiornamento di una stored procedure compilata in modo nativo  
  L'esecuzione di operazioni di modifica nelle stored procedure compilate in modo nativo non è supportata. Per modificare una stored procedure compilata in modo nativo è possibile eliminare e ricreare la stored procedure:  

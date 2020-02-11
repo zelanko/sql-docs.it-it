@@ -19,10 +19,10 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d83ee1d69e7083931a2f6e6befb89912abec43f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138683"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Rappresentazione e credenziali per le connessioni
@@ -31,11 +31,11 @@ ms.locfileid: "68138683"
   
  Per impostazione predefinita, un processo di SQL Server che si connette a Windows acquisisce il contesto di sicurezza dell'account di servizio Windows di SQL Server. È tuttavia possibile eseguire il mapping di una funzione CLR a un'identità del proxy, in modo che le connessioni in uscita dispongano di un contesto di sicurezza diverso da quello dell'account di servizio Windows.  
   
- In alcuni casi, è possibile rappresentare il chiamante usando il **SqlContext.WindowsIdentity** proprietà anziché in esecuzione come account del servizio. Il **WindowsIdentity** istanza rappresenta l'identità del client che viene richiamato il codice chiamante ed è disponibile solo quando l'autenticazione di Windows usato dal client. Dopo aver ottenuto il **WindowsIdentity** istanza, è possibile chiamare **Impersonate** per modificare il token di sicurezza del thread, quindi aprire le connessioni ADO.NET per conto del client.  
+ In alcuni casi, potrebbe essere necessario rappresentare il chiamante utilizzando la proprietà **SqlContext. WindowsIdentity** anziché eseguire come account del servizio. L'istanza **WindowsIdentity** rappresenta l'identità del client che ha richiamato il codice chiamante ed è disponibile solo quando il client usa l'autenticazione di Windows. Una volta ottenuta l'istanza di **WindowsIdentity** , è possibile chiamare **Impersonate** per modificare il token di sicurezza del thread, quindi aprire connessioni ADO.NET per conto del client.  
   
- Dopo aver chiamato SQLContext.WindowsIdentity.Impersonate, è possibile accedere ai dati locali e non può accedere ai dati di sistema. Per accedere ai dati anche in questo caso, è necessario chiamare WindowsImpersonationContext.  
+ Dopo aver chiamato SqlContext. WindowsIdentity. Impersonate, non è possibile accedere ai dati locali e non è possibile accedere ai dati di sistema. Per accedere di nuovo ai dati, è necessario chiamare WindowsImpersonationContext. Undo.  
   
- Nell'esempio seguente viene illustrato come rappresentare il chiamante usando il **SqlContext.WindowsIdentity** proprietà.  
+ Nell'esempio seguente viene illustrato come rappresentare il chiamante utilizzando la proprietà **SqlContext. WindowsIdentity** .  
   
  Visual C#  
   
@@ -71,9 +71,9 @@ catch
 ```  
   
 > [!NOTE]  
->  Per informazioni sulle modifiche del comportamento della rappresentazione, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Per informazioni sulle modifiche del comportamento nella rappresentazione, vedere [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Per ulteriori informazioni sulla delega, vedere l'articolo TechNet "[transizione del protocollo Kerberos e delega vincolata](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto SqlContext](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

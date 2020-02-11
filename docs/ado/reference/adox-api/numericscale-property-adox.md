@@ -20,26 +20,26 @@ ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16fdefcb06d2b1b90dfc3da39aaf6b1c9659debc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965742"
 ---
 # <a name="numericscale-property-adox"></a>Proprietà NumericScale (ADOX)
 Indica la scala di un valore numerico nella colonna.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **Byte** valore che rappresenta la scala dei valori dei dati nella colonna quando il [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) proprietà è **adNumeric** oppure **adDecimal**. **NumericScale** viene ignorato per tutti gli altri tipi di dati.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore **byte** che rappresenta la scala dei valori di dati nella colonna quando la proprietà [Type](../../../ado/reference/adox-api/type-property-column-adox.md) è **adNumeric** o **adDecimal**. **NumericScale** viene ignorato per tutti gli altri tipi di dati.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore predefinito è zero (0).  
   
- **NumericScale** è di sola lettura per [colonna](../../../ado/reference/adox-api/column-object-adox.md) già aggiunti a una raccolta di oggetti.  
+ **NumericScale** è di sola lettura per gli oggetti [Column](../../../ado/reference/adox-api/column-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di codice: Esempio NumericScale e Precision Properties (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Esempio di codice ADOX: esempio di proprietà NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Proprietà Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

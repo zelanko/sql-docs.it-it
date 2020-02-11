@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198988"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Rilevamento dei conflitti nella replica peer-to-peer
@@ -86,7 +86,7 @@ ms.locfileid: "68198988"
   
 -   Tentare di sincronizzare nuovamente il nodo consentendo all'agente di distribuzione di continuare ad applicare le modifiche:  
   
-    1.  Eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specificare 'p2p_continue_onconflict' per il @property parametro e `true` per il @value parametro.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specificare ' p2p_continue_onconflict ' per il @property parametro e `true` per il @value parametro.  
   
     2.  Riavviare l'agente di distribuzione.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68198988"
         > [!NOTE]  
         >  Se i dati sono incoerenti dopo questo passaggio, è necessario aggiornare manualmente le righe sul nodo con la massima priorità, quindi consentire la propagazione delle modifiche da questo nodo. Se non sono presenti ulteriori modifiche in conflitto nella topologia, tutti i nodi verranno portati in uno stato coerente.  
   
-    5.  Eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specificare 'p2p_continue_onconflict' per il @property parametro e `false` per il @value parametro.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specificare ' p2p_continue_onconflict ' per il @property parametro e `false` per il @value parametro.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  

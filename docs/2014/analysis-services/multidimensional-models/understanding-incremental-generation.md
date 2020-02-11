@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811065"
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
@@ -84,7 +84,7 @@ ms.locfileid: "68811065"
  Se invece si modifica la stringa di connessione dell'origine dei dati impostando un database diverso rispetto alla generazione precedente, non verrà generato alcun errore. Verrà utilizzato il nuovo database senza alcuna modifica al database precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire modifiche a viste origine dati e origini dati](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Gestione delle modifiche a viste origine dati e origini dati](manage-changes-to-data-source-views-and-data-sources.md)   
  [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

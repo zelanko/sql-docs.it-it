@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633435"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "73633435"
 
 Restituisce le statistiche del gruppo di carico di lavoro e i valori effettivi del gruppo di carico di lavoro in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Nome colonna|tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|ID univoco del gruppo del carico di lavoro.||
 |name|**sysname**|Nome del gruppo del carico di lavoro.||
@@ -41,4 +41,4 @@ Restituisce le statistiche del gruppo di carico di lavoro e i valori effettivi d
 
 ## <a name="see-also"></a>Vedere anche
 
- [Transact-SQL SQL Data Warehouse e Parallel data warehouse &#40;viste a gestione dinamica&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

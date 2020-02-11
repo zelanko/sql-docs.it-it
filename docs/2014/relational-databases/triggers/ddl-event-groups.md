@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211721"
 ---
 # <a name="ddl-event-groups"></a>gruppi di eventi DDL
@@ -27,7 +27,7 @@ ms.locfileid: "68211721"
 > [!NOTE]  
 >  Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL o notifiche degli eventi. Testare i trigger DDL e le notifiche degli eventi per determinarne la risposta alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e la stored procedure **sp_addtype** consentono entrambe di attivare un trigger DDL o una notifica degli eventi creata in un evento CREATE_TYPE.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  Gli eventi elencati in DDL_DATABASE_LEVEL_EVENTS vengono eseguiti a livello di server (istanza) o di database. Gli eventi elencati in DDL_SERVER_LEVEL_EVENTS vengono eseguiti solo a livello di server.  
   
 ||||  

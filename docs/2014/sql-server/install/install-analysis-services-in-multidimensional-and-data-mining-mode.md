@@ -17,18 +17,20 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890378"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e i modelli di data mining è [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponibile quando si installa in *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una funzionalità per istanze multiple, ovvero è possibile installare più di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un unico computer oppure eseguire una nuova istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side con una versione precedente. La modalità del server è specifica di un'istanza. L'utilizzo di altre modalità richiede l'installazione di altre istanze del server.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una funzionalità per istanze multiple, ovvero è possibile installare più di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un unico computer oppure eseguire una nuova istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side con una versione precedente. La modalità del server è specifica di un'istanza. L'utilizzo di altre modalità richiede l'installazione di altre istanze del server.  
   
- È possibile installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da solo o con altri componenti. Se si installa solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le seguenti funzionalità vengono installate quando si seleziona **Analysis Services** nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezione funzionalità dell'installazione guidata di:  
+ È possibile installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da solo o con altri componenti. Se si installa solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le seguenti funzionalità vengono installate quando si seleziona **Analysis Services** nella pagina Selezione funzionalità dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di:  
   
 -   Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'esecuzione dei modelli di data mining e dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -39,11 +41,13 @@ ms.locfileid: "68890378"
 ## <a name="choosing-additional-features"></a>Scelta di ulteriori funzionalità  
  Per soluzioni OLAP e di data warehouse di Analysis Services è richiesta l'installazione di componenti aggiuntivi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini dello sviluppo, della distribuzione e dell'amministrazione dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le funzionalità aggiuntive seguenti rappresentano opzioni disponibili per molti scenari utente tipici:  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilizzato per creare e visualizzare modelli di data mining e strutture di dati di Analysis Services.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilizzato per creare e visualizzare modelli di data mining e strutture di dati di Analysis Services.  
   
--   Componenti di connettività degli strumenti client usati per la comunicazione tra client e server, incluse le librerie di rete per DB-Library, ODBC e OLE DB.  
+-   Componenti per connettività degli strumenti client, utilizzati per la comunicazione tra client e server, incluse le librerie di rete per DB-Library, ODBC e OLE DB.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un set di oggetti grafici e programmabili per lo spostamento, la copia e la trasformazione dei dati.  
+-   
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un set di oggetti grafici e programmabili per lo spostamento, la copia e la trasformazione dei dati.  
   
 -   Strumenti di gestione, tra cui Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e Monitoraggio replica.  
   
@@ -53,7 +57,7 @@ ms.locfileid: "68890378"
 |Collegamenti|Attività|  
 |-----------|-----------|  
 |[Requisiti hardware e software per l'installazione di SQL Server 2014 e la](hardware-and-software-requirements-for-installing-sql-server.md) [configurazione di account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Prima di eseguire il programma di installazione, controllare i prerequisiti relativi all'installazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e determinare quale account verrà utilizzato per il provisioning del server.|  
-|[Installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Eseguire il programma di installazione di SQL Server per installare il software.|  
+|[Installare SQL Server 2014 dall'installazione guidata &#40;&#41;di installazione ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Eseguire il programma di installazione di SQL Server per installare il software.|  
 |[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Al termine dell'installazione, è necessario configurare le impostazioni del firewall per consentire le connessioni remote al server.|  
 |[Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Gli utenti che accedono ai database di Analysis Services devono disporre dell'autorizzazione in lettura per almeno un database nel server.|  
   
@@ -62,7 +66,7 @@ ms.locfileid: "68890378"
   
  [Installare Analysis Services in modalità Tabella](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
- [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
  [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   

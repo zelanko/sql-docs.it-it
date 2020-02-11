@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122950"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70122950"
 
 Questa funzione restituisce una stringa risultante dalla concatenazione o unione in join end-to-end di due o più valori di stringa. Per l'aggiunta di un valore di separazione durante la concatenazione, vedere [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,15 +46,15 @@ Valore stringa da concatenare agli altri valori. La funzione `CONCAT` richiede a
 *string_value*  
 Valore stringa la cui lunghezza e tipo dipendono dall'input.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `CONCAT` accetta un numero variabile di argomenti stringa e li concatena in una singola stringa. Richiede un minimo di due valori di input. In caso contrario, `CONCAT` genera un errore. `CONCAT` converte in modo implicito tutti gli argomenti nei tipi di stringa prima della concatenazione. `CONCAT` converte in modo implicito i valori Null in stringhe vuote. Se `CONCAT` riceve argomenti con tutti i valori **NULL**, restituisce una stringa vuota di tipo **varchar**(1). Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per altre informazioni sulle conversioni dei tipi di dati, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 Il tipo restituito dipende dal tipo degli argomenti. Nella tabella seguente viene illustrato il mapping:
   
 |Tipo di input|Tipo di output e lunghezza|  
 |---|---|
-|1. Qualsiasi argomento di<br><br />un tipo di sistema CLR SQL<br><br />un UDT CLR SQL<br><br />o Gestione configurazione<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o Gestione configurazione<br><br />**ntext**|**varchar(max)** , a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
+|1. Qualsiasi argomento di<br><br />un tipo di sistema CLR SQL<br><br />un UDT CLR SQL<br><br />o<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o<br><br />**ntext**|**varchar(max)** , a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
 |3. In alternativa, qualsiasi argomento di tipo **nvarchar** di 4000 caratteri al massimo<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4. In tutti gli altri casi|**varchar**(<= 8000) (un elemento **varchar** di 8000 caratteri al massimo), a meno che uno dei parametri non sia un tipo nvarchar di qualsiasi lunghezza. In questo caso, `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
   
@@ -66,7 +66,7 @@ La funzione CONCAT può essere eseguita in modalità remota su un server collega
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-concat"></a>A. Utilizzo di CONCAT  
+### <a name="a-using-concat"></a>R. Utilizzo di CONCAT  
   
 ```sql
 SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  
@@ -115,7 +115,7 @@ NameLastname
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

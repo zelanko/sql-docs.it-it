@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774744"
 ---
 # <a name="password-expired"></a>Password scaduta
-  Questa finestra di dialogo viene visualizzata quando si esegue la connessione a un server con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso in cui la password immessa sia corretta ma scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Viene visualizzato quando ci si connette a un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'autenticazione di e la password specificata è corretta ma è scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
- **Account di accesso**  
+ **Accesso**  
  Consente di visualizzare l'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in uso.  
   
  **Nuova password**  
@@ -37,7 +37,7 @@ ms.locfileid: "62774744"
 ## <a name="see-also"></a>Vedere anche  
  [Password complesse](../relational-databases/security/strong-passwords.md)   
  [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md)   
- [Modifica della modalità di autenticazione Server](configure-windows/change-server-authentication-mode.md)   
- [Modificare la password degli account usati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [Modificare la modalità di autenticazione del server](configure-windows/change-server-authentication-mode.md)   
+ [Modificare la password degli account utilizzati da SQL Server &#40;Gestione configurazione SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

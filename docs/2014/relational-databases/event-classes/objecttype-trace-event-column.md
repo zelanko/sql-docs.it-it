@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028378"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
@@ -29,12 +29,12 @@ ms.locfileid: "63028378"
   
 ## <a name="object-type-column-values"></a>Valori della colonna ObjectType  
   
-|Value|Definizione|  
+|valore|Definizione|  
 |-----------|----------------|  
 |8259|Vincolo CHECK|  
 |8260|Predefinito (vincolo o autonomo)|  
 |8262|Vincolo FOREIGN KEY|  
-|8272|Stored procedure|  
+|8272|Stored Procedure|  
 |8274|Regola|  
 |8275|Tabella di sistema|  
 |8276|Trigger nel server|  
@@ -43,10 +43,10 @@ ms.locfileid: "63028378"
 |8280|Stored procedure estesa|  
 |16724|Trigger CLR|  
 |16964|Database|  
-|16975|Object|  
+|16975|Oggetto|  
 |17222|Catalogo full-text|  
 |17232|Stored procedure CLR|  
-|17235|schema|  
+|17235|SCHEMA|  
 |17475|Credenziale|  
 |17491|Evento DDL|  
 |17741|Evento di gestione|  
@@ -65,7 +65,7 @@ ms.locfileid: "63028378"
 |19283|ObfusKey|  
 |19521|Account di accesso con chiave asimmetrica|  
 |19523|Account di accesso con certificato|  
-|19538|Role|  
+|19538|Ruolo|  
 |19539|Account di accesso SQL|  
 |19543|Account di accesso Windows|  
 |20034|Associazione al servizio remoto|  

@@ -20,16 +20,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875669"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
   In questo argomento viene descritto il ripristino di un backup del log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62875669"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Per ripristinare un backup del log delle transazioni  
   
-1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
+1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62875669"
   
      Nella tabella seguente vengono elencate le intestazioni delle colonne della griglia con una descrizione dei rispettivi valori.  
   
-    |Intestazione|Value|  
+    |Intestazione|valore|  
     |------------|-----------|  
     |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
-    |**Name**|Nome del set di backup.|  
-    |**Componente**|Componente di backup: **Database**, **File**, o \<vuoto > (per i log delle transazioni).|  
+    |**Nome**|Nome del set di backup.|  
+    |**Componente**|Componente di cui è stato eseguito il backup: **Database**, **File** o \<vuoto> (per i log delle transazioni).|  
     |**Database**|Nome del database su cui viene eseguita l'operazione di backup.|  
     |**Data inizio**|Data e ora di inizio dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.|  
     |**Data fine**|Data e ora di fine dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.|  
@@ -114,7 +114,7 @@ ms.locfileid: "62875669"
     |**Posizione**|Posizione del set di backup nel volume.|  
     |**Scadenza**|Data e ora di scadenza del set di backup.|  
   
-7.  Selezionare una delle opzioni seguenti:  
+7.  Selezionare uno degli elementi seguenti:  
   
     -   **Temporizzazione**  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62875669"
   
          Nella tabella seguente vengono elencate le intestazioni delle colonne della griglia con una descrizione dei rispettivi valori.  
   
-        |Intestazione|Value|  
+        |Intestazione|valore|  
         |------------|-----------|  
         |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
         |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  
@@ -146,9 +146,9 @@ ms.locfileid: "62875669"
   
          Consente di mantenere le impostazioni di replica durante il ripristino di un database pubblicato in un server diverso da quello in cui è stato creato il database.  
   
-         Questa opzione è disponibile solo con il **lascia il database pronto per l'utilizzo eseguendo il rollback di transazioni non sottoposte a commit...**  opzione (descritta più avanti), che equivale al ripristino di un backup con il `RECOVERY` opzione.  
+         Questa opzione è disponibile solo con l'opzione **lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit...** (descritta più avanti), equivalente `RECOVERY` al ripristino di un backup con l'opzione.  
   
-         Si seleziona questa opzione equivale all'uso di `KEEP_REPLICATION` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         La selezione di questa opzione equivale all'utilizzo `KEEP_REPLICATION` dell'opzione in [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` un'istruzione.  
   
     -   **Chiedi conferma prima del ripristino di ogni backup**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875669"
   
          Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
   
-         Si seleziona questa opzione equivale all'uso di `RESTRICTED_USER` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         La selezione di questa opzione è sinonimo `RESTRICTED_USER` dell'utilizzo dell' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` opzione in un'istruzione.  
   
 10. Nel gruppo di opzioni **Stato di recupero** specificare lo stato desiderato per il database dopo l'operazione di ripristino.  
   
     -   **Lascia il database pronto per l'uso eseguendo il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. (RESTORE WITH RECOVERY)**  
   
-         Esegue il recupero del database. Questa opzione equivale al `RECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Esegue il recupero del database. Questa opzione equivale all' `RECOVERY` opzione in un' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Selezionare questa opzione solo se non sono disponibili file di log da ripristinare.  
   
     -   **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)**  
   
-         Il database viene lasciato nello stato `RESTORING`. Questa opzione equivale all'uso di `NORECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Il database viene lasciato nello stato `RESTORING`. Questa opzione equivale all'utilizzo dell' `NORECOVERY` opzione in un' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Quando si seleziona questa opzione, l'opzione **Mantieni le impostazioni di replica** non è disponibile.  
   
@@ -183,13 +183,13 @@ ms.locfileid: "62875669"
   
     -   **Lascia il database in modalità sola lettura. Annulla le transazioni di cui non è stato eseguito il commit e salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati. (RESTORE WITH STANDBY)**  
   
-         Il database viene lasciato nello stato di standby. Questa opzione equivale all'uso di `STANDBY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Il database viene lasciato nello stato di standby. Questa opzione equivale all'utilizzo dell' `STANDBY` opzione in un' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Se si seleziona questa opzione è necessario specificare un file standby.  
   
 11. Facoltativamente, specificare un nome per il file standby nella casella di testo **File standby** . Questa opzione è necessaria se il database viene lasciato in modalità sola lettura. È possibile cercare il file standby per selezionarlo oppure digitarne direttamente il percorso nella casella di testo.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 > [!IMPORTANT]  
 >  È consigliabile specificare sempre in modo esplicito WITH NORECOVERY oppure WITH RECOVERY in ogni istruzione RESTORE per evitare ambiguità. Questa precauzione è particolarmente importante durante la scrittura di script.  
@@ -241,7 +241,7 @@ ms.locfileid: "62875669"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Applicazione di un singolo backup del log delle transazioni  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>R. Applicazione di un singolo backup del log delle transazioni  
  Nell'esempio seguente viene innanzitutto ripristinato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] da un backup completo del database che risiede in un dispositivo di backup denominato `AdventureWorks2012_1`. Viene quindi applicato il primo backup del log delle transazioni che risiede nel dispositivo di backup denominato `AdventureWorks2012_log`e infine viene recuperato il database.  
   
 ```sql  
@@ -291,13 +291,13 @@ GO
   
 -   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup del database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Ripristinare un database al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
+-   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [Ripristino di un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19efcc8b4381694177d0ec3d64376368e8d23a7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779774"
 ---
 # <a name="batches-of-statements"></a>Batch di istruzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Un batch di istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene due o più istruzioni, separate da un punto e virgola (;), compilate in una singola stringa passata a **SQLExecDirect** o alla [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Esempio:  
+  Un batch di [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni contiene due o più istruzioni, separate da un punto e virgola (;), compilate in una singola stringa passata a **SQLExecDirect** o alla [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Ad esempio:  
   
 ```  
 SQLExecDirect(hstmt,   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200442"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installazione del provider OLE DB di Analysis Services nei server di SharePoint
@@ -39,7 +39,7 @@ ms.locfileid: "74200442"
   
  Nella tabella seguente vengono descritte le versioni valide.  
   
-|Versione prodotto|Versione file|Valida per:|  
+|Versione del prodotto|Versione file|Valida per:|  
 |---------------------|------------------|----------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|MSOLAP100.dll nel file system<br /><br /> MSOLAP.4 in una stringa di connessione Excel<br /><br /> 10.50.1600 o successiva nei dettagli della versione del file|Utilizzare i modelli di dati creati con la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di PowerPivot per Excel.|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|MSOLAP110.dll nel file system<br /><br /> MSOLAP.5 in una stringa di connessione Excel<br /><br /> 11.0.0000 o successiva nei dettagli della versione del file|Utilizzare i modelli di dati creati con la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel.|  
@@ -159,6 +159,6 @@ ms.locfileid: "74200442"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di PowerPivot per SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

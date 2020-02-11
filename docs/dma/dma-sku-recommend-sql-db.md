@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72586733"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
@@ -57,10 +57,10 @@ Non è necessario eseguire questa attività per ogni database singolarmente. I c
     ![File di PowerShell visualizzato nella cartella DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. Eseguire lo script di PowerShell con gli argomenti seguenti:
-    - **ComputerName**: Nome del computer che ospita i database.
-    - **OutputFilePath**: Percorso del file di output in cui salvare i contatori raccolti.
-    - **CollectionTimeInSeconds**: Periodo di tempo durante il quale si desidera raccogliere i dati dei contatori delle prestazioni. Acquisire i contatori delle prestazioni per almeno 40 minuti per ottenere una raccomandazione significativa. Maggiore è la durata dell'acquisizione, maggiore sarà l'accuratezza dell'indicazione. Assicurarsi inoltre che i carichi di lavoro siano in esecuzione per i database desiderati per abilitare raccomandazioni più accurate.
-    - **DbConnectionString**: Stringa di connessione che punta al database master ospitato nel computer da cui vengono raccolti i dati dei contatori delle prestazioni.
+    - **ComputerName**: nome del computer che ospita i database.
+    - **OutputFilePath**: percorso del file di output in cui salvare i contatori raccolti.
+    - **CollectionTimeInSeconds**: periodo di tempo durante il quale si desidera raccogliere i dati dei contatori delle prestazioni. Acquisire i contatori delle prestazioni per almeno 40 minuti per ottenere una raccomandazione significativa. Maggiore è la durata dell'acquisizione, maggiore sarà l'accuratezza dell'indicazione. Assicurarsi inoltre che i carichi di lavoro siano in esecuzione per i database desiderati per abilitare raccomandazioni più accurate.
+    - **DbConnectionString**: stringa di connessione che punta al database master ospitato nel computer da cui vengono raccolti i dati dei contatori delle prestazioni.
 
     Ecco una chiamata di esempio:
 
@@ -84,42 +84,42 @@ Per istanza gestita, le raccomandazioni supportano uno scenario Lift-and-Shift. 
 
 Per usare l'interfaccia della riga di comando DMA per ottenere le raccomandazioni dello SKU, al prompt dei comandi eseguire dmacmd. exe con gli argomenti seguenti:
 
-- **/Action = SkuRecommendation**: Immettere questo argomento per eseguire valutazioni SKU.
-- **/SkuRecommendationInputDataFilePath**: Percorso del file del contatore raccolto nella sezione precedente.
-- **/SkuRecommendationTsvOutputResultsFilePath**: Percorso in cui scrivere i risultati dell'output in formato TSV.
-- **/SkuRecommendationJsonOutputResultsFilePath**: Percorso in cui scrivere i risultati dell'output in formato JSON.
-- **/SkuRecommendationHtmlResultsFilePath**: Percorso in cui scrivere i risultati dell'output in formato HTML.
+- **/Action = SkuRecommendation**: immettere questo argomento per eseguire valutazioni SKU.
+- **/SkuRecommendationInputDataFilePath**: percorso del file del contatore raccolto nella sezione precedente.
+- **/SkuRecommendationTsvOutputResultsFilePath**: percorso in cui scrivere i risultati dell'output in formato TSV.
+- **/SkuRecommendationJsonOutputResultsFilePath**: percorso in cui scrivere i risultati dell'output in formato JSON.
+- **/SkuRecommendationHtmlResultsFilePath**: percorso in cui scrivere i risultati dell'output in formato HTML.
 
 Inoltre, selezionare uno degli argomenti seguenti:
 
 - Impedisci aggiornamento prezzi
-  - **/SkuRecommendationPreventPriceRefresh**: Se impostato su true, impedisce l'aggiornamento del prezzo e presuppone i prezzi predefiniti. Usare se è in esecuzione in modalità offline. Se non si usa questo parametro, è necessario specificare i parametri seguenti per ottenere i prezzi più recenti in base a un'area specificata.
+  - **/SkuRecommendationPreventPriceRefresh**: se impostato su true, impedisce l'aggiornamento del prezzo e presuppone i prezzi predefiniti. Usare se è in esecuzione in modalità offline. Se non si usa questo parametro, è necessario specificare i parametri seguenti per ottenere i prezzi più recenti in base a un'area specificata.
 - Ottieni i prezzi più recenti
-  - **/SkuRecommendationCurrencyCode**: La valuta in cui visualizzare i prezzi, ad esempio "USD").
-  - **/SkuRecommendationOfferName**: Nome dell'offerta, ad esempio "MS-AZR-0003P"). Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) .
-    - **/SkuRecommendationRegionName**: Nome dell'area (ad esempio, "Westus").
-    - **/SkuRecommendationSubscriptionId**: ID della sottoscrizione.
-    - **/AzureAuthenticationTenantId**: Tenant di autenticazione.
+  - **/SkuRecommendationCurrencyCode**: valuta in cui visualizzare i prezzi, ad esempio "USD".
+  - **/SkuRecommendationOfferName**: nome dell'offerta, ad esempio "MS-AZR-0003P". Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) .
+    - **/SkuRecommendationRegionName**: nome dell'area (ad esempio, "westus").
+    - **/SkuRecommendationSubscriptionId**: ID sottoscrizione.
+    - **/AzureAuthenticationTenantId**: tenant di autenticazione.
     - **/AzureAuthenticationClientId**: ID client dell'app AAD usata per l'autenticazione.
     - Una delle opzioni di autenticazione seguenti:
-      - Interattiva
-        - **AzureAuthenticationInteractiveAuthentication**: Impostare su true per una finestra popup di autenticazione.
+      - Interattività
+        - **AzureAuthenticationInteractiveAuthentication**: impostare su true per una finestra popup di autenticazione.
       - Basato su certificati
-        - **AzureAuthenticationCertificateStoreLocation**: Impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser".
-        - **AzureAuthenticationCertificateThumbprint**: Impostare sull'identificazione personale del certificato.
+        - **AzureAuthenticationCertificateStoreLocation**: impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser".
+        - **AzureAuthenticationCertificateThumbprint**: impostare sull'identificazione personale del certificato.
       - Basato su token
-        - **AzureAuthenticationToken**: Impostare sul token del certificato.
+        - **AzureAuthenticationToken**: impostato sul token del certificato.
 
 > [!NOTE]
-> Per ottenere i ClientID e TenantId per l'autenticazione interattiva, è necessario configurare una nuova applicazione di AAD. Per ulteriori informazioni sull'autenticazione e il recupero delle credenziali, nell'articolo [Microsoft esempi di codice dell'API di fatturazione di Azure: @No__t_0 API tariffario, seguire le istruzioni riportate in **Step 1: Configurare un'applicazione client nativa nel tenant di AAD** .
+> Per ottenere i ClientID e TenantId per l'autenticazione interattiva, è necessario configurare una nuova applicazione di AAD. Per altre informazioni sull'autenticazione e sull'acquisizione di queste credenziali, vedere l'articolo [Microsoft Azure esempi di codice dell'API di fatturazione: API tariffario](https://github.com/Azure-Samples/billing-dotnet-ratecard-api), seguire le istruzioni in **passaggio 1: configurare un'applicazione client nativa nel tenant di AAD**.
 
 Infine, è disponibile un argomento facoltativo che è possibile usare per specificare i database per i quali si desiderano le raccomandazioni: 
 
-- **/SkuRecommendationDatabasesToRecommend**: Elenco di database per i quali eseguire le raccomandazioni. I nomi di database fanno distinzione tra maiuscole e minuscole e devono (1) essere trovati nel file di input. csv, (2) ciascuno racchiuso tra virgolette doppie e (3) ciascuno è separato da uno spazio singolo tra i nomi (ad esempio/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") . Se si omette questo parametro, assicurarsi che vengano fornite le indicazioni per tutti i database utente identificati nel file input. csv.  
+- **/SkuRecommendationDatabasesToRecommend**: elenco di database per i quali eseguire le raccomandazioni. I nomi di database fanno distinzione tra maiuscole e minuscole e devono (1) essere trovati nel file di input. csv, (2) ciascuno racchiuso tra virgolette doppie e (3) ciascuno è separato da uno spazio singolo tra i nomi (ad esempio/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"). Se si omette questo parametro, assicurarsi che vengano fornite le indicazioni per tutti i database utente identificati nel file input. csv.  
 
 Di seguito sono riportate alcune chiamate di esempio:
 
-**Sample 1: Ottenere raccomandazioni con prezzi predefiniti. Usare quando si esegue in modalità offline o quando non si dispone delle credenziali di autenticazione.**
+**Esempio 1: recupero di raccomandazioni con prezzi predefiniti. Usare quando si esegue in modalità offline o quando non si dispone delle credenziali di autenticazione.**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -130,7 +130,7 @@ Di seguito sono riportate alcune chiamate di esempio:
 /SkuRecommendationPreventPriceRefresh=true
 ```
 
-**Sample 2: Ottenere le raccomandazioni con i prezzi più recenti per l'area specificata (ad esempio, "UKWest").**
+**Esempio 2: ottenere raccomandazioni con i prezzi più recenti per l'area specificata (ad esempio, "UKWest").**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -147,7 +147,7 @@ Di seguito sono riportate alcune chiamate di esempio:
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-**Sample 3: Ottenere raccomandazioni per database specifici, ad esempio "TPCDS1G,EDW_3G,TPCDS10G").**
+**Esempio 3: ottenere consigli per database specifici, ad esempio "TPCDS1G, EDW_3G, TPCDS10G".**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation 
@@ -184,7 +184,7 @@ Segue una descrizione di ogni colonna nel file di output.
 - **ExclusionReasons** : questo valore è vuoto se si consiglia un livello. Per ogni livello non consigliato, vengono forniti i motivi per cui non è stata selezionata.
 - **AppliedRules** : breve notazione delle regole applicate.
 
-Il livello consigliato finale (ad esempio, **MetricType**) e il valore (ad esempio, **MetricValue**), trovato dove la colonna **IsTierRecommended** è true, riflette lo SKU minimo necessario per l'esecuzione delle query in Azure con una percentuale di successo simile a database locali. Per l'istanza gestita, DMA supporta attualmente le raccomandazioni per gli SKU 8vcore più comunemente usati per 40vcore. Se, ad esempio, lo SKU minimo consigliato è S4 per il livello standard, la scelta di S3 o di seguito provocherà il timeout o l'esecuzione delle query.
+Il livello consigliato finale (ad esempio, **MetricType**) e il valore (ad esempio, **MetricValue**), trovato dove la colonna **IsTierRecommended** è true, riflette lo SKU minimo necessario per l'esecuzione delle query in Azure con una percentuale di successo simile ai database locali. Per l'istanza gestita, DMA supporta attualmente le raccomandazioni per gli SKU 8vcore più comunemente usati per 40vcore. Se, ad esempio, lo SKU minimo consigliato è S4 per il livello standard, la scelta di S3 o di seguito provocherà il timeout o l'esecuzione delle query.
 
 Il file HTML contiene queste informazioni in formato grafico. Fornisce un mezzo intuitivo per visualizzare la raccomandazione finale e il provisioning della parte successiva del processo. Altre informazioni sull'output HTML sono riportate nella sezione seguente.
 
@@ -206,7 +206,7 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
     - **Region** (area): area in cui eseguire il provisioning dei database. Assicurarsi che la sottoscrizione supporti l'area di selezione.
     - **Nome del server** : il server di database SQL di Azure in cui si desidera distribuire i database. Se si immette un nome di server che non esiste, verrà creato.
     - **Nome utente amministratore** : nome utente amministratore del server.
-    - **Password amministratore** : password amministratore server. La password deve avere una lunghezza compresa tra 8 e 128 caratteri. La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #,% e così via). La password non può contenere tutto o parte (3 + lettere consecutive) dal nome utente.
+    - **Password amministratore** : password amministratore server. La password deve avere una lunghezza compresa tra 8 e 128 caratteri. La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via). La password non può contenere tutto o parte (3 + lettere consecutive) dal nome utente.
 
 2. Esaminare i consigli per ogni database e modificare il piano tariffario, il livello di calcolo e le dimensioni massime dei dati in base alle esigenze. Assicurarsi di deselezionare i database di cui non si vuole eseguire il provisioning.
 
@@ -224,7 +224,7 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
     - **Region** (area): area in cui eseguire il provisioning dei database. Assicurarsi che la sottoscrizione supporti l'area di selezione.
     - **Nome istanza** : istanza di Azure SQL istanza gestita cui si desidera eseguire la migrazione dei database. Il nome dell'istanza può contenere solo lettere minuscole, numeri è-', ma non può iniziare o terminare con '-' o contenere più di 63 caratteri.
     - **Nome utente amministratore istanza** : nome utente amministratore istanza. Verificare che il nome di accesso soddisfi i requisiti seguenti: si tratta di un identificatore SQL e non di un nome di sistema tipico, ad esempio admin, Administrator, SA, root, dbmanager, loginmanager e così via, oppure un utente o un ruolo predefinito del database, ad esempio dbo, Guest, Public e così via. Verificare che il nome non contenga spazi vuoti, caratteri Unicode o caratteri non alfabetici e che non inizi con numeri o simboli. 
-    - **Password amministratore istanza** : password amministratore istanza. La password deve avere una lunghezza di almeno 16 caratteri e non può contenere più di 128 caratteri. La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #,% e così via). La password non può contenere tutto o parte (3 + lettere consecutive) dal nome utente.
+    - **Password amministratore istanza** : password amministratore istanza. La password deve avere una lunghezza di almeno 16 caratteri e non può contenere più di 128 caratteri. La password deve contenere caratteri di tre delle categorie seguenti: lettere maiuscole, lettere minuscole, numeri (0-9) e caratteri non alfanumerici (!, $, #, % e così via). La password non può contenere tutto o parte (3 + lettere consecutive) dal nome utente.
     - **Nome VNET** : il nome VNET in cui deve essere eseguito il provisioning dell'istanza gestita. Immettere un nome di VNet esistente.
     - **Nome subnet** : il nome della subnet in cui deve essere eseguito il provisioning dell'istanza gestita. Immettere un nome di subnet esistente.
 

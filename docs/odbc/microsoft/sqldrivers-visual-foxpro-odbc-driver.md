@@ -1,5 +1,5 @@
 ---
-title: SQLDrivers (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLDrivers (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053874"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: Livello 2  
+ Conformità API ODBC: livello 2  
   
- Elenca le descrizioni di driver e parole chiave di attributo del driver.  
+ Elenca le descrizioni dei driver e le parole chiave degli attributi del driver.  
   
- Per altre informazioni, vedere [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) in *ODBC Programmer ' s Reference*.

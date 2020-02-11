@@ -15,39 +15,39 @@ ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039888"
 ---
 # <a name="diagnostic-messages"></a>Messaggi di diagnostica
-Viene restituito un messaggio di diagnostica con SQLSTATE ogni. Il valore SQLSTATE stesso spesso viene restituito con un numero di messaggi diversi. SQLSTATE 42000 (sintassi o violazione di accesso), ad esempio, viene restituito per la maggior parte degli errori nella sintassi SQL. Tuttavia, ogni errore di sintassi è probabile che essere descritti da un messaggio diverso.  
+Viene restituito un messaggio di diagnostica con ogni SQLSTATE. Lo stesso SQLSTATE viene spesso restituito con una serie di messaggi diversi. Per la maggior parte degli errori nella sintassi SQL, ad esempio, viene restituito SQLSTATE 42000 (errore di sintassi o violazione di accesso). Tuttavia, ogni errore di sintassi è probabilmente descritto da un messaggio diverso.  
   
- Messaggi di diagnostica di esempio sono elencati nella colonna di errore nella tabella di SQLSTATE nell'appendice A e in ogni funzione. Anche se i driver possono restituire questi messaggi, sono più possibilità di restituire qualsiasi messaggio viene passato a essi per l'origine dati.  
+ I messaggi di diagnostica di esempio sono elencati nella colonna Error della tabella di sqlstates nell'Appendice A e in ogni funzione. Sebbene i driver possano restituire questi messaggi, è più probabile che vengano restituiti tutti i messaggi che vengono passati dall'origine dati.  
   
- Le applicazioni in genere visualizzare messaggi di diagnostica all'utente, con il codice di errore nativo e SQLSTATE. Ciò consente all'utente e personale di supporto di determinano la causa di eventuali problemi. Le informazioni sul componente incorporati nel messaggio è particolarmente utile per eseguire questa operazione.  
+ Le applicazioni in genere visualizzano i messaggi di diagnostica per l'utente, insieme al codice di errore SQLSTATE e nativo. Questo consente all'utente e al personale del supporto di determinare la cause di eventuali problemi. Le informazioni sui componenti incorporate nel messaggio sono particolarmente utili per questa operazione.  
   
- Messaggi di diagnostica provengono da origini dati e i componenti in una connessione ODBC, ad esempio, i gateway e la gestione di Driver. In genere, le origini dati non supportano direttamente ODBC. Di conseguenza, se un componente in una connessione ODBC riceve un messaggio da un'origine dati, è necessario identificare l'origine dati come origine del messaggio. Anche deve identificarsi come componente che riceve il messaggio.  
+ I messaggi di diagnostica provengono da origini dati e componenti in una connessione ODBC, ad esempio driver, gateway e gestione driver. In genere, le origini dati non supportano direttamente ODBC. Di conseguenza, se un componente in una connessione ODBC riceve un messaggio da un'origine dati, deve identificare l'origine dati come origine del messaggio. Deve inoltre identificarsi come componente che ha ricevuto il messaggio.  
   
- Se l'origine dell'errore o avviso, è un componente stesso, il messaggio di diagnostica deve spiegare questo. Pertanto, il testo dei messaggi presenta due formati diversi. Per errori e avvisi che non sono presenti in un'origine dati, il messaggio di diagnostica debba usare questo formato:  
+ Se l'origine di un errore o di un avviso è un componente, il messaggio di diagnostica deve spiegarlo. Il testo dei messaggi, pertanto, presenta due formati diversi. Per gli errori e gli avvisi che non si verificano in un'origine dati, il messaggio di diagnostica deve utilizzare il formato seguente:  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
+ **[** *identificatore-fornitore* **] [** *ODBC-Component-Identifier* **]** *fornito dal componente-testo*  
   
- Per errori e avvisi che si verificano in un'origine dati, il messaggio di diagnostica debba usare questo formato:  
+ Per gli errori e gli avvisi che si verificano in un'origine dati, il messaggio di diagnostica deve utilizzare il formato seguente:  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
+ **[** *Vendor-Identifier* **] [** *ODBC-Component-Identifier* **] [** *Data-Source-Identifier* **]** *Data-Source-fornito-text*  
   
  La tabella seguente illustra il significato di ogni elemento.  
   
 |Elemento|Significato|  
 |-------------|-------------|  
-|*vendor-identifier*|Identifica il fornitore del componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
-|*ODBC-component-identifier*|Identifica il componente in cui si è verificato l'errore o avviso o che hanno ricevuto l'errore o avviso direttamente dall'origine dati.|  
-|*data-source-identifier*|Identifica l'origine dati. Per i driver basati su file, si tratta in genere un formato di file, ad esempio i driver basati su DBMS per Xbase [1], questo è il prodotto DBMS.|  
-|*component-supplied-text*|Generato dal componente di ODBC.|  
-|*data-source-supplied-text*|Generato dall'origine dati.|  
+|*identificatore fornitore*|Identifica il fornitore del componente in cui si è verificato l'errore o l'avviso o che ha ricevuto l'errore o l'avviso direttamente dall'origine dati.|  
+|*ODBC-Component-Identifier*|Identifica il componente in cui si è verificato l'errore o l'avviso o che ha ricevuto l'errore o l'avviso direttamente dall'origine dati.|  
+|*ID origine dati*|Identifica l'origine dati. Per i driver basati su file, si tratta in genere di un formato di file, ad esempio Xbase [1] per i driver basati su DBMS, questo è il prodotto DBMS.|  
+|*testo fornito dal componente*|Generato dal componente ODBC.|  
+|*Data Source-fornito-testo*|Generato dall'origine dati.|  
   
- [1] In questo caso, il driver viene utilizzato come il driver e l'origine dati.  
+ [1] in questo caso, il driver funge sia dal driver che dall'origine dati.  
   
- Parentesi quadre ( **[]** ) deve essere incluso nel messaggio e non indicano elementi facoltativi.
+ Le parentesi quadre (**[]**) devono essere incluse nel messaggio e non indicano elementi facoltativi.

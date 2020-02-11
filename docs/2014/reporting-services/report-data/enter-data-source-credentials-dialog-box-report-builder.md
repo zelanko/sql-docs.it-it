@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107323"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Finestra di dialogo Immetti credenziali origine dei dati (Generatore report)
@@ -31,8 +31,8 @@ ms.locfileid: "66107323"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Finestra di dialogo Proprietà origine dati, Generale &#40;Generatore report&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
- [Specifica di credenziali in Generatore report](../specify-credentials-in-report-builder.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Finestra di dialogo Proprietà origine dati, generale &#40;Generatore report&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
+ [Specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

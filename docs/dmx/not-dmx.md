@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4a28c6be2c956636f303ccc561936f799c63b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008247"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
@@ -34,8 +34,8 @@ NOT Expression1
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce FALSE se l'argomento restituisce TRUE e viceversa.  
   
-## <a name="remarks"></a>Note  
- Per consentire all'operatore di eseguire la negazione logica, l'argomento viene gestito come valore booleano, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se *Expression1* è TRUE, l'operatore restituisce FALSE. Se *Expression1* è FALSE, l'operatore restituisce TRUE. La tabella seguente illustra come viene eseguita la negazione logica.  
+## <a name="remarks"></a>Osservazioni  
+ Per consentire all'operatore di eseguire la negazione logica, l'argomento viene gestito come valore booleano, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se *expression1* è true, l'operatore restituisce false. Se *expression1* è false, l'operatore restituisce true. La tabella seguente illustra come viene eseguita la negazione logica.  
   
 |Valore di Expression1|Valore restituito|  
 |-----------------------|---------------------|  
@@ -43,8 +43,8 @@ NOT Expression1
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Gli operatori logici &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatori logici &#40;&#41;DMX](../dmx/operators-logical.md)   
+ [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

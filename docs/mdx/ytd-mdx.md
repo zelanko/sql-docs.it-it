@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125757"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  Restituisce i membri di un set di pari livello dallo stesso livello di un membro dato, iniziando il primo elemento di pari livello e terminando con il membro dato, in base al vincolo imposto dal *anno* livello nella dimensione temporale.  
+  Restituisce un set di membri di pari livello dallo stesso livello di un membro specificato, a partire dal primo elemento di pari livello e terminando con il membro dato, in base a quanto vincolato dal livello *anno* nella dimensione temporale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,13 +31,13 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
- Se non viene specificata un'espressione di membro, il valore predefinito è il membro corrente della prima gerarchia con un livello di tipo *anni* nella prima dimensione di tipo *ora* nel gruppo di misure.  
+## <a name="remarks"></a>Osservazioni  
+ Se non viene specificata un'espressione di membro, l'impostazione predefinita è il membro corrente della prima gerarchia con un livello di tipo *years* nella prima dimensione di tipo *Time* del gruppo di misure.  
   
- Il **Ytd** è una funzione di scelta rapida per il [PeriodsToDate](../mdx/periodstodate-mdx.md) in cui la proprietà Type della gerarchia dell'attributo su cui si basa il livello è impostato su *anni*. In altre parole, `Ytd(Member_Expression)` equivale a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Si noti che questa funzione non funzionerà quando la proprietà Type è impostata su *FiscalYears*.  
+ La funzione **YTD** è una funzione di collegamento per la funzione [PeriodsToDate](../mdx/periodstodate-mdx.md) in cui la proprietà Type della gerarchia dell'attributo su cui si basa il livello è impostata su *years*. In altre parole, `Ytd(Member_Expression)` equivale a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Si noti che questa funzione non funzionerà quando la proprietà Type è impostata su *FiscalYears*.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo.  
+ Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **YTD** viene spesso usato in combinazione con nessun parametro specificato, il che significa che il [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) funzione visualizzerà un totale cumulativo year-to-date in un report, come illustrato di nella query seguente:  
+ **YTD** viene spesso utilizzato in combinazione con nessun parametro specificato, ovvero la funzione [CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md) visualizzerà un totale cumulativo in esecuzione da anno a data in un report, come illustrato nella query seguente:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -66,6 +66,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

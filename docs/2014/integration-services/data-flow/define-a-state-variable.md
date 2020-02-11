@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827559"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
@@ -54,7 +54,7 @@ ms.locfileid: "62827559"
 |TFEND (Trickle-Feed Update Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
 |TFSTART|Si tratta dello stato durante un'esecuzione non iniziale del pacchetto di aggiornamento Trickle-Feed, dopo la chiamata dell'operazione `GetProcessingRange` all'attività di controllo CDC.<br /><br /> Viene indicato che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata, o non è ancora, terminata (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Si tratta dello stato di `GetProcessingRange` che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
-|ERROR|Il gruppo CDC si trova in uno stato ERROR.|  
+|ERRORE|Il gruppo CDC si trova in uno stato ERROR.|  
   
  Di seguito sono riportati esempi di valori della variabile di stato CDC.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62827559"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)   
- [Editor attività Controllo CDC](../cdc-control-task-editor.md)  
+ [Editor dell'attività di controllo CDC](../cdc-control-task-editor.md)  
   
   

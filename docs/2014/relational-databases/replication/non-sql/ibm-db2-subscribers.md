@@ -17,13 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022178"
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
+# <a name="ibm-db2-subscribers"></a>Sottoscrittori IBM DB2
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a database IBM DB2/AS 400, DB2/MVS e DB2/Universal tramite i provider OLE DB inclusi in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Configurazione di un Sottoscrittore IBM DB2  
@@ -74,7 +75,7 @@ ms.locfileid: "63022178"
   
     5.  Eseguire sp_changearticle specificando il percorso e il nome del file per la proprietà *creation_script*. Per altre informazioni, vedere [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **Per creare lo script di un articolo e fornirlo come script di creazione personalizzato**  
+     **Per creare uno script di articolo e fornirlo come script di creazione personalizzato**  
   
     1.  Creare lo script di un articolo utilizzando il sottolinguaggio DB2 SQL. Verificare che la prima riga del file sia **bypass_translation**e non contenga altro.  
   
@@ -112,47 +113,47 @@ ms.locfileid: "63022178"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|Double|  
+|`float(53)`|DOUBLE|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
+|`image`|VARCHAR (0) per i dati di BIT<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|N/D|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR (0) per i dati di BIT<sup>1</sup>|  
+|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`xml`|VARCHAR (0)<sup>1</sup>|  
   
- <sup>1</sup> vedere la sezione successiva per altre informazioni sui mapping al VARCHAR(0).  
+ <sup>1</sup> per ulteriori informazioni sui mapping a varchar (0), vedere la sezione successiva.  
   
 ### <a name="data-type-mapping-considerations"></a>Considerazioni sui mapping dei tipi di dati  
  Quando si esegue la replica nei Sottoscrittori DB2, considerare gli aspetti seguenti relativi ai mapping dei tipi di dati:  
   
--   Quando il mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` e `varbinary` a DB2 CHAR, VARCHAR, CHAR FOR BIT DATA e VARCHAR FOR BIT DATA, rispettivamente, la replica imposta la lunghezza del tipo di dati DB2 sia uguale a quello del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
+-   Quando si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`esegue `varchar`il `binary` mapping `varbinary` di, e a DB2 char, varchar, char per i dati di bit e varchar per i dati di bit, rispettivamente, la replica imposta la lunghezza del tipo di dati DB2 in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modo che corrisponda a quella del tipo.  
   
      In questo modo, la tabella generata viene creata correttamente nel Sottoscrittore, a condizione che il vincolo relativo alla dimensione della pagina DB2 consenta di supportare la dimensione massima delle righe. Verificare che l'account di accesso al database DB2 disponga delle autorizzazioni per utilizzare gli spazi tabella con dimensioni sufficienti per le tabelle replicate in DB2.  
   
--   DB2 può supportare colonne VARCHAR di grandezza pari a 32 KB. È pertanto possibile che venga eseguito correttamente il mapping tra alcune colonne LOB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le colonne VARCHAR DB2. Il provider OLE DB utilizzato dalla replica per DB2, tuttavia, non supporta l'esecuzione del mapping tra oggetti di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e oggetti di grandi dimensioni di DB2. Per questo motivo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colonne vengono mappate a VARCHAR(0) negli script di creazione generati. È necessario modificare il valore di lunghezza 0 in un valore appropriato prima di applicare lo script nel Sottoscrittore. Se la lunghezza del tipo di dati non cambia, in DB2 viene generato l'errore 604 quando si tenta di creare la tabella nel Sottoscrittore DB2. L'errore 604 indica che l'attributo di precisione o di lunghezza di un tipo di dati non è valido.  
+-   DB2 può supportare colonne VARCHAR di grandezza pari a 32 KB. È pertanto possibile che venga eseguito correttamente il mapping tra alcune colonne LOB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le colonne VARCHAR DB2. Il provider OLE DB utilizzato dalla replica per DB2, tuttavia, non supporta l'esecuzione del mapping tra oggetti di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e oggetti di grandi dimensioni di DB2. Per questo motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`le `varchar(max)`colonne `ntext`,, `nvarchar(max)` e vengono mappate a varchar (0) negli script di creazione generati. È necessario modificare il valore di lunghezza 0 in un valore appropriato prima di applicare lo script nel Sottoscrittore. Se la lunghezza del tipo di dati non cambia, in DB2 viene generato l'errore 604 quando si tenta di creare la tabella nel Sottoscrittore DB2. L'errore 604 indica che l'attributo di precisione o di lunghezza di un tipo di dati non è valido.  
   
      In base alle informazioni in proprio possesso sulla tabella di origine di cui si esegue la replica, determinare se sia opportuno eseguire il mapping tra un oggetto di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e un elemento DB2 di lunghezza variabile e specificare una lunghezza massima appropriata in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
   
@@ -161,9 +162,9 @@ ms.locfileid: "63022178"
   
      Se non esiste alcun mapping appropriato per una colonna LOB, valutare l'opportunità di applicare filtri colonne nell'articolo affinché la colonna non venga replicata. Per altre informazioni, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  
   
--   Quando si replicano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` e `nvarchar` DB2 CHAR e VARCHAR, la replica utilizza lo stesso identificatore di lunghezza per il tipo DB2 che per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. La lunghezza del tipo di dati, tuttavia, potrebbe essere troppo ridotta per la tabella DB2 generata.  
+-   Quando si esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` la `nvarchar` replica e in DB2 char e varchar, la replica usa lo stesso identificatore di lunghezza per il tipo DB2 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come per il tipo. La lunghezza del tipo di dati, tuttavia, potrebbe essere troppo ridotta per la tabella DB2 generata.  
   
-     In alcuni ambienti DB2 un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento dati non è limitato a caratteri a byte singolo, la lunghezza di un elemento CHAR o VARCHAR necessario prendere in considerazione. È inoltre necessario considerare i *caratteri di controllo SI* e i *caratteri di controllo SO* , se richiesti. Se si replicano tabelle con `nchar` e `nvarchar` colonne, potrebbe essere necessario specificare una lunghezza massima maggiore per il tipo di dati in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
+     In alcuni ambienti DB2, un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento di dati non è limitato a caratteri a byte singolo. la lunghezza di un elemento CHAR o VARCHAR deve tenere conto di questo. È inoltre necessario considerare i *caratteri di controllo SI* e i *caratteri di controllo SO* , se richiesti. Se si replicano tabelle con `nchar` colonne e `nvarchar` , potrebbe essere necessario specificare una lunghezza massima maggiore per il tipo di dati in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

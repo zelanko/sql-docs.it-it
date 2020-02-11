@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63064900"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluzioni (SQL Server Management Studio)
@@ -43,7 +43,7 @@ ms.locfileid: "63064900"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come creare una nuova soluzione utilizzabile per contenere uno o più progetti.|[Creazione di una nuova soluzione](create-a-new-solution.md)|  
+|Viene descritto come creare una nuova soluzione utilizzabile per contenere uno o più progetti.|[Creare una nuova soluzione](create-a-new-solution.md)|  
 |Viene descritto come aprire una soluzione esistente in Esplora soluzioni.|[Apertura di una soluzione esistente](open-an-existing-solution.md)|  
 |Viene illustrato come chiudere una soluzione.|[Chiusura di una soluzione](close-a-solution.md)|  
 |Viene descritto come eliminare una soluzione.|[Eliminazione di una soluzione](delete-a-solution.md)|  
@@ -54,7 +54,7 @@ ms.locfileid: "63064900"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)   
- [I progetti &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+ [Progetti &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Controllo del codice sorgente di Esplora soluzioni](../../database-engine/solution-explorer-source-control.md)  
   
   

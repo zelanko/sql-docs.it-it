@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165501"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
@@ -33,18 +33,18 @@ ms.locfileid: "74165501"
 Monitora lo stato di avanzamento delle query in tempo reale mentre la query è in esecuzione. Usare, ad esempio, questa DMV per determinare la parte della query la cui esecuzione è lenta. Creare un join di questa DMV ad altre DMV di sistema utilizzando le colonne identificate nel campo descrizione. In alternativa, creare un join di questa DMV con altri contatori di prestazioni, ad esempio Performance Monitor, xperf, usando le colonne di tipo timestamp.  
   
 ## <a name="table-returned"></a>Tabella restituita  
-I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti, ad esempio `SET STATISTICS XML ON` che creano solo l'output al termine della query.  
+I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti, ad esempio `SET STATISTICS XML ON` la creazione di output solo al termine della query.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sessione in cui viene eseguita la query. Fa riferimento a dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica la richiesta di destinazione. Fa riferimento a dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary(64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Fa riferimento a dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. Fa riferimento dm_exec_query_stats. plan_handle.|  
+|sql_handle|**varbinary (64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Fa riferimento a dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary (64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch eseguito e il relativo piano risiede nella cache dei piani oppure è attualmente in esecuzione. Fa riferimento dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome dell'operatore fisico.|  
 |node_id|**int**|Identifica un nodo operatore nell'albero della query.|  
 |thread_id|**int**|Distingue i thread (per una query parallela) che appartengono allo stesso nodo operatore della query.|  
-|task_address|**varbinary(8)**|Identifica l'attività SQLOS utilizzata da questo thread. Fa riferimento a dm_os_tasks.task_address.|  
+|task_address|**varbinary (8)**|Identifica l'attività SQLOS utilizzata da questo thread. Fa riferimento a dm_os_tasks.task_address.|  
 |row_count|**bigint**|Numero di righe restituite finora dall'operatore.|  
 |rewind_count|**bigint**|Numero di ripristini finora.|  
 |rebind_count|**bigint**|Numero di riassociazioni finora.|  
@@ -72,28 +72,28 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
 |segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore prima dell'applicazione del predicato residuo.| 
-|estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
+|estimated_read_row_count|**bigint**|**Si applica a:** A partire [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] da SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Se il nodo del piano di query non dispone di I/O, tutti i contatori correlati all'I/O vengono impostati su NULL.  
   
  I contatori correlati all'I/O segnalati da questa DMV sono più granulari di quelli segnalati da `SET STATISTICS IO` nei due modi seguenti:  
   
--   `SET STATISTICS IO` raggruppa i contatori per tutte le I/O in una tabella specificata. Con questa DMV si otterranno contatori distinti per ogni nodo nel piano di query che esegue le operazioni di I/O nella tabella.  
+-   `SET STATISTICS IO`raggruppa i contatori per tutte le I/O in una tabella specificata insieme. Con questa DMV si otterranno contatori distinti per ogni nodo nel piano di query che esegue le operazioni di I/O nella tabella.  
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un' *infrastruttura di profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON` e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` da popolare, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un' *infrastruttura di profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON`e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [query profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> La query in fase di analisi deve essere avviata **dopo** l'abilitazione dell'infrastruttura di profilatura delle query, in modo che dopo l'avvio della query non venga generato alcun risultato in `sys.dm_exec_query_profiles`. Per altre informazioni su come abilitare le infrastrutture di profilatura delle query, vedere [eseguire query sull'infrastruttura di profilatura](../../relational-databases/performance/query-profiling-infrastructure.md).
+> La query in fase di analisi deve essere avviata **dopo** l'abilitazione dell'infrastruttura di profilatura delle query, in `sys.dm_exec_query_profiles`modo che dopo l'avvio della query non venga generato alcun risultato. Per altre informazioni su come abilitare le infrastrutture di profilatura delle query, vedere [eseguire query sull'infrastruttura di profilatura](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] istanza gestita, richiede `VIEW DATABASE STATE` autorizzazione e l'appartenenza del ruolo del database `db_owner`.   
-Nei livelli [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] istanza gestita, richiede `VIEW DATABASE STATE` l'autorizzazione e l'appartenenza `db_owner` al ruolo del database.   
+Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
 ## <a name="examples"></a>Esempi  
- Passaggio 1: accedere a una sessione in cui si intende eseguire la query da analizzare con `sys.dm_exec_query_profiles`. Per configurare la query per l'utilizzo della profilatura `SET STATISTICS PROFILE ON`. Eseguire la query in questa stessa sessione.  
+ Passaggio 1: accedere a una sessione in cui si prevede di eseguire la query con `sys.dm_exec_query_profiles`cui si eseguirà l'analisi. Per configurare la query per l'utilizzo `SET STATISTICS PROFILE ON`della profilatura. Eseguire la query in questa stessa sessione.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

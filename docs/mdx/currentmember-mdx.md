@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892927"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
@@ -31,11 +31,12 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il membro su cui si opera a ogni passaggio di un'iterazione in un set di membri della gerarchia corrisponde al membro corrente. La funzione **CurrentMember** restituisce tale membro.  
   
 > [!IMPORTANT]  
->  Quando una dimensione contiene una sola gerarchia visibile, è possibile fare riferimento alla gerarchia con il nome della dimensione o della gerarchia poiché il nome della dimensione viene risolto in base all'unica gerarchia visibile che contiene. `Measures.CurrentMember` è ad esempio un'espressione MDX valida perché esegue la risoluzione nell'unica gerarchia nella dimensione Measures.  
+>  Quando una dimensione contiene una sola gerarchia visibile, è possibile fare riferimento alla gerarchia con il nome della dimensione o della gerarchia poiché il nome della dimensione viene risolto in base all'unica gerarchia visibile che contiene. 
+  `Measures.CurrentMember` è ad esempio un'espressione MDX valida perché esegue la risoluzione nell'unica gerarchia nella dimensione Measures.  
   
 ## <a name="examples"></a>Esempi  
  Nella query seguente viene illustrato il modo in cui è possibile utilizzare **CurrentMember** per trovare il membro corrente dalle gerarchie delle colonne, delle righe e dell'asse delle sezioni:  
@@ -74,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Pertanto, è possibile modificare anche il membro corrente su altre gerarchie nella stessa dimensione che non vengono utilizzate su un asse. Questo comportamento è denominato "auto-exists" ed è possibile trovare altri dettagli in [concetti chiave di &#40;Analysis Services&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
+ Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Pertanto, è possibile modificare anche il membro corrente su altre gerarchie nella stessa dimensione che non vengono utilizzate su un asse. Questo comportamento è denominato "auto-exists" ed è possibile trovare altri dettagli nei [concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -117,6 +118,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808399"
 ---
 # <a name="connection-properties-dialog-box"></a>Proprietà connessione - finestra di dialogo
@@ -28,8 +28,8 @@ ms.locfileid: "62808399"
   
  Il periodo di timeout della query per SQL Azure è di 30 minuti.  
   
-## <a name="authentication"></a>Autenticazione  
- Consente di visualizzare le proprietà di autenticazione per la connessione corrente. Le proprietà di autenticazione sono costituite dall'account di accesso e dal metodo di autenticazione utilizzati al momento della connessione. Per modificare le proprietà di autenticazione, disconnettersi da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e riconnettere Esplora oggetti al server usando le opzioni di connessione appropriate.  
+## <a name="authentication"></a>Authentication  
+ Consente di visualizzare le proprietà di autenticazione per la connessione corrente. Le proprietà di autenticazione sono costituite dall'account di accesso e dal metodo di autenticazione utilizzati al momento della connessione. Per modificare le proprietà di autenticazione, disconnettersi da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e quindi riconnettersi Esplora oggetti al server utilizzando le opzioni di connessione desiderate.  
   
  **Metodo di autenticazione**  
  Metodo di autenticazione utilizzato per la connessione corrente.  
@@ -49,19 +49,19 @@ ms.locfileid: "62808399"
  **Protocollo di rete**  
  Protocollo di rete della connessione [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
- **Dimensioni pacchetto di rete**  
+ **Dimensioni del pacchetto di rete**  
  Dimensioni di pacchetto utilizzate per la comunicazione con il server. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
  **Connection Timeout**  
  Tempo di attesa in secondi per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prima che si verifichi il timeout o venga restituito un errore di connessione all'utente. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
- **Execution Timeout**  
+ **Timeout esecuzione**  
  Tempo di attesa in secondi prima del completamento dell'esecuzione di un'attività nel server. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
- **Crittografata**  
+ **Crittografato**  
  Consente di indicare se la connessione corrente è crittografata. Per modificare questa impostazione, riconnettersi con le proprietà di connessione desiderate.  
   
-## <a name="product-category"></a>Product Category  
+## <a name="product-category"></a>Categoria di prodotto  
  Consente di visualizzare le proprietà del prodotto per la connessione corrente. Queste proprietà descrivono il prodotto server, la versione, il nome istanza e le regole di confronto. Le proprietà vengono impostate durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Nome prodotto**  
@@ -97,11 +97,11 @@ ms.locfileid: "62808399"
  **Processori**  
  Numero di processori presenti nel server.  
   
- **Memoria sistema operativo**  
+ **Memoria del sistema operativo**  
  Quantità totale di memoria fisica disponibile nel server espressa in megabyte (MB).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Connetti al server &#40;Pagina di accesso&#41; Motore di database](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Connetti al server &#40;pagina di accesso&#41; motore di database](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

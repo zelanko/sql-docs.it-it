@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637839"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installare la versione autonoma di Generatore report (Generatore report)
-  È possibile installare Generatore report dalla [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack nell' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) o in un percorso, ad esempio cartella pubblica in cui è stato scaricato il file ReportBuilder3_x86. msi, il pacchetto Windows Installer per Generatore report.  
+  È possibile installare Generatore report dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack nell' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) o in un percorso come la cartella pubblica in cui è stato scaricato il file ReportBuilder3_x86. msi, il pacchetto di Windows Installer per Generatore report.  
   
  È inoltre possibile eseguire un'installazione dalla riga di comando di Generatore report e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile utilizzare i parametri personalizzati specifici di Generatore report: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per Generatore report. REPORTSERVERURL specifica il server di report predefinito utilizzato da Generatore report per salvare i report.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "73637839"
   
 6.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-7.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Scegliere **Avanti**.  
+7.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
   
-8.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
+8.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
   
-9. Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Scegliere **Avanti**.  
+9. Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
   
     -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
         > [!NOTE]  
-        >  La cartella di installazione predefinita per Generatore report è \<unità > Programmi\Microsoft SQL Server.  
+        >  La cartella di installazione predefinita per Generatore report \<è unità>Programmi\Microsoft SQL Server.  
   
     -   Fare clic su **costo disco** per conoscere la quantità di spazio su disco utilizzata da Generatore report.  
   
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
+10. Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
   
     > [!NOTE]  
     >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  
@@ -80,23 +80,23 @@ ms.locfileid: "73637839"
   
 3.  Nella pagina **iniziale dell'installazione guidata** fare clic su **Avanti**.  
   
-4.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Scegliere **Avanti**.  
+4.  Nella pagina **contratto di licenza** leggere il contratto e quindi selezionare l'opzione **Accetto i termini del contratto di licenza** . Fare clic su **Avanti**.  
   
-5.  Digitare il proprio nome e il nome della società. Scegliere **Avanti**.  
+5.  Digitare il proprio nome e il nome della società. Fare clic su **Avanti**.  
   
-6.  Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Scegliere **Avanti**.  
+6.  Nella pagina **Selezione funzionalità** fare clic facoltativamente su **Sfoglia** o su **costo del disco**. Fare clic su **Avanti**.  
   
     -   Fare clic su **Sfoglia** per visualizzare il percorso predefinito di Generatore report e aggiornarlo.  
   
         > [!NOTE]  
-        >  La cartella di installazione predefinita per Generatore report è \<unità > Programmi\Microsoft SQL Server.  
+        >  La cartella di installazione predefinita per Generatore report \<è unità>Programmi\Microsoft SQL Server.  
   
     -   Fare clic su **costo disco** per conoscere la quantità di spazio su disco utilizzata da Generatore report.  
   
         > [!NOTE]  
         >  Se la quantità di spazio libero su disco disponibile in un volume non è sufficiente, questo volume viene evidenziato.  
   
-7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Scegliere **Avanti**.  
+7.  Nella pagina **Server di destinazione predefinito** immettere facoltativamente l'URL del server di report di destinazione se diverso da quello predefinito. Fare clic su **Avanti**.  
   
     > [!NOTE]  
     >  Se si intende utilizzare Generatore report quando è connesso a un server di report, è consigliabile specificare l'URL del server. Tuttavia, è possibile eseguire questa operazione anche dalla finestra di dialogo **Opzioni** quando si lavora in Generatore report.  
@@ -109,7 +109,7 @@ ms.locfileid: "73637839"
   
 2.  Fare clic su **pacchetto x86**.  
   
-3.  Fare clic su Salva.  
+3.  Fare clic su Save.  
   
 4.  Facoltativamente, passare al percorso in cui salvare, verificare che l'opzione **Salva con nome** sia **Windows Installer pacchetto**, quindi fare clic su **Salva**.  
   

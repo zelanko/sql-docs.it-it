@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055556"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor gestione connessione SMTP
@@ -27,7 +27,7 @@ ms.locfileid: "66055556"
  Per ulteriori informazioni sulla gestione connessioni SMTP, vedere [SMTP Connection Manager](connection-manager/smtp-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per la gestione connessione.  
   
  **Descrizione**  
@@ -43,9 +43,9 @@ ms.locfileid: "66055556"
 >  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
   
 > [!NOTE]  
->  Quando si usa Microsoft Exchange come server SMTP, potrebbe essere necessario impostare **usare l'autenticazione di Windows** a `True`. È possibile configurare i server Exchange in modo da impedire le connessioni SMTP non autenticate.  
+>  Quando si utilizza Microsoft Exchange come server SMTP, potrebbe essere necessario impostare **utilizza autenticazione di Windows** su `True`. È possibile configurare i server Exchange in modo da impedire le connessioni SMTP non autenticate.  
   
- **Attiva SSL (Secure Sockets Layer)**  
+ **Abilita Secure Sockets Layer (SSL)**  
  Selezionare questa opzione per crittografare le comunicazioni mediante SSL (Secure Sockets Layer) durante l'invio di messaggi di posta elettronica.  
   
 ## <a name="see-also"></a>Vedere anche  

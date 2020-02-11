@@ -9,40 +9,40 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892859"
 ---
 # <a name="data-types-dmx"></a>Tipi di dati (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data [!INCLUDE[msCoName](../includes/msconame-md.md)] mining in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è necessario fornire un tipo di dati per ogni colonna del modello. Il tipo di dati descrive i dati che verranno utilizzati dall'algoritmo di data mining durante la compilazione del modello.  
+  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mining in, è necessario fornire un tipo di dati per ogni colonna del modello. Il tipo di dati descrive i dati che verranno utilizzati dall'algoritmo di data mining durante la compilazione del modello.  
   
  I tipi di dati dipendono dall'algoritmo. Ogni algoritmo determina i tipi di dati supportati e le modalità con cui vengono utilizzati. Gli algoritmi Microsoft supportano i tipi di dati seguenti:  
   
--   Testo  
+-   Text  
   
--   Long  
+-   long  
   
 -   Boolean  
   
--   Double  
+-   DOUBLE  
   
--   Date  
+-   Data  
   
- Per ulteriori informazioni sui tipi di dati supportati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da, vedere Data [mining &#40;&#41;tipi](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)di dati.  
+ Per ulteriori informazioni sui tipi di dati supportati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da, vedere [tipi di dati &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Guida di riferimento &#40;alle&#41; funzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Guida di riferimento &#40;agli&#41; operatori DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Guida di riferimento &#40;alle&#41; istruzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Convenzioni della &#40;sintassi&#41; DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Elementi di sintassi &#40;DMX&#41; di Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;le convenzioni della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

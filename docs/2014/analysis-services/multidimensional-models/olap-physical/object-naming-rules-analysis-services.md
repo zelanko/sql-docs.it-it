@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530889"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
@@ -66,15 +66,15 @@ ms.locfileid: "69530889"
   
  Nella tabella seguente sono elencati i caratteri non validi per oggetti specifici.  
   
-|Object|Caratteri non validi|  
+|Oggetto|Caratteri non validi|  
 |------------|------------------------|  
-|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Per informazioni dettagliate, vedere convenzioni di [denominazione (Windows)](/windows/desktop/DNS/naming-conventions) .|  
+|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Per informazioni dettagliate, vedere [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` o `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`o`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`o`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Tutti gli altri oggetti|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **Eccezioni Quando sono consentiti caratteri riservati**  
+ **Eccezioni: quando sono consentiti i caratteri riservati**  
   
  Come è stato notato, i database di un livello di compatibilità e di modalità specifico possono avere nomi di oggetti che includono caratteri riservati. I nomi di attributi della dimensione, gerarchie, livelli, misuri e oggetti KPI possono includere caratteri riservati, per database tabulari (1103 o un valore superiore) che consentono l'utilizzo di caratteri estesi:  
   
@@ -83,13 +83,13 @@ ms.locfileid: "69530889"
 |MOLAP (tutte le versioni)|No|  
 |Tabulare - 1050|No|  
 |Tabulare - 1100|No|  
-|Tabulare-1130 e versioni successive|Yes|  
+|Tabulare-1130 e versioni successive|Sì|  
   
  I database possono avere un valore ModelType predefinito. Il valore predefinito è equivalente a multidimensionale e quindi non supporta l'utilizzo di caratteri riservati nei nomi delle colonne.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole riservate MDX](/sql/mdx/mdx-reserved-words)   
- [Analysis Services &#40;traduzioni&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XMLA XML for Analysis &#40;Compliance&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Traduzioni &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XML for Analysis di conformità &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

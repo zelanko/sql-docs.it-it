@@ -1,5 +1,5 @@
 ---
-title: 'Diagnostica di descrittore, informazioni, tipi specifici del driver: Data, | Microsoft Docs'
+title: Tipi specifici del driver-dati, descrittori, informazioni, diagnostica | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,47 +15,47 @@ ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa17a5552855916798c78e0e7d371b58e58a401e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046926"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipi di dati specifici del driver, tipi di descrittori, tipi di informazioni, tipi di diagnostica e attributi
-I driver possono allocare i valori specifici del driver per le operazioni seguenti:  
+I driver possono allocare i valori specifici del driver per gli elementi seguenti:  
   
--   **Indicatori di tipo di dati di SQL** questi intervalli vengono usati *ParameterType* nelle **SQLBindParameter** e in *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
+-   **Indicatori del tipo di dati SQL** Questi vengono usati in *ParameterType* in **SQLBindParameter** e in *DataType* in **SQLGetTypeInfo** e restituiti da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns**e **SQLSpecialColumns**.  
   
--   **Campi del descrittore** questi intervalli vengono usati *FieldIdentifier* nelle **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField**.  
+-   **Campi del descrittore** Questi vengono usati in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**e **SQLSetDescField**.  
   
--   **I campi di diagnostica** questi intervalli vengono usati *DiagIdentifier* nelle **SQLGetDiagField** e **SQLGetDiagRec**.  
+-   **Campi di diagnostica** Questi vengono usati in *DiagIdentifier* in **SQLGetDiagField** e **SQLGetDiagRec**.  
   
--   **Tipi di informazioni** questi intervalli vengono usati *InfoType* nelle **SQLGetInfo**.  
+-   **Tipi di informazioni** Questi vengono usati in *InfoType* in **SQLGetInfo**.  
   
--   **Connessione e gli attributi di istruzione** questi intervalli vengono usati *attributo* nelle **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
+-   **Attributi di connessione e di istruzione** Questi vengono usati nell' *attributo* in **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr**e **SQLSetStmtAttr**.  
   
- Per ognuno di questi elementi, sono disponibili due set di valori: valori riservati per l'utilizzo da ODBC e valori riservati per i driver. Prima di implementare i valori specifici del driver, un writer di driver deve richiedere un valore per ogni tipo specifico del driver, un campo o attributo da Open Group. Per i nuovi sviluppi di driver, utilizzare l'intervallo descritto nella tabella seguente. La gestione dei Driver di ODBC 3.8 non genererà un errore se viene usato un valore sconosciuto che non è compreso nell'intervallo descritto di seguito. Tuttavia, le versioni successive di gestione Driver potrebbero generare un errore se i valori sconosciuti vengono ricevuti che non sono compresi nell'intervallo.  
+ Per ognuno di questi elementi, sono disponibili due set di valori: valori riservati per l'utilizzo da ODBC e valori riservati per l'utilizzo da driver. Prima di implementare valori specifici del driver, un writer di driver deve richiedere un valore per ogni tipo, campo o attributo specifico del driver del gruppo aperto. Per lo sviluppo di nuovi driver, usare l'intervallo descritto nella tabella seguente. In Gestione driver ODBC 3,8 non verrà generato un errore se viene utilizzato un valore sconosciuto non compreso nell'intervallo descritto di seguito. Tuttavia, le versioni successive di gestione driver potrebbero generare un errore se vengono ricevuti valori sconosciuti che non sono compresi nell'intervallo.  
   
- Quando uno di questi valori viene passato a una funzione ODBC, il driver deve controllare se il valore è valido. I driver restituiscono SQLSTATE HYC00 (funzionalità facoltativa non implementata) per valori specifici del driver che si applicano a altri driver.  
+ Quando uno di questi valori viene passato a una funzione ODBC, il driver deve controllare se il valore è valido. I driver restituiscono SQLSTATE HYC00 (funzionalità facoltativa non implementata) per i valori specifici del driver applicabili ad altri driver.  
   
- A partire da ODBC 3.8, gli sviluppatori di driver possono allocare gli attributi specifici del driver all'interno di un intervallo riservato.  
+ A partire da ODBC 3,8, i writer di driver possono allocare attributi specifici del driver all'interno di un intervallo riservato.  
   
 > [!NOTE]  
->  La gestione dei Driver di ODBC 3.8 convalida né applica questi intervalli per la compatibilità con le versioni precedenti. Potrebbe imporre, tuttavia, una versione futura di gestione Driver.  
+>  Gestione driver ODBC 3,8 non convalida né impone questi intervalli per la compatibilità con le versioni precedenti. Una versione futura di gestione driver potrebbe tuttavia applicarli.  
   
-|Tipo di attributo|Tipo di dati ODBC|Intervallo di specifiche del driver base|Limite dell'intervallo di specifiche del driver|Costante ODBC per l'intervallo di valori specifici del driver base|  
+|Tipo di attributo|Tipo di dati ODBC|Base intervallo specifico del driver|Limite intervallo specifico del driver|Costante ODBC per base intervallo di valori specifico del driver|  
 |--------------------|--------------------|---------------------------------|----------------------------------|---------------------------------------------------------|  
-|Gli indicatori di tipo di dati SQL|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_SQL_TYPE_BASE|  
-|Campi di descrizione|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_DESCRIPTOR_BASE|  
+|Indicatori del tipo di dati SQL|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_SQL_TYPE_BASE|  
+|Campi del descrittore|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_DESCRIPTOR_BASE|  
 |Campi di diagnostica|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_DIAGNOSTIC_BASE|  
 |Tipi di informazioni|SQLUSMALLINT|0x4000|0x7FFF|SQL_DRIVER_INFO_TYPE_BASE|  
 |Attributi di connessione|SQLINTEGER|0x00004000|0x00007FFF|SQL_DRIVER_CONNECT_ATTR_BASE|  
 |Attributi di istruzione|SQLINTEGER|0x00004000|0x00007FFF|SQL_DRIVER_STATEMENT_ATTR_BASE|  
   
 > [!NOTE]  
->  Tipi di dati specifici del driver, i campi di descrizione, i campi di diagnostica, i tipi di informazioni, gli attributi di istruzione e gli attributi di connessione devono essere descritte nella documentazione del driver. Quando uno di questi valori viene passato a una funzione ODBC, il driver deve controllare se il valore è valido. I driver restituiscono SQLSTATE HYC00 (funzionalità facoltativa non implementata) per valori specifici del driver che si applicano a altri driver.  
+>  I tipi di dati specifici del driver, i campi di descrizione, i campi di diagnostica, i tipi di informazioni, gli attributi di istruzione e gli attributi di connessione devono essere descritti nella documentazione del driver. Quando uno di questi valori viene passato a una funzione ODBC, il driver deve controllare se il valore è valido. I driver restituiscono SQLSTATE HYC00 (funzionalità facoltativa non implementata) per i valori specifici del driver applicabili ad altri driver.  
   
- I valori di base sono definiti per facilitare lo sviluppo di driver. Attributi di diagnostica specifici del driver, ad esempio, possono essere definiti nel formato seguente:  
+ I valori di base sono definiti per semplificare lo sviluppo di driver. Ad esempio, gli attributi di diagnostica specifici del driver possono essere definiti nel formato seguente:  
   
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  

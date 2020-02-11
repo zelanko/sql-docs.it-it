@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074066"
 ---
 # <a name="template-explorer"></a>Esplora modelli
@@ -43,9 +43,9 @@ ms.locfileid: "63074066"
 ## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i seguenti argomenti per ottenere un'introduzione ai modelli.  
   
-|**Description**|**Argomento**|  
+|**Descrizione**|**Argomento**|  
 |---------------------|---------------|  
 |Viene descritto come incorporare il codice da un modello in una finestra dell'editor di codice.|[Aprire un modello](open-a-template.md)|  
-|Si descrive come sostituire valori del parametro di modello dopo aver aperto un modello in un editor di codice.|[Sostituisci parametri modello](replace-template-parameters.md)|  
+|Si descrive come sostituire valori del parametro di modello dopo aver aperto un modello in un editor di codice.|[Sostituire i parametri del modello](replace-template-parameters.md)|  
   
   

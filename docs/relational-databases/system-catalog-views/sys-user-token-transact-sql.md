@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions|| = azure-sqldw-latest
 ms.openlocfilehash: 9b3e389b97cee8a8a6d548eb93ad70b94d09ba40
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70160745"
 ---
 # <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "70160745"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|ID dell'entità. Questo valore deve essere univoco all'interno del database.|  
-|**sid**|**varbinary(85)**|Identificatore di sicurezza dell'entità se l'entità è esterna al database. Questo valore può essere ad esempio un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], di Windows, di un gruppo di Windows oppure sul quale viene eseguito il mapping a un certificato. In caso contrario, questo valore è NULL.|  
-|**name**|**nvarchar (128)**|Nome dell'entità. Questo valore deve essere univoco all'interno del database.|  
-|**tipo**|**nvarchar (128)**|Descrizione del tipo dell'entità. Viene eseguito il mapping di tutti i tipi a **SID**. I possibili valori sono i seguenti:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> Ruolo<br /><br /> APPLICATION ROLE<br /><br /> RUOLO DEL DATABASE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**usage**|**nvarchar (128)**|Specifica che l'entità partecipa alla valutazione di autorizzazioni GRANT or DENY o funge da autenticatore.<br /><br /> I valori validi sono i seguenti:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**SID**|**varbinary(85)**|Identificatore di sicurezza dell'entità se l'entità è esterna al database. Questo valore può essere ad esempio un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], di Windows, di un gruppo di Windows oppure sul quale viene eseguito il mapping a un certificato. In caso contrario, questo valore è NULL.|  
+|**nome**|**nvarchar (128)**|Nome dell'entità. Questo valore deve essere univoco all'interno del database.|  
+|**tipo**|**nvarchar (128)**|Descrizione del tipo dell'entità. Viene eseguito il mapping di tutti i tipi a **SID**. Il valore può essere uno dei seguenti:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> RUOLO DEL DATABASE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**utilizzo**|**nvarchar (128)**|Specifica che l'entità partecipa alla valutazione di autorizzazioni GRANT or DENY o funge da autenticatore.<br /><br /> I valori validi sono i seguenti:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
+ [sys. login_token &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [sys. database_principals &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683608"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
@@ -86,7 +86,7 @@ ms.locfileid: "74683608"
 ## <a name="additional-online-information"></a>Ulteriori informazioni online  
  Informazioni aggiuntive su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono disponibili nei siti Web [!INCLUDE[msCoName](../includes/msconame-md.md)] seguenti.  
   
-|Risorsa|Description|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
 |[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

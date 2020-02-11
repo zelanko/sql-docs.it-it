@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188293"
 ---
 # <a name="custom-reports-in-management-studio"></a>Report personalizzati in Management Studio
-  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] molti nodi di Esplora oggetti contengono un set di report standard creati da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. In tali report viene fornito un riepilogo delle informazioni relative ai server generalmente necessarie. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, gli amministratori possono eseguire report personalizzati creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]molti nodi di Esplora oggetti contengono un set di report standard creati da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. In tali report viene fornito un riepilogo delle informazioni relative ai server generalmente necessarie. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, gli amministratori possono eseguire report personalizzati creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="implementation"></a>Implementazione  
  I report personalizzati vengono archiviati come file di definizione di report con estensione rdl e vengono creati mediante il linguaggio RDL (Report Definition Language). Il linguaggio RDL contiene informazioni sul layout e il recupero dei dati per un report in formato XML RDL è uno schema aperto. Gli sviluppatori possono estendere RDL con attributi ed elementi aggiuntivi. Nei report può essere eseguita qualsiasi istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida.  
@@ -60,7 +60,7 @@ ms.locfileid: "68188293"
 ## <a name="managing-custom-reports"></a>Gestione dei report personalizzati  
  In presenza di numerosi report personalizzati, è consigliabile organizzare tali report utilizzando cartelle del file system con autorizzazioni del file system NTFS appropriate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  I report personalizzati vengono eseguiti utilizzando le autorizzazioni dell'utente corrente. Per impedire che le query eseguite dal report vengano modificate da utenti malintenzionati, è consigliabile impostare le autorizzazioni per la cartella del file system contenente i file di report in modo da limitare l'accesso.  
   
  Sia l'utente che l'account utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessitano dell'accesso in lettura alla cartella del file system contenente i file di report.  
@@ -73,8 +73,8 @@ ms.locfileid: "68188293"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
- [Visualizzazione relativi all'esecuzione del Report personalizzato avvisi](unsuppress-run-custom-report-warnings.md)   
+ [Aggiungere un report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Annulla l'esecuzione degli avvisi del report personalizzato](unsuppress-run-custom-report-warnings.md)   
  [Usare report personalizzati con proprietà dei nodi di Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

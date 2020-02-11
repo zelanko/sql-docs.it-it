@@ -1,5 +1,5 @@
 ---
-title: Panoramica degli attributi personalizzati di integrazione di Common Language Runtime | Microsoft Docs
+title: Panoramica degli attributi personalizzati dell'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781106"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Panoramica degli attributi personalizzati dell'integrazione con CLR
   Common Language Runtime (CLR) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] consente l'utilizzo di parole chiave descrittive, chiamate attributi. Questi attributi forniscono informazioni aggiuntive per molti elementi quali metodi e classi. Gli attributi vengono salvati nell'assembly con i metadati dell'oggetto e possono essere utilizzati per descrivere il codice ad altri strumenti di sviluppo o per influire sul comportamento in fase di esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando si registra una routine CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un set di proprietà sulla routine. Queste proprietà della routine determinano le funzionalità della routine, incluso se la routine può essere indicizzata. Impostando ad esempio la proprietà `DataAccess` su `DataAccessKind.Read` sarà possibile accedere ai dati dalle tabelle utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una funzione CLR. Nell'esempio seguente viene illustrato un caso semplice in cui il `DataAccess` viene impostata per facilitare l'accesso ai dati da una tabella utente **table1**.  
+ Quando si registra una routine CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un set di proprietà sulla routine. Queste proprietà della routine determinano le funzionalità della routine, incluso se la routine può essere indicizzata. Impostando ad esempio la proprietà `DataAccess` su `DataAccessKind.Read` sarà possibile accedere ai dati dalle tabelle utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una funzione CLR. Nell'esempio seguente viene illustrato un caso semplice in cui `DataAccess` la proprietà è impostata in modo da facilitare l'accesso ai dati da una tabella utente **Tabella1**.  
   
 ```csharp  
 using System;  

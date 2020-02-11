@@ -16,10 +16,10 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 56ed176d8b4b29e1ed4caafabd0893b7a33b1293
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962387"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -40,13 +40,13 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @schemaversion = ] schemaversion` identifica una modifica dello schema in sospeso. *SchemaVersion* è di **tipo int**e il valore predefinito è **0**. Utilizzare [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
+`[ @schemaversion = ] schemaversion`Identifica una modifica dello schema in sospeso. *SchemaVersion* è di **tipo int**e il valore predefinito è **0**. Utilizzare [sp_enumeratependingschemachanges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  
   
-`[ @status = ] 'status'` indica se una modifica dello schema in sospeso verrà ignorata. *status* è di **tipo nvarchar (10)** e il valore predefinito è **Active**. Se il valore di *status* viene **ignorato**, la modifica dello schema selezionata non verrà replicata.  
+`[ @status = ] 'status'`Indica se una modifica dello schema in sospeso verrà ignorata. *status* è di **tipo nvarchar (10)** e il valore predefinito è **Active**. Se il valore di *status* viene **ignorato**, la modifica dello schema selezionata non verrà replicata.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -58,6 +58,6 @@ sp_markpendingschemachange [@publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_markpendingschemachange**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: semanticsimilaritytable (Transact-SQL) | Microsoft Docs
+title: SEMANTICSIMILARITYTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140553"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140553"
   
  A questa funzione del set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come normale nome di tabella.  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,12 +45,12 @@ SEMANTICSIMILARITYTABLE
 ```  
   
 ##  <a name="Arguments"></a> Argomenti  
- **table**  
+ **tavolo**  
  Nome di una tabella per cui è abilitata l'indicizzazione full-text e semantica.  
   
  Questo nome può essere costituito da una a quattro parti, ma non è consentito un nome di server remoto.  
   
- **column**  
+ **colonna**  
  Nome della colonna indicizzata per cui restituire risultati. Per la colonna deve essere abilitata l'indicizzazione semantica.  
   
  **column_list**  
@@ -69,29 +69,29 @@ SEMANTICSIMILARITYTABLE
   
  Se i risultati vengono richiesti per più di una colonna, i documenti corrispondenti vengono restituiti in base a ogni colonna.  
   
-|Nome della colonna|type|Descrizione|  
+|Nome della colonna|Type|Descrizione|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID della colonna da cui è stato utilizzato un documento di origine per la ricerca di documenti simili.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**matched_column_id**|**int**|ID della colonna da cui è stato trovato un documento simile.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**matched_document_key**|**\***<br /><br /> Questa chiave corrisponde al tipo della chiave univoca nella tabella di origine.|Valore della chiave univoca di estrazione full-text e semantica della riga o del documento individuato come simile al documento specificato nella query.|  
-|**punteggio**|**REAL**|Valore relativo per la somiglianza del documento nella sua relazione con tutti gli altri documenti simili.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta una corrispondenza più vicina e 1.0 costituisce un punteggio perfetto.|  
+|**Punteggio**|**REALE**|Valore relativo per la somiglianza del documento nella sua relazione con tutti gli altri documenti simili.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta una corrispondenza più vicina e 1.0 costituisce un punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Per altre informazioni, vedere [trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Per altre informazioni, vedere [trovare documenti simili e correlati con la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- Non è possibile eseguire una query su diverse colonne per ottenere documenti simili. Il **SEMANTICSIMILARITYTABLE** funzione recupera solo documenti simili dalla stessa colonna come colonna di origine, identificata dalle **source_key** argomento.  
+ Non è possibile eseguire una query su diverse colonne per ottenere documenti simili. La funzione **SEMANTICSIMILARITYTABLE** recupera solo documenti simili dalla stessa colonna della colonna di origine, identificata dall'argomento **source_key** .  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>Metadati  
  Per informazioni generali e sullo stato relative all'estrazione e al popolamento della somiglianza semantica, eseguire una query sulle DMV seguenti:  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie autorizzazioni SELECT per la tabella di base in cui sono stati creati gli indici full-text e semantico.  
   
 ## <a name="examples"></a>Esempi  

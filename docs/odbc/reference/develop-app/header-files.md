@@ -13,22 +13,22 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139032"
 ---
 # <a name="header-files"></a>File di intestazione
-Il file di intestazione SQL. h contiene prototipi per le funzioni e funzionalità del livello di conformità di interfaccia ODBC Core. Il file di intestazione Sqlext. h contiene prototipi per le funzioni e le funzionalità del livello 1 e livelli di conformità API di livello 2. Il file di intestazione Sqlext contiene le definizioni dei tipi e gli indicatori per i tipi di dati SQL.  
+Il file di intestazione SQL. h contiene prototipi per le funzioni e le funzionalità del livello di conformità dell'interfaccia ODBC di base. Il file di intestazione sqlext. h contiene prototipi per le funzioni e le funzionalità nei livelli di conformità dell'API di livello 1 e 2. Il file di intestazione SqlTypes. h contiene le definizioni e gli indicatori di tipo per i tipi di dati SQL.  
   
- I file di intestazione contengono tutti un **#define**, ODBCVER, che un'applicazione o driver può impostare da compilare per versioni diverse di ODBC.  
+ Tutti i file di intestazione contengono un **#define**, ODBCVer, che un'applicazione o un driver può impostare per la compilazione per versioni diverse di ODBC.  
   
- Per allineare con la CLI ISO e aprire interfaccia CLI di gruppo, i file di intestazione contengono alias per i tipi di informazioni usati nelle chiamate a **SQLGetInfo**. Nella tabella seguente, la colonna "Nome ODBC" indica il nome ODBC per il tipo di informazioni nella [riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La colonna "Alias nel file di intestazione" indica il nome che viene utilizzato la CLI di ISO e l'interfaccia CLI di gruppo aprire. Il valore numerico effettivo di questi nomi di manifesto è lo stesso in ODBC sia la CLI di standard. Questi alias abilitare un'applicazione conforme agli standard o un driver per la compilazione con ODBC *3.x* i file di intestazione.  
+ Per l'allineamento con l'interfaccia della riga di comando ISO e l'interfaccia della riga di comando Apri gruppo, i file di intestazione contengono alias per i tipi di informazioni usati nelle chiamate a **SQLGetInfo**. Nella tabella seguente la colonna "nome ODBC" indica il nome ODBC per il tipo di informazioni nel [riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La colonna "alias in file di intestazione" indica il nome usato nell'interfaccia della riga di comando ISO e nell'interfaccia della riga di comando del gruppo aperto. Il valore numerico effettivo di questi nomi di manifesto è lo stesso sia in ODBC che nel interfacce della riga standard. Questi alias consentono a un'applicazione o un driver conforme agli standard di compilare con i file di intestazione ODBC *3. x* .  
   
- Questi alias includono le espansioni di abbreviazioni nei nomi di ODBC in modo che i nomi sono più comprensibili. "MAX" viene espanso alle "Massimo", "LEN" a "LENGTH", "MULT" a "MULTIPLE", "GU" a "OUTER_JOIN" e "TXN" a "Transazione".  
+ Questi alias includono espansioni delle abbreviazioni nei nomi ODBC in modo che i nomi siano più comprensibili. "MAX" viene espanso in "MAXIMum", "LEN" in "LENGTH", "MULT" in "MULTIPLE", "OJ" in "OUTER_JOIN" e "transazione" in "TRANSACTION".  
   
-|Nome di ODBC|Alias nel file di intestazione|  
+|Nome ODBC|Alias nel file di intestazione|  
 |---------------|--------------------------|  
 |SQL_MAX_CATALOG_NAME_LEN|SQL_MAXIMUM_CATALOG_NAME_LENGTH|  
 |SQL_MAX_COLUMN_NAME_LEN|SQL_MAXIMUM_COLUMN_NAME_LENGTH|  

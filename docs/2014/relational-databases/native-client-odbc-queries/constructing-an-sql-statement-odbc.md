@@ -1,5 +1,5 @@
 ---
-title: Costruzione di un'istruzione SQL (ODBC) | Microsoft Docs
+title: Creazione di un'istruzione SQL (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa955f31d26c87b39585ddead6bc5899a9e00679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206785"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Costruzione di un'istruzione SQL (ODBC)
@@ -32,7 +32,7 @@ ms.locfileid: "68206785"
   
      Istruzioni SQL costruite in fase di esecuzione che consentono all'utente di personalizzare l'istruzione servendosi di clausole comuni, ad esempio SELECT, WHERE e ORDER BY. Sono incluse query ad hoc immesse dagli utenti.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Client analizza le istruzioni SQL solo per la sintassi ODBC e ISO non supportati direttamente dai [!INCLUDE[ssDE](../../includes/ssde-md.md)], che il driver trasforma in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Qualsiasi altra sintassi SQL viene passata al [!INCLUDE[ssDE](../../includes/ssde-md.md)] invariate, in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina se sia valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo approccio comporta due vantaggi:  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC del client analizza le istruzioni SQL solo per la [!INCLUDE[ssDE](../../includes/ssde-md.md)]sintassi ODBC e ISO non supportata direttamente da, in [!INCLUDE[tsql](../../includes/tsql-md.md)]cui il driver viene trasformato. Tutte le altre sintassi SQL vengono passate all' [!INCLUDE[ssDE](../../includes/ssde-md.md)] oggetto invariato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui determinerà se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è valido. Questo approccio comporta due vantaggi:  
   
 -   Riduzione dell'overhead  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68206785"
   
 -   Flessibilità  
   
-     I programmatori possono personalizzare la portabilità delle applicazioni. Per migliorare la portabilità rispetto a più database, utilizzare principalmente la sintassi ODBC e ISO. Per utilizzare miglioramenti specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la sintassi di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta l'intero [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi in modo che le applicazioni basate su ODBC possono sfruttare tutte le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     I programmatori possono personalizzare la portabilità delle applicazioni. Per migliorare la portabilità rispetto a più database, utilizzare principalmente la sintassi ODBC e ISO. Per utilizzare miglioramenti specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la sintassi di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi completa, pertanto le applicazioni basate su ODBC possono sfruttare tutte le funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di.  
   
  L'elenco di colonne di un'istruzione SELECT deve contenere solo le colonne richieste per eseguire l'attività corrente. In questo modo non solo si riduce la quantità di dati inviati attraverso la rete, ma anche l'effetto delle modifiche del database sull'applicazione. Se in un'applicazione non si fa riferimento a una colonna di una tabella, l'applicazione non viene interessata dalle modifiche apportate alla colonna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
+ [Esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

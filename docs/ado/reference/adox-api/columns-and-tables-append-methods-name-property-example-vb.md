@@ -1,5 +1,5 @@
 ---
-title: Tabelle e colonne metodi Append oggetti esempio della proprietà Name (VB) | Microsoft Docs
+title: Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966869"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Esempio dei metodi Append di Columns e Tables e della proprietà Name (VB)
-Il codice seguente viene illustrato come creare una nuova tabella.  
+Nel codice seguente viene illustrato come creare una nuova tabella.  
   
 ```  
 ' BeginCreateTableVB  
@@ -67,10 +67,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

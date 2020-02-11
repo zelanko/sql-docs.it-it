@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107933"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66107933"
   
 -   Elementi personalizzati del report  
   
--   Riga  
+-   Grafico a linee  
   
 -   Image  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107933"
 |Casella di testo|Viene eseguito il rendering del contenuto della casella di testo. Nella modalità predefinita gli elementi vengono formattati in base alle proprietà di formattazione dell'elemento. Nella modalità conforme la formattazione può essere modificata dalle impostazioni relative alle informazioni sui dispositivi. Per altre informazioni sulle modalità di rendering CSV, vedere di seguito.|  
 |Tabella|Il rendering viene eseguito mediante l'espansione della tabella e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni. I report drill-through non sono supportati.|  
 |Matrice|Il rendering viene eseguito mediante l'espansione della matrice e la creazione di una riga e una colonna per ogni riga e colonna al livello di dettaglio inferiore. Per le righe e le colonne di subtotali non sono disponibili intestazioni.|  
-|List|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
+|Elenco|Viene eseguito il rendering di un record per ogni riga di dettagli o istanza nell'elenco.|  
 |Sottoreport|L'elemento padre viene ripetuto per ogni istanza del contenuto.|  
 |Grafico|Il rendering viene eseguito mediante la creazione di una riga per ogni valore del grafico ed etichetta del membro. Le etichette delle serie e delle categorie nelle gerarchie sono rese bidimensionali e incluse nella riga per un valore del grafico.|  
 |Barra dei dati|Viene eseguito il rendering come grafico. In genere, in una barra dei dati non sono incluse gerarchie o etichette.|  

@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729107"
 ---
 # <a name="member-revision-history-master-data-services"></a>Cronologia delle revisioni del membro (Master Data Services)
@@ -71,7 +71,7 @@ ms.locfileid: "73729107"
 |Eseguire il rollback della cronologia delle revisioni del membro|[Rollback della cronologia delle revisioni del membro &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
+ [Creazione di un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

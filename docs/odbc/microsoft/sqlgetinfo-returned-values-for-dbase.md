@@ -17,17 +17,17 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794680"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti da SQLGetInfo per dBASE
 Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando le #defines del linguaggio C elencate a **SQLGetInfo** nell'argomento *fInfoType* . Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere *ODBC Programmer ' s Reference*.  
   
 > [!NOTE]  
->  Dove **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra&#124;verticale () rappresenta un OR bit per bit.  
+>  Dove **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un OR bit per bit.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
@@ -94,7 +94,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_DRIVER_HENV|Gestito da Gestione driver.|  
 |SQL_DRIVER_HLIB|Gestito da Gestione driver.|  
 |SQL_DRIVER_HSTMT|Gestito da Gestione driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* specifica la data di compilazione)|  
 |SQL_DROP_ASSERTION|0|  
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Più valori|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|CONFORMITÀ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Da Gestione driver|  
 |SQL_OJ_CAPABILITIES|Più valori|  
@@ -156,7 +156,7 @@ Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento
 |SQL_SCROLL_OPTIONS|Più valori|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?"';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> "';:<,.!'\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Più valori|  
 |SQL_SUBQUERIES|Più valori|  
 |SQL_SYSTEM_FUNCTIONS|0|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493899"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordinamento dei membri dell'attributo in base a un attributo secondario
@@ -75,7 +75,7 @@ ms.locfileid: "69493899"
   
 1.  Passare alla scheda **Esplorazione** in Progettazione dimensioni per la dimensione Customer, quindi sfogliare i membri della gerarchia dell'attributo **Commute Distance** .  
   
-     Si noti che i membri di questa gerarchia dell'attributo sono ordinati in base ai valori ASCII della chiave del membro. In questo caso, l'ordinamento in base al nome o alla chiave dell'attribuito non consente di ordinare le distanze percorse in ordine crescente. In questa attività i membri della gerarchia dell'attributo verranno ordinati in base al calcolo denominato **CommuteDistanceSort** che attribuisce il numero di ordine appropriato a ogni valore distinto della colonna. Per risparmiare tempo, questo calcolo denominato è già stato aggiunto alla tabella **Customer** nella vista origine dati di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. È possibile passare a questa vista origine dati per visualizzare lo script SQL utilizzato in questo calcolo denominato. Per altre informazioni, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Si noti che i membri di questa gerarchia dell'attributo sono ordinati in base ai valori ASCII della chiave del membro. In questo caso, l'ordinamento in base al nome o alla chiave dell'attribuito non consente di ordinare le distanze percorse in ordine crescente. In questa attività i membri della gerarchia dell'attributo verranno ordinati in base al calcolo denominato **CommuteDistanceSort** che attribuisce il numero di ordine appropriato a ogni valore distinto della colonna. Per risparmiare tempo, questo calcolo denominato è già stato aggiunto alla tabella **Customer** nella vista origine dati di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. È possibile passare a questa vista origine dati per visualizzare lo script SQL utilizzato in questo calcolo denominato. Per ulteriori informazioni, vedere [definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      Nell'immagine seguente vengono illustrati i membri della gerarchia dell'attributo **Commute Distance** ordinati in base ai valori ASCII della chiave del membro.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493899"
   
      Si noti che i membri della gerarchia dell'attributo sono ora ordinati in base a un criterio logico per distanza crescente come illustrato nella figura seguente.  
   
-     ![Gerarchia dell'attributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif " riordinata Gerarchia dell'attributo Commute Distance") riordinata  
+     ![Gerarchia dell'attributo Commute Distance con ordine modificato](../../2014/tutorials/media/l4-memberproperties-5.gif "Gerarchia dell'attributo Commute Distance con ordine modificato")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

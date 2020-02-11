@@ -1,5 +1,5 @@
 ---
-title: Caratteristiche degli strumenti di gestione in SQL Server 2014 | Microsoft Docs
+title: Funzionalità degli strumenti di gestione non più supportate in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780350"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione non più supportate in SQL Server 2014
-  In questo argomento vengono descritte le funzionalità degli strumenti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  In questo argomento vengono descritte le funzionalità degli strumenti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Funzionalità rimosse in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- None  
+ nessuno  
   
 ## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Funzionalità rimosse in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62780350"
 ### <a name="activex-subsystem-for-sql-server-agent"></a>Sottosistema ActiveX per SQL Server Agent  
  Il sottosistema ActiveX per SQL Server Agent è stato rimosso in questa versione. Non è disponibile alcuna funzionalità sostitutiva.  
   
-### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
+### <a name="sp_addtask-sp_deletetask-sp_updatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
  Sp_addtask, sp_deletetask e sp_updatetask sono state rimosse in questa versione. Non utilizzare questa funzionalità nelle applicazioni nuove o aggiornate.  
   
 ### <a name="net-send-and-pager-notification"></a>Notifica tramite Net Send e cercapersone  
