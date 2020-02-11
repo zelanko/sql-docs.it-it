@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066309"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
@@ -41,7 +41,7 @@ ms.locfileid: "63066309"
  Per specificare un sistema di risoluzione personalizzato, vedere [Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge](../publish/specify-a-merge-article-resolver.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

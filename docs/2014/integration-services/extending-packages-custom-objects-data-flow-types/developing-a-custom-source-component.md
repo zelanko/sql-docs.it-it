@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ea069983515564225d0cf6b74e3660f6ef0829e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768944"
 ---
 # <a name="developing-a-custom-source-component"></a>Sviluppo di un componente di origine personalizzato
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di origine in grado di connettersi a origini dati personalizzate e di fornire dati da tali origini ad altri componenti in un'attività Flusso di dati. La possibilità per creare origini personalizzate si rivela utile quando è necessario connettersi a origini dati non accessibili tramite una delle origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistenti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di origine in grado di connettersi a origini dati personalizzate e di fornire dati da tali origini ad altri componenti in un'attività flusso di dati. La possibilità per creare origini personalizzate si rivela utile quando è necessario connettersi a origini dati non accessibili tramite una delle origini di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esistenti.  
   
  I componenti di origine includono uno o più output e nessun input. In fase di progettazione tali componenti vengono utilizzati per creare e configurare connessioni, leggere metadati di colonne dall'origine dati esterna e configurare le colonne di output dell'origine in base all'origine dati esterna. Durante l'esecuzione, si connettono all'origine dati esterna e aggiungono righe a un buffer di output. L'attività Flusso di dati fornisce quindi questo buffer di righe di dati ai componenti a valle.  
   
@@ -169,7 +169,7 @@ End Sub
   
  L'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> della colonna determina i valori impostati per le altre proprietà. Nella tabella seguente sono illustrati i requisiti delle proprietà dipendenti per ogni oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Le proprietà dipendenti dei tipi di dati non elencati sono impostate su zero.  
   
-|DataType|Length|Scala|Precisione|CodePage|  
+|DataType|Length|Scalabilità|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maggiore di 0 e minore o uguale a 28.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -666,7 +666,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un componente di destinazione personalizzato](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   

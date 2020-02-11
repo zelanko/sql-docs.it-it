@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec3bd035f1d8c3998189c819b9fdcf9fa98b1037
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762662"
 ---
-# <a name="mssqlserver7711"></a>MSSQLSERVER_7711
+# <a name="mssqlserver_7711"></a>MSSQLSERVER_7711
     
 ## <a name="details"></a>Dettagli  
   
@@ -35,9 +35,9 @@ ms.locfileid: "62762662"
 ## <a name="explanation"></a>Spiegazione  
  Si è verificato un errore nell'opzione DATA_COMPRESSION di una delle istruzioni seguenti:  
   
--   CREATE TABLE  
+-   CREA TABELLA  
   
--   ALTER TABLE  
+-   MODIFICA TABELLA  
   
 -   CREATE INDEX  
   

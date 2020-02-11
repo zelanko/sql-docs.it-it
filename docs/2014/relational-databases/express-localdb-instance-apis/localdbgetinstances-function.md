@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032247"
 ---
 # <a name="localdbgetinstances-function"></a>Funzione LocalDBGetInstances
   Vengono restituite tutte le istanze del database locale di SQL Server Express con la versione specificata.  
   
- **File di intestazione:** SQLNCLI. h  
+ **File di intestazione:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parametri  
  *pInstanceNames*  
- [Output] Quando questa funzione viene restituito, contiene i nomi di entrambi denominato e predefinito di istanze del database locale nella workstation dell'utente.  
+ Output Quando questa funzione viene restituita, contiene i nomi delle istanze del database locale denominate e predefinite nella workstation dell'utente.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. Nell'output contiene il numero di istanze di database locale trovate nella workstation dell'utente.  
+ [Input/output] In input, contiene il numero di slot per i nomi di istanza nel buffer *pInstanceNames* . Nell'output, contiene il numero di istanze del database locale trovate nella workstation dell'utente.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -68,12 +68,12 @@ HRESULT LocalDBGetInstances(
  Configurazione di un'istanza danneggiata.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Note  
- Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

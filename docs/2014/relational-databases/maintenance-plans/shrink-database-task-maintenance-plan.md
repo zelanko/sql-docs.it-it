@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806742"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Attività Compatta database (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Compatta database** per creare un'attività che cerchi di ridurre le dimensioni dei database selezionati. Le opzioni illustrate di seguito consentono di definire la quantità di spazio non utilizzato che deve rimanere nel database dopo la compattazione. Maggiore è la percentuale specificata, minore sarà il livello di compattazione del database. Il valore è basato sulla percentuale dei dati effettivi presenti nel database. Compattando ad esempio un database da 100 MB contenente 60 MB di dati e 40 MB di spazio disponibile con una percentuale di spazio disponibile del 50%, si ottiene un database con 60 MB di dati e 30 MB di spazio disponibile, perché il 50% di 60 MB è pari a 30 MB. Viene eliminato dal database solo lo spazio in eccesso. I valori validi sono compresi tra 0 e 100.  
+  Utilizzare la finestra di dialogo **attività Compatta database** per creare un'attività che tenti di ridurre le dimensioni dei database selezionati. Le opzioni illustrate di seguito consentono di definire la quantità di spazio non utilizzato che deve rimanere nel database dopo la compattazione. Maggiore è la percentuale specificata, minore sarà il livello di compattazione del database. Il valore è basato sulla percentuale dei dati effettivi presenti nel database. Compattando ad esempio un database da 100 MB contenente 60 MB di dati e 40 MB di spazio disponibile con una percentuale di spazio disponibile del 50%, si ottiene un database con 60 MB di dati e 30 MB di spazio disponibile, perché il 50% di 60 MB è pari a 30 MB. Viene eliminato dal database solo lo spazio in eccesso. I valori validi sono compresi tra 0 e 100.  
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62806742"
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
@@ -45,7 +45,7 @@ ms.locfileid: "62806742"
   
 -   **Tutti i database**  
   
-     Genera un piano per l'esecuzione di attività di manutenzione in tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a eccezione di tempdb.  
+     Generare un piano di manutenzione per l'esecuzione di attività [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di manutenzione su tutti i database ad eccezione di tempdb.  
   
 -   **Tutti i database di sistema**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62806742"
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **I database seguenti**  
+-   **Questi database**  
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
@@ -65,10 +65,10 @@ ms.locfileid: "62806742"
  **Compatta database quando le dimensioni superano**  
  Specificare le dimensioni in megabyte che causano l'esecuzione dell'attività.  
   
- **Spazio che deve rimanere disponibile dopo la compattazione**  
+ **Quantità di spazio disponibile da mantenere dopo la compattazione**  
  Consente di arrestare l'operazione di compattazione quando lo spazio disponibile nei file di database raggiunge le dimensioni specificate.  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ ms.locfileid: "62806742"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -88,10 +88,10 @@ ms.locfileid: "62806742"
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Connette a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -100,6 +100,6 @@ ms.locfileid: "62806742"
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
+ [DBCC SHRINKDATABASE &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
   
   

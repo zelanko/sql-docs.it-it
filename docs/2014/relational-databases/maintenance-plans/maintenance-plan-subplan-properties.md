@@ -14,23 +14,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806703"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Piano di manutenzione (Proprietà sottopiano)
   Usare la finestra di dialogo **Piano di manutenzione (Proprietà sottopiano)** per specificare il nome, la descrizione e la pianificazione per un sottopiano di un piano di manutenzione. Per visualizzare questa finestra di dialogo, fare clic su **Proprietà sottopiano** nella scheda **Progettazione** del piano di manutenzione o fare doppio clic su un sottopiano nella griglia della finestra di progettazione.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di immettere un nome per il sottopiano. La lunghezza massima del nome è di 128 caratteri.  
   
  **Descrizione**  
  Consente di immettere una descrizione per il sottopiano. La lunghezza massima della descrizione è di 512 caratteri.  
   
- **Pianificazione**  
+ **Pianificare**  
  Fare clic sull'icona della pianificazione per specificare quando eseguire le attività del sottopiano oppure fare clic sull'icona della pianificazione con una x rossa per rimuovere la pianificazione esistente per il sottopiano.  
   
 ## <a name="see-also"></a>Vedere anche  

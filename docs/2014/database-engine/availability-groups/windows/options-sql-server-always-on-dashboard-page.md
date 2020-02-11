@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789247"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Opzioni (SQL Server AlwaysOn, pagina Dashboard)
-  Usare il **Dashboard di SQL Server AlwaysOn** pagina del [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **opzioni** finestra di dialogo per configurare il AlwaysOn Dashboard.  
+  Utilizzare la pagina **dashboard SQL Server AlwaysOn** della [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]finestra di dialogo **Opzioni** per configurare il dashboard AlwaysOn.  
   
  **Per accedere alla pagina:**  
   
- Nel **degli strumenti** dal menu fare clic su **opzioni**, espandere il **AlwaysOn di SQL Server** cartella e quindi fare clic su **Dashboard**.  
+ Scegliere **Opzioni**dal menu **strumenti** , espandere la SQL Server cartella **AlwaysOn** e quindi fare clic su **Dashboard**.  
   
 ## <a name="on-this-page"></a>In questa pagina  
  **Abilitare l'aggiornamento automatico.**  
@@ -34,10 +34,10 @@ ms.locfileid: "62789247"
   
 -   Nel campo **Numero di tentativi di connessione** viene visualizzato il numero di tentativi effettuati dal dashboard per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita una replica di disponibilità per un gruppo di disponibilità monitorato tramite il dashboard. Il valore predefinito è 65535. Quando l'aggiornamento automatico è abilitato, è possibile modificare il campo per cambiare il numero di tentativi di connessione.  
   
- **Abilita criteri AlwaysOn definiti dall'utente.**  
+ **Abilitare i criteri AlwaysOn definiti dall'utente.**  
  Se sono stati definiti criteri AlwaysOn, fare clic su questa opzione per abilitarli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

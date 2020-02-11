@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815404"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
@@ -50,9 +50,9 @@ ms.locfileid: "62815404"
   
      Se nell'istanza del server sono presenti repliche di disponibilità, prima di poter cambiare il contesto del cluster HADR è necessario eseguire una delle operazioni indicate di seguito:  
   
-    |Ruolo di replica|Azione|Collegamento|  
+    |Ruolo della replica|Azione|Collegamento|  
     |------------------|------------|----------|  
-    |Primario|Gruppo di disponibilità offline.|[Portare un gruppo di disponibilità offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
+    |Primaria|Gruppo di disponibilità offline.|[Portare un gruppo di disponibilità offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
     |Secondari|Rimozione della replica dal gruppo di disponibilità|[Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Prima di poter passare da un cluster remoto al cluster locale, tutte le repliche con commit sincrono devono essere di tipo SYNCHRONIZED.  
@@ -71,11 +71,11 @@ ms.locfileid: "62815404"
   
 ####  <a name="Permissions"></a> Autorizzazioni  
   
--   **accesso di SQL Server**  
+-   **Accesso SQL Server**  
   
      È richiesta l'autorizzazione CONTROL SERVER.  
   
--   **Account di servizio SQL Server**  
+-   **Account del servizio SQL Server**  
   
      L'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza del server deve disporre degli elementi seguenti:  
   
@@ -85,14 +85,14 @@ ms.locfileid: "62815404"
   
  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare il contesto del cluster WSFC di una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria o una replica secondaria del gruppo di disponibilità.  
   
 2.  Usare la clausola SET HADR CLUSTER CONTEXT dell'istruzione [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) , come segue:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **' *`windows_cluster`* '** | LOCALE}  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** | LOCALE  
   
      dove  
   
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver cambiato il contesto del cluster di una replica di disponibilità  
+##  <a name="FollowUp"></a>Completamento: dopo aver cambiato il contesto del cluster di una replica di disponibilità  
  Il nuovo contesto del cluster HADR diviene effettivo immediatamente e non richiede il riavvio dell'istanza del server. L'impostazione del contesto del cluster HADR è di tipo persistente a livello di istanza e rimane invariata in caso di riavvio dell'istanza del server.  
   
  Confermare il nuovo contesto del cluster HADR eseguendo una query sulla vista a gestione dinamica (DMV) [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) , come segue:  
@@ -156,7 +156,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del team di SQL Server AlwaysOn: Blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

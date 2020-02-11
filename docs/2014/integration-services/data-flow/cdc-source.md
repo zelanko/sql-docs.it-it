@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828123"
 ---
 # <a name="cdc-source"></a>Origine CDC
@@ -28,7 +28,7 @@ ms.locfileid: "62828123"
   
  Per l'origine CDC vengono utilizzate le configurazioni seguenti:  
   
--   Una gestione connessione ADO.NET di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla configurazione della connessione dell'origine CDC, vedere [CDC Source Editor &#40;Connection Manager Page&#41;](../cdc-source-editor-connection-manager-page.md).  
+-   Una gestione connessione ADO.NET di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulla configurazione della connessione dell'origine CDC, vedere [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md).  
   
 -   Una tabella abilitata per CDC.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "62828123"
   
 -   Il nome della variabile del pacchetto dello stato CDC in base alla quale viene determinato l'intervallo di elaborazione CDC. L'origine CDC non modifica questa variabile.  
   
- I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle funzioni CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).  
+ I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle funzioni CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).  
   
  L'origine CDC include un output regolare e un output degli errori.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  L'origine CDC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code** (Codice errore): il valore è sempre -1.  
+-   **Error Code**: il valore è sempre -1.  
   
--   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
--   **Error Row Columns** (Colonne riga errore): dati del record che causano l'errore.  
+-   **Error Row Columns**: dati del record che provocano l'errore.  
   
- A seconda dell'impostazione del comportamento in seguito all'errore, l'origine CDC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
+ A seconda dell'impostazione del comportamento in seguito all'errore, l'origine CDC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor origine CDC &#40;pagina Output degli errori&#41;](../cdc-source-editor-error-output-page.md).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
  Il componente di origine CDC per Microsoft supporta tutti i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , di cui viene eseguito il mapping ai tipi di dati SSIS corretti.  
@@ -75,20 +75,24 @@ use <cdc-enabled-database-name>
   
  dove:  
   
--   \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
+-   
+  \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
   
--   \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
+-   
+  \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
   
--   \<value-from-state-ce> è il valore visualizzato nella variabile di stato CDC come CE/\<value-from-state-cs>/ (CE indica la fine dell'intervallo di elaborazione corrente).  
+-   
+  \<value-from-state-ce> è il valore visualizzato nella variabile di stato CDC come CE/\<value-from-state-cs>/ (CE indica la fine dell'intervallo di elaborazione corrente).  
   
--   \<mode> corrisponde alle modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   
+  \<mode> corrisponde alle modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Questo script consente di isolare i problemi riproducendoli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in cui è possibile riprodurre e identificare facilmente gli errori.  
   
 #### <a name="sql-server-error-message"></a>Messaggio di errore di SQL Server  
  È possibile che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]venga restituito il messaggio di errore seguente:  
   
- **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<.>.**  
+ **È stato specificato un numero insufficiente di argomenti per la procedura o la funzione\<cdc. fn_cdc_get_net_changes_.. >.**  
   
  Questo errore non indica che un argomento è mancante. Indica invece che i valori LSN iniziale o finale nella variabile di stato CDC non sono validi.  
   
@@ -111,7 +115,7 @@ use <cdc-enabled-database-name>
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** , vedere [Proprietà personalizzate dell'origine CDC](cdc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
@@ -125,6 +129,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/) sul sito Web mattmasson.com.  
+-   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)sul sito Web mattmasson.com.  
   
   

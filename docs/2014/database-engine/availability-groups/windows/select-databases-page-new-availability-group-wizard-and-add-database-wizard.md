@@ -1,5 +1,5 @@
 ---
-title: Pagina Selezione database (nuovo gruppo di disponibilità-procedura guidata per aggiungere guidata Database) | Microsoft Docs
+title: Pagina Selezione database (creazione guidata gruppo di disponibilità-procedura guidata Aggiungi database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788491"
 ---
-# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Pagina Selezione database (nuovo gruppo di disponibilità-procedura guidata per aggiungere guidata Database)
+# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Pagina Selezione database (creazione guidata gruppo di disponibilità-procedura guidata Aggiungi database)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Specifica database** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Opzioni di selezione dei database  
  Nella griglia **Database utente in questa istanza di SQL Server** è elencato ogni database utente locale. Le colonne sono le seguenti:  
   
- **Name**  
+ **Nome**  
  Visualizza il nome di un database utente locale.  
   
  **Dimensione**  
  Visualizza la dimensione del database, se è disponibile per la procedura guidata.  
   
- **Stato**  
+ **Status**  
  Visualizza un collegamento ipertestuale il cui testo indica se un determinato database soddisfa i prerequisiti per l'aggiunta a un gruppo di disponibilità. Se lo stato è "**Soddisfa i prerequisiti**" è possibile aggiungere il database al gruppo di disponibilità. Se un database non soddisfa tutti i prerequisiti, il collegamento ipertestuale **Stato** fornisce una breve spiegazione dei motivi per cui il database non è idoneo. Per ulteriori informazioni, fare clic sul collegamento ipertestuale.  
   
  È possibile lasciare la procedura guidata sulla pagina **Seleziona database** mentre si eseguono le operazioni necessari per soddisfare un prerequisito del database. Quando si torna alla pagina **Seleziona database** fare clic su **Aggiorna** per aggiornare la griglia.  
@@ -47,7 +47,7 @@ ms.locfileid: "62788491"
 -   [Usare la procedura guidata Aggiungi database a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

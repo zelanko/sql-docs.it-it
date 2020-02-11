@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832956"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
@@ -36,7 +36,7 @@ ms.locfileid: "62832956"
   
 -   Quando si seleziona il carattere jolly **(\*)** in **KeyColumns**, l'attività calcola il livello di attendibilità della chiave di ogni colonna nella tabella o nella vista.  
   
- Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns** vengono selezionate le opzioni seguenti:  
+ Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns**vengono selezionate le opzioni seguenti:  
   
 -   Si seleziona (\*) e la colonna C in **KeyColumns**. L'attività calcola il livello di attendibilità della chiave della colonna C, quindi quella delle chiavi candidate composte (A,C) e (B, C).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62832956"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, la proprietà **CompareOptions** è di sola lettura ed è impostata su **Default**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -100,7 +100,7 @@ ms.locfileid: "62832956"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -115,9 +115,9 @@ ms.locfileid: "62832956"
  **ThresholdSetting**  
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa proprietà è **Specified**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
+|**Nessuno**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Viene specificata una soglia in **KeyStrengthThreshold**. Il livello di attendibilità della chiave viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato solo se le colonne selezionate rappresentano una chiave esatta.|  
   

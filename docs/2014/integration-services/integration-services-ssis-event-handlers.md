@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767725"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
@@ -64,16 +64,16 @@ ms.locfileid: "62767725"
 -   Specificare la modalità di registrazione utilizzata dal gestore di evento.  
   
 ## <a name="event-handler-content"></a>Contenuto di un gestore di evento  
- La creazione di un gestore di evento è simile alla compilazione di un pacchetto. Un gestore di evento include attività e contenitori, ordinati in sequenza in modo da formare un flusso di controllo, e può includere anche flussi di dati. In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] è disponibile la scheda **Gestori eventi** , che consente di creare gestori di eventi personalizzati. Per altre informazioni, vedere [gestori eventi di pacchetti SSIS](integration-services-ssis-event-handlers.md).  
+ La creazione di un gestore di evento è simile alla compilazione di un pacchetto. Un gestore di evento include attività e contenitori, ordinati in sequenza in modo da formare un flusso di controllo, e può includere anche flussi di dati. In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] è disponibile la scheda **Gestori eventi** , che consente di creare gestori di eventi personalizzati. Per altre informazioni, vedere [gestori eventi del pacchetto SSIS](integration-services-ssis-event-handlers.md).  
   
  È possibile creare gestori di eventi anche a livello di codice. Per altre informazioni, vedere [Gestione degli eventi a livello di programmazione](building-packages-programmatically/handling-events-programmatically.md).  
   
 ## <a name="run-time-events"></a>Eventi di run-time  
  Nella tabella seguente vengono elencati i gestori di eventi disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e vengono descritti gli eventi di run-time che ne provocano l'esecuzione.  
   
-|Gestore di evento|Evento|  
+|Gestore di evento|Event|  
 |-------------------|-----------|  
-|`OnError`|Il gestore eventi per il `OnError` evento. Questo evento viene generato da un eseguibile quando si verifica un errore.|  
+|`OnError`|Gestore eventi per l' `OnError` evento. Questo evento viene generato da un eseguibile quando si verifica un errore.|  
 |**OnExecStatusChanged**|Gestore di evento per l'evento **OnExecStatusChanged** . Questo evento viene generato da un eseguibile quando cambia il suo stato di esecuzione.|  
 |**OnInformation**|Gestore di evento per l'evento **OnInformation** . Questo evento viene generato durante la convalida e l'esecuzione di un eseguibile, allo scopo di fornire informazioni. Questo evento fornisce solo informazioni, non errori o avvisi.|  
 |**OnPostExecute**|Gestore di evento per l'evento **OnPostExecute** . Questo evento viene generato da un eseguibile immediatamente dopo la fine dell'esecuzione.|  
@@ -83,7 +83,7 @@ ms.locfileid: "62767725"
 |**OnProgress**|Gestore di evento per l'evento **OnProgress** . Questo evento viene generato da un eseguibile quando compie un avanzamento misurabile.|  
 |**OnQueryCancel**|Gestore di evento per l'evento **OnQueryCancel** . Questo evento viene generato da un eseguibile per determinare se l'esecuzione deve essere arrestata.|  
 |**OnTaskFailed**|Gestore di evento per l'evento **OnTaskFailed** . Questo evento viene generato da un'attività quando non riesce.|  
-|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si impostano i **RaiseChangeEvent** proprietà per la variabile a `False`. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si imposta la proprietà **RaiseChangeEvent** per la variabile su `False`. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Gestore di evento per l'evento **OnWarning** . Questo evento viene generato da un eseguibile quando viene generato un avviso.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configurazione di un gestore dell'evento  

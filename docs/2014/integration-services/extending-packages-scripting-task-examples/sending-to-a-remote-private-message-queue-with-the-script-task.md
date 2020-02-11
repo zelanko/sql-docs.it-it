@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768467"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Invio di messaggi a una coda privata remota tramite l'attività Script
@@ -30,7 +30,7 @@ ms.locfileid: "62768467"
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio seguente viene usata una gestione connessione MSMQ esistente, insieme agli oggetti e ai metodi dello spazio dei nomi System.Messaging, per inviare il testo contenuto in una variabile di pacchetto a una coda di messaggi privata remota. La chiamata al metodo M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) della gestione connessione MSMQ restituisce un **MessageQueue** il cui `Send` metodo esegue questa operazione attività.  
+ Nell'esempio seguente viene usata una gestione connessione MSMQ esistente, insieme agli oggetti e ai metodi dello spazio dei nomi System.Messaging, per inviare il testo contenuto in una variabile di pacchetto a una coda di messaggi privata remota. La chiamata al metodo M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection (System. Object) della gestione connessione MSMQ restituisce un oggetto **MessageQueue** il cui `Send` metodo consente di eseguire questa attività.  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62768467"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  Creare un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabile denominata **MessageText** typu `String` per passare il testo del messaggio nello script. Immettere un messaggio predefinito come valore della variabile.  
+2.  Creare una [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabile denominata **MessageText** di tipo `String` per passare il testo del messaggio nello script. Immettere un messaggio predefinito come valore della variabile.  
   
 3.  Aggiungere un'attività Script all'area di progettazione e modificarla. Nella scheda **Script** dell'**Editor attività Script** aggiungere la variabile `MessageText` alla proprietà **ReadOnlyVariables** per rendere disponibile la variabile all'interno dello script.  
   
@@ -102,9 +102,9 @@ public class ScriptMain
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività Message Queue](../control-flow/message-queue-task.md)  
+ [Message Queue Task](../control-flow/message-queue-task.md)  
   
   

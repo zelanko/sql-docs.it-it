@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827942"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Crea InfoSource per dati transazione
@@ -33,7 +33,7 @@ ms.locfileid: "62827942"
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**e quindi fare clic su **Crea**.  
+4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**, quindi fare clic su **Crea**.  
   
 5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**e quindi fare clic su **OK**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62827942"
  **Nome InfoSource**  
  Immettere un nome per il nuovo InfoSource.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per il nuovo InfoSource.  
   
  **Descrizione lunga**  
@@ -81,7 +81,7 @@ ms.locfileid: "62827942"
  **Tipo**  
  Visualizza il tipo dell'InfoObject associato alla colonna del flusso di dati. Nella tabella seguente sono elencati i valori possibili per il tipo.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |CHA|Caratteristiche|  
 |UNI|Unità|  

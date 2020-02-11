@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e2fc735cd4834fcb6e59550604b831b5d8790fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768586"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione sincrona con il componente script
@@ -69,9 +69,9 @@ ms.locfileid: "62768586"
  Per altre informazioni sulla pagina **Input e output** di **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40;pagina Input e output&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Aggiunta di variabili  
- Se si desidera usare le variabili esistenti nello script, è possibile aggiungerle nel `ReadOnlyVariables` e `ReadWriteVariables` nei campi proprietà le **Script** pagina del **Editor trasformazione Script**.  
+ Se si desidera utilizzare le variabili esistenti nello script, è possibile aggiungerle nei campi delle `ReadOnlyVariables` proprietà `ReadWriteVariables` e nella pagina **script** di **Editor trasformazione script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sui puntini di sospensione ( **...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nella **Seleziona variabili** nella finestra di dialogo.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle `ReadOnlyVariables` proprietà e `ReadWriteVariables` e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .  
   
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62768586"
 ### <a name="understanding-the-auto-generated-code"></a>Informazioni sul codice generato automaticamente  
  Quando si apre l'IDE di VSTA dopo la creazione e la configurazione di un componente di trasformazione, la classe `ScriptMain` modificabile viene visualizzata nell'editor del codice con uno stub per il metodo `ProcessInputRow`. La classe `ScriptMain` è quella in cui si scriverà il codice personalizzato, mentre `ProcessInputRow` è il metodo più importante in un componente di trasformazione.  
   
- Se si apre la **Esplora progetti** finestra in VSTA, è possibile vedere che il componente Script ha generato anche sola lettura `BufferWrapper` e `ComponentWrapper` gli elementi del progetto. La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.  
+ Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto `ComponentWrapper` e di sola lettura. La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.  
   
  In fase di esecuzione il motore flusso di dati richiama il metodo `ProcessInput` nella classe `UserComponent`, che esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> della classe padre <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il metodo `ProcessInput` a sua volta esegue il ciclo delle righe nel buffer di input e chiama il metodo `ProcessInputRow` una volta per ogni riga.  
   
@@ -130,13 +130,13 @@ else
 }  
 ```  
   
- In questo esempio il componente script genera automaticamente i metodi **DirectRowTo\<OutputBufferX>** , in base ai nomi degli output configurati. È possibile utilizzare codice simile per indirizzare le righe di errore a un output degli errori simulati.  
+ In questo esempio il componente script genera automaticamente i metodi **DirectRowTo\<OutputBufferX>**, in base ai nomi degli output configurati. È possibile utilizzare codice simile per indirizzare le righe di errore a un output degli errori simulati.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti è illustrato il codice personalizzato necessario nella classe `ScriptMain` per creare un componente di trasformazione sincrono.  
   
 > [!NOTE]  
->  Questi esempi usano il **Person. Address** nella tabella di `AdventureWorks` database di esempio e passate la prima e la quarta colonna, il **intAddressID** e **città nvarchar (30)** le colonne, tramite il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  In questi esempi viene utilizzata la tabella **Person. Address** nel database di `AdventureWorks` esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Esempio di trasformazione sincrona a singolo output  
  In questo esempio viene illustrato un componente di trasformazione sincrono con un singolo output. La trasformazione passa la colonna **AddressID** e converte la colonna **City** in lettere maiuscole.  
@@ -145,7 +145,7 @@ else
   
 1.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come trasformazione.  
   
-2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio che contiene il **AddressID** e **Città** colonne.  
+2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio che contiene le colonne **AddressID** e **City** .  
   
 3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**. Contrassegnare la colonna **City** come Lettura/Scrittura.  
   
@@ -197,7 +197,7 @@ public class ScriptMain:
   
 1.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come trasformazione.  
   
-2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio che contiene almeno le **AddressID** e **Città** colonne.  
+2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio che contiene almeno le colonne **AddressID** e **City** .  
   
 3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**. Contrassegnare la colonna **City** come Lettura/Scrittura.  
   
@@ -258,9 +258,9 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Rimanere aggiornati con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Rimanere aggiornati con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md) [creazione di una trasformazione asincrona con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [lo sviluppo di un componente di trasformazione personalizzato con sincrono Output](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+ [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md) [creazione di una trasformazione asincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [sviluppo di un componente di trasformazione personalizzato con output sincroni](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

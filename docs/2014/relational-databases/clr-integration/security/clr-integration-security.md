@@ -1,5 +1,5 @@
 ---
-title: Sicurezza dell'integrazione CLR | Microsoft Docs
+title: Sicurezza dell'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918995"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
-  Il modello di sicurezza del [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gestisce e protegge l'accesso tra diversi tipi di oggetti CLR e non CLR in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] istruzione o un altro oggetto CLR in esecuzione sul server. Le chiamate tra gli oggetti vengono definite collegamenti. I tipi di controllo della sicurezza eseguiti su questi oggetti dipendono dai tipi di collegamento utilizzati.  
+  Il modello di sicurezza del [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) gestisce e protegge l'accesso tra diversi tipi di oggetti CLR e non CLR in esecuzione all' [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] interno di un'istruzione o un altro oggetto CLR in esecuzione nel server. Le chiamate tra gli oggetti vengono definite collegamenti. I tipi di controllo della sicurezza eseguiti su questi oggetti dipendono dai tipi di collegamento utilizzati.  
   
  Il modello di sicurezza dell'integrazione con CLR presenta gli obiettivi seguenti:  
   
--   Per impostazione predefinita, in esecuzione codice utente gestito in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'esecuzione di operazioni che potenzialmente compromettono l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere protetta grazie alle autorizzazioni di livello elevato appropriate.  
+-   Per impostazione predefinita, il codice utente gestito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]viene eseguito in. L'esecuzione di operazioni che potenzialmente compromettono l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere protetta grazie alle autorizzazioni di livello elevato appropriate.  
   
 -   Non è consigliabile concedere al codice utente gestito l'accesso non autorizzato ai dati dell'utente o ad altro codice dell'utente nel database. Il codice definito dall'utente deve essere eseguito nel contesto di sicurezza della sessione utente che lo ha richiamato e con i privilegi corretti per il contesto di sicurezza in questione.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62918995"
   
 -   Non è consigliabile concedere al codice definito dall'utente l'accesso non autorizzato alle risorse di sistema solo perché è in esecuzione nel processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il modello di sicurezza basata sull'accesso di codice di CLR. Alcuni dei vantaggi di questo approccio combinato alla sicurezza vengono esaminati nella presente sezione.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]con il modello di sicurezza basato sull'accesso al codice di CLR. Alcuni dei vantaggi di questo approccio combinato alla sicurezza vengono esaminati nella presente sezione.  
   
  Nella tabella seguente vengono elencati gli argomenti disponibili in questa sezione.  
   
- [Sicurezza dall'accesso di codice dell'integrazione con CLR](clr-integration-code-access-security.md)  
+ [Sicurezza da accesso di codice dell'integrazione con CLR](clr-integration-code-access-security.md)  
  Viene illustrato il modello di sicurezza da accesso di codice (CAS, Code Access Security) per il codice gestito.  
   
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  

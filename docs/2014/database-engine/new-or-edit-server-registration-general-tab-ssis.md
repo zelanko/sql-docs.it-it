@@ -1,5 +1,5 @@
 ---
-title: Nuovo o Modifica registrazione Server (scheda Generale) (SSIS) | Microsoft Docs
+title: Nuova registrazione o modifica registrazione server (scheda generale) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774161"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Creazione o modifica della registrazione del server (scheda Generale) (SSIS)
@@ -25,13 +25,13 @@ ms.locfileid: "62774161"
  Per accedere a questa pagina, in Server registrati fare clic su **Integration Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, scegliere **Nuovo**e quindi fare clic su **Registrazione server**.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Quando si registra un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato in Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
   
  **Nome server**  
  Consente di selezionare il server a cui connettersi. Viene visualizzato per impostazione predefinita l'ultimo server a cui ci si è connessi.  
   
- **Autenticazione**  
+ **autenticazione**  
  La modalità di autenticazione di Windows consente all'utente di utilizzare un account utente di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows per la connessione.  
   
  **Nome utente**  

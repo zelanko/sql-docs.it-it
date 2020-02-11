@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768967"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Sviluppo di un componente del flusso di dati personalizzato
-  L'attività Flusso di dati è costituita da componenti che si connettono a una varietà di origini dati, quindi trasformano e indirizzano i dati ad alta velocità. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre un modello a oggetti estendibile che consente agli sviluppatori di creare origini, trasformazioni e destinazioni personalizzate da usare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e nei pacchetti distribuiti. In questa sezione sono inclusi argomenti che in cui viene illustrato lo sviluppo di componenti del flusso di dati personalizzati.  
+  L'attività Flusso di dati è costituita da componenti che si connettono a una varietà di origini dati, quindi trasformano e indirizzano i dati ad alta velocità. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]fornisce un modello a oggetti estendibile che consente agli sviluppatori di creare origini, trasformazioni e destinazioni personalizzate che è [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] possibile utilizzare in e nei pacchetti distribuiti. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] In questa sezione sono inclusi argomenti che in cui viene illustrato lo sviluppo di componenti del flusso di dati personalizzati.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un componente flusso di dati personalizzato](creating-a-custom-data-flow-component.md)  
  Vengono descritti i passaggi iniziali per la creazione di un componente del flusso di dati personalizzato.  
   
@@ -44,31 +44,31 @@ ms.locfileid: "62768967"
  [Utilizzo di tipi di dati nel flusso di dati](working-with-data-types-in-the-data-flow.md)  
  Viene illustrato il mapping del flusso di dati dai tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ai tipi di dati gestiti di .NET Framework.  
   
- [Convalida di un componente flusso di dati](validating-a-data-flow-component.md)  
+ [Convalida di un componente del flusso di dati](validating-a-data-flow-component.md)  
  Vengono illustrati i metodi utilizzati per convalidare la configurazione del componente e per riconfigurare i metadati del componente.  
   
  [Implementazione di metadati esterni](implementing-external-metadata.md)  
  Viene illustrato l'utilizzo delle colonne di metadati esterni per la convalida dei dati.  
   
- [Generazione e definizione di eventi in un componente flusso di dati](raising-and-defining-events-in-a-data-flow-component.md)  
+ [Generazione e definizione di eventi in un componente del flusso di dati](raising-and-defining-events-in-a-data-flow-component.md)  
  Viene illustrato come generare eventi predefiniti e personalizzati.  
   
- [Registrazione e definizione di voci di log in un componente flusso di dati](logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Registrazione e definizione di voci di log in un componente del flusso di dati](logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Viene illustrato come creare e scrivere in voci di log personalizzate.  
   
- [Uso degli output degli errori in un componente flusso di dati](using-error-outputs-in-a-data-flow-component.md)  
+ [Utilizzo degli output degli errori in un componente del flusso di dati](using-error-outputs-in-a-data-flow-component.md)  
  Viene illustrato come reindirizzare le righe di errore a un output alternativo.  
   
- [Aggiornamento della versione di un componente flusso di dati](upgrading-the-version-of-a-data-flow-component.md)  
+ [Aggiornamento della versione di un componente del flusso di dati](upgrading-the-version-of-a-data-flow-component.md)  
  Viene illustrato come aggiornare i metadati del componente salvati quando viene utilizzata per la prima volta una nuova versione del componente.  
   
- [Sviluppo di un'interfaccia utente per un componente flusso di dati](developing-a-user-interface-for-a-data-flow-component.md)  
+ [Sviluppo di un'interfaccia utente per un componente del flusso di dati](developing-a-user-interface-for-a-data-flow-component.md)  
  Viene illustrato come implementare un editor personalizzato per un componente.  
   
  [Sviluppo di tipi specifici di componenti del flusso di dati](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contiene informazioni sullo sviluppo dei tre tipi di componenti del flusso di dati: origini, trasformazioni e destinazioni.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Contiene le classi e le interfacce utilizzate per creare componenti del flusso di dati personalizzati.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62768967"
  [Sviluppo di un enumeratore Foreach personalizzato](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Viene descritto come programmare enumeratori personalizzati.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensione del flusso di dati con il componente Script] (.. /.. /Extending-Packages-Scripting/Data-Flow-script-Component/Extending-the-Data-Flow-with-the-Script-Component.MD   
+ [Estensione del flusso di dati con il componente script] (.. /.. /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
  [Confronto tra soluzioni di scripting e oggetti personalizzati](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

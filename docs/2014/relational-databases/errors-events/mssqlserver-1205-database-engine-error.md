@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915898"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>Dettagli  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62915898"
 |Testo del messaggio|La transazione (ID di processo %d) è stata interrotta a causa di un deadlock delle risorse %.*ls con un altro processo. Ripetere la transazione.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Si è tentato di accedere a risorse in ordine conflittuale in transazioni distinte, causando un deadlock. Ad esempio:  
+ Accesso alle risorse in ordine conflittuale in transazioni distinte, con conseguente deadlock. Ad esempio:  
   
 -   Transaction1 aggiorna **Table1.Row1**, mentre Transaction2 aggiorna **Table2.Row2**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62915898"
   
 -   Si verifica un deadlock perché Transaction1 è in attesa del completamento di Transaction2 e Transaction2 è in attesa a sua volta del completamento di Transaction1.  
   
- Il sistema rileva il deadlock e sceglie una delle due transazioni interessate come "vittima". Genera quindi il messaggio ed esegue il rollback della transazione della vittima.  
+ Il sistema rileva il deadlock e sceglie una delle transazioni interessate come "vittima" e genera questo messaggio. Eseguire il rollback della transazione vittima.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Eseguire nuovamente la transazione. È inoltre possibile modificare l'applicazione per evitare i deadlock. È possibile tentare di eseguire nuovamente la transazione scelta come vittima. In base alle operazioni che verranno eseguite simultaneamente, è probabile che la transazione abbia esito positivo.  

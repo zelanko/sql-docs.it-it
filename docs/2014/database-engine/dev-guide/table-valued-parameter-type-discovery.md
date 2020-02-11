@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780320"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Individuazione del tipo di parametro con valori di tabella
-  Il consumer-, ovvero le applicazioni client che usano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider OLE DB Native Client, può individuare il tipo di ogni parametro del comando se il testo del comando è stato assegnato per il Provider OLE DB. Una volta noto il tipo di un parametro con valori di tabella, il consumer può individuare le informazioni sui metadati per ogni singola colonna del parametro con valori di tabella.  
+  Il consumer, ovvero l'applicazione client che utilizza il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, può individuare il tipo di ogni parametro del comando se il testo del comando è stato assegnato al provider di OLE DB. Una volta noto il tipo di un parametro con valori di tabella, il consumer può individuare le informazioni sui metadati per ogni singola colonna del parametro con valori di tabella.  
   
- Le informazioni sul tipo di parametri di routine è supportati da ICommandWithParameters:: GetParameterInfo per la maggior parte dei tipi di parametro. A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], con l'introduzione di tipi definiti dall'utente e la `xml` tipo di dati, il metodo GetParameterInfo non era sufficiente per questo scopo perché non era possibile fornire le informazioni sul tipo definito dall'utente (nome, schema, e catalogo) tramite ICommandWithParameters. È stata definita una nuova interfaccia ISSCommandWithParameters, per fornire informazioni estese sul tipo.  
+ Le informazioni sul tipo dei parametri della procedura sono supportate da ICommandWithParameters:: GetParameterInfo per la maggior parte dei tipi di parametro. A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, con l'introduzione di tipi definiti dall'utente e `xml` del tipo di dati, il metodo GetParameterInfo non è sufficiente a questo scopo perché non è stato possibile fornire informazioni sui tipi definiti dall'utente (nome, schema e catalogo) tramite ICommandWithParameters. È stata definita una nuova interfaccia, ISSCommandWithParameters, per fornire informazioni sul tipo estese.  
   
- Per i parametri con valori di tabella, utilizziamo inoltre l'interfaccia ISSCommandWithParameters per individuare informazioni dettagliate. Il client chiama ISSCommandWithParameters::GetParameterInfo dopo aver preparato l'oggetto comando. Per i parametri con valori di tabella il membro *wType* della struttura DBPARAMINFO viene impostato su DBTYPE_TABLE dal provider. Il valore del campo *ulParamSize* della struttura DBPARAMINFO è ~0.  
+ Per i parametri con valori di tabella, è inoltre possibile utilizzare l'interfaccia ISSCommandWithParameters per individuare informazioni dettagliate. Il client chiama ISSCommandWithParameters:: GetParameterInfo dopo aver preparato l'oggetto Command. Per i parametri con valori di tabella il membro *wType* della struttura DBPARAMINFO viene impostato su DBTYPE_TABLE dal provider. Il valore del campo *ulParamSize* della struttura DBPARAMINFO è ~0.  
   
  Il consumer può quindi richiedere proprietà aggiuntive (nome del catalogo del tipo di parametro con valori di tabella, nome dello schema del tipo di parametro con valori di tabella, nome del tipo di parametro con valori di tabella, ordinamento colonne e colonne predefinite) mediante ISSCommandWithParameters::GetParameterProperties.  
   

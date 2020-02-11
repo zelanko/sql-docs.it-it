@@ -1,5 +1,5 @@
 ---
-title: "Attività 6: Aggiunta dell'origine Excel al flusso di dati | Microsoft Docs"
+title: "Attività 6: aggiunta dell'origine Excel al flusso di dati | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 92a4c3e650ce375a1e80079bbad83c5ab2b9bcd9
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68495286"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Attività 6: Aggiunta dell'origine Excel al flusso di dati
@@ -32,21 +32,21 @@ ms.locfileid: "68495286"
   
 6.  Nella finestra di dialogo **gestione connessione Excel** fare clic su **Sfoglia**, quindi selezionare il file **Suppliers. xls** nella cartella **EIM tutorial** . Verificare che **Microsoft excel 97-2003** sia selezionato nella casella **versione di Excel** , quindi fare clic su **OK**.  
   
-     ![Finestra di dialogo Gestione connessione Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "dialogo Gestione connessione Excel")  
+     ![Finestra di dialogo Gestione connessioni di Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Finestra di dialogo Gestione connessioni di Excel")  
   
 7.  Nella finestra di dialogo **Editor origine Excel** selezionare **IncomingSuppliers $** nella casella **di riepilogo nome del foglio di Excel** .  
   
-     ![Nome del foglio di Excel-fornitori in ingresso $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Nome del foglio di Excel-fornitori in ingresso $")  
+     ![Nome del foglio di Excel - Fornitori$ in entrata](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Nome del foglio di Excel - Fornitori$ in entrata")  
   
 8.  Fare clic su **Anteprima** per visualizzare in anteprima i dati nel file di Excel.  
   
-9. Fare clic su **OK** per chiudere la finestra di dialogo.  
+9. Scegliere **OK** per chiudere la finestra di dialogo.  
   
-10. Trascinare la trasformazione **pulizia DQS** in **altre** trasformazioni nella **casella degli strumenti SSIS** nella scheda **flusso di dati** in **Leggi dati fornitore dal file di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Per ulteriori informazioni, vedere l'argomento [trasformazione della pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx) .  
+10. Trascinare la trasformazione **pulizia DQS** in **altre trasformazioni** nella **casella degli strumenti SSIS** nella scheda **flusso di dati** in **Leggi dati fornitore dal file di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Per ulteriori informazioni, vedere l'argomento [trasformazione della pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx) .  
   
-## <a name="next-step"></a>Passaggio successivo
+## <a name="next-step"></a>passaggio successivo
 
-[Attività 7: Aggiunta della trasformazione pulizia DQS al flusso di dati](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
+[Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
 
 ### <a name="see-also"></a>Vedere anche
 

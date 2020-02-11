@@ -1,5 +1,5 @@
 ---
-title: Consenti un Endpoint mirroring del Database per usare i certificati per le connessioni in uscita (Transact-SQL) | Microsoft Docs
+title: Consenti a un endpoint del mirroring del database di utilizzare i certificati per le connessioni in uscita (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806874"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita (Transact-SQL)
@@ -41,9 +41,9 @@ ms.locfileid: "62806874"
   
  Questa procedura descrive i vari passaggi, Per ogni passaggio la procedura fornisce un esempio di configurazione di un istanza di server in un sistema denominato HOST_A. Nella sezione di esempio corrispondente vengono indicati gli stessi passaggi per un'altra istanza di server in un sistema denominato HOST_B.  
   
-## <a name="procedure"></a>Routine  
+## <a name="procedure"></a>Procedura  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>Per configurare le istanze del server per le connessioni per il mirroring in uscita (On HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>Per configurare le istanze del server per le connessioni per il mirroring in uscita (On HOST_A)  
   
 1.  Nel database **master** creare la chiave master del database, se non è già presente. Per visualizzare le chiavi esistenti per un database, usare la vista del catalogo [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) .  
   
@@ -164,11 +164,11 @@ GO
  Copiare il certificato nell'altro sistema utilizzando un metodo che ne garantisca la protezione. È estremamente importante garantire la protezione di tutti i certificati.  
   
 > [!IMPORTANT]  
->  Dopo avere configurato le connessioni in uscita, è necessario configurare quelle in ingresso in ogni istanza del server per l'altra o le altre istanze. Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+>  Dopo avere configurato le connessioni in uscita, è necessario configurare quelle in ingresso in ogni istanza del server per l'altra o le altre istanze. Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
  Per informazioni sulla creazione di un database mirror e un esempio di Transact-SQL, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Per un esempio di Transact-SQL per stabilire una sessione in modalità a prestazioni elevate, vedere [Esempio: Configurazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Per un esempio di Transact-SQL per stabilire una sessione in modalità a prestazioni elevate, vedere [Esempio: Impostazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
@@ -179,7 +179,7 @@ GO
  [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Esempio: Configurazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [Esempio: Impostazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Impostazione di un database mirror crittografato](set-up-an-encrypted-mirror-database.md)  

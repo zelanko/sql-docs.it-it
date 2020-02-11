@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916745"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
@@ -57,7 +57,7 @@ ms.locfileid: "62916745"
      I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza della ognuno di tali colonne deve comunque rientrare nel limite di 8.000 byte per un `varchar`, `nvarchar,``varbinary`, o `sql_variant` colonna. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve comunque rientrare nel limite di 8.000 byte per una `varchar`colonna, `nvarchar,``varbinary`o. `sql_variant` Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
      Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916745"
   
 7.  Calcolare il numero di pagine necessario per archiviare tutte le righe:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      Il numero di pagine stimato deve essere arrotondato alla pagina intera più vicina.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916745"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio verrà utilizzata per archiviare i tipi di dati LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, e `image` è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
+     L'algoritmo per `varchar(max)`determinare esattamente la quantità di spazio utilizzata per archiviare i tipi di dati LOB, `varbinary(max)` `nvarchar(max)`,, `text`, **ntextxml**e `image` i valori è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
   
 -   Compressione  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62916745"
   
 -   Colonne di tipo sparse  
   
-     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../tables/use-sparse-columns.md).  
+     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Utilizzo di colonne di tipo sparse](../tables/use-sparse-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Heap &#40;tabelle senza indici cluster&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   

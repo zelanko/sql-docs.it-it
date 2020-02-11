@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770888"
 ---
 # <a name="request-log"></a>Log richieste
@@ -48,15 +48,15 @@ ms.locfileid: "62770888"
  **Tipo**  
  Visualizza il tipo dell'evento registrato. Nella tabella seguente sono elencati i tipi di eventi possibili.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |S|Messaggio di operazione completata.|  
 |E|Messaggio di errore|  
 |W|Messaggio di avviso.|  
 |I|Messaggio informativo.|  
-|A|L'operazione è stata interrotta.|  
+|Una|L'operazione è stata interrotta.|  
   
- **Message**  
+ **Messaggio**  
  Visualizza il testo del messaggio associato all'evento registrato.  
   
 ## <a name="see-also"></a>Vedere anche  

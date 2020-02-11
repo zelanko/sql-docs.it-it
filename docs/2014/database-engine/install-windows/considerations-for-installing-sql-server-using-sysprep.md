@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779136"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
@@ -28,7 +28,7 @@ ms.locfileid: "62779136"
   
      Questo passaggio consente di completare la configurazione di un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante questo passaggio, è possibile fornire informazioni specifiche del computer, della rete e dell'account.  
   
- Per altre informazioni su come installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite SysPrep, vedere [installare SQL Server 2014 tramite SysPrep](install-sql-server-using-sysprep.md).  
+ Per ulteriori informazioni sull'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tramite Sysprep, vedere [Install SQL Server 2014 using Sysprep](install-sql-server-using-sysprep.md).  
   
 ## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Utilizzi comuni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  La funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep può essere utilizzata nei modi seguenti:  

@@ -1,5 +1,5 @@
 ---
-title: "Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2 | Microsoft Docs"
+title: "Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767485"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione
@@ -40,12 +40,12 @@ ms.locfileid: "62767485"
   
 1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Lesson 2.dtsx** e scegliere **Esegui pacchetto**.  
   
-     Il pacchetto verrà eseguito. È possibile verificare lo stato di ogni ciclo nella finestra Output o facendo clic sulla scheda **Stato** . Ad esempio, viene evidenziato che sono state aggiunte 1097 righe alla tabella di destinazione dal file Currency_VEB.txt.  
+     Il pacchetto verrà eseguito. È possibile verificare lo stato di ogni ciclo nella finestra output o facendo clic sulla scheda **stato** . Ad esempio, è possibile osservare che 1097 righe sono state aggiunte alla tabella di destinazione dal file Currency_VEB. txt.  
   
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Aggiunta delle configurazioni di pacchetto per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lezione 5: Aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)  

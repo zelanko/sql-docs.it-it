@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830127"
 ---
 # <a name="transfer-error-messages-task"></a>Attività Trasferisci messaggi di errore
@@ -40,7 +40,7 @@ ms.locfileid: "62830127"
   
  L'attività Trasferisci messaggi di errore supporta un'origine e una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non esiste alcuna limitazione relativamente alla versione da utilizzare come origine o destinazione.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  L'attività Trasferisci messaggi di errore genera un evento informativo in cui è indicato il numero di messaggi di errore trasferiti.  
   
  Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
@@ -65,7 +65,7 @@ ms.locfileid: "62830127"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci messaggi di errore &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci messaggi di errore &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Trasferisci messaggi di errore &#40;pagina Messaggi&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   

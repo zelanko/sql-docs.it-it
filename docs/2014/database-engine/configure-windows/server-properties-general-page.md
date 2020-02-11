@@ -15,22 +15,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809353"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Proprietà server (pagina Generale) - SQL Server Management Studio
-  Usare questa pagina per visualizzare informazioni di sola lettura sull'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilizzare questa pagina per visualizzare informazioni di sola lettura sull' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione di.  
   
 ## <a name="property-grid"></a>Griglia proprietà  
  Consente di visualizzare le proprietà del server selezionato, ad esempio il nome, il sistema operativo e il numero di processori del server.  
   
- **Name**  
+ **Nome**  
  Visualizza visualizzare il nome dell'istanza del server.  
   
- **Product**  
+ **Prodotto**  
  Visualizza l'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente in esecuzione.  
   
  **Sistema operativo**  
@@ -57,7 +57,7 @@ ms.locfileid: "62809353"
  **Regole di confronto del server**  
  Visualizza le regole di confronto supportate dal server. Le regole di confronto specificano la tabella codici e il tipo di ordinamento da utilizzare per i dati Unicode e non Unicode.  
   
- **Cluster**  
+ **In cluster**  
  Il valore è **True** se l'istanza del server è configurata in un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o **False** se l'istanza del server non è in cluster.  
   
  **HADR abilitato**  

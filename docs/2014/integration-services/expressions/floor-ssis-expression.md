@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769167"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (espressione SSIS)
@@ -37,7 +37,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati numeric dell'espressione passata come argomento. Il risultato è rappresentato dalla parte intera del valore calcolato con tipo di dati corrispondente al tipo del parametro *numeric_expression*.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, FLOOR restituirà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

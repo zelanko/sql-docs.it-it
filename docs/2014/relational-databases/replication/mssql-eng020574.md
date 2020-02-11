@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938606"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62938606"
  I dati nel Sottoscrittore sono stati convalidati in base a quelli nel server di pubblicazione e non corrispondono, pertanto la convalida non è stata eseguita. Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Azione dell'utente  
- È consigliabile eseguire le operazioni seguenti:  
+ È consigliabile eseguire queste operazioni:  
   
 -   Stabilire i motivi per i quali la convalida non è stata eseguita.  
   

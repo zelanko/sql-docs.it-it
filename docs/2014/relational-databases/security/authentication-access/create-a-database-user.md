@@ -24,16 +24,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211962"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
   In questo argomento viene descritto come creare un utente di database con mapping a un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [creare un account di accesso](create-a-login.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68211962"
   
      [Sicurezza](#Security)  
   
--   **Per creare un utente del database, utilizzando:**  
+-   **Per creare un utente di database utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211962"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione `ALTER ANY USER` per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Per creare un utente del database  
   
@@ -70,24 +70,24 @@ ms.locfileid: "68211962"
   
 2.  Espandere il database in cui si desidera creare il nuovo utente del database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...** .  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...**.  
   
-4.  Nella finestra di dialogo **Utente database - Nuovo** nella pagina **Generale** selezionare uno dei tipi di utente seguenti nell'elenco **Tipo utente**: **Utente SQL con account di accesso**, **utente SQL senza account di accesso**, **utente mappato a un certificato**, **utente con mapping eseguito a una chiave asimmetrica**, o **utente di Windows** .  
+4.  Nella finestra di dialogo **utente database-nuovo** , nella pagina **generale** , selezionare uno dei seguenti tipi di utente nell'elenco **tipo di utente** : **utente SQL con account di accesso**, **utente SQL senza account di accesso**, **utente mappato a un certificato**, **utente mappato a una chiave asimmetrica**o **utente di Windows**.  
   
 5.  Immettere un nome per il nuovo utente nella casella **Nuovo utente** . Se si è scelto **Utente di Windows** nell'elenco **Tipo utente**, è anche possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona utente o gruppo**.  
   
-6.  Nella casella **Nome account di accesso** immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso**. È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
+6.  Nella casella **Nome account di accesso** immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso**. Il **nome dell'account di accesso** è disponibile se si seleziona **utente SQL con account di accesso** o utente di **Windows** dall'elenco **tipo di utente** .  
   
-7.  Nella casella **Schema predefinito** è specificato lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema**. È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
+7.  Nella casella **Schema predefinito** è specificato lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema**. Lo **schema predefinito** è disponibile se si seleziona **utente SQL con account di accesso**, **utente SQL senza account di accesso**o utente di **Windows** dall'elenco **tipo di utente** .  
   
-8.  Nella casella **Nome certificato** , immettere il certificato da utilizzare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
+8.  Nella casella **Nome certificato** , immettere il certificato da utilizzare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. Il **nome del certificato** è disponibile se si seleziona **utente con mapping eseguito a un certificato** dall'elenco **tipo di utente** .  
   
-9. Nella casella **Nome chiave asimmetrica**  , immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica**. È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
+9. Nella casella **Nome chiave asimmetrica**  , immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica**. Il **nome della chiave asimmetrica** è disponibile se si seleziona **utente con mapping eseguito a una chiave asimmetrica** dall'elenco **tipo di utente** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Nella finestra di dialogo **Utente di database - Nuovo** sono disponibili opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
+ La finestra di dialogo **Utente database - Nuovo** presenta diverse opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68211962"
      **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Per creare un utente del database  
   
@@ -136,6 +136,6 @@ ms.locfileid: "68211962"
  Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Entità &#40;Motore di database&#41;](principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](principals-database-engine.md)  
   
   

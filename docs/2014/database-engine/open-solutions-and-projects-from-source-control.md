@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774780"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Apertura di soluzioni e progetti dal controllo del codice sorgente
-  È possibile usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
+  È possibile utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o un progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
   
- Se non si dispone di una copia locale di una soluzione, è necessario aprirla dal controllo del codice sorgente prima di potere eseguire operazioni di controllo del codice sorgente su di essa. Dopo avere recuperato una copia locale della soluzione, non occorre nuovamente ad aprirlo dal controllo del codice sorgente; è possibile aprire la copia locale e usare i comandi del controllo codice sorgente standard, ad esempio **Leggi ultima versione** oppure **Estrai**, per eseguire l'operazione desiderata.  
+ Se non si dispone di una copia locale di una soluzione, è necessario aprirla dal controllo del codice sorgente prima di potere eseguire operazioni di controllo del codice sorgente su di essa. Dopo aver recuperato una copia locale della soluzione, non è necessario aprirla nuovamente dal controllo del codice sorgente. per eseguire l'operazione desiderata, è possibile aprire la copia locale e usare i comandi standard del controllo del codice sorgente, ad esempio **Get Latest Version** o **check out**.  
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   

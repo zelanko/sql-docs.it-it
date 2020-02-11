@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774575"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione)
@@ -29,15 +29,15 @@ ms.locfileid: "62774575"
 -   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente cluster:** Eseguire l'aggiornamento dell'edizione su uno dei nodi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster è sufficiente. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
+>  **in un ambiente cluster: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** È sufficiente eseguire l'aggiornamento dell'edizione in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei nodi del cluster. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura per tale condivisione.  
   
 > [!IMPORTANT]  
 >  Per rendere effettiva la modifica dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario riavviare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ciò determina un periodo di inattività mentre i servizi sono offline.  
   
-## <a name="procedure"></a>Routine  
+## <a name="procedure"></a>Procedura  
   
 #### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Per eseguire l'aggiornamento a un'edizione diversa di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62774575"
   
 4.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**.  
   
-5.  Nella pagina codice Product Key fare clic su un pulsante di opzione per indicare se si intende eseguire l'aggiornamento a un'edizione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o se si dispone di una chiave PID per una versione di produzione del prodotto. Per altre informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+5.  Nella pagina codice Product Key fare clic su un pulsante di opzione per indicare se si intende eseguire l'aggiornamento a un'edizione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o se si dispone di una chiave PID per una versione di produzione del prodotto. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md).  
   
 6.  Nella pagina relativa alle condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne i termini e le condizioni. Scegliere **Avanti**per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
   

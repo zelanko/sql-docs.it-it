@@ -1,5 +1,5 @@
 ---
-title: Connettersi alla pagina di repliche secondarie esistenti (procedura guidata Aggiungi Replica e procedura guidata Aggiungi database) | Microsoft Docs
+title: Pagina Connetti a repliche secondarie esistenti (procedura guidata Aggiungi replica e Aggiungi database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792011"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Pagina Connetti a repliche secondarie esistenti (procedure guidate Aggiungi replica e Aggiungi database)
@@ -30,7 +30,7 @@ ms.locfileid: "62792011"
  **Connesso come**  
  Visualizza l'account connesso all'istanza del server, dopo che è stata stabilita la connessione. Se in questa colonna viene visualizzato "**Non connesso**" per un'istanza del server specificata, sarà necessario fare clic sul pulsante **Connetti** o **Connetti tutto** .  
   
- **Connect**  
+ **Connettere**  
  Fare clic su questo pulsante se l'istanza del server viene eseguita con un account diverso rispetto ad altre istanze del server a cui è necessario connettersi.  
   
  **Connetti tutto**  
@@ -50,6 +50,6 @@ ms.locfileid: "62792011"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770637"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
@@ -33,11 +33,11 @@ ms.locfileid: "62770637"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|Sum|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|SUM|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
 |Media|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Count|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Conteggio|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count Distinct|Consente di restituire il numero di valori non Null univoci di un gruppo.|  
-|Minimo|Restituisce il valore minimo in un gruppo. Per altre informazioni, vedere [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Diversamente dalla funzione Transact-SQL MIN, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
+|Minima|Restituisce il valore minimo in un gruppo. Per altre informazioni, vedere [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Diversamente dalla funzione Transact-SQL MIN, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
 |Massimo|Restituisce il valore massimo in un gruppo. Per altre informazioni, vedere [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). Diversamente dalla funzione Transact-SQL MAX, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
   
  La trasformazione Aggregazione gestisce i valori Null come il motore di database relazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questo comportamento è definito nello standard SQL-92. Sono applicabili le regole seguenti:  
@@ -65,9 +65,9 @@ ms.locfileid: "62770637"
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  La trasformazione Aggregazione include un set di proprietà che è possibile impostare per migliorarne le prestazioni.  
   
--   Quando si esegue un'operazione **Group by** , impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by**. Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Group by** , impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by** . Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
--   Quando si esegue un'operazione **Distinct count** , impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count**. La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Distinct count** , impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** . La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
 ## <a name="aggregate-transformation-configuration"></a>Configurazione della trasformazione Aggregazione  
  La trasformazione Aggregazione può essere configurata a livello di trasformazione, output e colonna.  
@@ -100,7 +100,7 @@ ms.locfileid: "62770637"
   
  La trasformazione Aggregazione è asincrona, pertanto non legge e pubblica i dati riga per riga, ma legge l'intero set di righe, ne esegue i raggruppamenti e le aggregazioni e quindi pubblica i risultati.  
   
- Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City** e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
+ Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City**e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
   
  È inoltre possibile aggiungere più output alla trasformazione Aggregazione e indirizzare ogni aggregazione a un output diverso. Se ad esempio la trasformazione Aggregazione applica le funzioni Somma e Media, ogni aggregazione potrà essere indirizzata a un output diverso.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62770637"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor trasformazione aggregazione &#40;scheda Aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor trasformazione Aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62770637"
 -   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../data-flow.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832577"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Attività Profiling dati e visualizzatore
@@ -58,12 +58,12 @@ ms.locfileid: "62832577"
  **Passaggio 1: Configurazione dell'attività Profiling dati**  
  L'attività Profiling dati è un'attività che consente di configurare i profili che si desidera calcolare. Viene quindi eseguito il pacchetto contenente l'attività Profiling dati per calcolare i profili. L'attività salva l'output del profilo in formato XML in un file o una variabile del pacchetto.  
   
- **Per ulteriori informazioni:** [Impostazione dell'attività Profiling dati](data-profiling-task.md)  
+ **Per altre informazioni:** [Impostazione dell'attività Profiling dati](data-profiling-task.md)  
   
  **Passaggio 2: Controllo dei profili calcolati dall'attività Profiling dati**  
  Per visualizzare i profili dati calcolati dall'attività Profiling dati, è necessario inviare l'output a un file e quindi utilizzare il visualizzatore del profilo dati. Questo visualizzatore è un'utilità autonoma che consente di visualizzare l'output del profilo in forma di riepilogo e in formato dettagliato con funzionalità di drill-down facoltative.  
   
- **Per ulteriori informazioni:** [Visualizzatore profilo dati](data-profile-viewer.md)  
+ **Per altre informazioni:** [Visualizzatore profilo dati](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Aggiunta di logica condizionale al flusso di lavoro del profiling dei dati  
  L'attività Profiling dati non dispone di caratteristiche incorporate che consentono di utilizzare la logica condizionale per connettere questa attività alle attività a valle basate sull'output del profilo. È possibile, tuttavia, aggiungere tale logica in modo semplice, con operazioni di programmazione ridotte, in un'attività Script. L'attività Script, ad esempio, può eseguire una query XPath sul file di output dell'attività Profiling dati. La query può determinare se la percentuale di valori Null in una colonna specifica supera una determinata soglia. Se la percentuale supera la soglia, è possibile interrompere il pacchetto e risolvere il problema nei dati di origine prima di continuare. Per altre informazioni, vedere [Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto](incorporate-a-data-profiling-task-in-package-workflow.md).  

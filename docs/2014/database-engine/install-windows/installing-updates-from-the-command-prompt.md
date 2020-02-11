@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774982"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installazione degli aggiornamenti dal prompt dei comandi
@@ -23,7 +23,7 @@ ms.locfileid: "62774982"
 ## <a name="sample-syntax-for-installation"></a>Sintassi di esempio per l'installazione  
  Il nome del pacchetto di aggiornamento può variare e includere una lingua, un'edizione e un componente processore. Applicare un aggiornamento dal prompt dei comandi sostituendo <package_name> con il nome del pacchetto di aggiornamento.  
   
--   Aggiornare una singola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tutti i componenti condivisi, quali [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e strumenti di gestione: L'istanza può essere specificata utilizzando il parametro InstanceName o InstanceID. Per aggiornare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare il parametro InstanceID<nome_pacchetto>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance o <nome_pacchetto>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<ID istanza>.  
+-   Aggiornare una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tutti i componenti condivisi, quali [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli strumenti di gestione. È possibile specificare l'istanza tramite il parametro InstanceName o il parametro InstanceID. Per aggiornare un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare il parametro InstanceID<nome_pacchetto>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance o <nome_pacchetto>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<ID istanza>.  
   
 -   La configurazione consente di integrare gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale, in modo che il prodotto principale e i relativi aggiornamenti applicabili vengano installati contemporaneamente. È possibile preparare un'installazione dell'istanza del motore di database affinché includa l'aggiornamento del prodotto: setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<percorso in cui viene scaricato l'aggiornamento> /INSTANCEID=\<ID istanza> /FEATURES=SQLEngine.  
   

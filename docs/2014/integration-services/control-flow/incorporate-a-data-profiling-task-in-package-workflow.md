@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831621"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
-  Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
+  Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede in genere l'analisi visiva e la valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
   
  Tuttavia, una volta stabiliti i criteri per la qualità dei dati, è possibile automatizzare operazioni periodiche di analisi e pulizia dell'origine dati. Considerare gli scenari seguenti:  
   
--   **Controllo della qualità dei dati prima di un caricamento incrementale**. Utilizzare l'attività Profiling dati per calcolare il profilo Rapporto di valori Null nella colonna dei nuovi dati destinati alla colonna CustomerName di una tabella Customers. Se la percentuale di valori Null è maggiore del 20%, inviare un messaggio di posta elettronica contenente l'output del profilo all'operatore e terminare il pacchetto. In caso contrario, continuare il caricamento incrementale.  
+-   **Verifica della qualità dei dati prima di un caricamento incrementale**. Utilizzare l'attività Profiling dati per calcolare il profilo Rapporto di valori Null nella colonna dei nuovi dati destinati alla colonna CustomerName di una tabella Customers. Se la percentuale di valori Null è maggiore del 20%, inviare un messaggio di posta elettronica contenente l'output del profilo all'operatore e terminare il pacchetto. In caso contrario, continuare il caricamento incrementale.  
   
 -   **Automazione della pulizia quando vengono soddisfatte le condizioni specificate**. Utilizzare l'attività Profiling dati per calcolare il profilo Inclusione valore della colonna State rispetto a una tabella di ricerca di stati e quello della colonna ZIP Code/Postal Code rispetto a una tabella di ricerca di CAP. Se l'attendibilità dell'inclusione dei valori di stato è minore dell'80%, ma quella dei valori di ZIP Code/Postal Code è maggiore del 99%, emergono due indicazioni. Innanzitutto, i dati relativi allo stato sono errati. In secondo luogo, i dati relativi a ZIP Code/Postal Code sono corretti. Avviare un'attività Flusso di dati per pulire i dati dello stato eseguendo una ricerca del valore dello stato corretto dal valore corrente di Zip Code/Postal Code.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62831621"
   
  Quando si incorpora l'attività Profiling dati nel flusso di lavoro di un pacchetto, tenere presenti queste due caratteristiche dell'attività:  
   
--   **Output dell'attività**. L'output dell'attività Profiling dati viene scritto in un file o in una variabile del pacchetto in formato XML in base allo schema DataProfile.xsd. Pertanto, è necessario eseguire una query sull'output XML se si desidera utilizzare i risultati del profilo nel flusso di lavoro condizionale di un pacchetto. A tale scopo, è possibile utilizzare il linguaggio di query Xpath. Per esaminare la struttura di questo output XML, è possibile aprire un file di output di esempio o lo schema stesso. Per aprire il file di output o lo schema, è possibile utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], un altro editor XML o un editor di testo, ad esempio Blocco note.  
+-   **Output dell'attività**. L'output dell'attività Profiling dati viene scritto in un file o in una variabile del pacchetto in formato XML in base allo schema DataProfile.xsd. Pertanto, è necessario eseguire una query sull'output XML se si desidera utilizzare i risultati del profilo nel flusso di lavoro condizionale di un pacchetto. A tale scopo, è possibile utilizzare il linguaggio di query Xpath. Per esaminare la struttura di questo output XML, è possibile aprire un file di output di esempio o lo schema stesso. Per aprire il file o lo schema di output, è [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]possibile utilizzare, un altro editor XML o un editor di testo, ad esempio Blocco note.  
   
     > [!NOTE]  
     >  Alcuni risultati del profilo visualizzati nel Visualizzatore profilo dati sono valori calcolati che non si trovano direttamente nell'output. Ad esempio, l'output del profilo Rapporto di valori Null nella colonna contiene il numero complessivo di righe e il numero di righe che contengono valori Null. È necessario eseguire una query su questi due valori, quindi calcolare la percentuale di righe che contengono valori Null per ottenere il rapporto di valori Null nella colonna.  
@@ -102,9 +102,9 @@ ms.locfileid: "62831621"
   
 -   Nella finestra **Variabili** aggiungere e configurare le due variabili del pacchetto seguenti:  
   
-    -   Immettere il nome `ProfileConnectionName`, per una delle variabili e impostare il tipo di questa variabile su **stringa**.  
+    -   Immettere il nome, `ProfileConnectionName`, per una delle variabili e impostare il tipo di questa variabile su **String**.  
   
-    -   Immettere il nome `AddressLine2NullRatio`, per l'altra variabile e impostare il tipo di questa variabile su **doppie**.  
+    -   Immettere il nome, `AddressLine2NullRatio`, per l'altra variabile e impostare il tipo di questa variabile su **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurare l'attività Profiling dati  
  L'attività Profiling dati deve essere configurata nel modo seguente:  
@@ -142,9 +142,9 @@ ms.locfileid: "62831621"
   
 4.  Nella pagina **Script** selezionare il linguaggio di programmazione preferito. Quindi, rendere disponibili le due variabili del pacchetto per lo script:  
   
-    1.  Per la `ReadOnlyVariables`, selezionare `ProfileConnectionName`.  
+    1.  Per `ReadOnlyVariables`, selezionare `ProfileConnectionName`.  
   
-    2.  Per la **ReadWriteVariables**, selezionare `AddressLine2NullRatio`.  
+    2.  Per **ReadWriteVariables**selezionare `AddressLine2NullRatio`.  
   
 5.  Selezionare **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   

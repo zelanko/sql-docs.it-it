@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770673"
 ---
 # <a name="script-component"></a>Componente script
@@ -56,7 +56,7 @@ ms.locfileid: "62770673"
  In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. In modalità progettazione metadati è possibile aggiungere e modificare gli input e gli output del componente script, ma non scrivere codice. Dopo avere configurato tutti gli input e gli output è possibile passare alla modalità progettazione codice per creare lo script. Il componente script genera automaticamente il codice di base dai metadati degli input e degli output. Se si modificano i metadati dopo la generazione del codice di base, non sarà più possibile compilare il codice perché il codice di base aggiornato potrebbe essere incompatibile con quello inserito dall'utente.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Scrittura dello script utilizzato dal componente  
- Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md).  
+ Il componente script utilizza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente in cui vengono scritti gli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md).  
   
  Il componente script fornisce un progetto VSTA che include una classe generata automaticamente, ScriptMain, che rappresenta i metadati del componente. Se ad esempio il componente script viene utilizzato come trasformazione con tre output, la classe ScriptMain includerà un metodo per ogni output. La classe ScriptMain costituisce il punto di ingresso dello script.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62770673"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurazione del componente script in Progettazione  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Script**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Script &#40;pagina Colonne di input&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Editor trasformazione script &#40;pagina colonne di input&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Editor trasformazione Script &#40;pagina Input e output&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Editor trasformazione script &#40;pagina input e output&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Editor trasformazione Script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Editor trasformazione script &#40;pagina script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Editor trasformazione Script &#40;pagina Gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Editor trasformazione script &#40;pagina Gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768915"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
@@ -54,7 +54,7 @@ ms.locfileid: "62768915"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Visualizza il nome dell'attività nella casella degli strumenti del Flusso di controllo.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Descrizione dell'attività (ereditata da <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Questa proprietà è visualizzata nelle descrizioni comandi.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|Icona visualizzata in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio `RequiredProductLevel = DTSProductLevel.None`.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene informazioni di contatto per i casi in cui l'attività richiede supporto tecnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assegna un tipo all'attività.|  
 |Attribute.TypeId|Se implementata in una classe derivata, ottiene un identificatore univoco per questo attributo. Per ulteriori informazioni, vedere la proprietà `Attribute.TypeID` nella libreria di classi di Microsoft .NET Framework.|  
@@ -197,7 +197,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'attività personalizzata](creating-a-custom-task.md)   

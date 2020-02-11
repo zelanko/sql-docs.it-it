@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767903"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Esecuzione delle operazioni** per visualizzare lo stato e i risultati dell'operazione di importazione/esportazione ed eventualmente interrompere l'operazione.  
   
- Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per avviare la procedura guidata, nonché le autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
+ Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni di avvio della procedura guidata, nonché sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Lo scopo di Importazione/Esportazione guidata SQL Server è la copia di dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -30,16 +30,16 @@ ms.locfileid: "62767903"
  **Azione**  
  Consente di visualizzare ogni azione che fa parte dell'operazione.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare l'esito positivo o negativo di ogni azione.  
   
- **Message**  
+ **Messaggio**  
  Consente di visualizzare i messaggi informativi e di errore eventualmente generati dall'azione.  
   
  **Filter**  
  Consente di scegliere se si desidera visualizzare solo gli errori, gli avvisi o le azioni riuscite. Per ripristinare la visualizzazione predefinita scegliere **Mostra tutte le azioni**.  
   
- **Arresta**  
+ **Stop**  
  Consente di interrompere l'operazione, se necessario, utilizzando il pulsante **Arresta** .  
   
  **Report**  

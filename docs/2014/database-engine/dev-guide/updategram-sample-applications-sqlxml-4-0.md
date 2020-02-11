@@ -1,5 +1,5 @@
 ---
-title: Le applicazioni di esempio con updategram (SQLXML 4.0) | Microsoft Docs
+title: Applicazioni di esempio di updategram (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780419"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Applicazioni di esempio con updategram (SQLXML 4.0)
   In questa sezione vengono forniti esempi dell'utilizzo di updategram.  
   
- Tutti gli esempi in questa sezione usano il database di esempio AdventureWorks in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tutti gli aggiornamenti vengono applicati alle tabelle di tale database AdventureWorks.  
+ In tutti gli esempi di questa sezione viene utilizzato il database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esempio AdventureWorks in. Tutti gli aggiornamenti vengono applicati alle tabelle di tale database AdventureWorks.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Esecuzione di un Updategram mediante ADO &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Esecuzione di un updategram utilizzando ADO &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
  Viene fornita un'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic in cui viene utilizzato ADO per stabilire una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire un updategram.  
   
- [Esecuzione di un Updategram mediante OLE DB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)  
+ [Esecuzione di un updategram utilizzando OLE DB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)  
  Viene fornito un esempio reale dell'utilizzo di OLE DB per l'esecuzione di un updategram.  
   
- [Utilizza un Updategram in un'applicazione ASP di esempio &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md)  
+ [Utilizzo di un updategram in un'applicazione ASP di esempio &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md)  
  Viene fornita un'applicazione ASP (Active Server Pages) per aggiornare le informazioni sui clienti nella tabella Person.Contact del database AdventureWorks.  
   
   

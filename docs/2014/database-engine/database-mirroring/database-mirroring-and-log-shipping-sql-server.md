@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807471"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "62807471"
  Quando si utilizza un server di monitoraggio log shipping locale, non è necessaria alcuna considerazione specifica ai fini di questo scenario. Per informazioni sull'utilizzo di un'istanza di monitoraggio remota con questo scenario, vedere "Impatto del mirroring del database su un'istanza di monitoraggio remota" più avanti in questo argomento.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover dal database principale al database mirror  
- Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il**Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I**Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
+ Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. **Server_B** è il server mirror e viene anche configurato come server primario, che è attualmente inattivo. **Server_C** e **Server_D** sono log shipping server secondari. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
   
  ![Log shipping e mirroring del database](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62807471"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Impostazione della combinazione di mirroring e log shipping  
  Per impostare insieme il mirroring del database e il log shipping, è necessario attenersi alla procedura seguente:  
   
-1.  Ripristinare i backup del database principale/primario con NORECOVERY in un'altra istanza del server per utilizzarli in seguito come database mirror per il mirroring del database principale/primario. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Ripristinare i backup del database principale/primario con NORECOVERY in un'altra istanza del server per utilizzarli in seguito come database mirror per il mirroring del database principale/primario. Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Impostare il mirroring del database. Per altre informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) o [Impostazione del mirroring del database &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62807471"
   
     -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Eseguire il failover manuale di una sessione di mirroring del database &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 6.  Impostare il log shipping nel nuovo database principale (in precedenza database mirror) come database primario.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916947"
 ---
 # <a name="model-database"></a>Database model
@@ -27,7 +27,7 @@ ms.locfileid: "62916947"
  I database utente appena creati utilizzano lo stesso [modello di recupero](../backup-restore/recovery-models-sql-server.md) del database model. La stringa predefinita è configurabile dall'utente. Per informazioni sull'attuale modello di recupero, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 > [!IMPORTANT]  
->  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="model-usage"></a>Utilizzo del database model  
  Quando viene eseguita un'istruzione CREATE DATABASE, la prima parte del database viene creata copiando i contenuti del database **model** . La parte restante del nuovo database viene riempita con pagine vuote.  
@@ -49,51 +49,51 @@ ms.locfileid: "62916947"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
-|ANSI_NULL_DEFAULT|OFF|Yes|  
-|ANSI_NULLS|OFF|Yes|  
-|ANSI_PADDING|OFF|Yes|  
-|ANSI_WARNINGS|OFF|Yes|  
-|ARITHABORT|OFF|Yes|  
-|AUTO_CLOSE|OFF|Yes|  
-|AUTO_CREATE_STATISTICS|ON|Yes|  
-|AUTO_SHRINK|OFF|Yes|  
-|AUTO_UPDATE_STATISTICS|ON|Yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
-|CHANGE_TRACKING|OFF|no|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
-|CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Yes<br /><br /> Yes|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
-|DB_CHAINING|OFF|no|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Sì|  
+|ANSI_NULL_DEFAULT|OFF|Sì|  
+|ANSI_NULLS|OFF|Sì|  
+|ANSI_PADDING|OFF|Sì|  
+|ANSI_WARNINGS|OFF|Sì|  
+|ARITHABORT|OFF|Sì|  
+|AUTO_CLOSE|OFF|Sì|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_SHRINK|OFF|Sì|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
+|CURSOR_DEFAULT|GLOBAL|Sì|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sì<br /><br /> Sì|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
+|DB_CHAINING|OFF|No|  
 |ENCRYPTION|OFF|No|  
-|NUMERIC_ROUNDABORT|OFF|Yes|  
-|PAGE_VERIFY|CHECKSUM|Yes|  
-|PARAMETERIZATION|SIMPLE|Yes|  
-|QUOTED_IDENTIFIER|OFF|Yes|  
-|READ_COMMITTED_SNAPSHOT|OFF|Yes|  
-|RECOVERY|Dipende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizione<sup>1</sup>|Yes|  
-|RECURSIVE_TRIGGERS|OFF|Yes|  
+|NUMERIC_ROUNDABORT|OFF|Sì|  
+|PAGE_VERIFY|CHECKSUM|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
+|QUOTED_IDENTIFIER|OFF|Sì|  
+|READ_COMMITTED_SNAPSHOT|OFF|Sì|  
+|RECOVERY|Dipende dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizione<sup>1</sup>|Sì|  
+|RECURSIVE_TRIGGERS|OFF|Sì|  
 |Opzioni relative a Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|No|  
   
- <sup>1</sup> per verificare il modello di recupero corrente del database, vedere [visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> per verificare il modello di recupero corrente del database, vedere [visualizzare o modificare il modello di recupero di un database &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Nel database **model** non è possibile eseguire le operazioni seguenti:  
   
 -   Aggiunta di file o di filegroup.  
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
   
--   Modifica del proprietario del database. **model** è di proprietà di **sa**.  
+-   Modifica del proprietario del database. il **modello** è di proprietà di **sa**.  
   
 -   Eliminazione del database.  
   
--   Eliminazione dell'utente **guest** dal database.  
+-   Eliminazione dell'utente **Guest** dal database.  
   
 -   Abilitazione dell'acquisizione dei dati delle modifiche.  
   

@@ -16,22 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136737"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Creazione di un avviso utilizzando i livelli di gravità
-  Nel presente argomento viene descritta la procedura di creazione di un avviso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent generato quando si verifica un evento di un determinato livello di gravità in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come creare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un avviso di Agent generato quando si verifica un evento di un determinato livello di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gravità in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un avviso utilizzando il livello di gravità utilizzando:**  
   
@@ -43,7 +43,8 @@ ms.locfileid: "63136737"
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi ed è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include un semplice strumento grafico per la gestione del sistema di avvisi ed è lo strumento consigliato per la configurazione di un'infrastruttura di avvisi.  
   
 -   Gli eventi generati con la stored procedure **xp_logevent** si verificano nel database master. Pertanto, **xp_logevent** genera un avviso solo se **@database_name** per l'avviso è **'master'** o NULL.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "63136737"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_alert**.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-an-alert-using-severity-level"></a>Per creare un avviso utilizzando il livello di gravità  
   
@@ -76,7 +77,7 @@ ms.locfileid: "63136737"
   
 9. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-alert-using-severity-level"></a>Per creare un avviso utilizzando il livello di gravità  
   
@@ -101,6 +102,6 @@ ms.locfileid: "63136737"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_alert &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
   
   

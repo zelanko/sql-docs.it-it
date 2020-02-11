@@ -11,23 +11,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833109"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
-  Con la gestione connessione OData è possibile connettere un pacchetto a un'origine OData. Tramite un componente di origine OData viene eseguita la connessione a un'origine OData mediante una gestione connessione OData e vengono utilizzati i dati del servizio. Visualizzare [origine OData](../data-flow/odata-source.md)sezione per informazioni dettagliate, incluse le istruzioni di installazione per questi componenti.  
+  Con la gestione connessione OData è possibile connettere un pacchetto a un'origine OData. Tramite un componente di origine OData viene eseguita la connessione a un'origine OData mediante una gestione connessione OData e vengono utilizzati i dati del servizio. Vedere la sezione [origine OData](../data-flow/odata-source.md)per informazioni dettagliate, incluse le istruzioni di installazione per questi componenti.  
   
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Aggiunta di gestione connessione a un pacchetto SSIS  
  È possibile aggiungere una nuova gestione connessione OData a un pacchetto SSIS nelle tre modalità seguenti:  
   
 -   Fare clic sul pulsante **Nuovo...** in **Editor origine OData**  
   
--   Fare doppio clic su **gestioni connessioni** cartella le **Esplora soluzioni** e fare clic su **nuova gestione connessione**. Selezionare **ODATA** per **Tipo gestione connessione**.  
+-   Fare clic con il pulsante destro del mouse sulla cartella **gestioni connessioni** nel **Esplora soluzioni** e scegliere **nuova gestione connessione**. Selezionare **ODATA** per **Tipo gestione connessione**.  
   
--   Fare doppio clic nella **gestioni connessioni** riquadro nella parte inferiore del pacchetto della finestra di progettazione e seleziona **nuova connessione...** . Selezionare **ODATA** per **Tipo gestione connessione**.  
+-   Fare clic con il pulsante destro del mouse nel riquadro **gestioni connessioni** nella parte inferiore della finestra di progettazione del pacchetto e selezionare **nuova connessione.** Selezionare **OData** per **tipo gestione connessione**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticazione di gestione connessione  
  La gestione connessione OData supporta due modalità di autenticazione.  
@@ -39,7 +39,7 @@ ms.locfileid: "62833109"
  Per l'accesso anonimo, selezionare l'opzione Autenticazione di Windows.  
   
 ### <a name="specifying-and-securing-credentials"></a>Specifica e protezione delle credenziali  
- Se il servizio OData richiede l'autenticazione di base, è possibile specificare un nome utente e una password di [Editor gestione connessione OData](../odata-connection-manager-editor.md). I valori immessi nell'editor sono persistenti nel pacchetto. Il valore della password è crittografato in base al livello di protezione del pacchetto.  
+ Se il servizio OData richiede l'autenticazione di base, è possibile specificare un nome utente e una password nell' [Editor gestione connessione OData](../odata-connection-manager-editor.md). I valori immessi nell'editor sono persistenti nel pacchetto. Il valore della password è crittografato in base al livello di protezione del pacchetto.  
   
  È possibile esternalizzare/impostare i parametri dei valori del nome utente e della password in più modalità. Le due modalità principali per eseguire questa operazione in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] consistono nell'utilizzo dei parametri oppure nell'impostare le proprietà di gestione connessione direttamente quando si esegue il pacchetto mediante SQL Server Management Studio.  
   

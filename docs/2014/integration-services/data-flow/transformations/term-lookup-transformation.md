@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770317"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
@@ -56,7 +56,7 @@ ms.locfileid: "62770317"
   
  Quando un elemento di ricerca contiene termini che si sovrappongono nel set di riferimento, ovvero viene trovato un termine secondario in più di un record di riferimento, la trasformazione Ricerca termini restituisce solo un risultato della ricerca. Nell'esempio seguente viene illustrato il risultato ottenuto quando un elemento di ricerca contiene un termine secondario sovrapposto. Il termine secondario sovrapposto in questo caso è *Windows*, presente in due termini di riferimento. La trasformazione non restituisce tuttavia due risultati ma solo un termine di riferimento, ovvero *Windows*. Il secondo termine di riferimento, *Windows 7 Professional*, non viene restituito.  
   
-|Elemento|Value|  
+|Elemento|valore|  
 |----------|-----------|  
 |Termine di input|Windows 7 Professional|  
 |Termini di riferimento|Windows 7 x64 Professional|  
@@ -78,7 +78,8 @@ ms.locfileid: "62770317"
   
  Le colonne di output della trasformazione la cui proprietà InputColumnType è impostata su 0 o 2 includono la proprietà CustomLineageID, che contiene l'identificatore di derivazione assegnato alla colonna da un componente a monte nel flusso di dati.  
   
- La trasformazione Ricerca termini aggiunge all'output della trasformazione due colonne, che per impostazione predefinita sono denominate `Term` e `Frequency`. `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
+ La trasformazione Ricerca termini aggiunge all'output della trasformazione due colonne, che per impostazione predefinita sono denominate `Term` e `Frequency`. 
+  `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
   
  La tabella di ricerca deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Access. Se l'output della trasformazione Estrazione termini viene salvato in una tabella, quest'ultima potrà essere utilizzata come tabella di riferimento, ma è possibile utilizzare anche altre tabelle. Il testo presente in file flat, cartelle di lavoro di Excel o altre origini deve essere importato in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Access, prima di usare la trasformazione Ricerca termini.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "62770317"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca termini**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca termini &#40;scheda Tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca termini &#40;scheda tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
@@ -106,6 +107,6 @@ ms.locfileid: "62770317"
   
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
   

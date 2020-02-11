@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810543"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Opzione di configurazione del server Database Mail XPs
   Usare l'opzione **Stored procedure estese di posta elettronica database** per abilitare Posta elettronica database nel server. I valori possibili sono:  
   
--   **0** per indicare che Posta elettronica database non è disponibile (valore predefinito).  
+-   **0** che indica posta elettronica database non è disponibile (impostazione predefinita).  
   
--   **1** per indicare che Posta elettronica database è disponibile.  
+-   **1** che indica posta elettronica database è disponibile.  
   
  L'impostazione diventa effettiva immediatamente e non richiede l'arresto e il riavvio del server.  
   

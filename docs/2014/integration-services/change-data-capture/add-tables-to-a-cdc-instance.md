@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 546f001ac4809a4fb8c455e37bf10f975d84dce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771507"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Aggiungere tabelle a un'istanza di CDC
@@ -27,14 +27,14 @@ ms.locfileid: "62771507"
  **Per cercare tabelle specifiche**  
  Immettere i criteri di ricerca nel modo illustrato di seguito, quindi scegliere **Cerca**:  
   
--   **Schema**: selezionare uno schema del database nell'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
+-   **Schema**: selezionare uno schema del database dall'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
   
--   **Table Name Pattern** (Modello nome tabella): immettere qualsiasi stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
+-   **Table Name Pattern**: immettere qualsiasi stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
   
 > [!NOTE]  
 >  È possibile immettere criteri in uno o entrambi questi campi.  
   
--   **Display first 1000 matching tables** (Visualizza prima 1000 tabelle corrispondenti): questa casella di controllo è selezionata per impostazione predefinita. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
+-   **Display first 1000 matching tables**: per impostazione predefinita questa casella di controllo è selezionata. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
   
  **Per selezionare le tabelle da includere nell'istanza di CDC**  
  Fare clic sulla casella di controllo accanto alle tabelle che si desidera includere, quindi scegliere **Aggiungi**. Le tabelle vengono aggiunte all'elenco nella pagina **Select Tables and Columns** della New Instance Wizard.  

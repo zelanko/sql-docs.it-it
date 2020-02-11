@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769338"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (espressione SSIS)
@@ -31,16 +31,16 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *parte di una data*  
+ *datepart*  
  Parametro che consente di specificare per quale parte della data si desidera restituire un nuovo valore.  
   
- *data*  
+ *date*  
  Espressione che restituisce una data valida o una stringa con formato di data.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, DATEPART restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
@@ -53,12 +53,12 @@ DATEPART(datepart, date)
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Giorno|dd, d|  
 |Week|wk, ww|  
-|Giorno feriale|dw|  
+|Giorno della settimana|dw|  
 |Ora|Hh|  
 |Minuto|mi, n|  
-|Secondo|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Esempi di espressione SSIS  
@@ -68,7 +68,7 @@ DATEPART(datepart, date)
 DATEPART("month", (DT_DBTIMESTAMP)"11/04/2002")  
 ```  
   
- In questo esempio viene restituito un valore integer che rappresenta il giorno nella colonna **ModifiedDate** .  
+ In questo esempio viene restituito un Integer che rappresenta il giorno nella colonna **ModifiedDate** .  
   
 ```  
 DATEPART("dd", ModifiedDate)  

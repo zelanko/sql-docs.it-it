@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808692"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Opzione di configurazione del server transform noise words Server
-  Usare la `transform noise words` opzione di configurazione server per eliminare un messaggio di errore se parole non significative, vale a dire [parole non significative](../../relational-databases/search/full-text-search.md), esecuzione di un'operazione booleana su una query full-text restituisce zero righe. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  
+  Utilizzare l' `transform noise words` opzione di configurazione del server per non visualizzare un messaggio di errore se le parole non significative, ovvero [parole non significative](../../relational-databases/search/full-text-search.md), determinano la restituzione di zero righe da parte di un'operazione booleana su una query full-text. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Le parole non significative non vengono trasformate. Quando una query full-text contiene parole non significative, la query restituisce zero righe e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un avviso. Questo è il comportamento predefinito.<br /><br /> Si noti che l'avviso è un avviso di run-time. Pertanto, se la clausola full-text nella query non viene eseguita, l'avviso non viene generato. Per una query locale, viene generato un solo avviso, anche se sono presenti più clausole di query full-text. Per una query remota, il server collegato potrebbe non inoltrare l'errore ed è pertanto possibile che l'avviso non venga generato.|  
 |1|Le parole non significative vengono trasformate. Tali parole vengono ignorate e viene valutato e il resto della query.<br /><br /> Se vengono specificate parole non significative in un termine di prossimità, queste vengono rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La parola non significativa `is` viene ad esempio rimossa da `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, trasformando la query di ricerca in `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Si noti che la query `CONTAINS(<column_name>, 'NEAR(hello,is)')` verrebbe trasformata semplicemente in `CONTAINS(<column_name>, hello)` in quanto vi è un solo termine di ricerca valido.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62808692"
   
 -   Con transform noise words impostato su 0:  
   
-    |Stringa query|Risultato|  
+    |Stringa di query|Risultato|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Nessun risultato (il comportamento è lo stesso per "`the`" AND "`cat`").|  
     |"`cat`" NEAR "`the`"|Nessun risultato (il comportamento è lo stesso per "`the`" NEAR "`cat`").|  
@@ -48,7 +48,7 @@ ms.locfileid: "62808692"
   
 -   Con transform noise words impostato su 1:  
   
-    |Stringa query|Risultato|  
+    |Stringa di query|Risultato|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Riscontro per la riga con ID 1|  
     |"`cat`" NEAR "`the`"|Riscontro per la riga con ID 1|  

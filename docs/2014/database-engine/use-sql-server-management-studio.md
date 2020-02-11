@@ -15,20 +15,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773896"
 ---
 # <a name="use-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, configurazione, la gestione, l'amministrazione e sviluppo di tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli sviluppatori e agli amministratori qualsiasi sia il livello di competenza.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tutti i componenti di. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli sviluppatori e agli amministratori qualsiasi sia il livello di competenza.  
   
  SSMS unisce in un unico ambiente le funzionalità di Enterprise Manager, Query Analyzer e Analysis Manager inclusi nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS funziona inoltre con tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ad esempio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Gli sviluppatori possono lavorare in un ambiente familiare, mentre gli amministratori di database avranno a disposizione un'unica utilità completa che abbina strumenti grafici di facile utilizzo con ampie capacità di scripting.  
   
- Scaricare e installare SSMS dal [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
+ Scaricare e installare SSMS da [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Caratteristiche in SQL Server Management Studio](features-in-sql-server-management-studio.md)  
  Elenca l'ampio set di caratteristiche incluse in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62773896"
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
  Descrive come usare l'ambiente di modifica in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per modificare script [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX e XML/A.  
   
- [Modificare script SQLCMD con l'editor di query](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
+ [Modifica di script SQLCMD con l'editor di query](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
  Descrive le capacità e le limitazioni dell'utilizzo dell'editor di query in modalità SQLCMD.  
   
  [Codifica con colori negli editor di query](../relational-databases/scripting/color-coding-in-query-editors.md)  

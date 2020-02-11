@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25d4c4acf67de7443d9dfab68e67fe0750ff0a37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762672"
 ---
-# <a name="mssqlserver9002"></a>MSSQLSERVER_9002
+# <a name="mssqlserver_9002"></a>MSSQLSERVER_9002
     
 ## <a name="details"></a>Dettagli  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62762672"
  Usare **sys.databases** per determinare perché il log è pieno e quindi correggere tale condizione. Per ulteriori informazioni, vedere l'articolo sulla risoluzione dei problemi relativi a un log delle transazioni pieno (Errore 9002) nella documentazione online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
+ [Risolvere i problemi relativi a un log delle transazioni completo &#40;SQL Server errore 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

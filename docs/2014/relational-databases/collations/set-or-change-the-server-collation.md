@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918577"
 ---
 # <a name="set-or-change-the-server-collation"></a>Impostazione o modifica di regole di confronto del server
@@ -50,7 +50,7 @@ ms.locfileid: "62918577"
 >  Anziché modificare le regole di confronto predefinite di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare regole di confronto predefinite per ogni nuovo database creato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+ [Regole di confronto e supporto Unicode](collation-and-unicode-support.md)   
  [Impostare o modificare le regole di confronto del database](set-or-change-the-database-collation.md)   
  [Impostare o modificare le regole di confronto delle colonne](set-or-change-the-column-collation.md)   
  [Ricompilare database di sistema](../databases/system-databases.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771247"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recupero e comprensione dei dati delle modifiche
@@ -54,7 +54,7 @@ ms.locfileid: "62771247"
   
 3.  Nella pagina **Colonne**in **Editor origine OLE DB** verificare che su tutte le colonne desiderate sia eseguito il mapping a colonne di output.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere configurato un'origine OLE DB per recuperare i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
  **Argomento successivo:** [Elaborare inserimenti, aggiornamenti ed eliminazioni](process-inserts-updates-and-deletes.md)  

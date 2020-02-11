@@ -1,5 +1,5 @@
 ---
-title: Dimensione di struttura (Progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Struttura dimensione (Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081744"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Struttura dimensione (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la pagina **Struttura dimensione** in Progettazione dimensioni per modificare gli attributi, le gerarchie e i livelli della dimensione selezionata. La pagina **Struttura dimensione** contiene una barra degli strumenti e tre riquadri.  
   
- **Per visualizzare la pagina struttura dimensione**  
+ **Per visualizzare la pagina Struttura dimensione**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi aprire la dimensione che si desidera visualizzare.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "66081744"
  [Gerarchie](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Gerarchie** per gestire le gerarchie e i livelli relativi alla dimensione.  
   
- [Attributi](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attributes](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Attributi** per esplorare e gestire attributi per una dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

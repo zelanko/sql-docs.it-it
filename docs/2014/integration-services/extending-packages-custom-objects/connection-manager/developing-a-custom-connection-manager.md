@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768890"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Sviluppo di una gestione connessione personalizzata
@@ -33,7 +33,7 @@ ms.locfileid: "62768890"
 > [!IMPORTANT]  
 >  La maggior parte delle attività, delle origini e delle destinazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] funziona solo con tipi specifici di gestioni connessioni predefinite. Prima di sviluppare una gestione connessione personalizzata da utilizzare con attività e componenti predefiniti, controllare se tali componenti restringono l'elenco di gestioni connessioni rendendo disponibili solo quelli di un tipo specifico. Se la soluzione richiede una gestione connessione personalizzata, potrebbe essere necessario sviluppare anche un'attività personalizzata oppure un'origine o una destinazione personalizzata da utilizzare con la gestione connessione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  In questa sezione viene descritto come creare, configurare e scrivere il codice di una gestione connessione personalizzata e della relativa interfaccia utente personalizzata facoltativa. I frammenti di codice illustrati in questa sezione sono tratti dall'esempio di gestione connessione personalizzata SQL Server.  
   
  [Creazione di una gestione connessione personalizzata](creating-a-custom-connection-manager.md)  
@@ -74,6 +74,6 @@ ms.locfileid: "62768890"
  [Sviluppo di un componente flusso di dati personalizzato](../data-flow/developing-a-custom-data-flow-component.md)  
  Viene descritto come programmare origini, trasformazioni e destinazioni personalizzate del flusso di dati.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

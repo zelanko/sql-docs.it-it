@@ -26,17 +26,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755249"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
   Grazie all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile utilizzare qualsiasi linguaggio [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per creare trigger CLR. In questa sezione vengono fornite informazioni specifiche relative ai trigger implementati utilizzando l'integrazione con CLR. Per una descrizione completa dei trigger, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Definizione dei trigger  
- Un trigger è un tipo speciale di stored procedure che viene eseguita automaticamente quando viene eseguito un evento del linguaggio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include due tipi generali di trigger: Data Manipulation Language (DML) e Data Definition Language (DDL). I trigger DML possono essere utilizzati quando l'istruzione `INSERT`, `UPDATE` o `DELETE` modifica i dati in una tabella o in una vista specificata. I trigger DDL attivano stored procedure in risposta a diverse istruzioni DDL, che corrispondono principalmente a istruzioni che iniziano con `CREATE`, `ALTER` e `DROP`. Possono essere utilizzati per attività di amministrazione quali il controllo e la regolazione delle operazioni sul database.  
+ Un trigger è un tipo speciale di stored procedure che viene eseguita automaticamente quando viene eseguito un evento del linguaggio. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include due tipi generali di trigger: Data Manipulation Language (DML) e Data Definition Language (DDL). I trigger DML possono essere utilizzati quando l'istruzione `INSERT`, `UPDATE` o `DELETE` modifica i dati in una tabella o in una vista specificata. I trigger DDL attivano stored procedure in risposta a diverse istruzioni DDL, che corrispondono principalmente a istruzioni che iniziano con `CREATE`, `ALTER` e `DROP`. Possono essere utilizzati per attività di amministrazione quali il controllo e la regolazione delle operazioni sul database.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Funzionalità univoche dei trigger CLR  
  I trigger scritti in [!INCLUDE[tsql](../../includes/tsql-md.md)] consentono di determinare quali colonne della tabella o della vista di attivazione sono state aggiornate mediante le funzioni `UPDATE(column)` e `COLUMNS_UPDATED()`.  
@@ -49,14 +50,14 @@ ms.locfileid: "62755249"
   
 -   Accedere alle informazioni sugli oggetti di database interessati dall'esecuzione di istruzioni DDL.  
   
- Queste funzionalità vengono fornite implicitamente nel linguaggio di query o dalla classe `SqlTriggerContext`. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [panoramica dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Queste funzionalità vengono fornite implicitamente nel linguaggio di query o dalla classe `SqlTriggerContext`. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Utilizzo della classe SqlTriggerContext  
  La classe `SqlTriggerContext` non può essere costruita pubblicamente e può essere ottenuta solo accedendo alla proprietà `SqlContext.TriggerContext` all'interno del corpo di un trigger CLR. È possibile ottenere la classe `SqlTriggerContext` dall'oggetto `SqlContext` attivo chiamando la proprietà `SqlContext.TriggerContext`:  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- La classe `SqlTriggerContext` fornisce informazioni sul contesto per il trigger. Tali informazioni includono il tipo di azione che ha provocato l'attivazione del trigger, le colonne modificate in un'operazione UPDATE e, nel caso di un trigger DDL, una struttura XML `EventData` che descrive l'operazione di attivazione del trigger. Per altre informazioni, vedere [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ La classe `SqlTriggerContext` fornisce informazioni sul contesto per il trigger. Tali informazioni includono il tipo di azione che ha provocato l'attivazione del trigger, le colonne modificate in un'operazione UPDATE e, nel caso di un trigger DDL, una struttura XML `EventData` che descrive l'operazione di attivazione del trigger. Per ulteriori informazioni, vedere [EVENTDATA &#40;&#41;Transact-SQL ](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="determining-the-trigger-action"></a>Determinazione dell'azione trigger  
  Dopo aver ottenuto un `SqlTriggerContext`, è possibile utilizzarlo per determinare il tipo di azione che ha causato l'attivazione del trigger. Queste informazioni sono disponibili mediante la proprietà `TriggerAction` della classe `SqlTriggerContext`.  
@@ -72,9 +73,10 @@ ms.locfileid: "62755249"
 -   Per i trigger DDL, l'elenco dei valori TriggerAction possibili è molto più lungo. Per ulteriori informazioni, vedere "Enumerazione TriggerAction" in .NET Framework SDK.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle Inserted e Deleted  
- Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali: il **inserito** tabella e il **eliminato** tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
+ Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali, ovvero la tabella **inserted** e la tabella **Deleted** . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
   
- Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:  
+ I trigger CLR possono accedere alle tabelle **inserted** e **Deleted** tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:  
   
  C#  
   
@@ -480,7 +482,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è come indicato di seguito e presuppone che l'assembly **SQLCLRTest** è già registrato nell'attuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+ L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è la seguente e presuppone che l'assembly **SQLCLRTest** sia già registrato nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -660,7 +662,7 @@ DROP TABLE Table1;
  [Trigger DML](../../relational-databases/triggers/dml-triggers.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Compilazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; integrazione](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Compilazione di oggetti di database con Common Language Runtime &#40;integrazione&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

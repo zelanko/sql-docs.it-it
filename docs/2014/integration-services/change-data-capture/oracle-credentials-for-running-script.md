@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771112"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
@@ -23,16 +23,16 @@ ms.locfileid: "62771112"
 ## <a name="task-list"></a>Elenco attività  
  Immettere quanto segue nella finestra di dialogo:  
   
- **Autenticazione**  
+ **autenticazione**  
   
- Selezionare una delle opzioni seguenti:  
+ Selezionare uno degli elementi seguenti:  
   
 -   **Windows Authentication**: selezionare questa opzione per utilizzare le credenziali del dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
   
 -   **Oracle Authentication**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nel database Oracle di origine a cui si effettua la connessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura di gestione di un'istanza di CDC](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Rivedere e generare script di registrazione supplementare](review-and-generate-supplemental-logging-scripts.md)  
   
   

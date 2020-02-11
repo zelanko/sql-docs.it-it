@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786805"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurare l'opzione di configurazione del server query governor cost limit
-  In questo argomento viene descritto come configurare il `query governor cost limit` opzione di configurazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione Query Governor Cost Limit consente di specificare un limite di tempo massimo per l'esecuzione di una query. Il costo delle query equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. In questo modo, tutte le query vengono eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.  
+  In questo argomento viene descritto come configurare `query governor cost limit` l'opzione di configurazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del server [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]tramite o. L'opzione Query Governor Cost Limit consente di specificare un limite di tempo massimo per l'esecuzione di una query. Il costo delle query equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica. Il valore predefinito per questa opzione è 0, cioè Query Governor viene impostato su OFF. In questo modo, tutte le query vengono eseguite senza limitazione di tempo. Se si specifica un valore diverso da zero e positivo, tramite Query Governor non sarà possibile l'esecuzione delle query il cui costo stimato supera quel valore.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62786805"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver configurato l'opzione query governor cost limit](#FollowUp)  
+-   **Completamento:**  [Dopo la configurazione dell'opzione query governor cost limit](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62786805"
   
      Se si seleziona questa casella di controllo, nella casella sottostante immettere un valore positivo che verrà utilizzato da Query Governor per impedire l'esecuzione di qualsiasi query di durata superiore a quel valore.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-query-governor-cost-limit-option"></a>Per configurare l'opzione query governor cost limit  
   
@@ -91,7 +91,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione query governor cost limit  
+##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione query governor cost limit  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

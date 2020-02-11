@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832883"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
@@ -40,7 +40,7 @@ ms.locfileid: "62832883"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |GetProcessingRange|Questa operazione viene utilizzata prima di richiamare il flusso di dati che utilizza il flusso di dati dell'origine CDC. L'operazione consente di stabilire un intervallo di LSN letti dal flusso di dati dell'origine CDC quando il flusso di dati viene richiamato. L'intervallo viene archiviato in una variabile del pacchetto SSIS utilizzata dall'origine CDC durante l'elaborazione del flusso di dati.<br /><br /> Per altre informazioni sugli stati che vengono archiviati, vedere [Definire una variabile di stato](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: Questa operazione avviene dopo ogni esecuzione CDC (una volta completato il flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla successiva esecuzione di GetProcessingRange, questa posizione corrisponde all'inizio dell'intervallo di elaborazione.|  
+|MarkProcessedRange|Questa operazione avviene dopo ogni esecuzione CDC (una volta completato il flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla successiva esecuzione di GetProcessingRange, questa posizione corrisponde all'inizio dell'intervallo di elaborazione.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Gestione della persistenza dello stato CDC  
  L'attività di controllo CDC consente di gestire uno stato persistente tra attivazioni. Le informazioni archiviate nello stato CDC vengono utilizzate per determinare e gestire l'intervallo di elaborazione per il pacchetto CDC e per il rilevamento di eventuali condizioni di errore. Lo stato persistente viene archiviato come stringa. Per altre informazioni, vedere [Definire una variabile di stato](../data-flow/define-a-state-variable.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "62832883"
   
 -   Persistenza dello stato manuale: in questo caso, l'attività di controllo CDC gestisce lo stato archiviato in una variabile del pacchetto, ma lo sviluppatore del pacchetto deve leggere la variabile da un archivio persistente prima di chiamare il controllo CDC e quindi riscriverla nell'archivio persistente dopo l'ultima chiamata del controllo CDC e il completamento dell'esecuzione CDC.  
   
--   Persistenza dello stato automatica: lo stato CDC viene archiviato in una tabella in un database. Lo stato viene archiviato con un nome specificato nella proprietà **StateName** in una tabella denominata nella proprietà **Table to Use for Storing State** , inclusa in una gestione connessione selezionata per l'archiviazione dello stato. Il valore predefinito è la gestione connessione di origine, ma secondo la pratica comune è consigliabile impostare il valore sulla gestione connessione di destinazione. Tramite l'attività di controllo CDC viene aggiornato il valore di stato nella tabella di stato e viene eseguito il commit di tale valore come parte della transazione di ambiente.  
+-   Persistenza dello stato automatica: lo stato CDC viene archiviato in una tabella di un database. Lo stato viene archiviato con un nome specificato nella proprietà **StateName** in una tabella denominata nella proprietà **Table to Use for Storing State** , inclusa in una gestione connessione selezionata per l'archiviazione dello stato. Il valore predefinito è la gestione connessione di origine, ma secondo la pratica comune è consigliabile impostare il valore sulla gestione connessione di destinazione. Tramite l'attività di controllo CDC viene aggiornato il valore di stato nella tabella di stato e viene eseguito il commit di tale valore come parte della transazione di ambiente.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  È possibile che l'attività di controllo CDC restituisca un errore nei casi seguenti:  
@@ -67,9 +67,9 @@ ms.locfileid: "62832883"
 ## <a name="configuring-the-cdc-control-task"></a>Configurazione dell'attività di controllo CDC  
  È possibile impostare le proprietà tramite Progettazione SSIS o a livello di codice.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Editor attività Controllo CDC](../cdc-control-task-editor.md)  
+-   [Editor dell'attività di controllo CDC](../cdc-control-task-editor.md)  
   
 -   [Proprietà personalizzate dell'attività di controllo CDC](cdc-control-task-custom-properties.md)  
   

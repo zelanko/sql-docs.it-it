@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62987324"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
@@ -26,6 +26,6 @@ ms.locfileid: "62987324"
  L'inserimento di un numero di dati maggiori delle dimensioni di una colonna restituisce in genere un errore. In alcuni casi, tuttavia, viene restituito S_OK, ma *dwStatus* viene impostato su DBSTATUS_S_TRUNCATED. Questa situazione si verifica in genere quando vengono inseriti dati con parametri in una colonna di dimensioni insufficienti per contenere i dati, senza aver chiamato `ICommandWithParameters::SetParameterInfo`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le interfacce &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+ [Interfacce &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

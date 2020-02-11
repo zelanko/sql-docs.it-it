@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809350"
 ---
 # <a name="server-properties-connections-page"></a>Proprietà server (pagina Connessioni)
@@ -71,7 +71,7 @@ ms.locfileid: "62809350"
  Consente di visualizzare i valori correnti per le opzioni contenute nel riquadro. I valori sono di sola lettura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le opzioni &#40;Query in esecuzione: SQL Server: pagina avanzate&#41;](../options-query-execution-sql-server-advanced-page.md)   
+ [Opzioni &#40;esecuzione query: SQL Server: pagina avanzate&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

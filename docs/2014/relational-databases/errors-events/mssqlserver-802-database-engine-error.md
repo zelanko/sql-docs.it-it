@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762363"
 ---
-# <a name="mssqlserver802"></a>MSSQLSERVER_802
+# <a name="mssqlserver_802"></a>MSSQLSERVER_802
     
 ## <a name="details"></a>Dettagli  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62762363"
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Avviare la raccolta dei contatori di performance monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestore della memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione buffer** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione memoria**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

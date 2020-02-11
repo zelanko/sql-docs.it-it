@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917570"
 ---
 # <a name="contained-databases"></a>Database indipendenti
@@ -37,17 +37,17 @@ ms.locfileid: "62917570"
   
  In questo argomento sono contenute le sezioni seguenti.  
   
--   [Concetti relativi ai Database parzialmente indipendente](#Concepts)  
+-   [Concetti di database parzialmente indipendenti](#Concepts)  
   
 -   [Contenimento](#containment)  
   
--   [Vantaggi dell'uso di database parzialmente indipendenti](#benefits)  
+-   [Vantaggi dell'utilizzo di database parzialmente indipendenti](#benefits)  
   
 -   [Limitazioni](#Limitations)  
   
--   [Identificazione dell'indipendenza del Database](#Identifying)  
+-   [Identificazione del contenimento del database](#Identifying)  
   
-##  <a name="Concepts"></a> Concetti di database parzialmente indipendente  
+##  <a name="Concepts"></a>Concetti di database parzialmente indipendenti  
  In un database totalmente indipendente sono incluse tutte le impostazioni del database e i metadati necessari per definire il database, mentre non sono presenti dipendenze di configurazione nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui è installato il database. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risultare un'operazione dispendiosa in termini di tempo e richiedere una conoscenza dettagliata della relazione tra il database e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con i database parzialmente indipendenti è più semplice la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dagli altri database.  
   
  In un database indipendente le funzionalità vengono considerate in relazione all'indipendenza. Qualsiasi entità definita dall'utente basata solo su funzioni che risiedono nel database è considerata completamente indipendente. Qualsiasi entità definita dall'utente basata su funzioni che risiedono all'esterno del database è considerata non indipendente. Per altre informazioni, vedere la sezione [Indipendenza](#containment) più avanti in questo argomento.  
@@ -67,7 +67,8 @@ ms.locfileid: "62917570"
  Database con lo stato di indipendenza impostato su **NESSUNO**. Tutti i database delle versioni precedenti di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sono non indipendenti. Per impostazione predefinita, per tutti i database di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive lo stato di indipendenza è impostato su **NESSUNO**.  
   
  Database parzialmente indipendente  
- Un database parzialmente indipendente è un database indipendente in cui sono supportate funzionalità che superano il limite del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa la possibilità di determinare quando il limite di indipendenza viene superato.  
+ Un database parzialmente indipendente è un database indipendente in cui sono supportate funzionalità che superano il limite del database. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa la possibilità di determinare quando il limite di indipendenza viene superato.  
   
  Utente indipendente  
  Per i database indipendenti sono previsti due tipi di utenti.  
@@ -92,7 +93,7 @@ ms.locfileid: "62917570"
   
  All'esterno del limite del database è presente il *modello di gestione*che si riferisce alla gestione e alle funzioni a livello di istanza. Esempi di entità che si trovano all'esterno del limite del database includono tabelle di sistema, ad esempio **sys.endpoints**, utenti su cui viene eseguito il mapping ad account di accesso e tabelle utente in un altro database a cui viene fatto riferimento con un nome in tre parti.  
   
-##  <a name="containment"></a> Indipendenza  
+##  <a name="containment"></a>Contenimento  
  Le entità utente completamente residenti all'interno del database sono considerate *indipendenti*. Qualsiasi entità residente all'esterno del database o basata sull'interazione con le funzioni esterne al database è considerata *non indipendente*.  
   
  In generale, le entità utente rientrano nelle categorie di indipendenza seguenti:  
@@ -101,7 +102,7 @@ ms.locfileid: "62917570"
   
 -   Entità utente non indipendenti, ovvero quelle che superano il limite del database, ad esempio sys.server_principals o una stessa entità server (accesso). Qualsiasi struttura di codice in cui vengano usate queste entità o qualsiasi funzione che faccia riferimento a queste entità è anch'essa non indipendente.  
   
-###  <a name="partial"></a> Partially Contained Database  
+###  <a name="partial"></a>Database parzialmente indipendente  
  La caratteristica di database indipendente è attualmente disponibile solo in uno stato parzialmente indipendente. Un database parzialmente indipendente è un database indipendente in cui è supportato l'utilizzo di funzionalità non indipendenti.  
   
  Usare le viste [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) e [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) per restituire informazioni relative a oggetti o funzionalità non indipendenti. Determinando lo stato di indipendenza degli elementi del database, è possibile individuare gli oggetti o le funzionalità che è necessario sostituire o modificare ai fini dell'indipendenza.  
@@ -111,7 +112,7 @@ ms.locfileid: "62917570"
   
  In termini di regole di confronto, il comportamento dei database parzialmente indipendenti è nettamente diverso da quello dei database non indipendenti. Per altre informazioni sui problemi relativi alle regole di confronto, vedere [Contained Database Collations](contained-database-collations.md).  
   
-##  <a name="benefits"></a> Vantaggi dell'utilizzo di database parzialmente indipendenti  
+##  <a name="benefits"></a>Vantaggi dell'utilizzo di database parzialmente indipendenti  
  Alcuni problemi e complessità associati ai database non indipendenti possono essere risolti con un database parzialmente indipendente.  
   
 ### <a name="database-movement"></a>Spostamento di database  
@@ -133,7 +134,7 @@ ms.locfileid: "62917570"
 ### <a name="database-administration"></a>Amministrazione del database  
  La gestione delle impostazioni del database nel database, anziché nel database master, consente a ogni proprietario di database di avere più controllo sul database, senza fornire al proprietario di database l'autorizzazione **sysadmin** .  
   
-##  <a name="Limitations"></a> Limitazioni  
+##  <a name="Limitations"></a>Limitazioni  
  I database parzialmente indipendenti non supportano le funzionalità indicate di seguito.  
   
 -   Nei database parzialmente indipendenti non è supportato l'utilizzo di funzionalità di replica, di rilevamento modifiche o Change Data Capture.  
@@ -149,22 +150,23 @@ ms.locfileid: "62917570"
 > [!WARNING]  
 >  Le stored procedure temporanee sono attualmente consentite. Poiché le stored procedure temporanee violano l'indipendenza, non ne è previsto il supporto nelle versioni future del database indipendente.  
   
-##  <a name="Identifying"></a> Identificazione dell'indipendenza del database  
- Per consentire l'identificazione dello stato di indipendenza del database sono disponibili due strumenti. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) è una vista in cui sono riportate tutte le entità potenzialmente non indipendenti nel database. L'evento database_uncontained_usage si verifica quando viene identificata un'entità effettivamente non contenuta in fase di esecuzione.  
+##  <a name="Identifying"></a>Identificazione del contenimento del database  
+ Per consentire l'identificazione dello stato di indipendenza del database sono disponibili due strumenti. 
+  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) è una vista in cui sono riportate tutte le entità potenzialmente non indipendenti nel database. L'evento database_uncontained_usage si verifica quando viene identificata un'entità effettivamente non contenuta in fase di esecuzione.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  In questa vista vengono riportate tutte entità presenti nel database che potrebbero essere non indipendenti, ad esempio quelle che superano il limite del database. Sono incluse le entità utente che potrebbero usare oggetti al di fuori del modello di database. Poiché non è tuttavia possibile determinare lo stato di indipendenza di alcune entità, ad esempio quelle che usano SQL dinamico, fino alla fase di esecuzione, nella vista potrebbero essere presenti alcune entità che non sono effettivamente non indipendenti. Per altre informazioni, vedere [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql).  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage - evento  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage - evento  
  L'evento XEvent viene generato quando viene identificata un'entità non indipendente in fase di esecuzione. Sono incluse le entità che hanno origine nel codice client. Questo evento XEvent verrà generato solo per le entità effettivamente non indipendenti e solo in fase di esecuzione. Pertanto, qualsiasi entità utente non indipendente non eseguita non sarà identificata da questo XEvent.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Funzionalità modificate &#40;Database indipendente&#41;](modified-features-contained-database.md)  
+ [Funzionalità modificate &#40;database indipendente&#41;](modified-features-contained-database.md)  
   
  [Regole di confronto dei database indipendenti](contained-database-collations.md)  
   
  [Procedure consigliate per la sicurezza in database indipendenti](security-best-practices-with-contained-databases.md)  
   
- [Eseguire la migrazione in un database parzialmente indipendente](migrate-to-a-partially-contained-database.md)  
+ [Eseguire la migrazione a un database parzialmente indipendente](migrate-to-a-partially-contained-database.md)  
   
   

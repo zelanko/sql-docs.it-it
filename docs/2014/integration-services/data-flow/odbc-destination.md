@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771027"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
@@ -29,16 +29,16 @@ ms.locfileid: "62771027"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
  La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
   
--   **Batch**: in questa modalità la destinazione ODBC tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
+-   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
--   **Riga per riga**: in questa modalità, la destinazione ODBC prepara un'istruzione INSERT con parametri e usa **SQL Execute** per inserire le righe una per volta.  
+-   **Riga per riga**: in questa modalità, tramite la destinazione ODBC viene preparata un'istruzione INSERT con parametri e viene usato **SQL Execute** per inserire le righe una per volta.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  La destinazione ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code** (Codice errore): numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
+-   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
   
--   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
 -   Colonne dei dati di output standard.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62771027"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo Editor avanzato, vedere [Proprietà personalizzate della destinazione ODBC](odbc-destination-custom-properties.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../odbc-destination-editor-error-output-page.md)  
   

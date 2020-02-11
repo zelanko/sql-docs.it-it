@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Estendere la serie temporale modellare | Microsoft Docs'
+title: 'Lezione 5: estensione del modello Time Series | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822069"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lezione 5: Estensione del modello Time Series
@@ -26,7 +26,7 @@ ms.locfileid: "62822069"
   
  Si supponga ad esempio di avere eseguito il training del modello di data mining sui dati di vendita esistenti, alcuni mesi fa. Una volta ottenuti i dati delle nuove vendite, è necessario aggiornare le stime di vendita per incorporare i nuovi dati. È possibile eseguire questa operazione in un unico passaggio, fornendo le cifre relative alle nuove vendite come dati di input e generando le nuove stime in base al set di dati composto.  
   
-## <a name="making-predictions-with-extendmodelcases"></a>Esecuzione di stime con EXTEND_MODEL_CASES  
+## <a name="making-predictions-with-extend_model_cases"></a>Esecuzione di stime con EXTEND_MODEL_CASES  
  Di seguito sono riportati esempi generici di una stima basata su serie temporali che utilizza EXTEND_MODEL_CASES. Il primo esempio consente di specificare il numero di stime a partire dall'ultimo intervallo temporale del modello originale:  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Per creare una query di stima singleton in un modello Time Series  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+7.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Singleton_TimeSeries_Query.dmx`.  
+8.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Singleton_TimeSeries_Query.dmx`il nome.  
   
-9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+9. Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
      La query restituirà le stime delle quantità di vendita relative alla bicicletta M200 in Europa e nell'area del Pacifico.  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>Informazioni sull'avvio della stima con EXTEND_MODEL_CASES  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>Informazioni sull'avvio della stima con EXTEND_MODEL_CASES  
  Una volta create le stime in base al modello originale e ai nuovi dati, è possibile confrontare i risultati per stabilire in che modo l'aggiornamento dei dati di vendita influisce sulle stime. Prima di eseguire questa operazione, rivedere il codice appena creato e notare quanto segue:  
   
 -   Sono stati forniti nuovi dati solo per l'Europa.  
@@ -155,7 +155,7 @@ PREDICTION JOIN <source query>
   
  Nella tabella seguente viene illustrato come i nuovi valori forniti per il prodotto M200 Europe influiscono sulle stime. Per il prodotto M200 nell'area del Pacifico non sono stati forniti nuovi dati, tuttavia viene ugualmente eseguito il confronto tra le due serie:  
   
- **Prodotto e area: M200 Europe**  
+ **Prodotto e area geografica: M200 Europe**  
   
 |||||  
 |-|-|-|-|  
@@ -167,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **Prodotto e area: M200 Pacific**  
+ **Prodotto e regione: M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   Richiedere stime per quattro intervalli di tempo, dove il punto iniziale è l'intervallo di tempo 3 e il punto finale è l'intervallo di tempo 6.  
   
- In altre parole, se i nuovi dati sono contenuti n intervalli di tempo e si richiedono stime per gli intervalli temporali da 1 a n, le stime coincideranno con lo stesso periodo dei nuovi dati. Per ottenere nuove stime per periodi di tempo non previsti dai dati, è necessario avviare le stime nell'intervallo di tempo n+1 dopo la nuova serie dei dati oppure verificare di aver effettuato la richiesta di ulteriori intervalli di tempo.  
+ In altre parole, se i nuovi dati contengono n intervalli di tempo e si richiedono stime per gli intervalli temporali da 1 a n, le stime coincideranno con lo stesso periodo dei nuovi dati. Per ottenere nuove stime per periodi di tempo non previsti dai dati, è necessario avviare le stime nell'intervallo di tempo n+1 dopo la nuova serie dei dati oppure verificare di aver effettuato la richiesta di ulteriori intervalli di tempo.  
   
 > [!NOTE]  
 >  Non è possibile eseguire stime cronologiche quando si aggiungono nuovi dati.  
@@ -218,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  I risultati della stima iniziano dall'intervallo di tempo 3, che è successivo ai 2 mesi dei nuovi dati forniti.  
   
- **Prodotto e area: M200 Europe**  
+ **Prodotto e area geografica: M200 Europe**  
   
  Modello con dati aggiornati (PredictTimeSeries con EXTEND_MODEL_CASES)  
   
@@ -229,11 +229,11 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|11/25/2008 12:00:00 AM|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>Esecuzione di stime con REPLACE_MODEL_CASES  
- La sostituzione dei case del modello risulta utile qualora si desideri eseguire il training per un modello in un case set, quindi applicare il modello a una serie di dati diversa. Una procedura dettagliata di questo scenario viene presentata nella [lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+## <a name="making-predictions-with-replace_model_cases"></a>Esecuzione di stime con REPLACE_MODEL_CASES  
+ La sostituzione dei case del modello risulta utile qualora si desideri eseguire il training per un modello in un case set, quindi applicare il modello a una serie di dati diversa. Una procedura dettagliata di questo scenario è illustrata nella [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di query sul modello di serie temporale](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Esempi di query sul modello Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

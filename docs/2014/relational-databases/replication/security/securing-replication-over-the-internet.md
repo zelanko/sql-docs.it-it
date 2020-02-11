@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960035"
 ---
 # <a name="securing-replication-over-the-internet"></a>Sicurezza della replica su Internet
@@ -39,6 +39,6 @@ ms.locfileid: "62960035"
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)  
+ [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)  
   
   

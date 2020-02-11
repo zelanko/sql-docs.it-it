@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917094"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917094"
     > [!NOTE]  
     >  Se si tenta di collegare il database senza specificare il file di log, verrà eseguita una ricerca di tale file nella relativa posizione originale. Se nella posizione originale esiste ancora una copia del log, verrà collegata tale copia. Per evitare di utilizzare il file di log originale, specificare il percorso del nuovo file di log oppure rimuovere la copia originale del file di log dopo averlo copiato nella nuova posizione.  
   
-3.  Collegare i file copiati. Per altre informazioni, vedere [Attach a Database](attach-a-database.md).  
+3.  Collegare i file copiati. Per altre informazioni, vedere [Collegare un database](attach-a-database.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea una copia del [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni vengono eseguite in una finestra dell'Editor di Query connessa all'istanza del server a cui è collegato.  
+ Nell'esempio seguente viene creata una copia delle [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni che vengono eseguite in una finestra dell'editor di query connessa all'istanza del server a cui è collegato.  
   
-1.  Scollegare il [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni:  
+1.  Scollegare le [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni:  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917094"
     GO  
     ```  
   
-2.  Copiare con il metodo prescelto i file di database (AdventureWorks208R2_Data.mdf e AdventureWorks208R2_log) rispettivamente in: C:\MySQLServer\AdventureWorks208R2_Data.mdf e C:\MySQLServer\AdventureWorks208R2_Log.ldf.  
+2.  Copiare i file di database (AdventureWorks208R2_Data.mdf e AdventureWorks208R2_log) rispettivamente in: C:\MySQLServer\AdventureWorks208R2_Data.mdf e C:\MySQLServer\AdventureWorks208R2_Log.ldf, utilizzando il metodo desiderato.  
   
     > [!IMPORTANT]  
     >  Nel caso di un database di produzione, posizionare su dischi separati il database e il log delle transazioni.  

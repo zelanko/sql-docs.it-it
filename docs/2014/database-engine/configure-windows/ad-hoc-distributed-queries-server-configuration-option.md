@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813484"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>Opzione di configurazione del server ad hoc distributed queries
@@ -32,7 +32,7 @@ ms.locfileid: "62813484"
 > [!IMPORTANT]  
 >  Se si consente l'utilizzo dei nomi ad hoc, tutti gli account di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticati potranno accedere al provider. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede che gli amministratori abilitino questa funzionalità per i provider a cui è possibile accedere in modo sicuro tramite qualsiasi account di accesso locale.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si prova a eseguire una connessione ad hoc con l'opzione **Query distribuite ad hoc abilitate** non abilitata, viene restituito l'errore: Messaggio 7415, livello 16, stato 1, riga 1  
   
  L'accesso ad hoc al provider OLE DB "Microsoft.ACE.OLEDB.12.0" è stato negato. Accedere al provider tramite un server collegato.  

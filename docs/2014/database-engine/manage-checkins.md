@@ -1,5 +1,5 @@
 ---
-title: Gestione delle archiviazioni | Microsoft Docs
+title: Gestisci archiviazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774293"
 ---
 # <a name="manage-checkins"></a>Gestione delle archiviazioni
   Per mettere a disposizione di altri utenti le modifiche apportate a un file incluso nel controllo del codice sorgente, è necessario archiviare il file. Quando un file viene archiviato, la versione creata viene copiata nel provider del controllo del codice sorgente, viene impostata come versione più recente del file e viene in genere messa a disposizione degli utenti dotati delle autorizzazioni necessarie.  
   
- Uso [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per archiviare i file. Quando è necessario aggiornare periodicamente l'archivio del controllo del codice sorgente mantenendo al contempo il controllo su un set di file, è possibile specificare che i file estratti rimangano a disposizione dell'utente che li ha archiviati.  
+ Usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per archiviare i file. Quando è necessario aggiornare periodicamente l'archivio del controllo del codice sorgente mantenendo al contempo il controllo su un set di file, è possibile specificare che i file estratti rimangano a disposizione dell'utente che li ha archiviati.  
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   

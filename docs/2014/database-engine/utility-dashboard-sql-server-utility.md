@@ -1,5 +1,5 @@
 ---
-title: Dashboard utilità (utilità SQL Server) | Microsoft Docs
+title: Dashboard utilità (Utilità SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773813"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "62773813"
   
  Per creare una visualizzazione filtrata di un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o un'applicazione del livello dati, fare clic sul collegamento per una categoria di utilizzo accanto al relativo indicatore scorrevole nel dashboard dell'utilità. Ad esempio, se si fa clic su **CPU istanza sovrautilizzata** nel riquadro **Contenuto Esplora utilità** , SSMS crea una visualizzazione elenco filtrata delle istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che dispongono di una CPU sovrautilizzata in base alle impostazioni dei criteri correnti.  
   
- Si noti che quando si fa clic su un collegamento per una categoria di utilizzo, al nodo corrispondente nel riquadro di navigazione Esplora utilità viene aggiunto **(filtrato)** , ovvero **Istanze gestite** viene etichettato **Istanze gestite (filtrato)** . Per visualizzare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Impostazioni filtro**. Per cancellare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Rimuovi filtro**.  
+ Si noti che quando si fa clic su un collegamento per una categoria di utilizzo, al nodo corrispondente nel riquadro di navigazione Esplora utilità viene aggiunto **(filtrato)** , ovvero **Istanze gestite** viene etichettato **Istanze gestite (filtrato)**. Per visualizzare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Impostazioni filtro**. Per cancellare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Rimuovi filtro**.  
   
  Per altre informazioni sulla visualizzazione dello stato di integrità per singole istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per visualizzare o modificare impostazioni di configurazione dei criteri, vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62773813"
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di Esplora utilità per gestire Utilità SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Registrare un'istanza di SQL Server &#40;utilità SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985768"
 ---
 # <a name="reporting-services-extensions"></a>Estensioni di Reporting Services
-  L'architettura modulare di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile creare assembly privati o condivisi usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e aggiungere nuove funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per soddisfare le esigenze aziendali in continua evoluzione.  
+  L'architettura modulare di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile creare assembly privati o condivisi usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e aggiungere nuove [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funzionalità per soddisfare le esigenze aziendali in continua evoluzione.  
   
  L'architettura unica di estendibilità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente agli sviluppatori di estendere caratteristiche specifiche del prodotto e dei relativi componenti. Attualmente, è disponibile ampio supporto per l'estensione delle funzionalità di elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'API di elaborazione dati include convenzioni e costrutti del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] comuni che consentono agli sviluppatori di compilare funzionalità aggiuntive di elaborazione dati in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Queste estensioni per l'elaborazione dati aggiungono funzionalità sia al server di report che a Progettazione report e consentono una perfetta integrazione dei dati personalizzati nei report.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62985768"
   
  Un'altra estensione del server di report, RDCE (Report Definition Customization Extension) consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione. È possibile personalizzare i report in base a fattori come gli utenti o le lingue. È ad esempio possibile implementare viste diverse per utenti diversi, ad esempio amministratori o membri di un reparto, oppure personalizzare un report con layout diversi a seconda che ne venga eseguito il rendering in francese o in arabo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Considerazioni sulla sicurezza per le estensioni](security-considerations-for-extensions.md)  
  Vengono descritti i problemi di sicurezza relativi allo sviluppo e alla distribuzione delle estensioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

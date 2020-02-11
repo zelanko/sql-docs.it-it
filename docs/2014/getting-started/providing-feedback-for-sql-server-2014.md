@@ -1,5 +1,5 @@
 ---
-title: Commenti e suggerimenti per SQL Server 2014 | Microsoft Docs
+title: Invio di commenti e suggerimenti per SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772278"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Invio di commenti e suggerimenti su SQL Server 2014
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ringrazia gli utenti per il tempo dedicato e per il contributo che consente di migliorare i prodotti e la documentazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile fornire suggerimenti e report sui bug relativi alle funzionalità del prodotto e all'interfaccia utente, inviare commenti e suggerimenti sulla documentazione e scegliere di inviare automaticamente segnalazioni di errori e dati sull'utilizzo a [!INCLUDE[msCoName](../includes/msconame-md.md)] per l'analisi. Ognuna di queste tre opzioni relative ai commenti e ai suggerimenti viene descritta di seguito.  
   
 ## <a name="submitting-feedback-about-the-product"></a>Invio di commenti sul prodotto  
@@ -37,7 +38,7 @@ ms.locfileid: "62772278"
   
  È possibile trovare la pagina per i commenti e i suggerimenti su [!INCLUDE[msCoName](../includes/msconame-md.md)] nel sito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect in numerosi modi.  
   
--   Accedere alla [pagina Web](https://go.microsoft.com/fwlink/?linkid=34178) per i commenti e i suggerimenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Accedere alla [!INCLUDE[msCoName](../includes/msconame-md.md)]pagina Web[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per i commenti e i suggerimenti su [ nel sito ](https://go.microsoft.com/fwlink/?linkid=34178) Connect.  
   
 -   Nella barra degli strumenti della Guida di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fare clic sul pulsante **Commenti e suggerimenti** oppure scegliere il comando **Community/Commenti e suggerimenti**.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "62772278"
   
 -   Accedere alla Guida dall'utilità.  
   
--   Selezionare il **aiutare** casella di controllo il **barre degli strumenti** scheda della finestra di **strumenti/Personalizza...**  comando.  
+-   Selezionare la casella di controllo **Guida** nella scheda **barre** degli strumenti del comando **Strumenti/Personalizza...** .  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Segnalazione automatica errori e utilizzo caratteristiche  
  È possibile abilitare funzionalità specifiche per la segnalazione automatica degli errori e per inviare informazioni sull'utilizzo del software e dei servizi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Queste informazioni verranno utilizzate da [!INCLUDE[msCoName](../includes/msconame-md.md)] per migliorare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tutti i dati sono riservati.  
@@ -57,9 +58,9 @@ ms.locfileid: "62772278"
 ### <a name="managing-automatic-usage-reporting"></a>Gestione della segnalazione automatica delle informazioni sull'utilizzo  
  La segnalazione automatica delle informazioni sull'utilizzo consente di decidere se raccogliere e inviare dati a [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per segnalare i dati sull'utilizzo, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzate due pipeline che inviano dati simili, ma relativi a programmi diversi, e che vengono abilitate e disabilitate separatamente. L'abilitazione o la disabilitazione di una pipeline mediante uno dei programmi consente inoltre di arrestare o di avviare la raccolta di dati da altri programmi che condividono la stessa pipeline.  
   
--   Viene utilizzata una pipeline per segnalare i dati sull'utilizzo relativi a tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ad eccezione della documentazione online e di alcuni elementi dell'interfaccia utente basata su [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio negli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dopo l'installazione, è inoltre possibile disabilitare o abilitare questa pipeline. A tale scopo, in[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] aprire un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Opzioni suggerimenti clienti** dal menu **?** . Questo comando non verrà visualizzato fino a quando non viene aperto un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Viene utilizzata una pipeline per segnalare i dati sull'utilizzo relativi a tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ad eccezione della documentazione online e di alcuni elementi dell'interfaccia utente basata su [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio negli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dopo l'installazione, è inoltre possibile disabilitare o abilitare questa pipeline. A tale scopo, in[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] aprire un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Opzioni suggerimenti clienti** dal menu **?**. Questo comando non verrà visualizzato fino a quando non viene aperto un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   L'altra pipeline viene utilizzata per la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], gli elementi dell'interfaccia utente basata su Visual Studio degli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e Visual Studio. Dopo l'installazione, è inoltre possibile disabilitare o abilitare questa pipeline. A tale scopo, in[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] aprire un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Opzioni suggerimenti clienti** dal menu **?** . Questo comando non verrà visualizzato fino a quando non viene aperto un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   L'altra pipeline viene utilizzata per la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], gli elementi dell'interfaccia utente basata su Visual Studio degli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e Visual Studio. Dopo l'installazione, è inoltre possibile disabilitare o abilitare questa pipeline. A tale scopo, in[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] aprire un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Opzioni suggerimenti clienti** dal menu **?**. Questo comando non verrà visualizzato fino a quando non viene aperto un progetto basato su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="helping-build-a-better-books-online"></a>Contributo al miglioramento della documentazione online  
  Se si sceglie di abilitare la segnalazione utilizzo caratteristiche per la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il team responsabile della documentazione sarà in grado di migliorare il materiale offerto. I dati di aggregazione ricevuti indicano le esigenze dei clienti, nonché le modalità di spostamento tra gli argomenti, la frequenza di visualizzazione di argomenti specifici e gli argomenti considerati maggiormente utili.  

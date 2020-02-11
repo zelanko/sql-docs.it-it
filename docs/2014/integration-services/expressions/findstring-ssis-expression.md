@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769177"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (espressione SSIS)
@@ -42,7 +42,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare FINDSTRING solo con il tipo di dati DT_WSTR.  Per gli argomenti*character_expression* e *searchstring* costituiti da valori letterali stringa o da colonne di dati con tipo di dati DT_STR, prima di eseguire l'operazione della funzione FINDSTRING viene eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](cast-ssis-expression.md).  
   
  FINDSTRING restituirà Null se il valore *character_expression* o *searchstring* sono Null.  

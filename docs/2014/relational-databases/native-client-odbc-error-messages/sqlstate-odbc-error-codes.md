@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE (codici di errore ODBC) | Documenti di Microsoft
+title: SQLSTATE (codici di errore ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805865"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (codici di errore ODBC)
-  SQLSTATE fornisce informazioni dettagliate sulla causa di un avviso o di un errore. Per gli errori che si verificano nei dati di origine rilevato e restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client associa il numero di errore nativo restituito a SQLSTATE appropriato. Se non dispone di un codice di errore ODBC per eseguire il mapping a un numero di errore nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client restituisce SQLSTATE 42000 ("sintassi o violazione di accesso"). Per gli errori che vengono rilevati dal driver, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client viene generato l'errore SQLSTATE appropriato.  
+  SQLSTATE fornisce informazioni dettagliate sulla causa di un avviso o di un errore. Per gli errori che si verificano nell'origine dati rilevata e restituita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client esegue il mapping del numero di errore nativo restituito all'SQLSTATE appropriato. Se un numero di errore nativo non dispone di un codice di errore ODBC a cui eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il mapping, il driver ODBC di Native Client restituisce SQLSTATE 42000 ("errore di sintassi o violazione di accesso"). Per gli errori rilevati dal driver, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client genera il SQLSTATE appropriato.  
   
  Per ulteriori informazioni sui codici di errore di stato, vedere i seguenti argomenti:  
   
--   [Appendice A: Codici di errore ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendice A: codici di errore ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [Mapping di SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

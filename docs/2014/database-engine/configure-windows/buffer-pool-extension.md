@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786821"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
-  Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Vantaggi dell'estensione del pool di buffer  
  Lo scopo principale di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è l'archiviazione e il recupero dei dati. L'esecuzione di una quantità elevata di operazioni di I/O su disco è pertanto una caratteristica fondamentale del motore di database. Poiché le operazioni di I/O nel disco possono utilizzare molte risorse e richiedere un tempo relativamente lungo per il completamento, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene data grande importanza all'efficienza dell'I/O. Il pool di buffer funge da fonte primaria di allocazione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestione del buffer è un elemento chiave per il raggiungimento di tale efficienza. Il componente di gestione del buffer è costituito da due meccanismi, ovvero Gestione buffer che consente di accedere alle pagine del database e aggiornarle, e il pool di buffer, che consente di ridurre le operazioni di I/O del file di database.  
@@ -77,9 +77,9 @@ ms.locfileid: "62786821"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Informazioni restituite sull'estensione del pool di buffer  
  È possibile utilizzare le viste a gestione dinamica (DMV) seguenti per visualizzare la configurazione dell'estensione del pool di buffer e le informazioni sulle pagine di dati restituite nell'estensione.  
   
--   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)  
+-   [sys. dm_os_buffer_pool_extension_configuration &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)  
   
--   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)  
+-   [sys. dm_os_buffer_descriptors &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)  
   
  I contatori delle prestazioni sono disponibili nell'oggetto di Gestione buffer di SQL Server per tenere traccia delle pagine di dati nel file di estensione del pool di buffer. Per ulteriori informazioni, vedere l'argomento relativo ai [contatori delle prestazioni dell'estensione del pool di buffer](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62786821"
 |**Descrizione dell'attività**|**Argomento**|  
 |Abilitare e configurare l'estensione del pool di buffer.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
 |Modificare la configurazione dell'estensione del pool di buffer.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|  
-|Visualizzare la configurazione dell'estensione del pool di buffer.|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|  
-|Eseguire il monitoraggio dell'estensione del pool di buffer.|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contatori delle prestazioni](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
+|Visualizzare la configurazione dell'estensione del pool di buffer.|[sys. dm_os_buffer_pool_extension_configuration &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|  
+|Eseguire il monitoraggio dell'estensione del pool di buffer.|[sys. dm_os_buffer_descriptors &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contatori delle prestazioni](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   

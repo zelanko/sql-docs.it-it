@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770343"
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
@@ -93,7 +93,7 @@ ms.locfileid: "62770343"
   
  La tabella seguente mostra un set di dati prima della trasformazione dei dati tramite Pivot in base alla colonna **Year** .  
   
-|Year|Nome prodotto|Total|  
+|Year|Nome prodotto|Totale|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -131,7 +131,7 @@ ms.locfileid: "62770343"
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Per informazioni su come impostare le proprietà del componente, vedere [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione UnPivot](pivot-transformation.md)   

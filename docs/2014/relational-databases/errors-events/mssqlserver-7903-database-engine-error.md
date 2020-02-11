@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762783"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762783"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_ORPHANED_FILE|  
-|Testo del messaggio|Errore di tabella: File orfano "FILE" è stato trovato nella directory Filestream per l'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, ID di colonna C_ID.|  
+|Testo del messaggio|Errore di tabella: trovato file orfano "FILE" nella directory FileStream per l'ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di colonna ID_C.|  
   
 ## <a name="explanation"></a>Spiegazione  
  È stato trovato un file FILESTREAM in una directory di colonne FILESTREAM, ma il valore di colonna corrispondente nella partizione è mancante.  

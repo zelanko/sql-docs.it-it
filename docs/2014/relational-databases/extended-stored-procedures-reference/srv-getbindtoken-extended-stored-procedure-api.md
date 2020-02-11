@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127307"
 ---
-# <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API delle stored procedure estese)
+# <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API delle stored procedure estese)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Ottiene un token di associazione della transazione nella sessione client corrente che richiama la stored procedure estesa.  
   
@@ -54,13 +55,13 @@ bindtoken
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene tutte le informazioni utilizzate dalla libreria dell'API della stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *bindtoken*  
+ *token transazione*  
  Puntatore a un buffer in cui verrà copiato il token di associazione. Il token di associazione viene rappresentato come stringa con terminazioni Null. Il buffer specificato deve essere lungo almeno 255 byte.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>Per associare una sessione della stored procedure estesa alla sessione client che l'ha chiamata perché condividano lo stesso spazio di blocco della transazione  
   

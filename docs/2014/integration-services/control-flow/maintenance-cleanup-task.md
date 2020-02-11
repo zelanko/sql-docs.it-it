@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8b3c3aa4f63018e91370c4e01dada40c35a5f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830800"
 ---
 # <a name="maintenance-cleanup-task"></a>Pulizia file manutenzione - attività
@@ -35,7 +35,7 @@ ms.locfileid: "62830800"
  Diversamente dalle precedenti versioni dell'attività Pulizia file manutenzione, la versione disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elimina automaticamente i file presenti nelle sottodirectory della directory specificata. Questo vincolo riduce la superficie esposta a qualsiasi attacco che potrebbe sfruttare le funzionalità dell'attività Pulizia file manutenzione per eliminare file senza disporre della relativa autorizzazione. Per eliminare le sottocartelle di primo livello è necessario scegliere esplicitamente di eseguire l'operazione selezionando l'opzione **Includi sottocartelle di primo livello** nella finestra di dialogo **Attività Pulizia file manutenzione** .  
   
 ## <a name="configuration-of-the-maintenance-cleanup-task"></a>Configurazione dell'attività Pulizia file manutenzione  
- È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della **casella degli strumenti** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della **casella degli strumenti** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   

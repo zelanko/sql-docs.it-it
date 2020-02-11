@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917044"
 ---
 # <a name="master-database"></a>Database master
@@ -38,45 +38,45 @@ ms.locfileid: "62917044"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
-|ANSI_NULL_DEFAULT|OFF|Yes|  
-|ANSI_NULLS|OFF|Yes|  
-|ANSI_PADDING|OFF|Yes|  
-|ANSI_WARNINGS|OFF|Yes|  
-|ARITHABORT|OFF|Yes|  
+|ALLOW_SNAPSHOT_ISOLATION|ATTIVA|No|  
+|ANSI_NULL_DEFAULT|OFF|Sì|  
+|ANSI_NULLS|OFF|Sì|  
+|ANSI_PADDING|OFF|Sì|  
+|ANSI_WARNINGS|OFF|Sì|  
+|ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|No|  
-|AUTO_CREATE_STATISTICS|ON|Yes|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ON|Yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
-|CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> no|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
-|DB_CHAINING|ON|No|  
-|ENCRYPTION|OFF|no|  
-|NUMERIC_ROUNDABORT|OFF|Yes|  
-|PAGE_VERIFY|CHECKSUM|Yes|  
-|PARAMETERIZATION|SIMPLE|Yes|  
-|QUOTED_IDENTIFIER|OFF|Yes|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
+|CURSOR_DEFAULT|GLOBAL|Sì|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
+|DB_CHAINING|ATTIVA|No|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Sì|  
+|PAGE_VERIFY|CHECKSUM|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
+|QUOTED_IDENTIFIER|OFF|Sì|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
-|RECOVERY|SIMPLE|Yes|  
-|RECURSIVE_TRIGGERS|OFF|Yes|  
-|Opzioni relative a Service Broker|DISABLE_BROKER|no|  
-|TRUSTWORTHY|OFF|Yes|  
+|RECOVERY|SEMPLICE|Sì|  
+|RECURSIVE_TRIGGERS|OFF|Sì|  
+|Opzioni relative a Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|Sì|  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Nel database **master** non è possibile eseguire le operazioni seguenti:  
   
 -   Aggiunta di file o di filegroup.  
   
 -   Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
   
--   Modifica del proprietario del database. **master** è di proprietà di **sa**.  
+-   Modifica del proprietario del database. **Master** è di proprietà di **sa**.  
   
 -   Creazione di un catalogo o di un indice full-text.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917044"
   
 -   Eliminazione del database.  
   
--   Eliminazione dell'utente **guest** dal database.  
+-   Eliminazione dell'utente **Guest** dal database.  
   
 -   Abilitazione dell'acquisizione dei dati delle modifiche.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62917044"
   
 -   Impostazione del database o del filegroup primario su READ_ONLY.  
   
-## <a name="recommendations"></a>Indicazioni  
+## <a name="recommendations"></a>Consigli  
  Quando si utilizza il database **master** , è consigliabile attenersi alle indicazioni seguenti:  
   
 -   Tenere sempre a disposizione un backup aggiornato del database **master** .  

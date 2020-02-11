@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 8: Effettua la comprensione del pacchetto della lezione 1 | Microsoft Docs'
+title: 'Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767593"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Passaggio 8: Semplificazione del pacchetto della lezione 1
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1
   Dopo avere completato la configurazione del pacchetto della lezione 1, può essere utile riordinarne il layout. Se le forme nel layout del flusso di controllo e del flusso di dati sono di dimensioni casuali o se non sono allineate o raggruppate, può risultare più difficile comprendere la funzionalità del pacchetto.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools sono disponibili strumenti che consentono di formattare facilmente e rapidamente il layout dei pacchetti. Le caratteristiche di formattazione includono la possibilità di impostare forme di dimensioni uguali, di allineare le forme e di modificare la spaziatura orizzontale e verticale tra le forme.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools sono disponibili strumenti che consentono di formattare facilmente e rapidamente il layout dei pacchetti. Le caratteristiche di formattazione includono la possibilità di impostare forme di dimensioni uguali, di allineare le forme e di modificare la spaziatura orizzontale e verticale tra le forme.  
   
  Un altro modo per rendere più comprensibili le funzionalità del pacchetto consiste nell'aggiunta di annotazioni descrittive.  
   
@@ -44,13 +45,13 @@ ms.locfileid: "62767593"
   
 2.  Digitare o incollare il testo seguente nella casella delle annotazioni.  
   
-     **Tramite il flusso di dati vengono estratti dati da un file, vengono cercati valori nella colonna CurrencyKey della tabella DimCurrency e nella colonna DateKey della tabella DimDate e vengono scritti i dati nella tabella NewFactCurrencyRate.**  
+     **Il flusso di dati estrae i dati da un file, Cerca valori nella colonna CurrencyKey della tabella DimCurrency e nella colonna DateKey della tabella DimDate e scrive i dati nella tabella NewFactCurrencyRate.**  
   
      Per eseguire il wrapping del testo nella casella delle annotazioni, inserire il cursore nel punto in cui si desidera iniziare una nuova riga e premere INVIO.  
   
      Se non si inserisce alcun testo nella casella delle annotazioni, quest'ultima scomparirà quando si farà clic al suo esterno.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

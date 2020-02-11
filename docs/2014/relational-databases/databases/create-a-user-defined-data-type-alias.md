@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917445"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
   In questo argomento si illustra come creare un nuovo alias del tipo di dati definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62917445"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE TYPE nel database corrente e l'autorizzazione ALTER per *schema_name*. Se *schema_name* viene omesso, vengono applicate le regole predefinite per la risoluzione dei nomi per determinare lo schema dell'utente corrente.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Per creare un tipo di dati definito dall'utente  
   
@@ -59,10 +59,10 @@ ms.locfileid: "62917445"
      **Consenti valori Null**  
      Specificare se dal tipo di dati definito dall'utente possono essere accettati valori Null. Il supporto di valori Null di un tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Data type**  
+     **Tipo di dati**  
      Selezionare il tipo di dati di base dalla casella di riepilogo. In questa casella vengono visualizzati tutti i tipi di dati, ad eccezione di `geography`, `geometry`, `hierarchyid`, `sysname`, `timestamp` e `xml`. Il tipo di dati di un tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Valore predefinito**  
+     **Default**  
      Facoltativamente, selezionare una regola o un valore predefinito da associare all'alias del tipo di dati definito dall'utente.  
   
      **Lunghezza/Precisione**  
@@ -70,19 +70,19 @@ ms.locfileid: "62917445"
   
      La lunghezza non viene visualizzata per tipi di dati `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   
-     **Name**  
-     Se si crea un nuovo alias del tipo di dati definito dall'utente, digitare un nome univoco da utilizzare nel database per rappresentare il tipo di dati definito dall'utente. Il numero massimo di caratteri deve corrispondere al sistema `sysname` tipo di dati. Il nome di un alias del tipo di dati definito dall'utente esistente non può essere modificato.  
+     **Nome**  
+     Se si crea un nuovo alias del tipo di dati definito dall'utente, digitare un nome univoco da utilizzare nel database per rappresentare il tipo di dati definito dall'utente. Il numero massimo di caratteri deve corrispondere al tipo `sysname` di dati di sistema. Il nome di un alias del tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Rule**  
+     **Regola**  
      Facoltativamente, selezionare una regola da associare all'alias del tipo di dati definito dall'utente.  
   
-     **Scala**  
+     **Ridimensionare**  
      Specificare il numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale.  
   
      **Schema**  
      Consente di selezionare uno schema dall'elenco di tutti gli schemi disponibili per l'utente corrente. La selezione predefinita corrisponde allo schema predefinito per l'utente corrente.  
   
-     **Archiviazione**  
+     **Storage**  
      Consente di visualizzare la capacità di memorizzazione massima per l'alias del tipo di dati definito dall'utente. Le dimensioni di archiviazione massime variano in base alla precisione.  
   
     |||  
@@ -92,7 +92,7 @@ ms.locfileid: "62917445"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     Per la `nchar` e `nvarchar` tipi di dati, il valore di archiviazione è sempre due volte il valore nella **lunghezza**.  
+     Per `nchar` i `nvarchar` tipi di dati e, il valore di archiviazione è sempre il doppio del valore di **lunghezza**.  
   
      L'archiviazione non viene visualizzata per tipi di dati `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62917445"
   
 7.  Nell'area **Associazione** compilare le caselle **Valore predefinito** o **Regola** per associare un valore predefinito o una regola al nuovo alias del tipo di dati. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]non è possibile creare valori predefiniti e regole. Usare [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempi di codice per la creazione di valori predefiniti e di regole sono disponibili in Esplora modelli.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Per creare un alias del tipo di dati definito dall'utente  
   

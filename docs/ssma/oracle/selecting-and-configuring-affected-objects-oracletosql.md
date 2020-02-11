@@ -1,5 +1,5 @@
 ---
-title: Selezione e configurazione di oggetti (OracleToSQL) interessati | Microsoft Docs
+title: Selezione e configurazione degli oggetti interessati (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,22 +14,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266499"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selezione e configurazione degli oggetti interessati (OracleToSQL)
-In questa pagina è possibile selezionare tabelle e le chiavi esterne, le modifiche in cui devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelto nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
+In questa pagina è possibile selezionare le tabelle e le chiavi esterne, che devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelti nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
   
 ## <a name="selection-of-affected-objects"></a>Selezione degli oggetti interessati  
-Nell'albero degli oggetti Oracle che si trova sul lato sinistro della finestra, selezionare le tabelle e le chiavi esterne, le modifiche in cui devono essere confrontate per identici.  
+Nell'albero degli oggetti Oracle situato sul lato sinistro della finestra, controllare le tabelle e le chiavi esterne, che devono essere confrontate per essere identiche.  
   
-Se non è possibile verificare il Tester di SSMA uno di questi oggetti, verrà visualizzato il collegamento con l'etichetta **alcuni oggetti selezionati contengono errori** sotto l'albero di oggetti. Fare clic su questo collegamento per visualizzare i motivi per cui non è possibile confrontare questi oggetti e per cancellare la selezione degli oggetti non corretti.  
+Se SSMA tester non è in grado di verificare questi oggetti, viene visualizzato il collegamento con l'etichetta **alcuni oggetti selezionati che contengono errori** nell'albero degli oggetti. Fare clic su questo collegamento per visualizzare i motivi per cui non è possibile confrontare questi oggetti e per deselezionare la selezione di oggetti non corretti.  
   
 ## <a name="table"></a>Tabella  
-Scheda della tabella contiene la visualizzazione griglia della tabella selezionata. La griglia contiene le informazioni seguenti relative alla tabella selezionata:  
+La scheda tabella contiene la visualizzazione griglia della tabella selezionata. La griglia contiene le informazioni seguenti sulla tabella selezionata:  
   
 -   Nome colonna  
   
@@ -41,76 +41,76 @@ Scheda della tabella contiene la visualizzazione griglia della tabella seleziona
   
 -   Regola  
   
--   Impostazione predefinita  
+-   Predefinito  
   
--   identità  
+-   Identità  
   
--   Ammette valori Null  
+-   Nullable  
   
 ## <a name="sql"></a>Sql  
-Scheda SQL contiene la tabella"Crea" SQL della tabella selezionata.  
+Scheda SQL contiene il SQL "Create Table" della tabella selezionata.  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>data  
 Scheda dati consente di visualizzare i dati presenti nella tabella selezionata.  
   
 ## <a name="properties"></a>Proprietà  
-Scheda proprietà Visualizza le proprietà della tabella selezionata. I campi seguenti sono presenti nella scheda delle proprietà:  
+Scheda proprietà consente di visualizzare le proprietà della tabella selezionata. Nella scheda proprietà sono presenti i campi seguenti:  
   
--   Creazione o dell'ultima modifica  
+-   Data di creazione o dell'Ultima modifica  
   
 -   Nome oggetto  
   
-## <a name="columns-comparison-settings"></a>Impostazioni di confronto di colonne  
-Stabilire le regole di confronto per le colonne della tabella nel **confronto tra colonne** pagina. È possibile apportare le seguenti impostazioni.  
+## <a name="columns-comparison-settings"></a>Impostazioni di confronto colonne  
+Definire le regole di confronto per le colonne della tabella nella pagina di **confronto colonne** . È possibile apportare le impostazioni seguenti.  
   
-### <a name="use-during-test-comparisons"></a>Utilizzo durante i confronti tra Test  
-Determinare se la verifica dei risultati del test farà parte questa colonna.  
+### <a name="use-during-test-comparisons"></a>Usare durante i confronti di test  
+Determinare se questa colonna parteciperà alla verifica dei risultati del test.  
   
--   Se si sceglie **True**, SSMA confronterà il contenuto di questa colonna dopo l'esecuzione del test in Oracle con il contenuto della colonna in SQL Server. 
+-   Se si sceglie **true**, SSMA consentirà di confrontare il contenuto di questa colonna dopo l'esecuzione del test in Oracle con il contenuto della colonna in SQL Server. 
   
--   Se si sceglie**False**, la colonna verrà esclusi da verifica i risultati.  
+-   Se si sceglie**false**, la colonna verrà esclusa dalla verifica dei risultati.  
   
-### <a name="use-custom-scale"></a>Usare scala personalizzata  
-Per le colonne di tipo di dati numerici, è possibile impostare una scala personalizzata per il confronto.  
+### <a name="use-custom-scale"></a>Usare la scalabilità personalizzata  
+Per le colonne con tipo di dati numerico, è possibile impostare una scala personalizzata per il confronto.  
   
--   Se si sceglie **True**, i valori numerici saranno arrotondati in base al **confronto scalabilità** valore prima che vengano confrontati.  
+-   Se si sceglie **true**, i valori numerici verranno arrotondati in base al valore della **scala di confronto** prima che vengano confrontati.  
   
--   Se si sceglie**False**, il confronto numerico sarà esatto.  
+-   Se si sceglie**false**, il confronto numerico sarà esatto.  
   
-### <a name="comparing-scale"></a>Confronto di scalabilità  
+### <a name="comparing-scale"></a>Confronto tra scala  
   
--   È disponibile solo se il **Use Custom Scale** opzione è impostata su **True**. Questa è la precisione per un confronto numerico.  
+-   Disponibile solo se l'opzione **Usa scala personalizzata** è impostata su **true**. Si tratta della precisione per il confronto numerico.  
   
-### <a name="date-time-comparing"></a>Confronto tra ora di date  
-Definisce come data/ora vengono confrontati i valori.  
+### <a name="date-time-comparing"></a>Confronto data e ora  
+Definisce il modo in cui vengono confrontati i valori di data/ora.  
   
--   Se si seleziona **Confronta intero data**, verrà eseguito un confronto completo di valori da entrambe le piattaforme.  
+-   Se si seleziona **Confronta data intera**, verrà eseguito il confronto completo dei valori di entrambe le piattaforme.  
   
--   Se si seleziona **confrontare solo data**, ora parte verrà ignorata.  
+-   Se si seleziona **Confronta solo data**, la parte relativa all'ora verrà ignorata.  
   
--   Se si seleziona **confrontare solo ora**, la data parte verrà ignorata.  
+-   Se si seleziona **Confronta solo l'ora**, la parte della data verrà ignorata.  
   
--   Se si seleziona **ignorare millisecondi**, i risultati verranno confrontato con un massimo di secondi.  
+-   Se si seleziona **Ignora millisecondi**, i risultati verranno confrontati fino a secondi.  
   
--   Se si seleziona **ignorare Date e i millisecondi**, il risultato sarà confrontate solo da parte dell'ora e ignorando le parti frazionarie di un secondo.  
+-   Se si seleziona **Ignora data e millisecondi**, il risultato verrà confrontato solo per parte dell'ora e ignorerà le parti frazionarie di un secondo.  
   
-### <a name="ignore-strings-case"></a>Ignora maiuscole/minuscole stringhe  
-Controlla distinzione maiuscole/minuscole del confronto.  
+### <a name="ignore-strings-case"></a>Ignora case stringhe  
+Controlla la distinzione tra maiuscole e minuscole del confronto.  
   
--   Se si sceglie **True**, il confronto sarà maiuscole e minuscole.  
+-   Se si sceglie **true**, il confronto non fa distinzione tra maiuscole e minuscole.  
   
--   Se si sceglie **False**, il confronto terrà in considerazione per maiuscole/minuscole.  
+-   Se si sceglie **false**, il confronto viene considerato per la lettera maiuscola.  
   
 ## <a name="comparing-sql"></a>Confronto di SQL  
-È possibile visualizzare le istruzioni SELECT generate dal Tester SSMA sul **confronto tra SQL** pagina. Il Tester confronterà il set di risultati di tali istruzioni in base a una riga per riga. Ogni riga successiva di un set di risultati Oracle deve essere uguale alla riga successiva del set di risultati prodotto in SQL Server.
+È possibile visualizzare le istruzioni SELECT generate da SSMA tester nella pagina **confronto SQL** . Il tester Confronta i set di risultati di queste istruzioni riga per riga. Ogni riga successiva di un set di risultati Oracle deve essere uguale alla riga successiva del set di risultati generato in SQL Server.
   
-È possibile modificare tali istruzioni SELECT per fornire la verifica personalizzata. Per salvare le modifiche in Oracle e nelle istruzioni SQL Server, usare il **applica** pulsanti sotto l'origine e la destinazione SQL, di conseguenza.  
+È possibile modificare le istruzioni SELECT per fornire la verifica personalizzata. Per salvare le modifiche in Oracle e nelle istruzioni SQL Server, usare i pulsanti **applica** in origine e destinazione SQL, corrispondente.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
 [Personalizzazione dell'ordine delle chiamate &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Completamento della preparazione del Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[Esecuzione di Test case &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Completamento della preparazione del test case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Esecuzione di test case &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Test di oggetti di database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

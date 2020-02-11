@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916300"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62916300"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_STMT_DOES_NOT_MATCH|  
-|Testo del messaggio|Impossibile creare la Guida di piano ' %. \*ls' perché l'istruzione specificata da `@stmt` e `@module_or_batch`, o da `@plan_handle` e `@statement_start_offset`non corrisponde ad alcuna istruzione nel modulo specificato o nel batch. Modificare i valori in modo da corrispondere a un'istruzione nel modulo o nel batch.|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché l'istruzione specificata da `@stmt` e `@module_or_batch` o da `@plan_handle` e `@statement_start_offset` non corrisponde ad alcuna istruzione nel modulo o nel batch specificato. Modificare i valori in modo da corrispondere a un'istruzione nel modulo o nel batch.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Un'istruzione nel modulo o nel batch non corrisponde a quella specificata o al valore dell'offset dell'istruzione.  
@@ -40,7 +40,7 @@ ms.locfileid: "62916300"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guide di piano](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

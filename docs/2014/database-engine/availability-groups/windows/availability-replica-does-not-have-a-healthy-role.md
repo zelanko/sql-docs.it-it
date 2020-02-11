@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815598"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La replica di disponibilità non dispone di un ruolo integro
@@ -30,7 +30,7 @@ ms.locfileid: "62815598"
 |**Nome criteri**|Stato del ruolo della replica di disponibilità|  
 |**Problema**|La replica di disponibilità non presenta un ruolo integro.|  
 |**Categoria**|**Critico**|  
-|**Facet**|Replica di disponibilità|  
+|**Facet**|replica di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
  Tramite questi criteri viene controllato lo stato del ruolo della replica di disponibilità. I criteri sono in uno stato non integro quando il ruolo della replica di disponibilità non è né primario né secondario. Altrimenti, sono in uno stato integro.  
@@ -41,10 +41,10 @@ ms.locfileid: "62815598"
 ## <a name="possible-causes"></a>Possibili cause  
  Il ruolo di questa replica di disponibilità non è integro. La replica non presenta il ruolo primario o quello secondario.  
   
-## <a name="possible-solution-informationstilltocome"></a>Possibile soluzione: Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>Possibile soluzione: Information_still_to_come  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

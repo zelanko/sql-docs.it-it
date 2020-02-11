@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762338"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "62762338"
   
      [Sicurezza](#Security)  
   
-     [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
+     [Procedura consigliata: denominazione degli snapshot del database](#Naming)  
   
--   **Per creare un snapshot del database utilizzando:**  [Transact-SQL](#TsqlProcedure)  
+-   **Per creare uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Il database di origine, in cui può essere utilizzato qualsiasi modello di recupero, deve soddisfare i prerequisiti seguenti:  
   
--   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto per gli snapshot del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto per gli snapshot del database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   Il database di origine deve essere online, a meno che non si tratti di un database mirror nell'ambito di una sessione di mirroring del database.  
   
@@ -48,16 +48,16 @@ ms.locfileid: "62762338"
 > [!IMPORTANT]  
 >  Per informazioni relative ad altre considerazioni rilevanti, vedere [Snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md).  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
  In questa sezione vengono illustrate le procedure consigliate seguenti:  
   
--   [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
+-   [Procedura consigliata: denominazione degli snapshot del database](#Naming)  
   
--   [Procedura consigliata: Limitazione del numero di snapshot del database](#Limiting_Number)  
+-   [Procedura consigliata: limitazione del numero di snapshot del database](#Limiting_Number)  
   
--   [Procedura consigliata: Connessioni client a uno snapshot del database](#Client_Connections)  
+-   [Procedura consigliata: connessioni client a uno snapshot del database](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedura consigliata: Denominazione degli snapshot del Database  
+####  <a name="Naming"></a>Procedura consigliata: denominazione degli snapshot del database  
  Prima di creare gli snapshot è importante considerare il nome da utilizzare. Ogni snapshot del database richiede un nome di database univoco. Per semplificare l'amministrazione, il nome di uno snapshot può contenere informazioni utili a identificare il database, ad esempio:  
   
 -   Nome del database di origine.  
@@ -82,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Procedura consigliata: Limitazione del numero di snapshot del Database  
+####  <a name="Limiting_Number"></a>Procedura consigliata: limitazione del numero di snapshot del database  
  Creando una serie di snapshot a intervalli di tempo si acquisiscono snapshot sequenziali del database di origine. Ogni snapshot viene mantenuto finché non viene esplicitamente eliminato. Poiché ogni snapshot continua a crescere man mano che le pagine originali vengono aggiornate, per conservare spazio su disco è consigliabile eliminare un vecchio snapshot prima di crearne uno nuovo.  
   
 > [!NOTE]  
 >  Se si desidera ripristinare uno snapshot del database è necessario eliminare tutti gli altri snapshot dal database.  
   
-####  <a name="Client_Connections"></a> Procedura consigliata: Connessioni client a uno Snapshot del Database  
+####  <a name="Client_Connections"></a>Procedura consigliata: connessioni client a uno snapshot del database  
  Per utilizzare uno snapshot del database, i client devono sapere dove reperirlo. Gli utenti possono leggere da uno snapshot del database durante la creazione o l'eliminazione di un altro snapshot. Quando si sostituisce uno snapshot esistente con un nuovo snapshot, tuttavia, è necessario reindirizzare i client al nuovo snapshot. Gli utenti possono connettersi manualmente a uno snapshot del database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per supportare un ambiente di produzione, è tuttavia consigliabile creare una soluzione a livello di programmazione che indirizzi in modo trasparente i client che scrivono report all'ultimo snapshot del database.  
   
 ###  <a name="Security"></a> Sicurezza  
@@ -96,7 +96,7 @@ AdventureWorks_snapshot_evening
 ####  <a name="Permissions"></a> Autorizzazioni  
  Se un utente può creare un database, può creare anche uno snapshot del database; tuttavia, per creare uno snapshot di un database mirror, è necessario essere membro del ruolo del server predefinito **sysadmin** .  
   
-##  <a name="TsqlProcedure"></a> Come creare uno snapshot del database utilizzando Transact-SQL  
+##  <a name="TsqlProcedure"></a>Come creare uno snapshot del database (tramite Transact-SQL)  
  **Per creare uno snapshot del database**  
   
 > [!NOTE]  
@@ -108,11 +108,11 @@ AdventureWorks_snapshot_evening
   
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     ATTIVA  
   
      (  
   
-     NAME =*logical_file_name*,  
+     NOME =*logical_file_name*,  
   
      FILENAME ='*os_file_name*'  
   
@@ -132,11 +132,11 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  L'estensione `.ss` utilizzata negli esempi è arbitraria.  
   
- In questa sezione sono disponibili gli esempi seguenti:  
+ Questa sezione contiene gli esempi seguenti:  
   
--   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
+-   R. [Creazione di uno snapshot nel database AdventureWorks](#Creating_on_AW)  
   
--   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
+-   B. [Creazione di uno snapshot nel database Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Creazione di uno snapshot del database AdventureWorks  
  In questo esempio viene creato uno snapshot del database `AdventureWorks` . Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  
@@ -150,7 +150,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Creazione di uno snapshot del database Sales  
- In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales` . Questo database è stato creato nell'esempio, "Creazione di un database con filegroup" nella [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales` . Questo database è stato creato nell'esempio "creazione di un database con filegroup" in [create database &#40;SQL Server&#41;Transact-SQL ](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -181,7 +181,7 @@ GO
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREAZIONE di &#40;di DATABASE SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

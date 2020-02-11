@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b3ee629cd7701d8b06351e8932daac57637b195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833674"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestione connessione SAP BW
@@ -34,7 +34,7 @@ ms.locfileid: "62833674"
   
 -   Specificare il numero di sistema e host per un server applicazioni oppure specificare server messaggi, gruppo e SID per un gruppo di server con carico bilanciato.  
   
--   Abilitare la registrazione personalizzata delle chiamate di funzione RFC per i componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Tale registrazione è separata dalla registrazione facoltativa che è possibile abilitare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per abilitare la registrazione delle chiamate di funzione RFC, specificare una directory in cui archiviare i file di log creati prima e dopo ogni chiamata di funzione RFC. Questa funzionalità di registrazione crea molti file di log in formato XML. Poiché questi file di log contengono anche tutte le righe di dati trasferiti, è possibile che occupino una grande quantità di spazio su disco. Se non si seleziona una directory di log, la registrazione non è abilitata.  
+-   Abilitare la registrazione personalizzata delle chiamate di funzione RFC per i componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Tale registrazione è separata dalla registrazione facoltativa che è possibile abilitare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per abilitare la registrazione delle chiamate di funzione RFC, specificare una directory in cui archiviare i file di log creati prima e dopo ogni chiamata di funzione RFC. Questa funzionalità di registrazione crea molti file di log in formato XML. Poiché questi file di log contengono anche tutte le righe di dati trasferiti, è possibile che occupino una grande quantità di spazio su disco. Se non si seleziona una directory di log, la registrazione non è abilitata.  
   
     > [!IMPORTANT]  
     >  Se i dati trasferiti contengono informazioni riservate, anche i file di log conterranno tali informazioni riservate.  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769067"
 ---
 # <a name="log-ssis-expression"></a>LOG (espressione SSIS)
@@ -37,7 +37,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Prima del calcolo del logaritmo viene eseguito il cast dell' *espressione numerica* al tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
  Se tramite il parametro *numeric_expression* viene restituito zero o un valore negativo, il risultato sarà Null.  

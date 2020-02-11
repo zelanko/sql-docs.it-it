@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771199"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
@@ -80,7 +80,7 @@ ms.locfileid: "62771199"
   
  Quando l'acquisizione è abilitata inizialmente per la tabella `<schema-name>.<table-name>`, il nome dell'istanza di acquisizione predefinito è `<schema-name>_<table-name>`. Ad esempio, il nome dell'istanza di acquisizione predefinito per la tabella Oracle HR.EMPLOYEES è HR_EMPLOYEES e la tabella delle modifiche associata è [cdc]. [HR_EMPLOYEES_CT].  
   
- Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La tabella **[cdc].[lsn_time_mapping]** viene generata dal componente SQL Server CDC. L'utilizzo di tale tabella con Oracle CDC è diverso dall'utilizzo normale.  
@@ -98,7 +98,7 @@ ms.locfileid: "62771199"
 |----------|-----------------|  
 |version|Tiene traccia della versione della configurazione dell'istanza di CDC. Viene aggiornato ogni volta che si aggiorna la tabella e ogni volta che si aggiunge una nuova istanza di acquisizione o si rimuove un'istanza di acquisizione esistente.|  
 |connect_string|Stringa di connessione Oracle. Esempio di base:<br /><br /> `<server>:<port>/<instance>` (ad esempio `erp.contoso.com:1521/orcl`).<br /><br /> Nella stringa di connessione è anche possibile specificare un descrittore della connessione di rete Oracle, ad esempio `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Se si utilizza un server di elenchi in linea o nomi TNS, la stringa di connessione può essere il nome della connessione.<br /><br /> Per altre informazioni sulle stringhe di connessione Oracle, vedere [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) per dettagli sulle stringhe di connessione al database Oracle per l'istanza di Oracle Instant Client usata dal servizio Oracle CDC.|  
-|use_windows_authentication|Valore booleano che può essere:<br /><br /> **0**: vengono forniti nome utente e password Oracle per l'autenticazione (impostazione predefinita)<br /><br /> **1**: per connettersi al database Oracle viene usata l'autenticazione di Windows. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.|  
+|use_windows_authentication|Valore booleano che può essere:<br /><br /> **0**: vengono forniti nome utente e password Oracle per l'autenticazione (valore predefinito)<br /><br /> **1**: per connettersi al database Oracle viene utilizzata l'autenticazione di Windows. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.|  
 |username|Nome dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  
 |password|Password dell'utente del database Oracle di log mining. È obbligatorio solo se **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Tempo, in secondi, durante il quale una transazione Oracle viene mantenuta in memoria prima di essere scritta nella tabella **cdc.xdbcdc_staged_transactions** . Il valore predefinito è 120 secondi.|  
@@ -107,9 +107,9 @@ ms.locfileid: "62771199"
   
  Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Nome|Impostazione predefinita|Min|Max|Statico|Descrizione|  
+|Nome|Predefinito|Min|Max|Statico|Descrizione|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|traccia|False|-|-|False|Valori disponibili:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
+|traccia|False|-|-|False|Valori disponibili:<br /><br /> **True**<br /><br /> **False**<br /><br /> **in**<br /><br /> **spento**|  
 |cdc_update_state_interval|10|1|120|False|La dimensione in Kbyte dei blocchi di memoria allocati per una transazione; una transazione può allocare più di un blocco. Vedere la colonna memory_limit nella tabella [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  
 |target_max_batched_transactions|100|1|1000|True|Numero massimo di transazioni Oracle che è possibile elaborare come una transazione nell'aggiornamento delle tabelle SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|L'intervallo, in secondi, per l'aggiornamento della tabella **lsn_time_mapping** quando nelle tabelle acquisite non è presente alcuna attività.|  
@@ -142,9 +142,9 @@ ms.locfileid: "62771199"
 |status|Codice dello stato corrente per l'istanza di Oracle CDC corrente. Descrive lo stato corrente di CDC.|  
 |sub_status|Stato di secondo livello che fornisce informazioni aggiuntive sullo stato corrente.|  
 |active|Valore booleano che può essere:<br /><br /> **0**: il processo dell'istanza di Oracle CDC non è attivo.<br /><br /> **1**: il processo dell'istanza di Oracle CDC è attivo.|  
-|errore|Valore booleano che può essere:<br /><br /> **0**: il processo dell'istanza di Oracle CDC non è in stato di errore.<br /><br /> **1**: il processo dell'istanza di Oracle CDC è in stato di errore.|  
+|error|Valore booleano che può essere:<br /><br /> **0**: il processo dell'istanza di Oracle CDC non è in stato di errore.<br /><br /> **1**: il processo dell'istanza di Oracle CDC è in stato di errore.|  
 |status_message|Stringa che fornisce una descrizione dell'errore o dello stato.|  
-|TIMESTAMP|Timestamp con l'ora (UTC) dell'ultimo aggiornamento dello stato di acquisizione.|  
+|timestamp|Timestamp con l'ora (UTC) dell'ultimo aggiornamento dello stato di acquisizione.|  
 |active_capture_node|Nome dell'host, che può essere un nodo su un cluster, in cui sono attualmente in esecuzione il servizio Oracle CDC e l'istanza di Oracle CDC, mediante cui vengono elaborati i log delle transazioni Oracle.|  
 |last_transaction_timestamp|Timestamp con l'ora (UTC) della scrittura dell'ultima transazione nelle tabelle delle modifiche.|  
 |last_change_timestamp|Timestamp con l'ora (UTC) della lettura del record delle modifiche più recente dal log delle transazioni Oracle di origine. Il timestamp consente di identificare la latenza corrente del processo CDC.|  
@@ -164,13 +164,13 @@ ms.locfileid: "62771199"
   
 |Elemento|Descrizione|  
 |----------|-----------------|  
-|TIMESTAMP|Timestamp UTC esatto della scrittura del record di traccia.|  
-|tipo|Contiene uno dei valori seguenti.<br /><br /> errore<br /><br /> INFO<br /><br /> traccia|  
+|timestamp|Timestamp UTC esatto della scrittura del record di traccia.|  
+|type|Contiene uno dei valori seguenti.<br /><br /> ERRORE<br /><br /> INFO<br /><br /> TRACE|  
 |node|Nome del nodo in cui è stato scritto il record.|  
 |status|Codice di stato utilizzato dalla tabella dello stato.|  
 |sub_status|Codice di stato secondario utilizzato dalla tabella dello stato.|  
 |status_message|Messaggio di stato utilizzato dalla tabella dello stato.|  
-|dati|Dati aggiuntivi per i casi in cui il record di errore o di traccia contiene un payload, ad esempio un record di log danneggiato.|  
+|data|Dati aggiuntivi per i casi in cui il record di errore o di traccia contiene un payload, ad esempio un record di log danneggiato.|  
   
 ###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  In questa tabella vengono archiviati i record delle modifiche per le transazioni di grandi dimensioni o con esecuzione prolungata fino all'acquisizione del commit delle transazioni o dell'evento di rollback. I record del log acquisiti vengono ordinati dal servizio Oracle CDC in base all'ora dell'ultimo commit della transazione, quindi in base all'ordine cronologico per ciascuna transazione. I record del log per la stessa transazione vengono archiviati in memoria fino al termine della transazione, quindi vengono scritti nella tabella delle modifiche di destinazione o eliminati, in caso di rollback. Poiché la quantità di memoria disponibile è limitata, le transazioni di grandi dimensioni vengono scritte nella tabella **cdc.xdbcdc_staged_transactions** fino al completamento della transazione. Le transazioni vengono inoltre scritte nella tabella di staging in caso di esecuzione prolungata. Pertanto, al riavvio dell'istanza di Oracle CDC, non è necessario rileggere le modifiche precedenti dai log delle transazioni Oracle.  

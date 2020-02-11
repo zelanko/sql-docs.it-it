@@ -1,5 +1,5 @@
 ---
-title: Installazione di SQL Server 2014 tramite un File di configurazione | Microsoft Docs
+title: Installare SQL Server 2014 usando un file di configurazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775284"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installare SQL Server 2014 tramite un file di configurazione
@@ -56,7 +56,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Seguire la procedura guidata nella pagina **Inizio installazione** . Il percorso del file di configurazione viene specificato nella pagina **Inizio installazione** nella sezione relativa al percorso del file di configurazione. Per altre informazioni su come installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Seguire la procedura guidata nella pagina **Inizio installazione** . Il percorso del file di configurazione viene specificato nella pagina **Inizio installazione** nella sezione relativa al percorso del file di configurazione. Per ulteriori informazioni su come installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Install SQL Server 2014 dall'installazione guidata &#40;&#41;di ](install-sql-server-from-the-installation-wizard-setup.md)installazione.  
   
 3.  Annullare l'installazione senza completarla per generare il file INI.  
   
@@ -139,7 +139,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
+ [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Aggiornare un cluster di failover di SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   

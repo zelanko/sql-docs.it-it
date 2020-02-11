@@ -1,5 +1,5 @@
 ---
-title: Visualizzare lo stato di File | Microsoft Docs
+title: Visualizzazione dello stato del file | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773367"
 ---
 # <a name="view-file-status"></a>Visualizzazione dello stato dei file
@@ -40,11 +40,11 @@ ms.locfileid: "62773367"
   
 1.  In Esplora soluzioni selezionare un elemento.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente**, fare clic su **le proprietà di SourceSafe**.  
+2.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **proprietà di SourceSafe**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Visualizzare cronologia progetti](../../2014/database-engine/view-project-history.md)   
+ [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   
  [Confronto di file](../../2014/database-engine/compare-files.md)  
   

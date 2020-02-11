@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768853"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
   
- È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] supporta l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
+ È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] supporta l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
   
  Le espressioni di proprietà possono essere aggiornate in modi diversi:  
   
@@ -41,7 +42,7 @@ ms.locfileid: "62768853"
   
 -   Le variabili incluse in espressioni possono essere aggiornate tramite gli script eseguiti dall'attività Script e dal componente Script.  
   
- Le espressioni vengono compilate in base al linguaggio delle espressioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Nelle espressioni è possibile includere variabili definite dall'utente o di sistema, insieme agli operatori, alle funzioni e ai cast di tipo del linguaggio delle espressioni.  
+ Le espressioni vengono compilate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilizzando il linguaggio delle espressioni. Nelle espressioni è possibile includere variabili definite dall'utente o di sistema, insieme agli operatori, alle funzioni e ai cast di tipo del linguaggio delle espressioni.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  
@@ -55,7 +56,8 @@ ms.locfileid: "62768853"
  Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Se ad esempio un'espressione di proprietà imposta la proprietà `LoggingMode` in cui viene utilizzato un valore dell'enumerazione `DTSLoggingMode`, l'espressione di proprietà dovrà utilizzare 0, 1 o 2, anziché i nomi descrittivi `Enabled`, `Disabled` o `UseParentSetting`. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaccia utente delle espressioni di proprietà  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
   
 -   Pagina **Espressioni** degli editor personalizzati delle attività e dei contenitori Ciclo For e Ciclo Foreach. In pagina **Espressioni** è possibile modificare espressioni e visualizzare un elenco delle espressioni di proprietà usate da un'attività o da un contenitore Ciclo Foreach o Ciclo For.  
   
@@ -75,7 +77,7 @@ ms.locfileid: "62768853"
   
 #### <a name="to-work-with-property-expressions"></a>Per utilizzare le espressioni di proprietà  
   
--   [Aggiunta o modifica di un'espressione di proprietà](add-or-change-a-property-expression.md)  
+-   [Aggiungere o modificare un'espressione di proprietà](add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>Impostazione di espressioni di proprietà per i componenti dei flussi di dati  
  Se si crea un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le proprietà dei componenti di un flusso di dati che supportano espressioni di proprietà vengono esposte sull'attività Flusso di dati a cui appartengono. Per aggiungere, modificare e rimuovere le espressioni di proprietà dei componenti di un flusso di dati, è necessario fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartengono tali componenti e scegliere **Proprietà**. Nella finestra Proprietà sono elencate le proprietà dei componenti del flusso di dati per le quali è possibile utilizzare espressioni di proprietà. Per creare o modificare un'espressione di proprietà per la proprietà SamplingValue di una trasformazione Campionamento righe in un flusso di dati di nome SampleCustomer, ad esempio, fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartiene la trasformazione Campionamento righe e scegliere **Proprietà**. La proprietà SamplingValue è elencata nella finestra Proprietà, con il formato [SampleCustomer].[SamplingValue].  
@@ -92,11 +94,11 @@ ms.locfileid: "62768853"
  Le espressioni di proprietà vengono caricate dopo il caricamento delle configurazioni di pacchetto. Le variabili, ad esempio, vengono innanzitutto aggiornate dalle relative configurazioni e quindi vengono valutate e caricate le espressioni di proprietà che utilizzano tali variabili. Di conseguenza, le espressioni di proprietà utilizzano sempre i valori delle variabili impostati dalle configurazioni.  
   
 > [!NOTE]  
->  Non è possibile usare la `Set` opzione del **dtexec** utilità per popolare un'espressione di proprietà.  
+>  Non è possibile usare `Set` l'opzione dell'utilità **dtexec** per popolare un'espressione di proprietà.  
   
  Nella tabella seguente è indicato quando vengono valutate e caricate le espressioni di proprietà di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
-|Tipo oggetto|Caricamento e valutazione|  
+|Tipo di oggetto|Caricamento e valutazione|  
 |-----------------|-----------------------|  
 |Pacchetto, ciclo Foreach, ciclo For, sequenza, attività e componenti dei flussi di dati|Dopo il caricamento delle configurazioni<br /><br /> Prima della convalida<br /><br /> Prima dell'esecuzione|  
 |Gestioni connessioni|Dopo il caricamento delle configurazioni<br /><br /> Prima della convalida<br /><br /> Prima dell'esecuzione<br /><br /> Prima della creazione di un'istanza della connessione|  
@@ -114,7 +116,7 @@ ms.locfileid: "62768853"
  Le espressioni di esempio seguenti illustrano l'utilizzo di variabili di sistema, operatori, funzioni e valori letterali stringa nelle espressioni di proprietà.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Espressione di proprietà per la proprietà LoggingMode di un pacchetto  
- L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è il valore intero equivalente al membro enumeratore LoggingMode `Enabled`, e il valore 2 è il valore intero equivalente al membro `Disabled`. Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
+ L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è l'intero equivalente del membro `Enabled`dell'enumeratore LoggingMode e il valore 2 è l'intero equivalente del membro. `Disabled` Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -167,7 +169,7 @@ ms.locfileid: "62768853"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   [Espressione e Highlighter di configurazione (Progetto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Evidenziatore di espressioni e configurazioni (progetto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
 -   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   

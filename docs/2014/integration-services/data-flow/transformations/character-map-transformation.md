@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770420"
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
@@ -44,7 +44,7 @@ ms.locfileid: "62770420"
 |Hiragana|Esegue il mapping da caratteri Katakana a caratteri Hiragana.|  
 |Katakana|Esegue il mapping da caratteri Hiragana a caratteri Katakana.|  
 |Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua|Applica la conversione da maiuscole a minuscole (e viceversa) basata sulla lingua anziché le regole di sistema. La conversione da maiuscole a minuscole (e viceversa) basata sulla lingua fa riferimento a una funzionalità disponibile nell'API Win32 per il mapping Unicode semplice tra maiuscole e minuscole per il turco e altre impostazioni locali.|  
-|Minuscolo|Converte i caratteri in minuscolo.|  
+|Lettere minuscole|Converte i caratteri in minuscolo.|  
 |Cinese semplificato|Esegue il mapping da caratteri in cinese tradizionale a caratteri in cinese semplificato.|  
 |Cinese tradizionale|Esegue il mapping da caratteri in cinese semplificato a caratteri in cinese tradizionale.|  
 |Maiuscolo|Converte i caratteri in maiuscolo.|  
@@ -54,11 +54,11 @@ ms.locfileid: "62770420"
   
 |Operazione A|Operazione B|  
 |-----------------|-----------------|  
-|Minuscolo|Maiuscolo|  
+|Lettere minuscole|Maiuscolo|  
 |Hiragana|Katakana|  
 |Metà larghezza|Larghezza intera|  
 |Cinese tradizionale|Cinese semplificato|  
-|Minuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
+|Lettere minuscole|Hiragana, katakana, metà larghezza, larghezza intera|  
 |Maiuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configurazione della trasformazione Mappa caratteri  

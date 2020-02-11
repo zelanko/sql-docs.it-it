@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770737"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementazione di una ricerca in modalità No Cache o Partial Cache
@@ -54,17 +54,17 @@ ms.locfileid: "62770737"
   
 7.  Nella pagina **Connessione** selezionare una gestione connessione dall'elenco **Gestione connessione OLE DB** o fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [Gestione connessione OLE DB](../../connection-manager/ole-db-connection-manager.md).  
   
-8.  Eseguire una delle operazioni seguenti:  
+8.  Eseguire uno dei passaggi seguenti:  
   
-    -   Fare clic su **Usa una tabella o una vista**e quindi selezionare una tabella o una vista oppure fare clic su **Nuova** per creare una tabella o una vista.  
+    -   Fare clic su **Usa una tabella o una vista**, quindi selezionare una tabella o una vista oppure fare clic su **Nuova** per creare una tabella o una vista.  
   
     -   Fare clic su **Usa i risultati di una query SQL**e quindi compilare una query nella finestra **Comando SQL** .  
   
-         oppure  
+         -oppure-  
   
          Fare clic su **Compila query** per compilare una query usando gli strumenti grafici forniti da **Generatore query** .  
   
-         oppure  
+         -oppure-  
   
          Fare clic su **Sfoglia** per importare un'istruzione SQL da un file.  
   
@@ -101,11 +101,11 @@ ms.locfileid: "62770737"
      Se l'istruzione include parametri, fare clic su **Parametri** per eseguire il mapping dei parametri alle colonne di input.  
   
     > [!NOTE]  
-    >  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome della tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**in quanto ha la priorità su di esso.  
+    >  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**.  
   
 13. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../lookup-transformation-editor-error-output-page.md).  
   
-14. Fare clic su **OK** per salvare le modifiche alla trasformazione Ricerca e quindi eseguire il pacchetto.  
+14. Fare clic su **OK** per salvare le modifiche alla trasformazione Ricerca, quindi eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazioni di Integration Services](integration-services-transformations.md)  

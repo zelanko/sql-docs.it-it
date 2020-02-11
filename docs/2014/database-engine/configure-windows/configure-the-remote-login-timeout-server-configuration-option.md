@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f2a3a0515674e5a6a5a9e4cb4788ddcf4a37da8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786950"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote login timeout
@@ -25,7 +25,7 @@ ms.locfileid: "62786950"
 > [!NOTE]  
 >  Il valore predefinito per questa opzione è 20 secondi in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62786950"
   
      Utilizzare l'opzione **remote login timeout** per specificare il numero di secondi che devono trascorrere prima di considerare non riuscito il tentativo di accesso remoto.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>Per configurare l'opzione remote login timeout  
   

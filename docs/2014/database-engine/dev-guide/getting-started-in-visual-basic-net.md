@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva a Visual Basic .NET | Microsoft Docs
+title: Introduzione in Visual Basic .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781565"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Guida introduttiva a Visual Basic .NET
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET è uno dei linguaggi di programmazione gestiti supportati dalla libreria di runtime (Common Runtime Library) in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET. Molti degli esempi presenti in questa documentazione sono scritti in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
   
 ## <a name="references-and-imports"></a>Riferimenti e importazioni  

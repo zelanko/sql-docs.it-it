@@ -11,32 +11,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774656"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
   Esistono quattro scenari di aggiornamento a Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Scegliere lo scenario più appropriato alla propria situazione.  
   
--   [Aggiornare senza aggiornamento del motore di database](#noengine)  
+-   [Aggiornamento senza motore di database aggiornamento](#noengine)  
   
--   [Aggiornare con l'aggiornamento del motore di database](#engine)  
+-   [Aggiornamento con motore di database aggiornamento](#engine)  
   
--   [Aggiornare in uno scenario con due computer](#twocomputer)  
+-   [Eseguire l'aggiornamento in uno scenario con due computer](#twocomputer)  
   
--   [Aggiornare con il ripristino di un database da un backup](#restore)  
+-   [Eseguire l'aggiornamento con il ripristino di un database da un backup](#restore)  
   
 > [!IMPORTANT]
 >  -   L'aggiornamento dalla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 alla versione CTP2 non è supportato.  
 > -   Eseguire il backup del database prima di effettuare qualsiasi aggiornamento.  
 > -   Con il processo di aggiornamento vengono ricreate le stored procedure e le tabelle aggiornate utilizzate da [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Le personalizzazioni apportate a questi componenti potrebbero andare perse.  
-> -   I pacchetti di distribuzione di modelli possono essere utilizzati solo nell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per crearli. Non è possibile distribuire pacchetti di distribuzione di modelli creati in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+> -   I pacchetti di distribuzione di modelli possono essere utilizzati solo nell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per crearli. Non è possibile distribuire pacchetti di distribuzione di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] modelli [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]creati in a.  
 > -   È possibile continuare a usare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Master Data Services e di Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a> Aggiornare senza aggiornamento del motore di database  
- Questo scenario può essere considerato un'installazione side-by-side, perché entrambe [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono installati in parallelo, nello stesso computer o computer separati.  
+##  <a name="noengine"></a>Aggiornamento senza motore di database aggiornamento  
+ Questo scenario può essere considerato un'installazione side-by-Side, perché sia [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] che [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono installati in parallelo, nello stesso computer o in computer separati.  
   
  In questo scenario si continua a utilizzare [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per ospitare il database MDS. Tuttavia, è necessario aggiornare lo schema del database MDS e, successivamente, creare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per accedere al database MDS. L'accesso al database MDS non può essere eseguito più dall'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -67,11 +67,11 @@ ms.locfileid: "62774656"
     1.  Aprire la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID** **1**. Per informazioni sulla modifica dell'utente, vedere [modificare l'Account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID****1**. Per informazioni sulla modifica di questo utente, vedere [modificare l'account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  Nel riquadro sinistro fare clic su **Configurazione database**.  
   
-    3.  Nel riquadro di destra, fare clic su **seleziona Database** e specificare le informazioni per il [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] un'istanza di database.  
+    3.  Nel riquadro destro fare clic su **Seleziona database** e specificare le informazioni per l' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] istanza [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] del database o.  
   
     4.  Fare clic su **Aggiorna database** per avviare l' **Aggiornamento guidato database**. Per altre informazioni, vedere [Aggiornamento guidato database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62774656"
   
     3.  Nel riquadro destro, selezionare nell'elenco **Sito Web** una delle seguenti opzioni:  
   
-        -   **Sito Web predefinito**, quindi scegliere **Crea applicazione**.  
+        -   **Sito Web predefinito**, quindi fare clic su **Crea applicazione**.  
   
         -   **Crea nuovo sito**. Quando si crea il sito Web, viene creata automaticamente una nuova applicazione Web.  
   
@@ -98,14 +98,14 @@ ms.locfileid: "62774656"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Applica**.  
+    3.  Fare clic su **Apply**.  
   
-##  <a name="engine"></a> Aggiornare con l'aggiornamento del motore di database  
+##  <a name="engine"></a>Aggiornamento con motore di database aggiornamento  
  In questo scenario il motore di database e l'applicazione [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verranno aggiornati da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o SQL Server 2012 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Per eseguire questa attività, effettuare le operazioni indicate di seguito.  
   
-1.  **Per la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] solo**: Aprire **Pannello di controllo** > **programmi e funzionalità** e disinstallare Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Solo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] per**: aprire il **Pannello** > di controllo**programmi e funzionalità** e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]disinstallare Microsoft.  
   
 2.  Aggiornare il motore di database a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -113,11 +113,11 @@ ms.locfileid: "62774656"
   
     2.  Fare clic su **Installazione**nel riquadro sinistro.  
   
-    3.  Nel riquadro di destra, fare clic su **esegue l'aggiornamento da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
+    3.  Nel riquadro di destra fare clic su **Aggiorna da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
   
     4.  Completare la procedura guidata.  
   
-3.  **Per la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] solo**: Una volta completato l'aggiornamento, aggiungere il **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** funzionalità.  
+3.  **Solo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] per**: al termine dell'aggiornamento, aggiungere la **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** funzionalità.  
   
     1.  Aprire l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -125,9 +125,9 @@ ms.locfileid: "62774656"
   
     3.  Nel riquadro destro, fare clic su **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.  
   
-    4.  Nel **tipo di installazione** pagina della procedura guidata, selezionare la **aggiungere funzionalità a un'istanza esistente** opzione e scegliere l'istanza in cui è installato il database MDS.  
+    4.  Nella pagina **tipo di installazione** della procedura guidata selezionare l'opzione **Aggiungi funzionalità a un'istanza esistente** e scegliere l'istanza in cui è installato il database MDS.  
   
-    5.  Nel **selezione delle caratteristiche** nella pagina **funzionalità condivise**, selezionare **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
+    5.  Nella pagina **Selezione funzionalità** , in **funzionalità condivise**, selezionare **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
     6.  Completare la procedura guidata.  
   
@@ -136,15 +136,15 @@ ms.locfileid: "62774656"
     1.  Aprire la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID** **1**. Per informazioni sulla modifica dell'utente, vedere [modificare l'Account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID****1**. Per informazioni sulla modifica di questo utente, vedere [modificare l'account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  Nel riquadro sinistro fare clic su **Configurazione database**.  
   
-    3.  Nel riquadro di destra, fare clic su **seleziona Database** e specificare le informazioni per l'istanza del database.  
+    3.  Nel riquadro destro fare clic su **Seleziona database** e specificare le informazioni per l'istanza del database.  
   
     4.  Fare clic su **Aggiorna database** per avviare l' **Aggiornamento guidato database**. Per altre informazioni, vedere [Aggiornamento guidato database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
-    5.  Fare clic su **Applica**.  
+    5.  Fare clic su **Apply**.  
   
 5.  Quando l'aggiornamento è completato, creare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62774656"
   
     3.  Nel riquadro destro, selezionare nell'elenco **Sito Web** una delle seguenti opzioni:  
   
-        -   **Sito Web predefinito**, quindi scegliere **Crea applicazione**.  
+        -   **Sito Web predefinito**, quindi fare clic su **Crea applicazione**.  
   
         -   **Crea nuovo sito**. Quando si crea il sito Web, viene creata automaticamente una nuova applicazione Web.  
   
@@ -169,9 +169,9 @@ ms.locfileid: "62774656"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Applica**.  
+    3.  Fare clic su **Apply**.  
   
-##  <a name="twocomputer"></a> Aggiornare in uno scenario con due computer  
+##  <a name="twocomputer"></a>Eseguire l'aggiornamento in uno scenario con due computer  
  Questo scenario comporta l'aggiornamento di un sistema nel quale SQL Server viene installato in due computer: uno con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e l'altro con SQL Server 2008 R2 o SQL Server 2012.  
   
  Se è installato [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], si continua a utilizzare rispettivamente [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per ospitare il database MDS in un computer. Tuttavia, è necessario aggiornare lo schema del database MDS e quindi utilizzare l'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per accedere al database MDS. L'accesso al database MDS non può essere eseguito più dall'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -201,11 +201,11 @@ ms.locfileid: "62774656"
     1.  Aprire la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID** **1**. Per informazioni sulla modifica dell'utente, vedere [modificare l'Account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID****1**. Per informazioni sulla modifica di questo utente, vedere [modificare l'account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  Nel riquadro sinistro fare clic su **Configurazione database**.  
   
-    3.  Nel riquadro di destra, fare clic su **seleziona Database** e specificare le informazioni per il [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database istanza in altro computer, se [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è installato su un altro computer.  
+    3.  Nel riquadro destro fare clic su **Seleziona database** e specificare le informazioni per l' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] istanza [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] del database o nell'altro computer, se [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è installato nell'altro computer.  
   
     4.  Fare clic su **Aggiorna database** per avviare l' **Aggiornamento guidato database**. Per altre informazioni, vedere [Aggiornamento guidato database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62774656"
   
     3.  Nel riquadro destro, selezionare nell'elenco **Sito Web** una delle seguenti opzioni:  
   
-        -   **Sito Web predefinito**, quindi scegliere **Crea applicazione**.  
+        -   **Sito Web predefinito**, quindi fare clic su **Crea applicazione**.  
   
         -   **Crea nuovo sito**. Quando si crea il sito Web, viene creata automaticamente una nuova applicazione Web.  
   
@@ -232,9 +232,9 @@ ms.locfileid: "62774656"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Applica**.  
+    3.  Fare clic su **Apply**.  
   
-##  <a name="restore"></a> Aggiornare con il ripristino di un database da un backup  
+##  <a name="restore"></a>Eseguire l'aggiornamento con il ripristino di un database da un backup  
  In questo scenario, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato insieme a SQL Server 2008 R2 o SQL Server 2012 nello stesso computer o in due computer differenti. Inoltre, è stato eseguito il backup di un database in una versione precedente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2, prima dell'aggiornamento, e il database deve essere ripristinato.  
   
 -   Per impostazione predefinita, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]i file sono installati in *unità*:\Programmi\Microsoft SQL Server\120\Master Data Services.  
@@ -264,11 +264,11 @@ ms.locfileid: "62774656"
     1.  Aprire la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
-        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID** **1**. Per informazioni sulla modifica dell'utente, vedere [modificare l'Account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
+        >  Per aggiornare lo schema del database MDS, è necessario avere effettuato l'accesso con l'account Administrator specificato quando è stato creato il database MDS. Nel database MDS, in mdm.tblUser, a questo utente è assegnato il valore **ID****1**. Per informazioni sulla modifica di questo utente, vedere [modificare l'account amministratore di sistema &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
     2.  Nel riquadro sinistro fare clic su **Configurazione database**.  
   
-    3.  Nel riquadro di destra, fare clic su **seleziona Database** e specificare le informazioni per il [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] un'istanza di database.  
+    3.  Nel riquadro destro fare clic su **Seleziona database** e specificare le informazioni per l' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] istanza [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] del database o.  
   
     4.  Fare clic su **Aggiorna database** per avviare l' **Aggiornamento guidato database**. Per altre informazioni, vedere [Aggiornamento guidato database &#40;Gestione configurazione Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62774656"
   
     3.  Nel riquadro destro, selezionare nell'elenco **Sito Web** una delle seguenti opzioni:  
   
-        -   **Sito Web predefinito**, quindi scegliere **Crea applicazione**.  
+        -   **Sito Web predefinito**, quindi fare clic su **Crea applicazione**.  
   
         -   **Crea nuovo sito**. Quando si crea il sito Web, viene creata automaticamente una nuova applicazione Web.  
   
@@ -295,12 +295,12 @@ ms.locfileid: "62774656"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Applica**.  
+    3.  Fare clic su **Apply**.  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
- **Problema:** Quando si apre la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] viene visualizzata l'applicazione web, un messaggio di errore "versione del client non è compatibile con la versione del database".  
+ **Problema:** Quando si apre l' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] applicazione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web o, viene visualizzato il messaggio di errore "versione client non compatibile con la versione del database".  
   
- **Soluzione:** Questo problema si verifica quando un [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oppure [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] applicazione web gestione dati Master tenta di accedere a un database che è stato aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. È necessario quindi utilizzare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ **Soluzione:** Questo problema si verifica quando [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] un' [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] applicazione Web o gestione dati master tenta di accedere a un database che è stato [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiornato a Master Data Services. È necessario quindi utilizzare un'applicazione Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Questo problema si può verificare anche qualora non si arresti e riavvii il **pool di applicazioni MDS** in IIS in caso di aggiornamento dello schema del database MDS. Riavviare il **pool di applicazioni MDS** per correggere il problema.  
   

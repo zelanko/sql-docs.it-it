@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770188"
 ---
 # <a name="xml-source-custom-properties"></a>Proprietà personalizzate dell'origine XML
@@ -24,16 +24,16 @@ ms.locfileid: "62770188"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Valore intero|Modalità utilizzata per accedere ai dati XML.|  
+|AccessMode|Integer|Modalità utilizzata per accedere ai dati XML.|  
 |UseInlineSchema|Boolean|Valore che indica se utilizzare una definizione dello schema inline all'interno dell'origine XML. Il valore predefinito di questa proprietà è `False`.|  
-|XMLData|String|File o variabili da cui recuperare i dati XML.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
-|XMLSchemaDefinition|String|Percorso e nome del file di definizione dello schema (estensione xsd).<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
+|XMLData|string|File o variabili da cui recuperare i dati XML.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
+|XMLSchemaDefinition|string|Percorso e nome del file di definizione dello schema (estensione xsd).<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate dell'output dell'origine XML. Tutte le proprietà sono di lettura/scrittura.  
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|RowsetID|String|Valore che identifica il set di righe associato all'output.|  
+|RowsetID|string|Valore che identifica il set di righe associato all'output.|  
   
  Le colonne di output dell'origine XML non includono proprietà personalizzate.  
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789843"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62789843"
  Non sono consentite connessioni utente. I database secondari non sono disponibili per l'accesso in lettura. Si tratta del comportamento predefinito nel ruolo secondario.  
   
  Solo connessioni con finalità di lettura  
- I database secondari sono disponibili solo per le connessioni per il quale il `Application Intent` proprietà di connessione è impostata su `ReadOnly` (*connessioni con finalità di lettura*).  
+ I database secondari sono disponibili solo per la connessione per la quale la `Application Intent` proprietà di connessione è impostata su `ReadOnly` (*connessioni con finalità di lettura*).  
   
  Per informazioni su questa proprietà di connessione, vedere [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -69,24 +69,24 @@ ms.locfileid: "62789843"
  Sono consentite sia le connessioni di lettura e scrittura sia le connessioni in sola lettura ai database primari. Si tratta del comportamento predefinito per il ruolo primario.  
   
  Consentire solo le connessioni in lettura/scrittura  
- Quando la `Application Intent` proprietà di connessione è impostata su **ReadWrite** o non è impostata, la connessione è consentita. Le connessioni per cui il `Application Intent` parola chiave di stringa di connessione è impostata su `ReadOnly` non sono consentiti. Se si consentono solo le connessioni in lettura/scrittura, è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti.  
+ Se la `Application Intent` proprietà di connessione è impostata su **ReadWrite** o non è impostata, la connessione è consentita. Le connessioni per cui `Application Intent` la parola chiave della stringa di `ReadOnly` connessione è impostata su non sono consentite. Se si consentono solo le connessioni in lettura/scrittura, è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti.  
   
- Per informazioni su questa proprietà di connessione, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per informazioni su questa proprietà di connessione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="HowConnectionAccessAffectsConnectivity"></a> Effetti della configurazione dell'accesso alla connessione sulla connettività client  
  Le impostazioni dell'accesso alla connessione di una replica determinano l'esito positivo o negativo di un tentativo di connessione. Nella tabella seguente viene riepilogato l'esito positivo o negativo di un tentativo di connessione per ciascuna impostazione di accesso alla connessione.  
   
-|Ruolo di replica|Accesso alla connessione supportato sulla replica|Finalità di connessione|Risultato tentativo di connessione|  
+|Ruolo della replica|Accesso alla connessione supportato sulla replica|Finalità di connessione|Risultato tentativo di connessione|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondari|All|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
-|Secondari|Nessuno (comportamento predefinito nel ruolo secondario).|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Secondari|Solo finalità di lettura|Con finalità di lettura|Riuscito|  
-|Secondari|Solo finalità di lettura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Primario|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
-|Primario|Lettura/scrittura|Solo finalità di lettura|Failure|  
-|Primario|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
+|Secondari|Tutti|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
+|Secondari|Nessuno (comportamento predefinito nel ruolo secondario).|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Operazioni non riuscite|  
+|Secondari|Solo finalità di lettura|Con finalità di lettura|Operazione completata|  
+|Secondari|Solo finalità di lettura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Operazioni non riuscite|  
+|Primaria|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
+|Primaria|Lettura/scrittura|Solo finalità di lettura|Operazioni non riuscite|  
+|Primaria|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
   
  Per informazioni sulla configurazione di un gruppo di disponibilità in modo che accetti le connessioni dei client alle proprie repliche, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -97,10 +97,10 @@ ms.locfileid: "62789843"
   
 |Replica|Modalità di commit|Ruolo iniziale|Accesso alla connessione per il ruolo secondario|Accesso alla connessione per il ruolo primario|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Sincrona|Primario|None|Lettura/scrittura|  
-|Replica2|Sincrona|Secondari|None|Lettura/scrittura|  
+|Replica1|Sincrono|Primaria|nessuno|Lettura/scrittura|  
+|Replica2|Sincrono|Secondari|nessuno|Lettura/scrittura|  
 |Replica3|Asincrona|Secondari|Solo con finalità di lettura|Lettura/scrittura|  
-|Replica4|Asincrono|Secondari|Solo finalità di lettura|Lettura/scrittura|  
+|Replica4|Asincrona|Secondari|Solo finalità di lettura|Lettura/scrittura|  
   
  In genere, in questo scenario di esempio, i failover si verificano solo tra le repliche con commit sincrono e immediatamente dopo il failover, le applicazioni con finalità di lettura sono in grado di riconnettersi a una delle repliche secondarie con commit asincrono. Tuttavia, in caso di emergenza nel centro di elaborazione principale vengono perse entrambe le repliche con commit sincrono. L'amministratore del database del sito satellite esegue un failover manuale forzato a una replica secondaria con commit asincrono. I database secondari nella replica secondaria rimanente vengono sospesi dal failover forzato e diventano pertanto non disponibili per i carichi di lavoro di sola lettura. La nuova replica primaria, configurata per le connessioni in lettura/scrittura, evita che il carico di lavoro con finalità di lettura entri in competizione con il carico di lavoro di lettura/scrittura. Ciò significa che finché l'amministratore del database non riprende i database secondari nella replica del secondaria rimanente con commit asincrono, i client con finalità di lettura non saranno in grado di connettersi ad alcuna replica di disponibilità.  
   
@@ -118,12 +118,12 @@ ms.locfileid: "62789843"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del team di SQL Server AlwaysOn: Blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  
   

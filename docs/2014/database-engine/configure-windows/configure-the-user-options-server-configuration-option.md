@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787073"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurare l'opzione di configurazione del server user options
@@ -26,7 +26,7 @@ ms.locfileid: "62787073"
   
  Un utente può ottenere la priorità su tali impostazioni predefinite utilizzando l'istruzione SET. È possibile configurare dinamicamente **user options** per i nuovi account di accesso. Dopo aver modificato l'impostazione di **user options**, le nuove sessioni di accesso utilizzano la nuova impostazione, mentre le sessioni correnti non vengono interessate dalla modifica.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62787073"
   
 -   Nella tabella seguente sono elencati e descritti i valori di configurazione per **user options**. Non tutti i valori di configurazione sono compatibili tra loro. Ad esempio, non è possibile impostare contemporaneamente ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.  
   
-    |Value|Configurazione|Descrizione|  
+    |valore|Configurazione|Descrizione|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Controlla la verifica dei vincoli posticipata o provvisoria.|  
     |2|IMPLICIT_TRANSACTIONS|Per connessioni alla libreria di rete dblib, determina se una transazione viene avviata in modo implicito al momento dell'esecuzione di un'istruzione. L'impostazione IMPLICIT_TRANSACTIONS non influisce su connessioni ODBC o OLEDB.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62787073"
   
      Per impostazione predefinita, non è configurata alcuna opzione utente.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Per impostare l'opzione di configurazione user options  
   

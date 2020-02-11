@@ -13,28 +13,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771057"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selezionare tabelle e colonne Oracle
   Utilizzare la pagina Seleziona tabelle e colonne Oracle per selezionare le tabelle dal database di origine Oracle in cui vengono acquisite le modifiche. Nella pagina sono presenti gli elementi seguenti:  
   
 ## <a name="options"></a>Opzioni  
- **Elenco tabelle**  
+ **Elenco Tabella**  
  Nell'elenco tabelle sono presenti tre colonne:  
   
 -   **Nome tabella Oracle**: nome della tabella, incluso lo schema.  
   
--   **Istanza di acquisizione**: nome dell'istanza di acquisizione usata per denominare gli oggetti Change Data Capture specifici dell'istanza. L'istanza di acquisizione non può essere NULL.  
+-   **Istanza di acquisizione**: nome dell'istanza di acquisizione usato per denominare gli oggetti Change Data Capture specifici dell'istanza. L'istanza di acquisizione non può essere NULL.  
   
      Se non è specificato, il nome deriva dal nome dello schema di origine più il nome della tabella di origine nel formato `<schema-name>_<table-name>`. Il nome dell'istanza di acquisizione non può superare i 100 caratteri e deve essere univoco nel database.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **capture_instance**.  
   
--   **Ruolo di sicurezza**: nome del ruolo del database usato per controllare l'accesso ai dati delle modifiche.  
+-   **Ruolo di sicurezza**: nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **security_role**.  
   

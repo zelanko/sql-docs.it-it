@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828879"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
@@ -29,7 +29,7 @@ ms.locfileid: "62828879"
   
 -   Utilizzare il modello di pacchetto incluso in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
--   Utilizzare un modello personalizzato  
+-   Usare un modello personalizzato  
   
      Per utilizzare pacchetti personalizzati come modelli per la creazione di nuovi pacchetti, è sufficiente copiare tali modelli nella cartella DataTransformationItems, che per impostazione predefinita si trova in C:\Programmi\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\ProjectItems\DataTransformationProject.  
   

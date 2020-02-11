@@ -13,28 +13,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767983"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Anteprima dati (Importazione/Esportazione guidata SQL Server)
-  Usare la **i dati di anteprima** finestra di dialogo per visualizzare la query che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata invierà all'origine dati. È anche possibile utilizzare questa finestra di dialogo per visualizzare in anteprima fino a 200 righe di dati di esempio.  
+  Utilizzare la finestra di dialogo **Anteprima dati** per visualizzare la query che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà inviata all'origine dati dall'importazione/esportazione guidata. È anche possibile utilizzare questa finestra di dialogo per visualizzare in anteprima fino a 200 righe di dati di esempio.  
   
- Per altre informazioni sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importare ed esportare procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per l'avvio della procedura guidata e sulle autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
+ Per ulteriori informazioni sull' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni per avviare la procedura guidata e sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Lo scopo dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nel copiare i dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
  **Per aprire la finestra di dialogo Anteprima dati**  
   
--   Nel **Seleziona tabelle di origine e viste** pagina della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata, fare clic su **anteprima**.  
+-   Nella pagina **Selezione tabelle e viste di origine** dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata, fare clic su **Anteprima**.  
   
 ## <a name="options"></a>Opzioni  
  **Origine**  
  Viene visualizzata la query che verrà inviata all'origine dati dalla procedura guidata.  
   
- **Griglia Dati di esempio**  
+ **Griglia dati di esempio**  
  Vengono visualizzate fino a 200 righe di dati di esempio restituite dalla query.  
   
   

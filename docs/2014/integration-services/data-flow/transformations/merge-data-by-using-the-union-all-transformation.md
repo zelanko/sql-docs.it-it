@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770341"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Unione di dati tramite la trasformazione Unione input multipli
@@ -55,7 +55,7 @@ ms.locfileid: "62770341"
 9. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Union All Transformation](union-all-transformation.md)   
+ [Trasformazione Unione input multipli](union-all-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
  [Attività Flusso di dati](../../control-flow/data-flow-task.md)  

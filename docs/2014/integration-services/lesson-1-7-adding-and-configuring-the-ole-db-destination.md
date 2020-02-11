@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767560"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Passaggio 7: Aggiunta e configurazione della destinazione OLE DB
@@ -24,7 +24,7 @@ ms.locfileid: "62767560"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Per aggiungere e configurare la destinazione OLE DB di esempio  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Altre destinazioni**e trascinare **Destinazione OLE DB** nell'area di progettazione della scheda **Flusso di dati** . Posizionare la destinazione OLE DB sotto la trasformazione **Lookup Date Key** .  
+1.  Nella **casella degli strumenti SSIS**espandere **altre destinazioni**e trascinare **OLE DB destinazione** nell'area di progettazione della scheda **flusso di dati** . Posizionare la destinazione OLE DB direttamente sotto la trasformazione **Lookup Date Key** .  
   
 2.  Fare clic sulla trasformazione **Lookup Date Key** e trascinare la freccia verde sulla nuova **Destinazione OLE DB** per collegare i due componenti.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62767560"
   
 6.  Nella finestra di dialogo **Editor destinazione OLE DB** verificare che **localhost.AdventureWorksDW2012** sia selezionato nella casella **Gestione connessione OLE DB** .  
   
-7.  Nella casella **Nome tabella o vista** digitare o selezionare **[dbo].[FactCurrencyRate]** .  
+7.  Nella casella **Nome tabella o vista** digitare o selezionare **[dbo].[FactCurrencyRate]**.  
   
 8.  Fare clic sul pulsante **Nuova** per creare una nuova tabella.  Denominare **NewFactCurrencyRate**la tabella nello script.  Fare clic su **OK**.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "62767560"
   
 13. Fare clic con il pulsante destro del mouse sulla destinazione **Sample OLE DB Destination** e scegliere **Proprietà**.  
   
-14. Nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)** e il`DefaultCodePage` viene impostata su **1252**.  
+14. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la`DefaultCodePage` proprietà sia impostata su **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 8: Effettua la comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](data-flow/ole-db-destination.md)  

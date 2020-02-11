@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828238"
 ---
 # <a name="cdc-splitter"></a>CDC Splitter
@@ -24,12 +24,12 @@ ms.locfileid: "62828238"
   
 |Valore dell'operazione|Output|Descrizione|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Riga eliminata|  
-|2|Insert|Riga inserita (non disponibile quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
-|3|Update|Riga prima dell'aggiornamento (disponibile solo quando si usa la modalità CDC **All with Old Values** (Tutto con valori precedenti))|  
-|4|Update|Riga dopo l'aggiornamento (segue l'operazione prima dell'aggiornamento)|  
-|5|Update|Unione della riga (disponibile solo quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
-|Altro|Errore||  
+|1|Delete|Riga eliminata|  
+|2|Inserimento|Riga inserita (non disponibile quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
+|3|Aggiornamento|Riga prima dell'aggiornamento (disponibile solo quando si usa la modalità CDC **All with Old Values** (Tutto con valori precedenti))|  
+|4|Aggiornamento|Riga dopo l'aggiornamento (segue l'operazione prima dell'aggiornamento)|  
+|5|Aggiornamento|Unione della riga (disponibile solo quando si usa la modalità CDC **Net with Merge** (Rete con unione))|  
+|Altri|Errore||  
   
  È possibile utilizzare la barra di divisione per connettersi ad output INSERT, DELETE e UPDATE predefiniti per l'ulteriore elaborazione.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "62828238"
   
  L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code** (Codice errore): impostare su 1.  
+-   **Error Code**: impostare su 1.  
   
--   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
--   **Error Row Columns** (Colonne riga errore): colonne di input della riga che ha provocato l'errore.  
+-   **Error Row Columns**: colonne di input della riga che ha provocato l'errore.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurazione della barra di divisione CDC  
  Non sono disponibili proprietà configurabili per la barra di divisione CDC.  
