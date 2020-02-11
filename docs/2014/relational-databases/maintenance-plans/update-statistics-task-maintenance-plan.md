@@ -15,14 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807116"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Attività Aggiorna statistiche (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Aggiorna statistiche** per aggiornare le informazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dati contenuti nelle tabelle e negli indici. Questa attività consente di eseguire un nuovo campionamento delle statistiche di distribuzione di tutti gli indice creati per le tabelle utente del database. Le statistiche di distribuzione vengono utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottimizzare le operazioni di navigazione tra le tabelle durante l'elaborazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per compilare automaticamente le statistiche di distribuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue, per ogni indice, un campionamento periodico dei dati della tabella corrispondente La dimensione del campione è basata sul numero di righe della tabella e sulla frequenza di modifica dei dati. Questa opzione consente di eseguire un ulteriore campionamento utilizzando una determinata percentuale di dati delle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa queste informazioni per creare piani di query più efficienti.  
+  Utilizzare la finestra di dialogo **attività Aggiorna statistiche** per aggiornare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni relative ai dati nelle tabelle e negli indici. Questa attività consente di eseguire un nuovo campionamento delle statistiche di distribuzione di tutti gli indice creati per le tabelle utente del database. Le statistiche di distribuzione vengono utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottimizzare le operazioni di navigazione tra le tabelle durante l'elaborazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per compilare automaticamente le statistiche di distribuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue, per ogni indice, un campionamento periodico dei dati della tabella corrispondente La dimensione del campione è basata sul numero di righe della tabella e sulla frequenza di modifica dei dati. Questa opzione consente di eseguire un ulteriore campionamento utilizzando una determinata percentuale di dati delle tabelle. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa queste informazioni per creare piani di query più efficienti.  
   
  Questa attività esegue l'istruzione UPDATE STATISTICS.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "62807116"
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
@@ -48,13 +49,13 @@ ms.locfileid: "62807116"
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Database specifici**  
+-   **Questi database specifici**  
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
- **Nota** I piani di manutenzione vengono eseguiti solo su database il cui livello di compatibilità è impostato su 80 o su un valore superiore. I database per cui è impostato un livello di compatibilità 70 o inferiore non vengono visualizzati.  
+ **Nota** I piani di manutenzione vengono eseguiti solo su database impostati sul livello di compatibilità 80 o versione successiva. I database per cui è impostato un livello di compatibilità 70 o inferiore non vengono visualizzati.  
   
- **Oggetto**  
+ **Object**  
  Consente di limitare la griglia **Selezione** per visualizzare tabelle, viste o entrambe.  
   
  **Selezione**  
@@ -69,7 +70,7 @@ ms.locfileid: "62807116"
  **Solo statistiche indici**  
  Consente di aggiornare soltanto le statistiche relative agli indici.  
   
- **Tipo analisi**  
+ **Tipo di analisi**  
  Tipo di analisi utilizzata per raccogliere statistiche aggiornate.  
   
  **Analisi completa**  
@@ -78,7 +79,7 @@ ms.locfileid: "62807116"
  **Campionamento per**  
  Specificare la percentuale della tabella o della vista indicizzata o il numero di righe da utilizzare come campione durante la raccolta di statistiche per tabelle o viste di grandi dimensioni.  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -88,7 +89,7 @@ ms.locfileid: "62807116"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -97,11 +98,11 @@ ms.locfileid: "62807116"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ **Usa la sicurezza integrata di Windows**  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  

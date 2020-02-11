@@ -1,5 +1,5 @@
 ---
-title: Impostare i database definiti dall'utente di regole di confronto corrispondono a quelle del master e i database modello | Microsoft Docs
+title: Impostare le regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773313"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello
@@ -29,7 +29,7 @@ ms.locfileid: "62773313"
   
 -   Esportare i dati dal database utente e importarli nelle nuove tabelle che utilizzano le stesse regole di confronto dei database master e modello.  
   
--   Ricompilare i database di sistema in modo che vengano utilizzate regole di confronto corrispondenti a quelle del database utente. Per altre informazioni su come ricompilare i database di sistema, vedere [ricompilare database di sistema](../relational-databases/databases/system-databases.md).  
+-   Ricompilare i database di sistema in modo che vengano utilizzate regole di confronto corrispondenti a quelle del database utente. Per ulteriori informazioni su come ricompilare i database di sistema, vedere [ricompilare i database di sistema](../relational-databases/databases/system-databases.md).  
   
 -   Modificare qualsiasi stored procedure che crea join tra tabelle utente e tabelle in tempdb per creare le tabelle in tempdb utilizzando le regole di confronto del database utente. A tale scopo, aggiungere la clausola `COLLATE database_default` alle definizioni di colonna della tabella temporanea, come illustrato nell'esempio seguente:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62773313"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Articolo 325335 della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Articolo 325335 della Microsoft Knowledge base](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Procedura: Installare SQL Server 2008 dal Prompt dei comandi](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Procedura: Installazione di SQL Server 2008 dal prompt dei comandi](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

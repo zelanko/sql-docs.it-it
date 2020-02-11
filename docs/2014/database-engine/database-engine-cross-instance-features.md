@@ -11,16 +11,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807525"
 ---
 # <a name="database-engine-cross-instance-features"></a>Caratteristiche del motore di database tra istanze
   In questa sezione vengono illustrati gli strumenti e le attività associati alla gestione e al monitoraggio di server e istanze del database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
 [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

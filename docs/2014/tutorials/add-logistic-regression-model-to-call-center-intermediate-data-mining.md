@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un modello di regressione logistica alla struttura del Call Center (esercitazione intermedia di Data Mining) | Microsoft Docs
+title: Aggiunta di un modello di regressione logistica alla struttura del Call Center (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823278"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Aggiunta di un modello di regressione logistica alla struttura del call center (Esercitazione intermedia sul data mining)
@@ -28,47 +28,47 @@ ms.locfileid: "62823278"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>Per aggiungere un nuovo modello di data mining alla struttura di data mining del call center  
   
-1.  Nelle [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Esplora soluzioni fare doppio clic la struttura di data mining **Call Center Binned**e selezionare **Apri finestra di progettazione**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Esplora soluzioni fare clic con il pulsante destro del mouse sulla struttura di data mining **Call Center**e scegliere **Apri finestra di progettazione**.  
   
-2.  Progettazione modelli di Data Mining, fare clic sui **modelli di Data Mining** scheda.  
+2.  In Progettazione modelli di data mining fare clic sulla scheda **modelli di data mining** .  
   
-3.  Fare clic su **creare un modello di data mining correlato**.  
+3.  Fare clic su **Crea un modello di data mining correlato**.  
   
-4.  Nel **nuovo modello di Data Mining** della finestra di dialogo per **Model name**, tipo `Call Center - LR`.  Per la **nome dell'algoritmo**, selezionare **Microsoft Logistic Regression**.  
+4.  Nella finestra di dialogo **nuovo modello di data mining** Digitare `Call Center - LR`per **nome modello**.  Per **Nome algoritmo**selezionare **regressione logistica Microsoft**.  
   
 5.  Fare clic su **OK**.  
   
-     Il nuovo modello di data mining viene visualizzato nei **modelli di Data Mining** scheda.  
+     Il nuovo modello di data mining viene visualizzato nella scheda **modelli di data mining** .  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>Per personalizzare il modello di regressione logistica  
   
-1.  Nella colonna per il nuovo modello di data mining, `Call Center - LR`, lasciare Fact CallCenter ID come chiave.  
+1.  Nella colonna per il nuovo modello di data mining `Call Center - LR`, lasciare fact callcenter ID come chiave.  
   
-2.  Modificare il valore di ServiceGrade e Level Two Operators in **Predict**.  
+2.  Modificare il valore di ServiceGrade e di Level Two Operators in **Predict**.  
   
      Queste colonne verranno utilizzate sia per la stima che per l'input. In sostanza, si creano due modelli separati basati sugli stessi dati: uno che stima il numero di operatori e uno che stima il livello di servizio.  
   
-3.  Modificare tutte le altre colonne per **Input**.  
+3.  Modificare tutte le altre colonne in **input**.  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>Per specificare il valore di inizializzazione ed elaborare i modelli  
   
-1.  Nel **modello di Data Mining** scheda, fare doppio clic su colonna per il modello denominato Call Center - LR, quindi selezionare **imposta parametri algoritmo**.  
+1.  Nella scheda **modello di data mining** fare clic con il pulsante destro del mouse sulla colonna per il modello denominato Call Center-LR, quindi scegliere **Imposta parametri algoritmo**.  
   
-2.  Nella riga del parametro HOLDOUT_SEED fare clic sulla cella vuota sotto **valore**e il tipo `1`. Fare clic su **OK**.  
+2.  Nella riga relativa al parametro HOLDOUT_SEED fare clic sulla cella vuota in **valore**, quindi digitare `1`. Fare clic su **OK**.  
   
     > [!NOTE]  
     >  Il valore scelto come valore di inizializzazione non è importante, a condizione che si utilizzi lo stesso valore di inizializzazione per tutti i modelli correlati.  
   
-3.  Nel **modelli di Data Mining** dal menu **Elabora struttura di Data Mining e tutti i modelli**. Fare clic su **Sì** per distribuire il progetto di data mining i dati aggiornati nel server.  
+3.  Scegliere **Elabora struttura di data mining e tutti i modelli**dal menu **modelli di data mining** . Fare clic su **Sì** per distribuire il progetto data mining aggiornato al server.  
   
-4.  Nel **modello di processo di Data Mining** finestra di dialogo, fare clic su **eseguire**.  
+4.  Nella finestra di dialogo **Elabora modello di data mining** fare clic su **Esegui**.  
   
-5.  Fare clic su **chiudere** per chiudere la **stato elaborazione** la finestra di dialogo e quindi fare clic su **chiudere** nuovamente nel **Elabora modello di Data Mining** nella finestra di dialogo.  
+5.  Fare clic su **Chiudi** per chiudere la finestra di dialogo **Stato elaborazione** , quindi fare di nuovo clic su **Chiudi** nella finestra di dialogo **Elabora modello di data mining** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di stime per i modelli Call Center &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [Creazione di stime per i modelli di Call Center &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

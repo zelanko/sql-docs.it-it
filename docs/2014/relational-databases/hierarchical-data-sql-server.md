@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065705"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
-  L'elemento predefinito `hierarchyid` tipo di dati rende più semplice per archiviare e interrogare dati gerarchici. `hierarchyid` è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
+  Il tipo di `hierarchyid` dati incorporato rende più semplice archiviare ed eseguire query sui dati gerarchici. `hierarchyid`è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
   
  I dati gerarchici vengono definiti come un set di elementi di dati correlati tra loro tramite relazioni gerarchiche. Si parla di relazioni gerarchiche quando un elemento di dati è l'elemento padre di un altro elemento. Di seguito sono riportati alcuni esempi dei dati gerarchici comunemente archiviati nei database:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63065705"
   
 -   Il confronto avviene in ordine di scorrimento in profondità  
   
-     Dati due `hierarchyid` i valori **una** e **b**, **una < b** significa un precede b nell'attraversamento di profondità dell'albero. Gli indici sui tipi di dati `hierarchyid` sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
+     Dato due `hierarchyid` valori **a** e **b**, **un<b** indica che un oggetto precede b in un attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati `hierarchyid` sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
   
 -   Supporto per eliminazioni e inserimenti arbitrari  
   
@@ -74,7 +74,8 @@ ms.locfileid: "63065705"
   
 -   XML  
   
- `hierarchyid` è generalmente superiore a queste alternative. Tuttavia, esistono determinate situazioni illustrate in dettaglio di seguito in cui le alternative sono superiori.  
+ 
+  `hierarchyid` è generalmente superiore a queste alternative. Tuttavia, esistono determinate situazioni illustrate in dettaglio di seguito in cui le alternative sono superiori.  
   
 ### <a name="parentchild"></a>Elemento padre/figlio  
  Quando si utilizza l'approccio dell'elemento padre/figlio, ogni riga contiene un riferimento all'elemento padre. La tabella seguente definisce una tabella tipica utilizzata per contenere le righe padre e figlio in una relazione padre/figlio:  
@@ -108,7 +109,7 @@ GO
   
 -   Le query vengono eseguite raramente sulle sezioni della gerarchia. In altre parole, le query di solito vengono eseguite solo su un singolo punto della gerarchia. In questi casi la condivisione percorso non è importante. Ad esempio, la relazione elemento padre/figlio è superiore se la tabella dell'organizzazione viene utilizzata solo per l'elaborazione del libro paga per i singoli dipendenti.  
   
--   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. Modifica del percorso di una riga in una `hierarchyid` influisce sull'utilizzo *n* righe, dove *n* è il numero di nodi del sottoalbero spostato.  
+-   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. La modifica della posizione di una riga in `hierarchyid` un utilizzo influiscono su *n* righe, dove *n* è il numero di nodi nel sottoalbero spostato.  
   
      Se i sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono importanti, ma la maggior parte degli spostamenti è a un livello ben definito della gerarchia, suddividere i livelli superiori e inferiori in due gerarchie. In questo modo, tutti gli spostamenti si verificano a livello di foglia nella gerarchia più elevata. Ad esempio, considerare una gerarchia di siti Web ospitata da un servizio. I siti contengono molte pagine disposte in modo gerarchico. I siti ospitati potrebbero essere spostati in altri percorsi nella gerarchia del sito, tuttavia le pagine subordinate vengono raramente disposte in modo nuovo. Questo potrebbe essere rappresentato tramite:  
   
@@ -122,7 +123,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un documento XML è un albero e pertanto una singola istanza del tipo di dati XML può rappresentare una gerarchia completa. Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando viene creato un indice XML, `hierarchyid` valori vengono usati internamente per rappresentare la posizione nella gerarchia.  
+ Un documento XML è un albero e pertanto una singola istanza del tipo di dati XML può rappresentare una gerarchia completa. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando viene creato un indice XML, `hierarchyid` i valori vengono usati internamente per rappresentare la posizione nella gerarchia.  
   
  L'utilizzo del tipo di dati XML può essere superiore quando tutte le seguenti condizioni sono vere:  
   
@@ -159,7 +160,7 @@ GO
   
      In un indice breadth-first tutti gli elementi figlio diretti di un nodo vengono posizionati insieme. Pertanto, gli indici breadth-first sono in grado di fornire risposte alle query sugli elementi figlio immediati, ad esempio "Trova tutti i dipendenti che riportano direttamente a questo responsabile".  
   
- La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Creazione di indici  
@@ -265,7 +266,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Attività correlate  
   
 ###  <a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
- La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
@@ -319,7 +320,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Esempio di utilizzo di una transazione serializzabile  
- Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che potrebbero voler essere controllati da un'applicazione, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiunta di più dipendenti con lo stesso ID. Questa situazione richiede pertanto il ricalcolo di **@last_child** . Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
+ Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che un'applicazione potrebbe voler controllare, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiungere più dipendenti con lo stesso ID e **@last_child** pertanto deve essere ricalcolato. Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +390,7 @@ GO
   
   
 ###  <a name="findclr"></a> Individuazione di predecessori tramite CLR  
- Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Questo può essere scritto in uno [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR, perché il `hierarchyid` tipo è disponibile in entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
+ Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Questo può essere scritto in [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR, perché il `hierarchyid` tipo è disponibile in entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
   
  Utilizzare il codice CLR seguente per elencare i predecessori e cercare il predecessore comune minore:  
   
@@ -497,7 +498,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
- Un'altra operazione comune è lo spostamento di sottoalberi. La procedura descritta di seguito prende in considerazione il sottoalbero di **@oldMgr** e lo trasforma (includendo **@oldMgr** ) in un sottoalbero di **@newMgr** .  
+ Un'altra operazione comune è lo spostamento di sottoalberi. La procedura seguente prende il sottoalbero **@oldMgr** di e lo rende ( **@oldMgr**incluso) un sottoalbero di **@newMgr**.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

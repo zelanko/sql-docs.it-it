@@ -1,5 +1,5 @@
 ---
-title: Avviare Generatore Report (Generatore Report) | Microsoft Docs
+title: Avvia Generatore report (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,23 +16,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107595"
 ---
 # <a name="start-report-builder-report-builder"></a>Avviare Generatore report (Generatore report).
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] include autonomo e [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versioni di Generatore Report. È possibile utilizzare la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o in modalità integrata SharePoint.  
+  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]include le versioni autonome [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] e di Generatore report. È possibile utilizzare la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o in modalità integrata SharePoint.  
   
 > [!NOTE]  
 >  Generatore report non può essere installato in computer basati sul processore Itanium 64. Questa regola si applica sia alla versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] sia a quella autonoma di Generatore report.  
   
  Se la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] di Generatore report avviata è una versione precedente, contattare l'amministratore, che potrà aggiornare Gestione report e il sito di SharePoint per consentire l'utilizzo della versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Generatore report.  
   
- È possibile utilizzare anche la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] di Generatore report per creare report nella cartella di lavoro [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] pubblicata su SharePoint. Per altre informazioni sull'utilizzo di Generatore Report con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vedere [creare un Report di Reporting Services con i dati PowerPivot](https://go.microsoft.com/fwlink/?LinkId=185238) sul sito Web technet.microsoft.com.  
+ È possibile utilizzare anche la versione [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] di Generatore report per creare report nella cartella di lavoro [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] pubblicata su SharePoint. Per ulteriori informazioni sull'utilizzo di Generatore report [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]con, vedere la pagina relativa alla [creazione di un report Reporting Services con dati PowerPivot](https://go.microsoft.com/fwlink/?LinkId=185238) in TechNet.Microsoft.com.  
   
- Per avviare autonoma di Generatore Report le **avviare** menu nel computer locale, utente o un amministratore deve installare Generatore Report direttamente nel computer prima che lo strumento è disponibile per l'utilizzo. La versione autonoma non viene installata quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ma è necessario scaricarla e installarla separatamente. Per scaricare Generatore Report, vedere [Generatore Report di Microsoft® SQL Server® 2012](https://go.microsoft.com/fwlink/?LinkId=401502).  
+ Per avviare Generatore report autonomo dal menu **Start** nel computer locale, l'utente o un amministratore deve installare Generatore report direttamente nel computer prima che lo strumento sia disponibile per l'utilizzo. La versione autonoma non viene installata quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ma è necessario scaricarla e installarla separatamente. Per scaricare Generatore report, vedere [Microsoft® SQL Server® 2012 Generatore report](https://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Per avviare Generatore report ClickOnce da Gestione report  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66107595"
   
 1.  Nella barra degli indirizzi del browser digitare l'URL seguente:  
   
-     http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
+     http://\<nomeserver>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0. Application  
   
 2.  Premere INVIO.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "66107595"
   
      Verrà avviato Generatore report e sarà possibile creare un report o aprire un report nel server di report.  
   
-     **Nota** se il **nuovo documento** menu non sono elencati i **Report di Generatore Report**, **modello di Generatore Report**, e **originedatidelReport** le opzioni, i tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [aggiungere tipi di contenuto in una raccolta di &#40;Reporting Services in modalità integrata SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione Online di](https://go.microsoft.com/fwlink/?LinkId=154888) in sito Web MSDN.microsoft.com.  
+     **Nota** Se nel menu **nuovo documento** non sono elencate le opzioni **report Generatore report**, **modello Generatore report**e **origine dati report** , i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per ulteriori informazioni, vedere [aggiungere tipi di contenuto del server di report a una raccolta &#40;Reporting Services in modalità integrata SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di MSDN.Microsoft.com.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>Per avviare la versione autonoma di Generatore report dal menu Start  
   
-1.  Nel menu Start, fare clic su **tutti i programmi**, quindi fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **Generatore Report**.  
+1.  Dal menu Start fare clic su **tutti i programmi**, quindi fare [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] clic su **Generatore report**.  
   
 2.  Fare clic su **Generatore report** .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66107595"
   
 4.  Per aprire un report esistente archiviato nel computer locale o in un server di report, fare clic sull'icona di SQL Server nell'angolo superiore sinistro di Generatore report, quindi fare clic su Apri.  
   
-     Se il server di report nell'elenco dei server esistenti non visibile, chiudere la **Apri Report** finestra di dialogo e quindi fare clic su **Connect** nella parte inferiore di Generatore Report e connettersi al server.  
+     Se il server di report non è visibile nell'elenco di server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di Generatore report per connettersi al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)  

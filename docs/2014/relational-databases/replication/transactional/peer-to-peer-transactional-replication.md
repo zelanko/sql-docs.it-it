@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793922"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
@@ -61,7 +61,7 @@ ms.locfileid: "67793922"
   
 -   A sinistra, gli aggiornamenti vengono partizionati tra due server. Ad esempio, se nel database fosse disponibile un catalogo dei prodotti, un'applicazione personalizzata potrebbe dirigere gli aggiornamenti al nodo **A** per i prodotti con nomi che iniziano per A-M e al nodo **B** per i prodotti con nomi che iniziano per N-Z. Gli aggiornamenti verrebbero quindi replicati all'altro nodo.  
   
--   A destra tutti gli aggiornamenti vengono diretti al nodo **B** e da questo nodo vengono quindi replicati al nodo **A**. Se **B** è offline, ad esempio per manutenzione, il server applicazioni può dirigere tutte le attività al nodo **A**. Quando **B** sarà nuovamente online, potrà essere raggiunto dagli aggiornamenti e il server applicazioni potrà spostare tutti gli aggiornamenti a **B** o continuare a dirigerli ad **A**.  
+-   A destra tutti gli aggiornamenti vengono indirizzati al nodo **B**. Da questa posizione, gli aggiornamenti vengono replicati nel nodo **a**. Se **B** è offline, ad esempio per manutenzione, il server applicazioni può indirizzare tutte le attività a **un**. Quando **B** è di nuovo online, gli aggiornamenti possono passare a esso e il server applicazioni può spostare tutti gli aggiornamenti a **b** o continuare a indirizzarli a **un**.  
   
  La replica peer-to-peer può supportare entrambi gli approcci, ma l'esempio di aggiornamento centrale illustrato a destra viene spesso utilizzato nella replica transazionale standard.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793922"
   
     -   I nomi degli oggetti, lo schema degli oggetti e i nomi delle pubblicazioni devono essere identici.  
   
-    -   Le pubblicazioni devono consentire la replica delle modifiche dello schema. Il valore è **1** per la proprietà della pubblicazione **replicate_ddl**, che corrisponde all'impostazione predefinita. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Le pubblicazioni devono consentire la replica delle modifiche dello schema. Si tratta di un'impostazione di **1** per la proprietà di pubblicazione **replicate_ddl**, che corrisponde all'impostazione predefinita. Per ulteriori informazioni, vedere [apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Non è supportata l'applicazioni di filtri alle righe e alle colonne.  
   
@@ -137,24 +137,24 @@ ms.locfileid: "67793922"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà dell'articolo  **\@destination_owner** e  **\@destination_table**.  
+-   Le proprietà ** \@** degli articoli destination_owner e ** \@destination_table**.  
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.
   
  Per le proprietà indicate di seguito sono presenti considerazioni speciali:  
   
--   La proprietà di pubblicazione  **\@allow_initialize_from_backup** richiede il valore `true`.  
+-   La proprietà ** \@** di pubblicazione allow_initialize_from_backup richiede un valore `true`di.  
   
--   La proprietà di articolo  **\@replicate_ddl** richiede il valore `true`;  **\@identityrangemanagementoption** richiede il valore `manual`; e  **\@stato** richiede che l'opzione **24** è impostato.  
+-   La proprietà ** \@** di articolo replicate_ddl richiede un valore `true`di. identityrangemanagementoption richiede un valore di `manual`. ** \@** lo stato richiede che l'opzione **24** sia impostata. ** \@**  
   
--   Il valore delle proprietà di articolo  **\@ins_cmd**,  **\@del_cmd**, e  **\@upd_cmd** non può essere impostata su `SQL`.  
+-   Il valore per le proprietà ** \@** degli articoli ins_cmd, ** \@del_cmd**e ** \@upd_cmd** non può essere `SQL`impostato su.  
   
--   La proprietà della sottoscrizione  **\@sync_type** richiede il valore `none` o `automatic`.  
+-   La proprietà `none` `automatic` ** \@** della sottoscrizione sync_type richiede un valore di o.  
   
 ### <a name="maintenance-considerations"></a>Considerazioni relative alla manutenzione  
  Per le operazioni seguenti è necessario mettere il sistema in stato di inattività, ovvero arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi:  
   
--   Aggiunta di un [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] nodo in una topologia esistente  
+-   Aggiunta di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] un nodo a una topologia esistente  
   
 -   Aggiunta di un articolo a una pubblicazione esistente  
   

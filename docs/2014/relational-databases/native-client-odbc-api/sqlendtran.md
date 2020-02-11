@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5425fdc189febd23e9fc61765f4ad56fe484111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067592"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
-  Per impostazione predefinita, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client chiude cursore associato dell'istruzione quando **SQLEndTran** esegue il commit o il rollback di un'operazione. I cursori del server vengono chiusi a meno che non siano statici. Quando **SQLEndTran** esegue il commit o il rollback di un'operazione, il comportamento del cursore associato dell'istruzione è determinato dal valore dell'attributo specifiche del driver di connessione ODBC SQL_COPT_SS_PRESERVE_CURSORS, imposta [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC di Native client chiude il cursore associato di un'istruzione quando **SQLEndTran** esegue il commit o il rollback di un'operazione. I cursori del server vengono chiusi a meno che non siano statici. Quando **SQLEndTran** esegue il commit o il rollback di un'operazione, il comportamento del cursore associato dell'istruzione è determinato dal valore dell'attributo di connessione ODBC specifico del driver SQL_COPT_SS_PRESERVE_CURSORS, impostato da [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dettagli di implementazione di API ODBC](odbc-api-implementation-details.md)   
- [Funzione SQLEndTran](https://go.microsoft.com/fwlink/?LinkId=59342)  
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)   
+ [SQLEndTran Function](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

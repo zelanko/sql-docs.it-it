@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107419"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurare le proprietà delle origini dati per un report (Gestione report)
@@ -30,17 +30,17 @@ ms.locfileid: "66107419"
   
 2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera configurare un'origine dei dati specifica del report e aprirlo.  
   
-3.  Fare clic sulla scheda **Proprietà** . Viene visualizzata la pagina delle proprietà **Generale**.  
+3.  Fare clic sulla scheda **Proprietà** . Verrà visualizzata la pagina delle proprietà **generale** .  
   
-4.  Fare clic sulla scheda **Origini dati** . Verrà visualizzata la pagina delle proprietà dell'origine dati del report.  
+4.  Fare clic sulla scheda **origini dati** . Verrà visualizzata la pagina delle proprietà dell'origine dati del report.  
   
 5.  Fare clic su **Origine dati personalizzata** per specificare le informazioni sulla connessione all'origine dati all'interno del report.  
   
 6.  Nell'elenco **Tipo di connessione** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dall'origine dati.  
   
-7.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
+7.  Per **stringa di connessione**specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
-     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+     Nell'esempio seguente viene illustrata una stringa di connessione per la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al database locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -59,11 +59,11 @@ ms.locfileid: "66107419"
  Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
- [Pagina Nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
+ [Pagina nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Gestire origini dati dei report](manage-report-data-sources.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)  
+ [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)  
   
   

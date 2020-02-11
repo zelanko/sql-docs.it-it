@@ -1,5 +1,5 @@
 ---
-title: Creazione di rapporti di stato e cronologia | Microsoft Docs
+title: Creare rapporti di stato e cronologia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807505"
 ---
 # <a name="create-history-and-status-reports"></a>Creazione di report relativi alla cronologia e allo stato
@@ -27,25 +27,25 @@ ms.locfileid: "62807505"
   
 1.  In Esplora soluzioni selezionare il file desiderato.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente**, fare clic su **cronologia**.  
+2.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **cronologia**.  
   
-3.  Nel **cronologia delle** \<File o progetto > finestra di dialogo fare clic su **Report**.  
+3.  Nella finestra **di** \<dialogo Cronologia file o progetto> fare clic su **report**.  
   
-4.  Nel **Report sulla cronologia** finestra di dialogo, selezionare le opzioni appropriate e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **report Cronologia** selezionare le opzioni appropriate e quindi fare clic su **OK**.  
   
- Per altre informazioni sulle opzioni è possibile specificare durante il recupero della cronologia di un file, vedere [visualizzare la cronologia File](../../2014/database-engine/view-file-history.md).  
+ Per ulteriori informazioni sulle opzioni che è possibile specificare durante il recupero della cronologia di un file, vedere [visualizzare la cronologia dei file](../../2014/database-engine/view-file-history.md).  
   
 #### <a name="to-create-a-status-report"></a>Per creare un report relativo allo stato  
   
 1.  In Esplora soluzioni selezionare il file desiderato.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente**, fare clic su **le proprietà di SourceSafe**.  
+2.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **proprietà di SourceSafe**.  
   
-3.  Nel **lo stato del File** finestra di dialogo, fare clic su **Report**.  
+3.  Nella finestra di dialogo **stato file** fare clic su **report**.  
   
-4.  Nel **delle proprietà dei File di Report** finestra di dialogo, fare clic sulle opzioni appropriate e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **report proprietà file** fare clic sulle opzioni appropriate, quindi scegliere **OK**.  
   
- Per altre informazioni sulle opzioni è possibile specificare durante il recupero dello stato di file, vedere [visualizzare lo stato di File](../../2014/database-engine/view-file-status.md).  
+ Per ulteriori informazioni sulle opzioni che è possibile specificare durante il recupero dello stato del file, vedere [View file Status](../../2014/database-engine/view-file-status.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione e recupero delle informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)  

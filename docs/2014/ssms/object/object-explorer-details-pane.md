@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999935"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
@@ -42,11 +42,11 @@ ms.locfileid: "62999935"
 |----------|------------|  
 |**Indietro**|Passa agli elementi precedenti visualizzati in Dettagli Esplora oggetti. Esegue nuovamente una ricerca se la visualizzazione precedente è il risultato di un'operazione di ricerca.|  
 |**Avanti**|Sposta lo stato attivo alla schermata successiva dopo la selezione di un'operazione **Indietro** .|  
-|**Su**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
+|**Attivo**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
 |**Sincronizza**|Imposta lo stato attivo di Esplora oggetti sull'oggetto selezionato in Dettagli Esplora oggetti.|  
 |**Filter**|Quando disponibile, visualizza un subset di oggetti configurabili.|  
 |**Aggiorna**|Aggiorna la visualizzazione del contenuto di Dettagli Esplora oggetti.|  
-|**Cerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
+|**Ricerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
   
 ### <a name="column-header-selections"></a>Selezioni di intestazioni di colonna  
  Dettagli Esplora oggetti dispone di colonne selezionabili. È possibile fare clic con il pulsante destro del mouse su qualsiasi intestazione di colonna e controllare gli elementi che si desidera visualizzare. Le selezioni risulteranno persistenti per tutti i diversi oggetti sui quali ci si sposta. Le selezioni per ogni utente vengono mantenute quando si esce da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e lo si riavvia.  
@@ -87,7 +87,7 @@ ms.locfileid: "62999935"
 ## <a name="sql-server-object-search"></a>Ricerca di oggetti SQL Server  
  Caratteri jolly  
   
--   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per ulteriori informazioni, vedere [ricerca di testo con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Ambito di ricerca  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832592"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Rapporto di valori Null nella colonna (Attività Profiling dati)
@@ -43,7 +43,7 @@ ms.locfileid: "62832592"
   
  Per ulteriori informazioni, vedere la sezione "Opzioni TableorView" in questo argomento.  
   
- **Column**  
+ **Colonna**  
  Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per analizzare tutte le colonne.  
   
  Per ulteriori informazioni, vedere la sezione "Opzioni Column" in questo argomento.  

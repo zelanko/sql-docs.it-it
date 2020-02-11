@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072757"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornisce durabilità completa per le tabelle ottimizzate per la memoria. Quando viene eseguito il commit di una transazione che ha modificato una tabella ottimizzata per la memoria, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come avviene per le tabelle basate su disco, garantisce che le modifiche vengano rese permanenti, ovvero che saranno mantenute in seguito a un riavvio del database, a condizione che lo spazio di archiviazione sottostante sia disponibile. I componenti chiave della durabilità sono due: registrazione delle transazioni e salvataggio in modo permanente delle modifiche ai dati nell'archiviazione su disco.  
   
 ## <a name="transaction-log"></a>Log delle transazioni  
@@ -83,12 +84,13 @@ ms.locfileid: "63072757"
   
  Nell'esempio seguente il filegroup della tabella ottimizzata per la memoria dispone di quattro coppie di file di dati e differenziali in corrispondenza del timestamp 500, che contengono i dati delle transazioni precedenti. Ad esempio, le righe del primo file di dati corrispondono alle transazioni con timestamp maggiore di 100 e minore di o uguale a 200; in alternativa sono rappresentate come (100, 200]. La percentuale di completamento del secondo e terzo file di dati è inferiore al 50% dopo aver considerato le righe contrassegnate come eliminate. L'operazione di unione combina le due coppie di file di checkpoint e crea una nuova coppia di file di checkpoint contenente le transazioni con timestamp maggiore di 200 e minore o uguale a 400, ovvero l'intervallo combinato di queste due coppie di file di checkpoint. È presente un'altra coppia di file di checkpoint con intervallo (500, 600] e il file differenziale non vuoto per l'intervallo della transazione (200, 400] indica che l'operazione di unione può essere eseguita contemporaneamente all'attività transazionale, inclusa l'eliminazione di più righe dalle coppie di file di checkpoint di origine.  
   
- ![Diagramma che mostra il filegroup della tabella con ottimizzazione per la memoria](../../database-engine/media/storagediagram-hekaton.png "Diagramma che mostra il filegroup della tabella con ottimizzazione per la memoria")  
+ ![Nel diagramma viene visualizzato il gruppo di file della tabella con ottimizzazione per la memoria](../../database-engine/media/storagediagram-hekaton.png "Nel diagramma viene visualizzato il gruppo di file della tabella con ottimizzazione per la memoria")  
   
  Un thread in background valuta tutte le coppie di file di checkpoint chiuse utilizzando un criterio di unione, quindi avvia una o più richieste di unione per le coppie di file di checkpoint qualificate. Queste richieste di unione vengono elaborate dal thread del checkpoint offline. La valutazione dei criteri di unione viene eseguita periodicamente, anche quando un checkpoint viene chiuso.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Criteri di unione  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa i criteri di unione seguenti:  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Criteri di Unione  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa i criteri di unione seguenti:  
   
 -   Un'unione è pianificata se 2 o più coppie di file di checkpoint consecutive possono essere consolidate, dopo aver tenuto conto delle righe eliminate, in modo che le righe risultanti rientrino in una coppia di file di checkpoint di dimensioni ideali. Le dimensioni ideali di una coppia di file di checkpoint vengono determinate come indicato di seguito:  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072757"
   
  Non tutte le coppie di file di checkpoint con spazio disponibile sono qualificate per l'unione. Ad esempio, se due coppie di file di checkpoint adiacenti sono piene al 60%, non si qualificano per l'unione e ciascuna coppia di file di checkpoint rimane con il 40% dello spazio di archiviazione inutilizzato. Nel peggiore dei casi, tutte le coppie di file di checkpoint saranno piene al 50%, con un utilizzo dello spazio di archiviazione solo del 50%. Mentre le righe eliminate possono essere presenti nello spazio di archiviazione perché le coppie di file di checkpoint non si qualificano per l'unione, è possibile che le righe eliminate siano già state rimosse dalla memoria dal processo di Garbage Collection in memoria. La gestione dello spazio di archiviazione e della memoria è indipendente da Garbage Collection. Lo spazio di archiviazione utilizzato da coppie di file di checkpoint attive (non tutte le coppie di file di checkpoint vengono aggiornate) può essere fino a due volte maggiore delle dimensioni delle tabelle durevoli in memoria.  
   
- Se necessario, un'unione manuale può essere eseguita in modo esplicito chiamando [Sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Se necessario, un'Unione manuale può essere eseguita in modo esplicito chiamando [sys. sp_xtp_merge_checkpoint_files &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo di vita di una coppia di file di checkpoint  
- Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. In qualsiasi momento, i checkpoint sono in una delle fasi seguenti: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. In qualsiasi momento, le coppie di file di checkpoint si trovano in una delle fasi seguenti: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Dopo aver tenuto conto dello spazio di archiviazione utilizzato dalle coppie di file di checkpoint nei vari stati, lo spazio di archiviazione complessivo utilizzato dalle tabelle ottimizzate per la memoria durevoli può essere di oltre due volte maggiore delle dimensioni delle tabelle in memoria. La vista DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) è possibile eseguire query per elencare tutti i checkpoint nel filegroup ottimizzato per la memoria, incluse le relative fasi. La transizione delle coppie di file di checkpoint dallo stato MERGE SOURCE a TOMBSTONE e infine a Garbage Collection può richiedere fino a cinque checkpoint, con ogni checkpoint seguito da un backup del log delle transazioni, se il database è configurato per il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
+ Dopo aver tenuto conto dello spazio di archiviazione utilizzato dalle coppie di file di checkpoint nei vari stati, lo spazio di archiviazione complessivo utilizzato dalle tabelle ottimizzate per la memoria durevoli può essere di oltre due volte maggiore delle dimensioni delle tabelle in memoria. È possibile eseguire una query sulla DMV [sys. dm_db_xtp_checkpoint_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) per elencare tutti gli CFPS nel filegroup ottimizzato per la memoria, inclusa la fase. La transizione delle coppie di file di checkpoint dallo stato MERGE SOURCE a TOMBSTONE e infine a Garbage Collection può richiedere fino a cinque checkpoint, con ogni checkpoint seguito da un backup del log delle transazioni, se il database è configurato per il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
   
  È possibile forzare manualmente il checkpoint seguito dal backup del log per velocizzare il processo di Garbage Collection, ma questa operazione aggiungerà 5 coppie di file di checkpoint vuoti (5 coppie di file di dati/differenziali con un file di dati di 128 MB ciascuno). Negli scenari di produzione, i checkpoint e i backup del log automatici eseguiti come parte della strategia di backup effettuano la transazione delle coppie di file di checkpoint attraverso queste fasi senza richiedere alcun intervento manuale. La conseguenza del processo di Garbage Collection è il fatto che i database con tabelle ottimizzate per la memoria possono avere dimensioni di archiviazione maggiori rispetto alle dimensioni in memoria. Non è inusuale che le coppie di file di checkpoint abbiano dimensioni quattro volte maggiori di quelle delle tabelle ottimizzate per la memoria durevoli in memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

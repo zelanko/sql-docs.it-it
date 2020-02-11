@@ -22,14 +22,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044456"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestione configurazione SQL Server
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Console di gestione (mmc.exe) utilizza il file SQLServerManager10.msc nella cartella System32 di Windows per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)]Management Console (MMC. exe) utilizza il file SQLServerManager10. msc nella cartella system32 di Windows per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione e SQL Server Management Studio usano Strumentazione gestione Windows (WMI) per la visualizzazione e la modifica di alcune impostazioni server. WMI offre una modalità unificata di interfacciamento con le chiamate API che gestiscono le operazioni del Registro di sistema richieste dagli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e per fornire un controllo e una manipolazione avanzati dei servizi SQL selezionati del componente snap-in Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sulla configurazione delle autorizzazioni relative a WMI, vedere [Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63044456"
 >  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows.  
 > 
 >  -   **Windows 10**:  
->          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, via il **pagina iniziale**, digitare SQLServerManager12.msc (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Facendo clic su SQLServerManager12.msc apre Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare doppio clic su SQLServerManager12.msc e quindi fare clic su **Apri percorso file**. In Esplora File di Windows, fare doppio clic su SQLServerManager12.msc e quindi fare clic su **Aggiungi a Start** oppure **Pin alla barra delle applicazioni**.  
+>          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nella **pagina iniziale**digitare SQLServerManager12. msc (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Se si fa clic su SQLServerManager12.msc, viene aperto Gestione configurazione. Per aggiungere la Configuration Manager alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
 > -   **Windows 8**:  
->          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nel **ricerca** sull'accesso, in **app**, digitare **SQLServerManager\<versione >. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
+>          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** in **app**digitare **SQLServerManager\<Version>. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
   
  Per avviare, arrestare, sospendere, riprendere o configurare i servizi in un altro computer tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Connessione a un altro computer &#40;Gestione configurazione SQL Server&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
   
@@ -61,7 +61,8 @@ ms.locfileid: "63044456"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione consente di gestire i protocolli di rete server e client, imporre la crittografia dei protocolli, visualizzare le proprietà con alias o attivare/disabilitare un protocollo.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di creare o rimuovere un alias, modificare l'ordine di utilizzo dei protocolli o visualizzare le proprietà per un alias server, compresi:  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di creare o rimuovere un alias, modificare l'ordine di utilizzo dei protocolli o visualizzare le proprietà per un alias server, compresi:  
   
 -   Alias server: l'alias server usato per il computer a cui si sta connettendo il client.  
   
@@ -72,7 +73,8 @@ ms.locfileid: "63044456"
  Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente inoltre di visualizzare le informazioni sulle istanze cluster di failover, sebbene per alcune azioni, ad esempio l'avvio e l'arresto di servizi, sia necessario utilizzare Amministrazione cluster.  
   
 ### <a name="available-network-protocols"></a>Protocolli di rete disponibili  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta protocolli Shared Memory, TCP/IP e Named Pipes. Per ulteriori informazioni sulla scelta dei protocolli di rete, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta i protocolli di rete VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX/SPX. Per i client che in precedenza eseguivano la connessione con questi protocolli, è necessario selezionare un protocollo diverso per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non è possibile utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare il proxy WinSock. Per configurare il proxy WinSock, vedere la documentazione su ISA Server.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta protocolli Shared Memory, TCP/IP e Named Pipes. Per ulteriori informazioni sulla scelta dei protocolli di rete, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta i protocolli di rete VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX/SPX. Per i client che in precedenza eseguivano la connessione con questi protocolli, è necessario selezionare un protocollo diverso per la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non è possibile utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare il proxy WinSock. Per configurare il proxy WinSock, vedere la documentazione su ISA Server.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  

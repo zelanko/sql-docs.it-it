@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
+title: sys. sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905016"
 ---
-# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
+# <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Imposta il numero di ore di dati migrati che SQL Server viene mantenuto in una tabella di staging al fine di garantire un ripristino completo del database di Azure remoto, se è necessario un punto di ripristino temporizzato.    
+  Imposta il numero di ore di dati migrati che SQL Server conserva in una tabella di staging per garantire un ripristino completo del database di Azure remoto, se è necessario un ripristino temporizzato.    
     
- Per altre informazioni, vedi [Stretch Database riduce il rischio di perdita di dati per i dati di Azure conservando temporaneamente le righe migrate](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO).  
+ Per altre informazioni, vedere [Stretch database riduce il rischio di perdita di dati per i dati di Azure mantenendo temporaneamente le righe migrate](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO).  
    
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
      
 ## <a name="syntax"></a>Sintassi    
     
@@ -41,21 +41,21 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>Argomenti    
- [ @duration_hrs =] *duration_hrs*    
- È il numero di ore (valore intero diverso da null) i dati migrati da SQL Server da mantenere per il database abilitato per l'estensione corrente. Il valore predefinito e il valore minimo è 8 ore.    
+ [ @duration_hrs = ] *duration_hrs*    
+ Numero di ore (valore intero non null) dei dati migrati che si desidera mantenere SQL Server per il database abilitato per l'estensione corrente. Il valore predefinito e il valore minimo è 8 ore.    
  
  > [!NOTE]
- > I valori più alti richiedono ulteriore spazio di archiviazione in SQL Server.
+ > I valori più elevati richiedono più spazio di archiviazione in SQL Server.
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorizzazioni    
  Richiede autorizzazioni db_owner.    
     
-## <a name="remarks"></a>Note    
- Ottenere il valore corrente eseguendo [sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
+## <a name="remarks"></a>Osservazioni    
+ Ottenere il valore corrente eseguendo [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Vedere anche    
- [sys.sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
- [Ripristinare database abilitati per Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
+ [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
+ [Ripristinare i database abilitati per Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     
   

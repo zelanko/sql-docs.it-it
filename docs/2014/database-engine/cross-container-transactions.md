@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807425"
 ---
 # <a name="cross-container-transactions"></a>Transazioni tra contenitori
@@ -24,8 +24,8 @@ ms.locfileid: "62807425"
   
  Qualsiasi query interpretata che faccia riferimento a tabelle ottimizzate per la memoria viene considerata parte di una transazione tra contenitori, sia che venga eseguita da una transazione esplicita o implicita sia in modalità autocommit.  
   
-##  <a name="isolation"></a> Isolamento di singole operazioni  
- A ogni transazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di isolamento. Il livello di isolamento predefinito è READ COMMITTED. Per usare un livello di isolamento diverso, è possibile impostare il livello di isolamento utilizzando [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+##  <a name="isolation"></a>Isolamento di singole operazioni  
+ A ogni transazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di isolamento. Il livello di isolamento predefinito è READ COMMITTED. Per usare un livello di isolamento diverso, è possibile impostare il livello di isolamento usando [set Transaction isolation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  È spesso necessario effettuare operazioni in tabelle ottimizzate per la memoria in un livello di isolamento diverso dalle operazioni in tabelle basate su disco. In una transazione è possibile impostare un livello di isolamento diverso per una raccolta di istruzioni o per una singola operazione di lettura.  
   
@@ -65,13 +65,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Semantica di isolamento per singole operazioni  
  Una transazione T serializzabile viene eseguita in isolamento completo. È come se per tutte le altre transazioni fosse stato eseguito il commit prima dell'avvio di T o l'avvio dopo il commit di T. Il comportamento diventa più complesso quando operazioni diverse in una transazione presentano livelli di isolamento diversi.  
   
- La semantica generale dei livelli di isolamento delle transazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], insieme alle implicazioni sul blocco, è illustrato nella [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La semantica generale dei livelli di isolamento delle transazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in, insieme alle implicazioni sul blocco, viene illustrata in [set Transaction isolation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Per le transazioni tra contenitori in cui operazioni diverse possono avere livelli di isolamento diversi, è necessario comprendere la semantica di isolamento delle singole operazioni di lettura. Le operazioni di scrittura sono sempre isolate. Le scritture in transazioni diverse non possono avere un'influenza reciproca.  
   
  Un'operazione di lettura dei dati restituisce un numero di righe che soddisfa una condizione di filtro.  
   
- Operazioni di lettura vengono eseguite come parte di una transazione T. dei livelli di isolamento per le operazioni di lettura può essere riconosciute in termini di,  
+ Le letture vengono eseguite come parte di una transazione T. i livelli di isolamento per le operazioni di lettura possono essere interpretati in termini di,  
   
  Stato di commit  
  Lo stato di commit indica se il commit dei dati letti è garantito.  
@@ -80,9 +80,9 @@ commit
  La coerenza transazionale per un set di letture indica se per tutte le versioni delle righe lette è garantita l'inclusione di aggiornamenti esattamente dallo stesso set di transazioni.  
   
  Garanzie di stabilità per i dati letti fornite automaticamente alla transazione T.  
- La stabilità indica se operazioni di lettura della transazione sono ripetibili. ovvero se in caso di ripetizione di tali operazioni verrebbero restituite le stesse righe e le stesse versioni di riga.  
+ Stabilità indica se le letture della transazione sono ripetibili. ovvero se in caso di ripetizione di tali operazioni verrebbero restituite le stesse righe e le stesse versioni di riga.  
   
- Alcune garanzie fanno riferimento all'ora di fine logica della transazione. L'ora di fine logica è in genere l'ora in cui viene eseguito il commit della transazione nel database. Se la transazione accede a tabelle ottimizzate per la memoria, l'ora di fine logica è tecnicamente l'inizio della fase di convalida. (Per altre informazioni, vedere la discussione su durata delle transazioni nel [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Alcune garanzie fanno riferimento all'ora di fine logica della transazione. L'ora di fine logica è in genere l'ora in cui viene eseguito il commit della transazione nel database. Se la transazione accede a tabelle ottimizzate per la memoria, l'ora di fine logica è tecnicamente l'inizio della fase di convalida. Per ulteriori informazioni, vedere la discussione relativa alla durata delle transazioni nelle [transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Indipendentemente dal livello di isolamento, in una transazione (T) vengono sempre rilevati i relativi aggiornamenti:  
   
@@ -99,7 +99,7 @@ commit
  Vengono garantiti il commit e la stabilità dei dati letti fino all'ora di fine logica della transazione.  
   
  SERIALIZABLE  
- Tutte le garanzie di REPEATABLE READ oltre a scarto di righe fantasma e coerenza transazionale rispetto a tutte le operazioni di lettura serializzabili eseguite da T. fantasma prevenzione significa che l'operazione di analisi può restituire solo le righe aggiuntive scritte da T, ma nessuna righe scritte da altre transazioni.  
+ Tutte le garanzie di REPEATable READ e la coerenza delle transazioni fantasma rispetto a tutte le operazioni di lettura serializzabili eseguite da T. l'elusione fantasma significa che l'operazione di analisi può restituire solo righe aggiuntive scritte da T, ma no righe scritte da altre transazioni.  
   
  Si consideri la transazione seguente:  
   
@@ -135,7 +135,7 @@ commit
   
  Il lato basato su disco di una transazione T specificata raggiunge un determinato livello di isolamento X se viene soddisfatta una delle condizioni indicate di seguito:  
   
--   Inizia in X. Vale a dire l'impostazione predefinita della sessione era X, perché è stata eseguita `SET TRANSACTION ISOLATION LEVEL`, o è il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] predefinito.  
+-   Inizia in X. Ovvero, il valore predefinito della sessione è X, perché è stato `SET TRANSACTION ISOLATION LEVEL`eseguito o è l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impostazione predefinita.  
   
 -   Durante la transazione il livello di isolamento predefinito viene modificato in X utilizzando `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -172,7 +172,7 @@ commit
   
  Le tabelle con ottimizzazione per la memoria supportano i livelli di isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. Per le transazioni in modalità autocommit, nelle tabelle ottimizzate per la memoria è supportato il livello di isolamento READ COMMITTED.  
   
- Sono supportati gli scenari indicati di seguito:  
+ Sono supportati gli scenari seguenti:  
   
 -   Le transazioni tra contenitori READ UNCOMMITTED, READ COMMITTED e READ_COMMITTED_SNAPSHOT possono accedere alle tabelle ottimizzate per la memoria con livello di isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. Viene rispettata la garanzia READ COMMITTED per la transazione; per tutte le righe lette dalla transazione è stato eseguito il commit nel database.  
   
@@ -183,11 +183,11 @@ commit
   
  Per le transazioni tra contenitori di sola lettura nella modalità autocommit viene eseguito semplicemente il rollback alla fine della transazione. Non viene eseguita alcuna convalida.  
   
- Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida vedere la sezione sul rilevamento dei conflitti, convalida, e dipendenza di Commit consente di archiviare [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida, vedere la sezione relativa ai controlli di rilevamento dei conflitti, convalida e dipendenza di commit nelle [transazioni nelle tabelle ottimizzate](../relational-databases/in-memory-oltp/memory-optimized-tables.md)per la memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

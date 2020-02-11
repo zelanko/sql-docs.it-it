@@ -30,29 +30,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035420"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
-  **SQLdiag** è un'utilità di raccolta di dati diagnostici generica che può essere eseguita come applicazione console o come servizio. È possibile usare **SQLdiag** per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. L'utilità**SQLdiag** è stata creata per velocizzare e semplificare la raccolta delle informazioni diagnostiche necessarie per il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+  L'utilità **SQLdiag** è un'utilità di raccolta di dati diagnostici generica che può essere eseguita come applicazione console o come servizio. È possibile usare **SQLdiag** per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. L' **utilità SQLdiag** è progettata per accelerare e semplificare la [!INCLUDE[msCoName](../includes/msconame-md.md)] raccolta di informazioni di diagnostica per il servizio supporto tecnico clienti.  
   
 > [!NOTE]  
 >  Poiché questa utilità è soggetta a modifiche, le applicazioni o gli script che ne utilizzano gli argomenti della riga di comando o che dipendono dal suo comportamento potrebbero non funzionare correttamente nelle versioni future.  
   
- L'utilità**SQLdiag** può raccogliere i tipi di informazioni diagnostiche riportate di seguito:  
+ L' **utilità SQLdiag** può raccogliere i seguenti tipi di informazioni di diagnostica:  
   
 -   Registri di prestazioni di Windows  
   
--   Registri eventi di Windows  
+-   Log eventi di Windows  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tracce  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]tracce  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informazioni di blocco  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informazioni di blocco  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informazioni di configurazione  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]informazioni di configurazione  
   
  Per specificare i tipi di informazione che si vogliono raccogliere con l'utilità **SQLdiag** , modificare il file di configurazione SQLDiag.xml, descritto nella sezione seguente.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "63035420"
 > [!NOTE]  
 >  Per impostare la cartella corrente come percorso di supporto, specificare **%cd%** nella riga di comando come segue:  
 >   
->  **SQLDIAG /P %cd%**  
+>  **SQLdiag/P% CD%**  
   
  **/N** _output_folder_management_option_  
  Imposta la sovrascrittura o la ridenominazione della cartella di output all'avvio dell'utilità **SQLdiag** . Opzioni disponibili:  
@@ -109,45 +110,45 @@ ms.locfileid: "63035420"
  2 = all'avvio di **SQLdiag** , rinomina la cartella di output in SQLDIAG_00001, SQLDIAG_00002 e così via. Dopo aver rinominato la cartella di output corrente, **SQLdiag** scrive l'output nella cartella di output predefinita SQLDIAG.  
   
 > [!NOTE]  
->  Con**SQLdiag** l'output non viene accodato alla cartella di output corrente al momento dell'avvio. È possibile soltanto sovrascrivere la cartella di output predefinita (opzione 1) o rinominare la cartella (opzione 2), quindi l'output viene scritto nella nuova cartella di output predefinita denominata SQLDIAG.  
+>  **SQLdiag** non accoda l'output alla cartella di output corrente all'avvio. È possibile soltanto sovrascrivere la cartella di output predefinita (opzione 1) o rinominare la cartella (opzione 2), quindi l'output viene scritto nella nuova cartella di output predefinita denominata SQLDIAG.  
   
- **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *COMPUTER2 * * Machinen*] |*@machinelistfile*  
  Esegue l'override del computer specificato nel file di configurazione. Per impostazione predefinita il file di configurazione è SQLDiag.Xml o è impostato con il parametro **/I** . Quando si specifica più di un computer, separare ogni nome di computer con uno spazio.  
   
- L'utilizzo di *@machinelistfile* consente di specificare un nome di file di un elenco di computer da archiviare nel file di configurazione.  
+ L' *@machinelistfile* utilizzo di consente di specificare un nome file di un elenco di computer da archiviare nel file di configurazione.  
   
- **/C** _file_compression_type_  
+ **** _File_compression_type_ /c  
  Imposta il tipo di compressione usato per i file nella cartella di output **SQLdiag** . Opzioni disponibili:  
   
  0 = nessuna compressione (impostazione predefinita)  
   
  1 = compressione NTFS  
   
- **/B** [ **+** ]*start_time*  
+ **/B** [**+**]*start_time*  
  Specifica la data e l'ora di inizio della raccolta di dati diagnostici nel formato seguente:  
   
  AAAAMMGG_HH:MM:SS  
   
  L'ora viene specificata nel formato 24 ore. Per specificare ad esempio le 2 del pomeriggio deve essere specificato come **14:00:00**.  
   
- Usare **+** senza specificare la data, ovvero solo HH:MM:SS, per specificare un'ora in relazione alla data e all'ora correnti. Ad esempio, se si specifica **/B +02:00:00**, **SQLdiag** attenderà due ore prima di iniziare a raccogliere informazioni.  
+ Usare **+** senza la data (solo HH: mm: SS) per specificare un'ora relativa rispetto alla data e all'ora correnti. Ad esempio, se si specifica **/B +02:00:00**, **SQLdiag** attenderà due ore prima di iniziare a raccogliere informazioni.  
   
- Non inserire spazi tra **+** e il valore specificato per *start_time*.  
+ Non inserire uno spazio tra **+** e il *start_time*specificato.  
   
  Se si specifica un'ora di inizio già trascorsa, **SQLdiag** modifica forzatamente la data di inizio in modo che faccia riferimento a un periodo futuro. Se ad esempio si specifica **/B 01:00:00** e l'ora corrente è 08:00:00, **SQLdiag** modifica forzatamente la data di inizio in modo che venga impostata in corrispondenza del giorno successivo.  
   
  L'utilità **SQLdiag** usa l'ora locale del computer in cui è in esecuzione.  
   
- **/E** [ **+** ]*stop_time*  
+ **/E** [**+**]*stop_time*  
  Specifica la data e l'ora di arresto della raccolta di dati diagnostici nel formato seguente:  
   
  AAAAMMGG_HH:MM:SS  
   
  L'ora viene specificata nel formato 24 ore. Per specificare ad esempio le 2 del pomeriggio deve essere specificato come **14:00:00**.  
   
- Usare **+** senza specificare la data, ovvero solo HH:MM:SS, per specificare un'ora in relazione alla data e all'ora correnti. Se ad esempio si specifica un'ora di inizio e un'ora di fine usando **/B +02:00:00 /E +03:00:00**, **SQLdiag** attenderà 2 ore prima di iniziare a raccogliere informazioni. I dati verranno raccolti per 3 ore prima che l'utilità venga arrestata e chiusa. Se si omette **/B** , **SQLdiag** inizia a raccogliere subito i dati diagnostici e termina alla data e all'ora specificate da **/E**.  
+ Usare **+** senza la data (solo HH: mm: SS) per specificare un'ora relativa rispetto alla data e all'ora correnti. Se ad esempio si specifica un'ora di inizio e un'ora di fine usando **/B +02:00:00 /E +03:00:00**, **SQLdiag** attenderà 2 ore prima di iniziare a raccogliere informazioni. I dati verranno raccolti per 3 ore prima che l'utilità venga arrestata e chiusa. Se si omette **/B** , **SQLdiag** inizia a raccogliere subito i dati diagnostici e termina alla data e all'ora specificate da **/E**.  
   
- Non inserire spazi tra **+** e il valore specificato per *start_time* o *end_time*.  
+ Non inserire uno spazio tra **+** e il *start_time* o *end_time*specificati.  
   
  L'utilità **SQLdiag** usa l'ora locale del computer in cui è in esecuzione.  
   
@@ -156,23 +157,23 @@ ms.locfileid: "63035420"
   
  Ogni *SQLdiag_application_name* identifica un'istanza diversa di **SQLdiag**. Non esiste alcuna relazione tra un'istanza *SQLdiag_application_name* e il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- È possibile usare*SQLdiag_application_name* per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
+ *SQLdiag_application_name* può essere utilizzato per avviare o arrestare un'istanza specifica del servizio **SQLdiag** .  
   
  Ad esempio:  
   
- **SQLDIAG START /A** _SQLdiag_application_name_  
+ **Avvio dell'utilità SQLdiag** _SQLdiag_application_name_  
   
  È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio:  
   
- **SQLDIAG /R /A** _SQLdiag_application_name_  
+ **SQLDIAG/R/a** _SQLdiag_application_name_  
   
 > [!NOTE]  
->  **SQLdiag** aggiunge automaticamente il prefisso DIAG$ al nome dell'istanza specificato per *SQLdiag_application_name*. In questo modo viene messo a disposizione un nome di servizio appropriato se si registra **SQLdiag** come servizio.  
+>  **SQLdiag** aggiunge automaticamente il prefisso DIAG $ al nome dell'istanza specificato per *SQLdiag_application_name*. In questo modo viene messo a disposizione un nome di servizio appropriato se si registra **SQLdiag** come servizio.  
   
  /T { tcp [ ,*port* ] | np | lpc }  
  Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando il protocollo specificato.  
   
- tcp [,*port*]  
+ TCP [,*porta*]  
  Protocollo TCP/IP (Transmission Control Protocol/Internet Protocol). È possibile specificare facoltativamente un numero di porta per la connessione.  
   
  np  
@@ -196,11 +197,11 @@ ms.locfileid: "63035420"
   
  Utilizzare l'argomento della riga di comando **START** per avviare il servizio:  
   
- **SQLDIAG START**  
+ **AVVIO SQLDIAG**  
   
  È inoltre possibile utilizzare il comando **net start** per avviare il servizio:  
   
- **comando Net start SQLDIAG**  
+ **NET Start SQLdiag**  
   
  **/U**  
  Annulla la registrazione di **SQLdiag** come servizio.  
@@ -208,29 +209,29 @@ ms.locfileid: "63035420"
  Usare l'argomento **/A** anche se si annulla la registrazione di un'istanza denominata di **SQLdiag** .  
   
  **/L**  
- Esegue l'utilità **SQLdiag** in modalità continua quando si specificano un'ora di inizio o fine rispettivamente con gli argomenti **/B** o **/E** . L'utilità**SQLdiag** viene automaticamente riavviata in seguito all'arresto della raccolta di dati diagnostici a causa di una chiusura pianificata impostata tramite, ad esempio, l'argomento **/E** o **/X** .  
+ Esegue l'utilità **SQLdiag** in modalità continua quando si specificano un'ora di inizio o fine rispettivamente con gli argomenti **/B** o **/E** . **SQLdiag** viene riavviato automaticamente dopo l'arresto della raccolta di diagnostica a causa di un arresto pianificato. tramite, ad esempio, l'argomento **/E** o **/X** .  
   
 > [!NOTE]  
->  **SQLdiag** ignora l'argomento **/L** se non si specifica un'ora di inizio e fine con gli argomenti della riga di comando **/B** e **/E** .  
+>  **SQLdiag** ignora l'argomento **/l** se non si specifica un'ora di inizio o di fine usando gli argomenti della riga di comando **/b** e **/e** .  
   
  L'uso dell'argomento **/L** non implica la definizione della modalità del servizio. Per usare **/L** per l'esecuzione dell'utilità **SQLdiag** come servizio, specificare l'argomento nella riga di comando quando si registra il servizio.  
   
  **/X**  
- Esegue **SQLdiag** in modalità snapshot. L'utilità**SQLdiag** esegue uno snapshot di tutti i dati diagnostici configurati, quindi viene chiusa automaticamente.  
+ Esegue **SQLdiag** in modalità snapshot. **SQLdiag** esegue uno snapshot di tutte le attività di diagnostica configurate e quindi si arresta automaticamente.  
   
- **START** | **STOP** | **STOP_ABORT**  
- Avvia o arresta il servizio **SQLdiag** . **STOP_ABORT** forza il servizio di arrestarsi al più presto senza portare a termine la raccolta dei dati diagnostici in corso.  
+ **avvia** | **** arresto | **STOP_ABORT**  
+ Avvia o arresta il servizio **SQLdiag** . **STOP_ABORT** forza il servizio a arrestarsi il più rapidamente possibile senza completare la raccolta di dati diagnostici attualmente raccolti.  
   
  Questi argomenti di controllo del servizio devono essere i primi nella riga di comando quando vengono utilizzati. Ad esempio:  
   
- **SQLDIAG START**  
+ **AVVIO SQLDIAG**  
   
  L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Ad esempio:  
   
- **SQLDIAG START /A** _SQLdiag_application_name_  
+ **Avvio dell'utilità SQLdiag** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>Requisiti di sicurezza  
- Se l'utilità **SQLdiag** non viene eseguita in modalità generica specificando l'argomento della riga di comando **/G** , l'utente che esegue **SQLdiag** deve essere membro del gruppo **Administrators** di Windows e membro del ruolo predefinito del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. Per impostazione predefinita, l'utilità **SQLdiag** esegue la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, ma supporta anche l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Se l'utilità **SQLdiag** non viene eseguita in modalità generica specificando l'argomento della riga di comando **/G** , l'utente che esegue **SQLdiag** deve essere membro del gruppo **Administrators** di Windows e membro del ruolo predefinito del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** . Per impostazione predefinita, l'utilità **SQLdiag** esegue la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, ma supporta anche l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  Le prestazioni relative all'esecuzione dell'utilità **SQLdiag** dipendono dal tipo di dati diagnostici configurati per la raccolta. Se ad esempio l'utilità **SQLdiag** è stata configurata per raccogliere informazioni di traccia di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , maggiore è il numero di classi degli eventi selezionate per la raccolta delle tracce, maggiore sarà l'impatto sulle prestazioni del server.  
@@ -259,7 +260,7 @@ ms.locfileid: "63035420"
   
  In caso di uso dell'utilità **SQLdiag** per diagnosticare un problema che è possibile riprodurre, attendere la visualizzazione di questo messaggio prima di riprodurre il problema nel server.  
   
- L'utilità**SQLdiag** raccoglie la maggior parte dei dati diagnostici in parallelo. Tutti i dati diagnostici vengono raccolti con la connessione a strumenti, ad esempio l'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **di** oppure il processore dei comandi di Windows, tranne quando le informazioni vengono raccolte dai registri di prestazioni e dai registri eventi di Windows. L'utilità**SQLdiag** usa un thread di lavoro per computer per monitorare la raccolta di dati diagnostici da questi strumenti, spesso attendendo contemporaneamente il completamento della raccolta da parte di più strumenti. Durante il processo di raccolta l'utilità **SQLdiag** instrada l'output di ogni dato diagnostico alla cartella di output.  
+ **SQLdiag** raccoglie la maggior parte dei dati diagnostici in parallelo. Tutti i dati diagnostici vengono raccolti con la connessione a strumenti, ad esempio l'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **di** oppure il processore dei comandi di Windows, tranne quando le informazioni vengono raccolte dai registri di prestazioni e dai registri eventi di Windows. **SQLdiag** usa un thread di lavoro per computer per monitorare la raccolta dei dati di diagnostica di questi altri strumenti, spesso in attesa del completamento di diversi strumenti. Durante il processo di raccolta l'utilità **SQLdiag** instrada l'output di ogni dato diagnostico alla cartella di output.  
   
 ## <a name="stopping-data-collection"></a>Arresto della raccolta di dati  
  Dopo l'inizio della raccolta di dati diagnostici, l'utilità **SQLdiag** continua a raccogliere informazioni finché non viene arrestata manualmente oppure in base all'ora di arresto specificata. Per configurare l'arresto dell'esecuzione dell'utilità **SQLdiag** a un'ora specifica, usare l'argomento **/E** , che consente di specificare l'ora di arresto desiderata, oppure l'argomento **/X** , che imposta l'esecuzione dell'utilità **SQLdiag** in modalità snapshot.  
@@ -275,7 +276,7 @@ ms.locfileid: "63035420"
   
  Premere Ctrl+C due volte per terminare tutti i processi figlio di raccolta dei dati diagnostici e terminare l'applicazione immediatamente.  
   
- **Per arrestare l'esecuzione dell'utilità SQLdiag come servizio**  
+ **Per arrestare l'utilità SQLdiag durante l'esecuzione come servizio**  
   
  Se si esegue l'utilità **SQLdiag** come servizio, eseguire **SQLDiag STOP** nella cartella di avvio di **SQLdiag** per arrestarlo.  
   
@@ -286,7 +287,7 @@ SQLDIAG STOP /A Instance1
 ```  
   
 > [!NOTE]  
->  **/A** è il solo argomento della riga di comando che può essere utilizzato con **START**, **STOP**o **STOP_ABORT**. Se è necessario specificare un'istanza denominata di **SQLdiag** con uno dei verbi di controllo del servizio, specificare **/A** dopo il verbo di controllo nella riga di comando, come indicato nell'esempio di sintassi precedente. I verbi di controllo del servizio devono essere il primo argomento nella riga di comando quando vengono utilizzati.  
+>  **/A** è l'unico argomento della riga di comando che può essere utilizzato con **Start**, **Stop**o **STOP_ABORT**. Se è necessario specificare un'istanza denominata di **SQLdiag** con uno dei verbi di controllo del servizio, specificare **/A** dopo il verbo di controllo nella riga di comando, come indicato nell'esempio di sintassi precedente. I verbi di controllo del servizio devono essere il primo argomento nella riga di comando quando vengono utilizzati.  
   
  Per arrestare il servizio al più presto, eseguire **SQLDIAG STOP_ABORT** nella cartella di avvio dell'utilità. Questo comando annulla tutte le raccolte di dati diagnostici in corso senza attenderne il completamento.  
   
@@ -294,7 +295,7 @@ SQLDIAG STOP /A Instance1
 >  Usare **SQLDiag STOP** o **SQLDIAG STOP_ABORT** per arrestare il servizio **SQLdiag** . Non usare la console dei servizi Windows per arrestare **SQLdiag** o gli altri servizi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Avvio e arresto automatici dell'utilità SQLdiag  
- Per avviare e arrestare automaticamente la raccolta di dati diagnostici a un'ora specificata, usare gli argomenti **/B**_start_time_ e **/E**_stop_time_ nel formato 24 ore. Se, ad esempio, si sta cercando di risolvere un problema che si verifica regolarmente alle 02:00:00 circa, è possibile configurare l'utilità **SQLdiag** in modo che inizi automaticamente a raccogliere dati diagnostici alle 01:00 e si arresti automaticamente alle 03:00:00. Usare gli argomenti **/B** e **/E** per specificare l'ora di inizio e di fine. Utilizzare il formato 24 ore per specificare la data e l'ora di inizio e fine corrette nel formato AAAAMMGG_HH:MM:SS. Per specificare una data di inizio o fine relativa, anteporre il segno **+** all'ora di inizio e fine omettendo la parte relativa alla data (AAAAMMGG_) come illustrato nell'esempio seguente. In questo modo, l'utilità **SQLdiag** attende un'ora prima di iniziare a raccogliere le informazioni. I dati vengono raccolti per 3 ore prima che l'utilità venga arrestata e chiusa.  
+ Per avviare e arrestare automaticamente la raccolta dei dati di diagnostica a un'ora specificata, utilizzare gli argomenti **/b**_start_time_ e **/e**_stop_time_ , utilizzando la notazione a 24 ore. Se, ad esempio, si sta cercando di risolvere un problema che si verifica regolarmente alle 02:00:00 circa, è possibile configurare l'utilità **SQLdiag** in modo che inizi automaticamente a raccogliere dati diagnostici alle 01:00 e si arresti automaticamente alle 03:00:00. Usare gli argomenti **/B** e **/E** per specificare l'ora di inizio e di fine. Utilizzare il formato 24 ore per specificare la data e l'ora di inizio e fine corrette nel formato AAAAMMGG_HH:MM:SS. Per specificare un'ora di inizio o di fine relativa, anteporre al prefisso l'ora **+** di inizio e di fine e omettere la parte relativa alla data (YYYYMMDD_), come illustrato nell'esempio seguente, che fa sì che l' **utilità SQLdiag** attenda 1 ora prima di iniziare a raccogliere informazioni, quindi raccoglie le informazioni per 3 ore prima che venga arrestata e chiusa:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -302,13 +303,13 @@ sqldiag /B +01:00:00 /E +03:00:00
   
  Se si specifica un valore relativo per *start_time* , l'utilità **SQLdiag** viene avviata a un'ora relativa rispetto alla data e all'ora correnti. Se si specifica un valore relativo per *end_time* , l'utilità **SQLdiag** viene interrotta a un'ora relativa rispetto al valore specificato per *start_time*. Se la data o l'ora di inizio e fine specificate sono già trascorse, l'utilità **SQLdiag** modifica forzatamente la data e l'ora di inizio in modo che facciano riferimento a un periodo futuro.  
   
- Ciò ha implicazioni molto importanti sulle date di inizio e fine selezionate. Si consideri l'esempio seguente:  
+ Ciò ha implicazioni molto importanti sulle date di inizio e fine selezionate. Prendere in considerazione gli esempi seguenti:  
   
 ```  
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Se l'ora corrente è 08:00, l'ora di fine è già trascorsa prima dell'inizio della raccolta di dati diagnostici. Poiché l'utilità **SQLDiag** modifica automaticamente le date di inizio e fine riferendole al giorno successivo qualora siano già trascorse, in questo esempio la raccolta di dati diagnostici inizia alle 09:00 della data corrente (è stata specificata un'ora di inizio relativa con il prefisso **+** ) e continua fino alle 08:30 del giorno successivo.  
+ Se l'ora corrente è 08:00, l'ora di fine è già trascorsa prima dell'inizio della raccolta di dati diagnostici. Poiché l'utilità **SQLDiag** modifica automaticamente le date di inizio e fine riferendole al giorno successivo qualora siano già trascorse, in questo esempio la raccolta di dati diagnostici inizia alle 09:00 della data corrente (è stata specificata un'ora di inizio relativa con il prefisso **+**) e continua fino alle 08:30 del giorno successivo.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Arresto e riavvio di SQLdiag per la raccolta giornaliera di dati diagnostici  
  Per raccogliere un set specifico di dati diagnostici su base giornaliera senza dover avviare e arrestare manualmente l'utilità **SQLdiag**, usare l'argomento **/L** . L'argomento **/L** consente di impostare l'esecuzione continua dell'utilità **SQLdiag** grazie all'impostazione del riavvio automatico dell'utilità dopo un'interruzione pianificata. Se si specifica l'argomento **/L** e l'utilità **SQLdiag** viene arrestata perché ha raggiunto l'ora di fine specificata dall'argomento **/E** oppure perché viene eseguita in modalità snapshot specificata con l'argomento **/X** , l'utilità **SQLdiag** non viene chiusa, bensì riavviata.  
@@ -328,17 +329,17 @@ sqldiag /B 03:00:00 /X /L
 ## <a name="running-sqldiag-as-a-service"></a>Esecuzione dell'utilità SQLdiag come servizio  
  Se si vuole usare l'utilità **SQLdiag** per raccogliere dati diagnostici per lunghi periodi di tempo durante i quali potrebbe essere necessario disconnettersi dal computer sul quale l'utilità **SQLdiag** è in esecuzione, è possibile eseguire l'utilità come servizio.  
   
- **Per registrare l'utilità SQLDiag in modo che venga eseguita come servizio**  
+ **Per registrare l'utilità SQLdiag in modo che venga eseguita come servizio**  
   
  È possibile registrare l'utilità **SQLdiag** in modo che venga eseguita come servizio specificando l'argomento **/R** nella riga di comando. L'utilità **SQLdiag** viene registrata in modo che venga eseguita come servizio. Il nome del servizio dell'utilità **SQLdiag** è SQLDIAG. Qualsiasi altro argomento specificato nella riga di comando durante la registrazione dell'utilità **SQLDiag** come servizio viene memorizzato e riutilizzato quando il servizio viene avviato.  
   
- Per modificare il nome del servizio SQLDIAG predefinito, usare l'argomento della riga di comando **/A** per specificare un altro nome. **SQLdiag** aggiunge automaticamente il prefisso DIAG$ a qualsiasi nome dell'istanza di **SQLdiag** specificato con **/A** per creare nomi di servizio appropriati.  
+ Per modificare il nome del servizio SQLDIAG predefinito, usare l'argomento della riga di comando **/A** per specificare un altro nome. **SQLdiag** aggiunge automaticamente il prefisso DIAG $ a qualsiasi nome dell'istanza di **SQLdiag** specificato con **/a** per creare nomi di servizio appropriati.  
   
- **Per annullare la registrazione del servizio SQLDIAG**  
+ **Per annullare la registrazione del servizio SQLdiag**  
   
  Per annullare la registrazione del servizio, specificare l'argomento **/U** . L'annullamento della registrazione dell'utilità **SQLdiag** come servizio comporta l'eliminazione anche delle chiavi del Registro di sistema di Windows.  
   
- **Per avviare o riavviare il servizio SQLDIAG**  
+ **Per avviare o riavviare il servizio SQLdiag**  
   
  Per avviare o riavviare il servizio SQLDIAG, eseguire **SQLDiag START** dalla riga di comando.  
   
@@ -355,10 +356,10 @@ SQLDIAG START /A Instance1
  La sospensione del servizio dell'utilità **SQLdiag** non è supportata.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Esecuzione di più istanze di SQLdiag  
- È possibile eseguire più istanze di **SQLdiag** nello stesso computer specificando **/A** _SQLdiag_application_name_ nella riga di comando. Ciò consente di raccogliere diversi set di dati diagnostici contemporaneamente dalla stessa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È ad esempio possibile configurare un'istanza denominata di **SQLdiag** per eseguire in modo continuo una raccolta di dati lightweight. Se quindi si verifica un problema specifico relativo a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile eseguire l'istanza di **SQLdiag** predefinita per raccogliere i dati diagnostici relativi a quel problema o per la raccolta di un set di dati diagnostici su richiesta del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] per elaborare una diagnosi relativa al problema.  
+ Eseguire più istanze di **SQLdiag** nello stesso computer specificando **/a**_SQLdiag_application_name_ nella riga di comando. Ciò consente di raccogliere diversi set di dati diagnostici contemporaneamente dalla stessa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È ad esempio possibile configurare un'istanza denominata di **SQLdiag** per eseguire in modo continuo una raccolta di dati lightweight. Se quindi si verifica un problema specifico relativo a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile eseguire l'istanza di **SQLdiag** predefinita per raccogliere i dati diagnostici relativi a quel problema o per la raccolta di un set di dati diagnostici su richiesta del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)] per elaborare una diagnosi relativa al problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Raccolta dei dati diagnostici dalle istanze di SQL Server del cluster  
- L'utilità**SQLdiag** supporta la raccolta di dati diagnostici dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per raccogliere dati diagnostici dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], verificare di aver specificato **"."** per l'attributo **name** dell'elemento **\<Machine>** nel file di configurazione SQLDiag.Xml e di non aver specificato l'argomento **/G** nella riga di comando. Per impostazione predefinita, viene specificato **"."** per l'attributo **name** nel file di configurazione e l'argomento **/G** è disabilitato. Non è in genere necessario modificare il file di configurazione o gli argomenti della riga di comando durante la raccolta di dati da un'istanza cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ **SQLdiag** supporta la raccolta di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] diagnostica da istanze cluster. Per raccogliere dati diagnostici dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], verificare di aver specificato **"."** per l'attributo **name** dell'elemento **\<Machine>** nel file di configurazione SQLDiag.Xml e di non aver specificato l'argomento **/G** nella riga di comando. Per impostazione predefinita, viene specificato **"."** per l'attributo **name** nel file di configurazione e l'argomento **/G** è disabilitato. Non è in genere necessario modificare il file di configurazione o gli argomenti della riga di comando durante la raccolta di dati da un'istanza cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Se si specifica **"."** come nome del computer, l'utilità **SQLdiag** rileva che è in esecuzione in un cluster e contemporaneamente recupera i dati diagnostici da tutte le istanze virtuali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installate nel cluster. Se si desidera raccogliere dati diagnostici da una sola istanza virtuale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer, specificare l'istanza virtuale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'attributo **name** dell'elemento **\<Machine>** nel file SQLDiag.Xml.  
   
@@ -366,6 +367,6 @@ SQLDIAG START /A Instance1
 >  Per raccogliere le informazioni di traccia di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] dalle istanze cluster di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è necessario abilitare le condivisioni amministrative (ADMIN$) nel cluster.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](command-prompt-utility-reference-database-engine.md)  
+ [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

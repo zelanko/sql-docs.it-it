@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046684"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
-  Tutte le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituiscono un valore. **SQLProcedures** riporta SQL_PT_FUNCTION per il set di risultati PROCEDURE_TYPE colonna.  
+  Tutte le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituiscono un valore. **SQLProcedures** restituisce SQL_PT_FUNCTION per la colonna del set di risultati PROCEDURE_TYPE.  
   
- **SQLProcedures** restituisce SQL_SUCCESS se esistono o meno valori per *CatalogName, SchemaName* oppure *ProcName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
+ **SQLProcedures** restituisce SQL_SUCCESS se sono presenti o meno valori per i parametri *CatalogName, SchemaName* o *ProcName* . **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
- **SQLProcedures** può essere eseguito su un cursore server statico. Un tentativo di eseguire **SQLProcedures** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
+ **SQLProcedures** può essere eseguito su un cursore del server statico. Il tentativo di eseguire **SQLProcedures** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, a indicare che il tipo di cursore è stato modificato.  
   
- **SQLProcedures** restituisce informazioni sulle procedure i cui nomi corrispondono *ProcName* e può essere eseguito dall'utente corrente o per cui l'utente corrente dispone dell'autorizzazione VIEW DEFINITION.  
+ **SQLProcedures** restituisce informazioni su tutte le routine i cui nomi corrispondono a *ProcName* e possono essere eseguite dall'utente corrente o per cui all'utente corrente è stata concessa l'autorizzazione View definition.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [SQLProcedures (funzione)](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà (ADO) di riga | Microsoft Docs
+title: Proprietà Row (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917111"
 ---
 # <a name="row-property-ado"></a>Proprietà Row (ADO)
-Ottiene o imposta un DB OLE **riga** oggetto da o in un [interfaccia ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) oggetto. Quando si usa **put_Row** per impostare un **riga** dell'oggetto, una riga viene trasformata in un oggetto ADO **Record** oggetto.  
+Ottiene o imposta un oggetto OLE DB **riga** da o su un oggetto di [Interfaccia ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Quando si utilizza **put_Row** per impostare un oggetto **riga** , una riga viene trasformata in un oggetto **record** ADO.  
   
 ## <a name="readwritesyntax"></a>Lettura/scrittura. Sintassi  
   
@@ -38,13 +38,13 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="parameters"></a>Parametri  
  *ppRow*  
- Puntatore a OLE DB **riga** oggetto.  
+ Puntatore a un oggetto OLE DB **riga** .  
   
- *pRow*  
- OLE DB **riga** oggetto.  
+ *Prua*  
+ Oggetto OLE DB **riga** .  
   
 ## <a name="return-values"></a>Valori restituiti  
- Metodo di questa proprietà restituisce i valori HRESULT standard, tra cui S_OK ed E_FAIL.  
+ Questo metodo di proprietà restituisce i valori HRESULT standard, inclusi S_OK e E_FAIL.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Interfaccia ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

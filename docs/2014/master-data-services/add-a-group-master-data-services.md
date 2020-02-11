@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480139"
 ---
 # <a name="add-a-group-master-data-services"></a>Aggiungere un gruppo (Master Data Services)
   Aggiungere un gruppo all'elenco **Gruppi** in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per iniziare il processo di assegnazione dell'autorizzazione all'applicazione Web. Prima che un utente in un gruppo possa accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], è necessario assegnare l'autorizzazione di gruppo a una o più aree funzionali e oggetti modello.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
@@ -50,6 +50,6 @@ ms.locfileid: "65480139"
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [&#40;di sicurezza Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

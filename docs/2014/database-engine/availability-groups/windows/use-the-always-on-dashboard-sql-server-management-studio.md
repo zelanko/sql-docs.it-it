@@ -1,5 +1,5 @@
 ---
-title: Usare il Dashboard AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+title: Usare il dashboard AlwaysOn (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788728"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utilizzare il Dashboard AlwaysOn (SQL Server Management Studio)
@@ -61,13 +61,13 @@ ms.locfileid: "62788728"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Per avviare il AlwaysOn Dashboard  
+##  <a name="SSMSProcedure"></a>Per avviare il dashboard AlwaysOn  
   
 1.  In Esplora oggetti connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si desidera eseguire il dashboard AlwaysOn.  
   
 2.  Espandere il nodo **Disponibilità elevata AlwaysOn** , fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità** , quindi fare clic su **Mostra dashboard**.  
   
-###  <a name="DashboardOptions"></a> Per modificare le opzioni del Dashboard AlwaysOn  
+###  <a name="DashboardOptions"></a>Per modificare le opzioni del dashboard AlwaysOn  
  È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard AlwaysOn di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'aggiornamento automatico e l'abilitazione di criteri AlwaysOn definiti automaticamente.  
   
 1.  Dal menu **Strumenti** scegliere **Opzioni**.  
@@ -76,7 +76,7 @@ ms.locfileid: "62788728"
   
 3.  Per abilitare criteri definiti dall'utente, selezionare **Abilita criteri AlwaysOn definiti dall'utente**.  
   
-##  <a name="AvGroupsView"></a> Riepilogo del gruppo di disponibilità  
+##  <a name="AvGroupsView"></a>Riepilogo gruppo di disponibilità  
  Nella schermata del gruppo di disponibilità viene visualizzata una riga di riepilogo per ogni gruppo di disponibilità per il quale l'istanza del server connesso ospita una replica. In questo riquadro sono visualizzate le colonne seguenti:  
   
  **Nome gruppo di disponibilità**  
@@ -88,39 +88,39 @@ ms.locfileid: "62788728"
  **Modalità di failover**  
  Visualizza la modalità di failover per cui è configurata la replica. I possibili valori per le modalità di failover sono:  
   
--   **Automatico** Indica che una o più repliche sono in modalità di failover automatico.  
+-   **Automatico**. Indica che una o più repliche sono in modalità di failover automatico.  
   
 -   **Manuale**. Indica che non vi sono repliche in modalità di failover automatico.  
   
  **Problemi**  
- Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Fare clic sulle intestazioni di colonna per ordinare le informazioni sul gruppo di disponibilità in base al nome del gruppo di disponibilità, all'istanza primaria, alla modalità di failover o al problema.  
   
-##  <a name="AvGroupDetails"></a> Dettagli del gruppo di disponibilità  
+##  <a name="AvGroupDetails"></a>Dettagli del gruppo di disponibilità  
  Le informazioni dettagliate riportate di seguito vengono visualizzate per il gruppo di disponibilità selezionato nello schermata di riepilogo:  
   
- **Stato gruppo di disponibilità**  
+ **Stato del gruppo di disponibilità**  
  Visualizza lo stato di integrità del gruppo di disponibilità.  
   
- **Primary instance**  
+ **Istanza primaria**  
  Nome dell'istanza del server che ospita la replica primaria del gruppo di disponibilità.  
   
- **Failover mode**  
+ **Modalità di failover**  
  Visualizza la modalità di failover per cui è configurata la replica. I possibili valori per le modalità di failover sono:  
   
--   **Automatico** Indica che una o più repliche sono in modalità di failover automatico.  
+-   **Automatico**. Indica che una o più repliche sono in modalità di failover automatico.  
   
 -   **Manuale**. Indica che non vi sono repliche in modalità di failover automatico.  
   
- **Stato cluster**  
+ **Stato del cluster**  
  Nome e stato del cluster in cui l'istanza del server connesso e del gruppo di disponibilità è un nodo membro.  
   
-##  <a name="AvReplicaDetails"></a> Dettagli replica di disponibilità  
+##  <a name="AvReplicaDetails"></a>Dettagli replica di disponibilità  
  Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne seguenti:  
   
- **Name**  
+ **Nome**  
  Nome dell'istanza del server che ospita la replica di disponibilità. Questa colonna viene visualizzata per impostazione predefinita.  
   
  **Ruolo**  
@@ -129,7 +129,7 @@ ms.locfileid: "62788728"
  **Modalità di failover**  
  Visualizza la modalità di failover per cui è configurata la replica. I possibili valori per le modalità di failover sono:  
   
--   **Automatico** Indica che una o più repliche sono in modalità di failover automatico.  
+-   **Automatico**. Indica che una o più repliche sono in modalità di failover automatico.  
   
 -   **Manuale**. Indica che non vi sono repliche in modalità di failover automatico.  
   
@@ -138,29 +138,29 @@ ms.locfileid: "62788728"
   
 -   **Non sincronizzato**. Uno o più database nella replica non sono sincronizzati o non ne è ancora stato creato un join al gruppo di disponibilità.  
   
--   **Sincronizzazione in corso**. Uno o più database nella replica vengono sincronizzati.  
+-   **Sincronizzazione**in corso. Uno o più database nella replica vengono sincronizzati.  
   
--   **Sincronizzato**. Tutti i database nella replica secondaria sono sincronizzati con i database primari corrispondenti nella replica primaria corrente o nell'ultima replica primaria.  
+-   **Sincronizzazione**completata. Tutti i database nella replica secondaria sono sincronizzati con i database primari corrispondenti nella replica primaria corrente o nell'ultima replica primaria.  
   
     > [!NOTE]  
     >  Nella modalità prestazioni, il database non si trova mai nello stato sincronizzato.  
   
--   **NULL**. Stato sconosciuto. Si ottiene questo valore quando l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ovvero il nodo locale non fa parte del quorum WSFC.  
+-   **Valore null**. Stato sconosciuto. Si ottiene questo valore quando l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ovvero il nodo locale non fa parte del quorum WSFC.  
   
  **Problemi**  
- Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modalità di disponibilità**  
  Indica la proprietà della replica impostata separatamente per ogni replica di disponibilità. Questo valore è nascosto per impostazione predefinita. I valori possibili sono:  
   
--   **Asincrona**. La replica secondaria non è mai sincronizzata con la replica primaria.  
+-   **Asincrono**. La replica secondaria non è mai sincronizzata con la replica primaria.  
   
--   **Synchronous**. Quando si esegue l'aggiornamento al database primario, un database secondario entra in questo stato e rimane aggiornato finché continua la sincronizzazione dati per il database.  
+-   **Sincrono**. Quando si esegue l'aggiornamento al database primario, un database secondario entra in questo stato e rimane aggiornato finché continua la sincronizzazione dati per il database.  
   
- **Modalità connessione primaria**  
+ **Modalità di connessione primaria**  
  Indica la modalità utilizzata per connettersi alla replica primaria.  Questo valore è nascosto per impostazione predefinita.  
   
- **Modalità connessione secondaria**  
+ **Modalità di connessione secondaria**  
  Indica la modalità utilizzata per connettersi alla replica secondaria.  Questo valore è nascosto per impostazione predefinita.  
   
  **Stato connessione**  
@@ -172,24 +172,24 @@ ms.locfileid: "62788728"
   
     -   Sulla replica secondaria, dopo avere rilevato che è disconnessa, tenta di riconnettersi alla replica primaria.  
   
--   **Connected**: Una replica di disponibilità remota attualmente connessa alla replica locale.  
+-   **Connessione interconnessa**. Una replica di disponibilità remota attualmente connessa alla replica locale.  
   
  **Stato operativo**  
  Indica lo stato operativo corrente della replica secondaria. Questo valore è nascosto per impostazione predefinita. I valori possibili sono:  
   
- **0**. Failover in sospeso  
+ **0**. failover in sospeso  
   
- **1**. In sospeso  
+ **1**. in sospeso  
   
- **2**. Online  
+ **2**. online  
   
- **3**. Offline  
+ **3**. offline  
   
- **4**. Non riuscito  
+ **4**. operazione non riuscita  
   
- **5**. Errore, nessun quorum  
+ **5**. non riuscito, nessun quorum  
   
- **NULL**. La replica non è locale.  
+ **Valore null**. La replica non è locale.  
   
  **Ultimo errore di connessione.**  
  Numero dell'ultimo errore di connessione.  Questo valore è nascosto per impostazione predefinita.  
@@ -197,20 +197,20 @@ ms.locfileid: "62788728"
  **Descrizione ultimo errore di connessione**  
  Descrizione dell'ultimo errore di connessione.  Questo valore è nascosto per impostazione predefinita.  
   
- **Ora dell'ultimo errore di connessione**  
+ **Timestamp dell'ultimo errore di connessione**  
  Timestamp dell'ultimo errore di connessione. Questo valore è nascosto per impostazione predefinita.  
   
 > [!NOTE]  
 >  Per informazioni sui contatori delle prestazioni per le repliche di disponibilità, vedere [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Per raggruppare le informazioni su un gruppo di disponibilità  
+##  <a name="AvDbDetails"></a>Per raggruppare le informazioni sul gruppo di disponibilità  
  Per raggruppare le informazioni, fare clic su **Raggruppa per**, quindi selezionare una delle opzioni seguenti:  
   
 -   **Repliche di disponibilità**  
   
 -   **Database di disponibilità**  
   
--   **Synchronization state**  
+-   **Stato di sincronizzazione**  
   
 -   **Conformità del failover**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62788728"
   
  Nel riquadro in cui sono visualizzate le informazioni raggruppate sono presenti le colonne seguenti:  
   
- **Name**  
+ **Nome**  
  Nome del database di disponibilità. Questo valore è visualizzato per impostazione predefinita.  
   
  **Replica**  
@@ -233,7 +233,7 @@ ms.locfileid: "62788728"
   
     -   Per un database secondario, indica che il database non ha ancora avviato la sincronizzazione del log a causa di un problema di connessione, è stato sospeso o si trova in stati di transizione durante l'avvio o un cambio di ruolo.  
   
--   **Sincronizzazione in corso**.  
+-   **Sincronizzazione**in corso.  
   
      Su una replica primaria:  
   
@@ -243,7 +243,7 @@ ms.locfileid: "62788728"
   
      Su una replica secondaria, indica che è in corso uno spostamento dati attivo per quella replica.  
   
--   **Sincronizzato**.  
+-   **Sincronizzazione**completata.  
   
      Per un database primario, indica che almeno un database secondario è sincronizzato.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "62788728"
     > [!CAUTION]  
     >  Quando un database si trova nello stato INITIALIZING, il failover forzato sulla replica secondaria lascerà sempre il database in uno stato in cui non può essere avviato.  
   
- **Failover Readiness**  
+ **Conformità failover**  
  Indica per quale replica di disponibilità è possibile eseguire il failover con o senza la potenziale perdita di dati. Questa colonna viene visualizzata per impostazione predefinita. I valori possibili sono:  
   
 -   **Perdita di dati**  
@@ -277,7 +277,7 @@ ms.locfileid: "62788728"
   
 -   **Critico**. Fare clic per visualizzare i problemi critici.  
   
- Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Sospeso**  
  Indica se il database è **Sospeso** o **Ripreso**. Questo valore è nascosto per impostazione predefinita.  
@@ -303,10 +303,10 @@ ms.locfileid: "62788728"
  **Dimensione coda di rollforward (KB)**  
  Indica il numero di record del log nei file di log della replica secondaria di cui non è stato ancora eseguito il rollforward. Questo valore è nascosto per impostazione predefinita.  
   
- **Velocità fase di rollforward (KB/sec)**  
+ **Velocità rollforward (KB/sec)**  
  Indica la velocità in KB al secondo alla quale viene eseguito il rollforward dei record di log. Questo valore è nascosto per impostazione predefinita.  
   
- **Velocità di invio flusso di file (KB/sec)**  
+ **Velocità di invio FileStream (KB/sec)**  
  Indica la velocità del flusso di file in KB al secondo con cui avviene l'invio delle transazioni alla replica. Questo valore è nascosto per impostazione predefinita.  
   
  **LSN di fine log**  
@@ -330,10 +330,10 @@ ms.locfileid: "62788728"
  **Ora ultimo invio**  
  Indica l'ora di invio dell'ultimo blocco del log. Questo valore è nascosto per impostazione predefinita.  
   
- **LSN ultima ricezione**  
+ **LSN ultimo ricezione**  
  Indica il punto fino a cui tutti i blocchi di log sono stati ricevuti dalla replica secondaria che ospita il database secondario. Questo valore è nascosto per impostazione predefinita.  
   
- **Ora ultima ricezione**  
+ **Ora dell'ultima ricezione**  
  Indica l'ora in cui è stato letto l'identificatore del blocco di log nell'ultimo messaggio ricevuto sulla replica secondaria. Questo valore è nascosto per impostazione predefinita.  
   
  **LSN ultima finalizzazione**  
@@ -342,18 +342,18 @@ ms.locfileid: "62788728"
  **Ora ultima finalizzazione**  
  Indica l'ora di ricezione dell'identificatore del blocco di log per il valore LSN finale sulla replica secondaria. Questo valore è nascosto per impostazione predefinita.  
   
- **LSN ultimo rollforward**  
+ **LSN ultimo RedOne**  
  Indica l'LSN effettivo del record di log di cui è stato eseguito il rollforward per ultimo nella replica secondaria. Questo valore è nascosto per impostazione predefinita.  
   
- **Ora ultimo rollforward**  
+ **Ora ultimo riesecuzione**  
  Indica l'ora di rollforward dell'ultimo record del log nel database secondario. Questo valore è nascosto per impostazione predefinita.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Usare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [sys. dm_os_performance_counters &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

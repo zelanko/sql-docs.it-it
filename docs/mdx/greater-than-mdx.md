@@ -1,5 +1,5 @@
 ---
-title: '&gt; (Maggiore di) (MDX) | Microsoft Docs'
+title: '&gt;(Maggiore di) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906032"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt; (Maggiore di) (MDX)
+# <a name="gt-greater-than-mdx"></a>&gt;(Maggiore di) MDX
 
 
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è maggiore di quello di un'altra espressione MDX.  
@@ -34,9 +34,9 @@ MDX_Expression > MDX_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano basato sulle condizioni seguenti:  
   
--   **true** se entrambi i parametri sono non null e il primo parametro è un valore che è maggiore del valore del secondo parametro.  
+-   **true** se entrambi i parametri sono non null e il primo parametro ha un valore maggiore del valore del secondo parametro.  
   
--   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale a o inferiore al valore del secondo parametro.  
+-   **false** se entrambi i parametri sono non null e il primo parametro ha un valore uguale o minore del valore del secondo parametro.  
   
 -   Null se uno o entrambi i parametri restituiscono un valore Null.  
   
@@ -62,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

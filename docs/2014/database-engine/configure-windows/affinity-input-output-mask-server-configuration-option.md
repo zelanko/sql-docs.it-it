@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813679"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opzione di configurazione del server Affinity Mask I/O
-  Per implementare l'elaborazione multitasking, talvolta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 e Windows Server 2003 spostano i thread dei processi tra diversi processori. Nonostante dal punto di vista del sistema operativo questa attività sia efficiente, essa può ridurre le prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con carichi di lavoro di sistema eccessivi perché i dati vengono caricati ripetutamente nella cache di ogni processore. In tali condizioni, l'assegnazione dei processori a specifici thread può aumentare le prestazioni eliminando il ricaricamento dei processori. Questa associazione tra un thread e un processore è definita affinità processori.  
+  Per implementare l'elaborazione multitasking, talvolta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 e Windows Server 2003 spostano i thread dei processi tra diversi processori. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In tali condizioni, l'assegnazione dei processori a specifici thread può aumentare le prestazioni eliminando il ricaricamento dei processori. Questa associazione tra un thread e un processore è definita affinità processori.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'affinità processori per mezzo di due opzioni affinity mask: **affinity mask** (nota anche come **CPU affinity mask**) e **affinity I/O mask**. Per altre informazioni sull'opzione **affinity mask** , vedere [Opzione di configurazione del server affinity mask](affinity-mask-server-configuration-option.md). Il supporto di CPU e Affinity I/O per server con 33 fino a 64 processori richiede rispettivamente l'uso aggiuntivo dell' [opzione di configurazione del server affinity64 mask](affinity64-mask-server-configuration-option.md) e dell' [opzione di configurazione del server affinity64 Input-Output mask](affinity64-input-output-mask-server-configuration-option.md) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta l'affinità processori per mezzo di due opzioni affinity mask: **affinity mask** (nota anche come **CPU affinity mask**) e **affinity I/O mask**. Per altre informazioni sull'opzione **affinity mask** , vedere [Opzione di configurazione del server affinity mask](affinity-mask-server-configuration-option.md). Il supporto per l'affinità di CPU e I/O per i server con processori da 33 a 64 richiede l'uso aggiuntivo dell'opzione di [configurazione del server affinity64 mask](affinity64-mask-server-configuration-option.md) e dell' [opzione di configurazione del server Affinity64 input-output mask](affinity64-input-output-mask-server-configuration-option.md) .  
   
 > [!NOTE]  
 >  Il supporto dell'affinità nei server dotati di un numero di processori compreso tra 33 e 64 è disponibile solo su sistemi operativi a 64 bit.  
@@ -58,7 +58,7 @@ ms.locfileid: "62813679"
   
 -   0 nell'opzione **affinity I/O mask** e 1 nell'opzione **affinity mask** .  
   
- L'opzione **affinity I/O mask** è un'opzione avanzata. Se si usa la `sp_configure` stored procedure per modificare l'impostazione di sistema, è possibile modificare **l'opzione affinity i/o mask** solo quando **Mostra opzioni avanzate** è impostato su 1. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per riconfigurare l'opzione **affinity I/O mask** è necessario riavviare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L'opzione **affinity I/O mask** è un'opzione avanzata. Se si usa il `sp_configure` stored procedure di sistema per modificare l'impostazione, è possibile modificare **affinity I/O mask** solo quando il valore di **Show Advanced Options** è impostato su 1. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per riconfigurare l'opzione **affinity I/O mask** è necessario riavviare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Non configurare l'affinità di CPU nel sistema operativo Windows e contemporaneamente l'opzione affinity mask in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le due impostazioni mirano a ottenere lo stesso risultato e, se le configurazioni sono incoerenti, potrebbero causare risultati imprevisti. La configurazione ottimale dell'affinità di CPU in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere ottenuta utilizzando l'opzione `sp_configure` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

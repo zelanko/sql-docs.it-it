@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786690"
 ---
 # <a name="browse-for-servers-network-servers"></a>Cerca server (Server di rete)
-  Se si esegue la connessione a un componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza conoscere il nome esatto dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nella casella **Nome server** fare clic su **Cerca** per aprire la finestra di dialogo **Cerca server**.  
+  Se si esegue la connessione a un componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza conoscere il nome esatto dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nella casella **Nome server** fare clic su **Cerca** per aprire la finestra di dialogo **Cerca server** .  
   
  Questa finestra di dialogo verrà popolata automaticamente dal servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser in esecuzione nei computer server. È possibile che il nome di un'istanza non compaia nell'elenco per diverse ragioni:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62786690"
  Per connettersi a un'istanza che non compare nell'elenco, digitare una stringa di connessione completa per l'istanza, compreso il numero della porta TCP/IP o il nome pipe delle named pipe.  
   
 ## <a name="options"></a>Opzioni  
- **Selezionare l'istanza di SQL Server in rete con cui stabilire la connessione**  
- Indicare il server a cui si desidera connettersi facendo clic sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] visualizzata nell'albero. È possibile visualizzare o nascondere parti della visualizzazione struttura ad albero, fare clic sui nodi contrassegnati con un **+** oppure **-** simbolo.  
+ **Selezionare un'istanza di SQL Server nella rete per la connessione**  
+ Indicare il server a cui si desidera connettersi facendo clic sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] visualizzata nell'albero. È possibile mostrare o nascondere parti della visualizzazione albero facendo clic sui nodi contrassegnati con un **+** simbolo o. **-**  
   
   

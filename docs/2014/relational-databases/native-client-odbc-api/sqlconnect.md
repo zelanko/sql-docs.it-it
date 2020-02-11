@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5292d3141d6ae520a333827796ca8fc6005be15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067667"
 ---
 # <a name="sqlconnect"></a>SQLConnect
-  Quando si apre una connessione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client imposta SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD sul metodo di autenticazione utilizzato per aprire la connessione. Per altre informazioni sui nomi SPN, vedere [nomi delle entità servizio &#40;SPN&#41; nelle connessioni Client &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+  Quando si apre una connessione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client imposta SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD sul metodo di autenticazione utilizzato per aprire la connessione. Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>Supporto di SQLConnect per il ripristino di emergenza a disponibilità elevata  
- Per altre informazioni sull'uso **SQLConnect** per connettersi a un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, vedere [SQL Server Native Client il supporto per la disponibilità elevata, ripristino di emergenza](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Per altre informazioni sull'uso di **SQLConnect** per connettersi a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] un cluster, vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLConnect](https://go.microsoft.com/fwlink/?LinkId=101541)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

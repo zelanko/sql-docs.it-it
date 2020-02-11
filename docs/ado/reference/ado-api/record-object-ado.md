@@ -1,5 +1,5 @@
 ---
-title: Registrare l'oggetto (ADO) | Microsoft Docs
+title: Oggetto record (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,73 +16,73 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917365"
 ---
 # <a name="record-object-ado"></a>Oggetto Record (ADO)
-Rappresenta una riga da una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o il provider di dati o un oggetto restituito da un provider di dati semistrutturati, ad esempio un file o directory.  
+Rappresenta una riga di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o del provider di dati oppure un oggetto restituito da un provider di dati semistrutturato, ad esempio un file o una directory.  
   
-## <a name="remarks"></a>Note  
- Oggetto **Record** oggetto rappresenta una riga di dati e presenta alcune analogie con una sola riga concettuale **Recordset**. A seconda delle funzionalità del provider, **Record** oggetti possono essere restituiti direttamente dal provider invece di una riga singola **Recordset**, ad esempio quando una query SQL che seleziona solo una riga è eseguito. Oppure, un **Record** oggetto può essere ottenuto direttamente da un **Recordset** oggetto. Oppure, un **Record** può essere restituito direttamente da un provider di dati semistrutturati, ad esempio il provider OLE DB di Microsoft Exchange.  
+## <a name="remarks"></a>Osservazioni  
+ Un oggetto **record** rappresenta una riga di dati e presenta alcune somiglianze concettuali con un **Recordset**a una riga. A seconda delle funzionalità del provider, gli oggetti **record** possono essere restituiti direttamente dal provider anziché da un **Recordset**di una riga, ad esempio quando viene eseguita una query SQL che seleziona solo una riga. In alternativa, è possibile ottenere un oggetto **record** direttamente da un oggetto **Recordset** . In alternativa, è possibile restituire un **record** direttamente da un provider ai dati semistrutturati, ad esempio il provider di OLE DB di Microsoft Exchange.  
   
- È possibile visualizzare i campi associati i **Record** dell'oggetto per mezzo del [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme nel **Record** oggetto. ADO consente le colonne con valori di oggetto inclusi **Recordset**, **SafeArray**e i valori scalari il **campi** raccolta di **Record** oggetti.  
+ È possibile visualizzare i campi associati all'oggetto **record** per mezzo della raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) nell'oggetto **record** . ADO consente colonne con valori di oggetto, inclusi **Recordset**, **SAFEARRAY**e valori scalari nella raccolta **Fields** di oggetti **record** .  
   
- Se il **Record** oggetto rappresenta una riga in un **Recordset**, è possibile tornare a questo originale **Recordset** con il [origine](../../../ado/reference/ado-api/source-property-ado-record.md) proprietà.  
+ Se l'oggetto **record** rappresenta una riga in un **Recordset**, è possibile tornare al **Recordset** originale con la proprietà [source](../../../ado/reference/ado-api/source-property-ado-record.md) .  
   
- Il **Record** oggetto può anche essere utilizzato dai provider di dati semistrutturati, ad esempio le [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), alla struttura ad albero degli spazi dei nomi del modello. Ogni nodo nell'albero è un **Record** oggetto con le colonne associate. Le colonne possono rappresentare gli attributi di tale nodo e altre informazioni rilevanti. Il **Record** oggetto può rappresentare sia un nodo foglia e un nodo foglia della struttura ad albero. I nodi non foglia sono gli altri nodi come i relativi contenuti, ma i nodi foglia sono privi di tale contenuto. I nodi foglia contengono in genere i flussi binari di dati e i nodi non foglia possono anche essere un flusso binario predefinito associato. Proprietà di **Record** oggetto che identifica il tipo di nodo.  
+ L'oggetto **record** può essere usato anche da provider di dati semistrutturati, ad esempio il [provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), per modellare gli spazi dei nomi strutturati ad albero. Ogni nodo dell'albero è un oggetto **record** con colonne associate. Le colonne possono rappresentare gli attributi di tale nodo e altre informazioni rilevanti. L'oggetto **record** può rappresentare sia un nodo foglia che un nodo non foglia nella struttura ad albero. I nodi non foglia hanno altri nodi come contenuto, ma i nodi foglia non hanno tale contenuto. I nodi foglia in genere contengono flussi binari di dati e nodi non foglia possono avere anche un flusso binario predefinito associato. Le proprietà dell'oggetto **record** identificano il tipo di nodo.  
   
- Il **Record** oggetto rappresenta inoltre un modo alternativo per lo spostamento in una struttura gerarchica organizzati i dati. Oggetto **Record** oggetto può essere creata per rappresentare la radice di un sottoalbero specifico in una struttura ad albero di grandi dimensioni e nuovi **Record** gli oggetti possono essere aperti per rappresentare i nodi figlio.  
+ L'oggetto **record** rappresenta anche un modo alternativo per spostarsi tra i dati organizzati gerarchicamente. È possibile creare un oggetto **record** per rappresentare la radice di un sottoalbero specifico in una struttura ad albero di grandi dimensioni e i nuovi oggetti **record** possono essere aperti per rappresentare i nodi figlio.  
   
- Una risorsa (ad esempio, un file o directory) può essere identificata in modo univoco tramite un URL assoluto. Oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto in modo implicito viene creato e impostato il **Record** oggetto quando il **Record** viene aperto usando un URL assoluto. Oggetto **connessione** oggetto può essere impostato in modo esplicito il **Record** dell'oggetto tramite il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà. I file e directory in cui è possibile accedere usando il **connessione** oggetto definiscono il *contesto* in cui **Record** possono verificarsi operazioni.  
+ Una risorsa, ad esempio un file o una directory, può essere identificata in modo univoco da un URL assoluto. Un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) viene creato in modo implicito e impostato sull'oggetto **record** quando il **record** viene aperto utilizzando un URL assoluto. Un oggetto **connessione** può essere impostato in modo esplicito sull'oggetto **record** tramite la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) . I file e le directory a cui è possibile accedere tramite l'oggetto **Connection** definiscono il *contesto* in cui possono essere eseguite le operazioni di **registrazione** .  
   
- Metodi di modifica e l'esplorazione dei dati sul **Record** oggetto accettano anche un URL relativo, che consente di individuare una risorsa tramite un URL assoluto o la **connessione** contesto dell'oggetto come un punto di partenza.  
+ I metodi di navigazione e modifica dei dati nell'oggetto **record** accettano anche un URL relativo, che individua una risorsa usando un URL assoluto o il contesto dell'oggetto di **connessione** come punto di partenza.  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- Oggetto **Connection** oggetto è associato a ogni **Record** oggetto. Pertanto **Record** operazioni di oggetto possono essere parte di una transazione richiamando **connessione** oggetto metodi di transazione.  
+ Un oggetto **Connection** è associato a ogni oggetto **record** . Di conseguenza, le operazioni di **registrazione** di oggetti possono far parte di una transazione richiamando i metodi di transazione dell'oggetto **Connection** .  
   
- Il **Record** oggetto non supporta gli eventi ADO e pertanto non risponderà alle notifiche.  
+ L'oggetto **record** non supporta gli eventi ADO e pertanto non risponderà alle notifiche.  
   
- Con i metodi e proprietà di un **Record** dell'oggetto, è possibile eseguire le operazioni seguenti:  
+ Con i metodi e le proprietà di un oggetto **record** , è possibile eseguire le operazioni seguenti:  
   
--   Impostare o restituire l'oggetto associato **Connection** dell'oggetto con il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà.  
+-   Impostare o restituire l'oggetto **connessione** associato con la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) .  
   
--   Indicare le autorizzazioni di accesso con il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà.  
+-   Indica le autorizzazioni di accesso con la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) .  
   
--   Restituisce l'URL della directory, se presente, che contiene la risorsa rappresentata dal **Record** con il [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) proprietà.  
+-   Restituisce l'URL della directory, se presente, che contiene la risorsa rappresentata dal **record** con la proprietà [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) .  
   
--   Indicare l'URL assoluto, relativo URL, oppure **Recordset** da cui il **Record** deriva con il [origine](../../../ado/reference/ado-api/source-property-ado-record.md) proprietà.  
+-   Indica l'URL assoluto, l'URL relativo o il **Recordset** da cui il **record** viene derivato con la proprietà [source](../../../ado/reference/ado-api/source-property-ado-record.md) .  
   
--   Indicare lo stato corrente del **Record** con il [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà.  
+-   Indica lo stato corrente del **record** con la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Indicare il tipo di **Record** - *semplice*, *raccolta*, o *documenti strutturati* : con la [ RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)proprietà.  
+-   Indica il tipo di **record** - *semplice*, di *raccolta*o di *documento strutturato* con la proprietà [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
   
--   Arrestare l'esecuzione di un'operazione asincrona con il [annullare](../../../ado/reference/ado-api/cancel-method-ado.md) (metodo).  
+-   Arrestare l'esecuzione di un'operazione asincrona con il metodo [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   
--   Dissociare il **Record** da un'origine dati con il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) (metodo).  
+-   Annullare l'associazione del **record** da un'origine dati con il metodo [Close](../../../ado/reference/ado-api/close-method-ado.md) .  
   
--   Copiare il file o directory rappresentata da un **Record** in un'altra posizione con il [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) (metodo).  
+-   Copiare il file o la directory rappresentata da un **record** in un altro percorso con il metodo [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
   
--   Eliminare il file o directory e sottodirectory, rappresentato da un **Record** con il [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md) (metodo).  
+-   Eliminare il file, la directory e le sottodirectory, rappresentati da un **record** con il metodo [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md) .  
   
--   Aprire una **Recordset** che contiene le righe che rappresentano le sottodirectory e i file dell'entità rappresentata dalle **Record** con il [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md) (metodo).  
+-   Aprire un **Recordset** contenente le righe che rappresentano le sottodirectory e i file dell'entità rappresentata dal **record** con il metodo [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md) .  
   
--   Spostare o rinominare il file o directory e sottodirectory, rappresentato da un **Record** in un'altra posizione con il [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) (metodo).  
+-   Spostare (rinominare) il file, la directory e le sottodirectory, rappresentati da un **record** in un altro percorso con il metodo [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) .  
   
--   Associare il **Record** con i dati esistenti di origine oppure creare un nuovo file o directory con la [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (metodo).  
+-   Associare il **record** a un'origine dati esistente o creare un nuovo file o una nuova directory con il metodo [Open](../../../ado/reference/ado-api/open-method-ado-record.md) .  
   
- Il **Record** oggetto è sicuro per lo scripting.  
+ L'oggetto **record** è sicuro per lo scripting.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [I record e i flussi](../../../ado/guide/data/records-and-streams.md)   
+ [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Record e flussi](../../../ado/guide/data/records-and-streams.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

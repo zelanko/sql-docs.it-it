@@ -1,5 +1,5 @@
 ---
-title: Personalizzare la Web Part Visualizzatore Report | Microsoft Docs
+title: Personalizzare la Web part Visualizzatore report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109536"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
@@ -38,11 +38,11 @@ ms.locfileid: "66109536"
  A una web part sono associate proprietà personalizzate utilizzate per configurare funzionalità specifiche. Le web part dispongono inoltre in genere di proprietà comuni a tutte le web part.  
   
 ### <a name="change-default-properties"></a>Modifica delle proprietà predefinite  
- La web part Visualizzatore report include proprietà predefinite idealmente adeguate per l'apertura di report a richiesta da una raccolta o cartella. Per impostazione predefinita, tutti i controlli disponibili si trovano sulla barra degli strumenti, mentre l'altezza e la larghezza vengono impostate per utilizzare tutto lo spazio disponibile nella pagina Web. Se si vuole modificare le proprietà predefinite, è possibile personalizzare la Web part tramite **Impostazioni sito**.  
+ La web part Visualizzatore report include proprietà predefinite idealmente adeguate per l'apertura di report a richiesta da una raccolta o cartella. Per impostazione predefinita, tutti i controlli disponibili si trovano sulla barra degli strumenti, mentre l'altezza e la larghezza vengono impostate per utilizzare tutto lo spazio disponibile nella pagina Web. Se si desidera modificare le proprietà predefinite, è possibile personalizzare la Web part tramite **Impostazioni sito**.  
   
 1.  Scegliere **Impostazioni sito** dal menu **Azioni sito**.  
   
-2.  In Raccolte fare clic su **Web part**.  
+2.  In raccolte fare clic su **Web part**.  
   
 3.  Fare clic su **ReportViewer.dwp**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66109536"
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Personalizzazione di un visualizzatore report incorporato in una pagina Web  
  È possibile impostare le proprietà affinché Visualizzatore report si adatti alla pagina Web. Al visualizzatore possono essere applicati lo stesso stile e gli stessi colori della pagina che lo contiene. È possibile nascondere completamente o in parte la barra degli strumenti, la mappa documento e l'area dei parametri per sfruttare al massimo l'area di visualizzazione del report all'interno dello spazio assegnato. Il report utilizza sempre gli stili definiti al momento della sua creazione. Non è possibile personalizzare l'aspetto del report dopo la pubblicazione in una raccolta di SharePoint.  
   
- Se si incorpora la Web part Visualizzatore report in una pagina Web, è consigliabile impostare la proprietà **URL report** per un report specifico. In caso contrario, nel Visualizzatore report verranno visualizzate le istruzioni per il collegamento di un report. Non è possibile personalizzare o rimuovere le istruzioni.  
+ Se si incorpora la Web part Visualizzatore report in una pagina Web, è necessario impostare la proprietà **URL report** su un report specifico. In caso contrario, nel Visualizzatore report verranno visualizzate le istruzioni per il collegamento di un report. Non è possibile personalizzare o rimuovere le istruzioni.  
   
 ### <a name="custom-properties-of-the-report-viewer-web-part"></a>Proprietà personalizzate della web part Visualizzatore report  
  Ai fini dell'impostazione delle proprietà personalizzate, tenere presente che alcune di esse vengono utilizzate solo se la web part Visualizzatore report è incorporata in una pagina. Tra le proprietà personalizzabili ci sono il titolo, l'altezza, la larghezza, il tipo di colore e la zona. Altre proprietà, ad esempio le impostazioni relative alla barra degli strumenti e le impostazioni relative ai parametri, vengono utilizzate indipendentemente dal fatto che Visualizzatore report sia incorporato in una pagina o apra un report in modalità Pagina intera.  
@@ -61,7 +61,8 @@ ms.locfileid: "66109536"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |Report|Percorso completo di un report presente nel sito di SharePoint corrente oppure in un sito disponibile nella stessa farm o applicazione Web. Se si desidera impostare proprietà aggiuntive, per ottenere risultati ottimali fare clic su Applica dopo avere specificato l'URL del report.|  
-|Destinazione collegamento ipertestuale|Codice HTML standard che specifica il frame di destinazione per la visualizzazione dei contenuti collegati nel documento corrente. Per i report che includono collegamenti ipertestuali a siti Web esterni, è possibile specificare se un documento di destinazione sostituisce il report esistente nella finestra corrente oppure viene aperto in una nuova finestra del browser. I valori validi includono `_Top`, `_Blank` e `_Self`. `_Top` utilizza la finestra corrente, `_Blank` carica il documento in una nuova finestra del browser e `_Self` apre il documento nel frame corrente. Anche se nel linguaggio HTML `_Parent` è un valore valido per l'attributo Target, non utilizzare tale valore per una web part Visualizzatore report incorporata in una pagina.|  
+|Destinazione collegamento ipertestuale|Codice HTML standard che specifica il frame di destinazione per la visualizzazione dei contenuti collegati nel documento corrente. Per i report che includono collegamenti ipertestuali a siti Web esterni, è possibile specificare se un documento di destinazione sostituisce il report esistente nella finestra corrente oppure viene aperto in una nuova finestra del browser. I valori validi includono `_Top`, `_Blank` e `_Self`. 
+  `_Top` utilizza la finestra corrente, `_Blank` carica il documento in una nuova finestra del browser e `_Self` apre il documento nel frame corrente. Anche se nel linguaggio HTML `_Parent` è un valore valido per l'attributo Target, non utilizzare tale valore per una web part Visualizzatore report incorporata in una pagina.|  
 |Titolo web part generato automaticamente|Titolo generato che include il nome della web part Visualizzatore report seguito dal nome del report, separati da un trattino. Se il report non ha titolo, verrà utilizzato il nome di file del report. Tale titolo è visibile quando si aggiunge una web part a una pagina. Se questa casella di controllo è selezionata, il titolo verrà generato a ogni aggiornamento della pagina.|  
 |Collegamento Dettagli per il titolo della web part generato automaticamente|Collegamento ipertestuale generato automaticamente e visualizzato sopra la web part. È possibile fare clic sul collegamento per aprire il report in una nuova pagina, in modalità Pagina intera.|  
 |Mostra voce di menu Generatore report|Visualizza o nasconde l'opzione del menu **Azioni** che consente di aprire Generatore report.|  
@@ -75,7 +76,8 @@ ms.locfileid: "66109536"
 |Mostra controllo zoom|Visualizza o nasconde il controllo zoom sulla barra degli strumenti.|  
 |Mostra pulsante feed ATOM|Visualizza o nasconde il pulsante del feed ATOM sulla barra degli strumenti.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Posizione barra degli strumenti|Determina la posizione della barra degli strumenti all'interno del visualizzatore di report. I valori validi includono `Top` e `Bottom`.|  
-|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed` e `Hidden`. `Displayed` consente di visualizzare l'area Parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima dell'esecuzione. Utilizzare `Hidden` se tutti i parametri del report sono specificati e non si desidera visualizzare l'area relativa.|  
+|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed` e `Hidden`. 
+  `Displayed` consente di visualizzare l'area Parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima dell'esecuzione. Utilizzare `Hidden` se tutti i parametri del report sono specificati e non si desidera visualizzare l'area relativa.|  
 |Larghezza area parametri|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
 |Mappa documento|Controllo per la navigazione del report che viene definito nel report e consente di accedere con un clic a sezioni specifiche del report. È disponibile nei report HTML. La mappa documento è visualizzata in un'area comprimibile accanto all'area di visualizzazione del report. I valori validi includono `Displayed`, `Collapsed` e `Hidden`. Se per un determinato report è definita una mappa documento, quest'area verrà espansa per impostazione predefinita, a meno che non sia contrassegnata come nascosta o compressa nelle proprietà della web part. Se la mappa documento è compressa, sarà possibile fare clic sulla freccia per espanderla.|  
 |Larghezza area mappa documento|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
@@ -84,7 +86,7 @@ ms.locfileid: "66109536"
 ## <a name="customizing-the-toolbar"></a>Personalizzazione della barra degli strumenti  
  La barra degli strumenti è visualizzata sotto il titolo e si estende nella parte superiore del report. Include il menu **Azioni** , oltre a controlli per la navigazione dei report impaginati, l'aggiornamento e lo zoom. È disponibile anche un controllo mappa documento per i report che dispongono di una mappa documento. Nel menu **Azioni** sono disponibili comandi per l'esportazione del report, la ricerca di testo o numeri nel report, la stampa del report e l'apertura del report in Generatore report.  
   
- Non è possibile aggiungere nuovi comandi al menu  **Azioni** , ma è possibile personalizzare il menu modificando le opzioni visibili agli utenti. Per modificare la visibilità dei pulsanti e dei controlli della barra degli strumenti, è possibile modificare le opzioni nella sezione **Visibilità degli elementi della barra degli strumenti** della Web part. È inoltre possibile rimuovere il comando **Stampa** o formati di esportazione specifici, rendendo non disponibili tali caratteristiche sul server di report. I controlli per la navigazione tra le pagine sono disponibili solo per i report che includono interruzioni di pagina. In caso contrario il report è costituito da una singola pagina di lunghezza variabile. Il pulsante**Aggiorna** consente di rielaborare il report usando i parametri correnti. Per visualizzare tutti i controlli su una riga, impostare la larghezza complessiva della web part su almeno 400 pixel.  
+ Non è possibile aggiungere nuovi comandi al menu  **Azioni** , ma è possibile personalizzare il menu modificando le opzioni visibili agli utenti. Per modificare la visibilità dei pulsanti e dei controlli della barra degli strumenti, è possibile modificare le opzioni nella sezione **visibilità degli elementi della barra** degli strumenti della web part. È inoltre possibile rimuovere il comando **Stampa** o formati di esportazione specifici, rendendo non disponibili tali caratteristiche sul server di report. I controlli per la navigazione tra le pagine sono disponibili solo per i report che includono interruzioni di pagina. In caso contrario il report è costituito da una singola pagina di lunghezza variabile. L' **aggiornamento** elabora nuovamente il report utilizzando i parametri correnti per il report. Per visualizzare tutti i controlli su una riga, impostare la larghezza complessiva della web part su almeno 400 pixel.  
   
 ## <a name="customizing-the-viewing-area"></a>Personalizzazione dell'area di visualizzazione  
  L'area di visualizzazione viene utilizzata per la visualizzazione dei report ed è condivisa con le aree Parametri e Credenziali, se vengono utilizzate. Se è necessario immettere credenziali, verrà visualizzata un'area di visualizzazione report vuota con accanto l'area Credenziali. Tale area viene chiusa dopo l'immissione delle credenziali e l'avvio del report. Il testo visualizzato per richiedere l'impostazione delle credenziali può essere personalizzato modificando le proprietà di connessione all'origine dei dati. Per altre informazioni, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
@@ -93,6 +95,6 @@ ms.locfileid: "66109536"
   
 ## <a name="see-also"></a>Vedere anche  
  [Web part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Aggiungere la web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

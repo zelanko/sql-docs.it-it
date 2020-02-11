@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135612"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificare una traccia esistente (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "63135612"
   
 2.  Per modificare eventi di traccia, eseguire **sp_trace_setevent** usando i parametri per specificare le modifiche. Nell'ordine i parametri sono i seguenti:  
   
-    -   **@traceid** (ID traccia)  
+    -   **@traceid**(ID traccia)  
   
-    -   **@eventid** (ID evento)  
+    -   **@eventid**(ID evento)  
   
-    -   **@columnid** (ID colonna)  
+    -   **@columnid**(ID colonna)  
   
-    -   **@on** (ON)  
+    -   **@on**IN  
   
-     Quando si modifica il parametro **@on** , tenere presente l'interazione con il parametro **@columnid** :  
+     Quando si modifica il **@on** parametro, tenere presente l'interazione con il **@columnid** parametro:  
   
-    |ON|ID colonna|Risultato|  
+    |ATTIVA|ID colonna|Risultato|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|L'evento viene abilitato. Tutte le colonne vengono cancellate.|  
     ||NOT NULL|La colonna viene abilitata per l'evento specificato.|  

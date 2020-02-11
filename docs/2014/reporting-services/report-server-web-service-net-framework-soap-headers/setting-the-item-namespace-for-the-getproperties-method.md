@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012275"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Impostazione dello spazio dei nomi degli elementi per il metodo GetProperties

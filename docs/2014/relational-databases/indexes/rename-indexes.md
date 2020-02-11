@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036229"
 ---
 # <a name="rename-indexes"></a>Ridenominazione di indici
   In questo argomento si descrive come rinominare un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La ridenominazione di un indice consiste nel sostituire il nome attuale dell'indice con il nuovo nome specificato dall'utente. Il nome specificato deve essere univoco all'interno della tabella o della vista. Ad esempio, due tabelle possono avere un indice denominato **XPK_1**, ma la stessa tabella non può contenere due indici denominati **XPK_1**. Non è possibile creare un indice con lo stesso nome di un indice disabilitato esistente. La ridenominazione di un indice non ne causa la ricompilazione.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63036229"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per l'indice.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-rename-an-index-by-using-the-table-designer"></a>Per rinominare un indice utilizzando Progettazione tabelle  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63036229"
   
 6.  Nella griglia fare clic su **Nome** e digitare un nuovo nome nella casella di testo.  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
 8.  Nel menu **File** scegliere **Salva**_table_name_.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63036229"
   
 6.  Digitare il nuovo nome dell'indice e premere INVIO.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-rename-an-index"></a>Per rinominare un indice  
   

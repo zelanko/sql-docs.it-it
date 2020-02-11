@@ -16,34 +16,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033579"
 ---
 # <a name="set-up-the-job-history-log"></a>Impostare il log di cronologia processi
-  In questo argomento viene descritto come impostare il log di cronologia processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  In questo argomento viene descritto come configurare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log cronologia processi di Agent.  
   
--   **Prima di iniziare:**  [Sicurezza](#Security)  
+-   **Prima di iniziare:**  [sicurezza](#Security)  
   
--   **Per impostare il log di cronologia processi usando:**  [SQL Server Management Studio](#SSMS)  
+-   **Per configurare il log di cronologia processo usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
- **Per impostare il log di cronologia processo**  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
+ **Per configurare il log di cronologia processi**  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà SQL Server Agent** selezionare la pagina **Cronologia** .  
   
-4.  Selezionare una delle opzioni seguenti:  
+4.  È possibile scegliere tra le opzioni seguenti:  
   
     1.  Selezionare **Limita dimensioni log cronologia processo**e quindi immettere il numero massimo di righe consentito per il log di cronologia processo e il numero massimo di righe per processo.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63033579"
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)   
- [Monitorare l'attività di processo](monitor-job-activity.md)   
+ [Monitorare l'attività del processo](monitor-job-activity.md)   
  [Crea processi](create-jobs.md)  
   
   

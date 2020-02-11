@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044204"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Formattare gli indirizzi di cercapersone per gli avvisi
-  In questo argomento viene illustrata la procedura di fomattazione degli indirizzi di cercapersone per gli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come formattare gli indirizzi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cercapersone per gli [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avvisi di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)]in tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Sicurezza](#Security)  
   
--   **Per formattare gli indirizzi di cercapersone utilizzando:**  
+-   **Per formattare gli indirizzi cercapersone utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63044204"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono visualizzare le informazioni su un avviso. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-format-pager-addresses"></a>Per formattare gli indirizzi di cercapersone  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene l'avviso da inviare a un cercapersone.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**  
+2.  Fare clic con il pulsante destro del mouse **SQL Server Agent** e scegliere **Proprietà**  
   
 3.  In **Selezione pagina**selezionare **Sistema avvisi**.  
   

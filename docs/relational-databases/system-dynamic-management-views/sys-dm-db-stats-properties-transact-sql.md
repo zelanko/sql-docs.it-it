@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910710"
 ---
-# <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
+# <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Vengono restituite le proprietà di statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Per le tabelle partizionate, vedere il simili [DM db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md). 
+  Vengono restituite le proprietà di statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Per le tabelle partizionate, vedere [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)simile. 
  
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di tipo **int**.  
+ ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di **tipo int**.  
   
  *stats_id*  
- ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di tipo **int**.  
+ ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di **tipo int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -54,30 +54,30 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |last_updated|**datetime2**|Data e ora dell'ultimo aggiornamento dell'oggetto statistiche. Per altre informazioni, vedere la sezione [Osservazioni](#Remarks) più avanti nella pagina.|  
 |rows|**bigint**|Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella.|  
 |rows_sampled|**bigint**|Numero totale di righe campionate per i calcoli statistici.|  
-|passaggi|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
+|steps|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
-|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Le tabelle ottimizzate per la memoria: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nella [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna contiene: numero totale di modifiche per la tabella perché sono state aggiornate le statistiche temporali ultimo o il database è stato riavviato.|  
+|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] partire da e in questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
 |persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="Remarks"></a> Osservazioni  
- **DM db_stats_properties** restituisce un set di righe vuoto in presenza delle condizioni seguenti:  
+## Osservazioni su <a name="Remarks"></a>  
+ **sys. dm_db_stats_properties** restituisce un set di righe vuoto in una delle condizioni seguenti:  
   
--   **object_id** oppure **stats_id** è NULL.    
+-   **object_id** o **stats_id** è null.    
 -   L'oggetto specificato non viene trovato oppure non corrisponde a una tabella o a una vista indicizzata.    
 -   L'ID delle statistiche specificato non corrisponde alle statistiche esistenti per l'ID oggetto specificato.    
 -   L'utente corrente non dispone delle autorizzazioni per visualizzare l'oggetto statistiche.  
   
- Questo comportamento consente l'utilizzo sicuro di **DM db_stats_properties** caso di applicazione incrociata in viste, ad esempio **Sys. Objects** e **Sys. Stats**.  
+ Questo comportamento consente l'utilizzo sicuro di **sys. dm_db_stats_properties** quando viene applicata una croce alle righe in viste quali **sys. Objects** e **sys. stats**.  
  
-La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, il blob di statistiche non viene creato, non è disponibile, la data e il *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
+La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando non viene letto alcun dato per generare i dati delle statistiche, il BLOB di statistiche non viene creato, la data non è disponibile e la colonna *last_updated* è null. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche o essere proprietario della tabella o membro del ruolo predefinito del server `sysadmin`, del ruolo predefinito del database `db_owner` o del ruolo predefinito del database `db_ddladmin`.  
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-simple-example"></a>A. Esempio semplice
-Nell'esempio seguente restituisce le statistiche per il `Person.Person` tabella nel database AdventureWorks.
+### <a name="a-simple-example"></a>R. Esempio semplice
+Nell'esempio seguente vengono restituite le statistiche `Person.Person` per la tabella nel database AdventureWorks.
 
 ```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
@@ -110,6 +110,6 @@ WHERE modification_counter > 1000;
  [Funzioni e viste a gestione dinamica relative agli oggetti &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
- [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

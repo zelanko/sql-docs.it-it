@@ -27,10 +27,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127885"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerazioni sulla sicurezza per un'installazione di SQL Server
@@ -120,9 +120,9 @@ ms.locfileid: "63127885"
   
 -   Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer, non è possibile modificare il computer da controller di dominio a membro di dominio. Prima di modificare il computer host in membro di dominio, è necessario disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono supportate quando i nodi del cluster sono controller di dominio.  
+-   Le istanze del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono supportate quando i nodi del cluster sono controller di dominio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione non consente di creare gruppi di sicurezza o fornire account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio di sola lettura. In questo scenario il programma di installazione non verrà completato.  
+-   Tramite il programma di installazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà possibile creare gruppi di sicurezza o fornire account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controller di dominio di sola lettura. In questo scenario il programma di installazione non verrà completato.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Durante o dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Dopo l'installazione, è possibile ottimizzare la sicurezza dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendo le procedure consigliate seguenti per gli account e le modalità di autenticazione.  
@@ -139,7 +139,7 @@ ms.locfileid: "63127885"
   
 -   Richiedere l'autenticazione di Windows per le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Utilizzo dell'autenticazione Kerberos. Per altre informazioni, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+-   Utilizzo dell'autenticazione Kerberos. Per altre informazioni, vedere [Registrare un nome dell'entità servizio per le connessioni Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  **Password complesse**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "63127885"
 >  Durante l'installazione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene aggiunto un account di accesso per il gruppo BUILTIN\Users. In questo modo, tutti gli utenti autenticati del computer possono accedere all'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] come un membro del ruolo pubblico. L'account di accesso BUILTIN\Users può essere rimosso in sicurezza per limitare l'accesso del [!INCLUDE[ssDE](../../includes/ssde-md.md)] agli utenti di computer che dispongono di account di accesso singoli o sono membri di altri gruppi di Windows con account di accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti hardware e Software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Requisiti hardware e software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocolli e librerie di rete](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

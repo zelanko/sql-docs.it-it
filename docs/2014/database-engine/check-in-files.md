@@ -1,5 +1,5 @@
 ---
-title: Archiviare i file | Microsoft Docs
+title: Archivia file | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812585"
 ---
 # <a name="check-in-files"></a>Archiviazione di file
   Per rendere accessibili ad altri utenti i file modificati inclusi nel controllo del codice sorgente, è necessario archiviarli nel controllo del codice sorgente. Quando un file viene archiviato, la versione archiviata viene scritta nel provider del controllo del codice sorgente e diventa la versione più recente del file.  
   
- È possibile usare la **Archivia** comando per archiviare i file. Quando si utilizza questo comando, vengono archiviati anche tutti i file inclusi nella soluzione o nel progetto. L'archiviazione di un singolo file di codice sorgente tuttavia non comporta l'archiviazione anche del progetto o della soluzione ai quali il file appartiene.  
+ È possibile usare il comando **Archivia** per archiviare i file. Quando si utilizza questo comando, vengono archiviati anche tutti i file inclusi nella soluzione o nel progetto. L'archiviazione di un singolo file di codice sorgente tuttavia non comporta l'archiviazione anche del progetto o della soluzione ai quali il file appartiene.  
   
 ### <a name="to-check-in-a-file"></a>Per archiviare un file  
   
-1.  In Esplora soluzioni fare doppio clic il file da archiviare e quindi fare clic su **Archivia**.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul file da archiviare, quindi fare clic su **Archivia**.  
   
-2.  Se il **Archivia** verrà visualizzata la finestra di dialogo, selezionare le opzioni appropriate e quindi fare clic su **OK**.  
+2.  Se viene visualizzata la finestra **di dialogo Archivia** , selezionare le opzioni appropriate e quindi fare clic su **OK**.  
   
-     **Check-In**  
+     **Archivia**  
      Consente di archiviare tutti gli elementi selezionati.  
   
      **Colonne**  
@@ -41,22 +41,22 @@ ms.locfileid: "62812585"
      **Commenti**  
      Consente di aggiungere un commento da associare all'operazione di archiviazione.  
   
-     **Non visualizzare un controllo nella finestra di dialogo durante l'archiviazione degli elementi**  
+     **Non visualizzare la finestra di dialogo Estrai durante l'archiviazione degli elementi**  
      Consente di evitare la visualizzazione della finestra di dialogo durante le operazioni di archiviazione.  
   
      **Visualizzazione semplice**  
      Consente di visualizzare i file di cui si sta eseguendo l'archiviazione come elenchi semplici sotto la relativa connessione del controllo del codice sorgente.  
   
-     **Name**  
+     **Nome**  
      Consente di visualizzare i nomi degli elementi da archiviare. Accanto agli elementi viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
   
      **Opzioni**  
      Consente di visualizzare le opzioni di archiviazione specifiche del plug-in del controllo del codice sorgente quando si fa clic sulla freccia a destra del pulsante.  
   
-     **Sort**  
+     **Ordina**  
      Consente di eseguire l'ordinamento delle colonne visualizzate.  
   
-     **Visualizzazione struttura ad albero**  
+     **Visualizzazione albero**  
      Consente di visualizzare la gerarchia di cartelle e di file per gli elementi di cui si sta eseguendo l'archiviazione.  
   
  Se il file archiviato non fa parte di un'estrazione condivisa, nell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ne viene immediatamente eseguita l'archiviazione. In caso contrario, può venire chiesto di unire la versione utilizzata a quelle create da altri utenti.  

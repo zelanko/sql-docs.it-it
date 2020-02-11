@@ -1,5 +1,5 @@
 ---
-title: Impostazioni di migrazione dati (MySQLToSQL) | Microsoft Docs
+title: Impostazioni di migrazione dei dati (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,47 +10,47 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896375"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Impostazioni di migrazione dei dati (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>Impostazioni di migrazione dei dati  
-**Le impostazioni di migrazione dati** consente all'utente di scrivere query personalizzate per la migrazione dei dati.  
+**Le impostazioni di migrazione dei dati** consentono all'utente di scrivere query personalizzate per la migrazione dei dati.  
   
--   Questa scheda è disponibile quando **opzioni di migrazione dati estese** è impostata su **mostrano** e viene nascosto quando l'impostazione è impostata su **nascondere** nelle impostazioni del progetto. Per altre informazioni sulle impostazioni di progetto di migrazione, vedere [impostazioni progetto (migrazione)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Questa scheda è disponibile quando le **Opzioni di migrazione dei dati estese** sono impostate su **Mostra** ed è nascosta quando l'impostazione è impostata su **Nascondi** in Impostazioni progetto. Per ulteriori informazioni sulle impostazioni di migrazione del progetto, vedere [Impostazioni progetto (migrazione)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
   
--   L'analisi delle istruzioni SQL personalizzate verranno implementato in **le impostazioni di migrazione dati** scheda del nodo della tabella.  
+-   L'analisi delle istruzioni SQL personalizzate verrà implementata nella scheda **Impostazioni migrazione dati** del nodo tabella.  
   
--   Di seguito sono le due caselle di controllo disponibili nel **le impostazioni di migrazione dati** una visualizzazione dei.:  
+-   Di seguito sono riportate le due caselle di controllo disponibili nelle **impostazioni di migrazione dei dati** :  
   
-    1.  Troncare la tabella di SQL Server  
+    1.  Tronca SQL Server tabella  
   
-    2.  Selezionare utilizzo personalizzato  
+    2.  Usa selezione personalizzata  
   
-1.  **Troncare la tabella di SQL Server:**  
-     Questa opzione consente all'utente di avere una visione chiara dei dati migrati a livello di database di destinazione.  
+1.  **Tronca SQL Server tabella:**  
+     Questa opzione consente all'utente di avere una visualizzazione chiara dei dati migrati nel database di destinazione.  
   
-    -   Per impostazione predefinita, viene selezionata questa casella di testo.  
+    -   Per impostazione predefinita, questa casella di testo è selezionata.  
   
-    -   Se questa casella è deselezionata, verranno aggiunti i dati che viene eseguita la migrazione a quelli esistenti nel database di destinazione.  
+    -   Se questa casella di testo è deselezionata, i dati di cui viene eseguita la migrazione verranno aggiunti ai dati esistenti nel database di destinazione.  
   
-2.  **Selezionare utilizzo personalizzato:**  
-     Questa opzione consente all'utente di modificare la **selezionate** istruzione presente (**seleziona** istruzione consente agli utenti di selezionare i dati da visualizzare a livello di database di destinazione).  
+2.  **Usa selezione personalizzata:**  
+     Questa opzione consente all'utente di modificare l'istruzione **Select** presente. l'istruzione**SELECT** consente agli utenti di selezionare i dati da visualizzare nel database di destinazione.  
   
-    1.  Per impostazione predefinita, questa casella è deselezionata.  
+    1.  Per impostazione predefinita, questa casella di testo è deselezionata.  
   
-    2.  Se è selezionata questa casella di testo e quindi consente agli utenti di modificare la **seleziona** istruzione presente.  
+    2.  Se questa casella di testo è selezionata, consente agli utenti di modificare l'istruzione **Select** presente.  
   
-Esistono due pulsanti presenti una visualizzazione dei.:  
+Sono presenti due pulsanti, vale a dire:  
   
--   **Applicare:** Fare clic su **applica** per applicare le impostazioni che sono state modificate.  
+-   **Applica:** Fare clic su **applica** per applicare le impostazioni modificate.  
   
--   **Annulla:** Fare clic su **annullare** per ripristinare le impostazioni presente prima che le modifiche sono state apportate.  
+-   **Annulla:** Fare clic su **Annulla** per ripristinare le impostazioni presenti prima che siano state apportate le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione dei dati di MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
+[Migrazione di dati MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

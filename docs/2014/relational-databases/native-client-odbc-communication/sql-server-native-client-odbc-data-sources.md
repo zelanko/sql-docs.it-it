@@ -1,5 +1,5 @@
 ---
-title: Origini dati SQL Server Native Client ODBC | Microsoft Docs
+title: SQL Server Native Client origini dati ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028388"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Origini dati ODBC di SQL Server Native Client
   Un nome di origine dati (DSN, Data Source Name) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica un'origine dati ODBC che contiene tutte le informazioni necessarie a un'applicazione ODBC per connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server specifico. Per definire un nome di origine dati ODBC, è possibile procedere in due modi diversi:  
   
--   In un computer client, aprire Strumenti di amministrazione nel Pannello di controllo e fare doppio clic su **origini dati (ODBC)** . Verrà visualizzato Amministratore origine dati ODBC, in cui è possibile creare un nome di origine dati.  
+-   In un computer client, aprire strumenti di amministrazione nel pannello di controllo e fare doppio clic su **origini dati (ODBC)**. Verrà visualizzato Amministratore origine dati ODBC, in cui è possibile creare un nome di origine dati.  
   
 -   In un'applicazione ODBC, chiamare [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   
  Un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene gli elementi seguenti:  
   
--   Nome dell'origine dati.  
+-   nome dell'origine dati.  
   
 -   Tutte le informazioni necessarie per connettersi a un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

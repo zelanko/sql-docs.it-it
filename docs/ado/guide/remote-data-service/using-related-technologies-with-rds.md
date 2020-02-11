@@ -1,5 +1,5 @@
 ---
-title: Uso di tecnologie correlate con RDS | Microsoft Docs
+title: Utilizzo di tecnologie correlate con RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921892"
 ---
 # <a name="using-related-technologies-with-rds"></a>Uso di tecnologie correlate con RDS
@@ -27,21 +27,21 @@ In questa sezione vengono trattati gli argomenti seguenti.
 -   [Esecuzione di oggetti business nei Servizi componenti](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Molte altre tecnologie interagiscono con il servizio dati remoto o vengono usati nell'implementazione.  
+ Molte altre tecnologie interagiscono con Remote Data Service o vengono usate nell'implementazione di.  
   
- **Internet Information Services** per altre informazioni su Microsoft Internet Information Services (IIS), visitare il sito Web di Microsoft Internet Information Services.  
+ **Internet Information Services** Per ulteriori informazioni su Microsoft Internet Information Services (IIS), visitare il sito Web Microsoft Internet Information Services.  
   
- **Pagine ASP** per altre informazioni sulle Microsoft Active Server Pages (ASP), visitare il sito Web di Microsoft Active Server Pages.  
+ **Pagine Active Server** Per ulteriori informazioni su Microsoft Active Server Pages (ASP), visitare il sito Web Microsoft Active Server Pages.  
   
- **Servizi componenti Microsoft** per altre informazioni sui servizi componenti, vedere il sito Web di Microsoft Transaction Server.  
+ **Servizi componenti Microsoft** Per ulteriori informazioni su Servizi componenti, vedere il sito Web di Microsoft Transaction Server.  
   
- **Microsoft SQL Server** per altre informazioni su Microsoft SQL Server, visitare il sito Web di Microsoft SQL Server.  
+ **Microsoft SQL Server** Per ulteriori informazioni su Microsoft SQL Server, vedere il sito Microsoft SQL Server Web.  
   
- **Microsoft Internet Explorer** per altre informazioni su Microsoft Internet Explorer, vedere il sito di Microsoft Internet ExplorerWeb e il sito MSDN Library e Workshop sul Web.  
+ **Microsoft Internet Explorer** Per ulteriori informazioni su Microsoft Internet Explorer, visitare il sito Web Microsoft Internet ExplorerWeb e il sito Web MSDN Library e Web Workshop.  
   
- **Microsoft Windows NT Server o Windows 2000 Server** per altre informazioni sulla sicurezza in Microsoft Windows NT Server o Windows 2000 Server, vedere il sito Web di Microsoft Windows.  
+ Server **Microsoft Windows NT/windows 2000** Per ulteriori informazioni sulla sicurezza in Microsoft Windows NT Server o Windows 2000 Server, vedere il sito Web Microsoft Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
