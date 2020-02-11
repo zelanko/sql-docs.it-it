@@ -19,13 +19,13 @@ ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060378"
 ---
-# <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
+# <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni su un set di raccolta, inclusa pianificazione, modalità di raccolta e stato.  
@@ -46,13 +46,13 @@ ms.locfileid: "68060378"
 |logging_level|**smallint**|Specifica il livello di registrazione (0, 1 o 2). Non ammette i valori Null.|  
 |days_until_expiration|**smallint**|Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. Non ammette i valori Null.|  
 |description|**nvarchar(4000)**|Descrive il set di raccolta. Ammette i valori Null.|  
-|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] file dump per qualsiasi errore. Non ammette i valori Null.|  
-|dump_on_codes|**nvarchar(max)**|Contiene l'elenco di [!INCLUDE[ssIS](../../includes/ssis-md.md)] i codici di errore che consentono di attivare il file di dump. Ammette i valori Null.|  
+|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] file di dump in caso di errore. Non ammette i valori Null.|  
+|dump_on_codes|**nvarchar(max)**|Contiene l'elenco dei [!INCLUDE[ssIS](../../includes/ssis-md.md)] codici di errore utilizzati per attivare il file dump. Ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede SELECT per dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'API dell'agente di raccolta dati consente di modificare o eliminare solo i set di raccolta da essi creati. I set di raccolta forniti con il sistema non possono essere modificati o eliminati. Tuttavia, è possibile abilitare o disabilitare un set di raccolta del sistema e modificare la configurazione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484122"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
@@ -39,18 +39,18 @@ ms.locfileid: "65484122"
   
 -   Se il tipo di dati è una stringa, è possibile specificare che DQS non identifichi errori di sintassi quando si è certi che le stringhe non contengono tali errori.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  L'utilizzo di un dominio consente di effettuare le operazioni seguenti:  
   
 |||  
 |-|-|  
-|Creare una rappresentazione semantica per un campo dati con un tipo di dati specifico, specificare come viene popolato il dominio, e formattare l'output del dominio|[Creare un dominio](../../2014/data-quality-services/create-a-domain.md)|  
-|Collegare un dominio a un altro dominio, consentendone la condivisione delle impostazioni e dei valori|[Creare un dominio collegato](../../2014/data-quality-services/create-a-linked-domain.md)|  
-|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Creare una rappresentazione semantica per un campo dati con un tipo di dati specifico, specificare come viene popolato il dominio, e formattare l'output del dominio|[Creazione di un dominio](../../2014/data-quality-services/create-a-domain.md)|  
+|Collegare un dominio a un altro dominio, consentendone la condivisione delle impostazioni e dei valori|[Creazione di un dominio collegato](../../2014/data-quality-services/create-a-linked-domain.md)|  
+|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Associare un dominio o un dominio composito a dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Modificare o evidenziare i valori in una Knowledge Base.|[Modificare i valori di dominio](../../2014/data-quality-services/change-domain-values.md)|  
 |Utilizzare regole di convalida e di standardizzazione|[Creare una regola di dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../../2014/data-quality-services/create-term-based-relations.md)|  
-|Completare, chiudere o annullare l'attività di gestione del dominio|[Termine dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
+|Completare, chiudere o annullare l'attività di gestione del dominio|[Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
