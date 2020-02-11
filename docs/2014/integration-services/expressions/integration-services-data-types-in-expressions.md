@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769109"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
-  L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
+  L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
   
-## <a name="variables"></a>Variabili  
+## <a name="variables"></a>variables  
  Nelle espressioni è possibile utilizzare anche variabili. Le variabili hanno tipo di dati Variant e, prima di valutare l'espressione, l'analizzatore di espressioni converte il tipo di dati di una variabile da un sottotipo Variant a un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Per le variabili è possibile usare solo un subset dei tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Per una variabile non è ad esempio possibile utilizzare un tipo di dati BLOB (Binary Large Object).  
   
  Per altre informazioni sui tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e sul mapping dei tipi di dati Variant ai tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
@@ -51,11 +51,11 @@ ms.locfileid: "62769109"
 >   
 >  Per evitare errori o risultati imprevisti, è consigliabile non scrivere codice basato su particolari valori numerici per `True` e `False`. Quando possibile, è consigliabile limitare l'utilizzo delle variabili booleane ai valori logici per i quali sono progettate.  
   
- Per altre informazioni, vedere i seguenti argomenti:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [== &#40;uguale&#41; &#40;espressione SSIS&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)  
+-   [! = &#40;diverso&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62769109"
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
+ [Usare un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

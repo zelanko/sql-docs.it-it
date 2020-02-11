@@ -1,5 +1,5 @@
 ---
-title: Provider SQLXMLOLEDB (SQLXML 4.0) | Microsoft Docs
+title: Provider SQLXMLOLEDB (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780293"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Provider SQLXMLOLEDB (SQLXML 4.0)
   Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML tramite ADO.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Introduzione al Provider SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Introduzione al provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Vengono fornite le informazioni di base sul provider SQLXMLOLEDB e vengono elencate le proprietà specifiche di SQLXMLOLEDB.  
   
- [Uso del Provider SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Uso del provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Vengono forniti esempi di varie attività con il provider SQLXMLOLEDB.  
   
 ## <a name="see-also"></a>Vedere anche  

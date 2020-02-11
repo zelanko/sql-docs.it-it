@@ -1,5 +1,5 @@
 ---
-title: Guida F1 del Visualizzatore profilo dati | Microsoft Docs
+title: Guida sensibile al contesto Visualizzatore profilo dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059717"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
@@ -28,16 +28,16 @@ ms.locfileid: "66059717"
  Per altre informazioni sull'uso del Visualizzatore profilo dati, vedere [Visualizzatore profilo dati](control-flow/data-profile-viewer.md). Per altre informazioni sull'uso dell'attività Profiling dati che crea l'output del profilo analizzato nel Visualizzatore profilo dati, vedere [Impostazione dell'attività Profiling Dati](control-flow/data-profiling-task.md).  
   
 ## <a name="static-options"></a>Opzioni statiche  
- **Aprire**  
+ **Apri**  
  Consente di accedere al file salvato che contiene l'output dell'attività Profiling dati.  
   
- Riquadro**Profili**  
+ Riquadro **profili**  
  Espandere l'albero nel riquadro **Profili** per visualizzare i profili inclusi nell'output. Selezionare un profilo per visualizzarne i risultati.  
   
- Riquadro**Messaggio**  
+ Riquadro **messaggi**  
  Visualizza i messaggi di stato.  
   
- Riquadro**Drill-down**  
+ Riquadro **drill-down**  
  Visualizza le righe di dati che corrispondono a un valore nell'output, se l'origine dati utilizzata dall'attività Profiling dati è disponibile.  
   
  Se, ad esempio, si visualizza l'output di un profilo Distribuzione valori di colonna per una colonna US State, il riquadro **Distribuzione dettagliata valori** potrebbe contenere una riga per "WA". Fare doppio clic sulla riga nel riquadro **Distribuzione dettagliata valori** per visualizzare le righe di dati in cui il valore della colonna di stato è "WA" nel riquadro di drill-down.  
@@ -63,10 +63,10 @@ ms.locfileid: "66059717"
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="detailed-length-distribution-pane"></a>Riquadro Distribuzione dettagliata lunghezze  
- **Lunghezza**  
+ **Length**  
  Visualizza le lunghezze di colonna rilevate nella colonna analizzata.  
   
- **Count**  
+ **Conteggio**  
  Visualizza il numero di righe in cui il valore della colonna analizzata ha la lunghezza indicata nella colonna **Lunghezza** .  
   
  **Percentuale**  
@@ -75,10 +75,10 @@ ms.locfileid: "66059717"
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo di profilo: profilo Rapporto di valori Null nella colonna  
   
 #### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null - riquadro \<colonna>  
- **Conteggio valori Null**  
+ **Conteggio valori null**  
  Visualizza il numero di righe in cui il valore della colonna analizzata è un valore Null.  
   
- **Percentuale valori Null**  
+ **Percentuale valori null**  
  Visualizza la percentuale di righe in cui il valore della colonna analizzata è un valore Null.  
   
  **Conteggio righe**  
@@ -91,7 +91,7 @@ ms.locfileid: "66059717"
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="pattern-distribution-pane"></a>Riquadro Distribuzione criteri di ricerca  
- **Pattern**  
+ **Modello**  
  Visualizza i modelli calcolati per la colonna analizzata.  
   
  **Percentuale**  
@@ -100,7 +100,7 @@ ms.locfileid: "66059717"
 ### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
 #### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
- **Minimo**  
+ **Minima**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
  **Massimo**  
@@ -125,7 +125,7 @@ ms.locfileid: "66059717"
  **Valore**  
  Visualizza i valori distinct rilevati nella colonna analizzata.  
   
- **Count**  
+ **Conteggio**  
  Visualizza il numero di righe in cui la colonna analizzata ha il valore indicato nella colonna **Valore** .  
   
  **Percentuale**  
@@ -141,10 +141,10 @@ ms.locfileid: "66059717"
  Visualizza il livello di attendibilità (come percentuale) della colonna o combinazione di colonne chiave candidata. Un livello di attendibilità inferiore al 100% indica la presenza di valori duplicati.  
   
 #### <a name="key-violations-pane"></a>Riquadro Violazioni chiave  
- **\<colonna1>, \<colonna2>, ecc.**  
+ **\<Column1>, \<Column2> e così via.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
- **Count**  
+ **Conteggio**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo di profilo: profilo Dipendenza funzionale  
@@ -153,7 +153,7 @@ ms.locfileid: "66059717"
  **Colonne determinanti**  
  Visualizza la colonna o le colonne selezionate come colonne determinanti. Nell'esempio in cui uno stesso codice postale ZIP (Stati Uniti) deve essere associato sempre allo stesso stato, il codice postale rappresenta la colonna determinante.  
   
- **Colonna dipendente**  
+ **Colonne dipendenti**  
  Visualizza la colonna o le colonne selezionate come colonne dipendenti. Nell'esempio in cui uno stesso codice postale ZIP (Stati Uniti) deve essere associato sempre allo stesso stato, lo stato rappresenta la colonna dipendente.  
   
  **Attendibilità dipendenza funzionale**  
@@ -164,19 +164,19 @@ ms.locfileid: "66059717"
 > [!NOTE]  
 >  Una percentuale elevata di valori non corretti nei dati può provocare risultati imprevisti da un profilo Dipendenza funzionale. Ad esempio, il 90% delle righe contiene il valore di stato "WI" per il valore di codice postale ZIP "98052". Il profilo segnala le righe che contengono il valore di stato "WA" corretto come violazioni.  
   
- **\<nome colonna determinante>**  
+ **\<Nome colonna determinante>**  
  Visualizza il valore della colonna determinante o della combinazione di colonne determinanti in questa istanza di una violazione della dipendenza funzionale.  
   
- **\<nome colonna dipendente>**  
+ **\<Nome colonna dipendente>**  
  Visualizza il valore della colonna dipendente in questa istanza di una violazione della dipendenza funzionale.  
   
- **Conteggio del supporto**  
+ **conteggio del supporto**  
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
- **Conteggio violazioni**  
- Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>** .  
+ **Conteggio delle violazioni**  
+ Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. (Si tratta delle righe in cui il valore dipendente corrisponde al valore indicato nel ** \<nome della colonna dipendente>** colonna).  
   
- **Percentuale del supporto**  
+ **percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  
   
 ### <a name="profile-type--value-inclusion-profile"></a>Tipo di profilo: profilo Inclusione valore  
@@ -192,10 +192,10 @@ ms.locfileid: "66059717"
  Visualizza il livello di attendibilità (come percentuale) della sovrapposizione tra colonne. Un livello di attendibilità inferiore al 100% indica che vi sono casi in cui il valore del subset non viene rilevato tra i valori del superset.  
   
 #### <a name="inclusion-violations-pane"></a>Riquadro Violazioni inclusione  
- **\<colonna1>, \<colonna2>, ecc.**  
+ **\<Column1>, \<Column2> e così via.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
- **Count**  
+ **Conteggio**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
 ## <a name="see-also"></a>Vedere anche  

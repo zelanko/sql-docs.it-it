@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745552"
 ---
-# <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API Stored procedure estesa)
+# <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Invia un messaggio al client.  
   
@@ -76,13 +77,13 @@ msglen
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client, in questo caso l'handle che ha ricevuto la richiesta del linguaggio. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *msgtype*  
+ *MsgType*  
  SRV_MSG_INFO o SRV_MSG_ERROR, a seconda che il server invii un messaggio informativo o un messaggio di errore.  
   
  *msgnum*  
  Numero di messaggio a 4 byte.  
   
- *class*  
+ *classe*  
  Specifica la gravità dell'errore. Un livello di gravità minore o uguale a 10 è considerato un messaggio informativo.  
   
  *state*  
@@ -94,10 +95,10 @@ msglen
  *rpcnamelen*  
  Attualmente non supportato.  
   
- *linenum*  
+ *LineNum*  
  Numero di riga nel batch di comandi del linguaggio a cui è applicato il messaggio. I numeri di riga partono da 1. Se *linenum* non si applica al messaggio, viene impostato su 0.  
   
- *message*  
+ *Messaggio*  
  Puntatore alla stringa di caratteri da inviare al client.  
   
  *msglen*  
@@ -106,14 +107,14 @@ msglen
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione invia messaggi informativi o di errore al client. Viene chiamata una volta per ogni messaggio da inviare.  
   
  I messaggi possono essere inviati al client con **srv_sendmsg** in qualsiasi ordine prima o dopo l'invio di tutte le righe, se presenti, con **srv_sendrow**. Tutti i messaggi, se presenti, devono essere inviati al client prima dell'invio dello stato di completamento con **srv_senddone**.  
   
  Per inviare i messaggi in Unicode, usare **srv_wsendmsg** anziché **srv_sendmsg**.  
   
- Per altre informazioni, vedere [Dati Unicode e tabelle codici del server](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Per ulteriori informazioni [, vedere dati Unicode e tabelle codici del server](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

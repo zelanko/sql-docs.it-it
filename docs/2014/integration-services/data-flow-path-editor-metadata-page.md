@@ -1,5 +1,5 @@
 ---
-title: Percorso Editor (pagina metadati) del flusso di dati | Microsoft Docs
+title: Editor percorso flusso di dati (pagina metadati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,32 +15,32 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059984"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor percorso flusso di dati (pagina Metadati)
   Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso flusso di dati** per visualizzare i metadati delle colonne percorso.  
   
 ## <a name="options"></a>Opzioni  
- **Metadati percorso**  
+ **Metadati del percorso**  
  Elenca i metadati delle colonne. Fare clic sulle intestazioni di colonna per ordinarne i dati.  
   
- **Name**  
+ **Nome**  
  Indica il nome delle colonne.  
   
  **Tipo di dati**  
  Indica il tipo di dati della colonna.  
   
- **Precisione**  
+ **Precision**  
  Indica il numero di cifre in un valore numerico.  
   
- **Scala**  
+ **Scalabilità**  
  Indica il numero di cifre a destra del separatore decimale in un valore numerico.  
   
- **Lunghezza**  
+ **Length**  
  Indica la lunghezza corrente della colonna.  
   
  **Tabella codici**  
@@ -62,9 +62,9 @@ ms.locfileid: "66059984"
  Consente di copiare i metadati della colonna negli Appunti. Per impostazione predefinita, tutte le righe di metadati vengono copiate nell'ordine in cui sono attualmente visualizzate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor percorso flusso di dati &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor percorso flusso di dati &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flusso di dati](data-flow/data-flow.md)   
- [Usare le annotazioni nei pacchetti](use-annotations-in-packages.md)  
+ [Utilizzo di annotazioni nei pacchetti](use-annotations-in-packages.md)  
   
   

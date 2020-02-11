@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining | Microsoft Docs'
+title: 'Lezione 1: creazione di un modello di data mining e di una struttura di data mining Time Series | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678447"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lezione 1: Creazione di un modello di data mining Time Series e di una struttura di data mining
@@ -23,7 +23,7 @@ ms.locfileid: "62678447"
  Questa lezione presuppone che l'utente abbia familiarità con i modelli di previsione e con i requisiti dell'algoritmo Microsoft Time Series. Per altre informazioni, vedere [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## <a name="create-mining-model-statement"></a>Istruzione CREATE MINING MODEL  
- Per creare direttamente un modello di data mining e generare automaticamente la struttura di data mining sottostante, viene utilizzata la [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per creare direttamente un modello di data mining e generare automaticamente la struttura di data mining sottostante, è possibile utilizzare l'istruzione [create mining model &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Assegnazione di un nome al modello  
   
@@ -51,7 +51,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Il nome della struttura sottostante viene generato automaticamente in Analysis Services aggiungendo il suffisso "_structure" al nome del modello, per assicurare l'utilizzo di un nome univoco derivato dal nome del modello. Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Il nome della struttura sottostante viene generato automaticamente in Analysis Services aggiungendo il suffisso "_structure" al nome del modello, per assicurare l'utilizzo di un nome univoco derivato dal nome del modello. Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  La riga successiva definisce la colonna chiave del modello di data mining, che nel caso di un modello Time Series identifica in modo univoco un intervallo temporale nei dati di origine. L'intervallo temporale è identificato dalle parole chiave `KEY TIME` dopo il nome di colonna e i tipi di dati. Se il modello Time Series dispone di una chiave della serie separata, questa viene identificata tramite la parola chiave `KEY`.  
   
@@ -81,9 +81,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Nel **Connetti al Server** della finestra di dialogo per **tipo di Server**, selezionare **Analysis Services**. Nelle **nome Server**, digitare `LocalHost`, o il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che si desidera connettersi a fini di questa lezione. Fare clic su **Connetti**.  
+2.  Nella finestra di dialogo **Connetti al server** selezionare **Analysis Services**per **tipo di server**. In **nome server**, digitare `LocalHost`o il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si desidera connettersi per questa lezione. Fare clic su **Connetti**.  
   
-3.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+3.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -172,33 +172,33 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+6.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-7.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Forecasting_MIXED.dmx`.  
+7.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Forecasting_MIXED.dmx`il nome.  
   
 ## <a name="executing-the-query"></a>Esecuzione della query  
- Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, è necessario eseguirla per creare il modello di data mining e la relativa struttura sul server. Per altre informazioni sull'esecuzione di query nell'Editor di Query, vedere [Editor di Query motore di Database &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, è necessario eseguirla per creare il modello di data mining e la relativa struttura sul server. Per ulteriori informazioni sull'esecuzione di query nell'editor di query, vedere [motore di database editor di query &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Per eseguire la query  
   
--   Nell'Editor di Query nella barra degli strumenti, fare clic su **Execute**.  
+-   Nell'editor di query fare clic su **Esegui**sulla barra degli strumenti.  
   
-     Lo stato della query viene visualizzato nei **messaggi** scheda nella parte inferiore dell'Editor di Query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
+     Lo stato della query viene visualizzato nella scheda **messaggi** nella parte inferiore dell'editor di query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Una nuova struttura denominata **Forecasting_MIXED_Structure** ora esista nel server, insieme al modello di data mining correlato **Forecasting_MIXED**.  
+     Nel server è presente una nuova struttura denominata **Forecasting_MIXED_Structure** , insieme al modello di data mining correlato **Forecasting_MIXED**.  
   
- Nella prossima lezione, si aggiungerà un modello di data mining per i **Forecasting_MIXED** struttura di data mining appena creato.  
+ Nella lezione successiva verrà aggiunto un modello di data mining alla struttura di data mining **Forecasting_MIXED** appena creata.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli per i modelli Time Series di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining per i modelli Time Series &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

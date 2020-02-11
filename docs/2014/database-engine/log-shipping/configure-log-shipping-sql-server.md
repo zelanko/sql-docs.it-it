@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774585"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "62774585"
 > [!NOTE]  
 >  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e le versioni successive supportano la compressione dei backup. Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup per i backup del log. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774585"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774585"
   
 8.  Si noti la pianificazione di backup presente nella casella **Pianificazione** in **Processo di backup**. Se si desidera personalizzare la pianificazione dell'installazione, fare clic su **Pianificazione** e quindi modificare la pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in base alle specifiche esigenze.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup per i backup del log scegliendo una delle opzioni seguenti: **Usa l'impostazione predefinita del server**, **Comprimi backup** o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Quando si crea una configurazione per il log shipping, è possibile determinare il comportamento della compressione dei backup del log scegliendo una delle opzioni seguenti: **Utilizza l'impostazione predefinita del server**, **Comprimi backup**o **Non comprimere il backup**. Per altre informazioni, vedere [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Fare clic su **OK**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62774585"
   
 28. Nella finestra di dialogo **Proprietà database** fare clic su **OK** per iniziare il processo di configurazione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62774585"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Aggiornare il Log Shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Aggiungere un database secondario a una configurazione per il log shipping &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   

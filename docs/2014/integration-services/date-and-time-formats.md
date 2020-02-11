@@ -1,5 +1,5 @@
 ---
-title: Formati data e ora | Microsoft Docs
+title: Formati di data e ora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059651"
 ---
 # <a name="date-and-time-formats"></a>Formati di data e ora
@@ -32,7 +32,7 @@ ms.locfileid: "66059651"
   
 -   Formati ISO 8601, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Formati di base ed esteso con anno a quattro cifre, a due cifre e giorno a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
     |AAAA-MM|Formati di base ed esteso a precisione ridotta, con anno a quattro cifre e mese a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
@@ -63,7 +63,7 @@ ms.locfileid: "66059651"
   
 -   Formati di ora ISO 8601, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Formati di base ed esteso con ora a due cifre, minuto a due cifre e giorno a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
     |HHMI<br /><br /> HH:MI|Formati troncati di base ed esteso con ora a due cifre e minuto a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
@@ -72,7 +72,7 @@ ms.locfileid: "66059651"
   
 -   Formati ora che specificano un fuso orario, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da aggiungere all'ora UTC (Coordinated Universal Time) per ottenere l'ora locale.|  
     |-HH:MI<br /><br /> -HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da sottrarre all'ora UTC per ottenere l'ora locale.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66059651"
   
 -   Formati di ora che includono una frazione decimale, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di ore. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 12.750 indica ad esempio le 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di minuti. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 1220,500 indica ad esempio le 12:20:30.|  
@@ -120,12 +120,12 @@ ms.locfileid: "66059651"
   
  Le stringhe di output dell'analisi veloce sono di tipo DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET. Ai valori di data e ora con formati troncati viene applicato un riempimento. Nella tabella seguente sono elencati i valori aggiunti per le parti mancanti relative a data e ora.  
   
-|Parte della data o dell'ora|Spaziatura interna|  
+|Parte della data o dell'ora|Riempimento|  
 |---------------------|-------------|  
 |Secondi|Viene aggiunto 00.|  
-|Minutes|Aggiungi 00:00.|  
+|Minuti|Aggiungi 00:00.|  
 |Ora|Viene aggiunto 00.00.00.|  
-|Day|Viene aggiunto 01 come giorno del mese.|  
+|Giorno|Viene aggiunto 01 come giorno del mese.|  
 |Month|Viene aggiunto 01 come mese dell'anno.|  
   
  Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  

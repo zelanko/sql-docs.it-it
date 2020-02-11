@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720378"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modifica dei server di destinazione di un processo
-  In questo argomento viene illustrato come modificare i server di destinazione per i processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come modificare i server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinazione per i [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] processi di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)]in tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62720378"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server sysadmin. Gli altri utenti devono appartenere a uno dei seguenti ruoli predefiniti del database di SQL Server Agent nel database msdb:  
+ Per impostazione predefinita, i membri del ruolo predefinito del server sysadmin possono eseguire questa stored procedure. Gli altri utenti devono appartenere a uno dei seguenti ruoli predefiniti del database di SQL Server Agent nel database msdb:  
   
 1.  `SQLAgentUserRole`  
   
@@ -49,11 +49,11 @@ ms.locfileid: "62720378"
   
 3.  SQLAgentOperatorRole  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-the-target-servers-for-a-job"></a>Per modificare i server di destinazione per un processo  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**e quindi **Processi**, fare clic con il pulsante destro del mouse sul processo e quindi scegliere **Proprietà**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62720378"
   
      Se si sceglie **Più server di destinazione**, specificare quali dovranno essere i server di destinazione del processo selezionando la casella a sinistra del nome di ogni server. Verificare che le caselle di controllo corrispondenti ai server che non saranno server di destinazione del processo siano deselezionate.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-the-target-servers-for-a-job"></a>Per modificare i server di destinazione per un processo  
   
@@ -82,7 +82,7 @@ GO
   
 ```  
   
- Per altre informazioni, vedere [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobserver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  

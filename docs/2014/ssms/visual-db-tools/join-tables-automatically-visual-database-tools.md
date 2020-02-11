@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711068"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Unione di tabelle in modo automatico (Visual Database Tools)
@@ -40,8 +40,8 @@ ms.locfileid: "62711068"
  Se le tabelle non vengono unite in join automaticamente nella query, sarà possibile creare manualmente il join. Per informazioni dettagliate, vedere [Unione di tabelle in modo manuale &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modo in cui la Query e Progettazione viste rappresentazione di join &#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Rappresentazione di join in Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Eseguire query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

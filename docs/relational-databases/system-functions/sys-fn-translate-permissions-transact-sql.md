@@ -22,18 +22,18 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055369"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Converte la maschera di bit delle autorizzazioni restituita da Traccia SQL in una tabella di nomi delle autorizzazioni.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *level*  
- Tipo di entità a protezione diretta a cui viene applicata l'autorizzazione. *livello* viene **nvarchar(60)** .  
+ *livello*  
+ Tipo di entità a protezione diretta a cui viene applicata l'autorizzazione. *Level* è di **tipo nvarchar (60)**.  
   
  *perms*  
- Maschera di bit restituita nella colonna delle autorizzazioni. *Perms* viene **varbinary(16)** .  
+ Maschera di bit restituita nella colonna delle autorizzazioni. *perms* è di tipo **varbinary (16)**.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- **table**  
+ **tavolo**  
   
-## <a name="remarks"></a>Note  
- Il valore restituito nel **le autorizzazioni** colonna di traccia SQL è una rappresentazione di valori interi di una maschera di bit usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **Sys. fn_translate_permissions** Converte questa maschera di bit in una tabella di nomi di autorizzazioni.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore restituito nella colonna **autorizzazioni** di una traccia SQL è una rappresentazione Integer di una maschera di maschera utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da per calcolare le autorizzazioni valide. Tutti i 25 tipi di entità a protezione diretta dispongono di un proprio set di autorizzazioni con valori numerici corrispondenti. **sys. fn_translate_permissions** converte questa maschera di maschera in una tabella di nomi di autorizzazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="example"></a>Esempio  
- La query seguente utilizza `sys.fn_builtin_permissions` per visualizzare le autorizzazioni che si applicano ai certificati e quindi Usa `sys.fn_translate_permissions` per restituire i risultati della maschera di bit delle autorizzazioni.  
+ La query seguente usa `sys.fn_builtin_permissions` per visualizzare le autorizzazioni valide per i certificati, quindi usa `sys.fn_translate_permissions` per restituire i risultati della maschera di maschera delle autorizzazioni.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -70,7 +70,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
   
 ## <a name="see-also"></a>Vedere anche  
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [sys. server_permissions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

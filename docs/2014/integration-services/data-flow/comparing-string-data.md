@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828144"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
@@ -63,7 +63,7 @@ ms.locfileid: "62828144"
  È inoltre possibile specificare impostazioni locali per le gestioni connessioni file flat e per più file flat.  
   
 ## <a name="setting-comparison-options"></a>Impostazione delle opzioni di confronto  
- Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. L'effetto di questa opzione è per ignorare i segni diacritici, ad esempio la distinzione tra caratteri accentati, che rende "a" e "å" identici per il confronto.  
+ Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. L'effetto di questa opzione è ignorare i segni diacritici, ad esempio l'accento, che rendono "a" e "å" identici a scopo di confronto.  
   
  Nella tabella seguente vengono descritte le opzioni di confronto disponibili e uno stile di ordinamento.  
   

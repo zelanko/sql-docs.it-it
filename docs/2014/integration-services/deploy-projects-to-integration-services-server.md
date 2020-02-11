@@ -1,5 +1,5 @@
 ---
-title: Distribuire progetti nel Server Integration Services | Microsoft Docs
+title: Distribuire progetti nel server Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059583"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
@@ -23,7 +23,7 @@ ms.locfileid: "66059583"
  Per altre informazioni sugli ambienti, vedere [Creare ed eseguire il mapping di un ambiente server](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  Come nelle versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], nella versione corrente è possibile distribuire i pacchetti in un'istanza di SQL Server e utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per eseguire e gestire i pacchetti. Viene utilizzato il modello di distribuzione del pacchetto. Per altre informazioni, vedere [pacchetto di distribuzione &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+>  Come nelle versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], nella versione corrente è possibile distribuire i pacchetti in un'istanza di SQL Server e utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per eseguire e gestire i pacchetti. Viene utilizzato il modello di distribuzione del pacchetto. Per ulteriori informazioni, vedere [distribuzione di pacchetti &#40;&#41;SSIS ](packages/legacy-package-deployment-ssis.md).  
   
  Per distribuire un progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , completare le attività seguenti:  
   
@@ -50,35 +50,35 @@ ms.locfileid: "66059583"
   
      Per altre informazioni sull'aggiornamento di pacchetti, vedere [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md) e [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
+3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
   
 4.  (Facoltativo) Creare un ambiente per il progetto distribuito. Per altre informazioni, vedere [Creare ed eseguire il mapping di un ambiente server](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a> Per convertire un progetto nel modello di distribuzione del progetto  
+##  <a name="convert"></a>Per convertire un progetto nel modello di distribuzione del progetto  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
   
-     oppure  
+     -oppure-  
   
      Da Esplora oggetti di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse sul nodo **Progetti** e selezionare **Importa pacchetto**.  
   
 2.  Completare la procedura guidata. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a> Per distribuire un progetto nel server Integration Services  
+##  <a name="deploy"></a>Per distribuire un progetto nel server Integration Services  
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], quindi scegliere **Distribuisci** dal menu **Progetto** per avviare la **Distribuzione guidata Integration Services**.  
   
-     oppure  
+     -oppure-  
   
      In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] espandere il nodo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** in Esplora oggetti e individuare la cartella Progetti per il progetto da distribuire. Fare clic con il pulsante destro del mouse sulla cartella **Progetti** , quindi scegliere **Distribuzione progetto**.  
   
-     oppure  
+     -oppure-  
   
      Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
   
 2.  Nella pagina **Seleziona origine** fare clic su **File distribuzione progetto** per selezionare il file di distribuzione per il progetto.  
   
-     oppure  
+     -OPPURE-  
   
      Fare clic su **Catalogo di Integration Services** per selezionare un progetto che è già stato distribuito nel catalogo SSISDB.  
   

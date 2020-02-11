@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704718"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Visualizzazione o modifica delle proprietà di una connessione in un progetto
@@ -34,7 +34,7 @@ ms.locfileid: "62704718"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)   
- [Associazione di una Query con una connessione in un progetto](associate-a-query-with-a-connection-in-a-project.md)   
+ [Associare una query a una connessione in un progetto](associate-a-query-with-a-connection-in-a-project.md)   
  [Modificare la connessione associata a una query](change-the-connection-associated-with-a-query.md)  
   
   

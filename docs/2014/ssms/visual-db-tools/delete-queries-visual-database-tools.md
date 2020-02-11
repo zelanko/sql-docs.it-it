@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670474"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminazione di query (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "62670474"
 >  Se si desidera rimuovere la query dal progetto senza eliminarla, fare clic su **Rimuovi**. In questo modo, sarà poi possibile cercare e riaggiungere la query facendo clic con il pulsante destro del mouse sulla cartella delle query e scegliendo **Aggiungi elemento** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cancellare i risultati della Query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Cancellare i risultati di una query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Annullare le modifiche apportate alle query &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

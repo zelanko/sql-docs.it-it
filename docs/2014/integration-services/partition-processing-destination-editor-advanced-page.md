@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione elaborazione partizione (pagina avanzate) | Microsoft Docs
+title: Editor destinazione elaborazione partizione (pagina Avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056782"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione partizione (pagina Avanzate)
@@ -30,13 +30,13 @@ ms.locfileid: "66056782"
 >  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
   
 ## <a name="options"></a>Opzioni  
- **Usa configurazione errori predefinita**  
- Consente di specificare se utilizzare la gestione degli errori predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Il valore predefinito è `True`.  
+ **Usare la configurazione degli errori predefinita.**  
+ Consente di specificare se utilizzare la gestione degli errori predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per impostazione predefinita, questo valore è `True`.  
   
- **Azione per errore chiave**  
+ **Azione errore chiave**  
  Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore Sconosciuto.|  
 |**DiscardRecord**|Consente di scartare il record.|  
@@ -44,16 +44,16 @@ ms.locfileid: "66056782"
  **Ignora errori**  
  Consente di specificare che gli errori devono essere ignorati.  
   
- **Arresta in caso di errore**  
+ **Arresta in un errore**  
  Consente di specificare che l'elaborazione deve essere arrestata al verificarsi di un errore.  
   
  **Numero di errori**  
  Consente di specificare la soglia di errore alla quale l'elaborazione deve arrestarsi quando è stata selezionata l'opzione **Arresta in caso di errore**.  
   
- **Azione in caso di errore**  
+ **Azione in errore**  
  Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**StopProcessing**|Consente di arrestare l'elaborazione.|  
 |**StopLogging**|Consente di arrestare la registrazione degli errori.|  
@@ -61,7 +61,7 @@ ms.locfileid: "66056782"
  **Chiave non trovata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66056782"
  **Chiave duplicata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -79,16 +79,16 @@ ms.locfileid: "66056782"
  **Chiave Null convertita in sconosciuta**  
  Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore Sconosciuto. Il valore predefinito è **IgnoreError**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
 |**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
   
- **Chiave Null non consentita**  
+ **Chiave null non consentita**  
  Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -102,6 +102,6 @@ ms.locfileid: "66056782"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor destinazione elaborazione partizione &#40;pagina Mapping&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [Editor destinazione elaborazione partizione &#40;pagina mapping&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

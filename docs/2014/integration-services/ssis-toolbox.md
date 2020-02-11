@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766344"
 ---
 # <a name="ssis-toolbox"></a>Casella degli strumenti SSIS
@@ -31,7 +31,7 @@ ms.locfileid: "62766344"
   
  Nella **Casella degli strumenti SSIS**, i componenti del flusso di controllo e del flusso di dati sono organizzati in categorie.  È possibile espandere e comprimere le categorie per la visualizzazione e modificare l'organizzazione dei componenti in base alle proprie esigenze.  È possibile ripristinare l'organizzazione predefinita facendo clic con il pulsante destro del mouse all'interno della casella degli strumenti, quindi facendo clic su **Ripristina impostazioni predefinite casella degli strumenti**.  
   
- Le categorie **Preferiti** e **Comune** vengono visualizzate nella casella degli strumenti quando si selezionano le schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** . La categoria **Altre attività** viene visualizzata nella casella degli strumenti quando si seleziona la scheda **Flusso di controllo** o la scheda **Gestori eventi** . Le categorie **Altre trasformazioni**, **Altre origini**e **Altre destinazioni** vengono visualizzate nella casella degli strumenti quando si seleziona la scheda **Flusso di dati** .  
+ Le categorie **Preferiti** e **Comune** vengono visualizzate nella casella degli strumenti quando si selezionano le schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** . La categoria **altre attività** viene visualizzata nella casella degli strumenti quando si seleziona la scheda **flusso di controllo** o la scheda **gestori eventi** . Le **altre categorie trasformazioni**, **altre origini**e **altre destinazioni** vengono visualizzate nella casella degli strumenti quando si seleziona la scheda **flusso di dati** .  
   
  Quando si crea un nuovo progetto SSIS o si apre un progetto esistente, la **Casella degli strumenti SSIS** viene visualizzata automaticamente. La casella degli strumenti può essere aperta anche facendo clic sul relativo pulsante posto nell'angolo superiore destro dell'area di progettazione del pacchetto.  
   

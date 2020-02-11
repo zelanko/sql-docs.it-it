@@ -25,14 +25,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728517"
 ---
 # <a name="attribute-relationships"></a>Relazioni tra attributi
-  Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
   
 -   Tra l'attributo chiave e ogni attributo non chiave associato alle colonne della tabella principale della dimensione.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62728517"
   
 -   Tra l'attributo associato alla chiave esterna della tabella secondaria e ogni attributo non chiave associato alle colonne della tabella secondaria.  
   
- Vi sono, tuttavia, molti motivi per cui potrebbe essere necessario modificare queste relazioni tra attributi predefinite. Potrebbe, ad esempio, essere necessario definire una gerarchia naturale, un ordinamento personalizzato o una granularità della dimensione basata su un attributo non chiave. Per altre informazioni, vedere [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md).  
+ Vi sono, tuttavia, molti motivi per cui potrebbe essere necessario modificare queste relazioni tra attributi predefinite. Potrebbe, ad esempio, essere necessario definire una gerarchia naturale, un ordinamento personalizzato o una granularità della dimensione basata su un attributo non chiave. Per ulteriori informazioni, vedere [riferimento alle proprietà degli attributi delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
 > [!NOTE]  
 >  Le relazioni tra attributi sono note nelle espressioni MDX (Multidimensional Expression) come proprietà del membro.  
@@ -54,11 +54,11 @@ ms.locfileid: "62728517"
   
 -   Age  
   
--   Gender  
+-   Sesso  
   
 -   Email  
   
--   Città  
+-   city  
   
 -   Country  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62728517"
   
 -   Attributo City come relazione tra attributi dell'attributo Customer.  
   
- Per l'esplorazione dei dati nel cubo, è anche possibile creare una gerarchia definita dall'utente che non rappresenta una gerarchia naturale nei dati (che viene chiamato un *ad hoc* oppure *reporting* gerarchia). È ad esempio possibile creare una gerarchia basata su `{Age, Gender}`. Gli utenti non viene visualizzata alcuna differenza nel comportano dei due gerarchie, anche se la gerarchia naturale tragga vantaggio dall'aggregazione e indicizzazione di strutture, nascoste all'utente - dall'account per le relazioni naturali nei dati di origine.  
+ Per spostarsi tra i dati nel cubo, è inoltre possibile creare una gerarchia definita dall'utente che non rappresenti una gerarchia naturale nei dati (denominata gerarchia *ad hoc* o di *Reporting* ). È ad esempio possibile creare una gerarchia basata su `{Age, Gender}`. Gli utenti non vedono alcuna differenza nel comportamento delle due gerarchie, anche se la gerarchia naturale trae vantaggio dalle strutture di aggregazione e indicizzazione, nascoste dall'utente, che rappresentano le relazioni naturali nei dati di origine.  
   
  La proprietà `SourceAttribute` di un livello determina l'attributo utilizzato per descrivere il livello. La proprietà `KeyColumns` dell'attributo specifica la colonna della vista origine dati che definisce i membri. La proprietà `NameColumn` dell'attributo può specificare una colonna dei nomi differente per i membri.  
   
- Per definire un livello in una gerarchia definita dall'utente tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], il **progettazione dimensioni** consente di selezionare un attributo della dimensione, una colonna nella tabella della dimensione o una colonna di una tabella correlata inclusa nella vista origine dati per il cubo. Per altre informazioni sulla creazione di gerarchie definite dall'utente, vedere [gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Per definire un livello in una gerarchia definita dall'utente utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **Progettazione dimensioni** consente di selezionare un attributo della dimensione, una colonna in una tabella della dimensione o una colonna di una tabella correlata inclusa nella vista origine dati per il cubo. Per ulteriori informazioni sulla creazione di gerarchie definite dall'utente, vedere [creare gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  Relativamente al contenuto dei membri, in Analysis Services ci si basa in genere sul presupposto che i membri foglia non abbiano discendenti e contengano dati derivati dalle origini dei dati sottostanti, mentre i membri non foglia abbiano discendenti e contengano dati derivati dalle aggregazioni eseguite sui membri figlio. Nei livelli aggregati i membri sono basati sulle aggregazioni di livelli subordinati. Quando, perciò, la proprietà `IsAggregatable` viene impostata su `False` in un attributo di origine per un livello, non devono essere aggiunti attributi che possono essere aggregati come livelli al di sopra di esso.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "62728517"
  Il vincolo principale quando si crea una relazione tra attributi consiste nel verificare che l'attributo a cui la relazione fa riferimento non abbia più di un valore per ogni membro nell'attributo a cui appartiene la relazione tra attributi. Se, ad esempio, si definisce una relazione tra un attributo City e un attributo State, ogni città può essere in relazione solo con un unico stato.  
   
 ## <a name="attribute-relationship-queries"></a>Query sulla relazione tra attributi  
- È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi in forma di proprietà del membro, tramite la parola chiave `PROPERTIES` dell'istruzione `SELECT` MDX. Per altre informazioni su come usare MDX per recuperare le proprietà dei membri, vedere [usando le proprietà del membro &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
+ È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi in forma di proprietà del membro, tramite la parola chiave `PROPERTIES` dell'istruzione `SELECT` MDX. Per ulteriori informazioni sull'utilizzo di MDX per recuperare le proprietà dei membri, vedere [utilizzo delle proprietà dei membri &#40;&#41;MDX ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
- [Riferimento alle proprietà degli attributo delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)   
- [Gerarchie definite dall'utente](user-hierarchies.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Gerarchie utente](user-hierarchies.md)   
  [Proprietà delle gerarchie definite dall'utente](user-hierarchies-properties.md)  
   
   

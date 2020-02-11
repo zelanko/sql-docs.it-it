@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di dati di un vista con tabelle nidificate (esercitazione intermedia di Data Mining) di origine | Microsoft Docs
+title: Aggiunta di una vista origine dati con tabelle nidificate (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822779"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati con tabelle nidificate (Esercitazione intermedia sul data mining)
   Per creare un modello di analisi degli acquisti, è necessario utilizzare una vista origine dati che supporti dati associativi. Questa vista origine dati verrà utilizzata anche per lo scenario di clustering delle sequenze.  
   
- Questa vista origine dati è diversa dagli altri che è possibile lavorare con perché contiene un *tabella nidificata*. Oggetto *tabella nidificata* è una tabella che contiene più righe di informazioni su una singola riga nella tabella del case. Se ad esempio il modello analizza il comportamento di acquisto dei clienti, in genere si utilizza una tabella che dispone di una riga univoca per ogni cliente come tabella del case. Ogni cliente potrebbe tuttavia fare più acquisti, pertanto potrebbe essere necessario analizzare la sequenza di prodotti che vengono frequentemente acquistati insieme. Per rappresentare in modo logico questi acquisti nel modello, è necessario aggiungere un'altra tabella alla vista origine dati che elenca gli acquisti per ogni cliente.  
+ Questa vista origine dati è diversa da altre che potrebbero essere state elaborate perché contiene una *tabella nidificata*. Una *tabella nidificata* è una tabella che contiene più righe di informazioni su una singola riga della tabella del case. Se ad esempio il modello analizza il comportamento di acquisto dei clienti, in genere si utilizza una tabella che dispone di una riga univoca per ogni cliente come tabella del case. Ogni cliente potrebbe tuttavia fare più acquisti, pertanto potrebbe essere necessario analizzare la sequenza di prodotti che vengono frequentemente acquistati insieme. Per rappresentare in modo logico questi acquisti nel modello, è necessario aggiungere un'altra tabella alla vista origine dati che elenca gli acquisti per ogni cliente.  
   
  La tabella degli acquisti nidificata è correlata alla tabella dei clienti con una relazione molti-a-uno. La tabella nidificata potrebbe contenere molte righe per ogni cliente, ognuna delle quali contiene un solo prodotto acquistato, con informazioni aggiuntive sull'ordine tramite il quale sono stati effettuati gli acquisti, il prezzo al momento dell'ordine o eventuali promozioni applicate. È possibile utilizzare le informazioni nella tabella nidificata come input per il modello o come attributo stimabile.  
   
  In questa lezione verranno effettuate le operazioni seguenti:  
   
--   Verrà aggiunta una vista origine dati per il [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] zdroj dat.  
+-   Si aggiunge una vista origine dati all'origine [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] dati.  
   
 -   Si aggiungeranno il case e le tabelle nidificate alla vista aggiunta.  
   
@@ -37,51 +37,51 @@ ms.locfileid: "62822779"
   
 -   Si definirà in che modo vengono utilizzate le colonne di dati nel modello.  
   
- Per altre informazioni sull'utilizzo di case e tabelle nidificate e come scegliere una chiave tabella nidificata, vedere [tabelle annidate &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
+ Per ulteriori informazioni sull'utilizzo delle tabelle case e nidificate e su come scegliere una chiave di tabella nidificata, vedere [tabelle nidificate &#40;Analysis Services-&#41;di data mining ](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ### <a name="to-add-a-data-source-view"></a>Per aggiungere una vista origine dati  
   
-1.  In Esplora soluzioni fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **viste origine dati**, quindi scegliere **nuova vista origine dati**.  
   
      Verrà avviata Creazione guidata vista origine dati.  
   
-2.  Nella pagina iniziale di **Creazione guidata vista origine dati** fare clic su **Avanti**.  
+2.  Nella pagina **Creazione guidata vista origine dati** fare clic su **Avanti**.  
   
-3.  Nel **Vybrat Zdroj** nella pagina **origini dati relazionali**, selezionare il [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origine dati creata nell'esercitazione di Data Mining i dati di base. Scegliere **Avanti**.  
+3.  Nella pagina **Selezione origine dati** , in **origini dati relazionali**, selezionare l' [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origine dati creata nell'esercitazione di base sul data mining. Fare clic su **Avanti**.  
   
-4.  Nel **selezione tabelle e viste** pagina, selezionare le tabelle seguenti e quindi fare clic sulla freccia a destra per includerle nella nuova vista origine dati:  
+4.  Nella pagina **Selezione tabelle e viste** selezionare le tabelle seguenti, quindi fare clic sulla freccia destra per includerle nella nuova vista origine dati:  
   
     -   `vAssocSeqOrders`  
   
     -   `vAssocSeqLineItems`  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
-6.  Nel **Completamento procedura guidata** pagina, per impostazione predefinita la vista origine dati è denominata [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Modificare il nome in `Orders`, quindi fare clic su **fine**.  
+6.  Per impostazione predefinita, nella pagina **Completamento procedura guidata** la vista origine dati è denominata [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Modificare il nome in `Orders`, quindi fare clic su **fine**.  
   
-     Verrà visualizzata la finestra di progettazione vista origine dati e il `Orders` vista origine dati viene visualizzata.  
+     Verrà aperto Progettazione vista origine dati e `Orders` verrà visualizzata la vista origine dati.  
   
 ### <a name="to-create-a-relationship-between-tables"></a>Per creare una relazione tra le tabelle  
   
 1.  In Progettazione vista origine dati posizionare le due tabelle in modo che siano allineate orizzontalmente, con la tabella vAssocSeqLineItems sulla sinistra e la tabella vAssocSeqOrders sulla destra.  
   
-2.  Selezionare il **OrderNumber** colonna nella tabella vAssocSeqLineItems.  
+2.  Selezionare la colonna **OrderNumber** nella tabella vAssocSeqLineItems.  
   
-3.  Trascinare la colonna alla tabella vAssocSeqOrders e posizionarla nella **OrderNumber** colonna.  
+3.  Trascinare la colonna nella tabella vAssocSeqOrders e inserirla nella colonna **OrderNumber** .  
   
     > [!IMPORTANT]  
-    >  Assicurarsi di trascinare il **OrderNumber** colonna dalla tabella nidificata vAssocSeqLineItems, che rappresenta il lato "molti" del join, alla tabella del case vAssocSeqOrders, che rappresenta il lato del join.  
+    >  Assicurarsi di trascinare la colonna **OrderNumber** dalla tabella nidificata vAssocSeqLineItems, che rappresenta il lato molti del join, alla tabella del case vAssocSeqOrders, che rappresenta il lato uno del join.  
   
-     Una nuova *relazione molti-a-uno* ora esiste tra le tabelle vAssocSeqLineItems e vAssocSeqOrders. Se le tabelle sono state unite in join correttamente, la vista origine dati visualizzata sarà simile alla seguente:  
+     Esiste ora una nuova *relazione molti-a-uno* tra le tabelle VAssocSeqLineItems e vAssocSeqOrders. Se le tabelle sono state unite in join correttamente, la vista origine dati visualizzata sarà simile alla seguente:  
   
-     ![join molti-a-uno previsto nella tabella nidificata e maiuscole/minuscole](../../2014/tutorials/media/dsv-nestedjoin-illustration.gif "join molti-a-uno previsto nella tabella nidificata e maiuscole/minuscole")  
+     ![Join molti-a-uno previsto in una tabella del case e in una tabella nidificata](../../2014/tutorials/media/dsv-nestedjoin-illustration.gif "Join molti-a-uno previsto in una tabella del case e in una tabella nidificata")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di una struttura Market Basket e un modello &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Creazione di una struttura e di un modello di Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Esercitazione intermedia sul data mining &#40;Analysis Services-&#41;di data mining](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelli di data mining &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

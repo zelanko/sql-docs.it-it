@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753344"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Creare un progetto SMO per Visual Basic in Visual Studio .NET
@@ -30,17 +30,17 @@ ms.locfileid: "62753344"
   
 1.  Avviare [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (o [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]).  
   
-2.  Scegliere **Nuovo progetto** dal menu **File**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+2.  Scegliere **Nuovo progetto** dal menu **File**. Viene visualizzata la finestra di dialogo **Nuovo progetto**.  
   
-3.  Nelle **tipi di progetto** finestra di dialogo **Visual Basic**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati, selezionare **applicazione Console.**  
+3.  Nella finestra di dialogo **Tipi progetto** selezionare **Visual Basic**, quindi selezionare **Windows**. Nel riquadro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] modelli installati selezionare **applicazione console.**  
   
-4.  (Facoltativo) Nel **nome** digitare il nome della nuova applicazione.  
+4.  Opzionale Nel campo **nome** Digitare il nome della nuova applicazione.  
   
-5.  Fare clic su **OK** caricare il [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modello di applicazione console.  
+5.  Fare clic su **OK** per [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] caricare il modello applicazione console.  
   
 6.  Scegliere **Aggiungi riferimento** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-7.  Fare clic su **Sfoglia**, individuare gli assembly SMO nella cartella C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies e quindi selezionare i file seguenti. che costituiscono i file minimi necessari per compilare un'applicazione SMO:  
+7.  Fare clic su **Sfoglia**, individuare gli assembly SMO nella cartella C:\Programmi\Microsoft SQL Server\120\SDK\Assemblies e selezionare i file seguenti. che costituiscono i file minimi necessari per compilare un'applicazione SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62753344"
   
 9. Fare clic su **Apri**.  
   
-10. Nel **View** menu, fare clic su **codice**. oppure selezionare la finestra Module1.vb per visualizzare la finestra del codice.  
+10. Scegliere **codice**dal menu **Visualizza** . in alternativa, selezionare la finestra Module1. vb per visualizzare la finestra del codice.  
   
-11. Nel codice, prima di qualsiasi dichiarazione, digitare quanto segue **importazioni** istruzioni per qualificare i tipi nello spazio dei nomi SMO.  
+11. Nel codice, prima di qualsiasi dichiarazione, digitare le istruzioni **Imports** seguenti per qualificare i tipi nello spazio dei nomi SMO.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

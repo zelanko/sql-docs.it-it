@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60aa1e7f4e671540d8ece08a24696a3a46998c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832633"
 ---
 # <a name="control-flow"></a>Flusso di controllo
-  Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre diversi tipi di elementi del flusso di controllo: contenitori, che definiscono le strutture nei pacchetti, attività, che forniscono le funzionalità, e vincoli di precedenza, che connettono eseguibili, contenitori e attività in un flusso di controllo ordinato.  
+  Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] in sono disponibili tre diversi tipi di elementi del flusso di controllo: contenitori che forniscono strutture nei pacchetti, attività che forniscono funzionalità e vincoli di precedenza che connettono i file eseguibili, i contenitori e le attività in un flusso di controllo ordinato.  
   
  Per altre informazioni, vedere [Vincoli di precedenza](precedence-constraints.md), [Contenitori in Integration Services](integration-services-containers.md)e [Attività di Integration Services](integration-services-tasks.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62832633"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   

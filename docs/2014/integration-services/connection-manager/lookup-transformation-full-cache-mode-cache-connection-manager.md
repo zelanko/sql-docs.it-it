@@ -1,5 +1,5 @@
 ---
-title: Implementare una trasformazione ricerca nella modalità Full Cache utilizzando la gestione connessione Cache | Microsoft Docs
+title: Implementare una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione della cache | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833707"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache
@@ -49,7 +49,7 @@ ms.locfileid: "62833707"
   
 -   Configurare le gestioni connessione della cache nei diversi pacchetti per l'utilizzo dello stesso file di cache.  
   
- Per altre informazioni, vedere i seguenti argomenti:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Trasformazione Cache](../data-flow/transformations/cache-transform.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833707"
   
 -   [Contenitore Sequenza](../control-flow/sequence-container.md)  
   
- Per un video che illustra come implementare una trasformazione Ricerca nella modalità di Full cache usando la gestione connessione della cache, vedere [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031)(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Per implementare una trasformazione Ricerca nella modalità Full Cache in un pacchetto utilizzando la gestione connessione della cache e un'origine dati nel flusso di dati  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62833707"
   
      Configurare l'origine dati in base alle esigenze.  
   
-4.  Fare doppio clic sulla Trasformazione cache e quindi in **Editor trasformazione cache**, nella pagina **Gestione connessione** fare clic su **Nuova** per creare una nuova gestione connessione cache.  
+4.  Fare doppio clic sulla Trasformazione cache e quindi in **Editor trasformazione cache**, nella pagina **Gestione connessione** fare clic su **Nuova** per creare una nuova gestione connessione della cache.  
   
 5.  Fare clic sulla scheda **Colonne** della finestra di dialogo **Editor gestione connessione cache** e quindi specificare le colonne di indice usando l'opzione **Posizione dell'indice** .  
   
@@ -84,14 +84,14 @@ ms.locfileid: "62833707"
   
 6.  Per salvare la cache in un file, in **Editor gestione connessione della cache**, nella scheda **Generale** configurare la Gestione connessione cache impostando le opzioni seguenti:  
   
-    -   Selezionare **Usa cache di file**.  
+    -   Selezionare **Usa cache dei file**.  
   
     -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
          Se viene digitato un percorso di file che non esiste, il sistema crea il file quando viene eseguito il pacchetto.  
   
     > [!NOTE]  
-    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../access-to-files-used-by-packages.md).  
+    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../cache-transformation-editor-connection-manager-page.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../cache-transformation-editor-mappings-page.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62833707"
   
     2.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
-    3.  Fare doppio clic sulla trasformazione Ricerca e quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full Cache**.  
+    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full cache**.  
   
     4.  Nell'area **Tipo di connessione** selezionare **Gestione connessione cache**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62833707"
   
     6.  Nella pagina **Connessione** selezionare una gestione connessione cache nell'elenco **Gestione connessione cache** .  
   
-    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna nell'elenco **Colonne di ricerca disponibili** .  
+    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna dell'elenco **Colonne di ricerca disponibili** .  
   
         > [!NOTE]  
         >  La trasformazione Ricerca esegue automaticamente il mapping delle colonne con lo stesso nome e lo stesso tipo di dati.  
@@ -122,7 +122,7 @@ ms.locfileid: "62833707"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output degli errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "62833707"
   
      Configurare l'origine dati in base alle esigenze.  
   
-4.  Fare doppio clic sulla Trasformazione cache e quindi in **Editor trasformazione cache**, nella pagina **Gestione connessione** fare clic su **Nuova** per creare una nuova gestione connessione cache.  
+4.  Fare doppio clic sulla Trasformazione cache e quindi in **Editor trasformazione cache**, nella pagina **Gestione connessione** fare clic su **Nuova** per creare una nuova gestione connessione della cache.  
   
 5.  In **Editor gestione connessione della cache**, nella scheda **Generale** configurare la Gestione connessione cache impostando le opzioni seguenti:  
   
-    -   Selezionare **Usa cache di file**.  
+    -   Selezionare **Usa cache dei file**.  
   
     -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "62833707"
     -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
     > [!NOTE]  
-    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../access-to-files-used-by-packages.md).  
+    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 11. Se i metadati della colonna sono stati copiati nel passaggio 8, fare clic su **Colonne**, selezionare la riga vuota e quindi premere CTRL+V per incollare i metadati della colonna.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "62833707"
   
     6.  Nella pagina **Connessione** selezionare la gestione connessione cache aggiunta nell'elenco **Gestione connessione cache** .  
   
-    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna nell'elenco **Colonne di ricerca disponibili** .  
+    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna dell'elenco **Colonne di ricerca disponibili** .  
   
         > [!NOTE]  
         >  La trasformazione Ricerca esegue automaticamente il mapping delle colonne con lo stesso nome e lo stesso tipo di dati.  
@@ -208,7 +208,7 @@ ms.locfileid: "62833707"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output degli errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "62833707"
   
 5.  In **Editor gestione connessione della cache**, nella scheda **Generale** configurare la Gestione connessione cache impostando le opzioni seguenti:  
   
-    -   Selezionare **Usa cache di file**.  
+    -   Selezionare **Usa cache dei file**.  
   
     -   In **Nome file**digitare il percorso del file o fare clic su **Sfoglia** per selezionare il file.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "62833707"
   
     2.  Fare doppio clic sulla trasformazione di origine o precedente per configurare il componente.  
   
-    3.  Fare doppio clic sulla trasformazione Ricerca e quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full Cache**.  
+    3.  Fare doppio clic su Trasformazione Ricerca, quindi nella pagina **Generale**di **Editor trasformazione Ricerca** selezionare **Full cache**.  
   
     4.  Selezionare **Gestione connessione cache** nell'area **Tipo di connessione** .  
   
@@ -263,7 +263,7 @@ ms.locfileid: "62833707"
   
     6.  Nella pagina **Connessione** selezionare la gestione connessione cache aggiunta nell'elenco **Gestione connessione cache** .  
   
-    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna nell'elenco **Colonne di ricerca disponibili** .  
+    7.  Fare clic sulla pagina **Colonne** e trascinare almeno una colonna dall'elenco **Colonne di input disponibili** a una colonna dell'elenco **Colonne di ricerca disponibili** .  
   
         > [!NOTE]  
         >  La trasformazione Ricerca esegue automaticamente il mapping delle colonne con lo stesso nome e lo stesso tipo di dati.  
@@ -273,14 +273,14 @@ ms.locfileid: "62833707"
   
     8.  Selezionare le colonne nell'elenco **Colonne di ricerca disponibili** . Nell'elenco **Operazione di ricerca** specificare se i valori dalle colonne di ricerca sostituiscono quelli nella colonna di input o vengono scritti in una nuova colonna.  
   
-    9. Per configurare l'output degli errori, fare clic sulla pagina **Output degli errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Per configurare l'output degli errori, fare clic sulla pagina **Output errori** e impostare le opzioni di gestione degli errori. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Fare clic su **OK** per salvare le modifiche nella trasformazione Ricerca.  
   
 9. Eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementare una ricerca in modalità No Cache o Partial Cache](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

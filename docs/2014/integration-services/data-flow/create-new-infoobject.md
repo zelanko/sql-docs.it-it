@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827906"
 ---
 # <a name="create-new-infoobject"></a>Crea nuovo InfoObject
@@ -61,7 +61,7 @@ ms.locfileid: "62827906"
  **Nome InfoObject**  
  Immettere un nome per l'InfoObject.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per l'InfoObject.  
   
  **Descrizione lunga**  
@@ -129,7 +129,7 @@ ms.locfileid: "62827906"
  **Tipo di InfoObject**  
  Visualizza il tipo dell'InfoObject. Nella tabella seguente sono elencati i valori possibili per il tipo.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |CHA|Caratteristiche|  
 |KYF|Cifre chiave|  
@@ -139,7 +139,7 @@ ms.locfileid: "62827906"
 ### <a name="attributes-options"></a>Opzioni degli attributi  
  Utilizzare le opzioni seguenti per aggiungere e rimuovere attributi per l'InfoObject che viene creato:  
   
- **Aggiungi**  
+ **Aggiungere**  
  Aggiungere un InfoObject esistente come attributo.  
   
  Per aggiungere un InfoObject esistente, fare clic su Aggiungi e quindi usare la finestra di dialogo **Cerca InfoObject** per trovare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](look-up-infoobject.md).  

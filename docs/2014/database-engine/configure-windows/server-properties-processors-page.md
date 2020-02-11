@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809277"
 ---
 # <a name="server-properties-processors-page"></a>Proprietà server (pagina Processori)
@@ -27,7 +27,7 @@ ms.locfileid: "62809277"
  Consente di assegnare i processori a thread specifici, in modo da eliminare i ricaricamenti dei processori e ridurre la migrazione dei thread tra i processori. Per altre informazioni, vedere [Opzione di configurazione del server affinity mask](affinity-mask-server-configuration-option.md).  
   
  **Affinità I/O**  
- Associa l'I/O su disco di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un determinato subset di CPU. Per altre informazioni, vedere [Opzione di configurazione del server affinity I/O mask](affinity-input-output-mask-server-configuration-option.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Associa I/o su disco a un subset specificato di CPU. Per altre informazioni, vedere [Opzione di configurazione del server affinity I/O mask](affinity-input-output-mask-server-configuration-option.md).  
   
  **Imposta automaticamente maschera di affinità processori per tutti i processori**  
  Consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di impostare l'affinità processori.  
@@ -38,7 +38,7 @@ ms.locfileid: "62809277"
  **Numero massimo thread di lavoro**  
  Il valore 0 consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di impostare dinamicamente il numero di thread di lavoro. Si tratta dell'impostazione ottimale per la maggior parte dei sistemi. A seconda della configurazione di sistema, è tuttavia possibile che l'impostazione di questa opzione su un valore specifico migliori le prestazioni. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max worker threads](configure-the-max-worker-threads-server-configuration-option.md).  
   
- **Aumenta priorità di SQL Server**  
+ **Aumenta priorità SQL Server**  
  Consente di specificare se eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una priorità di pianificazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows maggiore rispetto agli altri processi in esecuzione nello stesso computer. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server priority boost](configure-the-priority-boost-server-configuration-option.md).  
   
  **Usa fiber Windows (lightweight pooling)**  

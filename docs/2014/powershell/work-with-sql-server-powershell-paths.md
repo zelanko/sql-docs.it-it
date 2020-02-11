@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782725"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
@@ -22,7 +22,7 @@ ms.locfileid: "72782725"
   
 1.  [Prima di iniziare](#BeforeYouBegin)  
   
-2.  **Per utilizzare un nodo di percorso:**  [Elenco di metodi e proprietà](#ListPropMeth), [Utilizzo di metodi e proprietà](#UsePropMeth)  
+2.  **Per lavorare su un nodo di percorso: elenco di**  [metodi e proprietà](#ListPropMeth), [utilizzo di metodi e proprietà](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] è possibile eseguire due tipi di azioni:  
@@ -33,7 +33,7 @@ ms.locfileid: "72782725"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato per gestire gli oggetti in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Non viene utilizzato per i dati nei database. Se si è passati a una tabella o una vista, non è possibile utilizzare il provider per selezionare, inserire, aggiornare o eliminare i dati. Usare il cmdlet **Invoke-Sqlcmd** per eseguire una query o per modificare dati in tabelle e viste nell'ambiente di Windows PowerShell. Per altre informazioni, vedere [cmdlet Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Elenco di metodi e proprietà
+##  <a name="ListPropMeth"></a>Elenco di metodi e proprietà
   
  Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member** .  
   
@@ -74,7 +74,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- In questo esempio viene utilizzato il metodo di **script** SMO per generare uno script che contiene le istruzioni `CREATE VIEW` necessario per ricreare le viste in AdventureWorks2012:  
+ In questo esempio viene utilizzato il metodo di **script** SMO per generare uno script `CREATE VIEW` che contiene le istruzioni necessarie per ricreare le viste in AdventureWorks2012:  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -94,9 +94,9 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider PowerShell per SQL Server](sql-server-powershell-provider.md)   
- [Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
- [Conversione di URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Provider di SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Esplora percorsi SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
+ [Converti URN in percorsi di provider SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105957"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Punti dati vuoti e Null nei grafici (Generatore report e SSRS)
   Quando si visualizzano campi con valori vuoti o Null nel grafico, è possibile che il grafico non presenti l'aspetto previsto. I valori vuoti vengono elaborati in modo diverso a seconda del tipo di grafico specificato:  
   
--   Se il grafico è di tipo lineare (grafico a barre, a dispersione, a linee, ad area, con intervalli o istogramma) i valori vuoti vengono visualizzati come spazi vuoti o "gap". Se si desidera identificare i punti vuoti, è necessario aggiungere segnaposti di punti vuoti. Per altre informazioni, vedere [aggiunta di punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Se il grafico è di tipo lineare (grafico a barre, a dispersione, a linee, ad area, con intervalli o istogramma) i valori vuoti vengono visualizzati come spazi vuoti o "gap". Se si desidera identificare i punti vuoti, è necessario aggiungere segnaposti di punti vuoti. Per ulteriori informazioni, vedere [aggiungere punti vuoti al grafico &#40;Generatore report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se il grafico è di tipo lineare contiguo (ad area, a barre, a linee, a dispersione o istogramma), vengono aggiunti punti dati vuoti per mantenere la continuità nella serie.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66105957"
   
 -   Nei tipi di grafico con forme i valori Null vengono omessi.  
   
- Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]altri, vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "66105957"
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Risolvere i problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809569"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62809569"
   
 -   Immediatamente dopo l'impostazione dell'opzione e l'esecuzione dell'istruzione RECONFIGURE oppure, in determinati casi, dell'istruzione RECONFIGURE WITH OVERRIDE.  
   
-     oppure  
+     -oppure-  
   
 -   Dopo l'esecuzione delle azioni precedenti e il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -64,76 +64,76 @@ ms.locfileid: "62809569"
   
 -   SC = opzioni a configurazione automatica.  
   
-    |Opzione di configurazione|Valore minimo|Valore massimo|Impostazione predefinita|  
+    |Opzione di configurazione|Valore minimo|Valore massimo|Predefinito|  
     |--------------------------|-------------------|-------------------|-------------|  
-    |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
-    |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
-    |[ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[conteggio bucket cache controllo accessi](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
+    |[quota cache check Access](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
+    |[query distribuite ad hoc](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
     |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
-    |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A, disponibile solo sulla versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A, disponibile solo nella versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A, RR) disponibile solo sulla versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Viene impostato su 1 all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il valore predefinito è 0 se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene configurato per l'avvio automatico durante l'installazione).|  
-    |[allow updates](allow-updates-server-configuration-option.md) (obsoleto. Non usare. altrimenti si verificherà un errore durante la riconfigurazione).|0|1|0|  
+    |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A, RR), disponibile solo nella versione a 64 bit di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[Agente XPS](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Viene impostato su 1 all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il valore predefinito è 0 se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene configurato per l'avvio automatico durante l'installazione).|  
+    |[Consenti aggiornamenti](allow-updates-server-configuration-option.md) (obsoleti. Non usare. altrimenti si verificherà un errore durante la riconfigurazione).|0|1|0|  
     |[checksum di backup predefinito](../backup-checksum-default.md)|0|1|0|  
-    |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
-    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
-    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[valore predefinito di compressione backup](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
+    |[soglia di processo bloccata](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[modalità di controllo C2](c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[conformità ai criteri comuni abilitata](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[contained database authentication](contained-database-authentication-server-configuration-option.md)|0||0|  
-    |[cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
+    |[soglia costo per parallelismo](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
     |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
-    |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
-    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
+    |[soglia cursori](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[Posta elettronica database XPS](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[lingua predefinita full-text](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1040|  
     |[lingua predefinita](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[traccia predefinita abilitata](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
     |[filestream_access_level](filestream-access-level-server-configuration-option.md)|0|2|0|  
-    |[fill factor](configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
+    |[fattore di riempimento](configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max), vedere [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft crawl bandwidth (min), vedere [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |ft notify bandwidth (max), vedere [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft notify bandwidth (min), vedere [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |[index create memory](configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
-    |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
+    |[risoluzione XACT in dubbio](in-doubt-xact-resolution-server-configuration-option.md) (a)|0|2|0|  
     |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[locks](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
-    |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
-    |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
-    |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
+    |[blocchi](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[massimo grado di parallelismo](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
+    |[intervallo massimo di ricerca per indicizzazione full-text](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
+    |[memoria massima del server](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 è il valore massimo consigliato per i sistemi operativi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit).|0<br /><br /> Il valore 0 consente di configurare automaticamente il valore di max worker threads in base al numero di processori, secondo la formula (256+( *\<processors>* -4) * 8) per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit e due volte tale valore per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit.|  
-    |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
-    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
+    |[numero massimo thread di lavoro](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 è il valore massimo consigliato per i sistemi operativi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit).|0<br /><br /> Zero configura automaticamente il numero massimo di thread di lavoro in base al numero di processori, usando la formula (256 + (*\<processori>* -4) * 8) per 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e due volte per 64 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |[conservazione dei supporti](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
+    |[memoria minima per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
-    |[trigger nidificati](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
-    |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
-    |[open objects](open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
-    |[optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[trigger annidati](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
+    |[dimensioni del pacchetto di rete](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
+    |[Procedure di automazione OLE](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
+    |[oggetti aperti](open-objects-server-configuration-option.md) (A, RR, obsoleti)|0|2147483647|0|  
+    |[ottimizzazione per carichi di lavoro ad hoc](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
-    |[priority boost](configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
-    |[query wait](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
-    |[recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A, SC)|0|32767|0|  
-    |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[pre-calcolo rango](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[Priority Boost](configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[limite di costo Query Governor](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
+    |[attesa query](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[intervallo di recupero](configure-the-recovery-interval-server-configuration-option.md) (A, SC)|0|32767|0|  
+    |[accesso remoto](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
     |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
-    |[remote login timeout](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
-    |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
+    |[Timeout accesso remoto](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
+    |[Trans proc remoto](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
     |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Replication XPs Option](replication-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[Opzione Replication XPS](replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[analizza le procedure di avvio](configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0|1|0|  
     |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
-    |[set working set size](set-working-set-size-server-configuration-option.md) (A, RR, obsoleto)|0|1|0|  
+    |[Imposta dimensioni working set](set-working-set-size-server-configuration-option.md) (A, RR, obsolete)|0|1|0|  
     |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
-    |[SMO e DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
-    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
-    |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
-    |[user connections](configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
+    |[SMO e DMO XPS](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[trasforma parole non significative](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
+    |cambio [anno A due cifre](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[connessioni utente](configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
     |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   

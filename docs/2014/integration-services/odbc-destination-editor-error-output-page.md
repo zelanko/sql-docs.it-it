@@ -1,5 +1,5 @@
 ---
-title: ODBC Destination Editor (pagina Output degli errori) | Microsoft Docs
+title: Editor destinazione ODBC (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057195"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor destinazione ODBC (pagina Output errori)
@@ -39,7 +39,7 @@ ms.locfileid: "66057195"
 ### <a name="inputoutput"></a>Input/Output  
  Consente di visualizzare il nome dell'origine dei dati.  
   
-### <a name="column"></a>colonna  
+### <a name="column"></a>Colonna  
  Non usato.  
   
 ### <a name="error"></a>Errore  
@@ -71,6 +71,6 @@ ms.locfileid: "66057195"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [ODBC Destination Editor &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105849"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66105849"
 ## <a name="types-of-axes"></a>Tipi di assi  
  Il grafico include due assi principali: l'asse dei valori e l'asse delle categorie.  
   
- ![Asse dei valori e asse delle categorie del grafico](../media/rsaxes-categorical-vs-value.gif "Asse dei valori e asse delle categorie del grafico")  
+ ![Assi dei valori e delle categorie del grafico](../media/rsaxes-categorical-vs-value.gif "Assi dei valori e delle categorie del grafico")  
   
  Quando si trascina un campo dal set di dati alla superficie del grafico, verrà determinato se tale campo appartiene all'asse delle categorie o dei valori.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66105849"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Esempio di calcolo delle etichette degli assi  
  La tabella seguente contiene esempi di dati sulle vendite da tracciare in un istogramma. Il campo Name viene aggiunto all'area Gruppi di categorie e il campo Quantity all'area Valori.  
   
-|nome|Quantity|  
+|Nome|Quantità|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -114,10 +114,10 @@ ms.locfileid: "66105849"
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Aggiunta o rimozione di margini laterali dall'asse delle categorie  
  Nei tipi di grafico a barre, istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Non è possibile modificare le dimensioni del margine. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Per altre informazioni, vedere [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Posizionamento di etichette in un grafico &#40;Generatore report e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Posizionare le etichette in un grafico &#40;Generatore report e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782774"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Esempio di una configurazione con privilegi minimi per PowerPivot per SharePoint 2013
@@ -25,7 +25,7 @@ ms.locfileid: "72782774"
   
  Nella tabella seguente sono riepilogati i tre account utilizzati nell'esempio di configurazione con privilegi minimi.  
   
-|ambito|Crea vista sottoscrizioni|  
+|Scope|Nome|  
 |-----------|----------|  
 |Account amministratore di SharePoint|**SPAdmin**|  
 |Account farm SharePoint|**SPFarm**|  
@@ -35,7 +35,7 @@ ms.locfileid: "72782774"
  **SPAdmin** è un account di dominio usato per installare e configurare la farm. Si tratta dell'account utilizzato per eseguire la configurazione guidata SharePoint e dello strumento di configurazione PowerPivot per SharePoint 2013. l'account **SPAdmin** è l'unico account che richiede diritti di amministratore locale. Prima di eseguire lo strumento di configurazione PowerPivot, concedere i privilegi dell'account **SPAdmin** all'istanza del database di SQL Server in cui SharePoint crea il contenuto e i database di configurazione. Per configurare l'account SPAdmin in uno scenario con privilegi minimi, l'account deve essere un membro dei ruoli **securityadmin** e **dbcreator**.  
   
 ### <a name="the-farm-account-spfarm"></a>Account farm (SPFarm)  
- **SPFarm** è un account di dominio usato dal servizio Timer di SharePoint e dall'applicazione Web per Amministrazione centrale per accedere al database del contenuto di SharePoint. Per questo account non è necessario essere un amministratore locale. Tramite la Configurazione guidata SharePoint vengono concessi i privilegi minimi appropriati nel database back-end di SQL Server. La configurazione di privilegi minimi di SQL Server è l'appartenenza ai ruoli **securityadmin** e **dbcreator**.  
+ **SPFarm** è un account di dominio utilizzato dal servizio timer di SharePoint e dall'applicazione Web per amministrazione centrale per accedere al database del contenuto di SharePoint. Per questo account non è necessario essere un amministratore locale. Tramite la Configurazione guidata SharePoint vengono concessi i privilegi minimi appropriati nel database back-end di SQL Server. La configurazione di privilegi minimi di SQL Server è l'appartenenza ai ruoli **securityadmin** e **dbcreator**.  
   
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>Account del servizio per il servizio PowerPivot (SPscv)  
  Se una nuova farm di SharePoint non viene configurata prima dell'esecuzione dello strumento di configurazione di PowerPivot, tramite quest'ultimo, per impostazione predefinita, verranno creati gli elementi seguenti:  

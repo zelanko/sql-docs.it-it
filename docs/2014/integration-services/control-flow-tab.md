@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060358"
 ---
 # <a name="control-flow-tab"></a>Scheda Flusso di controllo
@@ -42,7 +42,7 @@ ms.locfileid: "66060358"
   
 ## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
- [SSIS Designer](ssis-designer.md)   
+ [Progettazione SSIS](ssis-designer.md)   
  [Flusso di controllo](control-flow/control-flow.md)  
   
   

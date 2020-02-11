@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830183"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Form profilo rapido singola tabella (Attività Profiling dati)
@@ -27,16 +27,16 @@ ms.locfileid: "62830183"
  Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](data-profile-viewer.md).  
   
 ## <a name="options"></a>Opzioni  
- **Connessione**  
+ **Connection**  
  Consente di selezionare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] che usa il provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) per la connessione al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che contiene la tabella o la vista di cui eseguire il profiling.  
   
  **Tabella o vista**  
  Consente di selezionare una tabella o una vista esistente nel database a cui si connette la gestione connessione specificata.  
   
- **Calcola**  
+ **Calcolo**  
  Consente di selezionare i profili da calcolare.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Profilo Rapporto di valori Null nella colonna**|Consente di calcolare un profilo Rapporto di valori Null nella colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Questo profilo segnala la percentuale di valori Null nella colonna selezionata e consente di identificare eventuali problemi nei dati, ad esempio un rapporto inaspettatamente elevato di valori Null in una colonna. Per altre informazioni sulle impostazioni per questo profilo, vedere [Opzioni di Richiesta profilo Rapporto di valori Null nella colonna &#40;attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Profilo Statistiche di colonna**|Consente di calcolare un profilo Statistiche di colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Questo profilo segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e la deviazione minima e massima per le colonne di tipo `datetime`. Consente inoltre di identificare eventuali problemi nei dati, ad esempio le date non valide. Per altre informazioni sulle impostazioni per questo profilo, vedere [Opzioni di Richiesta profilo Statistiche di colonna &#40;attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md).|  

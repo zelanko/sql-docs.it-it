@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060227"
 ---
 # <a name="create-a-deployment-utility"></a>Creazione di un'utilità di distribuzione
-  Il primo passaggio della distribuzione di pacchetti consiste nel creare un'utilità di distribuzione per un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. L'utilità di distribuzione è una cartella contenente i file necessari per la distribuzione dei pacchetti di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un altro server. L'utilità di distribuzione viene creata nel computer in cui è archiviato il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Il primo passaggio della distribuzione di pacchetti consiste nel creare un'utilità di distribuzione per un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'utilità di distribuzione è una cartella contenente i file necessari per la distribuzione dei pacchetti di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un altro server. L'utilità di distribuzione viene creata nel computer in cui è archiviato il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Per creare l'utilità di distribuzione di pacchetti per un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è innanzitutto necessario configurare il processo di compilazione dell'utilità e quindi compilare il progetto. Quando si compila il progetto, tutti i pacchetti e le configurazioni di pacchetto del progetto vengono inclusi automaticamente. Per distribuire file aggiuntivi, ad esempio un file Leggimi per il progetto, è necessario inserirli nella cartella **Varie** del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Quando si compila il progetto, vengono inclusi automaticamente anche questi file.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66060227"
   
 2.  Fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Pagine delle proprietà di \<nome progetto>** fare clic su **Utilità di distribuzione**.  
+3.  Nella finestra di dialogo ** \<nome progetto> pagine delle proprietà** fare clic su **utilità di distribuzione**.  
   
-4.  Per aggiornare le configurazioni dei pacchetti quando i pacchetti vengono distribuiti, impostare **AllowConfigurationChanges** a `True`.  
+4.  Per aggiornare le configurazioni dei pacchetti durante la distribuzione dei **** pacchetti, `True`impostare AllowConfigurationChanges su.  
   
 5.  Impostare `CreateDeploymentUtility` su `True`.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66060227"
 9. Nella finestra **Output** vengono visualizzati lo stato del processo di compilazione e gli eventuali errori di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SSIS](../../2014/integration-services/package-configurations.md)   
- [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)   
- [Distribuzione di pacchetti con l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Distribuzione del pacchetto &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
+ [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
+ [Distribuire pacchetti con l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

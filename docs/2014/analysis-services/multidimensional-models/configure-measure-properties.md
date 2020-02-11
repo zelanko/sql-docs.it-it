@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076610"
 ---
 # <a name="configure-measure-properties"></a>Configurare le proprietà delle misure
@@ -58,7 +58,8 @@ ms.locfileid: "66076610"
   
 |Proprietà|Definizione|  
 |--------------|----------------|  
-|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. `Sum`è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
+|`AggregateFunction`|Obbligatorio. Determina la modalità di aggregazione delle misure. 
+  `Sum`è l'aggregazione predefinita. Per altre informazioni, vedere [Utilizzare le funzioni di aggregazione](use-aggregate-functions.md) per una descrizione di ogni funzione.|  
 |`DataType`|Obbligatorio. Specifica il tipo di dati della colonna della tabella dei fatti sottostante a cui è associata la misura. Per impostazione predefinita, questo valore viene ereditato dalla colonna di origine.|  
 |`Description`|Fornisce una descrizione della misura, che può essere esposta in applicazioni client.|  
 |`DisplayFolder`|Specifica la cartella in cui verrà visualizzata la misura quando gli utenti si connettono al cubo. Quando in un cubo sono presenti numerose misure, è possibile usare le cartelle di visualizzazione per categorizzare le misure e migliorare l'esplorazione dell'utente.|  
@@ -70,7 +71,7 @@ ms.locfileid: "66076610"
 |`Visible`|Determina la visibilità della misura nelle applicazioni client.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà dei gruppi di misure](configure-measure-group-properties.md)   
+ [Configurare le proprietà del gruppo di misure](configure-measure-group-properties.md)   
  [Modifica delle misure](../lesson-3-1-modifying-measures.md)  
   
   

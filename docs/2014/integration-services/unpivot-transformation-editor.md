@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054842"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor trasformazione UnPivot
@@ -33,7 +33,7 @@ ms.locfileid: "66054842"
  **Colonne di input disponibili**  
  Consente di specificare le colonne da trasformare in righe tramite Pivot utilizzando le caselle di controllo.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della colonna di input disponibile.  
   
  **Pass-through**  
@@ -63,6 +63,6 @@ ms.locfileid: "66054842"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Trasformazione pivot](data-flow/transformations/pivot-transformation.md)  
+ [Pivot - trasformazione](data-flow/transformations/pivot-transformation.md)  
   
   

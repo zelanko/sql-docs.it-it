@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a710ef8474ea0ce67d0b549febb3a9dd40aa36e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811376"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Configurare l'opzione di configurazione del server cursor threshold
   In questo argomento si illustra come configurare l'opzione di configurazione del server **cursor threshold** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **cursor threshold** è possibile specificare il numero delle righe del set di cursori in corrispondenza del quale i keyset del cursore vengono generati in modo asincrono. Quando i cursori generano un keyset per un set di risultati, Query Optimizer produce una stima del numero di righe che verranno restituite per tale set di risultati. Se il numero stimato di righe restituite supera la soglia, il cursore viene generato in modo asincrono ed è pertanto possibile recuperare le righe dal cursore durante il popolamento del cursore stesso. In caso contrario, il cursore viene generato in modo sincrono e la query attende che vengano restituite tutte le righe.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62811376"
   
 3.  In **Varie**specificare il valore desiderato per l'opzione **Cursor Threshold** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-cursor-threshold-option"></a>Per configurare l'opzione cursor threshold  
   

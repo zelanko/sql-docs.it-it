@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df13432a0b5f835690dd6371fd935198d7798b40
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783286"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Rimuovere un'istanza di SQL Server da Utilità SQL Server
@@ -57,7 +57,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
-È importante fare riferimento al nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esattamente come viene archiviato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Su un'istanza con distinzione tra maiuscole e minuscole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario specificare il nome dell'istanza usando la combinazione di maiuscole e minuscole esatta restituita da @@SERVERNAME. 
+È importante fare riferimento al nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza esattamente come viene archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Su un'istanza con distinzione tra maiuscole e minuscole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario specificare il nome dell'istanza usando la combinazione di maiuscole e minuscole esatta restituita da @@SERVERNAME. 
 
 Per ottenere il nome dell'istanza per l'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire la seguente query sull'istanza gestita:  
   
@@ -69,4 +69,4 @@ select @@SERVERNAME AS instance_name
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di Esplora utilità per gestire Utilità SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Risoluzione dei problemi relativi a Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
+ [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
