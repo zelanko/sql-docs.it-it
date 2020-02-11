@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767333"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Passaggio 4: Distribuzione del pacchetto della lezione 6
@@ -62,7 +62,7 @@ ms.locfileid: "62767333"
   
 6.  Nella finestra di dialogo Sfoglia cartella selezionare la cartella contenente il progetto SSIS Tutorial, quindi fare clic su OK.  
   
-7.  Scegliere Avanti.  
+7.  Fare clic su Avanti.  
   
 8.  Nella pagina Seleziona pacchetti verranno visualizzati tutti e sei i pacchetti di SSIS Tutorial. Nell'elenco Pacchetti selezionare Lesson 6.dtsx, quindi fare clic su Avanti.  
   

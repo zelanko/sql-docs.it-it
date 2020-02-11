@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782757"
 ---
 # <a name="bcp_exec"></a>bcp_exec
@@ -56,7 +56,7 @@ RETCODE bcp_exec (
   
  **bcp_exec** è l'unica funzione di copia bulk che probabilmente sarà in attesa per un periodo di tempo. è anche l'unica funzione di copia bulk che supporta la modalità asincrona. Per impostare la modalità asincrona, utilizzare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_ON prima di chiamare **bcp_exec**. Per verificare il completamento, chiamare **bcp_exec** con gli stessi parametri. Se la copia bulk non è stata ancora completata, **bcp_exec** restituisce SUCCEED_ASYNC. Restituisce anche in *pnRowsProcessed* un conteggio dello stato del numero di righe inviate al server. Il commit delle righe inviate al server non viene eseguito fino a quando non viene raggiunta la fine di un batch.  
   
- Per informazioni sulle modifiche di rilievo apportate alla copia bulk a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vedere [esecuzione &#40;di&#41;operazioni di copia bulk ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni sulle modifiche di rilievo apportate alla copia bulk [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a partire da, vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare **bcp_exec**:  

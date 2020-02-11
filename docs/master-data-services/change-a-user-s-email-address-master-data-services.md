@@ -1,5 +1,5 @@
 ---
-title: Modificare l'indirizzo&#39;di posta elettronica di un utente
+title: Modificare l'indirizzo di posta elettronica di un utente&#39;s
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729687"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Modificare l'indirizzo di posta elettronica di un utente (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73729687"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare l'indirizzo di posta elettronica al quale vengono inviate le notifiche e il formato predefinito di posta elettronica della notifica.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso all'area funzionale **Utenti e gruppi** .  
@@ -49,6 +49,6 @@ ms.locfileid: "73729687"
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [&#40;di sicurezza Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Microsoft Docs
+title: Riferimento tecnico per l'algoritmo Microsoft Association | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084124"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
@@ -42,11 +42,11 @@ ms.locfileid: "66084124"
  È inoltre possibile creare modelli di associazione per gli attributi numerici. Se gli attributi sono continui, i numeri possono essere *discretizzati* o raggruppati in bucket. I valori discretizzati possono quindi essere gestiti come valori booleani o come coppie attributo-valore.  
   
 ### <a name="support-probability-and-importance"></a>Supporto, probabilità e priorità  
- Il*supporto*, definito a volte *frequenza*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
+ *Supporto*, che talvolta è indicato come *Frequency*, indica il numero di case che contengono l'elemento o la combinazione di elementi di destinazione. Nel modello è possibile includere solo gli elementi che hanno almeno la quantità specificata di supporto.  
   
  Per *set di elementi frequente* si intende una raccolta di elementi in cui anche la combinazione di elementi dispone di supporto superiore alla soglia definita dal parametro MINIMUM_SUPPORT. Se ad esempio il set di elementi è {A,B,C} e il valore MINIMUM_SUPPORT è 10, ogni singolo elemento A, B e C e la combinazione di elementi {A,B,C} devono trovarsi in almeno 10 case per essere inclusi nel modello.  
   
- **Nota** È anche possibile controllare il numero di set di elementi in un modello di data mining specificando la lunghezza massima di un set di elementi, dove per lunghezza si intende il numero di elementi.  
+ **Nota** È inoltre possibile controllare il numero di set di elementi in un modello di data mining specificando la lunghezza massima di un set di elementi, dove length indica il numero di elementi.  
   
  Per impostazione predefinita, il supporto di qualsiasi elemento o set di elementi specifico rappresenta un conteggio dei case che contengono l'elemento o gli elementi. Tuttavia, è anche possibile esprimere MINIMUM_SUPPORT come percentuale del totale dei case del set di dati, digitando il numero come valore decimale minore di 1. Se ad esempio si specifica un valore MINIMUM_SUPPORT pari a 0,03, significa che almeno il 3% del totale dei case del set di dati deve contenere l'elemento o il set di elementi ai fini dell'inclusione nel modello. È necessario eseguire prove con il modello per determinare se è preferibile utilizzare un conteggio o una percentuale.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "66084124"
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
- È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice usando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> raccolta in AMO oppure usando il [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA. Nella tabella seguente viene descritto ogni parametro.  
+ È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È anche possibile modificare i parametri a livello di codice <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> utilizzando la raccolta in amo oppure l' [elemento MiningModels &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA. Nella tabella seguente viene descritto ogni parametro.  
   
 > [!NOTE]  
->  Non è possibile modificare i parametri in un modello esistente utilizzando un'istruzione DMX. è necessario specificare i parametri in DMX CREATE MODEL o ALTER STRUCTURE... ADD MODEL quando si crea il modello.  
+>  Non è possibile modificare i parametri in un modello esistente usando un'istruzione DMX. è necessario specificare i parametri nell'istruzione DMX CREATE MODEL o ALTER STRUCTURE... AGGIUNGERE un modello quando si crea il modello.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Specifica il numero massimo di set di elementi da produrre. Se non si specifica alcun numero, viene utilizzato il valore predefinito.  
@@ -153,7 +153,7 @@ ms.locfileid: "66084124"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto di un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Cyclical, Discrete, Discretized, Table e Ordered|  
@@ -162,8 +162,8 @@ ms.locfileid: "66084124"
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Association Rules](microsoft-association-algorithm.md)   
+ [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di associazione &#40;Analysis Services-Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

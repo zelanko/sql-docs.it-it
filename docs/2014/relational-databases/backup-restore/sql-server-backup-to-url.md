@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232318"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
   Questo argomento introduce i concetti, i requisiti e i componenti necessari per usare il servizio di archiviazione BLOB di Azure come destinazione di backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e le eccezioni rilevanti e sono inclusi alcuni esempi di codice.  
   
 ## <a name="requirements-components-and-concepts"></a>Requisiti, componenti e concetti  
- **In questa sezione:**  
+ **Contenuto della sezione:**  
   
 -   [Sicurezza](#security)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232318"
   
 -   [Ripristino da archiviazione di Azure tramite SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Sicurezza  
+###  <a name="security"></a> Sicurezza  
  Di seguito sono riportati i requisiti e le considerazioni sulla sicurezza per il backup o il ripristino dai servizi di archiviazione BLOB di Azure.  
   
 -   Quando si crea un contenitore per il servizio di archiviazione BLOB di Azure, è consigliabile impostare l'accesso su **privato**. In questo modo si limita l'accesso a utenti o account in grado di specificare le informazioni necessarie per l'autenticazione all'account di Azure.  
@@ -140,7 +140,7 @@ ms.locfileid: "75232318"
   
 |||||  
 |-|-|-|-|  
-|Argomento|Supportato|Exception|Commenti|  
+|Argomento|Supportato|Eccezione|Commenti|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -239,7 +239,7 @@ ms.locfileid: "75232318"
   
  [Pagina Backup database &#40;opzioni di backup&#41;](back-up-database-backup-options-page.md)  
   
- [Creare le credenziali-eseguire l'autenticazione ad archiviazione di Azure](create-credential-authenticate-to-azure-storage.md)  
+ [Creare le credenziali - Eseguire l'autenticazione nel servizio di archiviazione Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>SQL Server backup nell'URL tramite la creazione guidata piano di manutenzione  
  Analogamente all'attività di backup descritta in precedenza, la creazione guidata piano di manutenzione in SQL Server Management Studio è stata migliorata per includere l' **URL** come una delle opzioni di destinazione e altri oggetti di supporto necessari per eseguire il backup in archiviazione di Azure come le credenziali SQL. Per altre informazioni, vedere la sezione **Definire attività di backup** in [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -253,11 +253,11 @@ ms.locfileid: "75232318"
   
 3.  SQL Server quindi si connette ad archiviazione di Azure usando le informazioni sulle credenziali SQL fornite e apre la finestra **di dialogo Individua file di backup in Azure** . In questa pagina vengono visualizzati i file di backup che si trovano nello spazio di archiviazione. Selezionare il file che si desidera ripristinare, quindi fare clic su **OK**. Viene visualizzata di nuovo la finestra di dialogo **Seleziona dispositivi di backup** . Se si fa clic su **OK** in questa finestra di dialogo, viene visualizzata di nuovo la finestra di dialogo principale **Ripristina** in cui sarà possibile completare il ripristino.  Per ulteriori informazioni, vedere gli argomenti seguenti:  
   
-     [Ripristina database &#40;pagina generale&#41;](restore-database-general-page.md)  
+     [Ripristina database &#40;pagina Generale&#41;](restore-database-general-page.md)  
   
      [Pagina Ripristina file &#40;di database&#41;](restore-database-files-page.md)  
   
-     [Pagina Opzioni di ripristino &#40;database&#41;](restore-database-options-page.md)  
+     [Ripristina database &#40;pagina Opzioni&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>Esempi di codice  
  In questa sezione sono disponibili gli esempi riportati di seguito.  
@@ -802,4 +802,4 @@ ms.locfileid: "75232318"
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi di backup su URL SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Eseguire il backup e il ripristino dei database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Backup e ripristino di database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

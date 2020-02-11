@@ -18,23 +18,23 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030916"
 ---
-# <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
+# <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Imposta i valori dell'opzione di blocco per gli indici cluster e non cluster e per le tabelle senza indici cluster.  
   
- In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] le opzioni per il blocco a livello di pagina, riga e tabella vengono configurate automaticamente. Non è necessario impostare queste opzioni manualmente. **sp_indexoption** utenti esperti quando un tipo di blocco specifico risulta sempre adeguato.  
+ In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] le opzioni per il blocco a livello di pagina, riga e tabella vengono configurate automaticamente. Non è necessario impostare queste opzioni manualmente. **sp_indexoption** viene fornito per gli utenti esperti che sanno con certezza che un particolare tipo di blocco è sempre appropriato.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Usare invece [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Utilizzare invece [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,46 +46,46 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @IndexNamePattern = ] 'table_or_index_name'` È il nome completo o non qualificato di una tabella definita dall'utente o un indice. *table_or_index_name* viene **nvarchar(1035)** , non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
+`[ @IndexNamePattern = ] 'table_or_index_name'`Nome completo o non qualificato di una tabella o di un indice definito dall'utente. *table_or_index_name* è di **tipo nvarchar (1035)** e non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
   
-`[ @OptionName = ] 'option_name'` È un nome di opzione di indice. *option_name* viene **varchar(35**, non prevede alcun valore predefinito. *option_name* può avere uno dei valori seguenti.  
+`[ @OptionName = ] 'option_name'`Nome dell'opzione di indice. *option_name* è di tipo **varchar (35)** e non prevede alcun valore predefinito. *option_name* possibile avere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Se è TRUE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga. Se è FALSE, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**AllowPageLocks**|Se è TRUE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se è FALSE, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**DisAllowRowLocks**|Se è TRUE, i blocchi a livello di riga non vengono utilizzati. Se è FALSE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.|  
 |**DisAllowPageLocks**|Se è TRUE, i blocchi a livello di pagina non vengono utilizzati. Se è FALSE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.|  
   
-`[ @OptionValue = ] 'value'` Specifica se il *option_name* impostazione è abilitata (TRUE, ON, yes o 1) o disabilitata (FALSE, OFF, no o 0). *valore* viene **varchar(12)** , non prevede alcun valore predefinito.  
+`[ @OptionValue = ] 'value'`Specifica se l'impostazione *option_name* è abilitata (true, on, Yes o 1) oppure disabilitata (false, off, no o 0). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o maggiore di 0 (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Gli indici XML non sono supportati. Se si specifica un indice XML oppure un nome di tabella senza un nome di indice e la tabella include un indice XML, l'esecuzione dell'istruzione ha esito negativo. Per impostare queste opzioni, utilizzare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) invece.  
+## <a name="remarks"></a>Osservazioni  
+ Gli indici XML non sono supportati. Se si specifica un indice XML oppure un nome di tabella senza un nome di indice e la tabella include un indice XML, l'esecuzione dell'istruzione ha esito negativo. Per impostare queste opzioni, utilizzare [alter index](../../t-sql/statements/alter-index-transact-sql.md) .  
   
- Per visualizzare la riga corrente e la pagina proprietà di blocco, usare [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) o nella [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista del catalogo.  
+ Per visualizzare le proprietà del blocco di riga e di pagina correnti, utilizzare [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) o la vista del catalogo [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
   
--   L'accesso all'indice sono consentiti riga, pagina e i blocchi a livello di tabella quando **AllowRowLocks** = TRUE oppure **DisAllowRowLocks** = FALSE, e **AllowPageLocks** = TRUE oppure  **DisAllowPageLocks** = FALSE. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.  
+-   I blocchi a livello di riga, di pagina e di tabella sono consentiti quando si accede all'indice quando **AllowRowLocks** = true o **DisallowRowLocks** = false e **AllowPageLocks** = true o **DisallowPageLocks** = false. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.  
   
- Solo un blocco a livello di tabella è consentito l'accesso all'indice quando **AllowRowLocks** = FALSE o **DisAllowRowLocks** = TRUE e **AllowPageLocks** = FALSE o  **DisAllowPageLocks** = TRUE.  
+ È consentito solo un blocco a livello di tabella quando si accede all'indice quando **AllowRowLocks** = false o **DisallowRowLocks** = true e **AllowPageLocks** = false o **DisallowPageLocks** = true.  
   
  Se si specifica un nome di tabella senza alcun indice, le impostazioni vengono applicate a tutti gli indici in tale tabella. Se la tabella sottostante non include indici cluster, ovvero è un heap, le impostazioni vengono applicate nel modo descritto di seguito:  
   
--   Quando **AllowRowLocks** oppure **DisAllowRowLocks** viene impostato su TRUE o FALSE, l'impostazione viene applicata all'heap e a eventuali indici non cluster associati.  
+-   Quando **AllowRowLocks** o **DisallowRowLocks** sono impostati su true o false, l'impostazione viene applicata all'heap e a tutti gli indici non cluster associati.  
   
--   Quando **AllowPageLocks** opzione è impostata su TRUE oppure **DisAllowPageLocks** è impostato su FALSE, l'impostazione viene applicata all'heap e a eventuali indici non cluster associati.  
+-   Quando l'opzione **AllowPageLocks** è impostata su true o **DisallowPageLocks** è impostato su false, l'impostazione viene applicata all'heap e a tutti gli indici non cluster associati.  
   
--   Quando **AllowPageLocks** opzione è impostata a FALSE oppure **DisAllowPageLocks** è impostata su TRUE, l'impostazione viene applicata completamente agli indici non cluster. ovvero vengono disattivati tutti i blocchi a livello di pagina negli indici non cluster. Nell'heap sono disattivati solo i blocchi condivisi (S), i blocchi di aggiornamento (U) e i blocchi esclusivi (X) a livello di pagina. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può comunque acquisire un blocco preventivo a livello di pagina (IS, IU o IX) per scopi interni.  
+-   Quando l'opzione **AllowPageLocks** è impostata su false o **DisallowPageLocks** è impostato su true, l'impostazione viene applicata completamente agli indici non cluster. ovvero vengono disattivati tutti i blocchi a livello di pagina negli indici non cluster. Nell'heap sono disattivati solo i blocchi condivisi (S), i blocchi di aggiornamento (U) e i blocchi esclusivi (X) a livello di pagina. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può comunque acquisire un blocco preventivo a livello di pagina (IS, IU o IX) per scopi interni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>R. Impostazione di un'opzione in un indice specifico  
- Nell'esempio seguente non consente blocchi di pagina sul `IX_Customer_TerritoryID` indicizzare nel `Customer` tabella.  
+ Nell'esempio seguente vengono disabilitati i blocchi di pagina `IX_Customer_TerritoryID` sull'indice della `Customer` tabella.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Impostazione di un'opzione in una tabella senza indici cluster  
- Nell'esempio seguente i blocchi a livello di pagina vengono disattivati in una tabella senza indici cluster (heap). Il `sys.indexes` vista del catalogo viene eseguita una query prima e dopo il `sp_indexoption` procedure viene eseguita per visualizzare i risultati dell'istruzione.  
+ Nell'esempio seguente i blocchi a livello di pagina vengono disattivati in una tabella senza indici cluster (heap). Viene `sys.indexes` eseguita una query sulla vista del catalogo prima e `sp_indexoption` dopo l'esecuzione della stored procedure per visualizzare i risultati dell'istruzione.  
   
 ```sql  
 USE AdventureWorks2012;  

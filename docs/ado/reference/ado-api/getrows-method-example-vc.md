@@ -15,14 +15,14 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932499"
 ---
 # <a name="getrows-method-example-vc"></a>Esempio del metodo GetRows (VC++)
-Questo esempio Usa la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) metodo per recuperare un numero specificato di righe da una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per inserire una matrice con i dati risultanti. Il **GetRows** metodo restituirà inferiore al numero desiderato di righe in due casi: entrambi if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) viene raggiunto, oppure se **GetRows** cercava di recuperare un record che è stato eliminato da un altro utente. La funzione restituisce **False** solo se si verifica il secondo caso. La funzione GetRowsOK è necessaria per eseguire questa procedura.  
+Questo esempio usa il metodo [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) per recuperare un numero specificato di righe da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un valore inferiore al numero di righe desiderato in due casi: se è stato raggiunto [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Per eseguire questa procedura, è necessaria la funzione GetRowsOK.  
   
 ## <a name="example"></a>Esempio  
   
@@ -235,7 +235,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 2 record(s) found.  
@@ -244,6 +244,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà BOF, EOF proprietà (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Esempio di metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [Proprietà BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Metodo GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

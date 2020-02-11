@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105595"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Visualizzazione delle intestazioni durante lo scorrimento di un report (Generatore report e SSRS)
@@ -50,17 +50,17 @@ ms.locfileid: "66105595"
   
 1.  Nell'area di progettazione fare clic in un punto qualsiasi della tabella per visualizzare i membri statici e i gruppi, nel riquadro di raggruppamento.  
   
-     ![Riquadro di raggruppamento](../media/grouppane-updated.png "Riquadro di raggruppamento")  
+     ![Riquadro di raggruppamento](../media/grouppane-updated.png "riquadro di raggruppamento")  
   
      Nel riquadro Gruppi di righe vengono visualizzati i membri statici e dinamici gerarchici per la gerarchia di gruppi di righe, mentre nel riquadro Gruppi di colonne è riportata una visualizzazione simile per la gerarchia di gruppi di colonne.  
   
-2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**.  
+2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso e quindi fare clic su **modalità avanzata**.  
   
-3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
+3.  Fare clic sul membro statico (riga o colonna) che si desidera mantenere visibile durante lo scorrimento. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
-     ![Proprietà membri Tablix](../media/grouppane-tablixmember-updated.png "Proprietà membri Tablix")  
+     ![Proprietà Membro Tablix](../media/grouppane-tablixmember-updated.png "Proprietà Membro Tablix")  
   
-4.  Nel riquadro Proprietà impostare **FixedData** a `True`.  
+4.  Nel riquadro Proprietà impostare **FixedData** su `True`.  
   
 5.  Ripetere questo passaggio per tutti i membri adiacenti che si desidera mantenere visibili durante lo scorrimento.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66105595"
 ## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [Riquadro di raggruppamento &#40;Generatore report&#41;](grouping-pane-report-builder.md)  

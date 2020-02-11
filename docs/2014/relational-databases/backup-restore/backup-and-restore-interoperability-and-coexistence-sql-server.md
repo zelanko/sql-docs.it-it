@@ -1,5 +1,5 @@
 ---
-title: 'Backup e ripristino: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
+title: 'Backup e ripristino: interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922436"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: Interoperabilità e coesistenza (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
   In questo argomento vengono fornite alcune considerazioni sul backup e il ripristino di alcune funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tra cui ripristino dei file e avvio del database, ripristino online e indici disabilitati, mirroring del database, ripristino a fasi e indici full-text.  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Ripristino dei file e avvio del database](#FileRestoreAndDbStartup)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62922436"
   
  Se si verifica un problema durante l'avvio del database, il recupero non riesce e il database viene contrassegnato come sospetto. Se è possibile isolare uno o più file in cui è presente il problema, l'amministratore del database può attivare la modalità offline per i file e tentare di riavviare il database. Per attivare la modalità offline per un file, è possibile utilizzare l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) seguente:  
   
- ALTER DATABASE *database_name* MODIFY FILE (nome **=' *`filename`* '** , OFFLINE)  
+ ALTER database *database_name* modify file (Name **='*`filename`*'**, offline)  
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922436"
  Le informazioni contenute in questa sezione sono rilevanti solo per i database basati sul modello di recupero con registrazione completa che includono più filegroup.  
   
 > [!NOTE]  
->  La funzionalità del mirroring di database verrà rimossa in una delle prossime versioni di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  La funzionalità del mirroring di database verrà rimossa in una delle prossime versioni di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Usare invece [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Il mirroring del database è una soluzione per aumentare la disponibilità del database. Il mirroring viene implementato a livello di singolo database e funziona solo con database che utilizzano il modello di recupero con registrazione completa. Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922436"
 >  Per distribuire le copie di un subset dei filegroup in un database, è necessario replicare solo gli oggetti dei filegroup che si desidera copiare in altri server. Per altre informazioni sulla replica, vedere [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
- Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md),  
+ Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  È possibile creare il database mirror utilizzando una sequenza di ripristino a fasi, se supportata. Non è tuttavia possibile avviare l'esecuzione del mirroring fino a quando non sono stati ripristinati tutti i filegroup e, in genere, fino a quando non sono stati ripristinati i backup del log necessari per portare il database mirror a un punto nel tempo sufficientemente vicino al database principale. Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
   
@@ -132,6 +132,6 @@ ms.locfileid: "62922436"
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Repliche secondarie attive: backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

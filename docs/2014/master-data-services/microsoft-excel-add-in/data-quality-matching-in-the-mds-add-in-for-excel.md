@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478899"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel
@@ -35,12 +35,12 @@ ms.locfileid: "65478899"
   
 5.  Pubblicare i dati nuovi e/o aggiornati nel repository MDS.  
   
-## <a name="knowledge-bases"></a>Knowledge Base  
+## <a name="knowledge-bases"></a>Knowledge base  
  I risultati della corrispondenza forniti nel componente aggiuntivo sono basati su una Knowledge Base DQS.  
   
 -   La Knowledge Base predefinita (DQS Data) viene creata al momento dell'installazione di DQS. Se si sceglie din utilizzare la Knowledge Base predefinita, senza aggiungere i criteri di corrispondenza alla Knowledge Base predefinita nel client Data Quality, è necessario eseguire il mapping delle colonne nel foglio di lavoro ai domini nella Knowledge Base, quindi assegnare un valore di peso ai domini scelti.  
   
--   È possibile utilizzare il client Data Quality per creare una nuova Knowledge Base con criteri di corrispondenza o per aggiungere i criteri di corrispondenza alla Knowledge Base predefinita. In questo caso, i valori di peso sono determinati dai criteri di corrispondenza già creati ed è necessario solo eseguire il mapping delle colonne ai domini. Per altre informazioni, vedere [creare criteri di corrispondenza](../../data-quality-services/create-a-matching-policy.md).  
+-   È possibile utilizzare il client Data Quality per creare una nuova Knowledge Base con criteri di corrispondenza o per aggiungere i criteri di corrispondenza alla Knowledge Base predefinita. In questo caso, i valori di peso sono determinati dai criteri di corrispondenza già creati ed è necessario solo eseguire il mapping delle colonne ai domini. Per altre informazioni, vedere [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
   
  Per altre informazioni sulle Knowledge Base, vedere [Knowledge Base e domini DQS](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
@@ -48,12 +48,12 @@ ms.locfileid: "65478899"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Combinare dati esterni con i dati gestiti da MDS in preparazione a un confronto.|[Combinare i dati &#40;componente aggiuntivo MDS per Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|Utilizzare la Knowledge Base DQS per trovare analogie nei dati.|[Cercare la corrispondenza tra dati simili &#40;componente aggiuntivo MDS per Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Combinare dati esterni con i dati gestiti da MDS in preparazione a un confronto.|[Combinare i dati &#40;Componente aggiuntivo MDS per Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|Utilizzare la Knowledge Base DQS per trovare analogie nei dati.|[Corrisponde a dati simili &#40;Componente aggiuntivo MDS per Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Pubblicazione di dati &#40;componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Corrispondenza di dati](../../data-quality-services/data-matching.md)  
   

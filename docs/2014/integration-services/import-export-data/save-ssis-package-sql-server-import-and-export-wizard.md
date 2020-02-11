@@ -13,24 +13,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892765"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
-  Usare la **Salva pacchetto SSIS** pagina per denominare, descrivere e salvare un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) creare un pacchetto per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` del database o in un file con l'estensione dtsx estensione.  
+  Utilizzare la **pagina Salva pacchetto SSIS** per assegnare un nome, una descrizione e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un salvataggio[!INCLUDE[ssIS](../../includes/ssis-md.md)]di un pacchetto Integration Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` () nel database o in un file con estensione dtsx.  
   
 > [!NOTE]  
 >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
- Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per l'avvio della procedura guidata e sulle autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
+ Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni per avviare la procedura guidata e sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Lo scopo di Importazione/Esportazione guidata SQL Server è la copia di dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opzioni statiche  
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per il pacchetto.  
   
  **Descrizione**  
@@ -48,7 +48,7 @@ ms.locfileid: "62892765"
  **Usa autenticazione di Windows**  
  Se è stata selezionata una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare se connettersi al server utilizzando l'autenticazione integrata di Windows. Questo è il metodo di autenticazione ottimale.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Se è stata selezionata una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare se connettersi al server utilizzando l'autenticazione di SQL Server.  
   
  **Nome utente**  
@@ -59,12 +59,12 @@ ms.locfileid: "62892765"
   
 ### <a name="target--file-system"></a>Destinazione = File System  
  **Nome file**  
- Dopo aver selezionato una destinazione file, digitare il percorso del file di destinazione, oppure usare il **esplorare** pulsante.  
+ Quando è stata selezionata una destinazione file, digitare il percorso del file di destinazione oppure usare il pulsante **Sfoglia** .  
   
  **Sfoglia**  
- Dopo aver selezionato una destinazione file, selezionare il file di destinazione utilizzando il **Salva pacchetto** nella finestra di dialogo.  
+ Quando è stata selezionata una destinazione file, passare al file di destinazione utilizzando la finestra di dialogo **Salva pacchetto** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvare i pacchetti](../save-packages.md)  
+ [Salvataggio di pacchetti](../save-packages.md)  
   
   

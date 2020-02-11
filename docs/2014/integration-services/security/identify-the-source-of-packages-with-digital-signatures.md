@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766653"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificazione dell'origine dei pacchetti con firme digitali
@@ -34,16 +34,16 @@ ms.locfileid: "62766653"
   
 -   Per controllare la firma digitale di tutti i pacchetti prima del caricamento in fase di progettazione, impostare l'opzione **Controlla firma digitale al caricamento di un pacchetto** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Questa opzione è un'impostazione globale per tutti i pacchetti di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
--   Per controllare la firma digitale di un singolo pacchetto, specificare il `/VerifyS[igned]` opzione quando si usa la **dtexec** utilità per eseguire il pacchetto. Per altre informazioni, vedere [dtexec Utility](../packages/dtexec-utility.md).  
+-   Per controllare la firma digitale di un singolo pacchetto, specificare l' `/VerifyS[igned]` opzione quando si usa l'utilità **dtexec** per eseguire il pacchetto. Per altre informazioni, vedere [dtexec Utility](../packages/dtexec-utility.md).  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>Impostazione di un valore del Registro di sistema per la verifica della firma del pacchetto  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta anche un valore facoltativo del Registro di sistema, **BlockedSignatureStates**, che può essere usato per gestire i criteri di un'organizzazione per il caricamento di pacchetti firmati e non firmati. Il valore del Registro di sistema consente di impedire il caricamento di pacchetti non firmati o con firme non valide o non attendibili. Per altre informazioni su come impostare questo valore del Registro di sistema, vedere [Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema](../implement-a-signing-policy-by-setting-a-registry-value.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]supporta anche un valore facoltativo del registro di sistema, **BlockedSignatureStates**, che è possibile usare per gestire i criteri di un'organizzazione per il caricamento di pacchetti firmati e non firmati. Il valore del Registro di sistema consente di impedire il caricamento di pacchetti non firmati o con firme non valide o non attendibili. Per altre informazioni su come impostare questo valore del Registro di sistema, vedere [Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema](../implement-a-signing-policy-by-setting-a-registry-value.md).  
   
 > [!NOTE]  
 >  Il valore facoltativo **BlockedSignatureStates** del registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o alla riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pacchetti di Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
- [Panoramica della sicurezza &#40;Integration Services&#41;](security-overview-integration-services.md)  
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

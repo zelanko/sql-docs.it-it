@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244956"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
@@ -78,12 +78,12 @@ ms.locfileid: "75244956"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Descrive come utilizzare gli editor di codice e di testo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da sviluppare in modo interattivo, eseguire il debug ed eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)]|[Editor di query e di testo &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Descrive come utilizzare l'utilità `sqlcmd` per eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] dal prompt dei comando, incluso la possibilità di sviluppare script in modo interattivo.|[procedure per sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Descrive come utilizzare l'utilità `sqlcmd` per eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] dal prompt dei comando, incluso la possibilità di sviluppare script in modo interattivo.|[Procedure correlate a sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Descrive come integrare i componenti di SQL Server in un ambiente Windows PowerShell 2.0 e compilare script di PowerShell per la gestione di istanze e oggetti di SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
-|Descrive come usare la **procedura guidata Genera e pubblica script** per creare script [!INCLUDE[tsql](../../includes/tsql-md.md)] per ricreare uno o più degli oggetti da un database.|[Genera script &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
+|Descrive come usare la **procedura guidata Genera e pubblica script** per creare script [!INCLUDE[tsql](../../includes/tsql-md.md)] per ricreare uno o più degli oggetti da un database.|[Generazione di script &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [Esercitazione: scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

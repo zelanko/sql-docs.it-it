@@ -1,5 +1,5 @@
 ---
-title: Opzioni (finestre di progettazione-tabella e pagina di progettazione Database) | Microsoft Docs
+title: Opzioni (finestre di progettazione-pagina Progettazione tabelle e database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283663"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Opzioni (finestre di progettazione-pagina tabelle e Database finestre di progettazione)
+# <a name="options-designers-table-and-database-designers-page"></a>Opzioni (finestre di progettazione-pagina Progettazione tabelle e database)
   Utilizzare questa pagina per determinare il comportamento predefinito della finestra di progettazione. Per accedere alla impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Finestre di progettazione** e fare clic su **Progettazione tabelle**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -65,7 +65,7 @@ ms.locfileid: "63283663"
   
      Consente di visualizzare i nomi di colonna.  
   
--   **Key**  
+-   **Chiave**  
   
      Consente di visualizzare l'intestazione di tabella e le colonne chiave primaria.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63283663"
   
      Consente di visualizzare solo l'intestazione di tabella con il relativo nome.  
   
--   **Custom**  
+-   **Impostazione personalizzata**  
   
      Consente di scegliere le colonne da visualizzare.  
   

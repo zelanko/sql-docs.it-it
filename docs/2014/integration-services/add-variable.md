@@ -1,5 +1,5 @@
 ---
-title: Aggiungere una variabile | Microsoft Docs
+title: Aggiungi variabile | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061792"
 ---
 # <a name="add-variable"></a>Aggiungi variabile
@@ -28,13 +28,13 @@ ms.locfileid: "66061792"
  **Contenitore**  
  Selezionare un contenitore nell'elenco. Il contenitore definisce l'ambito della variabile e può essere un pacchetto o un file eseguibile nel pacchetto.  
   
- **Name**  
+ **Nome**  
  Consente di digitare il nome della variabile.  
   
- **Namespace**  
+ **Spazio dei nomi**  
  Consente di specificare lo spazio dei nomi della variabile. Per impostazione predefinita, le variabili definite dall'utente si trovano nello spazio dei nomi **Utente** .  
   
- **Tipo valore**  
+ **Tipo di valore**  
  Consente di selezionare un tipo di dati.  
   
  **Valore**  

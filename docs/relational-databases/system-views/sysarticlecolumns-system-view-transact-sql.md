@@ -18,27 +18,27 @@ ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a0505b8316254090fe5f2310fa68011d8289679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129545"
 ---
 # <a name="sysarticlecolumns-system-view-transact-sql"></a>sysarticlecolumns (vista di sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **sysarticlecolumns** Vista espone informazioni aggiuntive sulle colonne negli articoli pubblicati. Questa vista è archiviata nel database di distribuzione.  
+  La vista **sysarticlecolumns** espone informazioni aggiuntive sulle colonne negli articoli pubblicati. Questa vista è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identifica un articolo.|  
 |**colid**|**int**|Identifica una colonna di un articolo.|  
-|**is_udt**|**int**|Indica se il tipo di dati della colonna è un tipo definito dall'utente (UDT). Un valore pari **1** indica una colonna con tipo definito dall'utente.|  
-|**is_xml**|**int**|Indica se la colonna è un' **xml** colonna. Un valore pari **1** indica un' **xml** colonna.|  
-|**is_max**|**int**|Indica se la colonna è una colonna di tipo di dati di valori di grandi dimensioni (**varchar (max)** , **nvarchar (max)** oppure **varbinary (max)** ). Un valore pari **1** indica una colonna con valori di grandi dimensioni.|  
+|**is_udt**|**int**|Indica se il tipo di dati della colonna è un tipo definito dall'utente (UDT). Il valore **1** indica una colonna con tipo definito dall'utente.|  
+|**is_xml**|**int**|Indica se la colonna è una colonna **XML** . Il valore **1** indica una colonna **XML** .|  
+|**is_max**|**int**|Indica se la colonna è una colonna con tipo di dati con valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)** o **varbinary (max)**). Il valore **1** indica una colonna con valori di grandi dimensioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
+ [sp_articlecolumn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sysarticlecolumns &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

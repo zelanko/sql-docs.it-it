@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781316"
 ---
 # <a name="interfaces-ole-db"></a>Interfacce (OLE DB)
-  Oltre alle interfacce OLE DB principali fornite da di Microsoft Data Access Components (MDAC), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa le interfacce OLE DB aggiuntive seguenti:  
+  Oltre alle interfacce di base OLE DB fornite da Microsoft Data Access Components (MDAC), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client implementa le interfacce di OLE DB aggiuntive seguenti:  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -38,15 +38,15 @@ ms.locfileid: "62781316"
   
 -   [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
--   [ISSAbort &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
+-   [&#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
   
 -   [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
 -   [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
--   [ISQLServerErrorInfo per la &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
+-   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;OLE DB&#41; riferimento](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+ [Riferimento SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243305"
 ---
 # <a name="search-documents-using-results-lists"></a>Ricerca nei documenti utilizzando gli elenchi dei risultati
-  Utilizzando la finestra di dialogo **trova e Sostituisci** è possibile cercare e sostituire il testo in tutti i file di un progetto o di una soluzione o in una cartella file System, anche quando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]non sono aperti in. Le corrispondenze delle ricerche eseguite con la finestra di dialogo **Trova e sostituisci** vengono visualizzate nelle finestre Risultati ricerca 1 e Risultati ricerca 2, in cui è possibile vedere il testo esatto dalla riga contenente la corrispondenza.  
+  Nella finestra di dialogo **Trova e sostituisci** è possibile eseguire ricerche e sostituzioni di testo in tutti i file di un progetto o di una soluzione o in una cartella di file system, anche se i file non sono aperti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le corrispondenze delle ricerche eseguite con la finestra di dialogo **Trova e sostituisci** vengono visualizzate nelle finestre Risultati ricerca 1 e Risultati ricerca 2, in cui è possibile vedere il testo esatto dalla riga contenente la corrispondenza.  
   
 ### <a name="to-search-in-multiple-files"></a>Per eseguire la ricerca in più file  
   
@@ -53,19 +53,19 @@ ms.locfileid: "75243305"
   
 5.  Fare clic su **Sostituisci** per sostituire la corrispondenza di ricerca corrente con il testo contenuto nella casella **Sostituisci con** . Fare clic su **Trova successivo** per ignorare una corrispondenza e su **Ignora file**per ignorare un intero file.  
   
-     \-o  
+     \- - oppure -  
   
      Scegliere **Sostituisci tutto** per sostituire tutte le corrispondenze di ricerca con il testo contenuto nella casella **Sostituisci con** . Selezionare **Non chiudere i file modificati con Sostituisci tutto** se si vuole annullare alcune delle sostituzioni eseguite in un'altra sessione.  
   
     > [!NOTE]  
-    >  **Sostituisci tutti** sostituisce tutte le corrispondenze di ricerca, incluse quelle nei file ignorati con **Ignora file** o **Trova successivo**. È possibile usare **Annulla** solo per le sostituzioni eseguite nei file rimasti aperti dopo l'operazione di sostituzione.  
+    >  **Sostituisci tutto** consente di sostituire tutte le corrispondenze di ricerca comprese quelle dei file ignorati con **Ignora file** o **Trova successivo**. È possibile usare **Annulla** solo per le sostituzioni eseguite nei file rimasti aperti dopo l'operazione di sostituzione.  
   
  Per impostazione predefinita, le informazioni di sostituzione vengono visualizzate nella finestra Risultati ricerca 1. È possibile esplorare le sostituzioni facendo doppio clic su ogni voce della finestra Risultati ricerca 1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cerca e Sostituisci](search-and-replace.md)   
- [Cerca in modo interattivo i documenti](search-documents-interactively.md)   
+ [Ricerca e sostituzione](search-and-replace.md)   
+ [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

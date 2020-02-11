@@ -1,5 +1,5 @@
 ---
-title: Le transazioni nelle tabelle ottimizzate per la memoria | Microsoft Docs
+title: Transazioni nelle tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843102"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
@@ -50,7 +50,7 @@ ms.locfileid: "62843102"
  Se inoltre una transazione (TxA) legge righe che sono state inserito o modificate da un'altra transazione (TxB) che sono in fase di commit, verrà applicato il presupposto ottimistico che l'altra transazione sarà sottoposta a commit, anziché attendere l'esecuzione del commit. In questo caso, la transazione TxA avrà una dipendenza di commit dalla transazione TxB.  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Controlli relativi a rilevamento di conflitti, convalida e dipendenza di commit  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono rilevati i conflitti tra le transazioni simultanee, nonché le violazioni del livello di isolamento, e viene eliminata una delle transazioni in conflitto. L'esecuzione di tale transazione dovrà essere tentata di nuovo. (Per altre informazioni, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono rilevati i conflitti tra le transazioni simultanee, nonché le violazioni del livello di isolamento, e viene eliminata una delle transazioni in conflitto. L'esecuzione di tale transazione dovrà essere tentata di nuovo. Per ulteriori informazioni, vedere [linee guida per la logica di ripetizione dei tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Viene applicato automaticamente il presupposto ottimistico che non siano presenti conflitti né violazioni di isolamento delle transazioni. Se si verificano conflitti che possono causare incoerenze nel database o violare l'isolamento delle transazioni, tali conflitti vengono rilevati e la transazione viene terminata.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62843102"
 ### <a name="transaction-lifetime"></a>Durata della transazione  
  Gli errori indicati nella tabella precedente possono verificarsi in momenti diversi durante una transazione. Nella figura seguente vengono illustrate le fasi di una transazione che accede a tabelle ottimizzate per la memoria.  
   
- ![Durata di una transazione. ](../../2014/database-engine/media/hekaton-transactions.gif "Durata di una transazione.")  
+ ![Durata di una transazione.](../../2014/database-engine/media/hekaton-transactions.gif "Durata di una transazione.")  
 Durata di una transazione che accede a tabelle ottimizzate per la memoria.  
   
 #### <a name="regular-processing"></a>Elaborazione regolare  
@@ -82,7 +82,7 @@ Durata di una transazione che accede a tabelle ottimizzate per la memoria.
   
  Questo errore elimina la transazione, anche se XACT_ABORT è impostata su OFF, pertanto verrà eseguito il rollback della transazione al termine della sessione utente. Non è possibile eseguire il commit delle transazioni eliminate e tali transazioni supportano solo le operazioni di lettura che non scrivono nel log e non accedono alle tabelle ottimizzate per la memoria.  
   
-#####  <a name="cd"></a> Dipendenze di commit  
+#####  <a name="cd"></a>Dipendenze di commit  
  Durante l'elaborazione regolare, una transazione è in grado di leggere le righe scritte da altre transazioni che si trovano nella fase di convalida o di commit, ma per le quali il commit non è ancora stato eseguito. Le righe sono visibili perché l'ora di fine logica delle transazioni è stata assegnata all'avvio della fase di convalida.  
   
  Se una transazione legge tali righe di cui non è stato eseguito il commit, acquisirà una dipendenza di commit da tale transazione, con due implicazioni principali:  
@@ -96,10 +96,10 @@ Durata di una transazione che accede a tabelle ottimizzate per la memoria.
 #### <a name="validation-phase"></a>Fase di convalida  
  Durante la fase di convalida viene verificato automaticamente che i presupposti necessari per il livello di isolamento della transazione richiesto siano soddisfatti per tutta la durata logica della transazione.  
   
- All'inizio della fase di convalida, alla transazione viene assegnata un'ora di fine logica. Le versioni di riga scritte nel database diventano visibili ad altre transazioni all'ora di fine logica. Per altre informazioni, vedere [dipendenze di Commit](#cd).  
+ All'inizio della fase di convalida, alla transazione viene assegnata un'ora di fine logica. Le versioni di riga scritte nel database diventano visibili ad altre transazioni all'ora di fine logica. Per altre informazioni, vedere [dipendenze di commit](#cd).  
   
 ##### <a name="repeatable-read-validation"></a>Convalida di lettura ripetibile  
- Se il livello di isolamento della transazione è REPEATABLE READ o SERIALIZABLE oppure se le tabelle sono accessibili nel livello di isolamento REPEATABLE READ o SERIALIZABLE (per altre informazioni, vedere la sezione sull'isolamento di singole operazioni in [delle transazioni I livelli di isolamento](../../2014/database-engine/transaction-isolation-levels.md)), il sistema verifica che le letture siano ripetibili. Ciò significa che viene confermato che le versioni delle righe lette dalla transazione sono ancora valide al momento dell'ora di fine logica della transazione.  
+ Se il livello di isolamento della transazione è REPEATable READ o SERIALIZABLE o se le tabelle sono accessibili nell'isolamento REPEATable READ o SERIALIZABLE (per ulteriori informazioni, vedere la sezione sull'isolamento di singole operazioni nei [livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md)), il sistema convalida la ripetibilità delle letture. Ciò significa che viene confermato che le versioni delle righe lette dalla transazione sono ancora valide al momento dell'ora di fine logica della transazione.  
   
  Se una qualsiasi delle righe è stata aggiornata o modificata, il commit della transazione non viene eseguito con l'errore 41305 (analogo a "Impossibile eseguire il commit della transazione corrente a causa di un errore di convalida di lettura ripetibile").  
   

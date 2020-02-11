@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827016"
 ---
 # <a name="progress-report-event-category"></a>Categoria di eventi Report di stato
-  Il **Report stato di avanzamento** categoria di eventi contiene il **Progress Report: Online Index Operation**.  
+  Nella categoria di eventi **Report di stato** è inclusa la classe di evento **Progress Report: Online Index Operation** .  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

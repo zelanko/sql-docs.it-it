@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6256ad8ee35b17336940d92ee7b0c917cb591ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480090"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilità con le versioni precedenti (Master Data Services)
   In questa sezione vengono descritte le differenze tra le versioni di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono inoltre descritte le modifiche apportate al prodotto che interromperanno il funzionamento o influiranno sul comportamento di un'applicazione esistente che include la funzionalità di Integration Services.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Funzionalità deprecate di Master Data Services in SQL Server 2014](deprecated-master-data-services-features.md)  
   

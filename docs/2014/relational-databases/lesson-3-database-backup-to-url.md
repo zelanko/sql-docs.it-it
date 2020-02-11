@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Creare un database in archiviazione di Azure | Microsoft Docs'
+title: 'Lezione 4: creare un database in archiviazione di Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175632"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>Lezione 4: Creare un database in Archiviazione di Azure
@@ -77,7 +77,7 @@ ms.locfileid: "70175632"
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copiare i valori di **nome account di archiviazione** e **chiave di accesso primaria** nella finestra di dialogo **Connetti ad archiviazione di Azure** in SSMS. Successivamente, fare clic su **Connetti**. In questo modo le informazioni sui contenitori di account di archiviazione vengono portate in SSMS come illustrato nella schermata seguente:  
+    2.  Copiare i valori di **nome account di archiviazione** e **chiave di accesso primaria** nella finestra di dialogo **Connetti ad archiviazione di Azure** in SSMS. Fare clic su **Connetti**. In questo modo le informazioni sui contenitori di account di archiviazione vengono portate in SSMS come illustrato nella schermata seguente:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70175632"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     Per ulteriori informazioni, vedere [Aggiungere file di dati o file di log a un database](databases/add-data-or-log-files-to-a-database.md).  
+     Per altre informazioni, vedere [Aggiungere file di dati o file di log a un database](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Mantenere tutti gli altri valori predefiniti.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175632"
   
  **Lezione successiva:**  
   
- [Lezione 5. &#40;Crittografia&#41; facoltativa del database tramite TRANSparent Data Encryption](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lezione 5. &#40;facoltativo&#41; crittografare il database tramite Transparent Data Encryption](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   
