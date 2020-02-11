@@ -18,10 +18,10 @@ ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 17d637c2b5b4a8f65a2d2e843cdf439d856fdd3f
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659400"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Metodo SetCurrentCertificate (classe SecurityCertificate)
@@ -36,7 +36,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) che rappresenta un certificato di sicurezza.  
   
 #### <a name="parameters"></a>Parametri  

@@ -18,18 +18,18 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097610"
 ---
-# <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
+# <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Arresta l'ambiente di esecuzione delle stored procedure di automazione OLE nell'intero server.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ ms.locfileid: "68097610"
 sp_OAStop      
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
   
- Per altre informazioni sui codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Per ulteriori informazioni sui codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Note  
- Tutti i client che utilizzano le stored procedure di automazione OLE condividono uno stesso ambiente di esecuzione. Se un client richiama **sp_OAStop** verrà arrestato l'ambiente di esecuzione condiviso per tutti i client. Dopo che l'ambiente di esecuzione è stato arrestato, tutte le chiamate a **sp_OACreate** viene riavviato nell'ambiente di esecuzione.  
+## <a name="remarks"></a>Osservazioni  
+ Tutti i client che utilizzano le stored procedure di automazione OLE condividono uno stesso ambiente di esecuzione. Se un client chiama **sp_OAStop** l'ambiente di esecuzione condiviso verrà interrotto per tutti i client. Dopo che l'ambiente di esecuzione è stato interrotto, qualsiasi chiamata a **sp_OACreate** riavvia l'ambiente di esecuzione.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene arrestato l'ambiente di esecuzione di automazione OLE condiviso.  
@@ -58,7 +58,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   
