@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019065"
 ---
 # <a name="cursor-library-code-example"></a>Esempio di codice della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- L'esempio seguente usa la libreria di cursori per recuperare l'ID, open data e lo stato di ogni ordine dalla tabella ORDERS. Vengono quindi visualizzate 20 righe di dati. Se l'utente non aggiorna i dati, il codice aggiorna il buffer di righe e viene eseguita un'istruzione di aggiornamento posizionato. Infine, viene richiesto all'utente per la direzione di scorrimento e ripete il processo.  
+ Nell'esempio seguente viene utilizzata la libreria di cursori per recuperare l'ID, la data di apertura e lo stato di ogni ordine dalla tabella ORDERs. Vengono quindi visualizzate 20 righe di dati. Se l'utente aggiorna questi dati, il codice aggiorna i buffer del set di righe ed esegue un'istruzione UPDATE posizionata. Infine, viene richiesto all'utente la direzione per scorrere e ripetere il processo.  
   
 ```  
 #define ROWS 20  

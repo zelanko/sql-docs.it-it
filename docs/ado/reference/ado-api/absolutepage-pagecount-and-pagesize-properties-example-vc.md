@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage, PageCount, PageSize esempio di proprietà e (VC + +) | Microsoft Docs
+title: Esempio di proprietà AbsolutePage, PageCount e PageSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921843"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, PageSize esempio di proprietà e (VC + +)
-Questo esempio Usa la [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), e [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) le proprietà per visualizzare i nomi e le date di assunzione di ***dipendente*** tabella, cinque record alla volta.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Esempio di proprietà AbsolutePage, PageCount e PageSize (VC + +)
+In questo esempio vengono utilizzate le proprietà [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)e [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) per visualizzare i nomi e le date di assunzione della tabella ***Employee*** , cinque record alla volta.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  

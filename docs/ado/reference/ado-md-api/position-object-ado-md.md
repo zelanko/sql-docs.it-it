@@ -1,5 +1,5 @@
 ---
-title: Posizionare l'oggetto (ADO MD) | Microsoft Docs
+title: Oggetto Position (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949259"
 ---
 # <a name="position-object-ado-md"></a>Oggetto Position (ADO MD)
-Rappresenta un set di uno o più membri di dimensioni diverse che definisce un punto lungo un asse.  
+Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.  
   
-## <a name="remarks"></a>Note  
- Con le proprietà e raccolte di un **posizione** dell'oggetto è possibile eseguire le operazioni seguenti:  
+## <a name="remarks"></a>Osservazioni  
+ Con le proprietà e le raccolte di un oggetto **position** è possibile eseguire le operazioni seguenti:  
   
--   Usare la **ordinale** proprietà per restituire la posizione ordinale della **posizione** lungo il [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+-   Utilizzare la proprietà **ordinal** per restituire la posizione ordinale della **posizione** lungo l' [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   
--   Usare la [membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md) insieme per restituire i membri che costituiscono la posizione lungo la **asse**.  
+-   Utilizzare la raccolta [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) per restituire i membri che compongono la posizione lungo l' **asse**.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Esempio di asse (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Oggetto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   

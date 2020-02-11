@@ -1,5 +1,5 @@
 ---
-title: I record e i flussi | Microsoft Docs
+title: Record e flussi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,50 +15,50 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924490"
 ---
 # <a name="records-and-streams"></a>Record e flussi
-ADO offre attualmente le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto come il mezzo principale per l'accesso alle informazioni nelle origini dati, ad esempio database relazionali. Tuttavia, alcuni provider supportano il [Record](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti come alternativa o complementari oggetti con cui è possono modificare i dati dai provider. Per informazioni specifiche sulla **Record** comportamento, vedere la documentazione del provider.  
+ADO fornisce attualmente l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) come mezzo principale per accedere alle informazioni nelle origini dati, ad esempio i database relazionali. Tuttavia, alcuni provider supportano gli oggetti [record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) come oggetti alternativi o complementari con i quali è possibile modificare i dati dei provider. Per informazioni specifiche sul comportamento dei **record** , vedere la documentazione del provider.  
   
 ## <a name="records"></a>Record  
- **Record** gli oggetti funzionano essenzialmente come riga singola **Recordset**s. Tuttavia **record** hanno funzionalità limitate rispetto ai **recordset** e dispongono di proprietà e metodi diversi. L'origine per i dati in un **Record** oggetto può essere un comando che restituisce una riga di dati dal provider. Usando **Record** oggetti anziché **Recordset** agli oggetti di ricevere i risultati da una query che restituisce una riga di dati Elimina il sovraccarico di un'istanza più è complessa **Recordset**  oggetto.  
+ Gli oggetti **record** funzionano essenzialmente come **Recordset**di una riga. Tuttavia, i **record** hanno una funzionalità limitata rispetto ai **Recordset** e dispongono di proprietà e metodi diversi. L'origine dei dati in un oggetto **record** può essere un comando che restituisce una riga di dati dal provider. L'utilizzo di oggetti **record** anziché di oggetti **Recordset** per ricevere i risultati da una query che restituisce una riga di dati Elimina il sovraccarico dovuto alla creazione di un'istanza dell'oggetto **Recordset** più complesso.  
   
- **Record** oggetti possono essere usato un altro scopo, in particolare con i provider per origini dati diverse dalle tradizionali database relazionali, ad esempio il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Molte delle informazioni che devono essere elaborate esiste, non come tabelle nel database, ma come messaggi in sistemi di posta elettronica e i file nei file modern System. Il **Record** e **Stream** oggetti facilitano l'accesso alle informazioni archiviate nelle origini diverso da database relazionali.  
+ Gli oggetti **record** possono essere utilizzati con un altro scopo, in particolare con i provider per le origini dati diverse dai database relazionali tradizionali, ad esempio il [provider Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Gran parte delle informazioni che devono essere elaborate esiste, non come tabelle nei database, ma come messaggi nei sistemi di posta elettronica e nei file nei file System moderni. Gli oggetti **record** e **flusso** facilitano l'accesso alle informazioni archiviate in origini diverse dai database relazionali.  
   
- Il **Record** oggetto può rappresentare e gestire i dati, ad esempio file e directory in un file system o le cartelle e i messaggi in un sistema di posta elettronica. A tale scopo, l'origine per il **Record** può essere la riga corrente di un elemento aperto **Recordset**, un URL assoluto o un URL relativo in combinazione con un elemento aperto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
+ L'oggetto **record** può rappresentare e gestire dati quali directory e file in un file System o cartelle e messaggi in un sistema di posta elettronica. Per questi scopi, l'origine del **record** può essere la riga corrente di un **Recordset**aperto, un URL assoluto o un URL relativo insieme a un oggetto di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperto.  
   
- In genere, un **Recordset** può essere utilizzato per rappresentare un contenitore o in una gerarchia, ad esempio una cartella o la directory padre. Oggetto **Record** può essere utilizzato per restituire informazioni specifiche su un nodo nel contenitore padre, ad esempio un file o un documento. Il motivo principale **record** vengono usati per rappresentare questo tipo di informazioni è che queste origini dei dati eterogenee. Ciò significa che ogni **Record** può avere un set diverso e un numero di campi. Tradizionali **recordset** contenente le righe da un database sono omogenee, il che significa che ogni riga ha lo stesso numero e tipo dei campi.  
+ In genere, è possibile usare un **Recordset** per rappresentare un contenitore o un elemento padre in una gerarchia, ad esempio una cartella o una directory. È possibile usare un **record** per restituire informazioni specifiche su un nodo nel contenitore padre, ad esempio un file o un documento. Il motivo principale per rappresentare questo tipo di informazioni è che queste origini dei **dati sono** eterogenee. Ciò significa che ogni **record** può avere un set e un numero di campi diversi. I **Recordset** tradizionali contenenti righe da un database sono omogenei, il che significa che ogni riga ha lo stesso numero e tipo di campi.  
   
- Per altre informazioni sull'uso di **Record** oggetti per l'elaborazione di questi dati eterogenei dai provider come Provider di pubblicazione, vedere [utilizzo di ADO per Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+ Per ulteriori informazioni sull'utilizzo dell'oggetto **record** per l'elaborazione di questi dati eterogenei da provider quali Internet Publishing Provider, vedere [utilizzo di ADO per Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
 ## <a name="streams"></a>Flussi  
- Il **Stream** oggetto fornisce i mezzi per leggere, scrivere e gestire un flusso di byte. Questo flusso di byte può essere testo o binari e dimensioni è limitato solo dalle risorse di sistema. In genere, ADO **Stream** gli oggetti vengono usati per gli scopi seguenti:  
+ L'oggetto **Stream** fornisce i mezzi per la lettura, la scrittura e la gestione di un flusso di byte. Questo flusso di byte può essere di tipo text o Binary ed è di dimensioni limitate solo per le risorse di sistema. In genere, gli oggetti **flusso** ADO vengono utilizzati per gli scopi seguenti:  
   
--   Per contenere i dati di un **Recordset** salvati in formato XML. Questi flussi XML da salvare **Recordset**s è utilizzabile come origine quando si apre un nuovo **Recordset**. Per altre informazioni, vedere [flussi e persistenza](../../../ado/guide/data/streams-and-persistence.md).  
+-   Per contenere i dati di un **Recordset** salvato in formato XML. Questi flussi XML da **Recordset**salvati possono essere utilizzati come origine per l'apertura di un nuovo **Recordset**. Per altre informazioni, vedere [flussi e persistenza](../../../ado/guide/data/streams-and-persistence.md).  
   
--   Per contenere [CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md) da eseguire confrontandolo con il provider come alternativa alla [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md). Ad esempio, gli Updategram XML è utilizzabile come origine per un comando sul provider Microsoft OLE DB per SQL Server.  
+-   Per contenere [CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md) da eseguire sul provider come alternativa a [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md). Ad esempio, gli updategram XML possono essere utilizzati come origine per un comando sul provider Microsoft OLE DB per SQL Server.  
   
--   Per ricevere i risultati dal provider in un formato diverso da un **Recordset**, ad esempio risultati XML di Provider Microsoft OLE DB per SQL Server. Per altre informazioni, vedere [recupero di set di risultati in flussi](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
+-   Per ricevere i risultati del provider in un formato diverso da un **Recordset**, ad esempio i risultati XML del provider Microsoft OLE DB per SQL Server. Per altre informazioni, vedere [recupero di set di risultati in flussi](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
   
--   Per includere il testo o byte che costituiscono un file o un messaggio, in genere usati con i provider, ad esempio il Provider Microsoft OLE DB per Internet Publishing. Per altre informazioni su questo utilizzo di **Stream** oggetti, vedere [utilizzo di ADO per Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+-   Per contenere il testo o i byte che costituiscono un file o un messaggio, in genere utilizzato con provider quali il provider Microsoft OLE DB per Internet Publishing. Per ulteriori informazioni sull'utilizzo di oggetti **flusso** , vedere [utilizzo di ADO per Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
- Oggetto **Stream** oggetto può essere aperto su:  
+ Un oggetto **flusso** può essere aperto in:  
   
--   Un semplice file specificato con un URL.  
+-   File semplice specificato con un URL.  
   
--   Un campo di un **Record** oppure **Recordset** contenenti un **Stream** oggetto.  
+-   Campo di un **record** o di un **Recordset** contenente un oggetto **flusso** .  
   
--   Il flusso predefinito di un **Record** oppure **Recordset** oggetto che rappresenta una directory o un file composto.  
+-   Flusso predefinito di un **record** o di un oggetto **Recordset** che rappresenta una directory o un file composto.  
   
--   Un campo di risorse contenente l'URL di file semplice.  
+-   Campo di risorse contenente l'URL di un file semplice.  
   
--   Nessuna origine particolare affatto. In questo caso, un **Stream** apertura dell'oggetto in memoria. I dati possono essere scritti in essa e quindi salvati in un altro **Stream** o file.  
+-   Nessuna origine particolare. In questo caso, un oggetto **flusso** viene aperto in memoria. È possibile scrivere i dati e salvarli in un altro **flusso** o file.  
   
--   Un campo BLOB in un **Recordset**.  
+-   Campo BLOB in un **Recordset**.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

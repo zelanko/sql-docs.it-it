@@ -24,14 +24,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035286"
 ---
 # <a name="choosing-a-network-protocol"></a>Scelta di un protocollo di rete
-  Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
+  Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di soddisfare le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
   
 ## <a name="shared-memory"></a>Shared Memory  
  Shared Memory è il protocollo più semplice da utilizzare e non richiede la configurazione di impostazioni. Poiché i client che utilizzano questo protocollo possono connettersi solo a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita sullo stesso computer, Shared Memory non è adatto per la maggior parte delle attività del database. Utilizzare il protocollo Shared Memory per la risoluzione dei problemi quando si sospetta che gli altri protocolli siano configurati in modo non corretto.  
@@ -45,7 +45,7 @@ ms.locfileid: "63035286"
 ## <a name="named-pipes"></a>Named Pipe  
  Il protocollo Named Pipes è stato sviluppato per le reti locali. Un parte della memoria viene utilizzata da un processo per il passaggio di informazioni a un altro processo, in modo che l'output dell'uno corrisponda all'input dell'altro. Il secondo processo può essere locale (in esecuzione nello stesso computer del primo) o remoto (in un computer in rete).  
   
-## <a name="named-pipes-vs-tcpip-sockets"></a>Named Pipes e Socket TCP/IP  
+## <a name="named-pipes-vs-tcpip-sockets"></a>Named Pipes e TCP/IP Sockets  
  In un ambiente di rete locale (LAN) veloce, i client Named Pipes e i socket TCP/IP sono paragonabili in termini di prestazioni. La differenza di prestazioni tra i client diventa evidente con reti più lente, ad esempio nelle reti WAN (Wide Area Network) o nelle reti remote. Ciò dipende dalle diverse modalità di comunicazione impostate tra i peer dal meccanismo di comunicazione interprocesso (IPC).  
   
  Nel caso di Named Pipes, le comunicazioni di rete sono in genere caratterizzate da un maggior livello di interattività. Un peer invia i dati soltanto quando un altro peer li richiede tramite un comando di lettura. Un'operazione di lettura in rete genera solitamente una serie di messaggi di peek sulle named pipe prima dell'inizio della lettura dei dati. Tali messaggi possono risultare particolarmente onerosi in una rete lenta e provocare un traffico eccessivo, con conseguenze sulle prestazioni degli altri client di rete.  
@@ -61,6 +61,6 @@ ms.locfileid: "63035286"
 ## <a name="enabling-the-protocol"></a>Abilitazione del protocollo  
  Per il corretto funzionamento, è necessario abilitare il protocollo sia nel client che nel server. Il server può restare in attesa di richieste su tutti i protocolli abilitati contemporaneamente. I computer client possono sceglierne uno oppure tentare tutti i protocolli nell'ordine indicato in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per una breve esercitazione sulla configurazione dei protocolli e sulla connessione al [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere [Esercitazione: Introduzione al motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Per una breve esercitazione sulla configurazione di protocolli e sulla connessione di [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere [Esercitazione: Introduzione al Motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

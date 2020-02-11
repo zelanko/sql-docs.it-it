@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932242"
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio della proprietà MaxRecords (VC++)
-Questo esempio Usa la [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le 10 libri più costosi indicati nel ***titoli*** tabella.  
+In questo esempio viene usata la proprietà [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  
   
 ## <a name="example"></a>Esempio  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Titoli di dieci principali in base al prezzo:**  
-**Ma è facile? ---22.95**  
-**Utenti singoli Non spaventati e un computer: Variazioni di comportamento---21.59**  
-**Cipolle Leeks e aglio: Cucina segreti di Mar---20.95**  
+ **Primi dieci titoli per prezzo:**  
+**Ma è facile da usare? ---22,95**  
+**Singoli computer fobici e non fobici: variazioni del comportamento---21,59**  
+**Cipolla, porri e aglio: segreti culinari della---mediterranea 20,95**  
 **Segreti di Silicon Valley---20,00**  
-**Guida di Database del dirigente occupato---i 19,99 dollari**  
-**Parlare direttamente sui computer---i 19,99 dollari**  
-**Considera Silicon Valley Gastronomic---i 19,99 dollari**  
-**Privative interruzioni prolungate nel Data: Quattro casi di Studio---i 19,99 dollari**  
-**Sushi tutti gli utenti? ---14,99**  
-**Cinquanta gli anni in Palace Buckingham cucine---11.95**   
+**Guida al database del dirigente occupato---19,99**  
+**Discussione diretta sui computer---19,99**  
+**Delizie gastronomiche di Silicon Valley---19,99**  
+**Perdita prolungata dei dati: quattro case study---19,99**  
+**Sushi, chiunque? ---14,99**  
+**50 anni a Buckingham Palace kitchens---11,95**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

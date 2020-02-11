@@ -1,5 +1,5 @@
 ---
-title: Date, Time e Timestamp valori letterali | Microsoft Docs
+title: Valori letterali data, ora e timestamp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076979"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Valori letterali data, ora e timestamp
-La sequenza di escape per i valori letterali data, ora e timestamp  
+La sequenza di escape per i valori letterali data, ora e timestamp è  
   
- **{** _-tipo_ **'** _valore_ **'}**  
+ **{**  _-Type_ **'** _value_ **'}**  
   
- in cui *-tipo di valore letterale* è uno dei valori elencati nella tabella seguente.  
+ dove *literal-type* è uno dei valori elencati nella tabella seguente.  
   
-|*literal-type*|Significato|Formato di *valore*|  
+|*tipo di valore letterale*|Significato|Formato del *valore*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*aaaa*-*mm*-*gg*|  
-|**t**|Ora *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...* ] [1]|  
+|**d**|Data|*aaaa*-** mm-*GG*|  
+|**t**|Tempo|*HH*:*mm*:*SS*[1]|  
+|**ts**|Timestamp|*aaaa*-** mm-*GG* *HH*:*mm*:*SS*[.* f...*] 1|  
   
- [1] il numero di cifre a destra del separatore decimale in un intervallo di tempo o timestamp letterale contenente un componente relativo ai secondi dipende la precisione in secondi, quanto contenuto nel campo del descrittore SQL_DESC_PRECISION. (Per altre informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ [1] il numero di cifre a destra del separatore decimale in un valore letterale intervallo temporale o timestamp contenente un componente secondi dipende dalla precisione dei secondi, come contenuto nel campo del descrittore SQL_DESC_PRECISION. Per ulteriori informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   
- Per altre informazioni sulla data, ora e timestamp sequenze di escape, vedere [Date, Time e Timestamp sequenze di Escape](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) nell'appendice c: Grammatica SQL.  
+ Per ulteriori informazioni sulle sequenze di escape di data, ora e timestamp, vedere [sequenze di escape di data, ora e timestamp](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) nell'Appendice C: grammatica SQL.  
   
- Ad esempio, entrambe le istruzioni SQL seguenti aggiornare open data di ordine di vendita 1023 nella tabella Orders. La prima istruzione Usa la sintassi della sequenza di escape. La seconda istruzione viene utilizzata la sintassi di nativo Oracle Rdb per la colonna delle DATE e non è interoperativa.  
+ Ad esempio, entrambe le istruzioni SQL seguenti aggiornano la data di apertura dell'ordine di vendita 1023 nella tabella Orders. La prima istruzione usa la sintassi della sequenza di escape. La seconda istruzione utilizza la sintassi nativa di Oracle RDB per la colonna DATE e non è interoperativa.  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- La sequenza di escape per una data, ora o timestamp letterale può essere inserita in una variabile di caratteri associata a una data, ora o timestamp parametro. Ad esempio, il codice seguente usa un parametro data associato a una variabile di tipo carattere per aggiornare la data dell'ordine di vendita 1023 nella tabella Orders open:  
+ Anche la sequenza di escape per un valore letterale di data, ora o timestamp può essere inserita in una variabile di tipo carattere associata a un parametro di data, ora o timestamp. Il codice seguente, ad esempio, usa un parametro date associato a una variabile di tipo carattere per aggiornare la data di apertura dell'ordine di vendita 1023 nella tabella Orders:  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Tuttavia, è in genere più efficiente per associare il parametro direttamente a una struttura di data:  
+ Tuttavia, in genere è più efficiente associare il parametro direttamente a una struttura di data:  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Per determinare se un driver supporta le sequenze di escape ODBC per data, ora o timestamp valori letterali, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta un tipo di dati di data, ora o timestamp, deve anche supportare la sequenza di escape corrispondente.  
+ Per determinare se un driver supporta le sequenze di escape ODBC per i valori letterali data, ora o timestamp, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta un tipo di dati data, ora o timestamp, deve supportare anche la sequenza di escape corrispondente.  
   
- Origini dati possono anche supportare i valori letterali datetime definiti nella specifica ANSI SQL-92, che sono diverse dalle sequenze di escape ODBC per data, ora o timestamp valori letterali. Per determinare se un'origine dati supporta i valori letterali ANSI, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ANSI_SQL_DATETIME_LITERALS.  
+ Le origini dati possono inoltre supportare i valori letterali datetime definiti nella specifica ANSI SQL-92, che sono diversi dalle sequenze di escape ODBC per i valori letterali data, ora o timestamp. Per determinare se un'origine dati supporta i valori letterali ANSI, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ANSI_SQL_DATETIME_LITERALS.  
   
- Per determinare se un driver supporta le sequenze di escape ODBC per i valori letterali intervallo, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta un tipo di dati di intervallo data/ora, deve anche supportare la sequenza di escape corrispondente.  
+ Per determinare se un driver supporta le sequenze di escape ODBC per i valori letterali di intervallo, un'applicazione chiama **SQLGetTypeInfo**. Se l'origine dati supporta un tipo di dati intervallo DateTime, deve supportare anche la sequenza di escape corrispondente.  
   
- Origini dati possono anche supportare i valori letterali datetime definiti nella specifica ANSI SQL-92, che sono diverse dalle sequenze di escape ODBC per i valori letterali intervallo data/ora. Per determinare se un'origine dati supporta i valori letterali ANSI, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ANSI_SQL_DATETIME_LITERALS.
+ Le origini dati possono inoltre supportare i valori letterali datetime definiti nella specifica ANSI SQL-92, che sono diversi dalle sequenze di escape ODBC per i valori letterali di intervallo DateTime. Per determinare se un'origine dati supporta i valori letterali ANSI, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_ANSI_SQL_DATETIME_LITERALS.

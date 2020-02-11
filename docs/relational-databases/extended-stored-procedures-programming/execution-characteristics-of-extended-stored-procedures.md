@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095981"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caratteristiche dell'esecuzione di stored procedure estese
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
   
  L'esecuzione di una stored procedure estesa presenta tre caratteristiche:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74095981"
   
 -  
   
- Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del server fino a quando non viene arrestato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o l'amministratore lo Scarica in modo esplicito tramite DBCC *Dll_Name* (gratuito).  
+ Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server fino a quando non viene arrestato o l'amministratore Scarica in modo esplicito la dll tramite DBCC *Dll_Name* (free).  
   
  La stored procedure estesa può essere eseguita da [!INCLUDE[tsql](../../includes/tsql-md.md)] come stored procedure mediante l'istruzione EXECUTE:  
   
@@ -48,13 +48,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parametri  
- \@ *retval*  
+ \@*retval*  
  È un valore restituito.  
   
- \@ *param1*  
+ \@*param1*  
  È un parametro di input.  
   
- \@ *param2*  
+ \@*param2*  
  È un parametro di input/output.  
   
 > [!CAUTION]  

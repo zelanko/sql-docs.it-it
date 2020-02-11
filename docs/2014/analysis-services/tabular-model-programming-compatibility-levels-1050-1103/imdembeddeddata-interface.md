@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757782"
 ---
 # <a name="imdembedded-interface"></a>Interfaccia IMDEmbedded
@@ -30,16 +30,16 @@ ms.locfileid: "62757782"
   
 -   Annullare l'operazione incorporata corrente.  
   
--   Ottenere le dimensioni stimate (in byte) del flusso per il salvataggio dell'oggetto incorporato. La proprietà viene ereditata da `IPersistStream`.  
+-   Ottenere le dimensioni stimate (in byte) del flusso per il salvataggio dell'oggetto incorporato. Ereditato da `IPersistStream`.  
   
--   Verificare se il database incorporato è stato modificato rispetto all'ultimo salvataggio. La proprietà viene ereditata da `IPersistStream`.  
+-   Verificare se il database incorporato è stato modificato rispetto all'ultimo salvataggio. Ereditato da `IPersistStream`.  
   
--   Caricare il database incorporato nel motore locale o in-process. La proprietà viene ereditata da `IPersistStream`.  
+-   Caricare il database incorporato nel motore locale o in-process. Ereditato da `IPersistStream`.  
   
--   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. La proprietà viene ereditata da `IPersistStream`.  
+-   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
-## <a name="reference"></a>Riferimenti  
- Di seguito fanno riferimento i documenti il `IMDEmbedded` interfaccia illustrata nella **msmd** file di intestazione.  
+## <a name="reference"></a>Informazioni di riferimento  
+ Il riferimento seguente documenta l' `IMDEmbedded` interfaccia come presentata nel file di intestazione **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>File di origine: PXOEmbeddedData.idl  
   
@@ -98,18 +98,18 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Si è verificato un errore durante l'accesso all'identificatore di flusso.  
   
-#### <a name="remarks"></a>Note  
+#### <a name="remarks"></a>Osservazioni  
  Per verificare se la connessione corrente contiene un database incorporato, l'utente deve controllare il valore della proprietà DBPROP_MSMD_EMBEDDED_DATA dalle proprietà di connessione di OLE DB.  
   
  I valori possibili per DBPROP_MSMD_EMBEDDED_DATA sono:  
   
-|Nome|Value|Definizione|  
+|Nome|valore|Definizione|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Nessun database incorporato disponibile|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'applicazione corrente contiene il database incorporato|  
 |DBPROPVAL_EMBED_LINKED|0x02|Il database incorporato è ospitato in un'applicazione remota, ad esempio SharePoint Server|  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source (Sorgente)  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione dell'URL del contenitore.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source (Sorgente)  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione del flag.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source (Sorgente)  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione del percorso.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source (Sorgente)  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -217,7 +217,7 @@ HRESULT Cancel ( void )
  Annulla l'operazione del database incorporato corrente.  
   
 #### <a name="parameters"></a>Parametri  
- Nessuna.  
+ No.  
   
 #### <a name="return-value"></a>Valore restituito  
  `S_OK`  
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Si verificato un errore durante l'annullamento dell'operazione incorporata.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source (Sorgente)  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -245,7 +245,7 @@ HRESULT GetSizeMax (
 ```  
   
 #### <a name="description"></a>Descrizione  
- Ottiene la dimensione stimata (in byte) del flusso per il salvataggio dell'oggetto incorporato. La proprietà viene ereditata da `IPersistStream`.  
+ Ottiene la dimensione stimata (in byte) del flusso per il salvataggio dell'oggetto incorporato. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_bstrPath*  
@@ -265,7 +265,7 @@ HRESULT IsDirty ( void )
 ```  
   
 #### <a name="description"></a>Descrizione  
- Verifica se il database incorporato è stato modificato rispetto all'ultimo salvataggio. La proprietà viene ereditata da `IPersistStream`.  
+ Verifica se il database incorporato è stato modificato rispetto all'ultimo salvataggio. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  none  
@@ -289,7 +289,7 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>Descrizione  
- Carica il database incorporato sul motore locale o in-process. La proprietà viene ereditata da `IPersistStream`.  
+ Carica il database incorporato sul motore locale o in-process. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_pStm*  
@@ -315,7 +315,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Descrizione  
- Salva il database locale o in-process nel flusso incorporato del documento contenitore. La proprietà viene ereditata da `IPersistStream`.  
+ Salva il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_pStm*  

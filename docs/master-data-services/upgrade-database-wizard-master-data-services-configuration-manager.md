@@ -11,19 +11,19 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728906"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Usare l'**Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+  Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Action  
+## <a name="action"></a>Azione  
  Si tratta della pagina introduttiva della procedura guidata. Fare clic su **Avanti** per iniziare il processo di aggiornamento del database.  
   
 ## <a name="upgrade-review"></a>Controllo aggiornamento  
@@ -38,7 +38,7 @@ ms.locfileid: "73728906"
  Consente di visualizzare il processo di aggiornamento. Al termine dell'aggiornamento del database, fare clic sul collegamento al file di log per visualizzare informazioni dettagliate sull'aggiornamento o fare clic su **Fine** per chiudere la procedura guidata del database e tornare alla pagina **Database** . Il database aggiornato risulterà selezionato e sarà possibile visualizzare e modificare le impostazioni di sistema corrispondenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [Pagina di configurazione del database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Installazione e configurazione di Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aggiornare Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   

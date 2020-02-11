@@ -17,10 +17,10 @@ ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966680"
 ---
 # <a name="create-method-adox"></a>Metodo Create (ADOX)
@@ -35,10 +35,10 @@ Catalog.Create ConnectString
   
 #### <a name="parameters"></a>Parametri  
  *ConnectString*  
- Oggetto **stringa** valore utilizzato per la connessione all'origine dati.  
+ Valore **stringa** utilizzato per la connessione all'origine dati.  
   
-## <a name="remarks"></a>Note  
- Il **Create** metodo crea e apre un nuovo file ADO [connessione](../../../ado/reference/ado-api/connection-object-ado.md) all'origine dati specificato in *ConnectString*. Se l'operazione riesce, il nuovo **Connection** oggetto viene assegnato alle [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà.  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo **create** crea e apre una nuova [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ADO all'origine dati specificata in *ConnectString*. In caso di esito positivo, il nuovo oggetto **Connection** viene assegnato alla proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) .  
   
  Se il provider non supporta la creazione di nuovi cataloghi, si verificherà un errore.  
   
@@ -46,5 +46,5 @@ Catalog.Create ConnectString
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio del metodo Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
+ [Esempio di metodo Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

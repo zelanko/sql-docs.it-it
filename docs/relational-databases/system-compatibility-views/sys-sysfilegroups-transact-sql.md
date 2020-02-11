@@ -21,10 +21,10 @@ ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053479"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "68053479"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**groupid**|**smallint**|Numero di identificazione del filegroup, univoco all'interno di ogni database.|  
+|**GroupID**|**smallint**|Numero di identificazione del filegroup, univoco all'interno di ogni database.|  
 |**allocpolicy**|**smallint**|Riservato|  
-|**status**|**int**|0x8= Sola lettura<br /><br /> 0x10 = Predefinito|  
-|**groupname**|**sysname**|Nome del filegroup.|  
+|**stato**|**int**|0x8= Sola lettura<br /><br /> 0x10 = Predefinito|  
+|**GroupName**|**sysname**|Nome del filegroup.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

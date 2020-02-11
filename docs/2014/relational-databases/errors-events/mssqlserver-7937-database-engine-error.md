@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762793"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762793"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Testo del messaggio|Errore di tabella: Directory FileStream per l'ID di colonna C_ID dell'ID di oggetto O_ID, indice con ID I_ID, partizione con ID PN_ID non è stato trovato.|  
+|Testo del messaggio|Errore di tabella: impossibile trovare la directory FileStream per l'ID di colonna C_ID, ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID.|  
   
 ## <a name="explanation"></a>Spiegazione  
  La colonna specificata esiste in una partizione, ma nello spazio dati FILESTREAM non è stato possibile individuare la directory FILESTREAM corrispondente.  

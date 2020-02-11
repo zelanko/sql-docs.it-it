@@ -1,5 +1,5 @@
 ---
-title: Calcoli (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Calcoli (Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088285"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calcoli (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -35,7 +35,7 @@ ms.locfileid: "66088285"
   
 ## <a name="panes"></a>Riquadri  
  **Barra degli strumenti**  
- Utilizzare la barra degli strumenti nella visualizzazione Form e nella visualizzazione Script per eseguire operazioni frequenti in questa scheda. Per altre informazioni su questo riquadro, vedere [Barra degli strumenti &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilizzare la barra degli strumenti nella visualizzazione form e nella visualizzazione script per eseguire operazioni frequenti in questa scheda. Per ulteriori informazioni su questo riquadro, vedere [barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services-&#41;dati multidimensionali ](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Libreria script**  
  Usare il riquadro **Libreria script** nella visualizzazione Form per visualizzare il contenuto dello script del cubo in formato ordinato. Per altre informazioni su questo riquadro, vedere [Libreria script &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
@@ -46,17 +46,17 @@ ms.locfileid: "66088285"
  **Editor di script**  
  Usare il riquadro **Editor di script** nella visualizzazione Script per modificare l'intero script del cubo e nella visualizzazione Form per modificare i comandi dello script contenuti nello script del cubo. Per altre informazioni su questo riquadro, vedere [Editor script &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor Form membro calcolato**  
+ **Editor form membro calcolato**  
  Usare il riquadro **Editor form membro calcolato** nella visualizzazione Form per modificare i membri calcolati nello script del cubo. Per altre informazioni su questo riquadro, vedere [Editor form membro calcolato &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor Form Set denominato**  
+ **Editor form set denominato**  
  Usare il riquadro **Editor form set denominato** nella visualizzazione Form per modificare i set denominati nello script del cubo. Per altre informazioni su questo riquadro, vedere [Editor form set denominato &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Creare set denominati](multidimensional-models/create-named-sets.md)  
   
   

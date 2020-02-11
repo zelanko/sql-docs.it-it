@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Query denominata (Analysis Services - dati multidimensionali) genera | Microsoft Docs
+title: Finestra di dialogo Genera query denominata (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080906"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Genera query denominata (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Genera query denominata** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query denominata in base a una serie di grafico, un valore di serie di grafico o un filtro di grafico selezionato dal grafico visualizzato nella scheda **Grafico pivot** nella finestra di dialogo **Esplora dati** . Per visualizzare la finestra di dialogo **Genera query denominata** , è possibile fare clic su **Genera query denominata** nella finestra di dialogo **Esplora dati** .  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare il nome della query denominata.  
   
  **Descrizione**  
  Consente di digitare la descrizione facoltativa della query denominata.  
   
- **Definizione della query**  
+ **Definizione query**  
  Consente di visualizzare la definizione della query denominata generata in base alla serie di grafico, al valore di serie di grafico o al filtro di grafico selezionato in **Oggetto grafico selezionato**.  
   
  **Oggetto grafico selezionato**  

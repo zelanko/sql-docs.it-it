@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009877"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Utilizzare directory e percorsi in FileTable
@@ -55,19 +55,21 @@ GO
 > [!IMPORTANT]  
 >  Non è possibile archiviare più di 15 livelli di sottodirectory nella directory FileTable. Quando si archiviano 15 livelli di sottodirectory, il livello più basso non può contenere file, poiché essi rappresenterebbero un ulteriore livello.  
   
-###  <a name="fqnlength"></a> Lunghezza del nome e percorso completo  
+###  <a name="fqnlength"></a>Lunghezza del nome percorso completo  
   
 > [!IMPORTANT]  
 >  Il file system NTFS supporta nomi di percorso la cui lunghezza supera il limite di 260 caratteri della shell di Windows e della maggior parte delle API Windows. Pertanto, utilizzando Transact-SQL, è possibile creare file nella gerarchia dei file di una tabella FileTable che non è possibile visualizzare o aprire con Esplora risorse o con molte altre applicazioni Windows, perché il nome e percorso completo superano i 260 caratteri. Tuttavia, è possibile continuare ad accedere a questi file tramite Transact-SQL.  
   
-##  <a name="fullpath"></a> Percorso completo di un elemento archiviato in una tabella FileTable  
+##  <a name="fullpath"></a>Percorso completo di un elemento archiviato in una tabella FileTable  
  Il percorso completo di un file o di una directory in una tabella FileTable inizia con gli elementi seguenti:  
   
 1.  Condivisione abilitata per l'accesso di I/O ai file FILESTREAM a livello dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  **DIRECTORY_NAME** specificato a livello di database.  
+2.  
+  **DIRECTORY_NAME** specificato a livello di database.  
   
-3.  **FILETABLE_DIRECTORY** specificato a livello di FileTable.  
+3.  
+  **FILETABLE_DIRECTORY** specificato a livello di FileTable.  
   
  La gerarchia risultante risulta analoga alla seguente:  
   
@@ -77,7 +79,7 @@ GO
   
  È importante ricordare che la gerarchia di directory creata nella condivisione FILESTREAM a livello di istanza è una gerarchia di directory virtuale. Questa gerarchia viene archiviata nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è rappresentata fisicamente nel file system NTFS. Tutte le operazioni che comportano l'accesso a file e directory nella condivisione FILESTREAM e nelle tabelle FileTable in essa contenute sono intercettate e gestite da un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incorporato nel file system.  
   
-##  <a name="roots"></a> Semantica delle directory radice a livello di istanza, database e tabella FileTable  
+##  <a name="roots"></a>Semantica delle directory radice a livello di istanza, database e tabella FileTable  
  Questa gerarchia di directory osserva la semantica seguente:  
   
 -   La condivisione FILESTREAM del livello di istanza viene configurata da un amministratore e archiviata come proprietà del server. È possibile rinominare la condivisione mediante Gestione configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'operazione di ridenominazione non viene applicata finché il server non viene riavviato.  
@@ -90,18 +92,18 @@ GO
   
 -   Non è possibile aprire queste directory radice con handle di file esclusivi.  
   
-##  <a name="is_directory"></a> Colonna is_directory nello schema della tabella FileTable  
+##  <a name="is_directory"></a>Colonna is_directory nello schema FileTable  
  La tabella seguente descrive l'interazione tra la colonna **is_directory** e la colonna **file_stream** contenente i dati FILESTREAM in una tabella FileTable.  
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Comportamento**|  
+|** **valore** is_directory|** **valore** file_stream|**Comportamento**|  
 |FALSE|NULL|Si tratta di una combinazione non valida che sarà intercettata da un vincolo definito dal sistema.|  
 |FALSE|\<valore>|L'elemento rappresenta un file.|  
 |TRUE|NULL|L'elemento rappresenta una directory.|  
 |TRUE|\<valore>|Si tratta di una combinazione non valida che sarà intercettata da un vincolo definito dal sistema.|  
   
-##  <a name="alwayson"></a> Utilizzo di nomi di rete virtuale con i gruppi di disponibilità AlwaysOn  
+##  <a name="alwayson"></a>Uso dei nomi di rete virtuale (VNN) con Gruppi di disponibilità AlwaysOn  
  Quando il database che contiene dati FILESTREAM o FileTable appartiene a un gruppo di disponibilità AlwaysOn:  
   
 -   Le funzioni FILESTREAM e FileTable accettano o restituiscono nomi di rete virtuale anziché nomi computer. Per altre informazioni su queste funzioni, vedere [Funzioni FileStream e FileTable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql).  
@@ -109,9 +111,9 @@ GO
 -   Ogni accesso a dati FILESTREAM o FileTable tramite le API del file system deve utilizzare VNN anziché nomi computer. Per altre informazioni, vedere [FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Abilitazione dei prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)   
- [Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)   
- [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)   
- [Accedere alle tabelle FileTable con API di Input-Output dei file](access-filetables-with-file-input-output-apis.md)  
+ [Abilitare i prerequisiti per la tabella FileTable](enable-the-prerequisites-for-filetable.md)   
+ [Creare, modificare ed eliminare FileTable](create-alter-and-drop-filetables.md)   
+ [Accedere a tabelle FileTable con Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Accedere alle tabelle FileTable con API di input/output dei file](access-filetables-with-file-input-output-apis.md)  
   
   

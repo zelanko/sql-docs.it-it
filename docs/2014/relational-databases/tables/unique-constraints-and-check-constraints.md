@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196679"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
@@ -45,13 +45,13 @@ ms.locfileid: "68196679"
   
  È possibile applicare più vincoli CHECK a una colonna e inoltre applicare un singolo vincolo CHECK a più colonne creandolo a livello di tabella. È ad esempio possibile usare un vincolo CHECK in più colonne per confermare che a ogni riga con un valore di colonna **country_region** pari a **USA** corrisponda un valore di due caratteri nella colonna **state** . In questo modo è possibile verificare più condizioni simultaneamente.  
   
- I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui determinati i valori che sono validi: I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
+ I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui vengono determinati i valori validi. I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
   
 > [!CAUTION]  
 >  I vincoli che prevedono la conversione implicita o esplicita di tipi di dati possono impedire l'esecuzione di operazioni specifiche. Ad esempio, i vincoli definiti nelle tabelle di origine per il cambio di partizione possono impedire l'esecuzione di un'operazione ALTER TABLE...SWITCH. Evitare la conversione di tipi di dati nelle definizioni dei vincoli.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitazioni per i vincoli CHECK  
- I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Ad esempio, si supponga di inserire un vincolo su un `int` colonna **MyColumn** specificando che **MyColumn** può contenere solo il valore 10 (**MyColumn = 10**). Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
+ I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Si supponga, ad esempio, di inserire un vincolo `int` su una **colonna column che specifica che** la **colonna** può contenere solo il valore 10 (**colonna = 10**). Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
   
  Un vincolo CHECK restituisce TRUE se la verifica della condizione controllata non restituisce FALSE per nessuna riga della tabella. Un vincolo CHECK viene utilizzato a livello di riga. Se una tabella appena creata non contiene righe, tutti i vincoli CHECK sulla tabella sono considerati validi. Questa situazione può generare risultati imprevisti, come è illustrato nell'esempio seguente.  
   
@@ -91,13 +91,13 @@ DELETE CheckTbl WHERE col1 = 10;
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli univoci](../tables/create-unique-constraints.md)|  
-|Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli univoci](../tables/modify-unique-constraints.md)|  
-|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminazione di vincoli univoci](../tables/delete-unique-constraints.md)|  
+|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli UNIQUE](../tables/create-unique-constraints.md)|  
+|Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli UNIQUE](../tables/modify-unique-constraints.md)|  
+|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminare vincoli UNIQUE](../tables/delete-unique-constraints.md)|  
 |Viene descritto come disabilitare un vincolo CHECK quando un agente di replica inserisce o aggiorna i dati nella tabella.|[Disabilitare un vincolo CHECK per la replica](../tables/disable-check-constraints-for-replication.md)|  
-|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitazione di vincoli CHECK con le istruzioni INSERT e UPDATE](../tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modifica di vincoli CHECK](../tables/modify-check-constraints.md)|  
-|Viene descritto come eliminare un vincolo CHECK.|[Eliminazione dei vincoli CHECK](../tables/delete-check-constraints.md)|  
+|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitare i vincoli CHECK con le istruzioni INSERT e UPDATE](../tables/disable-check-constraints-with-insert-and-update-statements.md)|  
+|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modificare vincoli CHECK](../tables/modify-check-constraints.md)|  
+|Viene descritto come eliminare un vincolo CHECK.|[Eliminare vincoli CHECK](../tables/delete-check-constraints.md)|  
 |Viene descritto come visualizzare le proprietà di un vincolo CHECK.|[Vincoli UNIQUE e CHECK](../tables/unique-constraints-and-check-constraints.md)|  
   
   

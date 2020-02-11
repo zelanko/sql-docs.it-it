@@ -20,16 +20,16 @@ ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096987"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene informazioni sulle pianificazioni dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa tabella è archiviata nel **msdb** database.  
+  Contiene informazioni sulle pianificazioni dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa tabella è archiviata nel database **msdb** .  
   
   
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -37,34 +37,34 @@ ms.locfileid: "68096987"
 |**schedule_id**|**int**|ID della pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore univoco della pianificazione dei processi. Questo valore viene utilizzato per identificare una pianificazione per i processi distribuiti.|  
 |**originating_server_id**|**int**|ID del server master di provenienza della pianificazione dei processi.|  
-|**name**|**sysname (nvarchar(128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
-|**owner_sid**|**varbinary(85)**|Microsoft Windows *identificatore di protezione* dell'utente o gruppo che possiede la pianificazione del processo.|  
-|**enabled**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitata.<br /><br /> **1** = abilitato.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
-|**freq_type**|**int**|Frequenza di esecuzione di un processo per questa pianificazione.<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa a **freq_interval**<br /><br /> **64** = viene eseguita all'avvio del servizio SQL Server Agent<br /><br /> **128** = viene eseguita quando il computer è inattivo|  
-|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Dipende dal valore della **freq_type**. Il valore predefinito è **0**, che indica che **freq_interval** risulta inutilizzato. Vedere la tabella seguente per i valori possibili e i relativi effetti.|  
-|**freq_subday_type**|**int**|Unità per il **freq_subday_interval**. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> **1** : All'ora specificata<br /><br /> **2** : Secondi<br /><br /> **4** : Minutes<br /><br /> **8** : Ore|  
-|**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo.|  
-|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_interval** viene **32** (frequenza mensile relativa). Il valore può essere uno dei seguenti:<br /><br /> **0** = **freq_relative_interval** è inutilizzato<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
-|**freq_recurrence_**<br /><br /> **factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene usato solo se **freq_type** viene **8**, **16**, o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** risulta inutilizzato.|  
+|**nome**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
+|**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
+|**abilitato**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitato.<br /><br /> **1** = abilitata.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
+|**freq_type**|**int**|Frequenza di esecuzione di un processo per questa pianificazione.<br /><br /> **1** = solo una volta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo a **freq_interval**<br /><br /> **64** = viene eseguito all'avvio del servizio SQL Server Agent<br /><br /> **128** = viene eseguito quando il computer è inattivo|  
+|**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Dipende dal valore di **freq_type**. Il valore predefinito è **0**, che indica che **freq_interval** è inutilizzato. Per i valori possibili e i relativi effetti, vedere la tabella seguente.|  
+|**freq_subday_type**|**int**|Unità per la **freq_subday_interval**. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> **1** : all'ora specificata<br /><br /> **2** : secondi<br /><br /> **4** : minuti<br /><br /> **8** : ore|  
+|**freq_subday_interval**|**int**|Numero di periodi di **freq_subday_type** tra le esecuzioni del processo.|  
+|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_interval** è **32** (mensile relativo). Può avere uno dei valori seguenti:<br /><br /> **0** = **freq_relative_interval** non è utilizzato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
+|**freq_recurrence_**<br /><br /> **Factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene utilizzato solo se **freq_type** è **8**, **16**o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** non è utilizzata.|  
 |**active_start_date**|**int**|Data dalla quale è possibile avviare l'esecuzione del processo. La data è nel formato AAAAMMGG. NULL indica la data odierna.|  
 |**active_end_date**|**int**|Data dalla quale è possibile arrestare l'esecuzione del processo. La data è nel formato AAAAMMGG.|  
-|**active_start_time**|**int**|Data compresa tra **active_start_date** e **active_end_date** inizia l'esecuzione di tale processo. L'ora è nel formato HHMMSS, a 24 ore.|  
-|**active_end_time**|**int**|Data compresa tra **active_start_date** e **active_end_date** tale processo viene arrestata l'esecuzione. L'ora è nel formato HHMMSS, a 24 ore.|  
+|**active_start_time**|**int**|Tempo che intercorre tra **active_start_date** e **active_end_date** avvio dell'esecuzione del processo. L'ora è nel formato HHMMSS, a 24 ore.|  
+|**active_end_time**|**int**|Tempo che intercorre tra **active_start_date** e **active_end_date** interruzione dell'esecuzione del processo. L'ora è nel formato HHMMSS, a 24 ore.|  
 |**date_created**|**datetime**|Data e ora di creazione della pianificazione.|  
 |**date_modified**|**datetime**|Data e ora dell'ultima modifica della pianificazione.|  
-|**version_number**|**int**|Numero di versione corrente della pianificazione. Ad esempio, se una pianificazione è stata modificata 10 volte, il **version_number** è 10.|  
+|**numero_versione**|**int**|Numero di versione corrente della pianificazione. Se, ad esempio, una pianificazione è stata modificata 10 volte, il **version_number** è 10.|  
   
 |Valore di freq_type|Effetto su freq_interval|  
 |-------------------------|------------------------------|  
-|**1** (once)|**freq_interval** non viene usato (**0**)|  
+|**1** (una volta)|**freq_interval** non usato (**0**)|  
 |**4** (giornaliera)|Ogni **freq_interval** giorni|  
-|**8** (settimanale)|**freq_interval** corrisponde a uno o più dei valori seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
-|**16** (mensile)|Nel **freq_interval** giorno del mese|  
-|**32** (mensile, relativa)|**freq_interval** è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
-|**64** (inizia all'avvio del servizio SQL Server Agent)|**freq_interval** non viene usato (**0**)|  
-|**128** (viene eseguita quando il computer è inattivo)|**freq_interval** non viene usato (**0**)|  
+|**8** (settimanale)|**freq_interval** è uno o più degli elementi seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
+|**16** (ogni mese)|Il **freq_interval** giorno del mese|  
+|**32** (mensile, relativo)|**freq_interval** è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
+|**64** (inizia all'avvio del servizio SQL Server Agent)|**freq_interval** non usato (**0**)|  
+|**128** (viene eseguito quando il computer è inattivo)|**freq_interval** non usato (**0**)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo. sysjobschedules &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

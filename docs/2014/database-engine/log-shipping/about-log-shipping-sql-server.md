@@ -26,14 +26,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774551"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un *database primario* in un'istanza del *server primario* a uno o più *database secondari* in istanze separate del *server secondario* . I backup del log delle transazioni vengono applicati singolarmente a ogni database secondario. Un terzo server facoltativo, noto come *server di monitoraggio*, registra la cronologia e lo stato delle operazioni di backup e di ripristino e genera avvisi nel caso in cui tali operazioni non vengano eseguite come previsto.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Il log shipping consente di inviare automaticamente i backup del log delle transazioni da un *database primario* in un'istanza del *server primario* a uno o più *database secondari* in istanze separate del *server secondario* . I backup del log delle transazioni vengono applicati singolarmente a ogni database secondario. Un terzo server facoltativo, noto come *server di monitoraggio*, registra la cronologia e lo stato delle operazioni di backup e di ripristino e genera avvisi nel caso in cui tali operazioni non vengano eseguite come previsto.  
   
  **Contenuto dell'argomento**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62774551"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vantaggi  
+##  <a name="Benefits"></a>Vantaggi  
   
 -   Fornisce una soluzione di recupero di emergenza per un solo database primario e uno o più database secondari, ognuno in un'istanza separata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774551"
   
 -   Consente un ritardo specificato dall'utente tra l'esecuzione del backup del log del database primario da parte del server primario e il momento in cui è necessario che i server secondari eseguano il ripristino del backup del log. Un ritardo maggiore può essere utile, ad esempio, se i dati vengono modificati per errore nel database primario. Se la modifica accidentale viene identificata rapidamente, un ritardo può consentire il recupero dei dati precedenti alla modifica da un database secondario prima che la modifica venga estesa anche a questo database.  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="TermsAndDefinitions"></a>Termini e definizioni  
  server primario  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che costituisce il server di produzione.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774551"
 > [!TIP]  
 >  Per ogni avviso, è necessario specificare un numero. Assicurarsi inoltre di configurare l'avviso in modo che un operatore venga notificato quando viene generato un avviso.  
   
-##  <a name="ComponentsAndConcepts"></a> Panoramica del log shipping  
+##  <a name="ComponentsAndConcepts"></a>Panoramica del log shipping  
  Il log shipping prevede tre operazioni:  
   
 1.  Backup del log delle transazioni nell'istanza del server primario.  
@@ -123,23 +123,24 @@ ms.locfileid: "62774551"
   
  Tramite le istanze dei server primario e secondario vengono inviati la propria cronologia e il proprio stato all'istanza del server di monitoraggio.  
   
- ![Configurazione che include processi di backup, copia ripristino](../media/ls-typical-configuration.gif "Configurazione che include processi di backup, copia ripristino")  
+ ![Configurazione che mostra i processi di backup, copia & ripristino](../media/ls-typical-configuration.gif "Configurazione che include processi di backup, copia ripristino")  
   
-##  <a name="Interoperability"></a> Interoperabilità  
+##  <a name="Interoperability"></a>Interoperabilità  
  Il log shipping può essere utilizzato con le funzionalità o i componenti seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Prerequisiti per la migrazione dal Log Shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Prerequisiti per la migrazione dal log shipping a Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [Mirroring del database e log shipping &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [&#40;SQL Server di mirroring e log shipping del database&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Log shipping e replica &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e il mirroring del database si escludono a vicenda. Un database configurato per una di queste funzionalità non può essere configurato per l'altra.  
+>  
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e il mirroring del database si escludono a vicenda. Un database configurato per una di queste funzionalità non può essere configurato per l'altra.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Aggiornare il Log Shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Aggiornare il log shipping a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Configurare il log shipping &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)  
   
@@ -160,6 +161,6 @@ ms.locfileid: "62774551"
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

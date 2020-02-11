@@ -1,5 +1,5 @@
 ---
-title: Configurare l'aggiornamento dati dedicata o l'elaborazione di sole Query (PowerPivot per SharePoint) | Microsoft Docs
+title: Configurare l'aggiornamento dati dedicato o l'elaborazione solo query (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087507"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurare l'aggiornamento dati o l'elaborazione di sole query dedicato (PowerPivot per SharePoint)
   Nella modalità integrata SharePoint, è possibile configurare un'istanza del server Analysis Services per supportare un tipo specifico di richiesta di elaborazione, ad esempio l'aggiornamento dei dati o l'elaborazione di sole query. Per impostazione predefinita, sono abilitati entrambi i tipi di richieste di caricamento. È possibile disabilitare uno dei due tipi per creare un motore di query o un server di aggiornamento dei dati dedicato.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
 > [!NOTE]  
 >  In questa versione non sono presenti impostazioni di configurazione per limitare l'utilizzo della memoria o della CPU per i processi di aggiornamento dei dati o le query su richiesta. In un'istanza del [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] saranno utilizzate tutte le risorse disponibili per eseguire le query e i processi di aggiornamento dei dati in corso di gestione.  
@@ -29,9 +29,9 @@ ms.locfileid: "66087507"
   
  [Configurare una modalità di elaborazione](#config)  
   
- [Modificare il numero di processi di aggiornamento dati eseguibili in parallelo](#change)  
+ [Modificare il numero dei processi di aggiornamento dati eseguibili in parallelo](#change)  
   
-##  <a name="config"></a> Configurare una modalità di elaborazione  
+##  <a name="config"></a>Configurare una modalità di elaborazione  
   
 1.  In Impostazioni sistema di Amministrazione centrale fare clic su **Gestisci servizi nel server**.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66087507"
   
 5.  In Utilizzo istanza del servizio eseguire una delle operazioni seguenti:  
   
-    1.  Deselezionare la casella di controllo **Abilita il caricamento dei database di sola lettura** per disattivare l'elaborazione di query su richiesta che si verifica ogni volta che un utente apre una cartella di lavoro contenente dati PowerPivot.  
+    1.  Deselezionare la casella di controllo **Abilita caricamento di database** di sola lettura per disattivare l'elaborazione di query su richiesta che si verifica ogni volta che un utente apre una cartella di lavoro che contiene dati PowerPivot.  
   
-    2.  Deselezionare la casella di controllo **Abilita il caricamento di database per l'aggiornamento** per disattivare l'aggiornamento dati pianificato.  
+    2.  Deselezionare la casella di controllo **Abilita caricamento dei database per l'aggiornamento** per disattivare l'aggiornamento dati pianificato.  
   
     > [!NOTE]  
     >  La disabilitazione dell'aggiornamento dei dati non comporta la rimozione delle opzioni di aggiornamento dei dati dai siti di SharePoint. Gli utenti che possiedono cartelle di lavoro PowerPivot possono ancora creare pianificazioni per l'aggiornamento dei dati, tuttavia quest'ultimo non si verificherà in tale server.  
@@ -54,14 +54,14 @@ ms.locfileid: "66087507"
   
 7.  Salvare le modifiche. Il server non consentirà di convalidare le voci finché non si verifica un evento di elaborazione. Se si immette un numero non valido per i processi simultanei, l'errore sarà rilevato e registrato quando viene elaborata la richiesta successiva.  
   
-##  <a name="change"></a> Modificare il numero di processi di aggiornamento dati eseguibili in parallelo  
+##  <a name="change"></a>Modificare il numero di processi di aggiornamento dati che possono essere eseguiti in parallelo  
  Un processo di aggiornamento dei dati è un'attività pianificata aggiunta a una coda di elaborazione gestita e monitorata da un'applicazione di servizio PowerPivot. Un processo è costituito da informazioni sulla pianificazione per una o più origini dati in una cartella di lavoro PowerPivot. Un processo separato viene creato per ogni pianificazione definita. Se un proprietario della cartella di lavoro definisce una pianificazione per tutte le origini dati, sarà creato un solo processo per tutta l'operazione di aggiornamento dei dati. Se un proprietario della cartella di lavoro crea singole pianificazioni per le origini dati esterne, verranno creati più processi, i quali saranno eseguiti per effettuare un aggiornamento dei dati completo per tale cartella di lavoro.  
   
  È possibile aumentare il numero di processi di aggiornamento dei dati che possono essere eseguiti contemporaneamente se il sistema dispone della capacità di supportare il carico aggiuntivo.  
   
 |Impostazione|Valori validi|Descrizione|  
 |-------------|------------------|-----------------|  
-|Valore predefinito|Calcolati in base alla RAM.|Il valore predefinito si basa sulla quantità di memoria disponibile divisa per 4 gigabyte. L'impostazione predefinita viene calcolata tramite una formula in modo che le impostazioni possano essere regolate a seconda delle funzionalità del sistema.<br /><br /> Nota: La divisione per 4 gigabyte è stata selezionata in base all'utilizzo di RAM per un grande campione di origini dati PowerPivot effettive. Non si basa sull'architettura fisica o logica di PowerPivot.|  
+|Valore predefinito|Calcolati in base alla RAM.|Il valore predefinito si basa sulla quantità di memoria disponibile divisa per 4 gigabyte. L'impostazione predefinita viene calcolata tramite una formula in modo che le impostazioni possano essere regolate a seconda delle funzionalità del sistema.<br /><br /> Nota: il divisore da 4 gigabyte è stato selezionato in base all'utilizzo della RAM per un campionamento elevato di origini dati PowerPivot effettive. Non si basa sull'architettura fisica o logica di PowerPivot.|  
 |Valore massimo|Calcolati in base al numero di CPU.|Il numero massimo di processi simultanei che è possibile specificare è basato sul numero di processori del computer. Ad esempio, in un computer quad-core a 4 socket, il numero massimo di processi che è possibile eseguire contemporaneamente è 16.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>Aumento del valore predefinito a un valore superiore  
@@ -83,6 +83,6 @@ ms.locfileid: "66087507"
  Ogni processo di aggiornamento dei dati disporrà di caratteristiche di caricamento diverse a seconda del numero e delle dimensioni delle origini dati aggiornate. Il carico di elaborazione delle cartelle di lavoro che dispongono di una sola origine dati con un numero più piccolo di righe è molto più leggero rispetto a quello di una cartella di lavoro che dispone di numerose origini dati e di set di righe molto grandi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [Aggiornamento di dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

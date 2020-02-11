@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779547"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
@@ -35,7 +35,7 @@ ms.locfileid: "73779547"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire i dati di tipo **Text**, **ntext**e **Image** e i tipi di dati C specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Gestire i dati di tipo **Text**, **ntext**e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Image** e i tipi di dati C specifici di.  
   
  Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   

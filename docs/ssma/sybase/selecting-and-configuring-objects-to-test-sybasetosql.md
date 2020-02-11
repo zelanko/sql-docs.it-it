@@ -13,75 +13,75 @@ ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020959"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selezione e configurazione degli oggetti da testare (SybaseToSQL)
-In questo passaggio si selezionano oggetti da testare e configurare le impostazioni per il confronto dei parametri di output procedure e funzioni, nonché i valori restituiti di funzioni.  
+In questo passaggio si selezionano gli oggetti da testare e si configurano le impostazioni per il confronto dei parametri di output delle procedure e delle funzioni, oltre ai valori restituiti dalle funzioni.  
   
-## <a name="selection-of-objects-to-test"></a>Selezione di oggetti a Test  
-Nell'albero degli oggetti Sybase che si trova sul lato sinistro della finestra, selezionare gli oggetti che si vuole richiamare durante il processo di test. Visualizzare l'elenco completo degli oggetti testabili nel [Testing di oggetti di Database migrati &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) argomento.  
+## <a name="selection-of-objects-to-test"></a>Selezione degli oggetti da testare  
+Nell'albero degli oggetti Sybase situato sul lato sinistro della finestra, controllare gli oggetti che si desidera richiamare durante il processo di test. Vedere l'elenco completo di oggetti [testabili nell'argomento testing migrated database objects &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) .  
   
-Se Tester SSMA non supporta gli oggetti selezionati per il test, verrà visualizzato il collegamento con l'etichetta **alcuni oggetti selezionati contengono errori** sotto l'albero di oggetti. Fare clic su questo collegamento per visualizzare i motivi per cui non è possibile testare questi oggetti e per cancellare la selezione degli oggetti non corretti.  
+Se SSMA tester non supporta alcuno degli oggetti selezionati per il test, si noterà che il collegamento con l'etichetta **alcuni oggetti selezionati contiene errori** nell'albero degli oggetti. Fare clic su questo collegamento per visualizzare i motivi per cui non è possibile testare questi oggetti e per cancellare la selezione di oggetti non corretti.  
   
-Sul lato destro è possibile visualizzare le pagine diverse il **SQL** pagina Mostra la definizione dell'oggetto corrente. Nel **precedenti SQL** e **Post SQL** pagine è possono specificare script eseguiti prima e dopo la chiamata dell'avvio di oggetto test. Si tratta di può essere utile quando l'oggetto richiede ulteriori oggetti tali tabelle temporanee o cursori. Il **parametri** pagina vengono elencati i parametri se l'oggetto è una stored procedure o una funzione. Il **proprietà** pagina Mostra le caratteristiche aggiuntive dell'oggetto. Vedere la descrizione della **parametri Comparsions** e **chiamare valori** le pagine seguenti.  
+Sul lato destro è possibile visualizzare diverse pagine in cui la pagina **SQL** Mostra la definizione dell'oggetto corrente. Nelle pagine **pre-SQL** e **post SQL** è possibile specificare gli script che vengono eseguiti prima e dopo l'avvio della chiamata all'oggetto test. Questo può essere utile quando l'oggetto richiede oggetti aggiuntivi quali tabelle temporanee o cursori. Nella pagina **parametri** sono elencati i parametri se l'oggetto è un stored procedure o una funzione. Nella pagina delle **Proprietà** vengono visualizzate le caratteristiche aggiuntive dell'oggetto. Vedere la descrizione delle pagine relative a **parametri** e **valori di chiamata** seguenti.  
   
-## <a name="parameter-comparison-settings"></a>Impostazioni di confronto dei parametri  
-Stabilire le regole di confronto per i parametri output e restituire valori nel **confronto tra i parametri** pagina. È possibile apportare le seguenti impostazioni.  
+## <a name="parameter-comparison-settings"></a>Impostazioni di confronto parametri  
+Definire le regole di confronto per i parametri di output e i valori restituiti nella pagina **confronto parametri** . È possibile apportare le impostazioni seguenti.  
   
-### <a name="use-during-comparisons"></a>Utilizzo durante i confronti  
-Abilitare l'uso del parametro selezionato nel confronto dei risultati dei test.  
+### <a name="use-during-comparisons"></a>Usare durante i confronti  
+Consente di abilitare l'utilizzo del parametro selezionato nel confronto dei risultati del test.  
   
--   Se si sceglie **True**, SSMA confronterà il valore di output di questo parametro dopo avere eseguito la procedura in Sybase con il valore corrispondente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Se si sceglie **true**, SSMA consentirà di confrontare il valore di output di questo parametro dopo l'esecuzione della procedura in Sybase con il valore corrispondente in[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Se si sceglie**False**, il parametro verrà escluso dalla verifica i risultati.  
+-   Se si sceglie**false**, il parametro verrà escluso dalla verifica dei risultati.  
   
-### <a name="use-custom-scale"></a>Usare scala personalizzata  
-Per i parametri del tipo di dati numerici di lunghezza fissa e approssimativo, è possibile impostare una scala personalizzata per il confronto.  
+### <a name="use-custom-scale"></a>Usare la scalabilità personalizzata  
+Per i parametri di tipo di dati numerico di lunghezza approssimativa e fissa, è possibile impostare una scala personalizzata per il confronto.  
   
--   Se si sceglie **True**, i valori numerici saranno arrotondati in base al **confronto scalabilità** valore prima che vengano confrontati.  
+-   Se si sceglie **true**, i valori numerici verranno arrotondati in base al valore della **scala di confronto** prima che vengano confrontati.  
   
--   Se si sceglie**False**, il confronto numerico sarà esatto.  
+-   Se si sceglie**false**, il confronto numerico sarà esatto.  
   
-### <a name="comparing-scale"></a>Confronto di scalabilità  
-È disponibile solo se il **Use Custom Scale** opzione è impostata su **True**. Questa è la precisione per un confronto numerico.  
+### <a name="comparing-scale"></a>Confronto tra scala  
+Disponibile solo se l'opzione **Usa scala personalizzata** è impostata su **true**. Si tratta della precisione per il confronto numerico.  
   
-### <a name="date-time-comparing"></a>Confronto tra ora di date  
-Definisce come data/ora vengono confrontati i valori.  
+### <a name="date-time-comparing"></a>Confronto data e ora  
+Definisce il modo in cui vengono confrontati i valori di data/ora.  
   
--   Se si seleziona **Confronta intero data**, verrà eseguito un confronto completo di valori da entrambe le piattaforme.  
+-   Se si seleziona **Confronta data intera**, verrà eseguito il confronto completo dei valori di entrambe le piattaforme.  
   
--   Se si seleziona **confrontare solo data**, ora parte verrà ignorata.  
+-   Se si seleziona **Confronta solo data**, la parte relativa all'ora verrà ignorata.  
   
--   Se si seleziona **confrontare solo ora**, la data parte verrà ignorata.  
+-   Se si seleziona **Confronta solo l'ora**, la parte della data verrà ignorata.  
   
--   Se si seleziona **ignorare millisecondi**, i risultati verranno confrontato con un massimo di secondi.  
+-   Se si seleziona **Ignora millisecondi**, i risultati verranno confrontati fino a secondi.  
   
--   Se si seleziona **ignorare Date e i millisecondi**, il risultato sarà confrontate solo da parte dell'ora e ignorando le parti frazionarie di un secondo.  
+-   Se si seleziona **Ignora data e millisecondi**, il risultato verrà confrontato solo per parte dell'ora e ignorerà le parti frazionarie di un secondo.  
   
-### <a name="ignore-strings-case"></a>Ignora maiuscole/minuscole stringhe  
-Controlla distinzione maiuscole/minuscole del confronto.  
+### <a name="ignore-strings-case"></a>Ignora case stringhe  
+Controlla la distinzione tra maiuscole e minuscole del confronto.  
   
--   Se si sceglie **True**, il confronto sarà maiuscole e minuscole.  
+-   Se si sceglie **true**, il confronto non fa distinzione tra maiuscole e minuscole.  
   
--   Se si sceglie **False**, il confronto sarà distinzione maiuscole / minuscole.  
+-   Se si sceglie **false**, per il confronto verrà fatta distinzione tra maiuscole e minuscole.  
   
 ### <a name="ignore-trailing-spaces"></a>Ignora spazi finali  
-Controlla gli spazi finali come vengono considerati durante il confronto.  
+Controlla il modo in cui gli spazi finali vengono considerati durante il confronto.  
   
--   Se si sceglie **True**, le stringhe confrontate saranno tagliati a destra prima di confrontare.  
+-   Se si sceglie **true**, le stringhe confrontate verranno tagliate a destra prima del confronto.  
   
--   Se si sceglie **False**, le stringhe confrontate conserverà lo spazio vuoto finale.  
+-   Se si sceglie **false**, le stringhe confrontate manterranno gli spazi vuoti finali.  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Specificare i valori di input per le procedure e funzioni (chiamare valori)  
-È possibile specificare i valori di parametro di input nel **chiamare valori** pagina. Il **Aggiungi chiamata** pulsante Aggiunge una nuova chiamata con valori di parametri vuoto. Il **rimuovere chiamare** pulsante consente di rimuovere la chiamata corrente.  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Specificare i valori di input per le procedure e le funzioni (valori di chiamata)  
+È possibile specificare i valori dei parametri di input nella pagina **valori di chiamata** . Il pulsante **Aggiungi chiamata** aggiunge una nuova chiamata con valori di parametro vuoti. Il pulsante **Rimuovi chiamata** rimuove la chiamata corrente.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
 [Selezione e configurazione degli oggetti interessati &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di oggetti di Database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di oggetti di database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

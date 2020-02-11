@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831539"
 ---
 # <a name="ftp-task"></a>Attività FTP
@@ -35,7 +35,7 @@ ms.locfileid: "62831539"
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- Per l'accesso a un file o a una directory locale, l'attività FTP utilizza un percorso archiviato in una variabile o una gestione connessione file. Per l'accesso a un file o a una directory remota, invece, l'attività FTP utilizza un percorso archiviato in una variabile oppure specificato direttamente sul server remoto, come indicato nella gestione connessione FTP. Per altre informazioni, vedere [Gestione connessione file](../connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
+ Per l'accesso a un file o a una directory locale, l'attività FTP utilizza un percorso archiviato in una variabile o una gestione connessione file. Per l'accesso a un file o a una directory remota, invece, l'attività FTP utilizza un percorso archiviato in una variabile oppure specificato direttamente sul server remoto, come indicato nella gestione connessione FTP. Per altre informazioni, vedere [Gestione connessione File](../connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
  Questo significa che l'attività FTP può ricevere più file ed eliminare più file remoti, ma se utilizza una gestione connessione può inviare ed eliminare un solo file locale alla volta, poiché una gestione connessione file può accedere a un solo file. Per accedere a più file locali, è necessario specificarne il percorso utilizzando una variabile. Una variabile contenente "C:\Test\\*.txt" specifica ad esempio un percorso per l'eliminazione o l'invio di tutti i file con estensione txt presenti nella directory Test.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "62831539"
  Per altre informazioni sull'impostazione di queste proprietà a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor attività FTP &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)   
- [Editor attività FTP &#40;pagina Trasferimento file&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Editor attività FTP &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor attività FTP &#40;pagina trasferimento file&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Attività di Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

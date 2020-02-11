@@ -1,5 +1,5 @@
 ---
-title: Selezionare una vista origine dati (Creazione guidata cubo) | Microsoft Docs
+title: Selezione vista origine dati (creazione guidata cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069745"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Seleziona una vista origine dati (Creazione guidata cubo)
   Utilizzare la pagina **Selezionare la vista origine dati** per selezionare la vista origine dati per il cubo vuoto.  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Crea un cubo vuoto** nella pagina **Seleziona metodo di creazione** della procedura guidata.  
+>  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Crea un cubo vuoto** nella pagina **Seleziona metodo di creazione** .  
   
 ## <a name="options"></a>Opzioni  
  **Vista origine dati**  
  Consente di selezionare la vista origine dati che verrà utilizzata per il cubo vuoto.  
   
- **None**  
+ **Nessuno**  
  Selezionare questa opzione se non si desidera utilizzare una vista origine dati. Questa opzione è adatta se si intende generare la vista origine dati in un secondo momento o se si intende utilizzare solo il cubo con i gruppi di misure collegati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

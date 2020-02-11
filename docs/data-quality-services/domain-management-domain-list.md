@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251659"
 ---
 # <a name="domain-management-domain-list"></a>Gestione dominio: elenco domini
@@ -24,11 +24,11 @@ ms.locfileid: "75251659"
 
   In questo argomento vengono descritti i controlli dell'elenco Domini nella pagina **Gestione dominio** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilizzare questo riquadro per selezionare un dominio su cui eseguire le operazioni di gestione. Lo stesso riquadro viene utilizzato per tutte le pagine a schede della pagina **Gestione dominio** .  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
   
 ### <a name="domains-list"></a>Elenco domini  
  **Dominio**  
- In questo elenco vengono visualizzati tutti i domini della Knowledge Base. Le operazioni che si eseguono nelle pagine a schede nel riquadro a destra saranno eseguite sul dominio selezionato nell'elenco. Per altre informazioni, vedere l'articolo relativo alla  
+ In questo elenco vengono visualizzati tutti i domini della Knowledge Base. Le operazioni che si eseguono nelle pagine a schede nel riquadro a destra saranno eseguite sul dominio selezionato nell'elenco. Per ulteriori informazioni, vedere  
   
  **Creazione di un dominio composito**  
  Consente di creare un nuovo dominio composito nella Knowledge Base. Con questo comando viene visualizzata la finestra di dialogo **Crea un dominio composito** . Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio o facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Creazione di un dominio composito](../data-quality-services/create-a-composite-domain.md).  

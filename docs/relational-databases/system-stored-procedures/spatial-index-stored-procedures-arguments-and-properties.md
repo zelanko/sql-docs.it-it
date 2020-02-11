@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028902"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure per l'indice spaziale-argomenti e proprietà
@@ -26,18 +26,18 @@ ms.locfileid: "69028902"
 
   In questo argomento vengono descritti gli argomenti e le proprietà per le stored procedure relative agli indici spaziali.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
  Per la sintassi di stored procedure relative agli indici spaziali specifiche, vedere gli argomenti seguenti:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argomenti  
 `[ @tabname = ] 'tabname'`Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
@@ -59,7 +59,7 @@ ms.locfileid: "69028902"
 `[ @xml_output = ] 'xml_output'`Parametro di output che restituisce il set di risultati in un frammento XML. *xml_output* è di **XML** e non prevede alcun valore predefinito.  
   
 ## <a name="properties"></a>Proprietà  
- Impostare verboseoutput = 0 per restituire le proprietà principali, come illustrato nella tabella seguente.  **\@** verboseoutput > 0 per restituire tutte le proprietà dell'indice spaziale.  **\@**  
+ Impostare ** \@verboseoutput** = 0 per restituire le proprietà principali, come illustrato nella tabella seguente. verboseoutput > 0 per restituire tutte le proprietà dell'indice spaziale. ** \@**  
   
  **Base_Table_Rows**  
  Numero di righe nella tabella di base. Il valore è **bigint**.  
@@ -133,12 +133,12 @@ ms.locfileid: "69028902"
  Rapporto tra il numero di righe dell'indice e il numero di righe della tabella di base. Il valore è **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**  
- Indica se il campione di query rappresentativo è esterno al rettangolo di delimitazione dell'indice geometrico e alla cella radice (cella di livello 0). Il valore può essere 0 (campione esterno alla cella di livello 0) oppure 1. Se il campione di query è interno alla cella di livello 0, l'indice controllato non è appropriato. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Indica se il campione di query rappresentativo è esterno al rettangolo di delimitazione dell'indice **geometrico** e alla cella radice (cella di livello 0). Il valore può essere 0 (campione esterno alla cella di livello 0) oppure 1. Se il campione di query è interno alla cella di livello 0, l'indice controllato non è appropriato. Si tratta di una proprietà principale. Il valore è **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  Numero di istanze di celle di oggetti indicizzati tassellati nel livello 0 (cella radice, all'esterno del rettangolo di delimitazione della **geometria**). Si tratta di una proprietà principale. Il valore è **bigint**.  
   
- Per gli indici **Geometry** , questo errore si verifica se il rettangolo di delimitazione dell'indice è inferiore al dominio dei dati. Un numero elevato di oggetti nel livello 0 può richiedere filtri secondari se la finestra di query è parzialmente esterna al rettangolo di delimitazione e diminuisce le prestazioni dell'indice (ad esempio, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** è 1). Se la finestra Query è interna al riquadro, un numero elevato di oggetti presenti a livello 0 può migliorare effettivamente le prestazioni dell'indice.  
+ Per gli indici **Geometry** , questo errore si verifica se il rettangolo di delimitazione dell'indice è inferiore al dominio dei dati. Un numero elevato di oggetti nel livello 0 può richiedere filtri secondari se la finestra di query è parzialmente esterna al rettangolo di delimitazione e diminuisce le prestazioni dell'indice (ad esempio **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** è 1). Se la finestra Query è interna al riquadro, un numero elevato di oggetti presenti a livello 0 può migliorare effettivamente le prestazioni dell'indice.  
   
  Le istanze NULL e vuote vengono conteggiate a livello 0, ma non avranno alcun impatto sulle prestazioni. A livello 0 sarà presente un numero di celle pari a quello delle istanze NULL e vuote nella tabella di base. Per gli indici **geography** , il livello 0 avrà un numero di celle pari a quello delle istanze null e vuote + 1 cella, poiché l'esempio di query viene conteggiato come 1.  
   
@@ -155,28 +155,28 @@ ms.locfileid: "69028902"
  Numero di istanze della cella di oggetti indicizzati suddivisi a mosaico con precisione di livello 4. Si tratta di una proprietà principale. Il valore è **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Numero di celle completamente coperte da un oggetto a livello di mosaico 1 e pertanto interne all'oggetto. (Cell_attributevalue è 2). Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle completamente coperte da un oggetto a livello di mosaico 1 e pertanto interne all'oggetto. (Cell_attributevalue è 2). Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Numero di celle completamente coperte da un oggetto a livello di mosaico 2 e pertanto interne all'oggetto. (Il valore di Cell_attribute è 2). Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle completamente coperte da un oggetto a livello di mosaico 2 e pertanto interne all'oggetto. (Cell_attribute valore è 2). Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Numero di celle completamente coperte da un oggetto a livello di mosaico 3 e pertanto interne all'oggetto. (Il valore di Cell_attribute è 2). Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle completamente coperte da un oggetto a livello di mosaico 3 e pertanto interne all'oggetto. (Cell_attribute valore è 2). Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- Numero di celle completamente coperte da un oggetto a livello 4 del mosaico e di conseguenza interne all'oggetto. (Il valore di Cell_attribute è 2). Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle completamente coperte da un oggetto a livello 4 del mosaico e di conseguenza interne all'oggetto. (Cell_attribute valore è 2). Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Numero di celle intersecate da un oggetto a livello di mosaico 1. Il valore di Cell_attribute è 1. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle intersecate da un oggetto a livello di mosaico 1. (Cell_attribute valore è 1.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Numero di celle intersecate da un oggetto a livello di mosaico 2. Il valore di Cell_attribute è 1. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle intersecate da un oggetto a livello di mosaico 2. (Cell_attribute valore è 1.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Numero di celle intersecate da un oggetto a livello di mosaico 3. Il valore di Cell_attribute è 1. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle intersecate da un oggetto a livello di mosaico 3. (Cell_attribute valore è 1.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- Numero di celle intersecate da un oggetto a livello 4 del mosaico. Il valore di Cell_attribute è 1. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle intersecate da un oggetto a livello 4 del mosaico. (Cell_attribute valore è 1.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  Indica se il campione di query si trova nella cella radice 0 esterna al riquadro, ma contigua a esso. Si tratta di una proprietà principale. Il valore è **bigint**.  
@@ -185,19 +185,19 @@ ms.locfileid: "69028902"
 >  Questa informazione è utile solo per determinare se vi sono oggetti eventualmente mancanti nel riquadro.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- Numero di oggetti a livello 0 contigui al riquadro. Il valore di Cell_attribute è 0.  Il valore è **bigint**.  
+ Numero di oggetti a livello 0 contigui al riquadro. (Cell_attribute valore è 0.)  Il valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Numero di celle oggetto che toccano un limite di celle della griglia a livello 1 a mosaico. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle oggetto che toccano un limite di celle della griglia a livello 1 a mosaico. (Cell_attribute valore è 0.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Numero di celle oggetto che toccano un limite di celle della griglia a livello 2 a mosaico. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle oggetto che toccano un limite di celle della griglia a livello 2 a mosaico. (Cell_attribute valore è 0.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Numero di celle oggetto che toccano un limite di celle della griglia a livello 3 a mosaico. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle oggetto che toccano un limite di celle della griglia a livello 3 a mosaico. (Cell_attribute valore è 0.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Numero di celle dell'oggetto contigue a un limite della cella della griglia a livello 4 del mosaico. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Il valore è **bigint**.  
+ Numero di celle dell'oggetto contigue a un limite della cella della griglia a livello 4 del mosaico. (Cell_attribute valore è 0.) Si tratta di una proprietà di base. Il valore è **bigint**.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Percentuale dell'area totale (celle foglia totali) della griglia in cui sono contenute celle foglia coperte da un oggetto.  
@@ -207,10 +207,10 @@ ms.locfileid: "69028902"
  Il valore è **float**.  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Uguale a **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, con la differenza che tali celle sono parzialmente coperte. Il valore è **float**.  
+ Come **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, ad eccezione del fatto che queste sono celle parzialmente coperte. Il valore è **float**.  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Uguale a **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , tranne per il fatto che si tratta di celle del bordo. Il valore è **float**.  
+ Uguale a **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** con la differenza che si tratta di celle del bordo. Il valore è **float**.  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  Numero medio di celle per oggetto normalizzato rispetto alla griglia foglia. Indica le dimensioni spaziali dell'oggetto o le dimensioni degli oggetti. Il valore è **float**.  
@@ -297,28 +297,28 @@ ms.locfileid: "69028902"
  **Primary_Filter_Efficiency**  
  Se il filtro primario seleziona P righe e O è il numero di righe restituite, viene restituito come percentuale. Maggiore è l'efficienza dell'indice principale, minore è il numero di falsi positivi che il filtro secondario deve elaborare. Si tratta di una proprietà principale. Il valore è **float.**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto. Queste condizioni si applicano a tutte le stored procedure relative agli indici spaziali.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
 ## <a name="examples"></a>Esempi  
  Per gli esempi, vedere gli argomenti seguenti:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;di indice spaziale Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [Stored procedure di indice spaziale &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Nozioni fondamentali su XQuery](../../xquery/xquery-basics.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

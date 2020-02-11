@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768413"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  
   
 ## <a name="script-task-development-environment"></a>Ambiente di sviluppo dell'attività Script  
- Per l'attività Script viene usato [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di sviluppo per lo script stesso.  
+ L'attività script utilizza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di sviluppo per lo script stesso.  
   
  Il codice di script viene scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Specificare il linguaggio di script impostando la proprietà **ScriptLanguage** in **Editor attività Script**. Se si preferisce utilizzare un altro linguaggio di programmazione, è possibile sviluppare un assembly personalizzato nel linguaggio desiderato e chiamarne la funzionalità dal codice nell'attività Script.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62768413"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementi e classi del progetto dell'attività Script  
  Per impostazione predefinita, il progetto dell'attività Script visualizzato nella finestra Esplora progetti in VSTA contiene un singolo elemento, `ScriptMain`. L'elemento `ScriptMain` contiene a sua volta una singola classe, anch'essa denominata `ScriptMain`. Gli elementi di codice nella classe variano a seconda del linguaggio di programmazione selezionato per l'attività Script:  
   
--   Quando l'attività Script è configurato per il [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguaggio di programmazione le `ScriptMain` classe include una subroutine pubblica, `Main`. La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.  
+-   Quando l'attività script è configurata [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] per il linguaggio di `ScriptMain` programmazione, la classe include una subroutine `Main`Public,. La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.  
   
-     Per impostazione predefinita, nella subroutine `Main` di un nuovo script è presente solo il codice costituito dalla riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. Il `Dts.TaskResult` proprietà verrà discusso [risultati restituiti dall'attività Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Per impostazione predefinita, nella subroutine `Main` di un nuovo script è presente solo il codice costituito dalla riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. La `Dts.TaskResult` proprietà viene descritta in [restituzione di risultati dall'attività script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Se l'attività Script è configurata per il linguaggio di programmazione Visual C#, la classe `ScriptMain` include un metodo pubblico `Main`. Il metodo viene chiamato durante l'esecuzione dell'attività Script.  
   
@@ -245,10 +245,10 @@ To open Help, press F1.
   
 -   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)] più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)] più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti ad altri assembly nelle soluzioni di scripting](../referencing-other-assemblies-in-scripting-solutions.md)   
+ [Riferimento ad altri assembly nelle soluzioni di scripting](../referencing-other-assemblies-in-scripting-solutions.md)   
  [Configurazione dell'attività Script nell'editor attività Script](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

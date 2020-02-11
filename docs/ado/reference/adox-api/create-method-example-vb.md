@@ -1,5 +1,5 @@
 ---
-title: Esempio del metodo Create (VB) | Microsoft Docs
+title: Esempio di metodo Create (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 622b2ab47793fe55d2ecf6bbe65c0b9ccf544589
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966652"
 ---
 # <a name="create-method-example-vb"></a>Esempio del metodo Create (VB)
-Il codice seguente viene illustrato come creare un nuovo database Microsoft Jet con il [Create](../../../ado/reference/adox-api/create-method-adox.md) (metodo).  
+Il codice seguente illustra come creare un nuovo database Microsoft Jet con il metodo [create](../../../ado/reference/adox-api/create-method-adox.md) .  
   
 ```  
 Attribute VB_Name = "Create"  

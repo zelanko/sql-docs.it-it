@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768437"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
-  Come descritto in [codifica e debug del componente Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, il progetto del componente Script contiene tre elementi:  
+  Come descritto in [codifica e debug del componente script] (.. /Extending-Packages-scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-script-component.MD, il progetto del componente script contiene tre elementi del progetto:  
   
 1.  L'elemento `ScriptMain`, che contiene la classe `ScriptMain` in cui si scrive il codice. La classe `ScriptMain` eredita dalla classe `UserComponent`.  
   
@@ -124,7 +124,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper  
  L'elemento di progetto ComponentWrapper contiene una classe denominata `UserComponent` che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` in cui si scrive il codice personalizzato deriva a sua volta da `UserComponent`. La classe `UserComponent` contiene i metodi seguenti:  
   
--   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput` trasferisce l'elaborazione per il  **\<inputbuffer > _ProcessInput** (metodo). Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.  
+-   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput`passa l' ** \<** elaborazione al metodo di>_ProcessInput INPUTBUFFER. Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.  
   
 -   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.  
   
@@ -135,7 +135,7 @@ public override void PreExecute()
   
 -   Eseguire l'override di **\<inputbuffer>_ProcessInputRow** per elaborare i dati in ogni riga di input non appena vengono passati.  
   
--   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, ad esempio se è necessario verificare la presenza di `EndOfRowset` per eseguire un'altra azione dopo l'elaborazione di tutte le righe. Chiamare **\<inputbuffer>_ProcessInputRow** per eseguire l'elaborazione delle righe.  
+-   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, È ad esempio necessario testare per `EndOfRowset` eseguire altre operazioni dopo l'elaborazione di tutte le righe. Chiamare ** \<inputBuffer>_ProcessInputRow** per eseguire l'elaborazione delle righe.  
   
 -   Eseguire l'override di `FinishOutputs` se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
   
@@ -149,7 +149,7 @@ public override void PreExecute()
   
 -   Proprietà delle funzioni di accesso di sola scrittura, denominate e tipizzate per ogni colonna di output.  
   
--   Sola scrittura  **\<colonna > _IsNull** proprietà per ogni colonna di output selezionata che è possibile usare per impostare il valore della colonna su `null`.  
+-   Una colonna di sola ** \<scrittura>_IsNull** proprietà per ogni colonna di output selezionata che è possibile utilizzare per impostare il valore della `null`colonna su.  
   
 -   Un metodo `AddRow` per aggiungere una nuova riga vuota nel buffer di output.  
   
@@ -158,7 +158,8 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper  
  L'elemento di progetto ComponentWrapper contiene una classe denominata `UserComponent` che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` in cui si scrive il codice personalizzato deriva a sua volta da `UserComponent`. La classe `UserComponent` contiene i metodi seguenti:  
   
--   Un'implementazione sottoposta a override del metodo `PrimeOutput`. Il motore flusso di dati chiama questo metodo prima di `ProcessInput` in fase di esecuzione e viene chiamato solo una volta. `PrimeOutput` trasferisce l'elaborazione al metodo `CreateNewOutputRows`. Quindi, se il componente è un'origine (ovvero non include input), `PrimeOutput` chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama `SetEndOfRowset` sull'ultimo buffer di output.  
+-   Un'implementazione sottoposta a override del metodo `PrimeOutput`. Il motore flusso di dati chiama questo metodo prima di `ProcessInput` in fase di esecuzione e viene chiamato solo una volta. 
+  `PrimeOutput` trasferisce l'elaborazione al metodo `CreateNewOutputRows`. Quindi, se il componente è un'origine (ovvero non include input), `PrimeOutput` chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama `SetEndOfRowset` sull'ultimo buffer di output.  
   
 -   Un'implementazione sottoponibile a override del metodo `CreateNewOutputRows`. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
   
@@ -201,10 +202,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione del componente script nell'editor corrispondente](configuring-the-script-component-in-the-script-component-editor.md)   
- [La codifica e debug del componente Script] (.. /Extending-Packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-Script-Component.MD  
+ [Configurazione del componente script nell'editor del componente script](configuring-the-script-component-in-the-script-component-editor.md)   
+ [Codifica e debug del componente script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

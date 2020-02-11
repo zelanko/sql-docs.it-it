@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036794"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
 
-  Restituisce il set specificato da una stringa di formato Multidimensional.  
+  Restituisce il set specificato da una stringa in formato MDX (Multidimensional Expressions).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,17 +31,17 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  Espressione stringa valida che specifica, direttamente o indirettamente, un set.  
   
-## <a name="remarks"></a>Note  
- Il **StrToSet** funzione restituisce il set specificato nell'espressione stringa. Il **StrToSet** funzione viene in genere utilizzata con funzioni definite dall'utente per restituire una specifica di set da una funzione esterna a un'istruzione MDX o quando una query MDX con parametri.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **StrToSet** restituisce il set specificato nell'espressione stringa. La funzione **StrToSet** viene in genere utilizzata con funzioni definite dall'utente per restituire una specifica set da una funzione esterna a un'istruzione MDX o quando una query MDX è parametrizzata.  
   
--   Quando viene usato il flag CONSTRAINED, la specifica di set deve contenere nomi di membri completi o non qualificati o un set di tuple contenente i nomi di membri completi o non qualificati racchiusi tra parentesi graffe {}. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se viene fornita una stringa che non i nomi dei membri direttamente risolvibile in o non qualificati, viene visualizzato l'errore seguente: "Le restrizioni imposte dal CONSTRAINED flag nella funzione STRTOSET sono state violate."  
+-   Quando viene utilizzato il flag CONSTRAINED, la specifica del set deve contenere nomi di membri completi o non qualificati oppure un set di tuple contenenti nomi di membri completi o non qualificati racchiusi tra parentesi graffe {}. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se si specifica una stringa non direttamente risolvibile in nomi di membro completi o non qualificati, verrà visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOSET sono state violate".  
   
 -   Quando non viene utilizzato il flag CONSTRAINED, è possibile risolvere la specifica di set specificata in un'espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
 -   Per comprendere meglio le differenze tra set e membri, vedere Utilizzo di espressioni set e Utilizzo delle espressioni di membro.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce il set di membri della gerarchia dell'attributo State-Province tramite il **StrToSet** (funzione). La specifica di set contiene un'espressione set MDX valida.  
+ Nell'esempio seguente viene restituito il set di membri della gerarchia dell'attributo State-Province mediante la funzione **StrToSet** . La specifica di set contiene un'espressione set MDX valida.  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members')  
@@ -68,6 +68,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

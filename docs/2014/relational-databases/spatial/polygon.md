@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014075"
 ---
 # <a name="polygon"></a>Polygon
@@ -29,7 +29,7 @@ ms.locfileid: "66014075"
   
  Nella figura seguente vengono illustrati esempi di istanze `Polygon`.  
   
- ![Esempi di istanze di geometria Polygon](../../database-engine/media/polygon.gif "Esempi di istanze di geometria Polygon")  
+ ![Esempi di istanze Polygon geometry](../../database-engine/media/polygon.gif "Esempi di istanze di geometria Polygon")  
   
  Come indicato nell'illustrazione:  
   
@@ -64,7 +64,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Come illustrato in `@g4` e `@g5`, è possibile che un'istanza di `Polygon` accettata non sia un'istanza di `Polygon` valida. `@g5` mostra anche che un'istanza Polygon, per essere accettata, deve contenere solo un anello con quattro punti qualsiasi.  
+ Come illustrato in `@g4` e `@g5`, è possibile che un'istanza di `Polygon` accettata non sia un'istanza di `Polygon` valida. 
+  `@g5` mostra anche che un'istanza Polygon, per essere accettata, deve contenere solo un anello con quattro punti qualsiasi.  
   
  Negli esempi seguenti viene generata un'eccezione `System.FormatException`, poiché le istanze `Polygon` non vengono accettate.  
   
@@ -73,7 +74,9 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` non viene accettata perché l'istanza di `LineString` per l'anello esterno non contiene un numero di punti sufficiente. `@g2` non viene accettata perché il punto iniziale dell'istanza di `LineString` per l'anello esterno non corrisponde al punto finale. Nell'esempio seguente è presente un anello esterno accettabile, ma l'anello interno non è accettabile. Viene inoltre generata un'eccezione `System.FormatException`.  
+ 
+  `@g1` non viene accettata perché l'istanza di `LineString` per l'anello esterno non contiene un numero di punti sufficiente. 
+  `@g2` non viene accettata perché il punto iniziale dell'istanza di `LineString` per l'anello esterno non corrisponde al punto finale. Nell'esempio seguente è presente un anello esterno accettabile, ma l'anello interno non è accettabile. Viene inoltre generata un'eccezione `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
@@ -91,7 +94,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` è valida perché i due anelli interni si toccano in un solo punto e non si incrociano. Nell'esempio seguente vengono illustrate le istanze `Polygon` non valide.  
+ 
+  `@g3` è valida perché i due anelli interni si toccano in un solo punto e non si incrociano. Nell'esempio seguente vengono illustrate le istanze `Polygon` non valide.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +107,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` non è valida perché l'anello interno tocca l'anello esterno in due punti. `@g2` non è valida perché il secondo anello interno si trova all'interno del primo anello interno. `@g3` non è valida perché i due anelli interni si toccano in più punti consecutivi. `@g4` non è valida perché gli interni dei due anelli interni si sovrappongono. `@g5` non è valida perché l'anello esterno non è il primo anello. `@g6` non è valida perché l'anello non presenta almeno tre punti distinti.  
+ 
+  `@g1` non è valida perché l'anello interno tocca l'anello esterno in due punti. 
+  `@g2` non è valida perché il secondo anello interno si trova all'interno del primo anello interno. 
+  `@g3` non è valida perché i due anelli interni si toccano in più punti consecutivi. 
+  `@g4` non è valida perché gli interni dei due anelli interni si sovrappongono. 
+  `@g5` non è valida perché l'anello esterno non è il primo anello. 
+  `@g6` non è valida perché l'anello non presenta almeno tre punti distinti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `geometry``Polygon` semplice con un foro e SRID 10.  

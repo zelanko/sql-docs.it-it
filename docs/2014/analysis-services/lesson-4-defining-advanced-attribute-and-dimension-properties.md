@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Definizione di proprietà avanzate per attributi e dimensioni | Microsoft Docs'
+title: 'Lezione 4: definizione di attributi avanzati e proprietà della dimensione | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493988"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione delle proprietà avanzate di attributi e dimensioni
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione di attributo avanzato e proprietà dimensione
   In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
   
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.locfileid: "69493988"
  In questa attività vengono illustrate le procedure per definire i nomi dei livelli in una dimensione padre-figlio e per specificare se i dati correlati ai membri padre vengono visualizzati. Per ulteriori informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md) e [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Raggruppamento automatico dei membri degli attributi](lesson-4-3-automatically-grouping-attribute-members.md)  
- In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per ulteriori informazioni, vedere [membri attributo gruppo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Come nascondere e disabilitare le gerarchie degli attributi](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In questa attività vengono illustrate le procedure per disabilitare o nascondere le gerarchie degli attributi.  
@@ -47,11 +47,11 @@ ms.locfileid: "69493988"
  In questa attività vengono configurate le proprietà UnknownMember e UnknownMemberName per gestire le condizioni di errore determinate dai membri Null della dimensione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Definizione di relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
- [Esercitazione di modellazione &#40;multidimensionale Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

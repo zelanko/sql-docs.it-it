@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211298"
 ---
 # <a name="view-information-about-an-alert"></a>Visualizzare informazioni su un avviso
-  In questo argomento viene descritto come visualizzare le infomazioni sugli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come visualizzare le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sugli avvisi [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68211298"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono visualizzare le informazioni su un avviso. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Per visualizzare informazioni su un avviso  
   
@@ -57,19 +57,19 @@ ms.locfileid: "68211298"
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso con le informazioni da visualizzare e selezionare **Proprietà**.  
   
-     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo dell'interfaccia utente nella finestra di dialogo _Proprietà dell'avviso_**nome_avviso** , vedere:  
+     Per ulteriori informazioni sulle opzioni disponibili contenute nella finestra di dialogo**Proprietà avviso** _alert_name_, vedere:  
   
-    -   [Proprietà-nuovo avviso di avviso &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Proprietà avviso-nuovo avviso &#40;pagina generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Proprietà-nuovo avviso di avviso &#40;pagina di risposta&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Proprietà avviso-pagina nuova risposta avviso &#40;&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Proprietà avviso: Nuovo avviso &#40;pagina di opzioni&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Proprietà avviso: nuova pagina Opzioni &#40;avvisi&#41;](alert-properties-new-alert-options-page.md)  
   
     -   [Proprietà avviso &#40;pagina Cronologia&#41;](alert-properties-history-page.md)  
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Per visualizzare informazioni su un avviso  
   
@@ -89,6 +89,6 @@ ms.locfileid: "68211298"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_help_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_help_alert &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
   
   

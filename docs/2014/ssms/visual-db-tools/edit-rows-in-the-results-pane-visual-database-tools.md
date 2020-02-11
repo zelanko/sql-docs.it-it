@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028356"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifica di righe nel riquadro Risultati (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "63028356"
 4.  Salvare le modifiche uscendo dalla riga.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare i dati nel riquadro dei risultati &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [Utilizzare i dati nel riquadro risultati &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md)  
   
   

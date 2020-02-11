@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251747"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profiling di dati e notifiche in DQS
@@ -66,11 +66,11 @@ ms.locfileid: "75251747"
   
  Per ulteriori informazioni sulle statistiche di profiling specifiche correlate a un'attività, vedere le sezioni Profiling negli argomenti seguenti:  
   
--   [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Esecuzione dell'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
+-   [Creazione di criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)  
   
@@ -88,15 +88,15 @@ ms.locfileid: "75251747"
   
  Per condizioni specifiche associate alle notifiche per un'attività, vedere gli argomenti seguenti:  
   
--   [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Esecuzione dell'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
+-   [Creazione di criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

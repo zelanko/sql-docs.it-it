@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs
+title: sys. pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ec631e9008cc37a7b4f91ed3f530e5388bdf9c0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127503"
 ---
-# <a name="syspdwhealthcomponentstatusmappings-transact-sql"></a>sys.pdw_health_component_status_mappings (Transact-SQL)
+# <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Definisce il mapping tra il [!INCLUDE[ssDW](../../includes/ssdw-md.md)] stato dei componenti e i nomi definiti produttore del componente.  
+  Definisce il mapping tra gli [!INCLUDE[ssDW](../../includes/ssdw-md.md)] stati dei componenti e i nomi dei componenti definiti dal produttore.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|property_id|**int**|Identificatore univoco della proprietà.<br /><br /> property_id e id_componente physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
-|component_id|**int**|L'ID del componente. Visualizzare [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id e id_componente physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
-|physical_name|**nvarchar(32)**|Nome della proprietà definita dal produttore.<br /><br /> property_id e id_componente physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
-|logical_name|**nvarchar(255)**|Nome della proprietà come definito da [!INCLUDE[ssDW](../../includes/ssdw-md.md)].|NOT NULL<br /><br /> 0 - istanza del dispositivo è univoco.<br /><br /> 1 - istanza dispositivo non è univoco.|  
+|property_id|**int**|Identificatore univoco della proprietà.<br /><br /> property_id, component_id e physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
+|component_id|**int**|ID del componente. Vedere [sys. pdw_health_components &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id, component_id e physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
+|physical_name|**nvarchar (32)**|Nome della proprietà definito dal produttore.<br /><br /> property_id, component_id e physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
+|logical_name|**nvarchar(255)**|Nome della proprietà definito da [!INCLUDE[ssDW](../../includes/ssdw-md.md)].|NOT NULL<br /><br /> 0-l'istanza del dispositivo è univoca.<br /><br /> 1-l'istanza del dispositivo non è univoca.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

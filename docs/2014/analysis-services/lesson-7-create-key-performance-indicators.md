@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 8: Creare indicatori di prestazioni chiave | Microsoft Docs'
+title: 'Lezione 8: creare indicatori di prestazioni chiave | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,35 +11,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078365"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lezione 8: Creare indicatori di prestazioni chiave
-  In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori di prestazioni chiave vengono usati per misurare le prestazioni di un valore, definito mediante una misura di *base* , rispetto a un valore *target* , definito anch'esso da una misura o da un valore assoluto. Nelle applicazioni client di creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un metodo semplice e veloce per comprendere l'andamento aziendale in generale o per identificare le tendenze. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
+  In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori KPI vengono usati per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch ' esso da una misura o da un valore assoluto. Nelle applicazioni client per la creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un modo rapido e semplice per comprendere i risultati aziendali positivi nel loro complesso o per identificare tendenze significative. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
   
- Tempo stimato per il completamento della lezione: **15 minuti**  
+ Tempo previsto per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 7: Creare misure](lesson-6-create-measures.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 7: Creare misure](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Creare indicatori di prestazioni chiave  
   
 #### <a name="to-create-an-internet-current-quarter-sales-performance-kpi"></a>Per creare un indicatore KPI relativo alle prestazioni delle vendite Internet trimestrali correnti  
   
-1.  In Progettazione modelli fare clic sulla tabella (scheda) **Internet Sales**.  
+1.  In Progettazione modelli fare clic sulla tabella (scheda) **Internet Sales** .  
   
 2.  Nella griglia delle misure fare clic su una cella vuota.  
   
-3.  Sulla barra della formula sopra la tabella digitare la formula seguente:  
+3.  Nella barra della formula sopra la tabella digitare la formula seguente:  
   
      `Internet Current Quarter Sales Performance :=IFERROR([Internet Current Quarter Sales]/[Internet Previous Quarter Sales Proportion to QTD],BLANK())`  
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-     Tale misura definirà fungerà da misura di base per l'indicatore KPI.  
+     Questa misura verrà usata come misura di base per l'indicatore KPI.  
   
 4.  Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura **Internet Current Quarter Sales Performance** , quindi scegliere **Crea KPI**.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66078365"
   
 5.  Nella finestra di dialogo **Indicatore di prestazioni chiave** selezionare l'opzione **Valore assoluto**in **Definisci valore di destinazione** .  
   
-6.  Nel **valore assoluto** digitare `1.1`, quindi premere INVIO.  
+6.  Nel campo **valore assoluto** Digitare `1.1`, quindi premere INVIO.  
   
-7.  In **Definisci soglie stato**, nel campo dispositivo di scorrimento sinistro (in basso), digitare `1`, quindi destra (alta) nel dispositivo di scorrimento, digitare `1.07`.  
+7.  In **Definisci soglie stato**, nel campo del dispositivo di scorrimento a sinistra ( `1`in basso), digitare e quindi nel campo del dispositivo di scorrimento `1.07`a destra (alto), digitare.  
   
-8.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde).  
+8.  In **Seleziona stile icona** selezionare l'icona a forma di rombo (rossa), di triangolo (gialla) o di cerchio (verde).  
   
     > [!TIP]  
     >  Si noti il campo espandibile **Descrizioni** sotto gli stili di icona disponibili. È possibile digitare le descrizioni per i diversi elementi KPI per semplificarne l'identificazione nelle applicazioni client.  
@@ -64,7 +64,7 @@ ms.locfileid: "66078365"
   
 1.  Nella griglia delle misure per la tabella **Internet Sales** fare clic su una cella vuota.  
   
-2.  Sulla barra della formula sopra la tabella digitare la formula seguente:  
+2.  Nella barra della formula sopra la tabella digitare la formula seguente:  
   
      `Internet Current Quarter Margin Performance :=IF([Internet Previous Quarter Margin Proportion to QTD]<>0,([Internet Current Quarter Margin]-[Internet Previous Quarter Margin Proportion to QTD])/[Internet Previous Quarter Margin Proportion to QTD],BLANK())`  
   
@@ -74,13 +74,13 @@ ms.locfileid: "66078365"
   
 4.  Nella finestra di dialogo **Indicatore di prestazioni chiave** selezionare l'opzione **Valore assoluto**in **Definisci valore di destinazione** .  
   
-5.  Nel **valore assoluto** digitare `1.25`.  
+5.  Nel campo **valore assoluto** Digitare `1.25`.  
   
 6.  In **Definisci soglie stato**far scorrere il dispositivo di scorrimento sinistro (in basso) fino a quando non viene visualizzato **0.8**, quindi far scorrere il dispositivo di scorrimento destro (in alto) fino a quando non viene visualizzato **1.03**.  
   
-7.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde), quindi fare clic su **OK**.  
+7.  In **Seleziona stile icona** selezionare l'icona a forma di rombo (rossa), di triangolo (gialla) o di cerchio (verde) e quindi fare clic su **OK**.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 9: Creare prospettive](lesson-8-create-perspectives.md).  
   
   

@@ -18,18 +18,18 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108757"
 ---
-# <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
+# <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina, abilita o disabilita una guida di piano.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,35 +51,35 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>Argomenti  
  **N'** _plan_guide_name_ **'**  
- Viene specificata la guida di piano da eliminare, abilitare o disabilitare. *plan_guide_name* viene risolto nel database corrente. Se non specificato, *plan_guide_name* il valore predefinito è NULL.  
+ Viene specificata la guida di piano da eliminare, abilitare o disabilitare. *plan_guide_name* viene risolto nel database corrente. Se non specificato, *plan_guide_name* valore predefinito è null.  
   
  DROP  
- Elimina la Guida di piano specificata in *plan_guide_name*. Dopo l'eliminazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
+ Elimina la Guida di piano specificata da *plan_guide_name*. Dopo l'eliminazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DROP ALL  
- Elimina tutte le guide di piano nel database corrente. **N'** _plan_guide_name_ non può essere utilizzato quando DROP ALL è specificata.  
+ Elimina tutte le guide di piano nel database corrente. Non è possibile specificare **n'**_plan_guide_name_ se è specificato drop all.  
   
  DISABLE  
- Disabilita la Guida di piano specificata in *plan_guide_name*. Dopo la disabilitazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
+ Disabilita la Guida di piano specificata da *plan_guide_name*. Dopo la disabilitazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DISABLE ALL  
- Disabilita tutte le guide di piano nel database corrente. **N'** _plan_guide_name_ non può essere utilizzato quando DISABLE ALL è specificata.  
+ Disabilita tutte le guide di piano nel database corrente. Non è possibile specificare **n'**_plan_guide_name_ se è specificato Disable All.  
   
  ENABLE  
- Abilita la Guida di piano specificata in *plan_guide_name*. Dopo che è stata abilitata, una guida di piano può essere associata a una query idonea. Per impostazione predefinita, le guide di piano vengono abilitate in fase di creazione.  
+ Consente di abilitare la Guida di piano specificata da *plan_guide_name*. Dopo che è stata abilitata, una guida di piano può essere associata a una query idonea. Per impostazione predefinita, le guide di piano vengono abilitate in fase di creazione.  
   
  ENABLE ALL  
- Abilita tutte le guide di piano nel database corrente. **N'** _plan_guide_name_ **'** non può essere utilizzato quando ENABLE ALL è specificata.  
+ Abilita tutte le guide di piano nel database corrente. Non è possibile specificare **n'**_plan_guide_name_**'** quando viene specificato enable all.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore.  
   
  La disabilitazione di una guida di piano disabilitata o l'abilitazione di una guida di piano abilitata non ha alcun effetto e viene eseguita senza la restituzione di un errore.  
   
- Le guide di piano non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Tuttavia, è possibile eseguire **sp_control_plan_guide** con l'opzione DROP o DROP ALL in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le guide ai piani non sono disponibili in ogni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edizione di. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Tuttavia, è possibile eseguire **sp_control_plan_guide** con l'opzione DROP o drop all in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
- Per eseguire **sp_control_plan_guide** su una Guida di piano di tipo OBJECT (creato specificando  **@type ='** oggetto **'** ) richiede l'autorizzazione ALTER per l'oggetto che viene fatto riferimento dalla Guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
+## <a name="permissions"></a>Autorizzazioni  
+ Per eseguire **sp_control_plan_guide** in una guida di piano di tipo Object (creata specificando ** @type ='** Object **'** ) è richiesta l'autorizzazione ALTER per l'oggetto a cui fa riferimento la Guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -134,10 +134,10 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sp_create_plan_guide &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sys. plan_guides &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Guide di piano](../../relational-databases/performance/plan-guides.md)  
   
   

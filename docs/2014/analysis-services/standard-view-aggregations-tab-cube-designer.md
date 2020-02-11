@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068060"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Vista standard (scheda Aggregazioni, Progettazione cubi)
@@ -26,13 +26,13 @@ ms.locfileid: "66068060"
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Progettare le aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.|  
-|**Ottimizzazione basata sulle statistiche sull'utilizzo**|Fare clic per visualizzare la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo** .|  
+|**Progetta aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.|  
+|**Ottimizzazione basata sulle statistiche di utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle** informazioni di utilizzo.|  
 |**Assegna progettazione aggregazioni**|Fare clic per visualizzare la finestra di dialogo **Assegna progettazione aggregazioni** .|  
 |**Elimina**|Fare clic per eliminare la progettazione delle aggregazioni selezionata.|  
 |**Proprietà**|Fare clic per visualizzare le proprietà dell'aggregazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggregazioni &#40;progettazione del cubo&#41;](aggregations-cube-design.md)  
+ [Aggregazioni &#40;Progettazione cubi&#41;](aggregations-cube-design.md)  
   
   

@@ -14,20 +14,20 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941922"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
+# <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove un'istanza di SQL Server da un gruppo di PolyBase per il calcolo della scalabilità orizzontale. 
+  Rimuove un'istanza di SQL Server da un gruppo di base per il calcolo con scalabilità orizzontale. 
  
- L'istanza di SQL Server deve disporre di [Guida di PolyBase](../../relational-databases/polybase/polybase-guide.md) funzionalità installata.  PolyBase consente l'integrazione di origini dati non SQL Server, ad esempio l'archivio blob di Hadoop e Azure. Vedere anche [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ Per l'istanza di SQL Server deve essere installata la funzionalità della [Guida di base](../../relational-databases/polybase/polybase-guide.md) .  La polibase consente l'integrazione di origini dati non SQL Server, ad esempio Hadoop e l'archiviazione BLOB di Azure. Vedere anche [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ sp_polybase_leave_group;
   
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL SERVER.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL SERVER.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile rimuovere un nodo di calcolo solo da un gruppo.  
   
- Dopo aver eseguito la stored procedure, riavviare il motore PolyBase e PolyBase Data Movement Service nel computer. Per verificare eseguire sulla seguente DMV nel nodo head: **DM exec_compute_nodes**.  
+ Dopo aver eseguito il stored procedure, riavviare il motore di base e il servizio PolyBase Data Movement nel computer. Per verificare, eseguire la DMV seguente sul nodo head: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Esempio  
- L'esempio rimuove il computer corrente da un gruppo PolyBase.  
+ Nell'esempio viene rimosso il computer corrente da un gruppo di base.  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introduzione a polibase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

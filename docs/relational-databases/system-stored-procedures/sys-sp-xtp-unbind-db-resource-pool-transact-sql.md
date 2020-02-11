@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041005"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Tramite questa procedura di sistema viene rimossa un'associazione esistente tra un database e un pool di risorse allo scopo di tenere traccia dell'utilizzo di memoria di [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Se attualmente non vi sono pool associati al database specificato, l'operazione viene completata. Quando il database non è associato, la memoria allocata in precedenza per gli oggetti ottimizzati per la memoria rimane allocata al pool di risorse precedente. È necessario riavviare il database per liberare la memoria allocata. Una volta annullata l'associazione tra un database e il pool di risorse, viene utilizzato il pool di risorse DEFAULT da parte dell'associazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>Parametri  
   
-## <a name="messages"></a>Messages  
+## <a name="messages"></a>Messaggi  
  Se il database è associato a un pool di risorse denominato, la procedura viene eseguita correttamente. Tuttavia, è necessario riavviare il database per rendere effettivo l'annullamento dell'associazione.  
  Se non esiste alcuna associazione esistente per il database specificato, `sp_xtp_unbind_db_resource_pool` viene eseguita correttamente, ma viene visualizzato il messaggio informativo:  
   

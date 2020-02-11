@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264778"
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
@@ -31,7 +31,7 @@ ms.locfileid: "63264778"
   
  Oltre a disporre di funzionalità non supportate a livello nativo, alcuni sviluppatori potrebbero avere l'esigenza di estendere le funzionalità esistenti con versioni alternative di controlli già inclusi in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo scenario, uno sviluppatore potrebbe disporre di tre componenti: un componente runtime, un componente della fase di progettazione e un componente di conversione dell'elemento del report in fase di progettazione che consente di convertire su richiesta un elemento del report esistente in un elemento del report personalizzato.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Architettura di un elemento del report personalizzato](custom-report-item-architecture.md)  
  Vengono descritti i componenti che costituiscono un elemento del report personalizzato.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63264778"
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](creating-a-custom-report-item-design-time-component.md)  
  Vengono descritte le procedure per la creazione di un componente dell'elemento del report personalizzato in fase in progettazione.  
   
- [Procedura: Distribuire un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuzione di un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
  Vengono descritte le procedure per la distribuzione di un elemento del report personalizzato.  
   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)  

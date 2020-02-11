@@ -1,5 +1,5 @@
 ---
-title: Opzioni della riga di comando nella Console SSMA (SybaseToSQL) | Microsoft Docs
+title: Opzioni della riga di comando nella console SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083480"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opzioni della riga di comando nella console SSMA (SybaseToSQL)
-Microsoft offre un solido set di opzioni della riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
+Microsoft offre un solido set di opzioni della riga di comando per l'esecuzione e il controllo delle attività SSMA. Le sezioni seguenti illustrano in dettaglio lo stesso.  
   
 ## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella console SSMA  
-È qui descritti la console di opzioni del comando.  
+Di seguito sono descritte le opzioni del comando console.  
   
-Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
+Ai fini di questa sezione, il termine "opzione" viene definito anche "switch".  
   
--   Opzioni non sono tra maiuscole e minuscole e può iniziare con ' **-** 'or,' **/** ' caratteri.  
+-   Le opzioni non fanno distinzione tra maiuscole e minuscole e**-** possono iniziare con il**/** carattere '' o ''.  
   
--   Se si specificano opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
+-   Se vengono specificate opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
   
--   I parametri di opzione devono essere separati dal carattere opzione da spazi vuoti.  
+-   I parametri di opzione devono essere separati dal carattere dell'opzione per spazi vuoti.  
   
     **Esempi di sintassi:**  
   
@@ -38,23 +38,23 @@ Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.
   
     `C:\> SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\VariableValueFileSample.xml" -c "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
--   Devono specificare i nomi di cartella o file contenenti spazi tra virgolette doppie.  
+-   I nomi di file o cartelle contenenti spazi devono essere specificati tra virgolette doppie.  
   
--   L'output di voci di riga di comando e i messaggi di errore vengono archiviati in STDOUT o in un file specificato.  
+-   L'output delle voci della riga di comando e i messaggi di errore vengono archiviati in STDOUT o in un file specificato.  
   
-### <a name="script-file-option--sscript"></a>Opzione del File script: -s o script  
-Un parametro obbligatorio, il percorso/nome del file script specifica lo script di sequenze di comandi deve essere eseguito da SSMA.  
+### <a name="script-file-option--sscript"></a>Opzione file script:-s/script  
+Un Commuter obbligatorio, il nome/percorso del file di script specifica lo script delle sequenze di comandi che devono essere eseguite da SSMA.  
   
 **Esempi di sintassi:**  
   
 `C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>Opzione File valore variabile: variabile o v-  
-Questo file è costituito da variabili utilizzate nel file di script. Si tratta di un'opzione facoltativa. Se le variabili non dichiarate nel file delle variabili e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
+### <a name="variable-value-file-option--vvariable"></a>Opzione file valore variabile:-v/variabile  
+Questo file è costituito da variabili utilizzate nel file di script. Si tratta di un'opzione facoltativa. Se le variabili non vengono dichiarate nel file di variabile e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
   
 **Esempi di sintassi:**  
   
--   Variabili definite in più file di valore della variabile, ad esempio uno con un valore predefinito e l'altra con un valore specifico dell'istanza quando applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando consideri le preferenze, nel caso in cui è presente una duplicazione delle variabili:  
+-   Variabili definite in più file di valori di variabile, ad esempio uno con un valore predefinito e un altro con un valore specifico dell'istanza quando applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando assume la preferenza, nel caso in cui esista una duplicazione di variabili:  
   
     `C:\>SSMAforSybaseConsole.EXE -s`  
   
@@ -62,14 +62,14 @@ Questo file è costituito da variabili utilizzate nel file di script. Si tratta 
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>Opzione File di connessione server: -c/serverconnection  
-Questo file contiene informazioni di connessione server per ogni server. Ogni definizione del server è identificato da un ID Server univoco. Gli ID Server viene fatto riferimento nel file di script per connessione correlati ai comandi.  
+### <a name="server-connection-file-option--cserverconnection"></a>Opzione del file di connessione del server:-c/ServerConnection  
+Questo file contiene le informazioni di connessione al server per ogni server. Ogni definizione di server è identificata da un ID server univoco. Per i comandi correlati alla connessione, viene fatto riferimento agli ID del server nel file di script.  
   
-Definizione di server può essere una parte del file di connessione di server e/o file di script. Id del server nel file di script ha la precedenza sul file di connessione del server, nel caso in cui è presente una duplicazione dell'id del server.  
+La definizione del server può essere una parte del file di connessione al server e/o del file di script. L'ID del server nel file di script ha la precedenza sul file di connessione del server, nel caso in cui si verifichi una duplicazione dell'ID server.  
   
 **Esempi di sintassi:**  
   
--   Gli ID del server vengono usati nel file di script e vengono definite in un file di connessione server separato, file di connessione server usa le variabili definite nel file di valore della variabile:  
+-   Gli ID server vengono utilizzati nel file di script e sono definiti in un file di connessione del server separato. il file di connessione del server utilizza variabili definite nel file di valore della variabile:  
   
     `C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -77,16 +77,16 @@ Definizione di server può essere una parte del file di connessione di server e/
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   Definizione del server è incorporato nel file di script:  
+-   La definizione del server è incorporata nel file script:  
   
     `C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di Output XML: - x / xmloutput [xmloutputfile]  
-Questo comando viene utilizzato per l'output i messaggi di output del comando in formato xml alla console o in un file xml.  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di output XML:-x/XMLOutput [xmloutputfile]  
+Questo comando viene usato per l'output dei messaggi di output del comando in formato XML nella console o in un file XML.  
   
-Sono disponibili due opzioni per xmloutput, una visualizzazione dei..,:  
+Sono disponibili due opzioni per XMLOutput, vale a dire...:  
   
--   Se il percorso file non viene fornito dopo il cambio di xmloutput l'output viene reindirizzato al file.  
+-   Se il FilePath viene fornito dopo l'opzione XMLOutput, l'output viene reindirizzato al file.  
   
     **Esempio di sintassi:**  
   
@@ -94,14 +94,14 @@ Sono disponibili due opzioni per xmloutput, una visualizzazione dei..,:
   
     `"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   Se non viene specificato alcun percorso di file dopo il cambio di xmloutput il xmlout viene visualizzato nella console di se stesso.  
+-   Se non viene fornito alcun FilePath dopo l'opzione XMLOutput, il XMLout viene visualizzato nella console.  
   
     **Esempio di sintassi:**  
   
     `C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>Opzione File di log: -l/log  
-Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un file di log. Si tratta di un'opzione facoltativa. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, viene generato nella posizione predefinita.  
+### <a name="log-file-option--llog"></a>Opzione del file di log:-l/log  
+Tutte le operazioni SSMA nell'applicazione console vengono registrate in un file di log. Si tratta di un'opzione facoltativa. Se un file di log e il relativo percorso vengono specificati nella riga di comando, il log viene generato nel percorso specificato. In caso contrario, viene generato nel percorso predefinito.  
   
 **Esempio di sintassi:**  
   
@@ -109,8 +109,8 @@ Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>Opzione di cartella di progetto ambiente: e-/ projectenvironment  
-Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa opzione è facoltativa.  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>Opzione cartella ambiente progetto:-e/projectenvironment  
+Indica la cartella delle impostazioni dell'ambiente del progetto per il progetto SSMA corrente. Questa opzione è facoltativa.  
   
 **Esempio di sintassi:**  
   
@@ -118,57 +118,57 @@ Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa 
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-### <a name="secure-password-option--psecurepassword"></a>Opzione Password sicura: -p/securepassword  
-Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
+### <a name="secure-password-option--psecurepassword"></a>Opzione password protetta:-p/SecurePassword  
+Questa opzione indica la password crittografata per le connessioni server. Differisce da tutte le altre opzioni: l'opzione non esegue alcuno script né facilita le attività relative alla migrazione, ma consente di gestire la crittografia delle password per le connessioni server usate nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](managing-passwords-sybasetosql.md) sezione.  
+Non è possibile immettere altre opzioni o password come parametri della riga di comando. In caso contrario, viene restituito un errore. Per ulteriori informazioni, vedere la sezione [gestione delle password](managing-passwords-sybasetosql.md) .  
   
-Le seguenti opzioni secondarie sono supportate per `-p/securepassword`:  
+Per `-p/securepassword`sono supportate le opzioni secondarie seguenti:  
   
--   Per aggiungere password protette archiviazione per un ID del Server specificato o per tutti gli ID del Server definito nel file di connessione del server. -L'opzione di sovrascrittura, di seguito, gli aggiornamenti della password se esiste già:  
+-   Per aggiungere la password all'archiviazione protetta per un ID server specificato o per tutti gli ID server definiti nel file di connessione del server. L'opzione-overwrite, riportata di seguito, aggiorna la password se esiste già:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}` `-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   Per rimuovere la password crittografata dalla risorsa di archiviazione protetta dell'ID del Server specificato o per tutti gli ID del Server:  
+-   Per rimuovere la password crittografata dalla risorsa di archiviazione protetta dell'ID server specificato o di tutti gli ID server:  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   Per visualizzare un elenco di ID Server per cui la password viene crittografata:  
+-   Per visualizzare un elenco di ID server per i quali la password è crittografata:  
   
     `-p/securepassword -l/list`  
   
--   Per esportare le password archiviate in un archivio protetto a un file crittografato. Questo file è crittografato con la frase di pass specificato dall'utente.  
+-   Per esportare le password archiviate in un archivio protetto in un file crittografato. Questo file è crittografato con il pass-phrase specificato dall'utente.  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   Crittografati-che è stato esportato in precedenza viene importato il file nell'archivio locale protetto utilizzando specificato dall'utente-passphrase. Una volta che il file viene decrittografato, questo viene archiviato in un nuovo file, che a sua volta, viene crittografato nel computer locale.  
+-   Il file crittografato che è stato esportato in precedenza viene importato nell'archiviazione protetta locale usando la passphrase specificata dall'utente. Una volta decrittografato, il file viene archiviato in un nuovo file, che a sua volta viene crittografato nel computer locale.  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
-    È possibile specificare più ID Server usando i separatori virgola.  
+    È possibile specificare più ID server utilizzando separatori di virgole.  
   
-### <a name="help-option--help"></a>Opzione della Guida:-? /help  
-Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
+### <a name="help-option--help"></a>Opzione della guida:-?/Help  
+Visualizza il riepilogo della sintassi delle opzioni della console SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-Per una visualizzazione tabulare di opzioni della riga di comando di Console SSMA, consultare [appendice - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
+Per una visualizzazione tabulare delle opzioni della riga di comando della console SSMA, fare riferimento all' [appendice-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
   
-### <a name="securepassword-help-option--securepassword--help"></a>Opzione SecurePassword Help: - securepassword-? /Help  
-Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
+### <a name="securepassword-help-option--securepassword--help"></a>Opzione della Guida di SecurePassword:-SecurePassword-?/Help  
+Visualizza il riepilogo della sintassi delle opzioni della console SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-Per una visualizzazione tabulare di opzioni della riga di comando di Console SSMA, consultare [appendice - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+Per una visualizzazione tabulare delle opzioni della riga di comando della console SSMA, fare riferimento all' [appendice-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
-### <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo dipende dai requisiti progetto:  
+### <a name="next-step"></a>passaggio successivo  
+Il passaggio successivo dipende dai requisiti del progetto:  
   
--   Per specificare una password o l'esportazione / importazione per le password, vedere [la gestione delle password &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Per specificare una password o le password di esportazione/importazione, vedere Gestione delle password [&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Per la generazione di report, vedere [generazione di report &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Per la generazione di report, vedere [generazione di report &#40;&#41;SybaseToSQL ](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   Per risolvere i problemi nella console, vedere [Troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   Per la risoluzione dei problemi nella console di, vedere [troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

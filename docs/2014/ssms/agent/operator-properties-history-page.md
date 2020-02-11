@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301724"
 ---
 # <a name="operator-properties-history-page"></a>Proprietà Operatore (pagina Cronologia)
@@ -26,10 +26,10 @@ ms.locfileid: "63301724"
  **Tramite posta elettronica**  
  Indica i tentativi di notifica più recenti eseguiti tramite posta elettronica o **(nessun tentativo)** se l'operatore non ha ricevuto alcuna notifica tramite posta elettronica.  
   
- **Tramite cercapersone**  
+ **Per cercapersone**  
  Indica i tentativi di notifica più recenti eseguiti tramite cercapersone o **(nessun tentativo)** se l'operatore non ha ricevuto alcuna notifica tramite cercapersone.  
   
- **Tramite Net Send**  
+ **Per Net Send**  
  Indica i tentativi di notifica più recenti eseguiti tramite Net Send o **(nessun tentativo)** se l'operatore non ha ricevuto alcuna notifica tramite Net Send.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205020"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Supporto di FOR XML per i tipi di dati stringa
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   

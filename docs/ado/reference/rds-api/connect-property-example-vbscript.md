@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà (VBScript) Connect | Microsoft Docs
+title: Esempio di proprietà Connect (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964579"
 ---
 # <a name="connect-property-example-vbscript"></a>Esempio della proprietà Connect (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo codice viene illustrato come impostare il [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà in fase di progettazione:  
+ Questo codice Mostra come impostare la proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) in fase di progettazione:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -37,9 +37,9 @@ ms.locfileid: "67964579"
 </OBJECT>  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare il **Connect** proprietà in fase di esecuzione di codice VBScript.  
+ Nell'esempio seguente viene illustrato come impostare la proprietà **Connect** in fase di esecuzione nel codice VBScript.  
   
- Per testare questo esempio, tagliare e incollare il codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **ConnectVBS**. Lo script identificherà il server.  
+ Per testare questo esempio, tagliare e incollare il codice tra i \<tag body> \<e/body> in un documento HTML normale e denominarlo **ConnectVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginConnectVBS -->  

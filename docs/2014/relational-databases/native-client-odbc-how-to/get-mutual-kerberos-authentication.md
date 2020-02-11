@@ -1,5 +1,5 @@
 ---
-title: Ottenere l'autenticazione Kerberos reciproca | Documenti di Microsoft
+title: Ottenere l'autenticazione Kerberos reciproca | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200417"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Ottenere l'autenticazione Kerberos reciproca
@@ -22,7 +22,7 @@ ms.locfileid: "63200417"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per ulteriori informazioni, vedere [nome dell'entità servizio &#40;SPN&#41; supporto per le connessioni client](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

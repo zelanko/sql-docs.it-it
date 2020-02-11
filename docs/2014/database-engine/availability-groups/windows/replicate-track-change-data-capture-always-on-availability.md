@@ -1,5 +1,5 @@
 ---
-title: La replica, rilevamento delle modifiche, Change Data Capture e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
+title: Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814057"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62814057"
   
  
   
-##  <a name="Overview"></a> Panoramica della replica nei gruppi di disponibilità AlwaysOn  
+##  <a name="Overview"></a>Panoramica della replica in Gruppi di disponibilità AlwaysOn  
   
 ###  <a name="PublisherRedirect"></a> Reindirizzamento del server di pubblicazione  
  Se un database pubblicato è compatibile con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], il database di distribuzione tramite cui viene fornito agli agenti l'accesso al database di pubblicazione viene configurato con le voci redirected_publishers. Tramite queste voci la coppia server di pubblicazione/database configurata originariamente viene reindirizzata, usando un nome del listener del gruppo di disponibilità per connettersi al server e al database di pubblicazione. Il failover delle connessioni stabilite tramite il nome del listener del gruppo di disponibilità avrà esito negativo. Al riavvio dell'agente di replica dopo il failover, la connessione verrà reindirizzata automaticamente al nuovo database primario.  
@@ -39,7 +39,7 @@ ms.locfileid: "62814057"
 > [!NOTE]  
 >  Dopo il failover su una replica secondaria, tramite Monitoraggio replica non è possibile regolare il nome dell'istanza di pubblicazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le informazioni sulla replica continueranno a essere visualizzate con il nome dell'istanza primaria originale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dopo il failover, non è possibile immettere un token di traccia tramite Monitoraggio replica, nondimeno un token di traccia immesso nel nuovo server di pubblicazione tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]è visibile in Monitoraggio replica.  
   
-###  <a name="Changes"></a> Modifiche generali apportate agli agenti di replica per supportare i gruppi di disponibilità AlwaysOn  
+###  <a name="Changes"></a>Modifiche generali apportate agli agenti di replica per supportare Gruppi di disponibilità AlwaysOn  
  Tre agenti di replica sono stati modificati per supportare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Gli agenti di lettura log, snapshot e di merge sono stati modificati in modo da eseguire query sul database di distribuzione per il server di pubblicazione reindirizzato e usare il nome del listener del gruppo di disponibilità restituito, se è stato dichiarato un server di pubblicazione reindirizzato, per connettersi al server di pubblicazione del database.  
   
  Per impostazione predefinita, quando gli agenti eseguono una query sul database di distribuzione per determinare se il server di pubblicazione originale è stato reindirizzato, l'appropriatezza del database di destinazione o del reindirizzamento corrente verrà verificata prima che l'host reindirizzato venga restituito all'agente. Questo è il comportamento consigliato. Tuttavia, se l'avvio dell'agente si verifica molto frequentemente, l'overhead associato alla stored procedure di convalida può essere ritenuto troppo costoso. Una nuova opzione della riga di comando, *BypassPublisherValidation*, è stata aggiunta agli agenti di lettura log, snapshot e di merge. Quando viene usata l'opzione, il server di pubblicazione reindirizzato viene restituito immediatamente all'agente e l'esecuzione della stored procedure di convalida viene ignorata.  
@@ -59,7 +59,7 @@ ms.locfileid: "62814057"
   
      Con il flag di traccia 1448 è possibile far procedere l'agente lettura log repliche anche se il ricevimento di una modifica non è stato riconosciuto dalle repliche secondarie asincrone. Anche con questo flag di traccia abilitato, tramite l'agente di lettura log vengono sempre attese le repliche secondarie sincrone. L'agente di lettura log non procederà oltre il riconoscimento minimo delle repliche secondarie sincrone. Questo flag di traccia si applica all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non solo a un gruppo di disponibilità, a un database di disponibilità o a un'istanza di lettura log. Questo flag di traccia diventa immediatamente effettivo senza un riavvio. Può essere attivato anticipatamente o quando si verifica un errore in una replica secondaria asincrona.  
   
-###  <a name="StoredProcs"></a> Stored procedure che supportano AlwaysOn  
+###  <a name="StoredProcs"></a>Stored procedure che supportano AlwaysOn  
   
 -   **sp_redirect_publisher**  
   
@@ -109,9 +109,9 @@ ms.locfileid: "62814057"
     ```  
   
     > [!NOTE]  
-    >  È consigliabile creare i processi per tutte le possibili destinazioni di failover prima del failover e contrassegnarli come disabilitati finché la replica di disponibilità in un host non diventa la nuova replica primaria. È inoltre necessario disabilitare i processi CDC in esecuzione nel database primario precedente quando il database locale diventa un database secondario. Per disabilitare e abilitare i processi, usare l'opzione *@enabled* di [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  È consigliabile creare i processi per tutte le possibili destinazioni di failover prima del failover e contrassegnarli come disabilitati finché la replica di disponibilità in un host non diventa la nuova replica primaria. È inoltre necessario disabilitare i processi CDC in esecuzione nel database primario precedente quando il database locale diventa un database secondario. Per disabilitare e abilitare i processi, usare *@enabled* l'opzione di [Sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
--   **Aggiunta di ruoli CDC a una Replica di Database primario AlwaysOn**  
+-   **Aggiunta di ruoli CDC a una replica di database primario AlwaysOn**  
   
      Quando una tabella è abilitata per CDC, è possibile associare un ruolo di database all'istanza di acquisizione. Se viene specificato un ruolo, l'utente che desidera usare le funzioni con valori di tabella di CDC per accedere alle modifiche della tabella deve non solo disporre dell'accesso SELECT alle colonne della tabella con rilevamento, ma essere anche un membro del ruolo denominato. Se il ruolo specificato non esiste già, verrà creato. Quando i ruoli del database vengono aggiunti automaticamente a un database primario AlwaysOn, i ruoli vengono propagati anche nei database secondari del gruppo di disponibilità.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62814057"
   
      Per individuare la replica secondaria è possibile usare il nome del listener del gruppo di disponibilità o il nome del nodo esplicito. Se viene usato il nome del listener del gruppo di disponibilità, l'accesso verrà indirizzato a qualsiasi replica secondaria adatta.  
   
-     Quando `sp_addlinkedserver` viene usato per creare un server collegato per accedere al database secondario, il *@datasrc* parametro viene utilizzato per il nome del listener del gruppo di disponibilità o il nome del server esplicito e il *@provstr* parametro viene usato per specificare la finalità di sola lettura.  
+     Quando `sp_addlinkedserver` viene usato per creare un server collegato per accedere al database secondario, *@datasrc* il parametro viene usato per il nome del listener del gruppo di disponibilità o il nome del *@provstr* server esplicito e il parametro viene usato per specificare la finalità di sola lettura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -173,7 +173,7 @@ ms.locfileid: "62814057"
      In generale, è consigliabile usare account di accesso al dominio per l'accesso client ai dati delle modifiche nei database che sono membri di gruppi di disponibilità AlwaysOn. Per assicurare accesso continuato ai dati delle modifiche dopo il failover, l'utente del dominio avrà bisogno di privilegi di accesso su tutti gli host che supportano repliche del gruppo di disponibilità. Se un utente di database viene aggiunto a un database in una replica primaria e l'utente è associato a un account di accesso al dominio, tale utente viene propagato nei database secondari e continua a essere associato all'account di accesso al dominio specificato. Se il nuovo utente del database è associato a un account di accesso con autenticazione SQL Server, l'utente nei database secondari sarà propagato senza un account di accesso. Mentre l'accesso con autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associato potrebbe essere usato per accedere ai dati delle modifiche nel database primario dove l'utente del database è stato definito originariamente, il nodo è il solo in cui sarebbe possibile l'accesso. L'accesso con autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non consentirebbe di accedere ai dati da un database secondario, né da un nuovo database primario diverso dal database originale dove è stato definito l'utente del database.  
   
 ###  <a name="CT"></a> Rilevamento delle modifiche  
- Un database abilitato per il rilevamento delle modifiche (CT) può far parte di un gruppo di disponibilità AlwaysOn. Non è richiesta alcuna operazione di configurazione aggiuntiva. Le applicazioni client di rilevamento delle modifiche in cui vengono usate le funzioni con valori di tabella CDC per accedere ai dati delle modifiche devono poter essere in grado di individuare la replica primaria dopo il failover. Se l'applicazione client viene connessa tramite il nome del listener del gruppo di disponibilità, le richieste di connessione verranno sempre indirizzate in modo appropriato alla replica primaria corrente.  
+ Un database abilitato per il rilevamento delle modifiche (CT) può far parte di un gruppo di disponibilità AlwaysOn. Non è necessaria alcuna configurazione aggiuntiva. Le applicazioni client di rilevamento delle modifiche in cui vengono usate le funzioni con valori di tabella CDC per accedere ai dati delle modifiche devono poter essere in grado di individuare la replica primaria dopo il failover. Se l'applicazione client viene connessa tramite il nome del listener del gruppo di disponibilità, le richieste di connessione verranno sempre indirizzate in modo appropriato alla replica primaria corrente.  
   
 > [!NOTE]  
 >  I dati del rilevamento modifiche devono sempre essere ottenuti dalla replica primaria. Un tentativo di accedere ai dati delle modifiche da una replica secondaria comporterà l'errore seguente:  
@@ -185,36 +185,36 @@ ms.locfileid: "62814057"
 ##  <a name="Prereqs"></a> Prerequisiti, restrizioni e considerazioni per l'utilizzo della replica  
  In questa sezione vengono descritte le considerazioni per la distribuzione della replica con la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e suggerimenti.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   Quando si usano la replica transazionale e il database di pubblicazione si trova in un gruppo di disponibilità, sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Il sottoscrittore può invece usare un livello inferiore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Quando si usano la replica di tipo merge e il database di pubblicazione è in un gruppo di disponibilità:  
   
-    -   Sottoscrizione push: Sia il server di pubblicazione e il server di distribuzione devono eseguire almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Sottoscrizione push: sia nel server di pubblicazione che nel server di distribuzione deve essere in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Sottoscrizione pull: I database di pubblicazione, server di distribuzione e sottoscrittore devono essere almeno su [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
+    -   Sottoscrizione pull: il server di pubblicazione, il server di distribuzione e i database sottoscrittore devono essere presenti almeno in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
   
 -   L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato.  
   
--   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per ulteriori informazioni [, vedere Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrizioni  
  Combinazioni supportate di replica in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
-||**Server di pubblicazione**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
+||**Autore**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
 |**Transazionale**|Sì<sup>1</sup>|No|Sì<sup>2</sup>|  
-|**P2P**|no|No|No|  
-|**Merge**|Yes|No|Sì<sup>2</sup>|  
-|**Snapshot**|Yes|no|Sì<sup>2</sup>|  
+|**P2P**|No|No|No|  
+|**Merge**|Sì|No|Sì<sup>2</sup>|  
+|**Snapshot**|Sì|No|Sì<sup>2</sup>|  
   
  <sup>1</sup> non include il supporto per la replica transazionale bidirezionale e reciproca.  
   
- <sup>2</sup> Failover al database di replica è una procedura manuale. Il failover automatico non è fornito.  
+ <sup>2</sup> il failover al database di replica è una procedura manuale. Il failover automatico non è fornito.  
   
- <sup>3</sup> database del server di distribuzione non è supportato per l'uso con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database.  
+ <sup>3</sup> il database del server di distribuzione non è supportato [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'utilizzo con o il mirroring del database.  
   
 ### <a name="considerations"></a>Considerazioni  
   
@@ -229,7 +229,7 @@ ms.locfileid: "62814057"
   
 -   [Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [Gestione di un Database di pubblicazione AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
+-   [Gestione di un database di pubblicazione AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
@@ -239,7 +239,7 @@ ms.locfileid: "62814057"
   
 -   [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
--   [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+-   [Usare i dati delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
  **Change tracking**  
   
@@ -250,14 +250,14 @@ ms.locfileid: "62814057"
 -   [Utilizzare il rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Gruppi di disponibilità AlwaysOn: Interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [le istanze del Cluster di Failover AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Sottoscrittori della replica e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ Gruppi di disponibilità AlwaysOn: istanze del cluster di failover AlwaysOn di [interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [(SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   

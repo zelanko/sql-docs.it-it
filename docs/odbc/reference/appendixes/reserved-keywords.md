@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057215"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
-Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non limitano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare queste parole chiave. Il simbolo #**definire** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
+Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare una di queste parole chiave. Il valore #**define** SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|AZIONE|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -40,15 +40,15 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |ASSERTION|MATCH|  
 |AT|MAX|  
 |AUTHORIZATION|MIN|  
-|MEDIO|MINUTE|  
+|MEDIA|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|FUNZIONE BIT_LENGTH|NATIONAL|  
+|BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|No|  
+|CASCADED|NO|  
 |CASE|Nessuno|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -56,18 +56,18 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|ATTIVA|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|Oppure|  
+|COLLATION|o|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|OVERLAPS|  
+|CONNECTION|SOVRAPPOSIZIONI|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|CONVENZIONE PASCAL|  
+|VINCOLI|PARTIAL|  
+|CONTINUE|PASCAL|  
 |CONVERT|POSIZIONE|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -78,25 +78,25 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|Decimal|RIGHT|  
+|DECIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Elimina|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|DIMENSIONE|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -111,10 +111,10 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
-|FOREIGN|TO|  
+|FOREIGN|A|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
@@ -127,9 +127,9 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|Utente|  
+|IDENTITÀ|USER|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|VALORE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|con|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056546"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
@@ -39,7 +39,7 @@ Assicurarsi di salvare una copia del file di configurazione originale prima di a
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Numero di database da valutare in parallelo
 
-Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae l'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può determinare il timeout se vengono valutati in parallelo più database nello stesso server. 
+Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae l'applicazione livello dati (dacpac) per comprendere lo schema del database.Questa operazione può determinare il timeout se vengono valutati in parallelo più database nello stesso server. 
 
 A partire da Data Migration Assistant v 2.0, è possibile controllarlo impostando il valore di configurazione parallelDatabases. Il valore predefinito è 8.
 
@@ -82,19 +82,19 @@ A partire da Data Migration Assistant v 2.0, se si verifica questo problema, è 
 Durante la valutazione, Data Migration Assistant estrae l'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può avere esito negativo con timeout per database di dimensioni molto grandi o se il server è sotto carico. A partire dalla migrazione dei dati v 1.0, è possibile modificare i valori di configurazione seguenti per evitare errori. 
 
 > [!NOTE]
-> Per impostazione predefinita, l'intera voce &lt;DACFx&gt; è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
+> Per impostazione &lt;predefinita&gt; , l'intera voce DACFx è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
 
 - commandTimeout
 
-   Questo parametro imposta la proprietà IDbCommand. CommandTimeout in *secondi*. (Valore predefinito = 60)
+   Questo parametro imposta la proprietà IDbCommand. CommandTimeout in *secondi*.(Valore predefinito = 60)
 
 - databaseLockTimeout
 
-   Questo parametro equivale a impostare il timeout di timeout [\_\_di blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) , espresso in *millisecondi*. (Valore predefinito = 5000)
+   Questo parametro equivale a [impostare il periodo\_di timeout\_del blocco del blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) in *millisecondi*.(Valore predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Questo parametro imposta il numero di connessioni del pool di connessioni SQL da utilizzare. (Valore predefinito = 8)
+  Questo parametro imposta il numero di connessioni del pool di connessioni SQL da utilizzare.(Valore predefinito = 8)
 
 ```
 <advisorGroup>

@@ -1,5 +1,5 @@
 ---
-title: Accedere ai Provider WMI per Gestione configurazione usando WQL | Microsoft Docs
+title: Accedere al provider WMI per la gestione della configurazione tramite WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195870"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accedere al provider WMI per la gestione della configurazione tramite WQL
@@ -29,13 +29,13 @@ ms.locfileid: "68195870"
   
 ### <a name="querying-services-using-wbemtest"></a>Esecuzione di query sui servizi mediante WBEMtest  
   
-1.  Dal **avviare** menu, fare clic su **eseguire**, quindi immettere `WBEMtest`.  
+1.  Dal menu **Start** fare clic su **Esegui**, quindi immettere `WBEMtest`.  
   
 2.  Viene visualizzata la finestra di dialogo WBEMtest.exe. Fare clic su **Connetti**.  
   
 3.  Nel primo campo di testo digitare lo spazio dei nomi del provider WMI per Gestione computer: root\Microsoft\SqlServer\ComputerManagement11. Fare clic su **Connetti**.  
   
-4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **Selezionare \* FROM SqlService.** Fare clic su **Applica**.  
+4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale **: \* Select from SqlService.** Fare clic su **Apply**.  
   
 5.  Ridefinire ulteriormente la query aggiungendo `WHERE ServiceName = "MSSQLSERVER"`.  
   

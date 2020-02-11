@@ -1,5 +1,5 @@
 ---
-title: Installazione di preparazione aggiornamento dal Prompt dei comandi | Microsoft Docs
+title: Installazione di preparazione aggiornamento dal prompt dei comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094340"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
@@ -34,9 +34,9 @@ ms.locfileid: "66094340"
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
-|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi *log_file_name*, usare **-L\*v**_log_file_name_. Per registrare solo i messaggi di errore, utilizzare `-Le` *log_file_name*.|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
+|/q [n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
+|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi in *log_file_name*, usare **-\*L v**_log_file_name_. Per registrare solo i messaggi di errore `-Le`, utilizzare *log_file_name*.|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
 |UAINSTALLDIR=path|Installa Preparazione aggiornamento nel percorso specificato da path.|  
   
 ## <a name="installation-examples"></a>Esempi dell'installazione  

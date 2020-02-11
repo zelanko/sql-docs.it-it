@@ -1,5 +1,5 @@
 ---
-title: Parametri di Analysis Services | Microsoft Docs
+title: Parametri Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096783"
 ---
 # <a name="analysis-services-parameters"></a>Parametri di Analysis Services
-  Per analizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e forniscono informazioni su come connettersi a tale istanza.  
+  Per analizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e fornire informazioni su come connettersi a tale istanza.  
   
 ## <a name="options"></a>Opzioni  
- **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Nome dell'istanza**  
+ **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Nome istanza**  
  Selezionare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dall'elenco.  
   
- **Nome del computer**  
+ **Nome computer**  
  Nome del computer associato all'istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Riferimento all'interfaccia utente di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+ [Guida di riferimento all'interfaccia utente di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

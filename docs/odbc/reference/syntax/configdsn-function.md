@@ -20,17 +20,17 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892856"
 ---
 # <a name="configdsn-function"></a>Funzione ConfigDSN
 **Conformità**  
- Versione introdotta: ODBC 1.0  
+ Versione introdotta: ODBC 1,0  
   
- **Riepilogo**  
+ **Summary**  
  **ConfigDSN** aggiunge, modifica o Elimina le origini dati dalle informazioni di sistema. Potrebbe richiedere informazioni di connessione all'utente. Può trovarsi nella DLL del driver o in una DLL di installazione separata.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,11 +51,11 @@ BOOL ConfigDSN(
  *fRequest*  
  Input Tipo di richiesta. L'argomento *fRequest* deve contenere uno dei valori seguenti:  
   
- ODBC_ADD_DSN: Aggiungere una nuova origine dati.  
+ ODBC_ADD_DSN: aggiungere una nuova origine dati.  
   
- ODBC_CONFIG_DSN: Configurare (modificare) un'origine dati esistente.  
+ ODBC_CONFIG_DSN: configurare (modificare) un'origine dati esistente.  
   
- ODBC_REMOVE_DSN: Rimuovere un'origine dati esistente.  
+ ODBC_REMOVE_DSN: rimuovere un'origine dati esistente.  
   
  *lpszDriver*  
  Input Descrizione del driver (in genere il nome del DBMS associato) presentata agli utenti anziché al nome del driver fisico.  
@@ -67,9 +67,9 @@ BOOL ConfigDSN(
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **ConfigDSN** restituisce false, un valore  *\*pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **ConfigDSN** restituisce false, un valore * \*pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Error|Descrizione|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Handle di finestra non valido|L'argomento *hwndParent* non è valido.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave/valore non valide|L'argomento *lpszAttributes* contiene un errore di sintassi.|  
@@ -81,9 +81,9 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Commenti  
  **ConfigDSN** riceve le informazioni di connessione dalla dll del programma di installazione come un elenco di attributi sotto forma di coppie parola chiave/valore. Ogni coppia viene terminata con un byte null e l'intero elenco viene terminato con un byte null. Ovvero due byte null contrassegnano la fine dell'elenco. Gli spazi non sono consentiti intorno al segno di uguale nella coppia parola chiave/valore. **ConfigDSN** può accettare parole chiave che non sono parole chiave valide per **SQLBrowseConnect** e **SQLDriverConnect**. **ConfigDSN** non supporta necessariamente tutte le parole chiave valide per **SQLBrowseConnect** e **SQLDriverConnect**. (**ConfigDSN** non accetta la parola chiave **driver** ). Le parole chiave usate dalla funzione **ConfigDSN** devono supportare tutte le opzioni necessarie per ricreare l'origine dati usando la funzionalità di installazione automatica del programma di installazione. Quando gli utilizzi dei valori **ConfigDSN** e i valori della stringa di connessione sono uguali, è necessario utilizzare le stesse parole chiave.  
   
- Come in **SQLBrowseConnect** e **SQLDriverConnect**, le parole chiave e i relativi valori non devono contenere **[{}] (),;? =\*! @** characters e il valore della parola chiave **DSN** non possono essere costituiti solo da spazi vuoti. Grazie alla grammatica del registro di sistema, le parole chiave e i nomi delle origini\\dati non possono contenere il carattere barra rovesciata ().  
+ Come in **SQLBrowseConnect** e **SQLDriverConnect**, le parole chiave e i relativi valori non devono contenere **[{}] (),;? = \*! @** characters e il valore della parola chiave **DSN** non possono essere costituiti solo da spazi vuoti. Grazie alla grammatica del registro di sistema, le parole chiave e i nomi delle origini\\dati non possono contenere il carattere barra rovesciata ().  
   
- **ConfigDSN** deve chiamare **SQLValidDSN** per verificare la lunghezza del nome dell'origine dati e per verificare che nel nome non siano inclusi caratteri non validi. Se il nome dell'origine dati è più lungo di SQL_MAX_DSN_LENGTH o include caratteri non validi, **SQLValidDSN** restituisce un errore e **ConfigDSN** restituisce un errore. La lunghezza del nome dell'origine dati viene controllata anche da **SQLWriteDSNToIni**.  
+ **ConfigDSN** deve chiamare **SQLValidDSN** per verificare la lunghezza del nome dell'origine dati e per verificare che nel nome non siano inclusi caratteri non validi. Se il nome dell'origine dati supera SQL_MAX_DSN_LENGTH o include caratteri non validi, **SQLValidDSN** restituisce un errore e **ConfigDSN** restituisce un errore. La lunghezza del nome dell'origine dati viene controllata anche da **SQLWriteDSNToIni**.  
   
  Per configurare, ad esempio, un'origine dati che richiede un ID utente, una password e un nome di database, un'applicazione di installazione potrebbe passare le seguenti coppie parola chiave-valore:  
   

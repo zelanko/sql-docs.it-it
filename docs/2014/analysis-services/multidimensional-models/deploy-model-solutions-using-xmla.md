@@ -1,5 +1,5 @@
 ---
-title: Distribuire soluzioni di modelli utilizzando XMLA | Microsoft Docs
+title: Distribuire soluzioni di modelli tramite XMLA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68700aaba6c335bf7fe9686961933eac5c52f8f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075365"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>Distribuire soluzioni di modelli utilizzando XMLA
@@ -34,7 +34,7 @@ ms.locfileid: "66075365"
 >  La password eventualmente specificata nella stringa di connessione per un'origine dati o ai fini della rappresentazione non è contenuta nello script XML. Poiché in tale scenario la password è necessaria per l'elaborazione, è necessario aggiungerla manualmente allo script XML prima che questo venga eseguito oppure aggiungerla dopo l'esecuzione dello script XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)   
+ [Distribuire soluzioni di modelli tramite la distribuzione guidata](deploy-model-solutions-using-the-deployment-wizard.md)   
  [Sincronizzare database di Analysis Services](synchronize-analysis-services-databases.md)  
   
   

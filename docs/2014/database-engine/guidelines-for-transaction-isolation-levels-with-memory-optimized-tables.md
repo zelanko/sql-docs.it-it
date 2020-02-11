@@ -1,5 +1,5 @@
 ---
-title: Linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria | Microsoft Docs
+title: Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779156"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria
@@ -24,7 +24,7 @@ ms.locfileid: "62779156"
   
 -   TRANSACTION ISOLATION LEVEL è un'opzione obbligatoria per il blocco ATOMIC che include il contenuto di una stored procedure compilata in modo nativo.  
   
--   A causa delle restrizioni sull'utilizzo del livello di isolamento nelle transazioni tra contenitori, l'utilizzo di tabelle ottimizzate per la memoria in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato deve essere spesso accompagnato da un hint di tabella che specifica il livello di isolamento utilizzato per accedere alla tabella. Per altre informazioni sull'hint del livello di isolamento e transazioni tra contenitori, vedere [livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md).  
+-   A causa delle restrizioni sull'utilizzo del livello di isolamento nelle transazioni tra contenitori, l'utilizzo di tabelle ottimizzate per la memoria in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato deve essere spesso accompagnato da un hint di tabella che specifica il livello di isolamento utilizzato per accedere alla tabella. Per ulteriori informazioni sugli hint del livello di isolamento e sulle transazioni tra contenitori, vedere [livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md).  
   
 -   Il livello di isolamento delle transazioni desiderato deve essere dichiarato in modo esplicito. Non è possibile utilizzare hint di blocco (ad esempio XLOCK) per garantire l'isolamento di determinate righe o tabelle nella transazione.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62779156"
   
 -   Con le tabelle ottimizzate per la memoria è opportuno evitare transazioni con esecuzione prolungata. Tali transazioni aumentano la probabilità di conflitti e la conseguente interruzione della transazione. Una transazione con esecuzione prolungata può posticipare il processo di Garbage Collection. Più lunga è l'esecuzione di una transazione, più a lungo OLTP in memoria mantiene le versioni delle righe eliminate di recente; questo può ridurre le prestazioni di ricerca di nuove transazioni.  
   
- Le tabelle basate su disco in genere si basano sul blocco per l'isolamento delle transazioni. Le tabelle con ottimizzazione per la memoria si basano sul controllo di più versioni e sul rilevamento dei conflitti per garantire l'isolamento. Per informazioni dettagliate, vedere la sezione sul rilevamento dei conflitti, convalida e controlli di dipendenza di Commit in [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Le tabelle basate su disco in genere si basano sul blocco per l'isolamento delle transazioni. Le tabelle con ottimizzazione per la memoria si basano sul controllo di più versioni e sul rilevamento dei conflitti per garantire l'isolamento. Per informazioni dettagliate, vedere la sezione relativa ai controlli di rilevamento dei conflitti, convalida e dipendenza di commit nelle [transazioni nelle tabelle ottimizzate](../relational-databases/in-memory-oltp/memory-optimized-tables.md)per la memoria.  
   
  Le tabelle basate su disco consentono il controllo di più versioni con i livelli di isolamento SNAPSHOT e READ_COMMITTED_SNAPSHOT. Per le tabelle ottimizzate per la memoria tutti i livelli di isolamento sono basati su più versioni, inclusi REPEATABLE READ e SERIALIZABLE.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779156"
   
  La garanzia offerta dal livello di isolamento SNAPSHOT (il livello più basso di isolamento supportato per le tabelle ottimizzate per la memoria) include le garanzie di READ COMMITTED. Ogni istruzione della transazione legge la stessa versione coerente del database. Non solo tutte le righe vengono lette dalla transazione di cui è stato eseguito il commit nel database, ma anche tutte le operazioni di lettura rilevano il set di modifiche apportate dallo stesso set di transazioni.  
   
- **Linee guida**: Se solo la garanzia di isolamento READ COMMITTED è necessaria, utilizzare l'isolamento SNAPSHOT con le stored procedure compilate in modo nativo e per l'accesso a tabelle ottimizzate per la memoria tramite interpretato [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Linee guida**: se è necessaria solo la garanzia di isolamento Read Committed, usare l'isolamento dello snapshot con le stored procedure compilate in modo nativo e per [!INCLUDE[tsql](../includes/tsql-md.md)]accedere alle tabelle ottimizzate per la memoria tramite interpretato.  
   
  Per le transazioni in modalità autocommit, viene eseguito il mapping implicito del livello di isolamento READ COMMITTED a SNAPSHOT per le tabelle ottimizzate per la memoria. Pertanto, se il valore della sessione TRANSACTION ISOLATION LEVEL è impostato su READ COMMITTED, non è necessario specificare il livello di isolamento tramite un hint di tabella durante l'accesso alle tabelle ottimizzate per la memoria.  
   
@@ -91,13 +91,13 @@ COMMIT
   
      In alcune applicazioni è possibile che venga presupposto che i lettori attendano sempre i writer per eseguire il commit, in particolare in presenza di un'eventuale sincronizzazione tra le due transazioni nel livello applicazione.  
   
-     **Linee guida:** Le applicazioni non possono basarsi sul comportamento di blocco. Se un'applicazione richiede la sincronizzazione tra transazioni simultanee, tale logica può essere implementata nel livello applicazione o del livello di database, tramite [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Linee guida:** Le applicazioni non possono basarsi sul comportamento di blocco. Se un'applicazione richiede la sincronizzazione tra transazioni simultanee, tale logica può essere implementata a livello di applicazione o a livello di database, tramite [sp_getapplock &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Nelle transazioni che utilizzano l'isolamento READ COMMITTED ogni istruzione rileva la versione più recente delle righe nel database. Pertanto, le istruzioni successive rilevano le modifiche apportate nello stato del database.  
   
      Il polling di una tabella utilizzando un loop WHILE fino a trovare una nuova riga è un esempio di modello applicativo che utilizza questo presupposto. A ogni iterazione del ciclo la query rileverà gli aggiornamenti più recenti nel database.  
   
-     **Linee guida:** Se un'applicazione deve eseguire il polling di una tabella con ottimizzazione per la memoria per ottenere le righe più recenti scritte nella tabella, spostare il ciclo di polling all'esterno dell'ambito della transazione.  
+     **Linee guida:** Se un'applicazione deve eseguire il polling di una tabella ottimizzata per la memoria per ottenere le righe più recenti scritte nella tabella, spostare il ciclo di polling al di fuori dell'ambito della transazione.  
   
      Di seguito è riportato un modello di un'applicazione di esempio che utilizza questo presupposto. Eseguire il polling di una tabella utilizzando un ciclo WHILE fino a trovare una nuova riga. In ogni iterazione del ciclo la query accederà agli aggiornamenti più recenti nel database.  
   
@@ -123,7 +123,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Hint di tabella di blocco  
- Gli hint di blocco ([hint per la tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) come HOLDLOCK e XLOCK è utilizzabile con le tabelle basate su disco per avere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengano eseguiti più blocchi di quelli necessari per il livello di isolamento specificato.  
+ Gli hint di blocco ([hint di tabella &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), ad esempio HOLDLOCK e XLOCK, possono essere utilizzati con le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabelle basate su disco in modo da richiedere più blocchi rispetto a quelli necessari per il livello di isolamento specificato.  
   
  I blocchi non vengono utilizzati per le tabelle con ottimizzazione per la memoria. I livelli di isolamento più elevati quali REPEATABLE READ e SERIALIZABLE possono essere utilizzati per dichiarare le garanzie desiderate.  
   
@@ -131,7 +131,7 @@ COMMIT
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Linee guida per la logica di riesecuzione per le transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [Linee guida per la logica di ripetizione tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

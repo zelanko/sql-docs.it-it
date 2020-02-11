@@ -2,8 +2,7 @@
 title: Eseguire una valutazione della migrazione SQL Server
 titleSuffix: Data Migration Assistant
 description: Informazioni su come usare Data Migration Assistant per valutare una SQL Server locale prima di eseguire la migrazione a un altro SQL Server o al database SQL di Azure
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001906"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037172"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Eseguire una valutazione della migrazione di SQL Server con Data Migration Assistant
 
-Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione a SQL Server locali, SQL Server in esecuzione in una macchina virtuale di Azure o in un database SQL di Azure, usando Data Migration Assistant.
+Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione a SQL Server locali, SQL Server in esecuzione in una macchina virtuale di Azure o un database SQL di Azure usando Data Migration Assistant.
 
    > [!NOTE]
    > Data Migration Assistant v 5.0 introduce il supporto per l'analisi della connettività del database e delle query SQL incorporate nel codice dell'applicazione. Per altre informazioni, vedere il post di Blog relativo [all'uso di Data Migration Assistant per valutare il livello di accesso ai dati di un'applicazione](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
@@ -114,6 +114,9 @@ Le istruzioni dettagliate seguenti consentono di eseguire la prima valutazione p
 
     ![Aggiungere origini e avviare la valutazione](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> È possibile eseguire più valutazioni contemporaneamente e visualizzarne lo stato aprendo la pagina **All Assessments** (Tutte le valutazioni).
+
 ## <a name="view-results"></a>Visualizzare i risultati
 
 La durata della valutazione dipende dal numero di database aggiunti e dalle dimensioni dello schema di ogni database. I risultati vengono visualizzati per ogni database non appena sono disponibili.
@@ -156,4 +159,6 @@ Istruzioni dettagliate per la valutazione della conformità della destinazione s
 
 Al termine della valutazione di tutti i database, selezionare **Esporta report** per esportare i risultati in un file JSON o in un file CSV. È quindi possibile analizzare i dati con la propria praticità.
 
-È possibile eseguire più valutazioni contemporaneamente e visualizzarne lo stato aprendo la pagina **All Assessments** (Tutte le valutazioni).
+## <a name="save-and-load-assessments"></a>Salvare e caricare valutazioni
+
+Oltre ad esportare i risultati di una valutazione, è possibile salvare i dettagli di valutazione in un file e caricare un file di valutazione per una revisione successiva.  Per ulteriori informazioni, vedere l'articolo [salvare e caricare valutazioni con Data Migration Assistant](../dma/dma-save-load-assessments.md).

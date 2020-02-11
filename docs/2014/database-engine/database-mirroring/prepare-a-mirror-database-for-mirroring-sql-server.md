@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754778"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparazione di un database mirror per il mirroring (SQL Server)
@@ -29,9 +29,9 @@ ms.locfileid: "62754778"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Requirements"></a> Requisiti  
+###  <a name="Requirements"></a>Requisiti  
   
--   Le istanze del server principale e del server mirror devono essere eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene sia possibile che la versione di SQL Server del server mirror sia successiva, questa configurazione è consigliata solo per processi di aggiornamento accuratamente pianificati. In questo tipo di configurazione si corre il rischio che venga effettuato un failover automatico durante il quale lo spostamento dei dati viene automaticamente sospeso in quanto non è possibile spostare i dati in una versione precedente di SQL Server. Per altre informazioni, vedere [Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server](upgrading-mirrored-instances.md).  
+-   Le istanze del server principale e del server mirror devono essere eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene sia possibile che la versione di SQL Server del server mirror sia successiva, questa configurazione è consigliata solo per processi di aggiornamento accuratamente pianificati. In questo tipo di configurazione si corre il rischio che venga effettuato un failover automatico durante il quale lo spostamento dei dati viene automaticamente sospeso in quanto non è possibile spostare i dati in una versione precedente di SQL Server. Per altre informazioni, vedere [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 -   Le istanze del server principale e del server mirror devono essere eseguite nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62754778"
   
 -   Non è possibile eseguire il mirroring del database di sistema **master**, **msdb**, **temp**o **model** .  
   
--   È possibile eseguire il mirroring un database appartenente a un [gruppi di disponibilità AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   Non è possibile eseguire il mirroring di un database appartenente a un [gruppi di disponibilità AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Utilizzare un backup completo molto recente o uno differenziale recente del database principale.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62754778"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Proprietario del database o amministratore di sistema.  
   
-##  <a name="PrepareToRestartMirroring"></a> Per preparare un database mirror esistente per il riavvio del mirroring  
+##  <a name="PrepareToRestartMirroring"></a>Per preparare un database mirror esistente per il riavvio del mirroring  
  Se il mirroring è stato rimosso e lo stato del database mirror è ancora RECOVERING, è possibile riavviare il mirroring.  
   
-1.  Eseguire almeno un backup del log sul database principale. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+1.  Eseguire almeno un backup del log sul database principale. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 2.  Nel database mirror utilizzare RESTORE WITH NORECOVERY per il ripristino di tutti i backup del log eseguiti sul database principale dopo la rimozione del mirroring. Per altre informazioni, vedere [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="CombinedProcedure"></a> Per preparare un nuovo database mirror  
+##  <a name="CombinedProcedure"></a>Per preparare un nuovo database mirror  
  **Per preparare un database mirror**  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ ms.locfileid: "62754778"
   
     -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
-    -   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
+    -   [Creare un backup differenziale del Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
 3.  In genere, è necessario eseguire almeno un backup del log sul database principale. È tuttavia possibile evitare il backup del log se il database è stato appena creato e non è ancora stato eseguito alcun backup del log oppure se il modello di recupero è stato appena modificato da SIMPLE a FULL.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "62754778"
     > [!NOTE]  
     >  Se si ripristina il database un filegroup alla volta, prestare attenzione a ripristinare l'intero database.  
   
-    -   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+    -   [Ripristinare un backup del database &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) e [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+    -   [Restore &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-transact-sql) e gli [argomenti RESTORE &#40;transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 7.  Se si utilizza RESTORE WITH NORECOVERY, applicare tutti i backup del log in sospeso al database mirror.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754778"
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Prima di iniziare una sessione di mirroring del database, è necessario creare il database mirror. Questa operazione deve essere eseguita poco prima di iniziare la sessione di mirroring.  
   
- Questo esempio usa il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , che usa il modello di recupero con registrazione minima per impostazione predefinita.  
+ Nell'esempio viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in cui, per impostazione predefinita, viene utilizzato il modello di recupero con registrazione minima.  
   
 1.  Per utilizzare il mirroring con il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , è necessario modificare il database in modo da utilizzare il modello di recupero con registrazione completa:  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62754778"
   
  Per un esempio completo di impostazione del mirroring del database, con le impostazioni relative alla sicurezza e ai partner, nonché l'aggiunta di un server di controllo del mirroring, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver preparato un Database Mirror  
+##  <a name="FollowUp"></a>Completamento: dopo la preparazione di un database mirror  
   
 1.  Se è stato eseguito un backup del log aggiuntivo dopo l'ultima operazione RESTORE LOG, è necessario applicare manualmente ogni backup del log aggiuntivo, utilizzando RESTORE WITH NORECOVERY.  
   
@@ -240,14 +240,14 @@ ms.locfileid: "62754778"
   
 -   [Impostazione di un database mirror crittografato](set-up-an-encrypted-mirror-database.md)  
   
--   [Impostare un database mirror per l'uso della proprietà Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [Impostazione di un database mirror per l'utilizzo della proprietà Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/indexes/indexes.md)   
- [Mirroring di database e cataloghi full-text &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
+ [Eseguire il backup e il ripristino di indici e cataloghi full-text](../../relational-databases/indexes/indexes.md)   
+ [Mirroring del database e cataloghi full-text &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Mirroring e replica del database &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: Raccolta delle proprietà (ADO) | Microsoft Docs
+title: Raccolta Properties (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,27 +18,27 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917567"
 ---
 # <a name="properties-collection-ado"></a>Raccolta Properties (ADO)
-Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado.md) gli oggetti per un'istanza specifica di un oggetto.  
+Contiene tutti gli oggetti [Property](../../../ado/reference/ado-api/property-object-ado.md) per un'istanza specifica di un oggetto.  
   
-## <a name="remarks"></a>Note  
- Alcuni oggetti ADO hanno una **delle proprietà** raccolta costituita da **proprietà** oggetti. Ciascuna **proprietà** oggetto corrisponde a una caratteristica dell'oggetto ADO specifico del provider.  
+## <a name="remarks"></a>Osservazioni  
+ Alcuni oggetti ADO hanno una raccolta **Properties** costituita da oggetti **Property** . Ogni oggetto **Proprietà** corrisponde a una caratteristica dell'oggetto ADO specifico del provider.  
   
 > [!NOTE]
->  Vedere le [proprietà](../../../ado/reference/ado-api/property-object-ado.md) argomento di oggetto per una spiegazione più dettagliata di come usare **proprietà** oggetti.  
+>  Per una spiegazione più dettagliata dell'uso degli oggetti **Proprietà** , vedere l'argomento oggetto [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
   
- Il **proprietà dinamiche** delle **Recordset** oggetto passare dall'ambito (diventano non disponibile) quando il **Recordset** viene chiuso.  
+ Le **proprietà dinamiche** dell'oggetto **Recordset** non rientrano nell'ambito (diventano non disponibili) quando il **Recordset** viene chiuso.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Proprietà di raccolta di proprietà, metodi ed eventi](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Properties](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

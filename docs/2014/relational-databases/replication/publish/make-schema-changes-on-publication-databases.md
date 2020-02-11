@@ -18,16 +18,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199443"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
-  La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle seguenti modifiche dello schema nell'oggetto pubblicato appropriato nel server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tale modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   ALTER TABLE  
+-   MODIFICA TABELLA  
   
 -   ALTER TABLE SET LOCK ESCALATION non deve essere utilizzato se la replica della modifica dello schema è abilitata e una topologia include [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68199443"
   
 -   ALTER TRIGGER  
   
-     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] (Data Definition Language).  
+     È possibile utilizzare ALTER TRIGGER solo per trigger [DML]\ (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] \(Data Definition Language).  
   
 > [!IMPORTANT]  
 >  È necessario apportare le modifiche dello schema nelle tabelle tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche dello schema in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tenta di eliminare e ricreare la tabella. Poiché non è possibile eliminare gli oggetti pubblicati, la modifica dello schema ha esito negativo.  
@@ -89,7 +89,7 @@ ms.locfileid: "68199443"
   
 -   Per aggiungere una nuova colonna a una tabella e non includere la colonna in una pubblicazione esistente, disabilitare la replica delle modifiche dello schema e quindi eseguire ALTER TABLE \<Tabella> ADD \<Colonna>.  
   
--   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+-   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Sarà necessario reinizializzare le sottoscrizioni.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199443"
   
 -   Per eliminare una colonna da una pubblicazione esistente e dalla tabella nel server di pubblicazione, eseguire ALTER TABLE \<Tabella> DROP \<Colonna>. Per impostazione predefinita, la colonna viene quindi eliminata dalla tabella in tutti i Sottoscrittori.  
   
--   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+-   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Sarà necessario generare un nuovo snapshot.  
   
@@ -144,11 +144,12 @@ ms.locfileid: "68199443"
         ||100RTM, snapshot nativo|100RTM, snapshot carattere|Tutti gli altri livelli di compatibilità|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|Modifica consentita|Modifica bloccata|Modifica bloccata|  
-        |`geography` e `geometry`|Modifica consentita|Modifica consentita<sup>1</sup>|Modifica bloccata|  
+        |`geography` e `geometry`|Modifica consentita|Consenti modifica<sup>1</sup>|Modifica bloccata|  
         |`filestream`|Modifica consentita|Modifica bloccata|Modifica bloccata|  
-        |`date`, `time`, `datetime2` e `datetimeoffset`|Modifica consentita|Modifica consentita<sup>1</sup>|Modifica bloccata|  
+        |
+  `date`, `time`, `datetime2` e `datetimeoffset`|Modifica consentita|Consenti modifica<sup>1</sup>|Modifica bloccata|  
   
-         <sup>1</sup> sottoscrittori SQL Server Compact convertono questi tipi di dati nel Sottoscrittore.  
+         <sup>1</sup> SQL Server Compact i sottoscrittori convertono questi tipi di dati nel Sottoscrittore.  
   
 -   Se si verifica un errore quando si applica una modifica dello schema, ad esempio un errore dovuto all'aggiunta di una chiave esterna che fa riferimento a una tabella non disponibile nel Sottoscrittore, la sincronizzazione ha esito negativo ed è necessario reinizializzare la sottoscrizione.  
   
@@ -163,6 +164,6 @@ ms.locfileid: "68199443"
  [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)   
- [Rigenerare procedure transazionali personalizzate per riflettere le modifiche dello schema](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
+ [Rigenerazione di procedure transazionali personalizzate per riflettere le modifiche dello schema](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

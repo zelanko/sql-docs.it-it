@@ -19,18 +19,18 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000867"
 ---
-# <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
+# <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina la definizione di un tipo di agente di raccolta.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,20 +41,20 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collector_type_uid = ] 'collector_type_uid'` È il GUID per il tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e deve avere un valore se *nome* è NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'`GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e deve avere un valore se il *nome* è null.  
   
-`[ @name = ] 'name'` È il nome del tipo di agente di raccolta. *nome* viene **sysname** e deve avere un valore se *collector_type_uid* è NULL.  
+`[ @name = ] 'name'`Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collector_type_uid* è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Entrambi *collector_type_uid* oppure *nome* deve avere un valore, non possono essere entrambi NULL.  
+## <a name="remarks"></a>Osservazioni  
+ Il *collector_type_uid* o il *nome* deve avere un valore e non può essere null.  
   
  Questa procedura genererà un errore se esistono gli elementi della raccolta di questo tipo di raccolta.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **dc_admin** (con autorizzazione EXECUTE) ruolo predefinito del database per eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database **dc_admin** (con autorizzazione Execute).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene eliminato il tipo di agente di raccolta query T-SQL generico.  

@@ -11,10 +11,10 @@ ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729493"
 ---
 # <a name="custom-index-master-data-services"></a>Indice personalizzato (Master Data Services)

@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056165"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -39,25 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @parameter_name = ] 'parameter_name'` il nome dell'impostazione di configurazione da recuperare. Quando specificato, il valore dell'impostazione di configurazione viene restituito nel parametro di output **\@parameter_value** . Se non viene specificata alcuna **\@parameter_name** , questo stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione posta elettronica database nell'istanza.  
+`[ @parameter_name = ] 'parameter_name'`Nome dell'impostazione di configurazione da recuperare. Quando specificato, il valore dell'impostazione di configurazione viene restituito nel parametro di output ** \@parameter_value** . Quando non viene specificato alcun ** \@parameter_name** , questo stored procedure restituisce un set di risultati contenente tutte le impostazioni di configurazione posta elettronica database nell'istanza di.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Quando non viene specificato alcun **\@parameter_name** , restituisce un set di risultati con le colonne seguenti.  
+ Quando non viene specificato alcun ** \@parameter_name** , restituisce un set di risultati con le colonne seguenti.  
   
 ||||  
 |-|-|-|  
 |Nome colonna|Tipo di dati|Descrizione|  
 |**paramName**|**nvarchar(256)**|Nome del parametro di configurazione.|  
 |**paramValue**|**nvarchar(256)**|Valore del parametro di configurazione.|  
-|**description**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
+|**Descrizione**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nell'stored procedure **sysmail_help_configure_sp** sono elencate le impostazioni di configurazione posta elettronica database correnti per l'istanza di.  
   
- Quando si specifica un **\@parameter_name** , ma non viene fornito alcun parametro di output per **\@parameter_value**, questo stored procedure non produce alcun output.  
+ Quando si specifica un ** \@parameter_name** , ma non viene fornito alcun parametro di output per ** \@parameter_value**, questo stored procedure non produce alcun output.  
   
  Il stored procedure **sysmail_help_configure_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere richiamata con un nome in tre parti se il database corrente non è **msdb**.  
   
@@ -88,6 +88,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Stored procedure &#40;di posta elettronica database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

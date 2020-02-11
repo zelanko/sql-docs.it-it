@@ -1,5 +1,5 @@
 ---
-title: Generazione dello schema della Guida F1 di procedura guidata (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Guida sensibile al contesto della generazione guidata schema (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069953"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Generazione guidata schema (Analysis Services - Dati multidimensionali)
@@ -34,15 +34,15 @@ ms.locfileid: "66069953"
   
  Dopo avere generato e salvato uno schema relazionale tramite la Generazione guidata schema è possibile utilizzare la procedura guidata per modificare e ripopolare successivamente lo schema relazionale.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Specificare la destinazione &#40;Generazione guidata Schema&#41; &#40;Analysis Services - dati multidimensionali&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Impostazione generazione guidata schema di &#40;di destinazione&#41; &#40;Analysis Services Dati multidimensionali&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [Opzioni Schema Database Area di interesse &#40;Generazione guidata Schema&#41; &#40;Analysis Services - dati multidimensionali&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [Opzioni schema database area di interesse &#40;generazione guidata schema&#41; &#40;Analysis Services Dati multidimensionali&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Impostazione convenzioni di denominazione &#40;Generazione guidata Schema&#41; &#40;Analysis Services - dati multidimensionali&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Impostazione convenzioni di denominazione &#40;generazione guidata schema&#41; &#40;Analysis Services Dati multidimensionali&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Completamento procedura guidata &#40;Generazione guidata Schema&#41; &#40;Analysis Services - dati multidimensionali&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Completamento procedura guidata &#40;generazione guidata schema&#41; &#40;Analysis Services Dati multidimensionali&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  

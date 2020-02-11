@@ -19,16 +19,16 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843868"
 ---
-# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys. elastic_pool_resource_stats (database SQL di Azure)
+# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le statistiche di utilizzo delle risorse per tutti i pool elastici in un server di database SQL. Per ogni pool elastico è presente una riga per ogni finestra di report di 15 secondi (quattro righe al minuto). Sono inclusi CPU, i/o, log, consumo di risorse di archiviazione e utilizzo simultaneo di richieste/sessioni da parte di tutti i database nel pool. Questi dati vengono conservati per 14 giorni. 
+  Restituisce statistiche di uso delle risorse per tutti i pool elastici in un server di database SQL di Azure. Per ogni pool elastico è presente una riga per ogni finestra di report di 15 secondi (quattro righe al minuto). Sono inclusi CPU, IO, Log, uso dell'archiviazione e uso di richieste/sessioni simultanee da parte di tutti i database nel pool. Questi dati vengono conservati per 14 giorni. 
   
 ||  
 |-|  
@@ -39,15 +39,15 @@ ms.locfileid: "73843868"
 |**start_time**|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di Reporting di 15 secondi.|  
 |**end_time**|**datetime2**|Ora UTC che indica la fine dell'intervallo di Reporting di 15 secondi.|  
 |**elastic_pool_name**|**nvarchar(128)**|Nome del pool di database elastici.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Utilizzo medio del calcolo in percentuale del limite del pool.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Utilizzo medio di I/O in percentuale in base al limite del pool.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Utilizzo medio delle risorse di scrittura in percentuale del limite del pool.|  
-|**avg_storage_percent**|**decimal(5,2)**|Utilizzo medio dello spazio di archiviazione in percentuale del limite di archiviazione del pool.|  
-|**max_worker_percent**|**decimal(5,2)**|Numero massimo di ruoli di lavoro simultanei (richieste) in percentuale in base al limite del pool.|  
-|**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del pool.|  
-|**elastic_pool_dtu_limit**|**int**|Impostazione del DTU del pool elastico corrente per questo pool elastico durante questo intervallo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Impostazione limite massimo corrente di archiviazione del pool elastico per questo pool elastico in megabyte durante questo intervallo.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_cpu_percent**|**Decimal (5, 2)**|Utilizzo medio del calcolo espresso in percentuale del limite del pool.|  
+|**avg_data_io_percent**|**Decimal (5, 2)**|Utilizzo I/O medio espresso in percentuale sulla base del limite del pool.|  
+|**avg_log_write_percent**|**Decimal (5, 2)**|Utilizzo delle risorse di scrittura medio espresso in percentuale del limite del pool.|  
+|**avg_storage_percent**|**Decimal (5, 2)**|Utilizzo di spazio di archiviazione medio espresso in percentuale del limite di archiviazione del pool.|  
+|**max_worker_percent**|**Decimal (5, 2)**|Numero massimo di ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del pool.|  
+|**max_session_percent**|**Decimal (5, 2)**|Numero massimo di sessioni simultanee espresso in percentuale sulla base del limite del pool.|  
+|**elastic_pool_dtu_limit**|**int**|Impostazione del numero massimo DTU del pool elastico corrente per questo pool elastico durante l'intervallo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Impostazione del limite massimo di archiviazione del pool elastico corrente per questo pool elastico espresso in megabyte durante l'intervallo.|
+|**avg_allocated_storage_percent**|**Decimal (5, 2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Osservazioni
 
@@ -79,9 +79,9 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>Vedere anche
 
- Aumenta [la crescita esplosiva con i database elastici](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [Aumentare la crescita esplosiva con i database elastici](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Creare e gestire un pool di database elastici del database SQL (anteprima)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys. resource_stats &#40;database&#41; SQL di Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [sys. dm_db_resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

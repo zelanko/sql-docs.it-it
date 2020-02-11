@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 7dded8c79495d0bdc684927f4875a93c3160c1bf
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401037"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Caricamento del foglio di progettazione per la pianificazione della capacità del server per la piattaforma Analytics
@@ -31,7 +31,7 @@ Questo foglio di progettazione per la pianificazione della capacità consente di
   
 Stampare questo foglio di lavoro e compilarlo con i propri requisiti.  
   
-|Componente|Requisito|Compilare questo articolo con i propri requisiti|Raccomandazioni|  
+|Componente|Requisito|Compilare questo articolo con i propri requisiti|Consigli|  
 |-------------|---------------|--------------------------------------------------|-------------------|  
 |Archiviazione|Numero massimo di byte che si prevede di archiviare nel server di caricamento in un determinato periodo di tempo.|![Icona a forma di matita](media/pencil-icon.png "Icona a forma di matita")|Per determinare i requisiti di archiviazione, determinare la quantità di dati che si prevede di archiviare nel server di caricamento in un determinato periodo di tempo.  I requisiti di capacità sono solo per i file di caricamento. il sistema operativo e i file di caricamento devono trovarsi su matrici di dischi diversi.<br /><br />Ad esempio: se si prevede di caricare 100 GB di dati dal disco 3 volte al giorno, ma non di eliminare i file di dati fino alla fine della settimana, è necessario un minimo di 2,1 TB per archiviare i file di dati. Si consiglia di essere prudenti e ottenere circa il 30% di spazio di archiviazione per tenere conto delle variazioni e della crescita.  Per questo esempio, è preferibile 2,73 TB di spazio di archiviazione.|  
 |Velocità di caricamento|Numero massimo di byte per ora di dati da caricare in PDW.|![Icona a forma di matita](media/pencil-icon.png "Icona a forma di matita")|Si tratta di una stima. Quando si calcola questo requisito, si supponga che i file si trovino già nel server di caricamento e che le altre condizioni di caricamento siano le più valide possibile.<br /><br />Ad esempio: non è necessario fattorizzare la compressibilità dei dati perché dwloader Invia sempre dati non compressi al PDW. Non è necessario fattorizzare le conversioni dei tipi di dati e le dimensioni della tabella di destinazione.|  

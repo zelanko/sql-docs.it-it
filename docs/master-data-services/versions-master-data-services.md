@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727800"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
@@ -72,12 +72,12 @@ ms.locfileid: "73727800"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Modificare il nome di una versione esistente.|[Modificare il nome di una versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Modificare il nome di una versione esistente.|[Modificare il nome della versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |Bloccare una versione così solo gli amministratori possono modificare i dati.|[Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Sbloccare una versione così solo gli amministratori possono modificare i dati.|[Sbloccare una versione &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Eseguire il commit di una versione &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
 |Creare un nuovo flag per contrassegnare una versione.|[Creare un flag di versione &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un flag di versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Modificare il nome di un flag di versione esistente.|[Modificare il nome del flag di versione &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Assegnare un flag esistente a una versione.|[Assegnare un flag a una versione &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |Creare una nuova copia di una versione esistente|[Copiare una versione &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminare una versione esistente.|[Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
@@ -89,6 +89,6 @@ ms.locfileid: "73727800"
   
 -   [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

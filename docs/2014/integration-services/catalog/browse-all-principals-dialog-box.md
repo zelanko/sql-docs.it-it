@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771721"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Finestra di dialogo Sfoglia tutte le entità
@@ -55,7 +55,7 @@ ms.locfileid: "62771721"
  **Colonna Icona**  
  Icona che corrisponde al **Tipo** di entità.  
   
- **Name**  
+ **Nome**  
  Nome dell'entità.  
   
  **Tipo**  

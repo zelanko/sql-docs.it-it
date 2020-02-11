@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188826"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent è un servizio di Microsoft Windows che esegue attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   [Vantaggi di SQL Server Agent](#Benefits)  
   
@@ -31,22 +31,28 @@ ms.locfileid: "68188826"
   
 -   [Sicurezza per l'amministrazione di SQL Server Agent](#Security)  
   
-##  <a name="Benefits"></a> Vantaggi di SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I processi sono costituiti da uno o più passaggi, ciascuno dei quali contiene un'attività, ad esempio il backup di un database.  
+##  <a name="Benefits"></a>Vantaggi di SQL Server Agent  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I processi sono costituiti da uno o più passaggi, ciascuno dei quali contiene un'attività, ad esempio il backup di un database.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in grado di eseguire un processo incluso in una pianificazione, in risposta a un evento specifico, oppure su richiesta. Se, ad esempio, l'esigenza è quella di eseguire il backup di tutti i server aziendali ogni sera in orario non lavorativo, è possibile automatizzare questa attività, Pianificare l'esecuzione del backup dal lunedì al venerdì dopo le 22.00. In caso di problemi durante l'operazione, SQL Server Agent potrà registrare l'evento e inviarne notifica all'utente.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in grado di eseguire un processo incluso in una pianificazione, in risposta a un evento specifico, oppure su richiesta. Se, ad esempio, l'esigenza è quella di eseguire il backup di tutti i server aziendali ogni sera in orario non lavorativo, è possibile automatizzare questa attività, Pianificare l'esecuzione del backup dal lunedì al venerdì dopo le 22.00. In caso di problemi durante l'operazione, SQL Server Agent potrà registrare l'evento e inviarne notifica all'utente.  
   
 > [!NOTE]  
 >  Per impostazione predefinita, all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il servizio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent viene disabilitato, a meno che l'utente non scelga esplicitamente l'avvio automatico del servizio.  
   
-##  <a name="Components"></a> Componenti di SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  
+##  <a name="Components"></a>Componenti SQL Server Agent  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  
   
 ### <a name="jobs"></a>Processi  
- Un *processo* è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. I processi consentono la definizione di un'attività amministrativa eseguibile una o più volte e il monitoraggio della riuscita o non riuscita di ogni esecuzione. Un processo può essere eseguito su un server locale oppure su più server remoti.  
+ Un *processo* è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Usare i processi per definire un'attività amministrativa eseguibile una o più volte e monitorabile per verificarne l'esito positivo o negativo. Un processo può essere eseguito in un server locale o in più server remoti.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che sono in esecuzione al momento di un evento di failover su un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riprendono dopo il failover su un altro nodo del cluster di failover. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I processi di Agent che sono in esecuzione quando un nodo Hyper-V viene messo in pausa non riprendono se la pausa provoca un failover in un altro nodo. I processi che iniziano ma che non riescono a essere completati a causa di un evento di failover vengono registrati come avviati, ma non mostrano voci di log aggiuntive per il completamento o l'errore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in questi scenari sembrano non avere mai termine.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che sono in esecuzione al momento di un evento di failover su un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riprendono dopo il failover su un altro nodo del cluster di failover. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I processi di Agent che sono in esecuzione quando un nodo Hyper-V viene messo in pausa non riprendono se la pausa provoca un failover in un altro nodo. I processi che iniziano ma che non riescono a essere completati a causa di un evento di failover vengono registrati come avviati, ma non mostrano voci di log aggiuntive per il completamento o l'errore. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in questi scenari sembrano non avere mai termine.  
   
  È possibile eseguire i processi in diversi modi:  
   
@@ -61,7 +67,7 @@ ms.locfileid: "68188826"
  Ogni passaggio del processo viene eseguito in un contesto di sicurezza specifico. Nel caso dei passaggi di processo che utilizzano [!INCLUDE[tsql](../../includes/tsql-md.md)], specificare l'istruzione EXECUTE AS per impostare il contesto di sicurezza corrispondente. Per gli altri tipi di passaggi di processo, utilizzare un account proxy per impostare il contesto di sicurezza corrispondente.  
   
 ### <a name="schedules"></a>Pianificazioni  
- Una *pianificazione* specifica quando viene eseguito un processo. È possibile eseguire più processi sulla stessa pianificazione e applicare più di una pianificazione allo stesso processo. Una pianificazione consente di definire le condizioni seguenti relativi al momento in cui un processo viene eseguito:  
+ Una *pianificazione* specifica quando viene eseguito un processo. La stessa pianificazione può includere l'esecuzione di più processi e allo stesso processo possono essere applicate più pianificazioni. Per quanto riguarda quando un processo deve essere eseguito, una pianificazione può definire le condizioni seguenti:  
   
 -   All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -69,7 +75,7 @@ ms.locfileid: "68188826"
   
 -   Una sola volta in corrispondenza di una data e un'ora specifiche.  
   
--   Su base periodica.  
+-   In base a una pianificazione ricorrente.  
   
  Per altre informazioni, vedere [Creare e collegare le pianificazioni ai processi](create-and-attach-schedules-to-jobs.md).  
   
@@ -78,9 +84,10 @@ ms.locfileid: "68188826"
   
  Un avviso può rispondere a una delle condizioni seguenti:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventi  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eventi  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condizioni delle prestazioni  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condizioni delle prestazioni  
   
 -   Eventi WMI (Microsoft Windows Management Instrumentation) nel computer in cui viene eseguito SQL Server Agent  
   
@@ -88,20 +95,21 @@ ms.locfileid: "68188826"
   
 -   Invio di una notifica a uno o più operatori  
   
--   Esecuzione di un processo  
+-   Eseguire un processo  
   
  Per altre informazioni, vedere [Avvisi](alerts.md).  
   
 ### <a name="operators"></a>Operatori  
- Un *operatore* definisce le informazioni di contatto relative al responsabile della manutenzione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alcune organizzazioni le mansioni di operatore vengono assegnate a un unico dipendente. In organizzazioni con più server, tali mansioni possono essere ripartite tra più dipendenti. Un operatore non include informazioni di sicurezza e non definisce alcuna entità di sicurezza.  
+ Un *operatore* definisce le informazioni di contatto relative al responsabile della manutenzione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alcune organizzazioni le mansioni di operatore vengono assegnate a un unico dipendente. In organizzazioni con più server, tali mansioni possono essere ripartite tra più dipendenti. Un operatore non include informazioni di sicurezza e non definisce un'entità di sicurezza.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di segnalare gli avvisi agli operatori tramite:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di segnalare gli avvisi agli operatori tramite:  
   
 -   Posta elettronica  
   
 -   Cercapersone (tramite posta elettronica)  
   
--   **net send**  
+-   **NET SEND**  
   
 > [!NOTE]  
 >  Per inviare notifiche usando **Net Send**, è necessario che il servizio Windows Messenger sia avviato nel computer in cui si trova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -113,20 +121,22 @@ ms.locfileid: "68188826"
   
  È possibile definire un operatore come alias assegnato a un gruppo di utenti. In questo modo la notifica può raggiungere contemporaneamente tutti i membri dell'alias. Per altre informazioni, vedere [Operatori](operators.md).  
   
-##  <a name="Security"></a> Sicurezza per l'amministrazione di SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'agente utilizza il **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database nel **msdb** database per controllare l'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del `sysadmin` ruolo predefinito del server. Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
+##  <a name="Security"></a>Sicurezza per l'amministrazione di SQL Server Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent utilizza i ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** nel database **msdb** per controllare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del `sysadmin` ruolo predefinito del server. Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
   
 ### <a name="roles"></a>Ruoli  
- I membri del **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database in **msdb**, e i membri del `sysadmin` ruolo predefinito del server ha accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
+ I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del ruolo `sysadmin` predefinito del server hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
- Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
+ Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono definiti i sottosistemi inclusi nella tabella seguente:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono definiti i sottosistemi inclusi nella tabella seguente:  
   
 |Nome sottosistema|Descrizione|  
 |--------------------|-----------------|  
-|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> **\*\* Importanti \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |Sistema operativo (**CmdExec**)|Esegue un programma eseguibile.|  
 |PowerShell|Esegue un passaggio di processo con script di PowerShell.|  
 |Server di distribuzione repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente distribuzione repliche.|  
@@ -134,19 +144,21 @@ ms.locfileid: "68188826"
 |Lettura coda repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente di lettura coda repliche.|  
 |Snapshot repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente snapshot repliche.|  
 |Lettura log repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente lettura log repliche.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Command|Esegue un comando di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Query|Esegue una query di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|Esegue un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Comando|Esegue un comando di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Query|Esegue una query di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]esecuzione del pacchetto|Esegue un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
 > [!NOTE]  
 >  Poiché i passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] non utilizzano proxy, non è disponibile alcun sottosistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent applica restrizioni di sottosistema anche quando l'entità di sicurezza per il proxy disporrebbe dell'autorizzazione necessaria per eseguire l'attività nel passaggio di processo. Ad esempio, un proxy per un utente membro del ruolo predefinito del server sysadmin non può eseguire un passaggio di processo [!INCLUDE[ssIS](../../includes/ssis-md.md)] a meno che non abbia accesso al sottosistema di [!INCLUDE[ssIS](../../includes/ssis-md.md)] , anche se l'utente può eseguire pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent applica restrizioni di sottosistema anche quando l'entità di sicurezza per il proxy disporrebbe dell'autorizzazione necessaria per eseguire l'attività nel passaggio di processo. Ad esempio, un proxy per un utente membro del ruolo predefinito del server sysadmin non può eseguire un passaggio di processo [!INCLUDE[ssIS](../../includes/ssis-md.md)] a meno che non abbia accesso al sottosistema di [!INCLUDE[ssIS](../../includes/ssis-md.md)] , anche se l'utente può eseguire pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 ### <a name="proxies"></a>Proxy  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i proxy per la gestione dei contesti di sicurezza. È possibile utilizzare un proxy in più passaggi di processo. I membri del `sysadmin` ruolo predefinito del server è possibile creare i proxy.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i proxy per la gestione dei contesti di sicurezza. È possibile utilizzare un proxy in più passaggi di processo. I membri del `sysadmin` ruolo predefinito del server possono creare proxy.  
   
- Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del `sysadmin` ruolo predefinito del server hanno accesso illimitato al proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
+ Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del `sysadmin` ruolo predefinito del server dispongono di accesso illimitato ai proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per automatizzare l'amministrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedere come descritto di seguito:  

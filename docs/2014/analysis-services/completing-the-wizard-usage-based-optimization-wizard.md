@@ -1,5 +1,5 @@
 ---
-title: Completamento procedura guidata (Creazione guidata basata sulle statistiche) | Microsoft Docs
+title: Completamento procedura guidata (Ottimizzazione guidata basata sull'utilizzo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087555"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Completamento procedura guidata (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Completamento procedura guidata** per salvare la progettazione delle aggregazioni e assegnarla nelle partizioni selezionate. Se lo si desidera, è inoltre possibile elaborare le partizioni selezionate al termine della progettazione e del salvataggio delle aggregazioni da parte dell'Ottimizzazione guidata basata sulle statistiche di utilizzo.  
   
 ## <a name="options"></a>Opzioni  
- **Creare una nuova progettazione delle aggregazioni**  
+ **Crea una nuova progettazione delle aggregazioni**  
  Selezionare per creare una nuova progettazione delle aggregazioni e digitare un nome per la nuova progettazione delle aggregazioni.  
   
- **Eseguire il merge con una progettazione delle aggregazioni esistente**  
+ **Unisci a una progettazione delle aggregazioni esistente**  
  Selezionare per unire a una progettazione delle aggregazioni esistente. Selezionare una progettazione delle aggregazioni esistente dall'elenco.  
   
  **Le seguenti partizioni verranno modificate**  
@@ -36,7 +36,7 @@ ms.locfileid: "66087555"
  Consente di elaborare le partizioni selezionate al termine della procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di ottimizzazione basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
+ [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

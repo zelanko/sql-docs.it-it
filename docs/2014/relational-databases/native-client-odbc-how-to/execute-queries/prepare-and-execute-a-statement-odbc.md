@@ -1,5 +1,5 @@
 ---
-title: Preparare ed eseguire un'istruzione (ODBC) | Documenti di Microsoft
+title: Preparare ed eseguire un'istruzione (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200396"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparare ed eseguire un'istruzione (ODBC)
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Per preparare un'istruzione da eseguire più volte  
   
-1.  Chiamare [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
+1.  Chiamare la [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
   
-2.  Facoltativamente, è possibile chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+2.  Facoltativamente, chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
 3.  Per ogni parametro dell'istruzione preparata è possibile:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63200396"
   
     -   Chiamare [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) per eseguire l'istruzione preparata.  
   
-    -   Se si utilizzano parametri di input data-at-execution, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+    -   Se vengono utilizzati parametri di input data-at-execution, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Per preparare un'istruzione con associazione di parametri a livello di colonna  
   
@@ -54,11 +54,11 @@ ms.locfileid: "63200396"
   
     -   Impostare SQL_ATTR_PARAMS_STATUS_PTR in modo che punti a una matrice [S] di variabili SQLUSSMALLINT che contenga gli indicatori di stato dei parametri.  
   
-2.  Chiamare la funzione SQLPrepare per preparare l'istruzione.  
+2.  Chiamare SQLPrepare per preparare l'istruzione.  
   
-3.  Facoltativamente, è possibile chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+3.  Facoltativamente, chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
-4.  Facoltativamente, per ogni parametro nell'istruzione preparata, è possibile chiamare SQLDescribeParam per ottenere informazioni sui parametri.  
+4.  Facoltativamente, per ogni parametro nell'istruzione preparata, chiamare SQLDescribeParam per ottenere informazioni sui parametri.  
   
 5.  Per ogni marcatore di parametro:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63200396"
   
     -   Allocare una matrice di buffer di S parametri per archiviare le lunghezze dei dati.  
   
-    -   Chiamare la funzione SQLBindParameter per associare le matrici di lunghezza parametro valore e i dati del dati al parametro dell'istruzione.  
+    -   Chiamare SQLBindParameter per associare il valore dei dati del parametro e le matrici di lunghezza dei dati al parametro dell'istruzione.  
   
     -   Se il parametro è un testo data-at-execution o un parametro di immagine, configurarlo.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63200396"
   
     -   Inserire le S lunghezze e gli S valori di dati nelle matrici di parametri associate.  
   
-    -   Chiamare la funzione SQLExecute per eseguire l'istruzione preparata.  
+    -   Chiamare SQLExecute per eseguire l'istruzione preparata.  
   
-    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante SQLParamData e SQLPutData.  
+    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando SQLParamData e SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Per preparare un'istruzione con associazione di parametri a livello di riga  
   
@@ -98,19 +98,19 @@ ms.locfileid: "63200396"
   
     -   Impostare SQL_ATTR_PARAMS_STATUS_PTR in modo che punti a una matrice [S] di variabili SQLUSSMALLINT che contenga gli indicatori di stato dei parametri.  
   
-3.  Chiamare la funzione SQLPrepare per preparare l'istruzione.  
+3.  Chiamare SQLPrepare per preparare l'istruzione.  
   
-4.  Per ogni marcatore di parametro, chiamare la funzione SQLBindParameter per puntare il puntatore lunghezza valore e i dati ai dati di parametro alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
+4.  Per ogni marcatore di parametro, chiamare SQLBindParameter per puntare il valore dei dati del parametro e il puntatore alla lunghezza dei dati alle variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
   
 5.  Per ogni esecuzione di un'istruzione preparata:  
   
     -   Inserire i valori dei dati nella matrice di buffer dei parametri associati.  
   
-    -   Chiamare la funzione SQLExecute per eseguire l'istruzione preparata. Il driver esegue in modo efficace l'istruzione SQL S volte, una volta per ogni set di parametri.  
+    -   Chiamare SQLExecute per eseguire l'istruzione preparata. Il driver esegue in modo efficace l'istruzione SQL S volte, una volta per ogni set di parametri.  
   
-    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante SQLParamData e SQLPutData.  
+    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando SQLParamData e SQLPutData.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query procedure relative al &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Procedure relative all'esecuzione di query &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

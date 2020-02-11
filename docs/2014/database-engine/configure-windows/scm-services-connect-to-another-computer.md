@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810349"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Connessione a un altro computer (Gestione configurazione SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62810349"
   
 3.  Nella finestra di dialogo **Seleziona computer** digitare il nome del computer che si vuole gestire nella casella di testo **Altro computer** quindi fare clic su **OK**.  
   
-     Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer**\<*computerremoto*>.  
+     Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*computerremoto*>.  
   
 4.  Nell'albero della console espandere **Servizi e applicazioni**e quindi espandere **Gestione configurazione SQL Server** per gestire i servizi del computer remoto.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62810349"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nel **aprire** , digitare `mmc -a` per aprire la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console in modalità autore.  
+2.  Nella casella **Apri** Digitare `mmc -a` per aprire la [!INCLUDE[msCoName](../../includes/msconame-md.md)] console di gestione in modalità autore.  
   
 3.  Scegliere **Aggiungi/Rimuovi snap-in** dal menu **File**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62810349"
   
 11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.  
   
-12. Nel **File** menu, fare clic su **Salva con nome**e salvare il file nella cartella desiderata con un nome appropriato e il `.msc` estensione di file. Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Scegliere **Salva**con nome dal menu `.msc` **file** e salvare il file nella cartella desiderata con un nome appropriato con l'estensione del file. Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer di destinazione, fare doppio clic sul file. È possibile salvare un collegamento al file sul desktop o nel menu **Start** .  
   
