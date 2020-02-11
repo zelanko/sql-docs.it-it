@@ -1,5 +1,5 @@
 ---
-title: Gli identificatori tra virgolette | Microsoft Docs
+title: Identificatori delimitati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078998"
 ---
 # <a name="quoted-identifiers"></a>Identificatori delimitati
-In un'istruzione SQL, gli identificatori che contengono caratteri speciali o parole chiave di corrispondenza devono essere racchiuso *caratteri di identificatore offerta*; gli identificatori racchiusi tra tali caratteri sono note come *racchiusi tra virgolette gli identificatori*(noto anche come *identificatori delimitati* in SQL-92). Ad esempio, l'identificatore di contabilità è racchiuso tra virgolette in quanto segue **seleziona** istruzione:  
+In un'istruzione SQL, gli identificatori contenenti caratteri speciali o parole chiave corrispondenti devono essere racchiusi tra *virgolette*. gli identificatori racchiusi in tali caratteri sono noti come *identificatori tra virgolette* (noti anche come *identificatori delimitati* in SQL-92). Nell'istruzione **Select** seguente, ad esempio, l'identificatore contabilità fornitori è racchiuso tra virgolette:  
   
 ```  
 SELECT * FROM "Accounts Payable"  
 ```  
   
- Il motivo per inserire identificatori è eseguire l'istruzione analizzabili. Ad esempio, se contabilità fornitori non è delimitato nell'istruzione precedente, il parser sarebbe presuppongono che si sono verificati due tabelle, gli account e i fornitori e restituire un errore di sintassi che non sono stati separati da una virgola. L'identificatore virgolette è specifico del driver e viene recuperata con l'opzione SQL_IDENTIFIER_QUOTE_CHAR **SQLGetInfo**. Gli elenchi di caratteri speciali e parole chiave vengono recuperati con le opzioni SQL_SPECIAL_CHARACTERS e SQL_KEYWORDS **SQLGetInfo**.  
+ Il motivo per cui vengono citati gli identificatori consiste nel rendere l'istruzione analizzabile. Se, ad esempio, gli account pagabili non erano racchiusi tra virgolette nell'istruzione precedente, il parser presumerebbe che fossero presenti due tabelle, account e pagabili e restituisse un errore di sintassi che non erano separate da virgole. Il carattere virgoletta identificatore è specifico del driver e viene recuperato con l'opzione SQL_IDENTIFIER_QUOTE_CHAR in **SQLGetInfo**. Gli elenchi di caratteri speciali e di parole chiave vengono recuperati con le opzioni SQL_SPECIAL_CHARACTERS e SQL_KEYWORDS in **SQLGetInfo**.  
   
- Per sicurezza, applicazioni interoperative citare spesso tutti gli identificatori, ad eccezione di quelli per le pseudo-colonne, ad esempio la colonna ROWID in Oracle. **SQLSpecialColumns** restituisce un elenco di pseudocolonne. Inoltre, se sono presenti restrizioni specifiche dell'applicazione in cui sono sono presenti caratteri speciali nei nomi degli oggetti, è consigliabile per le applicazioni interoperative di non usare caratteri speciali in tali posizioni.
+ Per essere sicuri, le applicazioni interoperative spesso citano tutti gli identificatori tranne quelli per le pseudo-colonne, ad esempio la colonna ROWID in Oracle. **SQLSpecialColumns** restituisce un elenco di pseudo-colonne. Inoltre, se sono presenti restrizioni specifiche dell'applicazione in cui è possibile visualizzare i caratteri speciali in un nome di oggetto, è preferibile che le applicazioni interoperative non usino caratteri speciali in tali posizioni.

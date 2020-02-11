@@ -159,10 +159,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105751"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
@@ -180,7 +180,7 @@ ms.locfileid: "66105751"
   
  ![Diagramma degli elementi del misuratore](../media/gauge-elements-diagram.gif "Diagramma degli elementi del misuratore")  
   
- Per ulteriori informazioni sull'utilizzo dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per altre informazioni sull'uso dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare misuratori separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -188,8 +188,9 @@ ms.locfileid: "66105751"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GaugeTypes"></a> Tipi di misuratore  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili due tipi di misuratore, ovvero radiale e lineare. Il misuratore radiale viene usato in genere quando si desidera esprimere i dati come velocità. Il misuratore lineare viene invece usato per esprimere i dati come temperatura o valore della scala.  
+##  <a name="GaugeTypes"></a>Tipi di misuratore  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili due tipi di misuratore, ovvero radiale e lineare. Il misuratore radiale viene usato in genere quando si desidera esprimere i dati come velocità. Il misuratore lineare viene invece usato per esprimere i dati come temperatura o valore della scala.  
   
  Le differenze principali tra i due tipi sono la forma complessiva del misuratore e i relativi indicatori di misura disponibili. I misuratori radiali sono circolari, o gradi di cerchio, e sono simili ai tachimetri. Gli indicatori di misura del misuratore spesso sono lancette, ma possono essere marcatori o barre.  
   
@@ -209,10 +210,10 @@ ms.locfileid: "66105751"
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico a bullet.  
+ Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico bullet.  
   
   
-##  <a name="AddingData"></a> Aggiunta di dati a un misuratore  
+##  <a name="AddingData"></a>Aggiunta di dati a un misuratore  
  Dopo avere aggiunto un misuratore all'area di progettazione, trascinare un campo del set di dati nel riquadro dei dati del misuratore. I valori del campo vengono tutti aggregati per impostazione predefinita a un unico valore visualizzato sul misuratore. Tale valore è collegato all'indicatore di misura tramite la proprietà Value. A seconda del tipo di dati del campo, nel misuratore viene usata l'aggregazione SUM o COUNT. Quando si usano dati numerici, appropriati per l'aggiunta, nel misuratore viene usata la funzione SUM. In caso contrario, viene usata l'aggregazione COUNT. Il valore dell'indicatore di misura può usare un'aggregazione diversa o nessuna aggregazione.  
   
  Per visualizzare gruppi singoli o righe singole sul misuratore, è possibile aggiungere raggruppamenti. Quando vengono applicati il raggruppamento e il filtro, viene usato il valore dell'indicatore di misura per visualizzare l'ultimo gruppo o l'ultima riga nel set di dati restituito.  
@@ -240,7 +241,7 @@ ms.locfileid: "66105751"
     > [!NOTE]  
     >  Questo metodo non è applicabile quando sul misuratore non è presente un indicatore di misura o quando il report contiene più di un set di dati e il pannello del misuratore non è associato a un set di dati.  
   
--   Fare clic con il pulsante destro del mouse sull'indicatore di misura del misuratore e scegliere **Proprietà indicatore di misura**. Per la `Value`, selezionare un campo nell'elenco a discesa o definire un'espressione campo facendo il **espressione** (*fx*) pulsante.  
+-   Fare clic con il pulsante destro del mouse sull'indicatore di misura del misuratore e scegliere **Proprietà indicatore di misura**. Per `Value`, selezionare un campo nell'elenco a discesa o definire un'espressione di campo facendo clic sul pulsante **espressione** (*FX*).  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Aggregazione di campi in un solo valore  
  Quando viene aggiunto un campo a un misuratore, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per impostazione predefinita viene calcolata un'aggregazione per il campo. I tipi di dati numerici vengono aggregati con la funzione SUM. I tipi di dati non numerici vengono aggregati con la funzione COUNT che consente di calcolare il numero di istanze per un valore o un campo specifico all'interno del set di dati o del gruppo. Se il tipo di dati del campo valori è String, non sarà possibile visualizzare un valore numerico, neanche se nei campi sono presenti numeri. I campi stringa vengono invece aggregati usando la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile specificare un'espressione di Visual Basic per convertire i valori String in un tipo di dati numerici usando la costante CDbl o la costante CInt. L'espressione seguente, ad esempio, converte un campo stringa chiamato MyField in valori numerici.  
@@ -252,10 +253,10 @@ ms.locfileid: "66105751"
 ### <a name="defining-a-group-on-a-gauge"></a>Definizione di un gruppo su un misuratore  
  Dopo avere aggiunto un campo al misuratore, è possibile aggiungere un gruppo di dati. Il misuratore differisce da tutte le altre aree dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], in quanto consente di visualizzare più gruppi in un'unica area dati. Aggiungere un gruppo mediante la definizione di un'espressione di raggruppamento sul misuratore equivale ad aggiungere un gruppo di righe nell'area dati Tablix. Quando tuttavia viene aggiunto il gruppo, viene visualizzato solo il valore dell'ultimo gruppo come valore dell'indicatore di misura sul misuratore. Se ad esempio si aggiunge un'espressione di raggruppamento relativa all'anno, l'indicatore di misura punterà al valore aggregato relativo alle vendite dell'ultimo anno nel set di dati. Per altre informazioni sui gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
   
- Potrebbe essere necessario aggiungere un gruppo al misuratore se, ad esempio, si visualizzano più misuratori in una tabella o in un elenco e si desidera visualizzare i dati aggregati per gruppo. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Potrebbe essere necessario aggiungere un gruppo al misuratore se, ad esempio, si visualizzano più misuratori in una tabella o in un elenco e si desidera visualizzare i dati aggregati per gruppo. Per ulteriori informazioni, vedere [aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="PositioningData"></a> Posizionamento di elementi in un misuratore  
+##  <a name="PositioningData"></a>Posizionamento di elementi in un misuratore  
  Il pannello del misuratore è il contenitore di livello superiore in cui sono presenti uno o più misuratori. È possibile visualizzare la finestra di dialogo **Proprietà pannello del misuratore** facendo clic all'esterno del misuratore. Ogni misuratore, a sua volta, contiene diversi elementi, ovvero una scala del misuratore, un intervallo del misuratore e un indicatore di misura del misuratore. Per usare il misuratore, è necessario comprendere le modalità di misurazione degli elementi contenuti nel pannello del misuratore per poterne modificare le dimensioni e la posizione.  
   
 ### <a name="understanding-size-and-position-measurements"></a>Informazioni sulle misure di dimensioni e posizione  
@@ -290,20 +291,20 @@ ms.locfileid: "66105751"
   
 -   [Impostare un valore minimo o massimo su un misuratore &#40;Generatore report e SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Impostare un intervallo di blocco su un misuratore &#40;Report e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Impostare un intervallo di blocco su un misuratore &#40;Generatore report e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Specificare un'immagine come indicatore di misura su un misuratore &#40;Report e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Specificare un'immagine come indicatore di misura su un misuratore &#40;Generatore report e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> Contenuto della sezione  
+##  <a name="InThisSection"></a>Contenuto della sezione  
  Negli argomenti seguenti sono disponibili ulteriori informazioni sull'utilizzo dei misuratori.  
   
 |||  
 |-|-|  
-|Nome|Definizione|  
-|[Formattazione di scale su un misuratore &#40;Generatore report e SSRSSSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
+|Termine|Definizione|  
+|[Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
 |[Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione degli indicatori di misura dei misuratori e informazioni dettagliate sulle opzioni di formattazione per gli stili degli indicatori di misura dei misuratori radiali e lineari.|  
-|[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41; (Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;)](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  
+|[Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  
   
   
 ## <a name="see-also"></a>Vedere anche  

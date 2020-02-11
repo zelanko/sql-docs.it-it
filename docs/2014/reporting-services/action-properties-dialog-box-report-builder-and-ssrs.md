@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà azione (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà azione (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110075"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66110075"
  **Abilita come azione**  
  Selezionare un'opzione per indicare l'azione da eseguire quando l'utente fa clic sull'elemento.  
   
- **None**  
+ **Nessuno**  
  Selezionare questa opzione per indicare che all'elemento non è associata alcuna azione.  
   
  **Vai al report**  
@@ -58,14 +58,14 @@ ms.locfileid: "66110075"
   
  Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo senza l'estensione del nome di file. Se il report è archiviato nella stessa cartella del report corrente, è sufficiente utilizzare il nome del report. Se il report si trova in una cartella diversa nello stesso server di report, utilizzare un percorso relativo o completo. Un percorso relativo inizia dalla cartella corrente e risale la gerarchia di cartelle, ad esempio ../Cartella2/Report1. Un percorso completo inizia da /, la cartella Home, ad esempio /Report/Report1.  
   
- Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo, inclusa l'estensione del nome di file (RDL). Ad esempio, http:// *\<NomeServerSharePoint > /\<sito >* /Documents/Report1.rdl. I percorsi relativi non sono supportati.  
+ Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo, inclusa l'estensione del nome di file (RDL). Ad esempio, http://*\<NomeSharePointServer>/\<site>*/Documents/Report1.rdl. I percorsi relativi non sono supportati.  
   
  Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) nella [documentazione di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
  **Utilizzare i parametri seguenti per eseguire il report**  
  Aggiungere un elenco di parametri da passare al report drill-through. I nomi dei parametri devono corrispondere ai parametri definiti per il report di destinazione. Utilizzare i pulsanti **Aggiungi** ed **Elimina** per aggiungere e rimuovere parametri e le frecce SU e GIÙ per ordinare l'elenco di parametri.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un nuovo parametro da passare al report drill-through.  
   
  **Elimina**  
@@ -77,32 +77,32 @@ ms.locfileid: "66110075"
  **Freccia GIÙ**  
  Consente di spostare il parametro di una posizione verso il basso nell'elenco.  
   
- **Name**  
+ **Nome**  
  Digitare il testo che corrisponde al nome di un parametro definito nel report drill-through.  
   
  **Valore**  
- Digitare o selezionare un valore da passare per il parametro denominato nel report drill-through. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione.  
+ Digitare o selezionare un valore da passare per il parametro denominato nel report drill-through. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione.  
   
- **Omit**  
- Selezionare questa opzione per impedire l'esecuzione del parametro. Per impostazione predefinita, questa casella di controllo è deselezionata e non è attiva. Per selezionare la casella di controllo, fare clic sul pulsante **Espressione** (*fx*) e digitare **True** o creare un'espressione. La casella di controllo viene selezionata quando si fa clic su **OK** nella finestra di dialogo **Espressione** .  
+ **Omettere**  
+ Selezionare questa opzione per impedire l'esecuzione del parametro. Per impostazione predefinita, questa casella di controllo è deselezionata e non è attiva. Per selezionare la casella di controllo, fare clic sul pulsante **espressione** (*FX*) e digitare **true** o creare un'espressione. La casella di controllo è selezionata quando si fa clic su **OK** nella finestra di dialogo **espressione** .  
   
  **Vai al segnalibro**  
  Selezionare questa opzione per definire un collegamento a un segnalibro nel report corrente. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai al segnalibro**.  
   
- **Seleziona un segnalibro**  
- Digitare o selezionare l'ID del segnalibro del report a cui passare quando viene fatto clic sul collegamento. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione. L'ID del segnalibro può essere un ID statico oppure un'espressione che restituisce l'ID di un segnalibro. L'espressione può includere un campo contenente un ID del segnalibro.  
+ **Selezionare un segnalibro**  
+ Digitare o selezionare l'ID del segnalibro del report a cui passare quando viene fatto clic sul collegamento. Fare clic sul pulsante espressione (**FX**) per modificare l'espressione. L'ID del segnalibro può essere un ID statico oppure un'espressione che restituisce l'ID di un segnalibro. L'espressione può includere un campo contenente un ID del segnalibro.  
   
  Per creare un collegamento a un segnalibro, è innanzitutto necessario impostare la proprietà Bookmark di un elemento del report. Per impostare la proprietà Bookmark, selezionare un elemento del report e nel riquadro Proprietà digitare un valore o un'espressione per l'ID del segnalibro, ad esempio SalesChart o 5TopSales.  
   
  **Vai a URL**  
- Selezionare questa opzione per definire un collegamento a una pagina Web. Digitare o selezionare l'URL di una pagina Web o un'espressione che restituisca l'URL di una pagina Web. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione. L'espressione può includere un campo contenente un URL. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai a URL**.  
+ Selezionare questa opzione per definire un collegamento a una pagina Web. Digitare o selezionare l'URL di una pagina Web o un'espressione che restituisca l'URL di una pagina Web. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione. L'espressione può includere un campo contenente un URL. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai a URL**.  
   
  **Selezionare un URL**  
- Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http:// *\<nomeserver >*  /Images/Image1.jpg. Per un elemento pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http:// *\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
+ Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://*\<ServerName>*/images/image1.jpg. Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeSharePointServer>\</site>*/Documents/images/image1.jpg).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  

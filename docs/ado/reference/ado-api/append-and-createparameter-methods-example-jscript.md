@@ -1,5 +1,5 @@
 ---
-title: Append e CreateParameter (esempio di metodi (JScript) | Microsoft Docs
+title: Esempio di metodi Append e CreateParameter (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920720"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Append e CreateParameter (esempio di metodi (JScript)
-Questo esempio Usa la [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AppendJS**.  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Esempio di metodi Append e CreateParameter (JScript)
+In questo esempio vengono utilizzati i metodi [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AppendJS. asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -144,6 +144,6 @@ body {
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)

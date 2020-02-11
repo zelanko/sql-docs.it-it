@@ -1,5 +1,5 @@
 ---
-title: '&gt; (Maggiore di) (DMX) | Microsoft Docs'
+title: '&gt;(Maggiore di) (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9156525f463a3597c60421be7de0af64bd4f4ac7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074818"
 ---
-# <a name="gt-greater-than-dmx"></a>&gt; (Maggiore di) (DMX)
+# <a name="gt-greater-than-dmx"></a>&gt;(Maggiore di) DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Esegue un'operazione di confronto che determina se il valore di un'espressione DMX (Data Mining Extensions) è maggiore di quello di un'altra espressione DMX.  
@@ -35,8 +35,8 @@ DMX_Expression > DMX_Expression
  Valore booleano che contiene TRUE se entrambi i parametri sono non Null e il valore del primo parametro è maggiore di quello del secondo. Tale valore booleano contiene FALSE se entrambi i parametri sono non Null e il valore del primo parametro è minore o uguale a quello del secondo. Il valore booleano contiene un valore Null se un parametro o entrambi restituiscono un valore Null.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -17,14 +17,14 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921322"
 ---
 # <a name="addnew-method-ado"></a>Metodo AddNew (ADO)
-Crea un nuovo record per un aggiornabile [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+Crea un nuovo record per un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,30 +34,30 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *recordset*  
- Oggetto **Recordset** oggetto.  
+ *Recordset*  
+ Oggetto **Recordset** .  
   
  *FieldList*  
- Facoltativo. Un singolo nome o una matrice di nomi o le posizioni ordinali dei campi nel nuovo record.  
+ Facoltativa. Un singolo nome o una matrice di nomi o posizioni ordinali dei campi nel nuovo record.  
   
  *Valori*  
- facoltativo. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *Fieldlist* è una matrice *valori* deve anche essere una matrice con lo stesso numero di membri; in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
+ Facoltativa. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *FieldName* è una matrice, *i valori* devono essere anche una matrice con lo stesso numero di membri. in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
-## <a name="remarks"></a>Note  
- Usare la **AddNew** metodo per creare e inizializzare un nuovo record. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **adAddNew** (una [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valore) per verificare se è possibile aggiungere record corrente **Recordset**oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Usare il metodo **AddNew** per creare e inizializzare un nuovo record. Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) con **adAddNew** (un valore [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.  
   
- Dopo aver chiamato il **AddNew** metodo, il nuovo record del record corrente e rimane tale dopo la chiamata il [Update](../../../ado/reference/ado-api/update-method.md) (metodo). Poiché viene aggiunto il nuovo record per il **Recordset**, una chiamata a **MoveNext** dopo l'aggiornamento verrà spostato oltre la fine del **Recordset**, rendendo **EOF**  True. Se il **Recordset** objekt nepodporuje segnalibri, potrebbe non essere in grado di accedere al record di nuovo dopo il passaggio a un altro record. A seconda del tipo di cursore, potrebbe essere necessario chiamare il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per rendere accessibile il nuovo record.  
+ Dopo aver chiamato il metodo **AddNew** , il nuovo record diventa il record corrente e rimane aggiornato dopo la chiamata al metodo [Update](../../../ado/reference/ado-api/update-method.md) . Poiché il nuovo record viene aggiunto al **Recordset**, una chiamata a **MoveNext** che segue l'aggiornamento viene spostata oltre la fine del **Recordset**, rendendo **EOF** true. Se l'oggetto **Recordset** non supporta i segnalibri, potrebbe non essere possibile accedere al nuovo record dopo lo spostamento in un altro record. A seconda del tipo di cursore, potrebbe essere necessario chiamare il metodo [Requery](../../../ado/reference/ado-api/requery-method.md) per rendere accessibile il nuovo record.  
   
- Se si chiama **AddNew** durante la modifica del record corrente o durante l'aggiunta di un nuovo record, chiama il metodo ADO le **Update** metodo per salvare eventuali modifiche e quindi crea il nuovo record.  
+ Se si chiama **AddNew** durante la modifica del record corrente o durante l'aggiunta di un nuovo record, ADO chiama il metodo **Update** per salvare le modifiche e quindi crea il nuovo record.  
   
- Il comportamento dei **AddNew** metodo dipende dalla modalità di aggiornamento del **Recordset** oggetto e se si passa il *Fieldlist* e *valori*argomenti.  
+ Il comportamento del metodo **AddNew** dipende dalla modalità di aggiornamento dell'oggetto **Recordset** e dal fatto che vengano passati gli argomenti *FieldName* e *values* .  
   
- In *modalità di aggiornamento immediato* (in cui il provider scrive le modifiche all'origine dati sottostante non appena viene chiamato il **aggiornare** metodo), la chiamata di **AddNew** metodo senza set di argomenti di [EditMode](../../../ado/reference/ado-api/editmode-property.md) proprietà **adEditAdd** (un' [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valore). Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo invia il nuovo record nel database e reimposta il **EditMode** proprietà **adEditNone** (un **EditModeEnum**valore). Se si passa il *Fieldlist* e *valori* argomenti, ADO genera immediatamente il nuovo record nel database (nessun **Update** è necessario chiamare); il **EditMode**  non modifica il valore di proprietà (**adEditNone**).  
+ In *modalità di aggiornamento immediato* , in cui il provider scrive le modifiche nell'origine dati sottostante una volta chiamato il metodo **Update** , la chiamata al metodo **AddNew** senza argomenti imposta la proprietà [EditMode](../../../ado/reference/ado-api/editmode-property.md) su **adEditAdd** (un valore [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) ). Il provider memorizza nella cache le modifiche del valore del campo in locale. Se si chiama il metodo di **aggiornamento** , il nuovo record viene inserito nel database e la proprietà **EditMode** viene reimpostata su **adEditNone** (valore **EditModeEnum** ). Se si passano gli argomenti *FieldName* e *values* , ADO inserisce immediatamente il nuovo record nel database (non è necessaria alcuna chiamata di **aggiornamento** ); il valore della proprietà **EditMode** non cambia (**adEditNone**).  
   
- In *modalità di aggiornamento batch* (in cui il provider vengono memorizzati nella cache più modifiche e li scrive all'origine dati sottostante solo quando si chiama il [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo), la chiamata di **AddNew** metodo senza argomenti imposta le **EditMode** proprietà **adEditAdd**. Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo aggiunge il nuovo record corrente **Recordset**, ma il provider non inviare le modifiche al database sottostante o reimpostare il **EditMode** per **adEditNone**, fino a quando si chiama il **UpdateBatch** (metodo). Se si passa il *Fieldlist* e *valori* argomenti, ADO invia il nuovo record per il provider per l'archiviazione in una cache e imposta il **EditMode** a **adEditAdd** ; è necessario chiamare il **UpdateBatch** metodo per registrare il nuovo record nel database sottostante.  
+ In *modalità di aggiornamento batch* , in cui il provider memorizza nella cache più modifiche e le scrive nell'origine dati sottostante solo quando si chiama il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) , la chiamata al metodo **AddNew** senza argomenti imposta la proprietà **EditMode** su **adEditAdd**. Il provider memorizza nella cache le modifiche del valore del campo in locale. La chiamata al metodo **Update** aggiunge il nuovo record al **Recordset**corrente, ma il provider non pubblica le modifiche nel database sottostante o Reimposta **EditMode** su **AdEditNone**finché non viene chiamato il metodo **UpdateBatch** . Se si passano gli argomenti *FieldName* e *values* , ADO invia il nuovo record al provider per l'archiviazione in una cache e imposta **EditMode** su **adEditAdd**; è necessario chiamare il metodo **UpdateBatch** per inserire il nuovo record nel database sottostante.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come usare il metodo AddNew con l'elenco dei campi e un elenco di valori incluso, per informazioni su come includere l'elenco dei campi e un elenco di valori come matrici.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo AddNew con l'elenco dei campi e l'elenco di valori inclusi, per vedere come includere l'elenco dei campi e l'elenco di valori come matrici.  
   
 ```  
 create table aa1 (intf int, charf char(10))  
@@ -91,7 +91,7 @@ rs.Update
  [Esempio di metodo AddNew (VC + +)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
  [Metodo CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Requery (metodo)](../../../ado/reference/ado-api/requery-method.md)   
+ [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)   
  [Metodo Supports](../../../ado/reference/ado-api/supports-method.md)   
- [Metodo di aggiornamento](../../../ado/reference/ado-api/update-method.md)   
+ [Metodo Update](../../../ado/reference/ado-api/update-method.md)   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

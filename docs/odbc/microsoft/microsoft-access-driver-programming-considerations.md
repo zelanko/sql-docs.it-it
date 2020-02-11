@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla programmazione dei Driver Microsoft Access | Microsoft Docs
+title: Considerazioni sulla programmazione di driver Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045120"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Considerazioni sulla programmazione dei driver Microsoft Access

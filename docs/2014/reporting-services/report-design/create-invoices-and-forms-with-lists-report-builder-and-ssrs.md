@@ -1,5 +1,5 @@
 ---
-title: Elenchi (Generatore Report e SSRS) | Microsoft Docs
+title: Elenchi (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106145"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
@@ -23,17 +23,17 @@ ms.locfileid: "66106145"
 > [!NOTE]  
 >  È possibile pubblicare elenchi separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero &#40;Generatore report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
  Nei report di esempio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è incluso un report in cui viene utilizzato un elenco. Per informazioni sugli elenchi, esplorare la definizione del report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a> Aggiunta di un elenco al report  
+##  <a name="AddingList"></a>Aggiunta di un elenco al report  
  Aggiungere un elenco all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. Per impostazione predefinita, l'elenco contiene inizialmente una sola cella in una riga associata al gruppo di dettagli.  
   
- ![Nuovo elemento elenco per i report nell'area di progettazione](../media/rs-listtemplatenew.gif "Nuovo elemento elenco per i report nell'area di progettazione")  
+ ![Elemento del report del nuovo elenco nell'area di progettazione](../media/rs-listtemplatenew.gif "Elemento del report del nuovo elenco nell'area di progettazione")  
   
  Quando si seleziona un elenco nell'area di progettazione, vengono visualizzati handle di riga e di colonna, come mostrato nella figura seguente.  
   
@@ -43,32 +43,32 @@ ms.locfileid: "66106145"
   
 
   
-##  <a name="DisplayingLayout"></a> Visualizzazione dei dati in un layout in formato libero  
+##  <a name="DisplayingLayout"></a>Visualizzazione di dati in un layout in formato libero  
  Per organizzare i dati del report in un layout in formato libero anziché in una griglia, è possibile aggiungere un elenco all'area di progettazione. Trascinare i campi dal riquadro dei dati del report alla cella. Per impostazione predefinita, la cella contiene un rettangolo utilizzato come contenitore. Spostare ogni campo nel contenitore fino a ottenere la progettazione desiderata. Utilizzare le guide di allineamento che appaiono quando le caselle di testo vengono trascinate nel contenitore del rettangolo per consentire l'allineamento verticale e orizzontale dei bordi. Rimuovere lo spazio vuoto indesiderato modificando la dimensione della cella. Per altre informazioni, vedere [Modificare l'altezza di riga o la larghezza di colonna &#40;Generatore report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  Nella figura seguente viene riportato un elenco che include informazioni su un ordine, oltre ai campi Date, Order, Qty, Product, LineTotal e a un'immagine.  
   
- ![Elenco in visualizzazione Progettazione con 4 campi e un'immagine](../media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione con 4 campi e un'immagine")  
+ ![Elenco in visualizzazione Progettazione, 4 campi e un'immagine](../media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione, 4 campi e un'immagine")  
   
  In Anteprima l'elenco si ripete per visualizzare i dati del campo in formato libero, come mostrato nella figura seguente:  
   
- ![Anteprima dell'elenco con quattro campi e un'immagine](../media/rs-basiclistformpreview.gif "Anteprima dell'elenco con quattro campi e un'immagine")  
+ ![Anteprima dell'elenco con 4 campi e un'immagine](../media/rs-basiclistformpreview.gif "Anteprima dell'elenco con 4 campi e un'immagine")  
   
 > [!NOTE]  
 >  Per mostrare il layout in formato libero per ogni valore del campo, nelle figure vengono incluse delle linee tratteggiate, in genere non utilizzate in un report di produzione.  
   
 
   
-##  <a name="DisplayingGrouping"></a> Visualizzazione dei dati con un livello di raggruppamento  
+##  <a name="DisplayingGrouping"></a>Visualizzazione di dati con un livello di raggruppamento  
  Poiché fornisce automaticamente un contenitore, è possibile utilizzare un elenco per visualizzare dati raggruppati con più viste. Per modificare l'elenco predefinito per specificare un gruppo, modificare il gruppo di dettagli, quindi specificare un nuovo nome e un'espressione di raggruppamento.  
   
  È possibile, ad esempio, incorporare una tabella e un grafico che mostrano viste diverse dello stesso set di dati. Se si aggiunge un gruppo all'elenco, gli elementi del report nidificati si ripetono una volta per ogni valore del gruppo. Nella figura seguente viene mostrato un elenco raggruppato per categoria di prodotto. Non è presente alcuna riga di dettaglio. Due tabelle vengono nidificate l'una accanto all'altra nell'elenco. Nella prima sono visualizzate le sottocategorie con le vendite totali, nella seconda la categoria raggruppata per area geografica, con un grafico che mostra la distribuzione delle sottocategorie.  
   
- ![Elenco con due tabelle, una con un grafico annidato](../media/rs-basiclistgroupdesign.gif "Elenco con due tabelle, una con un grafico annidato")  
+ ![Elenco con 2 tabelle di cui una con grafico nidificato](../media/rs-basiclistgroupdesign.gif "Elenco con 2 tabelle di cui una con grafico nidificato")  
   
  In Anteprima la tabella riporta le vendite totali per tutte le sottocategorie di biciclette e la tabella accanto visualizza la suddivisione di vendite per area geografica. Attraverso un'espressione che consente di specificare il colore di sfondo per la tabella e una tavolozza personalizzata per il grafico, la prima tabella include anche la legenda dei colori del grafico.  
   
- ![Anteprima, due tabelle, una con un grafico annidato](../media/rs-basiclistgrouppreview.gif "Anteprima, due tabelle, una con un grafico annidato")  
+ ![Anteprima, 2 tabelle di cui una con grafico nidificato](../media/rs-basiclistgrouppreview.gif "Anteprima, 2 tabelle di cui una con grafico nidificato")  
   
 
   
