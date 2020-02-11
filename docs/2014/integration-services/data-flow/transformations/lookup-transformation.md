@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900242"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
@@ -74,7 +74,7 @@ ms.locfileid: "62900242"
 -   Output nessuna corrispondenza. L'output senza corrispondenza gestisce le righe nell'input che non corrispondono ad almeno una voce nel set di dati di riferimento. Se si configura la trasformazione Ricerca in modo da gestire le righe senza corrispondenza come errori, le righe vengono reindirizzate all'output degli errori. In caso contrario, la trasformazione reindirizza tali righe all'output senza corrispondenza.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la trasformazione Ricerca disponeva solo di un output. Per altre informazioni su come eseguire una trasformazione ricerca creata in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vedere [aggiornare le trasformazioni ricerca](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la trasformazione Ricerca disponeva solo di un output. Per ulteriori informazioni su come eseguire una trasformazione Ricerca creata in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vedere [upgrade Lookup Transformations](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Output degli errori.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62900242"
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere***   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per ulteriori informazioni, vedere***  [implementare una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -114,14 +114,15 @@ ms.locfileid: "62900242"
   
      Tale opzione di memorizzazione nella cache è compatibile con l'opzione di non memorizzazione nella cache disponibile per la trasformazione Ricerca in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
 -   [Implementazione di una ricerca in modalità No Cache o Partial Cache](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -129,11 +130,11 @@ ms.locfileid: "62900242"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031) in msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
   
 -   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Post di blog [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Modello di ricerca senza distinzione tra maiuscole e minuscole) in blogs.msdn.com  
+-   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](https://go.microsoft.com/fwlink/?LinkId=157782)sul sito Web all'indirizzo blogs.msdn.com  
   
 -   Esempio [trasformazione Ricerca](https://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   

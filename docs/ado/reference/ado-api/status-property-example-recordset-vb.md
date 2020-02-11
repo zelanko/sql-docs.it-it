@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà Status (Recordset) (VB) | Microsoft Docs
+title: Esempio di proprietà Status (recordset) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916789"
 ---
 # <a name="status-property-example-recordset-vb"></a>Esempio della proprietà Status per recordset (VB)
-Questo esempio Usa la [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per visualizzare i record che sono stati modificati in un'operazione batch prima che si è verificato un aggiornamento batch.  
+In questo esempio viene utilizzata la proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) per visualizzare i record modificati in un'operazione batch prima che si verifichi un aggiornamento batch.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -98,4 +98,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Status (Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Proprietà Status (Recordset - ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

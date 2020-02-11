@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643333"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB)
   In questo esempio viene utilizzata l'interfaccia IRowsetFastUpload per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
- Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
+ Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([Abilitazione e configurazione di FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
   
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   

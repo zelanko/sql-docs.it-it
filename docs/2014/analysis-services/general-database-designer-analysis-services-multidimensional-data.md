@@ -1,5 +1,5 @@
 ---
-title: Generale (progettazione Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Generale (Progettazione database) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081074"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Generale (Progettazione database) (Analysis Services - Dati multidimensionali)
@@ -48,7 +48,7 @@ ms.locfileid: "66081074"
  **Lingua**  
  Consente di selezionare la lingua per la transazione specificata.  
   
- Per aggiungere una nuova traduzione alla griglia, fare clic su  **\<Aggiungi nuova traduzione >** .  
+ Per aggiungere una nuova traduzione alla griglia, fare clic su ** \<Aggiungi nuova traduzione>**.  
   
  **Didascalia tradotta**  
  Consente di digitare la didascalia del database nella lingua della traduzione. Se vuota, viene utilizzata la didascalia predefinita del database.  
@@ -60,14 +60,14 @@ ms.locfileid: "66081074"
  Espandere la sezione **Mapping tipi di conto** per modificare la funzione di aggregazione predefinita associata a ogni **tipo** di conto nel database selezionato.  
   
 > [!NOTE]  
->  Questa opzione si applica esclusivamente ai cubi nei quali una o più misure usano la funzione di aggregazione *ByAccount* .  
+>  Questa opzione è applicabile solo ai cubi nei quali una o più misure utilizzano la funzione di aggregazione *ByAccount* .  
   
  Nella griglia visualizzata in questa sezione sono incluse le colonne seguenti:  
   
- **Name**  
+ **Nome**  
  Consente di digitare il nome del tipo di conto.  
   
- Per aggiungere un nuovo tipo di account, fare clic su  **\<Aggiungi nuovo tipo di conto >** .  
+ Per aggiungere un nuovo tipo di conto, fare clic su ** \<Aggiungi nuovo tipo di account>**.  
   
  **Alias**  
  Consente di impostare il nome predefinito del tipo di conto per l'utilizzo con Configurazione guidata funzionalità di Business Intelligence. Se la colonna è lasciata vuota, viene utilizzato il valore predefinito indicato nella colonna **Nome** .  
@@ -76,8 +76,8 @@ ms.locfileid: "66081074"
  Consente di selezionare la funzione di aggregazione da utilizzare per il tipo di conto selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [I database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
- [Gli avvisi di &#40;finestra di progettazione del Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Avvisi &#40;progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

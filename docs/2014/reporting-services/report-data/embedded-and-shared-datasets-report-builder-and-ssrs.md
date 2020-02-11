@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107281"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati (Generatore report e SSRS)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Il set di dati dipende dalla connessione dati contenente le informazioni sull'origine dati esterna. I dati stessi non sono inclusi nella definizione del report. Nel set di dati sono contenuti un comando di query, una raccolta campi, parametri, filtri e opzioni dei dati in cui sono incluse la distinzione tra maiuscole e minuscole e le regole di confronto. Esistono due tipi di set di dati:  
   
--   **Set di dati condivisi.** Un set di dati condiviso viene pubblicato in un server di report e può essere utilizzato da più report. Un set di dati condiviso deve essere basato su un'origine dati condivisa. Può essere memorizzato nella cache ed essere pianificato creando un piano di aggiornamento della cache.  
+-   **DataSet condivisi.** Un set di dati condiviso viene pubblicato in un server di report e può essere utilizzato da più report. Un set di dati condiviso deve essere basato su un'origine dati condivisa. Può essere memorizzato nella cache ed essere pianificato creando un piano di aggiornamento della cache.  
   
--   **Set di dati incorporati.** I set di dati incorporati vengono definiti e utilizzati in un singolo report.  
+-   **DataSet incorporati.** I set di dati incorporati vengono definiti e utilizzati in un singolo report.  
   
  La differenza tra i due tipi dipende dalle diverse modalità di creazione, archiviazione e gestione.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66107281"
     |Proprietà|Note sulla configurazione per la definizione|Note sulla configurazione per l'istanza|  
     |--------------|--------------------------------------------|------------------------------------------|  
     |Testo della query|Configurare la query, anche definendola come espressione.|Impossibile modificare la query.|  
-    |Parametri della query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
-    |Filtri|Definisci filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
+    |Parametri di query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
+    |Filtri|Definire filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
     |origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
     |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
     |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
@@ -61,7 +61,7 @@ ms.locfileid: "66107281"
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

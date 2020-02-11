@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893614"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Restituisce il set di tuple del primo set specificato in cui esiste almeno una tupla del secondo set specificato. Questa funzione consente di eseguire manualmente ciò che la funzione Auto Exist esegue automaticamente. Per ulteriori informazioni su auto exists, vedere [concetti chiave in &#40;MDX&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Restituisce il set di tuple del primo set specificato in cui esiste almeno una tupla del secondo set specificato. Questa funzione consente di eseguire manualmente ciò che la funzione Auto Exist esegue automaticamente. Per ulteriori informazioni su auto exists, vedere [concetti chiave in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Se il nome \<del gruppo di misure facoltativo > viene specificato, la funzione restituisce le tuple esistenti con una o più tuple del secondo set e le tuple a cui sono associate righe nella tabella dei fatti del gruppo di misure specificato.  
+ Se il nome \<del gruppo di misure facoltativo> viene specificato, la funzione restituisce le tuple esistenti con una o più tuple del secondo set e le tuple a cui sono associate righe nella tabella dei fatti del gruppo di misure specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Espressione stringa valida che specifica il nome di un gruppo di misure.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 1.  Quando viene specificato l'argomento MeasureGroupName, le righe del gruppo di misure con misure che contengono valori null contribuiscono a **esistere** . Questa è la differenza tra questo formato di EXISTS e la funzione NonEmpty: se la proprietà NullProcessing di queste misure è impostata su Preserve, ciò significa che le misure visualizzeranno i valori null quando le query vengono eseguite su tale parte del cubo. Non Empty rimuoverà sempre le tuple da un set con valori di misura null, mentre Exists con l'argomento MeasureGroupName non filtra le tuple a cui sono associate righe del gruppo di misure, anche se i valori della misura sono null.  
   
@@ -93,10 +93,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [MDX non &#40;vuoto&#41;](../mdx/nonempty-mdx.md)   
- [MDX IsEmpty &#40;&#41;](../mdx/isempty-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [Crossjoin &#40;&#41;MDX](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)   
+ [&#40;MDX non empty&#41;](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

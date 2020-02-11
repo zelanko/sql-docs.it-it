@@ -1,5 +1,5 @@
 ---
-title: Sys. server_audit_specifications (Transact-SQL) | Microsoft Docs
+title: sys. server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125011"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle specifiche del controllo del server in un controllo di SQL Server in un'istanza del server. Per altre informazioni su SQL Server Audit, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nome della specifica del server.|  
+|**nome**|**Sysname**|Nome della specifica del server.|  
 |**server_specification_id**|**Int**|ID del **server_specification**.|  
 |**create_date**|**DateTime**|Data di creazione della specifica del controllo del server.|  
 |**modified_date**|**DateTime**|Data dell'ultima modifica della specifica del controllo del server.|  
-|**is_state_enabled**|**tinyint**|Stato della specifica del controllo:<br /><br /> 0 - DISABILITATO<br /><br /> 1 - ABILITATA|  
+|**is_state_enabled**|**tinyint**|Stato della specifica del controllo:<br /><br /> 0-DISABILITATO<br /><br /> 1: ABILITATO|  
 |**audit_GUID**|**uniqueidentifier**|GUID del controllo che contiene questa specifica. Viene utilizzato durante l'enumerazione delle specifiche del controllo del server membro durante l'avvio del server.|  
   
-## <a name="permissions"></a>Permissions  
- Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le entità con l'autorizzazione **ALTER ANY Server Audit** o **View any Definition** possono accedere a questa vista del catalogo. Non è inoltre necessario negare l'autorizzazione **View any Definition** per l'entità.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
