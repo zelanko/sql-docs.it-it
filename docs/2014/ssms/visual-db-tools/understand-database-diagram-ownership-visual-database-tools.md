@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204703"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Informazioni sulla proprietà dei diagrammi di database (Visual Database Tools)
-  Per poter utilizzare la Progettazione diagrammi di database, è necessario che un membro del ruolo db_owner (un ruolo dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) ne effettui preventivamente la configurazione per il controllo dell'accesso ai diagrammi. Ciascun diagramma ha un solo proprietario, ovvero l'utente che lo ha creato. Per altre informazioni sull'impostazione dei diagrammi, vedere [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Per poter utilizzare la Progettazione diagrammi di database, è necessario che un membro del ruolo db_owner (un ruolo dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) ne effettui preventivamente la configurazione per il controllo dell'accesso ai diagrammi. Ciascun diagramma ha un solo proprietario, ovvero l'utente che lo ha creato. Per ulteriori informazioni sulla configurazione dei diagrammi, vedere la pagina relativa alla [configurazione di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  In relazione alla proprietà dei diagrammi, tenere presente quanto segue:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63204703"
 -   Se il proprietario di un diagramma viene rimosso dal database, il diagramma rimarrà all'interno del database finché un membro del ruolo db_owner non tenterà di aprirlo. A questo punto, il membro del ruolo db_owner potrà scegliere di subentrare come proprietario del diagramma.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare diagrammi di Database &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [Impostazione di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
+ [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

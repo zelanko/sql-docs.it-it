@@ -1,5 +1,5 @@
 ---
-title: Editor attività di monitoraggio eventi WMI (pagina generale) | Microsoft Docs
+title: Editor attività Monitoraggio eventi WMI (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054345"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor attività Monitoraggio eventi WMI (pagina Generale)
@@ -27,7 +27,7 @@ ms.locfileid: "66054345"
  Per ulteriori informazioni su questa attività, vedere [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) [Query con WQL](https://go.microsoft.com/fwlink/?LinkId=79045)in MSDN Library.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per l'attività Monitoraggio eventi WMI. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  

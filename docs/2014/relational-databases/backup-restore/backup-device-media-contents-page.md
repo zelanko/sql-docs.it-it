@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876693"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
@@ -43,7 +43,7 @@ ms.locfileid: "62876693"
  **Set di supporti**  
  Un set di supporti consiste in una raccolta ordinata di supporti di backup su cui è stata eseguita la scrittura di una o più operazioni di backup utilizzando un numero costante di dispositivi di backup.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome del set di supporti, se disponibile.  
   
  **Descrizione**  
@@ -57,9 +57,9 @@ ms.locfileid: "62876693"
   
 |Intestazione|Valori|  
 |------------|------------|  
-|**Name**|Nome del set di backup.|  
-|**Tipo**|L'oggetto di backup: Database, File, oppure  *\<vuoto >* (per i log delle transazioni).|  
-|**Componente**|Il tipo di backup eseguito: Completo, differenziale o Log delle transazioni.|  
+|**Nome**|Nome del set di backup.|  
+|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
+|**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  
@@ -72,13 +72,13 @@ ms.locfileid: "62876693"
   
 -   [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   [Specificare un disco o un nastro come destinazione di backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Impostare la data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62876693"
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   

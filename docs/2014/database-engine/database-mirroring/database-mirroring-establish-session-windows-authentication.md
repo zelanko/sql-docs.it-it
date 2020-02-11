@@ -1,5 +1,5 @@
 ---
-title: Stabilire una sessione utilizzando l'autenticazione di Windows (Transact-SQL) di mirroring del Database | Microsoft Docs
+title: Stabilire una sessione di mirroring del database tramite l'autenticazione di Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755514"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
@@ -42,9 +42,9 @@ ms.locfileid: "62755514"
      Per ogni istanza del server in una sessione di mirroring del database è necessario un endpoint di mirroring del database. Se l'endpoint non esiste, è necessario crearlo.  
   
     > [!NOTE]  
-    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: autenticazione di Windows o autenticazione basata su certificati. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per ulteriori informazioni, vedere [sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE **=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
+     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si intende utilizzare questa istanza del server esclusivamente per i partner nelle sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint**=**(partner ruolo). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET PARTNER, l'opzione STATE degli endpoint di entrambi i partner deve essere impostata su STARTED.  
   
@@ -63,17 +63,17 @@ ms.locfileid: "62755514"
   
 4.  Per impostare il server principale come partner sul database mirror, connettersi al server mirror ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     ALTER database *<database_name>* set partner **=** _<server_network_address>_  
   
-     dove *<database_name>* è il nome del database di cui eseguire il mirroring (il nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete del server principale.  
+     dove *<database_name>* è il nome del database di cui eseguire il mirroring (questo nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete del server principale.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP<strong>://</strong>\<*indirizzo_sistema>* <strong>:</strong>\<*porta>*  
+     TCP<strong>://</strong>\<*System-Address>* <strong>:</strong>\<*porta>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Ad esempio, sull'istanza del server mirror, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server principale originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER1, ovvero il nome del sistema partner, e il numero della porta usata dall'endpoint del mirroring del database del partner è 7022:  
+     Ad esempio, sull'istanza del server mirror, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server principale originale. Il nome del database è **AdventureWorks**, l'indirizzo di sistema è DBSERVER1, il nome del sistema del partner e la porta utilizzata dall'endpoint del mirroring del database del partner è 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -84,11 +84,11 @@ ms.locfileid: "62755514"
   
 5.  Per impostare il server mirror come partner sul database principale, connettersi al server principale ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     ALTER database *<database_name>* set partner **=** _<server_network_address>_  
   
      Per ulteriori informazioni, vedere il passaggio 4.  
   
-     Ad esempio, sull'istanza del server principale, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server mirror originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER2, ovvero il nome del sistema partner, e il numero della porta usata dall'endpoint del mirroring del database del partner è 7025:  
+     Ad esempio, sull'istanza del server principale, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server mirror originale. Il nome del database è **AdventureWorks**, l'indirizzo di sistema è DBSERVER1, il nome del sistema del partner e la porta utilizzata dall'endpoint del mirroring del database del partner è 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -212,14 +212,14 @@ ms.locfileid: "62755514"
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Consentire l'accesso alla rete a un endpoint del mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Mirroring del database e log shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
+ [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [&#40;SQL Server di mirroring e log shipping del database&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Mirroring e replica del database &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [Specificare un indirizzo di rete del server &#40;il mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

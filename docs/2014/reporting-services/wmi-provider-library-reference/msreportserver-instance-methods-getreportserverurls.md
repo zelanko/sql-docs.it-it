@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097192"
 ---
-# <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Metodo GetReportServerUrls (MSReportServer_Instance WMI)
+# <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>Metodo GetReportServerUrls (MSReportServer_Instance WMI)
   Restituisce un elenco degli URL che è possibile utilizzare per accedere al server di report e alla gestione report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,13 +35,13 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *ApplicationName[]*  
+ *ApplicationName []*  
  Matrice che contiene le applicazioni installate. I valori sono `ReportServerWebService` e `ReportManager`.  
   
- *URLs[]*  
+ *URL []*  
  Matrice che contiene gli URL registrati correttamente.  
   
- *Lunghezza*  
+ *Length*  
  Valore intero che contiene la lunghezza delle matrici restituite.  
   
  *HRESULT*  
@@ -49,11 +49,11 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Valori restituiti  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I metodi esposti dagli oggetti di gestione WMI vengono chiamati tramite la funzione InvokeMethod. Per altre informazioni, vedere gli argomenti relativi all'esecuzione di metodi in oggetti di gestione all'interno della documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

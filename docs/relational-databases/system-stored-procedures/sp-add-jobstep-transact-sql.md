@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412849"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74412849"
 
   Aggiunge un passaggio (operazione) a un processo di SQL Agent.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
   > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte, ma non tutti i tipi di processo SQL Server Agent sono supportati. Per informazioni dettagliate, vedere [istanza gestita di database SQL di Azure differenze di T-SQL da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
@@ -61,7 +61,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
          | [ @proxy_name = ] 'proxy_name' } ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
 `[ @job_id = ] job_id`Numero di identificazione del processo a cui aggiungere il passaggio. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
 `[ @job_name = ] 'job_name'`Nome del processo a cui aggiungere il passaggio. *job_name* è di **tipo sysname**e il valore predefinito è null.  
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`Sottosistema utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il *comando*. il *sottosistema* è di **tipo nvarchar (40)**. i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> ** \* Importante \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CmdExec**'|Comando del sistema operativo o programma eseguibile|  
@@ -110,7 +110,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`Azione da eseguire se il passaggio ha esito positivo. *success_action* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1** (impostazione predefinita)|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -121,7 +121,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_action = ] fail_action`Azione da eseguire se il passaggio ha esito negativo. *fail_action* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2** (impostazione predefinita)|Uscita in caso di esito negativo|  
@@ -146,7 +146,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`È un'opzione che controlla il comportamento. *Flags* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (impostazione predefinita)|Il file di output viene sovrascritto|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  
@@ -164,7 +164,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_add_jobstep** deve essere eseguito dal database **msdb** .  
@@ -215,6 +215,6 @@ GO
  [sp_help_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

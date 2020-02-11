@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401459"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Elenchi di controllo della configurazione dell'appliance per il sistema di piattaforma Analytics
@@ -24,7 +24,7 @@ Fornisce elenchi di controllo per le attività necessarie per configurare il sis
   
 ## <a name="BeforeTasks"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  Il dispositivo deve essere installato nel data center e acceso.  
   
@@ -49,7 +49,7 @@ Il SQL Server PDW**Configuration Manager** (PDWCM) è uno strumento di amministr
   
 Utilizzare **Configuration Manager** per eseguire le attività di configurazione seguenti.  
   
-|Attività di configurazione|Description|  
+|Attività di configurazione|Descrizione|  
 |----------------------|---------------|  
 |Acquisire familiarità con i nomi dei componenti fisici|[Componenti fisici di infrastruttura PDW e appliance &#40;sistema di piattaforma di analisi&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Avvia SQL Server PDW Configuration Manager|[Avviare la piattaforma Configuration Manager &#40;Analytics System&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ Utilizzare **Configuration Manager** per eseguire le attività di configurazione
 ## <a name="AddTasks"></a>Eseguire attività di configurazione aggiuntive  
 Dopo aver eseguito le attività di **Configuration Manager** , eseguire il seguente elenco di attività di configurazione aggiuntive. Alcune di queste attività sono facoltative.  
   
-|Attività di configurazione|Description|  
+|Attività di configurazione|Descrizione|  
 |----------------------|---------------|  
 |Il software antivirus di terze parti può essere installato e configurato nell'appliance di SQL Server PDW per i nodi rivolte all'esterno.<br /><br />(Facoltativa)|Per ulteriori informazioni, vedere la pagina relativa al [&#41;del sistema &#40;Analytics del software antivirus ](antivirus-software.md).|  
 |La password per la modalità ripristino servizi directory può essere modificata.<br /><br />(Facoltativa)|Per ulteriori informazioni, vedere la pagina relativa alla [configurazione della password amministratore per l'accesso ai nodi ad in modalità ripristino servizi Directory &#40;ripristino servizi directory&#41; &#40;&#41;di sistema della piattaforma ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

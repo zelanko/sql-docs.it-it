@@ -1,5 +1,5 @@
 ---
-title: 'Attività 6: Importazione di valori dal progetto Cleanse Supplier List | Microsoft Docs'
+title: 'Attività 6: importazione di valori dal progetto cleane Supplier List | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489090"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Attività 6: Importazione di valori dal progetto Cleanse Supplier List
-  In questa attività vengono importate le informazioni sulla qualità dei dati raccolte durante il processo di pulizia. Visualizzare [importazione di pulizia dei valori di progetto in un dominio](https://msdn.microsoft.com/library/hh479581.aspx) per altre informazioni. Anche esportata la knowledge base in un file DQS prima di pubblicare aggiornato **Suppliers** della knowledge base.  
+  In questa attività vengono importate le informazioni sulla qualità dei dati raccolte durante il processo di pulizia. Per altri dettagli, vedere [importazione dei valori di un progetto di pulizia in un dominio](https://msdn.microsoft.com/library/hh479581.aspx) . È inoltre possibile esportare la Knowledge base in un file DQS prima di pubblicare la Knowledge base **Suppliers** aggiornata.  
   
-1.  Nella pagina principale del **Client DQS**, fare clic su **freccia destra** accanto a **Suppliers** sotto **Knowledge Base recenti** e fare clic su **Gestione dominio**.  
+1.  Nella pagina principale del **client DQS**fare clic sulla **freccia a destra** accanto a **fornitori** in **Knowledge Base recenti** e quindi su **Gestione dominio**.  
   
-2.  Fare clic su **Contact Email** nell'elenco di domini e passare per il **i valori di dominio** scheda nel riquadro di destra.  
+2.  Fare clic su **Contact email** nell'elenco di domini e passare alla scheda **Domain values** nel riquadro destro.  
   
-3.  Fare clic su **freccia giù** accanto al **Importa valori** icona sulla barra degli strumenti fare clic su **Importa valori progetto**.  
+3.  Fare clic sulla **freccia giù** accanto all'icona **Importa valori** sulla barra degli strumenti e fare clic su **Importa valori progetto**.  
   
-     ![Importare il progetto valori pulsante della barra degli strumenti](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "importare pulsante della barra degli strumenti valori progetto")  
+     ![Pulsante della barra degli strumenti Importa valori di progetto](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "Pulsante della barra degli strumenti Importa valori di progetto")  
   
-4.  Nel **Importa valori progetto** finestra di dialogo, seleziona la **Cleanse Supplier List** del progetto e fare clic su **OK**.  
+4.  Nella finestra di dialogo **Importa valori progetto** selezionare il progetto **Pulisci Supplier List** , quindi fare clic su **OK**.  
   
 5.  Si noti che tutti gli indirizzi di posta elettronica vengono importati insieme alle due correzioni apportate durante la pulizia interattiva. Scorrere per visualizzare le due correzioni.  
   
-    |Value|Correggi in|  
+    |valore|Correggi in|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  Ripetere il passaggio precedente di importare i valori di progetto per la **paese** si noti che viene aggiunta una nuova voce per la correzione e dominio **United State** a **United States** (con ' s').  
+6.  Ripetere il passaggio precedente dell'importazione dei valori del progetto per il dominio **Country** . si noti che è stata aggiunta una nuova voce per la correzione **dello stato United** a **Stati Uniti** (con ' s').  
   
-    |Value|Correggi in|  
+    |valore|Correggi in|  
     |-----------|----------------|  
-    |United State|United States|  
+    |United State|Stati Uniti|  
   
-7.  Per visualizzare i valori di dominio precedenti, deselezionare **Mostra solo nuovi** casella di controllo.  
+7.  Per visualizzare i valori di dominio precedenti, deselezionare la casella di controllo **Mostra solo nuovo** .  
   
-8.  Ripetere il passaggio precedente di importare i valori di progetto per la **Supplier Name** dominio. Per impostazione predefinita, dopo l'importazione, verranno visualizzati solo i nuovi valori. Per visualizzare tutti i valori, deselezionare **Mostra solo nuovi** casella di controllo. Sono stati arricchiti i **Suppliers** knowledge base con quello che hai imparato dell'attività di pulizia. Maggiore è l'attendibilità della Knowledge Base, migliori sono i risultati della pulizia.  
+8.  Ripetere il passaggio precedente per importare i valori di progetto per il dominio **Supplier Name** . Per impostazione predefinita, dopo l'importazione, verranno visualizzati solo i nuovi valori. Per visualizzare tutti i valori, deselezionare la casella di controllo **Mostra solo nuovi** . La Knowledge base **Suppliers** è stata arricchita con i concetti appresi dall'attività di pulizia. Maggiore è l'attendibilità della Knowledge Base, migliori sono i risultati della pulizia.  
   
     > [!NOTE]  
     >  Non è possibile importare valori per un dominio composito.  
   
-9. Fare clic su **Esporta Knowledge Base** icona sulla barra degli strumenti e quindi fare clic su **Esporta Knowledge Base**.  
+9. Fare clic sull'icona **Esporta Knowledge base** sulla barra degli strumenti e quindi fare clic su **Esporta Knowledge base**.  
   
      ![Menu Esporta Knowledge Base](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-02.jpg "Menu Esporta Knowledge Base")  
   
-10. Passare alla cartella dell'esercitazione, digitare **Suppliers. DQS** per il **nome file**, fare clic su **Salva**. È possibile utilizzare questo file DQS per creare una nuova Knowledge Base basandosi su di esso.  
+10. Passare alla cartella tutorial, digitare **Suppliers. DQS** per il **nome del file**e fare clic su **Salva**. È possibile utilizzare questo file DQS per creare una nuova Knowledge Base basandosi su di esso.  
   
-11. Fare clic su **OK** per chiudere la **Esporta Knowledge Base - Suppliers** finestra di messaggio.  
+11. Fare clic su **OK** per chiudere la finestra di messaggio **Esporta Knowledge base-fornitori** .  
   
 12. Fare clic su **fine** per completare l'attività.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65489090"
   
 14. Fare clic su **OK** nella finestra di messaggio.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Lezione 3: Corrispondenza dei dati per rimuovere i duplicati dall'elenco fornitori](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

@@ -21,18 +21,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127400"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
- Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene generalmente usata per chiamare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una stored procedure estesa per registrare un errore (definito dalla stored procedure estesa) nel file del log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel log dell'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiamare da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di log degli errori o [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro applicazioni di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +77,7 @@ oserrtextlen
  *errornum*  
  Numero dell'errore definito dalla stored procedure estesa. Questo numero deve essere compreso tra 50.001 e 2.147.483.647.  
   
- *severity*  
+ *gravità*  
  Valore di gravità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard per l'errore. Questo numero deve essere compreso tra 0 e 24.  
   
  *state*  
@@ -100,7 +101,7 @@ oserrtextlen
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione **srv_message_handler** consente a una stored procedure estesa di integrarsi con le funzioni centralizzate di registrazione e report errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli avvisi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere stabiliti per gli eventi dalle stored procedure estese e SQL Server Agent monitorerà queste condizioni di avviso.  
   
  Se il messaggio di errore è più lungo, viene troncato a 412 byte.  

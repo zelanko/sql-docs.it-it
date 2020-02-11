@@ -1,5 +1,5 @@
 ---
-title: Decision Trees scheda albero (Visualizzatore modello di Data Mining) | Microsoft Docs
+title: Scheda albero delle decisioni (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082294"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Scheda Albero delle decisioni (Visualizzatore modello di data mining)
   Nel riquadro **Albero delle decisioni** è disponibile una rappresentazione visiva delle regole delle decisioni create in un modello di albero delle decisioni. Nelle regole delle decisioni viene descritto il percorso verso un determinato risultato.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Per altre informazioni:** [algoritmo Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm.md), [visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -34,10 +34,10 @@ ms.locfileid: "66082294"
  **Visualizzatore**  
  Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. È possibile usare il visualizzatore personalizzato o il Visualizzatore contenuto di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se disponibili, è anche possibile utilizzare i visualizzatori plug-in.  
   
- **Eseguire lo zoom avanti**  
+ **Zoom avanti**  
  Consente di eseguire lo zoom avanti per ottenere una vista più dettagliata dei nodi e dei rami dell'albero delle decisioni. In un modello complesso, gli alberi delle decisioni possono disporre di molti livelli di diramazione.  
   
- **Eseguire lo zoom indietro**  
+ **Zoom indietro**  
  Consente di eseguire lo zoom indietro per ottenere una vista complessiva dell'albero.  
   
  **Copia parte visibile del grafico**  
@@ -46,13 +46,13 @@ ms.locfileid: "66082294"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scalabilità adatta il diagramma alla finestra**  
+ **Ridimensiona e adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero albero non si adatta alla schermata.  
   
  **Istogrammi**  
  Consente di selezionare il numero di stati che possono essere visualizzati nell'istogramma per ogni nodo. Se il numero di stati nel modello è inferiore al valore selezionato, non vengono visualizzate barre aggiuntive.  
   
- **Struttura ad albero**  
+ **Albero**  
  Consente di scegliere un albero da visualizzare nel visualizzatore. Se si crea un modello che dispone di più attributi stimabili, l'algoritmo consente di creare un albero separato per ogni attributo stimabile.  
   
  **Background**  
@@ -65,7 +65,7 @@ ms.locfileid: "66082294"
  Consente di spostare a destra o a sinistra la barra del dispositivo di scorrimento per modificare il numero di livelli visualizzati nel grafico dell'albero. Per vedere tutti i nodi nel modello, far scorrere la barra completamente a destra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

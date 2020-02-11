@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689412"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
   Crea un file di formato che contiene una descrizione del formato del file di dati della copia bulk corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,15 +52,15 @@ szFormatFile
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
- Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate a [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md) definiscono il formato del file di dati. **bcp_writefmt** Salva questa definizione nel file cui fa *szFormatFile*. Per altre informazioni, vedere [bcp_init](bcp-init.md).  
+## <a name="remarks"></a>Osservazioni  
+ Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate a [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md) definiscono il formato del file di dati. **bcp_writefmt** Salva questa definizione nel file a cui fa riferimento *szFormatFile*. Per ulteriori informazioni, vedere [bcp_init](bcp-init.md).  
   
- Per altre informazioni sulla struttura dei **bcp** i file di formato di dati, vedere [importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Per ulteriori informazioni sulla struttura dei file di formato dei dati **bcp** , vedere [importare ed esportare dati per operazioni bulk tramite l'utilità bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Per caricare un file di formato salvato, utilizzare [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Il file di formato generato dalla **bcp_writefmt** è supportato solo dalle versioni del **bcp** utilità distribuito con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 e versioni successive.  
+>  Il file di formato prodotto da **bcp_writefmt** è supportato solo dalle versioni dell'utilità **bcp** distribuite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la versione 7,0 e successive.  
   
 ## <a name="example"></a>Esempio  
   

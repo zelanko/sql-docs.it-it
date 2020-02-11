@@ -1,5 +1,5 @@
 ---
-title: I record di diagnostica | Microsoft Docs
+title: Record di diagnostica | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039884"
 ---
 # <a name="diagnostic-records"></a>Record di diagnostica
-Associato a ogni ambiente, connessione, istruzione e descrittore handle vengono *record di diagnostica*. Questi record contengono informazioni diagnostiche sull'ultima funzione chiamata che è usato un handle specifico. I record vengono sostituiti solo quando viene chiamata un'altra funzione utilizzando l'handle. Non sono previsti limiti al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  
+Associate a ogni handle di ambiente, connessione, istruzione e descrittore sono *record di diagnostica*. Questi record contengono informazioni di diagnostica sull'ultima funzione chiamata che ha utilizzato un particolare handle. I record vengono sostituiti solo quando un'altra funzione viene chiamata usando tale handle. Non esiste un limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  
   
- Esistono due tipi di record di diagnostica: una *record di intestazione* e zero o più *record di stato*. Il record di intestazione è 0. i record di stato sono record 1 e versioni successive. I record di diagnostica sono costituiti da un numero di campi distinti, che sono diversi per il record di intestazione e i record di stato. Componenti ODBC è inoltre possono definire i propri campi di record di diagnostica.  
+ Esistono due tipi di record di diagnostica: un *record di intestazione* e zero o più *record di stato*. Il record di intestazione è il record 0; i record di stato sono record 1 e versioni successive. I record di diagnostica sono composti da un numero di campi distinti, diversi per il record di intestazione e i record di stato. Inoltre, i componenti ODBC possono definire i propri campi dei record di diagnostica.  
   
- Anche se i record di diagnostica possono essere considerati come strutture, non è necessario per poter essere effettivamente strutture. come un driver archivia le informazioni di diagnostica è specifico del driver.  
+ Sebbene i record di diagnostica possano essere considerati come strutture, non è necessario che siano effettivamente strutture. il modo in cui un driver archivia le informazioni di diagnostica è specifico del driver.  
   
- I campi nei record di diagnostica vengono recuperati con **SQLGetDiagField**. SQLSTATE, il numero di errore nativo e i campi di messaggio di diagnostica di record di stato possono essere recuperati in una singola chiamata con **SQLGetDiagRec**.  
+ I campi nei record di diagnostica vengono recuperati con **SQLGetDiagField**. I campi SQLSTATE, numero di errore nativo e messaggio di diagnostica dei record di stato possono essere recuperati in una singola chiamata con **SQLGetDiagRec**.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

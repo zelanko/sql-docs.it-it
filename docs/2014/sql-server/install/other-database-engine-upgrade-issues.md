@@ -1,5 +1,5 @@
 ---
-title: Altri problemi di aggiornamento del motore di Database | Microsoft Docs
+title: Altri problemi di aggiornamento motore di database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093694"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Altri problemi di aggiornamento del motore di database
@@ -54,7 +54,7 @@ ms.locfileid: "66093694"
 ## <a name="new-data-types"></a>Nuovi tipi di dati  
  I seguenti tipi di dati sono tipi di sistema riservati. Rinominare i tipi definiti dall'utente (UDT) in conflitto prima o dopo l'aggiornamento.  
   
--   Geography  
+-   Area geografica  
   
 -   Geometry  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66093694"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La tabella di destinazione della clausola OUTPUT INTO non può contenere trigger definiti  
- OUTPUT in una tabella di destinazione quando la tabella contiene trigger abilitati non è supportato.  
+ L'OUTPUT in una tabella di destinazione quando la tabella contiene trigger abilitati non è supportato.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Errore in fase di compilazione per le funzioni definite dall'utente quando la destinazione di una clausola OUTPUT INTO è una tabella  
  Non è possibile utilizzare funzioni definite dall'utente per eseguire azioni che modificano lo stato del database. Ad esempio, una funzione definita dall'utente non può eseguire azioni DDL (CREATE/ALTER/DROP) o DML (INSERT/UPDATE/DELETE) su qualsiasi oggetto, ad eccezione delle variabili di tabella.  
@@ -74,7 +74,7 @@ ms.locfileid: "66093694"
 ## <a name="rename-cdc-schema"></a>Rinominare lo schema CDC  
  È disponibile un nome di schema denominato CDC Il nome dello schema non può essere utilizzato se **Change Data Capture** è abilitato per il database.  
   
- È necessario eliminare lo schema CDC prima di abilitare **Change Data Capture** per il database. Questo passaggio può essere completato prima o dopo l'aggiornamento. Per eliminare lo schema, eseguire le operazioni seguenti:  
+ Prima di abilitare **Change Data Capture** per il database, è necessario eliminare lo schema cdc. Questo passaggio può essere completato prima o dopo l'aggiornamento. Per eliminare lo schema, eseguire le operazioni seguenti:  
   
 1.  Trasferire gli oggetti dallo schema CDC in un nuovo schema utilizzando ALTER SCHEMA.  
   

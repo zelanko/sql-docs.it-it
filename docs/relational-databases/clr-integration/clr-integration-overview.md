@@ -18,10 +18,10 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d87768886150b06b23c6ff5053e4f0f524828904
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212402"
 ---
 # <a name="clr-integration---overview"></a>Integrazione CLR - Panoramica
@@ -30,10 +30,13 @@ ms.locfileid: "70212402"
   
  Grazie all'integrazione di CLR in Microsoft SQL Server, è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Poiché il codice gestito viene compilato nel codice nativo prima dell'esecuzione, è possibile ottenere notevoli miglioramenti delle prestazioni in alcuni scenari.  
   
- Nel codice gestito viene utilizzata la sicurezza dall'accesso di codice (CAS) per gli assembly eseguano determinate operazioni. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza CAS per aiutare a proteggere il codice gestito e impedire che il sistema operativo o il server di database vengano compromessi.  
+ Nel codice gestito viene utilizzata la sicurezza dall'accesso di codice (CAS) per gli assembly eseguano determinate operazioni. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza CAS per aiutare a proteggere il codice gestito e impedire che il sistema operativo o il server di database vengano compromessi.  
   
 ## <a name="advantages-of-clr-integration"></a>Vantaggi dell'integrazione con CLR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] è progettato in maniera specifica per consentire di accedere ai dati e modificarli direttamente nel database. Sebbene [!INCLUDE[tsql](../../includes/tsql-md.md)] risulti particolarmente vantaggioso per l'accesso ai dati e la loro gestione, non è un linguaggio di programmazione completo. [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta, ad esempio, matrici, raccolte, cicli Foreach, scorrimento bit o classi. Il codice gestito dispone di supporto integrato per questi costrutti, sebbene sia possibile simularne alcuni in [!INCLUDE[tsql](../../includes/tsql-md.md)]. A seconda dello scenario, l'implementazione di determinate caratteristiche del database nel codice gestito può risultare particolarmente vantaggiosa.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] è progettato in maniera specifica per consentire di accedere ai dati e modificarli direttamente nel database. Sebbene [!INCLUDE[tsql](../../includes/tsql-md.md)] risulti particolarmente vantaggioso per l'accesso ai dati e la loro gestione, non è un linguaggio di programmazione completo. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta, ad esempio, matrici, raccolte, cicli Foreach, scorrimento bit o classi. Il codice gestito dispone di supporto integrato per questi costrutti, sebbene sia possibile simularne alcuni in [!INCLUDE[tsql](../../includes/tsql-md.md)]. A seconda dello scenario, l'implementazione di determinate caratteristiche del database nel codice gestito può risultare particolarmente vantaggiosa.  
   
  Microsoft Visual Basic .NET e Microsoft Visual C# offrono funzionalità orientate a oggetti quali incapsulamento, ereditarietà e polimorfismo. Il codice correlato può ora essere organizzato facilmente in classi e spazi dei nomi. In questo modo è possibile organizzare e gestire il codice più facilmente quando si utilizzano grandi quantità di codice server.  
   
@@ -60,7 +63,7 @@ ms.locfileid: "70212402"
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architettura dell'integrazione CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Architettura dell'integrazione con CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Accesso ai dati da oggetti di database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introduzione all'integrazione con CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

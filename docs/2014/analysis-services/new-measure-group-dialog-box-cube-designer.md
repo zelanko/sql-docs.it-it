@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Nuovo gruppo di misure (Progettazione cubi) | Microsoft Docs
+title: Finestra di dialogo nuovo gruppo di misure (Progettazione cubi) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072268"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Finestra di dialogo Nuovo gruppo di misure (Progettazione cubi)
@@ -33,7 +33,7 @@ ms.locfileid: "66072268"
  Consente di selezionare la tabella dei fatti per il nuovo gruppo di misure. Non è possibile utilizzare le tabelle come tabelle dei fatti per più di una volta nello stesso cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Struttura del cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Struttura Cube &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

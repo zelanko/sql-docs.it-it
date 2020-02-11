@@ -1,5 +1,5 @@
 ---
-title: Proprietà BOF, EOF proprietà (ADO) | Microsoft Docs
+title: Proprietà BOF, EOF (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,56 +18,56 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920380"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
--   **Proprietà BOF** indica che la posizione del record corrente è precedente al primo record in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+-   **BOF** Indica che la posizione del record corrente è prima del primo record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
--   **EOF** indica che la posizione del record corrente è successiva all'ultimo record in un **Recordset** oggetto.  
+-   **EOF** Indica che la posizione corrente del record è successiva all'ultimo record in un oggetto **Recordset** .  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **BOF** e **EOF** restituiscono **booleano** valori.  
+ Le proprietà **BOF** e **EOF** restituiscono valori **booleani** .  
   
-## <a name="remarks"></a>Note  
- Usare la **BOF** e **EOF** le proprietà per determinare se un **Recordset** oggetto contiene record o se sono stati superati i limiti di un **Recordset**  dell'oggetto quando si sposta da un record a altro.  
+## <a name="remarks"></a>Osservazioni  
+ Usare le proprietà **BOF** e **EOF** per determinare se un oggetto **Recordset** contiene record o se è stato superato il limite di un oggetto **Recordset** quando ci si sposta da un record a un altro.  
   
- Il **BOF** restituisce proprietà **True** (-1) se la posizione del record corrente è precedente al primo record e **False** (0) se la posizione del record corrente è il o dopo il primo record.  
+ La proprietà **BOF** restituisce **true** (-1) se la posizione corrente del record precede il primo record e **false** (0) se la posizione corrente del record è il primo record o dopo il primo.  
   
- Il **EOF** restituisce proprietà **True** se la posizione del record corrente è successiva all'ultimo record e **False** se la posizione del record corrente è il o prima dell'ultimo record.  
+ La proprietà **EOF** restituisce **true** se la posizione corrente del record è successiva all'ultimo record e **false** se la posizione corrente del record è precedente o precedente all'ultimo record.  
   
- Se il **BOF** oppure **EOF** proprietà è **True**, nessun record corrente.  
+ Se la proprietà **BOF** o **EOF** è **true**, non è presente alcun record corrente.  
   
- Se si apre un **Recordset** oggetti che non contiene record, il **BOF** e **EOF** sono impostate su **True** (vedere il [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà per ulteriori informazioni su questo stato di un **Recordset**). Quando si apre un **Recordset** oggetto che contiene almeno un record, il primo record corrisponde al record corrente e il **BOF** e **EOF** sono proprietà **False** .  
+ Se si apre un oggetto **Recordset** che non contiene record, le proprietà **BOF** e **EOF** sono impostate su **true** . per ulteriori informazioni su questo stato di un **Recordset**, vedere la proprietà [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Quando si apre un oggetto **Recordset** che contiene almeno un record, il primo record è il record corrente e le proprietà **BOF** e **EOF** sono **false**.  
   
- Se si elimina l'ultimo record rimanente nella **Recordset** oggetto, il **BOF** e **EOF** proprietà restino **False** finché non si tentativo di modificare la posizione del record corrente.  
+ Se si elimina l'ultimo record rimanente nell'oggetto **Recordset** , è possibile che le proprietà **BOF** e **EOF** rimangano **false** fino a quando non si tenta di riposizionare il record corrente.  
   
- Questa tabella mostra che **spostare** metodi sono consentiti con diverse combinazioni delle **BOF** e **EOF** proprietà.  
+ Questa tabella mostra i metodi di **spostamento** consentiti con combinazioni diverse delle proprietà **BOF** e **EOF** .  
   
-||Metodi MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Spostare < 0|Spostare 0|MoveNext,<br /><br /> Sposta > 0|  
+||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Sposta < 0|Sposta 0|MoveNext<br /><br /> Sposta > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**Proprietà BOF**=**True**, **EOF**=**False**|Allowed|Errore|Errore|Allowed|  
-|**Proprietà BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Errore|Errore|  
-|Entrambi **True**|Errore|Errore|Errore|Errore|  
-|Entrambi **False**|Allowed|Allowed|Allowed|Allowed|  
+|**BOF**=**true**, **EOF**=**false**|Consentito|Errore|Errore|Consentito|  
+|**BOF**=**false**, **EOF**=**true**|Consentito|Consentito|Errore|Errore|  
+|Entrambi **true**|Errore|Errore|Errore|Errore|  
+|Entrambi **false**|Consentito|Consentito|Consentito|Consentito|  
   
- Consentendo un' **spostare** metodo non garantisce che il metodo individuerà correttamente un record; in realtà indica che la chiamata specificato **spostare** metodo non genererà un errore.  
+ L'abilitazione di un metodo **Move** non garantisce che il metodo consenta di individuare correttamente un record; significa solo che la chiamata al metodo **Move** specificato non genererà un errore.  
   
- La tabella seguente mostra cosa accade ai **BOF** e **EOF** le impostazioni delle proprietà quando si chiama varie **spostare** metodi, ma non è possibile individuare correttamente il record.  
+ La tabella seguente mostra cosa accade alle impostazioni delle proprietà **BOF** e **EOF** quando si chiamano vari metodi di **spostamento** ma non è possibile individuare correttamente un record.  
   
-||PROPRIETÀ BOF|EOF|  
+||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**, **MoveLast**|Impostare su **True**|Impostare su **True**|  
-|**Spostare** 0|Nessuna modifica|Nessuna modifica|  
-|**MovePrevious**, **spostare** < 0|Impostare su **True**|Nessuna modifica|  
-|**MoveNext**, **spostare** > 0|Nessuna modifica|Impostare su **True**|  
+|**MoveFirst**, **MoveLast**|Imposta su **true**|Imposta su **true**|  
+|**Sposta** 0|Nessuna modifica|Nessuna modifica|  
+|**MovePrevious**, **Sposta** < 0|Imposta su **true**|Nessuna modifica|  
+|**MoveNext**, **spostamento** > 0|Nessuna modifica|Imposta su **true**|  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà BOF, EOF e segnalibro (esempio di proprietà (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Proprietà BOF, EOF e segnalibro esempio di proprietà (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [Esempio di proprietà BOF, EOF e Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [Esempio di proprietà BOF, EOF e segnalibro (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

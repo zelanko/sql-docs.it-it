@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184551"
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
-  Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilizzare il **piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungi sottopiano**  
@@ -40,16 +40,16 @@ ms.locfileid: "63184551"
  **Rimuovi pianificazione**  
  Consente di rimuovere una pianificazione dal sottopiano selezionato.  
   
- **Gestisci connessioni**  
+ **Gestire le connessioni**  
  Visualizza la finestra di dialogo **Gestisci connessioni** . Questa finestra di dialogo viene utilizzata per aggiungere ulteriori connessioni a istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al piano di manutenzione. Le attività di manutenzione nell'editor sottopiani possono utilizzare una qualsiasi di queste connessioni. Durante l'esecuzione, il piano di manutenzione stabilisce una connessione dal server del piano di manutenzione ai server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati utilizzando le credenziali di connessione.  
   
- **Report e registrazione**  
+ **Creazione di report e registrazione**  
  Visualizza la finestra di dialogo **Report e registrazione** usata per gestire report riguardanti l'attività del piano di manutenzione e per configurare la registrazione nel server locale o in un server remoto.  
   
  **Server**  
  Visualizza la finestra di dialogo **Server** usata per selezionare i server in cui verranno eseguite le attività del sottopiano. Questa opzione è abilitata solo nei server master in ambienti multiserver. Per altre informazioni, vedere [Creare un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md).  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome del piano di manutenzione. Il nome dei nuovi piani di manutenzione viene indicato in una finestra di dialogo visualizzata prima dell'apertura della finestra di progettazione dei piani di manutenzione. Per rinominare un piano di manutenzione, fare clic con il pulsante destro del mouse sul piano in Esplora oggetti e quindi scegliere **Rinomina**.  
   
  **Descrizione**  
@@ -89,25 +89,25 @@ ms.locfileid: "63184551"
  **Modifica**  
  Consente di aprire la finestra di dialogo delle proprietà per l'attività.  
   
- **Disable**  
+ **Disabilitazione**  
  Gli oggetti non saranno quindi temporaneamente disponibili.  
   
- **Abilita**  
+ **Abilitare**  
  Consente di ripristinare un'attività disabilitata.  
   
  **Gruppo**  
  Consente di creare un gruppo che contiene una o più attività.  
   
- **Separa**  
+ **Separare**  
  Consente di rimuovere attività da un gruppo.  
   
- **Ridimensiona automaticamente**  
+ **AutoSize**  
  Consente di impostare le dimensioni di ogni attività sulle dimensioni ottimali per l'attività specifica.  
   
  **Comprimi**  
  Consente di nascondere attività all'interno di un gruppo.  
   
- **Espandi**  
+ **Espandere**  
  Consente di visualizzare le attività di un gruppo nascoste in precedenza con il comando **Comprimi**.  
   
  **Zoom**  

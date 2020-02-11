@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900944"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
@@ -54,7 +54,7 @@ ms.locfileid: "62900944"
     > [!NOTE]  
     >  L'indicazione del numero dei valori distinct, esatto o approssimativo, consente di ottimizzare le prestazioni, perché la trasformazione può preallocare la quantità di memoria appropriata per l'esecuzione delle operazioni necessarie.  
   
-12. Facoltativamente, fare clic su **Avanzate** e aggiornare il nome dell'output della trasformazione Aggregazione. Se le aggregazioni includono una `Group By` operazione, è possibile selezionare un numero approssimativo di valori di chiave di raggruppamento le **scala chiavi** colonna oppure specificare un numero esatto di valori di chiave di raggruppamento il **chiavi** colonna.  
+12. Facoltativamente, fare clic su **Avanzate** e aggiornare il nome dell'output della trasformazione Aggregazione. Se le aggregazioni includono un' `Group By` operazione, è possibile selezionare un numero approssimativo di valori di chiavi di raggruppamento nella colonna **Scala chiavi** oppure specificare un numero esatto di valori di chiave di raggruppamento nella colonna **chiavi** .  
   
     > [!NOTE]  
     >  L'indicazione del numero dei valori distinct, esatto o approssimativo, consente di ottimizzare le prestazioni, perché la trasformazione può preallocare la quantità di memoria appropriata per l'esecuzione delle operazioni necessarie.  

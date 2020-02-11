@@ -1,5 +1,5 @@
 ---
-title: Esportare un Report come tipo di un altro File (Generatore Report e SSRS) | Microsoft Docs
+title: Esportare un report in un altro tipo di file (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109174"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Esportare un report in un altro tipo di file (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66109174"
   
 3.  Selezionare il formato che si desidera usare.  
   
-     Verrà visualizzata la finestra di dialogo **Salva con nome** . Per impostazione predefinita, il nome del file è quello del report esportato. Se lo si desidera, tale nome può essere modificato.  
+     Verrà aperta la finestra di dialogo **Salva con nome**. Per impostazione predefinita, il nome del file è quello del report esportato. Se lo si desidera, tale nome può essere modificato.  
   
 4.  Passare al percorso in cui è stato salvato il report esportato e aprirlo.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66109174"
   
 ### <a name="to-export-a-report-as-another-file-type-in-report-manager"></a>Per esportare un report in un altro tipo di file in Gestione report  
   
-1.  Dalla pagina Gestione report **Home**, accedere al report che si desidera esportare.  
+1.  Dalla home page di Gestione report passare al report da **** esportare.  
   
 2.  Fare clic sul report.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109174"
   
      Il report verrà visualizzato o salvato con l'applicazione associata al formato scelto. Se si fa clic su **Salva**, verrà richiesto di specificare un percorso in cui salvare il report.  
   
-     **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
+     **Nota** Se il programma non è in grado di aprire il report nel formato scelto perché non è disponibile un programma associato a questo tipo di file, verrà richiesto di salvare il report esportato o di trovare un programma online per aprire il report.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Per esportare un report in un altro tipo di file in una raccolta di SharePoint.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66109174"
   
      Se lo si desidera, modificare il nome del file del report esportato.  
   
-     **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
+     **Nota** Se il programma non è in grado di aprire il report nel formato scelto perché non è disponibile un programma associato a questo tipo di file, verrà richiesto di salvare il report esportato o di trovare un programma online per aprire il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esempio di OriginalValue e UnderlyingValue in proprietà XML (VC + +) | Microsoft Docs
+title: Esempio di proprietà OriginalValue e UnderlyingValue (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931823"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio di OriginalValue e UnderlyingValue in proprietà XML (VC + +)
-Questo esempio viene illustrato il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà visualizzando un messaggio se i dati sottostanti di un record è stata modificata durante un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornamento batch.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VC + +)
+In questo esempio vengono illustrate le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -194,32 +194,32 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Dati sono stati modificati.**  
-**ID del titolo: PS1372**  
+ **I dati sono stati modificati.**  
+**ID titolo: PS1372**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
-**Il valore di base: sociologia**   
-**Dati sono stati modificati.**  
-**ID del titolo: PS2091**  
+**Valore sottostante: sociologia**   
+**I dati sono stati modificati.**  
+**ID titolo: PS2091**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
-**Il valore di base: sociologia**   
-**Dati sono stati modificati.**  
-**ID del titolo: PS2106**  
+**Valore sottostante: sociologia**   
+**I dati sono stati modificati.**  
+**ID titolo: PS2106**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
-**Il valore di base: sociologia**   
-**Dati sono stati modificati.**  
-**ID del titolo: PS3333**  
+**Valore sottostante: sociologia**   
+**I dati sono stati modificati.**  
+**ID titolo: PS3333**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
-**Il valore di base: sociologia**   
-**Dati sono stati modificati.**  
-**ID del titolo: PS7777**  
+**Valore sottostante: sociologia**   
+**I dati sono stati modificati.**  
+**ID titolo: PS7777**  
 **Valore corrente: self_help**   
 **Valore originale: psicologia**   
-**Il valore di base: sociologia**    
+**Valore sottostante: sociologia**    
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

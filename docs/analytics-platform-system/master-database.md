@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400981"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Database master-data warehouse parallela
@@ -40,9 +40,9 @@ Nell'elenco seguente vengono descritte le operazioni che non è possibile esegui
   
 -   Eseguire **DBCC SHRINKLOG**.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |--------|---------------|  
 |Creare un backup completo del database master.|Esempio:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Per ulteriori informazioni, vedere [backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Ripristinare il database master|Per ripristinare il database master, utilizzare la pagina [Ripristina database master](restore-the-master-database.md) dello strumento Configuration Manager.|  

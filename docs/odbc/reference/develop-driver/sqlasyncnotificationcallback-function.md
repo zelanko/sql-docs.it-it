@@ -11,24 +11,24 @@ ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915538"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Funzione SQLAsyncNotificationCallback
 **Conformità**  
- Versione introdotta: ODBC 3.8  
+ Versione introdotta: ODBC 3,8  
   
- Conformità agli standard: Nessuna  
+ Conformità agli standard: nessuna  
   
- **Riepilogo**  
- **SQLAsyncNotificationCallback** consente al driver di richiamata da Gestione Driver quando si verifica un stato di avanzamento dell'operazione asincrona corrente dopo il driver restituisce SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** può solo chiamato dal driver.  
+ **Summary**  
+ **SQLAsyncNotificationCallback** consente a un driver di richiamare Gestione driver quando ci sono alcuni progressi per l'operazione asincrona corrente dopo che il driver restituisce SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** può essere chiamato solo dal driver.  
   
- I driver non chiamano **SQLAsyncNotificationCallback** con il nome di funzione **SQLAsyncNotificationCallback**. Al contrario, gestione Driver passa un puntatore a funzione a un driver come valore dell'attributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK per l'handle di connessione corrispondente o un handle di istruzione, rispettivamente. È possibile assegnare gli handle di diversi valori di puntatore funzione diversa. Il tipo del puntatore a funzione è definito come SQL_ASYNC_NOTIFICATION_CALLBACK.  
+ I driver non chiamano **SQLAsyncNotificationCallback** con il nome della funzione **SQLAsyncNotificationCallback**. Il gestore di driver passa invece un puntatore a funzione a un driver come valore per l'attributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK dell'handle di connessione o dell'handle di istruzione corrispondente, rispettivamente. A diversi handle possono essere assegnati valori di puntatore a funzione diversi. Il tipo del puntatore a funzione è definito come SQL_ASYNC_NOTIFICATION_CALLBACK.  
   
- **SQLAsyncNotificationCallback** è thread-safe. Un driver è possibile scegliere di usare più thread che chiamano **SQLAsyncNotificationCallback** su diversi gestisce contemporaneamente.  
+ **SQLAsyncNotificationCallback** è thread-safe. Un driver può scegliere di usare più thread che chiamano **SQLAsyncNotificationCallback** su handle diversi simultaneamente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +40,23 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
 ## <a name="arguments"></a>Argomenti  
  *pContex*  
- Puntatore a una struttura di dati definita da Gestione Driver. Il valore viene passato al driver tramite SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) o SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT).  Il driver non ha accesso al valore.  
+ Puntatore a una struttura di dati definita da Gestione driver. Il valore viene passato al driver tramite SQLSetConnectAttr (SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) o SQLSetStmtAttr (SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT).  Il driver non ha accesso al valore.  
   
  *fLast*  
- Utilizzato da un driver per indica che la chiamata di funzione di callback è quello più recente per l'operazione asincrona corrente. Quando Gestione Driver chiama la funzione anche in questo caso, il driver restituirà un codice restituito diverso da SQL_STILL_EXECUTING. Gestione Driver può utilizzare queste informazioni, ad esempio, per informare in anticipo l'applicazione che verrà completata l'operazione asincrona.  
+ Utilizzato da un driver per indicare che questa chiamata di funzione di callback è l'ultima per l'operazione asincrona corrente. Il driver restituisce un codice restituito diverso da SQL_STILL_EXECUTING quando Gestione driver chiama di nuovo la funzione. Gestione driver può utilizzare queste informazioni, ad esempio, per informare l'applicazione in anticipo che l'operazione asincrona verrà completata.  
   
- Se *gestiscono* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** non restituisca SQL_INVALID_HANDLE.  
+ Se *handle* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** restituisce SQL_INVALID_HANDLE.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- **SQLAsyncNotificationCallback** restituisce SQL_ERROR per due situazioni seguenti (queste informazioni indicano un problema di implementazione nel driver o gestione Driver.  
+ **SQLAsyncNotificationCallback** può restituire SQL_ERROR per le due situazioni seguenti, che indicano un problema di implementazione nel driver o nella gestione driver.  
   
 |Errore|Descrizione|  
 |-----------|-----------------|  
-|Connessione o l'istruzione non ha richiesto la notifica.||  
-|Non è valido *gestire*|Il driver passato un handle non valido, quali i test di convalida interno di gestione Driver non è riuscita.|  
+|La connessione o l'istruzione non ha richiesto la notifica.||  
+|*Handle* non valido|Il driver ha passato un handle non valido, che non ha superato i test interni di convalida di gestione driver.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione asincrona (metodo di polling)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892834"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt;modello&gt;. CONTENUTO (DMX)
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente colonne derivate dal set di righe dello schema relativo al contenuto.  
@@ -40,18 +40,18 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificatore del modello.  
   
  *espressione della condizione*  
- facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ *espressione*  
+ Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Note  
- > **Di selezione dal**  _\<modello_ **.** L'istruzione Content restituisce contenuto specifico per ogni algoritmo. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare una **selezione da \<modello >. Istruzione CONTENT** per la restituzione di valori nella colonna NODE_RULE del modello.  
+## <a name="remarks"></a>Osservazioni  
+ >**di selezione dal** _ \<modello _ **. **L'istruzione Content restituisce contenuto specifico per ogni algoritmo. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare una **selezione da \<modello>. Istruzione CONTENT** per restituire valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
 > [!NOTE]  
->  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto del modello di data mining per ogni algoritmo e suggerimenti su come interpretare ed eseguire query sul contenuto del modello di data mining per ogni tipo di modello, vedere [ &#40;contenuto&#41;dei modelli di data mining Analysis Services-Data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto del modello di data mining per ogni algoritmo e suggerimenti per l'interpretazione e l'esecuzione di query sul contenuto del modello di data mining per ogni tipo di modello, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Colonna del set di righe relativo al contenuto|Descrizione|  
 |---------------------------|-----------------|  
@@ -91,7 +91,7 @@ WHERE NODE_TYPE = 1
  Nella query seguente viene utilizzata la funzione **descendant** per restituire gli elementi figlio immediati del nodo restituito nella query precedente.  
   
 > [!NOTE]  
->  Poiché il valore di NODE_NAME è una stringa, non è possibile usare un'istruzione sub-SELECT per restituire NODE_ID come argomento della funzione **descendant** .  
+>  Poiché il valore della NODE_NAME è una stringa, non è possibile utilizzare un'istruzione sub-SELECT per restituire l'NODE_ID come argomento della funzione **decrescente** .  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -136,15 +136,15 @@ WHERE NODE_TYPE = 26
   
  Risultati dell'esempio:  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Istruzioni di manipolazione &#40;dei&#41; dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

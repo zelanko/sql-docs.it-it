@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f92a270bb599c84f5d0b2bd85e713c3f406f81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479525"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Modalità di determinazione delle autorizzazioni (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479525"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: Vengono determinate le autorizzazioni per attributi valide.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: vengono determinate le autorizzazioni per attributi valide.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per attributi valide:  
   
 -   Le autorizzazioni assegnate agli oggetti modello determinano gli attributi a cui un utente può accedere.  
@@ -44,13 +44,13 @@ ms.locfileid: "65479525"
   
 -   Tutti gli oggetti che si trovano allo stesso livello dell'entità vengono negati in modo implicito.  
   
--   A tutti gli oggetti che si trovano a un livello superiore viene fornito l'accesso per la navigazione. Per altre informazioni sull'accesso per la navigazione, vedere [accesso per la navigazione &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   A tutti gli oggetti che si trovano a un livello superiore viene fornito l'accesso per la navigazione. Per ulteriori informazioni sull'accesso per la navigazione, vedere [accesso &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- In questo esempio **Read-only** autorizzazione viene assegnata a un'entità e tale autorizzazione viene ereditata dal relativo attributo che si trova a un livello inferiore della struttura del modello. Il modello fornisce l'accesso per la navigazione a questa entità e al relativo attributo. All'altra entità del modello non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negata in modo implicito.  
+ In questo esempio, l'autorizzazione di sola **lettura** viene assegnata a un'entità e tale autorizzazione viene ereditata dal relativo attributo, che è a un livello inferiore della struttura del modello. Il modello fornisce l'accesso per la navigazione a questa entità e al relativo attributo. All'altra entità del modello non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negata in modo implicito.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate autorizzazioni per i membri gerarchia, vengono determinate autorizzazioni per i membri valide.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate le autorizzazioni per i membri gerarchia, vengono determinate le autorizzazioni per i membri valide.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per i membri gerarchia valide:  
   
 -   Le autorizzazioni assegnate ai nodi gerarchia determinano i membri a cui un utente può accedere.  
@@ -61,11 +61,11 @@ ms.locfileid: "65479525"
   
 -   Tutti i nodi che si trovano a livelli superiori a cui non sono assegnate autorizzazioni vengono negati in modo implicito.  
   
- In questo esempio **Read-only** autorizzazione viene assegnata a un nodo della gerarchia e tale autorizzazione viene ereditata da un nodo a un livello inferiore della struttura della gerarchia. Alla radice non viene assegnata alcuna autorizzazione, pertanto viene negata in modo implicito. All'altro nodo della struttura della gerarchia non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negato in modo implicito.  
+ In questo esempio, l'autorizzazione di sola **lettura** viene assegnata a un nodo della gerarchia e tale autorizzazione viene ereditata da un nodo a un livello inferiore della struttura della gerarchia. Alla radice non viene assegnata alcuna autorizzazione, pertanto viene negata in modo implicito. All'altro nodo della struttura della gerarchia non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negato in modo implicito.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: Viene determinata l'intersezione delle autorizzazioni per membri e attributi.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: viene determinata l'intersezione delle autorizzazioni per membri e attributi.  
  Se le autorizzazioni per attributi valide sono diverse dalle autorizzazioni per membri valide, le autorizzazioni devono essere determinate per ogni singolo valore di attributo. Per altre informazioni, vedere [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorizzazioni assegnate a più gruppi  

@@ -13,20 +13,20 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 01856f105a8a06ba590a4a8877e9315eaa81baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63063047"
 ---
-# <a name="lesson-3-deleting-database-objects"></a>Lezione 3: Eliminazione degli oggetti di database
+# <a name="lesson-3-deleting-database-objects"></a>Lezione 3: Eliminazione di oggetti di database
   In questa breve lezione viene illustrato come rimuovere gli oggetti creati nelle lezioni 1 e 2 e come procedere quindi all'eliminazione del database.  
   
  In questa lezione sono inclusi gli argomenti seguenti:  
   
--   [Eliminazione di oggetti di database](lesson-3-1-deleting-database-objects.md)  
+-   [Eliminazione degli oggetti di database](lesson-3-1-deleting-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Deleting Database Objects](lesson-3-1-deleting-database-objects.md)  
+ [Eliminazione degli oggetti di database](lesson-3-1-deleting-database-objects.md)  
   
   

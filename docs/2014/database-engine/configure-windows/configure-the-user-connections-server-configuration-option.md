@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811222"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurare l'opzione di configurazione del server user connections
@@ -28,7 +28,7 @@ ms.locfileid: "62811222"
   
  Per determinare il numero massimo di connessioni utente consentito dal sistema, è possibile eseguire [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) oppure eseguire una query sulla vista del catalogo [sys.configuration](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62811222"
   
 4.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-user-connections-option"></a>Per configurare l'opzione user connections  
   

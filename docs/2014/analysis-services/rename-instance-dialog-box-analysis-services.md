@@ -1,5 +1,5 @@
 ---
-title: Dialogo Rinomina istanza (Analysis Services) | Microsoft Docs
+title: Finestra di dialogo Rinomina istanza (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070364"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Finestra di dialogo Rinomina istanza (Analysis Services)
@@ -24,14 +24,14 @@ ms.locfileid: "66070364"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |**Istanza da rinominare**|Consente di selezionare l'istanza da rinominare.|  
-|**Nuovo nome istanza**|Consente di digitare il nome dell'istanza desiderata. Non includere il nome del server. Vale a dire, anziché immettere \<nome server >\\< nome istanza\>, immettere solo \<nome istanza >.<br /><br /> Se si desidera impostare l'istanza da ridenominare come istanza predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , lasciare vuota questa casella.|  
+|**Nuovo nome istanza**|Consente di digitare il nome dell'istanza desiderata. Non includere il nome del server. Ovvero, anziché immettere il nome \<del server>\\<nome\>dell'istanza, immettere \<solo il nome dell'istanza>.<br /><br /> Se si desidera impostare l'istanza da ridenominare come istanza predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , lasciare vuota questa casella.|  
 |**Nome utente**|Indica l'account che verrà utilizzato dal servizio per l'avvio. Non è possibile modificare il nome utente.|  
 |**Password**|Consente di digitare la password dell'account del servizio.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

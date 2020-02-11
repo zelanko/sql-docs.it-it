@@ -11,10 +11,10 @@ ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3081d4bc0c79e9a0745f2e5941fe50922586e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981590"
 ---
 # <a name="getncharacterstream-method-sqlserverresultset"></a>Metodo getNCharacterStream (SQLServerResultSet)
@@ -24,10 +24,10 @@ ms.locfileid: "67981590"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo getNCharacterStream &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto Reader.|  
-|[metodo &#40;getNCharacterStream Java. lang. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto Reader.|  
+|[getNCharacterStream Method &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto Reader.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

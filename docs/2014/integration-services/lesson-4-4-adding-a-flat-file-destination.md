@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4: Aggiunta di una destinazione File Flat | Microsoft Docs'
+title: 'Passaggio 4: Aggiunta di una destinazione file flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767373"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Passaggio 4: Aggiunta di una destinazione file flat
   L'output degli errori della trasformazione Lookup Currency Key reindirizza alla trasformazione Script tutte le righe di dati in cui l'operazione di ricerca ha avuto esito negativo. Per migliorare le informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione degli errori.  
   
- In questa attività, tutte queste informazioni sulle righe con esito negativo verranno salvate in un file delimitato per l'elaborazione in un momento successivo. Per salvare le righe con esito negativo, è necessario aggiungere e configurare una gestione connessione file flat per il file di testo che conterrà i dati degli errori e una destinazione file flat. Impostando le proprietà della gestione connessione file flat utilizzata dalla destinazione file flat è possibile specificare la modalità con cui la destinazione file flat deve formattare e scrivere il file di testo. Per altre informazioni, vedere [Gestione connessione file flat](connection-manager/file-connection-manager.md) e [Destinazione file flat](data-flow/flat-file-destination.md).  
+ In questa attività, tutte queste informazioni sulle righe con esito negativo verranno salvate in un file delimitato per l'elaborazione in un momento successivo. Per salvare le righe con esito negativo, è necessario aggiungere e configurare una gestione connessione file flat per il file di testo che conterrà i dati degli errori e una destinazione file flat. Impostando le proprietà della gestione connessione file flat utilizzata dalla destinazione file flat è possibile specificare la modalità con cui la destinazione file flat deve formattare e scrivere il file di testo. Per ulteriori informazioni, vedere [gestione connessione file flat](connection-manager/file-connection-manager.md) e [destinazione file flat](data-flow/flat-file-destination.md).  
   
 ### <a name="to-add-and-configure-a-flat-file-destination"></a>Per aggiungere e configurare una destinazione file flat  
   
@@ -36,17 +36,17 @@ ms.locfileid: "62767373"
   
 6.  Nella finestra di dialogo **Formato file flat** verificare che sia stato selezionato **Delimitato** e quindi scegliere **OK**.  
   
-7.  Nel **Editor gestione connessione File Flat**, nella **nome gestione connessione** nella casella `Error Data`.  
+7.  Nell' **Editor gestione connessione file flat**Digitare `Error Data`nella casella **Nome gestione connessione** .  
   
 8.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Sfoglia**e individuare la cartella in cui archiviare il file.  
   
-9. Nel **aperto** della finestra di dialogo per **nome File**, tipo `ErrorOutput.txt`e quindi fare clic su **Open**.  
+9. Nella finestra di dialogo **Apri** , per **nome file**, digitare `ErrorOutput.txt`, quindi fare clic su **Apri**.  
   
 10. Nella finestra di dialogo **Editor gestione connessione file flat** verificare che nella casella **Impostazioni locali** sia presente Inglese (Stati Uniti) e che nella **Tabella codici** sia presente 1252 (ANSI -Latino I).  
   
 11. Nel riquadro delle opzioni fare clic su **Colonne**.  
   
-     Si noti che, oltre alle colonne dal file di dati di origine, sono presenti tre nuove colonne: ErrorCode, ErrorColumn ed ErrorDescription. Queste colonne vengono generate dall'output degli errori della trasformazione Lookup Currency Key e dallo script nella trasformazione Get Error Description e possono essere utilizzate per la risoluzione dei problemi relativi alla riga con esito negativo.  
+     Si noti che oltre alle colonne del file dei dati di origine sono presenti tre nuove colonne: ErrorCode, ErrorColumn e ErrorDescription. Queste colonne vengono generate dall'output degli errori della trasformazione Lookup Currency Key e dallo script nella trasformazione Get Error Description e possono essere utilizzate per la risoluzione dei problemi relativi alla riga con esito negativo.  
   
 12. Fare clic su **OK**.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "62767373"
 15. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 5: Il pacchetto della lezione 4 dell'esercitazione di test](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Passaggio 5: Test del pacchetto creato nella lezione 4 dell'esercitazione](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

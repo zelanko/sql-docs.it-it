@@ -17,57 +17,57 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773430"
 ---
 # <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
-  È possibile usare la **archiviazioni in sospeso** finestra per visualizzare sempre un elenco dei file estratti nella soluzione corrente e per archiviare i file con un singolo pulsante fare clic su.  
+  È possibile utilizzare la finestra **archiviazioni in sospeso** per visualizzare in qualsiasi momento un elenco dei file estratti nella soluzione corrente e per archiviare questi file con un solo clic del mouse.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Per visualizzare un elenco di file modificati  
   
-1.  Nel **View** menu, fare clic su **archiviazioni in sospeso**.  
+1.  Scegliere **archiviazioni in sospeso**dal menu **Visualizza** .  
   
-2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la **archiviazioni in sospeso** sul lato destro della finestra di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo che è possibile archiviare i file al termine utilizzo.  
+2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la finestra **archiviazioni in sospeso** sul lato destro dell' [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo da poter archiviare i file al termine del lavoro.  
   
-     **Check-In**  
+     **Archivia**  
      Consente di eseguire l'archiviazione della soluzione.  
   
      **Commenti**  
      Consente di associare un commento in formato testo normale all'archiviazione in sospeso. Viene creato un commento che viene associato a ogni versione di un progetto e memorizzato nel database del controllo del codice sorgente.  
   
      **Opzioni**  
-     Specifica le azioni eseguibili in controllo del codice sorgente quando si sceglie la **Archivia** pulsante.  
+     Specifica le azioni che devono essere eseguite dal controllo del codice sorgente quando si fa clic sul pulsante **Archivia** .  
   
-    -   **Mantenere tutte le versioni estratte**  
+    -   **Mantieni tutte le versioni estratte**  
   
          Consente di specificare che le modifiche devono essere scritte nel provider del controllo del codice sorgente, ma che i file devono rimanere estratti.  
   
-     **Sort**  
+     **Ordina**  
      Consente di specificare il tipo di ordinamento per le colonne visualizzate nell'elenco Elementi.  
   
      **Colonne**  
      Consente di visualizzare un elenco delle colonne che è possibile aggiungere all'elenco Elementi della finestra di dialogo.  
   
-     **Visualizzazione struttura ad albero**  
+     **Visualizzazione albero**  
      Consente di visualizzare la gerarchia di cartelle e di file per la soluzione o il progetto che si sta archiviando.  
   
      **Visualizzazione semplice**  
      Consente di visualizzare i file in corso di archiviazione come elenchi semplici sotto la relativa connessione del controllo del codice sorgente.  
   
-     **Confrontare le versioni**  
-     Si apre Visual SourceSafe **opzioni di differenza** nella finestra di dialogo Confronta un file selezionato nel progetto dell'ambiente di sviluppo per qualsiasi altro file selezionato e vengono illustrate le differenze, se presente.  
+     **Confronta versioni**  
+     Consente di aprire la finestra di dialogo **Opzioni differenze** Visual SourceSafe, che consente di confrontare un file selezionato nel progetto dell'ambiente di sviluppo con qualsiasi altro file selezionato e di visualizzare le eventuali differenze.  
   
      **Annulla estrazione**  
-     Inverte l'estrazione di tutti gli elementi selezionati nel **archiviazioni in sospeso** finestra.  
+     Inverte l'estrazione di tutti gli elementi selezionati nella finestra **archiviazioni in sospeso** .  
   
-     **Name**  
+     **Nome**  
      Consente di visualizzare un elenco degli elementi disponibili per l'archiviazione. Accanto a ciascun elemento viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)   
+ [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   
   

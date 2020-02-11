@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query del modello Decision Trees | Microsoft Docs
+title: Esempi di query sul modello Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084761"
 ---
 # <a name="decision-trees-model-query-examples"></a>Esempi di query sul modello di alberi delle decisioni
@@ -42,10 +42,10 @@ ms.locfileid: "66084761"
   
  [Recupero di una formula di regressione da un modello Decision Trees](#bkmk_Query6)  
   
-##  <a name="bkmk_top2"></a> Ricerca di informazioni su un modello Decision Trees  
+##  <a name="bkmk_top2"></a>Ricerca di informazioni su un modello Decision Trees  
  Per creare query significative sul contenuto di un modello Decision Trees, è necessario comprendere la struttura del contenuto del modello ed essere in grado di individuare il tipo di informazioni archiviate dai diversi tipi di nodo. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query1"></a> Esempio di Query 1: Recupero di parametri di modello dal set di righe dello schema di data mining  
+###  <a name="bkmk_Query1"></a>Esempio di query 1: recupero di parametri di modello dal set di righe dello schema di data mining  
  L'esecuzione di una query sul set di righe dello schema di data mining consente di trovare i metadati relativi al modello, ad esempio la data e l'ora di creazione, la data e l'ora dell'ultima elaborazione, il nome della struttura di data mining su cui si basa il modello e il nome della colonna utilizzata come attributo stimabile. È inoltre possibile restituire i parametri utilizzati durante la creazione del modello.  
   
 ```  
@@ -60,7 +60,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> Esempio di Query 2: Restituzione di dettagli sul contenuto del modello tramite DMX  
+###  <a name="bkmk_Query2"></a>Esempio di query 2: restituzione di dettagli sul contenuto del modello tramite DMX  
  La query seguente restituisce alcune informazioni di base sugli alberi delle decisioni creati al momento della compilazione del modello in [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md). Ogni albero viene archiviato nel proprio nodo. Poiché il modello contiene un singolo attributo stimabile, è presente un solo nodo dell'albero. Se, tuttavia, si crea un modello di associazione utilizzando l'algoritmo Decision Trees, potrebbero essere presenti centinaia di alberi, uno per ciascun prodotto.  
   
  La query restituisce tutti i nodi di tipo 2, ovvero i nodi di livello superiore di un albero che rappresenta un attributo stimabile specifico.  
@@ -79,7 +79,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|All|12939|5|  
+|TM_DecisionTree|000000001|Tutti|12939|5|  
   
  Significato dei risultati In un modello Decision Trees la cardinalità di un nodo specifico indica il numero di figli immediati del nodo. La cardinalità per questo nodo è 5, pertanto il modello ha diviso in cinque sottogruppi la popolazione di destinazione dei potenziali acquirenti di biciclette.  
   
@@ -98,7 +98,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  Risultati dell'esempio:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORTO|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
@@ -109,7 +109,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  Da questi risultati è possibile determinare che tra i clienti che hanno acquistato una bicicletta (`[Bike Buyer]` = 1), 1067 clienti possiedono 0 automobili e 473 clienti possiedono 3 automobili.  
   
-###  <a name="bkmk_Query3"></a> Esempio di Query 3: Recupero di sottoalberi dal modello  
+###  <a name="bkmk_Query3"></a>Esempio di query 3: recupero di sottoalberi dal modello  
  Si supponga di voler individuare altre informazioni sui clienti che hanno acquistato una bicicletta. È possibile visualizzare dettagli aggiuntivi per uno dei sottoalberi usando la funzione [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) nella query, come illustrato nell'esempio seguente. La query restituisce il conteggio di acquirenti di biciclette recuperando nodi foglia (NODE_TYPE = 4) dall'albero che contiene i clienti di età maggiore di 42 anni. La query consente di limitare le righe della tabella nidificata a quelle in cui Bike Buyer = 1.  
   
 ```  
@@ -139,7 +139,7 @@ AND NODE_TYPE = 4
   
 -   Recupero della formula di regressione per una parte di un albero delle decisioni in cui la relazione tra l'input e l'output è lineare.  
   
-###  <a name="bkmk_Query4"></a> Esempio di Query 4: Restituzione di stime con probabilità  
+###  <a name="bkmk_Query4"></a>Esempio di query 4: restituzione di stime con probabilità  
  Nella query di esempio seguente viene usato il modello di albero delle decisioni creato in [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md). La query passa in un nuovo set di dati di esempio, dalla tabella dbo.ProspectiveBuyers a [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, per determinare i clienti inclusi nel nuovo set di dati che acquisteranno una bicicletta.  
   
  La query usa la funzione di stima [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)che restituisce una tabella annidata contenente informazioni utili sulle probabilità individuate dal modello. La clausola WHERE finale della query filtra i risultati per restituire solo i clienti stimati come probabili acquirenti di una bicicletta per oltre lo 0%.  
@@ -191,8 +191,8 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Se il provider non supporta set di righe gerarchici, ad esempio quelli illustrati in questo esempio, è possibile utilizzare la parola chiave FLATTENED nella query per restituire i risultati come tabella contenente valori Null al posto dei valori di colonna ripetuti. Per altre informazioni, vedere [Tabelle annidate &40#;Analysis Services - Data mining&#41;](nested-tables-analysis-services-data-mining.md) o [Informazioni sull'istruzione DMX Select](/sql/dmx/understanding-the-dmx-select-statement).  
   
-###  <a name="bkmk_Query5"></a> Esempio di Query 5: Stima delle associazioni da un modello Decision Trees  
- La query di esempio seguente si basa sulla struttura di data mining di associazione. Per proseguire con l'esempio, è possibile aggiungere un nuovo modello a questa struttura di data mining e selezionare Microsoft Decision Trees come algoritmo. Per altre informazioni su come creare la struttura di data mining di associazione, vedere [lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
+###  <a name="bkmk_Query5"></a>Esempio di query 5: stima delle associazioni da un modello Decision Trees  
+ La query di esempio seguente si basa sulla struttura di data mining di associazione. Per proseguire con l'esempio, è possibile aggiungere un nuovo modello a questa struttura di data mining e selezionare Microsoft Decision Trees come algoritmo. Per altre informazioni su come creare la struttura di data mining di associazione, vedere [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
  La query di esempio seguente è una query singleton, che può essere creata facilmente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] scegliendo i campi desiderati e selezionando i valori per i campi in un elenco a discesa.  
   
@@ -231,7 +231,7 @@ NATURAL PREDICTION JOIN
 |Mountain-400-W|  
 |Classic Vest|  
   
-###  <a name="bkmk_Query6"></a> Esempio di Query 6: Recupero di una formula di regressione da un modello Decision Trees  
+###  <a name="bkmk_Query6"></a>Esempio di query 6: recupero di una formula di regressione da un modello Decision Trees  
  Quando si crea un modello Decision Trees che contiene una regressione su un attributo continuo, è possibile utilizzare la formula di regressione per eseguire stime oppure estrarre le informazioni sulla formula di regressione. Per altre informazioni sulle query sui modelli di regressione, vedere [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md).  
   
  Se un modello Decision Trees contiene una combinazione di nodi di regressione e nodi suddivisi in intervalli o attributi discreti, è possibile creare una query che restituisca solo il nodo di regressione. La tabella NODE_DISTRIBUTION contiene i dettagli della formula di regressione. In questo esempio le colonne sono bidimensionali e la tabella NODE_DISTRIBUTION è associata a un alias per semplificare la visualizzazione. In questo modello, tuttavia, non è stato individuato alcun regressore da correlare a Income con altri attributi continui. In questi casi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce il valore medio dell'attributo e la varianza totale nel modello per l'attributo.  
@@ -244,7 +244,7 @@ WHERE NODE_TYPE = 25
   
  Risultati dell'esempio:  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0,000457142857142857|0|1|  
 |Yearly Income|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
@@ -258,7 +258,7 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |Funzione di stima|Uso|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se il nodo specificato contiene o meno il case corrente.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Viene stimata l'appartenenza a un set di dati associativo.|  
@@ -269,12 +269,12 @@ WHERE NODE_TYPE = 25
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Viene restituito il valore di supporto per uno stato specificato.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Restituisce la varianza di una colonna specificata.|  
   
- Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+ Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima generali &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
- [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Contenuto del modello di data mining per i modelli di albero delle decisioni &#40;Analysis Services-Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

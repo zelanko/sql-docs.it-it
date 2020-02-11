@@ -1,5 +1,5 @@
 ---
-title: Valore di proprietà (ADO) | Microsoft Docs
+title: Proprietà Value (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,30 +17,30 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913926"
 ---
 # <a name="value-property-ado"></a>Proprietà Value (ADO)
 
-Indica il valore assegnato a un [campo](../../../ado/reference/ado-api/field-object.md), [parametro](../../../ado/reference/ado-api/parameter-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetto.
+Indica il valore assegnato a un [campo](../../../ado/reference/ado-api/field-object.md), un [parametro](../../../ado/reference/ado-api/parameter-object.md)o un oggetto [proprietà](../../../ado/reference/ado-api/property-object-ado.md) .
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti
 
-Imposta o restituisce un **Variant** valore che indica il valore dell'oggetto. Dipende dal valore predefinito di [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà.
+Imposta o restituisce un valore **Variant** che indica il valore dell'oggetto. Il valore predefinito dipende dalla proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) .
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Usare la **valore** proprietà per impostare o restituire i dati dal **campo** oggetti, per impostare o restituire i valori dei parametri con **parametro** oggetti, o per impostare o restituire le impostazioni delle proprietà con **Proprietà** oggetti. Se il **valore** è di lettura/scrittura o sola lettura dipende da numerosi fattori. Vedere gli argomenti di oggetto corrispondente per altre informazioni.
+Utilizzare la proprietà **value** per impostare o restituire dati da oggetti **campo** , per impostare o restituire valori di parametro con oggetti **Parameter** oppure per impostare o restituire le impostazioni delle proprietà con oggetti **Property** . Il fatto che la proprietà **value** sia di lettura/scrittura o di sola lettura dipenda da numerosi fattori. Per ulteriori informazioni, vedere gli argomenti relativi agli oggetti.
 
-ADO consente l'impostazione e restituzione di dati binari long con il **valore** proprietà.
+ADO consente di impostare e restituire dati binari lunghi con la proprietà **value** .
   
 > [!NOTE]
-> Per **parametri** oggetti, le letture ADO le **valore** proprietà una sola volta dal provider. Se un comando contiene un **parametro** cui **valore** proprietà è vuota e si crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dal comando, assicurarsi di chiudere il  **Recordset** prima di recuperare il **valore** proprietà. In caso contrario, per alcuni provider, il **valore** proprietà può essere vuota e non deve contenere il valore corretto.
+> Per gli oggetti **Parameter** , ADO legge la proprietà **value** solo una volta dal provider. Se un comando contiene un **parametro** la cui proprietà **value** è vuota e si crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dal comando, assicurarsi di chiudere prima il **Recordset** prima di recuperare la proprietà **value** . In caso contrario, per alcuni provider, la proprietà **value** può essere vuota e non conterrà il valore corretto.
 > 
-> Per ottenere nuove **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, il **valore** deve essere impostata prima di qualsiasi altro **campo** proprietà possono essere specificate. Per prima cosa, un valore specifico per il **valore** proprietà necessario aver assegnata e [Update](../../../ado/reference/ado-api/update-method.md) sul **campi** raccolta denominata. Quindi, le altre proprietà, ad esempio [tipo](../../../ado/reference/ado-api/type-property-ado.md) oppure [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) sono accessibili.
+> Per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) , è necessario impostare la proprietà **value** prima di poter specificare altre proprietà del **campo** . Per prima cosa, è necessario assegnare un valore specifico per la proprietà **value** e [aggiornarlo](../../../ado/reference/ado-api/update-method.md) nella raccolta **Fields** denominata. È quindi possibile accedere ad altre proprietà, ad esempio il [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [gli attributi](../../../ado/reference/ado-api/attributes-property-ado.md) .
   
 ## <a name="applies-to"></a>Si applica a
   
@@ -50,5 +50,5 @@ ADO consente l'impostazione e restituzione di dati binari long con il **valore**
   
 ## <a name="see-also"></a>Vedere anche
 
-[Valore di esempio di proprietà (Visual Basic)](../../../ado/reference/ado-api/value-property-example-vb.md)
-[valore di esempio di proprietà (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Esempio di proprietà Value (VB) value,](../../../ado/reference/ado-api/value-property-example-vb.md)
+[esempio (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 

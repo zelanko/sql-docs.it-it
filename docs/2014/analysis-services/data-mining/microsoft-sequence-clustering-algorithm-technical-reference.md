@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Microsoft Docs
+title: Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083840"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
@@ -99,7 +99,7 @@ ms.locfileid: "66083840"
  Il valore predefinito è 64.  
   
  MAXIMUM_STATES  
- Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo fuori sequenza è maggiore del numero massimo di stati, l'algoritmo utilizza stati più frequenti dell'attributo e considera gli stati rimanenti come `Missing`.  
+ Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo non di sequenza è maggiore del numero massimo di Stati, l'algoritmo utilizza gli Stati più frequenti dell'attributo e considera gli stati rimanenti come `Missing`.  
   
  Il valore predefinito è 100.  
   
@@ -127,24 +127,24 @@ ms.locfileid: "66083840"
 >  Se si crea un modello che usano l'algoritmo di Microsoft Sequence ma non usano una colonna Sequence, il modello risultante non conterrà alcuna sequenza, ma raggrupperà semplicemente i case in base ad altri attributi inclusi nel modello.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table e Ordered|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
--   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering non supporta l'uso dello standard PMML (Predictive Model Markup Language) per la creazione dei modelli di data mining.  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Esempi di query sul modello Sequence Clustering](clustering-model-query-examples.md)   
+ [Contenuto del modello di data mining per i modelli Sequence Clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

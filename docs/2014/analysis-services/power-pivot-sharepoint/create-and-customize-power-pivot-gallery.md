@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229290"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Creare e personalizzare la raccolta PowerPivot
@@ -34,7 +34,7 @@ ms.locfileid: "75229290"
   
 -   [Passa alla vista teatro o alla vista raccolta](#switch)  
   
-##  <a name="prereq"></a>Prerequisiti  
+##  <a name="prereq"></a> Prerequisiti  
   
 -   È necessario disporre di Silverlight. Silverlight può essere scaricato e installato mediante Microsoft Update. Se si visualizza una libreria di Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando un browser che non dispone di Silverlight, fare clic sul collegamento nella pagina per installarlo. Dopo l'installazione, sarà necessario chiudere e riaprire il browser.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "75229290"
   
  Nella tabella seguente vengono descritti i layout diversi per la presentazione di bozze di anteprima di ogni pagina visualizzata in anteprima:  
   
-|Visualizza|Description|  
+|Visualizza|Descrizione|  
 |----------|-----------------|  
 |Vista Raccolta (impostazione predefinita)|Raccolta è la vista predefinita per una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'anteprima viene visualizzata a sinistra. Le immagini più piccole di ogni foglio di lavoro vengono visualizzate accanto all'anteprima in ordine sequenziale da sinistra a destra.|  
 |Tutti i documenti|Si tratta del layout standard per le raccolte documenti. È possibile scegliere questa vista per gestire singoli documenti o visualizzare il contenuto delle raccolte in un formato elenco.<br /><br /> Utilizzare questa vista per modificare le proprietà ed eliminare o spostare singoli documenti.<br /><br /> Se è stato abilitato il controllo delle versioni, è necessario utilizzare questa vista per archiviare o estrarre i documenti dalla raccolta.|  

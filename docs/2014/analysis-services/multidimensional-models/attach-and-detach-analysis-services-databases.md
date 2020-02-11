@@ -1,5 +1,5 @@
 ---
-title: Collegamento e scollegamento di database di Analysis Services | Microsoft Docs
+title: Collegamento e scollegamento di Analysis Services database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077491"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
-  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. Per tutti i casi e altro ancora, il `Attach` e `Detach` comandi abilitano il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba per portare offline il database e inserirli nuovamente online con un minimo sforzo.  
+  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. Per tutti questi e altri casi, i `Attach` comandi `Detach` e consentono all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di portare il database offline e di riportarlo online con scarso sforzo.  
   
 ## <a name="attach-and-detach-commands"></a>Comandi Attach e Detach  
  Il comando `Attach` consente di portare online un database in precedenza portato offline. È possibile collegare il database all'istanza del server originale o a un'altra istanza. Quando si collega un database, l'utente può specificare l'impostazione **ReadWriteMode** per il database. Il comando `Detach` consente di portare un database offline dal server.  
@@ -46,9 +46,9 @@ ms.locfileid: "66077491"
   
 |Scollegamento di un database di lettura/scrittura|Scollegamento di un database di sola lettura|  
 |--------------------------------------|-------------------------------------|  
-|1) Il server invia una richiesta per un blocco CommitExclusive sul database<br />2) Il server attende il commit o il rollback di tutte le transazioni in corso<br />3) Il server compila tutti i metadati necessari per scollegare il database<br />4) Il database viene contrassegnato come eliminato<br />5) Il server esegue il commit della transazione|1) Il database viene contrassegnato come eliminato<br />2) Il server esegue il commit della transazione<br /><br /> <br /><br /> Nota: La password di scollegamento non può essere modificata per un database di sola lettura. Se viene fornito il parametro password per un database collegato che contiene già una password, verrà generato un errore.|  
+|1) Il server invia una richiesta per un blocco CommitExclusive sul database<br />2) Il server attende il commit o il rollback di tutte le transazioni in corso<br />3) Il server compila tutti i metadati necessari per scollegare il database<br />4) Il database viene contrassegnato come eliminato<br />5) Il server esegue il commit della transazione|1) Il database viene contrassegnato come eliminato<br />2) Il server esegue il commit della transazione<br /><br /> <br /><br /> Nota: la password di scollegamento non può essere modificata per un database di sola lettura. Se viene fornito il parametro password per un database collegato che contiene già una password, verrà generato un errore.|  
   
- I comandi `Attach` e `Detach` devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, il `Attach` e `Detach` comandi sono comandi transazionali atomici. ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
+ I comandi `Attach` e `Detach` devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, i `Attach` comandi `Detach` e sono comandi transazionali atomici. ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
   
 > [!IMPORTANT]  
 >  Per eseguire il comando `Detach`, sono necessari privilegi di amministratore del database o di amministratore del server.  
@@ -61,8 +61,8 @@ ms.locfileid: "66077491"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Spostare un database di Analysis Services](move-an-analysis-services-database.md)   
  [Proprietà ReadWriteMode del database](database-readwritemodes.md)   
- [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
+ [Passare a un database Analysis Services tra le modalità ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Scollega elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Connetti elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

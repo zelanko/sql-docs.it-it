@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina Editor di testo - testo normale - generale) | Microsoft Docs
+title: Opzioni (editor di testo-testo normale-pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089283"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opzioni (Editor di testo - Testo normale - pagina Generale)
@@ -24,7 +24,7 @@ ms.locfileid: "66089283"
  Le opzioni per l'editor di testo normale possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor di testo normale tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco membri automatico**  
+ **Elenco automatico membri**  
  Questa caratteristica non è supportata dall'editor di testo normale.  
   
  **Nascondi membri avanzati**  
@@ -34,19 +34,19 @@ ms.locfileid: "66089283"
  Questa caratteristica non è supportata dall'editor di testo normale.  
   
 ## <a name="settings"></a>Impostazioni  
- **Attiva spazio virtuale**  
+ **Abilita spazio virtuale**  
  Consente di inserire spazi alla fine di ogni riga di testo. Selezionare la casella di controllo per inserire i commenti sempre nel medesimo punto accanto al testo.  
   
- **Ritorno a capo automatico**  
+ **A capo automatico**  
  Consente di visualizzare sulla riga successiva le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Mostra icona per ritorno a capo automatico** .  
   
- **Mostra icone per ritorno a capo automatico**  
+ **Mostra icona per ritorno a capo automatico**  
  Consente di visualizzare un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva. Per non visualizzare questi indicatori, deselezionare la casella di controllo.  
   
 > [!NOTE]  
 >  I simboli di ritorno a capo non vengono aggiunti al codice, né stampati. Si tratta esclusivamente di elementi di riferimento.  
   
- **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
+ **Applica comandi Taglia o Copia a righe vuote in assenza di selezione**  
  Consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

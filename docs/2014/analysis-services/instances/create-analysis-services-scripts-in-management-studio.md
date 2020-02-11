@@ -1,5 +1,5 @@
 ---
-title: Creare script per Analysis Services in Management Studio | Microsoft Docs
+title: Creare script di Analysis Services in Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080106"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include funzionalità di generazione di script, modelli ed editor che è possibile usare per generare script per oggetti e attività di Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Generare script per attività di Analysis Services in Management Studio  
@@ -35,7 +36,7 @@ ms.locfileid: "66080106"
   
 2.  Fare clic con il pulsante destro del mouse e quindi scegliere **Backup**. Viene aperta la finestra di dialogo Backup database. Specificare un nome per il file di backup e scegliere le opzioni desiderate per questo backup.  
   
-3.  Fare clic su **Script** nella parte superiore della finestra di dialogo. La funzionalità Script fa parte di tutte le finestre di dialogo basate su attività in Management Studio. Include le opzioni seguenti: **Creare uno script azione in nuova finestra Query** per aprire la finestra dell'editor di query, **genera Script azione nel File** per salvare lo script XMLA in un file, o **genera Script azione negli Appunti** per salvare lo script XMLA per il Appunti.  
+3.  Fare clic su **Script** nella parte superiore della finestra di dialogo. La funzionalità Script fa parte di tutte le finestre di dialogo basate su attività in Management Studio. Include le opzioni seguenti: **Genera script azione in nuova finestra Query** per aprire la finestra dell'editor di query, **Genera script azione su file** per salvare lo script XMLA in un file o **Genera script azione negli Appunti** per salvare lo script XMLA negli Appunti.  
   
      Notare che l'opzione **Genera script azione nel processo** elencata come un'opzione per script in Management Studio non è supportata per gli script di Analysis Services.  
   
@@ -59,13 +60,13 @@ ms.locfileid: "66080106"
   
 2.  Individuare l'oggetto per cui si desidera creare lo script da utilizzare per creare, modificare o eliminare oggetti.  
   
-3.  Pulsante destro del mouse dell'oggetto, scegliere **crea Script per cubo**, scegliere **CREATE in**, **ALTER To**, o **Elimina a**e quindi fare clic su uno del le opzioni seguenti: **Nuova finestra Editor di Query** per aprire la finestra dell'editor di query, **File** per salvare lo script XMLA in un file, o **Appunti** per salvare lo script XMLA negli Appunti.  
+3.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere **Crea script per cubo**, quindi **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in**o **Genera codice per istruzione DELETE in**e quindi fare clic su una delle opzioni seguenti: **Nuova finestra editor di query** per aprire la finestra dell'editor di query, **File** per salvare lo script XMLA in un file o **Appunti** per salvare lo script XMLA negli Appunti.  
   
     > [!NOTE]  
     >  In genere, è consigliabile selezionare **File** per creare più versioni diverse del file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Editor di query XMLA &#40;Analysis Services - Dati multidimensionali&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Creazione di script per attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Editor di query XMLA &#40;Analysis Services Dati multidimensionali&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

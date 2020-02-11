@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106748"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
@@ -44,13 +44,13 @@ ms.locfileid: "66106748"
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Visualizza** sulla barra multifunzione e quindi su **Proprietà**.  
   
-4.  In `Hidden`, scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento del report la prima volta che si esegue un report:  
+4.  In `Hidden`scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento del report la prima volta che si esegue un report:  
   
-    -   Selezionare `False` per visualizzare l'elemento del report.  
+    -   Selezionare `False` questa opzione per visualizzare l'elemento del report.  
   
-    -   Selezionare `True` per nascondere l'elemento del report.  
+    -   Selezionare `True` questa opzione per nascondere l'elemento del report.  
   
-    -   Selezionare **\<Espressione>** per aprire la finestra di dialogo **Espressione** nella quale è possibile creare un'espressione che viene valutata in fase di runtime per determinare la visibilità.  
+    -   Selezionare ** \<espressione>** per aprire la finestra di dialogo **espressione** per creare un'espressione che viene valutata in fase di esecuzione per determinare la visibilità.  
   
 5.  Nella casella a discesa in **ToggleItem**selezionare il nome di una casella di testo alla quale aggiungere l'immagine dell'elemento Toggle.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "66106748"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Per aggiungere a un elemento del report un'azione per espandere e comprimere  
   
-1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere e scegliere **Proprietà** *\<elemento report*. Viene visualizzata la finestra di dialogo **Proprietà** *\<elemento report>* relativa all'elemento report.  
+1.  Nella visualizzazione di progettazione report fare clic con il pulsante destro del mouse sull'elemento del report da visualizzare o nascondere, quindi fare clic su * \<elemento del report>* **proprietà**. Verrà * \<* visualizzata la finestra di dialogo **proprietà**>elemento del report per l'elemento del report.  
   
-2.  Fare clic su **Visibilità**.  
+2.  Fare clic su **visibilità**.  
   
 3.  In **Quando il report viene eseguito inizialmente**scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento del report la prima volta che si esegue un report:  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66106748"
     -   Selezionare **Mostra o nascondi in base a un'espressione** per determinare la visibilità usando un'espressione valutata in fase di runtime. Fare clic su (**fx**) per aprire la finestra di dialogo **Espressione** per creare un'espressione.  
   
         > [!NOTE]  
-        >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report. L'espressione restituisce un valore `Boolean` `True` per nascondere l'elemento e `False` per visualizzarlo.  
+        >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report. L'espressione restituisce un valore `Boolean``True` per nascondere l'elemento e `False` per visualizzarlo.  
   
 4.  Nella casella a discesa di **La visualizzazione può essere attivata/disattivata tramite questo elemento del report**selezionare il nome di una casella di testo nel report nella quale visualizzare l'immagine di un elemento Toggle, ad esempio Textbox1.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66106748"
      ![Esecuzione di report con tabella di espansione](../media/expandcollapse-runreport-reporttable.png "Esecuzione di report con tabella di espansione")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azione di drill-down &#40;Generatore report e SSRS &#41;](drilldown-action-report-builder-and-ssrs.md)   
- [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Azione di drill-down &#40;Generatore report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Nascondi un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952027"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Ripristino della chiave di crittografia (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzata una chiave di crittografia per proteggere dati sensibili archiviati nel database del server di report. Per garantire di disporre di accesso continuo ai dati crittografati, è importante creare una copia di backup della chiave di crittografia qualora sia necessario ripristinarla in seguito a causa di modifiche all'account del servizio o come parte di una migrazione pianificata. In questo argomento è offerta una panoramica sull'utilizzo della Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per ripristinare le chiavi.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
  Per ripristinare la chiave, è necessario avere precedentemente salvato una copia di backup della chiave in un file protetto da password. Durante il ripristino della chiave, il server di report sostituirà una chiave esistente con la chiave inclusa nel file protetto da password. La chiave inclusa nel file deve essere identica a quella utilizzata per crittografare e decrittografare i dati.  
   
@@ -31,23 +31,23 @@ ms.locfileid: "71952027"
  Se è stata ripristinata una chiave non valida diversa da quella utilizzata per crittografare i dati, non sarà possibile decrittografare i dati archiviati nel database del server di report. Se la chiave ripristinata non è valida, è necessario ripristinare immediatamente una copia di backup, se disponibile, della chiave corretta. Se non si dispone di una copia di backup della chiave utilizzata per crittografare i dati, è necessario eliminare tutti i dati crittografati. Per eseguire questa operazione, fare clic sul pulsante **Elimina** nella pagina [Chiavi di crittografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) . Dopo avere eliminato il contenuto crittografato, è necessario aggiornare manualmente tutte le sottoscrizioni e specificare nuovamente tutte le credenziali archiviate definite per i report e le sottoscrizioni basate sui dati nel server di report.  
   
 ## <a name="restore-encryption-key-dialog"></a>Finestra di dialogo Ripristina chiave di crittografia  
- Per informazioni su dove trovare la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, vedere [Reporting Services Configuration Manager &#40;modalità&#41;nativa](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per informazioni su dove trovare la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, vedere [Reporting Services Configuration Manager &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Per aprire la finestra di dialogo Ripristina chiave di crittografia fare clic su **Chiavi di crittografia** nel riquadro di navigazione di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quindi fare clic su **Ripristina**. Questa finestra di dialogo viene visualizzata anche quando si aggiorna l'account del servizio utilizzando la pagina Account servizio di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni su  
   
 ## <a name="options"></a>Opzioni  
- **Percorso del file**  
+ **Percorso file**  
  Selezionare il file protetto da password che contiene una copia della chiave simmetrica. L'estensione predefinita è snk.  
   
  **Password**  
  Immettere la password per sbloccare il file. Solo gli utenti che conoscono la password possono ripristinare la chiave. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono applicati criteri password complessi. La password deve contenere almeno 8 caratteri e includere una combinazione di caratteri alfanumerici maiuscoli e minuscoli e almeno un simbolo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Reporting Services Configuration Manager argomenti della Guida F1 &#40;modalità nativa di SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Chiavi &#40;di crittografia modalità nativa SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
+ [Inizializzare un server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Chiavi di crittografia &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

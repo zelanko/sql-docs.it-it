@@ -19,18 +19,18 @@ ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000881"
 ---
-# <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
+# <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina un set di raccolta definito dall'utente e tutti i relativi elementi della raccolta.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,26 +42,26 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
 ## <a name="arguments"></a>Argomenti  
  [ @collection_set_id = ] *collection_set_id*  
- Identificatore univoco del log del set di raccolta. *collection_set_id* viene **int** e deve avere un valore se *nome* è NULL.  
+ Identificatore univoco del log del set di raccolta. *collection_set_id* è di **tipo int** e deve avere un valore se *Name* è null.  
   
- [ @name =] '*nome*'  
- Nome del set di raccolta. *nome* viene **sysname** e deve avere un valore se *collection_set_id* è NULL.  
+ [ @name = ] '*Name*'  
+ Nome del set di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collection_set_id* è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_delete_collection_set nel contesto del database di sistema msdb.  
   
- Entrambi *collection_set_id* oppure *nome* deve avere un valore, non possono essere entrambi NULL. Per ottenere questi valori, eseguire una query sulla vista di sistema syscollector_collection_set.  
+ Il *collection_set_id* o il *nome* deve avere un valore e non può essere null. Per ottenere questi valori, eseguire una query sulla vista di sistema syscollector_collection_set.  
   
  Non è possibile eliminare set di raccolta definiti dal sistema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente elimina una raccolta definita dall'utente impostata specificando il *collection_set_id*.  
+ Nell'esempio seguente viene eliminato un set di raccolta definito dall'utente che specifica il *collection_set_id*.  
   
 ```  
 USE msdb;  
@@ -73,6 +73,6 @@ EXEC dbo.sp_syscollector_delete_collection_set
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

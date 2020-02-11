@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164914"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Classi e proprietà del provider WMI per eventi del server
@@ -27,7 +27,7 @@ ms.locfileid: "74164914"
   
  Per informazioni sulle proprietà che possono essere sottoposte a query da un evento o un gruppo di eventi, fare riferimento allo schema dell'evento. Per impostazione predefinita, lo schema dell'evento viene installato nella directory seguente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- In alternativa, è possibile fare riferimento allo schema dell'evento pubblicato in [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100).  
+ In alternativa, è possibile fare riferimento allo schema dell'evento pubblicato [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)in.  
   
  Se ad esempio si fa riferimento all'evento ALTER_DATABASE, si apprenderà che l'evento padre viene DDL_SERVER_LEVEL_EVENTS e le relative proprietà sono **TSQLCommand** e **DatabaseName**. L'evento eredita inoltre le proprietà **SQLInstance**, **posttime**, **nomecomputer**, **SPID**e **LoginName**. L'evento non dispone di eventi figli.  
   
@@ -36,14 +36,14 @@ ms.locfileid: "74164914"
   
  **Eventi e gruppi di eventi del linguaggio di definizione dei dati**  
   
- ![Albero eventi del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Albero eventi del provider WMI per eventi del server")  
+ ![Albero degli eventi del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Albero degli eventi del provider WMI per eventi del server")  
   
- **Eventi di traccia e gruppi di eventi**  
+ **Eventi e gruppi di eventi di traccia**  
   
  ![Eventi di traccia e gruppi di eventi](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Eventi di traccia e gruppi di eventi")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti relativi al provider WMI per eventi del Server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+ [Concetti relativi al provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esempio di diagnostica di Gestione driver | Microsoft Docs
+title: Esempio di diagnostica di gestione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046958"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Esempio di diagnostica di Gestione driver
-Gestione Driver può anche generare messaggi di diagnostica. Ad esempio, se un'applicazione passata un'opzione direzione non valido per **SQLDataSources**, potrebbe essere formattare e restituire i valori seguenti da Gestione Driver **SQLGetDiagRec**:  
+Gestione driver può inoltre generare messaggi di diagnostica. Se, ad esempio, un'applicazione ha passato un'opzione di direzione non valida a **SQLDataSources**, gestione driver potrebbe formattare e restituire i valori seguenti da **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "HY103"  
@@ -30,4 +30,4 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Driver Manager]Direction option out of range"  
 ```  
   
- Perché si è verificato l'errore in Gestione Driver, aggiungere prefissi per il messaggio di diagnostica sul suo fornitore ([Microsoft]) e il relativo identificatore ([gestione Driver ODBC]).
+ Poiché l'errore si è verificato in Gestione driver, i prefissi sono stati aggiunti al messaggio di diagnostica per il fornitore ([Microsoft]) e al relativo identificatore ([Gestione driver ODBC]).

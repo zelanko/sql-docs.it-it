@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008907"
 ---
-# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
+# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Uso **sp_pdw_database_encryption** per abilitare transparent data encryption in per un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliance. Quando **sp_pdw_database_encryption** impostato su 1, utilizzare il **ALTER DATABASE** istruzione per crittografare un database tramite Transparent Data Encryption.  
+  Usare **sp_pdw_database_encryption** per abilitare Transparent Data Encryption in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] per un'appliance. Quando **sp_pdw_database_encryption** impostato su 1, utilizzare l'istruzione **ALTER database** per crittografare un database tramite Transparent Data Encryption.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,25 +32,25 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>Parametri  
-`[ @enabled = ] enabled` Determina se transparent data encryption è abilitato. *abilitata* viene **int**, e può essere uno dei valori seguenti:  
+`[ @enabled = ] enabled`Determina se la crittografia trasparente dei dati è abilitata. *Enabled* è di **tipo int**. i possibili valori sono i seguenti:  
   
 -   0 = Disabilitato  
   
 -   1 = Attivato  
   
- L'esecuzione **sp_pdw_database_encryption** senza parametri, viene restituito lo stato corrente della funzionalità TDE nell'appliance come set di risultati scalari: 0 per disabilitato o 1 per abilitare.  
+ L'esecuzione di **sp_pdw_database_encryption** senza parametri restituisce lo stato corrente di Transparent Data Encryption nell'appliance come set di risultati scalari: 0 per Disabled o 1 per Enabled.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Quando TDE è abilitata tramite **sp_pdw_database_encryption**, il database tempdb è eliminato, ricreato e crittografato. Per questo motivo, non è possibile abilitare TDE in un'appliance mentre sono presenti altre sessioni attive usando tempdb. Abilitazione o disabilitazione di TDE in un'appliance è un'azione che modifica lo stato dell'appliance, nella maggior parte dei casi si dovrà essere eseguita una sola volta nel ciclo di vita di appliance e deve essere eseguita quando non viene rilevato traffico nell'appliance.  
+## <a name="remarks"></a>Osservazioni  
+ Quando Transparent Data Encryption viene abilitato utilizzando **sp_pdw_database_encryption**, il database tempdb viene eliminato, ricreato e crittografato. Per questo motivo, non è possibile abilitare la funzionalità Transparent Data Encryption in un'appliance mentre sono presenti altre sessioni attive che usano tempdb. L'abilitazione o la disabilitazione di Transparent Data Encryption in un'appliance è un'azione che modifica lo stato dell'appliance, nella maggior parte dei casi dovrebbe essere eseguita una volta nella durata dell'appliance e deve essere eseguita quando non è presente traffico nell'appliance.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del database, o **CONTROL SERVER** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del database **sysadmin** o all'autorizzazione **Control Server** .  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente Abilita TDE nell'appliance.  
+ L'esempio seguente abilita Transparent Data Encryption nell'appliance.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  

@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni su una dimensione (Analysis Services) | Microsoft Docs
+title: Concedere le autorizzazioni per una dimensione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074963"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Concedere le autorizzazioni per una dimensione (Analysis Services)
   La sicurezza delle dimensioni viene usata per impostare le autorizzazioni su un oggetto dimensione e non sui relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  
   
- Probabilmente però l'obiettivo non è controllare le operazioni di elaborazione, bensì l'accesso dei dati a una dimensione o gli attributi e le gerarchie in essa contenuti. Si supponga, ad esempio, che una società con divisioni di vendita regionali non desideri autorizzare l'accesso alle informazioni sulle prestazioni di vendita agli utenti esterni alla divisione. Per consentire o negare l'accesso a parti di dati della dimensione per diversi elementi costituenti, è possibile impostare le autorizzazioni sugli attributi della dimensione e sui membri della dimensione. Si noti che non è possibile negare l'accesso a un singolo oggetto dimensione, ma solo ai relativi dati. Se l'obiettivo immediato è consentire o negare l'accesso ai membri di una dimensione, compresi i diritti di accesso alle singole gerarchie di attributi, vedere [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) per altre informazioni.  
+ Probabilmente però l'obiettivo non è controllare le operazioni di elaborazione, bensì l'accesso dei dati a una dimensione o gli attributi e le gerarchie in essa contenuti. Si supponga, ad esempio, che una società con divisioni di vendita regionali non desideri autorizzare l'accesso alle informazioni sulle prestazioni di vendita agli utenti esterni alla divisione. Per consentire o negare l'accesso a parti di dati della dimensione per diversi elementi costituenti, è possibile impostare le autorizzazioni sugli attributi della dimensione e sui membri della dimensione. Si noti che non è possibile negare l'accesso a un singolo oggetto dimensione, ma solo ai relativi dati. Se l'obiettivo immediato è consentire o negare l'accesso ai membri di una dimensione, compresi i diritti di accesso alle singole gerarchie di attributi, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) per altre informazioni.  
   
  La parte restante di questo argomento descrive le autorizzazioni che è possibile impostare sull'oggetto dimensione, tra cui:  
   
--   Autorizzazioni di Lettura o Lettura/Scrittura: è possibile solo scegliere tra Lettura e Lettura/Scrittura. Non è possibile specificare "nessuno". Come indicato, se l'obiettivo consiste nel limitare l'accesso ai dati della dimensione, vedere [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) per informazioni dettagliate.  
+-   Autorizzazioni di Lettura o Lettura/Scrittura: è possibile solo scegliere tra Lettura e Lettura/Scrittura. Non è possibile specificare "nessuno". Come indicato, se l'obiettivo consiste nel limitare l'accesso ai dati della dimensione, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) per informazioni dettagliate.  
   
 -   Autorizzazioni di elaborazione: impostare tale opzione quando gli scenari richiedono una strategia di elaborazione che prevede autorizzazioni personalizzate per singoli oggetti.  
   
@@ -45,22 +45,22 @@ ms.locfileid: "66074963"
 ## <a name="set-permissions-on-a-database-dimension"></a>Impostare le autorizzazioni su una dimensione del database  
  Le dimensioni del database sono oggetti autonomi all'interno di un database, consentendo il riuso della dimensione all'interno dello stesso modello. Considerare la dimensione DATE del database usata più volte in un modello come dimensioni Order Date, Ship Date e Due Date del cubo. Poiché le dimensioni del cubo e del database sono oggetti peer in un database, è possibile impostare le autorizzazioni di elaborazione indipendentemente per ogni oggetto.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], espandere il nodo **Ruoli** relativo al database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di, espandere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
 2.  Nel riquadro **Dimensioni** il set di dimensioni deve essere impostato su **Tutte le dimensioni del database**.  
   
      Per impostazione predefinita, le autorizzazioni sono impostate su **Lettura**.  
   
-     Sebbene sia disponibile l'autorizzazione **Lettura/Scrittura** , è consigliabile non usarla. L'autorizzazione**Lettura/Scrittura** viene usata per gli scenari di writeback delle dimensioni, che sono stati deprecati. Visualizzare [Analysis Services deprecate in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Sebbene sia disponibile l'autorizzazione **Lettura/Scrittura** , è consigliabile non usarla. **Lettura/scrittura** viene utilizzato per gli scenari di writeback delle dimensioni, che sono stati deprecati. Vedere [deprecated Analysis Services features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Facoltativamente, è possibile impostare le autorizzazioni **Lettura definizione** ed **Elaborazione** per i singoli oggetti dimensione, a condizione che tali autorizzazioni non siano già impostate a livello di database. Vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) e [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) per informazioni dettagliate.  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>Impostare le autorizzazioni su una dimensione del cubo  
  Le dimensioni del cubo sono dimensioni del database che sono state aggiunte a un cubo. Di conseguenza, sono strutturalmente dipendenti dai gruppi di misure associati. Sebbene sia possibile elaborare questi oggetti in modo atomico, in relazione all'autorizzazione è consigliabile gestire il cubo e le dimensioni del cubo come una sola entità.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], espandere il nodo **Ruoli** relativo al database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di, espandere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
-2.  Nel **quote** riquadro modificare la dimensione del set \<nome-cubo > **dimensioni cubo**.  
+2.  Nel riquadro **dimensioni** modificare il set di \<dimensioni in nome cubo> **dimensioni cubo**.  
   
      Per impostazione predefinita, le autorizzazioni vengono ereditate da una dimensione del database corrispondente. Deselezionare la casella di controllo **Eredita** per modificare le autorizzazioni da **Lettura** a **Lettura/Scrittura**. Prima di usare l'autorizzazione **Lettura/Scrittura**, leggere la nota nella sezione precedente.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "66074963"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Concedere le autorizzazioni per il cubo o il modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concessione dell'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Concessione dell'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

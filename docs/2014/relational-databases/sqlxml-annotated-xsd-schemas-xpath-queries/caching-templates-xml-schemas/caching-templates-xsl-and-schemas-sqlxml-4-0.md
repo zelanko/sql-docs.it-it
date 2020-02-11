@@ -1,5 +1,5 @@
 ---
-title: La memorizzazione nella cache modelli XSL e schemi (SQLXML 4.0) | Documenti di Microsoft
+title: Memorizzazione nella cache di modelli, XSL e schemi (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013245"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>Memorizzazione nella cache di modelli, file XSL e schemi (SQLXML 4.0)
@@ -28,14 +28,14 @@ ms.locfileid: "66013245"
   
  Negli argomenti di questa sezione vengono fornite ulteriori informazioni sulla memorizzazione nella cache.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [La cache dei modelli &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Caching del modello &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)  
  Viene illustrata e quindi fornita una chiave del Registro di sistema per la memorizzazione nella cache dei modelli.  
   
- [La memorizzazione nella cache di XSL &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [Caching XSL &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
  Viene illustrata e quindi fornita una chiave del Registro di sistema per la memorizzazione nella cache dei file XSL.  
   
- [La cache dello schema &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+ [Caching dello schema &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)  
  Vengono illustrati i problemi dell'installazione affiancata di SQLXML relativi alla memorizzazione nella cache degli schemi e vengono fornite chiavi del Registro di sistema per la memorizzazione nella cache degli schemi.  
   
   

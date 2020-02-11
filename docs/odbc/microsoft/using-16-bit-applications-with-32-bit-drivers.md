@@ -1,5 +1,5 @@
 ---
-title: Uso di applicazioni a 16 Bit con driver a 32 Bit | Microsoft Docs
+title: Uso di applicazioni a 16 bit con driver a 32 bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,52 +14,52 @@ ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088188"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 bit con driver a 32 bit
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Usare invece Gestione driver a 32 o 64 bit.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Utilizzare invece Gestione driver a 32 bit o 64 bit.  
   
- È possibile eseguire applicazioni a 16 bit con driver a 32 bit nel sistema basato su Windows, purché il driver a 32 bit non chiama in modo esplicito le funzioni API Win32 che creano thread. Il Windows nel sottosistema Windows (WOW) esegue le applicazioni in modalità a 16 bit e risolve le chiamate a 16 bit del sistema operativo. ODBC thunk delle chiamate a 16 bit DLL resolve dall'applicazione al driver a 32 bit. Le applicazioni a 16 bit usano l'API di Windows e driver a 32 bit usano l'API Win32.  
+ È possibile eseguire applicazioni a 16 bit con driver a 32 bit nel sistema basato su Windows, purché il driver a 32 bit non chiami in modo esplicito le funzioni API Win32 che creano thread. Il sottosistema Windows on Windows (WOW) esegue le applicazioni in modalità a 16 bit e risolve le chiamate a 16 bit al sistema operativo. Le DLL di thunk ODBC risolvono le chiamate a 16 bit dall'applicazione ai driver a 32 bit. Le applicazioni a 16 bit utilizzano l'API Windows e i driver a 32 bit utilizzano l'API Win32.  
   
-## <a name="architecture"></a>Architettura  
- La figura seguente mostra le applicazioni a 16 come comunicare con driver a 32 bit. Tra la gestione di Driver a 16 bit e il driver a 32 bit sono generici thunk delle DLL che consentono di convertire le chiamate ODBC 16 bit a chiamate ODBC 32-bit.  
+## <a name="architecture"></a>Architecture  
+ Nella figura seguente viene illustrato il modo in cui le applicazioni a 16 bit comunicano con driver a 32 bit. Tra la gestione driver a 16 bit e i driver a 32 bit sono dll di thunk generiche che convertono le chiamate ODBC a 16 bit in chiamate ODBC a 32 bit.  
   
- ![16 come&#45;di comunicare con 32 bit app&#45;i driver di bit](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Modalità di comunicazione delle applicazioni a 16&#45;bit con driver&#45;bit di 32](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
->  Ogni volta che un'applicazione a 16 bit interagisce con un driver a 32 bit, la gestione di Driver a 32 bit restituisce sempre "2.0" come versione di ODBC supportati dal driver.  
+>  Ogni volta che un'applicazione a 16 bit interagisce con un driver a 32 bit, gestione driver 32 bit restituisce sempre "2,0" come versione di ODBC supportata dal driver.  
   
 ## <a name="administration"></a>Amministrazione  
- È possibile gestire le origini dati per i driver a 32 bit con l'amministratore dell'origine dati ODBC. Per aprire l'amministratore ODBC in computer che eseguono Microsoft® Windows® 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)** . Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
+ È possibile gestire le origini dati per i driver a 32 bit tramite Amministrazione origine dati ODBC. Per aprire Amministratore ODBC nei computer che eseguono Microsoft® Windows® 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
   
- La figura seguente mostra come un'applicazione a 16 bit chiama una DLL di installazione di driver a 32 bit. Tra il programma di installazione a 16 bit DLL e il driver a 32 bit DLL di installazione è una DLL thunk generica che converte le chiamate DLL programma di installazione a 16 bit in chiamate DLL programma di installazione a 32 bit.  
+ Nella figura seguente viene illustrato come un'applicazione a 16 bit chiama una DLL di installazione del driver a 32 bit. Tra la dll del programma di installazione a 16 bit e la DLL di installazione del driver a 32 bit è una DLL di thunk generica che converte le chiamate di DLL del programma di installazione a 16 bit in chiamate DLL del programma di installazione a 32 bit.  
   
- ![Come un 16&#45;app bit chiama un 32&#45;di tipo bit DLL di installazione driver](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Come un'app a 16&#45;bit chiama una DLL di installazione del driver a 32 bit&#45;](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
- In Windows in Windows (thunk di 16 bit a 32 bit), una DLL thunk aggiuntiva denominata Ds32gt converte i valori di argomento a 16 bit passati tramite un programma di installazione a 32 bit DLL eseguire il backup a 16 bit.  
+ In Windows in Windows (da 16 bit a 32 bit), una DLL di thunk aggiuntiva denominata ds32gt. dll converte i valori degli argomenti a 16 bit passati attraverso una DLL di installazione a 32 bit a 16 bit.  
   
 ## <a name="components"></a>Componenti  
- Il componente ODBC del SDK di MDAC 2.8 SP1 include i file seguenti per l'esecuzione di applicazioni a 16 bit con driver a 32 bit. Questi componenti si trovano nella directory \Redist.  
+ Il componente ODBC di MDAC 2,8 SP1 SDK include i file seguenti per l'esecuzione di applicazioni a 16 bit con driver a 32 bit. Questi componenti si trovano nella directory redist  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|Odbc16gt.dll|DLL thunk di 16 bit ODBC generico|  
-|Odbc32gt.dll|ODBC generico thunk DLL a 32 bit|  
-|Odbccp32.dll|DLL di installazione a 32 bit|  
-|Odbcad32.exe|programma di amministrazione di 32 bit|  
-|Odbcinst.hlp|File di programma di installazione della Guida|  
-|Ds16gt.dll|installazione di driver a 16 bit generico thunk delle DLL|  
-|Ctl3d32.dll|raccolta di stili di finestra tridimensionale a 32 bit|  
+|Odbc16gt. dll|DLL di thunk generici ODBC a 16 bit|  
+|Odbc32gt. dll|DLL di thunk generico ODBC a 32 bit|  
+|Odbccp32. dll|DLL del programma di installazione a 32 bit|  
+|Odbcad32. exe|programma di amministrazione a 32 bit|  
+|Odbcinst. hlp|File della guida del programma di installazione|  
+|Ds16gt. dll|DLL di thunk generico per la configurazione di driver a 16 bit|  
+|Ctl3d32. dll|libreria di stili della finestra tridimensionale a 32 bit|  
   
- Inoltre, i file seguenti con la gestione dei Driver di ODBC 2.10 16 bit, che non fanno parte di ODBC 3.51, richiesti dal e devono essere installati con l'applicazione a 16 bit.  
+ Inoltre, i file seguenti insieme alla gestione driver ODBC 2,10 a 16 bit, che non fanno parte di ODBC 3,51, sono richiesti da e devono essere installati con l'applicazione a 16 bit.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|Odbc.dll|Gestione Driver a 16 bit|  
-|Odbcinst.dll|DLL di installazione a 16 bit|  
-|Odbcadm.exe|programma di amministrazione di ODBC 16 bit|
+|ODBC. dll|Gestione driver a 16 bit|  
+|Odbcinst. dll|DLL del programma di installazione a 16 bit|  
+|ODBCADM. exe|programma di amministrazione ODBC a 16 bit|

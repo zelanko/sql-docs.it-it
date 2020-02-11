@@ -13,14 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014212"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Oggetto `MultiLineString` è una raccolta di zero o più `geometry` oppure **geographyLineString** istanze.  
+  Un `MultiLineString` è una raccolta di zero o più `geometry` istanze di o **GeographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Istanze MultiLineString  
  Nella figura seguente vengono illustrati esempi di istanze `MultiLineString`.  
@@ -29,7 +29,7 @@ ms.locfileid: "66014212"
   
  Come indicato nell'illustrazione:  
   
--   Figura 1 è un semplice `MultiLineString` istanza il cui limite sono i quattro endpoint dei due `LineString` elementi.  
+-   La figura 1 è un' `MultiLineString` istanza semplice il cui limite è costituito dai quattro endpoint `LineString` dei due elementi.  
   
 -   La figura 2 è un'istanza di tipo semplice `MultiLineString` perché si intersecano solo gli endpoint degli elementi `LineString`. Il limite è rappresentato dai due endpoint non sovrapposti.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014212"
   
 -   La figura 4 rappresenta un'istanza di tipo non semplice, non chiuso `MultiLineString`.  
   
--   La figura 5 rappresenta un'istanza di tipo semplice, non chiuso `MultiLineString`. Non è chiusa perché relativo `LineStrings` elementi non sono chiusi. È semplice perché nessuna delle parti interne di alcuna istanza `LineStrings` si interseca.  
+-   La figura 5 rappresenta un'istanza di tipo semplice, non chiuso `MultiLineString`. Non è chiuso perché i relativi `LineStrings` elementi non sono chiusi. È semplice perché nessuna delle parti interne di alcuna istanza `LineStrings` si interseca.  
   
 -   La figura 6 rappresenta un'istanza di tipo semplice e chiuso `MultiLineString`. È chiusa perché tutti i suoi elementi sono chiusi. È semplice perché nessuno dei suoi elementi si interseca con le parti interne.  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Per poter essere accettata, un'istanza di `MultiLineString` deve essere vuota o comprendere esclusivamente istanze di `LineString` accettate. Per altre informazioni su accettato `LineString` istanze, vedere [LineString](../spatial/linestring.md). Negli esempi seguenti vengono illustrate alcune istanze `MultiLineString` accettate.  
+ Per poter essere accettata, un'istanza di `MultiLineString` deve essere vuota o comprendere esclusivamente istanze di `LineString` accettate. Per ulteriori informazioni sulle istanze `LineString` accettate, vedere [LineString](../spatial/linestring.md). Negli esempi seguenti vengono illustrate alcune istanze `MultiLineString` accettate.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -74,7 +74,8 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` non è valida, poiché la seconda istanza `LineString` si sovrappone alla prima istanza `LineString` in un intervallo. Si toccano in un numero infinito di punti.  
+ 
+  `@g4` non è valida, poiché la seconda istanza `LineString` si sovrappone alla prima istanza `LineString` in un intervallo. Si toccano in un numero infinito di punti.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente crea un'istanza `geometry``MultiLineString` che contiene due elementi `LineString` con SRID 0.  

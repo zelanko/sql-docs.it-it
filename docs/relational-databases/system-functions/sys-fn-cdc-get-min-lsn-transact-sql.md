@@ -21,18 +21,18 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046397"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata di [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabella di sistema. Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
+  Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata dalla tabella di sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +42,18 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **«** *capture_instance_name* **»**  
- Nome dell'istanza di acquisizione. *capture_instance_name* viene **sysname**.  
+ **'** *capture_instance_name* **'**  
+ Nome dell'istanza di acquisizione. *capture_instance_name* è di **tipo sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **binary(10)**  
+ **binario (10)**  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Restituisce 0x00000000000000000000 quando l'istanza di acquisizione non esiste o quando il chiamante non è autorizzato ad accedere ai dati delle modifiche associati all'istanza di acquisizione.  
   
  Questa funzione è utilizzata in genere per identificare l'endpoint inferiore della cronologia dell'acquisizione dei dati delle modifiche associati a un'istanza di acquisizione. È inoltre possibile utilizzare questa funzione per verificare che gli endpoint di una query di intervallo si trovino all'interno della cronologia dell'istanza di acquisizione prima di richiedere i dati delle modifiche. È importante eseguire tali controlli perché l'endpoint inferiore di un'istanza di acquisizione cambia quando viene eseguito il processo di pulizia sulle tabelle delle modifiche. Se il tempo tra le richieste dei dati delle modifiche è significativo, anche un endpoint inferiore impostato sull'endpoint superiore della richiesta precedente dei dati delle modifiche potrebbe cadere al di fuori della cronologia corrente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

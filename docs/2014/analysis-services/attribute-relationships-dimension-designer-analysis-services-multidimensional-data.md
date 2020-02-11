@@ -1,5 +1,5 @@
 ---
-title: Attributo relazioni (Progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Relazioni tra attributi (Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063192"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relazione tra attributi (Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -38,10 +38,10 @@ ms.locfileid: "66063192"
  Utilizzare quest'elenco per trovare una specifica relazione tra attributi nel diagramma delle relazioni tra attributi e per gestire quella relazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Struttura dimensione &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Le traduzioni &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Struttura dimensione &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

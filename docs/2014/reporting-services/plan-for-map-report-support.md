@@ -1,5 +1,5 @@
 ---
-title: Piano di supporto dei Report mappa | Microsoft Docs
+title: Piano per il supporto dei report mappa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108075"
 ---
 # <a name="plan-for-map-report-support"></a>Pianificare il supporto dei report mappa
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta i report di mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. L'autore del report è possibile creare un report che specifica i dati spaziali o sezioni di Bing map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]supporta i report mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. Un autore del report può creare un report che specifica dati spaziali o sezioni di Bing Map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  
   
 ## <a name="support-for-bing-maps"></a>Supporto per Bing Maps  
  Le mappe possono includere un livello sfondo che consente di visualizzare sezioni di Bing Map. Per visualizzare un report pubblicato che dispone di un livello sezione mappa, è necessario configurare il server di report per recuperare sezioni dai servizi Web di Bing Maps. Per altre informazioni, vedere [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- In ogni report gli autori del report possono specificare se utilizzare una connessione Secure Sockets Layer (SSL) per recuperare sezioni dal server delle sezioni. A tale scopo, nel riquadro proprietà per il livello sezione, è necessario impostare la proprietà booleana UseSecureConnection a `true`.  
+ In ogni report gli autori del report possono specificare se utilizzare una connessione Secure Sockets Layer (SSL) per recuperare sezioni dal server delle sezioni. A tale scopo, nel riquadro proprietà per il livello sezione è necessario impostare la proprietà booleana UseSecureConnection su `true`.  
   
 > [!NOTE]  
 >  Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkId=151372).  
@@ -47,9 +47,9 @@ ms.locfileid: "66108075"
   
 -   Quando i dati mappa devono essere incorporati, regolare il centro del viewport e il livello di zoom per includere solo i dati mappa necessari per il report.  
   
- Per altre informazioni, [Maps &#40;Generatore Report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Per altre informazioni, [Maps &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

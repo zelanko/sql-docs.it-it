@@ -1,5 +1,5 @@
 ---
-title: Risultati di SQL Server messaggi | Documenti di Microsoft
+title: SQL Server risultati del messaggio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206716"
 ---
 # <a name="sql-server-message-results"></a>Risultati dei messaggi di SQL Server
-  Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] non generano istruzioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client rowset OLE DB provider o un conteggio di righe quando viene eseguito è influenzato:  
+  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti non generano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe del provider OLE DB Native client o un conteggio delle righe interessate quando vengono eseguite:  
   
 -   PRINT  
   
@@ -34,13 +34,13 @@ ms.locfileid: "68206716"
   
 -   SET STATISTICS  
   
- Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. In caso di esecuzione, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce S_OK e i messaggi sono disponibili per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client.  
+ Queste istruzioni restituiscono uno o più messaggi informativi o determinano la restituzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di messaggi informativi in sostituzione dei risultati del conteggio o del set di righe. Al completamento dell'esecuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client restituisce S_OK e i messaggi sono disponibili [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il consumer del provider OLE DB di Native Client.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce S_OK e include uno o più messaggi informativi disponibili in seguito all'esecuzione di molte [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni o l'esecuzione del consumer di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membro del provider OLE DB Native Client funzione.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client restituisce S_OK e include uno o più messaggi informativi disponibili dopo l' [!INCLUDE[tsql](../../includes/tsql-md.md)] esecuzione di molte istruzioni o l'esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del consumer di una funzione membro del provider di OLE DB di Native Client.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consumer OLE DB provider consentendo dinamico specifica del testo della query è necessario controllare interfacce degli errori dopo ogni esecuzione della funzione membro indipendentemente dal valore del codice restituito, la presenza o assenza di un restituito**IRowset** o **IMultipleResults** riferimenti all'interfaccia o un numero di righe modificate.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB di Native client che consente di specificare dinamicamente il testo della query deve controllare le interfacce di errore dopo l'esecuzione di ogni funzione membro, indipendentemente dal valore del codice restituito, dalla presenza o dall'assenza di un riferimento all'interfaccia **IRowset** o **IMultipleResults** restituito o da un conteggio delle righe interessate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [errori](errors.md)  
+ [Errors](errors.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67316669"
 ---
 # <a name="custom-messages-for-logging"></a>Messaggi personalizzati per la registrazione
@@ -33,11 +33,11 @@ ms.locfileid: "67316669"
   
  [Pacchetto](#Package)  
   
- [Attività Inserimento bulk](#BulkInsert)  
+ [Inserimento bulk - attività](#BulkInsert)  
   
  [Attività Flusso di dati](#DataFlow)  
   
- [Attività Esegui pacchetto DTS 2000](#ExecuteDTS200)  
+ [Attività Esegui DTS 2000](#ExecuteDTS200)  
   
  [Attività Esegui processo](#ExecuteProcess)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67316669"
   
  [Attività FTP](#FTP)  
   
- [Attività Message Queue](#MessageQueue)  
+ [Message Queue Task](#MessageQueue)  
   
  [Attività Script](#Script)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67316669"
   
  [Attività Trasferisci oggetti di SQL Server](#TransferSQLServerObjects)  
   
- [Attività Servizio Web](#WebServices)  
+ [Attività servizi Web](#WebServices)  
   
  [Attività Lettore di dati WMI](#WMIDataReader)  
   
@@ -80,11 +80,11 @@ ms.locfileid: "67316669"
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
-|`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
-|`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
+|`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
+|`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
 |`Diagnostic`|Offre informazioni sulla configurazione del sistema che influisce sull'esecuzione dei pacchetti, ad esempio il numero di file eseguibili che è possibile eseguire simultaneamente.<br /><br /> La voce di log `Diagnostic` include anche le voci precedenti e seguenti alle chiamate a provider di dati esterni. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
-###  <a name="BulkInsert"></a> Attività Inserimento bulk  
+###  <a name="BulkInsert"></a>Attività Inserimento bulk  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Inserimento bulk.  
   
 |Voce di log|Descrizione|  
@@ -93,7 +93,7 @@ ms.locfileid: "67316669"
 |`DTSBulkInsertTaskEnd`|Indica che l'inserimento bulk è terminato.|  
 |`DTSBulkInsertTaskInfos`|Offre informazioni descrittive sull'attività.|  
   
-###  <a name="DataFlow"></a> Attività Flusso di dati  
+###  <a name="DataFlow"></a>Attività flusso di dati  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Flusso di dati.  
   
 |Voce di log|Descrizione|  
@@ -109,7 +109,7 @@ ms.locfileid: "67316669"
 |`PipelineExecutionTrees`|Specifica gli alberi di esecuzione del layout nel flusso di dati. L'utilità di pianificazione del motore flusso di dati utilizza tali alberi per compilare il piano di esecuzione del flusso di dati.|  
 |`PipelineInitialization`|Fornisce le informazioni di inizializzazione relative all'attività, che includono le directory da utilizzare per l'archiviazione temporanea dei dati BLOB, le dimensioni predefinite del buffer e il numero di righe in un buffer. A seconda della configurazione dell'attività Flusso di dati, è possibile che vengano scritte più voci di log.|  
   
-###  <a name="ExecuteDTS200"></a> Attività Esegui pacchetto DTS 2000  
+###  <a name="ExecuteDTS200"></a>Attività Esegui DTS 2000  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui pacchetto DTS 2000.  
   
 |Voce di log|Descrizione|  
@@ -119,7 +119,7 @@ ms.locfileid: "67316669"
 |`ExecuteDTS80PackageTaskTaskInfo`|Offre informazioni descrittive sull'attività.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Restituisce il risultato dell'esecuzione del pacchetto DTS 2000 eseguito dall'attività.|  
   
-###  <a name="ExecuteProcess"></a> Attività Esegui processo  
+###  <a name="ExecuteProcess"></a>Attività Esegui processo  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui processo.  
   
 |Voce di log|Descrizione|  
@@ -127,21 +127,21 @@ ms.locfileid: "67316669"
 |`ExecuteProcessExecutingProcess`|Fornisce informazioni sul processo di esecuzione del file eseguibile che l'attività dovrà eseguire.<br /><br /> Vengono scritte due voci di log. Una contiene informazioni sul nome e la posizione del file eseguibile eseguito dall'attività, l'altra registra l'uscita dall'eseguibile.|  
 |`ExecuteProcessVariableRouting`|Fornisce informazioni sulle variabili indirizzate all'input e agli output del file eseguibile. Vengono scritte voci di log per stdin (l'input), stdout (l'output) e stderr (l'output degli errori).|  
   
-###  <a name="ExecuteSQL"></a> Attività Esegui SQL  
+###  <a name="ExecuteSQL"></a>Attività Esegui SQL  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Esegui SQL.  
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
   
-###  <a name="FileSystem"></a> Attività File system  
+###  <a name="FileSystem"></a>Attività file System  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività File system.  
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Indica l'operazione eseguita dall'attività. Questa voce di log viene scritta all'inizio dell'operazione sul file system e include informazioni sull'origine e sulla destinazione.|  
   
-###  <a name="FTP"></a> Attività FTP  
+###  <a name="FTP"></a>Attività FTP  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività FTP.  
   
 |Voce di log|Descrizione|  
@@ -149,7 +149,7 @@ ms.locfileid: "67316669"
 |`FTPConnectingToServer`|Indica che l'attività ha stabilito una connessione al server FTP.|  
 |`FTPOperation`|Specifica l'inizio e il tipo dell'operazione FTP eseguita dall'attività.|  
   
-###  <a name="MessageQueue"></a> Attività Message Queue  
+###  <a name="MessageQueue"></a>Attività Message Queue  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Message Queue.  
   
 |Voce di log|Descrizione|  
@@ -163,14 +163,14 @@ ms.locfileid: "67316669"
 |`MSMQTaskInfo`|Offre informazioni descrittive sull'attività.|  
 |`MSMQTaskTimeOut`|Indica che si è verificato il timeout dell'attività.|  
   
-###  <a name="Script"></a> Attività Script  
+###  <a name="Script"></a>Attività script  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Script.  
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. Viene scritta una voce di log per ogni chiamata al metodo `Log` dell'oggetto `Dts`. Tale voce viene scritta al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-###  <a name="SendMail"></a> Attività Invia messaggi  
+###  <a name="SendMail"></a>Attività Invia messaggi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Invia messaggi.  
   
 |Voce di log|Descrizione|  
@@ -179,7 +179,7 @@ ms.locfileid: "67316669"
 |`SendMailTaskEnd`|Indica che l'attività ha terminato l'invio di un messaggio di posta elettronica.|  
 |`SendMailTaskInfo`|Offre informazioni descrittive sull'attività.|  
   
-###  <a name="TransferDatabase"></a> Attività Trasferisci database  
+###  <a name="TransferDatabase"></a>Attività Trasferisci database  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci database.  
   
 |Voce di log|Descrizione|  
@@ -187,7 +187,7 @@ ms.locfileid: "67316669"
 |`SourceDB`|Specifica il database copiato dall'attività.|  
 |`SourceSQLServer`|Specifica il computer da cui è stato copiato il database.|  
   
-###  <a name="TransferErrorMessages"></a> Attività Trasferisci messaggi di errore  
+###  <a name="TransferErrorMessages"></a>Attività Trasferisci messaggi di errore  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci messaggi di errore.  
   
 |Voce di log|Descrizione|  
@@ -195,7 +195,7 @@ ms.locfileid: "67316669"
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Indica che l'attività ha terminato il trasferimento dei messaggi di errore.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Indica che l'attività ha iniziato a trasferire messaggi di errore.|  
   
-###  <a name="TransferJobs"></a> Attività Trasferisci processi  
+###  <a name="TransferJobs"></a>Attività Trasferisci processi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci processi.  
   
 |Voce di log|Descrizione|  
@@ -203,7 +203,7 @@ ms.locfileid: "67316669"
 |`TransferJobsTaskFinishedTransferringObjects`|Indica che l'attività ha terminato il trasferimento dei processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.|  
 |`TransferJobsTaskStartTransferringObjects`|Indica che l'attività ha iniziato a trasferire processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.|  
   
-###  <a name="TransferLogins"></a> Attività Trasferisci account di accesso  
+###  <a name="TransferLogins"></a>Attività Trasferisci account di accesso  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci account di accesso.  
   
 |Voce di log|Descrizione|  
@@ -211,7 +211,7 @@ ms.locfileid: "67316669"
 |`TransferLoginsTaskFinishedTransferringObjects`|Indica che l'attività ha terminato il trasferimento degli account di accesso.|  
 |`TransferLoginsTaskStartTransferringObjects`|Indica che l'attività ha iniziato a trasferire account di accesso.|  
   
-###  <a name="TransferMasterStoredProcedures"></a> Attività Trasferisci stored procedure master  
+###  <a name="TransferMasterStoredProcedures"></a>Attività Trasferisci stored procedure master  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci stored procedure master.  
   
 |Voce di log|Descrizione|  
@@ -219,7 +219,7 @@ ms.locfileid: "67316669"
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|Indica che l'attività ha terminato il trasferimento delle stored procedure definite dall'utente archiviate nel database **master** .|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|Indica che l'attività ha iniziato a trasferire le stored procedure definite dall'utente archiviate nel database **master** .|  
   
-###  <a name="TransferSQLServerObjects"></a> Attività Trasferisci oggetti di SQL Server  
+###  <a name="TransferSQLServerObjects"></a>Attività Trasferisci oggetti SQL Server  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |Voce di log|Descrizione|  
@@ -227,7 +227,7 @@ ms.locfileid: "67316669"
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Indica che l'attività ha terminato il trasferimento degli oggetti di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|Indica che l'attività ha iniziato a trasferire oggetti di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
-###  <a name="WebServices"></a> Attività Servizio Web  
+###  <a name="WebServices"></a>Attività servizi Web  
  Nella tabella seguente sono elencate le voci di log personalizzate che è possibile abilitare per l'attività Servizio Web.  
   
 |Voce di log|Descrizione|  
@@ -236,7 +236,7 @@ ms.locfileid: "67316669"
 |`WSTaskEnd`|Indica che l'attività ha completato un metodo per il servizio Web.|  
 |`WSTaskInfo`|Offre informazioni descrittive sull'attività.|  
   
-###  <a name="WMIDataReader"></a> Attività Lettore di dati WMI  
+###  <a name="WMIDataReader"></a>Attività lettore di dati WMI  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Lettore di dati WMI.  
   
 |Voce di log|Descrizione|  
@@ -244,7 +244,7 @@ ms.locfileid: "67316669"
 |`WMIDataReaderGettingWMIData`|Indica che l'attività ha iniziato a leggere dati WMI.|  
 |`WMIDataReaderOperation`|Specifica la query WQL eseguita dall'attività.|  
   
-###  <a name="WMIEventWatcher"></a> Attività Monitoraggio eventi WMI  
+###  <a name="WMIEventWatcher"></a>Attività Monitoraggio eventi WMI  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Monitoraggio eventi WMI.  
   
 |Voce di log|Descrizione|  
@@ -253,7 +253,7 @@ ms.locfileid: "67316669"
 |`WMIEventWatcherTimedout`|Indica che si è verificato il timeout dell'attività.|  
 |`WMIEventWatcherWatchingForWMIEvents`|Indica che l'attività ha iniziato a eseguire la query WQL. La voce include la query.|  
   
-###  <a name="XML"></a> Attività XML  
+###  <a name="XML"></a>Attività XML  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML.  
   
 |Voce di log|Descrizione|  

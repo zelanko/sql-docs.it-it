@@ -15,10 +15,10 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278117"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
@@ -26,9 +26,9 @@ ms.locfileid: "72278117"
 
   Aggiunge un'istanza di SQL Server come nodo di calcolo a un gruppo di base per il calcolo con scalabilità orizzontale.  
   
- Per l'istanza di SQL Server deve essere installata la funzionalità di [base](../../relational-databases/polybase/polybase-guide.md) .  La polibase consente l'integrazione di origini dati non SQL Server, ad esempio Hadoop e l'archiviazione BLOB di Azure. Vedere anche [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ Per l'istanza di SQL Server deve essere installata la funzionalità di [base](../../relational-databases/polybase/polybase-guide.md) .  La polibase consente l'integrazione di origini dati non SQL Server, ad esempio Hadoop e l'archiviazione BLOB di Azure. Vedere anche [sp_polybase_leave_group &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,17 +40,17 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *\@head_node_address* = n'*head_node_address*'  
- Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. *\@head_node_address* è di tipo nvarchar (255).  
+ head_node_address = n'*head_node_address*' * \@*  
+ Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. head_node_address è di tipo nvarchar (255). * \@*  
   
- *\@dms_control_channel_port* = dms_control_channel_port  
- Porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement servizio. *\@dms_control_channel_port* è un __int16 senza segno. Il valore predefinito è **16450**.  
+ * \@dms_control_channel_port* = dms_control_channel_port  
+ Porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement servizio. dms_control_channel_port è un __int16 senza segno. * \@* Il valore predefinito è **16450**.  
   
- *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. *\@head_node_sql_server_instance_name* è di tipo nvarchar (16).  
+ * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. head_node_sql_server_instance_name è di tipo nvarchar (16). * \@*  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
@@ -66,7 +66,7 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introduzione a polibase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

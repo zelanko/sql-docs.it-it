@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d84c0ba15b036dfff8e6e2a69bb7702c771df1b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243032"
 ---
 # <a name="threads-window"></a>Finestra Thread
-  Nella finestra **thread** vengono visualizzate informazioni sul [!INCLUDE[ssDE](../../includes/ssde-md.md)] thread utilizzato dalla sessione dell' [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor di query di cui è in corso il debug. Per visualizzare le informazioni sul thread, è necessario utilizzare la modalità di debug.  
+  Nella finestra **Thread** vengono visualizzate informazioni sul thread del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usato dalla sessione dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di cui viene eseguito il debug. Per visualizzare le informazioni sul thread, è necessario utilizzare la modalità di debug.  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alla finestra thread**  
+ **Per accedere alla finestra Thread**  
   
 -   Scegliere **Finestre** dal menu **Debug**, quindi fare clic su **Thread**.  
   
@@ -34,15 +34,15 @@ ms.locfileid: "75243032"
  Se non è attiva la modalità lightweight pooling, selezionare la riga in cui il valore di os_thread_id corrisponde al valore specificato nella colonna **ID** . Se è attiva la modalità lightweight pooling, selezionare la riga in cui il valore di fiber_context_address corrisponde al valore specificato nella colonna **ID** .  
   
  **Nome**  
- Consente di visualizzare informazioni sulla sessione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato **NomeComputer/NomeIstanza [SPID]**.  
+ Consente di visualizzare informazioni sulla sessione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato **NomeComputer/NomeIstanza [SPID]** .  
   
- **ComputerName**  
+ **NomeComputer**  
  Nome del computer che esegue l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui è connessa la sessione dell'editor di query.  
   
  **InstanceName**  
  Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui è connessa la sessione dell'editor di query.  
   
- **SPID**  
+ **[SPID]**  
  ID di processo della sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che identifica in modo univoco la sessione. È possibile ottenere ulteriori informazioni sulla sessione selezionando la riga nella vista sys.sysprocesses che include lo stesso valore nella colonna spid.  
   
  **Posizione**  
@@ -51,11 +51,11 @@ ms.locfileid: "75243032"
  **Priorità**  
  Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta questa caratteristica.  
   
- **Sospensione**  
+ **Sospendi**  
  Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta questa caratteristica.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [sys. dm_os_threads &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql)   
- [sys. sysprocesses &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql)  
+ [sys.dm_os_threads &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà parametri (gestione Report) | Microsoft Docs
+title: Pagina delle proprietà parametri (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108115"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Pagina delle proprietà Parametri (Gestione report)
@@ -33,7 +33,7 @@ ms.locfileid: "66108115"
   
 3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà Generale per il report.  
   
-4.  Selezionare la scheda **Parametri** . Se la scheda **Parametri** non è disponibile significa che il report non contiene parametri.  
+4.  Selezionare la scheda **parametri** . Se la scheda **parametri** non è visibile, il report non contiene parametri.  
   
 ## <a name="options"></a>Opzioni  
  **Nome parametro**  
@@ -42,7 +42,7 @@ ms.locfileid: "66108115"
  **Tipo di dati**  
  Mostra il tipo di dati del parametro.  
   
- **Ha un valore predefinito**  
+ **Con valore predefinito**  
  Selezionare questa casella di controllo per specificare se il parametro ha un valore predefinito. Se si seleziona questa casella di controllo, viene attivata l'opzione **Valore predefinito**. Se il parametro del report accetta valori Null, viene attivata anche l'opzione **Null** . Se l'opzione **Con valore predefinito** non è selezionata, è necessario nascondere il valore o richiedere all'utente di fornire un valore quando il report viene eseguito.  
   
  **Valore predefinito**  
@@ -60,16 +60,16 @@ ms.locfileid: "66108115"
   
  Deselezionare questa casella di controllo se si desidera che il parametro venga visualizzato nel report.  
   
- **Richiedere all'utente**  
+ **Richiesta all'utente**  
  Selezionare questa casella di controllo per visualizzare una casella di testo per richiedere agli utenti l'immissione di un valore per il parametro.  
   
  Deselezionare questa casella di controllo se si desidera eseguire il report in modalità automatica (ad esempio per generare snapshot della cronologia dei report o dell'esecuzione del report), se si desidera utilizzare lo stesso valore di parametro per tutti gli utenti oppure se non è necessario l'input dell'utente.  
   
- **Testo da visualizzare**  
+ **Testo visualizzato**  
  Consente di specificare la stringa di testo visualizzata accanto alla casella di testo del parametro. È possibile specificare un'etichetta o testo descrittivo. Non sono previste limitazioni per la lunghezza della stringa. Le stringhe di testo lunghe vengono mandate a capo nello spazio disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

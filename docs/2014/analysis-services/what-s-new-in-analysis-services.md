@@ -1,5 +1,5 @@
 ---
-title: '&#39;Novità di Analysis Services e Business Intelligence | Microsoft Docs'
+title: Novità di Analysis Services e Business Intelligence |&#39;Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2019
 ms.prod: sql-server-2014
@@ -11,23 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59ce45ff7e02d63c3c5bf27ca209ec911de67dbd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889333"
 ---
-# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>&#39;Novità di SQL Server 2014 Analysis Services
-  Fatta eccezione per la funzionalità aggiuntiva che supporta Power View report sui modelli multidimensionali [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è invariata rispetto alla versione precedente.  
+# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Novità di SQL Server 2014 Analysis Services&#39;
+  Fatta eccezione per la funzionalità aggiuntiva che supporta Power View report sui modelli multidimensionali [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è invariata rispetto alla versione precedente.  
   
- Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie diversi in questa versione, vedere Novità [di SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie diversi in questa versione, vedere novità [di SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Aggiornamenti all'installazione dello strumento di progettazione  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per Business Intelligence (SSDT-BI), precedentemente noto come Business Intelligence Development Studio (BIDS), viene utilizzato per creare i modelli di Analysis Services, i report di Reporting Services e i pacchetti di Integration Services. È possibile scaricare SSDT-BI dai percorsi seguenti:  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per Business Intelligence (SSDT-BI), precedentemente noto come Business Intelligence Development Studio (BIDS), viene utilizzato per creare i modelli di Analysis Services, i report di Reporting Services e i pacchetti di Integration Services. È possibile scaricare SSDT-BI dai percorsi seguenti:  
   
 -   [Scaricare SSDT-BI per Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Scaricare SSDT-BI per Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Download di SSDT-BI per Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  Se si dispone di una versione precedente di SSDT-BI o BIDS installata nel computer, la versione più recente viene installata side-by-side alla versione precedente. La versione più recente e quella precedente degli strumenti di progettazione vengono in genere eseguite su una sola workstation in modo da poter modificare progetti e soluzioni legati a versioni specifiche del server.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68889333"
   
  ![Nuovi modelli di progetto in SSDT](media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
   
-## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Funzionalità aggiunte di recente: Power View per i modelli multidimensionali  
+## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Funzionalità recentemente aggiunte: Power View per i modelli multidimensionali  
  La possibilità di creare report Power View nei modelli multidimensionali è stata introdotta per la prima volta nell'aggiornamento cumulativo 4 di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. La funzionalità Power View per i modelli multidimensionali è ora incluso in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  **Report Power View per un modello multidimensionale**  

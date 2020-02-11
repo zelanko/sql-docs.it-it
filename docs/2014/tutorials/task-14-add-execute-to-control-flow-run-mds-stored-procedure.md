@@ -1,5 +1,5 @@
 ---
-title: 'Attività 14: Aggiunta di attività Esegui SQL al flusso di controllo per eseguire la Stored Procedure per MDS | Microsoft Docs'
+title: "Attività 14: aggiunta dell'attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,53 +11,53 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65477094"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Attività 14: Attività dell'attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS
-  Dopo il caricamento dei dati nelle tabelle di staging MDS, eseguire una stored procedure associata alla tabella in questione per caricare i dati di staging nelle tabelle appropriate del database MDS. Questa stored procedure ha due parametri obbligatori che è necessario passare: LogFlag e VersionName. Il parametro LogFlag specifica se le transazioni vengono registrate durante il processo di gestione temporanea, mentre il parametro VersionName rappresenta la versione del modello. Visualizzare [Stored Procedure di staging](https://msdn.microsoft.com/library/hh231028.aspx) per altre informazioni.  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Attività 14: Aggiunta dell'Attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS
+  Dopo il caricamento dei dati nelle tabelle di staging MDS, eseguire una stored procedure associata alla tabella in questione per caricare i dati di staging nelle tabelle appropriate del database MDS. In questa stored procedure sono inclusi due parametri obbligatori che è necessario passare: LogFlag e VersionName. Il parametro LogFlag specifica se le transazioni vengono registrate durante il processo di gestione temporanea, mentre il parametro VersionName rappresenta la versione del modello. Per ulteriori informazioni, vedere l'argomento [stored procedure](https://msdn.microsoft.com/library/hh231028.aspx) di gestione temporanea.  
   
  In questa attività viene aggiunta Attività Esegui SQL al flusso di controllo per richiamare la stored procedure in modo da caricare i dati di gestione temporanea nelle tabelle MDS appropriate.  
   
-1.  Passare ora al **flusso di controllo** scheda.  
+1.  Passare ora alla scheda **flusso di controllo** .  
   
-2.  Funzionalità di trascinamento **attività Esegui SQL** dal **casella degli strumenti SSIS** per il **flusso di controllo** scheda.  
+2.  Trascinare l' **attività Esegui SQL** dalla **casella degli strumenti SSIS** alla scheda **flusso di controllo** .  
   
-3.  Fare doppio clic su **attività Esegui SQL** nel **flusso di controllo** scheda, quindi scegliere **rinominare**. Tipo di **avvia Stored Procedure per caricare i dati in MDS** , quindi premere **invio**.  
+3.  Fare clic con il pulsante destro del mouse su **attività Esegui SQL** nella scheda **flusso di controllo** e scegliere **Rinomina**. Digitare **trigger stored procedure per caricare i dati in MDS** e premere **invio**.  
   
-4.  Connettere **Ricevi, Pulisci, corrispondenza e dei dati fornitore abbina** al **avvia Stored Procedure per caricare i dati** usando il connettore verde.  
+4.  Connettere **Ricevi, Pulisci, abbina e cura i dati fornitore** per **attivare la stored procedure per caricare i dati** usando il connettore verde.  
   
-     ![Connettersi all'attività Esegui SQL](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "connettersi all'attività Esegui SQL")  
+     ![Connessione all'attività Esegui SQL](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "Connessione all'attività Esegui SQL")  
   
-5.  Usando il **variabili** finestra, aggiungere due nuove variabili con le impostazioni seguenti. Se non viene visualizzato il **variabili** finestra, fare clic su **SSIS** nella barra dei menu e fare clic su **variabili**.  
+5.  Usando la finestra **variabili** aggiungere due nuove variabili con le impostazioni seguenti. Se non viene visualizzata la finestra **variabili** , fare clic su **SSIS** sulla barra dei menu e fare clic su **variabili**.  
   
-    |nome|Tipo di dati|Value|  
+    |Nome|Tipo di dati|valore|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
-    |VersionName|String|VERSION_1|  
+    |VersionName|string|VERSION_1|  
   
-     ![Finestra variabili SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "finestra variabili SSIS")  
+     ![Finestra Variabili SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "Finestra Variabili SSIS")  
   
-6.  Fare doppio clic su **attivano Stored Procedure per caricare i dati in MDS**.  
+6.  Fare doppio clic su **trigger stored procedure per caricare i dati in MDS**.  
   
-7.  Nel **Editor attività Esegui SQL** finestra di dialogo **(locale). MDS** (o **localhost. MDS**) per **connessione**.  
+7.  Nella finestra di dialogo **Editor attività Esegui SQL** selezionare **(locale). MDS** (o **localhost). MDS**) per la **connessione**.  
   
-8.  Tipo **EXEC [stg]. [ udp_Supplier_Leaf]?,?,?** per la **istruzione SQL**. Per verificare il nome, utilizzare SQL Server Management Studio.  
+8.  Digitare **exec [STG]. [ udp_Supplier_Leaf]?,?,?** per l' **istruzione SQL**. Per verificare il nome, utilizzare SQL Server Management Studio.  
   
-     ![Eseguire finestra di dialogo Editor SQL - impostazioni generali](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "eseguire finestra di dialogo Editor SQL - impostazioni generali")  
+     ![Finestra di dialogo Editor Esegui SQL - Impostazioni generali](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "Finestra di dialogo Editor Esegui SQL - Impostazioni generali")  
   
-9. Fare clic su **Mapping parametri** nel menu a sinistra.  
+9. Fare clic su **Mapping parametri** dal menu a sinistra.  
   
-10. Nel **Mapping dei parametri** pagina, fare clic su **Add** per aggiungere un mapping. Ingrandire la finestra e ridimensionare le colonne in modo da visualizzare correttamente i valori negli elenchi a discesa.  
+10. Nella pagina **Mapping parametri** fare clic su **Aggiungi** per aggiungere un mapping. Ingrandire la finestra e ridimensionare le colonne in modo da visualizzare correttamente i valori negli elenchi a discesa.  
   
-11. Selezionare **User:: VersionName** nell'elenco a discesa per il **il nome di variabile**.  
+11. Selezionare **User:: VersionName** dall'elenco a discesa per il nome della **variabile**.  
   
-12. Selezionare **NVARCHAR** per **tipo di dati**.  
+12. Selezionare **nvarchar** per **tipo di dati**.  
   
-13. Tipo di **0** (zero) per **nome del parametro**.  
+13. Digitare **0** (zero) per **nome parametro**.  
   
 14. Ripetere i quattro passaggi precedenti per aggiungere altre due variabili.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "65477094"
   
      ![Editor attività Esegui SQL - Mapping parametri](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "Editor attività Esegui SQL - Mapping parametri")  
   
-15. Fare clic su **OK** per chiudere la **Editor Esegui SQL** nella finestra di dialogo.  
+15. Fare clic su **OK** per chiudere la finestra di dialogo **Editor SQL Esegui** .  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 15: Compilazione e l'esecuzione del progetto SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 15: Compilazione ed esecuzione del progetto SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

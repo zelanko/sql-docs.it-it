@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149483"
 ---
 # <a name="create-element-dta"></a>Create - elemento (DTA)
@@ -39,8 +39,8 @@ ms.locfileid: "63149483"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuna.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|No.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni struttura di progettazione fisica, quali indici, statistiche o strutture heap.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -48,10 +48,10 @@ ms.locfileid: "63149483"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Recommendation &#40;DTA&#41;](recommendation-element-dta.md)|  
-|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` Elemento (vedere [Engine Tuning Advisor XML schema di Database](https://schemas.microsoft.com/sqlserver/) per informazioni)<br /><br /> `Heap` Elemento (vedere [Engine Tuning Advisor XML schema di Database](https://schemas.microsoft.com/sqlserver/) per informazioni)|  
+|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics`Elemento (vedere [Ottimizzazione guidata motore di database XML Schema](https://schemas.microsoft.com/sqlserver/) per informazioni)<br /><br /> `Heap`Elemento (vedere [Ottimizzazione guidata motore di database XML Schema](https://schemas.microsoft.com/sqlserver/) per informazioni)|  
   
-## <a name="remarks"></a>Note  
- Questo elemento appartiene al nome **CreateTypecomplexType** nell'XML Schema dell'Ottimizzazione guidata motore di database. Viene utilizzato per creare indici, statistiche e strutture heap per una configurazione specificata dall'utente. Questo elemento `Create` non deve essere confuso con altri tipi che è possibile utilizzare per creare viste (`CreateViewType`) o per il partizionamento (`CreatePType`). Vedere le [Engine Tuning Advisor XML schema di Database](https://schemas.microsoft.com/sqlserver/) per informazioni su questi altri `Create` tipi di elemento.  
+## <a name="remarks"></a>Osservazioni  
+ Questo elemento appartiene al nome **CreateTypecomplexType** nell'XML Schema dell'Ottimizzazione guidata motore di database. Viene utilizzato per creare indici, statistiche e strutture heap per una configurazione specificata dall'utente. Questo elemento `Create` non deve essere confuso con altri tipi che è possibile utilizzare per creare viste (`CreateViewType`) o per il partizionamento (`CreatePType`). Per informazioni su questi altri `Create` tipi di elemento, fare riferimento alla [Ottimizzazione guidata motore di database XML Schema](https://schemas.microsoft.com/sqlserver/) .  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

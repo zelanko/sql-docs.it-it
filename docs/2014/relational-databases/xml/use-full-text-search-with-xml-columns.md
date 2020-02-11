@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193257"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utilizzo della ricerca full-text con colonne XML
@@ -33,7 +33,7 @@ ms.locfileid: "63193257"
   
 2.  Eseguire quindi una query sui valori XML che utilizzano l'indice XML sulla colonna XML.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Esempio: Combinazione di ricerca full-text e query XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Esempio: combinazione di ricerca full-text e query XML  
  Dopo la creazione dell'indice full-text sulla colonna XML è possibile utilizzare la query seguente per verificare se un valore XML contiene la parola "custom" nel titolo di un libro:  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Inoltre, la ricerca full-text usa lo stemming delle parole, mentre la query XQuery **contains()** richiede una corrispondenza letterale. Tale differenza è illustrata nell'esempio successivo.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Esempio: Ricerca full-text su valori XML tramite stemming  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Esempio: ricerca full-text su valori XML tramite stemming  
  Il controllo eseguito dalla query XQuery **contains()** nell'esempio precedente non può essere in genere eliminato. Considerare la query seguente:  
   
 ```  

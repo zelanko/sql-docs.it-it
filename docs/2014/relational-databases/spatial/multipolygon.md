@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014114"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -38,7 +38,7 @@ ms.locfileid: "66014114"
   
 -   È un'istanza `MultiPolygon` vuota.  
   
--   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per altre informazioni su accettato `Polygon` istanze, vedere [poligono](../spatial/polygon.md).  
+-   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per ulteriori informazioni sulle istanze `Polygon` accettate, vedere [Polygon](../spatial/polygon.md).  
   
  Negli esempi seguenti vengono illustrate alcune istanze `MultiPolygon` accettate.  
   
@@ -59,7 +59,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Istanze valide  
  Un'istanza `MultiPolygon` è valida se è un'istanza `MultiPolygon` vuota o se soddisfa i criteri indicati di seguito.  
   
-1.  Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` valide. Per valido `Polygon` istanze, vedere [poligono](../spatial/polygon.md).  
+1.  Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` valide. Per le `Polygon` istanze valide, vedere [Polygon](../spatial/polygon.md).  
   
 2.  Nessuna delle istanze `Polygon` che comprendono l'istanza `MultiPolygon` si sovrappone.  
   
@@ -72,7 +72,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` è valida perché le due istanze di `Polygon` si toccano solo in corrispondenza di un punto tangente. `@g3` non è valida perché gli interni delle due istanze di `Polygon` si sovrappongono.  
+ 
+  `@g2` è valida perché le due istanze di `Polygon` si toccano solo in corrispondenza di un punto tangente. 
+  `@g3` non è valida perché gli interni delle due istanze di `Polygon` si sovrappongono.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
@@ -94,7 +96,7 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
  [Polygon](../spatial/polygon.md)   
  [STArea &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STCentroid &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
- [STPointOnSurface &#40;tipodi dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [Dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

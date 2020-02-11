@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728241"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modificare ed eliminare una relazione di sincronizzazione delle entità (Master Data Services)
@@ -26,17 +26,17 @@ ms.locfileid: "73728241"
 ## <a name="prerequisites"></a>Prerequisites  
  Prerequisiti per modificare una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   È necessario avere almeno l'accesso in lettura all'entità di origine e a tutti i relativi attributi e membri.  
   
  Prerequisiti per eliminare una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Quando si modifica una relazione di sincronizzazione delle entità, tenere presente quanto segue:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73728241"
   
 3.  Nella pagina di **gestione della sincronizzazione delle entità** selezionare una relazione di sincronizzazione nella griglia.  
   
-4.  Fare clic su **Modifica**. Viene visualizzato un riquadro sul lato destro.  
+4.  Fare clic su **Edit**. Viene visualizzato un riquadro sul lato destro.  
   
 5.  Modificare il valore **Frequenza**. Selezionare **Sincronizza su richiesta**oppure **Auto Sync** (Sincronizzazione automatica) e impostare una frequenza.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "73728241"
   
 3.  Nella pagina di **gestione della sincronizzazione delle entità** selezionare una relazione di sincronizzazione nella griglia.  
   
-4.  Fare clic su **Elimina**.  
+4.  Scegliere **Elimina**.  
   
 5.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare ed eseguire una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
+ [Creazione ed esecuzione di una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

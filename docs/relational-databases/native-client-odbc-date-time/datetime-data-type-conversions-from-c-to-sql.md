@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783944"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In questo argomento vengono elencati i problemi da considerare quando si esegue la conversione da tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di data/ora.  
+  Questo argomento elenca i problemi da considerare quando si esegue la conversione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi C a tipi di data/ora.  
   
- Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando viene chiamato **SQLExecute** o **SQLExecuteDirect** . In particolare, ODBC considera il troncamento dei secondi frazionari come un errore, mentre il comportamento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è arrotondato; ad esempio, l'arrotondamento si verifica quando si passa da **datetime2 (6)** a **datetime2 (2)** . I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
+ Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando viene chiamato **SQLExecute** o **SQLExecuteDirect** . In particolare, ODBC considera il troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento è arrotondato; ad esempio, l'arrotondamento si verifica quando si passa da **datetime2 (6)** a **datetime2 (2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "73783944"
   
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
--   **-** : nessuna conversione supportata. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
+-   **-**: Nessuna conversione supportata. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
   
 -   **1**: se i dati forniti non sono validi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "formato DateTime non valido".  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73783944"
   
     ||||  
     |-|-|-|  
-    |Tipo|Scala implicita<br /><br /> 0|Scala implicita<br /><br /> 1.. 9|  
+    |Type|Scala implicita<br /><br /> 0|Scala implicita<br /><br /> 1.. 9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Per SQL_C_TYPE_TIMESTAMP, tuttavia, se i secondi frazionari possono essere rappresentati con tre cifre senza perdita di dati e la dimensione della colonna è almeno 23, vengono generate esattamente tre cifre di secondi frazionari. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando driver ODBC meno recenti.  
@@ -90,9 +90,9 @@ ms.locfileid: "73783944"
   
      Una dimensione della colonna pari a zero implica una dimensione illimitata per i tipi di carattere a lunghezza variabile in ODBC (9 cifre, a meno che non si applichi la regola delle 3 cifre per SQL_C_TYPE_TIMESTAMP). La specifica di una dimensione della colonna pari a zero con un tipo di carattere a lunghezza fissa è un errore.  
   
--   **N/A**: viene mantenuto il comportamento [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e precedente esistente.  
+-   **N/A**: viene [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mantenuto il comportamento esistente e quello precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti &#40;di data e ora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Miglioramenti di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

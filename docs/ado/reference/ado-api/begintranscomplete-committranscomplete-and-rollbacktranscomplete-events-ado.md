@@ -1,5 +1,5 @@
 ---
-title: Gli eventi di BeginTrans, CommitTrans e RollbackTrans (ADO) | Microsoft Docs
+title: Eventi BeginTrans, CommitTrans, RollbackTrans (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,20 +23,20 @@ ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920440"
 ---
-# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete e RollbackTransComplete (ADO)
-Questi eventi verranno chiamati al termine dell'operazione associato nel [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto termina l'esecuzione.  
+# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventi BeginTransComplete, CommitTransComplete e RollbackTransComplete (ADO)
+Questi eventi verranno chiamati al termine dell'esecuzione dell'operazione associata sull'oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
--   **BeginTransComplete** viene chiamato dopo il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operazione.  
+-   **BeginTransComplete** viene chiamato dopo l'operazione [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **CommitTransComplete** viene chiamato dopo il [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operazione.  
+-   **CommitTransComplete** viene chiamato dopo l'operazione [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **RollbackTransComplete** viene chiamato dopo il [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operazione.  
+-   **RollbackTransComplete** viene chiamato dopo l'operazione [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,26 +49,26 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parametri  
  *TransactionLevel*  
- Oggetto **lungo** valore contenente il nuovo livello di transazione delle **BeginTrans** che ha causato questo evento.  
+ Valore **Long** che contiene il nuovo livello di transazione di **BeginTrans** che ha causato l'evento.  
   
  *pError*  
- Un' [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Viene descritto l'errore generato se il valore di EventStatusEnum **adStatusErrorsOccurred**; in caso contrario, non è impostata.  
+ Oggetto [Error](../../../ado/reference/ado-api/error-object.md) . Viene descritto l'errore che si è verificato se il valore di EventStatusEnum è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
   
  *adStatus*  
- Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore dello stato. Quando viene chiamato uno di questi eventi, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo o a **adStatusErrorsOccurred** se l'operazione non riuscita.  
+ Valore di stato di [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Quando viene chiamato uno di questi eventi, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita o **adStatusErrorsOccurred** se l'operazione non è riuscita.  
   
- Questi eventi possono evitare le notifiche successivi impostando questo parametro su **adStatusUnwantedEvent** prima che l'evento restituito.  
+ Questi eventi possono impedire le notifiche successive impostando questo parametro su **adStatusUnwantedEvent** prima che l'evento venga restituito.  
   
  *pConnection*  
- Il **connessione** dell'oggetto per cui si è verificato questo evento.  
+ Oggetto **connessione** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Note  
- In Visual C++, più **connessioni** possono condividere lo stesso evento metodo di gestione. Il metodo Usa l'oggetto restituito **connessione** oggetto per determinare quale oggetto ha causato l'evento.  
+## <a name="remarks"></a>Osservazioni  
+ In Visual C++, più **connessioni** possono condividere lo stesso metodo di gestione degli eventi. Il metodo utilizza l'oggetto **Connection** restituito per determinare l'oggetto che ha causato l'evento.  
   
- Se il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) è impostata su **adXactCommitRetaining** oppure **adXactAbortRetaining**, una nuova transazione viene avviata dopo il commit o il rollback di una transazione. Usare la **BeginTransComplete** Ignora tutto dell'evento, ma il primo evento di inizio transazione.  
+ Se la proprietà [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) è impostata su **adXactCommitRetaining** o **adXactAbortRetaining**, viene avviata una nuova transazione dopo il commit o il rollback di una transazione. Utilizzare l'evento **BeginTransComplete** per ignorare tutto il primo evento di avvio della transazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [BeginTrans, CommitTrans e RollbackTrans (esempio di metodi (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)

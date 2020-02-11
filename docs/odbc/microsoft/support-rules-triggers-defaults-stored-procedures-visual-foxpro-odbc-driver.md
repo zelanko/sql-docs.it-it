@@ -1,5 +1,5 @@
 ---
-title: Supporto per la Stored procedure, trigger, i valori predefiniti e regole | Microsoft Docs
+title: Supporto per regole, trigger, valori predefiniti e stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -29,255 +29,255 @@ ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080767"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
-È possibile creare regole di Visual FoxPro, trigger, valori predefiniti o le stored procedure usando il Driver ODBC Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con le regole esistenti, trigger, valori predefiniti o le stored procedure come che inserisce, aggiorna o Elimina i dati archiviati in un database in Visual FoxPro.  
+Non è possibile creare regole, trigger, valori predefiniti o stored procedure Visual FoxPro utilizzando il driver ODBC Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con regole, trigger, valori predefiniti o stored procedure esistenti durante l'inserimento, l'aggiornamento o l'eliminazione dei dati Visual FoxPro archiviati in un database.  
   
- La tabella seguente elenca le funzioni supportate dal Driver ODBC Visual FoxPro quando le funzioni o i comandi sono presenti nelle regole, trigger, valori predefiniti o le stored procedure e comandi di Visual FoxPro.  
+ Nella tabella seguente sono elencati i comandi e le funzioni di Visual FoxPro supportati dal driver ODBC Visual FoxPro quando i comandi o le funzioni sono presenti in regole, trigger, valori predefiniti o stored procedure.  
   
- Se l'applicazione interagisce con i dati cui le regole, trigger, valori predefiniti o le stored procedure chiamano altri comandi di Visual FoxPro o funzioni, il driver genera un errore. Visualizzare [funzioni e non supportati i comandi Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) per un elenco di comandi e funzioni non supportate dal driver.  
+ Se l'applicazione interagisce con i dati le cui regole, trigger, valori predefiniti o stored procedure chiamano qualsiasi altra funzione o comando Visual FoxPro, il driver genera un errore. Vedere [comandi e funzioni Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) non supportati per un elenco di comandi e funzioni non supportati dal driver.  
   
 > [!TIP]  
->  Se si desidera inserire codice condizionale all'interno di regole, trigger o stored procedure che determina i comandi da eseguire quando viene chiamato dal driver, è possibile usare la **(versione)** (funzione). Il **(versione)** restituisce "Driver ODBC Visual FoxPro  *\<versione >* " quando viene chiamato dal driver.  
+>  Se si desidera inserire codice condizionale nelle regole, nei trigger o nelle stored procedure che determinano i comandi da eseguire quando vengono chiamati dal driver, è possibile utilizzare la funzione **Version ()** . La funzione **Version ()** restituisce "Visual FoxPro ODBC driver * \<Version>*" quando viene chiamato dal driver.  
   
-## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Funzioni supportate in Stored procedure, trigger, valori predefiniti e regole e i comandi di Visual FoxPro  
-  
-||||  
-|-|-|-|  
-|Operatore $|% (Operatore)|& Comando|  
-|& & Comandi|* Comando|= Comando|  
-  
-## <a name="a"></a>A  
+## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandi e funzioni di Visual FoxPro supportati in regole, trigger, valori predefiniti e stored procedure  
   
 ||||  
 |-|-|-|  
-|Funzione ABS)|Funzione ACOPY)|Comando Aggiungi tabella|  
-|Funzione ADATABASES)|Funzione ADBOBJECTS)|Funzione AERROR)|  
-|ADEL () (funzione)|Funzione AELEMENT)|Funzione ALEN)|  
-|Funzione AFIELDS)|Funzione AINS)|ALTER TABLE (comando SQL)|  
-|Funzione ALIAS)|Funzione ALLTRIM)|AGGIUNTA di comandi di matrice|  
-|Operatore AND|Aggiungi comando|Aggiungi credito comando|  
-|AGGIUNGERE dal comando|AGGIUNGERE comandi generale|Funzione ASCAN)|  
-|AGGIUNGERE il comando procedure|Centro sicurezza di AZURE all'indirizzo funzione|Funzione ASUBSCRIPT)|  
-|Funzione ASIN)|Funzione ASORT)|Funzione ATAN)|  
-|NELLA funzione)|Funzione AT_C)|Funzione ATCLINE)|  
-|Funzione () traffico aereo|Funzione ATCC)|Funzione AUSED)|  
-|Funzione ATLINE)|Funzione ATN2)||  
-|Comando medio|Funzione ACOS)||  
+|Operatore $|Operatore %|Comando &|  
+|Comando && |* Comando|= (Comando)|  
+  
+## <a name="a"></a>Una  
+  
+||||  
+|-|-|-|  
+|Funzione ABS ()|Funzione ACOPY ()|Comando Aggiungi tabella|  
+|Funzione ADATABASES ()|Funzione ADBOBJECTS ()|Funzione AERROR ()|  
+|Funzione ADEL ()|Funzione AELEMENT ()|Funzione ALEN ()|  
+|()-Funzione|Funzione AINS ()|ALTER TABLE (comando SQL)|  
+|Funzione ALIAS ()|Funzione ALLTRIM ()|Comando ACCODA da matrice|  
+|Operatore AND|Comando APPEND|Comando APPEND MEMO|  
+|Comando ACCODA da|ACCODA comando generale|Funzione ASCAN ()|  
+|Comando APPEND PROCEDURES|Funzione ASC ()|Funzione ASUBSCRIPT ()|  
+|ASIN () (funzione)|Funzione ASORT ()|Funzione ATAN ()|  
+|AT () (funzione)|Funzione AT_C ()|Funzione ATCLINE ()|  
+|Funzione ATC ()|Funzione ATCC ()|Funzione AUSED ()|  
+|Funzione ATLINE ()|Funzione ATN2 ()||  
+|MEDIA comando|Funzione ARCCOS ()||  
   
 ## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
-|Comando BEGIN TRANSACTION|TRA () (funzione)|Funzione BITNOT)|  
-|Funzione BITCLEAR)|Funzione BITLSHIFT)|BITSET () (funzione)|  
-|Funzione BITOR)|Funzione BITRSHIFT)|Comando vuota|  
-|Funzione BITTEST)|Funzione BITXOR)||  
-|Funzione BOF)|Funzione BITAND)||  
+|Comando BEGIN TRANSACTION|Funzione BETWEEN ()|Funzione BITNOT ()|  
+|Funzione BITCLEAR ()|Funzione BITLSHIFT ()|Funzione BITSt ()|  
+|Funzione BITOR ()|Funzione BITRSHIFT ()|Comando BLANK|  
+|Funzione BITTEST ()|Funzione BITXOR ()||  
+|Funzione BOF ()|Funzione BITAND ()||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|CALCOLARE comando|Funzioni CANDIDATE)|Funzione di tra due CHR)|  
-|Funzione () CDX|Funzione CEILING)|Chiudi i comandi|  
-|Funzione CHRTRAN)|Funzione CHRTRANC)|Comando COPY di indici|  
-|Funzione CMONTH)|CONTINUARE a comando|Copia il comando estesa di struttura|  
-|Comando COPY di procedure|Comando COPY di struttura|COPIA al comando|  
-|Copia il comando TAG|COPIARE il comando di matrice|Funzione CPCONVERT)|  
-|COS () funziona|Comando COUNT|Funzione CTOD)|  
-|Funzione CPCURRENT)|Funzione CPDBF)|Funzione CURSORSETPROP)|  
-|Funzione CTOT)|Funzione CURSORGETPROP)||  
-|Funzione CURVAL)|Funzione CDOW)||  
+|Comando CALCULATE|Funzione CANDIDAta ()|Funzione CHR ()|  
+|Funzione CDX ()|Funzione CEILING ()|Chiudi comandi|  
+|Funzione CHRTRAN ()|Funzione CHRTRANC ()|Comando copia indici|  
+|Funzione CMONTH ()|Comando CONTINUE|COPY STRUCTURE-comando esteso|  
+|Comando COPY PROCEDURES|Comando Copia struttura|COPIA in comando|  
+|Comando COPY TAG|Comando COPY TO ARRAY|Funzione CPCONVERT ()|  
+|Funzione COS ()|Comando COUNT|Funzione CTOD ()|  
+|Funzione CPCURRENT ()|Funzione CPDBF ()|Funzione CURSORSETPROP ()|  
+|Funzione CTOT ()|Funzione CURSORGETPROP ()||  
+|Funzione curvy ()|Funzione CDOW ()||  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|Funzione DATE)|Funzione DATETIME)|Funzione DAY)|  
-|Funzione () a due byte|Funzione DBF)|Funzione DBGETPROP)|  
-|Funzione DBUSED)|DELETE (comando SQL)|Comando DELETE|  
-|DELETE TAG (comando)|Funzione (eliminato)|Ordine DECRESCENTE () (funzione)|  
-|Funzione DIFFERENCE)|DIMENSIONI comando|Funzione () su disco insufficiente|  
-|DMY () (funzione)|ESEGUIRE L'OPERAZIONE DI CASE... Comando ENDCASE|Comando|  
-|ISTRUZIONE DO WHILE... Comando ENDDO|Funzione di DOW)|Funzione DTOC)|  
-|Funzione DTOR)|Gli oggetti DTO () (funzione)|Funzione DTOT)|  
+|Funzione DATE ()|DATETIME () (funzione)|Funzione DAY ()|  
+|Funzione DBC ()|Funzione DBF ()|Funzione DBGETPROP ()|  
+|Funzione DBUSed ()|DELETE (comando SQL)|Comando DELETE|  
+|DELETE TAG (comando)|Funzione DELETED ()|Funzione Descending ()|  
+|Funzione DIFFERENCE ()|Comando DIMENSION|Funzione DISKSPACE ()|  
+|Funzione DMY ()|FAI CASO... Comando ENDCASE|Comando DO|  
+|ESEGUI... Comando ENDDO|Funzione DOW ()|Funzione DTOC ()|  
+|Funzione DTOR ()|Funzione DTO ()|Funzione DTOT ()|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|Funzione (vuoto)|VALUTARE la funzione)|Comando EXIT|  
-|Funzione di errore)|Funzione EXP)||  
-|Comando END TRANSACTION|EOF (funzione))||  
+|Funzione EMPTY ()|Funzione EVALUATE ()|Comando EXIT|  
+|Funzione ERROR ()|Funzione EXP ()||  
+|Comando END TRANSACTION|Funzione EOF ()||  
   
 ## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|Funzione FCOUNT)|Funzione FDATE)|Funzione di campo)|  
-|Funzione FILE)|Funzione FILTER)|Funzione FLDLIST)|  
-|Funzione () BRANCO|Funzione FLOOR)|Comando SCARICAMENTO|  
-|FOR... Comando ENDFOR|PER la funzione)|TROVATO () (funzione)|  
-|Comando TABLE gratuito|Funzione FSIZE)|FTIME (funzione))|  
-|FULLPATH (funzione))|Comando (funzione)|Funzione Val)|  
+|Funzione FCOUNT ()|Funzione FDATE ()|Funzione FIELD ()|  
+|Funzione FILE ()|Funzione FILTER ()|Funzione FLDLIST ()|  
+|Funzione FLOCK ()|Funzione FLOOR ()|Scarica comando|  
+|PER... Comando ENDFOR|Funzione FOR ()|Funzione FOUND ()|  
+|Comando tabella gratuita|Funzione FSIZE ()|Funzione FTIME ()|  
+|FULLPATH () (funzione)|Comando FUNCTION|Funzione FV ()|  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|La raccolta di comandi|Funzione GETNEXTMODIFIED)|Comando GO/Vai a|  
-|Funzione GETFLDSTATE)|Funzione GOMONTH)||  
-|Funzione GETCP)|GETENV () (funzione)||  
+|Raccogli comando|Funzione GETNEXTMODIFIED ()|Comando GO/GOTO|  
+|Funzione GETFLDSTATE ()|Funzione GOMONTH ()||  
+|Funzione GETCP ()|Funzione GETENV ()||  
   
 ## <a name="h"></a>H  
   
 |||  
 |-|-|  
-|Funzione di intestazione)|Funzione HOUR)|  
+|Funzione HEADER ()|Funzione HOUR ()|  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|Funzione IDXCOLLATE)|IF... Comando ENDIF|Funzione IIF)|  
-|Funzione INDBC)|INDEX (comando)|Funzione di elenco)|  
-|Comando INSERT-SQL|Funzione INT)|ISALPHA (funzione))|  
-|Funzione ISBLANK)|ISDIGIT (funzione))|Funzione ISEXCLUSIVE)|  
-|ISLEADBYTE (funzione))|ISLOWER (funzione))|Funzione ISNULL)|  
-|Funzione ISREADONLY)|ISUPPER (funzione))||  
+|Funzione IDXCOLLATE ()|SE... ENDIF (comando)|Funzione IIF ()|  
+|Funzione INDBC ()|INDEX (comando)|Funzione INLIST ()|  
+|Comando INSERT-SQL|INT () (funzione)|Funzione α ()|  
+|Funzione BLANK ()|Funzione undigit ()|Funzione unexclusive ()|  
+|Funzione ISLEADBYTE ()|Funzione LOWER ()|ISNULL () (funzione)|  
+|Funzione ISREADONLY ()|Funzione ToUpper ()||  
   
 ## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
-|CHIAVE () (funzione)|Funzione KEYMATCH)||  
+|Funzione KEY ()|Funzione di combinazione di maiuscole ()||  
   
 ## <a name="l"></a>L  
   
 ||||  
 |-|-|-|  
-|Funzione LEFT)|Funzione LEFTC)|Funzione LIKEC)|  
-|Funzione LENC)|Ad esempio () (funzione)|LOCK () (funzione)|  
-|Comando locale|TROVARE comandi|Funzione LOOKUP)|  
-|Funzione LOG)|Funzione LOG10)|Funzione LTRIM)|  
-|Funzione LOWER)|Comando LPARAMETERS||  
-|Funzione LUPDATE)|Funzione LEN)||  
+|LEFT () (funzione)|Funzione LEFTC ()|Funzione LIKEC ()|  
+|Funzione LENC ()|LIKE () (funzione)|Funzione LOCK ()|  
+|Comando locale|INDIVIDUA comando|Funzione LOOKUP ()|  
+|Funzione LOG ()|Funzione LOG10 ()|Funzione LTRIM ()|  
+|LOWER ()-funzione|Comando LPARAMETERS||  
+|Funzione LUPDATE ()|Funzione LEN ()||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|Variabile di memoria di sistema _MLINE|Funzione MAX)|Funzione MDX)|  
-|Funzione MDY)|Funzione MEMLINES)|Funzione MESSAGE)|  
-|Funzione MIN)|Funzione MINUTE)|Funzione MLINE)|  
-|Funzione MOD)|Funzione MONTH)|Funzione MTON)|  
+|Variabile di memoria di sistema _MLINE|Funzione MAX ()|MDX () (funzione)|  
+|Funzione MDY ()|Funzione MEMLINES ()|Funzione MESSAGE ()|  
+|Funzione MIN ()|Funzione MINUTE ()|Funzione lineam ()|  
+|Funzione MOD ()|Funzione MONTH ()|Funzione MTON ()|  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|Funzione NDX)|NORMALIZE () (funzione)|NOT (operatore)|  
-|Comando nota|Funzione NTOM)|Funzione NVL)|  
+|Funzione NDX ()|Funzione Normalize ()|Operatore NOT|  
+|Comando Nota|Funzione NTOM ()|Funzione NVL ()|  
   
 ## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  
-|Si verifica all'indirizzo (funzione)|Funzione OLDVAL)|NEL comando di errore|  
-|NEL comando di tasti|NELLA funzione)|Comando Apri DATABASE|  
-|Operatore OR|Funzione di ordine)|Funzione () del sistema operativo|  
+|Funzione OCCURs ()|Funzione OLDVAL ()|Comando ON ERROR|  
+|Comando tasto ON|Funzione ON ()|Comando Apri DATABASE|  
+|Operatore OR|Funzione ORDER ()|Funzione OS ()|  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|Comando PACK|Funzione PARAMETERS)|Funzione di pagamento)|  
-|Parametri comando|Funzione primaria)|Comando privato|  
-|Funzione PI)|Funzione () del programma|Funzione (corretto)|  
-|PROCEDURE (comando)|Funzione va)||  
-|Comando pubblica|PADL () &#124; PADR () &#124; funzioni PADC)||  
+|Comando PACK|Funzione PARAMETERS ()|Funzione PAYMENT ()|  
+|Comando PARAMETERS|Funzione PRIMARY ()|Comando privato|  
+|Funzione PI ()|Funzione PROGRAM ()|Funzione PROPER ()|  
+|Comando PROCEDURE|Funzione PV ()||  
+|PUBLIC (comando)|Funzioni PADL () &#124; PADR () &#124; PADC ()||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|Funzione RAND)|Funzione () RAT|Funzione RATC)|  
-|Funzione RATLINE)|Richiama comando|Funzione RECCOUNT)|  
-|Funzione RECNO)|Funzione RECSIZE)|Comando a livello di area|  
-|Funzione di relazione)|Rimuovi tabella comandi|Comando Sostituisci|  
-|Sostituire dal comando di matrice|REPLICATE (funzione))|Ripetere i comandi|  
-|RESTITUIRE comando|Funzione RIGHT)|Funzione RIGHTC)|  
-|Funzione RLOCK)|Comando di ROLLBACK|Funzione ROUND)|  
-|Funzione RTOD)|Funzione RTRIM)||  
+|Funzione RAND ()|Funzione RAT ()|Funzione RATC ()|  
+|Funzione RATLINE ()|RICHIAMA comando|Funzione RECCOUNT ()|  
+|Funzione RECNO ()|Funzione RECSIZE ()|Comando REGIONAL|  
+|Funzione RELATION ()|Comando Rimuovi tabella|SOSTITUISCi comando|  
+|Comando SOSTITUISCi da matrice|Funzione REPLICAte ()|Comando RETRY|  
+|RETURN (comando)|RIGHT () (funzione)|Funzione RIGHTC ()|  
+|Funzione RLOCK ()|ROLLBACK (comando)|Funzione ROUND ()|  
+|Funzione RTOD ()|Funzione RTRIM ()||  
   
 ## <a name="s"></a>S  
   
 ||||  
 |-|-|-|  
-|ANALISI... Comando ENDSCAN|Grafico a dispersione comando|Funzione () al secondo|  
-|Funzione () secondi|Comando di ricerca|SEEK (funzione))|  
-|Selezionare comando|Funzione SELECT)|Comando SELECT-SQL|  
-|SET BLOCKSIZE (comando)|SET CARRY (comando)|Comando secolo SET|  
-|SET COLLATE (comando)|Comando DATABASE SET|Comando Data SET|  
-|SET (comando) predefinito|SET DELETED (comando)|SET EXACT (comando)|  
-|SET EXCLUSIVE (comando)|Comando FDOW SET|I campi di SET (comando)|  
-|FILTRO di SET (comando)|SET fisso (comando)|Comando FULLPATH SET|  
-|Comando FWEEK SET|IMPOSTARE le ore di comando|Comando dell'indice SET|  
-|Comando LOCK SET|Comando MULTILOCKS SET|IMPOSTARE prossimità del comando|  
-|Comando NOCPTRANS SET|SET di comando di notifica|SET NULL (comando)|  
-|Comando OPTIMIZE SET|ORDINE di SET (comando)|SET PATH (comando)|  
-|SET di PROCEDURE (comando)|Comando di impostazione relazione|RELAZIONE SET disattiva comandi|  
-|SET REPROCESS (comando)|Comando Ignora SET|Comando UDFPARMS SET|  
-|SET UNIQUE (comando)|Comando SET del VOLUME|Funzione SET)|  
-|Funzione SETFLDSTATE)|Funzione SIGN)|Funzione SIN)|  
-|Comando Ignora|Comando SORT|Funzione SPACE)|  
-|Funzione SQRT)|Comando di archiviazione|Funzione STR)|  
-|Funzione STRCONV)|Funzione STRTRAN)|Funzione STUFF)|  
-|Funzione STUFFC)|SUBSTR () (funzione)|Funzione SUBSTRC)|  
-|Comando SUM|SYS(2011) (funzione)||  
+|ANALIZZA... Comando ENDSCAN|SCATTER (comando)|Funzione SEC ()|  
+|Funzione SECONDS ()|Comando SEEK|Funzione SEEK ()|  
+|Comando SELECT|Funzione SELECT ()|Comando SELECT-SQL|  
+|SET BLOCKSIZE (comando)|IMPOSTA comando CARRY|SET CENTURY (comando)|  
+|SET COLLATE (comando)|Comando SET DATABASE|Comando imposta data|  
+|IMPOSTA comando predefinito|SET DELETED (comando)|SET EXACT (comando)|  
+|SET EXCLUSIVE (comando)|Comando SET FDOW|Comando imposta campi|  
+|Comando Imposta filtro|IMPOSTA comando fisso|IMPOSTA comando FULLPATH|  
+|Comando SET FWEEK|Comando SET HOURs|SET INDEX (comando)|  
+|SET LOCK (comando)|IMPOSTA comando per più blocchi|IMPOSTA il comando NEAR|  
+|Comando SET NOCPTRANS|Imposta notifica comando|SET NULL (comando)|  
+|SET OPTIMIZe (comando)|Comando Imposta ordine|SET PATH (comando)|  
+|Comando SET PROCEDURE|SET RELATION (comando)|SET RELATION OFF-comando|  
+|SET REPROCESS (comando)|SET SKIP (comando)|Comando SET UDFPARMS|  
+|SET UNIQUE (comando)|Comando imposta VOLUME|Funzione SET ()|  
+|Funzione SETFLDSTATE ()|Funzione SIGN ()|Funzione SIN ()|  
+|Comando SKIP|Ordina comando|Funzione SPACE ()|  
+|Funzione SQRT ()|Comando STORE|Funzione STR ()|  
+|Funzione STRCONV ()|Funzione STRTRAN ()|Funzione STUFF ()|  
+|Funzione STUFFC ()|Funzione substr ()|Funzione SUBSTRC ()|  
+|Comando SUM|Funzione SYS (2011)||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|Variabile di memoria di sistema _TALLY|Variabile di memoria di sistema _TRIGGERLEVEL|Funzione TAGCOUNT)|  
-|Funzione TABLEUPDATE)|TAG () (funzione)|Funzione di destinazione)|  
-|Funzione TAGNO)|Funzione TAN)|TRIM () (funzione)|  
-|Funzione TIME)|TOTALI comandi|Funzione TXNLEVEL)|  
-|Funzione TTOC)|Funzione TTOD)||  
-|Funzione di tipo)|Funzione TABLEREVERT)||  
+|Variabile di memoria di sistema _TALLY|Variabile di memoria di sistema _TRIGGERLEVEL|Funzione TAGCOUNT ()|  
+|Funzione TABLEUPDATE ()|Funzione TAG ()|Funzione TARGET ()|  
+|Funzione TAGNO ()|Funzione TAN ()|Funzione TRIM ()|  
+|Funzione TIME ()|Comando TOTAL|Funzione TXNLEVEL ()|  
+|Funzione TTOC ()|Funzione TTOD ()||  
+|Funzione TYPE ()|Funzione TABLEREVERT ()||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|Funzione (univoco)|UNLOCK-comando|USARE il comando|  
-|Comando UPDATE|Funzione (superiore)||  
-|UTILIZZATO () (funzione)|UPDATE (comando SQL)||  
+|UNIQUE () (funzione)|Comando di sblocco|Comando USE|  
+|Aggiorna comando|Funzione UPPER ()||  
+|Funzione USED ()|UPDATE (comando SQL)||  
   
 ## <a name="v"></a>V  
   
 ||||  
 |-|-|-|  
-|Funzione VAL)|Funzione di versione)||  
+|Funzione VAL ()|Funzione VERSION ()||  
   
 ## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  
-|SETTIMANA ()-funzione|||  
+|Funzione WEEK ()|||  
   
-## <a name="y"></a>Y  
+## <a name="y"></a>S  
   
 ||||  
 |-|-|-|  
-|Funzione YEAR)|||  
+|Funzione YEAR ()|||  
   
 ## <a name="z"></a>Z  
   

@@ -1,5 +1,5 @@
 ---
-title: Sezione di dati | Microsoft Docs
+title: Sezione Data | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925646"
 ---
 # <a name="data-section"></a>Sezione di dati
-La sezione di dati definisce i dati del set di righe con uno qualsiasi degli aggiornamenti, le operazioni di inserimento o eliminazione in sospeso. La sezione di dati può contenere zero o più righe. Può contenere solo i dati da un set di righe in cui la riga è definita dallo schema. Inoltre, come illustrato in precedenza, le colonne senza dati possono essere omessa. Se un attributo o un sottoelemento viene usato nella sezione dei dati e tale costrutto non è stato definito nella sezione schema, viene ignorata automaticamente.  
+La sezione Data definisce i dati del set di righe insieme a tutti gli aggiornamenti, gli inserimenti o le eliminazioni in sospeso. La sezione dei dati può contenere zero o più righe. Può contenere solo dati di un set di righe in cui la riga è definita dallo schema. Inoltre, come indicato in precedenza, le colonne senza dati possono essere omesse. Se nella sezione dati viene utilizzato un attributo o un sottoelemento e tale costrutto non è stato definito nella sezione schema, viene ignorato automaticamente.  
   
-## <a name="string"></a>String  
- I caratteri XML riservati nei dati di testo devono essere sostituiti con entità di carattere appropriato. Ad esempio, nel nome della società "Garage di Joe", la virgoletta singola devono essere sostituita da un'entità. La riga effettiva sarebbe simile al seguente:  
+## <a name="string"></a>string  
+ I caratteri XML riservati nei dati di testo devono essere sostituiti con le entità carattere appropriate. Ad esempio, nel nome della società "garage di Joe", la virgoletta singola deve essere sostituita da un'entità. La riga effettiva sarà simile alla seguente:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- I seguenti caratteri sono riservati in XML e devono essere sostituiti da entità carattere: {"," &,\<, >}.  
+ I seguenti caratteri sono riservati in XML e devono essere sostituiti da entità carattere: {', ", &\<,, >}.  
   
 ## <a name="binary"></a>Binary  
- Dati binari sono con codificata hex (vale a dire, un byte viene mappato a due caratteri, un carattere per nibble).  
+ I dati binari sono con codifica bin. Hex, ovvero un byte viene mappato a due caratteri, un carattere per ogni bocconcino.  
   
-## <a name="datetime"></a>DateTime  
- Il formato VT_DATE variant non è direttamente supportato dai tipi di dati XML-Data. Il formato corretto per le date con il componente di data e ora è aaaa-mm-ggThh.  
+## <a name="datetime"></a>Datetime  
+ Il formato di VT_DATE Variant non è supportato direttamente dai tipi di dati XML-Data. Il formato corretto per le date con un componente dati e ora è aaaa-mm-ggThh: mm: SS.  
   
- Per altre informazioni su formati della data specificata da XML, vedere la [specifica W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Per ulteriori informazioni sui formati di data specificati da XML, vedere la [specifica W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Quando la specifica di dati XML definisce due tipi di dati equivalenti (ad esempio, i4 = = int), ADO verrà scrive il nome descrittivo ma leggere in entrambi.  
+ Quando la specifica XML-data definisce due tipi di dati equivalenti (ad esempio, I4 = = int), ADO scrive il nome descrittivo ma viene letto in entrambi.  
   
-## <a name="managing-pending-changes"></a>La gestione delle modifiche in sospeso  
- Un set di record possono essere aperti nell'immediato o in modalità di aggiornamento batch. Quando vengono aperti in modalità di aggiornamento batch con cursori sul lato client, tutte le modifiche apportate al set di record sono in stato di attesa fino a quando non viene chiamato il metodo UpdateBatch. Le modifiche in sospeso vengono inoltre mantenuti quando viene salvato il Recordset. Nel codice XML, sono rappresentati dall'utilizzo degli elementi "update" definita nell'urn: schemas-microsoft-com: rowset. Inoltre, se un set di righe possono essere aggiornati, le proprietà aggiornabili deve essere impostata true nella definizione della riga. Ad esempio, per definire che la tabella spedizionieri contiene modifiche in sospeso, la definizione di riga verrebbe aspetto sono simili alle seguenti.  
+## <a name="managing-pending-changes"></a>Gestione delle modifiche in sospeso  
+ Un recordset può essere aperto in modalità di aggiornamento immediato o batch. Quando vengono aperti in modalità di aggiornamento batch con cursori sul lato client, tutte le modifiche apportate al recordset sono in uno stato in sospeso fino a quando non viene chiamato il metodo UpdateBatch. Anche le modifiche in sospeso vengono rese permanente quando il recordset viene salvato. In XML sono rappresentati dall'uso degli elementi "Update" definiti in urn: schemas-microsoft-com: rowset. Inoltre, se è possibile aggiornare un set di righe, è necessario impostare la proprietà aggiornabile su true nella definizione della riga. Ad esempio, per definire che la tabella Shippers contiene modifiche in sospeso, la definizione di riga avrà un aspetto simile al seguente.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -53,9 +53,9 @@ La sezione di dati definisce i dati del set di righe con uno qualsiasi degli agg
 </s:ElementType>  
 ```  
   
- Ciò indica al Provider di persistenza di dati sui dispositivi surface in modo che ADO può costruire un oggetto Recordset aggiornabile.  
+ In questo modo, il provider di persistenza può esporre i dati in modo che ADO possa costruire un oggetto recordset aggiornabile.  
   
- I dati di esempio seguente viene illustrato come gli inserimenti, le modifiche ed eliminazioni esaminare il file persistente.  
+ I dati di esempio seguenti illustrano la modalità di ricerca di inserimenti, modifiche ed eliminazioni nel file salvato in modo permanente.  
   
 ```  
 <rs:data>  
@@ -82,7 +82,7 @@ La sezione di dati definisce i dati del set di righe con uno qualsiasi degli agg
 </rs:data>  
 ```  
   
- Un aggiornamento contiene sempre i dati della riga originale intero seguiti da dati della riga modificata. La riga modificata può contenere tutte le colonne o solo le colonne che sono stati effettivamente modificati. Nell'esempio precedente, non viene modificata la riga relativa spedizioniere 2 e solo la colonna telefono è stato modificato i valori per 3 spedizioniere e pertanto è l'unica colonna inclusa nella riga modificata. Le righe inserite per spedizionieri 12, 13 e 14 sono suddivisi in batch insieme rs: Inserisci in un tag. Si noti che le righe eliminate possono anche essere raggruppate, sebbene non illustrato nell'esempio precedente.  
+ Un aggiornamento contiene sempre tutti i dati di riga originali seguiti dai dati delle righe modificati. La riga modificata può contenere tutte le colonne o solo le colonne effettivamente modificate. Nell'esempio precedente, la riga per spedizioniere 2 non viene modificata e solo la colonna Phone ha modificato i valori per spedizioniere 3 ed è pertanto l'unica colonna inclusa nella riga modificata. Le righe inserite per gli spedizionieri 12, 13 e 14 vengono raggruppate in un tag RS: Insert. Si noti che le righe eliminate possono anche essere raggruppate in batch, sebbene non sia illustrato nell'esempio precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

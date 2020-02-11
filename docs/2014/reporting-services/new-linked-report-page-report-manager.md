@@ -1,5 +1,5 @@
 ---
-title: Pagina Nuovo Report collegato (gestione Report) | Microsoft Docs
+title: Pagina nuovo report collegato (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108173"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Pagina Nuovo report collegato (Gestione report)
@@ -31,7 +31,7 @@ ms.locfileid: "66108173"
   
 2.  Passare con il puntatore del mouse sul report, quindi fare clic sulla freccia a discesa.  
   
-3.  Nel menu di riepilogo a discesa, fare clic su **crea Report collegato**.  
+3.  Nel menu a discesa fare clic su **Crea report collegato**.  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>Per aprire la pagina Nuovo report collegato dalla pagina delle proprietà Generale di un report  
   
@@ -44,8 +44,8 @@ ms.locfileid: "66108173"
 4.  Nella barra degli strumenti dell'elemento fare clic su **Crea report collegato**.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
- Specificare il nome del report collegato. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. I caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
+ **Nome**  
+ Specificare il nome del report collegato. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. I caratteri ; ? : \@ & = +, $/* \< > | "o/quando si specifica un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto del report. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al report.  
@@ -57,8 +57,8 @@ ms.locfileid: "66108173"
  Fare clic su **OK** per salvare le modifiche e tornare alla pagina delle proprietà generale del report di base.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un Report collegato](reports/create-a-linked-report.md)   
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Creazione di un report collegato](reports/create-a-linked-report.md)   
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

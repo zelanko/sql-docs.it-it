@@ -1,5 +1,5 @@
 ---
-title: Avviare SQL Server Profiler | Microsoft Docs
+title: Avvia SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186119"
 ---
 # <a name="start-sql-server-profiler"></a>Avviare SQL Server Profiler
-  È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in diversi modi per supportare la raccolta dell'output di traccia in numerosi scenari. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può essere avviato dal menu **Start**, dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diverse posizioni all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in diversi modi per supportare la raccolta dell'output di traccia in numerosi scenari. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può essere avviato dal menu **Start** , dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diverse posizioni all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la prima volta e si sceglie **Nuova traccia** dal menu **File**, l'applicazione visualizza la finestra di dialogo **Connetti al server**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile specificare l'istanza di alla quale si vuole connettersi.  
+ Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la prima volta e si sceglie **Nuova traccia** dal menu **File**, l'applicazione visualizza la finestra di dialogo** Connetti al server** in cui è possibile specificare l'istanza di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla quale si vuole connettersi.  
   
 ### <a name="to-start-sql-server-profiler-from-the-start-menu"></a>Per avviare SQL Server Profiler dal menu Start  
   
@@ -35,7 +36,8 @@ ms.locfileid: "68186119"
 1.  Selezionare [!INCLUDE[ssDE](../../includes/ssde-md.md)] SQL Server Profiler **dal menu** Tools **di Ottimizzazione guidata**.  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>Avvio di SQL Server Profiler in Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] avvia ogni sessione del profiler nella rispettiva istanza e continua l'esecuzione anche dopo l'arresto di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] avvia ogni sessione del profiler nella rispettiva istanza e continua l'esecuzione anche dopo l'arresto di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] da diverse posizioni all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], come illustrato nelle procedure riportate di seguito. Quando viene avviato [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , vengono caricati il contesto di connessione, il modello di traccia e il contesto del filtro del punto di avvio.  
   

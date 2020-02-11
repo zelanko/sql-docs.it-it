@@ -1,5 +1,5 @@
 ---
-title: Sys. Credentials (Transact-SQL) | Microsoft Docs
+title: sys. Credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da427117b2282c9014ff0171e1a7c29f7490940e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078748"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
@@ -39,19 +39,19 @@ ms.locfileid: "68078748"
 |credential_identity|**nvarchar(4000)**|Nome dell'identità da utilizzare, in genere corrispondente a un utente di Windows. Non è necessario che sia univoco.|  
 |create_date|**datetime**|Ora di creazione della credenziale.|  
 |modify_date|**datetime**|Ora dell'ultima modifica apportata alla credenziale.|  
-|target_type|**nvarchar(100)**|Tipo di credenziale. Restituisce NULL per credenziali tradizionali e CRYPTOGRAPHIC PROVIDER per credenziali di cui è stato eseguito il mapping a un provider di servizi di crittografia. Per altre informazioni sui provider di gestione delle chiavi esterne, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
-|target_id|**int**|ID dell'oggetto a cui è stato eseguito il mapping della credenziale. Restituisce 0 per credenziali tradizionali e un valore diverso da 0 per credenziali di cui è stato eseguito il mapping a un provider di servizi di crittografia. Per altre informazioni sui provider di gestione delle chiavi esterne, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_type|**nvarchar (100)**|Tipo di credenziale. Restituisce NULL per credenziali tradizionali e CRYPTOGRAPHIC PROVIDER per credenziali di cui è stato eseguito il mapping a un provider di servizi di crittografia. Per ulteriori informazioni sui provider di gestione delle chiavi esterne, vedere [Extensible Key management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_id|**int**|ID dell'oggetto a cui è stato eseguito il mapping della credenziale. Restituisce 0 per credenziali tradizionali e un valore diverso da 0 per credenziali di cui è stato eseguito il mapping a un provider di servizi di crittografia. Per ulteriori informazioni sui provider di gestione delle chiavi esterne, vedere [Extensible Key management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
-## <a name="remarks"></a>Note  
-Per le credenziali a livello di database, vedere [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
+## <a name="remarks"></a>Osservazioni  
+Per le credenziali a livello di database, vedere [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
- Richiede `VIEW ANY DEFINITION` autorizzazione o `ALTER ANY CREDENTIAL` autorizzazione. Inoltre, l'entità non deve essere negata `VIEW ANY DEFINITION` l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ `VIEW ANY DEFINITION` Richiede l'autorizzazione o `ALTER ANY CREDENTIAL` l'autorizzazione. Inoltre, all'entità non deve essere negata `VIEW ANY DEFINITION` l'autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
   

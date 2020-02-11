@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049135"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63049135"
  **Indice spaziale selezionato**  
  Consente di visualizzare un elenco degli indici spaziali esistenti. Selezionare un indice per visualizzare le relative proprietà. Se l'elenco è vuoto, significa che non sono stati definiti indici spaziali per la tabella.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di creare un nuovo indice spaziale.  
   
  **Elimina**  
@@ -85,10 +85,10 @@ ms.locfileid: "63049135"
  Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione** .  
   
  **(Nome)**  
- Visualizza il nome dell'indice spaziale. Quando viene creato un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
+ Visualizza il nome dell'indice spaziale. Quando viene creato un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. È possibile modificare il nome in qualsiasi momento.  
   
  **Descrizione**  
- Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+ Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
  **Categoria Progettazione tabelle**  
  Se viene espansa, visualizza le informazioni relative alle proprietà dell'indice spaziale.  

@@ -10,13 +10,13 @@ ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2393c7da432f2143319588c3c16ea88c3b9f1b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995705"
 ---
-# <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
+# <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "67995705"
 |Testo del messaggio|Errore imprevisto all'interno della chiamata del metodo API di un'istanza del database locale. Vedere il registro eventi applicazioni di Windows per informazioni sull'errore.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Errore imprevisto.  
+ Si è verificato un errore imprevisto.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Per informazioni, vedere il registro eventi.  

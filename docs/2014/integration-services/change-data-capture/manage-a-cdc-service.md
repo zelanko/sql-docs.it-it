@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835743"
 ---
 # <a name="manage-a-cdc-service"></a>Gestire un servizio CDC
@@ -45,6 +45,6 @@ ms.locfileid: "62835743"
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Modalità di gestione di un servizio CDC da CDC Designer Console](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
+ [Usare la Procedura guidata nuova istanza](use-the-new-instance-wizard.md)  
   
   

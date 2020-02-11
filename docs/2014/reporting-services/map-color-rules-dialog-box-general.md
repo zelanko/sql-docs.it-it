@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping di finestra di dialogo delle regole colore, generale | Microsoft Docs
+title: Finestra di dialogo regole colori mappa, generale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108315"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Finestra di dialogo Proprietà regole colori mappa, Generale
@@ -29,7 +29,7 @@ ms.locfileid: "66108315"
  **Applica stile modello**  
  Selezionare questa opzione per utilizzare i colori in base al tema scelto nella procedura guidata o impostato nelle proprietà dei livelli Poligono, Linea o Punto. Un tema consente di impostare le opzioni predefinite per colore, carattere e bordi della mappa. Per questa opzione, non viene applicata nessuna regola per assegnare colori a ogni elemento della mappa.  
   
- **Visualizza dati tramite tavolozza dei colori**  
+ **Visualizza dati tramite tavolozza colori**  
  Selezionare questa opzione per visualizzare i dati analitici tramite i colori di una specifica tavolozza.  
   
  **Visualizza dati tramite intervalli colori**  
@@ -39,7 +39,7 @@ ms.locfileid: "66108315"
  Selezionare questa opzione per visualizzare i dati analitici specificando il proprio elenco di colori.  
   
  **Campo dati**  
- Questa opzione viene visualizzata quando si seleziona una delle **visualizzare i dati** opzioni.  
+ Questa opzione viene visualizzata quando si seleziona una delle opzioni **Visualizza dati** .  
   
  Selezionare il campo dei dati analitici da utilizzare dall'elenco a discesa. A seconda dell'origine dati spaziali, l'elenco visualizza i campi dall'origine dati spaziali e da un set di dati del report che dispone di una relazione tra i dati spaziali e quelli analitici. Per creare tale relazione, impostare le opzioni dei dati nella pagina Dati analitici per il livello mappa selezionato.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "66108315"
  **Colore finale**  
  Specificare il colore da utilizzare per i dati nella parte superiore dell'intervallo di dati.  
   
- **Aggiungi**  
- Fare clic su **Add** per specificare i colori per la regola colore.  
+ **Aggiungere**  
+ Fare clic su **Aggiungi** per specificare i colori personalizzati per la regola colore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

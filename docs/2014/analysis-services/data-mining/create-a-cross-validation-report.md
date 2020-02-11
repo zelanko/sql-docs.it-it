@@ -1,5 +1,5 @@
 ---
-title: Creare un Report di convalida incrociata | Microsoft Docs
+title: Creazione di un report di convalida incrociata | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085531"
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
@@ -53,7 +53,8 @@ ms.locfileid: "66085531"
   
 1.  Nella scheda **Convalida incrociata** per **FoldCount**fare clic sulla freccia giù per selezionare un numero compreso tra 1 e 10. Il valore predefinito è 10.  
   
-     **FoldCount** rappresenta il numero di partizioni che verranno create all'interno del set di dati originali. Se si imposta FoldCount su 1, il set di training verrà utilizzato senza partizionamento.  
+     
+  **FoldCount** rappresenta il numero di partizioni che verranno create all'interno del set di dati originali. Se si imposta FoldCount su 1, il set di training verrà utilizzato senza partizionamento.  
   
 2.  Per **TargetAttribute**fare clic sulla freccia verso il basso e selezionare una colonna nell'elenco. Se si tratta di un modello di clustering, selezionare **#Cluster** per indicare che il modello non dispone di un modello stimabile. Si noti che il valore **#Cluster**è disponibile solo quando la struttura di data mining non supporta altri tipi di attributi stimabili.  
   

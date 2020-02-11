@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079026"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Aggiunta di attributi alle dimensioni
@@ -38,7 +38,7 @@ ms.locfileid: "66079026"
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **Genere**  
   
     -   **EmailAddress**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66079026"
   
 5.  Trascinare le colonne seguenti dalla tabella **Geography** nel riquadro **Vista origine dati** al riquadro **Attributi** :  
   
-    -   **City**  
+    -   **city**  
   
     -   **StateProvinceName**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079026"
   
     -   **StandardCost**  
   
-    -   **Colore**  
+    -   **Color**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079026"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **Peso**  
   
     -   **DaysToManufacture**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66079026"
   
     -   **Classe**  
   
-    -   **Stile**  
+    -   **Style**  
   
     -   **ModelName**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66079026"
   
     -   **EndDate**  
   
-    -   **Stato**  
+    -   **Status**  
   
 5.  Scegliere **Salva tutto**dal menu File.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66079026"
  [Esame delle proprietà del cubo e delle dimensioni](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

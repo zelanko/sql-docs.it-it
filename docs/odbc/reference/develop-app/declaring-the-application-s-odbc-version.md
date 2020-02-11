@@ -1,5 +1,5 @@
 ---
-title: La dichiarazione dell'applicazione&#39;versione ODBC s | Microsoft Docs
+title: Dichiarazione della versione ODBC dell'applicazione&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,33 +18,33 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076845"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>La dichiarazione dell'applicazione&#39;s versione ODBC
-Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione segue ODBC *2.x* o ODBC *3.x* specifica quando si usano gli elementi seguenti:  
+# <a name="declaring-the-application39s-odbc-version"></a>Dichiarazione della versione ODBC dell'applicazione&#39;s
+Prima di allocare una connessione, un'applicazione deve impostare l'attributo dell'ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione segue la specifica ODBC *2. x* o ODBC *3. x* quando si utilizzano gli elementi seguenti:  
   
--   **SQLSTATE**. Numero di valori SQLSTATE è diversi in ODBC *2.x* e ODBC *3.x*.  
+-   **Sqlstates**. Molti valori SQLSTATE sono diversi in ODBC *2. x* e ODBC *3. x*.  
   
--   **Date, Time e gli identificatori di tipo Timestamp**. La tabella seguente vengono illustrati gli identificatori di tipo di dati date, time e timestamp in ODBC *2.x* e ODBC *3.x*.  
+-   **Identificatori di tipo data, ora e timestamp**. Nella tabella seguente vengono illustrati gli identificatori di tipo per i dati di data, ora e timestamp in ODBC *2. x* e ODBC *3. x*.  
   
-    |ODBC *2.x*|ODBC *3.x*|  
+    |ODBC *2. x*|ODBC *3. x*|  
     |----------------|----------------|  
     |**Identificatori dei tipi SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  
     |SQL_TIME|SQL_TYPE_TIME|  
     |SQL_TIMESTAMP|SQL_TYPE_TIMESTAMP|  
-    |**Identificatori di tipo C**||  
+    |**Identificatori di tipi C**||  
     |SQL_C_DATE|SQL_C_TYPE_DATE|  
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_**argomento nella SQLTables**. In ODBC *2.x*, i caratteri jolly ("%" e "_") nel *CatalogName* argomento vengono trattati in modo letterale. In ODBC *3.x*, essi vengono trattati come caratteri jolly. Di conseguenza, un'applicazione che segue ODBC *2.x* specifica non è possibile usarle come i caratteri jolly e non utilizzare caratteri di escape quando vengono utilizzati come valori letterali. Un'applicazione che segue ODBC *3.x* specifica può usare queste chiavi come caratteri jolly o utilizzare caratteri di escape e usarle come valori letterali. Per altre informazioni, vedere [argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   Argomento _CatalogName_**in SQLTables**.   In ODBC *2. x*, i caratteri jolly ("%" e "_") nell'argomento *CatalogName* vengono trattati letteralmente. In ODBC *3. x*vengono considerati caratteri jolly. Pertanto, un'applicazione che segue la specifica ODBC *2. x* non può utilizzarle come caratteri jolly e non ne esegue l'escape quando vengono utilizzate come valori letterali. Un'applicazione che segue la specifica ODBC *3. x* può usarla come caratteri jolly o come escape e usarla come valori letterali. Per ulteriori informazioni, vedere [arguments in Catalog Functions](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- ODBC *3.x* ODBC e Driver Manager *3.x* i driver di controllare la versione della specifica di ODBC in cui verrà scritta un'applicazione e rispondere di conseguenza. Se, ad esempio, seguito dall'applicazione ODBC *2.x* specification e le chiamate **SQLExecute** prima di chiamare **SQLPrepare**, ODBC *3.x*Gestione driver restituisce SQLSTATE S1010 (funzione di errore nella sequenza). Se l'applicazione segue ODBC *3.x* specifica, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza). Per altre informazioni, vedere [garantire la compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ I driver ODBC *3. x* driver Manager e ODBC *3. x* controllano la versione della specifica ODBC in cui un'applicazione viene scritta e rispondono di conseguenza. Se, ad esempio, l'applicazione segue la specifica ODBC *2. x* e chiama **SQLExecute** prima di chiamare **SQLPrepare**, gestione driver ODBC *3. x* restituisce SQLSTATE S1010 (errore della sequenza di funzioni). Se l'applicazione segue la specifica ODBC *3. x* , gestione driver restituisce SQLSTATE HY010 (errore della sequenza di funzioni). Per altre informazioni, vedere [compatibilità con le versioni precedenti e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Le applicazioni che osservano ODBC *3.x* specification devono usare codice condizionale per evitare di utilizzare funzionalità nuove a ODBC *3.x* quando si lavora con ODBC *2.x* driver. ODBC *2.x* driver non supportano la funzionalità nuova a ODBC *3.x* solo perché l'applicazione dichiara che segue ODBC *3.x* specifica. Inoltre, ODBC *3.x* i driver non scade supportare la funzionalità nuova a ODBC *3.x* solo perché l'applicazione dichiara che segue ODBC *2.x* specifica.
+>  Le applicazioni che seguono la specifica ODBC *3. x* devono utilizzare il codice condizionale per evitare l'utilizzo di funzionalità nuove di ODBC *3. x* quando si utilizzano i driver ODBC *2. x* . I driver ODBC *2. x* non supportano le nuove funzionalità di ODBC *3.* x solo perché l'applicazione dichiara che segue la specifica ODBC *3. x* . Inoltre, i driver ODBC *3. x* non smettono di supportare la nuova funzionalità di ODBC *3. x* solo perché l'applicazione dichiara che segue la specifica ODBC *2. x* .

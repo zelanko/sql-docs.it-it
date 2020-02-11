@@ -17,18 +17,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957215"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Crittografa i dati con una crittografia gerarchica e un'infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
+# <a name="encryption-hierarchy"></a>Gerarchia di crittografia
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  
   
- ![Visualizza alcune combinazioni di crittografia in uno stack](../../../database-engine/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in uno stack")  
+ ![Visualizza alcune combinazioni di crittografia in uno stack.](../../../database-engine/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in uno stack.")  
   
  Tenere presenti i concetti seguenti:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74957215"
   
  Le stesse informazioni vengono illustrate in modo diverso nella figura seguente.  
   
- ![Visualizzazione di alcune combinazioni di crittografia in una ruota.](../../../database-engine/media/encryption-hierarchy-wheel.gif "Visualizzazione di alcune combinazioni di crittografia in una ruota.")  
+ ![Visualizza alcune combinazioni di crittografia in una ruota.](../../../database-engine/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
   
  In questo diagramma vengono illustrati i concetti aggiuntivi seguenti:  
   
@@ -55,10 +55,9 @@ ms.locfileid: "74957215"
 -   Le chiavi simmetriche e asimmetriche in EKM possono proteggere l'accesso alle chiavi simmetriche e asimmetriche archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La linea punteggiata associata a EKM indica che le chiavi in EKM potrebbero sostituire le chiavi simmetriche e asimmetriche archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="encryption-mechanisms"></a>Meccanismi di crittografia  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprende i meccanismi di crittografia seguenti:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprende i meccanismi di crittografia seguenti:  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]funzioni  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] funzioni  
   
 -   Chiavi asimmetriche  
   
@@ -105,13 +104,13 @@ ms.locfileid: "74957215"
 ### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
  Transparent Data Encryption è un caso speciale di crittografia che utilizza una chiave simmetrica. Transparent Data Encryption crittografa un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta da altri certificati o chiavi, a loro volta protetti dalla chiave master del database o da una chiave asimmetrica archiviata in un modulo EKM. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
-## <a name="related-content"></a>Contenuti correlati  
- [Protezione SQL Server](../securing-sql-server.md)  
+## <a name="related-content"></a>Contenuto correlato  
+ [Sicurezza di SQL Server](../securing-sql-server.md)  
   
- [Funzioni di sicurezza &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Funzioni di sicurezza &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../permissions-hierarchy-database-engine.md)   
- [Oggetti proteggibili](../securables.md)  
+ [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../permissions-hierarchy-database-engine.md)   
+ [Entità a protezione diretta](../securables.md)  
   
   

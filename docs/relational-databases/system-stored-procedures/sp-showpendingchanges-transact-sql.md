@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632741"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -43,13 +43,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @destination_server = ] 'destination_server'` è il nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname**e il valore predefinito è null.  
+`[ @destination_server = ] 'destination_server'`Nome del server in cui vengono applicate le modifiche replicate. *destination_server* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *Publication* , i risultati sono limitati solo alla pubblicazione specificata.  
   
-`[ @article = ] 'article'` è il nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *article* , i risultati sono limitati solo all'articolo specificato.  
   
-`[ @show_rows = ] 'show_rows'` specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso e il valore predefinito è **0**. Se viene specificato il valore **1** , il set di risultati contiene le colonne is_delete e rowguid.  
+`[ @show_rows = ] 'show_rows'`Specifica se il set di risultati contiene informazioni più specifiche sulle modifiche in sospeso e il valore predefinito è **0**. Se viene specificato il valore **1** , il set di risultati contiene le colonne is_delete e rowguid.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -62,10 +62,10 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|Nome dell'articolo nella tabella di origine delle modifiche.|  
 |pending_deletes|**int**|Numero di eliminazioni in attesa della replica.|  
 |pending_ins_and_upd|**int**|Numero di inserimenti e aggiornamenti in attesa della replica.|  
-|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Il valore **1** indica che la modifica è un'eliminazione. Per @show_rowsè necessario un valore pari a **1** .|  
-|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Per @show_rowsè necessario un valore pari a **1** .|  
+|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Il valore **1** indica che la modifica è un'eliminazione. Richiede il valore **1** per @show_rows.|  
+|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Richiede il valore **1** per @show_rows.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  

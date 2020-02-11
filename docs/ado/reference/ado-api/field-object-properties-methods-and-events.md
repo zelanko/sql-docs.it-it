@@ -1,5 +1,5 @@
 ---
-title: Campo di proprietà degli oggetti, metodi ed eventi | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932769"
 ---
-# <a name="field-object-properties-methods-and-events"></a>Campo oggetto proprietà, metodi ed eventi
-## <a name="propertiescollections"></a>Le proprietà e le raccolte  
+# <a name="field-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Field
+## <a name="propertiescollections"></a>Proprietà/raccolte  
  [Proprietà ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)  
   
- [Attributi proprietà](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Proprietà Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Proprietà DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)  
   
- [Nome proprietà](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Proprietà Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
  [Proprietà NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "67932769"
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
+ [Proprietà Status (Field - ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
- [Proprietà del tipo](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type (proprietà)](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67932769"
   
  [Metodo GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

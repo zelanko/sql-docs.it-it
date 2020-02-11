@@ -13,26 +13,26 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923850"
 ---
 # <a name="types-of-cursors-ado"></a>Tipi di cursori (ADO)
-Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, sola lettura, statici, scorrimento, non memorizzato nel buffer) prevede un prezzo - nella memoria del client, il carico di rete o delle prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  
+Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni ulteriore caratteristica del cursore oltre le nozioni di base (di sola lettura, statica, a scorrimento, senza buffer) presenta una memoria del client, un carico di rete o le prestazioni. In molti casi, le opzioni predefinite del cursore generano un cursore più complesso rispetto a quello effettivamente necessario per l'applicazione.  
   
- La scelta del tipo di cursore dipende dal modo in cui l'applicazione usa il set di risultati e anche diverse considerazioni di progettazione, tra cui la dimensione del set di risultati, la percentuale dei dati che possono essere usati, sensibilità alle modifiche dei dati e le prestazioni dell'applicazione requisiti.  
+ La scelta del tipo di cursore dipende dalla modalità di utilizzo del set di risultati da parte dell'applicazione, nonché da diverse considerazioni sulla progettazione, incluse le dimensioni del set di risultati, la percentuale dei dati che è probabile utilizzare, la sensibilità alle modifiche dei dati e le prestazioni dell'applicazione requisiti.  
   
- In parole semplici, la scelta di cursore dipende dalla necessità di modificare o semplicemente visualizzarne i dati:  
+ Nella maggior parte dei casi, la scelta del cursore dipende dal fatto che sia necessario modificare o semplicemente visualizzare i dati:  
   
--   Se è necessario solo per lo scorrimento di un set di risultati, ma non i dati delle modifiche, usare una [forward-only](../../../ado/guide/data/forward-only-cursors.md) oppure [statico](../../../ado/guide/data/static-cursors.md) cursore.  
+-   Se è sufficiente scorrere un set di risultati, ma non modificare i dati, usare un cursore [statico](../../../ado/guide/data/static-cursors.md) o di [sola trasmissione](../../../ado/guide/data/forward-only-cursors.md) .  
   
--   Se si dispone di un set di risultati di grandi dimensioni ed è necessario selezionare solo poche righe, usare una [keyset](../../../ado/guide/data/keyset-cursors.md) cursore.  
+-   Se si dispone di un set di risultati di grandi dimensioni ed è necessario selezionare solo poche righe, utilizzare un cursore [Keyset](../../../ado/guide/data/keyset-cursors.md) .  
   
--   Se si desidera sincronizzare un set di risultati con recenti aggiunte, modifiche ed eliminazioni da tutti gli utenti simultanei, usare una [dinamica](../../../ado/guide/data/dynamic-cursors.md) cursore.  
+-   Se si desidera sincronizzare un set di risultati con aggiunte, modifiche ed eliminazioni recenti da parte di tutti gli utenti simultanei, utilizzare un cursore [dinamico](../../../ado/guide/data/dynamic-cursors.md) .  
   
- Sebbene sembri essere diverso ogni tipo di cursore, tenere presente che questi tipi di cursore non sono molto diverse varianti come semplicemente il risultato della combinazione di caratteristiche e le opzioni.  
+ Anche se ogni tipo di cursore sembra essere distinto, tenere presente che questi tipi di cursore non sono molto diversi come il risultato delle caratteristiche e delle opzioni sovrapposte.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -45,7 +45,7 @@ Come regola generale, l'applicazione deve usare il cursore più semplice che for
 -   [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cursori forward-Only](../../../ado/guide/data/forward-only-cursors.md)   
+ [Cursori di sola trasmissione](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursori statici](../../../ado/guide/data/static-cursors.md)   
  [Cursori keyset](../../../ado/guide/data/keyset-cursors.md)   
  [Cursori dinamici](../../../ado/guide/data/dynamic-cursors.md)

@@ -1,5 +1,5 @@
 ---
-title: VBScript di esempi di codice ADO | Microsoft Docs
+title: Esempi di codice ADO VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4bef039b082d281f2426cc9c7695d8115fad05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921170"
 ---
 # <a name="ado-code-examples-vbscript"></a>Esempi di codice ADO VBScript
 Usare gli esempi di codice seguenti per informazioni su come usare i metodi ADO durante la scrittura in Microsoft® Visual Basic® Scripting Edition (VBScript).  
   
 > [!NOTE]
->  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'intero esempio di codice, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguito correttamente se vengono usati esempi parziali o se la formattazione del paragrafo va persa.  
   
 ## <a name="methods"></a>Metodi  
   
@@ -36,15 +36,15 @@ Usare gli esempi di codice seguenti per informazioni su come usare i metodi ADO 
   
 -   [Esempio di metodo Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md)  
   
--   [Eseguire, rieseguire una query ed eliminare esempio di metodi](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
+-   [Esempio di metodi Execute, Requery e Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
   
 -   [Esempio di metodo Move](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
   
--   [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious esempio di metodi](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
+-   [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
   
 -   [Esempio di metodi Open e Close](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Appendice D: Esempi di ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Appendice D: Esempi ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

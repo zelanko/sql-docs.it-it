@@ -1,5 +1,5 @@
 ---
-title: Oggetto DataControl (Servizi Desktop remoto) | Microsoft Docs
+title: Oggetto DataControl (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964394"
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (Servizi Desktop remoto)
-Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare i **Recordset** dati in una pagina Web.  
+Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di query di dati a uno o più controlli, ad esempio una casella di testo, un controllo griglia o una casella combinata, per visualizzare i dati del **Recordset** in una pagina Web.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,38 +40,38 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Note  
- L'ID della classe per il **Servizi Desktop remoto. DataControl** oggetto è BD96C556-65A3 - 11d 0-983A-00C04FC29E33.  
+## <a name="remarks"></a>Osservazioni  
+ ID di classe per **RDS. L'oggetto DataControl** è BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Se si verifica un errore che un [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) o **Servizi Desktop remoto. DataControl** object non caricare, assicurarsi di usare l'ID di classe corretto. La classe di ID per questi oggetti sono stati modificati dalla versione 1.0 e 1.1. Tenere anche presente che è necessario impostare le colonne nullable anche quando si usa la **Servizi Desktop remoto DataControl** oggetto.  
+>  Se viene ricevuto un errore, il Servizi Desktop remoto [. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) o Servizi Desktop remoto **. L'oggetto DataControl** non viene caricato, assicurarsi di usare l'ID classe corretto. Gli ID di classe per questi oggetti sono stati modificati rispetto alla versione 1,0 e 1,1. Tenere inoltre presente che quando si utilizza l'oggetto di **controllo** Servizi Desktop remoto è necessario impostare anche le colonne che ammettono valori null.  
   
- Per uno scenario di base, è necessario impostare solo le **SQL**, **Connect**, e **Server** le proprietà del **Servizi Desktop remoto. DataControl** oggetto, che chiamerà automaticamente l'oggetto business predefinito, [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
+ Per uno scenario di base, è necessario impostare solo le proprietà **SQL**, **Connect**e **server** del Servizi Desktop remoto **. Oggetto DataControl** , che chiamerà automaticamente l'oggetto business predefinito, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
   
- Tutte le proprietà di **Servizi Desktop remoto. DataControl** sono facoltative in quanto gli oggetti business personalizzata possono sostituire le proprie funzionalità.  
+ Tutte le proprietà in Servizi Desktop remoto **. DataControl** è facoltativo perché gli oggetti business personalizzati possono sostituire le proprie funzionalità.  
   
 > [!NOTE]
->  Se esegue una query per più risultati, solo le prime [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene restituito. Se sono necessari più set di risultati, assegnarlo a un proprio **DataControl**. Un esempio di una query per ottenere risultati più potrebbe essere come segue: `"Select * from Authors, Select * from Topics"`  
+>  Se si eseguono query per più risultati, viene restituito solo il primo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se sono necessari più set di risultati, assegnare ognuno a un proprio **DataControl**. Di seguito è riportato un esempio di query per più risultati:`"Select * from Authors, Select * from Topics"`  
   
- Aggiunta di "DFMode = 20;" alla stringa di connessione quando si usa il **Servizi Desktop remoto. DataControl** oggetto può migliorare le prestazioni del server quando si esegue l'aggiornamento dati. Con questa impostazione, il **RDSServer** oggetti sul server utilizza una modalità meno risorse. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:  
+ Aggiunta di "DFMode = 20;" alla stringa di connessione quando si utilizza **RDS. L'oggetto DataControl** può migliorare le prestazioni del server quando si aggiornano i dati. Con questa impostazione, l'oggetto **RDSServer. DataFactory** sul server usa una modalità con utilizzo intensivo di risorse minore. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:  
   
--   Uso di query con parametri.  
+-   Utilizzo di query con parametri.  
   
--   Recupero di informazioni di parametro o della colonna prima di chiamare il **Execute** (metodo).  
+-   Recupero delle informazioni sul parametro o sulla colonna prima della chiamata al metodo **Execute** .  
   
--   L'impostazione **Transact Updates** al **True**.  
+-   Impostazione degli **aggiornamenti Transact** su **true**.  
   
--   Ottenere lo stato di riga.  
+-   Recupero dello stato delle righe.  
   
--   Chiama il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) (metodo).  
+-   Chiamata al metodo [Resync](../../../ado/reference/ado-api/resync-method.md) .  
   
--   Aggiornamento (in modo esplicito o automaticamente) tramite il [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) proprietà.  
+-   Aggiornamento (in modo esplicito o automatico) tramite la proprietà [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) .  
   
--   L'impostazione **comandi** oppure [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) proprietà.  
+-   Impostazione delle proprietà del **comando** o del [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) .  
   
--   Usando **adCmdTableDirect**.  
+-   Uso di **adCmdTableDirect**.  
   
- Il **Servizi Desktop remoto. DataControl** oggetto viene eseguito in modalità asincrona per impostazione predefinita. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) uguale al parametro **adcExecSync** e il [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) parametro con valore uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
+ **RDS. **Per impostazione predefinita, l'oggetto DataControl viene eseguito in modalità asincrona. Se è necessaria l'esecuzione sincrona per l'applicazione, impostare il parametro [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) uguale a **adcExecSync** e il parametro [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) uguale a **adcFetchUpFront**, come illustrato nell'esempio seguente.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -83,28 +83,28 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
 </OBJECT>  
 ```  
   
- Usare uno **Servizi Desktop remoto. DataControl** oggetto per collegare i risultati di una singola query a uno o più controlli visivi. Ad esempio, si supponga che il codice di una query che richiede dati dei clienti, ad esempio nome, residenza, luogo di nascita, durata e stato di priorità del cliente. È possibile usare un singolo **Servizi Desktop remoto. DataControl** oggetto da visualizzare nome del cliente, età e area tre caselle di testo separato. Stato di priorità del cliente in una casella di controllo; e tutti i dati in un controllo griglia.  
+ Utilizzare un Servizi Desktop remoto **. Oggetto DataControl** per collegare i risultati di una singola query a uno o più controlli visivi. Si supponga, ad esempio, di codificare una query che richiede i dati del cliente, ad esempio nome, residenza, luogo di nascita, età e stato del cliente prioritario. È possibile utilizzare un singolo **RDS. Oggetto DataControl** per visualizzare il nome, l'età e l'area geografica di un cliente in tre caselle di testo separate; Stato del cliente prioritario in una casella di controllo; e tutti i dati in un controllo Grid.  
   
- Utilizzare diverse **Servizi Desktop remoto. DataControl** gli oggetti a cui collegarsi i risultati delle query più controlli visivi diversi. Si supponga, ad esempio, che è possibile utilizzare una query per ottenere informazioni relative a un cliente e una seconda query per ottenere informazioni su denaro, merci che il cliente ha acquistato. Si desidera visualizzare i risultati della prima query in tre caselle di testo e una casella di controllo e i risultati della query secondo in un controllo griglia. Se si usa l'oggetto business predefinito (**RDSServer**), è necessario eseguire le operazioni seguenti:  
+ Usare Servizi Desktop remoto diversi **. Oggetti DataControl** per collegare i risultati di più query a controlli visivi diversi. Si supponga, ad esempio, di usare una query per ottenere informazioni su un cliente e una seconda query per ottenere informazioni sulle merci acquistate dal cliente. Si desidera visualizzare i risultati della prima query in tre caselle di testo e una casella di controllo e i risultati della seconda query in un controllo griglia. Se si usa l'oggetto business predefinito (**RDSServer. DataFactory**), è necessario eseguire le operazioni seguenti:  
   
--   Aggiungere due **Servizi Desktop remoto. DataControl** oggetti alla pagina Web.  
+-   Aggiungere due servizi desktop remoto **. Oggetti DataControl** per la pagina Web.  
   
--   Le query di scrittura due, uno per ogni **SQL** proprietà di due **Servizi Desktop remoto. DataControl** oggetti. Uno **Servizi Desktop remoto. DataControl** oggetto conterrà una query SQL che richiede informazioni sul cliente; la second conterrà una query che richiede un elenco di denaro, merci il cliente ha acquistato.  
+-   Scrivere due query, una per ogni proprietà **SQL** dei due servizi desktop remoto **. Oggetti DataControl** . Un **RDS. L'oggetto DataControl** conterrà una query SQL che richiede informazioni sui clienti; il secondo conterrà una query che richiede un elenco di merci acquistate dal cliente.  
   
--   Nel tag OBJECT di ogni controllo associato, specificare il valore DATAFLD per impostare i valori per i dati che si desidera visualizzare in ogni controllo visuale.  
+-   Nei tag OBJECT di ogni controllo associato specificare il valore DATAFLD per impostare i valori per i dati che si desidera visualizzare in ogni controllo visivo.  
   
- Non vi è alcuna restrizione conteggio sul numero di **Servizi Desktop remoto. DataControl** gli oggetti che è possibile incorporare con tag di oggetti in una singola pagina Web.  
+ Non esiste alcuna restrizione del conteggio per il numero di Servizi Desktop remoto **. Oggetti DataControl** che è possibile incorporare utilizzando tag oggetto in una singola pagina Web.  
   
- Quando si definisce la **Servizi Desktop remoto. DataControl** dell'oggetto in una pagina Web, usare diverso da zero **altezza** e **larghezza** valori, ad esempio 1 (per evitare l'inclusione di spazio aggiuntivo).  
+ Quando si definisce il Servizi Desktop remoto **. Oggetto DataControl** in una pagina Web, usare valori di **altezza** e **larghezza** diversi da zero, ad esempio 1 (per evitare l'inclusione di spazio aggiuntivo).  
   
- Componenti client di servizio dati remoto sono già inclusi come parte di Internet Explorer 4.0. Pertanto, non è necessario includere un parametro CODEBASE nel **Servizi Desktop remoto. DataControl** tag object.  
+ I componenti client di Remote Data Service sono già inclusi come parte di Internet Explorer 4,0; Pertanto, non è necessario includere un parametro codebase in Servizi Desktop remoto **. Tag oggetto DataControl** .  
   
- Con Internet Explorer 4.0 o versioni successive, è possibile associare ai dati usando i controlli HTML e ActiveX® solo se sono contrassegnati come controlli del modello di apartment.  
+ Con Internet Explorer 4,0 o versione successiva, è possibile eseguire l'associazione ai dati usando i controlli HTML e i controlli ActiveX® solo se sono contrassegnati come controlli del modello di Apartment.  
   
 > [!NOTE]
->  **Gli utenti di Microsoft Visual Basic** il **Servizi Desktop remoto. DataControl** è sicuro per gli script e viene usato solo nelle applicazioni basate su Web. Un'applicazione client di Visual Basic non è necessario specificare per tale.  
+>  **Utenti di Microsoft Visual Basic** **RDS. DataControl** è sicuro per gli script e viene utilizzato solo nelle applicazioni basate sul Web. Non è necessario un Visual Basic applicazione client.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 289fceb17fdc7f9e7a1a9c7de41ca577e1b2d965
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660084"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>Proprietà PropertyValueType (classe SqlServiceAdvancedProperty)
@@ -36,7 +36,7 @@ object.PropertyValueType [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) che rappresenta una proprietà avanzata.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

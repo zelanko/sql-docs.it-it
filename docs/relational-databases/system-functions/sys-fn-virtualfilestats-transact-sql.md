@@ -1,5 +1,5 @@
 ---
-title: fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059200"
 ---
-# <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
+# <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le statistiche di I/O per i file di database, compresi i file di log. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], queste informazioni sono anche disponibili le [DM io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) vista a gestione dinamica.  
+  Restituisce le statistiche di I/O per i file di database, compresi i file di log. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]queste informazioni sono disponibili anche nella vista a gestione dinamica [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +44,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>Argomenti  
  *database_id* | NULL  
- ID del database. *database_id* è di tipo **int** e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ ID del database. *database_id* è di **tipo int**e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | NULL  
- ID del file. *file_id* viene **int**, non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i file del database.  
+ ID del file. *file_id* è di **tipo int**e non prevede alcun valore predefinito. Specificare NULL per restituire informazioni per tutti i file del database.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID del database.|  
 |**FileId**|**smallint**|ID di file.|  
-|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]a. |  
 |**NumberReads**|**bigint**|Numero di letture eseguite nel file.|  
 |**BytesRead**|**bigint**|Numero di letture di byte eseguite nel file.|  
 |**IoStallReadMS**|**bigint**|Periodo di tempo totale, in millisecondi, durante il quale gli utenti attendono il completamento delle operazioni di lettura I/O nel file.|  
@@ -64,12 +64,12 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Periodo di tempo totale, in millisecondi, durante il quale gli utenti attendono il completamento delle operazioni di scrittura I/O nel file.|  
 |**IoStallMS**|**bigint**|Somma di **IoStallReadMS** e **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Valore dell'handle di file.|  
-|**BytesOnDisk**|**bigint**|Dimensioni fisiche del file (numero di byte) su disco.<br /><br /> Per i file di database, questo è lo stesso valore **dimensioni** nelle **Sys. database_files**, ma è espresso in byte anziché in pagine.<br /><br /> Per i file sparse di snapshot del database, è lo spazio utilizzato dal sistema operativo per il file.|  
+|**BytesOnDisk**|**bigint**|Dimensioni fisiche del file (numero di byte) su disco.<br /><br /> Per i file di database, si tratta dello stesso valore di **size** in **sys. database_files**, ma è espresso in byte anziché in pagine.<br /><br /> Per i file sparse di snapshot del database, è lo spazio utilizzato dal sistema operativo per il file.|  
   
-## <a name="remarks"></a>Note  
- **fn_virtualfilestats** è un sistema di funzione con valori di tabella che fornisce informazioni statistiche, ad esempio il numero totale dei / o eseguite in un file. Questa funzione consente di tenere traccia della durata dell'attesa da parte degli utenti per la lettura o la scrittura in un file. Consente inoltre di identificare i file in cui si verifica un elevato numero di operazioni di I/O.  
+## <a name="remarks"></a>Osservazioni  
+ **fn_virtualfilestats** è una funzione con valori di tabella di sistema che fornisce informazioni statistiche, ad esempio il numero totale di operazioni di i/o eseguite su un file. Questa funzione consente di tenere traccia della durata dell'attesa da parte degli utenti per la lettura o la scrittura in un file. Consente inoltre di identificare i file in cui si verifica un elevato numero di operazioni di I/O.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Visualizzazione di informazioni statistiche per un database e un file con nome  
- Nell'esempio seguente vengono visualizzate informazioni statistiche per il file di log nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La funzione di sistema `DB_ID` viene usato per specificare il *database_id* parametro.  
+ Nell'esempio seguente vengono visualizzate informazioni statistiche per il file di log nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La funzione `DB_ID` di sistema viene utilizzata per specificare il parametro *database_id* .  
   
 ```sql  
 SELECT *  
@@ -102,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [DB_ID &#40;&#41;Transact-SQL](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

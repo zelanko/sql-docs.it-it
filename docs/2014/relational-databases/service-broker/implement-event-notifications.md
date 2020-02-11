@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197753"
 ---
 # <a name="implement-event-notifications"></a>Implementazione di notifiche degli eventi
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  In questo caso, la notifica dell'evento viene generata due volte: Tempo Onne quando si verifica l'evento CREATE_SCHEMA, e anche in questo caso quando si verifica l'evento CREATE_TABLE. È consigliabile non creare notifiche degli eventi sia negli eventi CREATE_SCHEMA che nel testo <schema_element> delle definizioni CREATE SCHEMA corrispondenti. In alternativa, compilare nell'applicazione la logica necessaria a evitare di acquisire dati per eventi non desiderati.  
+>  In questo caso la notifica dell'evento viene generata due volte, una prima volta quando viene generato l'evento CREATE_SCHEMA e una seconda volta quando viene generato l'evento CREATE_TABLE. È consigliabile non creare notifiche degli eventi sia negli eventi CREATE_SCHEMA che nel testo <schema_element> delle definizioni CREATE SCHEMA corrispondenti. In alternativa, compilare nell'applicazione la logica necessaria a evitare di acquisire dati per eventi non desiderati.  
   
  **Per creare la notifica di un evento**  
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898859"
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
@@ -101,7 +101,7 @@ ms.locfileid: "62898859"
 ## <a name="unique-variable-names"></a>Nomi di variabile univoci  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono supportare le variabili personalizzate ed è disponibile un set di variabili di sistema. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare ulteriori spazi dei nomi per le variabili personalizzate e aggiornare i nomi degli spazi dei nomi in base alle esigenze della propria applicazione. Il generatore di espressioni elenca le variabili comprese nell'ambito corrente, a qualsiasi spazio dei nomi appartengano.  
   
- Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usare variabili nei pacchetti](../use-variables-in-packages.md).  
+ Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
  L'analizzatore di espressioni può valutare correttamente un'espressione solo se le variabili utilizzate hanno nomi univoci. Se un pacchetto utilizza più variabili con lo stesso nome, i relativi spazi dei nomi devono essere diversi. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un operatore di risoluzione degli spazi dei nomi composto da un doppio segno di due punti (::), per qualificare una variabile con il relativo spazio dei nomi. Nell'espressione seguente, ad esempio, vengono usate due variabili con il nome **Count**, una appartenente allo spazio dei nomi **User** e l'altra allo spazio dei nomi **MyNamespace** .  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62898859"
 > [!IMPORTANT]  
 >  Per consentire all'analizzatore di espressioni di riconoscere tali variabili, è necessario racchiudere tra parentesi quadre la combinazione costituita dallo spazio dei nomi e dal nome qualificato della variabile.  
   
- Se il valore di **conteggio** nel **utente** dello spazio dei nomi è 10, mentre il valore di **Count** nel **MyNamespace** è 2, l'espressione restituisce `true` perché l'analizzatore di espressioni le riconosce come due variabili diverse.  
+ Se il valore di **count** nello spazio dei nomi **User** è 10 e il valore di **count** in **MyNamespace** è 2, l'espressione restituisce perché l' `true` analizzatore di espressioni riconosce due variabili diverse.  
   
- Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. Ad esempio, l'espressione seguente ha scopo di confrontare i valori (10 e 2) di due **conteggio** variabili, ma l'espressione viene valutata `false` perché l'analizzatore di espressioni usa la stessa istanza di  **Conteggio** variabile due volte.  
+ Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. L'espressione seguente, ad esempio, ha lo scopo di confrontare i valori (10 e 2) di due variabili di **conteggio** separate, ma l' `false` espressione restituisce perché l'analizzatore di espressioni utilizza due volte la stessa istanza della variabile **count** .  
   
 ```  
 @Count > @Count  

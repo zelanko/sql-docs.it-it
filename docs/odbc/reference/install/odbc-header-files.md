@@ -15,15 +15,15 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093970"
 ---
 # <a name="odbc-header-files"></a>File di intestazione ODBC
 > [!NOTE]  
->  Ridistribuzione dei file di intestazione ODBC non è obbligatorio. Non sono considerati "Core".  
+>  La ridistribuzione dei file di intestazione ODBC non è obbligatoria. Nessuno è considerato "core".  
   
  **File di intestazione**  
   
@@ -33,12 +33,12 @@ ms.locfileid: "68093970"
   
  Sqlext. h  
   
- Sqlext  
+ SqlTypes. h  
   
- Sqlucode  
+ Sqlucode. h  
   
- Msdasql.h  
+ MSDASQL. h  
   
- Msdadc.h  
+ Msdadc. h  
   
- Sqlspi.h (usati per lo sviluppo di driver, vedere [riferimento ODBC Service Provider Interface (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) per altre informazioni) disponibile a partire da Windows 8 SDK.
+ Sqlspi. h (utilizzato per lo sviluppo di driver. per ulteriori informazioni, vedere la Guida di [riferimento all'interfaccia del provider di servizi (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) ) disponibile a partire da Windows 8 SDK.

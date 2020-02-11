@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401158"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Messaggi di errore in parallelo data warehouse
@@ -27,7 +27,7 @@ I messaggi di errore restituiti seguono la stessa sintassi.
   
 Questi sono i valori potenziali per ogni campo:  
   
-|Campo|Description|Esempio|  
+|Campo|Descrizione|Esempio|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|La parola "errore" o altro testo che avvisa l'utente di un problema.|ERRORE|  
 |*SQL_State_Code*|Codice di stato SQL, in base alla specifica ODBC. Il driver genera il codice di stato SQL appropriato ogni volta che viene restituito un messaggio a un'applicazione. Il testo "Microsoft" indica l'origine dell'errore.|42000|  

@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632885"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
@@ -31,7 +31,7 @@ La versione 5.0 del Data Migration Assistant fornisce supporto per:
 - SQL Server 2019 per Windows e SQL Server 2019 per Linux come destinazioni per la valutazione e l'aggiornamento.
 - Salvataggio e caricamento delle valutazioni, incluso il supporto per il salvataggio e il caricamento di valutazioni create nelle versioni precedenti del Data Migration Assistant.
 - Valutazione dei progetti di SQL Server Integration Services (SSIS) ospitati in pacchetti SSISDB e SSIS ospitati nell'archivio pacchetti. Il Migration Assistant di database rileva le funzionalità non supportate, parzialmente supportate o deprecate e i problemi di compatibilità utilizzati nei pacchetti di origine e fornisce indicazioni utili per risolvere tali problemi.
-- Valutazione delle query SQL da un'applicazione esterna, ad esempio query SQL C# nel codice sorgente. Gli utenti possono usare Data Access Migration Toolkit per generare un report JSON completo per le query SQL usate nel C# codice sorgente e quindi caricare il report in Data Migration Assistant.
+- Valutazione delle query SQL da un'applicazione esterna, ad esempio query SQL nel codice sorgente C#. Gli utenti possono usare Data Access Migration Toolkit per generare un report JSON completo per le query SQL usate nel codice sorgente C# e quindi caricare il report in Data Migration Assistant.
 
 Inoltre, questa versione di Data Migration Assistant fornisce ulteriori miglioramenti e correzioni di bug e lo strumento è stato aggiornato a 4.7.2 .NET.
 
@@ -180,7 +180,7 @@ La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:
   - Prestazioni
-  - Sicurezza
+  - Security
   - Archiviazione
 - Esperienza utente moderna per eseguire valutazioni.
 

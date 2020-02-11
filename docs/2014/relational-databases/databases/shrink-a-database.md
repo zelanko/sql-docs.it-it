@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917008"
 ---
 # <a name="shrink-a-database"></a>Compattare un database
@@ -42,7 +42,7 @@ ms.locfileid: "62917008"
   
 -   Se viene rilevato un indice columnstore ottimizzato in memoria xVelocity, DBCC SHRINKDATABASE avrà esito negativo. L'operazione avrà esito positivo se completata prima del rilevamento dell'indice columnstore ottenendo dimensioni del database inferiori. Per completare DBCC SHRINKDATABASE, disabilitare tutti gli indici columnstore prima di eseguire DBCC SHRINKDATABASE, quindi ricompilare gli indici columnstore.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Per visualizzare la quantità corrente di spazio disponibile, cioè non allocato, nel database. Per altre informazioni, vedere [Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](display-data-and-log-space-information-for-a-database.md)  
   
@@ -61,20 +61,20 @@ ms.locfileid: "62917008"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>Per compattare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]espandere l'istanza.  
   
-2.  Espandere **Database**, quindi fare clic con il pulsante destro del mouse sul database che si vuole compattare.  
+2.  Espandere **database**, quindi fare clic con il pulsante destro del mouse sul database che si desidera compattare.  
   
 3.  Scegliere **Attività**, **Compatta**, quindi fare clic su **Database**.  
   
      **Database**  
      Consente di visualizzare il nome del database selezionato.  
   
-     **Spazio allocato**  
+     **Spazio allocato corrente**  
      Consente di visualizzare lo spazio totale utilizzato e inutilizzato per il database selezionato.  
   
      **Spazio disponibile**  
@@ -88,7 +88,7 @@ ms.locfileid: "62917008"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Per compattare un database  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62917008"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si utilizza [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) per ridurre le dimensioni dei file di dati e di log nel database `UserDB` e per ottenere il `10` percento di spazio disponibile nel database.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si utilizza [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) per ridurre le dimensioni dei file di dati e di log nel database `UserDB` e per ottenere il `10` percento di spazio disponibile nel database.  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la compattazione di un database  
+##  <a name="FollowUp"></a>Completamento: dopo la compattazione di un database  
  I dati spostati per ridurre un file possono essere dispersi in qualsiasi percorso disponibile nel file, provocando la frammentazione dell'indice e rallentando le prestazioni di query che eseguono ricerche in un intervallo dell'indice Per eliminare la frammentazione, valutare la possibilità di ricompilare gli indici sul file dopo la compattazione.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -108,7 +108,7 @@ ms.locfileid: "62917008"
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [DBCC SHRINKFILE &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Filegroup e file di database](database-files-and-filegroups.md)  
   
   

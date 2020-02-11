@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891873"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
@@ -29,19 +29,19 @@ ms.locfileid: "68891873"
   
  Nella finestra Progettazione query basata su testo vengono visualizzati una barra degli strumenti e i due riquadri seguenti:  
   
--   **Query** Mostra il testo della query e il nome della tabella o della stored procedure, a seconda del tipo di query. Non tutti i tipi di query sono disponibili per tutti i tipi di origine dati. Il nome tabella, ad esempio, è supportato solo per le origini dati di tipo OLE DB.  
+-   **Query** di Consente di visualizzare il testo della query, il nome della tabella o il nome della stored procedure a seconda del tipo di query. Non tutti i tipi di query sono disponibili per tutti i tipi di origine dati. Il nome tabella, ad esempio, è supportato solo per le origini dati di tipo OLE DB.  
   
--   **Risultato** Consente di visualizzare i risultati della query eseguita in fase di progettazione.  
+-   **Risultato** Mostra i risultati dell'esecuzione della query in fase di progettazione.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query basata su testo  
  La finestra Progettazione query basata su testo include una sola barra degli strumenti per tutti i tipi di comandi. Nella tabella seguente sono elencati tutti i pulsanti contenuti nella barra degli strumenti con la rispettiva funzione.  
   
-|Button|Descrizione|  
+|Pulsante|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
-|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
-|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Nota: Se una stored procedure restituisce più set di risultati, solo il primo set è utilizzato per popolare il set di dati.|  
+|![Eseguire la query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
+|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Nota: se una stored procedure restituisce più set di risultati, solo il primo set viene usato per popolare il set di dati.|  
   
 ### <a name="command-type-text"></a>Tipo di comando Text  
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , per impostazione predefinita viene visualizzata la finestra Progettazione query relazionale. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.  
@@ -56,7 +56,7 @@ ms.locfileid: "68891873"
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|  
   
 #### <a name="example"></a>Esempio  
- La query seguente restituisce l' [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]elenco dei cognomi dalla tabella del database `ContactType` **2008** per lo `Person` schema.  
+ La query seguente restituisce l'elenco dei cognomi dalla [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]tabella del database `ContactType` **2008** per lo `Person` schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -79,13 +79,13 @@ SELECT Name FROM Person.ContactType
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|  
   
 #### <a name="example"></a>Esempio  
- La query seguente chiama il [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]stored procedure `uspGetWhereUsedProductID` **2008** . Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.  
+ La query seguente chiama il [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **** stored procedure `uspGetWhereUsedProductID`2008. Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del prodotto.  
   
 ```  
 uspGetWhereUsedProductID  
 ```  
   
- Fare clic sul pulsante **Esegui** ( **!** ). Quando vengono richiesti i parametri di query, utilizzare la tabella seguente per immettere i valori.  
+ Fare clic sul pulsante **Esegui** (**!**). Quando vengono richiesti i parametri di query, utilizzare la tabella seguente per immettere i valori.  
   
 |||  
 |-|-|  
@@ -105,7 +105,7 @@ uspGetWhereUsedProductID
  L'immissione del nome della tabella Person.ContactType, è equivalente alla creazione dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] di `SELECT * FROM Person.ContactType`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](relational-query-designer-user-interface-report-builder.md)   
- [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
+ [Interfaccia utente di progettazione query relazionale &#40;Generatore report&#41;](relational-query-designer-user-interface-report-builder.md)   
+ [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

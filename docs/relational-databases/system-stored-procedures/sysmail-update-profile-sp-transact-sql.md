@@ -18,18 +18,18 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902885"
 ---
-# <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
+# <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica la descrizione o il nome di un profilo di Posta elettronica database.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,27 +40,27 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` Id del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_id = ] profile_id`ID del profilo da aggiornare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
-`[ @profile_name = ] 'profile_name'` Il nome del profilo da aggiornare oppure nuovo nome per il profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_name = ] 'profile_name'`Nome del profilo da aggiornare o nuovo nome del profilo. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare almeno uno dei *profile_id* o *profile_name* . Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
-`[ @description = ] 'description'` Nuova descrizione per il profilo. *Descrizione* viene **nvarchar(256)** , con un valore predefinito è NULL.  
+`[ @description = ] 'description'`Nuova descrizione del profilo. *Description* è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si specificano sia l'ID che il nome del profilo, la procedura modifica il nome del profilo utilizzando il nome specificato e quindi aggiorna la descrizione del profilo. Se si specifica solo uno di questi argomenti, la procedura aggiorna la descrizione del profilo.  
   
- La stored procedure **sysmail_update_profile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
+ Il stored procedure **sysmail_update_profile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  **A. Modifica della descrizione di un profilo**  
   
- Nell'esempio seguente modifica la descrizione del profilo denominato `AdventureWorks Administrator` nella **msdb** database.  
+ Nell'esempio seguente viene modificata la descrizione del profilo denominato `AdventureWorks Administrator` nel database **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -68,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Administrative mail profile.';  
 ```  
   
- **B. Modifica del nome e descrizione di un profilo**  
+ **B. Modifica del nome e delle descrizione di un profilo**  
   
  Nell'esempio seguente vengono modificati il nome e la descrizione del profilo con ID `750`.  
   
@@ -81,8 +81,8 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Oggetti di configurazione di posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Creare un Account di posta elettronica Database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

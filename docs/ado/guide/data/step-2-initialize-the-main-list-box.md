@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Inizializzare la casella di riepilogo principale | Microsoft Docs'
+title: 'Passaggio 2: inizializzare la casella di riepilogo principale | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924082"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Passaggio 2: Inizializzare la casella di riepilogo Main
-Per dichiarare gli oggetti globali di Record e Recordset, inserire il codice seguente (generale) (dichiarazioni) relativo a Form1:  
+Per dichiarare oggetti record e recordset globali, inserire il codice seguente in (General) (dichiarazioni) per Form1:  
   
 ```  
 Option Explicit  
@@ -26,10 +26,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- Questo codice dichiara riferimenti agli oggetti globale per gli oggetti di Record e Recordset che verranno utilizzati più avanti in questo scenario.  
+ Questo codice dichiara i riferimenti a oggetti globali per gli oggetti record e recordset che verranno usati più avanti in questo scenario.  
   
-## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Per connettersi a un URL e popolare IstMain  
- Inserire il codice seguente nel gestore dell'evento Form Load relativo a Form1:  
+## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Per connettersi a un URL e popolare lstMain  
+ Inserire il codice seguente nel gestore dell'evento di caricamento del form per Form1:  
   
 ```  
 Private Sub Form_Load()  
@@ -45,11 +45,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Questo codice crea gli oggetti globali di Record e Recordset. L'oggetto di Record, `grec`, viene aperto con un URL specificato come ActiveConnection. Se non esiste, l'URL viene aperto. Se non esiste già, si è creato. Si noti che è necessario sostituire "<https://servername/foldername/>" con un URL valido dall'ambiente in uso.  
+ Questo codice crea un'istanza degli oggetti record e recordset globali. L'oggetto record, `grec`, viene aperto con un URL specificato come ActiveConnection. Se l'URL esiste, viene aperto; Se non esiste già, viene creato. Si noti che è necessario sostituire<https://servername/foldername/>"" con un URL valido dall'ambiente.  
   
- Oggetto Recordset `grs`, viene aperto sugli elementi figlio del Record, `grec`. Quindi `lstMain` viene popolato con i nomi dei file delle risorse pubblicate per l'URL.  
+ L'oggetto recordset, `grs`, viene aperto negli elementi figlio del record `grec`. Viene `lstMain` quindi popolato con i nomi di file delle risorse pubblicate nell'URL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Internet Publishing](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Passaggio 1: Configurare il progetto di Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Passaggio 3: Popolare la casella di riepilogo di campi](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Scenario di pubblicazione Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
+ [Passaggio 1: configurare il progetto di Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [Passaggio 3: Popolare la casella di riepilogo Fields](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

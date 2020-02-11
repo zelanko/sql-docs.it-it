@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829407"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
@@ -64,17 +64,17 @@ ms.locfileid: "62829407"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Servizio Web &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività servizio Web &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Servizio Web &#40;pagina Input&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor attività servizio Web &#40;pagina di input&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor attività Servizio Web &#40;pagina Output&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor attività servizio Web &#40;pagina output&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -82,8 +82,8 @@ ms.locfileid: "62829407"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) nel sito technet.microsoft.com.  
+ Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  
   
- [Come usare il servizio Web tramite il pacchetto SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
+ [Come utilizzare il servizio Web tramite il pacchetto SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

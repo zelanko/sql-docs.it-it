@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277075"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Impostazioni filtro (Esplora oggetti ed Esplora utilità)
@@ -27,7 +27,7 @@ ms.locfileid: "63277075"
  **Proprietà**  
  Consente di visualizzare la proprietà in base a cui applicare il filtro.  
   
- **Operatoree**  
+ **Operatore**  
  Consente di selezionare il modo in cui il valore viene applicato alla proprietà dal filtro. Sono disponibili le opzioni seguenti:  
   
 -   **Uguale a**  
@@ -73,7 +73,7 @@ ms.locfileid: "63277075"
  Consente di eliminare tutte le impostazioni correnti del filtro.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
+ [Usa SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

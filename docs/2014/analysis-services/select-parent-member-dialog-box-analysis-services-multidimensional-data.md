@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo membro padre (Analysis Services - dati multidimensionali) seleziona | Microsoft Docs
+title: Finestra di dialogo Seleziona membro padre (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069312"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Seleziona membro padre (Analysis Services - Dati multidimensionali)
@@ -28,11 +28,11 @@ ms.locfileid: "66069312"
 >  In alcuni casi, ad esempio quando la gerarchia selezionata in **Albero** è definita per un attributo in cui non è specificato alcun livello (Tutti), potrebbero non essere disponibili membri da selezionare.  
   
 ## <a name="options"></a>Opzioni  
- **Struttura ad albero**  
+ **Albero**  
  Selezionare il membro padre da utilizzare per il membro calcolato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor Form membro calcolato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Editor form membro calcolato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

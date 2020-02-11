@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 53aa9c9131edce40c62fbfab6899ef7531ffca01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105972"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incorporare un'immagine in un report (Generatore report e SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "66105972"
   
 ## <a name="see-also"></a>Vedere anche  
  [Immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine con associazione a dati &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

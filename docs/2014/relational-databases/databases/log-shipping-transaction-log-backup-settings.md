@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916889"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Log shipping - Impostazioni backup log delle transazioni
   Utilizzare questa finestra di dialogo per configurare e modificare le impostazioni di backup del log delle transazioni di una configurazione per il log shipping.  
   
- Per una spiegazione dei concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+ Per approfondimenti sui concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ## <a name="options"></a>Opzioni  
  **Percorso di rete della cartella di backup**  
@@ -45,11 +45,11 @@ ms.locfileid: "62916889"
  **Nome processo**  
  Consente di visualizzare il nome del processo di SQL Server Agent utilizzato per creare i backup del log delle transazioni per il log shipping. Durante la creazione iniziale del processo, è possibile modificare il nome digitandolo nella casella.  
   
- **Pianificazione**  
+ **Pianificare**  
  Consente di visualizzare la pianificazione corrente per il backup dei log delle transazioni del database primario. Prima che il processo di backup venga creato, è possibile modificare la pianificazione facendo clic su **Pianificazione...** . Dopo la creazione del processo, è possibile modificare la pianificazione facendo clic su **Modifica processo...** .  
   
 ### <a name="backup-job"></a>Processo di backup  
- **Pianificazione...**  
+ **Pianificazione**  
  Consente di modificare la pianificazione creata al momento della creazione del processo di SQL Server Agent.  
   
  **Modifica processo...**  

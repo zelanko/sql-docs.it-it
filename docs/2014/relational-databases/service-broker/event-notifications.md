@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197772"
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
@@ -59,7 +59,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Trigger|Notifiche degli eventi|  
 |--------------|-------------------------|  
 |I trigger DML rispondono agli eventi DML (Data Manipulation Language). I trigger DLL rispondono agli eventi DLL (Data Definition Language).|Le notifiche degli eventi rispondono agli eventi DDL e a un subset di eventi di Traccia SQL.|  
-|I trigger possono eseguire codice gestito Transact-SQL o CLR (Common Language Runtime).|Le notifiche degli eventi non eseguono codice, Ma inviano `xml` messaggi a un servizio di Service Broker.|  
+|I trigger possono eseguire codice gestito Transact-SQL o CLR (Common Language Runtime).|Le notifiche degli eventi non eseguono codice, Inviano `xml` invece messaggi a un servizio Service Broker.|  
 |I trigger vengono elaborati in modo sincrono nell'ambito delle transazioni che ne provocano l'attivazione.|Le notifiche degli eventi possono essere elaborate in modo asincrono e non vengono eseguite nell'ambito delle transazioni che le attivano.|  
 |Il consumer di un trigger è strettamente associato all'evento che lo attiva.|Il consumer di una notifica degli eventi non è associato all'evento che la attiva.|  
 |I trigger devono essere elaborati nel server locale.|Le notifiche degli eventi possono essere elaborate in un server remoto.|  
@@ -67,8 +67,8 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |I nomi di trigger DML sono definiti a livello di ambito dello schema. L'ambito dei nomi dei trigger DDL è il server o il database.|L'ambito dei nomi delle notifiche degli eventi è il server o il database. Le notifiche degli eventi in un evento QUEUE_ACTIVATION sono definiti a livello di ambito di una coda specifica.|  
 |Il proprietario dei trigger DML è il proprietario delle tabelle sulle quali vengono applicati.|Il proprietario di una notifica degli eventi in una coda può essere diverso dal proprietario dell'oggetto al quale viene applicata.|  
 |I trigger supportano la clausola EXECUTE AS.|Le notifiche degli eventi non supportano la clausola EXECUTE AS.|  
-|Informazioni sull'evento trigger DDL possono essere acquisite usando la funzione EVENTDATA, che restituisce un `xml` tipo di dati.|Notifiche degli eventi inviano `xml` informazioni sugli eventi a un servizio di Service Broker. Le informazioni vengono formattate con lo stesso schema della funzione EVENTDATA.|  
-|I metadati relativi ai trigger si trovano nelle viste del catalogo **sys.triggers** e **sys.server_triggers** .|I metadati relativi alle notifiche degli eventi si trovano nelle viste del catalogo **sys.event_notifications** e **sys.server_event_notifications**.|  
+|Le informazioni sugli eventi del trigger DDL possono essere acquisite usando la funzione EVENTDATA `xml` , che restituisce un tipo di dati.|Le notifiche degli `xml` eventi inviano informazioni sugli eventi a un servizio Service Broker. Le informazioni vengono formattate con lo stesso schema della funzione EVENTDATA.|  
+|I metadati relativi ai trigger si trovano nelle viste del catalogo **sys.triggers** e **sys.server_triggers** .|I metadati relativi alle notifiche degli eventi si trovano nelle viste del catalogo **sys.event_notifications** e **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifiche degli eventi e Traccia SQL  
  Nella tabella seguente vengono confrontate le caratteristiche delle notifiche degli eventi e della Traccia SQL per il monitoraggio degli eventi del server.  

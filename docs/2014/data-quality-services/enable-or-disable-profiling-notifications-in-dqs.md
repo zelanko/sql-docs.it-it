@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484218"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Abilitare o disabilitare le notifiche di profiling in DQS
@@ -31,9 +31,9 @@ ms.locfileid: "65484218"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per abilitare le notifiche, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Enable"></a> Abilitare o disabilitare le notifiche di profiling  
+##  <a name="Enable"></a>Abilitare o disabilitare le notifiche di profiling  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Configurazione**.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "65484218"
   
 4.  Deselezionare o selezionare la casella di controllo **Abilita notifiche** per disabilitare o abilitare le notifiche di profiling per le varie attività in DQS.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
   

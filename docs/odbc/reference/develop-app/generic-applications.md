@@ -15,13 +15,13 @@ ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139301"
 ---
 # <a name="generic-applications"></a>Applicazioni generiche
-Applicazioni generiche, talvolta, eseguire un'attività a livello di codice, ad esempio un foglio di calcolo il recupero dei dati da un database. Utente che potrebbe eseguire anche un'ampia gamma di attività definite dall'utente, ad esempio un'applicazione di query standard che consente all'utente di immettere ed eseguire un'istruzione SQL. Quali applicazioni generiche hanno in comune è che devono interagire con un'ampia gamma di DBMS diverso e che lo sviluppatore non conosce in anticipo quali saranno questi DBMS.  
+Le applicazioni generiche a volte eseguono un'attività hardcoded, ad esempio un foglio di calcolo che recupera i dati da un database. Potrebbero inoltre eseguire un'ampia gamma di attività definite dall'utente, ad esempio un'applicazione di query generica che consente all'utente di immettere ed eseguire un'istruzione SQL. Per quanto riguarda le applicazioni generiche, è necessario che funzionino con un'ampia gamma di sistemi DBMS diversi e che lo sviluppatore non conosca in anticipo quali saranno i DBMS.  
   
- Di conseguenza, le applicazioni generiche devono essere estremamente interoperativi. Lo sviluppatore deve apportare molte le scelte disponibili, commerciali off per le funzionalità di interoperabilità e necessario scrivere codice che prevede che i driver per supportare un'ampia gamma di funzionalità. Mentre le applicazioni generiche potrebbero essere ottimizzate per funzionare con DBMS comuni, raramente contengono codice specifico del driver o specifici del DBMS.
+ Pertanto, le applicazioni generiche devono essere altamente interoperative. Lo sviluppatore deve effettuare molte scelte, effettuare il trading di interoperabilità per le funzionalità e deve scrivere codice che prevede che i driver supportino una vasta gamma di funzionalità. Sebbene sia possibile ottimizzare le applicazioni generiche in modo che funzionino con DBMS diffusi, raramente contengono codice specifico del driver o DBMS.

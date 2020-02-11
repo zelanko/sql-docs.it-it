@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232232"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
@@ -45,7 +45,7 @@ ms.locfileid: "75232232"
   
  
 ## <a name="sql-server-utility"></a>Utilità SQL Server  
- Se si importa un'applicazione livello dati in un'istanza gestita del Motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
+ Se si importa un'applicazione livello dati in un'istanza gestita del Motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** e segnalata nella pagina dei dettagli **Deployed Data-tier Applications** (Applicazioni livello dati distribuite).  
   
 ## <a name="database-options-and-settings"></a>Opzioni e impostazioni del database  
  Per impostazione predefinita, il database creato durante l'importazione disporrà di tutte le impostazioni predefinite dall'istruzione CREATE DATABASE, con l'eccezione delle regole di confronto del database e del livello di compatibilità che vengono impostati sui valori definiti nel file di esportazione dell'applicazione livello dati. In un file di esportazione dell'applicazione livello dati vengono utilizzati i valori del database originale.  
@@ -55,17 +55,17 @@ ms.locfileid: "75232232"
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  È possibile importare un'applicazione livello dati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è in esecuzione [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Se si esporta un'applicazione livello dati da una versione successiva, è possibile che nell'applicazione in questione siano contenuti oggetti non supportati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Non è possibile distribuire tali applicazioni livello dati a istanze di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  È consigliabile evitare di importare file di esportazione dell'applicazione livello dati provenienti da origini sconosciute o non attendibili. Tali file potrebbero contenere codice dannoso che potrebbe eseguire codice Transact-SQL indesiderato o causare errori modificando lo schema. Prima di usare un file di esportazione proveniente da un'origine sconosciuta o non attendibile, decomprimere l'applicazione livello dati e controllare il codice, ad esempio le stored procedure e altro codice definito dall'utente. Per altre informazioni su come eseguire questi controlli, vedere [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file di esportazione dell'applicazione livello dati senza password. Quando il file viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Un'applicazione livello dati può essere importata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite account di accesso nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati con l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>Utilizzo della procedura guidata Importa applicazione livello dati  
- **Per avviare la procedura guidata, attenersi alla procedura seguente:**  
+ **Per avviare la procedura guidata, effettuare i passaggi seguenti:**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -73,33 +73,33 @@ ms.locfileid: "75232232"
   
 3.  Completare le finestre di dialogo della procedura guidata.  
   
-    -   [Pagina introduttiva](#Introduction)  
+    -   [Pagina Introduzione](#Introduction)  
   
-    -   [Pagina impostazioni di importazione](#Import_settings)  
+    -   [Pagina Impostazioni di importazione](#Import_settings)  
   
     -   [Pagina Impostazioni database](#Database_settings)  
   
     -   [Pagina Riepilogo](#Summary)  
   
-    -   [Pagina di stato](#Progress)  
+    -   [Pagina Stato](#Progress)  
   
-    -   [Pagina dei risultati](#Results)  
+    -   [Pagina Risultati](#Results)  
   
-###  <a name="Introduction"></a>Pagina introduttiva  
+###  <a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la procedura guidata Importa applicazione livello dati.  
   
- **Options**  
+ **Opzioni**  
   
--   **Non visualizzare più questa pagina.** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+-   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : consente di passare alla pagina **impostazioni di importazione** .  
+-   **Avanti**: passa alla pagina **Impostazioni di importazione**.  
   
--   **Annulla** : Annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
-###  <a name="Import_settings"></a>Pagina impostazioni di importazione  
+###  <a name="Import_settings"></a> Pagina Impostazioni di importazione  
  Utilizzare questa pagina per specificare il percorso del file con estensione bacpac da importare.  
   
--   **Importa da disco locale** : fare clic su **Sfoglia..** . per spostarsi nel computer locale o specificare il percorso nello spazio fornito. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
+-   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
 -   **Importa da Azure** : importa un file BACPAC da un contenitore di Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "75232232"
   
      Per continuare, specificare il file bacpac da importare, quindi fare clic su **Apri**.  
   
-###  <a name="Database_settings"></a>Pagina Impostazioni database  
+###  <a name="Database_settings"></a> Pagina Impostazioni database  
  Usare questa pagina per specificare i dettagli del database che verrà creato.  
   
  **Per un'istanza locale di SQL Server:**  
   
--   **Nome nuovo database** : specificare un nome per il database importato.  
+-   **Nome nuovo database**: specificare un nome per il database importato.  
   
--   **Percorso file di dati** -specificare una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
+-   **Percorso file di dati**: fornire una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
--   **Percorso file di log** : specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
+-   **Percorso file di log**: specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
  Scegliere **Avanti**per continuare.  
   
  **Per un database SQL:**  
   
--   **Nome nuovo database** : specificare un nome per il database importato.  
+-   **Nome nuovo database**: specificare un nome per il database importato.  
   
 -   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://www.windowsazure.com/home/tour/database/) .  
   
@@ -135,20 +135,20 @@ ms.locfileid: "75232232"
   
  Scegliere **Avanti**per continuare.  
   
-###  <a name="Summary"></a>Pagina Riepilogo  
+###  <a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di importazione utilizzando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di importazione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
-###  <a name="Progress"></a>Pagina di stato  
+###  <a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
  Scegliere **Avanti**per continuare.  
   
-###  <a name="Results"></a>Pagina dei risultati  
+###  <a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Fare clic su **Chiudi** per uscire dalla procedura guidata.  
+ Fare clic su **Chiudi** per chiudere la procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)   
- [Esportare un'applicazione livello dati](export-a-data-tier-application.md)  
+ [Esportazione di un'applicazione livello dati](export-a-data-tier-application.md)  
   

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460010"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Strumenti di progettazione di query e viste (Visual Database Tools)
@@ -48,8 +48,8 @@ ms.locfileid: "63460010"
  Per nascondere un riquadro o visualizzarne uno non visibile, fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Riquadro**e fare clic sul nome del riquadro. Se Progettazione query e Progettazione viste è aperto in modalità Progettazione query, il riquadro **Risultati** non è disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Aprire Progettazione Query e Progettazione viste &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Aprire Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [Editor SQL &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

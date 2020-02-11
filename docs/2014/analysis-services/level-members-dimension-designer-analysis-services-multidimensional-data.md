@@ -1,5 +1,5 @@
 ---
-title: Livello e membri (scheda esplorazione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078105"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -25,9 +25,9 @@ ms.locfileid: "66078105"
 ## <a name="writeback-mode"></a>Modalità writeback  
  La funzionalità di questo riquadro cambia se la modalità writeback è abilitata. Per abilitare la modalità writeback la dimensione selezionata deve essere abilitata per la scrittura, ovvero la proprietà `WriteEnabled` della dimensione deve essere impostata su True, e la dimensione deve essere distribuita a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Per abilitare la modalità di writeback, puoi selezionare **Writeback** dal riquadro **Toolbar**, oppure fare clic con il pulsante destro del mouse sul riquadro **Level e Members** e selezionare **Writeback** dal menu di scelta rapida.  
+ Per abilitare la modalità writeback, è possibile selezionare **Writeback** nel riquadro **Barra degli strumenti** oppure fare clic con il pulsante destro del mouse nel riquadro dei livelli e dei membri **** e scegliere **Writeback** dal menu di scelta rapida.  
   
- Se la modalità writeback è abilitata è possibile eseguire le azioni aggiuntive seguenti nel riquadro dei **livelli e dei membri** :  
+ Se la modalità writeback è abilitata è possibile eseguire le azioni aggiuntive seguenti nel riquadro dei livelli e dei membri **** :  
   
 |Per|Attività svolte|  
 |-----------|-------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "66078105"
  **Livello corrente**  
  Consente di visualizzare il livello a cui appartiene il membro attualmente selezionato in **Albero** .  
   
- **Struttura ad albero**  
+ **Albero**  
  Consente di visualizzare i membri della gerarchia e della lingua attualmente selezionate.  
   
  Se le proprietà membro vengono selezionate dall'opzione **Proprietà membro** del riquadro Barra degli strumenti, ogni proprietà membro viene visualizzata come colonna.  
@@ -48,7 +48,7 @@ ms.locfileid: "66078105"
  Se la modalità writeback è abilitata, viene visualizzata una colonna per ogni colonna chiave associata all'attributo chiave nella dimensione.  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
- Le opzioni seguenti sono disponibili nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse su qualsiasi parte del riquadro dei **livelli e dei membri** per il membro selezionato:  
+ Le opzioni seguenti sono disponibili nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse su qualsiasi parte del riquadro dei livelli e dei membri **** per il membro selezionato:  
   
  **Crea elemento di pari livello**  
  Consente di creare un nuovo membro allo stesso livello del membro selezionato.  
@@ -59,7 +59,7 @@ ms.locfileid: "66078105"
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è abilitata la modalità writeback.  
   
- **Creare figlio**  
+ **Crea elemento figlio**  
  Consente di creare un nuovo membro al livello immediatamente inferiore a quello del membro selezionato, come elemento figlio del membro selezionato.  
   
 > [!NOTE]  
@@ -102,7 +102,7 @@ ms.locfileid: "66078105"
 >  Questa opzione viene visualizzata solo se è abilitata la modalità writeback.  
   
  **Filtra membri**  
- Visualizza la finestra di dialogo **Membri filtro** per filtrare i membri visualizzati in **Livello e Membri** per la gerarchia selezionata. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
+ Consente di visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati nel riquadro dei livelli e dei membri **** per la gerarchia selezionata. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Espandi tutto**  
  Consente di espandere tutti i membri contenuti in **Albero**.  
@@ -123,7 +123,7 @@ ms.locfileid: "66078105"
  Selezionare questa opzione per abilitare la modalità writeback.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sulla barra degli strumenti &#40;scheda esplorazione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra degli strumenti &#40;scheda Esplorazione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

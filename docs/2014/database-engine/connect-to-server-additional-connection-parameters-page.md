@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808672"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Connetti al server (pagina Parametri aggiuntivi per la connessione)
@@ -45,14 +45,14 @@ ms.locfileid: "62808672"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Esempio a: Connessione al motore di database  
+### <a name="example-a-connecting-to-the-database-engine"></a>Esempio 1: Connessione al Motore di database  
  Per connettersi al database [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] in un server denominato ACCOUNTING, immettere quanto indicato di seguito nella pagina **Parametri aggiuntivi per la connessione** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Esempio b: La connessione ad Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Esempio B: Connessione ad Analysis Services  
  Per connettersi ad Analysis Services e fare in modo che tutte le partizioni in attesa di notifiche vengano sottoposte a query in tempo reale (ignorando la memorizzazione nella cache) e per impostare il valore di timeout del writeback su 5, immettere quanto indicato di seguito nella pagina **Parametri aggiuntivi per la connessione** :  
   
 ```  

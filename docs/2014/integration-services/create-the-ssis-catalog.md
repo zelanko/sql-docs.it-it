@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798022"
 ---
 # <a name="create-the-ssis-catalog"></a>Creare il catalogo SSIS
-  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Prima di poter distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in quest'ultimo deve essere incluso il catalogo `SSISDB`. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
+  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Prima di poter distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in quest'ultimo deve essere incluso il catalogo `SSISDB`. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
   
  Il catalogo SSISDB può essere creato in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Il catalogo può essere creato anche a livello di programmazione utilizzando Windows PowerShell.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "72798022"
   
 2.  Connettersi al motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** , quindi fare clic su **Creazione catalogo**.  
+3.  In Esplora oggetti espandere il nodo del server, fare clic con il pulsante destro del mouse sul nodo **Cataloghi di Integration Services** e quindi fare clic su **Creazione catalogo**.  
   
 4.  Fare clic su **Abilitazione integrazione con CLR**.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "72798022"
   
      La stored procedure esegue la manutenzione dello stato delle operazioni per il catalogo SSISDB. Corregge lo stato di eventuali pacchetti in esecuzione in caso di arresto dell'istanza del server [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-6.  Immettere una password quindi fare clic su **Ok**.  
+6.  Immettere una password e quindi fare clic su **OK**.  
   
      La password consente di proteggere la chiave del database master utilizzata per crittografare i dati del catalogo. Salvare la password in un percorso sicuro. È consigliabile eseguire inoltre il backup della chiave master del database. Per altre informazioni, vedere [Backup della chiave master di un database](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Per creare il catalogo SSISDB a livello di programmazione  
   
-1.  Eseguire il seguente script di PowerShell:  
+1.  Eseguire lo script di PowerShell seguente:  
   
     ```powershell
     # Load the IntegrationServices Assembly  
@@ -71,4 +71,4 @@ ms.locfileid: "72798022"
   
 ## <a name="see-also"></a>Vedere anche  
  [Catalogo SSIS](catalog/ssis-catalog.md)   
- [Backup, ripristino e spostamento del catalogo SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
+ [Backup, ripristino e spostamento del catalogo SSISDB](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

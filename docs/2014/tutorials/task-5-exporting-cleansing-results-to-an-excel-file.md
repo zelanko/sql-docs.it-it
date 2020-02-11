@@ -1,5 +1,5 @@
 ---
-title: 'Attività 5: Esportazione dei risultati in un File di Excel di pulizia | Microsoft Docs'
+title: 'Attività 5: esportazione dei risultati della pulizia in un file di Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489120"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Attività 5: Esportazione dei risultati della pulizia in un file di Excel
-  In questa attività vengono esportati i risultati dell'attività di pulizia in un file di Excel. Visualizzare [fase di esportazione](https://msdn.microsoft.com/library/hh213061.aspx#Export) per altre informazioni.  
+  In questa attività vengono esportati i risultati dell'attività di pulizia in un file di Excel. Per ulteriori informazioni, vedere l'argomento relativo alla [fase di esportazione](https://msdn.microsoft.com/library/hh213061.aspx#Export) .  
   
-1.  Nel riquadro di destra, selezionare **Excel** per il **tipo di destinazione**.  
+1.  Nel riquadro di destra selezionare **Excel** per il **tipo di destinazione**.  
   
-2.  Fare clic su **esplorare**, specificare il nome di file di output come **Cleansed Supplier List. xls**, quindi fare clic su **Open**.  
+2.  Fare clic su **Sfoglia**, specificare il nome del file di output come **cleaned Supplier List. xls**, quindi fare clic su **Apri**.  
   
-3.  Selezionare **Data Only** per il **Output** formato esportare solo i dati puliti. La seconda opzione, **dei dati e informazioni pulizia**, consente di esportare i dettagli dell'attività pulizia insieme ai dati puliti. Il **standardizzare formato** opzione consente di applicare qualsiasi formati di output definiti in un dominio ai valori di tale dominio. Non è stato definito un formato di output in un dominio nell'esercitazione.  
+3.  Selezionare **solo i dati** per il formato di **output** per esportare solo i dati puliti. La seconda opzione, **dati e informazioni pulizia**, consente di esportare i dettagli delle attività di pulizia insieme ai dati puliti. L'opzione **standardizzazione formato** consente di applicare i formati di output definiti in un dominio ai valori di tale dominio. Non è stato definito un formato di output in un dominio nell'esercitazione.  
   
-     ![Pagina dei risultati di esportazione Cleansing](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "esportazione pulizia pagina risultati")  
+     ![Pagina Esporta risultati pulizia](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "Pagina Esporta risultati pulizia")  
   
-4.  Fare clic su **esportare** per esportare i dati. Non fare clic **fine** ancora.  
+4.  Fare clic su **Esporta** per esportare i dati. Non fare ancora clic su **fine** .  
   
-5.  Fare clic su **Close** nel **esportazione** nella finestra di dialogo.  
+5.  Fare clic su **Chiudi** nella finestra di dialogo **esportazione** .  
   
-6.  Fare clic su **fine** per completare l'attività. Se si dimentica di esportare i risultati prima di fare clic **Finish**, fare clic su **Apri progetto Data Quality** nella pagina principale del **Client DQS**, selezionare **Cleanse Supplier Elenco** dall'elenco dei progetti, fare clic su **successivo** nella parte inferiore della schermata per ottenere il **Esporta** fase del processo di pulizia. È anche possibile passare a **Gestisci e Visualizza risultati** scheda, fare clic su **nuovamente** pulsante.  
+6.  Fare clic su **fine** per completare l'attività. Se si dimentica di esportare i risultati prima di fare clic su **fine**, fare clic su **Apri progetto Data Quality** nella pagina principale del **client DQS**, selezionare **Pulisci fornitore** dall'elenco di progetti e fare clic su **Avanti** nella parte inferiore della schermata per tornare alla fase di **esportazione** del processo di pulizia. È anche possibile passare alla scheda **Gestisci e visualizza risultati** facendo clic sul pulsante **indietro** .  
   
-7.  Aprire il **Cleansed Supplier List. xls** eseguire le operazioni seguenti:  
+7.  Aprire **cleaned Supplier List. xls** ed eseguire le operazioni seguenti:  
   
-    1.  Assicurarsi che non sono presenti indirizzi di posta elettronica che terminano con Adventure-Work.com (senza del carattere ') cercando Adventure-Work.com nel foglio di lavoro.  
+    1.  Verificare che non esistano indirizzi di posta elettronica che terminano con adventure-work.com (senza carattere ') cercando adventure-work.com nel foglio di.  
   
-    2.  Riscontrerebbe che è presente alcun **Stati Uniti** valore nel **paese** colonna.  
+    2.  Vedere che non è presente alcun valore di **USA** nella colonna **Country** .  
   
-    3.  Cercare **Los Angeles** e verificare che il **stato** è impostata su **CA**.  
+    3.  Cercare **Los Angeles** e verificare che lo **stato** sia impostato su **CA**.  
   
-    4.  Verificare che vi sia alcun termine **co**, **corp**, e **Inc.** .  
+    4.  Verificare che non siano presenti termini **Co.**, **Corp.** e **Inc.**  
   
-    5.  Eliminare il **Address Validation** colonna dal foglio di calcolo e salvare il file di excel. Questa colonna aggiuntiva corrisponde al dominio composito Address Validation.  
+    5.  Eliminare la colonna **convalida indirizzo** dal foglio di calcolo e salvare il file di Excel. Questa colonna aggiuntiva corrisponde al dominio composito Address Validation.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 6: Importazione di valori dal progetto Cleanse Supplier List](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

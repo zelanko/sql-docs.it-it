@@ -1,5 +1,5 @@
 ---
-title: Modello valore argomenti | Microsoft Docs
+title: Argomenti del valore del criterio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,35 +15,35 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023345"
 ---
 # <a name="pattern-value-arguments"></a>Argomenti del valore dei criteri
-Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; argomenti di tipo identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE sono.  
+Alcuni argomenti nelle funzioni del catalogo, ad esempio l'argomento *TableName* in **SQLTables**, accettano i criteri di ricerca. Questi argomenti accettano i criteri di ricerca se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_FALSE; si tratta di argomenti identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE.  
   
- I caratteri di pattern di ricerca sono:  
+ I caratteri del criterio di ricerca sono:  
   
--   Un carattere di sottolineatura (_), che rappresenta qualsiasi carattere singolo.  
+-   Carattere di sottolineatura (_), che rappresenta un carattere singolo.  
   
--   Un segno di percentuale, %, che rappresenta qualsiasi sequenza di zero o più caratteri.  
+-   Segno di percentuale (%), che rappresenta qualsiasi sequenza di zero o più caratteri.  
   
--   Un carattere di escape, che è specifico del driver e viene usato per includere caratteri di sottolineatura, segni di percentuale, e il carattere di escape come valori letterali. Se il carattere di escape precede un carattere non speciali, il carattere di escape non ha alcun significato speciale. Se il carattere di escape precede un carattere speciale, viene eseguito l'escape del carattere speciale. Ad esempio, "\a" verrebbe considerato come due caratteri, "\\" e "a", ma "\\%" verrebbe considerato come il carattere singolo non speciali "%".  
+-   Un carattere di escape, che è specifico del driver e viene usato per includere caratteri di sottolineatura, segni percentuali e il carattere di escape come valori letterali. Se il carattere di escape precede un carattere non speciale, il carattere di escape non ha un significato speciale. Se il carattere di escape precede un carattere speciale, evita il carattere speciale. Ad esempio, "\a" verrebbe considerato come due caratteri, "\\" e "a", ma "\\%" verrebbe considerato come il carattere singolo non speciale "%".  
   
- Il carattere di escape viene recuperato con l'opzione SQL_SEARCH_PATTERN_ESCAPE **SQLGetInfo**. In un argomento che accetta i criteri di ricerca per includere tale carattere come valore letterale deve precedere qualsiasi carattere di sottolineatura, un segno di percentuale o un carattere di escape. Nella tabella seguente sono riportati alcuni esempi.  
+ Il carattere di escape viene recuperato con l'opzione SQL_SEARCH_PATTERN_ESCAPE in **SQLGetInfo**. Deve precedere un carattere di sottolineatura, un segno di percentuale o un carattere di escape in un argomento che accetta i criteri di ricerca per includere tale carattere come valore letterale. Nella tabella seguente sono riportati alcuni esempi.  
   
-|Criterio di ricerca|Descrizione|  
+|Criteri di ricerca|Descrizione|  
 |--------------------|-----------------|  
-|%A %|Tutti gli identificatori che contengono la lettera A|  
-|ABC_|Tutti gli identificatori di quattro caratteri iniziano con ABC|  
-|ABC\\_|L'identificatore ABC, presupponendo che il carattere di escape è una barra rovesciata (\\)|  
-|\\\\%|Tutti gli identificatori che iniziano con una barra rovesciata (\\), presupponendo che il carattere di escape è una barra rovesciata|  
+|Un|Tutti gli identificatori contenenti la lettera A|  
+|ABC_|Tutti i quattro identificatori di caratteri che iniziano con ABC|  
+|ABC\\_|Identificatore ABC_, supponendo che il carattere di escape sia una\\barra rovesciata ()|  
+|\\\\%|Tutti gli identificatori che iniziano con una\\barra rovesciata (), supponendo che il carattere di escape sia una barra rovesciata|  
   
- Particolare attenzione per eseguire l'escape di caratteri di ricerca del modello negli argomenti di accettano i criteri di ricerca. Ciò è particolarmente vero per il carattere di sottolineatura, che viene usato comunemente negli identificatori. Un errore comune nelle applicazioni consiste nel recuperare un valore di una funzione di catalogo e passa tale valore a un argomento di modello di ricerca in un'altra funzione di catalogo. Ad esempio, si supponga che un'applicazione recupera il nome della tabella MY_TABLE dal risultato impostato per **SQLTables** e la passa a **SQLColumns** per recuperare un elenco di colonne in MY_TABLE. Anziché ottenere le colonne per MY_TABLE, l'applicazione recupererà le colonne per tutte le tabelle che corrispondono al criterio di ricerca MY_TABLE, ad esempio MY_TABLE MY1TABLE, MY2TABLE e così via.  
+ È necessario prestare particolare attenzione per eseguire l'escape di caratteri del criterio di ricerca negli argomenti che accettano i criteri di ricerca. Ciò è particolarmente vero per il carattere di sottolineatura, comunemente utilizzato negli identificatori. Un errore comune nelle applicazioni consiste nel recuperare un valore da una funzione di catalogo e passare tale valore a un argomento del criterio di ricerca in un'altra funzione di catalogo. Si supponga, ad esempio, che un'applicazione recuperi il nome della tabella MY_TABLE dal set di risultati per **SQLTables** e lo passi a **SQLColumns** per recuperare un elenco di colonne nel MY_TABLE. Anziché recuperare le colonne per MY_TABLE, l'applicazione otterrà le colonne per tutte le tabelle che corrispondono ai criteri di ricerca MY_TABLE, ad esempio MY_TABLE, MY1TABLE, MY2TABLE e così via.  
   
 > [!NOTE]
->  ODBC 2. *x* driver non supportano i criteri di ricerca nel *CatalogName* argomento nel **SQLTables**. ODBC 3*x* driver accettano criteri di ricerca in questo argomento se l'attributo di ambiente sql_attr ODBC_VERSION è impostato su SQL_OV_ODBC3; non accetta i criteri di ricerca in questo argomento se è impostato su SQL_OV_ODBC2.  
+>  ODBC 2. i driver *x* non supportano i criteri di ricerca nell'argomento *CatalogName* di **SQLTables**. I driver ODBC 3 *. x* accettano i criteri di ricerca in questo argomento se l'attributo SQL_ATTR_ ODBC_VERSION Environment è impostato su SQL_OV_ODBC3; non accettano i criteri di ricerca in questo argomento se è impostato su SQL_OV_ODBC2.  
   
- Passando un puntatore null a un argomento di modello di ricerca non vincola la ricerca per tale argomento. vale a dire, un puntatore null e la percentuale di pattern di ricerca (caratteri) sono equivalenti. Tuttavia, un criterio di ricerca di lunghezza zero, vale a dire, un puntatore valido a una stringa di lunghezza zero - corrisponde solo una stringa vuota ("").
+ Il passaggio di un puntatore null a un argomento del criterio di ricerca non vincola la ricerca di tale argomento; ovvero, un puntatore null e il criterio di ricerca% (qualsiasi carattere) sono equivalenti. Tuttavia, un criterio di ricerca di lunghezza zero, ovvero un puntatore valido a una stringa di lunghezza zero-corrisponde solo alla stringa vuota ("").

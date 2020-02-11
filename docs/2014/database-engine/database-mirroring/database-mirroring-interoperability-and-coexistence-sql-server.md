@@ -14,20 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807307"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mirroring del database: interoperabilità e coesistenza (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mirroring del database: Interoperabilità e coesistenza (SQL Server)
   È possibile utilizzare il mirroring del database con i componenti e le funzionalità seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Istanze del Cluster di Failover AlwaysOn (SQL Server Failover Clustering)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [Istanze del cluster di failover AlwaysOn (Clustering di failover SQL Server)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
 -   [Change Data Capture (e rilevamento delle modifiche)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
--   [Snapshot di database](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [Snapshot del database](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Cataloghi full-text](database-mirroring-and-full-text-catalogs-sql-server.md)  
   

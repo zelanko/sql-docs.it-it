@@ -1,5 +1,5 @@
 ---
-title: Consentendo parzialmente attendibili ai chiamanti | Microsoft Docs
+title: Consentire chiamanti parzialmente attendibili | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754199"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Accettazione di chiamanti parzialmente attendibili
@@ -60,7 +60,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  L'esempio illustra inoltre l'utilizzo dell'attributo "Allow partially trusted callers" per indicare che l'assembly del set di risultati è una libreria che può essere chiamata da altri assembly senza problemi. Questo approccio è leggermente più complesso ma molto più sicuro rispetto alla registrazione dell'assembly chiamante tramite l'autorizzazione UNSAFE. È più sicuro in quanto, registrando l'assembly chiamante come sicuro, si limitano le risorse interessate al di fuori del server e si evitano danni all'integrità del server.  
   
- Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] degli script richiede anche il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Gli [!INCLUDE[tsql](../../includes/tsql-md.md)] script richiedono inoltre il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page.  
   
  Per compilare ed eseguire l'esempio, incollare il primo listato di codice in un file denominato ResultSet.cs ed eseguire la compilazione con csc /target:library ResultSet.cs.  
   
