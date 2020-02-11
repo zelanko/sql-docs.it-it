@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265374"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Asserzione di autorizzazioni negli assembly personalizzati
   Per impostazione predefinita, il codice degli assembly personalizzati viene eseguito con il set di autorizzazioni **Execution** limitato. In alcuni casi, potrebbe essere necessario implementare un assembly personalizzato per l'esecuzione di chiamate protette alle risorse protette all'interno del sistema di sicurezza (ad esempio un file o il Registro di sistema). A tale scopo, è necessario effettuare le operazioni seguenti:  
   
-1.  Identificare le autorizzazioni esatte necessarie per il codice per effettuare la chiamata protetta. Se questo metodo è parte di una libreria [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], queste informazioni devono essere incluse nella documentazione del metodo.  
+1.  Identificare le autorizzazioni esatte necessarie per il codice per effettuare la chiamata protetta. Se questo metodo fa parte di una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] libreria, queste informazioni devono essere incluse nella documentazione del metodo.  
   
 2.  Modificare i file di configurazione dei criteri del server di report per concedere le autorizzazioni necessarie all'assembly personalizzato. Per altre informazioni sui file di configurazione dei criteri di sicurezza, vedere [Uso di file di criteri di sicurezza di Reporting Services](../extensions/secure-development/using-reporting-services-security-policy-files.md).  
   

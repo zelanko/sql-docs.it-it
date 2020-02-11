@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637609"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
@@ -40,7 +40,7 @@ ms.locfileid: "62637609"
 -   Utilizzo del caricamento bulk.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Cast di tipo di istanze binarie e di stringa  
- È possibile analizzare uno qualsiasi dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, stringa, ad esempio [**n**] [**var**]**char**, **testo di [n]** ,  **varbinary**, e **immagine**, nelle `xml` eseguendo il cast (CAST) o conversione (Converti) la stringa del tipo di dati di `xml` tipo di dati. L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se è presente uno schema è associato il `xml` tipo, la convalida viene eseguito anche. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).  
+ È possibile analizzare qualsiasi tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati stringa, ad esempio [**n**] [**var**]**char**, **[n] text**, **varbinary**e **Image**, nel tipo di `xml` dati eseguendo il cast (cast) o convertendo (converte) la stringa nel tipo `xml` di dati. L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se al tipo è associato uno schema, `xml` viene anche eseguita la convalida. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).  
   
  I documenti XML possono essere codificati con codifiche diverse, ad esempio UTF-8, UTF-16, windows-1252). Di seguito vengono descritte le regole in base alle quali i tipi di origine di stringa e binari interagiscono con la codifica del documento XML, nonché il comportamento del parser.  
   
@@ -67,7 +67,8 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Per impostazione predefinita, il parser XML elimina gli spazi vuoti durante la conversione di dati di tipo stringa nel formato XML in uno dei casi seguenti:  
   
--   `The xml:space` l'attributo non viene definito per un elemento o i relativi predecessori.  
+-   
+  `The xml:space` l'attributo non viene definito per un elemento o i relativi predecessori.  
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
@@ -79,7 +80,7 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <root><child/></root>  
@@ -93,8 +94,8 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se il parametro *style* non viene utilizzato o è impostato sul valore 0, gli spazi vuoti non significativi non vengono mantenuti per la conversione dell'istanza XML DT. Per altre informazioni sull'uso dell'operatore CONVERT e del parametro *style* durante la conversione di dati di tipo stringa in istanze XML DT, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: Eseguire il cast di un valore stringa al tipo XML tipizzato e assegnarlo a una colonna  
- Nell'esempio seguente esegue il cast di una variabile stringa che contiene un frammento XML per il `xml` tipo di dati e quindi lo archivia nella `xml` colonna di tipo:  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: cast di un valore stringa al tipo XML tipizzato e assegnazione a una colonna  
+ Nell'esempio seguente viene eseguito il cast di una variabile stringa che contiene un frammento XML al tipo di `xml` dati e quindi `xml` la archivia nella colonna Type:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -103,13 +104,13 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- L'operazione di inserimento seguente converte in modo implicito da una stringa di `xml` tipo:  
+ L'operazione di inserimento seguente converte in modo implicito una stringa `xml` nel tipo:  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- È possibile in modo esplicito cast () della stringa per il `xml` tipo:  
+ È possibile eseguire il cast esplicito () della stringa `xml` al tipo:  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -121,8 +122,8 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: Convertire una stringa nel tipo XML tipizzato e assegnarla a una variabile  
- Nell'esempio seguente, una stringa viene convertita in `xml` digitare e assegnato a una variabile del `xml` tipo di dati:  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: conversione di una stringa nel tipo XML tipizzato e assegnazione a una variabile  
+ Nell'esempio seguente, una stringa viene convertita nel `xml` tipo e assegnata a una variabile del `xml` tipo di dati:  
   
 ```  
 declare @x xml  
@@ -144,9 +145,9 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- L'istruzione SELECT restituisce un frammento di testo XML che viene quindi analizzato durante l'assegnazione di `xml` variabile del tipo di dati.  
+ L'istruzione SELECT restituisce un frammento XML testuale che viene quindi analizzato durante l'assegnazione alla `xml` variabile del tipo di dati.  
   
- È anche possibile usare la [direttiva TYPE](type-directive-in-for-xml-queries.md) nella clausola FOR XML che restituisce direttamente una FOR XML il risultato della query come `xml` tipo:  
+ Nella clausola FOR XML è inoltre possibile utilizzare la [direttiva Type](type-directive-in-for-xml-queries.md) che restituisce direttamente il risultato di una query for XML `xml` come tipo:  
   
 ```  
 Declare @xmlDoc xml  
@@ -157,13 +158,13 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- Nell'esempio seguente, l'oggetto tipizzato `xml` risultato di una query FOR XML viene inserito in un `xml` colonna di tipo:  
+ Nell'esempio seguente, il risultato tipizzato `xml` di una query for XML viene inserito in una `xml` colonna di tipo:  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -180,10 +181,11 @@ go
  Per altre informazioni su FOR XML, vedere [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
- Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:  
+ È possibile utilizzare una costante stringa in cui è prevista un' `xml` istanza del tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -192,9 +194,9 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- Nell'esempio precedente in modo implicito la stringa viene convertita la `xml` tipo di dati e la assegna a un `xml` variabile di tipo.  
+ Nell'esempio precedente la stringa viene convertita in modo `xml` implicito nel tipo di dati e assegnata a una `xml` variabile di tipo.  
   
- L'esempio seguente inserisce una stringa costante in un `xml` colonna di tipo:  
+ Nell'esempio seguente viene inserita una stringa costante in `xml` una colonna di tipo:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -205,17 +207,17 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  L'istanza XML tipizzata viene convalidata in base allo schema specificato. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="using-bulk-load"></a>Utilizzo del caricamento bulk  
- La funzionalità avanzata [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) consente di eseguire il caricamento bulk dei documenti XML nel database. È possibile blocco carico istanze XML dai file nel `xml` colonne di tipo nel database. Per esempi funzionanti, vedere [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Per altre informazioni sul caricamento dei documenti XML, vedere [Caricare dati XML](load-xml-data.md).  
+ La funzionalità avanzata [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) consente di eseguire il caricamento bulk dei documenti XML nel database. È possibile eseguire il `xml` caricamento bulk delle istanze XML dai file nelle colonne di tipo del database. Per esempi funzionanti, vedere [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Per altre informazioni sul caricamento dei documenti XML, vedere [Caricare dati XML](load-xml-data.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Recuperare ed eseguire query su dati XML](retrieve-and-query-xml-data.md)|Descrizione delle parti di istanze XML che non sono mantenute quando vengono archiviate nei database.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md)   
- [Metodi con tipo di dati XML](/sql/t-sql/xml/xml-data-type-methods)   
+ [Confronto dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md)   
+ [metodi con tipo di dati XML](/sql/t-sql/xml/xml-data-type-methods)   
  [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

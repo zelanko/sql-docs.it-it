@@ -18,10 +18,10 @@ ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 97d3de804e5edce5d25e1af3b832ebc4103a3815
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660177"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Proprietà ExpirationDate (classe SecurityCertificate)
@@ -36,7 +36,7 @@ object.ExpirationDate [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) che rappresenta un certificato di sicurezza.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

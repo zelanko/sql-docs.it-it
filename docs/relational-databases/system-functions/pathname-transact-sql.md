@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251956"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72251956"
 
   Restituisce il percorso di un oggetto binario di grandi dimensioni (BLOB) FILESTREAM. L'API OpenSqlFilestream usa questo percorso per restituire un handle che un'applicazione può usare per lavorare con i dati BLOB usando le API Win32. PathName è un valore di sola lettura.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,8 +44,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La richiesta del percorso per una colonna con qualsiasi altro tipo di dati o per un columnthat **varbinary (max)** non dispone dell'attributo di archiviazione FILESTREAM provocherà un errore in fase di compilazione della query.  
   
- *opzione \@*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. *\@opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
+ *\@opzione*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l'opzione può essere uno dei valori seguenti. * \@* Il valore predefinito è 0.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>b. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Visualizzazione dei percorsi di oggetti BLOB FILESTREAM in una tabella  
  Nell'esempio seguente vengono creati e visualizzati i percorsi di tre oggetti BLOB FILESTREAM.  
   
 ```sql  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati BLOB (Binary Large Object) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;&#41;Transact-SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

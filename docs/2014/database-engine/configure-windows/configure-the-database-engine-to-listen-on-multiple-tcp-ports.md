@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811545"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurazione del Motore di database per l'attesa su più porte TCP
@@ -82,7 +82,7 @@ ms.locfileid: "62811545"
   
 4.  Fare clic con il pulsante destro del mouse su **IPAll**e quindi scegliere **Proprietà**.  
   
-5.  Nella casella **Porta TCP** digitare le porte sulle quali si desidera che [!INCLUDE[ssDE](../../includes/ssde-md.md)] resti in attesa, separate da virgole. In questo esempio, se è elencata la porta predefinita 1433, digitare `,1500` in modo che nella casella si legga `1433,1500`, quindi fare clic su **OK**.  
+5.  Nella casella **Porta TCP** digitare le porte sulle quali si desidera che [!INCLUDE[ssDE](../../includes/ssde-md.md)] resti in attesa, separate da virgole. In questo esempio, se la porta predefinita 1433 è elencata, `,1500` Digitare in modo che `1433,1500`la casella legga, quindi fare clic su **OK**.  
   
     > [!NOTE]  
     >  Se non si sta abilitando la porta su tutti gli indirizzi IP, configurare la porta aggiuntiva nella casella delle proprietà per il solo indirizzo desiderato. Nel riquadro della console fare quindi clic con il pulsante destro del mouse su **TCP/IP**, scegliere **Proprietà**e nella casella **Attesa su tutti** selezionare **No**.  

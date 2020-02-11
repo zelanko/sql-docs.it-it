@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650497"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Editor proxy e Aggiungi entità
-  Utilizzare questa pagina per concedere alle entità del server l'accesso a un account proxy di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa pagina per concedere a entità server l'accesso a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un account proxy di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Tipo di entità**  
@@ -29,7 +29,7 @@ ms.locfileid: "62650497"
  **Entità disponibili**  
  Elenca le entità del tipo selezionato.  
   
- **Name**  
+ **Nome**  
  Selezionare il nome dell'entità per concedere l'accesso a tale entità oppure selezionare **Nome** per concedere l'accesso a tutte le entità incluse nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  

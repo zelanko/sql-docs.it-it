@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6acffc286e913d35846b2eeb156cf1980b42fab3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104983"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Impostare l'orientamento della casella di testo (Generatore report e SSRS)
   Una casella di testo può essere orientata in direzioni diverse: orizzontalmente, verticalmente (testo leggibile dall'alto in basso) o ruotata di 270 gradi (testo leggibile dal basso in alto). Poiché l'orientamento è impostato sulla casella di testo e non sul testo, questa modifica viene applicata a tutto il testo nella casella. Non è possibile specificare orientamenti diversi per parti del testo. Per adattare il testo ruotato ridimensionare manualmente la larghezza della colonna e l'altezza della riga.  
   
- La proprietà WritingMode, che consente di specificare l'orientamento del testo, non è disponibile nel **proprietà casella di testo** nella finestra di dialogo. Per impostarla, è necessario aprire il riquadro Proprietà. Sono valori disponibili per la proprietà WritingMode **orizzontali** (testo leggibile da sinistra a destra), **verticale** (testo lettura dall'alto verso il basso), **Rotate270** (testo leggibile basso verso l'alto). Per adattare il testo è necessario ridimensionare manualmente la larghezza della colonna e l'altezza della riga.  
+ La proprietà WritingMode, utilizzata per specificare l'orientamento del testo, non è disponibile nella finestra di dialogo **Proprietà casella di testo** . Per impostarla, è necessario aprire il riquadro Proprietà. I valori disponibili per la proprietà WritingMode sono **orizzontali** (testo leggibile da sinistra verso destra), **verticale** (testo leggibile dall'alto in basso), **Rotate270** (testo leggibile dal basso verso l'alto). Per adattare il testo è necessario ridimensionare manualmente la larghezza della colonna e l'altezza della riga.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "66104983"
   
 3.  Fare clic sulla casella di testo di cui si desidera modificare l'orientamento del testo.  
   
-4.  Individuare proprietà nel riquadro proprietà e nell'elenco a discesa selezionare l'orientamento del testo da applicare alla casella di testo WritingMode.  
+4.  Individuare la proprietà WritingMode nel riquadro proprietà e nell'elenco a discesa selezionare l'orientamento del testo da applicare alla casella di testo.  
   
     > [!NOTE]  
     >  Se le proprietà nel riquadro Proprietà sono organizzate in categorie, WritingMode si trova nella categoria **Localizzazione** .  

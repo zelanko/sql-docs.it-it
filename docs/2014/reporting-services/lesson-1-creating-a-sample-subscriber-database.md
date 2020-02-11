@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione di un Database Sottoscrittore di esempio | Microsoft Docs'
+title: 'Lesson 1: Creating a Sample Subscriber Database (Lezione 1: Creazione di un database di esempio del Sottoscrittore) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108542"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
   Prima di definire una sottoscrizione guidata dai dati è necessario disporre di un'origine dei dati contenente i dati della sottoscrizione. In questo passaggio vengono illustrate le procedure per la creazione di un piccolo database per archiviare i dati della sottoscrizione utilizzati in questa esercitazione. Successivamente, quando la sottoscrizione viene elaborata, tramite il server di report vengono recuperati i dati e utilizzati per personalizzare l'output di report, le opzioni di recapito e il formato di presentazione del report.  
   
- In questa lezione si presuppone che si usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per creare un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database.  
+ In questa lezione si presuppone che [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] si usi per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] creare un database.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Per creare un database di esempio del Sottoscrittore  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66108542"
   
 2.  Fare clic con il pulsante destro del mouse su Database, quindi scegliere **Nuovo database**.  
   
-3.  Nella finestra di dialogo Nuovo Database, in nome del Database, digitare *sottoscrittori*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Nella finestra di dialogo nuovo database digitare *sottoscrittori*in nome database. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Fare clic sul pulsante **Nuova query** sulla barra degli strumenti.  
   
@@ -55,16 +55,16 @@ ms.locfileid: "66108542"
     GO  
     ```  
   
-6.  Fare clic su  **Esegui** sulla barra degli strumenti.  
+6.  Fare clic su **Esegui** sulla barra degli strumenti.  
   
-7.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Esempio: `select * from OrderInfo`  
+7.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Ad esempio: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In tal modo sono stati creati i dati di sottoscrizione per la distribuzione dei report e per la variazione dell'output del report per ogni sottoscrittore. Sarà quindi possibile modificare le proprietà dell'origine dei dati del report da distribuire ai sottoscrittori. La modifica delle proprietà dell'origine dei dati viene eseguita per preparare il report per il recapito delle sottoscrizioni guidate dai dati. Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: Modifica i dati del Report delle proprietà dell'origine](lesson-2-modifying-the-report-data-source-properties.md).  
+ In tal modo sono stati creati i dati di sottoscrizione per la distribuzione dei report e per la variazione dell'output del report per ogni sottoscrittore. Sarà quindi possibile modificare le proprietà dell'origine dei dati del report da distribuire ai sottoscrittori. La modifica delle proprietà dell'origine dei dati viene eseguita per preparare il report per il recapito delle sottoscrizioni guidate dai dati. Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: modifica delle proprietà dell'origine dati del report](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Creare un Database](../relational-databases/databases/create-a-database.md)   
+ [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Creazione di un database](../relational-databases/databases/create-a-database.md)   
  [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206978"
 ---
 # <a name="modify-a-partition-function"></a>Modificare una funzione di partizione
@@ -23,7 +23,7 @@ ms.locfileid: "68206978"
 > [!CAUTION]  
 >  La stessa funzione di partizione può essere utilizzata da più tabelle o indici. La modifica di una funzione di partizione viene applicata a tutti gli elementi in un'unica transazione. Controllare le dipendenze della funzione di partizione prima di modificarla.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68206978"
   
 -   Autorizzazione CONTROL SERVER o ALTER ANY DATABASE nel server del database in cui la funzione di partizione è stata creata.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per modificare una funzione di partizione:**  
   
  Non è possibile eseguire questa azione specifica tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per modificare una funzione di partizione, è innanzitutto necessario eliminare la funzione e crearne quindi una nuova con le proprietà desiderate tramite la Creazione guidata partizione. Per ulteriori informazioni, vedere  
@@ -84,7 +84,7 @@ ms.locfileid: "68206978"
   
 4.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionata la funzione di partizione corretta, quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Per suddividere una singola partizione in due partizioni  
   

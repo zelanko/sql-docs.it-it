@@ -15,10 +15,10 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729597"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Creare un pacchetto di distribuzione di modelli tramite la procedura guidata
@@ -27,7 +27,7 @@ ms.locfileid: "73729597"
 
   Utilizzare Distribuzione guidata modello [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per creare un pacchetto contenente solo oggetti modello. Se è necessario includere dati nel pacchetto, vedere [Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] è necessario avere l'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
@@ -48,11 +48,11 @@ ms.locfileid: "73729597"
   
 5.  Fare clic su **Avanti**.  
   
-6.  Fare clic su **Download**.  
+6.  Fare clic su **Download**  
   
 7.  Salvare il file.  
   
-8.  Per chiudere la procedura guidata, fare clic su **Chiudi** .  
+8.  Fare clic su **Chiudi** per chiudere la procedura guidata.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   

@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulla pubblicazione, avvisi (pubblicazione Snapshot, SQL Server 2005 e versioni successive) | Microsoft Docs
+title: Informazioni sulla pubblicazione, avvisi (pubblicazione snapshot, SQL Server 2005 e versioni successive) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021660"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione snapshot, SQL Server 2005 e versioni successive)
@@ -34,10 +34,10 @@ ms.locfileid: "63021660"
  Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. Gli avvisi vengono definiti facendo clic su **Configura avvisi** e specificando le informazioni appropriate nella finestra di dialogo **Configura avvisi di replica** .  
   
 ## <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare un avviso e specificare un valore soglia.  
   
- **Avviso**  
+ **Warning**  
  Descrizione dell'avviso associato al valore soglia.  
   
  **Soglia**  

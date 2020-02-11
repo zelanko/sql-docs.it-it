@@ -1,5 +1,5 @@
 ---
-title: Colonne (Data Mining) classificate | Microsoft Docs
+title: Colonne classificate (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085691"
 ---
 # <a name="classified-columns-data-mining"></a>Colonne classificate (Data mining)
@@ -40,10 +40,10 @@ ms.locfileid: "66085691"
   
  Nell'elenco seguente vengono descritti i tipi di contenuto supportati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per le colonne classificate.  
   
- **PROBABILITY**  
+ **PROBABILITÀ**  
  Il valore della colonna indica la probabilità del valore associato ed è un numero compreso tra 0 e 1.  
   
- **VARIANCE**  
+ **VARIANZA**  
  Il valore della colonna indica la varianza del valore associato.  
   
  **STDEV**  
@@ -55,12 +55,12 @@ ms.locfileid: "66085691"
  **PROBABILITY_STDEV**  
  Il valore della colonna indica la deviazione standard della probabilità per il valore associato.  
   
- **SUPPORT**  
+ **SUPPORTO**  
  Il valore della colonna indica il peso o fattore di replica del case del valore associato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati &#40;Data mining&#41;](data-types-data-mining.md)  
+ [Tipi di contenuto &#40;&#41;di data mining](content-types-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)  
   
   

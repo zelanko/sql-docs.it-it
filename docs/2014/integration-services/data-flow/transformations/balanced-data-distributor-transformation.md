@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770604"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Trasformazione del server di distribuzione di dati bilanciati
-  La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core. Il componente BDD fa parte del Feature Pack per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Scaricarlo e installarlo dalla [qui](https://go.microsoft.com/fwlink/p/?LinkId=391999).  
+  La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core. Il componente BDD fa parte del Feature Pack per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Scaricare e installare l'app da [qui](https://go.microsoft.com/fwlink/p/?LinkId=391999).  
   
  Nel diagramma seguente viene illustrato un esempio semplice di utilizzo della trasformazione BDD. In questo esempio, tramite la trasformazione BDD viene selezionato un buffer della pipeline per volta dai dati di input di un'origine del file flat e viene inviato a uno dei tre percorsi di output in base a un meccanismo round robin. In SQL Server Data Tools è possibile controllare i valori di una proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(dimensioni predefinite del buffer della pipeline) e di una proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(numero massimo di righe predefinito in un buffer della pipeline) nella finestra **Proprietà** in cui sono visualizzate le proprietà di un'attività Flusso di dati.  
   

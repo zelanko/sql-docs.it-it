@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873052"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
@@ -52,10 +52,10 @@ ms.locfileid: "62873052"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file BACPAC dell'applicazione livello dati senza password. Quando il file BACPAC viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorizzazioni  
  Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
- Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
+ Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati con l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Distribuisci database  
  **Per eseguire la migrazione di un database utilizzando la procedura guidata Distribuisci database**  
@@ -85,31 +85,31 @@ ms.locfileid: "62873052"
   
 -   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : consente di passare alla pagina **Impostazioni di distribuzione** .  
+-   **Avanti** : consente di passare alla pagina **Impostazioni distribuzione** .  
   
--   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla** : Annulla l'operazione e chiude la procedura guidata.  
   
-##  <a name="Deployment_settings"></a> Pagina Impostazioni di distribuzione  
+##  <a name="Deployment_settings"></a>Pagina Impostazioni distribuzione  
  Usare questa pagina per specificare il server di destinazione e fornire i dettagli sul nuovo database.  
   
  **Host locale:**  
   
--   **Connessione server**: specificare i dettagli della connessione al server e quindi fare clic su **Connetti** per verificare la connessione.  
+-   **Connessione server** : specificare i dettagli della connessione al server e quindi fare clic su **Connetti** per verificare la connessione.  
   
--   **Nome nuovo database**: specificare un nome per il nuovo database.  
+-   **Nome nuovo database** : specificare un nome per il nuovo database.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Impostazioni database:**  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
+-   edizione: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
+-   **Dimensioni massime database** : selezionare le dimensioni massime del database dal menu a discesa.  
   
  **Altre impostazioni:**  
   
 -   Specificare una directory locale per il file temporaneo, cioè il file di archivio BACPAC. Si noti che il file verrà creato nel percorso specificato in cui rimarrà una volta completata l'operazione.  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
- Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e chiudere la procedura guidata, fare clic su **Annulla**.  
+ Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e uscire dalla procedura guidata, fare clic su **Annulla**.  
   
 ##  <a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
@@ -117,10 +117,10 @@ ms.locfileid: "62873052"
 ##  <a name="Results"></a> Pagina Risultati  
  In questa pagina è riportato l'esito positivo o negativo dell'operazione di distribuzione, indicante i risultati di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Fare clic su **Fine** per chiudere la procedura guidata.  
+ Fare clic su **fine** per chiudere la procedura guidata.  
   
 ## <a name="using-a-net-framework-application"></a>Utilizzo di un'applicazione .NET Framework  
- **Per distribuire un database usando i metodi DacStoreExport() e Import() in un'applicazione .NET Framework.**  
+ **Per distribuire un database utilizzando i metodi metodi dacstoreexport () e Import () in un'applicazione .NET Framework.**  
   
  Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62873052"
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)   
- [Esportazione di un'applicazione livello dati](export-a-data-tier-application.md)   
+ [Esportare un'applicazione livello dati](export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](import-a-bacpac-file-to-create-a-new-user-database.md)  
   
   

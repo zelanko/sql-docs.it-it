@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242062"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Esercitazioni di SQL Server 2014
@@ -41,12 +41,12 @@ ms.locfileid: "75242062"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Le esercitazioni sono disponibili per le tecnologie [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Tecnologia|Description|  
+|Tecnologia|Descrizione|  
 |----------------|-----------------|  
 |[Analysis Services esercitazioni &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
-|[Reporting Services esercitazioni &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
-|[Esercitazioni Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Esercitazioni motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  
+|[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
+|[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Esercitazioni del motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  
 |[Esercitazioni sulla replica](../relational-databases/replication/replication-tutorials.md)|Viene illustrato come installare ed eseguire le topologie di replica tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Esercitazioni sulla gestione di informazioni aziendali](../../2014/tutorials/enterprise-information-management-tutorials.md)|Informazioni sulla gestione delle informazioni in un'organizzazione utilizzando le tecnologie Microsoft EIM.|  
   

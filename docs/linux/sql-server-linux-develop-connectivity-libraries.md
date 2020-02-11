@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049734"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Framework e librerie di connettività per Microsoft SQL Server
@@ -23,15 +23,15 @@ Vedere le [esercitazioni introduttive](https://aka.ms/sqldev) per iniziare rapid
 
 La tabella seguente elenca i *driver* o le librerie di connettività che le applicazioni client possono usare da diversi linguaggi per connettersi a e usare Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker, oltre che nel database SQL di Azure e in Azure SQL Data Warehouse. 
 
-| Linguaggio | Piattaforma | Risorse aggiuntive | Scarica | Introduzione |
+| Linguaggio | Piattaforma | Risorse aggiuntive | Download | Introduzione |
 | :-- | :-- | :-- | :-- | :-- |
-| C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Scarica](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
-| Java | Windows, Linux, macOS | [Microsoft JDBC Driver per SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Scarica](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
+| C# | Windows, Linux, macOS | [Microsoft ADO.NET per SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Scaricare](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
+| Java | Windows, Linux, macOS | [Driver Microsoft JDBC per SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Scaricare](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
 | PHP | Windows, Linux, macOS| [Driver SQL PHP per SQL Server](../connect/php/microsoft-php-driver-for-sql-server.md) | Sistema operativo: <br/> \* [Windows](https://www.microsoft.com/download/details.aspx?id=20098) <br/> \* [Linux](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) <br/> \* [macOS](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) |  [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu)
 | Node.js | Windows, Linux, macOS | [Driver Node.js per SQL Server](../connect/node-js/node-js-driver-for-sql-server.md) |  [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu)
 | Python | Windows, Linux, macOS | [Driver SQL per Python](../connect/python/python-driver-for-sql-server.md) <br/> \* [pyodbc](https://msdn.microsoft.com/library/mt763257.aspx) |  [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
 | Ruby | Windows, Linux, macOS | [Driver Ruby per SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Introduzione](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu)
-| C++ | Windows, Linux, macOS | [Microsoft ODBC Driver per SQL Server](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) | [Scarica](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) |  
+| C++ | Windows, Linux, macOS | [Driver Microsoft ODBC per SQL Server](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) | [Scaricare](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) |  
 
 La tabella seguente elenca alcuni esempi di framework ORM (Object Relational Mapping, mapping relazionale a oggetti) e framework Web che le applicazioni client possono usare con Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker, oltre che nel database SQL di Azure e in Azure SQL Data Warehouse. 
 

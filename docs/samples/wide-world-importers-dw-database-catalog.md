@@ -1,5 +1,5 @@
 ---
-title: Catalogo del database OLAP WideWorldImporters - SQL | Microsoft Docs
+title: Catalogo di database OLAP WideWorldImporters-SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,93 +11,93 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104292"
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>Catalogo del database WideWorldImportersDW
+# <a name="wideworldimportersdw-database-catalog"></a>Catalogo di database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-Spiegazioni per gli schemi, tabelle e stored procedure nel database WideWorldImportersDW. 
+Spiegazioni per gli schemi, le tabelle e le stored procedure nel database WideWorldImportersDW. 
 
-Il database WideWorldImportersDW viene utilizzato per il data warehousing e l'elaborazione analitica. I dati transazionali sull'analisi di vendite e acquisti vengano generati nel database WideWorldImporters e caricati nel database WideWorldImportersDW utilizzando un **processo ETL giornaliera**.
+Il database WideWorldImportersDW viene utilizzato per l'elaborazione analitica e di data warehousing. I dati transazionali sulle vendite e sugli acquisti vengono generati nel database di WideWorldImporters e caricati nel database WideWorldImportersDW usando un **processo ETL giornaliero**.
 
-I dati in WideWorldImportersDW rispecchia pertanto i dati in WideWorldImporters, ma le tabelle vengono organizzate in modo diverso. Mentre WideWorldImporters ha uno schema normalizzato tradizionali, WideWorldImportersDW Usa il [dello schema a stella](https://wikipedia.org/wiki/Star_schema) approccio per la progettazione di tabella. Oltre alle tabelle dei fatti e delle dimensioni, il database include un numero di tabelle di staging che vengono usati nel processo ETL.
+I dati in WideWorldImportersDW riflettono quindi i dati in WideWorldImporters, ma le tabelle sono organizzate in modo diverso. Mentre WideWorldImporters dispone di uno schema normalizzato tradizionale, WideWorldImportersDW usa l'approccio con [schema a stella](https://wikipedia.org/wiki/Star_schema) per la progettazione delle tabelle. Oltre alle tabelle dei fatti e delle dimensioni, nel database sono incluse diverse tabelle di gestione temporanea utilizzate nel processo ETL.
 
 ## <a name="schemas"></a>Schemi
 
 I diversi tipi di tabelle sono organizzati in tre schemi.
 
-|schema|Descrizione|
+|SCHEMA|Descrizione|
 |-----------------------------|---------------------|
 |Dimension|Tabelle delle dimensioni.|
-|Fatti|Tabelle dei fatti.|  
-|Integrazione|Le tabelle di staging e altri oggetti necessari per ETL.|  
+|Fact|Tabelle dei fatti.|  
+|Integrazione|Tabelle di staging e altri oggetti necessari per ETL.|  
 
 ## <a name="tables"></a>Tabelle
 
-Le tabelle dei fatti e dimensione sono elencate di seguito. Le tabelle nello schema di integrazione vengono usate solo per il processo ETL e non sono elencate.
+Di seguito sono elencate le tabelle delle dimensioni e dei fatti. Le tabelle nello schema di integrazione vengono utilizzate solo per il processo ETL e non sono elencate.
 
 ### <a name="dimension-tables"></a>Tabelle delle dimensioni
 
-WideWorldImportersDW ha le seguenti tabelle delle dimensioni. La descrizione include la relazione con le tabelle di origine del database WideWorldImporters.
+WideWorldImportersDW include le tabelle delle dimensioni seguenti. La descrizione include la relazione con le tabelle di origine nel database WideWorldImporters.
 
 |Tabella|Tabelle di origine|
 |-----------------------------|---------------------|
-|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|city|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|Nuova tabella con le informazioni sulle date, inclusi anno fiscale (in base 1 ° novembre avviare per anno fiscale).|
-|Employee|`Application.People` (Indici per tabelle con ottimizzazione per la memoria).|
+|Data|Nuova tabella con informazioni sulle date, incluso l'anno finanziario, in base al 1 ° novembre per l'anno finanziario.|
+|Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornitore|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods` (Indici per tabelle con ottimizzazione per la memoria).|
-|TransactionType|`Application.TransactionTypes` (Indici per tabelle con ottimizzazione per la memoria).|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>Tabelle dei fatti
 
-WideWorldImportersDW ha le seguenti tabelle dei fatti. La descrizione include la relazione con le tabelle di origine nel database WideWorldImporters, nonché le classi di query o il reporting analitica che ogni tabella dei fatti viene generalmente utilizzato con.
+In WideWorldImportersDW sono presenti le tabelle dei fatti seguenti. La descrizione include la relazione con le tabelle di origine nel database WideWorldImporters, nonché le classi di query di analisi e Reporting, in genere ogni tabella dei fatti viene utilizzata con.
 
-|Tabella|Tabelle di origine|Esempio Analitica|
+|Tabella|Tabelle di origine|Analisi di esempio|
 |-----------------------------|---------------------|---------------------|
-|JSON|`Sales.Orders` e `Sales.OrderLines`|Vendite persone, produttività di selezione/packer e sul tempo necessario per selezionare gli ordini. Inoltre, bassa scorte portano a ordini arretrati.|
-|Vendita|`Sales.Invoices` e `Sales.InvoiceLines`|Le date di vendita, le date di consegna, redditività nel corso del tempo, redditività dal venditore.|
-|Acquisto|`Purchasing.PurchaseOrderLines`|Visual Studio previsto effettivo lead time|
-|Transaction|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Problema date vs finalizzazione date e importi di misurazione.|
-|Spostamento dei|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
-|Possiedono|`Warehouse.StockItemHoldings`|Livelli di scorte disponibili e il valore.|
+|JSON|`Sales.Orders` e `Sales.OrderLines`|Addetti alle vendite, produttività di selezione e Packer e tempo di selezione degli ordini. Inoltre, le situazioni di stock ridotte portano a back Orders.|
+|Sale|`Sales.Invoices` e `Sales.InvoiceLines`|Date di vendita, date di consegna, redditività nel tempo, redditività per venditore.|
+|Purchase|`Purchasing.PurchaseOrderLines`|Tempo reale previsto rispetto ai lead|
+|Transazione|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Misurazione delle date del problema rispetto alle date finali e agli importi.|
+|Spostamento|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
+|Holding azionaria|`Warehouse.StockItemHoldings`|Livelli e valore delle scorte in mano.|
 
 ## <a name="stored-procedures"></a>Stored procedure
 
 Le stored procedure vengono utilizzate principalmente per il processo ETL e per scopi di configurazione.
 
-Tutte le estensioni dell'esempio sono invitate a usare il `Reports` dello schema per i report di Reporting Services e il `PowerBI` dello schema per l'accesso a Power BI.
+Tutte le estensioni dell'esempio sono consigliate per l' `Reports` uso dello schema per Reporting Services report e `PowerBI` dello schema per l'accesso a Power bi.
 
-### <a name="application-schema"></a>Schema dell'applicazione
+### <a name="application-schema"></a>Schema applicazione
 
-Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità dell'edizione enterprise alla versione standard edition dell'esempio, aggiungere PolyBase e reseed ETL.
+Queste procedure vengono utilizzate per configurare l'esempio. Vengono usati per applicare le funzionalità di Enterprise Edition alla versione Standard Edition dell'esempio, aggiungono la polibase e il reseeding ETL.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|Si applica sia il partizionamento e gli indici columnstore per le tabelle dei fatti.|
-|Configuration_ConfigureForEnterpriseEdition|Si applica il partizionamento, columnstore in memoria e indicizzazione.|
-|Configuration_EnableInMemory|Sostituisce le tabelle di staging di integrazione con le tabelle ottimizzate per la memoria SCHEMA_ONLY per migliorare le prestazioni ETL.|
-|Configuration_ApplyPolyBase|Configura un'origine dati esterna, formato di file e tabelle.|
-|Configuration_PopulateLargeSaleTable|Applica le modifiche all'edizione enterprise, quindi popola una maggiore quantità di dati per l'anno di calendario 2012 come cronologia aggiuntiva.|
-|Configuration_ReseedETL|Rimuove i dati esistenti e riavvia i valori di inizializzazione ETL. Ciò consente il ripopolamento del database OLAP in modo che corrisponda alle righe aggiornate nel database OLTP.|
+|Configuration_ApplyPartitionedColumnstoreIndexing|Applica sia il partizionamento sia gli indici columnstore per le tabelle dei fatti.|
+|Configuration_ConfigureForEnterpriseEdition|Applica il partizionamento, l'indicizzazione columnstore e in memoria.|
+|Configuration_EnableInMemory|Sostituisce le tabelle di staging dell'integrazione con SCHEMA_ONLY tabelle ottimizzate per la memoria per migliorare le prestazioni ETL.|
+|Configuration_ApplyPolyBase|Configura un'origine dati esterna, un formato di file e una tabella.|
+|Configuration_PopulateLargeSaleTable|Applica le modifiche dell'edizione Enterprise, quindi popola una quantità maggiore di dati per l'anno di calendario 2012 come cronologia aggiuntiva.|
+|Configuration_ReseedETL|Rimuove i dati esistenti e riavvia i semi ETL. In questo modo è possibile ripopolare il database OLAP affinché corrisponda alle righe aggiornate nel database OLTP.|
 
 ### <a name="integration-schema"></a>Schema di integrazione
 
-Le procedure utilizzate nel processo ETL rientrano nelle categorie seguenti:
-- Procedure di supporto per il pacchetto ETL - Get * tutte le procedure.
-- Le procedure utilizzate dal pacchetto ETL per la migrazione di dati di gestione temporanea nelle tabelle del data Warehouse - tutte le procedure di migrazione *.
-- `PopulateDateDimensionForYear` -Accetta un anno e assicura che tutte le date per tale anno vengono popolate nel `Dimension.Date` tabella.
+Le procedure utilizzate nel processo ETL rientrino nelle categorie seguenti:
+- Procedure di supporto per il pacchetto ETL: tutte le procedure Get *.
+- Procedure utilizzate dal pacchetto ETL per la migrazione dei dati di gestione temporanea nelle tabelle DW-tutte le procedure di migrazione *.
+- `PopulateDateDimensionForYear`-Richiede un anno e garantisce che tutte le date dell'anno siano popolate nella `Dimension.Date` tabella.
 
-### <a name="sequences-schema"></a>Schema di sequenze
+### <a name="sequences-schema"></a>Schema sequences
 
-Procedure per configurare le sequenze nel database.
+Procedure per la configurazione delle sequenze nel database.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chiama la routine `ReseedSequenceBeyondTableValue` per tutte le sequenze.|
-|ReseedSequenceBeyondTableValue|Usato per riposizionare il valore di sequenza successivo oltre il valore in qualsiasi tabella che utilizza la stessa sequenza. (Ad esempio un `DBCC CHECKIDENT` per equivalente a colonne identity per le sequenze ma tra potenzialmente più tabelle.)|
+|ReseedSequenceBeyondTableValue|Utilizzato per riposizionare il successivo valore di sequenza oltre il valore in una tabella che utilizza la stessa sequenza. ( `DBCC CHECKIDENT` Ad esempio per le colonne Identity equivalenti per le sequenze ma per le tabelle potenzialmente multiple).|

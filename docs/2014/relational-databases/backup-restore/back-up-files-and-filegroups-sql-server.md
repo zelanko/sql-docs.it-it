@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782752"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
   In questo argomento viene descritto come eseguire il backup di file e filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Quando a causa delle dimensioni del database e dei requisiti relativi alle prestazioni non è consigliabile eseguire un backup completo del database, è possibile creare invece un backup del file. Un *backup del file* contiene tutti i dati inclusi in uno o più file o filegroup. Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -69,13 +69,13 @@ ms.locfileid: "72782752"
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>Per eseguire il backup di file e filegroup del database  
   
-1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
+1.  Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, selezionare **Attività**, quindi fare clic su **Esegui backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
-4.  Verificare il nome del database nell'elenco **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
+4.  Nell'elenco **Database** verificare il nome del database. È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
 5.  Nell'elenco **Tipo di backup** selezionare **Completo** o **Differenziale**.  
   
@@ -83,26 +83,26 @@ ms.locfileid: "72782752"
   
 7.  Selezionare i file e i filegroup dei quali si desidera eseguire il backup nella finestra di dialogo **Seleziona file e filegroup** . È possibile selezionare uno o più file singoli oppure selezionare la casella di controllo relativa a un filegroup per selezionare automaticamente tutti i file appartenenti al filegroup.  
   
-8.  Accettare il nome predefinito del set di backup indicato nella casella di testo **Nome** oppure immettere un nome diverso per il set di backup.  
+8.  Accettare il nome del set di backup predefinito suggerito nella casella di testo **Nome** o immettere un nome diverso.  
   
-9. Facoltativamente, immettere una descrizione del set di backup nella casella di testo **Descrizione** .  
+9. Facoltativamente, immettere una descrizione del set di backup nella casella di testo **Descrizione**.  
   
 10. Specificare la scadenza del set di backup:  
   
     -   Per far scadere il set di backup dopo un numero specifico di giorni, fare clic su **Dopo** (opzione predefinita), quindi immettere il numero di giorni che devono trascorrere prima della scadenza del set. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.  
   
-         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina**Impostazioni database** ). Per accedere a questa opzione, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
+         Il valore predefinito viene impostato nell'opzione **periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà Server** (pagina**Impostazioni database** ). Per accedere a questa opzione, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
   
-    -   Per impostare una data di scadenza specifica per il set di backup, fare clic su **Il**e immettere la data di scadenza del set.  
+    -   Per impostare il set di backup in modo che scada in una data specifica, fare clic su **Il** e immettere la data di scadenza del set.  
   
 11. Fare clic su **Disco** o su **Nastro**per selezionare il tipo di destinazione del backup. Per selezionare i percorsi per un massimo di 64 unità disco o nastro contenenti un singolo set di supporti, fare clic su **Aggiungi**. I percorsi selezionati vengono visualizzati nell'elenco **Backup su** .  
   
     > [!NOTE]  
     >  Per rimuovere una destinazione di backup, selezionarla e fare clic su **Rimuovi**. Per visualizzare il contenuto di una destinazione di backup, selezionarla e fare clic su **Contenuto**.  
   
-12. Per visualizzare o selezionare le opzioni avanzate, fare clic su **Opzioni** nel riquadro **Selezione pagina** .  
+12. Per visualizzare o selezionare le opzioni avanzate, fare clic su **Opzioni** nel riquadro **Selezione pagina**.  
   
-13. Selezionare un'opzione **Sovrascrivi supporti** facendo clic su una delle opzioni seguenti:  
+13. Selezionare un'opzione **Sovrascrivi supporti** facendo clic su uno degli elementi seguenti:  
   
     -   **Esegui backup nel set di supporti esistente**  
   
@@ -116,20 +116,20 @@ ms.locfileid: "72782752"
   
     -   **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**  
   
-         Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, facoltativamente, aggiungere una descrizione per il set di supporti nella casella di testo **Descrizione nuovo set di supporti** . Per altre informazioni sulla creazione di un nuovo set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, se lo si desidera, descrivere il set di supporti nella casella di testo **Descrizione nuovo set di supporti**. Per altre informazioni sulla creazione di un nuovo set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 14. Nella sezione **Affidabilità** è possibile selezionare facoltativamente:  
   
-    -   **Verifica backup al termine**.  
+    -   **Verificare il backup al termine**dell'operazione.  
   
-    -   **Esegui checksum prima della scrittura nei supporti**e, facoltativamente, **Continua in caso di errori checksum**. Per altre informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Eseguire checksum prima della scrittura nei supporti**e, facoltativamente, **continuare in un errore di checksum**. Per altre informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-15. Se si esegue il backup su un'unità nastro (come specificato nella sezione **Destinazione** della pagina **Generale**) l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
+15. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
     > [!NOTE]  
     >  Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale** .  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e nelle versioni più recenti è supportata la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]e versioni successive supportano la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, il fatto che un backup venga o meno compresso dipende dal valore dell'opzione di configurazione del server **Compressione backup predefinita**. Tuttavia, indipendentemente dall'impostazione predefinita a livello del server corrente, è possibile comprimere un backup selezionando la casella **Comprimi backup** e impedirne la compressione selezionando la casella **Non comprimere il backup**.  
   
      **Per visualizzare l'impostazione predefinita corrente della compressione dei backup**  
   
@@ -139,7 +139,7 @@ ms.locfileid: "72782752"
   
 #### <a name="to-back-up-files-and-filegroups"></a>Per eseguire il backup di file e filegroup  
   
-1.  Per creare un backup del file o del filegroup, usare un'istruzione [BACKUP DATABASE <file_or_filegroup>](/sql/t-sql/statements/backup-transact-sql). In questa istruzione è necessario specificare almeno gli elementi seguenti:  
+1.  Per creare un backup di file o filegroup, utilizzare un'istruzione [backup DATABASE <file_or_filegroup>](/sql/t-sql/statements/backup-transact-sql) . In questa istruzione è necessario specificare almeno gli elementi seguenti:  
   
     -   Nome del database.  
   
@@ -151,22 +151,22 @@ ms.locfileid: "72782752"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=** _nome_file_logico_ | FILEGROUP **=** _nome_filegroup_logico_ } [ **,** ...*f* ]  
+     {FILE **=** _logical_file_name_ | Filegroup **=** _logical_filegroup_name_ } [ **,**... *f* ]  
   
-     TO *dispositivo_backup* [ **,** ...*n* ]  
+     TO *dispositivo_backup* [ **,**...*n* ]  
   
-     [ WITH *con_opzioni* [ **,** ...*o* ] ];  
+     [ WITH *con_opzioni* [ **,**...*o* ] ];  
   
     |Opzione|Descrizione|  
     |------------|-----------------|  
     |*database*|Nome del database di cui viene eseguito il backup del log delle transazioni oppure il backup parziale o completo del database.|  
-    |FILE **=** _nome_file_logico_|Specifica il nome logico di un file da includere nel backup del file.|  
-    |FILEGROUP **=** _nome_filegroup_logico_|Specifica il nome logico di un filegroup da includere nel backup del file. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.|  
-    |[ **,** ...*f* ]|Segnaposto che indica che è possibile specificare più file e filegroup. Il numero di file o filegroup che possono essere specificati è illimitato.|  
-    |*backup_device* [ **,** ...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _nome_dispositivo_backup_fisico_<br /><br /> Per altre informazioni, vedere [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *con_opzioni* [ **,** ...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, ad esempio DIFFERENTIAL.<br /><br /> Nota: il backup differenziale del file richiede come base un backup completo del file. Per altre informazioni, vedere [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
+    |**=** _Logical_file_name_ file|Specifica il nome logico di un file da includere nel backup del file.|  
+    |**=** _Logical_filegroup_name_ filegroup|Specifica il nome logico di un filegroup da includere nel backup del file. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.|  
+    |[ **,**...*f* ]|Segnaposto che indica che è possibile specificare più file e filegroup. Il numero di file o filegroup che possono essere specificati è illimitato.|  
+    |*backup_device* [ **,**... *n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> {DISK &#124; TAPE} **=** _physical_backup_device_name_<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *con_opzioni* [ **,**...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, ad esempio DIFFERENTIAL.<br /><br /> Nota: il backup differenziale del file richiede come base un backup completo del file. Per altre informazioni, vedere [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
-2.  Se si utilizza il modello di recupero con registrazione completa, è inoltre necessario eseguire un backup del log delle transazioni. Per utilizzare un set completo di backup del file completi per il ripristino di un database, è inoltre necessario disporre di backup dei log relativi a tutti i backup del file, dall'inizio del primo backup del file. Per altre informazioni, vedere [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
+2.  Se si utilizza il modello di recupero con registrazione completa, è inoltre necessario eseguire un backup del log delle transazioni. Per utilizzare un set completo di backup del file completi per il ripristino di un database, è inoltre necessario disporre di backup dei log relativi a tutti i backup del file, dall'inizio del primo backup del file. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Negli esempi seguenti viene eseguito il backup di uno o più file dei filegroup secondari del database `Sales` . Questo database utilizza il modello di recupero con registrazione completa e contiene i filegroup secondari seguenti:  
@@ -187,7 +187,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>b. Creazione di un backup completo dei filegroup secondari  
+#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. Creazione di un backup completo dei filegroup secondari  
  Nell'esempio seguente viene creato un backup completo di ogni file presente in entrambi i filegroup secondari.  
   
 ```sql  
@@ -217,9 +217,9 @@ GO
   
 Utilizzare il cmdlet `Backup-SqlDatabase` e specificare `Files` per il valore del parametro `-BackupAction`. Inoltre, specificare uno dei parametri seguenti:  
   
-    -   Per eseguire il backup di un file specifico, specificare il `-DatabaseFile`parametro *String* , dove *String* è uno o più file di database di cui eseguire il backup.  
+    -   Per eseguire il backup di un file specifico, `-DatabaseFile`specificare il parametro *String* , dove *String* è uno o più file di database di cui eseguire il backup.  
   
-    -   Per eseguire il backup di tutti i file di un determinato filegroup, specificare il parametro della *stringa* di `-DatabaseFileGroup`, dove *String* è uno o più filegroup di database di cui eseguire il backup.  
+    -   Per eseguire il backup di tutti i file di un determinato filegroup, `-DatabaseFileGroup`specificare il parametro *String* , dove *String* è uno o più filegroup di database di cui eseguire il backup.  
   
      Nell'esempio seguente viene creato un backup completo di ogni file presente nei filegroup secondari 'FileGroup1' e 'FileGroup2' nel database `MyDB` . I backup vengono creati nel percorso di backup predefinito dell'istanza del server `Computer\Instance`.  
   
@@ -234,11 +234,11 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Informazioni sulla cronologia e sull'intestazione del backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
- [Eseguire il backup di database &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Eseguire il backup di database &#40;pagina Opzioni di backup&#41;](back-up-database-backup-options-page.md)   
- [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
+ [Backup database &#40;pagina generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Pagina Backup database &#40;opzioni di backup&#41;](back-up-database-backup-options-page.md)   
+ [Backup completi dei file &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [Ripristini di file &#40;Modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
+ [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md)  
   
   

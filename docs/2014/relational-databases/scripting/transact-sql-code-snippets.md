@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243124"
 ---
 # <a name="transact-sql-code-snippets"></a>Frammenti di codice Transact-SQL
@@ -26,7 +26,7 @@ ms.locfileid: "75243124"
 |----------------------|-----------|  
 |Viene illustrato come inserire un frammento esistente, ad esempio un frammento CREATE TABLE o SELECT.|[Inserire frammenti Transact-SQL](insert-transact-sql-snippets.md)|  
 |Viene illustrato come includere un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in un blocco BEGIN, IF o WHILE.|[Inserire frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)|  
-|Viene illustrato come completare la compilazione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] completa, o di un blocco, dopo avere inserito un frammento di codice.|[Completa frammenti Transact-SQL](complete-transact-sql-snippets.md)|  
+|Viene illustrato come completare la compilazione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] completa, o di un blocco, dopo avere inserito un frammento di codice.|[Completare frammenti Transact-SQL](complete-transact-sql-snippets.md)|  
 |Viene illustrato come compilare frammenti personalizzati e aggiungerli al set di frammenti di SQL Server.|[Aggiungere frammenti Transact-SQL](add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

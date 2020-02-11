@@ -1,5 +1,5 @@
 ---
-title: AVG (MDX) | Microsoft Docs
+title: Media (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017007"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
@@ -34,20 +34,21 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Se viene specificato un set di tuple vuote o un set vuoto, il **Avg** funzione restituisce un valore vuoto.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificato un set di tuple vuote o un set vuoto, la funzione **AVG** restituisce un valore vuoto.  
   
- Il **Avg** funzione calcola la media dei valori non vuoti delle celle nel set specificato calcolando innanzitutto la somma dei valori nelle celle nel set specificato, e quindi dividendo la somma calcolata per il numero delle celle non vuote il set specificato.  
-  
-> [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora i valori Null durante il calcolo del valore medio di un set di numeri.  
-  
- Se un'espressione numerica specifica (in genere una misura) non è specificata, il **Avg** funzione calcola la media di ogni misura nel contesto di query corrente. Se viene fornita una misura specifica, il **Avg** funzione valuta innanzitutto la misura all'interno del set e quindi calcola la media in base alla misura specificata.  
+ La funzione **AVG** calcola la media dei valori non vuoti delle celle del set specificato calcolando innanzitutto la somma dei valori tra le celle del set specificato e quindi dividendo la somma calcolata in base al numero di celle non vuote nel set specificato.  
   
 > [!NOTE]  
->  Quando si usa la **CurrentMember** funzione in un'istruzione di membro calcolato, è necessario specificare un'espressione numerica, poiché non esiste alcuna misura predefinita per la coordinata corrente in tale contesto di query.  
+>  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora i valori Null durante il calcolo del valore medio di un set di numeri.  
   
- Per forzare l'inclusione delle celle vuote, l'applicazione deve usare la [CoalesceEmpty](../mdx/coalesceempty-mdx.md) funzionare o specificare un valore valido *Numeric_Expression* che fornisce un valore pari a zero (0) per i valori vuoti. Per ulteriori informazioni sulle celle vuote, vedere la documentazione relativa a OLE DB.  
+ Se non si specifica un'espressione numerica specifica (in genere una misura), la funzione **AVG** calcola la media di ogni misura nel contesto di query corrente. Se viene fornita una misura specifica, la funzione **AVG** valuta prima di tutto la misura sul set, quindi la funzione calcola la media in base alla misura specificata.  
+  
+> [!NOTE]  
+>  Quando si utilizza la funzione **CurrentMember** in un'istruzione del membro calcolata, è necessario specificare un'espressione numerica perché non esiste alcuna misura predefinita per la coordinata corrente in un contesto di query di questo tipo.  
+  
+ Per forzare l'inclusione di celle vuote, l'applicazione deve utilizzare la funzione [CoalesceEmpty](../mdx/coalesceempty-mdx.md) o specificare un *Numeric_Expression* valido che fornisca un valore pari a zero (0) per i valori vuoti. Per ulteriori informazioni sulle celle vuote, vedere la documentazione relativa a OLE DB.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita la media di una misura su un set specificato. Si noti che la misura specificata può essere la misura predefinita per i membri del set specificato o una misura specificata.  
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni mese dell'anno fiscale 2003, dai **Adventure Works** cubo. Il **Avg** calcola la Media dal set di giorni in cui sono contenuti in ciascun mese del `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
+ Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **AVG** calcola la media dal set di giorni contenuti in ogni mese della `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni semestre dell'anno fiscale 2003, dai **Adventure Works** cubo.  
+ Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni semestre dell'anno fiscale 2003, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  
@@ -145,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

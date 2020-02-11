@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400538"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacità di elaborazione e archiviazione nel sistema della piattaforma Analytics
@@ -48,7 +48,7 @@ Il sollevamento è il miglioramento della capacità di percentuale aumentando il
 |24|48|768|12288|20%|  
 |28|56|896|14336|17%|  
   
-Spiegazione:  
+Spiegazione  
   
 -   **Unità di scala dei dati** per dispositivo. Per informazioni sulle unità di scala dei dati, vedere [componenti hardware del sistema della piattaforma di analisi](hardware-components.md).  
   
@@ -90,7 +90,7 @@ Questa tabella stima che è possibile caricare e archiviare fino a 6 petabyte di
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
 |DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8.640 TB|   
   
-Spiegazione:  
+Spiegazione  
   
 -   Le **dimensioni dell'unità** sono pari a 1, 2 o 4 TB per ogni fornitore di hardware.  
   

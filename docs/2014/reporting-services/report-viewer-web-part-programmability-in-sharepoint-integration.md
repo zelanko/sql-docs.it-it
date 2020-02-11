@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255137"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilità della web part Visualizzatore report nell'integrazione con SharePoint
   La web part Visualizzatore report è un controllo server `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` contenente un set di API pubbliche che consentono agli sviluppatori di creare applicazioni di SharePoint personalizzate. È possibile creare web part personalizzate che forniscono parametri e percorsi di report a web part Visualizzatore report tramite connessioni web part. È inoltre possibile incorporare la web part in una pagina web part di SharePoint personalizzata e personalizzarla usando l'API pubblica.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Connessione a web part Visualizzatore report con web part personalizzate  
- La web part Visualizzatore report è una connessione dell'utente a web part di SharePoint che implementano <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Una web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, ad esempio la web part **Documenti**, può fornire il percorso di un report a una web part Visualizzatore di report quando viene inserita nella stessa pagina web part della web part Visualizzatore di report. Allo stesso modo, un' `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web Part, ad esempio il **testo filtro** o il **filtro scelte**, può fornire un parametro di report a una Web Part Visualizzatore Report quando viene inserita nella stessa pagina Web Part Visualizzatore Report Web Parte.  
+ La web part Visualizzatore report è una connessione dell'utente a web part di SharePoint che implementano <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> o `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Una web part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, ad esempio la web part **Documenti**, può fornire il percorso di un report a una web part Visualizzatore di report quando viene inserita nella stessa pagina web part della web part Visualizzatore di report. Analogamente, `T:Microsoft.SharePoint.WebPartPages.IFilterValues` una Web part, ad esempio il **filtro di testo** o il **Filtro scelte**, può fornire un parametro di report a una Web part Visualizzatore report quando viene inserita nella stessa pagina Web part della web part Visualizzatore report.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implementazione di un provider del percorso report con IWebPartRow  
  Per fornire il percorso di un report a una web part Visualizzatore report tramite connessioni web part, eseguire le operazioni seguenti:  

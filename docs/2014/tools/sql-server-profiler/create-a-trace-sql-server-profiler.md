@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211084"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Creare una traccia (SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "68211084"
   
 1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Verrà visualizzata la finestra di dialogo **Proprietà traccia**.  
+     Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
     > [!NOTE]  
     >  Se la casella di controllo **Avvia traccia non appena viene stabilita una connessione** è selezionata, la finestra di dialogo **Proprietà traccia** non verrà visualizzata e verrà invece avviata la traccia. Per disabilitare questa impostazione, scegliere **Opzioni**dal menu **Strumenti**e deselezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
@@ -43,14 +43,14 @@ ms.locfileid: "68211084"
   
     -   Fare clic su **Salva nella tabella** per acquisire la traccia in una tabella del database.  
   
-         Facoltativamente fare clic su **Numero massimo di righe** e specificare un valore.  
+         Facoltativamente fare clic su **Numero massimo di righe**e specificare un valore.  
   
     > [!CAUTION]  
     >  Se i risultati della traccia non vengono salvati in un file o in una tabella, è possibile visualizzare la traccia quando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è aperto. I risultati della traccia andranno tuttavia persi dopo l'arresto della traccia e la chiusura di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Per evitare tale perdita dei risultati della traccia, scegliere **Salva** dal menu **File** per salvare i risultati prima di chiudere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 5.  Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia.  
   
-6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**. Per altre informazioni, vedere: [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**. Per altre informazioni, vedere [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  Fare clic su **Esegui** per avviare la traccia.  
   

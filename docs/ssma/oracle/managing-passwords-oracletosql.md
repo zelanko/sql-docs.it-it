@@ -1,5 +1,5 @@
 ---
-title: La gestione delle password (OracleToSQL) | Microsoft Docs
+title: Gestione delle password (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,39 +14,39 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262916"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gestione delle password (OracleToSQL)
-Questa sezione riguarda la protezione delle password di database e la procedura per importare o esportare tali tra server:  
+In questa sezione viene illustrata la protezione delle password del database e la procedura per importarli o esportarli tra server:  
   
-1.  Protezione di Password  
+1.  Sicurezza della password  
   
-2.  L'esportazione o importazione di Password crittografata  
+2.  Esportazione o importazione della password crittografata  
   
-## <a name="securing-password"></a>Protezione di Password  
+## <a name="securing-password"></a>Sicurezza della password  
 SSMA consente di proteggere la password di un database.  
   
-Usare la procedura seguente per implementare una connessione sicura:  
+Per implementare una connessione protetta, attenersi alla procedura seguente:  
   
-Specificare una password valida usando uno dei tre metodi seguenti:  
+Specificare una password valida utilizzando uno dei tre metodi seguenti:  
   
-1.  **Testo non crittografato:** Digitare la password del database nell'attributo valore del nodo 'password'. Si trova sotto il nodo della definizione di server nella sezione Server di file di script o file di connessione server.  
+1.  **Testo non crittografato:** Digitare la password del database nell'attributo value del nodo ' password '. Si trova nel nodo definizione server della sezione server del file di script o di connessione al server.  
   
-    Le password in testo non crittografato non sono protette. Pertanto, si verificherà il seguente messaggio di avviso nell'output della console: *"Server &lt;server-id&gt; password viene fornita in formato testo non crittografato non sicure, applicazione Console SSMA fornisce un'opzione per proteggere la password mediante crittografia, vedere securepassword - opzione nel file della Guida SSMA per altre informazioni informazioni".*  
+    Le password in testo non crittografato non sono sicure. Pertanto, nell'output della console verrà visualizzato il seguente messaggio di avviso: *"server &lt;-ID&gt; password è disponibile in formato testo non protetto, l'applicazione console SSMA fornisce un'opzione per proteggere la password tramite crittografia. per ulteriori informazioni, vedere l'opzione-SecurePassword nel file della Guida di SSMA."*  
   
-    **Password crittografate:** La password specificata, in questo caso, viene archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
+    **Password crittografate:** La password specificata, in questo caso, viene archiviata in formato crittografato nel computer locale in ProtectedStorage. SSMA.  
   
     -   **Protezione delle password**  
   
-        -   Eseguire la `SSMAforOracleConsole.exe` con il `-securepassword` e aggiunge l'opzione nella riga di comando passando il server di connessione o file script che contiene il nodo della password nella sezione Definizione server.  
+        -   Eseguire `SSMAforOracleConsole.exe` con `-securepassword` e aggiungere switch alla riga di comando passando la connessione al server o il file di script contenente il nodo password nella sezione relativa alla definizione del server.  
   
-        -   Al prompt dei comandi, l'utente viene richiesto di immettere la password del database e confermarla.  
+        -   Al prompt, all'utente viene richiesto di immettere la password del database e di confermarla.  
   
-            Gli ID definizione di server e relativa password crittografata corrispondenti vengono archiviate in un file nel computer locale  
+            Gli ID di definizione del server e le password crittografate corrispondenti vengono archiviati in un file nel computer locale  
             
             Esempio 1:  
             
@@ -72,27 +72,27 @@ Specificare una password valida usando uno dei tre metodi seguenti:
     
     -   **Rimozione delle password crittografate**  
   
-        Eseguire la `SSMAforOracleConsole.exe` con il`-securepassword` e `-remove` passare alla riga di comando passando l'ID server, per rimuovere le password crittografate dal file di archiviazione protetto presentano nel computer locale.  
+        Eseguire `SSMAforOracleConsole.exe` con l'`-securepassword` opzione e `-remove` nella riga di comando passando gli ID server per rimuovere le password crittografate dal file di archiviazione protetto presente nel computer locale.  
         
         Esempio:  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
   
-    -   **Elenco di ID Server le cui password vengono crittografate**  
+    -   **Elenco di ID server le cui password sono crittografate**  
   
-        Eseguire la `SSMAforOracleConsole.exe` con il `-securepassword` e `-list` passare alla riga di comando per elencare tutti gli ID server le cui password sono state crittografate.  
+        Eseguire `SSMAforOracleConsole.exe` con `-securepassword` e `-list` passare alla riga di comando per elencare tutti gli ID server le cui password sono state crittografate.  
   
         Esempio:  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
     > [!NOTE]  
-    > 1.  La password in testo non crittografato indicato nel file di connessione di server o lo script ha la precedenza sulla password crittografata nel file protetto.  
-    > 2.  Quando è presente alcuna password nella sezione server di file di connessione del server o il file di script o se non è stato protetto nel computer locale, la console viene richiesto di immettere la password.  
+    > 1.  La password in testo non crittografato indicato nel file di connessione dello script o del server ha la precedenza sulla password crittografata in un file protetto.  
+    > 2.  Se nella sezione server del file di connessione del server o del file di script non è presente alcuna password o se non è stata protetta nel computer locale, nella console viene richiesto di immettere la password.  
   
-## <a name="exporting-or-importing-encrypted-passwords"></a>Esportare o importare le password crittografate  
-L'applicazione Console SSMA consente di esportare le password crittografate del database presente in un file nel computer locale in un file protetto e viceversa. È utile nella creazione della macchina password crittografate indipendenti. La funzionalità di esportazione legge l'id del server e protetto da archiviazione di password da locale e Salva le informazioni in un file crittografato. L'utente viene richiesto di immettere la password per il file protetto. Assicurarsi che la password immessa è 8 caratteri o più. Questo file protetto sia portabile tra computer diversi. Funzionalità di importazione legge il server di informazioni su id e la password dal file protetto. L'utente viene richiesto di immettere la password per il file protetto e aggiunge le informazioni nell'archiviazione locale protetto.  
+## <a name="exporting-or-importing-encrypted-passwords"></a>Esportazione o importazione di password crittografate  
+L'applicazione console SSMA consente di esportare le password di database crittografate presenti in un file nel computer locale in un file protetto e viceversa. Consente di rendere le password crittografate indipendenti dal computer. La funzionalità di esportazione consente di leggere l'ID e la password del server dall'archiviazione protetta locale e di salvare le informazioni in un file crittografato. All'utente viene richiesto di immettere la password per il file protetto. Verificare che la password immessa sia di 8 caratteri o superiore. Questo file protetto è portabile tra computer diversi. La funzionalità di importazione legge le informazioni relative all'ID server e alla password dal file protetto. All'utente viene richiesto di immettere la password per il file protetto e di accodare le informazioni all'archivio locale protetto.  
   
 Esempio:  
 
@@ -127,5 +127,5 @@ Esempio:
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della Console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Esecuzione della console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

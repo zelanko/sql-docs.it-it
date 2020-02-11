@@ -20,17 +20,18 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131577"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce informazioni su una connessione a un database.  
   
@@ -54,7 +55,7 @@ len
  *srvproc*  
  Puntatore che identifica una connessione al database.  
   
- *field*  
+ *campo*  
  Specifica i dati nella connessione da restituire.  
   
 |valore|Valori di codice restituiti|  
@@ -79,7 +80,7 @@ len
 |SRV_USER|Nome utente della connessione.|  
 |||  
   
- *len*  
+ *Len*  
  Puntatore a una variabile **int** che contiene la lunghezza del valore *field* restituito. Se *len* è NULL, la lunghezza della stringa non viene restituita.  
   
 ## <a name="returns"></a>Valori di codice restituiti  

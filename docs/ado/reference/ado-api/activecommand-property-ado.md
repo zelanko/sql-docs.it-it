@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà ActiveCommand (ADO) | Microsoft Docs
+title: Proprietà ActiveCommand (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,24 +16,24 @@ ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921671"
 ---
 # <a name="activecommand-property-ado"></a>Proprietà ActiveCommand (ADO)
-Indica la [comandi](../../../ado/reference/ado-api/command-object-ado.md) oggetto che ha creato l'oggetto associato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+Indica l'oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) che ha creato l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) associato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **Variant** che contiene un **comando** oggetto. Valore predefinito è un riferimento a un oggetto null.  
+ Restituisce una **variante** che contiene un oggetto **comando** . Il valore predefinito è un riferimento a un oggetto null.  
   
-## <a name="remarks"></a>Note  
- Il **ActiveCommand** proprietà è di sola lettura.  
+## <a name="remarks"></a>Osservazioni  
+ La proprietà **ActiveCommand** è di sola lettura.  
   
- Se un **comandi** oggetto non è stato usato per creare l'oggetto corrente **Recordset**, quindi un **Null** riferimento all'oggetto viene restituito.  
+ Se non è stato utilizzato un oggetto **comando** per creare il **Recordset**corrente, viene restituito un riferimento a un oggetto **null** .  
   
- Utilizzare questa proprietà per trovare l'oggetto associato **comandi** dell'oggetto quando si dispone solo risultante **Recordset** oggetto.  
+ Utilizzare questa proprietà per trovare l'oggetto **comando** associato quando viene fornito solo l'oggetto **Recordset** risultante.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

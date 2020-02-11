@@ -18,10 +18,10 @@ ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660879"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Proprietà SqlServiceType (classe SqlService)
@@ -36,7 +36,7 @@ object.SqlServiceType [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +45,7 @@ object.SqlServiceType [= value]
 ## <a name="remarks"></a>Osservazioni  
  I possibili valori restituiti sono i seguenti:  
   
-|Tipo|Definizione|  
+|Type|Definizione|  
 |----------|----------------|  
 |*1*|MSSQLSERVER è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*2*|SQLSERVERAGENT è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|  
@@ -54,11 +54,11 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService è il servizio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer è il servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
-|*8*|NsService è il servizio di notifica [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)].|  
-|*9*|MSSQLFDLauncher è il servizio Utilità di avvio del daemon filtri full-text di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|*10*|SQLPBENGINE è il servizio motore di base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|*11*|SQLPBDMS è il servizio di spostamento dati di base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|*12*|MSSQLLaunchpad è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] launchpad.|  
+|*8*|NsService è il [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] servizio di notifica.|  
+|*9*|MSSQLFDLauncher è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio Utilità di avvio del daemon filtri full-text.|  
+|*10*|SQLPBENGINE è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio del motore di base.|  
+|*11*|SQLPBDMS è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio di spostamento dati di base.|  
+|*12*|MSSQLLaunchpad è il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio launchpad.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

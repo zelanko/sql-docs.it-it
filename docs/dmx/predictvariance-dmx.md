@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041689"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -31,10 +31,10 @@ PredictVariance(<scalar column reference>)
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Un valore scalare del tipo specificato da  *\<riferimento a colonna scalare >* .  
+ Valore scalare del tipo specificato dal * \<riferimento a colonna scalare>*.  
   
-## <a name="remarks"></a>Note  
- Se il riferimento alla colonna è discreto, **PredictVariance** restituirà 0 perché non è possibile calcolare la varianza da valori discreti.  
+## <a name="remarks"></a>Osservazioni  
+ Se il riferimento alla colonna è discreto, **PredictVariance** restituisce 0 perché la varianza non può essere calcolata da valori discreti.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato un natural prediction join per determinare la probabilità che un individuo sia un acquirente di biciclette sulla base del modello di data mining TM Decision Tree e la varianza per la stima.  
@@ -54,8 +54,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

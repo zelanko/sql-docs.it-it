@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di un modello di Clustering | Microsoft Docs
+title: Esplorazione di un modello di clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064675"
 ---
 # <a name="browsing-a-clustering-model"></a>Esplorazione di un modello di clustering
-  Quando si apre un modello di clustering utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al Visualizzatore di clustering in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare i cluster creati e comprenderne le caratteristiche. È inoltre possibile confrontare e contrapporre singoli segmenti con altri segmenti o con la popolazione.  
+  Quando si apre un modello di clustering utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore clustering in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare i cluster creati e comprenderne le caratteristiche. È inoltre possibile confrontare e contrapporre singoli segmenti con altri segmenti o con la popolazione.  
   
-##  <a name="BKMK_Tabs"></a> Esplorare il modello  
- Il **esplorare** finestra include i seguenti strumenti che consentono di comprendere il modello di clustering ed esplorare gli attributi di gruppi di dati sottostanti:  
+##  <a name="BKMK_Tabs"></a>Esplorare il modello  
+ Nella finestra **Sfoglia** sono inclusi gli strumenti seguenti che consentono di comprendere il modello di clustering ed esplorare gli attributi dei gruppi di dati sottostanti:  
   
--   [Diagramma dei cluster](#BKMK_ClusterDiagram)  
+-   [Diagramma del cluster](#BKMK_ClusterDiagram)  
   
 -   [Profili cluster](#BKMK_ClusterProfiles)  
   
--   [Caratteristiche cluster](#BKMK_ClusterCharacteristics)  
+-   [Caratteristiche del cluster](#BKMK_ClusterCharacteristics)  
   
--   [Analisi discriminante tra cluster](#BKMK_ClusterDiscrimination)  
+-   [Analisi discriminante cluster](#BKMK_ClusterDiscrimination)  
   
- Per provare un modello di clustering, è possibile usare i dati di esempio nella scheda Training della cartella di lavoro di dati di esempio e compilare un modello di clustering utilizzando [Creazione guidata Cluster &#40;aggiuntivi di Data Mining per Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e tutte le impostazioni predefinite .  
+ Per sperimentare un modello di clustering, è possibile utilizzare i dati di esempio nella scheda Training della cartella di lavoro dei dati di esempio e compilare un modello di clustering utilizzando la [creazione guidata cluster &#40;componenti aggiuntivi Data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) e tutte le impostazioni predefinite.  
   
-###  <a name="BKMK_ClusterDiagram"></a> Diagramma dei cluster  
- Il **diagramma dei Cluster** scheda Visualizza tutti i cluster che si trovano in un modello di data mining. Di seguito è possibile visualizzare il numero di raggruppamenti differenti trovati nel set di dati e la posizione che occupano gli uni rispetto agli altri.  
+###  <a name="BKMK_ClusterDiagram"></a>Diagramma del cluster  
+ Nella scheda **diagramma dei cluster** vengono visualizzati tutti i cluster presenti in un modello di data mining. Di seguito è possibile visualizzare il numero di raggruppamenti differenti trovati nel set di dati e la posizione che occupano gli uni rispetto agli altri.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Esplorazione del diagramma dei cluster  
   
@@ -55,58 +55,58 @@ ms.locfileid: "66064675"
   
      Quando si trascina il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili tra i cluster. Ciò consente di concentrarsi sui gruppi correlati.  
   
-3.  Si noti che il **variabile ombreggiatura** controllo nell'angolo superiore destro delle **diagramma dei Cluster** finestra.  
+3.  Si noti il controllo **Variabile ombreggiatura** nell'angolo superiore destro della finestra **diagramma del cluster** .  
   
-     Per impostazione predefinita, viene impostata su **popolamento**. Ciò significa che i cluster più scuri dispongono di maggiore supporto.  
+     Per impostazione predefinita, è impostato su **population**. Ciò significa che i cluster più scuri dispongono di maggiore supporto.  
   
 4.  Posizionare il cursore del mouse su qualsiasi cluster.  
   
      Viene visualizzata una descrizione comando contenente la popolazione di tale cluster.  
   
-5.  A questo punto, fare clic sui **variabile ombreggiatura** elenco a discesa elenco e scegliere il **Age** variabile. Come in questo caso, viene visualizzato un elenco di valori nel **stato** casella di testo.  
+5.  A questo punto, fare clic sull'elenco a discesa **Variabile ombreggiatura** e scegliere la variabile **Age** . A tale scopo, nella casella di testo **stato** verrà visualizzato un elenco di valori.  
   
-     Nella colonna Age utilizzata come input per questo modello sono contenuti valori numerici continui, ma ai fini del clustering, tramite l'algoritmo vengono sempre discretizzati i numeri. Qui è possibile visualizzare i contenitori o gruppi che ha creato l'algoritmo, ad esempio "molto bassa (\<lt;=27)" e "molto elevato (> = 63)".  
+     Nella colonna Age utilizzata come input per questo modello sono contenuti valori numerici continui, ma ai fini del clustering, tramite l'algoritmo vengono sempre discretizzati i numeri. Qui è possibile visualizzare i contenitori o i gruppi creati dall'algoritmo, ad esempio "molto basso (\<= 27)" e "molto alto (>= 63)".  
   
-6.  Dal **lo stato** negli elenchi a discesa, selezionare **molto elevato** e vedere come cambia il diagramma.  
+6.  Dagli elenchi a discesa **stato** selezionare **molto alta** e vedere come cambia il diagramma.  
   
      Modificando la variabile ombreggiatura, è possibile vedere immediatamente quali cluster contengono più clienti di questa fascia di età di destinazione e quali cluster contengono meno clienti in questa fascia di età.  
   
-     ![Modificare il diagramma dei cluster per mostrare l'età](media/dm13-cluster-diagramshadebyage.gif "modificare il diagramma dei cluster per mostrare l'età")  
+     ![Modificare il diagramma dei cluster per mostrare l'età](media/dm13-cluster-diagramshadebyage.gif "Modificare il diagramma dei cluster per mostrare l'età")  
   
      Più scura è l'ombreggiatura, maggiore è la proporzione dell'attributo di destinazione e della distribuzione dei valori di tale cluster.  
   
-7.  Individuare il cluster ombreggiatura più scura quando la **variabile ombreggiatura** è impostata su Age > 65.  
+7.  Individuare il cluster con ombreggiatura più scura quando la **Variabile ombreggiatura** è impostata su Age >65.  
   
      Posizionare il mouse sul cluster.  
   
      Il valore visualizzato nella descrizione comando ora mostra la popolazione di clienti contenuti in questo cluster maggiori di 65 anni.  
   
-8.  Il cluster e scegliere **Rinomina Cluster**. Digitare un nuovo nome descrittivo, ad esempio **oltre 65**. Il nuovo nome viene salvato con il modello nel server e può essere utilizzato per l'identificazione del cluster nelle altre viste di clustering.  
+8.  Fare clic con il pulsante destro del mouse sul cluster e scegliere **Rinomina cluster**. Digitare un nuovo nome descrittivo, ad esempio **oltre 65**. Il nuovo nome viene salvato con il modello nel server e può essere utilizzato per l'identificazione del cluster nelle altre viste di clustering.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a> Profili cluster  
- Il **profili Cluster** scheda consente di confrontare la composizione di tutti i cluster in modo immediato. In questa scheda è possibile iniziare quando si sta acquisendo familiarità con il modello. Questa vista è anche utile successivamente, se, dopo aver esplorato un cluster specifico, si stabilisce che è necessario trovare quelli correlati.  
+###  <a name="BKMK_ClusterProfiles"></a>Profili cluster  
+ La scheda **Profili cluster** consente di confrontare a colpo d'occhio la composizione di tutti i cluster. In questa scheda è possibile iniziare quando si sta acquisendo familiarità con il modello. Questa vista è anche utile successivamente, se, dopo aver esplorato un cluster specifico, si stabilisce che è necessario trovare quelli correlati.  
   
- **Profili cluster** offre anche un'utile Panoramica del modo in cui i cluster sono diversi tra loro. Di conseguenza, potrebbe risultare comodo utilizzare questa vista per assegnare a ogni cluster un nome descrittivo.  
+ I **Profili cluster** offrono anche una panoramica di come i cluster sono diversi tra loro. Di conseguenza, potrebbe risultare comodo utilizzare questa vista per assegnare a ogni cluster un nome descrittivo.  
   
 ##### <a name="explore-the-cluster-profiles"></a>Esplorazione del profili dei cluster  
   
-1.  Fare clic sulla cella Occupation nella **stati** colonna, per visualizzare l'elenco di tutti i valori di Occupation.  
+1.  Fare clic sulla cella per le professioni, nella colonna **Stati** , per visualizzare l'elenco di tutti i valori per il lavoro.  
   
 2.  Ora spostare il cursore su Occupation nei profili dei cluster.  
   
      Nella descrizione comando viene visualizzata la distribuzione di occupazioni in quel cluster.  
   
-     ![Visualizzare i valori dettagliati nelle descrizioni comandi o nella legenda](media/dm13-cluster-profile-age-tooltip.gif "visualizzare i valori dettagliati nelle descrizioni comandi o nella legenda")  
+     ![Visualizzare i valori dettagliati nelle descrizioni comandi o nella legenda](media/dm13-cluster-profile-age-tooltip.gif "Visualizzare i valori dettagliati nelle descrizioni comandi o nella legenda")  
   
-     Si noti che, in alcuni cluster (ad esempio quello nell'immagine), l'elenco di occupazioni non sono completo e alcune occupazioni vengono sostituite con l'etichetta **altri**.  
+     Si noti che, in alcuni cluster, ad esempio quello nell'immagine, l'elenco delle occupazioni non è completo e alcune occupazioni vengono sostituite con l'etichetta, **other**.  
   
-     Ciò avviene per motivi strutturali poiché può essere difficile capire la differenza tra molte piccole barre in un istogramma. Per impostazione predefinita solo le barre di importanza più alta vengono mantenute e le barre rimanenti vengono raggruppate in un grigio **altri** bucket.  
+     Ciò avviene per motivi strutturali poiché può essere difficile capire la differenza tra molte piccole barre in un istogramma. Per impostazione predefinita vengono mantenute solo le barre di importanza più alta e le barre rimanenti vengono raggruppate in un **altro** bucket grigio.  
   
-     Per modificare il numero di barre visibili in qualsiasi istogramma, utilizzare l'opzione **barre istogramma**.  
+     Per modificare il numero di barre visibili in qualsiasi istogramma, usare l'opzione **Barre istogramma**.  
   
-3.  Si noti che il **età** colonna ha un aspetto diversa dagli altri. Fare clic sul rombo nel grafico utilizzato per rappresentare Age.  
+3.  Si noti che la colonna **Age** ha un aspetto diverso dagli altri. Fare clic sul rombo nel grafico utilizzato per rappresentare Age.  
   
      Nella colonna Age originalmente erano contenuti solo numeri continui. Per l'algoritmo di clustering sono richiesti valori discreti, pertanto vengono raggruppati i valori numerici nella colonna Age in un numero limitato di fasce di età, in base alla distribuzione di valori.  
   
@@ -114,56 +114,56 @@ ms.locfileid: "66064675"
   
      Questi grafici a rombi vengono visualizzati solo quando nei dati di origine si utilizzano valori numerici continui. Nei grafici a rombi vengono fornite alcune statistiche descrittive utili, inclusa la deviazione media e standard per tale valore in ogni cluster:  
   
-    -   La linea nel grafico a rombi rappresenta l'intervallo di valori per l'attributo. I valori vengono anche mostrati nel **stati** colonna a sinistra del **profili** grafico.  
+    -   La linea nel grafico a rombi rappresenta l'intervallo di valori per l'attributo. I valori vengono visualizzati anche nella colonna **Stati** a sinistra del grafico dei **profili** .  
   
     -   Il centro del rombo è posizionato in corrispondenza della media del nodo.  
   
     -   La larghezza del rombo rappresenta la varianza dell'attributo in corrispondenza di quel nodo. Pertanto, un rombo con spessore minore indica che il nodo può creare una stima più accurata.  
   
-5.  Per creare più spazio nel grafico, fare doppio clic su un cluster non è necessario visualizzare immediatamente e selezionare **Nascondi colonna**. Questo non viene eliminato dal modello; viene solo compressa temporaneamente la colonna.  
+5.  Per creare più spazio nel grafico, fare clic con il pulsante destro del mouse su un cluster che non è necessario visualizzare immediatamente e selezionare **Nascondi colonna**. Questa operazione non viene eliminata dal modello, ma la colonna viene compressa temporaneamente.  
   
-     Per visualizzare i cluster nascosti, è possibile fare clic e trascinare il bordo della colonna o selezionare il nome del cluster dall'elenco, **altri cluster**.  
+     Per visualizzare i cluster nascosti, è possibile fare clic e trascinare il bordo della colonna oppure selezionare il nome del cluster dall'elenco, **più cluster**.  
   
 6.  Scorrere verso il basso l'elenco di attributi fino a visualizzare Bike Buyer, quindi individuare il cluster con la percentuale più elevata di valori Sì.  
   
-     Fare doppio clic sull'intestazione di colonna per il cluster che si desidera rinominare, selezionare **Rinomina cluster**e il tipo **acquirenti di biciclette**.  
+     Fare clic con il pulsante destro del mouse sull'intestazione di colonna per il cluster che si desidera rinominare, selezionare **Rinomina cluster**e digitare **Bike Buyers**.  
   
      Il nuovo nome del cluster è persistente in tutte le viste e nel server, fino a quando non si rielabora il modello.  
   
-     ![Rinominare i cluster per semplificare l'utilizzo del grafico](media/dm13-cluster-rename.gif "rinominare i cluster per semplificare l'utilizzo del grafico")  
+     ![Rinominare i cluster per rendere il grafico più semplice da usare](media/dm13-cluster-rename.gif "Rinominare i cluster per rendere il grafico più semplice da usare")  
   
- **Suggerimenti**  
+ **Consigli**  
   
 -   Fare clic su un'intestazione di colonna per disporre gli attributi in ordine di importanza per il cluster.  
   
 -   Trascinare le colonne per riordinarle nel visualizzatore.  
   
--   Fare clic su qualsiasi cella nel grafico dei profili per visualizzare statistiche dettagliate nel **legenda Data Mining**.  
+-   Fare clic su una cella del grafico profili per visualizzare le statistiche dettagliate in **Legenda data mining**.  
   
--   Fare doppio clic su una cella qualsiasi e selezionare **colonne del modello di drill-through** per restituire i dati sottostanti per un nuovo foglio di lavoro di Excel.  
+-   Fare clic con il pulsante destro del mouse su una cella e selezionare **colonne modello drill-through** per restituire i dati sottostanti in un nuovo foglio di lavoro di Excel  
   
--   Fare clic sulla colonna del cluster sull'intestazione e seleziona **drill-through ai dati della struttura** per ottenere informazioni dettagliate sui membri del cluster che non sono state incluse nel modello.  
+-   Fare clic con il pulsante destro del mouse sull'intestazione di colonna del cluster e selezionare **drill-through per strutturare i dati** per ottenere informazioni dettagliate sui membri del cluster non inclusi nel modello.  
   
-     Ad esempio, se si siano analizzando i clienti, si potrebbe lasciare le informazioni di contatto nei dati sottostanti (la struttura di data mining) ma non includerlo nel modello, perché non è utile per l'analisi. Tuttavia, dopo che i clienti sono stati assegnati ai cluster, è possibile visualizzare i dati dettagliati tramite il drill-through.  
+     Se, ad esempio, si esegue la profilatura dei clienti, è possibile lasciare le informazioni di contatto nei dati sottostanti, ovvero la struttura di data mining, ma non includerle nel modello, perché non è utile per l'analisi. Tuttavia, dopo che i clienti sono stati assegnati ai cluster, è possibile visualizzare i dati dettagliati tramite il drill-through.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a> Caratteristiche cluster  
+###  <a name="BKMK_ClusterCharacteristics"></a>Caratteristiche del cluster  
  La vista Caratteristiche cluster consente di esplorare realmente un singolo cluster per trovare gli attributi che caratterizzano più fortemente questo gruppo di dati.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Esplorazione delle caratteristiche del cluster  
   
-1.  Selezionare il **oltre 65** cluster sostituendo il **Cluster** elenco.  
+1.  Selezionare il cluster **Over 65** dall'elenco **cluster** .  
   
      Dopo aver selezionato un cluster, è possibile visualizzare nel dettaglio le caratteristiche del cluster specifico.  
   
      Gli attributi contenuti nel cluster sono elencati nelle colonne **Variabili** , mentre lo stato di ogni attributo è elencato nella colonna **Valori** .  
   
-     Gli stati degli attributi sono elencati in ordine di importanza, accompagnato dalla relativa probabilità in questo cluster, rappresentato come una barra colorata nella **probabilità** colonna.  
+     Gli Stati degli attributi sono elencati in ordine di importanza, accompagnati dalla relativa probabilità in questo cluster, rappresentati come una barra colorata nella colonna **probabilità** .  
   
-     ![Caratteristiche di un modello di clustering](media/dm13-cluster-characteristics.gif "caratteristiche di un modello di clustering")  
+     ![Caratteristiche di un modello di clustering](media/dm13-cluster-characteristics.gif "Caratteristiche di un modello di clustering")  
   
-2.  Scegliere il **variabili** colonna per ordinare dall'attributo.  
+2.  Fare clic sulla colonna **variabili** per eseguire l'ordinamento in base all'attributo.  
   
      Modificando la variabile di ordinamento, è possibile vedere più facilmente come i valori per le variabili, ad esempio il reddito o la proprietà di un'automobile, vengono distribuiti nel gruppo.  
   
@@ -171,24 +171,24 @@ ms.locfileid: "66064675"
   
      Un nuovo foglio di lavoro viene aggiunto alla cartella di lavoro contenente le caratteristiche del cluster selezionato.  
   
-4.  Scegliere ora un cluster diverso nell'elenco **acquirenti di biciclette**.  
+4.  A questo punto, scegliere un cluster diverso dall'elenco **Bike Buyers**.  
   
 5.  Fare clic su **copia in Excel**.  
   
-     Si noti che il grafico delle caratteristiche del nuovo cluster viene aggiunto al relativo foglio di lavoro. È possibile spostarlo nello stesso foglio di lavoro di altro profilo per renderne più semplice per confrontarli, che verrà effettuato nel passaggio successivo.  
+     Si noti che il grafico delle caratteristiche del nuovo cluster viene aggiunto al relativo foglio di lavoro. È possibile spostarlo nello stesso foglio di un altro profilo per semplificarne il confronto, operazione che verrà eseguita nel passaggio successivo.  
   
- **Suggerimenti**  
+ **Consigli**  
   
--   Si noti che la caratteristica primaria del cliente nel cluster oltre 65 è che non acquista il prodotto. Se si desidera saperne il motivo, è possibile esplorare i cluster e confrontare i gruppi o si potrebbe creare un modello correlato utilizzando un algoritmo che sia in grado di esplorare cause e risultati, ad esempio un modello di albero delle decisioni o un modello Naïve Bayes.  
+-   Si noti che la caratteristica principale del cliente nel cluster over 65 è che non acquistano il prodotto. Se si desidera saperne il motivo, è possibile esplorare i cluster e confrontare i gruppi o si potrebbe creare un modello correlato utilizzando un algoritmo che sia in grado di esplorare cause e risultati, ad esempio un modello di albero delle decisioni o un modello Naïve Bayes.  
   
--   Se si desidera ottenere un elenco completo di attributi e probabilità per questo cluster (o tutti i cluster), è possibile creare una query. Per esempi di query sui modelli di clustering, vedere [Clustering Model Query Examples](data-mining/clustering-model-query-examples.md).  
+-   Se si desidera ottenere un elenco completo di attributi e probabilità per questo cluster (o tutti i cluster), è possibile creare una query. Per esempi di query sui modelli di clustering, vedere [esempi di query sul modello di clustering](data-mining/clustering-model-query-examples.md).  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a> Analisi discriminante tra cluster  
- Si utilizza il **analisi discriminante tra Cluster** pressione di tab per confrontare gli attributi tra due cluster o tra un cluster e tutti gli altri casi nel set di dati.  
+###  <a name="BKMK_ClusterDiscrimination"></a>Analisi discriminante cluster  
+ Utilizzare la scheda analisi **discriminante tra cluster** per confrontare gli attributi tra due cluster o tra un cluster e tutti gli altri case del set di dati.  
   
- Per evidenziare le funzionalità di questo visualizzatore, lo confronteremo con alle tabelle side-by-side di Excel che è stato creato sulla base di **caratteristiche Cluster** visualizzazione.  
+ Per evidenziare le funzionalità di questo visualizzatore, viene confrontato con le tabelle affiancate in Excel create in base alla visualizzazione delle **caratteristiche del cluster** .  
   
 ##### <a name="explore-cluster-discrimination"></a>Esplorazione dell'analisi discriminante del cluster  
   
@@ -200,28 +200,28 @@ ms.locfileid: "66064675"
   
      Il confronto dovrebbe essere simile a quello riportato nell'immagine seguente.  
   
-     ![confronto tra cluster in un modello](media/dm13-cluster-compareclusters.gif "confronto tra cluster in un modello")  
+     ![confronto dei cluster in un modello](media/dm13-cluster-compareclusters.gif "confronto dei cluster in un modello")  
   
-     Si noti che, dietro le quinte, il **analisi discriminante tra Cluster** Visualizzatore inviate query complesse al server di data mining, per estrarre gli attributi più importanti nella distinzione tra i due gruppi, rendendo più semplice da confrontare due set di clienti.  
+     Si noti che, dietro le quinte, il Visualizzatore analisi **discriminante del cluster** invia query complesse al server data mining per estrarre gli attributi più importanti nella distinzione tra i due gruppi, semplificando il confronto di due set di clienti.  
   
-2.  Fare clic su uno del **predilige...**  colonne.  
+2.  Fare clic su una delle colonne **predilige...** .  
   
      Nella barra a destra dell'elenco di valori e di attributi vengono visualizzati quali valori e funzionalità sono più importanti come caratteristica del cluster selezionato.  
   
 3.  Confrontare quindi gli elenchi in Excel.  
   
-     ![Grafico della rete di dipendenze per un modello di associazione](media/dm13-comparing-profiles-in-excel.gif "grafico della rete di dipendenze per un modello di associazione")  
+     ![Grafico della rete di dipendenze per un modello di associazione](media/dm13-comparing-profiles-in-excel.gif "Grafico della rete di dipendenze per un modello di associazione")  
   
      Poiché le statistiche sottostanti utilizzate per la compilazione dell'immagine nel visualizzatore vengono salvate in Excel come tabelle, è possibile filtrare, ordinare e visualizzare i valori effettivi di probabilità.  
   
-     Oltre a utilizzare Excel, è consigliabile provare il visualizzatore cluster per Visio, che consente non solo di visualizzare i punti dati ma anche di modificare e migliorare ampiamente il grafico. Per altre informazioni, vedere [descrizione dettagliata del diagramma Cluster &#40;componenti aggiuntivi Data Mining&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
+     Oltre a utilizzare Excel, è consigliabile provare il visualizzatore cluster per Visio, che consente non solo di visualizzare i punti dati ma anche di modificare e migliorare ampiamente il grafico. Per ulteriori informazioni, vedere la [procedura dettagliata relativa al diagramma dei Cluster &#40;componenti aggiuntivi Data Mining&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Suggerimenti**  
+ **Consigli**  
   
- Dopo aver ottenuto alcune informazioni sui gruppi di clienti, provare a usare il [Scenario di simulazione &#40;strumenti di analisi tabelle per Excel&#41; ](what-if-scenario-table-analysis-tools-for-excel.md) oppure [dello Scenario ricerca obiettivo &#40;strumenti di analisi tabelle per Excel&#41; ](goal-seek-scenario-table-analysis-tools-for-excel.md) strumenti per esplorare i fattori nel modello che potrebbero essere modificate per influire sul risultato.  
+ Una volta ottenute informazioni dettagliate sui gruppi di clienti, provare a utilizzare lo [scenario di simulazione &#40;strumenti di analisi tabelle per excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) o [uno scenario di ricerca obiettivo &#40;strumenti di analisi tabelle per Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) strumenti, per esplorare i fattori del modello che potrebbero essere modificati per influire sul risultato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
- [Creazione guidata del cluster &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
+ [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
+ [Creazione guidata cluster &#40;componenti aggiuntivi Data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
   

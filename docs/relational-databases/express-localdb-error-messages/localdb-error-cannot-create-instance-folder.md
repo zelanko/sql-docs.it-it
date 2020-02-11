@@ -10,13 +10,13 @@ ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 365db92740bb7d6f0915201d6d3680a68d7274ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995992"
 ---
-# <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Dettagli  
@@ -27,7 +27,7 @@ ms.locfileid: "67995992"
 |ID evento|256|  
 |Origine evento|Runtime database locale di SQL Server 12.0|  
 |Componente|API di Runtime database locale|  
-|Testo del messaggio|Impossibile creare la cartella per l'istanza di Database locale a: SQL Server locale DB\Instances %%LOCALAPPDATA%%\Microsoft\Microsoft\\< nome istanza\>.|  
+|Testo del messaggio|Impossibile creare la cartella per l'istanza del database locale in:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server\\ Local DB\Instances<\>nome istanza.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Impossibile creare una cartella in %profiloutente%.  

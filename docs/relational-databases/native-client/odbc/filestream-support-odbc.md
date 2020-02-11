@@ -14,18 +14,18 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761194"
 ---
 # <a name="filestream-support-odbc"></a>Supporto FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la caratteristica FILESTREAM avanzata. Per ulteriori informazioni su questa funzionalità, vedere [supporto FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Per un esempio che illustra il supporto di ODB per FILESTREAM, vedere [inviare e ricevere dati in modo &#40;incrementale con&#41;ODBC FILESTREAM](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la caratteristica FILESTREAM avanzata. Per ulteriori informazioni su questa funzionalità, vedere [supporto FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Per un esempio che illustra il supporto di ODB per FILESTREAM, vedere [inviare e ricevere dati in modo incrementale con filestream &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Per inviare e ricevere valori **varbinary (max)** maggiori di 2 GB, un'applicazione deve associare parametri usando SQLBindParameter con *ColumnSize* impostato su **SQL_SS_LENGTH_UNLIMITED**e impostare il contenuto di *StrLen_or_IndPtr* su  **SQL_DATA_AT_EXEC** prima di SQLExecDirect o SQLExecute.  
+ Per inviare e ricevere valori **varbinary (max)** maggiori di 2 GB, un'applicazione deve associare parametri usando SQLBindParameter con *ColumnSize* impostato su **SQL_SS_LENGTH_UNLIMITED**e impostare il contenuto di *StrLen_or_IndPtr* su **SQL_DATA_AT_EXEC** prima di SQLExecDirect o SQLExecute.  
   
  Come per qualsiasi parametro data-at-execution, i dati verranno forniti con SQLParamData e SQLPutData.  
   
@@ -101,7 +101,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Inserimento  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

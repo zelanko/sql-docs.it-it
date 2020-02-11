@@ -1,5 +1,5 @@
 ---
-title: Altre architetture di Driver | Microsoft Docs
+title: Altre architetture di driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,36 +17,36 @@ ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086008"
 ---
 # <a name="other-driver-architectures"></a>Altre architetture di driver
-Alcuni driver ODBC non sono strettamente conformi per l'architettura descritta in precedenza. È possibile che i driver di eseguono attività diverse da quelle di un driver ODBC tradizionali o non sono driver nel senso normale.  
+Alcuni driver ODBC non sono strettamente conformi all'architettura descritta in precedenza. Questo potrebbe essere dovuto al fatto che i driver eseguono compiti diversi da quelli di un driver ODBC tradizionale o non sono driver in senso normale.  
   
 ## <a name="driver-as-a-middle-component"></a>Driver come componente centrale  
- Il driver ODBC può trovarsi tra gestione Driver e uno o più driver ODBC. Quando il driver al centro è in grado di lavorare con più origini dati, agisce come un dispatcher di chiamate ODBC o tradotta in modo appropriato le chiamate da altri moduli che effettivamente accedere alle origini dati. In questa architettura, il driver nella parte centrale richiede alcuni del ruolo di una gestione Driver.  
+ Il driver ODBC può risiedere tra Gestione driver e uno o più driver ODBC. Quando il driver al centro è in grado di lavorare con più origini dati, funge da dispatcher di chiamate ODBC (o chiamate tradotte in modo appropriato) ad altri moduli che accedono effettivamente alle origini dati. In questa architettura, il driver in mezzo assume parte del ruolo di gestione driver.  
   
- Un altro esempio di questo tipo di driver è un programma spy per ODBC, che intercetta e copia le funzioni ODBC inviate tra gestione Driver e il driver. Questo livello è utilizzabile per emulare un driver o un'applicazione. Per la gestione di Driver, il livello viene visualizzato sia il driver; al driver, il livello viene visualizzato da Gestione Driver.  
+ Un altro esempio di questo tipo di driver è un programma di spionaggio per ODBC, che intercetta e copia le funzioni ODBC inviate tra Gestione driver e il driver. Questo livello può essere usato per emulare un driver o un'applicazione. Per Gestione driver, il livello sembra essere il driver; al driver, il livello sembra essere gestione driver.  
   
-## <a name="heterogeneous-join-engines"></a>Motori di Join eterogeneo  
- Alcuni driver ODBC vengono compilate al momento di un motore di query per l'esecuzione di join eterogeneo. In un'architettura di un motore di join eterogeneo (vedere la figura seguente), il driver viene visualizzato per l'applicazione come un driver ma viene visualizzato a un'altra istanza di gestione Driver come un'applicazione. Questo driver elabora un join eterogeneo dall'applicazione chiamando nei driver in istruzioni SQL separate per ogni database unito in join.  
+## <a name="heterogeneous-join-engines"></a>Motori Join eterogenei  
+ Alcuni driver ODBC sono basati su un motore di query per l'esecuzione di Join eterogenei. In un'architettura di un motore di join eterogeneo (vedere la figura seguente), il driver viene visualizzato nell'applicazione come driver, ma viene visualizzato in un'altra istanza di gestione driver come applicazione. Questo driver elabora un join eterogeneo dall'applicazione chiamando istruzioni SQL separate nei driver per ogni database Unito in join.  
   
- ![Architettura di un motore di join eterogeneo](../../odbc/reference/media/fig3-4.gif "fig3-4")  
+ ![Architettura di un motore di join eterogeneo](../../odbc/reference/media/fig3-4.gif "Fig3-4")  
   
- Questa architettura offre un'interfaccia comune per l'applicazione accedere ai dati da database diversi. È possibile usare un modo comune per recuperare i metadati, ad esempio informazioni sulle colonne speciali (identificatori di riga), e può chiamare funzioni comuni di catalogo per recuperare informazioni del dizionario dei dati. Chiamando la funzione ODBC **SQLStatistics**, ad esempio, l'applicazione può recuperare informazioni sugli indici nelle tabelle di essere unito in join, anche se le tabelle si trovano in due distinti database. Query processor non dovrà preoccuparsi di come i database di archiviano i metadati.  
+ Questa architettura fornisce un'interfaccia comune per l'applicazione per accedere ai dati da database diversi. Può utilizzare un modo comune per recuperare i metadati, ad esempio le informazioni sulle colonne speciali (identificatori di riga), ed è possibile chiamare funzioni comuni del catalogo per recuperare informazioni sul dizionario dei dati. Chiamando la funzione ODBC **SQLStatistics**, ad esempio, l'applicazione può recuperare informazioni sugli indici nelle tabelle da unire in join, anche se le tabelle si trovano in due database distinti. Query Processor non deve preoccuparsi del modo in cui i metadati vengono archiviati nei database.  
   
- L'applicazione ha anche accesso standard per i tipi di dati. ODBC definisce tipi di dati SQL comuni che i tipi di dati specifici del DBMS vengono eseguito il mapping a. Un'applicazione può chiamare **SQLGetTypeInfo** per recuperare informazioni sui tipi di dati in database diversi.  
+ L'applicazione dispone inoltre dell'accesso standard ai tipi di dati di. ODBC definisce i tipi di dati SQL comuni a cui viene eseguito il mapping dei tipi di dati specifici di DBMS. Un'applicazione può chiamare **SQLGetTypeInfo** per recuperare informazioni sui tipi di dati in database diversi.  
   
- Quando l'applicazione genera un'istruzione di join eterogeneo, query processor in questa architettura analizza l'istruzione SQL e quindi genera istruzioni SQL separate per ogni database da unire. Grazie ai metadati di tutti i driver, query processor di determinare il join più efficace e intelligente. Ad esempio, se l'istruzione join due tabelle in un database con una tabella in un altro database, query processor può aggiungere le due tabelle in un database prima di aggiungere il risultato con la tabella di altro database.  
+ Quando l'applicazione genera un'istruzione join eterogenea, query processor in questa architettura analizza l'istruzione SQL e quindi genera istruzioni SQL separate per ogni database da unire in join. Utilizzando i metadati relativi a ogni driver, query processor può determinare il join più efficiente e intelligente. Se, ad esempio, l'istruzione crea un join tra due tabelle in un database con una tabella in un altro database, query processor può unire le due tabelle in un database prima di unire il risultato con la tabella dell'altro database.  
   
-## <a name="odbc-on-the-server"></a>ODBC sul Server  
- Driver ODBC possono essere installati in un server in modo che possono essere usati dalle applicazioni in uno qualsiasi di una serie di computer client. In questa architettura (vedere la figura seguente), una gestione Driver e un singolo driver ODBC vengono installati in ogni client e un altro gestore di Driver e una serie di driver ODBC vengono installati nel server. In questo modo ogni accesso client a una varietà di driver utilizzate e gestite nel server.  
+## <a name="odbc-on-the-server"></a>ODBC nel server  
+ I driver ODBC possono essere installati in un server in modo che possano essere utilizzati dalle applicazioni su una serie di computer client. In questa architettura (vedere la figura seguente), una gestione driver e un singolo driver ODBC sono installati in ogni client e nel server sono installati un'altra gestione driver e una serie di driver ODBC. Questo consente a ogni client di accedere a un'ampia gamma di driver usati e gestiti nel server.  
   
- ![Architettura del driver ODBC in un server](../../odbc/reference/media/fig3-5.gif "FIG3-5")  
+ ![Architettura di driver ODBC in un server](../../odbc/reference/media/fig3-5.gif "FIG3-5")  
   
- Vantaggio di questa architettura consiste nella configurazione e manutenzione efficiente del software. I driver devono essere aggiornati solo in un'unica posizione: nel server. Origini dati con origini dati di sistema, è possibile definire nel server per l'utilizzo per tutti i client. Non è necessario definire le origini dati nel client. Pool di connessioni può essere utilizzato per semplificare il processo mediante il quale i client si connettono a origini dati.  
+ Un vantaggio di questa architettura è la manutenzione e la configurazione efficienti del software. I driver devono essere aggiornati solo in un'unica posizione: sul server. Utilizzando origini dati di sistema, è possibile definire le origini dati nel server per l'utilizzo da parte di tutti i client. Non è necessario definire le origini dati nel client. Il pool di connessioni può essere usato per semplificare il processo mediante il quale i client si connettono alle origini dati.  
   
- Il driver del client è in genere un driver di dimensioni molto ridotto che trasferisce la chiamata di gestione Driver al server. Il footprint può essere significativamente inferiore ai driver ODBC perfettamente funzionanti sul server. In questa architettura, è possibile liberare risorse client se il server dispone di potenza di calcolo. Inoltre, l'efficienza e sicurezza dell'intero sistema possono essere migliorati con installazione di server di backup e l'esecuzione di bilanciamento del carico per ottimizzare l'uso di server.
+ Il driver del client è in genere un driver molto piccolo che trasferisce la chiamata di gestione driver al server. Il footprint può essere significativamente inferiore rispetto ai driver ODBC completamente funzionali nel server. In questa architettura, le risorse client possono essere liberate se il server ha una maggiore potenza di calcolo. Inoltre, l'efficienza e la sicurezza dell'intero sistema possono essere migliorate installando i server di backup ed eseguendo il bilanciamento del carico per ottimizzare l'uso del server.

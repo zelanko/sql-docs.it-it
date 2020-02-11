@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211973"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
@@ -39,7 +39,7 @@ ms.locfileid: "68211973"
   
 -   Dopo che l'amministratore ha apportato correzioni al registro di sicurezza, il comportamento relativo alla registrazione tornerà normale.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68211973"
   
      [Sicurezza](#Security)  
   
--   **Per registrare eventi di controllo di SQL Server nel registro di sicurezza:**  
+-   **Per scrivere SQL Server eventi di controllo nel registro di sicurezza:**  
   
      [Configurare l'impostazione di controllo dell'accesso agli oggetti in Windows mediante auditpol](#auditpolAccess)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "68211973"
 7.  Chiudere lo strumento Criteri di sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)  
   
   

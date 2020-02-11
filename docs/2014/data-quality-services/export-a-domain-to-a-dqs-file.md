@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484347"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Esportazione di un dominio in un file DQS
@@ -36,10 +36,10 @@ ms.locfileid: "65484347"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per esportare un dominio in un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Export"></a> Export a domain to a .dqs file  
+##  <a name="Export"></a>Esportare un dominio in un file DQS  
  È possibile esportare da qualsiasi pagina Gestione dominio. Il comando di esportazione è disponibile sia da un controllo nell'interfaccia utente che da un comando nel menu di scelta rapida del riquadro Elenco domini.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire una Knowledge Base nell'attività Gestione dominio.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65484347"
   
 6.  Nella finestra di dialogo **Esporta dominio** verificare che la riga dello stato indichi che l'esportazione è stata completata. Fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'esportazione di un dominio in un file con estensione dqs  
+##  <a name="FollowUp"></a>Completamento: dopo l'esportazione di un dominio in un file DQS  
  Dopo avere esportato un dominio in un file DQS, è possibile importare il dominio in un'altra Knowledge Base.  
   
   

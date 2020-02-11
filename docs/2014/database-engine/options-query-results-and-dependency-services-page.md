@@ -1,5 +1,5 @@
 ---
-title: Opzioni (risultati delle Query e pagina Servizi di dipendenza) | Microsoft Docs
+title: Opzioni (pagina risultati query e servizi di dipendenza) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,34 +13,34 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481198"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opzioni (Risultati delle query e pagina Servizi di dipendenza)
-  Utilizzare questa pagina per specificare il server a cui connettersi per utilizzare Servizi di dipendenza. Servizi di dipendenza consente di estrarre informazioni sulle dipendenze tra oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archiviati in server diversi. Per visualizzare le dipendenze tra oggetti utilizzare il **dipendenze tra gli oggetti** nella finestra di dialogo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Utilizzare questa pagina per specificare il server a cui connettersi per utilizzare Servizi di dipendenza. Servizi di dipendenza consente di estrarre informazioni sulle dipendenze tra oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archiviati in server diversi. Per visualizzare le dipendenze degli oggetti, utilizzare la finestra di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]dialogo **Dipendenze oggetti** in.  
   
  **Per saperne di più**  
   
-1.  [Aprire la finestra di dialogo Opzioni (pagina risultati Query/dipendenza Services)](#open_dialog)  
+1.  [Aprire la finestra di dialogo Opzioni (pagina Risultati query/Servizi di dipendenza)](#open_dialog)  
   
 2.  [Configurare le opzioni](#options)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Opzioni (pagina risultati Query/dipendenza Services)  
+##  <a name="open_dialog"></a>Aprire la finestra di dialogo Opzioni (pagina risultati query/servizi di dipendenza)  
   
-1.  Nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], fare clic su **opzioni** sul **strumenti** menu.  
+1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]fare clic su **Opzioni** nel menu **strumenti** .  
   
 2.  Espandere **Risultati query** e fare clic su **Servizi di dipendenza**.  
   
 ##  <a name="options"></a> Configurare le opzioni  
   
 ### <a name="options"></a>Opzioni  
- **Server di servizi di dipendenza**  
+ **Server Servizi di dipendenza**  
  Consente di specificare il server in cui è installato Servizi di dipendenza.  
   
- **Autenticazione**  
+ **autenticazione**  
  Selezionare l'autenticazione di Windows per accedere utilizzando un account utente di Microsoft Windows oppure selezionare l'autenticazione di SQL Server.  
   
  Quando un utente si connette con un nome di account di accesso e una password da una connessione non trusted, SQL Server esegue l'autenticazione controllando se è stato impostato un account di accesso di SQL Server e se la password specificata corrisponde a quella registrata in precedenza. Se SQL Server non è in grado di trovare un account di accesso, l'autenticazione non riesce e viene visualizzato un messaggio di errore.  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905995"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
@@ -31,13 +31,13 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  Espressione MDX (Multidimensional Expression) valida che in genere restituisce le coordinate delle celle di un membro o di una tupla.  
   
-## <a name="remarks"></a>Note  
- Il **IsEmpty** funzione restituisce **true** se l'espressione valutata corrisponde un valore di cella vuota. In caso contrario, questa funzione restituisce **false**.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **IsEmpty** restituisce **true** se l'espressione valutata è un valore di cella vuota. In caso contrario, la funzione restituisce **false**.  
   
 > [!NOTE]  
 >  La proprietà predefinita di un membro è costituita dal valore del membro.  
   
- Il **IsEmpty** funzione è l'unico modo per verificare in modo affidabile per una cella vuota, perché il valore di cella vuota ha un significato speciale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ La funzione **IsEmpty** è l'unico modo per verificare in modo affidabile una cella vuota, perché il valore di cella vuota ha un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]significato speciale in.  
   
 > [!IMPORTANT]  
 >  Se la valutazione dell'espressione valore restituisce un errore, la funzione restituirà **false**. Un'espressione valore può restituire un errore, ad esempio, se in un riferimento alle proprietà viene fatto riferimento a una proprietà non valida o inesistente.  
@@ -58,7 +58,7 @@ IsEmpty(Value_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di valori vuoti](../mdx/working-with-empty-values.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilizzo di valori vuoti](../mdx/working-with-empty-values.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

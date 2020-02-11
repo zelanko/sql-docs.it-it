@@ -5,22 +5,37 @@ description: Informazioni sui cluster Big Data di SQL Server che vengono eseguit
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706665"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720936"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 A partire da [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] consentono di distribuire cluster scalabili di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. Questi componenti vengono eseguiti in modo affiancato per permettere la lettura, la scrittura e l'elaborazione di Big Data da Transact-SQL o Spark, in modo da combinare e analizzare facilmente i dati relazionali di alto valore con volumi elevati di Big Data.
+
+In [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] vengono introdotti i cluster Big Data di SQL Server.
+
+Usare i cluster Big Data di SQL Server per:
+
+- [Distribuire cluster scalabili](../big-data-cluster/deploy-get-started.md) di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. 
+- Leggere, scrivere ed elaborare Big Data da Transact-SQL o Spark.
+- Combinare e analizzare con facilità dati relazionali di alto valore con volumi elevati di Big Data.
+- Eseguire query su origini dati esterne.
+- Archiviare Big Data in HDFS gestito da SQL Server.
+- Eseguire query sui dati da più origini dati esterne tramite il cluster.
+- Usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi.
+- [Distribuire ed eseguire applicazioni](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualizzare i dati con [PolyBase](../relational-databases/polybase/polybase-guide.md). Eseguire query sui dati da origini dati esterne SQL Server, Oracle, Teradata, MongoDB e ODBC con tabelle esterne.
+- Fornire disponibilità elevata per l'istanza master di SQL Server e tutti i database tramite una tecnologia basata su gruppi di disponibilità Always On.
 
 Per altre informazioni sulle nuove funzionalità e sui problemi noti per l'ultima versione, vedere le [note sulla versione](release-notes-big-data-cluster.md).
 

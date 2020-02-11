@@ -1,5 +1,5 @@
 ---
-title: "Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master | Microsoft Docs"
+title: "Attività 6: verificare che l'attributo basato su dominio venga creato utilizzando Gestione dati master | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488956"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
@@ -26,9 +26,9 @@ ms.locfileid: "65488956"
   
 3.  Assicurarsi che il modello **Suppliers** sia selezionato e fare clic su **Esplora risorse**. Se **Esplora risorse** è già aperto è possibile aggiornare la pagina.  
   
-4.  Posizionare il mouse sopra **entità** nella barra dei menu e si noti che ora sono presenti due entità: **Supplier** e **stato**.  
+4.  Passando il puntatore su **Entità** nella barra dei menu, si noti che ora sono presenti due entità: **Supplier** e **State**.  
   
-     ![Menu entità con stato e fornitore](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu entità con stato e fornitore")  
+     ![Menu Entità con Stato e fornitore](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu Entità con Stato e fornitore")  
   
 5.  Fare clic su **State** se l'entità non è già aperta.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "65488956"
   
 11. A questo punto si noti che un valore per il campo **Stato** può essere modificato nel riquadro **Dettagli** tramite l'elenco a discesa. È anche possibile osservare che, nell'elenco a sinistra e nell'elenco a discesa nel riquadro **Dettagli**, viene prima visualizzato il codice e poi il nome tra parentesi graffe. È possibile modificare anche qualsiasi altro valore nel riquadro **Dettagli**.  
   
-     ![Stato attributo con codici e nomi aggiornati](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "stato attributo con codici e nomi aggiornati")  
+     ![Attributo stato con codici e nomi aggiornati](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attributo stato con codici e nomi aggiornati")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati Master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

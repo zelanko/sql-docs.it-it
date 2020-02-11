@@ -1,23 +1,24 @@
 ---
-title: File di unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: File di unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110665"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256330"
 ---
 # <a name="sql-server-unit-test-files"></a>File di unit test di SQL Server
+
 Analogamente agli unit test per il codice gestito, gli unit test di SQL Server si trovano nei progetti di test. È possibile visualizzare gli elementi che costituiscono uno unit test di SQL Server nella gerarchia di un progetto di test in **Esplora soluzioni**.  
   
 Uno unit test di SQL Server è costituito da più elementi contenuti in diversi file. Nella tabella seguente vengono descritti i file che interagiscono per formare uno unit test di SQL Server.  

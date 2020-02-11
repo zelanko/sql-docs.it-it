@@ -11,10 +11,10 @@ ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728221"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Modificare ed eliminare un indice (Master Data Services)
@@ -26,15 +26,15 @@ ms.locfileid: "73728221"
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Per modificare un indice**  
   
 1.  In Gestione dati master fare clic su **Amministrazione sistema**.  
   
-2.  Nella pagina **Gestisci modelli** selezionare un modello dalla griglia e quindi fare clic su **Entità**.  
+2.  Nella pagina **Gestisci modello** selezionare un modello dalla griglia e quindi fare clic su **entità**.  
   
 3.  Dalla griglia della pagina **Gestisci entità** selezionare l'entità che contiene l'indice da modificare.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73728221"
   
  **Per eliminare un indice**  
   
-1.  Nella pagina **Gestisci modelli** selezionare un modello dalla griglia, quindi fare clic su **Entità**.  
+1.  Nella pagina **Gestisci modello** selezionare un modello dalla griglia e quindi fare clic su **entità**.  
   
 2.  Dalla griglia della pagina **Gestisci entità** selezionare l'entità che contiene l'indice da eliminare.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "73728221"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un indice &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
- [Indice personalizzato &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
+ [Master Data Services &#40;di indice personalizzato&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

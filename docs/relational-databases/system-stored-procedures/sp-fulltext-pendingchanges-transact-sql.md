@@ -19,18 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124221"
 ---
-# <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
+# <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce modifiche non ancora elaborate, ad esempio inserimenti, aggiornamenti ed eliminazioni in sospeso, per una tabella specificata che utilizza il rilevamento delle modifiche.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,25 +47,25 @@ sp_fulltext_pendingchanges table_id
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Key**|*|Valore di chiave full-text dalla tabella specificata.|  
+|**Chiave**|*|Valore di chiave full-text dalla tabella specificata.|  
 |**DocId**|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
 |**Status**|**int**|0 = La riga verrà rimossa dall'indice full-text.<br /><br /> 1 = Alla riga verrà applicata l'indicizzazione full-text.<br /><br /> 2 = La riga è aggiornata.<br /><br /> -1 = La riga è in uno stato di transizione (elaborazione batch senza commit) o in uno stato di errore.|  
 |**DocState**|**tinyint**|Dump non elaborato della colonna relativa allo stato del mapping dell'identificatore interno del documento (DocId).|  
   
- <sup>* Il tipo di dati per la chiave è lo stesso come il tipo di dati della colonna chiave full-text nella tabella di base.</sup>  
+ <sup>* Il tipo di dati per la colonna Key corrisponde al tipo di dati della colonna chiave full-text nella tabella di base.</sup>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non ci sono modifiche da elaborare, viene restituito un set di righe vuoto.  
   
- Query di ricerca full-Text non restituiscono righe con un **stato** valore pari a 0. Questo perché la riga è stata eliminata dalla tabella di base ed è in attesa di essere eliminata dall'indice full-text.  
+ Le query di ricerca full-text non restituiscono righe con un valore di **stato** 0. Questo perché la riga è stata eliminata dalla tabella di base ed è in attesa di essere eliminata dall'indice full-text.  
   
  Per verificare il numero di modifiche in attesa per una determinata tabella, utilizzare la proprietà **TableFullTextPendingChanges** della funzione OBJECTPROPERTYEX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca full-Text e semantica Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [Stored procedure per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

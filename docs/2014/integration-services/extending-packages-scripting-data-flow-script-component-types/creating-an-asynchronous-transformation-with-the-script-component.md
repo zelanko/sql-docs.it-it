@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768617"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione asincrona con il componente script
@@ -70,7 +70,7 @@ ms.locfileid: "62768617"
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se si vuole usare valori di variabili esistenti nello script, è possibile aggiungerli nei campi delle proprietà ReadOnlyVariables e ReadWriteVariables della pagina **Script** di **Editor trasformazione Script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sui puntini di sospensione ( **...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nella **Seleziona variabili** nella finestra di dialogo.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle `ReadOnlyVariables` proprietà e `ReadWriteVariables` e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .  
   
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -82,11 +82,11 @@ ms.locfileid: "62768617"
  Per importanti informazioni applicabili a tutti i tipi di componenti creati tramite il componente script, vedere [Codifica e debug del componente script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Informazioni sul codice generato automaticamente  
- Quando si apre l'IDE di VSTA dopo la creazione e configurazione di un componente di trasformazione, il modificabile `ScriptMain` classe viene visualizzata nell'editor del codice con stub per il ProcessInputRow e CreateNewOutputRows metodi. La classe ScriptMain è quella in cui si scriverà il codice personalizzato, mentre ProcessInputRow è il metodo più importante in un componente di trasformazione. Il metodo `CreateNewOutputRows` viene in genere utilizzato in un componente di origine, che è simile a una trasformazione asincrona in quanto entrambi i componenti devono creare le rispettive righe di output.  
+ Quando si apre l'IDE di VSTA dopo la creazione e la configurazione di un componente `ScriptMain` di trasformazione, la classe modificabile viene visualizzata nell'editor di codice con stub per i metodi ProcessInputRow e CreateNewOutputRows. La classe ScriptMain è quella in cui si scriverà il codice personalizzato, mentre ProcessInputRow è il metodo più importante in un componente di trasformazione. Il metodo `CreateNewOutputRows` viene in genere utilizzato in un componente di origine, che è simile a una trasformazione asincrona in quanto entrambi i componenti devono creare le rispettive righe di output.  
   
- Se si apre VSTA **Esplora progetti** finestra, è possibile vedere che il componente Script ha generato anche sola lettura `BufferWrapper` e `ComponentWrapper` gli elementi del progetto. La classe ScriptMain eredita dalla classe UserComponent il `ComponentWrapper` elemento del progetto.  
+ Se si apre la finestra **Esplora progetti** di VSTA, è possibile osservare che il componente script ha generato anche gli elementi `BufferWrapper` di `ComponentWrapper` progetto e di sola lettura. La classe ScriptMain eredita dalla classe UserComponent nell'elemento di `ComponentWrapper` progetto.  
   
- In fase di esecuzione, il motore flusso di dati chiama il metodo PrimeOutput `UserComponent` classe, che esegue l'override di <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> metodo del <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe padre. Il metodo PrimeOutput chiama a sua volta il metodo CreateNewOutputRows.  
+ In fase di esecuzione, il motore flusso di dati chiama il metodo PrimeOutput `UserComponent` nella classe, che esegue <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> l'override del <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> metodo della classe padre. Il metodo PrimeOutput chiama a sua volta il metodo CreateNewOutputRows.  
   
  In fase di esecuzione il motore flusso di dati chiama il metodo ProcessInput nella classe UserComponent, che esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> della classe padre <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A sua volta il metodo ProcessInput esegue il ciclo delle righe nel buffer di input e chiama il metodo ProcessInputRow una volta per ogni riga.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62768617"
   
  In una trasformazione asincrona è possibile usare il metodo AddRow per aggiungere righe all'output, se necessario, dall'interno dei metodi ProcessInputRow o ProcessInput. Non è necessario usare il metodo CreateNewOutputRows. Se si scrive una singola riga di risultati, ad esempio i risultati di un'aggregazione, in un determinato output, è possibile creare prima la riga di output usando il metodo CreateNewOutputRows e inserire i valori in seguito dopo l'elaborazione di tutte le righe di input. Tuttavia non è utile creare più righe nel metodo CreateNewOutputRows, perché il componente script consente di usare solo la riga corrente in un input o in un output. Il metodo CreateNewOutputRows è più importante in un componente di origine, in cui non sono presenti righe di input da elaborare.  
   
- È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Ad esempio, uno degli esempi di codice in questo argomento esegue l'override di ProcessInput per contare il numero di indirizzi in una città specifica mentre ProcessInputRow esegue tramite righe`.` l'esempio scrive il valore di riepilogo nel secondo output dopo che tutte le righe sono stati elaborato. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
+ È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Uno degli esempi di codice in questo argomento, ad esempio, esegue l'override di ProcessInput per contare il numero di indirizzi in una determinata città perché`.` ProcessInputRow scorre le righe. l'esempio scrive il valore di riepilogo nel secondo output dopo l'elaborazione di tutte le righe. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
   
  A seconda delle esigenze è anche possibile creare script nei metodi PreExecute e PostExecute, disponibili nella classe ScriptMain, per eseguire l'elaborazione preliminare o finale.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62768617"
  In questo esempio è illustrato il codice personalizzato necessario nella classe ScriptMain per creare un componente di trasformazione asincrono.  
   
 > [!NOTE]  
->  Gli esempi usano la tabella **Person.Address** del database di esempio **AdventureWorks** e passano la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar(30)City**, attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
+>  In questi esempi viene utilizzata la tabella **Person. Address** del database di esempio **AdventureWorks** e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.  
   
  In questo esempio viene illustrato un componente di trasformazione asincrono con due output. Questa trasformazione passa le colonne **AddressID** e **City** a un output mentre conta il numero di indirizzi di una specifica città (Redmond, Washington, U.S.A.), quindi restituisce il valore risultante a un secondo output.  
   
@@ -229,7 +229,7 @@ public class ScriptMain:
   
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md)   

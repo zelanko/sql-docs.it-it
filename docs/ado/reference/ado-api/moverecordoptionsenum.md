@@ -16,24 +16,24 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932042"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-Specifica il comportamento dei [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) (metodo).  
+Specifica il comportamento del metodo [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) dell'oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) .  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|Valore predefinito. Esegue l'operazione di spostamento predefinito: L'operazione ha esito negativo se il file di destinazione o la directory esiste già e l'operazione Aggiorna i collegamenti ipertestuali.|  
-|**adMoveOverWrite**|1|Sovrascrive il file di destinazione o la directory, anche se esiste già.|  
-|**adMoveDontUpdateLinks**|2|Modifica il comportamento predefinito della **MoveRecord** metodo aggiornando non collegamenti ipertestuali dell'origine **Record**. Il comportamento predefinito dipende dalle funzionalità del provider. Operazione di spostamento aggiornamenti collegamenti se il provider è in grado di supportare. Se il provider non è possibile correggere collegamenti o se non viene specificato questo valore, quindi lo spostamento ha esito positivo anche quando i collegamenti non sono stati corretti.|  
-|**adMoveAllowEmulation**|4|Richiede che il provider tenta di simulare lo spostamento (tramite le operazioni di eliminazione, caricamento e download). Se il tentativo di spostare il **Record** ha esito negativo perché l'URL di destinazione è in un server diverso o serviti da un provider diverso da quello di origine, questo può causare una maggiore latenza o perdita di dati, a causa di funzionalità del provider diversa quando lo spostamento delle risorse tra provider.|  
+|**adMoveUnspecified**|-1|Default. Esegue l'operazione di spostamento predefinita: l'operazione ha esito negativo se il file o la directory di destinazione esiste già e l'operazione Aggiorna i collegamenti ipertestuali.|  
+|**adMoveOverWrite**|1|Sovrascrive il file o la directory di destinazione, anche se esiste già.|  
+|**adMoveDontUpdateLinks**|2|Modifica il comportamento predefinito del metodo **MoveRecord** non aggiornando i collegamenti ipertestuali del **record**di origine. Il comportamento predefinito dipende dalle funzionalità del provider. Spostare i collegamenti degli aggiornamenti dell'operazione se il provider è in grado di supportare. Se il provider non è in grado di correggere i collegamenti o se questo valore non è specificato, lo spostamento ha esito positivo anche quando i collegamenti non sono stati corretti.|  
+|**adMoveAllowEmulation**|4|Richiede che il provider tenti di simulare lo spostamento (mediante operazioni di download, caricamento ed eliminazione). Se il tentativo di spostare il **record** ha esito negativo perché l'URL di destinazione si trova in un server diverso o viene servito da un provider diverso da quello di origine, potrebbe verificarsi un aumento della latenza o della perdita di dati, a causa delle diverse funzionalità del provider durante lo spostamento delle risorse tra i provider.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Queste costanti non dispongono di equivalenti di ADO o WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

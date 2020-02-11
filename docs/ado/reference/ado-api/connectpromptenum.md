@@ -16,31 +16,31 @@ ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919449"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-Specifica se una finestra di dialogo deve essere visualizzata per la richiesta di parametri mancanti quando si apre una connessione a un'origine dati.  
+Specifica se deve essere visualizzata una finestra di dialogo per richiedere parametri mancanti quando si apre una connessione a un'origine dati.  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Richiede sempre.|  
-|**adPromptComplete**|2|Viene richiesto se sono necessarie ulteriori informazioni.|  
-|**adPromptCompleteRequired**|3|Viene richiesto se sono necessarie ulteriori informazioni, ma non sono consentiti parametri facoltativi.|  
-|**adPromptNever**|4|Mai richieste.|  
+|**adPromptComplete**|2|Richiede se sono necessarie altre informazioni.|  
+|**adPromptCompleteRequired**|3|Richiede se sono necessarie altre informazioni ma non sono consentiti parametri facoltativi.|  
+|**adPromptNever**|4|Non richiede mai.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.ConnectPrompt.ALWAYS|  
-|AdoEnums.ConnectPrompt.COMPLETE|  
-|AdoEnums.ConnectPrompt.COMPLETEREQUIRED|  
-|AdoEnums.ConnectPrompt.NEVER|  
+|AdoEnums. ConnectPrompt. ALWAYs|  
+|AdoEnums. ConnectPrompt. COMPLETE|  
+|AdoEnums. ConnectPrompt. COMPLETEREQUIRED|  
+|AdoEnums. ConnectPrompt. NEVER|  
   
 ## <a name="applies-to"></a>Si applica a  
  [Proprietà dinamica Prompt (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
