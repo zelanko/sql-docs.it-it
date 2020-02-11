@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPInit (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPInit (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033594"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -37,12 +37,12 @@ const wchar_t *pwszErrorFile,
 inteDirection);  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il metodo **BCPInit** deve essere chiamato prima di qualsiasi altro metodo di copia bulk. Il metodo **BCPInit** esegue le inizializzazioni necessarie per una copia bulk dei dati tra la workstation e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Il metodo **BCPInit** esamina la struttura dell'origine del database o della tabella di destinazione, non il file di dati. Specifica i valori relativi al formato dei dati per il file di dati in base a ogni colonna nella vista o nella tabella di database o nel set di risultati SELECT. Questa specifica include il tipo di dati di ogni colonna, la presenza o meno di un indicatore di lunghezza o Null e di stringhe di byte con carattere di terminazione nei dati e la larghezza dei tipi di dati a lunghezza fissa. Il metodo **BCPInit** imposta questi valori nel modo seguente:  
   
--   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato in base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati tipi di dati nativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di intestazione di Native Client (SQLNCLI. h). I relativi valori utilizzano il modello BCP_TYPE_XXX. I dati vengono rappresentati nel relativo formato elettronico, ovvero i dati di una colonna di un tipo di dati integer vengono rappresentati da una sequenza a quattro byte, di tipo big o little endian a seconda del computer con il quale è stato creato il file di dati.  
+-   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi specificati nel file di intestazione di Native Client (sqlncli. h). I relativi valori utilizzano il modello BCP_TYPE_XXX. I dati vengono rappresentati nel relativo formato elettronico, ovvero i dati di una colonna di un tipo di dati integer vengono rappresentati da una sequenza a quattro byte, di tipo big o little endian a seconda del computer con il quale è stato creato il file di dati.  
   
 -   Se un tipo di dati del database ha una lunghezza fissa, anche i dati del file di dati presenteranno una lunghezza fissa. I metodi di copia bulk che elaborano dati, ad esempio [IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md), analizzano le righe di dati prevedendo che la lunghezza dei dati nel file sia identica alla lunghezza dei dati specificata nella vista o nella tabella di database o nell'elenco di colonne SELECT. I dati di una colonna del database definiti come `char(13)` devono, ad esempio, essere rappresentati da 13 caratteri per ogni riga di dati nel file. I dati a lunghezza fissa possono essere preceduti da un indicatore Null se la colonna del database consente valori Null.  
   
@@ -69,17 +69,17 @@ inteDirection);
  Nome del file utente per la copia interna o esterna.  
   
  *pwszErrorFile*[in]  
- Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che non è stato possibile copiare da un file utente in una tabella. Se il *pwszErrorFile* argomento è impostato su NULL, non viene usato alcun file degli errori.  
+ Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che non è stato possibile copiare da un file utente in una tabella. Se l'argomento *pwszErrorFile* è impostato su null, non viene utilizzato alcun file degli errori.  
   
  *eDirection*[in]  
  Direzione dell'operazione di copia, BCP_DIRECTION_IN o BCP_DIRECTION _OUT. BCP_DIRECTION _IN indica una copia da un file utente in una tabella di database e BCP_DIRECTION _OUT indica una copia da una tabella di database in un file utente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. Per informazioni dettagliate, usare l'interfaccia [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
+ Si è verificato un errore specifico del provider. per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  

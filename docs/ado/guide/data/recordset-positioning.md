@@ -1,5 +1,5 @@
 ---
-title: Posizionamento dei recordset | Microsoft Docs
+title: Posizionamento del recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924437"
 ---
 # <a name="recordset-positioning"></a>Posizionamento nei recordset
-Usare la **esempio di AbsolutePosition** la posizione ordinale in base alle proprietà per passare a un record, il **Recordset** oggetto, o per determinare la posizione ordinale del record corrente. Il provider deve supportare le funzionalità appropriate per questa proprietà sia disponibile.  
+Utilizzare la proprietà **AbsolutePosition** per spostarsi in un record, in base alla relativa posizione ordinale nell'oggetto **Recordset** , oppure per determinare la posizione ordinale del record corrente. Il provider deve supportare la funzionalità appropriata affinché questa proprietà sia disponibile.  
   
- **Esempio di AbsolutePosition** è basato su 1 e uguale a 1 quando il record corrente è il primo record nel **Recordset**. Come accennato in precedenza, è possibile ottenere il numero totale di record nel **Recordset** dell'oggetto dalle **RecordCount** proprietà.  
+ **AbsolutePosition** è in base 1 e è uguale a 1 quando il record corrente è il primo record nel **Recordset**. Come indicato in precedenza, è possibile ottenere il numero totale di record nell'oggetto **Recordset** dalla proprietà **RecordCount** .  
   
- Quando si impostano i **esempio di AbsolutePosition** proprietà, anche se è in un record di cache corrente, ADO consente di ricaricare la cache con un nuovo gruppo di record che iniziano con il record è specificati. Il **CacheSize** proprietà determina la dimensione di questo gruppo.  
+ Quando si imposta la proprietà **AbsolutePosition** , anche se si tratta di un record nella cache corrente, ADO ricarica la cache con un nuovo gruppo di record a partire dal record specificato. La proprietà **CacheSize** determina le dimensioni di questo gruppo.  
   
 > [!NOTE]
->  È consigliabile non usare la **esempio di AbsolutePosition** proprietà come un numero di record di surrogati. La posizione di un determinato record viene modificato quando si elimina un record precedente. Non sono inoltre alcuna garanzia che un determinato record avrà lo stesso **esempio di AbsolutePosition** se il **Recordset** oggetto viene rieseguito o riaperto. I segnalibri sono lo strumento consigliato per mantenere e restituire dati in una posizione specificata e sono l'unico modo il posizionamento in tutti i tipi di **Recordset** oggetti.
+>  Non usare la proprietà **AbsolutePosition** come numero di record surrogato. La posizione di un determinato record viene modificata quando si elimina un record precedente. Non esiste inoltre alcuna garanzia che un determinato record avrà lo stesso **AbsolutePosition** se l'oggetto **Recordset** viene nuovamente sottoposto a query o riaperto. I segnalibri rappresentano il metodo consigliato per mantenere e tornare a una posizione specificata e sono l'unico modo per posizionare tutti i tipi di oggetti **Recordset** .

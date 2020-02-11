@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà set di dati, filtri (Generatore Report) | Microsoft Docs
+title: Finestra di dialogo Proprietà set di dati, filtri (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109374"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Finestra di dialogo Proprietà set di dati, Filtri (Generatore report)
@@ -29,7 +29,7 @@ ms.locfileid: "66109374"
  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere all'elenco una nuova clausola di filtro.  
   
  **Elimina**  
@@ -42,9 +42,9 @@ ms.locfileid: "66109374"
  Sposta il filtro selezionato di una posizione verso il basso nell'elenco.  
   
  **Espressione**  
- Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante espressione (**FX**) per modificare l'espressione.  
   
- **Data type**  
+ **Tipo di dati**  
  Scegliere il tipo di dati per **Valore**. Se possibile, scegliere un tipo di dati che corrisponda al tipo di dati per **Espressione**.  
   
  I valori specificati in **Espressione** e **Valore** devono restituire lo stesso tipo di dati. Ad esempio, se **Espressione** è impostato su un campo a cui è associato il tipo di dati System.Int32 e **Valore** è impostato su 7, nell'elenco a discesa selezionare **Integer**.  
@@ -55,12 +55,12 @@ ms.locfileid: "66109374"
  Scegliere l'operatore da utilizzare per confrontare l'espressione e il valore.  
   
  **Valore**  
- Digitare l'espressione o il valore da usare durante la valutazione dell'espressione specificata nella casella **Espressione** . Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare l'espressione o il valore da usare durante la valutazione dell'espressione specificata nella casella **Espressione** . Fare clic sul pulsante espressione (**FX**) per modificare l'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Aggiungere un filtro a un set di dati &#40;Report e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

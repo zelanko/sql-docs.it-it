@@ -17,32 +17,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088446"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.  
   
-##  <a name="BKMK_Tabs"></a> Esplorare il modello  
+##  <a name="BKMK_Tabs"></a>Esplorare il modello  
  I modelli basati sugli algoritmi di [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o Logistic Regression sono simili nel senso che analizzano i dati come set di connessioni tra gli input e gli output noti. Il visualizzatore **Sfoglia** consente di esplorare tali connessioni tramite i controlli seguenti:  
   
 -   [Variabili](#BKMK_Variables)  
   
 -   [Input](#BKMK_Inputs)  
   
--   [Outputs](#BKMK_Outputs)  
+-   [Output](#BKMK_Outputs)  
   
  Per provare questo visualizzatore, è possibile creare un modello tramite [Procedura guidata Classificazione &#40;componenti aggiuntivi Data Mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) e usare l'opzione **Avanzate** per modificare l'algoritmo in Microsoft Logistic Regression nella finestra di dialogo **Parametri algoritmo**.  
   
-###  <a name="BKMK_Variables"></a> Variabili  
+###  <a name="BKMK_Variables"></a>Variabili  
  Nel riquadro **Variabili** viene visualizzato un elenco di variabili di input nell'ordine del relativo effetto sul modello. Usare i controlli **Output** e **Input** per filtrare il modello, influendo sulle variabili visualizzate e sul relativo ordine.  
   
  Utilizzando questo visualizzatore, è possibile esplorare i fattori che sono più importanti per determinare se è più probabile che un cliente appartenga alla categoria di acquirenti di biciclette o alla categoria di non acquirenti.  
   
- ![Effetto dei test sui risultati degli attributi selezionati](media/dm13-neuralnet-agebuyer1.gif "effetto dei test sui risultati degli attributi selezionati")  
+ ![Effetto dei test sui risultati degli attributi selezionati](media/dm13-neuralnet-agebuyer1.gif "Effetto dei test sui risultati degli attributi selezionati")  
   
 ##### <a name="explore-variables"></a>Esplorazione delle variabili  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66088446"
   
      Per Income, la colonna è stata suddivisa in raggruppamenti, ad esempio 78.4-154.06 (per l'intervallo di reddito superiore).  
   
-     ![ordinamento per visualizzare la modalità di suddivisione delle variabili](media/dm13-nn-bucketing-variables.gif "ordinamento per visualizzare la modalità di suddivisione delle variabili")  
+     ![Ordinamento per visualizzare la modalità di suddivisione delle variabili](media/dm13-nn-bucketing-variables.gif "Ordinamento per visualizzare la modalità di suddivisione delle variabili")  
   
      Se si desiderano raggruppamenti differenti, è necessario usare lo strumento [Modifica etichette &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md) o le funzioni di Excel per creare nuove categorie di reddito prima di compilare il modello.  
   
@@ -72,24 +72,24 @@ ms.locfileid: "66088446"
   
      Viene visualizzata una descrizione comando che include un punteggio della *priorità*, una coppia di punteggi di *probabilità* e una coppia di valori di *accuratezza*.  
   
-    -   La **priorità** viene calcolata nell'intero set di dati e identifica l'attributo che, dati tutti gli input, è più correlato al risultato di destinazione. Nel visualizzatore vengono ordinati i valori nel grafico in base ai punteggi di priorità.  
+    -   L' **importanza** viene calcolata nell'intero set di dati e identifica l'attributo che, dati tutti gli input, è più correlato al risultato di destinazione. Nel visualizzatore vengono ordinati i valori nel grafico in base ai punteggi di priorità.  
   
     -   La **probabilità** viene calcolata per ogni set di coppie attributo-valore, per i risultati di destinazione, nell'intero set di dati.  
   
-    -   L'**accuratezza** indica quanto è utile questa determinata coppia attributo-valore per la promozione di un risultato o di un altro.  
+    -   **Lift** indica quanto è utile questa particolare coppia attributo-valore per la promozione di un risultato o di un altro.  
   
-     Nota: La descrizione comando contiene le stesse informazioni indipendentemente dal fatto che si posizioni il puntatore del mouse su una colonna o l'altro.  
+     Nota: nella descrizione comando sono contenute le stesse informazioni indipendentemente dal fatto che si posizioni il mouse su una colonna o sull'altra.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_Inputs"></a> Input  
+###  <a name="BKMK_Inputs"></a>Input  
  Il riquadro **Input** consente di scegliere un set di input e applicarlo come filtro al modello. In questo modo è possibile vedere l'influenza di tali scelte sul risultato, in base ai dati di training  
   
 ##### <a name="explore-inputs"></a>Esplorazione degli input  
   
 1.  Si supponga di voler fare riferimento a un gruppo specifico e visualizzare i fattori che hanno influito maggiormente sugli acquisti in tale gruppo.  
   
-     Nel **Input** riquadro, fare clic sul  **\<tutti >** sotto **attributo**e selezionare **Age**.  
+     Nel riquadro **input** fare clic sulla ** \<cella all>** in **attributo**e selezionare **Age**.  
   
      Per **Valore** selezionare la categoria di età più giovane.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66088446"
   
      Ad esempio, per l'attributo di input, aggiungere **Gender** e selezionare **Female** come valore.  
   
-     ![Effetto dei test sui risultati degli attributi selezionati](media/dm13-neuralnet-agebuyer2.gif "effetto dei test sui risultati degli attributi selezionati")  
+     ![Effetto dei test sui risultati degli attributi selezionati](media/dm13-neuralnet-agebuyer2.gif "Effetto dei test sui risultati degli attributi selezionati")  
   
      Si noti come l'elenco di variabili cambia. Ora **Income** è la variabile più importante nella stima del risultato di destinazione.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66088446"
   
  [Torna all'inizio](#BKMK_Tabs)  
   
-###  <a name="BKMK_Outputs"></a> Output  
+###  <a name="BKMK_Outputs"></a>Uscite  
  Nel riquadro **Output** è possibile scegliere il risultato a cui si è interessati. Le reti neurali consentono di specificare il numero di colonne di risultati desiderato, sebbene l'aggiunta di più output aumenti la complessità del modello e possa richiedere un tempo di elaborazione più lungo.  
   
  Per confrontare due output, essi devono essere stati definiti come colonne **Stima** o **Solo stima**.  
@@ -127,13 +127,13 @@ ms.locfileid: "66088446"
  [Torna all'inizio](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Ulteriori informazioni sui modelli di rete neurale  
- Le informazioni nel visualizzatore vengono recuperate dal server utilizzando una stored procedure specifica per questo tipo di modello: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ Le informazioni nel visualizzatore vengono recuperate dal server utilizzando una stored procedure specifica di questo tipo di modello: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Se si desidera creare un modello con più attributi stimabili tramite i componenti aggiuntivi, usare le opzioni di modellazione **Avanzate**.  
   
  Per altre informazioni, vedere [Crea struttura di data mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md) e [Aggiunta modello a struttura &#40;componenti aggiuntivi Data Mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

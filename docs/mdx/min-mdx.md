@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114379"
 ---
 # <a name="min-mdx"></a>Min (MDX)
@@ -34,11 +34,12 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si specifica un'espressione numerica, questa viene valutata sull'intero set e restituisce il valore minimo di tale valutazione. Se non viene specificata un'espressione numerica, il set specificato viene valutato nel contesto corrente dei membri del set e viene restituito il valore minimo di tale valutazione.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora i valori Null durante il calcolo del valore minimo di un set di numeri.  
+>  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora i valori Null durante il calcolo del valore minimo di un set di numeri.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il valore minimo delle vendite trimestrali per ogni sottocategoria e paese del cubo Adventure Works.  
@@ -58,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Viste e i campi di esempio di raccolte (VB) | Microsoft Docs
+title: Esempio di raccolte views e Fields (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964822"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Esempio delle raccolte Views e Fields (VB)
-Il codice seguente illustra come usare il [comandi](../../../ado/reference/adox-api/command-property-adox.md) proprietà e il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto per recuperare informazioni sui campi per la visualizzazione.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) e l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per recuperare informazioni sui campi per la visualizzazione.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -82,4 +82,4 @@ End Sub
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Proprietà Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: sp_backup_master_switch (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942069"
 ---
-# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>sp_backup_master_switch (Transact-SQL)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Sospende o riprende il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "67942069"
   
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,16 +47,16 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> Argomenti  
  @state  
- Imposta lo stato del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Il @state parametro è **BIT**. Quando è impostato su un valore pari a 0, le operazioni vengono sospese e quando è impostato su un valore pari a 1, le operazioni riprendono.  
+ Imposta lo stato del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Il @state parametro è di **bit**. Quando è impostato su un valore pari a 0, le operazioni vengono sospese e quando è impostato su un valore pari a 1, le operazioni riprendono.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- 0 (esito positivo) o 1 (esito negativo)  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Vengono descritti i problemi di sicurezza relativi all'istruzione. Includere le autorizzazioni come sottosezione (titolo H3). Provare a includere altre sottosezioni per il concatenamento di proprietà e il controllo, se appropriate.  
   
-### <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory**stored procedure.  
+### <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory**stored procedure.  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente può essere utilizzato per sospendere il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nell'istanza in cui viene eseguito:  

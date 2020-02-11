@@ -20,10 +20,10 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657371"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilizzo del provider WMI per Gestione configurazione
@@ -45,7 +45,7 @@ Per impostazione predefinita, il formato dello spazio dei nomi è il seguente. N
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Quando si esegue la connessione tramite PowerShell, è necessario rimuovere la `\\.\` principale. Ad esempio, il codice PowerShell seguente elenca tutte le classi WMI per un SQL Server 2016, che è la versione principale 13.
+Quando si esegue la connessione tramite PowerShell, è `\\.\` necessario rimuovere il leader. Ad esempio, il codice PowerShell seguente elenca tutte le classi WMI per un SQL Server 2016, che è la versione principale 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +69,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Nota:** Se ci si connette tramite Windows Firewall sarà necessario assicurarsi che i computer siano configurati in modo appropriato. Vedere l'articolo "connessione tramite Windows Firewall" nella documentazione di Strumentazione gestione Windows su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [sito Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
+ **Nota:** Se ci si connette tramite Windows Firewall sarà necessario assicurarsi che i computer siano configurati in modo appropriato. Vedere l'articolo "connessione tramite Windows Firewall" nella documentazione di Strumentazione gestione Windows nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [sito Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Autorizzazioni e autenticazione del server  
  Per accedere al provider WMI per Gestione configurazione, è necessario che lo script di gestione WMI del client sia in esecuzione nel contesto di un amministratore nel computer di destinazione. È necessario essere membro del gruppo locale Administrators di Windows nel computer da gestire.  

@@ -1,5 +1,5 @@
 ---
-title: Append (metodo) (oggetti procedure ADOX) | Microsoft Docs
+title: Metodo Append (routine ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967289"
 ---
 # <a name="append-method-adox-procedures"></a>Metodo Append (raccolta Procedures ADOX)
-Aggiunge un nuovo [routine](../../../ado/reference/adox-api/procedure-object-adox.md) dell'oggetto per il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta.  
+Aggiunge un nuovo oggetto [procedura](../../../ado/reference/adox-api/procedure-object-adox.md) alla raccolta [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,29 +34,29 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Name*  
- Oggetto **stringa** valore che specifica il nome della procedura per creare e di aggiunta.  
+ *Nome*  
+ Valore **stringa** che specifica il nome della procedura da creare e accodare.  
   
- *Command*  
- Un oggetto ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto che rappresenta la procedura per creare e aggiungere.  
+ *Comando*  
+ Oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO che rappresenta la routine da creare e accodare.  
   
-## <a name="remarks"></a>Note  
- Crea una nuova stored procedure nell'origine dati con il nome e gli attributi specificati nel **comando** oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Crea una nuova stored procedure nell'origine dati con il nome e gli attributi specificati nell'oggetto **Command** .  
   
- Se il testo del comando specificato dall'utente rappresenta una vista anziché una routine, il comportamento è dipendente da provider in uso. **Accodare** avrà esito negativo se il provider non supporta comandi di persistenza.  
+ Se il testo del comando specificato dall'utente rappresenta una vista anziché una routine, il comportamento dipende dal provider in uso. L' **Accodamento** avrà esito negativo se il provider non supporta la persistenza dei comandi.  
   
 > [!NOTE]
->  Quando si usa il Provider OLE DB per Microsoft Jet, il **procedure** insieme **Append** metodo consentirà di specificare una **visualizzazione** anziché un  **Routine** nella *comando* parametro. Il **View** verrà aggiunto all'origine dati e verrà aggiunto al **procedure** raccolta. Dopo il **Append**, se il **procedure** e **viste** raccolte vengono aggiornate, il **visualizzazione** non saranno nel **Procedure** raccolta e verrà visualizzato nei **viste** raccolta.  
+>  Quando si usa il provider di OLE DB per Microsoft Jet, il metodo **Append** della raccolta **Procedures** consente di specificare una **vista** anziché una **routine** nel parametro *Command* . La **vista** verrà aggiunta all'origine dati e verrà aggiunta alla raccolta **Procedures** . Dopo l' **Accodamento**, se le raccolte **procedure** e **viste** vengono aggiornate, la **vista** non sarà più presente nella raccolta **Procedures** e verrà visualizzata nella raccolta **views** .  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure di esempio del metodo Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Group ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append (metodo) (oggetti Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (metodo) (oggetti Key ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (metodo) (User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Esempio di metodo Append di procedure (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (gruppi ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Metodo Append (indici ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Metodo Append (chiavi ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Metodo Append (utenti ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Metodo Append (raccolta Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

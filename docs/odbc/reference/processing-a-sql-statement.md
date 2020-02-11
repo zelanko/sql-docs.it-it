@@ -18,27 +18,27 @@ ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076286"
 ---
 # <a name="processing-a-sql-statement"></a>Elaborazione di un'istruzione SQL
-Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è necessario discutere le modalità di elaborazione di un'istruzione SQL. I passaggi necessari sono comuni a tutte le tre tecniche, anche se ogni tecnica vengono eseguite in momenti diversi. Nella figura seguente vengono illustrati i passaggi coinvolti nell'elaborazione di un'istruzione SQL, che sono illustrati nella parte restante di questa sezione.  
+Prima di illustrare le tecniche per l'utilizzo di SQL a livello di codice, è necessario illustrare il modo in cui viene elaborata un'istruzione SQL. I passaggi necessari sono comuni a tutte e tre le tecniche, sebbene ciascuna tecnica le esegua in momenti diversi. Nella figura seguente vengono illustrati i passaggi necessari per l'elaborazione di un'istruzione SQL, descritti nella parte restante di questa sezione.  
   
- ![Passaggi per l'elaborazione di un'istruzione SQL](../../odbc/reference/media/pr01.gif "pr01")  
+ ![Passaggi per l'elaborazione di un'istruzione SQL](../../odbc/reference/media/pr01.gif "PR01")  
   
- Per elaborare un'istruzione SQL, un DBMS esegue i cinque passaggi seguenti:  
+ Per elaborare un'istruzione SQL, un sistema DBMS esegue i cinque passaggi seguenti:  
   
-1.  Il sistema DBMS analizza innanzitutto l'istruzione SQL. Interrompe l'istruzione in singole parole, denominate tokens, assicura che l'istruzione include un verbo valido e le clausole valide e così via. In questo passaggio possono essere rilevati gli errori di ortografia e gli errori di sintassi.  
+1.  Il sistema DBMS analizza prima di tutto l'istruzione SQL. Suddivide l'istruzione in singole parole, denominate token, verifica che l'istruzione includa un verbo valido e clausole valide e così via. In questo passaggio è possibile rilevare errori di sintassi e errori di ortografia.  
   
-2.  Il sistema DBMS convalida l'istruzione. Controlla l'istruzione sul catalogo di sistema. Tutte le tabelle denominate nell'istruzione presenti nel database? Tutte le colonne esistenti e i nomi delle colonne non sono ambigui? L'utente dispone dei privilegi necessari per eseguire l'istruzione? Alcuni errori semantici possono essere rilevati in questo passaggio.  
+2.  Il sistema DBMS convalida l'istruzione. Consente di controllare l'istruzione rispetto al catalogo di sistema. Tutte le tabelle denominate nell'istruzione esistono nel database? Sono presenti tutte le colonne e i nomi di colonna non sono ambigui? L'utente dispone dei privilegi necessari per eseguire l'istruzione? In questo passaggio è possibile rilevare alcuni errori semantici.  
   
-3.  Il sistema DBMS genera un piano di accesso per l'istruzione. Il piano di accesso è una rappresentazione binaria dei passaggi necessari per eseguire l'istruzione. è l'equivalente DBMS di codice eseguibile.  
+3.  Il sistema DBMS genera un piano di accesso per l'istruzione. Il piano di accesso è una rappresentazione binaria dei passaggi necessari per eseguire l'istruzione; si tratta dell'equivalente DBMS del codice eseguibile.  
   
-4.  Il sistema DBMS consente di ottimizzare il piano di accesso. Illustra vari modi per eseguire il piano di accesso. Un indice consente di velocizzare la ricerca? Dovrebbe DBMS innanzitutto applicare una condizione di ricerca a una tabella e quindi aggiungerla alla tabella B o deve iniziare con l'aggiunta e usare la condizione di ricerca in un secondo momento? Una ricerca sequenziale tramite una tabella è può essere evitata o ridotto a un subset della tabella? Dopo avere esplorato le alternative, il sistema DBMS sceglie uno di essi.  
+4.  Il sistema DBMS ottimizza il piano di accesso. Vengono esaminati vari modi per eseguire il piano di accesso. È possibile usare un indice per velocizzare la ricerca? Il sistema DBMS applica prima di tutto una condizione di ricerca alla tabella A, quindi la aggiunge alla tabella B oppure deve iniziare con il join e usare la condizione di ricerca in un secondo momento? Una ricerca sequenziale in una tabella può essere evitata o ridotta a un subset della tabella? Dopo aver esplorato le alternative, il sistema DBMS ne sceglie una.  
   
-5.  Il sistema DBMS esegue l'istruzione, eseguire il piano di accesso.  
+5.  Il sistema DBMS esegue l'istruzione eseguendo il piano di accesso.  
   
- I passaggi necessari per elaborare un'istruzione SQL variano nella quantità richiedono l'accesso al database e la quantità di tempo che necessario. L'analisi di un'istruzione SQL non richiede l'accesso al database e possono essere eseguita molto rapidamente. Ottimizzazione, d'altra parte, è un elevato della CPU di elaborare e richiede l'accesso al catalogo di sistema. Per una query complessa, riferita, query optimizer può esplorare migliaia diversi modi di eseguire la stessa query. Tuttavia, il costo dell'esecuzione della query in modo inefficiente in genere è talmente elevato che il tempo impiegato nell'ottimizzazione riacquisito più di velocità di esecuzione maggiore di query. Si tratta ancora più significativo se lo stesso piano di accesso ottimizzata è possibile utilizzare più volte per eseguire le query ricorrenti.
+ I passaggi usati per elaborare un'istruzione SQL variano a seconda della quantità di accesso al database richiesta e del tempo necessario. L'analisi di un'istruzione SQL non richiede l'accesso al database e può essere eseguita molto rapidamente. L'ottimizzazione, d'altra parte, è un processo con utilizzo intensivo della CPU e richiede l'accesso al catalogo di sistema. Per una query complessa con più tabelle, Query Optimizer può esplorare migliaia di modi diversi per eseguire la stessa query. Tuttavia, il costo di esecuzione della query in modo inefficiente è in genere così elevato che il tempo impiegato per l'ottimizzazione è maggiore rispetto a quello recuperato in una maggiore velocità di esecuzione delle query. Questo è ancora più significativo se lo stesso piano di accesso ottimizzato può essere utilizzato più volte per eseguire query ripetitive.

@@ -18,18 +18,18 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060207"
 ---
-# <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
+# <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni messaggio di posta elettronica Database con il **non è stato possibile** dello stato. Utilizzare questa vista per controllare quali messaggi non sono stati inviati correttamente.  
+  Contiene una riga per ogni messaggio di Posta elettronica database con lo stato **non riuscito** . Utilizzare questa vista per controllare quali messaggi non sono stati inviati correttamente.  
   
- Per visualizzare tutti i messaggi elaborati da posta elettronica Database, usare [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md). Per visualizzare allegati di posta elettronica, usare [sysmail_attachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
+ Per visualizzare tutti i messaggi elaborati da Posta elettronica database, utilizzare [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi inviati, utilizzare [sysmail_sentitems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md). Per visualizzare gli allegati di posta elettronica, utilizzare [sysmail_mailattachments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -38,33 +38,33 @@ ms.locfileid: "68060207"
 |**destinatari**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
-|**subject**|**nvarchar(510)**|Oggetto del messaggio.|  
-|**body**|**ntext**|Corpo del messaggio.|  
-|**body_format**|**varchar(20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
-|**importance**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
-|**Sensibilità**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
+|**Oggetto**|**nvarchar (510)**|Oggetto del messaggio.|  
+|**corpo**|**ntext**|Il corpo del messaggio|  
+|**body_format**|**varchar (20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
+|**importanza**|**varchar (6)**|Parametro di **importanza** del messaggio.|  
+|**sensibilità**|**varchar (12)**|Parametro di **riservatezza** del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
-|**Attachment_encoding**|**varchar(20)**|Tipo di allegato del messaggio di posta elettronica.|  
+|**Attachment_encoding**|**varchar (20)**|Tipo di allegato del messaggio di posta elettronica.|  
 |**Query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
 |**execute_query_database**|**sysname**|Contesto di database all'interno del quale il programma di posta elettronica ha eseguito la query.|  
 |**attach_query_result_as_file**|**bit**|Quando il valore è 0, i risultati della query sono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto del corpo. Quando il valore è 1, i risultati sono restituiti come file allegato.|  
 |**query_result_header**|**bit**|Quando il valore è 1, i risultati della query includono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna.|  
-|**query_result_width**|**int**|Il **query_result_width** parametro del messaggio.|  
-|**query_result_separator**|**char(1)**|Carattere utilizzato per separare le colonne nell'output della query.|  
-|**exclude_query_output**|**bit**|Il **exclude_query_output** parametro del messaggio. Per altre informazioni, vedere [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
-|**append_query_error**|**bit**|Il **append_query_error** parametro del messaggio. 0 indica che Posta elettronica database non deve inviare il messaggio di posta elettronica se la query contiene un errore.|  
+|**query_result_width**|**int**|Parametro **query_result_width** del messaggio.|  
+|**query_result_separator**|**char (1)**|Carattere utilizzato per separare le colonne nell'output della query.|  
+|**exclude_query_output**|**bit**|Parametro **exclude_query_output** del messaggio. Per ulteriori informazioni, vedere [sp_send_dbmail &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**append_query_error**|**bit**|Parametro **append_query_error** del messaggio. 0 indica che Posta elettronica database non deve inviare il messaggio di posta elettronica se la query contiene un errore.|  
 |**send_request_date**|**datetime**|Data e ora di inserimento del messaggio nella coda della posta.|  
 |**send_request_user**|**sysname**|Utente che ha inviato il messaggio. Corrisponde al contesto utente della procedura di Posta elettronica database e non al campo Da del messaggio.|  
 |**sent_account_id**|**int**|Identificatore dell'account di Posta elettronica database utilizzato per l'invio del messaggio. Per questa vista è sempre NULL.|  
-|**sent_status**|**varchar(8)**|Stato del messaggio. Sempre **non è stato possibile** per questa visualizzazione.|  
+|**sent_status**|**varchar (8)**|Stato del messaggio. **Non è sempre riuscito** per questa visualizzazione.|  
 |**sent_date**|**datetime**|Data e ora di rimozione del messaggio dalla coda della posta.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Note  
- Usare la **sysmail_faileditems** visualizzazione per visualizzare i messaggi non inviati da posta elettronica Database. Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che non sono stati inviati. Per visualizzare il motivo dell'errore, vedere la voce per il messaggio non riuscito nel [sysmail_event_log &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) visualizzazione.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la vista **sysmail_faileditems** per vedere quali messaggi non sono stati inviati da posta elettronica database. Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che non sono stati inviati. Per visualizzare la causa dell'errore, vedere la voce relativa al messaggio non riuscito nel [sysmail_event_log &#40;vista&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
- Concedere **sysadmin** ruolo predefinito del server e **databasemailuserrole** ruolo predefinito del database. Quando viene utilizzata da un membro del **sysadmin** ruolo predefinito del server, questa visualizzazione Mostra tutti i messaggi. Tutti gli altri utenti vedono semplicemente i messaggi non recapitati che hanno cercato di inviare personalmente.  
+## <a name="permissions"></a>Autorizzazioni  
+ Concesso al ruolo predefinito del server **sysadmin** e al ruolo del database **DatabaseMailUserRole** . Se eseguita da un membro del ruolo predefinito del server **sysadmin** , questa vista Mostra tutti i messaggi non riusciti. Tutti gli altri utenti vedono semplicemente i messaggi non recapitati che hanno cercato di inviare personalmente.  
   
   

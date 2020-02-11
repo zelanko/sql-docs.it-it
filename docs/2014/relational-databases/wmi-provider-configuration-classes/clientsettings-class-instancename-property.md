@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b559ddf5c33b10375d89138a0ac5580472c4fadf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242654"
 ---
 # <a name="instancename-property-clientsettings-class"></a>Proprietà InstanceName (classe ClientSettings)
-  Ottiene il nome dell'istanza del client di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Ottiene il nome dell'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto `ClientSettings` che rappresenta le impostazioni in un'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   

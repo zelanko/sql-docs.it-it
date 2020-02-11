@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494018"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Creazione di un'origine dati (Esercitazione di base sul data mining)
@@ -27,7 +27,7 @@ ms.locfileid: "69494018"
   
 1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **origini dati** e scegliere **nuova origine dati**.  
   
-2.  Nella pagina **iniziale della creazione guidata origine dati** fare clic su **Avanti**.  
+2.  Nella pagina **Creazione guidata origine dati** fare clic su **Avanti**.  
   
 3.  Nella [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] pagina **Selezione metodo di definizione connessione** fare clic su **nuova** per aggiungere una connessione al database.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69494018"
 6.  Nel gruppo **accedi al server** selezionare **Usa autenticazione di Windows**.  
   
     > [!IMPORTANT]  
-    >  Se possibile, gli implementatori devono utilizzare l'autenticazione di Windows, che fornisce un metodo di autenticazione più sicuro rispetto all'autenticazione di SQL Server. Tuttavia, l'autenticazione di SQL Server è disponibile per la compatibilità con le versioni precedenti. Per ulteriori informazioni sui metodi di autenticazione, vedere [motore di database configurazione-](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md)provisioning dell'account.  
+    >  Se possibile, gli implementatori devono utilizzare l'autenticazione di Windows, che fornisce un metodo di autenticazione più sicuro rispetto all'autenticazione di SQL Server. Tuttavia, l'autenticazione di SQL Server è disponibile per la compatibilità con le versioni precedenti. Per ulteriori informazioni sui metodi di autenticazione, vedere [motore di database configurazione-provisioning dell'account](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
 7.  Nell'elenco **selezionare o immettere un nome di database** selezionare [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] e quindi fare clic su **OK**.  
   
@@ -50,19 +50,19 @@ ms.locfileid: "69494018"
   
      Nella pagina **Completamento procedura guidata** si noti che, per impostazione predefinita, l'origine dati è denominata Adventure Works DW 2012.  
   
-10. Scegliere **Fine**.  
+10. Fare clic su **Fine**.  
   
      La nuova origine dati, Adventure Works DW 2012, viene visualizzata nella cartella **origini dati** in Esplora soluzioni.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di una vista &#40;origine dati esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Creazione di una vista origine dati &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
- [Esercitazione sulla creazione di &#40;un Analysis Services progetto di base sul data mining&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Creazione di un progetto Analysis Services &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Definizione di un'origine dati](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Impostare opzioni di rappresentazione &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Impostare le opzioni di rappresentazione &#40;SSAS-multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

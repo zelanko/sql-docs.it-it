@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241241"
 ---
 # <a name="non-deterministic-content-models"></a>modelli di contenuto non deterministici
@@ -59,7 +59,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>Esempio: modello di contenuto non deterministico accettato  
+## <a name="example-non-deterministic-content-model-accepted"></a>Esempio: modello di contenuto non deterministico rifiutato  
  Lo schema seguente verrebbe rifiutato nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1.  
   
 ```  
@@ -79,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

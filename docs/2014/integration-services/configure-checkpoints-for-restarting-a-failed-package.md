@@ -1,5 +1,5 @@
 ---
-title: Configurazione dei checkpoint per riavviare un pacchetto non riuscito | Microsoft Docs
+title: Configurare i checkpoint per il riavvio di un pacchetto non riuscito | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060764"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurazione dei checkpoint per il riavvio di un pacchetto non riuscito
@@ -32,7 +32,7 @@ ms.locfileid: "66060764"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
+4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo e quindi scegliere **Proprietà**.  
   
 5.  Impostare la proprietà SaveCheckpoints su `True`.  
   

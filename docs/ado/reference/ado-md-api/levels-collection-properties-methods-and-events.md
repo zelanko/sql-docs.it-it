@@ -1,5 +1,5 @@
 ---
-title: I livelli di raccolta delle proprietà, metodi ed eventi | Microsoft Docs
+title: Proprietà, metodi ed eventi della raccolta levels | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,22 +13,22 @@ ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81603a2a8ab558d0f574e08c90992ea68afffc80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949511"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Levels
 ## <a name="properties"></a>Proprietà  
  [Proprietà Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Proprietà dell'elemento](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item (proprietà)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (metodo)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

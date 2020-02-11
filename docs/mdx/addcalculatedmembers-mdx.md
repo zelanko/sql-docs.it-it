@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017179"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
@@ -31,8 +31,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, durante la risoluzione delle funzioni sui set MDX esclude i membri calcolati. Il **AddCalculatedMembers** funzione esamina l'espressione set specificata *Set_Expression,* e include i membri calcolati di pari livello dei membri contenuti all'interno dell'ambito di tale set espressione.  
+## <a name="remarks"></a>Osservazioni  
+ Per impostazione predefinita, durante la risoluzione delle funzioni sui set MDX esclude i membri calcolati. La funzione **AddCalculatedMembers** esamina l'espressione set specificata in *set_expression* e include i membri calcolati che sono elementi di pari livello dei membri contenuti nell'ambito di tale espressione set.  
   
 > [!NOTE]  
 >  Questa funzione può essere utilizzata solo con espressioni set unidimensionali.  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- L'esempio seguente restituisce il `Measures.[Unit Price]` membro, oltre a tutti i membri calcolati nel **misure** dimensione, dal **Adventure Works** cubo.  
+ Nell'esempio seguente viene restituito `Measures.[Unit Price]` il membro, oltre a tutti i membri calcolati nella dimensione **measures** , dal cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -60,6 +60,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

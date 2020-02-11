@@ -1,5 +1,5 @@
 ---
-title: Pianifica pagina (gestione Report) | Microsoft Docs
+title: Pagina Pianificazioni (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102320"
 ---
 # <a name="schedules-page-report-manager"></a>Pagina Pianificazioni (Gestione report)
@@ -49,16 +49,16 @@ ms.locfileid: "66102320"
  **Riprendi**  
  Fare clic per riattivare una pianificazione condivisa. I processi di cui era pianificata l'esecuzione durante la sospensione della pianificazione non vengono eseguiti.  
   
- **Pianificazione**  
+ **Pianificare**  
  Mostra le pianificazioni condivise definite. Fare clic su una pianificazione condivisa per visualizzarne o modificarne le impostazioni.  
   
- **Autore**  
+ **Creatore**  
  Mostra il nome dell'utente che ha creato la pianificazione condivisa.  
   
- **Ultima esecuzione, prossima esecuzione**  
+ **Ultima esecuzione, Prossima esecuzione**  
  Mostra la data e ora dell'ultima esecuzione e della prossima esecuzione della pianificazione.  
   
- **Stato**  
+ **Status**  
  Indica se una pianificazione condivisa è sospesa o attiva.  
   
 ## <a name="see-also"></a>Vedere anche  

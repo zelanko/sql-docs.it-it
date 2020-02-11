@@ -11,13 +11,13 @@ ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728865"
 ---
-# <a name="validation-statuses-master-data-services"></a>Stati di convalida (Master Data Services)
+# <a name="validation-statuses-master-data-services"></a>Stati di convalida ([Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "73728865"
 |In attesa di riconvalida del membro dipendente|Membri consolidati aggiornati in attesa di essere convalidati insieme ai membri figlio.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Convalidare una versione rispetto alle regole business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

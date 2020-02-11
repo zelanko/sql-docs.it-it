@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811575"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server max text repl size
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **testo repl dimensione massima** opzione specifica la dimensione massima (in byte) della `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, e `image` dati che possono essere aggiunto a una colonna replicata o una colonna acquisita in un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L' **opzione max text repl size** specifica la dimensione massima (in byte) dei `text`dati `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, e `image` che è possibile aggiungere a una colonna replicata o a una colonna acquisita in un'unica istruzione INSERT, Update, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62811575"
   
 3.  Nel gruppo **Varie**impostare il valore desiderato per l'opzione **Dimensioni massime replica testo** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Per configurare l'opzione max text repl size  
   

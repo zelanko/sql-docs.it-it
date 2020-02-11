@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query_text (Transact-SQL) | Microsoft Docs
+title: sys. query_store_query_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b90f6641724ed526a9f7b496b792bb6cf786105f
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70000799"
 ---
-# <a name="sysquery_store_query_text-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
+# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene il [!INCLUDE[tsql](../../includes/tsql-md.md)] testo e l'handle SQL della query.  
@@ -37,24 +37,24 @@ ms.locfileid: "70000799"
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Chiave primaria.|  
 |**query_sql_text**|**nvarchar(max)**|Testo SQL della query, fornito dall'utente. Include spazi vuoti, suggerimenti e commenti. I commenti e gli spazi prima e dopo il testo della query vengono ignorati. I commenti e gli spazi all'interno del testo non vengono ignorati.|  
-|**statement_sql_handle**|**vabinary(64)**|Handle SQL della singola query.|  
+|**statement_sql_handle**|**vabinary (64)**|Handle SQL della singola query.|  
 |**is_part_of_encrypted_module**|**bit**|Il testo della query fa parte di un modulo crittografato.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**has_restricted_text**|**bit**|Il testo della query contiene una password o altre parole senza menzioni.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **View database state** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_context_settings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

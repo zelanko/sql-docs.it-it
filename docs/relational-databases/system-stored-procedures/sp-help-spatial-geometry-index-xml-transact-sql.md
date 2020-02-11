@@ -18,10 +18,10 @@ ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304892"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72304892"
   
  I risultati vengono restituiti in un frammento XML in cui vengono visualizzati il nome e valore delle proprietà selezionate.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Le proprietà che contengono valori NULL non sono incluse nel set XML restituito.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usato `sp_help_spatial_geometry_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito nella tabella **geometry_col** per l'esempio di query specificato in **\@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
+ Nell'esempio seguente viene `sp_help_spatial_geometry_index_xml` usato per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito nella tabella **geometry_col** per l'esempio di query specificato in ** \@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
  Viene quindi eseguita una [query XQuery](../../xquery/xquery-basics.md) sul set di risultati, restituendo una proprietà specifica.  
   
@@ -79,7 +79,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Nozioni di base su XQuery](../../xquery/xquery-basics.md)   
+ [Nozioni fondamentali su XQuery](../../xquery/xquery-basics.md)   
  [Guida di riferimento al linguaggio XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare un cubo da un modello senza utilizzare una vista origine dati | Microsoft Docs
+title: Creazione di un cubo da un modello senza utilizzare una vista origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076513"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
-  Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
+  Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Selezione del metodo di compilazione  
  Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Build the cube without using a data source**(Crea il cubo senza usare un'origine dati). Per creare il cubo usando un modello di cubo esistente, selezionare la casella di controllo **Use a cube template** (Usa un modello di cubo). . Se non si seleziona l'utilizzo di un modello, è necessario impostare le opzioni manualmente.  
   
- Nei modelli di cubo sono inclusi misure, gruppi di misure, dimensioni, gerarchie e attributi predefiniti. Se si seleziona un modello, nella procedura guidata vengono utilizzate le definizioni di oggetti nei modelli come base per l'impostazione delle opzioni nelle pagine seguenti. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene installato con diversi modelli di cubi standard. L'amministratore del server può aggiungere inoltre modelli di cubo o di dimensioni progettati espressamente per i dati dell'organizzazione.  
+ Nei modelli di cubo sono inclusi misure, gruppi di misure, dimensioni, gerarchie e attributi predefiniti. Se si seleziona un modello, nella procedura guidata vengono utilizzate le definizioni di oggetti nei modelli come base per l'impostazione delle opzioni nelle pagine seguenti. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene installato con diversi modelli di cubi standard. L'amministratore del server può aggiungere inoltre modelli di cubo o di dimensioni progettati espressamente per i dati dell'organizzazione.  
   
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
- Utilizzare la pagina per **selezionare le dimensioni** della procedura guidata per aggiungere dimensioni esistenti al cubo. Questa pagina viene visualizzata solo se esistono già dimensioni condivise senza un'origine dati nel progetto o nel database. In essa non sono elencate dimensioni che dispongono di un'origine dati.  
+ Utilizzare la pagina per selezionare le dimensioni della procedura guidata per aggiungere dimensioni esistenti al cubo. **** Questa pagina viene visualizzata solo se esistono già dimensioni condivise senza un'origine dati nel progetto o nel database. In essa non sono elencate dimensioni che dispongono di un'origine dati.  
   
- Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra ( **>** ) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia ( **>>** ) per spostare tutte le dimensioni nell'elenco.  
+ Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la**>>** doppia freccia () per spostare tutte le dimensioni nell'elenco.  
   
 ## <a name="defining-new-measures"></a>Definizione di nuove misure  
  Usare la pagina **Definizione nuove misure** della procedura guidata per specificare le misure e i gruppi di misure nel nuovo cubo. I gruppi di misure che vengono specificati in questa pagina corrisponderanno alle tabelle dei fatti nello schema generato, mentre le misure corrisponderanno alle colonne non chiave numeriche nelle tabelle.  
@@ -39,7 +40,7 @@ ms.locfileid: "66076513"
   
  Sia nella griglia **Selezionare le misure dal modello** sia nella griglia **Aggiungi nuove misure** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare la proprietà `Name` nell'oggetto misura.|  
 |**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare la proprietà `Name` per l'oggetto gruppo di misure.|  
@@ -51,16 +52,16 @@ ms.locfileid: "66076513"
   
  Se si usa un modello per creare il cubo, nella griglia in **Selezionare le dimensioni dal modello** vengono visualizzate le dimensioni nel modello. È possibile deselezionare la casella di controllo accanto a una qualsiasi dimensione per rimuoverla dal cubo. Deselezionare la casella di controllo nella barra del titolo della griglia per rimuovere tutte le dimensioni elencate. Se non si utilizza un modello, nella griglia viene elencata solo la dimensione temporale.  
   
- È possibile aggiungere dimensioni al cubo nella griglia in **Aggiungi nuove dimensioni**. Per aggiungere una dimensione, fare clic nella cella le `Name` colonna che contiene il testo **Aggiungi nuova dimensione**e quindi digitare un nome per la dimensione. Per rimuovere una riga dall'elenco, fare clic sull'icona di eliminazione (**X**).  
+ È possibile aggiungere dimensioni al cubo nella griglia in **Aggiungi nuove dimensioni**. Per aggiungere una dimensione, fare clic sulla cella nella `Name` colonna contenente il testo **Aggiungi nuova dimensione**, quindi digitare un nome per la dimensione. Per rimuovere una riga dall'elenco, fare clic sull'icona di eliminazione (**X**).  
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
 |`Name`|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore imposta la `Name` proprietà per l'oggetto dimensione.|  
-|**Dimensione a modifica lenta**|Viene specificato che si tratta di una dimensione a modifica lenta. Se si seleziona questa casella di controllo, alla dimensione vengono aggiunti gli attributi relativi alla data di inizio, alla data di fine, all'ID originale e allo stato della dimensione a modifica lenta. L'opzione**Dimensione a modifica lenta** è selezionata per impostazione predefinita se si usa un modello per creare il cubo e la procedura guidata rileva questi quattro tipi di attributo in una dimensione del modello.|  
-|**Attributi**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
+|**SCD**|Viene specificato che si tratta di una dimensione a modifica lenta. Se si seleziona questa casella di controllo, alla dimensione vengono aggiunti gli attributi relativi alla data di inizio, alla data di fine, all'ID originale e allo stato della dimensione a modifica lenta. **SCD** è selezionato per impostazione predefinita se si utilizza un modello per creare il cubo e la procedura guidata rileva questi quattro tipi di attributo in una dimensione del modello.|  
+|**Attributes**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
   
 ## <a name="defining-time-periods"></a>Definizione dei periodi di tempo  
  Usare la pagina **Definizione periodi di tempo** della procedura guidata per specificare l'intervallo di date da includere nella dimensione. È possibile scegliere, ad esempio, un intervallo che inizia dal primo gennaio del primo anno a cui si riferiscono i dati e che si estende fino agli anni successivi alla transazione più recente. Le transazioni che non rientrano in questo intervallo non verranno visualizzate oppure verranno visualizzate come membri sconosciuti nella dimensione in base all'impostazione della proprietà `UnknownMemberVisible` della dimensione. La proprietà `UnknownMemberName` consente di specificare la didascalia per il membro sconosciuto. È inoltre possibile modificare il primo giorno della settimana utilizzato nei dati. Il giorno predefinito è domenica.  
@@ -82,7 +83,7 @@ ms.locfileid: "66076513"
 |Calendario|Descrizione|  
 |--------------|-----------------|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Se si seleziona questo calendario, specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.|  
-|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e mese e il modello di tre mesi di 4-4 e 5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane al mese.|  
+|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e il mese di inizio e il modello di tre mesi di 4-4-5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane in un mese.|  
 |Calendario produzione|Calendario in cui vengono utilizzati 13 periodi di quattro settimane, divisi in tre trimestri di quattro periodi e un trimestre di cinque periodi. Se si seleziona questo calendario, specificare la settimana di inizio, compresa tra 1 e 4, il mese per l'anno di produzione, nonché il trimestre con periodi aggiuntivi.|  
 |Calendario ISO 8601|Calendario standard ISO (International Organization for Standardization) per il formato della data e dell'ora (8601). Calendario costituito da un numero intero di settimane di sette giorni. Per evitare di dividere una settimana, il calendario inizia un nuovo anno pochi giorni prima o dopo il primo gennaio.|  
   

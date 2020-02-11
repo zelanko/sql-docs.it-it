@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273424"
 ---
 # <a name="server-element-dta"></a>Elemento Server (DTA)
@@ -38,8 +38,8 @@ ms.locfileid: "63273424"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuna.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|No.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una volta per ogni elemento di `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -49,8 +49,8 @@ ms.locfileid: "63273424"
 |**Elemento padre**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
 |**Elementi figlio**|[Elemento Name per Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Elemento Database per Server &#40;DTA&#41;](database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Note  
- È possibile specificare una sola `Server` (elemento) per il `DTAInput` elemento. Questo elemento appartiene al nome **ServerDetailsTypecomplexType** nell'XML Schema di DTA. Questo elemento `Server` non deve essere confuso con l'elemento figlio di `Configuration`. Per altre informazioni, vedere [Elemento Server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
+## <a name="remarks"></a>Osservazioni  
+ È possibile specificare un `Server` solo elemento per l' `DTAInput` elemento. Questo elemento appartiene al nome **ServerDetailsTypecomplexType** nell'XML Schema di DTA. Questo elemento `Server` non deve essere confuso con l'elemento figlio di `Configuration`. Per altre informazioni, vedere [Elemento Server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come specificare la tabella **Sales.SalesPerson** nel database **AdventureWorks** in SERVER001:  

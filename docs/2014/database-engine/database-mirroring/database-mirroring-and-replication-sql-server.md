@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807461"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
@@ -71,11 +71,11 @@ ms.locfileid: "62807461"
   
 3.  Configurare la distribuzione per il server mirror. Assegnare al database mirror lo stesso nome del server di pubblicazione e specificare lo stesso server di distribuzione e la stessa cartella snapshot utilizzati dal database principale. Se ad esempio si configura la replica con stored procedure, eseguire [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) nel server di distribuzione e quindi [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) nel mirror. Per **sp_adddistpublisher**:  
   
-    -   Impostare il valore del parametro **@publisher** sul nome di rete del server mirror.  
+    -   Impostare il valore del **@publisher** parametro sul nome di rete del server mirror.  
   
-    -   Impostare il valore del parametro **@working_directory** sulla cartella snapshot usata dal server principale.  
+    -   Impostare il valore del **@working_directory** parametro sulla cartella snapshot usata dal server principale.  
   
-4.  Specificare il nome del database mirror per il parametro dell'agente **-PublisherFailoverPartner**. Questo parametro è necessario per l'identificazione del database mirror dopo il failover da parte degli agenti seguenti:  
+4.  Specificare il nome del server mirror per il parametro **-PublisherFailoverPartner** Agent. Questo parametro è necessario per l'identificazione del database mirror dopo il failover da parte degli agenti seguenti:  
   
     -   Agente snapshot (per tutte le pubblicazioni)  
   
@@ -85,7 +85,8 @@ ms.locfileid: "62807461"
   
     -   Agente di merge (per le sottoscrizioni di tipo merge)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Listener per la replica di (replisapi.dll: per le sottoscrizioni di tipo merge sincronizzate usando sincronizzazione Web)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Listener per la replica di (replisapi.dll: per le sottoscrizioni di tipo merge sincronizzate usando sincronizzazione Web)  
   
     -   Controllo ActiveX merge SQL (per le sottoscrizioni di tipo merge sincronizzate tramite il controllo)  
   
@@ -97,7 +98,7 @@ ms.locfileid: "62807461"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     È consigliabile aggiungere il parametro **-PublisherFailoverPartner** a un profilo agente e quindi specificare il nome del database mirror nel profilo. Se ad esempio si sta configurando la replica con stored procedure:  
+     È consigliabile aggiungere **-PublisherFailoverPartner** a un profilo agente e quindi specificare il nome del database mirror nel profilo. Se ad esempio si sta configurando la replica con stored procedure:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -133,9 +134,9 @@ ms.locfileid: "62807461"
   
 -   Se si amministra la replica sul database mirror mediante stored procedure o oggetti RMO (Replication Management Objects), per i casi in cui si specifica il nome del server di pubblicazione indicare il nome dell'istanza in cui il database è stato abilitato per la replica. Per determinare il nome appropriato, usare la funzione [publishingnomeserver](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     Quando si esegue il mirroring di un database di pubblicazione, i metadati della replica archiviati nel database con mirroring sono identici a quelli archiviati nel database principale. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database principale, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database mirror equivale al nome del database principale e non a quello del database mirror. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione sul server mirror. Se, ad esempio, si sta configurando la replica con stored procedure sul database mirror dopo un failover e si vuole aggiungere una sottoscrizione pull a un database di pubblicazione abilitato sul database principale, è necessario specificare il nome del server principale invece del nome del server mirror per il parametro **@publisher** di **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
+     Quando si esegue il mirroring di un database di pubblicazione, i metadati della replica archiviati nel database con mirroring sono identici a quelli archiviati nel database principale. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database principale, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database mirror equivale al nome del database principale e non a quello del database mirror. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione sul server mirror. Se, ad esempio, si configura la replica con stored procedure sul database mirror dopo un failover e si desidera aggiungere una sottoscrizione pull a un database di pubblicazione abilitato nel server principale, è necessario specificare il nome dell'entità anziché il nome del server mirror per il **@publisher** parametro di **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
   
-     Se si abilita un database di pubblicazione sul server mirror dopo che è stato eseguito il failover sul server mirror, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema equivale al nome del server mirror. In questo caso, per il parametro **@publisher** è necessario usare il nome del database mirror.  
+     Se si Abilita un database di pubblicazione sul server mirror dopo il failover sul database mirror, il nome dell'istanza del server di pubblicazione archiviato nelle tabelle di sistema è il nome del server mirror. in questo caso, si utilizzerà il nome del server mirror per il **@publisher** parametro.  
   
     > [!NOTE]  
     >  In alcuni casi, ad esempio se si usa **sp_addpublication**, il parametro **@publisher** è supportato solo per server di pubblicazione non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è quindi rilevante per il mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -12,10 +12,10 @@ ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 623fbf69ef49ceb7dfea7f2d9c6e96b7520ded3e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558088"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework
@@ -33,7 +33,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  Per correggere questo problema, è necessario aggiornare gli assembly SQLCLR interessati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . È possibile eseguire questa operazione eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgradedlls** per ignorare la ricreazione di database di DQS e aggiornare solo gli assembly interessati. In questo modo viene garantita l'integrità della Knowledge Base, dei progetti Data Quality e di qualsiasi altro dato di DQS.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   È necessario aver eseguito l'accesso come membro del gruppo di amministratori nel computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
@@ -59,6 +59,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Aggiornare lo schema dei database DQS dopo l'installazione di SQL Server aggiornamento](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

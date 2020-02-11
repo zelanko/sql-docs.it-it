@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893671"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
@@ -34,8 +34,8 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  Espressione stringa valida del nome della proprietà di un membro.  
   
-## <a name="remarks"></a>Note  
- La funzione **Properties** restituisce il valore del membro specificato per la proprietà del membro specificata. La proprietà del membro può essere una qualsiasi delle proprietà intrinseche dei membri, ad esempio **nome**, **ID**, **chiave**o **didascalia**, oppure può essere una proprietà del membro definita dall'utente. Per ulteriori informazioni, vedere [proprietà &#40;intrinseche dei&#41; membri MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [proprietà &#40;dei membri definite&#41;dall'utente MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Properties** restituisce il valore del membro specificato per la proprietà del membro specificata. La proprietà del membro può essere una qualsiasi delle proprietà intrinseche dei membri, ad esempio **nome**, **ID**, **chiave**o **didascalia**, oppure può essere una proprietà del membro definita dall'utente. Per ulteriori informazioni, vedere [proprietà intrinseche dei membri &#40;&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [proprietà dei membri definite dall'utente &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  Per impostazione predefinita, il valore è impostato forzatamente su una stringa. Se viene specificato **Type** , il valore restituito è fortemente tipizzato.  
   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle proprietà dei membri &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilizzo delle proprietà del membro &#40;&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,16 +18,16 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106308"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_subscriptions** tabella contiene una riga per ogni sottoscrizione gestita dall'agente di Merge nel Sottoscrittore. Questa tabella è archiviata nel database di distribuzione.  
+  La tabella **MSmerge_subscriptions** contiene una riga per ogni sottoscrizione gestita dal agente di merge nel Sottoscrittore. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -38,11 +38,11 @@ ms.locfileid: "68106308"
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = push<br /><br /> 1 = pull<br /><br /> 2 = anonima|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione:<br /><br /> 1 = Automatica.<br /><br /> 2 = Nessuna.|  
-|**status**|**tinyint**|Stato della sottoscrizione.|  
+|**stato**|**tinyint**|Stato della sottoscrizione.|  
 |**subscription_time**|**datetime**|Ora di aggiunta della sottoscrizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

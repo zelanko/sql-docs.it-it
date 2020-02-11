@@ -13,10 +13,10 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041475"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Ripristinare il database master (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68041475"
   
 2.  Per ripristinare un backup completo del database **master**, usare l'istruzione [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-     `RESTORE DATABASE master FROM`  *<dispositivo_backup>*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
      L'opzione REPLACE indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di ripristinare il database specificato anche quando è già presente un database con lo stesso nome. Il database esistente, se presente, viene eliminato. In modalità utente singolo è consigliabile immettere l'istruzione RESTORE DATABASE nell' [utilità sqlcmd](../../tools/sqlcmd-utility.md). Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Ottenere la finestra di dialogo (controllo del codice sorgente) | Microsoft Docs
+title: Finestra di dialogo Get (controllo del codice sorgente) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779008"
 ---
 # <a name="get-dialog-box-source-control"></a>Finestra di dialogo Aggiungi (Controllo del codice sorgente)
   Consente di recuperare una copia in sola lettura dell'elemento selezionato dal database del controllo del codice sorgente e di inserire tale copia nella propria cartella di lavoro o in un'altra cartella specificata.  
   
 ## <a name="dialog-box-access"></a>Accesso alla finestra di dialogo  
- In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] selezionare un elemento in Esplora soluzioni. Nel **File** menu, fare clic su **controllo del codice sorgente** quindi fare clic su **ottenere**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] selezionare un elemento in Esplora soluzioni. Scegliere **controllo del codice sorgente** dal menu **file** e quindi fare clic su **Ottieni**.  
   
 > [!NOTE]  
 >  Per accedere a questa finestra di dialogo, è inoltre possibile fare clic con il pulsante destro del mouse sull'elemento in Esplora soluzioni.  
@@ -43,16 +43,16 @@ ms.locfileid: "62779008"
  **Ora modifica**  
  Visualizza l'ora dell'ultima modifica di un elemento.  
   
- **Name**  
+ **Nome**  
  Visualizza i nomi degli elementi da recuperare. Accanto agli elementi viene visualizzata la casella di controllo selezionata. Se non si desidera recuperare un dato elemento, deselezionare la casella di controllo corrispondente.  
   
  **Opzioni**  
  Consente di visualizzare opzioni specifiche di lettura del plug-in Source Safe quando si fa clic sulla freccia a destra del pulsante.  
   
- **Sort**  
+ **Ordina**  
  Consente di scegliere l'ordine delle colonne visualizzate.  
   
- **Visualizzazione struttura ad albero**  
+ **Visualizzazione albero**  
  Consente di visualizzare la gerarchia di cartelle e file per gli elementi da recuperare.  
   
 ## <a name="see-also"></a>Vedere anche  

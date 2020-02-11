@@ -1,5 +1,5 @@
 ---
-title: Impostare l'archiviazione delle partizioni (Analysis Services - multidimensionale) | Microsoft Docs
+title: Impostare l'archiviazione delle partizioni (Analysis Services-multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,19 +26,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072986"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Impostare l'archiviazione delle partizioni (Analysis Services - Multidimensionale)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sono disponibili diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
   
  È possibile specificare l'archiviazione delle partizioni nella scheda Partizioni del cubo in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o nella pagina delle proprietà delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="guidelines-for-choosing-a-storage-mode"></a>Linee guida per la scelta di una modalità di archiviazione  
- Una prassi comune per gruppi di misure di grandi dimensioni consiste nel configurare tipi di archiviazione diversi per le varie partizioni. Tenere presenti le linee guida seguenti:  
+ Una prassi comune per gruppi di misure di grandi dimensioni consiste nel configurare tipi di archiviazione diversi per le varie partizioni. Considerare le linee guida seguenti:  
   
 -   Utilizzare l'impostazione ROLAP in tempo reale per i dati correnti che vengono aggiornati continuamente.  
   

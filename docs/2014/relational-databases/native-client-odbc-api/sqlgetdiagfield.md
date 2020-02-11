@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657704"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client specifica i campi di diagnostica aggiuntivi seguenti per `SQLGetDiagField`. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client specifica i seguenti campi di diagnostica `SQLGetDiagField`aggiuntivi per. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
   
 |Campo del record di diagnostica|Descrizione|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Segnala il numero di riga di una stored procedure che genera un errore. Il valore di SQL_DIAG_SS_LINE è significativo solo se SQL_DIAG_SS_PROCNAME restituisce un valore. Il valore viene restituito come numero intero senza segno a 16 bit.|  
 |SQL_DIAG_SS_MSGSTATE|Stato di un messaggio di errore. Per informazioni sullo stato del messaggio di errore, vedere [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Il valore viene restituito come numero intero con segno a 32 bit.|  
-|SQL_DIAG_SS_PROCNAME|Nome della stored procedure che genera un errore, se appropriato. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere determinata chiamando [SQLGetInfo](sqlgetinfo.md) che richiede il valore di SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_PROCNAME|Nome della stored procedure che genera un errore, se appropriato. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere determinato chiamando [SQLGetInfo](sqlgetinfo.md) richiedendo il valore per SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|Livello di gravità del messaggio di errore associato. Il valore viene restituito come numero intero con segno a 32 bit.|  
 |SQL_DIAG_SS_SRVNAME|Nome del server in cui si è verificato l'errore. Il valore viene restituito come stringa di caratteri. La lunghezza della stringa (in caratteri) viene definita dalla macro SQL_MAX_SQLSERVERNAME in sqlncli.h.|  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62657704"
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client segnala i codici di funzione dinamica aggiuntivi seguenti che identificano l'ultima istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentata. Il codice di funzione dinamica viene restituito nell'intestazione (record 0) del set di record di diagnostica ed è pertanto disponibile a ogni esecuzione, indipendentemente dall'esito di quest'ultima.  
   
-|Codice di funzione dinamica|`Source`|  
+|Codice di funzione dinamica|Source (Sorgente)|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Istruzione ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|L'errore si è verificato nella clausola WHERE o HAVING di un'istruzione.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Istruzione CREATE DATABASE|  
-|SQL_DIAG_DFC_SS_CREATE_DEFAULT|Istruzione CREATE DEFAULT|  
+|SQL_DIAG_DFC_SS_CREATE_DEFAULT|Istruzione CREATE DEFAULT |  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|CREATE PROCEDURE - istruzione|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|Istruzione CREATE RULE|  
 |SQL_DIAG_DFC_SS_CREATE_TRIGGER|CREATE TRIGGER - istruzione|  
@@ -58,23 +58,23 @@ ms.locfileid: "62657704"
 |SQL_DIAG_DFC_SS_DROP_PROCEDURE|Istruzione DROP PROCEDURE|  
 |SQL_DIAG_DFC_SS_DROP_RULE|Istruzione DROP RULE|  
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Istruzione DROP TRIGGER|  
-|SQL_DIAG_DFC_SS_DUMP_DATABASE|Istruzione BACKUP o DUMP DATABASE|  
+|SQL_DIAG_DFC_SS_DUMP_DATABASE|Istruzione BACKUP o DUMP DATABASE |  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Istruzione DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Viene restituito anche per un'istruzione CHECKPOINT se il **trunc. log sul chkpt.** opzione di database è attiva.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Restituito anche per un'istruzione CHECKPOINT se il file **tronca. log in chkpt.** l'opzione di database è on.|  
 |SQL_DIAG_DFC_SS_GOTO|Istruzione per il controllo di flusso GOTO|  
-|SQL_DIAG_DFC_SS_INSERT_BULK|Istruzione INSERT BULK|  
+|SQL_DIAG_DFC_SS_INSERT_BULK|Istruzione INSERT BULK |  
 |SQL_DIAG_DFC_SS_KILL|Istruzione KILL|  
 |SQL_DIAG_DFC_SS_LOAD_DATABASE|Istruzione LOAD o RESTORE DATABASE|  
 |SQL_DIAG_DFC_SS_LOAD_HEADERONLY|Istruzione LOAD o RESTORE HEADERONLY.|  
 |SQL_DIAG_DFC_SS_LOAD_TABLE|Istruzione LOAD TABLE|  
-|SQL_DIAG_DFC_SS_LOAD_TRANSACTION|Istruzione LOAD o RESTORE TRANSACTION|  
+|SQL_DIAG_DFC_SS_LOAD_TRANSACTION|Istruzione LOAD o RESTORE TRANSACTION |  
 |SQL_DIAG_DFC_SS_PRINT|istruzione PRINT|  
 |SQL_DIAG_DFC_SS_RAISERROR|istruzione RAISERROR|  
 |SQL_DIAG_DFC_SS_READTEXT|Istruzione READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Istruzione RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Istruzione per il controllo di flusso RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO - istruzione|  
-|SQL_DIAG_DFC_SS_SET|Istruzione SET (generica, tutte le opzioni)|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Istruzione SELECT INTO|  
+|SQL_DIAG_DFC_SS_SET|Istruzione SET (generica, tutte le opzioni) |  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT - istruzione|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT - istruzione|  
 |SQL_DIAG_DFC_SS_SET_STATISTICS|Istruzione SET STATISTICS IO o SET STATISTICS TIME|  
@@ -82,25 +82,25 @@ ms.locfileid: "62657704"
 |SQL_DIAG_DFC_SS_SETUSER|SETUSER - istruzione|  
 |SQL_DIAG_DFC_SS_SET_XCTLVL|Istruzione SET TRANSACTION ISOLATION LEVEL|  
 |SQL_DIAG_DFC_SS_SHUTDOWN|Istruzione SHUTDOWN|  
-|SQL_DIAG_DFC_SS_TRANS_BEGIN|Istruzione BEGIN TRAN|  
+|SQL_DIAG_DFC_SS_TRANS_BEGIN|Istruzione BEGIN TRAN |  
 |SQL_DIAG_DFC_SS_TRANS_COMMIT|Istruzione COMMIT TRAN|  
 |SQL_DIAG_DFC_SS_TRANS_PREPARE|Preparazione al commit di una transazione distribuita|  
-|SQL_DIAG_DFC_SS_TRANS_ROLLBACK|Istruzione ROLLBACK TRAN|  
+|SQL_DIAG_DFC_SS_TRANS_ROLLBACK|Istruzione ROLLBACK TRAN |  
 |SQL_DIAG_DFC_SS_TRANS_SAVE|Istruzione SAVE TRAN|  
 |SQL_DIAG_DFC_SS_TRUNCATE_TABLE|TRUNCATE TABLE - istruzione|  
 |SQL_DIAG_DFC_SS_UPDATE_STATISTICS|UPDATE STATISTICS - istruzione|  
 |SQL_DIAG_DFC_SS_UPDATETEXT|UPDATETEXT, istruzione|  
 |SQL_DIAG_DFC_SS_USE|USE - istruzione|  
-|SQL_DIAG_DFC_SS_WAITFOR|Istruzione per il controllo di flusso WAITFOR|  
+|SQL_DIAG_DFC_SS_WAITFOR|Istruzione per il controllo di flusso WAITFOR |  
 |SQL_DIAG_DFC_SS_WRITETEXT|Istruzione WRITETEXT|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField e parametri con valori di tabella  
- SQLGetDiagField può essere utilizzato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
+ SQLGetDiagField può essere usato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
   
- Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLGetDiagField (funzione)](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

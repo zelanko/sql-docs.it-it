@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510427"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Aggiunta di un report personalizzato a Management Studio
@@ -61,7 +61,7 @@ ms.locfileid: "62510427"
   
 -   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo in Esplora oggetti, scegliere **Report**e fare clic su **Report personalizzati**. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file **ReportConnessioni.rdl** e fare clic su **Apri**.  
   
-     Alla prima apertura di un nuovo report personalizzato da un nodo di Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
+     Alla prima apertura di un nuovo report personalizzato da un nodo Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
   
     1.  Per modificare il numero dei file visualizzati nell'elenco degli ultimi elementi usati, scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e fare clic su **Generale**.  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62510427"
   
 ## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
- [Usare report personalizzati con proprietà dei nodi Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)   
- [Visualizzazione relativi all'esecuzione del Report personalizzato avvisi](unsuppress-run-custom-report-warnings.md)   
+ [Usare i report personalizzati con le proprietà del nodo Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)   
+ [Annulla l'esecuzione degli avvisi del report personalizzato](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

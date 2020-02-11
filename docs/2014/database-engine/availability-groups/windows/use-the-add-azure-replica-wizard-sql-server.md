@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176000"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
@@ -28,16 +28,16 @@ ms.locfileid: "70176000"
   
      [Sicurezza](#Security)  
   
--   **Per aggiungere una replica mediante:**  [Procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Per aggiungere una replica tramite:**  [procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "istanze del server" e "repliche e gruppi di disponibilità" in [prerequisiti, restrizioni e consigli &#40;per&#41;gruppi di disponibilità AlwaysOn SQL Server](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "istanze del server" e "repliche e gruppi di disponibilità" in [prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
--   È necessario usare un ambiente IT ibrido in cui nella subnet locale sia presente una VPN da sito a sito con Azure. Per ulteriori informazioni, vedere [Configurare una VPN da sito a sito nel portale di gestione](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   È necessario usare un ambiente IT ibrido in cui nella subnet locale sia presente una VPN da sito a sito con Azure. Per altre informazioni, vedere [Creare una rete virtuale con una connessione VPN da sito a sito usando il portale di Azure classico](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Il gruppo di disponibilità deve contenere le repliche di disponibilità locali.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70176000"
   
 -   **Prerequisiti per l'utilizzo della sincronizzazione dei dati iniziale completa** È necessario specificare una condivisione di rete affinché la procedura guidata possa creare e accedere ai backup. Per la replica primaria, all'account usato per avviare il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] devono essere associate le autorizzazioni del file system in lettura e scrittura per una condivisione di rete. Per le repliche secondarie, all'account deve essere associata l'autorizzazione di lettura per la condivisione di rete.  
   
-     Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -55,9 +55,9 @@ ms.locfileid: "70176000"
 ##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi replica Azure (SQL Server Management Studio)  
  La procedura guidata Aggiungi replica Azure può essere avviata dalla [Pagina Specifica repliche](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Questa pagina può essere visualizzata in due modi:  
   
--   [Utilizzare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la procedura guidata Aggiungi replica a gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
  Dopo aver avviato la procedura guidata Aggiungi replica Azure effettuare i passaggi seguenti:  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70176000"
   
 4.  Specificare le impostazioni per la macchina virtuale di Azure che ospiterà la nuova replica secondaria:  
   
-     Immagine  
+     Image  
      Nome dell'immagine di SQL Server da usare per la macchina virtuale di Azure  
   
-     Dimensioni VM  
+     Dimensioni macchina virtuale  
      Dimensioni della macchina virtuale di Azure  
   
-     Nome VM  
+     Nome macchina virtuale  
      Nome DNS della macchina virtuale di Azure  
   
      Nome utente VM  
@@ -110,8 +110,8 @@ ms.locfileid: "70176000"
 -   [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per &#40;gruppi di disponibilità AlwaysOn SQL Server&#41; ](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

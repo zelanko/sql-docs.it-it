@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b9c42cabb34d78086e31f9b59096ac4c78558f5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73768181"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e OLE DB
@@ -25,10 +25,10 @@ ms.locfileid: "73768181"
   
 -   [Leggere una colonna FILESTREAM in un file usando IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   
--   [Recuperare dati da una colonna FILESTREAM usando ISequentialStream &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
+-   [Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   
--   [Inviare dati a una colonna FILESTREAM usando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
   

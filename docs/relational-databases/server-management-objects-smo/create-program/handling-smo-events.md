@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148719"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
@@ -40,10 +40,10 @@ ms.locfileid: "70148719"
   
  Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore eventi ricevono informazioni sull'evento dal parametro *ServerEventNotificatificationArgs* che può essere usato per segnalare le informazioni relative all'evento.  
   
- I tipi di eventi del database e del server che possono essere gestiti sono elencati <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> nella classe <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>e nella classe.  
+ I tipi di eventi del database e del server che possono essere gestiti sono elencati <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> nella classe e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>nella classe.  
   
 ## <a name="example"></a>Esempio  
-Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Registrazione di gestori di eventi e sottoscrizione della gestione degli eventi in Visual Basic  

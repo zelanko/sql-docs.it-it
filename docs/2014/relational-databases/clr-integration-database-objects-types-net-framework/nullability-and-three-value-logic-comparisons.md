@@ -1,5 +1,5 @@
 ---
-title: Supporto di valori null e confronti di logica a tre valori | Microsoft Docs
+title: Supporto dei valori null e confronti di logica a tre valori | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919628"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Supporto dei valori Null e confronti di logica a tre valori
@@ -36,9 +36,9 @@ ms.locfileid: "62919628"
  Lo spazio dei nomi `System.Data.SqlTypes` introduce un tipo `SqlBoolean` per rappresentare questa logica a 3 valori. I confronti tra gli spazi dei nomi `SqlTypes` restituiscono un tipo di valore `SqlBoolean`. Il valore UNKNOWN viene rappresentato dal valore Null del tipo `SqlBoolean`. Vengono fornite le proprietà `IsTrue`, `IsFalse` e `IsNull` per controllare il valore di un tipo `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Operazioni, funzioni e valori NULL  
- Tutti gli operatori aritmetici (+, -, \*, /, %), operatori bit per bit (~ &, e |), la maggior parte delle funzioni e restituiscono NULL se uno degli operandi o degli argomenti di `SqlTypes` sono NULL. La proprietà `IsNull` restituisce sempre un valore True o False.  
+ Tutti gli operatori aritmetici (+, \*-,,/,%), gli operatori bit per bit (~, & e |) e la maggior parte delle funzioni restituiscono null se uno `SqlTypes` degli operandi o degli argomenti di è null. La proprietà `IsNull` restituisce sempre un valore True o False.  
   
-## <a name="precision"></a>Precisione  
+## <a name="precision"></a>Precision  
  I valori massimi dei tipi di dati decimali CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono diversi da quelli dei tipi di dati numerici e decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per i tipi di dati CLR decimali di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], inoltre, si presuppone la massima precisione. Nei tipi di dati CLR per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, `SqlDecimal` fornisce la stessa scala e precisione massima e la stessa semantica del tipo di dati decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Rilevamento dell'overflow  

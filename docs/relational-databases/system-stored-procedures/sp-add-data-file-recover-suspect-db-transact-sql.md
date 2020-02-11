@@ -18,18 +18,18 @@ ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942366"
 ---
-# <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
+# <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aggiunge un file di dati a un filegroup quando non è possibile completare l'operazione di recupero di un database a causa di spazio insufficiente nel filegroup (errore 1105). Dopo l'aggiunta del file, la stored procedure disabilita l'impostazione sospetta e completa il recupero del database. I parametri sono identici a quelli dell'istruzione ALTER DATABASE *database_name* ADD FILE.  
+  Aggiunge un file di dati a un filegroup quando non è possibile completare l'operazione di recupero di un database a causa di spazio insufficiente nel filegroup (errore 1105). Dopo l'aggiunta del file, la stored procedure disabilita l'impostazione sospetta e completa il recupero del database. I parametri sono gli stessi di quelli per ALTER DATABASE *database_name* Add file.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,32 +45,32 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbName = ] 'database_ '` È il nome del database. *database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @dbName = ] 'database_ '`Nome del database. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filegroup = ] 'filegroup_name_ '` È il filegroup a cui aggiungere il file. *filegroup_name* viene **nvarchar(260)** , valore predefinito è NULL, che indica che il file primario.  
+`[ @filegroup = ] 'filegroup_name_ '`Filegroup a cui aggiungere il file. *filegroup_name* è di **tipo nvarchar (260)** e il valore predefinito è null, che indica il file primario.  
   
-`[ @name = ] 'logical_file_name_ '` Il nome utilizzato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *logical_file_name* viene **nvarchar(260)** , non prevede alcun valore predefinito.  
+`[ @name = ] 'logical_file_name_ '`Nome utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *logical_file_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
   
-`[ @filename = ] 'os_file_name_ '` Il percorso e nome file utilizzato dal sistema operativo per il file. Il file deve trovarsi in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* viene **nvarchar(260)** , non prevede alcun valore predefinito.  
+`[ @filename = ] 'os_file_name_ '`È il percorso e il nome file usati dal sistema operativo per il file. Il file deve trovarsi in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
   
-`[ @size = ] 'size_ '` Indica le dimensioni iniziali del file. *le dimensioni* viene **nvarchar(20)** , con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se *dimensioni* non viene specificato, il valore predefinito è 1 MB.  
+`[ @size = ] 'size_ '`Dimensioni iniziali del file. *size* è di **tipo nvarchar (20)** e il valore predefinito è null. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se non si specifica *size* , il valore predefinito è 1 MB.  
   
-`[ @maxsize = ] 'max_size_ '` È la dimensione massima che può raggiungere il file. *max_size* viene **nvarchar(20)** , con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB.  
+`[ @maxsize = ] 'max_size_ '`Dimensione massima consentita per la crescita del file. *max_size* è di **tipo nvarchar (20)** e il valore predefinito è null. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB.  
   
- Se *max_size* non viene specificato, il file aumenterà finché il disco è pieno. Prima che si verifichi questa situazione, l'amministratore riceve un avviso dal registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Se *max_size* non è specificato, le dimensioni del file aumenteranno fino a quando il disco non è pieno. Prima che si verifichi questa situazione, l'amministratore riceve un avviso dal registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-`[ @filegrowth = ] 'growth_increment_ '` È la quantità di spazio aggiunta al file ogni volta che è richiesto spazio nuovo. *growth_increment* viene **nvarchar(20)** , con un valore predefinito è NULL. Il valore 0 indica che le dimensioni non verranno aumentate. Specificare un numero intero, ovvero non includere decimali. È possibile specificare il valore in megabyte (MB) o in kilobyte (KB) oppure in forma di percentuale (%). Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale specificata delle dimensioni del file quando si verifica l'incremento. Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB.  
+`[ @filegrowth = ] 'growth_increment_ '`Quantità di spazio aggiunta al file ogni volta che è necessario spazio nuovo. *growth_increment* è di **tipo nvarchar (20)** e il valore predefinito è null. Il valore 0 indica che le dimensioni non verranno aumentate. Specificare un numero intero, ovvero non includere decimali. È possibile specificare il valore in megabyte (MB) o in kilobyte (KB) oppure in forma di percentuale (%). Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale specificata delle dimensioni del file quando si verifica l'incremento. Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB.  
   
- Se *growth_increment* è NULL, il valore predefinito è 10% e il valore minimo è 64 KB. Le dimensioni specificate vengono arrotondate al blocco di 64 KB più prossimo.  
+ Se *growth_increment* è null, il valore predefinito è 10% e il valore minimo è 64 KB. Le dimensioni specificate vengono arrotondate al blocco di 64 KB più prossimo.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="permissions"></a>Permissions  
- Autorizzazioni per impostazione predefinita ai membri di eseguire la **sysadmin** ruolo predefinito del server. Queste autorizzazioni non sono trasferibili.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** . Queste autorizzazioni non sono trasferibili.  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio il database `db1` è stato contrassegnato come sospetto durante l'operazione di recupero a causa di spazio insufficiente (errore 1105) nel filegroup `fg1`.  
@@ -84,7 +84,7 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
+ [sp_add_log_file_recover_suspect_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,23 +13,23 @@ ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925100"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Recordset gerarchici in XML
-ADO consente la persistenza degli oggetti Recordset gerarchici in XML. Con gli oggetti di Recordset gerarchici, il valore di un campo nell'oggetto Recordset padre è un altro oggetto Recordset. Questi campi sono rappresentati come elementi figlio nel flusso XML anziché un attributo.  
+ADO consente la persistenza degli oggetti recordset gerarchici in XML. Con gli oggetti recordset gerarchici, il valore di un campo nel recordset padre è un altro recordset. Tali campi sono rappresentati come elementi figlio nel flusso XML anziché come attributo.  
   
-## <a name="remarks"></a>Note  
- Nell'esempio seguente viene illustrato in questo caso:  
+## <a name="remarks"></a>Osservazioni  
+ Nell'esempio seguente viene illustrato questo caso:  
   
 ```  
 Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select stor_id, ord_num, ord_date, qty from sales} AS rsSales RELATE stor_id TO stor_id)", "Provider=MSDataShape;DSN=pubs;Integrated Security=SSPI;"  
 ```  
   
- Di seguito è riportato il formato XML del set di record persistente:  
+ Di seguito è riportato il formato XML del Recordset permanente:  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
@@ -104,25 +104,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- Quando questo viene reso persistente in questo modo, l'esatto ordine delle colonne nell'oggetto Recordset padre non è ovvio. Qualsiasi campo nell'elemento padre può contenere un Recordset figlio. Il Provider di persistenza mantiene tutte le colonne scalari prima di tutto come attributi e quindi le colonne"tutti figlio Recordset" come elementi figlio della riga padre. La posizione ordinale del campo nell'elemento padre Recordset possa essere ottenuto esaminando la definizione dello schema del set di record. Ogni campo ha una proprietà OLE DB, rs: numero, definita nello spazio dei nomi dello schema Recordset che contiene il numero ordinale per il campo.  
+ L'ordine esatto delle colonne nel recordset padre non è evidente quando viene reso permanente in questo modo. Qualsiasi campo nell'elemento padre può contenere un recordset figlio. Il provider di persistenza Salva in modo permanente tutte le colonne scalari come attributi e quindi Salva in modo permanente tutte le "colonne" del recordset figlio come elementi figlio della riga padre. La posizione ordinale del campo nel recordset padre può essere ottenuta esaminando la definizione dello schema del recordset. Ogni campo ha una proprietà OLE DB, RS: Number, definita nello spazio dei nomi dello schema recordset che contiene il numero ordinale per il campo.  
   
- I nomi di tutti i campi nell'oggetto Recordset figlio sono concatenati con il nome del campo del Recordset che contiene questo elemento figlio del padre. Questo modo si garantisce che siano presenti conflitti nome nei casi in cui padre e figlio recordset entrambi contenere un campo che viene ottenuto da due tabelle diverse ma avente.  
+ I nomi di tutti i campi del recordset figlio sono concatenati con il nome del campo nel recordset padre che contiene questo elemento figlio. In questo modo si garantisce che non vi siano conflitti di nome nei casi in cui i recordset padre e figlio contengono entrambi un campo ottenuto da due tabelle diverse, ma è denominato singolarmente.  
   
- Durante il salvataggio di recordset gerarchici in XML, è necessario tenere in ADO le seguenti restrizioni:  
+ Quando si salvano recordset gerarchici in XML, è necessario tenere presenti le restrizioni seguenti in ADO:  
   
--   Recordset gerarchici con aggiornamenti in sospeso non possono essere resi persistenti in XML.  
+-   Un recordset gerarchico con aggiornamenti in sospeso non può essere reso permanente in XML.  
   
--   Un Recordset gerarchico creato con un comando di forma con parametri non può essere persistente (in formato XML o ADTG).  
+-   Un recordset gerarchico creato con un comando Shape con parametri non può essere reso permanente (in formato XML o ADTG).  
   
--   ADO Salva attualmente la relazione tra padre e figlio recordset come un oggetto binario di grandi dimensioni (BLOB). I tag XML per descrivere la relazione non sono ancora stati definiti nello spazio dei nomi dello schema del set di righe.  
+-   ADO salva attualmente la relazione tra i recordset padre e figlio come oggetto binario di grandi dimensioni (BLOB). I tag XML per descrivere questa relazione non sono stati ancora definiti nello spazio dei nomi dello schema del set di righe.  
   
--   Quando viene salvato un Recordset gerarchico, figlio tutti i recordset vengono salvati con essa. Se il Recordset corrente è un elemento figlio di un altro oggetto Recordset, il relativo elemento padre non viene salvato. Figlio tutti i recordset tramite cui formare il sottoalbero del set di record corrente vengono salvate.  
+-   Quando viene salvato un recordset gerarchico, tutti i recordset figlio vengono salvati insieme a esso. Se il recordset corrente è figlio di un altro recordset, il relativo elemento padre non viene salvato. Vengono salvati tutti i recordset figlio che formano il sottoalbero del recordset corrente.  
   
- Quando si riapre un Recordset gerarchico dal rispettivo formato XML persistente, è necessario considerare le limitazioni seguenti:  
+ Quando un recordset gerarchico viene riaperto dal formato XML-permanente, è necessario tenere presenti le limitazioni seguenti:  
   
--   Se il record figlio contiene i record per il quale esistono record padre corrispondente, queste righe non vengono scritte nella rappresentazione XML del Recordset gerarchici. Di conseguenza, tali righe andranno perse quando il Recordset è riaperto dalla posizione persistente.  
+-   Se il record figlio contiene record per i quali non sono presenti record padre corrispondenti, tali righe non verranno scritte nella rappresentazione XML del recordset gerarchico. In questo modo, tali righe andranno perse quando il recordset viene riaperto dalla relativa posizione permanente.  
   
--   Se un record figlio ha dei riferimenti a più di un record padre, quindi alla riapertura del Recordset, il Recordset figlio può contenere i record duplicati. Tuttavia, questi duplicati saranno visibili solo se l'utente interagisce direttamente con il set di righe figlio sottostanti. Se un capitolo viene usato per passare l'oggetto Recordset, ovvero l'unico modo per spostarsi tra ADO, figlio, i duplicati non sono visibili.  
+-   Se un record figlio contiene riferimenti a più di un record padre, quando si riapre il recordset, il recordset figlio potrebbe contenere record duplicati. Tuttavia, questi duplicati saranno visibili solo se l'utente utilizza direttamente il set di righe figlio sottostante. Se viene utilizzato un capitolo per spostarsi nel recordset figlio (che è l'unico modo per spostarsi tra ADO), i duplicati non sono visibili.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

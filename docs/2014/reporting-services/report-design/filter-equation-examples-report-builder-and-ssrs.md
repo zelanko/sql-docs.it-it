@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb56fdfd6d59884ac60b587748cf1f663fa3042d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105904"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Esempi di equazioni di filtro (Generatore report e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105904"
 ## <a name="filter-examples"></a>Esempi di filtri  
  Nella tabella seguente sono riportati esempi di equazioni di filtro che utilizzano tipi di dati e operatori differenti. L'ambito per il confronto è determinato dall'elemento del report per il quale è definito il filtro. Per un filtro definito in un set di dati, ad esempio, **TOP% 10** si riferisce al primo 10 percento di valori nel set di dati. Per un filtro definito in un gruppo, **TOP% 10** rappresenta il primo 10 percento di valori nel gruppo.  
   
-|Espressione semplice|Tipo di dati|Operatore|Value|Descrizione|  
+|Espressione semplice|Tipo di dati|Operatore|valore|Descrizione|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Sono inclusi valori di dati maggiori di 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Include i primi 10 valori di dati.|  

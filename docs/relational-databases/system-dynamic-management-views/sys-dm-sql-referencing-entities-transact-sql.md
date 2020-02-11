@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982346"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -60,17 +60,17 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *schema_name.referenced*_*entity_name*  
+ *schema_name. a cui viene fatto riferimento*_*entity_name*  
  Nome dell'entità a cui si fa riferimento.  
   
  *schema_name* è necessario tranne quando la classe a cui si fa riferimento è PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* è di **tipo nvarchar (517)** .  
+ *schema_name. referenced_entity_name* è di **tipo nvarchar (517)**.  
   
- *< referenced_class >* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *<referenced_class>* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
   
- *< referenced_class >* è di **tipo nvarchar**(60).  
+ *<referenced_class>* è di **tipo nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|Nome dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_id|**int**|ID dell'entità di riferimento. Non ammette i valori Null.|  
 |referencing_class|**tinyint**|Classe dell'entità di riferimento. Non ammette i valori Null.<br /><br /> 1 = Oggetto<br /><br /> 12 = Trigger DDL a livello di database<br /><br /> 13 = Trigger DDL a livello di server|  
-|referencing_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar (60)**|Descrizione della classe dell'entità di riferimento.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica che la risoluzione dell'ID dell'entità a cui si fa riferimento si verifica in fase di esecuzione poiché dipende dallo schema del chiamante.<br /><br /> 1 = L'entità di riferimento ha la possibilità di fare riferimento all'entità, tuttavia la risoluzione dell'ID dell'entità a cui si fa riferimento è dipendente dal chiamante e non può essere determinata. Ciò avviene solo per riferimenti a stored procedure non associati a schema, stored procedure estese o funzioni definite dall'utente chiamate all'interno di un'istruzione EXECUTE.<br /><br /> 0 = L'entità a cui si fa riferimento non è dipendente dal chiamante.|  
   
 ## <a name="exceptions"></a>Eccezioni  
@@ -101,24 +101,24 @@ sys.dm_sql_referencing_entities (
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Yes|  
-|Visualizza|Yes|Yes|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
-|stored procedure CLR|No|Yes|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
-|Funzione CLR definita dall'utente|No|Yes|  
+|Tabella|Sì*|Sì|  
+|Visualizza|Sì|Sì|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]stored procedure * *|Sì|Sì|  
+|stored procedure CLR|No|Sì|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]funzione definita dall'utente|Sì|Sì|  
+|Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
-|Stored procedure estese|No|Yes|  
-|Coda|No|Yes|  
-|Sinonimo|No|Yes|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
-|Raccolta di XML Schema|No|Yes|  
-|Funzione di partizione|No|Yes|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
+|Stored procedure estese|No|Sì|  
+|Coda|No|Sì|  
+|Sinonimo|No|Sì|  
+|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
+|Raccolta di XML Schema|No|Sì|  
+|Funzione di partizione|No|Sì|  
   
- \* una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)], un tipo definito dall'utente o una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo DEFAULT.  
+ \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento [!INCLUDE[tsql](../../includes/tsql-md.md)] a un modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Restituzione delle entità che fanno riferimento a un tipo specificato  
- Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il tipo di `dbo.Flag` viene inoltre utilizzato nella definizione di diverse colonne nella tabella `HumanResources.Employee`. Tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, di un vincolo CHECK o di un vincolo DEFAULT nella tabella, non viene restituita alcuna riga per la tabella `HumanResources.Employee`.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Restituzione delle entità che fanno riferimento a un tipo specificato  
+ Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il `dbo.Flag` tipo viene inoltre utilizzato nella definizione di diverse colonne della `HumanResources.Employee` tabella. Tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, di un vincolo CHECK o di un vincolo DEFAULT nella tabella, non viene restituita `HumanResources.Employee` alcuna riga per la tabella.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -175,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys. dm_sql_referenced_entities &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

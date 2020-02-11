@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194968"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Definire la clausola TOP nelle query (Visual Database Tools)
@@ -52,7 +52,7 @@ ms.locfileid: "63194968"
 >  Per modificare i valori delle proprietà figlio della proprietà **Specifica Top** , è anche possibile modificare la clausola TOP nel riquadro SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Proprietà delle query &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
   
   

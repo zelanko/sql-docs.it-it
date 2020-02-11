@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728704"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Esempi di regole di business (Master Data Services)
@@ -76,7 +76,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
 ---------|---------|---------|-------------  
-Prodotto     |Product         |Required fields| Specifica gli attributi obbligatori per i membri dell'entità Product.           
+Prodotto     |Prodotto         |Required fields| Specifica gli attributi obbligatori per i membri dell'entità Product.           
 Nella regola di business seguente, l' `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. I valori di attributo non possono essere Null o vuoti.  
 ```  
 If  
@@ -135,7 +135,7 @@ Else
   
 Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
 ---------|---------|---------|------------  
-Prodotto     | Prodotto        |  Default Name| Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA.         
+Prodotto     | Prodotto        |  Nome predefinito| Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA.         
 Nella regola di business seguente, se gli attributi Color e Class non soddisfano la condizione della regola `is equal` , viene applicata l' `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
 ```  
 If  

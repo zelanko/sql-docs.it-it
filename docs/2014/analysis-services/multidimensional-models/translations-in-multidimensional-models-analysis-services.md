@@ -13,38 +13,38 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072736"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduzioni nei modelli multidimensionali
-  Supporto multilingue nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguita utilizzando le traduzioni. Ogni traduzione include un identificatore di lingua e le associazioni per le proprietà degli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere visualizzati in più lingue. Ad esempio, è possibile definire una traduzione per un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al fine di visualizzare la didascalia e la descrizione di tale database nella lingua specificata. Per altre informazioni sulle traduzioni, vedere [traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
+  Il supporto multilingue in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito tramite le traduzioni. Ogni traduzione include un identificatore di lingua e le associazioni per le proprietà degli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere visualizzati in più lingue. Ad esempio, è possibile definire una traduzione per un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al fine di visualizzare la didascalia e la descrizione di tale database nella lingua specificata. Per ulteriori informazioni sulle traduzioni, vedere la pagina relativa alle [traduzioni dei cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Definizione di traduzioni  
  È possibile definire le traduzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la finestra di progettazione appropriata per l'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da tradurre. Mediante la definizione di una traduzione viene creato un oggetto `Translation` associato all'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appropriato con i valori letterali espliciti specificati, nella lingua indicata, per le proprietà dell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] correlato.  
   
  Agli oggetti e alle proprietà seguenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere associate le traduzioni corrispondenti:  
   
-|Object|Proprietà|Finestra di progettazione|  
+|Oggetto|Proprietà|Finestra di progettazione|  
 |------------|----------------|--------------|  
-|Database|`Caption`, `Description`|[Generale &#40;finestra di progettazione del Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
-|Cube|`Caption`, `Description`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Gruppo di misure|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Misura|`Caption`, `DisplayFolder`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Dimensione del cubo|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Perspective|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Indicatore di prestazioni chiave|`Caption`, `Description`, `DisplayFolder`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Azione|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Set denominato|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|membro calcolato|`Caption`|[Le traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Dimensione del database|`Caption`, `AttributeAllMember`|[Le traduzioni &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Le traduzioni &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Gerarchia|`Caption`, `AllMemberName`|[Le traduzioni &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Level|`Caption`|[Le traduzioni &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Database|`Caption`, `Description`|[&#40;generale di progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
+|Cube|`Caption`, `Description`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Gruppo di misure|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Measure|`Caption`, `DisplayFolder`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Dimensione del cubo|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Prospettiva|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Indicatore di prestazioni chiave|`Caption`, `Description`, `DisplayFolder`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Azione|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Set denominato|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|membro calcolato|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Dimensione del database|`Caption`, `AttributeAllMember`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Attributo|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Gerarchia|`Caption`, `AllMemberName`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Level|`Caption`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup> il `CaptionColumn` proprietà di un attributo può essere associato a una colonna in una vista origine dati e possono usare regole di confronto di Windows diverso da quello specificato per l'istanza, a differenza di altre traduzioni.  
+ <sup>1</sup> la `CaptionColumn` proprietà di un attributo può essere associata a una colonna in una vista origine dati e può utilizzare regole di confronto di Windows diverse da quelle specificate per l'istanza, a differenza di altre traduzioni.  
   
 ### <a name="defining-attribute-translations"></a>Definizione di traduzioni degli attributi  
  Le traduzioni associate agli attributi nelle dimensioni del database vengono gestite in modo diverso rispetto alle altre traduzioni, come illustrato di seguito:  
@@ -53,7 +53,7 @@ ms.locfileid: "66072736"
   
 -   È possibile utilizzare regole di confronto di Windows diverse da quelle specificate per l'istanza in modo che i membri dell'attributo vengano ordinati correttamente per la lingua specificata nella traduzione.  
   
- È possibile usare la **traduzione dati attributi** nella finestra di dialogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per definire le traduzioni degli attributi nelle dimensioni del database. Per altre informazioni sul **traduzione dati attributo** finestra di dialogo, vedere [finestra di dialogo traduzione dati attributo &#40;Analysis Services - dati multidimensionali&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+ È possibile utilizzare la finestra di dialogo **Traduzione dati attributo** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per gli attributi nelle dimensioni del database. Per ulteriori informazioni sulla finestra di dialogo **Traduzione dati attributo** , vedere la finestra di [dialogo traduzione dati attributi &#40;Analysis Services-&#41;dati multidimensionali ](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="resolving-translations"></a>Risoluzione di traduzioni  
  Se un'applicazione client richiede informazioni corrispondenti all'identificatore di lingua specificato, l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di risolvere i dati e i metadati per gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] approssimandoli all'identificatore di lingua più vicino. Se l'applicazione client non specifica una lingua predefinita oppure specifica l'identificatore delle impostazioni locali neutro (0) o l'identificatore della lingua predefinita (1024), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce i dati e i metadati per l'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nella lingua predefinita.  
@@ -64,7 +64,7 @@ ms.locfileid: "66072736"
   
     |Identificatore di lingua specificato|Identificatore di lingua alternativo|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - Cinese (RAS di Hong Kong, RPC)|1028 - Cinese (Taiwan)|  
+    |3076 - Cinese (Hong Kong SAR, RPC)|1028 - Cinese (Taiwan)|  
     |5124 - Cinese (RAS di Macao)|1028 - Cinese (Taiwan)|  
     |1028 - Cinese (Taiwan)|Lingua predefinita|  
     |4100 - Cinese (Singapore)|2052 - Cinese (RPC)|  

@@ -11,19 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637738"
 ---
 # <a name="send-dataset-sample"></a>Esempio Send DataSet
   Nell'esempio Send `DataSet` viene illustrato come restituire un oggetto `DataSet` basato su ADO.NET all'interno di una stored procedure sul lato server basata su Common Language Runtime (CLR) come set di risultati al client. Questa operazione è utile, ad esempio, quando tramite una stored procedure di questo tipo vengono inseriti dati in un oggetto `DataSet` utilizzando i risultati di una query e vengono modificati i dati contenuti in tale oggetto `DataSet`. In alternativa, è utile se tramite la stored procedure viene creato e popolato un oggetto `DataSet` da zero. L'esempio è composto da due classi, `DataSetUtilities` e `TestSendDataSet`. Il metodo `SendDataSet` sulla classe `DataSetUtilities` implementa un modo generico per trasmettere il contenuto di un'istanza di un oggetto `DataSet` al client. Il metodo `DoTest` definito sulla classe `TestSendDataSet` consente di verificare che il metodo `SendDataSet` funzioni, creando un oggetto `DataSet` e inserendovi dati dalla stored procedure Transact-SQL `uspGetTwoBOMTestData`. La stored procedure `uspGetTwoBOMTestData` consente di eseguire la stored procedure `uspGetBillOfMaterials` Transact-SQL due volte per eseguire in modo ricorsivo la query per la distinta base di due prodotti specificati come parametri della stored procedure `usp_GetTwoBOMTestData`. Generalmente, dopo essere stati inseriti nel set di dati, i dati vengono modificati prima di richiamare `SendDataSet` per recapitare i dati del set di dati come set di risultati al client. Per motivi di semplicità, nell'esempio vengono restituiti i dati senza apportare modifiche.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -563,7 +565,7 @@ EXTERNAL NAME [SendDataSet].[TestSendDataSet].[DoTest];
 GO  
 ```  
   
- Di seguito è riportato lo script di test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) che consente di testare l'esempio.  
+ Di seguito è riportato lo script di test [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) che consente di testare l'esempio.  
   
 ```  
 USE AdventureWorks  
@@ -594,6 +596,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scenari di utilizzo ed esempi per Common Language Runtime &#40;l'integrazione con&#41; CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

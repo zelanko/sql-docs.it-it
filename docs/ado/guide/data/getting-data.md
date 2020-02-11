@@ -1,5 +1,5 @@
 ---
-title: Recupero dei dati | Microsoft Docs
+title: Recupero di dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925255"
 ---
 # <a name="getting-data"></a>Recupero di dati
-[Nozioni fondamentali su ADO](../../../ado/guide/data/ado-fundamentals.md)e il [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) esempio introdotta in particolare, le quattro operazioni principali coinvolti nella creazione di un'applicazione ADO: recupero di dati, analisi dei dati, la modifica dei dati e l'aggiornamento dei dati. Questa sezione illustra il recupero dei dati in modo più dettagliato.  
+Le [nozioni di base su ADO](../../../ado/guide/data/ado-fundamentals.md)e l'esempio [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) , in particolare, hanno introdotto le quattro operazioni principali necessarie per la creazione di un'applicazione ADO, ovvero il recupero dei dati, l'analisi dei dati, la modifica dei dati e l'aggiornamento dei dati. Questa sezione illustra il recupero dei dati in modo più dettagliato.  
   
- Nel livello di base, diversi oggetti ADO contribuiscono alle operazioni di recupero dei dati. Prima di tutto è necessario connettersi a un'origine dati tramite un oggetto ADO **connessione** oggetto. Quindi le istruzioni passate all'origine dati utilizzando un oggetto ADO **comando** oggetto. Infine, si ricevono più spesso dati in un oggetto ADO **Recordset** oggetto.  
+ A livello di base, diversi oggetti ADO contribuiscono alle operazioni di recupero dei dati. Per prima cosa è necessario connettersi a un'origine dati utilizzando un oggetto ADO **Connection** . Passare quindi le istruzioni all'origine dati usando un oggetto **comando** ADO. Infine, si ricevono spesso dati in un oggetto **Recordset** ADO.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

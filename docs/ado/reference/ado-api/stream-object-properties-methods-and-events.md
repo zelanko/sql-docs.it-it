@@ -1,5 +1,5 @@
 ---
-title: Stream le proprietà degli oggetti, metodi ed eventi | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto Stream | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930671"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Le proprietà dell'oggetto Stream, metodi ed eventi
+# <a name="stream-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Stream
 ## <a name="properties"></a>Proprietà  
- [Proprietà set di caratteri](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset (proprietà)](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [Proprietà EOS](../../../ado/reference/ado-api/eos-property.md)  
   
  [Proprietà LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [Proprietà Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode (proprietà)](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Proprietà Position](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Position (proprietà)](../../../ado/reference/ado-api/position-property-ado.md)  
   
- [Proprietà Size (flusso ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Proprietà Size (Stream - ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
- [Proprietà state](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Proprietà State](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+ [Proprietà Type (Stream - ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Metodi  
- [Cancel (metodo)](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Metodo Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Close (metodo)](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "67930671"
   
  [Flush (metodo)](../../../ado/reference/ado-api/flush-method-ado.md)  
   
- [LoadFromFile (metodo)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
+ [Metodo LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Metodo Open (Stream - ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
  [Metodo Read](../../../ado/reference/ado-api/read-method.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67930671"
   
  [Metodo WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  
