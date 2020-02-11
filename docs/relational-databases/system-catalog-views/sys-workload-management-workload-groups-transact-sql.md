@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633445"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73633445"
 
  Restituisce i dettagli per i gruppi del carico di lavoro.  
   
-|Nome colonna|tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|ID univoco del gruppo del carico di lavoro. Non ammette i valori Null.||
 |name|**sysname**|Nome del gruppo del carico di lavoro. Deve essere univoco per l'istanza.  Non ammette i valori Null.||
@@ -36,7 +36,7 @@ ms.locfileid: "73633445"
 |request_min_resource_grant_percent|**Decimal (5, 2)**|Specifica la quantità minima di risorse allocate a una richiesta. L'intervallo consentito per value è compreso tra 0,75 e 100.||
 |request_max_resource_grant_percent |**Decimal (5, 2)**|Specifica la quantità massima di risorse allocate a una richiesta.||
 |query_execution_timeout_sec|**int**|Quantità di tempo di esecuzione, in secondi, consentita prima che la query venga annullata.  Le query non possono essere annullate dopo che è stata raggiunta la fase di esecuzione restituita.  in query_execution_timeout_sec non è incluso il tempo impiegato per la coda.|
-|query_wait_timeout_sec|**int**|INTERNO||
+|query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|Ora di creazione del gruppo di carico di lavoro. Non ammette i valori Null.||
 modify_time|**datetime**|Ora dell'Ultima modifica del gruppo di carico di lavoro. Non ammette i valori Null.||
 |&nbsp;||||

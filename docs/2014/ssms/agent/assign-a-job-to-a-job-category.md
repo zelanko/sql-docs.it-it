@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473202"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
-  In questo argomento viene descritto come assegnare i processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a categorie di processi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
+  In questo argomento viene descritto come [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegnare processi di Agent a categorie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di processi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite o SQL Server Management Objects.  
   
  Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È possibile assegnare processi a categorie predefinite, oppure creare una categoria definita dall'utente e usarla per l'assegnazione dei processi.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62473202"
   
   
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -49,12 +49,12 @@ ms.locfileid: "62473202"
   
 4.  Fare clic con il pulsante destro del mouse sul processo da modificare e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo -** _nome_processo_ selezionare nell'elenco **Categoria** la categoria di processi cui assegnare il processo.  
+5.  Nell'elenco **categoria** della finestra di dialogo **proprietà processo-**_job_name_ Selezionare la categoria di processi che si desidera assegnare al processo.  
   
 6.  Fare clic su **OK**.  
   
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
@@ -74,11 +74,11 @@ ms.locfileid: "62473202"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
   
   
-##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
+##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per assegnare un processo a una categoria di processi**  
   
  Usare la classe `JobCategory` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  

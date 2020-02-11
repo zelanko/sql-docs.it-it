@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519305"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
@@ -54,7 +54,7 @@ ms.locfileid: "62519305"
 |default_etw_session_logfile_path|Qualsiasi stringa contenente fino a 256 caratteri. Questo valore è facoltativo.|Percorso del file di log per la sessione di Eventi estesi. Per impostazione predefinita è %TEMP%\ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del file di log, in megabyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 20 MB.|  
 |default_etw_session_buffer_size_kb|Qualsiasi valore intero senza segno. Questo valore è facoltativo.|Dimensioni del buffer in memoria, in kilobyte (MB), per la sessione di Eventi estesi. Il valore predefinito è 128 MB.|  
-|tentativi|Qualsiasi valore intero senza segno.|Numero di tentativi di pubblicazione dell'evento al sottosistema ETW prima di eliminare l'evento. Il valore predefinito è 0.|  
+|retries|Qualsiasi valore intero senza segno.|Numero di tentativi di pubblicazione dell'evento al sottosistema ETW prima di eliminare l'evento. Il valore predefinito è 0.|  
   
  La configurazione di queste impostazioni è facoltativa. La destinazione ETW utilizza valori predefiniti per queste impostazioni.  
   

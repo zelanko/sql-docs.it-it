@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4110d6a03e9e0b4d7aeca01c62a74a64b26c3ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761696"
 ---
 # <a name="delete-check-constraints"></a>Eliminazione dei vincoli CHECK
   È possibile eliminare un vincolo CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'eliminazione dei vincoli CHECK consente di rimuovere le limitazioni sui valori dei dati accettati nella colonna o nella combinazione di colonne inclusa nell'espressione del vincolo.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62761696"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-check-constraint"></a>Per eliminare un vincolo CHECK  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62761696"
   
 4.  Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-a-check-constraint"></a>Per eliminare un vincolo CHECK  
   

@@ -18,16 +18,16 @@ ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990000"
 ---
-# <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
+# <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Archivia i dettagli della cronologia relativi ai processi di log shipping. Questa tabella è archiviata nel **msdb** database.  
+  Archivia i dettagli della cronologia relativi ai processi di log shipping. Questa tabella è archiviata nel database **msdb** .  
   
  Le tabelle correlate alla cronologia e al monitoraggio vengono utilizzate anche nel server primario e nei server secondari.  
   
@@ -40,20 +40,20 @@ ms.locfileid: "67990000"
 |**session_status**|**tinyint**|Stato della sessione.<br /><br /> 0 = In fase di avvio.<br /><br /> 1 = In fase di esecuzione.<br /><br /> 2 = Esito positivo.<br /><br /> 3 = Errore.<br /><br /> 4 = Avviso.|  
 |**log_time**|**datetime**|Data e ora di creazione del record.|  
 |**log_time_utc**|**datetime**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) di creazione del record.|  
-|**message**|**nvarchar(max)**|Testo del messaggio.|  
+|**Messaggio**|**nvarchar(max)**|Testo del messaggio.|  
   
-## <a name="remarks"></a>Note  
- Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di agente, utilizzare le colonne **agent_id**, **agent_type**, e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, per ordinare **log_time**.  
+## <a name="remarks"></a>Osservazioni  
+ Questa tabella contiene i dettagli della cronologia per gli agenti per il log shipping. Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type**e **session_id**. Per visualizzare i dettagli della cronologia per la sessione dell'agente, Ordina per **log_time**.  
   
- Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni correlate al server primario vengono archiviate nel server primario nel relativo **log_shipping_monitor_history_detail** tabella e informazioni relative a un database secondario Server verrà archiviato anche nel server secondario nel relativo **log_shipping_monitor_history_detail** tabella.  
+ Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nella tabella **log_shipping_monitor_history_detail** e le informazioni relative a un server secondario vengono inoltre archiviate nel server secondario nella tabella **log_shipping_monitor_history_detail** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
- [log_shipping_monitor_error_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
+ [sp_delete_log_shipping_primary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [log_shipping_monitor_error_detail &#40;&#41;Transact-SQL](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
   
   

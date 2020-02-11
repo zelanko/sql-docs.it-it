@@ -1,5 +1,5 @@
 ---
-title: Raccolta di colonne (ADOX) | Microsoft Docs
+title: Raccolta Columns (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,41 +19,41 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966848"
 ---
 # <a name="columns-collection-adox"></a>Raccolta Columns (ADOX)
-Contiene tutti [colonna](../../../ado/reference/adox-api/column-object-adox.md) gli oggetti di una tabella, indice o chiave.  
+Contiene tutti gli oggetti [colonna](../../../ado/reference/adox-api/column-object-adox.md) di una tabella, un indice o una chiave.  
   
-## <a name="remarks"></a>Note  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) metodo per un **colonne** raccolta sia univoca per ADOX. È possibile:  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) per una raccolta **Columns** è univoco per ADOX. È possibile:  
   
--   Aggiungere una nuova colonna alla raccolta con il **Append** (metodo).  
+-   Aggiungere una nuova colonna alla raccolta con il metodo **Append** .  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
--   Accesso a una colonna nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Accedere a una colonna della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Restituisce il numero di colonne contenute nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Restituisce il numero di colonne contenute nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Rimuovere una colonna dalla raccolta con il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) (metodo).  
+-   Rimuovere una colonna dalla raccolta con il metodo [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Aggiornare gli oggetti nella raccolta in base allo schema del database corrente con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
+-   Aggiornare gli oggetti della raccolta in modo che corrispondano allo schema del database corrente con il metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Si verifica un errore quando si aggiunge un **colonna** per il **colonne** raccolta di un [indice](../../../ado/reference/adox-api/index-object-adox.md) se il **colonna** non esiste in un [Nella tabella](../../../ado/reference/adox-api/table-object-adox.md) già aggiunto al [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) raccolta.  
+>  Si verificherà un errore durante l'aggiunta di una **colonna** alla raccolta **Columns** di un [Indice](../../../ado/reference/adox-api/index-object-adox.md) se la **colonna** non esiste in una [tabella](../../../ado/reference/adox-api/table-object-adox.md) già accodata alla raccolta [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
--   [Proprietà, metodi ed eventi della raccolta di oggetti Column](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi della raccolta Columns](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle e colonne aggiungere metodi, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Metodo Connection Close, esempio di proprietà Table Type (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Append oggetti Key (metodo), tipo di chiave, RelatedColumn, RelatedTable e UpdateRule (esempio di proprietà (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Metodo di chiusura della connessione, esempio di proprietà del tipo di tabella (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Esempio di proprietà Method Append, Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Esempio di proprietà SortOrder (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

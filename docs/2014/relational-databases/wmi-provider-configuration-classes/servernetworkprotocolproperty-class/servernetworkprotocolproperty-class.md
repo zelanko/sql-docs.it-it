@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642901"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Classe ServerNetworkProtocolProperty
-  Il servernetworkprotocolproperty [classe ServerNetworkProtocolProperty]-class.md) rappresenta le proprietà di un protocollo di rete del server.  
+  La [classe ServerNetworkProtocolProperty] ServerNetworkProtocolProperty-class.md) rappresenta le proprietà di un protocollo di rete del server.  
   
- Con la servernetworkprotocolproperty delle [classe ServerNetworkProtocolProperty]-class.md), è possibile eseguire le attività seguenti:  
+ Con [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) è possibile eseguire le attività seguenti:  
   
 -   Controllare il protocollo a cui appartiene la proprietà corrente.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62642901"
 -   Impostare i flag per la proprietà corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

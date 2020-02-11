@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637913"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
@@ -61,9 +61,9 @@ GO
   
     -   Individuare il pacchetto di Windows Installer denominato **SemanticLanguageDatabase.msi** sui supporti di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Individuare la versione a 32 bit o la versione a 64 bit del pacchetto di installazione a seconda del sistema di destinazione. Il nome della cartella che contiene il file ne identifica la versione a 32 bit o a 64 bit; il nome del file stesso è uguale per entrambe versioni.  
   
-    -   Scaricare il pacchetto del programma di installazione da [Microsoft? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina nell'area Download [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+    -   Scaricare il pacchetto del programma di installazione da [Microsoft? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina nell'area [!INCLUDE[msCoName](../../../includes/msconame-md.md)] download.  
   
-2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase.msi** per estrarre il database e il file di log.  
+2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase. msi** per estrarre il database e il file di log.  
   
      Se lo si desidera, è possibile modificare la directory di destinazione. Per impostazione predefinita, il programma di installazione estrae i file in una cartella denominata **Microsoft Semantic Language Database** nella cartella Programmi a 32 o a 64 bit. Il file MSI contiene un file di database compresso e un file di log.  
   
@@ -74,7 +74,7 @@ GO
 > [!IMPORTANT]  
 >  Quando viene estratto il database di statistiche lingua semantica, al file di database e al file di log nel percorso predefinito del file system vengono assegnate autorizzazioni limitate. Si potrebbe pertanto non disporre dell'autorizzazione per collegare il database se lo si lascia nel percorso predefinito. Se viene generato un errore quando si tenta di collegare il database, spostare i file o verificare e correggere le autorizzazioni del file system nel modo appropriato.  
   
- **2. Collegare il database di statistiche lingua semantica.**  
+ **2. alleghi il database di statistiche lingua semantica.**  
  Collegare il database all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o chiamando [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) con la sintassi **FOR ATTACH**. Per altre informazioni, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
   
  Per impostazione predefinita, il nome del database è **semanticsdb**. Facoltativamente è possibile fornire un nome diverso per il database al momento del collegamento. Tale nome dovrà essere fornito al momento di registrare il database nel passaggio successivo.  
@@ -89,7 +89,7 @@ GO
   
  In questo esempio di codice si presuppone che il database sia stato spostato dal percorso predefinito in un nuovo percorso.  
   
- **3. Registrare il database di statistiche lingua semantica.**  
+ **3. registrare il database di statistiche lingua semantica.**  
  Chiamare la stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) e specificare il nome assegnato al database al momento del collegamento.  
   
 ```sql  

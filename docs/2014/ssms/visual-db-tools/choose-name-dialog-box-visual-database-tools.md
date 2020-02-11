@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62509963"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Finestra di dialogo Scegli nome (Visual Database Tools)
-  Questa finestra di dialogo viene visualizzata quando sceglie **salvare \<NomeTabella**>, **salvare \<DiagramName >** , oppure **Salva \<ViewName >** dal **File** menu.  
+  Questa finestra di dialogo viene visualizzata quando si sceglie ** \<Salva tablename**>, **Salva \<DiagramName>** o **Salva \<vista>** dal menu **file** .  
   
  **Digitare un nome per la tabella/Immettere un nome per il diagramma/Digitare un nome per la vista**  
  Rende disponibile una casella di testo in cui è possibile digitare un nome per la tabella, il diagramma o la vista.  

@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473050"
 ---
 # <a name="post-download-instructions"></a>Invia istruzioni di download
   Utilizzare questa pagina per specificare le istruzioni di download per un server di destinazione.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo istruzione**  
+ **Tipo di istruzione**  
  Consente di specificare il tipo di istruzione di download da inviare.  
   
  **Descrizione**  
@@ -35,10 +35,10 @@ ms.locfileid: "62473050"
  **Tutti i server di destinazione**  
  Selezionare questa opzione per inviare l'istruzione di download a tutti i server di destinazione.  
   
- **Solo i server di destinazione seguenti**  
+ **Questi server di destinazione**  
  Selezionare questa opzione per inviare l'istruzione di download ai server di destinazione selezionati.  
   
- **Select**  
+ **Selezionare**  
  Consente di specificare che il server di destinazione deve ricevere l'istruzione di download.  
   
  **Server di destinazione**  

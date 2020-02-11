@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105363"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
@@ -34,10 +34,10 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Il **Intersect** funzione restituisce l'intersezione di due set. Per impostazione predefinita la funzione rimuove i duplicati da entrambi i set prima di eseguire l'intersezione. I due set specificati devono disporre della stessa dimensionalità.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Intersect** restituisce l'intersezione di due set. Per impostazione predefinita la funzione rimuove i duplicati da entrambi i set prima di eseguire l'intersezione. I due set specificati devono disporre della stessa dimensionalità.  
   
- L'opzione facoltativa **tutti** flag consente di mantenere i duplicati. Se **tutti i** è specificato, il **Intersect** interseca gli elementi come di consueto (funzione) e ogni elemento duplicato del primo set che contiene un elemento duplicato nel secondo set. I due set specificati devono disporre della stessa dimensionalità.  
+ Il flag **All** facoltativo mantiene i duplicati. Se si specifica **All** , la funzione **Intersect** interseca gli elementi non duplicati come di consueto e interseca ogni duplicato nel primo set con un duplicato corrispondente nel secondo set. I due set specificati devono disporre della stessa dimensionalità.  
   
 ## <a name="example"></a>Esempio  
  Per la seguente query vengono restituiti gli anni 2003 e 2004, ovvero i due membri visualizzati in entrambi i set specificati:  
@@ -73,6 +73,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

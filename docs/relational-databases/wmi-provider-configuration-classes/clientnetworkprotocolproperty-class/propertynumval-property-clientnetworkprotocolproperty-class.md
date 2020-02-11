@@ -18,10 +18,10 @@ ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eb04378883ca9aa973b1dfcd89083087566a413
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658888"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyNumVal (classe ClientNetworkProtocolProperty)
@@ -36,8 +36,8 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
- Oggetto della [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *oggetto*  
+ A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore u**int32** che specifica il valore numerico della proprietà corrente.  

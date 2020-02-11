@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761454"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
   È possibile creare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per assicurare non vengano immessi valori duplicat nelle colonne specifiche che non partecipano in una chiave primaria. La creazione automatica di un vincolo univoco crea un indice univoco corrispondente.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -43,21 +43,21 @@ ms.locfileid: "62761454"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
 1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella nella quale aggiungere un vincolo univoco e scegliere **Progetta**.  
   
-2.  Scegliere **Indici/chiavi** dal menu **Progettazione tabelle**.  
+2.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
 3.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
 4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
-5.  Nel menu **File** scegliere **Salva**_table name_.  
+5.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   

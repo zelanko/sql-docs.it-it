@@ -1,5 +1,5 @@
 ---
-title: Distribuire criteri pianificati a istanze Multiple | Microsoft Docs
+title: Distribuire i criteri pianificati in più istanze | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185805"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Distribuzione di criteri pianificati in istanze multiple
@@ -28,37 +28,37 @@ ms.locfileid: "68185805"
   
  Tali attività verranno eseguite nel computer utilizzato per completare le attività precedenti di questa lezione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Di seguito vengono indicati i prerequisiti di questa attività:  
   
 -   È necessario avere completato le attività precedenti di questa lezione.  
   
 -   È necessario che nelle istanze in cui si desidera distribuire i criteri pianificati sia in esecuzione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] o versione successiva. Ai fini dell'automazione è necessario che i criteri siano archiviati localmente, operazione non supportata nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Il server in cui si desidera distribuire i criteri pianificati devono essere registrati in server registrati in entrambi i **gruppi di Server locali** o il **server di gestione centrale** nodo. Per altre informazioni, vedere i seguenti argomenti:  
+-   I server in cui si desidera distribuire i criteri pianificati devono essere registrati in Server registrati nel nodo **gruppi di server locali** o **server di gestione centrale** . Per altre informazioni, vedere gli argomenti seguenti:  
   
     -   [Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
-    -   [Registrare un Server connesso &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
+    -   [Registrare un server connesso &#40;&#41;SQL Server Management Studio ](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   
     -   [Creare un server di gestione centrale e un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
 ### <a name="to-export-the-scheduled-policies-as-xml-files"></a>Per esportare i criteri pianificati come file xml  
   
-1.  Nel server in cui sono configurati criteri pianificati nell'attività precedente, espandere **Management**, espandere **gestione dei criteri**e quindi fare clic su **criteri**.  
+1.  Nel server in cui sono stati configurati i criteri pianificati nell'attività precedente espandere **gestione**, **Gestione criteri**, quindi fare clic su **criteri**.  
   
 2.  Scegliere **Dettagli Esplora oggetti** dal menu **Visualizza**.  
   
-3.  Nel **dettagli Esplora oggetti** riquadro, selezionare tutte le procedure consigliate pianificati i criteri che si desidera distribuire in altri server tramite server registrati.  
+3.  Nel riquadro **dettagli Esplora oggetti** selezionare tutti i criteri per procedure consigliate pianificati che si desidera distribuire in altri server tramite Server registrati.  
   
     > [!NOTE]  
-    >  È possibile scegliere il **categoria** intestazione per ordinare i criteri in base alla categoria.  
+    >  È possibile fare clic sull'intestazione **categoria** per ordinare i criteri per categoria.  
   
-4.  Fare doppio clic la selezione e quindi fare clic su **Esporta criteri**.  
+4.  Fare clic con il pulsante destro del mouse sulla selezione, quindi scegliere **Esporta criteri**.  
   
-5.  Se si seleziona più criteri da esportare, nella **Sfoglia per cartelle** nella finestra di dialogo selezionare una cartella di destinazione oppure creare una nuova cartella. Per questa lezione, creare una nuova cartella nel percorso **C:\Scheduled_BP_Policies**, quindi fare clic su **OK**.  
+5.  Se sono stati selezionati più criteri da esportare, nella finestra di dialogo **Sfoglia per cartelle** selezionare una cartella di destinazione o creare una nuova cartella. Per questa lezione, creare una nuova cartella con il percorso **c:\ Scheduled_BP_Policies**e quindi fare clic su **OK**.  
   
-     Se è selezionato un solo criterio da esportare, nella **Esporta criteri** finestra di dialogo casella, creare una nuova cartella con il percorso **C:\Scheduled_BP_Policies**, fare clic su **Open**, quindi fare clic su **Salvare**.  
+     Se è stato selezionato un solo criterio da esportare, nella finestra di dialogo **Esporta criteri** creare una nuova cartella con il percorso **c:\ Scheduled_BP_Policies**, fare clic su **Apri**e quindi su **Salva**.  
   
      I file xml dei criteri vengono creati nel percorso della cartella.  
   
@@ -66,36 +66,36 @@ ms.locfileid: "68185805"
   
 1.  Scegliere **Server registrati** dal menu **Visualizza**.  
   
-2.  Espandere **motore di Database**, espandere **gruppi di Server locali** oppure **server di gestione centrale**, pulsante destro del mouse il nodo che si desidera distribuire i criteri e quindi Fare clic su **Importa criteri**.  
+2.  Espandere **motore di database**, espandere **gruppi di server locali** o **server di gestione centrale**, fare clic con il pulsante destro del mouse sul nodo in cui si desidera distribuire i criteri e quindi fare clic su **Importa criteri**.  
   
     > [!NOTE]  
-    >  Se facendo clic **gruppi di Server locali** o il Server di gestione centrale stesso, i criteri verranno distribuiti a tutti i server gestiti. Se si fa clic con il pulsante destro del mouse su un gruppo di server specifico, i criteri verranno distribuiti solo in tale gruppo. Se si fa clic con il pulsante destro del mouse su un server registrato specifico, i criteri verranno distribuiti solo in tale server.  
+    >  Se si fa clic con il pulsante destro del mouse su **gruppi di server locali** o sul server di gestione centrale stesso, i criteri verranno distribuiti in tutti i server gestiti. Se si fa clic con il pulsante destro del mouse su un gruppo di server specifico, i criteri verranno distribuiti solo in tale gruppo. Se si fa clic con il pulsante destro del mouse su un server registrato specifico, i criteri verranno distribuiti solo in tale server.  
   
-3.  Accanto a **i file da importare**, fare clic sul pulsante con puntini di sospensione ( **...** ).  
+3.  Accanto a **file da importare**fare clic sul pulsante con i puntini di sospensione (**...**).  
   
-4.  Nel **Seleziona criteri** della finestra di dialogo Sfoglia per il percorso della cartella in cui è stato salvato i criteri pianificati. Per questo esempio, passare al percorso **C:\Scheduled_BP_Policies**.  
+4.  Nella finestra di dialogo **Seleziona criterio** passare al percorso della cartella in cui sono stati salvati i criteri pianificati. Per questo esempio, passare al percorso **c:\ Scheduled_BP_Policies**.  
   
-5.  Selezionare i criteri che si desidera importare per le istanze di destinazione e quindi fare clic su **aperto**.  
+5.  Selezionare i criteri che si desidera importare nelle istanze di destinazione, quindi fare clic su **Apri**.  
   
-6.  Nel **importazione** nella finestra di dialogo il **lo stato dei criteri** selezionare lo stato dei criteri desiderati. È possibile scegliere di mantenere lo stato dei criteri, abilitare o disabilitare i criteri durante l'importazione. Tenere presente che i criteri devono essere abilitati per poter essere eseguiti in base a una pianificazione.  
+6.  Nella finestra di dialogo **Importa** selezionare lo stato dei criteri desiderato nell'elenco **stato criteri** . È possibile scegliere di mantenere lo stato dei criteri, abilitare o disabilitare i criteri durante l'importazione. Tenere presente che i criteri devono essere abilitati per poter essere eseguiti in base a una pianificazione.  
   
-7.  Fare clic su **OK** per importare i criteri a tutte le istanze di destinazione.  
-  
-    > [!NOTE]  
-    >  Se sono presenti errori, il **importazione** nella finestra di dialogo non scomparsa. Scegliere il **Log** pagina per esaminare i messaggi. Fare clic su **annullare** per chiudere la finestra di dialogo.  
-  
-8.  Per visualizzare i criteri da un'istanza di destinazione, connettersi all'istanza, aprire Esplora oggetti, espandere **Management**, quindi espandere **criteri**. Si dovrebbero vedere i criteri importati i **criteri** nodo. Se si fa doppio clic su ciascuno dei criteri, è possibile visualizzare la pianificazione o modificare le impostazioni.  
+7.  Fare clic su **OK** per importare i criteri in tutte le istanze di destinazione.  
   
     > [!NOTE]  
-    >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare doppio clic su **criteri di gestione**, quindi fare clic su **Visualizza cronologia**.  
+    >  Se si verificano errori, la finestra di dialogo **Importa** non scomparirà. Fare clic sulla pagina **log** per esaminare i messaggi. Fare clic su **Annulla**per chiudere la finestra di dialogo.  
   
-## <a name="summary"></a>Riepilogo  
+8.  Per visualizzare i criteri da un'istanza di destinazione, connettersi all'istanza di, aprire Esplora oggetti, espandere **gestione**, quindi espandere **criteri**. Verranno visualizzati i criteri importati nel nodo **criteri** . Se si fa doppio clic su ciascuno dei criteri, è possibile visualizzare la pianificazione o modificare le impostazioni.  
+  
+    > [!NOTE]  
+    >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Visualizza cronologia**.  
+  
+## <a name="summary"></a>Summary  
  In questa esercitazione è stato illustrato come eseguire valutazioni su richiesta e pianificate dei criteri per procedure consigliate per una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Avanti  
- L'esercitazione è completata. Per tornare all'inizio, vedere [esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ L'esercitazione è completata. Per tornare all'inizio, vedere [esercitazione: valutazione delle procedure consigliate tramite la gestione basata su criteri](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- Per visualizzare un elenco dei [!INCLUDE[ssDE](../includes/ssde-md.md)] esercitazioni, fare clic su [esercitazioni del motore di Database](../relational-databases/database-engine-tutorials.md).  
+ Per visualizzare un elenco delle [!INCLUDE[ssDE](../includes/ssde-md.md)] esercitazioni, fare clic su [motore di database esercitazioni](../relational-databases/database-engine-tutorials.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

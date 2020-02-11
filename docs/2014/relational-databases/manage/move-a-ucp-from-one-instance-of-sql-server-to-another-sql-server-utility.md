@@ -11,22 +11,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640333"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra (Utilità SQL Server)
   In questo argomento viene illustrato come spostare un punto di controllo dell'utilità da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="move-a-ucp-from-one-instance-of-sql-server-to-another"></a>Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra.  
   
 1.  Creare un nuovo punto di controllo dell'utilità nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sarà la nuova istanza host del punto di controllo dell'utilità. Per altre informazioni, vedere [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-2.  Se sono state configurate impostazioni dei criteri non predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], prendere nota delle soglie dei criteri in modo da poterli reimpostare sul nuovo punto di controllo dell'utilità. Quando al nuovo punto di controllo dell'utilità vengono aggiunte istanze, vengono applicati i criteri predefiniti. Se vengono applicati i criteri predefiniti, nella visualizzazione elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzato il valore **Globale** nella colonna **Tipo criteri** .  
+2.  Se sono state configurate impostazioni dei criteri non predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , prendere nota delle soglie dei criteri in modo da poterli reimpostare sul nuovo punto di controllo dell'utilità. Quando al nuovo punto di controllo dell'utilità vengono aggiunte istanze, vengono applicati i criteri predefiniti. Se vengono applicati i criteri predefiniti, nella visualizzazione elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzato il valore **Globale** nella colonna **Tipo criteri** .  
   
 3.  Rimuovere tutte le istanze gestite dal vecchio punto di controllo dell'utilità. Per altre informazioni, vedere [Rimuovere un'istanza di SQL Server da Utilità SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62640333"
   
 8.  Attendere circa 1 ora per il completamento delle operazioni di raccolta e di aggregazione dei dati.  
   
-9. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** in **Esplora utilità**e scegliere **Aggiorna**. I dati della visualizzazione elenco vengono visualizzati nel riquadro del contenuto di **Esplora utilità**. Per altre informazioni, vedere [View Resource Health Policy Results &#40;SQL Server Utility&#41;](view-resource-health-policy-results-sql-server-utility.md) (Visualizzare i risultati dei criteri di integrità delle risorse - Utilità SQL Server).  
+9. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** in **Esplora utilità**e scegliere **Aggiorna**. I dati della visualizzazione elenco vengono visualizzati nel riquadro del contenuto di **Esplora utilità** . Per altre informazioni, vedere [View Resource Health Policy Results &#40;SQL Server Utility&#41;](view-resource-health-policy-results-sql-server-utility.md) (Visualizzare i risultati dei criteri di integrità delle risorse - Utilità SQL Server).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md)   

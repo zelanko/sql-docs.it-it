@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un'estesa Stored Procedure in SQL Server | Microsoft Docs
+title: Aggiunta di una stored procedure estesa a SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512349"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Aggiunta di una stored procedure estesa a SQL Server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
   
- Una DLL che contiene funzioni di stored procedure estese funge da estensione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare la DLL, copiare il file in una directory, ad esempio quella che contiene lo standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file DLL (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *x*\MSSQL\Binn per impostazione predefinita).  
+ Una DLL che contiene funzioni di stored procedure estese funge da estensione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare la DLL, copiare il file in una directory, ad esempio quella che contiene i file dll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard (C:\Programmi\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn per impostazione predefinita).  
   
  Dopo che la DLL della stored procedure estesa è stata copiata nel server, un amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve registrare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni funzione di stored procedure estesa presente nella DLL. È possibile eseguire questa operazione utilizzando la stored procedure di sistema sp_addextendedproc.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62512349"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Se il nome della funzione specificato in `sp_addextendedproc` non corrisponde esattamente al nome presente nella DLL, il nuovo nome verrà registrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non sarà possibile utilizzarlo. Ad esempio, sebbene `xp_Hello` viene registrato come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si trova nella stored procedure estesa `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di trovare la funzione nella DLL se si usa `xp_Hello` per chiamare la funzione in un secondo momento.  
+ Se il nome della funzione specificato in `sp_addextendedproc` non corrisponde esattamente al nome presente nella DLL, il nuovo nome verrà registrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non sarà possibile utilizzarlo. Se, ad esempio `xp_Hello` , viene registrato come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure esteso disponibile in `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di trovare la funzione nella dll se si utilizza `xp_Hello` per chiamare la funzione in un secondo momento.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -76,7 +76,7 @@ DECLARE @txt varchar(33);
 EXEC xp_HELLO @txt OUTPUT;  
 ```  
   
- Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza è tra maiuscole e minuscole, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di chiamare la stored procedure estesa, anche se è stata registrata esattamente lo stesso nome e regole di confronto della funzione nella DLL, se la procedura viene chiamata con un caso diverso.  
+ Quando le regole di confronto dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza fanno distinzione tra maiuscole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e minuscole, non sarà in grado di chiamare il stored procedure esteso, anche se è stato registrato con lo stesso nome e le stesse regole di confronto della funzione nella dll, se la procedura viene chiamata con un case diverso.  
   
 ```  
 --Register the function (xp_hello)  
@@ -93,7 +93,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
  Non è necessario arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
+ [sp_addextendedproc &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

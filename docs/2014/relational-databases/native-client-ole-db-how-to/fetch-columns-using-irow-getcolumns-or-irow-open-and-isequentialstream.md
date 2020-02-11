@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467584"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia `ISequentialStream`. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Per recuperare le colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream  
   
@@ -35,11 +35,12 @@ ms.locfileid: "62467584"
   
 3.  Recuperare i dati delle colonne utilizzando `IRow::Open()` o `IRow::GetColumns()`.  
   
-    -   `IRow::Open()` può essere utilizzato per aprire una `ISequentialStream` nella riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (è quindi possibile utilizzare `IStream` o `ISequentialStream` per leggere i dati dalla colonna).  
+    -   
+  `IRow::Open()` può essere utilizzato per aprire una `ISequentialStream` nella riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (è quindi possibile utilizzare `IStream` o `ISequentialStream` per leggere i dati dalla colonna).  
   
-    -   Se `IRow::GetColumns()` viene usato, il **pData** elemento di struttura DBCOLUMNACCESS viene impostato in modo che punti a un oggetto flusso.  
+    -   Se `IRow::GetColumns()` si utilizza, l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto flusso.  
   
-4.  Uso **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
+4.  Usare **ISequentialStream:: Read ()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare una singola riga mediante IRow. In questo esempio viene recuperata una colonna per volta dalla riga. In questo esempio viene illustrato l'utilizzo di IRow::Open() e di IRow::GetColumns(). Per leggere i dati della colonna, nell'esempio viene utilizzato un oggetto ISequentialStream::Read.  
@@ -670,6 +671,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a OLE DB](ole-db-how-to-topics.md)  
+ [Procedure per l'utilizzo di OLE DB](ole-db-how-to-topics.md)  
   
   

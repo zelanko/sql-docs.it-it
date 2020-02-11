@@ -1,5 +1,5 @@
 ---
-title: I set di righe | Microsoft Docs
+title: Set di righe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206648"
 ---
 # <a name="rowsets"></a>Set di righe
   Le righe di un set di righe contengono colonne di dati. I set di righe sono oggetti centrali che consentono a tutti i provider di dati OLE DB di esporre dati di set di risultati in formato tabulare.  
   
- Dopo aver creato una sessione mediante il metodo **IDBCreateSession::CreateSession**, il consumer può usare l'interfaccia **IOpenRowset** o **IDBCreateCommand** nella sessione per creare un set di righe. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
+ Dopo aver creato una sessione mediante il metodo **IDBCreateSession::CreateSession**, il consumer può usare l'interfaccia **IOpenRowset** o **IDBCreateCommand** nella sessione per creare un set di righe. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta entrambe le interfacce. Di seguito sono descritti i due metodi.  
   
 -   Creare un set di righe chiamando il metodo **IOpenRowset::OpenRowset**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68206648"
   
  I consumer rilasciano set di righe con il metodo **IRowset::Release**. Il rilascio di un set di righe comporta anche il rilascio di tutti gli handle di riga gestiti dal consumer per tale set di righe, ma non comporta il rilascio delle funzioni di accesso. Se si ha un'interfaccia **IAccessor**, questa deve essere comunque rilasciata.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Creazione di un set di righe con IOpenRowset](creating-a-rowset-with-iopenrowset.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "68206648"
   
 -   [Proprietà e comportamenti dei set di righe](rowset-properties-and-behaviors.md)  
   
--   [Set di righe e cursori SQL Server](rowsets-and-sql-server-cursors.md)  
+-   [Set di righe e cursori di Server SQL](rowsets-and-sql-server-cursors.md)  
   
 -   [Recupero di righe](fetching-rows.md)  
   
--   [Recupero di una sola riga con IRow](fetching-a-single-row-with-irow.md)  
+-   [Recupero di una sola riga utilizzando IRow](fetching-a-single-row-with-irow.md)  
   
 -   [Segnalibri](bookmarks.md)  
   

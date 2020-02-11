@@ -20,23 +20,23 @@ ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966008"
 ---
 # <a name="indexnulls-property-adox"></a>Proprietà IndexNulls (ADOX)
-Indica se i record con valori null nei rispettivi campi indice avere voci di indice.  
+Indica se i record con valori null nei rispettivi campi di indice contengono voci di indice.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) valore. Il valore predefinito è **adIndexNullsDisallow**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) . Il valore predefinito è **adIndexNullsDisallow**.  
   
-## <a name="remarks"></a>Note  
- Questa proprietà è di sola lettura sul [indice](../../../ado/reference/adox-api/index-object-adox.md) già aggiunti a una raccolta di oggetti.  
+## <a name="remarks"></a>Osservazioni  
+ Questa proprietà è di sola lettura sugli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [Esempio della proprietà IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)

@@ -18,18 +18,18 @@ ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995505"
 ---
-# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
+# <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza il nome e il proprietario di tutti i database a cui l'utente può accedere.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +38,11 @@ ms.locfileid: "67995505"
 sp_MShasdbaccess      
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="permissions"></a>Permissions  
- Eseguire l'autorizzazione viene concessa per il **pubblica** ruolo.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'autorizzazione Execute è concessa al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  

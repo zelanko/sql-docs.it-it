@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524137"
 ---
 # <a name="specify-first-and-last-triggers"></a>Specifica dei primi e degli ultimi trigger
@@ -32,7 +32,7 @@ ms.locfileid: "62524137"
 |------------|-----------------|  
 |**Primo**|Specifica che il trigger DML è il primo trigger AFTER attivato per un'azione di trigger.|  
 |**Ultimo**|Specifica che il trigger DML è l'ultimo trigger AFTER attivato per un'azione di trigger.|  
-|**None**|Specifica che non esiste un ordine specifico per l'attivazione del trigger DML. Viene utilizzata principalmente per reimpostare un trigger precedentemente designato come primo o ultimo.|  
+|**Nessuno**|Specifica che non esiste un ordine specifico per l'attivazione del trigger DML. Viene utilizzata principalmente per reimpostare un trigger precedentemente designato come primo o ultimo.|  
   
  L'esempio seguente mostra l'utilizzo di **sp_settriggerorder**:  
   

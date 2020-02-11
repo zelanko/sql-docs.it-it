@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup e ripristino di tabelle (Transact-SQL) | Microsoft Docs
+title: Tabelle di backup e ripristino (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091887"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Tabelle di backup e ripristino (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68091887"
 
   Negli argomenti di questa sezione vengono descritte le tabelle di sistema in cui sono archiviate le informazioni utilizzate dalle operazioni di backup e ripristino di database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
  Contiene una riga per ogni file di dati o di log di un database.  
   

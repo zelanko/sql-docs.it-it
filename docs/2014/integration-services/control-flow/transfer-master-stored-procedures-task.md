@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829488"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
@@ -34,7 +34,7 @@ ms.locfileid: "62829488"
   
 -   Le stored procedure duplicate vengono ignorate.  
   
- In fase di esecuzione l'attività Trasferisci stored procedure master si connette al server di origine e al server di destinazione utilizzando due gestioni connessioni SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci stored procedure master, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione SMO](../connection-manager/smo-connection-manager.md).  
+ In fase di esecuzione l'attività Trasferisci stored procedure master si connette al server di origine e al server di destinazione utilizzando due gestioni connessioni SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci stored procedure master, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione file](../connection-manager/smo-connection-manager.md).  
   
 ## <a name="transferring-stored-procedures-between-instances-of-sql-server"></a>Trasferimento di stored procedure tra istanze di SQL Server  
  L'attività Trasferisci stored procedure master supporta un'origine e una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "62829488"
   
  Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci stored procedure master &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci stored procedure master &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Trasferisci stored procedure master &#40;pagina Stored procedure&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62829488"
 -   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività Trasferisci oggetti di SQL Server](transfer-sql-server-objects-task.md)   
+ [Attività Trasferisci oggetti SQL Server](transfer-sql-server-objects-task.md)   
  [Attività di Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

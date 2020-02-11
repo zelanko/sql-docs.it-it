@@ -18,10 +18,10 @@ ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9ce23fbc14501e07eaf116a1e0e7edb32c2f8abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660695"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetStringValue (classe ClientNetworkProtocolProperty)
@@ -36,7 +36,7 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
@@ -46,7 +46,7 @@ object.SetStringValue(StrValue)
 |*StrValue*|Valore string che specifica il nuovo valore della proprietà corrente.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore **UInt32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
   

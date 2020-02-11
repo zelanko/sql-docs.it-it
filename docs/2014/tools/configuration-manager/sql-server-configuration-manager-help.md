@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186761"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Guida di Gestione configurazione SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "68186761"
  In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione SQL Server non è in grado di configurare le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager non è in grado di configurare versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="services"></a>Servizi  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione SQL Server gestisce i servizi relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene molte delle funzioni di questo strumento equivalgano alle opzioni della finestra di dialogo Servizi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, è importante sottolineare che Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue operazioni aggiuntive sui servizi che gestisce, ad esempio applicando le autorizzazioni corrette quando si cambia l'account del servizio. L'utilizzo della finestra di dialogo Servizi Windows standard per configurare i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe provocare malfunzionamenti.  
@@ -50,7 +50,7 @@ ms.locfileid: "68186761"
 -   Configurare un protocollo di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  Per una breve esercitazione sulla configurazione dei protocolli e sulla connessione al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Esercitazione: Introduzione al motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Per una breve esercitazione sulla configurazione di protocolli e sulla connessione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Esercitazione: Introduzione al Motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Configurazione SQL Server Native Client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I client SQL Server si connettono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la libreria di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le operazioni seguenti relative alle applicazioni client nel computer corrente:  

@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà passaggio processo: Nuovo passaggio di processo (pagina generale) | Microsoft Docs'
+title: 'Proprietà passaggio processo: nuovo passaggio di processo (pagina generale) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510955"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Generale)
-  Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per definirne uno nuovo.  
+# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
+  Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent oppure per definire un nuovo passaggio di processo.  
   
  Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "62510955"
  **Database**  
  Imposta il database in cui viene eseguito il passaggio di processo. Questa opzione non è disponibile per tutti i tipi di passaggio di processo.  
   
- **Command**  
+ **Comando**  
  Consente di impostare il comando eseguito dal passaggio del processo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opzioni per i passaggi del processo Transact-SQL  
- **Aprire**  
+ **Apri**  
  Consente di caricare il comando da un file.  
   
  **Seleziona tutto**  
@@ -67,10 +67,10 @@ ms.locfileid: "62510955"
  **JScript**  
  Consente di specificare JScript come linguaggio per i passaggi del processo.  
   
- **Altro**  
+ **Altri**  
  Consente di digitare il nome del linguaggio per i passaggi del processo scritti in un altro linguaggio di scripting.  
   
- **Aprire**  
+ **Apri**  
  Consente di caricare il comando da un file.  
   
  **Seleziona tutto**  
@@ -83,10 +83,10 @@ ms.locfileid: "62510955"
  Consente di incollare il contenuto degli Appunti.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Opzioni per i passaggi del processo Sistema operativo (CmdExec)  
- **Elabora codice di uscita di un comando eseguito correttamente**  
+ **Elabora codice di uscita di un comando riuscito**  
  Consente di digitare il codice di uscita restituito dal comando per indicare il corretto completamento.  
   
- **Aprire**  
+ **Apri**  
  Consente di caricare il comando da un file.  
   
  **Seleziona tutto**  
@@ -99,7 +99,7 @@ ms.locfileid: "62510955"
  Consente di incollare il contenuto degli Appunti.  
   
 ## <a name="options-for-powershell-job-steps"></a>Opzioni per i passaggi di processo di PowerShell  
- **Aprire**  
+ **Apri**  
  Consente di caricare lo script da un file.  
   
  **Seleziona tutto**  
@@ -168,7 +168,7 @@ ms.locfileid: "62510955"
  **Server**  
  Consente di selezionare il server in cui viene eseguito il passaggio del processo.  
   
- **Apertura**  
+ **Apri**  
  Consente di caricare il comando da un file.  
   
  **Seleziona tutto**  
@@ -187,7 +187,7 @@ ms.locfileid: "62510955"
  **Database**  
  Database da utilizzare per il passaggio del processo.  
   
- **Aprire**  
+ **Apri**  
  Consente di caricare il comando da un file.  
   
  **Seleziona tutto**  
@@ -209,7 +209,7 @@ ms.locfileid: "62510955"
   
 -   **SQL Server**  
   
--   **File system**  
+-   **File System**  
   
 -   **Archivio pacchetti SSIS**  
   
@@ -219,11 +219,12 @@ ms.locfileid: "62510955"
  **Usa autenticazione di Windows**  
  Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Consente di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona questo metodo di autenticazione, immettere il **Nome utente** e la **Password corretti**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'autenticazione è disponibile per garantire la compatibilità con le versioni precedenti. Per un livello di sicurezza migliore, utilizzare l'autenticazione di Windows, se possibile.  
   
  **Pacchetto**  
  Consente di digitare la posizione del pacchetto.  
@@ -237,7 +238,7 @@ ms.locfileid: "62510955"
  **File di configurazione**  
  Consente di elencare i file di configurazione per il pacchetto.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un file di configurazione per il pacchetto.  
   
  **Rimuovi**  
@@ -255,7 +256,7 @@ ms.locfileid: "62510955"
  **File di comando**  
  Consente di elencare i file di comando per il pacchetto.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un file di comando.  
   
  **Rimuovi**  
@@ -282,7 +283,7 @@ ms.locfileid: "62510955"
 ### <a name="execution-options-tab"></a>Scheda Opzioni di esecuzione  
  Consente di visualizzare o modificare le opzioni di esecuzione per il pacchetto.  
   
- **Interrompi il pacchetto in caso di avvisi di convalida**  
+ **Interrompi pacchetto per avvisi di convalida**  
  Selezionare questa opzione per interrompere l'esecuzione del pacchetto in caso di avvisi di convalida.  
   
  **Convalida pacchetto senza esecuzione**  
@@ -291,7 +292,7 @@ ms.locfileid: "62510955"
  **Numero massimo di file eseguibili simultanei**  
  Numero massimo di file eseguibili che è possibile eseguire simultaneamente.  
   
- **Abilita checkpoint pacchetto**  
+ **Abilita Checkpoint pacchetto**  
  Selezionare questa opzione affinché il passaggio del processo utilizzi i checkpoint del pacchetto.  
   
  **File del checkpoint**  
@@ -336,10 +337,10 @@ ms.locfileid: "62510955"
  **Esegui solo pacchetti firmati**  
  Consente di eseguire solo i pacchetti firmati. Se questa opzione è selezionata, il passaggio del processo viene interrotto se il pacchetto non è firmato.  
   
- **Verifica build pacchetto**  
+ **Verificare la compilazione del pacchetto**  
  Consente di eseguire solo i pacchetti con un numero di build specifico. Se questa opzione è selezionata, il passaggio del processo viene interrotto se il pacchetto non dispone del numero di build specifico.  
   
- **Compilazione**  
+ **Compilare**  
  Consente di digitare il numero di build del pacchetto.  
   
  **Verifica ID pacchetto**  
@@ -357,18 +358,18 @@ ms.locfileid: "62510955"
 ### <a name="command-line-tab"></a>Scheda Riga di comando  
  Consente di specificare le opzioni della riga di comando per il pacchetto. In questa scheda sono disponibili le opzioni seguenti.  
   
- **Ripristina opzioni originali**  
+ **Ripristinare le opzioni originali**  
  Consente di utilizzare le opzioni della riga di comando impostate in questa finestra di dialogo.  
   
- **Modifica riga di comando manualmente**  
+ **Modificare la riga di comando manualmente**  
  Consente di specificare le opzioni nella finestra della riga di comando.  
   
  **Riga di comando**  
  Consente di digitare le opzioni della riga di comando da utilizzare per il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire passaggi di processo](manage-job-steps.md)   
- [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [Gestire i passaggi del processo](manage-job-steps.md)   
+ [SQL Server Agent processi per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

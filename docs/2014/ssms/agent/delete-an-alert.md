@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523631"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
-  In questo argomento viene descritta la modalità di eliminazione degli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eliminare gli avvisi [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62523631"
   
      [Sicurezza](#Security)  
   
--   **Per eliminare un avviso tramite:**  
+-   **Per eliminare un avviso utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62523631"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per impostazione predefinita, solo i membri del ruolo predefinito del server **sysadmin** possono eliminare gli avvisi.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-an-alert"></a>Per eliminare un avviso  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62523631"
   
 5.  Nella finestra di dialogo **Elimina oggetto** verificare che sia selezionato l'avviso corretto, quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-an-alert"></a>Per eliminare un avviso  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62523631"
     GO  
     ```  
   
- Per altre informazioni, vedere s[sp_delete_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql).  
+ Per ulteriori informazioni, vedere s[sp_delete_alert &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql).  
   
   

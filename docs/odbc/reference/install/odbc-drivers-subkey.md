@@ -1,5 +1,5 @@
 ---
-title: Sottochiave ODBC Drivers | Microsoft Docs
+title: Sottochiave driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093986"
 ---
 # <a name="odbc-drivers-subkey"></a>Sottochiave ODBC Drivers
-I valori nella sottochiave ODBC driver Elenca driver installati. Nella tabella seguente viene illustrato il formato di questi valori.  
+I valori nella sottochiave ODBC Drivers elencano i driver installati. Il formato di questi valori è illustrato nella tabella seguente.  
   
-|Nome|Tipo di dati|Data|  
+|Nome|Tipo di dati|data|  
 |----------|---------------|----------|  
-|*driver-description*|REG_SZ|**installato**|  
+|*Driver-Descrizione*|REG_SZ|**Installato**|  
   
- Il *-descrizione del driver* nome è definito dallo sviluppatore del driver. In genere è il nome del sistema DBMS associato al driver.  
+ Il nome del *driver-Description* viene definito dallo sviluppatore del driver. Si tratta in genere del nome del DBMS associato al driver.  
   
- Si supponga, ad esempio, che sono stati installati i driver per SQL Server e i file di testo formattato. I valori nella sottochiave ODBC driver potrebbero essere:  
+ Si supponga, ad esempio, che i driver siano stati installati per i file di testo formattati e SQL Server. I valori nella sottochiave ODBC Drivers potrebbero essere:  
   
 ```  
 Text : REG_SZ : Installed  

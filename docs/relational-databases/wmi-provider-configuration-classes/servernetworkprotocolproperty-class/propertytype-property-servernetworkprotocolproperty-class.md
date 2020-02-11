@@ -18,10 +18,10 @@ ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e8308cc5eba318f3d8a5c64e6333aaa472ec37bd
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659336"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyType (classe ServerNetworkProtocolProperty)
@@ -36,7 +36,7 @@ object.PropertyType [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196433"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
@@ -42,10 +42,10 @@ ms.locfileid: "68196433"
   
 5.  Creare l'indice cluster univoco per la vista.  
   
-###  <a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate  
- La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su ON, l'espressione **'** abc **'** + NULL restituisce il valore NULL. Se tuttavia l'opzione CONCAT_NULL_YIEDS_NULL è impostata su OFF, la stessa espressione restituisce **'** abc **'** .  
+###  <a name="Restrictions"></a>Opzioni SET necessarie per le viste indicizzate  
+ La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su ON, l'espressione **'** abc **'** + NULL restituisce il valore NULL. Se tuttavia l'opzione CONCAT_NULL_YIEDS_NULL è impostata su OFF, la stessa espressione restituisce **'** abc **'**.  
   
- Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET nella tabella seguente devono essere impostate sui valori indicati nel **RequiredValue** colonna ogni volta che si verificano le condizioni seguenti:  
+ Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET nella tabella seguente devono essere impostate sui valori indicati nella colonna **RequiredValue** ogni volta che si verificano le condizioni seguenti:  
   
 -   Vengono creati la vista e gli indici successivi nella vista.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196433"
   
 -   Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.  
   
-    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Impostazione predefinita<br /><br /> OLE DB e ODBC predefinito|Impostazione predefinita<br /><br /> DB-Library predefinito|  
+    |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|  
   
      *L'impostazione di ANSI_WARNINGS su ON comporta l'impostazione implicita di ARITHABORT su ON.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196433"
   
 -   Quando si crea l'indice, l'opzione IGNORE_DUP_KEY deve essere impostata su OFF (impostazione predefinita).  
   
--   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero _schema_ **.** _nometabella_ , nella definizione della vista.  
+-   È necessario fare riferimento alle tabelle con nomi in due parti, _schema_**.** _TableName_ nella definizione della vista.  
   
 -   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione WITH SCHEMABINDING.  
   
--   A qualsiasi funzione definita dall'utente a cui si fa riferimento nella vista è necessario fare riferimento mediante nomi composti da due parti, _schema_ **.** _funzione_.  
+-   È necessario fare riferimento a qualsiasi funzione definita dall'utente a cui viene fatto riferimento nella vista tramite nomi in due parti, _schema_**.** _funzione_.  
   
 -   La proprietà di accesso ai dati di una funzione definita dall'utente deve essere NO SQL e la proprietà di accesso esterno deve essere NO.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68196433"
     |COUNT|Funzioni ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET E OPENXML)|OUTER join (LEFT, RIGHT o FULL)|  
     |Tabella derivata (definita specificando un'istruzione SELECT nella clausola FROM)|Self-join|Specifica delle colonne tramite SELECT \* o SELECT *nome_tabella*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Espressione di tabella comune (CTE)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, o `filestream` colonne|Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
+    |`float`\*colonne `text`, `ntext`, `image`, `XML`, o `filestream`|Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
     |Predicati full-text (CONTAIN, FREETEXT)|Funzione SUM che fa riferimento a un'espressione che ammette i valori Null|ORDER BY|  
     |Funzione di aggregazione CLR definita dall'utente|Torna all'inizio|Operatori CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operatori UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
@@ -124,18 +124,18 @@ ms.locfileid: "68196433"
     |Set di colonne di tipo sparse|Funzioni inline o a più istruzioni con valori di tabella|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indicizzata può contenere `float` colonne; tuttavia, tali colonne non possono essere incluse nella chiave di indice cluster.  
+     \*La vista indicizzata può contenere `float` colonne; tali colonne, tuttavia, non possono essere incluse nella chiave di indice cluster.  
   
 -   Se è presente la clausola GROUP BY, la definizione di VIEW deve contenere COUNT_BIG(*) e non deve contenere HAVING. Queste restrizioni relative alla clausola GROUP BY vengono applicate solo alla definizione della vista indicizzata. Una query può usare una vista indicizzata nel relativo piano di esecuzione anche se non soddisfa tali restrizioni.  
   
 -   Se la definizione della vista include una clausola GROUP BY, la chiave dell'indice cluster univoco può contenere riferimenti solo alle colonne specificate nella clausola GROUP BY.  
   
-###  <a name="Recommendations"></a> Indicazioni  
- Quando si fa riferimento a valori letterali stringa `datetime` e `smalldatetime` nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati `datetime` o `smalldatetime` sono considerate non deterministiche. Ciò è dovuto al fatto che i risultati dipendono dalle impostazioni LANGUAGE e DATEFORMAT della sessione del server. I risultati dell'espressione `CONVERT (datetime, '30 listopad 1996', 113)` dipendono ad esempio dall'impostazione LANGUAGE, in quanto la stringa '`listopad`' indica mesi diversi in diverse lingue. Analogamente, nell'espressione `DATEADD(mm,3,'2000-12-01')` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta la stringa `'2000-12-01'` sulla base dell'impostazione DATEFORMAT.  
+###  <a name="Recommendations"></a> Raccomandazioni  
+ Quando si fa riferimento a valori letterali stringa `datetime` e `smalldatetime` nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati `datetime` o `smalldatetime` sono considerate non deterministiche. Ciò è dovuto al fatto che i risultati dipendono dalle impostazioni LANGUAGE e DATEFORMAT della sessione del server. I risultati dell'espressione `CONVERT (datetime, '30 listopad 1996', 113)` dipendono ad esempio dall'impostazione LANGUAGE, in quanto la stringa '`listopad`' indica mesi diversi in diverse lingue. Analogamente, nell'espressione `DATEADD(mm,3,'2000-12-01')`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta la stringa `'2000-12-01'` sulla base dell'impostazione DATEFORMAT.  
   
  Anche la conversione implicita di dati di tipo carattere non Unicode tra regole di confronto viene considerata non deterministica  
   
-###  <a name="Considerations"></a> Considerazioni  
+###  <a name="Considerations"></a>Considerazioni  
  L'impostazione dell'opzione **large_value_types_out_of_row** delle colonne di una vista indicizzata è ereditata dall'impostazione della colonna corrispondente nella tabella di base. Questo valore viene impostato mediante [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). L'impostazione predefinita per le colonne generate da espressioni è 0. Ciò significa che i tipi per valori di grandi dimensioni vengono archiviati all'interno delle righe.  
   
  È possibile creare viste indicizzate per una tabella partizionata, nonché partizionare questo tipo di viste.  
@@ -151,7 +151,7 @@ ms.locfileid: "68196433"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata  
   
@@ -215,9 +215,9 @@ ms.locfileid: "68196433"
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [IMPOSTARE ARITHABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [IMPOSTA CONCAT_NULL_YIELDS_NULL &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [IMPOSTA NUMERIC_ROUNDABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

@@ -20,18 +20,18 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68092996"
 ---
 # <a name="sqlsetcursorname-function"></a>Funzione SQLSetCursorName
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
+ Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
- **SQLSetCursorName** associa un nome di cursore con un'istruzione attiva. Se un'applicazione non chiama **SQLSetCursorName**, il driver genera nomi dei cursori in base alle necessità per l'elaborazione di istruzione SQL.  
+ **Summary**  
+ **SQLSetCursorName** associa un nome di cursore a un'istruzione attiva. Se un'applicazione non chiama **SQLSetCursorName**, il driver genera i nomi di cursore necessari per l'elaborazione dell'istruzione SQL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,46 +45,46 @@ SQLRETURN SQLSetCursorName(
   
 ## <a name="arguments"></a>Argomenti  
  *StatementHandle*  
- [Input] Handle di istruzione.  
+ Input Handle di istruzione.  
   
  *Nomecursore*  
- [Input] Nome del cursore. Elaborare con efficienza, il nome del cursore non deve includere spazi iniziali o finali nel nome del cursore e se il nome del cursore include identificatori delimitati, il delimitatore deve essere inserito come primo carattere nel nome del cursore.  
+ Input Nome del cursore. Per un'elaborazione efficiente, il nome del cursore non deve includere spazi iniziali o finali nel nome del cursore e se il nome del cursore include un identificatore delimitato, il delimitatore deve essere posizionato come primo carattere nel nome del cursore.  
   
  *NameLength*  
- [Input] Lunghezza in caratteri della **Nomecursore*.  
+ Input Lunghezza in caratteri di **CursorName*.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLSetCursorName** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLSetCursorName** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLSetCursorName** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con *HandleType* di SQL_HANDLE_STMT e un *handle* di *statementHandle*. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLSetCursorName** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|01004|Stringa troncati di dati a destra|Il nome del cursore ha superato il limite massimo, pertanto è stato usato solo il numero massimo consentito di caratteri.|  
-|24000|Stato del cursore non valido|L'istruzione corrispondente *StatementHandle* era già stato eseguito o cursore posizionato.|  
-|34000|Nome di cursore non valido|Il nome di cursore specificato in **Nomecursore* non è valido perché perché supera la lunghezza massima definita dal driver, i o "SQLCUR" o "SQL_CUR."|  
-|3C000|Nome di cursore duplicato|Il nome di cursore specificato in **Nomecursore* esiste già.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY009|Utilizzo non valido del puntatore null|(DM) dell'argomento *Nomecursore* era un puntatore null.|  
-|HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *StatementHandle*. Questa funzione aynchronous era ancora in esecuzione quando il **SQLSetCursorName** funzione è stata chiamata.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione la *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
-|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o buffer non valido|(DM) dell'argomento *lunghezzanome non* era minore di 0, ma non è uguale a SQL_NTS.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dati stringa, troncati a destra|Il nome del cursore supera il limite massimo, pertanto è stato utilizzato solo il numero massimo consentito di caratteri.|  
+|24000|Stato del cursore non valido|L'istruzione corrispondente a *statementHandle* era già in uno stato eseguito o posizionato in un cursore.|  
+|34000|Nome di cursore non valido|Il nome del cursore specificato in **CursorName* non è valido perché supera la lunghezza massima definita dal driver oppure è stato avviato con "SQLCUR" o "SQL_CUR".|  
+|3C000|Nome cursore duplicato|Il nome del cursore specificato in **CursorName* esiste già.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY009|Uso non valido del puntatore null|(DM) l'argomento *CursorName* è un puntatore null.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione Aynchronous era ancora in esecuzione quando è stata chiamata la funzione **SQLSetCursorName** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) l'argomento *NameLength* è minore di 0 ma non uguale a SQL_NTS.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *statementHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Nomi dei cursori vengono utilizzati solo per gli aggiornamenti posizionati ed eliminare le istruzioni (ad esempio, **aggiornare** _nome-tabella_ ... **WHERE CURRENT OF** _-nome del cursore_). Per altre informazioni, vedere [istruzioni di eliminazione e aggiornamento posizionato](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se l'applicazione non chiama **SQLSetCursorName** per definire un nome di cursore, durante l'esecuzione di un'istruzione di query il driver genera un nome che inizia con le lettere SQL_CUR e non superare i 18 caratteri.  
+ I nomi dei cursori vengono utilizzati solo nelle istruzioni Update e Delete posizionate, ad esempio **Update** _Table-Name_ ... **Dove Current di** _Cursor-Name_). Per altre informazioni, vedere [istruzioni Update e Delete posizionate](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se l'applicazione non chiama **SQLSetCursorName** per definire un nome di cursore, durante l'esecuzione di un'istruzione di query il driver genera un nome che inizia con le lettere SQL_CUR e non supera i 18 caratteri di lunghezza.  
   
- Tutti i nomi di cursore all'interno della connessione devono essere univoci. La lunghezza massima di un nome di cursore è definita dal driver. Per garantire la massima interoperabilità, è consigliabile che le applicazioni limitare i nomi di cursore a non più di 18 caratteri. In ODBC 3*x*, se un nome di cursore è un identificatore con virgolette, viene trattata in modo distinzione maiuscole/minuscole e può contenere caratteri che la sintassi SQL non autorizza o gestisce in modo speciale, ad esempio gli spazi vuoti o parole chiave riservate. Se un nome di cursore deve essere trattato in modo tra maiuscole e minuscole, deve essere passato come un identificatore tra virgolette.  
+ Tutti i nomi di cursore all'interno della connessione devono essere univoci. La lunghezza massima del nome di un cursore è definita dal driver. Per garantire la massima interoperabilità, è consigliabile che le applicazioni limitino i nomi di cursore a non più di 18 caratteri. In ODBC 3 *. x*, se il nome di un cursore è un identificatore tra virgolette, viene considerato con distinzione tra maiuscole e minuscole e può contenere caratteri non consentiti dalla sintassi di SQL, ad esempio spazi vuoti o parole chiave riservate. Se il nome di un cursore deve essere considerato con distinzione tra maiuscole e minuscole, deve essere passato come identificatore tra virgolette.  
   
- Impostare un nome di cursore che viene impostato in modo esplicito o implicito è rimasto fino a quando non viene eliminata l'istruzione con cui è associato, usando **SQLFreeHandle**. **SQLSetCursorName** può essere chiamato per rinominare un cursore su un'istruzione fino a quando il cursore si trova in uno stato allocato o preparato.  
+ Il nome di un cursore impostato in modo esplicito o implicito rimane impostato fino a quando non viene eliminata l'istruzione a cui è associato, utilizzando **SQLFreeHandle**. È possibile chiamare **SQLSetCursorName** per rinominare un cursore su un'istruzione purché il cursore sia in uno stato allocato o preparato.  
   
 ## <a name="code-example"></a>Esempio di codice  
- Nell'esempio seguente, un'applicazione utilizza **SQLSetCursorName** per impostare un nome di cursore per un'istruzione. Tale istruzione viene quindi utilizzato per recuperare i risultati della tabella CUSTOMERS. Infine, esegue un aggiornamento posizionato per modificare il numero di telefono di John Smith. Si noti che l'applicazione usa gli handle di istruzione diverso per il **selezionate** e **UPDATE** istruzioni.  
+ Nell'esempio seguente, un'applicazione utilizza **SQLSetCursorName** per impostare un nome di cursore per un'istruzione. Viene quindi utilizzata l'istruzione per recuperare i risultati dalla tabella CUSTOMers. Infine, viene eseguito un aggiornamento posizionato per modificare il numero di telefono di John Smith. Si noti che l'applicazione utilizza diversi handle di istruzione per le istruzioni **Select** e **Update** .  
   
  Per un altro esempio di codice, vedere [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
@@ -135,10 +135,10 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Esecuzione di un'istruzione SQL|[Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Eseguire un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Restituzione di un nome di cursore|[Funzione SQLGetCursorName](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
-|L'impostazione di scorrere le opzioni di cursore|[Funzione SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
+|Impostazione delle opzioni di scorrimento del cursore|[Funzione SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

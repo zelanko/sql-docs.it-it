@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196509"
 ---
 # <a name="dml-triggers"></a>Trigger DML
@@ -59,10 +59,10 @@ ms.locfileid: "68196509"
 |Applicabilità|Tabelle|Tabelle e viste|  
 |Quantità per tabella o vista|Multiplo per azione di trigger (UPDATE, DELETE e INSERT)|Singolo per azione di trigger (UPDATE, DELETE e INSERT)|  
 |Riferimenti di propagazione|Nessuna restrizione|I trigger INSTEAD OF UPDATE e DELETE non sono consentiti in tabelle che rappresentano le destinazioni di vincoli di integrità per operazioni referenziali di propagazione|  
-|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br />Operazioni referenziali dichiarative<br />Creazione di tabelle**inserted** e **deleted**<br />Operazione di trigger|Prima: Elaborazione dei vincoli<br /><br /> Invece di:  Operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
+|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br />Operazioni referenziali dichiarative<br />Creazione di tabelle**inserted** e **deleted**<br />Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
 |Ordine di esecuzione|È possibile specificare la prima e l'ultima esecuzione|Non applicabile|  
-|`varchar(max)`, `nvarchar(max)`, e `varbinary(max)` fa riferimento a colonna nelle **inserito** e **eliminato** tabelle|Allowed|Allowed|  
-|`text`, `ntext`, e `image` fa riferimento a colonna nelle **inserito** e **eliminato** tabelle|Non consentiti|Allowed|  
+|`varchar(max)`riferimenti `nvarchar(max)`alle colonne `varbinary(max)` , e nelle tabelle **inserted** e **Deleted**|Consentito|Consentito|  
+|`text`riferimenti `ntext`alle colonne `image` , e nelle tabelle **inserted** e **Deleted**|Non consentito|Consentito|  
   
  Trigger CLR  
  I trigger CLR includono i trigger AFTER e INSTEAD OF. Un trigger CLR può essere anche un trigger DDL. Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -71,16 +71,16 @@ ms.locfileid: "68196509"
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Viene illustrato come creare un trigger DML.|[Creare trigger DML.](create-dml-triggers.md)|  
-|Viene illustrato come creare un trigger CLR.|[Creazione di trigger CLR](create-clr-triggers.md)|  
-|Viene descritto come creare un trigger DML per la gestione delle modifiche sia della singola riga che di più righe.|[Creazione di trigger DML per gestire più righe di dati](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
-|Viene descritto come annidare trigger.|[Creazione di trigger annidati](create-nested-triggers.md)|  
-|Viene descritto come specificare l'ordine in cui vengono generati trigger AFTER.|[Specifica dei primi e degli ultimi trigger](specify-first-and-last-triggers.md)|  
-|Viene descritto come utilizzare le tabelle speciali inserted e deleted nel codice del trigger.|[Utilizzo delle tabelle inserite ed eliminate](use-the-inserted-and-deleted-tables.md)|  
-|Viene descritto come modificare o rinominare un trigger DML.|[Modifica o ridenominazione di trigger DML](modify-or-rename-dml-triggers.md)|  
-|Viene descritto come visualizzare informazioni sui trigger DML.|[Ottieni informazioni sui trigger DML](get-information-about-dml-triggers.md)|  
-|Vengono descritte le modalità di creazione, modifica e disabilitazione dei trigger DML.|[Eliminare o disabilitare trigger DML](delete-or-disable-dml-triggers.md)|  
-|Viene descritto come gestire la sicurezza dei trigger.|[Gestione della sicurezza dei trigger](manage-trigger-security.md)|  
+|Viene illustrato come creare un trigger DML.|[Creare trigger DML](create-dml-triggers.md)|  
+|Viene illustrato come creare un trigger CLR.|[Creare trigger CLR](create-clr-triggers.md)|  
+|Viene descritto come creare un trigger DML per la gestione delle modifiche sia della singola riga che di più righe.|[Creare trigger DML per gestire più righe di dati](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
+|Viene descritto come annidare trigger.|[Creare trigger annidati](create-nested-triggers.md)|  
+|Viene descritto come specificare l'ordine in cui vengono generati trigger AFTER.|[Specificare i primi e gli ultimi trigger](specify-first-and-last-triggers.md)|  
+|Viene descritto come utilizzare le tabelle speciali inserted e deleted nel codice del trigger.|[Usare le tabelle inserite ed eliminate](use-the-inserted-and-deleted-tables.md)|  
+|Viene descritto come modificare o rinominare un trigger DML.|[Modificare o rinominare trigger DML](modify-or-rename-dml-triggers.md)|  
+|Viene descritto come visualizzare informazioni sui trigger DML.|[Recuperare informazioni sui trigger DML](get-information-about-dml-triggers.md)|  
+|Vengono descritte le modalità di creazione, modifica e disabilitazione dei trigger DML.|[Eliminare e disabilitare trigger DML](delete-or-disable-dml-triggers.md)|  
+|Viene descritto come gestire la sicurezza dei trigger.|[Gestire la sicurezza dei trigger](manage-trigger-security.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   

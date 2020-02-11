@@ -1,5 +1,5 @@
 ---
-title: Funzioni di sicurezza di sistema | Microsoft Docs
+title: Funzioni di sicurezza del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: dff237aca1c928e6921b99f62407848ba536d76e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950959"
 ---
 # <a name="system-security-functions"></a>Funzioni di sicurezza del sistema
@@ -24,7 +24,7 @@ ms.locfileid: "67950959"
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le funzioni di sicurezza riportate di seguito.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  
   
  [sys.fn_check_object_signatures](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  

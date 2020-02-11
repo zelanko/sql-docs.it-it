@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470048"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
@@ -28,7 +28,7 @@ ms.locfileid: "62470048"
 ## <a name="options"></a>Opzioni  
  La scheda **Attività di manutenzione** contiene le colonne di informazioni seguenti.  
   
- **Name**  
+ **Nome**  
  Visualizza i nomi dei componenti disponibili. Ogni nome è preceduto da una casella di controllo. Se è selezionata, la casella di controllo indica che [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha trovato una voce per il componente nel Registro di sistema del computer. È possibile che il componente sia già visualizzato nella scheda **Casella degli strumenti** attiva o che verrà aggiunto a tale scheda quando si fa clic su **OK**. Se è deselezionata, la casella di controllo indica che il componente non è attualmente visualizzato nella **Casella degli strumenti**o che verrà rimosso dalla **Casella degli strumenti** quando si fa clic su **OK**.  
   
  **Percorso**  
@@ -43,7 +43,7 @@ ms.locfileid: "62470048"
  **Lingua**  
  Lingua del componente.  
   
- **Versione**  
+ **Version**  
  Versione del componente.  
   
   

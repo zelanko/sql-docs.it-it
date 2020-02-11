@@ -1,5 +1,5 @@
 ---
-title: Le stored procedure | Microsoft Docs
+title: Stored procedure | Microsoft Docs
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638326"
 ---
 # <a name="stored-procedures"></a>Stored procedure
-  Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Un stored procedure ([stored procedure &#40;motore di database&#41;](../../stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]supporta  
   
 -   Stored procedure  
   
@@ -32,11 +32,11 @@ ms.locfileid: "62638326"
   
      DLL C o C++ scritte nell'API ODS (Open Data Services) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le stored procedure estese. L'API ODS amplia le funzionalità delle stored procedure per includere il codice C o C++.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Esecuzione di stored procedure &#40;OLE DB&#41;](stored-procedures-running.md)  
   
--   [Esecuzione di una chiamata a una stored procedure &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [Chiamata di una stored procedure &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  

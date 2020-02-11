@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467245"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Ripristinare e recuperare tabelle con ottimizzazione per la memoria
   Il meccanismo di base per recuperare o ripristinare un database con tabelle ottimizzate per la memoria è simile a quello per i database che hanno solo tabelle basate su disco. A differenza delle tabelle basate su disco, le tabelle ottimizzate per la memoria devono essere caricate in memoria prima di rendere disponibile il database per l'accesso utente. Si tratta di un nuovo passaggio nel processo di recupero del database. I passaggi modificati per il recupero del database sono cambiati come indicato di seguito:  
   
- Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ogni database attraversa una fase di recupero suddivisa in tre parti:  
+ Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ogni database attraversa una fase di recupero suddivisa in tre parti:  
   
 1.  Fase di analisi. Durante questa fase, viene eseguito un passaggio nei log delle transazioni attivi per rilevare le transazioni di cui è stato eseguito il commit e di cui non è stato eseguito il commit. Il motore OLTP in memoria identifica il checkpoint per caricare e precaricare le voci di log della tabella di sistema. Elabora inoltre alcuni record di log delle allocazioni di file.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62467245"
   
 -   Flusso dei file di dati.  Alla creazione del filtro mappa differenziale, i file di dati vengono letti utilizzando un numero di thread equivalente al numero di CPU logiche. Ogni thread che legge il file di dati legge le righe di dati, controlla la mappa differenziale associata e inserisce la riga nella tabella solo se tale riga non è stata contrassegnata come eliminata. Questa parte del recupero può essere associata alla CPU in alcuni casi riportati di seguito.  
   
- ![Tabelle con ottimizzazione per la memoria.](../../database-engine/media/memory-optimized-tables.gif "Tabelle con ottimizzazione per la memoria.")  
+ ![Tabelle con ottimizzazione per la memoria.](../../database-engine/media/memory-optimized-tables.gif "Tabelle ottimizzate per la memoria.")  
   
  Le tabelle con ottimizzazione per la memoria possono in genere essere caricate in memoria alla velocità di I/O, ma in alcuni casi il caricamento delle righe di dati in memoria è più lento. Alcuni casi specifici sono i seguenti:  
   

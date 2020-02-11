@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473222"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modifica o ridenominazione di trigger DML
   In questo argomento viene illustrato come modificare o rinominare un trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62473222"
   
 -   Quando si rinomina un trigger, il trigger deve trovarsi nel database corrente e il nuovo nome deve seguire le regole per gli [identificatori](../databases/database-identifiers.md).  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   È consigliabile non usare la stored procedure [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) per rinominare un trigger. La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. La ridenominazione di un trigger non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . È consigliabile eliminare e ricreare il trigger.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62473222"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per modificare un trigger DML è necessaria l'autorizzazione ALTER sulla tabella o vista in cui è definito il trigger.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>Per modificare un trigger DML  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62473222"
   
 2.  [Ricreare il trigger](../triggers/create-dml-triggers.md), specificando il nuovo nome.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Per modificare un trigger utilizzando ALTER TRIGGER  
   
