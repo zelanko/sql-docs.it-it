@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250665"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
@@ -52,7 +52,7 @@ ms.locfileid: "63250665"
 > [!NOTE]  
 >  Su ogni partner, alcuni dei contatori mostrano un valore zero in base al ruolo attualmente svolto dal partner.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I contatori delle prestazioni consentono di monitorare le prestazioni del mirroring del database. Ad esempio, è possibile esaminare il contatore **Ritardo transazioni** per verificare se il mirroring del database sta influenzando le prestazioni sul server principale. È possibile esaminare i contatori **Coda rollforward** e **Coda invii log** per verificare se il database mirror è in grado di mantenersi aggiornato rispetto al database principale. Il contatore **Byte log inviati/sec** consente di monitorare il numero di eventi di log inviati al secondo.  
   
 ## <a name="see-also"></a>Vedere anche  

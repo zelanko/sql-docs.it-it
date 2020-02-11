@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480966"
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
@@ -34,9 +34,9 @@ ms.locfileid: "65480966"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare un dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Discovery"></a> Creare un dominio nell'attività di individuazione delle informazioni  
+##  <a name="Discovery"></a>Creazione di un dominio nell'attività di individuazione delle informazioni  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480966"
   
 5.  Nella tabella **Mapping** selezionare una colonna di origine dall'elenco a discesa per la **Colonna di origine** di una riga vuota. Se non esiste alcun dominio corrispondente, fare clic sull'icona **Crea un dominio** .  
   
-##  <a name="DomainManagement"></a> Creare un dominio nell'attività di gestione del dominio  
+##  <a name="DomainManagement"></a>Creare un dominio nell'attività di gestione del dominio  
   
 1.  Nella schermata iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri Knowledge Base** , quindi selezionare una Knowledge Base o fare clic su **Nuova Knowledge Base** e immettere le proprietà per la nuova Knowledge Base.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480966"
   
 3.  Nella pagina **Gestione dominio** fare clic sull'icona **Crea un dominio** sopra l'elenco di domini.  
   
-##  <a name="Properties"></a> Impostare le proprietà di un dominio  
+##  <a name="Properties"></a>Impostare le proprietà del dominio  
   
 1.  Nella finestra di dialogo **Crea dominio** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65480966"
   
 10. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver creato un dominio  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di un dominio  
  Dopo avere creato un dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

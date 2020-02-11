@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481142"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Pulire i dati in un dominio composito
   In questo argomento vengono fornite informazioni sulla pulizia dei domini compositi in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati. I singoli domini in un dominio composito devono contenere un'area delle informazioni in comune. Per informazioni dettagliate sui domini compositi, vedere [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
   
-##  <a name="Mapping"></a> Esecuzione del mapping di un dominio composito ai dati di origine  
+##  <a name="Mapping"></a>Mapping di un dominio composito ai dati di origine  
  Sono disponibili due modalità per eseguire il mapping dei dati di origine a un dominio composito:  
   
 -   Dati di origine costituiti da un singolo campo, ad esempio Nome e cognome, di cui viene eseguito il mapping a un dominio composito.  
@@ -31,9 +31,9 @@ ms.locfileid: "65481142"
   
 -   Dati di origine costituiti da più campi, ad esempio Nome, Secondo nome e Cognome, di cui viene eseguito il mapping ai singoli domini all'interno di un dominio composito.  
   
- Per un esempio di come eseguire il mapping di domini compositi ai dati di origine, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Per un esempio di come eseguire il mapping di domini compositi ai dati di origine, vedere [associare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="CDCorrection"></a> Correzione dei dati mediante le regole definitive tra domini  
+##  <a name="CDCorrection"></a>Correzione dei dati mediante le regole definitive tra domini  
  Le regole tra domini in un dominio composito consentono di creare regole che indicano la relazione tra i singoli domini in un dominio composito. Le regole tra domini vengono prese in considerazione quando si esegue l'attività di pulizia sui dati di origine relativi ai domini compositi. Oltre a indicare la validità di una regola tra domini, la regola definitiva tra domini *Then* , **Il valore è uguale a**, corregge anche i dati durante l'attività di pulizia dei dati.  
   
  Considerare l'esempio seguente. Si supponga di avere un dominio composito, Product, con tre singoli domini: ProductName, CompanyName e ProductVersion. Creare la regola definitiva tra domini seguente:  
@@ -42,7 +42,7 @@ ms.locfileid: "65481142"
   
  Quando questa regola tra domini viene eseguita, i dati di origine (ProductName) verranno corretti come segue dopo l'attività di pulizia:  
   
- **Origine dati**  
+ **Dati di origine**  
   
 |ProductName|CompanyName|ProductVersion|  
 |-----------------|-----------------|--------------------|  
@@ -54,12 +54,12 @@ ms.locfileid: "65481142"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e nella colonna **Motivo** viene visualizzato il messaggio seguente: Con correzione in base alla regola " *\<Nome regola tra domini>* ". Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e nella colonna **Motivo** viene visualizzato il messaggio seguente: Con correzione in base alla regola "*\<Nome regola tra domini>*". Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regola definitiva tra domini non funziona per i domini compositi associati al servizio dati di riferimento.  
   
-##  <a name="DataProfiling"></a> Profiling dei dati per i domini compositi  
+##  <a name="DataProfiling"></a>Profiling dei dati per i domini compositi  
  Il profiling DQS fornisce due dimensioni della qualità dei dati: *completezza* (l'entità della presenza dei dati) e *accuratezza* (la misura entro cui i dati possono essere utilizzati per gli scopi previsti) durante l'attività di pulizia. È possibile che il profiling non fornisca statistiche di completezza affidabili per i domini compositi. Se sono necessarie statistiche di completezza, utilizzare domini singoli anziché domini compositi. Se si desidera utilizzare domini compositi, è consigliabile creare una Knowledge Base con domini singoli di cui eseguire il profiling per determinare la completezza, quindi creare un altro dominio con un dominio composito per l'attività di pulizia. Ad esempio, il profiling potrebbe mostrare una completezza del 95% per record relativi a indirizzi, utilizzando un dominio composito, ma potrebbe esservi un livello di incompletezza molto più alto per una delle colonne, ad esempio una colonna relativa al codice postale (CAP). In questo esempio, è necessario misurare la completezza della colonna del CAP con un solo dominio.  
   
  Il profiling fornirà probabilmente statistiche di accuratezza affidabili per i domini compositi perché è possibile misurare l'accuratezza di più colonne allo stesso tempo. Il valore di questi dati sta nell'aggregazione composta, pertanto è consigliabile misurarne l'accuratezza con un dominio composito.  

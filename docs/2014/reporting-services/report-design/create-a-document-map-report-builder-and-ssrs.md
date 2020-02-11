@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106171"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106171"
     > [!NOTE]  
     >  Per selezionare un'area dati Tablix, fare clic in una cella per visualizzare gli handle di riga e di colonna, quindi fare clic sull'handle d'angolo.  
   
-2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare nella mappa documento nel `DocumentMapLabel` proprietà, oppure immettere un'espressione che restituisca un'etichetta. Digitare ad esempio **SalesChart**.  
+2.  Nel riquadro Proprietà digitare il testo che si desidera visualizzare nella mappa documento nella `DocumentMapLabel` proprietà oppure immettere un'espressione che restituisca un'etichetta. Digitare ad esempio **SalesChart**.  
   
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, nel gruppo **Mostra/Nascondi** della scheda **Visualizza** selezionare **Proprietà**.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106171"
 4.  Incollare l'URL in Gestione report, quindi premere INVIO. Verrà avviata l'esecuzione del report e la mappa documento verrà nascosta.  
   
 > [!NOTE]  
->  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  Per ulteriori informazioni sul download di report di esempio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e visualizzazione dei report in Gestione Report &#40;Report e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

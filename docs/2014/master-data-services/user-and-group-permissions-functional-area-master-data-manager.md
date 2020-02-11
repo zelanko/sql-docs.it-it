@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482557"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
@@ -36,7 +36,7 @@ ms.locfileid: "65482557"
   
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
- [Autorizzazioni membri gerarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
  [Assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65482557"
   
  [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Risoluzione dei problemi relativi alla sicurezza di Gestione dati master](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Risoluzione dei problemi di sicurezza Gestione dati master](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  

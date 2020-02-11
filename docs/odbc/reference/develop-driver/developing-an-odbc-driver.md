@@ -1,5 +1,5 @@
 ---
-title: Sviluppo di un Driver ODBC | Microsoft Docs
+title: Sviluppo di un driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6509a1627a753bc0bb0db354ee0a20b304e19774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078894"
 ---
 # <a name="developing-an-odbc-driver"></a>Sviluppo di un driver ODBC
-In questa sezione contiene argomenti che illustrano come sviluppare un driver ODBC.  
+In questa sezione sono inclusi argomenti in cui viene illustrato come sviluppare un driver ODBC.  
   
- In questa sezione contiene gli argomenti seguenti  
+ Questa sezione contiene i seguenti argomenti  
   
 -   [Architettura dei driver ODBC](../../../odbc/reference/develop-driver/odbc-driver-architecture.md)  
   

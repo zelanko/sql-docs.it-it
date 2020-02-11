@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Driver Access) | Microsoft Docs
+title: SQLDriverConnect (driver Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053986"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (driver Access)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni di accesso specifici del Driver. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver di accesso. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  **SQLDriverConnect** consente di connettersi a un driver senza creare un'origine dati (DSN).  
   
- Le parole chiave seguenti sono supportate nella stringa di connessione per tutti i driver: **DSN**, **DBQ**, e **FIL**.  
+ Le parole chiave seguenti sono supportate nella stringa di connessione per tutti i driver: **DSN**, **DBQ**e **fil**.  
   
- Il **UID** e **PWD** sono supportate anche le parole chiave.  
+ Sono supportate anche le parole chiave **UID** e **pwd** .  
   
- La parola chiave PWD non deve includere i caratteri speciali (vedere in SQL_SPECIAL_CHARACTERS **SQLGetInfo** restituiti valori).  
+ La parola chiave PWD non deve includere alcun carattere speciale (vedere SQL_SPECIAL_CHARACTERS nei valori restituiti da **SQLGetInfo** ).  
   
- Nella tabella seguente illustra le parole chiave minime necessarie per connettersi a tutti i driver e viene fornito un esempio di coppie parola chiave/valore utilizzate con **SQLDriverConnect**. Per un elenco completo dei valori DRIVERID, vedere [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).  
+ Nella tabella seguente vengono illustrate le parole chiave minime necessarie per connettersi a ogni driver e viene fornito un esempio di coppie parola chiave/valore utilizzate con **SQLDriverConnect**. Per un elenco completo dei valori di DRIVERID, vedere [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).  
   
-|Driver|Parole chiave necessarie|Esempi|  
+|Driver|Parole chiave obbligatorie|Esempi|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Driver, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|
+|Microsoft Access|Driver, DBQ|Driver = {driver Microsoft Access (*. mdb)}; DBQ = c:\\\Temp\\\sample.mdb|

@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480376"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Apertura di progetti di Integration Services nel client Data Quality
+  
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] consente di eseguire un progetto di pulizia in modalità batch. È tuttavia talvolta necessario rivedere i risultati della pulizia in un pacchetto di Integration Services in modo simile a quello utilizzato per rivedere i risultati della pulizia nella scheda **Gestisci e visualizza risultati** di un'attività di pulizia in un progetto Data Quality di DQS. DQS consente di aprire progetti di Integration Services in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nello stesso modo in cui si apre qualsiasi altro progetto Data Quality dalla finestra di dialogo **Apri progetto** e di eseguire attività interattive sui risultati della pulizia in un progetto di Integration Services.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -38,17 +39,17 @@ ms.locfileid: "65480376"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per aprire un progetto di Integration Services è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
-##  <a name="Open"></a> Apertura di un progetto di Integration Services  
+##  <a name="Open"></a>Aprire un progetto di Integration Services  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella pagina iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
   
 3.  Nella finestra di dialogo **Apri progetto** è possibile identificare un progetto di Integration Services in una delle modalità seguenti:  
   
-    1.  **Nome progetto**: i progetti di Integration Services vengono elencati usando la terminologia di denominazione seguente: "Package. DQS cleansing _*\<data > * *\<ora >*_ {GUID}." Ogni volta che si esegue correttamente lo stesso pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nella schermata **Apri progetto** è elencato un nuovo progetto.  
+    1.  **Nome progetto**: i progetti Integration Services vengono elencati utilizzando la terminologia di denominazione seguente: "Package. DQS Cleansing_*\<date\<> * * Time>*_ {GUID}". Ogni volta che si esegue correttamente lo stesso pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nella schermata **Apri progetto** è elencato un nuovo progetto.  
   
-    2.  **Tipo di progetto**: i progetti di Integration Services presentano un tipo di progetto **SSIS** nella finestra di dialogo **Apri progetto**.  
+    2.  **Tipo di progetto**: i progetti Integration Services hanno **SSIS** come tipo di progetto nella schermata **Apri progetto** .  
   
      Selezionare un progetto, quindi fare clic su **Avanti**.  
   
@@ -59,5 +60,5 @@ ms.locfileid: "65480376"
 6.  Dopo avere esportato i dati, fare clic su **Fine** per chiudere il progetto di Integration Services.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione DQS Cleansing](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
+ [Trasformazione pulizia DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Progetti di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  

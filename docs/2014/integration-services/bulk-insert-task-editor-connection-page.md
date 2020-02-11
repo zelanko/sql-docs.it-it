@@ -1,5 +1,5 @@
 ---
-title: Bulk Insert Task Editor (pagina connessione) | Microsoft Docs
+title: Editor attività Inserimento bulk (pagina connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061215"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor attività Inserimento bulk (pagina Connessione)
@@ -30,7 +30,7 @@ ms.locfileid: "66061215"
  **Connessione**  
  Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova connessione.  
   
- **Argomenti correlati:** [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [Configura gestione connessione OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Argomenti correlati:** [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [configurazione OLE DB gestione connessione](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Consente di digitare il nome della tabella o della vista di destinazione o di selezionare una tabella o una vista nell'elenco.  
@@ -38,10 +38,10 @@ ms.locfileid: "66061215"
  **Formato**  
  Consente di selezionare l'origine del formato per l'inserimento bulk. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Usa file**|Consente di selezionare un file contenente la specifica di formato. Selezionando questa opzione viene visualizzata l'opzione dinamica **FormatFile**.|  
-|**Specifica**|Consente di specificare il formato. Se si seleziona questa opzione consente di visualizzare le opzioni dinamiche `RowDelimiter` e `ColumnDelimiter`.|  
+|**Specificare**|Consente di specificare il formato. Selezionando questa opzione vengono visualizzate le opzioni `RowDelimiter` dinamiche `ColumnDelimiter`e.|  
   
  **File**  
  Selezionare una gestione connessione file o file flat nell'elenco oppure fare clic su \<**Nuova connessione...**> per creare una nuova connessione.  
@@ -50,7 +50,7 @@ ms.locfileid: "66061215"
   
  Se si accede al file di origine utilizzando una gestione connessione file flat, l'attività Inserimento bulk non utilizzerà il formato specificato nella gestione connessione file flat, ma userà il formato specificato in un file di formato o i valori delle proprietà RowDelimiter e ColumnDelimiter dell'attività.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md), [gestione connessione File Flat](connection-manager/flat-file-connection-manager.md), [Editor gestione connessione File Flat &#40;&#41; ](general-page-of-integration-services-designers-options.md), [Editor gestione connessione File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor gestione connessione File Flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md), [gestione connessione file](connection-manager/flat-file-connection-manager.md)Flat, [Editor gestione connessione file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md), [Editor gestione connessione file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Aggiorna tabelle**  
  Consente di aggiornare l'elenco di tabelle e di viste.  
@@ -63,14 +63,14 @@ ms.locfileid: "66061215"
   
 ### <a name="format--specify"></a>Format = Specifica  
  `RowDelimiter`  
- Consente di specificare il delimitatore di riga nel file di origine. Il valore predefinito è **{CR}{LF}**.  
+ Consente di specificare il delimitatore di riga nel file di origine. Il valore predefinito è **{CR} {LF}**.  
   
  `ColumnDelimiter`  
  Consente di specificare il delimitatore di colonna nel file di origine. Il valore predefinito è **Tabulazione**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Inserimento bulk &#40;pagina Generale&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Editor attività Inserimento bulk &#40;pagina generale&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [Editor attività Inserimento bulk &#40;pagina Opzioni&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

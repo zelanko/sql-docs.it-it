@@ -14,23 +14,23 @@ ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070088"
 ---
 # <a name="system-functions"></a>Funzioni di sistema
-La tabella seguente elenca le funzioni di sistema inclusi nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_SYSTEM_FUNCTIONS, un'applicazione può determinare le funzioni di sistema supportate da un driver.  
+Nella tabella seguente sono elencate le funzioni di sistema incluse nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_SYSTEM_FUNCTIONS, un'applicazione può determinare quali funzioni di sistema sono supportate da un driver.  
   
- Gli argomenti indicati come *exp* può essere il nome di una colonna, il risultato di un'altra funzione scalare o un valore letterale, in cui il tipo di dati sottostante può essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL _BIGINT, SQL_FLOAT, SQL_REAL, SQL_DOUBLE, SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.  
+ Gli argomenti identificati come *Exp* possono essere il nome di una colonna, il risultato di un'altra funzione scalare o un valore letterale, in cui il tipo di dati sottostante potrebbe essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, SQL_DOUBLE, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP.  
   
- Gli argomenti indicati come *valore* può essere una valore letterale costante, in cui il tipo di dati sottostante può essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, SQL_DOUBLE, SQL _ TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP.  
+ Gli argomenti denotati come *valore* possono essere una costante letterale, in cui il tipo di dati sottostante può essere rappresentato come SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, SQL_DOUBLE, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP.  
   
- Valori restituiti sono rappresentati come tipi di dati ODBC.  
+ I valori restituiti sono rappresentati come tipi di dati ODBC.  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|**DATABASE( )**  (ODBC 1.0)|Restituisce il nome del database corrispondente all'handle di connessione. (Il nome del database è disponibile anche tramite la chiamata **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.)|  
-|**IFNULL (** _exp_,_valore_ **)** (1.0 ODBC)|Se *exp* è null, *valore* viene restituito. Se *exp* non è null, *exp* viene restituito. Il tipo di dati o i tipi di *valore* deve essere compatibile con il tipo di dati *exp*.|  
-|**USER( )**  (ODBC 1.0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è anche disponibile tramite **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Ciò può essere diverso dal nome di account di accesso.|
+|**Database ()** (ODBC 1,0)|Restituisce il nome del database corrispondente all'handle di connessione. Il nome del database è disponibile anche chiamando **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.|  
+|**IFNULL (** _Exp_,_valore_**)** (ODBC 1,0)|Se *Exp* è null, viene restituito *value* . Se *Exp* non è null, viene restituito *Exp* . Il tipo di dati o i tipi di *valore* possibili devono essere compatibili con il tipo di dati di *Exp*.|  
+|**Utente ()** (ODBC 1,0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è disponibile anche per mezzo di **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Questo può essere diverso dal nome dell'account di accesso.|

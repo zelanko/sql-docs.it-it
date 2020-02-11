@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245926"
 ---
 # <a name="view-job-step-information"></a>Visualizzare informazioni sui passaggi di processo
@@ -31,7 +31,7 @@ ms.locfileid: "63245926"
   
      [Sicurezza](#Security)  
   
--   **Per visualizzare informazioni sui passaggi di processo mediante:**  
+-   **Per visualizzare le informazioni sui passaggi di processo utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63245926"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È possibile visualizzare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . I membri di questo ruolo infatti possono visualizzare tutti i processi e tutte le informazioni sui passaggi di processo.  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Per visualizzare informazioni sui passaggi di processo  
   

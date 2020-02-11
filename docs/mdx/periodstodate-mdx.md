@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055635"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
@@ -34,10 +34,10 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
- All'interno dell'ambito del livello specificato, il **PeriodsToDate** funzione restituisce il set di punti allo stesso livello del membro specificato, a partire dal primo periodo e fino al membro specificato.  
+## <a name="remarks"></a>Osservazioni  
+ All'interno dell'ambito del livello specificato, la funzione **PeriodsToDate** restituisce il set di punti sullo stesso livello del membro specificato, a partire dal primo periodo fino al membro specificato.  
   
--   Se si specifica un livello, viene derivato il membro corrente della gerarchia *gerarchia*. **CurrentMember**, dove *gerarchia*è la gerarchia del livello specificato.  
+-   Se viene specificato un livello, il membro corrente della gerarchia viene dedotto *gerarchia*. **CurrentMember**, dove *Hierarchy*è la gerarchia del livello specificato.  
   
 -   Se non è specificato un livello né un membro, come livello viene considerato il livello padre del membro corrente della prima gerarchia nella prima dimensione di tipo Time del gruppo di misure.  
   
@@ -46,7 +46,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo.  
+ Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -85,7 +85,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Conteggio &#40;MDX&#41;](../mdx/topcount-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

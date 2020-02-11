@@ -21,18 +21,18 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046504"
 ---
-# <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
+# <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il numero ordinale di colonna della colonna specificata che viene visualizzato nei [tabella delle modifiche](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associato all'istanza di acquisizione specificata.  
+  Restituisce il numero ordinale di colonna della colonna specificata così come viene visualizzato nella [tabella delle modifiche](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associata all'istanza di acquisizione specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **«** *capture_instance* **»**  
- Nome dell'istanza di acquisizione in cui la colonna specificata viene identificata come una colonna acquisita. *capture_instance* viene **sysname**.  
+ **'** *capture_instance* **'**  
+ Nome dell'istanza di acquisizione in cui la colonna specificata viene identificata come una colonna acquisita. *capture_instance* è di **tipo sysname**.  
   
- **«** *column_name* **»**  
- Colonna per la quale eseguire un report. *column_name* viene **sysname**.  
+ **'** *column_name* **'**  
+ Colonna per la quale eseguire un report. *column_name* è di **tipo sysname**.  
   
 ## <a name="return-type"></a>Tipo restituito  
  **int**  
   
-## <a name="remarks"></a>Note  
- Questa funzione viene utilizzata per identificare la posizione ordinale di una colonna acquisita all'interno della maschera di aggiornamento dell'acquisizione dei dati delle modifiche. Viene principalmente usato in combinazione con la funzione [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) per estrarre informazioni dalla maschera di aggiornamento quando si eseguono query per i dati delle modifiche.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione viene utilizzata per identificare la posizione ordinale di una colonna acquisita all'interno della maschera di aggiornamento dell'acquisizione dei dati delle modifiche. Viene utilizzata principalmente insieme alla funzione [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) per estrarre informazioni dalla maschera di aggiornamento quando si eseguono query sui dati delle modifiche.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT in tutte le colonne acquisite della tabella di origine. Se per l'istanza di acquisizione viene specificato un ruolo del database per il componente di acquisizione dei dati delle modifiche, viene anche richiesta l'appartenenza a tale ruolo.  
   
 ## <a name="examples"></a>Esempi  
@@ -78,8 +78,8 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys. sp_cdc_get_captured_columns &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys. fn_cdc_is_bit_set &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

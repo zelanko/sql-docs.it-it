@@ -20,13 +20,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05580f7687d61557325ae720ea8e638f9186a867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078437"
 ---
-# <a name="tableconstraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
+# <a name="table_constraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni vincolo di tabella del database corrente. Questa vista degli schemi delle informazioni restituisce informazioni sugli oggetti per i quali l'utente dispone di autorizzazioni.  
@@ -35,22 +35,22 @@ ms.locfileid: "68078437"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificatore del vincolo.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificatore del vincolo.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> <strong> \* Importante \* \* </strong> Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nome del vincolo.|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> <strong> \* Importante \* \* </strong> Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella.|  
 |**CONSTRAINT_TYPE**|**varchar (** 11 **)**|Tipo di vincolo:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
-|**IS_DEFERRABLE**|**varchar(** 2 **)**|Specifica se è possibile posticipare la verifica dei vincoli. Restituisce sempre NO.|  
-|**INITIALLY_DEFERRED**|**varchar(** 2 **)**|Specifica se la verifica dei vincoli viene inizialmente posticipata. Restituisce sempre NO.|  
+|**IS_DEFERRABLE**|**varchar (** 2 **)**|Specifica se è possibile posticipare la verifica dei vincoli. Restituisce sempre NO.|  
+|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Specifica se la verifica dei vincoli viene inizialmente posticipata. Restituisce sempre NO.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Viste degli schemi delle informazioni &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys. key_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys. check_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
   
   

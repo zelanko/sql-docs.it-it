@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105243"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Funzione Level (Generatore report e SSRS)
@@ -35,9 +35,9 @@ Level(scope)
  (`String`) (Facoltativo). Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Restituisce un valore `Integer`. Se *ambito* specifica una set di dati o un'area dati oppure un raggruppamento non ricorsivo (vale a dire un raggruppamento con nessun `Parent` elemento), `Level` restituisce 0. Se *scope* viene omesso, restituisce il livello dell'ambito corrente.  
+ Restituisce un valore `Integer`. Se *scope* specifica un set di dati o un'area dati oppure un raggruppamento non `Parent` ricorsivo, ovvero un raggruppamento senza elemento, `Level` restituisce 0. Se *scope* viene omesso, restituisce il livello dell'ambito corrente.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore restituito dalla funzione `Level` è a base zero, ovvero il primo livello di una gerarchia viene indicato con 0.  
   
  È possibile utilizzare la funzione `Level` per consentire l'applicazione dei rientri in una gerarchia ricorsiva, ad esempio un elenco di dipendenti.  

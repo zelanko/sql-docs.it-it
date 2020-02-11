@@ -16,18 +16,18 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5994201f7e6b2b859ef85a7a24e0c0465f59ec31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056491"
 ---
-# <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
+# <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove un processo di snapshot dei dati filtrati per una pubblicazione con filtri di riga con parametri. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Quando il processo viene eliminato, tutti i dati correlati viene eliminato dal [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) tabella di sistema.  
+  Rimuove un processo di snapshot dei dati filtrati per una pubblicazione con filtri di riga con parametri. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Quando il processo viene eliminato, tutti i dati correlati vengono eliminati dalla tabella di sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,27 +40,27 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione da cui deve essere rimosso il processo di snapshot dei dati filtrati. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione da cui viene rimosso il processo di snapshot dei dati filtrati. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobname*è di tipo sysname e se non è fornito le impostazioni predefinite a qualsiasi processo nome è associato *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobname*è di tipo sysname. se non viene specificato, il nome del processo è associato a *dynamic_snapshot_jobid*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` È un identificatore per il processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobid*viene **uniqueidentifier**, con valore predefinito è NULL.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Identificatore del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobid*è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
 > [!IMPORTANT]  
->  Solo *dynamic_snapshot_jobid*oppure *dynamic_snapshot_jobname* può essere specificato. Se non sono specificati valori per uno *dynamic_snapshot_jobid*oppure *dynamic_snapshot_jobname*, vengono rimossi tutti i processi di snapshot dinamico per la pubblicazione.  
+>  È possibile specificare solo *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname* . Se non vengono specificati valori per *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname*, vengono rimossi tutti i processi di snapshot dinamici per la pubblicazione.  
   
-`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* viene **bit**, il valore predefinito è **0**. È possibile utilizzare questo parametro per rimuovere un processo di snapshot dinamico senza eseguire operazioni di pulizia dei riferimenti nel server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor`*ignore_distributor* è di **bit**e il valore predefinito è **0**. È possibile utilizzare questo parametro per rimuovere un processo di snapshot dinamico senza eseguire operazioni di pulizia dei riferimenti nel server di distribuzione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropdynamicsnapshot** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_dropdynamicsnapshot**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropdynamicsnapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+ [sp_adddynamicsnapshot_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

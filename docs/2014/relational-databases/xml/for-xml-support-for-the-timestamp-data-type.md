@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287675"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Supporto del tipo di dati timestamp in FOR XML
@@ -37,7 +37,7 @@ for xml auto, xmldata
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Schema name="Schema1"   

@@ -15,16 +15,16 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919341"
 ---
 # <a name="createrecordset-method-example-vb"></a>Esempio del metodo CreateRecordset (VB)
-È possibile creare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto e specificare le informazioni di colonna. È quindi possibile inserire i dati nel **Recordset** oggetto; i buffer sottostante di set di righe gli inserimenti.  
+È possibile creare un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e specificare le informazioni sulla colonna. È quindi possibile inserire i dati nell'oggetto **Recordset** ; il set di righe sottostante memorizza nel buffer gli inserimenti.  
   
- Esempio di codice seguente viene illustrato come definire un **Recordset** tramite il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto. È possibile farlo anche con il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Nell'esempio di codice seguente viene illustrato come definire un **Recordset** utilizzando l'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . Questa operazione può essere eseguita anche con [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
 ```  
 'BeginRsDefineShapeVB  

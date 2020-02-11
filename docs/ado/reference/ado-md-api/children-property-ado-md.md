@@ -17,20 +17,20 @@ ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911526"
 ---
 # <a name="children-property-ado-md"></a>Proprietà Children (ADO MD)
-Restituisce un [membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md) raccolta per cui corrente [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) padre nella gerarchia.  
+Restituisce una raccolta di [membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md) per cui il [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) corrente è l'elemento padre nella gerarchia.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **membri** raccolta ed è di sola lettura.  
+ Restituisce una raccolta di **membri** ed è di sola lettura.  
   
-## <a name="remarks"></a>Note  
- Il **figli** proprietà contiene un **membri** raccolta per cui corrente **membro** è l'oggetto padre gerarchico. A livello di foglia **membro** gli oggetti non presentano membri figlio **membri** raccolta. Questa proprietà è supportata solo nei **membro** oggetti appartenenti a un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Si verifica un errore quando questa proprietà viene fatto riferimento dal **membro** oggetti appartenenti a un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ La proprietà **Children** contiene una raccolta di **membri** per cui il **membro** corrente è l'elemento padre gerarchico. Gli oggetti **membro** a livello foglia non hanno membri figlio nella raccolta **Members** . Questa proprietà è supportata solo per gli oggetti **membro** che appartengono a un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Si verifica un errore quando si fa riferimento a questa proprietà dagli oggetti **membro** che appartengono a un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

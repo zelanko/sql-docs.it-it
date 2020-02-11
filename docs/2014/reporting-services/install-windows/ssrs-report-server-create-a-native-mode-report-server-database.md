@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108680"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
@@ -27,14 +27,14 @@ ms.locfileid: "66108680"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa|  
   
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Casi in cui creare o configurare i database del server di report  
  È necessario creare e configurare il database del server di report se il server di report è stato installato in modalità "solo file".  
   
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente durante l'installazione dell'istanza del server di report. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
   
-##  <a name="rsdbrequirements"></a> Prima di iniziare  
+##  <a name="rsdbrequirements"></a>Prima di iniziare  
  La creazione o la configurazione di un database del server di report è un processo che comprende diversi passaggi. Prima di creare il database del server di report, determinare il modo in cui effettuare le operazioni seguenti:  
   
  Selezionare un server di database  
@@ -49,7 +49,7 @@ ms.locfileid: "66108680"
  Determinare le credenziali del server di report  
  Determinare la modalità utilizzata dal server di report per la connessione ai relativi database. Tra i tipi di credenziali possibili sono inclusi l'account utente di dominio, l'account utente del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'account del servizio del server di report.  
   
- Tali credenziali vengono crittografate e archiviate nel file RSReportServer.config. Il server di report utilizza le credenziali per le connessioni al database del server di report in corso. Se si desidera utilizzare un account utente di Windows o un account utente del database, verificare di specificarne uno già esistente. Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea un account di accesso e imposta le autorizzazioni necessarie, ma non crea un account per l'utente. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Tali credenziali vengono crittografate e archiviate nel file RSReportServer.config. Il server di report utilizza le credenziali per le connessioni al database del server di report in corso. Se si desidera utilizzare un account utente di Windows o un account utente del database, verificare di specificarne uno già esistente. Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea un account di accesso e imposta le autorizzazioni necessarie, ma non crea un account per l'utente. Per ulteriori informazioni, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  Determinare la lingua del server di report  
  Scegliere una lingua da specificare per il server di report. I nomi dei ruoli predefiniti, le descrizioni e le cartelle dei report personali non verranno visualizzati in lingue diverse quando gli utenti si connettono al server tramite versioni del browser in altre lingue.  
@@ -63,11 +63,11 @@ ms.locfileid: "66108680"
   
 2.  Fare clic sul menu **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**, quindi **Gestione configurazione SQL Server**.  
   
-3.  Aprire **Configurazione di rete SQL Server**.  
+3.  Aprire **SQL Server configurazione di rete**.  
   
 4.  Selezionare l'istanza.  
   
-5.  Fare doppio clic su **TCP/IP** e fare clic su **abilitato**.  
+5.  Fare clic con il pulsante destro del mouse su **TCP/IP** e scegliere **abilitato**.  
   
 6.  Riavviare il servizio.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108680"
   
 2.  Nella pagina Database fare clic su **Cambia database**.  
   
-3.  Fare clic su **Crea un nuovo database del server di report**, quindi scegliere **Avanti**.  
+3.  Fare clic su **Crea un nuovo database del server di report**, quindi fare clic su **Avanti**.  
   
 4.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che verrà utilizzata per creare e ospitare il database del server di report.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66108680"
   
     3.  Fare clic su **Test connessione** per convalidare la connessione al server.  
   
-    4.  Scegliere **Avanti**.  
+    4.  Fare clic su **Avanti**.  
   
 5.  Specificare le proprietà utilizzate per creare il database. Per ulteriori informazioni sull'utilizzo di tali proprietà, vedere [Operazioni preliminari](#rsdbrequirements) in questo argomento.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108680"
   
     3.  La modalità del server di report è sempre impostata su **Nativa**.  
   
-    4.  Scegliere **Avanti**.  
+    4.  Fare clic su **Avanti**.  
   
 6.  Specificare le credenziali utilizzate dal server di report per la connessione al database del server di report.  
   
@@ -111,16 +111,16 @@ ms.locfileid: "66108680"
   
          Selezionare **Credenziali del servizio** se si desidera che il server di report si connetta tramite l'account del servizio. Se si seleziona questa opzione, il server si connette utilizzando la sicurezza integrata e le credenziali non verranno crittografate o archiviate.  
   
-    2.  Scegliere **Avanti**.  
+    2.  Fare clic su **Avanti**.  
   
 7.  Esaminare le informazioni incluse nella pagina Riepilogo per verificare che le impostazioni siano corrette, quindi scegliere **Avanti**.  
   
 8.  Verificare la connessione facendo clic su un URL nella pagina URL server di report o URL Gestione report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, in una finestra del browser verrà visualizzata la gerarchia di cartelle del server di report o Gestione report. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](verify-a-reporting-services-installation.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Database &#40;modalità nativa SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Gestione di un server di report in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Gestire un server di report Reporting Services in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482737"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65482737"
   
 -   **Nega** esegue l'override di tutte le altre autorizzazioni.  
   
--   **Sola lettura** esegue l'override **Update**.  
+-   **Aggiornamento** **di sola lettura** esegue l'override di.  
   
  Nell'immagine seguente viene indicato quali autorizzazioni vengono applicate a ogni singolo valore di attributo quando le autorizzazioni per gli attributi sono diverse dalle autorizzazioni per i membri.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482737"
   
  Nella scheda **Membri gerarchia** il nodo della sottocategoria Mountain Bikes in una gerarchia derivata dispone dell'autorizzazione **Aggiorna** .  
   
- Risultato: in **Esplora**l'utente dispone dell'autorizzazione **Aggiorna** per tutti i valori di attributo per tutti i membri nel nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente dispone dell'autorizzazione **Aggiorna** per tutti i valori di attributo per tutti i membri nel nodo Mountain Bike. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -50,20 +50,20 @@ ms.locfileid: "65482737"
   
  Nella scheda **Modelli** all'attributo Subcategory è assegnata l'autorizzazione **Aggiorna** .  
   
- Nel **i membri della gerarchia** scheda, il nodo della sottocategoria Mountain Bikes in una gerarchia derivata viene assegnato in modo esplicito **sola lettura** l'autorizzazione.  
+ Nella scheda **membri gerarchia** , al nodo della sottocategoria Mountain Bikes in una gerarchia derivata viene assegnata in modo esplicito l'autorizzazione **di sola lettura** .  
   
- Risultato: Nelle **Explorer**, l'utente ha **sola lettura** dell'autorizzazione per i valori dell'attributo Subcategory per i membri del nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente dispone dell'autorizzazione di sola **lettura** per i valori dell'attributo Subcategory per i membri del nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>Esempio 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- Nel **modelli** scheda, all'attributo Subcategory è **sola lettura** assegnata l'autorizzazione.  
+ Nella scheda **modelli** all'attributo Subcategory è stata assegnata l'autorizzazione di sola **lettura** .  
   
  Nella scheda **Membri gerarchia** alla sottocategoria Mountain Bikes in una gerarchia derivata è stata assegnata in modo esplicito l'autorizzazione **Aggiorna** .  
   
- Risultato: Nelle **Explorer**, l'utente ha **sola lettura** autorizzazione ai valori di attributo. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente dispone dell'autorizzazione di sola **lettura** per i valori dell'attributo. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

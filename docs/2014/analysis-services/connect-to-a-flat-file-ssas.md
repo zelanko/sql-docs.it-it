@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un File Flat (SSAS) | Microsoft Docs
+title: Connettersi a un file flat (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087354"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connessione a un file flat (SSAS)
-  Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un file flat (con estensione txt), a un file con valori delimitati da tabulazioni (con estensione tab) o a un file con valori delimitati da virgole (con estensione csv). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un file flat (con estensione txt), a un file con valori delimitati da tabulazioni (con estensione tab) o a un file con valori delimitati da virgole (con estensione csv). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un file flat, è necessario che nel computer sia installato il provider ACE. Per altre informazioni, vedere [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
@@ -37,10 +37,10 @@ ms.locfileid: "66087354"
  **Sfoglia**  
  Selezionare il percorso in cui è disponibile un file.  
   
- **Separatore di colonna**  
+ **Separatore colonne**  
  Selezionare i separatori di colonna disponibili da un apposito elenco. Scegliere un separatore che non sia già presente nel testo.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Tabulazione (t)|Le colonne sono separate da un carattere di tabulazione (t).|  
 |Virgola (,)|Le colonne sono separate da una virgola (,).|  
@@ -49,10 +49,10 @@ ms.locfileid: "66087354"
 |Due punti (:)|Le colonne sono separate da due punti (:).|  
 |Barra verticale (&#124;)|Le colonne sono separate da una barra verticale (&#124;).|  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Specificare la codifica e le opzioni delle impostazioni locali per il file flat.  
   
- **Utilizza la prima riga come intestazioni di colonna**  
+ **Utilizza la prima riga per le intestazioni di colonna**  
  Specificare se utilizzare la prima riga di dati per le intestazioni di colonna della tabella di destinazione.  
   
  **Anteprima dati**  

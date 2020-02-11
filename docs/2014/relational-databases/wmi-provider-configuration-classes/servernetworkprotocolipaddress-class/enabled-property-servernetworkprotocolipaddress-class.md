@@ -1,5 +1,5 @@
 ---
-title: Proprietà (classe ServerNetworkProtocolIpAddress) Enabled | Microsoft Docs
+title: Proprietà Enabled (classe ServerNetworkProtocolIpAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 72505d5c2f00118f3522ac25445822ba17573438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277044"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Proprietà Enabled (classe ServerNetworkProtocolIpAddress)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) che rappresenta un indirizzo IP del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore booleano che specifica se l'indirizzo IP è abilitato. `true` se l'indirizzo IP è abilitato; `false` se l'indirizzo IP è disabilitato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

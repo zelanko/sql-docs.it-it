@@ -18,18 +18,18 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b3ea170f07eaea32306e0453d492e510062c9b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046276"
 ---
-# <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Questa stored procedure aggiunge una voce per un database secondario nel server primario.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,26 +42,26 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_database = ] 'primary_database'` È il nome del database nel server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @secondary_server = ] 'secondary_server',` È il nome del server secondario. *secondary_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_server = ] 'secondary_server',`Nome del server secondario. *secondary_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @secondary_database = ] 'secondary_database'` È il nome del database secondario. *secondary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'`Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="remarks"></a>Note  
- **sp_add_log_shipping_primary_secondary** deve essere eseguita la **master** database nel server primario.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_add_log_shipping_primary_secondary** deve essere eseguito dal database **Master** nel server primario.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo **sp_add_log_shipping_primary_secondary** per aggiungere una voce per il database secondario **LogShipAdventureWorks** nel server secondario FLATIRON.  
+ Questo esempio illustra l'uso di **sp_add_log_shipping_primary_secondary** per aggiungere una voce per il database secondario **LogShipAdventureWorks** al server secondario Flatiron.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

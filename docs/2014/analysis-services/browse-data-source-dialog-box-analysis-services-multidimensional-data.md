@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo origine dati (Analysis Services - dati multidimensionali) Sfoglia | Microsoft Docs
+title: Finestra di dialogo Cerca origine dati (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064551"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo per l'esplorazione dell'origine dei dati (Analysis Services - Dati multidimensionali)
-  Utilizzare la finestra di dialogo **Sfoglia origine dati** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per visualizzare i primi 1.000 record della tabella selezionata.  
+  Utilizzare la finestra di dialogo per l'esplorazione della vista origine **** dati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per visualizzare i primi 1.000 record della tabella selezionata.  
   
 ## <a name="options"></a>Opzioni  
- **Tabella dell'origine dati**  
+ **Tabella Origine dati**  
  Visualizza i primi 1.000 record della tabella selezionata. I dati sono di sola lettura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

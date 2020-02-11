@@ -13,20 +13,20 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068626"
 ---
 # <a name="configuring-data-sources"></a>Configurazione delle origini dati
-Informazioni sulle origini dati vengono archiviate nel Registro di sistema. Gli utenti di modificare le informazioni sull'origine dati tramite un programma di amministrazione. Ciò può essere l'amministratore ODBC, il dispositivo del Pannello di controllo ODBC o un programma di amministrazione scritte da uno sviluppatore di applicazioni o driver.  
+Le informazioni sulle origini dati vengono archiviate nel registro di sistema. Gli utenti modificano le informazioni sulle origini dati tramite un programma di amministrazione. Può trattarsi dell'amministratore ODBC, del dispositivo del pannello di controllo ODBC o di un programma di amministrazione scritto da un'applicazione o da uno sviluppatore di driver.  
   
- È possibile usare i comandi di PowerShell per modificare origini dati. Per altre informazioni su questi comandi di PowerShell, vedere [comandi di PowerShell di Windows Data Access componenti](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Per modificare le origini dati, è possibile usare i comandi di PowerShell. Per altre informazioni su questi comandi di PowerShell, vedere [comandi di PowerShell per Windows Data Access Components](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  In questa sezione è specifica per le piattaforme Microsoft Windows®. Modo in cui sono configurate zdroje dat su altre piattaforme è specifica della piattaforma.  
+>  Questa sezione è dedicata alle piattaforme Microsoft Windows®. Il modo in cui le origini dati sono configurate su altre piattaforme è specifico della piattaforma.  
   
- In questa sezione contiene gli argomenti seguenti:  
+ Questa sezione contiene gli argomenti seguenti:  
   
 -   [Componenti di configurazione](../../../odbc/reference/install/configuration-components.md)

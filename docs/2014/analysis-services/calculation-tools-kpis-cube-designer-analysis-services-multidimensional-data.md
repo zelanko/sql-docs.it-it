@@ -1,5 +1,5 @@
 ---
-title: Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088264"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -51,32 +51,32 @@ ms.locfileid: "66088264"
  Selezionare questa opzione per copiare negli Appunti l'elemento specificato in **Metadati** o **Funzioni** .  
   
 > [!NOTE]  
->  Questa opzione non viene visualizzata se si seleziona **Modelli** .  
+>  Questa opzione non viene visualizzata se si seleziona **modelli** .  
   
 > [!NOTE]  
->  Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **Set** di una dimensione visualizzata in **Metadati** o la cartella del gruppo di funzioni relativa alla funzione visualizzata in **Funzioni**.  
+>  Questa opzione è disabilitata se non è possibile copiare il membro selezionato, ad esempio la cartella **set** di una dimensione visualizzata in **metadati** o la cartella del gruppo di funzioni per una funzione visualizzata in **funzioni**.  
   
  **Filtra membri**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati per l'elemento selezionato in **Metadati**. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
+>  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
   
 > [!NOTE]  
->  Questa opzione è attivata solo se si seleziona un livello per un attributo in **Metadati**.  
+>  Questa opzione è abilitata solo se nei **metadati**è selezionato un livello per un attributo.  
   
  **Aggiungi modello**  
  Selezionare questa opzione per aggiungere un nuovo membro calcolato, set denominato o comando script in base al modello selezionato nello script del cubo e visualizzare il riquadro **Editor form KPI** in visualizzazione Form.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
+>  Questa opzione viene visualizzata solo se si seleziona **metadati** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Gli indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Libreria KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor Form KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Visualizzatore KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Libreria KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor form KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Visualizzatore KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

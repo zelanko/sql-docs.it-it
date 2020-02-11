@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d4de14f9927355559f27e8139e832562dd97e358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480790"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
@@ -38,14 +38,14 @@ ms.locfileid: "65480790"
   
  ![Processo di corrispondenza in DQS](../../2014/data-quality-services/media/dqs-matchingprocess.gif "Processo di corrispondenza in DQS")  
   
-##  <a name="How"></a> Come eseguire la corrispondenza di dati  
+##  <a name="How"></a>Come eseguire la corrispondenza dei dati  
  Come per altri processi correlati qualità dei dati in DQS, l'individuazione di corrispondenze tra dati viene eseguita compilando una Knowledge Base ed eseguendo un'attività corrispondente in un progetto di qualità dei dati osservando i passaggi seguenti:  
   
 1.  Creare criteri di corrispondenza nella Knowledge Base  
   
 2.  Eseguire un processo di deduplicazione in un'attività corrispondente che è parte di un progetto di qualità dei dati.  
   
-###  <a name="Policy"></a> Compilazione di criteri di corrispondenza  
+###  <a name="Policy"></a>Compilazione di criteri di corrispondenza  
  Preparare la Knowledge Base per l'esecuzione degli abbinamenti creando criteri di corrispondenza nella Knowledge Base stessa, così da definire la modalità con cui DQS assegna le probabilità di corrispondenza. I criteri di corrispondenza sono costituiti da una o più le regole di corrispondenza che identificano i domini che verranno utilizzati da DQS per la valutazione della corrispondenza tra due record e specificano l'importanza da assegnare a ciascun valore di dominio nella valutazione della corrispondenza stessa. Specificare nelle regole se i valori di dominio devono essere una corrispondenza esatta o se possono essere solo simili e specificare il livello di similitudine. Specificare inoltre se una corrispondenza di dominio è un prerequisito.  
   
  L'attività dei criteri di corrispondenza nella procedura guidata Gestione Knowledge Base analizza i dati di esempio applicando ogni regola di corrispondenza per confrontare record per volta in tutto l'intervallo di record. I record i cui punteggi di corrispondenza sono maggiori di un minimo specificato vengono raggruppati in cluster nei risultati di corrispondenza. Questi risultati di corrispondenza non vengono aggiunti alla Knowledge Base, vengono bensì utilizzati al fine di ottimizzare le regole di corrispondenza. La creazione di criteri di corrispondenza può essere un processo iterativo nel quale si modificano le regole di corrispondenza in base ai risultati di corrispondenza o a statistiche di profiling.  
@@ -59,7 +59,7 @@ ms.locfileid: "65480790"
   
  Al momento della creazione, ogni regola di corrispondenza viene salvata nella Knowledge Base. Tuttavia, una Knowledge Base può essere disponibile per l'uso in un progetto Data Quality solo quando viene pubblicata. Inoltre, fino al momento della pubblicazione della Knowledge Base, le regole di corrispondenza presenti in quest'ultima non possono essere modificate da un utente diverso da quello che l'ha creata.  
   
-###  <a name="Project"></a> Esecuzione di un progetto corrispondente  
+###  <a name="Project"></a>Esecuzione di un progetto corrispondente  
  DQS esegue la deduplicazione dei dati confrontando ogni riga nei dati di origine con tutte le altre righe, utilizzando i criteri di corrispondenza definiti nella Knowledge Base e producendo una probabilità che le righe presentino una corrispondenza. Ciò è possibile in un progetto Data Quality dotato di un tipo di corrispondenza. L'individuazione delle corrispondenze è uno dei passaggi principali in un progetto Data Quality. È opportuno eseguirlo dopo la pulizia dei dati, in modo che il confronto possa avere luogo tra dati privi di errori. Prima di eseguire un processo di corrispondenza, è possibile esportare i risultati del progetto di pulizia in una tabella dati o in un file csv, quindi creare un progetto corrispondente nel quale si esegue il mapping dei risultati della pulizia ai domini del progetto corrispondente.  
   
  Un progetto di corrispondenza dei dati è costituito da un processo computerizzato e da un processo interattivo. Il progetto corrispondente applica le regole di corrispondenza nei criteri di corrispondenza all'origine dati da valutare. Tale processo consente di valutare le probabilità che due righe coincidano tramite un punteggio di corrispondenza. Verranno considerati corrispondenti solo i record con probabilità di corrispondenza maggiori di un valore impostato dall'amministratore dei dati nei criteri di corrispondenza.  
@@ -68,12 +68,12 @@ ms.locfileid: "65480790"
   
  È possibile esportare i risultati del processo di corrispondenza in una tabella di SQL Server o in un file csv. È possibile esportare risultati della corrispondenza in due modi: record corrispondenti e record non corrispondenti, oppure record superstiti che includono solo il record superstite per un cluster nonché i risultati non corrispondenti. Nei record superstiti, se lo stesso record viene identificato come superstite per più cluster, tale record verrà esportato solo una volta.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le attività seguenti in relazione all'individuazione di corrispondenze in DQS:  
   
 |||  
 |-|-|  
-|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md)|  
+|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creazione di criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md)|  
 |Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Eseguire un progetto corrispondente](../../2014/data-quality-services/run-a-matching-project.md)|  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102651"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66102651"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procedura: Identificazione della versione di schema RDL di Progettazione report  
   
-1.  Apre un nuovo progetto. La versione del progetto che si sceglie determina la versione dello schema RDL. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportate più versioni dello schema. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Apre un nuovo progetto. La versione del progetto che si sceglie determina la versione dello schema RDL. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]sono supportate più versioni dello schema. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  Dal menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66102651"
   
 4.  In **Nome**digitare un nome di report o accettare il nome predefinito.  
   
-5.  Scegliere **Aggiungi**. Progettazione report apre un nuovo report vuoto nella visualizzazione della struttura.  
+5.  Fare clic su **Aggiungi**. Progettazione report apre un nuovo report vuoto nella visualizzazione della struttura.  
   
 6.  Scegliere **Codice** dal menu **Visualizza**. La definizione del report viene visualizzata come file XML.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66102651"
      Lo spazio dei nomi della definizione del report viene specificato dall'URL seguente: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Upgrade Reports](../install-windows/upgrade-reports.md)   
+ [Aggiornare i report](../install-windows/upgrade-reports.md)   
  [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

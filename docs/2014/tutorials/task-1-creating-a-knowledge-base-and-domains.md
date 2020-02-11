@@ -1,5 +1,5 @@
 ---
-title: 'Attività 1: Creazione di una Knowledge Base e domini | Microsoft Docs'
+title: 'Attività 1: creazione di una Knowledge base e di domini | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481239"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Attività 1: Creazione di una Knowledge Base e dei domini
-  In questa attività si crea il **Suppliers** della knowledge base e i domini che viene usato per la corrispondenza dei dati e pulizia dei dati per rimuovere i duplicati.  
+  In questa attività verrà creata la Knowledge base **Suppliers** e verranno creati i domini utilizzati per la pulizia dei dati e la corrispondenza dei dati per rimuovere i duplicati.  
   
-1.  Avvio veloce **Client Data Quality**. Fare clic su **avviare**, scegliere **tutti i programmi**, fare clic su **Microsoft SQL Server 2012**, fare clic su **Data Quality Services**, quindi fare clic su  **Client Data Quality**.  
+1.  Avviare **Data Quality Client**. Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **Microsoft SQL Server 2012**, fare clic su **Data Quality Services**, quindi su **Data Quality Client**.  
   
-2.  Nel **Connetti al Server** finestra di dialogo, selezionare l'istanza di server di database in cui è installato DQS e fare clic su **Connect**.  
+2.  Nella finestra di dialogo **Connetti al server** selezionare l'istanza del server di database in cui è installato DQS, quindi fare clic su **Connetti**.  
   
-     ![Connettersi al Server Dialog Box](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "connettersi alla finestra di dialogo Server")  
+     ![Finestra di dialogo Connetti al server](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Finestra di dialogo Connetti al server")  
   
-3.  In Data Quality Client home page di **Gestione Knowledge Base** riquadro, fare clic su **nuova Knowledge Base**.  
+3.  Nella home page Data Quality Client, nel riquadro **Gestione Knowledge base** , fare clic su **nuova Knowledge base**.  
   
-     ![Gestione Knowledge Base - nuova KB](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "Gestione Knowledge Base - nuova KB")  
+     ![Gestione Knowledge Base - Nuova KB](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "Gestione Knowledge Base - Nuova KB")  
   
-4.  Immettere **Suppliers** per **nome** della knowledge base.  
+4.  Immettere **Suppliers** per **nome** della Knowledge base.  
   
-     ![Nuova Knowledge Base - Gestione dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "nuova Knowledge Base - Gestione dominio")  
+     ![Nuova Knowledge Base - Gestione dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-03.jpg "Nuova Knowledge Base - Gestione dominio")  
   
-5.  Verificare che **crea Knowledge Base da** campo è impostato su **None** poiché si sta creando il **Suppliers** della knowledge base da zero.  
+5.  Verificare che il campo **Crea Knowledge base da** sia impostato su **nessuno** perché la Knowledge base **Suppliers** viene creata da zero.  
   
-6.  Verificare che **Gestione dominio** sia selezionata per il **attività** e fare clic su **Next**. L'attività Gestione dominio consente di creare e gestire domini nella Knowledge Base.  
+6.  Verificare che sia selezionata l'opzione **Gestione dominio** per l' **attività** e fare clic su **Avanti**. L'attività Gestione dominio consente di creare e gestire domini nella Knowledge Base.  
   
-7.  Nel **Gestione dominio** finestra, fare clic su **creare un dominio** pulsante della barra degli strumenti per creare un dominio.  
+7.  Nella finestra **Gestione dominio** fare clic sul pulsante della barra degli strumenti **Crea un dominio** per creare un dominio.  
   
-     ![Pulsante Crea dominio sulla barra degli strumenti](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-04.jpg "pulsante Crea dominio sulla barra degli strumenti")  
+     ![Pulsante della barra degli strumenti Crea dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-04.jpg "Pulsante della barra degli strumenti Crea dominio")  
   
-8.  Nel **crea dominio** finestra di dialogo, digitare **Supplier ID** per il **nome di dominio**, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Crea dominio** digitare **Supplier ID** per il **nome di dominio**e fare clic su **OK**.  
   
-     ![Dialogo Crea dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "dialogo Crea dominio")  
+     ![Finestra di dialogo Crea dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "Finestra di dialogo Crea dominio")  
   
-9. Ripetere il passaggio precedente per creare i seguenti domini con tutte le impostazioni predefinite. Per mantenere semplice l'esercitazione, si imposta la **tipo di dati** di tutti i domini come **stringa**. Gli altri tipi di dati consentiti sono: Valore integer, Decimal e Date. Quando la **utilizza valori iniziali** opzione è selezionata (impostazione predefinita), tutti i sinonimi vengono sostituiti con il valore iniziale del gruppo di sinonimi nell'output. L'impostazione **Normalizza stringa** opzione (predefinito) Rimuove i caratteri speciali nei valori di dominio. Il **formato Output in** opzione consente di selezionare la formattazione che viene applicato quando i valori dei dati nel dominio. Selezionare **Abilita correttore ortografico** (predefinito) per eseguire correttore ortografico su tutti i valori stringa durante l'inserimento nel dominio. Il **Language** impostazione consente di specificare la versione di lingua le **correttore ortografico** da applicare. Selezionare **Disabilita algoritmi di errore di sintassi** per popolare il dominio senza verificare i valori di stringa per gli errori di sintassi. Visualizzare [creare un dominio](https://msdn.microsoft.com/library/hh510401.aspx) argomento in MSDN library per altri dettagli.  
+9. Ripetere il passaggio precedente per creare i seguenti domini con tutte le impostazioni predefinite. Per semplificare l'esercitazione, impostare il tipo di **dati** di tutti i domini come **stringa**. Gli altri tipi di dati consentiti sono Integer, Decimal e Data. Quando si seleziona l'opzione **Usa valori iniziali** (impostazione predefinita), tutti i sinonimi vengono sostituiti con il valore principale del gruppo di sinonimi nell'output. L'impostazione dell'opzione **Normalizza stringa** (impostazione predefinita) consente di rimuovere tutti i caratteri speciali nei valori di dominio. L'opzione **Format output to** consente di selezionare la formattazione applicata quando vengono restituiti i valori dei dati nel dominio. Selezionare **Abilita correttore ortografico** (impostazione predefinita) per eseguire il correttore ortografico su tutti i valori stringa durante il popolamento del dominio. L'impostazione della **lingua** specifica la versione della lingua del **correttore ortografico** che si desidera applicare. Selezionare **Disabilita algoritmi di errore sintassi** per popolare il dominio senza verificare la presenza di errori di sintassi nei valori stringa. Per ulteriori informazioni, vedere l'argomento relativo alla [creazione di un dominio](https://msdn.microsoft.com/library/hh510401.aspx) in MSDN Library.  
   
     -   Supplier Name  
   
-    -   Contact Email  
+    -   Indirizzo di posta elettronica del contatto  
   
     -   Riga indirizzo  
   
-    -   Città  
+    -   city  
   
     -   State  
   
     -   Country  
   
-    -   CAP  
+    -   Zip  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 2: Aggiunta manuale di valori di dominio](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

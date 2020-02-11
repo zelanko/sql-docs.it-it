@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 878e9a4bff1625042a08ec7e43699fa067dea532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101504"
 ---
 # <a name="item-level-tasks"></a>Attività a livello di elemento
@@ -30,27 +30,27 @@ ms.locfileid: "66101504"
   
  I set di dati condivisi utilizzano lo stesso set di autorizzazioni dei report. Le parti del report utilizzano lo stesso set di autorizzazioni delle risorse.  
   
-|Attività|Applicabile all'elemento|Permissions|  
+|Attività|Applicabile all'elemento|Autorizzazioni|  
 |----------|---------------------|-----------------|  
 |Utilizzo di report|Report|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Utilizzo di report|Set di dati condivisi|Lettura di contenuto<br /><br /> Lettura delle definizioni dei report<br /><br /> Lettura di proprietà|  
 |Creazione di report collegati|Report|Creazione di collegamenti<br /><br /> Lettura di proprietà|  
 |Gestione di tutte le sottoscrizioni|Report|Lettura di proprietà<br /><br /> Lettura di qualsiasi sottoscrizione<br /><br /> Creazione di qualsiasi sottoscrizione<br /><br /> Eliminazione di qualsiasi sottoscrizione<br /><br /> Aggiornamento di qualsiasi sottoscrizione|  
-|Gestione di origini dei dati|Cartelle|Creazione di origini dei dati|  
-|Gestione di origini dei dati|Origini dati|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
-|Gestione di cartelle|Cartelle|Creazione di cartelle<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Lettura di proprietà|  
+|Gestire le origini dati|Cartelle|Creazione di origini dei dati|  
+|Gestire le origini dati|Origini dati|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
+|Gestione di cartelle|Cartelle|Creazione cartella<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Lettura di proprietà|  
 |Gestione di sottoscrizioni individuali|Report|Lettura di proprietà<br /><br /> Creazione di sottoscrizioni<br /><br /> Eliminazione di sottoscrizioni<br /><br /> Lettura di sottoscrizioni<br /><br /> Aggiornamento di sottoscrizioni|  
-|Gestione di modelli|Cartelle|Creazione di un modello|  
-|Gestione di modelli|Modelli|Lettura di proprietà<br /><br /> Lettura di contenuto<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di origini dei dati<br /><br /> Aggiornamento di origini dei dati<br /><br /> Lettura dei criteri di autorizzazione degli elementi del modello<br /><br /> Aggiornamento dei criteri di autorizzazione degli elementi del modello<br /><br /> Eliminazione delle proprietà di aggiornamento|  
+|Gestire i modelli|Cartelle|Creazione di un modello|  
+|Gestire i modelli|Modelli|Lettura di proprietà<br /><br /> Lettura di contenuto<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di origini dei dati<br /><br /> Aggiornamento di origini dei dati<br /><br /> Lettura dei criteri di autorizzazione degli elementi del modello<br /><br /> Aggiornamento dei criteri di autorizzazione degli elementi del modello<br /><br /> Eliminazione delle proprietà di aggiornamento|  
 |Gestione della cronologia dei report|Report|Lettura di proprietà<br /><br /> Creazione della cronologia dei report<br /><br /> Eliminazione della cronologia dei report<br /><br /> Esecuzione dei criteri di lettura<br /><br /> Aggiornamento di criteri<br /><br /> Visualizzazione della cronologia dei report|  
 |Gestione di report|Cartelle|Creazione di report<br /><br /> applicabile anche alla creazione di set di dati condivisi|  
 |Gestione di report|Report|Lettura di proprietà<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Aggiornamento di parametri<br /><br /> Lettura di origini dei dati<br /><br /> Aggiornamento di origini dei dati<br /><br /> Lettura delle definizioni dei report<br /><br /> Aggiornamento delle definizioni dei report<br /><br /> Esecuzione dei criteri di lettura<br /><br /> Aggiornamento di criteri|  
 |Gestione di report|Set di dati condivisi|Lettura di proprietà<br /><br /> Eliminazione delle proprietà di aggiornamento<br /><br /> Aggiornamento di parametri<br /><br /> Lettura di origini dei dati<br /><br /> Aggiornamento di origini dei dati<br /><br /> Lettura delle definizioni dei report<br /><br /> Aggiornamento delle definizioni dei report<br /><br /> Esecuzione dei criteri di lettura<br /><br /> Aggiornamento di criteri|  
-|Gestione di risorse|Cartelle|Creazione di risorse|  
+|Gestione di risorse|Cartelle|Creare la risorsa|  
 |Gestione di risorse|Risorse|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
 |Gestione di risorse|Parti del report|Aggiornamento di proprietà<br /><br /> Eliminazione del contenuto di aggiornamento<br /><br /> Lettura di proprietà|  
 |Impostazione della sicurezza per singoli elementi|Report, risorse, origini dei dati, set di dati condivisi, cartelle|Lettura di criteri di sicurezza - Aggiornamento di criteri di sicurezza|  
-|Visualizzazione di origini dei dati|Origini dei dati|Lettura di contenuto<br /><br /> Lettura di proprietà|  
+|Visualizzazione di origini dei dati|Origini dati|Lettura di contenuto<br /><br /> Lettura di proprietà|  
 |Visualizzazione di cartelle|Cartelle|Lettura di proprietà<br /><br /> Esecuzione e visualizzazione<br /><br /> Visualizzazione della cronologia dei report|  
 |Visualizzazione di modelli|Modelli di report|Lettura di proprietà<br /><br /> Lettura di contenuto<br /><br /> Lettura di origini dei dati|  
 |Visualizzazione di report|Report|Lettura di contenuto<br /><br /> Lettura di proprietà|  

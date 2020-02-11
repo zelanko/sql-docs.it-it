@@ -17,14 +17,14 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918947"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
-Il **EndOfRecordset** eventi viene chiamato quando viene eseguito un tentativo per spostarsi in una riga successiva alla fine del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+L'evento **EndOfRecordset** viene chiamato quando si tenta di spostarsi in una riga oltre la fine del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,22 +35,22 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parametri  
  *fMoreData*  
- Oggetto **VARIANT_BOOL** valore che, se impostata su VARIANT_TRUE, indica più righe sono stati aggiunti per il **Recordset**.  
+ Valore **VARIANT_BOOL** che, se impostato su VARIANT_TRUE, indica che nel **Recordset**sono state aggiunte più righe.  
   
  *adStatus*  
- Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore dello stato.  
+ Valore di stato di [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- Quando **EndOfRecordset** viene chiamato, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo. È impostato su **adStatusCantDeny** se questo evento non è possibile richiedere l'annullamento dell'operazione che ha causato questo evento.  
+ Quando viene chiamato **EndOfRecordset** , questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita. Viene impostato su **adStatusCantDeny** se questo evento non può richiedere l'annullamento dell'operazione che ha causato l'evento.  
   
- Prima di **EndOfRecordset** restituisce un valore di questo parametro impostato su **adStatusUnwantedEvent** per evitare le notifiche successivi.  
+ Prima della restituzione di **EndOfRecordset** , impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive.  
   
  *pRecordset*  
- Oggetto **Recordset** oggetto. Il **Recordset** per cui si è verificato questo evento.  
+ Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Note  
- Un' **EndOfRecordset** evento può verificarsi se il [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) operazione ha esito negativo.  
+## <a name="remarks"></a>Osservazioni  
+ Se l'operazione [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) ha esito negativo, è possibile che si verifichi un evento **EndOfRecordset** .  
   
- Questo gestore eventi viene chiamato quando viene effettuato un tentativo di spostare oltre la fine del **Recordset** oggetto, forse in seguito alla chiamata **MoveNext**. Tuttavia, mentre in questo caso, è possibile recuperare altri record da un database e li aggiunge alla fine della **Recordset**. In questo caso, impostare *fMoreData* VARIANT_TRUE e ritorno dal **EndOfRecordset**. Quindi chiamare **MoveNext** nuovamente di accedere ai record appena recuperati.  
+ Questo gestore eventi viene chiamato quando viene effettuato un tentativo di spostarsi oltre la fine dell'oggetto **Recordset** , probabilmente in seguito alla chiamata a **MoveNext**. Tuttavia, in questo caso, è possibile recuperare più record da un database e aggiungerli alla fine del **Recordset**. In tal caso, impostare *fMoreData* su VARIANT_TRUE e restituire da **EndOfRecordset**. Chiamare quindi di nuovo **MoveNext** per accedere ai record appena recuperati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500447"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Finestra di dialogo Proprietà set di dati, Query (Generatore report)
@@ -36,7 +36,7 @@ Selezionare **Query** nella finestra di dialogo **Proprietà set di dati** per s
  **Usa un set di dati incorporato nel report**  
  Selezionare questa opzione per creare un set di dati da utilizzare solo per il report specifico.  
   
- **Data Source**  
+ **Origine dati**  
  Consente di selezionare l'origine dati su cui basare il set di dati. Per creare una nuova origine dati, fare clic su **Nuova**.  
   
  **Tipo di query**  

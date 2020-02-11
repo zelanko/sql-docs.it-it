@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480830"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
@@ -38,22 +38,22 @@ ms.locfileid: "65480830"
   
  ![Knowledge Base e domini in DQS](../../2014/data-quality-services/media/dqs-knowledgebasesanddomains.gif "Knowledge Base e domini in DQS")  
   
-##  <a name="How"></a> Procedura di creazione e compilazione di una Knowledge Base DQS  
+##  <a name="How"></a>Come creare e compilare una Knowledge Base DQS  
  La compilazione di una Knowledge Base DQS include i processi e i componenti seguenti:  
   
  **Individuazione informazioni**  
  Un processo assistito da computer con il quale le informazioni vengono compilate in una Knowledge Base elaborando un campione di dati  
   
- **Gestione dominio**  
+ **Gestione del dominio**  
  Un processo interattivo che consente all'amministratore dei dati di verificare e modificare le informazioni contenute nei domini della Knowledge Base, ciascuno dei quali è associato a un campo dati. Sono incluse le attività di impostazione delle proprietà a livello di campo, di creazione di regole, di modifica di valori specifici, di utilizzo di servizi dati di riferimento o di configurazione di relazioni basate su termini o tra campi.  
   
  **Servizi dati di riferimento**  
  Un processo di gestione dei domini che consente di convalidare i dati rispetto a dati mantenuti e garantiti da un provider di dati di riferimento.  
   
- **Criteri di abbinamento**  
+ **Criteri di corrispondenza**  
  Criteri che definiscono la modalità di elaborazione dei record in DQS per identificare potenziali duplicati e mancate corrispondenze, incorporati nella Knowledge Base in un processo assistito da computer e interattivo.  
   
-##  <a name="Discovery"></a> Individuazione informazioni  
+##  <a name="Discovery"></a>Individuazione informazioni  
  La creazione della Knowledge Base è inizialmente un processo guidato dal computer. L'attività di individuazione delle informazioni consente di compilare la Knowledge Base tramite l'analisi di un campione di dati per la creazione di criteri di qualità di dati, la ricerca di incoerenze ed errori di sintassi dei dati e la proposta di modifiche ai dati. Questa analisi si basa su algoritmi incorporati in DQS.  
   
  L'amministratore dei dati prepara il processo collegando una Knowledge Base a una vista o una tabella di database di SQL Server contenente dati di esempio simili a quelli che verranno utilizzati per l'analisi da parte della Knowledge Base. L'amministratore dei dati esegue quindi il mapping di un dominio della Knowledge Base a ogni colonna dei dati di esempio da analizzare. Un dominio può essere un dominio singolo con mapping a un singolo campo oppure un dominio composito, costituito da più domini singoli, per ognuno dei quali è stato eseguito il mapping a parte dei dati in un singolo campo (vedere "Domini compositi" di seguito). Quando si esegue l'individuazione delle informazioni, tramite DQS vengono estratte dai dati di esempio informazioni relative alla qualità dei dati, che vengono inserite in domini della Knowledge Base. Una volta eseguita l'analisi per l'individuazione delle informazioni, si disporrà di una Knowledge Base con la quale effettuare la correzione dei dati.  
@@ -67,7 +67,7 @@ ms.locfileid: "65480830"
   
  Tuttavia, è possibile controllare le maiuscole/minuscole dei valori che si esportano nei risultati della pulizia. A tale scopo, impostare la proprietà di dominio **Formato output in** (vedere [Impostare le proprietà di un dominio](../../2014/data-quality-services/set-domain-properties.md)) e usare la casella di controllo **Standardizzare output** quando si esportano i risultati della pulizia (vedere [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a> Gestione dominio  
+##  <a name="Domains"></a>Gestione del dominio  
  L'attività di gestione del dominio consente all'amministratore dei dati di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni assistita da computer. Ogni modifica apportata è destinata a un dominio della Knowledge Base. Nell'attività di gestione del dominio è possibile effettuare le operazioni seguenti:  
   
 -   Creare un nuovo dominio. Il nuovo dominio può essere collegato o copiato da un dominio esistente.  
@@ -136,12 +136,12 @@ ms.locfileid: "65480830"
   
  È possibile eseguire la corrispondenza sui domini singoli che costituiscono il dominio composito, ma non sul dominio composito in sé.  
   
-##  <a name="Matching"></a> Corrispondenza di dati  
+##  <a name="Matching"></a>Corrispondenza dei dati  
  Oltre ad apportare modifiche manuali a una Knowledge Base tramite la gestione del dominio, è possibile aggiungere informazioni di corrispondenza a una Knowledge Base. Per preparare DQS al processo di deduplicazione dei dati, è necessario creare criteri di corrispondenza che verranno utilizzati per calcolare la probabilità di una corrispondenza. I criteri includono una o più regole di corrispondenza create dall'amministratore dei dati per definire il modo in cui le righe di dati vengono confrontate in DQS. L'amministratore dei dati determina quali campi dati nella riga devono essere confrontati e il peso di ciascun campo nel confronto. Determina inoltre il livello di probabilità al quale si può definire una corrispondenza. Le regole di corrispondenza vengono aggiunte alla Knowledge Base per essere utilizzate nell'attività di corrispondenza nel progetto Data Quality.  
   
  Per ulteriori informazioni sulla Knowledge Base e sulla corrispondenza dei dati, vedere [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md)possono essere presenti più Knowledge Base.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le operazioni seguenti su una Knowledge Base e sui relativi domini:  
   
 |||  
@@ -150,6 +150,6 @@ ms.locfileid: "65480830"
 |Eseguire operazioni di importazione ed esportazione su domini e Knowledge Base|[Importazione ed esportazione delle informazioni](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creare un dominio singolo, una regola di dominio e relazioni basate su termini, nonché modificare valori di dominio|[Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md)|  
 |Creare un dominio composito, creare una regola tra domini e utilizzare relazioni tra valori|[Gestione di un dominio composito](../../2014/data-quality-services/managing-a-composite-domain.md)|  
-|Utilizzare la Knowledge Base predefinita incorporata in DQS, Dati DQS.|[Uso della Knowledge Base predefinita di DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)|  
+|Utilizzare la Knowledge Base predefinita incorporata in DQS, Dati DQS.|[Utilizzo della Knowledge Base predefinita di DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

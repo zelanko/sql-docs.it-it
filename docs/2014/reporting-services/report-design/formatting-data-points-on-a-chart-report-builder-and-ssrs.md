@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105816"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
@@ -60,21 +60,21 @@ ms.locfileid: "66105816"
   
 |Parola chiave del grafico|Descrizione|Applicabile al tipo di grafico|Esempio di espressione semplice equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valore Y del punto dati.|All|`=Fields!MyDataField.Value`|  
-|#VALY2|Valore Y #2 del punto dati.|Con intervalli, a bolle|None|  
-|#VALY3|Valore Y #3 del punto dati.|Azionario, a candela|None|  
-|#VALY4|Valore Y #4 del punto dati.|Azionario, a candela|None|  
-|#SERIESNAME|Nome della serie.|All|None|  
-|#LABEL|Etichetta del punto dati.|All|None|  
+|#VALY|Valore Y del punto dati.|Tutti|`=Fields!MyDataField.Value`|  
+|#VALY2|Valore Y #2 del punto dati.|Con intervalli, a bolle|nessuno|  
+|#VALY3|Valore Y #3 del punto dati.|Azionario, a candela|nessuno|  
+|#VALY4|Valore Y #4 del punto dati.|Azionario, a candela|nessuno|  
+|#SERIESNAME|Nome della serie.|Tutti|nessuno|  
+|#LABEL|Etichetta del punto dati.|Tutti|nessuno|  
 |#AXISLABEL|Etichetta del punto dati dell'asse.|Con forme|`=Fields!MyDataField.Value`|  
-|#INDEX|Indice del punto dati.|All|None|  
-|#PERCENT|Percentuale del valore Y del punto dati.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Totale di tutti i valori Y della serie|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Testo corrispondente al testo dell'elemento della legenda.|All|None|  
-|#AVG|Media di tutti i valori Y della serie|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|Minimo di tutti i valori Y della serie|Tutto|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Massimo di tutti i valori Y della serie|All|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Primo di tutti i valori Y della serie|All|`=First(Fields!MyDataField.Value)`|  
+|#INDEX|Indice del punto dati.|Tutti|nessuno|  
+|#PERCENT|Percentuale del valore Y del punto dati.|Tutti|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Totale di tutti i valori Y della serie|Tutti|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Testo corrispondente al testo dell'elemento della legenda.|Tutti|nessuno|  
+|#AVG|Media di tutti i valori Y della serie|Tutti|`=Avg(Fields!MyDataField.Value)`|  
+|#MIN|Minimo di tutti i valori Y della serie|Tutti|`=Min(Fields!MyDataField.Value)`|  
+|#MAX|Massimo di tutti i valori Y della serie|Tutti|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Primo di tutti i valori Y della serie|Tutti|`=First(Fields!MyDataField.Value)`|  
   
  Per formattare la parola chiave, racchiudere tra parentesi una stringa di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per specificare il valore del punto dati in una descrizione comandi come numero con due posizioni decimali, includere la stringa di formato "N2" tra parentesi, indicando ad esempio il valore "#VALY {N2}" per la proprietà **ToolTip** della serie. Per altre informazioni sulle stringhe di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) sul sito MSDN. Per altre informazioni sulla formattazione dei numeri in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66105816"
 ## <a name="inserting-data-point-markers"></a>Inserimento di marcatore dei punti dati  
  Un marcatore del punto dati è un indicatore visivo usato per segnalare ogni punto dati di una serie. In un grafico a dispersione il marcatore viene usato per determinare la forma e la dimensione dei singoli punti dati. La dimensione del marcatore specificata dipende dal tipo di grafico. È possibile modificare la dimensione, il colore o lo stile del marcatore. I marcatori non sono disponibili per tipi di grafico con intervalli e forme o per sottotipi di grafico in pila.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
  [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)  

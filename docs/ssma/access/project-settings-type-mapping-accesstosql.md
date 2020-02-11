@@ -1,5 +1,5 @@
 ---
-title: Impostazioni progetto (Mapping di tipo) (AccessToSQL) | Microsoft Docs
+title: Impostazioni progetto (mapping dei tipi) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,62 +17,62 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066666"
 ---
-# <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (Mapping di tipo) (AccessToSQL)
-Le impostazioni di progetto del mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È anche possibile specificare i mapping dei tipi per singoli oggetti di database. Per altre informazioni, vedere [Mapping tipi di origine e destinazione dati](mapping-source-and-target-data-types-accesstosql.md).  
+# <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (mapping dei tipi) (AccessToSQL)
+Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [mapping di tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md).  
   
-Mapping dei tipi è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo:  
+Il mapping dei tipi è disponibile nelle finestre di dialogo **Impostazioni** progetto e **Impostazioni progetto predefinite** :  
   
--   Usare la **impostazioni del progetto** finestra di dialogo per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni di mapping di tipo, nel **degli strumenti** dal menu **le impostazioni del progetto**e quindi fare clic su **Mapping dei tipi** nel riquadro sinistro.  
+-   Utilizzare la finestra di dialogo **Impostazioni progetto** per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni del mapping dei tipi, scegliere **Impostazioni progetto**dal menu **strumenti** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
   
--   Usare la **impostazioni di progetto predefinite** finestra di dialogo per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni di mapping di tipo, nel **degli strumenti** dal menu **impostazioni di progetto predefinite**, selezionare tipo di progetto di migrazione per i quali impostazioni sono necessarie per essere visualizzati / modificato da  **Versione di destinazione della migrazione** elenco a discesa e quindi fare clic su **Mapping di tipo** nel riquadro sinistro.  
+-   Utilizzare la finestra di dialogo **Impostazioni progetto predefinite** per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni del mapping dei tipi, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per cui è necessario visualizzare le impostazioni/changed dall'elenco a discesa **versione destinazione migrazione** e quindi fare clic su **mapping dei tipi** nel riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
-**Tipo origine**  
-Il tipo di dati di accesso per eseguire il mapping.  
+**Tipo di origine**  
+Tipo di dati di accesso da mappare.  
   
 **Tipo di destinazione**  
-La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipo di dati di SQL Azure per il tipo di dati di accesso specificato.  
+Tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati di destinazione o SQL Azure per il tipo di dati di accesso specificato.  
   
-La tabella seguente illustra il mapping predefinito tra i tipi di dati di origine e di destinazione.  
+Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dati di origine e di destinazione.  
   
-|Tipo di dati di accesso|Tipo di dati di SQL Server|  
+|Tipo di dati Access|Tipo di dati di SQL Server|  
 |--------------------|------------------------|  
-|**binary[\*..\*]**|**varbinary[\*]**|  
+|**binario [\*.. \*]**|**varbinary [\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
-|**currency**|**money**|  
-|**data**|**datetime**|  
+|**valuta**|**money**|  
+|**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**long**|**int**|  
-|**longbinary**|**varbinary(max)**|  
+|**lungo**|**int**|  
+|**LongBinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
-|**Memo** - per Access 97|**ntext**|  
-|**single**|**real**|  
-|**text[\*..\*]**|**nvarchar[\*]**|  
-|**testo [\*.. \*]** - per Access 97|**varchar[\*]**|  
+|**Memo** : per l'accesso 97|**ntext**|  
+|**singolo**|**reale**|  
+|**testo [\*.. \*]**|**nvarchar [\*]**|  
+|**testo [\*.. ] \*** -per Access 97|**varchar [\*]**|  
   
-**Aggiungi**  
-Fare clic per aggiungere un tipo di dati all'elenco di mapping.  
+**Aggiungere**  
+Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  
   
 **Modifica**  
-Fare clic per modificare un tipo di dati nell'elenco di mapping.  
+Fare clic per modificare un tipo di dati nell'elenco mapping.  
   
 **Rimuovi**  
-Fare clic per rimuovere il mapping dei tipi di dati selezionato dall'elenco di mapping.  
+Fare clic per rimuovere il mapping dei tipi di dati selezionati dall'elenco mapping.  
   
-**Ripristina predefiniti**  
-Fare clic per reimpostare tutti i mapping dei tipi di dati per le impostazioni predefinite SSMA.  
+**Ripristina impostazioni predefinite**  
+Fare clic per reimpostare tutti i mapping dei tipi di dati sulle impostazioni predefinite SSMA.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Mapping dei tipi di dati origine e destinazione](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Mapping dei tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md)  
+[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

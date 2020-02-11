@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479999"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy
@@ -26,8 +26,8 @@ ms.locfileid: "65479999"
   
  Per distribuire un pacchetto contenente solo oggetti modello, è possibile utilizzare la Distribuzione guidata modello nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Per altre informazioni, vedere [Creare un pacchetto di distribuzione di modelli tramite la procedura guidata](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Questa versione dello strumento MDSModelDeploy non è possibile usare più di gigabyte (GB) di memoria. Quando si crea o distribuire modelli di grandi dimensioni mediante **modellare gli oggetti e dati** opzione, potrebbero verificarsi errori di "Stream era troppo lunga" o "memoria insufficiente". Per risolvere questo problema, è possibile utilizzare MDS di gestione temporanea per distribuire i dati. o l'aggiornamento a MDS 2016 o versione successiva, che include la versione aggiornata dello strumento MDSModelDeploy.
-## <a name="prerequisites"></a>Prerequisiti  
+> Questa versione dello strumento MDSModelDeploy non può usare più di gigabyte (GB) di memoria. Quando si creano o si distribuiscono modelli di grandi dimensioni utilizzando **gli oggetti modello e** l'opzione dati, è possibile che si verifichino errori di "memoria insufficiente" o "flusso troppo lungo". Per risolvere questo problema, utilizzare la gestione temporanea MDS per distribuire i dati. in alternativa, eseguire l'aggiornamento a MDS 2016 o versione successiva, che include la versione aggiornata dello strumento MDSModelDeploy.
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 1.  Di seguito sono riportate le autorizzazioni di base necessarie per eseguire lo strumento MDSModelDeploy:  
@@ -58,7 +58,7 @@ ms.locfileid: "65479999"
   
  È necessario che sia disponibile un modello affinché sia possibile crearne un pacchetto. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](create-a-model-master-data-services.md).  
   
- Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+ Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Per creare un pacchetto di distribuzione modelli tramite MDSModelDeploy  
   
@@ -66,17 +66,17 @@ ms.locfileid: "65479999"
   
 2.  Spostarsi sul percorso di MDSModelDeploy.exe.  
   
-    -   Se MDS è stato installato nel percorso predefinito, il file è nel *unità*: \Programmi\Microsoft SQL Server\120\Master Data services\configuration.  
+    -   Se MDS è stato installato nel percorso predefinito, il file si trova in *unità*: \Programmi\microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Se MDS non è stato installato nel percorso predefinito, cercare MDSModelDeploy.exe nel computer locale.  
   
-3.  Facoltativo. Visualizzare le opzioni e la Guida.  
+3.  Facoltativa. Visualizzare le opzioni e la Guida.  
   
     -   Per visualizzare tutte le opzioni disponibili, digitare `MDSModelDeploy` e premere Invio.  
   
     -   Per visualizzare la Guida per un'opzione, digitare quanto segue, dove *OptionName* è il nome dell'opzione: `MDSModelDeploy help OptionName`.  
   
-4.  Facoltativo. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
+4.  Facoltativa. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
   
     ```  
     MDSModelDeploy listservices  
@@ -92,14 +92,14 @@ ms.locfileid: "65479999"
   
      Se non si vuole includere dati, non usare le opzioni `-version` e `-includedata` .  
   
-6.  Premere INVIO. Al termine della creazione del pacchetto, verrà visualizzato un messaggio "Operazione MDSModelDeploy completata".  
+6.  Premere Invio. Al termine della creazione del pacchetto, verrà visualizzato un messaggio "Operazione MDSModelDeploy completata".  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni di distribuzione dei modelli &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [Opzioni di distribuzione del modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Distribuzione di modelli &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

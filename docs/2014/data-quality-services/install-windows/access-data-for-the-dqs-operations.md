@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480526"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Accedere ai dati per le operazioni DQS
@@ -24,13 +24,13 @@ ms.locfileid: "65480526"
   
 -   Usare il database in uso come dati di origine per le operazioni DQS e come destinazione per l'esportazione dei dati elaborati. A tale scopo, assicurarsi che il database si trovi nella stessa istanza di SQL Server dei database del server Data Quality. In caso contrario, il database non sarà disponibile nel client Data Quality per le relative operazioni. All'account utente di Windows deve essere concesso anche l'accesso al database DQS_STAGING_DATA per l'esportazione dei risultati corrispondenti perché questa operazione è un processo in due fasi: i risultati corrispondenti vengono prima esportati nelle tabelle temporanee del database DQS_STAGING_DATA e successivamente vengono spostati nella tabella nel database di destinazione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   È necessario aver completato l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] tramite l'esecuzione del file DQSInstaller.exe. Per altre informazioni, vedere [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 -   L'account utente di Windows deve essere un membro del ruolo predefinito del server appropriato (ad esempio securityadmin, serveradmin o sysadmin) nell'istanza del motore di database per concedere/modificare l'accesso all'account di accesso SQL sui database.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Per concedere l'accesso in lettura/scrittura a un utente sul database DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>Per concedere l'accesso in lettura/scrittura a un utente sul database DQS_STAGING_DATA  
   
 1.  Avviare Microsoft SQL Server Management Studio.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65480526"
   
 4.  Nel riquadro sinistro della finestra di dialogo **Proprietà account di accesso** fare clic su **Mapping utenti** .  
   
-5.  Nel riquadro a destra selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_STAGING_DATA**, quindi selezionare i ruoli seguenti nel riquadro **Appartenenza a ruoli del database per: DQS_STAGING_DATA**:  
+5.  Nel riquadro di destra selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_STAGING_DATA** , quindi selezionare i ruoli seguenti nel riquadro **Appartenenza a ruoli del database per: DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: leggere dati da tabelle e viste.  
+    -   **db_datareader**: leggere i dati da tabelle o viste.  
   
-    -   **db_datawriter**: aggiungere, eliminare o modificare dati nelle tabelle.  
+    -   **db_datawriter**: aggiungere, eliminare o modificare i dati nelle tabelle.  
   
     -   **db_ddladmin**: creare, modificare o eliminare tabelle e viste.  
   

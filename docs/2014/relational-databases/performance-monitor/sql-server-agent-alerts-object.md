@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d88041f61c2f84e510c637b71f0ebb1bbb2a97cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250931"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Oggetto Avvisi di SQL Server Agent
@@ -36,6 +36,6 @@ ms.locfileid: "63250931"
 ## <a name="see-also"></a>Vedere anche  
  [Avvisi](../../ssms/agent/alerts.md)   
  [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

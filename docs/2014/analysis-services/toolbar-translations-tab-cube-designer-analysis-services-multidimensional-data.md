@@ -1,5 +1,5 @@
 ---
-title: Sulla barra degli strumenti (scheda traduzioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Barra degli strumenti (scheda Traduzioni, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065935"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Traduzioni, Progettazione cubo) (Analysis Services - Dati multidimensionali)
@@ -24,9 +24,9 @@ ms.locfileid: "66065935"
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Aggiungere funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
-|**Process**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo selezionato.|  
+|**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
+|**Processo**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo selezionato.|  
 |**Nuova traduzione**|Fare clic su questo pulsante per creare una nuova traduzione nel cubo selezionato.|  
-|**Elimina traduzione**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare la traduzione selezionata.<br /><br /> Nota: Questa opzione è abilitata solo se è selezionata una traduzione nel **dettagli di traduzione** riquadro.|  
+|**Elimina traduzione**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare la traduzione selezionata.<br /><br /> Nota: questa opzione è attivata solo se nel riquadro **Translation Details** (Dettagli traduzione) è selezionata una traduzione.|  
   
   

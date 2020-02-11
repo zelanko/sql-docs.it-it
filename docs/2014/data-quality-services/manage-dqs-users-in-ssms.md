@@ -1,5 +1,5 @@
 ---
-title: Gestione di utenti DQS in SSMS | Microsoft Docs
+title: Gestire gli utenti DQS in SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480342"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gestione di utenti DQS in SSMS
@@ -27,7 +27,7 @@ ms.locfileid: "65480342"
 ####  <a name="Permissions"></a> Autorizzazioni  
  L'account utente di Windows deve essere un membro del ruolo predefinito del server appropriato, ad esempio securityadmin, serveradmin o sysadmin, per creare account di accesso SQL e assegnare a questi i ruoli DQS appropriati.  
   
-##  <a name="GrantRoles"></a> Creare un account di accesso SQL e concessione del ruolo DQS  
+##  <a name="GrantRoles"></a>Creazione di un account di accesso SQL e concessione del ruolo DQS  
   
 1.  Avviare Microsoft SQL Server Management Studio.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65480342"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro destro selezionare la casella di controllo nella colonna **Mappa** per il database **DQS_MAIN** e quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN**, a seconda del livello di accesso necessario per l'utente.  
+6.  Nel riquadro destro selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_MAIN** , quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor**o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN** , a seconda del livello di accesso necessario all'utente.  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   

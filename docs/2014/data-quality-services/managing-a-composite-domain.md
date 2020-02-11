@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480388"
 ---
 # <a name="managing-a-composite-domain"></a>Gestione di un dominio composito
@@ -24,16 +24,16 @@ ms.locfileid: "65480388"
   
  I domini compositi hanno funzionalità diverse rispetto ai singoli domini. Non è possibile modificare i valori nel dominio composito. È necessario eseguire tale operazione in un singolo dominio. Con i domini compositi è possibile utilizzare le regole tra domini per testare i valori nei singoli domini del dominio composito. È inoltre possibile visualizzare le combinazioni di valori presenti nei domini compositi.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  L'utilizzo di un dominio composito consente di effettuare le operazioni seguenti:  
   
 |||  
 |-|-|  
-|Creare una rappresentazione semantica per un campo dati costituito da più termini correlati non analizzati.|[Creare un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
-|Quando si esegue il mapping di dati complessi a un dominio composito, è possibile analizzare i dati in base alle informazioni oltre che in base a un delimitatore. Verranno innanzitutto utilizzate le informazioni sui singoli domini per determinare come le parti della stringa complessa appartengano ai singoli domini.|[Creare un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
-|Associare un servizio dati di riferimento, ad esempio un servizio di gestione dei dati di indirizzo, a un dominio composito.|[Collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Creare una rappresentazione semantica per un campo dati costituito da più termini correlati non analizzati.|[Creazione di un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
+|Quando si esegue il mapping di dati complessi a un dominio composito, è possibile analizzare i dati in base alle informazioni oltre che in base a un delimitatore. Verranno innanzitutto utilizzate le informazioni sui singoli domini per determinare come le parti della stringa complessa appartengano ai singoli domini.|[Creazione di un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
+|Associare un servizio dati di riferimento, ad esempio un servizio di gestione dei dati di indirizzo, a un dominio composito.|[Associare un dominio o un dominio composito a dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Creare una regola tra domini quando il valore di un dominio in un dominio composito influisce sul valore di un altro dominio.|[Creare una regola tra domini](../../2014/data-quality-services/create-a-cross-domain-rule.md)|  
-|Identificare le combinazioni di valori in modo da indicarne la frequenza.|[Usare le relazioni di valori in un dominio composito](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Identificare le combinazioni di valori in modo da indicarne la frequenza.|[Utilizzare le relazioni di valori in un dominio composito](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

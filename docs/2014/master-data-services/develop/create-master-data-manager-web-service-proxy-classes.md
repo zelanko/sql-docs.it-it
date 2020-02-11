@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479546"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Creare le classi proxy del servizio Web Gestione dati master
@@ -25,7 +25,7 @@ ms.locfileid: "65479546"
   
 1.  Aprire il file Web.config di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in un editor di testo. Il file Web.config si trova nella cartella WebApplication del percorso di installazione di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Trovare il `mdsWsHttpBehavior` sezione sotto  **\<serviceBehaviors >** . Per il  **\<serviceMetadata >** elemento, impostare `httpGetEnabled` a `true`.  
+2.  Trovare la `mdsWsHttpBehavior` sezione in ** \<serviceBehaviors>**. Per l' ** \<elemento>serviceMetadata** , impostare `httpGetEnabled` su `true`.  
   
     > [!NOTE]  
     >  Se si desidera abilitare servizi Web tramite Secure Sockets Layer (SSL), impostare invece `httpsGetEnabled` su `true` nella sezione `mdsWsHttpBehavior` del file web.config. È inoltre necessario modificare `mdsWsHTTPBinding` in modo tale che sia configurato per SSL e impostare come commento la sezione non SSL.  
@@ -39,7 +39,7 @@ ms.locfileid: "65479546"
  Se è installato Visual Studio 2010, il modo più semplice per generare le classi proxy è aggiungere un **Riferimento al servizio** al progetto. L'indirizzo del riferimento al servizio è l'URL dell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiunto a /service/service.svc, Ad esempio: http://yourserver/MDS/service/service.svc. Per altre informazioni, vedere [Procedura: Aggiungere, aggiornare o rimuovere un riferimento al servizio](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Creazione di classi proxy tramite Svcutil.exe  
- Per usare Svcutil.exe è necessario che nel computer sia installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Strumento ServiceModel Metadata Utility (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) e [Generazione di un client WCF dai metadati del servizio](https://go.microsoft.com/fwlink/?LinkId=164821).  
+ Per avere Svcutil. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] exe nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] computer in uso, è necessario che sia installato il Windows SDK o. Se si utilizza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], per eseguire il comando sarà necessario utilizzare il prompt dei comandi di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Per altre informazioni, vedere [Strumento ServiceModel Metadata Utility (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) e [Generazione di un client WCF dai metadati del servizio](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Per creare un set di classi proxy in C# tramite Svcutil.exe, utilizzare un comando analogo al seguente:  
   
@@ -52,13 +52,13 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  Dove:  
   
--   *servername*:*port* corrispondono al nome del computer e al numero della porta del computer host di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
+-   *nomeserver*: la*porta* è il nome del computer e il numero di porta del [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]computer che ospita.  
   
 -   *virtual_path* è il percorso virtuale di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internet Information Services (IIS).  
   
 -   *proxy_name* è il nome del file proxy generato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operazioni del servizio Web per categoria &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [Operazioni del servizio Web categorizzate &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
   
   

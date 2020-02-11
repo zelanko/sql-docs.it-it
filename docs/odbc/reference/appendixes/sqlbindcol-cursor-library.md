@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064968"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- In questo argomento viene illustrato l'utilizzo dei **SQLBindCol** funzione nella libreria di cursori. Per informazioni generali sul **SQLBindCol**, vedere [funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ In questo argomento viene illustrato l'utilizzo della funzione **SQLBindCol** nella libreria di cursori. Per informazioni generali su **SQLBindCol**, vedere [funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
- Un'applicazione alloca i buffer per la libreria di cursori restituire il set di righe corrente in uno o più. Viene chiamato **SQLBindCol** una o più volte per associare tali buffer al set di risultati.  
+ Un'applicazione alloca uno o più buffer affinché la libreria di cursori restituisca il set di righe corrente in. Chiama **SQLBindCol** una o più volte per associare questi buffer al set di risultati.  
   
- Un'applicazione può chiamare **SQLBindCol** riassociare risultato set di colonne dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, purché il tipo di dati C, le dimensioni di colonna e cifre decimali della colonna associata rimangono invariati. L'applicazione non necessario chiudere il cursore per la riassociazione delle colonne a indirizzi diversi.  
+ Un'applicazione può chiamare **SQLBindCol** per riassociare le colonne del set di risultati dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**, purché il tipo di dati C, le dimensioni della colonna e le cifre decimali della colonna associata rimangano invariate. L'applicazione non deve chiudere il cursore per riassociare le colonne a indirizzi diversi.  
   
- La libreria di cursori supporta l'impostazione dell'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR usare gli offset di associazione. (**SQLBindCol** non deve essere chiamato per questo che si verifichi la riassociazione.) Se la libreria di cursori viene usata con un database ODBC *3.x* driver, l'offset di binding non è utilizzato quando **SQLFetch** viene chiamato. L'offset di binding viene usato se **SQLFetch** viene chiamato quando la libreria di cursori viene usata con un database ODBC *2.x* driver perché **SQLFetch** viene quindi mappato a  **SQLExtendedFetch**.  
+ La libreria di cursori supporta l'impostazione dell'attributo SQL_ATTR_ROW_BIND_OFFSET_PTR Statement per l'utilizzo degli offset di binding. Non è necessario chiamare**SQLBindCol** per eseguire questa operazione di riassociazione. Se la libreria di cursori viene utilizzata con un driver ODBC *3. x* , l'offset di binding non viene utilizzato quando viene chiamato **SQLFetch** . L'offset di binding viene utilizzato se **SQLFetch** viene chiamato quando la libreria di cursori viene utilizzata con un driver ODBC *2. x* perché viene quindi eseguito il mapping di **SQLFetch** a **SQLExtendedFetch**.  
   
- La libreria di cursori supporta la chiamata **SQLBindCol** per associare la colonna del segnalibro.  
+ La libreria di cursori supporta la chiamata a **SQLBindCol** per associare la colonna del segnalibro.  
   
- Quando si lavora con un database ODBC *2.x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLBindCol** per impostare la lunghezza del buffer per una colonna del segnalibro a un valore non viene chiamato uguale a 4. Quando si lavora con un database ODBC *3.x* driver, la libreria di cursori consente il buffer essere di qualsiasi dimensione.
+ Quando si utilizza un driver ODBC *2. x* , la libreria di cursori restituisce SQLSTATE HY090 (lunghezza di stringa o di buffer non valida) quando viene chiamato **SQLBindCol** per impostare la lunghezza del buffer per una colonna del segnalibro su un valore diverso da 4. Quando si utilizza un driver ODBC *3. x* , la libreria di cursori consente che il buffer sia di qualsiasi dimensione.

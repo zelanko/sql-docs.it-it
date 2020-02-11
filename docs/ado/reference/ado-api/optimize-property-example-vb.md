@@ -1,5 +1,5 @@
 ---
-title: Ottimizzare l'esempio di proprietà (Visual Basic) | Microsoft Docs
+title: Esempio di proprietà Optimize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917810"
 ---
 # <a name="optimize-property-example-vb"></a>Esempio della proprietà Optimize (VB)
-Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) dell'oggetto dinamico **Optimize** proprietà. Il ***zip*** campo del ***autori*** nella tabella di ***Pubs*** database non è indicizzato. Impostando il [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul ***zip*** campo autorizza ADO per compilare un indice che consente di migliorare le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  
+In questo esempio viene illustrata la proprietà dinamica **optimize** dell'oggetto [campo](../../../ado/reference/ado-api/field-object.md) . Il campo ***zip*** della tabella ***authors*** nel database ***pubs*** non è indicizzato. L'impostazione della proprietà [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) su **true** nel campo ***zip*** autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -87,5 +87,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà dinamica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -11,26 +11,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091085"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avviso relativo all'utilizzo sul lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID
-  L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  
+  L'assembly **Microsoft. SqlServer. Types. dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono le condizioni seguenti.  
+ L'assembly **Microsoft. SqlServer. Types. dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono le condizioni seguenti.  
   
--   Quando si sposta un'applicazione personalizzata da un computer in cui [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] era stato installato in un computer in cui solo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato, l'applicazione avrà esito negativo perché la versione di cui viene fatto riferimento 10.0 del **SqlTypes** assembly non è presente. È possibile che venga visualizzato questo messaggio di errore: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Quando si sposta un'applicazione personalizzata da un computer in cui [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] è stato installato in un computer in cui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato solo, l'applicazione avrà esito negativo perché la versione 10,0 dell'assembly **SqlTypes** a cui viene fatto riferimento non è presente. È possibile che venga visualizzato questo messaggio di errore: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   Quando si fa riferimento il **SqlTypes** assembly versione 11.0 e viene installata anche la versione 10.0, è possibile visualizzare questo messaggio di errore: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
+-   Quando si fa riferimento all'assembly **SqlTypes** versione 11,0 e viene installata anche la versione 10,0, è possibile che venga visualizzato questo messaggio di errore:`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
--   Quando si fa riferimento il **SqlTypes** assembly versione 11.0 da un'applicazione personalizzata destinata a .NET 3.5, 4 o 4.5, l'applicazione avrà esito negativo perché SqlClient in base alla progettazione carica la versione 10.0 dell'assembly. Questo errore si verifica quando l'applicazione chiama uno dei metodi seguenti:  
+-   Quando si fa riferimento all'assembly **SqlTypes** versione 11,0 da un'applicazione personalizzata destinata a .NET 3,5, 4 o 4,5, l'applicazione avrà esito negativo perché SqlClient per progettazione carica la versione 10,0 dell'assembly. Questo errore si verifica quando l'applicazione chiama uno dei metodi seguenti:  
   
     -   Metodo `GetValue` della classe `SqlDataReader`  
   
@@ -83,8 +83,8 @@ ms.locfileid: "66091085"
 -   È possibile risolvere questo problema nella stringa di connessione specificando il valore "SQL Server 2012" per l'attributo "Type System Version" per forzare il caricamento della versione 11.0 dell'assembly da parte di SqlClient. Questo attributo della stringa di connessione è disponibile unicamente in .NET 4.5 e versioni successive.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md
 )  
   
   

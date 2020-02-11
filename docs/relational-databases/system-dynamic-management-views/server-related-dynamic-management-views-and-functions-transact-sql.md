@@ -1,5 +1,5 @@
 ---
-title: Viste a gestione dinamica correlate al server e funzioni (Transact-SQL) | Microsoft Docs
+title: Funzioni e viste a gestione dinamica relative al server (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061902"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>Funzioni a gestione dinamica e DMV correlate al server (Transact-SQL)
@@ -23,7 +23,7 @@ ms.locfileid: "68061902"
 
   In questa sezione sono contenute le DMV associate ai servizi SQL Server, Full-text e SQL Server Agent installate nel server host. È possibile utilizzare le viste per restituire le informazioni sulle proprietà per tali servizi. Inoltre, nelle viste sono contenute informazioni relative alla configurazione, all'installazione e ai file di dump della memoria.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |||  
 |-|-|  

@@ -18,21 +18,21 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056498"
 ---
-# <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
+# <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impedendo così l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tale nome di accesso.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Drop login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,21 +42,21 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'` È l'account di accesso da rimuovere. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* deve esistere nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'`Account di accesso da rimuovere. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* deve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]essere già presente in.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_droplogin** chiama DROP LOGIN.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_droplogin** chiama Drop login.  
   
- **sp_droplogin** non può essere eseguita all'interno di una transazione definita dall'utente.  
+ Impossibile eseguire **sp_droplogin** in una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN nel server.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzato `DROP LOGIN` per rimuovere l'account di accesso `Victoria` da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo è il metodo consigliato.  
+ Nell'esempio seguente viene utilizzato `DROP LOGIN` per rimuovere l'account di accesso `Victoria` da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo è il metodo preferito.  
   
 ```  
 DROP LOGIN Victoria;  
@@ -64,7 +64,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

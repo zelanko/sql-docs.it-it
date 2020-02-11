@@ -1,5 +1,5 @@
 ---
-title: Esempio di File (DTA) di Input XML semplice | Microsoft Docs
+title: Esempio di file di input XML semplice (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283414"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Esempio di file di input XML semplice (DTA)
-  Copiare e incollare questo esempio di file di input XML semplice da utilizzare per l'ottimizzazione dei carichi di lavoro nell'editor XML o nell'editor di testo preferito. Sostituire quindi i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**e **TuningOptions** con quelli per la sessione di ottimizzazione specifica. Per altre informazioni sugli attributi e sugli elementi figlio che è possibile usare con questi elementi, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md) Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  
+  Copiare e incollare questo esempio di file di input XML semplice da utilizzare per l'ottimizzazione dei carichi di lavoro nell'editor XML o nell'editor di testo preferito. Sostituire quindi i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**e **TuningOptions** con quelli per la sessione di ottimizzazione specifica. Per altre informazioni sugli attributi e sugli elementi figlio che è possibile usare con questi elementi, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  
   
 ## <a name="code"></a>Codice  
  [!code-xml[InputFileSamples#SimpleXMLInputFile](../../snippets/xml/SQL14/dta_xml/inputfilesamples/xml/dta_xml_input_file_samples.xml#simplexmlinputfile)]  

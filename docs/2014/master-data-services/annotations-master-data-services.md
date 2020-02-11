@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9906aa967f98b41df8eabf63e11fe6e518a3734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480059"
 ---
 # <a name="annotations-master-data-services"></a>Annotazioni (Master Data Services)
@@ -29,7 +29,8 @@ ms.locfileid: "65480059"
   
 -   Area funzionale **Gestione versioni** dell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
--   [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]MDS.  
+-   
+  [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]MDS.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

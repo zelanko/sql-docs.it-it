@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100893"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. L'estensione per il recapito tramite posta elettronica viene configurata mediante Gestione configurazione Reporting Services e la modifica dei file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Per distribuire o ricevere un report tramite posta elettronica, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. È possibile sottoscrivere o distribuire un solo report per volta. Non è possibile creare una sottoscrizione che recapiti più report nello stesso messaggio di posta elettronica. Per altre informazioni sulle sottoscrizioni, vedere [creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Per distribuire o ricevere un report tramite posta elettronica, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. È possibile sottoscrivere o distribuire un solo report per volta. Non è possibile creare una sottoscrizione che recapiti più report nello stesso messaggio di posta elettronica. Per ulteriori informazioni sulle sottoscrizioni, vedere [creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa|  
   
 ## <a name="e-mail-delivery-options"></a>Opzioni di recapito tramite posta elettronica  
  La funzionalità di recapito tramite posta elettronica del server di report consente di recapitare report in base alle modalità seguenti:  
@@ -37,9 +37,9 @@ ms.locfileid: "66100893"
   
 -   Invio di una notifica nel campo Oggetto di un messaggio di posta elettronica. Per impostazione predefinita, nel campo Oggetto nella definizione della sottoscrizione sono incluse le variabili seguenti che vengono sostituite da informazioni specifiche del report al momento dell'elaborazione della sottoscrizione:  
   
-     **@ReportName** indica il nome del report.  
+     **@ReportName**Specifica il nome del report.  
   
-     **@ExecutionTime** indica l'ora in cui il report è stato eseguito.  
+     **@ExecutionTime**Specifica quando il report è stato eseguito.  
   
      È possibile utilizzare queste variabili in combinazione con testo statico o modificare il testo nel campo Oggetto per ogni sottoscrizione.  
   
@@ -47,7 +47,8 @@ ms.locfileid: "66100893"
   
      Se il browser supporta HTML 4.0 e MHTML e si sceglie Archivio Web come formato di rendering, il report verrà incorporato nel messaggio. Con tutti gli altri formati di rendering (CSV, PDF e così via), il report verrà recapitato come allegato. È possibile disabilitare questa funzionalità nel file di configurazione RSReportServer.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non esegue la verifica delle dimensioni dell'allegato né di quelle del messaggio prima dell'invio del report. Se l'allegato o il messaggio supera il limite massimo consentito dal server di posta elettronica, il report non viene recapitato. Se il report è di grandi dimensioni, è consigliabile selezionare una delle altre opzioni di recapito, ad esempio la notifica o l'invio dell'URL.  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non esegue la verifica delle dimensioni dell'allegato né di quelle del messaggio prima dell'invio del report. Se l'allegato o il messaggio supera il limite massimo consentito dal server di posta elettronica, il report non viene recapitato. Se il report è di grandi dimensioni, è consigliabile selezionare una delle altre opzioni di recapito, ad esempio la notifica o l'invio dell'URL.  
   
  Per determinare il modo in cui un report viene recapitato alla creazione della sottoscrizione, è possibile impostare le opzioni di recapito. Ad esempio, se nella sottoscrizione si seleziona **Includi collegamento** , nel messaggio di posta elettronica viene incluso un collegamento ipertestuale al report.  
   
@@ -71,18 +72,18 @@ ms.locfileid: "66100893"
   
  Per informazioni su come configurare un server di report in modalità nativa, vedere quanto segue:  
   
--   [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Impostazioni posta elettronica - Gestione configurazione &#40;modalità nativa SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Impostazioni posta elettronica-Configuration Manager &#40;modalità nativa SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Per informazioni su come configurare un server di report in modalità SharePoint, vedere quanto segue:  
   
--   [Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurare la posta elettronica per un'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../security/tasks-and-permissions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Assegnazioni di ruolo](../security/role-assignments.md)  
   
   

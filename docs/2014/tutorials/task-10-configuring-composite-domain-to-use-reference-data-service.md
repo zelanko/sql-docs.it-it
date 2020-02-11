@@ -1,5 +1,5 @@
 ---
-title: 'Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento | Microsoft Docs'
+title: "Attività 10: configurazione del dominio composito per l'utilizzo del servizio dati di riferimento | Microsoft Docs"
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481233"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Attività 10: Configurazione del dominio composito per usare il servizio dati di riferimento
-  In questa attività si configura il **Address Validation** dominio composito per utilizzare il **Melissa Data - controllo indirizzo** servizio. In fase di esecuzione, durante l'attività di pulizia, tramite DQS i valori del dominio Address Validation vengono passati al servizio per la pulizia. Visualizzare [mappa dominio/dominio composito ai dati di riferimento](https://msdn.microsoft.com/library/hh213030.aspx) per altri dettagli.  
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento
+  In questa attività viene configurato il dominio composito **Address Validation** per usare il servizio **Melissa Data-Address Check** . In fase di esecuzione, durante l'attività di pulizia, tramite DQS i valori del dominio Address Validation vengono passati al servizio per la pulizia. Per altri dettagli, vedere [eseguire il mapping di dominio/dominio composito ai dati di riferimento](https://msdn.microsoft.com/library/hh213030.aspx) .  
   
-1.  Nella pagina principale del **Client DQS**, fare clic su **Suppliers (Domain Management)** sotto **Knowledge Base recenti** per avviare il **Gestione dominio**pagina.  
+1.  Nella pagina principale del **client DQS**fare clic su **suppliers (Domain Management)** in **Knowledge Base recenti** per avviare la pagina di **gestione del dominio** .  
   
-2.  Selezionare il **Address Validation** dominio composito nel **elenco di domini**.  
+2.  Selezionare il dominio composito **Address Validation** nell' **elenco dei domini**.  
   
-3.  Nel riquadro destro passare al **i dati di riferimento** scheda.  
+3.  Nel riquadro destro passare alla scheda dati di **riferimento** .  
   
-     ![Scheda dati di riferimento](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "scheda dati di riferimento")  
+     ![Scheda Dati di riferimento](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "Scheda Dati di riferimento")  
   
-4.  Fare clic su **esplorare** pulsante sulla barra degli strumenti.  
+4.  Fare clic sul pulsante **Sfoglia** sulla barra degli strumenti.  
   
-5.  Nel **catalogo di provider di dati di riferimento Online** finestra di dialogo **casella di controllo** accanto a **Melissa Data - controllo indirizzo**.  
+5.  Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** selezionare la **casella di controllo** accanto a **Melissa Data-verifica indirizzo**.  
   
-     ![Selezione di Melissa Data - controllo indirizzo](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "selezionare Melissa Data - controllo indirizzo")  
+     ![Selezione di Melissa Data - Controllo indirizzo](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "Selezione di Melissa Data - Controllo indirizzo")  
   
-6.  Nel riquadro di destra, nelle **Schema** sezione, eseguire il mapping **Address Line** dominio per il **Address Line (M)** elemento dello schema utilizzando l'elenco a discesa.  
+6.  Nel riquadro destro, nella sezione **schema** , eseguire il mapping del dominio della **linea di indirizzo** all'elemento dello schema della **riga dell'indirizzo (M)** utilizzando l'elenco a discesa.  
   
-     ![Eseguire il mapping di elementi dello Schema di servizi desktop remoto al dominio](../../2014/tutorials/media/et-configuringcdtouserds-03.jpg "mappare l'elemento dello Schema di servizi desktop remoto al dominio")  
+     ![Esecuzione del mapping della voce Schema servizio dati di riferimento al dominio](../../2014/tutorials/media/et-configuringcdtouserds-03.jpg "Esecuzione del mapping della voce Schema servizio dati di riferimento al dominio")  
   
-7.  Fare clic su **Aggiungi voce di Schema (+)** pulsante sulla barra degli strumenti per creare una voce nell'elenco.  
+7.  Fare clic sul pulsante **Aggiungi voce di schema (+)** nella barra degli strumenti per creare una voce nell'elenco.  
   
-     ![Aggiungere pulsante della barra degli strumenti di voce dello Schema](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "aggiungere pulsante della barra degli strumenti di voce dello Schema")  
+     ![Pulsante della barra degli strumenti Aggiungi voce di schema](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "Pulsante della barra degli strumenti Aggiungi voce di schema")  
   
 8.  Eseguire il mapping dei domini DQS utilizzando gli elenchi a discesa come illustrato nella figura seguente.  
   
-     ![Eseguire il mapping agli elementi dello Schema di servizi desktop remoto ai domini](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "mappare gli elementi dello Schema di servizi desktop remoto ai domini")  
+     ![Esecuzione del mapping delle voci Schema servizio dati di riferimento a domini](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "Esecuzione del mapping delle voci Schema servizio dati di riferimento a domini")  
   
 9. Scegliere **OK** per chiudere la finestra di dialogo.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 11: Pubblicazione della Knowledge Base](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

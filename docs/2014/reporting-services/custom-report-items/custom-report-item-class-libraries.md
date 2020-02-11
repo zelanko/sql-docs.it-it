@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264885"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
@@ -46,7 +46,8 @@ ms.locfileid: "63264885"
 |`AltReportItem`|Oggetto elemento del report alternativo, da utilizzare se il controllo di runtime di un elemento del report personalizzato non è supportato.|  
 |`Style`|Proprietà di stile per l'elemento del report personalizzato.|  
 |`Adornment`|Finestra dell'area di controllo utilizzata per la modifica interattiva del controllo.|  
-|`Site`|`ISite` del componente.|  
+|`Site`|
+  `ISite` del componente.|  
 |`DesignerVerbCollection`|Matrice di verbi personalizzati per il menu di scelta rapida del controllo.|  
   
 #### <a name="public-methods"></a>Metodi pubblici  
@@ -63,7 +64,7 @@ ms.locfileid: "63264885"
 |`OnPaint`|Viene chiamato in risposta all'evento `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Attributo utilizzato per identificare il tipo di elemento del report personalizzato. Il nome deve corrispondere al valore della <`Name`> attributo del `ReportItem` elemento nel file di configurazione di progettazione Report.  
+ Attributo utilizzato per identificare il tipo di elemento del report personalizzato. Il nome deve corrispondere al valore dell'attributo <`Name`> dell' `ReportItem` elemento nel file di configurazione progettazione report.  
   
 #### <a name="public-methods"></a>Metodi pubblici  
   
@@ -121,7 +122,7 @@ ms.locfileid: "63264885"
 |`EditValue`|Richiama l'Editor espressioni, inizializzato con il valore dell'oggetto specificato.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- Questa classe è una raccolta di campi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene utilizzata per supportare eventi di trascinamento della selezione nell'ambiente di progettazione. Eredita da `IReportItemDataObject`.  
+ Questa classe è una raccolta di campi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene utilizzata per supportare eventi di trascinamento della selezione nell'ambiente di progettazione. Eredita dall'oggetto `IReportItemDataObject`.  
   
 #### <a name="public-properties"></a>Proprietà pubbliche  
   

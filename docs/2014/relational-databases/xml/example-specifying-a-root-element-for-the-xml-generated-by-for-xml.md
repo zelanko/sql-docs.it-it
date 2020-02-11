@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica di un elemento radice per codice XML generato da FOR XML | Microsoft Docs'
+title: 'Esempio: specifica di un elemento radice per codice XML generato da FOR XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288380"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Esempio: Specifica di un elemento radice per codice XML generato da FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Esempio: specifica di un elemento radice per codice XML generato da FOR XML
   Specificando l'opzione `ROOT` nella query `FOR XML` , è possibile richiedere un singolo elemento di livello principale per il codice XML risultante, come illustrato nella query seguente. L'argomento specificato per la direttiva `ROOT` consente di ottenere il nome dell'elemento radice.  
   
 ## <a name="example"></a>Esempio  
@@ -35,7 +35,7 @@ FOR XML RAW, ROOT('MyRoot')
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <MyRoot>  
@@ -46,6 +46,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

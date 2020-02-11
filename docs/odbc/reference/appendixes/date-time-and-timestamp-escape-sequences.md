@@ -1,5 +1,5 @@
 ---
-title: Le sequenze di Escape data, ora e Timestamp | Microsoft Docs
+title: Sequenze di escape di data, ora e timestamp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051146"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Sequenze di escape data, ora e timestamp
-ODBC definisce sequenze di escape per date, time e timestamp valori letterali. La sintassi di queste sequenze di escape è come segue:  
+ODBC definisce sequenze di escape per i valori letterali data, ora e timestamp. La sintassi di queste sequenze di escape è la seguente:  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC definisce sequenze di escape per date, time e timestamp valori letterali. L
 {ts 'value'}  
 ```  
   
- Nella notazione BNF, la sintassi è come segue:  
+ Nella notazione BNF la sintassi è la seguente:  
   
 ```  
   
@@ -52,5 +52,5 @@ timestamp-separator ::=
      (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Note  
- Le sequenze di escape di valore letterale data, ora e timestamp sono supportate se i tipi di dati date, time e timestamp sono supportati dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se sono supportati questi tipi di dati.
+## <a name="remarks"></a>Osservazioni  
+ Le sequenze di escape dei valori letterali data, ora e timestamp sono supportate se i tipi di dati data, ora e timestamp sono supportati dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se questi tipi di dati sono supportati.

@@ -1,5 +1,5 @@
 ---
-title: Funzionalità deprecate in SQL Server Reporting Services in SQL Server 2014 | Microsoft Docs
+title: Funzionalità deprecate in SQL Server Reporting Services SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,29 +16,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109347"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014
   In questo argomento si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate. Le funzionalità sono ancora disponibili nella versione in cui sono deprecate, tuttavia sono pianificate per essere rimosse in una versione successiva di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
--   [Funzionalità deprecate in SQL Server 2014 Reporting Services](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services funzionalità deprecate](#bkmk_2014)  
   
--   [SQL Server 2012 SP1 Reporting Services Deprecated Features](#bkmk_2012sp1)  
+-   [Funzionalità deprecate di SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [Funzionalità deprecate in SQL Server 2012 Reporting Services](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services funzionalità deprecate](#bkmk_2012)  
   
--   [SQL Server 2008 R2 Reporting Services Deprecated Features](#bkmk_kj)  
+-   [Funzionalità deprecate di SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a> Funzionalità deprecate in SQL Server 2014 Reporting Services  
+##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services funzionalità deprecate  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Funzionalità non supportate nella prossima versione di SQL Server  
- Le funzionalità riportate di seguito di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non saranno supportate nella **prossima** versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate.  
+ Le funzionalità [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seguenti non saranno supportate nella **prossima** versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non usare queste funzionalità in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui sono attualmente implementate.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML  
  Le seguenti impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML sono deprecate.  
@@ -64,23 +64,23 @@ ms.locfileid: "66109347"
  Per ulteriori informazioni sull'estensione per il rendering HTML, vedere [HTML Device Information Settings](html-device-information-settings.md)  
   
 #### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendering di Microsoft Word e Microsoft Excel 1997-2003  
- Con le estensioni per il rendering BIFF8 di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esegue i report nel formato BIFF (Binary Interchange File Format) di [!INCLUDE[msCoName](../includes/msconame-md.md)] Word e [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] include estensioni per il rendering nel [!INCLUDE[msCoName](../includes/msconame-md.md)] formato Office 2007-2010 Open XML.  
+ Con le estensioni per il rendering BIFF8 di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esegue i report nel formato BIFF (Binary Interchange File Format) di [!INCLUDE[msCoName](../includes/msconame-md.md)] Word e [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]include le [!INCLUDE[msCoName](../includes/msconame-md.md)] estensioni che eseguono il rendering nel formato Office 2007-2010 Open XML.  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>Linguaggio RDL (Report Definition Language) 2005 e versioni precedenti  
- Il linguaggio RDL (Report Definition Language) 2005 e le versioni precedenti sono deprecati. Per altre informazioni su RDL, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
+ Il linguaggio RDL (Report Definition Language) 2005 e le versioni precedenti sono deprecati. Per ulteriori informazioni su RDL, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  Per ulteriori informazioni sull'aggiornamento dei report, vedere [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 #### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Elementi di report personalizzati di SQL Server 2005 e versioni precedenti  
- Gli elementi di report personalizzati compilati per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 e per le versioni precedenti sono deprecati.  
+ Gli elementi del report personalizzati compilati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per 2005 e versioni precedenti sono deprecati.  
   
 #### <a name="reporting-services-snapshots-2005-and-earlier"></a>Snapshot di Reporting Services 2005 e versioni precedenti  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gli snapshot di cui è stato eseguito il rendering con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 e versioni precedenti sono deprecati.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]gli snapshot di cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è stato eseguito il rendering con 2005 e versioni precedenti sono deprecati.  
   
 #### <a name="report-models"></a>Modelli di report  
- I modelli di report del linguaggio SMDL (Semantic Modeling Language) sono deprecati. Sebbene sia possibile continuare a usare i modelli di report esistenti come origini dati in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è consigliabile aggiornare i report per rimuovere la dipendenza dai modelli di report.  
+ I modelli di report del linguaggio SMDL (Semantic Modeling Language) sono deprecati. Sebbene sia possibile continuare a utilizzare i modelli di report esistenti come origini dati [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nei report, è consigliabile aggiornare i report per rimuovere la dipendenza dai modelli di report.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono inclusi strumenti per la creazione o l'aggiornamento dei modelli di report. Per altre informazioni, vedere [modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non include strumenti per la creazione o l'aggiornamento di modelli di report. Per ulteriori informazioni, vedere [modifiche di rilievo nelle SQL Server Reporting Services SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Metodi deprecati nell'endpoint servizio Web  
  Le operazioni seguenti sono deprecate nell'endpoint servizio Web di <xref:ReportService2010.ReportingService2010>:  
@@ -99,7 +99,7 @@ ms.locfileid: "66109347"
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono state deprecate funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a> Funzionalità deprecate di SQL Server 2012 SP1 Reporting Services  
+##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services funzionalità deprecate  
  In questa sezione si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Le funzionalità seguenti del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportate nella versione successiva di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ma in seguito verranno rimosse. La versione specifica di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non è stata determinata.  
   
 ### <a name="sharepoint-web-parts"></a>Web part di SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109347"
   
  Per ulteriori informazioni sulle web part deprecate, vedere [Visualizzare ed esplorare i report in modalità nativa utilizzando le web part di SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a> Funzionalità deprecate in SQL Server 2012 Reporting Services  
+##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services funzionalità deprecate  
  In questa sezione si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering HTML  
@@ -134,23 +134,23 @@ ms.locfileid: "66109347"
  Per ulteriori informazioni sull'estensione per il rendering HTML, vedere [HTML Device Information Settings](html-device-information-settings.md)  
   
 ### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendering di Microsoft Word e Microsoft Excel 1997-2003  
- Con le estensioni per il rendering BIFF8 di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esegue i report nel formato BIFF (Binary Interchange File Format) di [!INCLUDE[msCoName](../includes/msconame-md.md)] Word e [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] include estensioni per il rendering nel [!INCLUDE[msCoName](../includes/msconame-md.md)] formato Office 2007-2010 Open XML.  
+ Con le estensioni per il rendering BIFF8 di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esegue i report nel formato BIFF (Binary Interchange File Format) di [!INCLUDE[msCoName](../includes/msconame-md.md)] Word e [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]include le [!INCLUDE[msCoName](../includes/msconame-md.md)] estensioni che eseguono il rendering nel formato Office 2007-2010 Open XML.  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>Linguaggio RDL (Report Definition Language) 2005 e versioni precedenti  
- Il linguaggio RDL (Report Definition Language) 2005 e le versioni precedenti sono deprecati. Per altre informazioni su RDL, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
+ Il linguaggio RDL (Report Definition Language) 2005 e le versioni precedenti sono deprecati. Per ulteriori informazioni su RDL, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  Per ulteriori informazioni sull'aggiornamento dei report, vedere [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Elementi di report personalizzati di SQL Server 2005 e versioni precedenti  
- Gli elementi di report personalizzati compilati per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 e per le versioni precedenti sono deprecati.  
+ Gli elementi del report personalizzati compilati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per 2005 e versioni precedenti sono deprecati.  
   
 ### <a name="reporting-services-snapshots-2005-and-earlier"></a>Snapshot di Reporting Services 2005 e versioni precedenti  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gli snapshot di cui è stato eseguito il rendering con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 e versioni precedenti sono deprecati.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]gli snapshot di cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è stato eseguito il rendering con 2005 e versioni precedenti sono deprecati.  
   
 ### <a name="report-models"></a>Modelli di report  
- I modelli di report del linguaggio SMDL (Semantic Modeling Language) sono deprecati. Sebbene sia possibile continuare a usare i modelli di report esistenti come origini dati in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è consigliabile aggiornare i report per rimuovere la dipendenza dai modelli di report.  
+ I modelli di report del linguaggio SMDL (Semantic Modeling Language) sono deprecati. Sebbene sia possibile continuare a utilizzare i modelli di report esistenti come origini dati [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nei report, è consigliabile aggiornare i report per rimuovere la dipendenza dai modelli di report.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono inclusi strumenti per la creazione o l'aggiornamento dei modelli di report. Per altre informazioni, vedere [modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non include strumenti per la creazione o l'aggiornamento di modelli di report. Per ulteriori informazioni, vedere [modifiche di rilievo nelle SQL Server Reporting Services SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Metodi deprecati nell'endpoint servizio Web  
  Le operazioni seguenti sono deprecate nell'endpoint servizio Web di <xref:ReportService2010.ReportingService2010>:  
@@ -159,7 +159,7 @@ ms.locfileid: "66109347"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a> Funzionalità deprecate in SQL Server 2008 R2 Reporting Services  
+##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funzionalità deprecate  
   
 > [!NOTE]  
 >  Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.  
@@ -172,7 +172,7 @@ ms.locfileid: "66109347"
 ## <a name="see-also"></a>Vedere anche  
  [Novità &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Compatibilità con le versioni precedenti](../getting-started/backward-compatibility.md)   
- [Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Funzionalità non più disponibili di SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Modifiche del comportamento a SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

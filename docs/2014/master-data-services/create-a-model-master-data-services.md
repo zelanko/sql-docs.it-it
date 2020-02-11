@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479929"
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un modello per contenere oggetti modello.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
 ### <a name="to-create-a-model"></a>Per creare un modello  
   
@@ -34,15 +34,15 @@ ms.locfileid: "65479929"
   
 2.  Nella pagina **Vista modelli** scegliere **Gestisci** dalla barra dei menu, quindi fare clic su **Modelli**.  
   
-3.  Nel **modello di manutenzione** pagina, fare clic su **Add model**.  
+3.  Nella pagina **manutenzione modello** fare clic su **Aggiungi modello**.  
   
-4.  Nel **nome modello** , digitare il nome del modello.  
+4.  Nella casella **nome modello** Digitare il nome del modello.  
   
 5.  Facoltativamente, scegliere **Crea entità con lo stesso nome del modello** per creare un'entità con lo stesso nome del modello.  
   
-6.  Facoltativamente, selezionare **crea gerarchia esplicita con lo stesso nome del modello** per creare una gerarchia esplicita con lo stesso nome del modello. Tale opzione abilita anche l'entità per le raccolte.  
+6.  Facoltativamente, selezionare **Crea gerarchia esplicita con lo stesso nome del modello** per creare una gerarchia esplicita con lo stesso nome del modello. Tale opzione abilita anche l'entità per le raccolte.  
   
-7.  Facoltativamente, selezionare **gerarchia obbligatoria (sono inclusi tutti i membri foglia** per creare una gerarchia esplicita come una gerarchia obbligatoria.  
+7.  Facoltativamente, selezionare **gerarchia obbligatoria (tutti i membri foglia sono inclusi** per creare la gerarchia esplicita come gerarchia obbligatoria.  
   
 8.  Fare clic su **Salva modello**.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "65479929"
  [Modelli &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Eliminare un modello &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [Modificare un nome di modello &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
+ [Modificare il nome di un modello &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   
   

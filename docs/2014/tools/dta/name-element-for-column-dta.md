@@ -1,5 +1,5 @@
 ---
-title: Nome di elemento per Column (DTA) | Microsoft Docs
+title: Elemento Name per Column (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297516"
 ---
 # <a name="name-element-for-column-dta"></a>Elemento Name per Column (DTA)
@@ -37,8 +37,9 @@ ms.locfileid: "63297516"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento `Column`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -46,7 +47,7 @@ ms.locfileid: "63297516"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Column per Index &#40;DTA&#41;](column-element-for-index-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

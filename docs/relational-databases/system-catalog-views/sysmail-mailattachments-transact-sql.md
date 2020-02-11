@@ -1,5 +1,5 @@
 ---
-title: sysmail_attachments (Transact-SQL) | Microsoft Docs
+title: sysmail_mailattachments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,40 +18,40 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060199"
 ---
-# <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
+# <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni allegato inviato a Posta elettronica database. Utilizzare questa vista quando si desidera ottenere informazioni sugli allegati di Posta elettronica database. Per esaminare tutti i messaggi di posta elettronica elaborati mediante l'utilizzo di posta elettronica Database [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
+  Contiene una riga per ogni allegato inviato a Posta elettronica database. Utilizzare questa vista quando si desidera ottenere informazioni sugli allegati di Posta elettronica database. Per esaminare tutti i messaggi di posta elettronica elaborati da Posta elettronica database usare [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Identificatore dell'allegato.|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta contenente l'allegato.|  
-|**filename**|**nvarchar(520)**|Nome di file dell'allegato. Quando **attach_query_result** è 1 e **query_attachment_filename** è NULL, posta elettronica Database crea un nome file arbitrario.|  
-|**filesize**|**int**|Dimensioni in byte dell'allegato.|  
-|**attachment**|**varbinary(max)**|Contenuto dell'allegato.|  
+|**filename**|**nvarchar (520)**|Nome di file dell'allegato. Quando **attach_query_result** è 1 e **query_attachment_filename** è null, posta elettronica database crea un nome file arbitrario.|  
+|**Filesize**|**int**|Dimensioni in byte dell'allegato.|  
+|**attachment**|**varbinary(max)**|Il contenuto dell'allegato.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando si risolvono i problemi relativi a Posta elettronica database, è possibile utilizzare questa vista per visualizzare le proprietà degli allegati.  
   
- Gli allegati archiviati nelle tabelle di sistema possono causare il **msdb** crescita del database. Uso **sysmail_delete_mailitems_sp** eliminare elementi di posta elettronica e gli allegati associati. Per altre informazioni, vedere [creare un processo di SQL Server Agent per archivio messaggi di posta elettronica Database e log eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
+ Gli allegati archiviati nelle tabelle di sistema possono causare l'aumento delle dimensioni del database **msdb** . Utilizzare **sysmail_delete_mailitems_sp** per eliminare gli elementi di posta elettronica e gli allegati associati. Per ulteriori informazioni, vedere [la pagina relativa alla creazione di un processo di SQL Server Agent per l'archiviazione di messaggi posta elettronica database e log eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Permissions  
- Concesso per il **sysadmin** ruolo predefinito del server e il **DatabaseMailUserRole** ruolo predefinito del database. Quando viene utilizzata da un membro del **sysadmin** ruolo predefinito del server, questa visualizzazione Mostra tutti gli allegati. Tutti gli altri utenti vedono semplicemente gli allegati dei messaggi che hanno inviato personalmente.  
+## <a name="permissions"></a>Autorizzazioni  
+ Concesso al ruolo predefinito del server **sysadmin** e al ruolo del database **DatabaseMailUserRole** . Se eseguita da un membro del ruolo predefinito del server **sysadmin** , questa vista Mostra tutti gli allegati. Tutti gli altri utenti vedono semplicemente gli allegati dei messaggi che hanno inviato personalmente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+ [sysmail_allitems &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_faileditems &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_sentitems &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [sysmail_unsentitems &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esempio del metodo Cancel (VB) | Microsoft Docs
+title: Esempio di metodo Cancel (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920188"
 ---
 # <a name="cancel-method-example-vb"></a>Esempio del metodo Cancel (VB)
-Questo esempio Usa la [annullare](../../../ado/reference/ado-api/cancel-method-ado.md) metodo per annullare un comando in esecuzione su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) se la connessione è occupata.  
+In questo esempio viene utilizzato il metodo [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) per annullare un comando in esecuzione su un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) se la connessione è occupata.  
   
 ```  
 'BeginCancelVB  

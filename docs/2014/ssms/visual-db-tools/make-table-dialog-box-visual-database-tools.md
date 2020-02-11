@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459977"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Finestra di dialogo Creazione tabella (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63459977"
 >  Prima di eseguire la query, è possibile modificare le proprietà della tabella che si desidera creare utilizzando la finestra **Proprietà** . For informazioni dettagliate vedere [Proprietà delle query &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare query di creazione tabella &#40;Visual Database Tools&#41;](create-make-table-queries-visual-database-tools.md)   
+ [Creazione di query di creazione tabella &#40;Visual Database Tools&#41;](create-make-table-queries-visual-database-tools.md)   
  [Tipi di query &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   
   

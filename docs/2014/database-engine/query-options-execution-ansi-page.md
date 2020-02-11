@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina ANSI) l'esecuzione di query | Microsoft Docs
+title: Esecuzione di opzioni query (pagina ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089076"
 ---
 # <a name="query-options-execution-ansi-page"></a>Esecuzione di Opzioni query (pagina ANSI)
-  Questa pagina consente di indicare se [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debba eseguire le query usando tutte o una parte delle impostazioni specificate nello standard ISO (ANSI).  
+  Utilizzare questa pagina per specificare che [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguirà le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **SET ANSI_DEFAULTS**  
+ **IMPOSTA ANSI_DEFAULTS**  
  Consente di selezionare tutte le impostazioni ISO predefinite. Per impostazione predefinita, la casella non è disponibile perché solo alcune impostazioni ISO sono configurate.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -39,7 +39,7 @@ ms.locfileid: "66089076"
  Consente di chiudere automaticamente tutti i cursori aperti (in conformità alla specifica ISO) quando viene eseguito il commit di una transazione. Se questa opzione è deselezionata, ovvero impostata su OFF, i cursori rimangono aperti durante la transazione e vengono chiusi solo con un comando esplicito o quando viene chiusa la connessione. Questa opzione è deselezionata per impostazione predefinita.  
   
  **SET ANSI_PADDING**  
- Controlla il modo in cui la colonna archivia i valori di dimensioni inferiori a quelle definite della colonna e i valori contenenti spazi vuoti finali nei dati **char**, **varchar**, **binary**e **varbinary** . Questa impostazione influisce solo sulla definizione di nuove colonne. Dopo la creazione della colonna, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archivia i valori in base all'impostazione specificata in fase di creazione. Le successive modifiche dell'impostazione non influiscono sulle colonne esistenti. Questa casella di controllo è selezionata per impostazione predefinita.  
+ Controlla il modo in cui la colonna archivia i valori inferiori alle dimensioni definite della colonna e il modo in cui la colonna archivia i valori contenenti spazi vuoti finali nei dati **char**, **varchar**, **Binary**e **varbinary** . Questa impostazione influisce solo sulla definizione di nuove colonne. Dopo la creazione della colonna, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archivia i valori in base all'impostazione specificata in fase di creazione. Le successive modifiche dell'impostazione non influiscono sulle colonne esistenti. Questa casella di controllo è selezionata per impostazione predefinita.  
   
  **SET ANSI_WARNINGS**  
  Specifica il funzionamento standard ISO in varie condizioni di errore.  
@@ -53,7 +53,7 @@ ms.locfileid: "66089076"
  **SET ANSI_NULLS**  
  Consente di specificare il funzionamento conforme allo standard ISO degli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) quando questi vengono utilizzati con valori Null. Quando **SET ANSI_NULLS** è selezionata, tutti i confronti con un valore Null restituiscono UNKNOWN, in conformità allo standard ISO. Quando l'opzione **SET ANSI_NULLS** non è selezionata, i confronti di tutti i dati con un valore Null restituiscono TRUE, se il valore dei dati è NULL. Questa opzione è selezionata per impostazione predefinita.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

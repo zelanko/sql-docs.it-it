@@ -16,53 +16,53 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918868"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-Specifica il motivo che ha causato un evento si verifichi.  
+Specifica il motivo per cui è stato generato un evento.  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|Un'operazione di aggiunta di un nuovo record.|  
+|**adRsnAddNew**|1|Un'operazione ha aggiunto un nuovo record.|  
 |**adRsnClose**|9|Un'operazione ha chiuso il **Recordset**.|  
 |**adRsnDelete**|2|Un'operazione ha eliminato un record.|  
-|**adRsnFirstChange**|11|Un'operazione eseguita alla prima modifica a un record.|  
-|**adRsnMove**|10|Un'operazione ha spostato il puntatore di record all'interno di **Recordset**.|  
-|**adRsnMoveFirst**|12|Un'operazione ha spostato il puntatore di record del primo record di **Recordset**.|  
-|**adRsnMoveLast**|15|Un'operazione ha spostato il puntatore di record dell'ultimo record di **Recordset**.|  
-|**adRsnMoveNext**|13|Un'operazione ha spostato il puntatore di record sul record successivo nella **Recordset**.|  
-|**adRsnMovePrevious**|14|Un'operazione ha spostato il puntatore di record per record precedente la **Recordset**.|  
-|**adRsnRequery**|7|Un'operazione rieseguita la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adRsnResynch**|8|Un'operazione di risincronizzata il **Recordset** con il database.|  
-|**adRsnUndoAddNew**|5|Un'operazione ha annullato l'aggiunta di un nuovo record.|  
+|**adRsnFirstChange**|11|Un'operazione ha effettuato la prima modifica a un record.|  
+|**adRsnMove**|10|Un'operazione ha spostato il puntatore del record all'interno del **Recordset**.|  
+|**adRsnMoveFirst**|12|Un'operazione ha spostato il puntatore del record sul primo record nel **Recordset**.|  
+|**adRsnMoveLast**|15|Un'operazione ha spostato il puntatore del record nell'ultimo record del **Recordset**.|  
+|**adRsnMoveNext**|13|Un'operazione ha spostato il puntatore del record al record successivo nel **Recordset**.|  
+|**adRsnMovePrevious**|14|Un'operazione ha spostato il puntatore del record nel record precedente nel **Recordset**.|  
+|**adRsnRequery**|7|Un'operazione ha nuovamente eseguito una query sul [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adRsnResynch**|8|Un'operazione ha risincronizzato il **Recordset** con il database.|  
+|**adRsnUndoAddNew**|5|Un'operazione ha invertito l'aggiunta di un nuovo record.|  
 |**adRsnUndoDelete**|6|Un'operazione ha annullato l'eliminazione di un record.|  
-|**adRsnUndoUpdate**|4|Un'operazione ha annullato l'aggiornamento di un record.|  
+|**adRsnUndoUpdate**|4|Un'operazione ha invertito l'aggiornamento di un record.|  
 |**adRsnUpdate**|3|Un'operazione ha aggiornato un record esistente.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
-|AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
-|AdoEnums.EventReason.UNDOADDNEW|  
-|AdoEnums.EventReason.UNDODELETE|  
-|AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums. EventReason. ADDNEW|  
+|AdoEnums. EventReason. CLOSE|  
+|AdoEnums. EventReason. DELETE|  
+|AdoEnums. EventReason. FIRSTCHANGE|  
+|AdoEnums. EventReason. MOVE|  
+|AdoEnums. EventReason. MOVEFIRST|  
+|AdoEnums. EventReason. MOVELAST|  
+|AdoEnums. EventReason. MOVENEXT|  
+|AdoEnums. EventReason. MOVEPREVIOUS|  
+|AdoEnums. EventReason. Requery|  
+|AdoEnums. EventReason. Resync|  
+|AdoEnums. EventReason. UNDOADDNEW|  
+|AdoEnums. EventReason. UNDODELETE|  
+|AdoEnums. EventReason. UNDOUPDATE|  
+|AdoEnums. EventReason. UPDATE|  
   
 ## <a name="applies-to"></a>Si applica a  
   

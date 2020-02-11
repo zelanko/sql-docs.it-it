@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460008"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Aggiunta di nuove righe nel riquadro Risultati (Visual Database Tools)
@@ -54,7 +54,7 @@ ms.locfileid: "63460008"
 -   Annullare la modifica premendo ESC. Se si preme ESC mentre si è posizionati in una cella cui sono state apportate modifiche, tali modifiche verranno annullate. Se si preme ESC mentre si è posizionati in una cella cui non è stata apportata alcuna modifica, verranno annullate le modifiche apportate all'intera riga.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare i dati nel riquadro dei risultati &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [Utilizzare i dati nel riquadro risultati &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

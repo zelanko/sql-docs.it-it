@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105154"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Funzione RunningValue (Generatore report e SSRS)
@@ -43,10 +43,11 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Dipende dalla funzione di aggregazione specificata nel parametro *function* .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore per `RunningValue` viene reimpostato su 0 per ogni nuova istanza dell'ambito. Se viene specificato un gruppo, il valore corrente viene reimpostato quando viene modificata l'espressione di raggruppamento. Se viene specificata un'area dati, il valore corrente viene reimpostato per ogni nuova istanza dell'area dati. Se viene specificato un set di dati, il valore corrente non viene reimpostato nell'intero set di dati.  
   
- `RunningValue` non può essere utilizzato in un filtro o un'espressione di ordinamento.  
+ 
+  `RunningValue` non può essere utilizzato in un filtro o un'espressione di ordinamento.  
   
  Il set di dati per il quale il valore corrente è calcolato deve avere lo stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come `CInt`, `CDbl` o `CDec`. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
@@ -58,7 +59,7 @@ RunningValue(expression, function, scope)
   
 -   Scope per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Espressione* non deve contenere `First`, `Last`, `Previous`, o `RunningValue` funzioni.  
+-   L' *espressione* non deve `First`contenere `Last`funzioni `Previous`,, `RunningValue` o.  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   

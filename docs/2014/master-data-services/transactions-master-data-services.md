@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478500"
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "65478500"
 >  Gli amministratori possono visualizzare tutte le transazioni per tutti gli utenti a condizione che non dispongano dell'autorizzazione di sola lettura applicata nell'area funzionale **Gestione versioni**. Ad esempio, se è impostato il livello di autorizzazione di sola lettura e aggiornamento per l'amministratore, l'amministratore non può visualizzare altre transazioni utente perché l'autorizzazione di sola lettura ha la precedenza sull'autorizzazione di aggiornamento.
 
 ## <a name="system-settings"></a>Impostazioni sistema  
- In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. Questa impostazione influisce solo su SQL Server 2008 R2. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
+ In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. Questa impostazione influisce solo su SQL Server 2008 R2. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
   
  In caso di importazione di dati in questa versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile specificare se registrare transazioni all'avvio della stored procedure. Per altre informazioni, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   

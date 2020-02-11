@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267318"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Impostare le dimensioni massime di un file di traccia (SQL Server Profiler)

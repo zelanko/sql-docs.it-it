@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098316"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Metodo ListIPAddresses (MSReportServer_ConfigurationSetting WMI)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>Metodo ListIPAddresses (MSReportServer_ConfigurationSetting WMI)
   Elenca gli indirizzi IP per il computer del server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,13 +37,13 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] Elenco degli indirizzi IP per il computer.  
   
  *IPVersion[]*  
  [out] Versione degli indirizzi IP.  
   
- *IsDhcpEnabled[]*  
+ *IsDhcpEnabled []*  
  [out] Indica se gli indirizzi IP sono abilitati a DHCP.  
   
  *Length*  
@@ -55,13 +55,13 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Note  
- Le stringhe*IPVersion* sono V4, V6.  
+## <a name="remarks"></a>Osservazioni  
+ Le stringhe *IpVersion* sono V4, V6.  
   
- Se *IsDhcpEnabled* viene `True`, il *IPAddress* è dinamico. Non deve essere utilizzato per le associazioni SSL.  
+ Se *IsDhcpEnabled* è `True`, *IPAddress* è dinamico. Non deve essere utilizzato per le associazioni SSL.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

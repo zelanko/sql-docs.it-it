@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105365"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendering delle aree dati (Generatore report e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105365"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Aree dati Tablix  
- L'area dati Tablix, che consente di creare tabelle, matrici ed elenchi, viene visualizzata come una griglia composta da colonne e righe. L'intersezione di una riga e di una colonna corrisponde a una cella. Quando viene eseguito il rendering, questa cella può contenere dati o altri elementi del report, ad esempio immagini, rettangoli, caselle di testo o sottoreport. Le dimensioni di un'area dati Tablix possono aumentare in verticale e/o in orizzontale. Inoltre, le dimensioni della cella d'angolo, delle celle di intestazione e delle celle del corpo dell'area dati possono aumentare in base al rispettivo contenuto. Se l'area dati si estende in più pagine, gli elementi del report impostati per essere ripetuti con l'area dati vengono visualizzati in tutte le pagine in cui è visualizzata l'area dati. Per altre informazioni, vedere [sono elencati &#40;Generatore Report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ L'area dati Tablix, che consente di creare tabelle, matrici ed elenchi, viene visualizzata come una griglia composta da colonne e righe. L'intersezione di una riga e di una colonna corrisponde a una cella. Quando viene eseguito il rendering, questa cella può contenere dati o altri elementi del report, ad esempio immagini, rettangoli, caselle di testo o sottoreport. Le dimensioni di un'area dati Tablix possono aumentare in verticale e/o in orizzontale. Inoltre, le dimensioni della cella d'angolo, delle celle di intestazione e delle celle del corpo dell'area dati possono aumentare in base al rispettivo contenuto. Se l'area dati si estende in più pagine, gli elementi del report impostati per essere ripetuti con l'area dati vengono visualizzati in tutte le pagine in cui è visualizzata l'area dati. Per ulteriori informazioni, vedere la pagina relativa agli [elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>Da destra a sinistra  
  Un'area dati Tablix impostata per la visualizzazione da destra a sinistra viene visualizzata con la relativa struttura come immagine speculare dell'area dati, se il rendering è stato eseguito da sinistra a destra. L'angolo dell'area dati viene visualizzato nell'angolo superiore destro. Se il report contiene colonne dinamiche, queste si espandono verso sinistra. Le impostazioni da destra a sinistra non influiscono sull'ordine dei dati nell'area dati. Le colonne vengono semplicemente disposte in un ordine diverso.  

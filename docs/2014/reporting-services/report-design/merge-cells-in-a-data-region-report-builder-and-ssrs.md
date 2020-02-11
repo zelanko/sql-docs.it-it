@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105571"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Unire le celle in un'area dati (Generatore report e SSRS)
   È possibile unire celle in un'area dati per combinare più celle, migliorare l'aspetto dell'area dati oppure consentire l'espansione delle etichette per gruppi di colonne e di righe.  
   
 > [!NOTE]  
->  Le celle possono essere unite solo all'interno delle singole aree di un'area dati: angolo, intestazioni di colonna, definizione di gruppo (o intestazioni di riga) e corpo. Non è possibile unire celle che intersecano i limiti dell'area. Non è ad esempio possibile unire una cella nell'area dell'angolo dell'area dati con una presente nell'area del gruppo di righe. Per altre informazioni sulle aree tablix, vedere [sono elencati &#40;Generatore Report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+>  Le celle possono essere unite solo all'interno delle singole aree di un'area dati: angolo, intestazioni di colonna, definizione di gruppo (o intestazioni di riga) e corpo. Non è possibile unire celle che intersecano i limiti dell'area. Non è ad esempio possibile unire una cella nell'area dell'angolo dell'area dati con una presente nell'area del gruppo di righe. Per ulteriori informazioni sulle aree Tablix, vedere la pagina relativa agli [elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

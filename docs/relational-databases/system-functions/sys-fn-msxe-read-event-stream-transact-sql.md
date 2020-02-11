@@ -21,13 +21,13 @@ ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082695"
 ---
-# <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
+# <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gli eventi estesi forniscono una funzione con valori di tabella per l'utilizzo interno da parte dell'interfaccia utente degli eventi estesi. La tabella non fornisce dati utilizzabili dagli utenti.  
@@ -39,7 +39,7 @@ ms.locfileid: "68082695"
 -   Funzione con valori di tabella fn_xe_file_target_read_file. Per altre informazioni, vedere [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |type|**Integer (4)**|Tipo di evento. Non ammette i valori Null.|  
-|data|**Immagine (16)**|Dati immagine dell'evento. Ammette i valori Null.|  
+|data|**Image (16)**|Dati immagine dell'evento. Ammette i valori Null.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   

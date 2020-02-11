@@ -18,36 +18,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100744"
 ---
 # <a name="schedules"></a>Pianificazioni
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili pianificazioni condivise e pianificazioni in base al report che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre pianificazioni condivise e pianificazioni in base al report che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
--   [Operazioni eseguibili con pianificazioni](#bkmk_whatyoucando)  
+-   [Operazioni possibili con le pianificazioni](#bkmk_whatyoucando)  
   
--   [Confronto tra le pianificazioni condivise e specifiche del Report](#bkmk_compare)  
+-   [Confronto di pianificazioni condivise e specifiche del report](#bkmk_compare)  
   
 -   [Configurare le origini dati](#bkmk_configuredatasources)  
   
--   [Store le credenziali e gli account di elaborazione](#bkmk_credentials)  
+-   [Archiviare le credenziali e gli account di elaborazione](#bkmk_credentials)  
   
--   [Pianificazione e recapito di funzionamento di elaborazione](#bkmk_how_scheduling_works)  
+-   [Funzionamento dell'elaborazione di pianificazione e recapito](#bkmk_how_scheduling_works)  
   
 -   [Dipendenze del server](#bkmk_serverdependencies)  
   
--   [Effetti dell'arresto di SQL Server Agent](#bkmk_stoppingagent)  
+-   [Effetti dell'arresto del SQL Server Agent](#bkmk_stoppingagent)  
   
--   [Effetti dell'arresto del servizio Server di Report](#bkmk_stoppingservice)  
+-   [Effetti dell'arresto del servizio del server di report](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> Operazioni possibili con le pianificazioni  
- È possibile utilizzare Gestione report nelle pagine della modalità nativa e di amministrazione del sito SharePoint in modalità SharePoint per creare e gestire le pianificazioni. È possibile effettuare le operazioni seguenti:  
+ È possibile utilizzare Gestione report nelle pagine della modalità nativa e di amministrazione del sito SharePoint in modalità SharePoint per creare e gestire le pianificazioni. È possibile:  
   
 -   Pianificare il recapito di un report in una sottoscrizione standard o guidata dai dati.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66100744"
 |Per|Includere questa attività|Ruoli predefiniti della modalità nativa|Gruppi della modalità SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Creare, modificare o eliminare pianificazioni condivise|Gestione di pianificazioni condivise|Amministratore sistema|Proprietari|  
-|Selezionare pianificazioni condivise|Visualizzazione di pianificazioni condivise|Utente sistema|Membri|  
+|Selezionare pianificazioni condivise|Visualizzazione di pianificazioni condivise|Utente sistema|Members|  
 |Creare, modificare o eliminare pianificazioni in base al report in una sottoscrizione definita dall'utente|Gestione di sottoscrizioni individuali|Browser, Generatore report, Report personali, Gestione contenuto|Visitatori, Membri|  
 |Creare, modificare o eliminare pianificazioni in base al report per tutte le altre operazioni pianificate|Gestione della cronologia dei report, Gestione di tutte le sottoscrizioni e Gestione di report|Gestione contenuto|Proprietari|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66100744"
  Reporting Services gestisce una coda degli eventi per tutte le operazioni pianificate ed esegue il polling della coda a intervalli regolari per verificare la disponibilità di nuovi eventi. Per impostazione predefinita, l'analisi della coda viene eseguita a intervalli di 10 secondi. Per cambiare l'intervallo, è possibile modificare le impostazioni di configurazione `PollingInterval`, `IsNotificationService` e `IsEventService` nel file RSReportServer.config. In modalità SharePoint viene utilizzato anche RSreporserver.config per queste impostazioni e i valori vengono applicati a tutte le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dipendenze del server  
- Per il funzionamento di Elaborazione pianificazione e recapito è necessario che vengano avviati il servizio del server di report e SQL Server Agent. La funzionalità elaborazione pianificazione e recapito deve essere abilitata mediante la `ScheduleEventsAndReportDeliveryEnabled` proprietà del **Surface Area Configuration for Reporting Services** facet nella gestione basata su criteri. Affinché vengano eseguite le operazioni pianificate, è necessario che SQL Server Agent e il servizio del server di report siano in esecuzione.  
+ Per il funzionamento di Elaborazione pianificazione e recapito è necessario che vengano avviati il servizio del server di report e SQL Server Agent. La funzionalità Elaborazione pianificazione e recapito deve essere abilitata `ScheduleEventsAndReportDeliveryEnabled` tramite la proprietà della **Configurazione superficie di attacco per Reporting Services** facet nella gestione basata su criteri. Affinché vengano eseguite le operazioni pianificate, è necessario che SQL Server Agent e il servizio del server di report siano in esecuzione.  
   
 > [!NOTE]  
 >  È possibile utilizzare il facet **Configurazione superficie di attacco per Reporting Services** per arrestare le operazioni pianificate temporaneamente o definitivamente. Anche se è possibile creare e distribuire estensioni personalizzate per il recapito, Elaborazione pianificazione e recapito non è estendibile né è possibile modificare il modo in cui gestisce eventi e notifiche. Per altre informazioni sulla disabilitazione delle funzionalità, vedere la sezione relativa al **recapito e agli eventi pianificati** di [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  

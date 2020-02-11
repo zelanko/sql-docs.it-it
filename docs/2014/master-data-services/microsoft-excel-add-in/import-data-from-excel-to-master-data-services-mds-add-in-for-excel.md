@@ -1,5 +1,5 @@
 ---
-title: Pubblicare dati da Excel a MDS (aggiuntivo MDS per Excel) | Microsoft Docs
+title: Pubblicare dati da Excel a MDS (Componente aggiuntivo MDS per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478799"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Pubblicare dati da Excel in MDS (componente aggiuntivo MDS per Excel)
@@ -24,7 +24,7 @@ ms.locfileid: "65478799"
 >  -   Quando si pubblicano le modifiche, vengono eliminati i commenti sulle celle gestite da MDS.  
 > -   Una formula non è supportata in una cella gestita da MDS. Una formula in una cella gestita da MDS viene gestita come valore di testo.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -37,9 +37,9 @@ ms.locfileid: "65478799"
   
 1.  Nel gruppo **Pubblica e convalida** fare clic su **Pubblica**.  
   
-2.  Facoltativo. Se viene visualizzata la finestra di dialogo **Pubblicazione e annotazione** , scegliere di condividere la stessa annotazione (commento) per tutti gli aggiornamenti o annotare individualmente ogni modifica.  
+2.  Facoltativa. Se viene visualizzata la finestra di dialogo **Pubblicazione e annotazione** , scegliere di condividere la stessa annotazione (commento) per tutti gli aggiornamenti o annotare individualmente ogni modifica.  
   
-3.  Facoltativo. Selezionare la casella di controllo **Non visualizzare più questa finestra di dialogo** . È possibile mostrare sempre la finestra di dialogo in futuro scegliendo **Impostazioni** e selezionando la finestra di dialogo **Mostra la finestra di dialogo Pubblicazione e annotazione durante la pubblicazione** .  
+3.  Facoltativa. Selezionare la casella di controllo **Non visualizzare più questa finestra di dialogo** . È possibile mostrare sempre la finestra di dialogo in futuro scegliendo **Impostazioni** e selezionando la finestra di dialogo **Mostra la finestra di dialogo Pubblicazione e annotazione durante la pubblicazione** .  
   
 4.  Fare clic su **Pubblica**.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "65478799"
 >  Se si aggiungono i nuovi membri (righe) al foglio di lavoro e non è possibile pubblicarli correttamente nel repository MDS, è possibile che non si disponga dell'autorizzazione **Update** per tutti gli attributi nel foglio di lavoro. Nella scheda **Verifica** nel gruppo **Modifiche** fare clic su **Rimuovi protezione foglio** e tentare di nuovo la pubblicazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Applicare le regole di business &#40;componente aggiuntivo MDS per Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [Applicare regole business &#40;Componente aggiuntivo MDS per Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicazione di dati &#40;componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [Convalida dei dati &#40;componente aggiuntivo MDS per Excel&#41;](validating-data-mds-add-in-for-excel.md)  
+ [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+ [Convalida dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

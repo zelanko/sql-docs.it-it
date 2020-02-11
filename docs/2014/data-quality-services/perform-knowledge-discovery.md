@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481300"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
@@ -37,15 +37,15 @@ ms.locfileid: "65481300"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una Knowledge Base.  
   
-##  <a name="FirstStep"></a> Primo passaggio: Avviare l'individuazione delle informazioni  
+##  <a name="FirstStep"></a>Primo passaggio: avviare l'individuazione delle informazioni  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Se si desidera eseguire l'individuazione delle informazioni in una nuova Knowledge Base, fare clic su **Nuova Knowledge Base**, immettere il nome e la descrizione e, se applicabile, specificare l'oggetto da cui si crea la Knowledge Base. Se si desidera eseguire l'individuazione delle informazioni in una Knowledge Base esistente, fare clic su **Apri Knowledge Base**, quindi seleziona una Knowledge Base.  
   
 3.  Selezionare **Individuazione informazioni** come attività, quindi fare clic su **Crea** per creare la nuova Knowledge Base, oppure **Apri** per aprirne una esistente.  
   
-##  <a name="Mapping"></a> Fase di mapping  
+##  <a name="Mapping"></a>Fase di mapping  
   
 1.  Nel campo **Origine dati** selezionare **SQL Server** (valore predefinito) o **File di Excel**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65481300"
   
 4.  Nella tabella **Mapping** eseguire il mapping di ogni colonna di origine su cui si desidera eseguire l'individuazione delle informazioni a un dominio nella Knowledge Base, come segue:  
   
-    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) o [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
+    1.  Creare un mapping selezionando una colonna di origine nell'elenco a discesa per la **Colonna di origine** di una riga vuota, quindi selezionando un dominio nell'elenco a discesa per la colonna **Dominio** nella stessa riga, se esiste un dominio. Se non esiste alcun dominio, fare clic su **Crea un dominio** o **Crea un dominio composito** per crearne uno. Per ulteriori informazioni, vedere [Creare una regola di dominio](../../2014/data-quality-services/create-a-domain-rule.md) o [Crea un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md).  
   
     2.  Ripetere il passaggio precedente per ogni mapping. Per modificare il numero di righe nella tabella, fare clic su **Aggiungi un mapping colonne**o selezionare una riga e fare clic su **Rimuovi mapping colonne selezionate**. Se si fa clic su **Rimuovi mapping colonne selezionate** quando è selezionata una riga popolata, la riga selezionata verrà eliminata anche se è presente una riga non popolata.  
   
@@ -81,23 +81,23 @@ ms.locfileid: "65481300"
   
     -   Fare clic su **Annulla** per terminare l'attività di individuazione delle informazioni. Il lavoro verrà perso e sarà visualizzata di nuovo la home page di DQS.  
   
-    -   Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Individuazione - Mapping**. Dopo aver fatto clic su **Chiudi**, per eseguire l'attività Gestione dominio, è necessario fare clic su **Individuazione informazioni** nella schermata **Apri knowledge base**, passare alla schermata **Gestione Knowledge Base: Manage Domain Terms** (Gestisci condizioni di dominio), fare clic su **Fine** e quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro sulla Knowledge Base e uscire.  
+    -   Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Individuazione - Mapping**. Dopo avere fatto clic su **Chiudi**per eseguire l'attività Gestione dominio è necessario fare clic su **Individuazione informazioni** nella schermata **Apri Knowledge Base** , passare alla schermata **Gestione Knowledge Base: Gestisci termini di dominio** , fare clic su **Fine**, quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
-##  <a name="Discover"></a> Fase di individuazione  
+##  <a name="Discover"></a>Fase di individuazione  
   
 1.  Fare clic su **Avvia** per analizzare l'origine dati.  
   
     > [!NOTE]  
     >  L'individuazione viene eseguita sulle colonne immesse nella tabella **Mapping** della pagina **Mappa** . Il dominio di cui è stato eseguito il mapping a ogni colonna verrà popolato con le informazioni ricavate dall'individuazione. Se il dominio è un dominio composito, le informazioni verranno aggiunte ai singoli domini singoli da cui è costituito il dominio composito.  
   
-2.  Durante l'esecuzione del processo di individuazione, controllare lo stato di completamento visualizzato per ogni passaggio dell'individuazione: **pre-elaborazione dei record**, **esecuzione delle regole di dominio**ed **esecuzione dell'individuazione**. La percentuale e lo stato di completamento verranno visualizzati per ognuna di queste fasi.  
+2.  Durante l'esecuzione del processo di individuazione, controllare lo stato di completamento visualizzato per ogni passaggio dell'individuazione: **Pre-elaborazione record**, **Esecuzione regole di dominio**ed **Esecuzione individuazione**. La percentuale e lo stato di completamento verranno visualizzati per ognuna di queste fasi.  
   
 3.  Al termine dell'analisi, verificare che la riga di stato sotto le statistiche di completamento indichi che l'operazione sia stata completata correttamente.  
   
     > [!NOTE]  
     >  Se si esce dalla schermata prima della fine del caricamento del file, il processo di caricamento verrà terminato.  
   
-4.  Dopo il completamento dell'analisi, verificare le statistiche nella scheda **Profiler** per controllare lo stato dei dati. Per ulteriori informazioni, vedere **Profiling dei dati e notifiche in DQS**.  
+4.  Dopo il completamento dell'analisi, verificare le statistiche nella scheda **Profiler** per controllare lo stato dei dati. Per altre informazioni, vedere **Data Profiling and Notifications in DQS**.  
   
 5.  Una volta completata l'analisi, il pulsante **Avvia** viene sostituito dal pulsante **Riavvia** . Fare clic su **Riavvia** per eseguire di nuovo il processo di analisi. Se i risultati dall'analisi precedente non sono stati ancora salvati, facendo clic su **Riavvia** si causerà la perdita di tali dati non salvati. Per continuare, fare clic su **Sì** nella finestra popup. Durante l'esecuzione dell'analisi, non lasciare la pagina o il processo di analisi verrà interrotto.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "65481300"
   
     -   Fare clic su **Annulla** per terminare l'attività di individuazione delle informazioni. Il lavoro verrà perso e sarà visualizzata di nuovo la home page di DQS.  
   
-    -   Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Individuazione informazioni - Individua**. Dopo aver fatto clic su **Chiudi**, per eseguire l'attività Gestione dominio, è necessario fare clic su **Individuazione informazioni** nella schermata **Apri knowledge base**, passare alla schermata **Gestione Knowledge Base: Manage Domain Terms** (Gestisci condizioni di dominio), fare clic su **Fine** e quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro sulla Knowledge Base e uscire.  
+    -   Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Individuazione informazioni - Individua**. Dopo avere fatto clic su **Chiudi**per eseguire l'attività Gestione dominio è necessario fare clic su **Individuazione informazioni** nella schermata **Apri Knowledge Base** , passare alla schermata **Gestione Knowledge Base: Gestisci termini di dominio** , fare clic su **Fine**, quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
     -   Fare clic per tornare alla pagina **Individua** .  
   
-##  <a name="Manage"></a> Fase di gestione dei risultati di individuazione dati  
+##  <a name="Manage"></a>Fase di gestione dei risultati di individuazione dati  
  Dopo avere eseguito l'attività di individuazione delle informazioni, è possibile modificare i valori come segue:  
   
 -   Aggiungere un valore di dominio all'elenco di valori o selezionare un valore ed eliminarlo dall'elenco  
@@ -152,13 +152,13 @@ ms.locfileid: "65481300"
   
 4.  Per modificare lo stato di un valore, procedere come segue:  
   
-    1.  **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da Errore o Non valido in Corretto, selezionare il valore e quindi scegliere **Imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia giù nella barra delle icone o dall'elenco a discesa Tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
+    1.  **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da errore o non valido a corretto, selezionare il valore, quindi fare clic su **imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
   
-    2.  **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da Corretto o Non valido in Errore, selezionare il valore, quindi scegliere **Imposta i valori di dominio selezionati come errori** (segno di spunta) dalla freccia giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    2.  **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da corretto o non valido in errore, selezionare il valore, quindi fare clic sull'icona **imposta i valori di dominio selezionati come errori** (Croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
-    3.  **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da Corretto o Errore in Non valido, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia a discesa nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    3.  **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da corretto o da errore a non valido, selezionare il valore, quindi fare clic sull'icona **imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
-    4.  **Correggi in**: dopo avere impostato un valore come errore o non valido, immettere un nuovo valore nella colonna **Correggi in**. In DQS verrà aggiunta una nuova riga per il valore sostitutivo che verrà designato come valore corretto, quindi verranno raggruppati i due valori. Il nuovo valore verrà visualizzato come valore iniziale, con il valore iniziale in grassetto e il valore in errore o non valido rientrato.  
+    4.  **Correggi**in: dopo avere impostato un valore come in errore o non valido, immettere un nuovo valore nella colonna **Correggi** in. In DQS verrà aggiunta una nuova riga per il valore sostitutivo che verrà designato come valore corretto, quindi verranno raggruppati i due valori. Il nuovo valore verrà visualizzato come valore iniziale, con il valore iniziale in grassetto e il valore in errore o non valido rientrato.  
   
 5.  Per designare i valori come gruppo di sinonimi, selezionare più valori corretti, quindi procedere come segue:  
   
@@ -167,61 +167,61 @@ ms.locfileid: "65481300"
         > [!NOTE]  
         >  Se si selezionano due o più valori in un gruppo e un altro valore all'esterno del gruppo e quindi si impostano come sinonimi, verrà generato un messaggio di errore non corretto. Dopo avere chiuso la finestra popup del messaggio di errore, i valori verranno impostati correttamente come sinonimi.  
   
-    -   **Interrompi relazione tra sinonimi selezionati**: fare clic per annullare la designazione di sinonimo.  
+    -   **Interrompi relazione tra sinonimi selezionati**: fare clic per annullare la designazione del sinonimo.  
   
-    -   **Imposta il valore di dominio selezionato come valore iniziale del gruppo**: modificare il valore iniziale del gruppo selezionando nel gruppo un valore non designato come valore iniziale e quindi fare clic sul pulsante **Imposta il valore di dominio selezionato come valore iniziale del gruppo**.  
+    -   **Imposta valore di dominio selezionato come valore principale del gruppo**: modificare il valore di riferimento del gruppo selezionando un valore nel gruppo non designato come valore principale, quindi facendo clic sul pulsante **Imposta valore di dominio selezionato come valore principale del** gruppo.  
   
-6.  **Correttore ortografico**: se nella pagina Proprietà dominio è stato abilitato il correttore ortografico, trovare tutti i valori con una sottolineatura rossa ondulata, che indica che il correttore ortografico suggerisce una correzione. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Correttore ortografico**: se è stato abilitato il correttore ortografico nella pagina Proprietà dominio, trovare tutti i valori con una sottolineatura rossa ondulata, l'indicazione che il correttore ortografico sta suggerendo una correzione. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) in errore e la correzione verrà aggiunta alla colonna **Correggi in** . Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Per utilizzare il Correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Gestisci risultati individuazione dati** per abilitarlo in questa pagina.  
   
 7.  **Aggiungi nuovo valore di dominio**: aggiungere un nuovo valore al dominio facendo clic sul pulsante **Aggiungi nuovo valore di dominio** per aggiungere una riga alla fine della tabella. Dopo avere immesso un valore, la riga verrà riposizionata in ordine alfabetico.  
   
-8.  **Import domain values from Excel** (Importa valori di dominio da Excel): aggiungere nuovi valori da un foglio di calcolo di Excel facendo clic sulla freccia giù corrispondente all'icona **Importa valori** e quindi selezionare **Import domain values from Excel** (Importa valori di dominio da Excel). Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+8.  **Importare i valori di dominio da Excel**: aggiungere nuovi valori da un foglio di calcolo di Excel facendo clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionando **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-9. **Importa valori progetto**: aggiungere nuovi valori da un progetto Data Quality facendo clic sulla freccia giù corrispondente all'icona **Importa valori** e selezionare **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Scegliere **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
+9. **Importa valori progetto**: aggiungere nuovi valori da un progetto Data Quality facendo clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionando **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Fare clic su **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
   
-10. **Elimina valori di dominio selezionati**: rimuovere uno o più valori esistenti dal dominio selezionando i valori e quindi fare clic sul pulsante **Elimina valori di dominio selezionati**. Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
+10. **Elimina valori di dominio selezionati**: rimuovere uno o più valori esistenti dal dominio selezionando i valori, quindi facendo clic sul pulsante Elimina valori di **dominio selezionati** . Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
   
 11. Fare clic su **Fine** per completare l'attività di individuazione delle informazioni. Se non sono stati controllati tutti i domini, verrà visualizzata una finestra popup. Fare clic su **Sì** per continuare il controllo o su **No** per procedere. Se si fa clic su NO, verrà visualizzata un'altra finestra popup con le opzioni seguenti:  
   
-    1.  **Publish**: la Knowledge Base verrà pubblicata per consentirne l'uso da parte dell'utente corrente o di altri utenti. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la home page. Per completare il processo, fare clic su **Sì** nella finestra popup.  
+    1.  **Publish**: la Knowledge base verrà pubblicata per l'uso da parte dell'utente corrente o di altri utenti. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la home page. Per completare il processo, fare clic su **Sì** nella finestra popup.  
   
-    2.  **No**: il lavoro verrà salvato, la Knowledge Base rimarrà bloccata e il suo stato verrà impostato come In lavorazione. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
+    2.  **No**: il lavoro verrà salvato, la Knowledge base rimarrà bloccata e lo stato della Knowledge base verrà impostato su in lavorazione. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
   
-    3.  **Annulla**: verranno chiuse le finestre popup e si rimarrà nella pagina **Gestisci valori di dominio**.  
+    3.  **Annulla**: la finestra popup verrà chiusa e si rimarrà nella pagina **Gestisci valori di dominio** .  
   
 12. È inoltre possibile fare clic sulle opzioni seguenti:  
   
-    -   **Annulla** per terminare l'attività di individuazione delle informazioni. Il lavoro verrà perso e sarà visualizzata di nuovo la home page di DQS.  
+    -   **Annulla** per terminare l'attività di individuazione delle informazioni, perdere il lavoro e tornare al Home page DQS.  
   
-    -   **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Discovery - Value Management** (Individuazione - Gestione valore).  
+    -   **Close** per tornare al Home page DQS mentre si salva il lavoro. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Discovery - Value Management** (Individuazione - Gestione valore).  
   
-    -   Fare clic su **Indietro** per tornare alla pagina **Individua** . Dopo aver fatto clic su **Chiudi**, per eseguire l'attività Gestione dominio, è necessario fare clic su **Individuazione informazioni** nella schermata **Apri knowledge base**, passare alla schermata **Gestione Knowledge Base: Manage Domain Terms** (Gestisci condizioni di dominio), fare clic su **Fine** e quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro sulla Knowledge Base e uscire.  
+    -   Fare clic su **Indietro** per tornare alla pagina **Individua** . Dopo avere fatto clic su **Chiudi**per eseguire l'attività Gestione dominio è necessario fare clic su **Individuazione informazioni** nella schermata **Apri Knowledge Base** , passare alla schermata **Gestione Knowledge Base: Gestisci termini di dominio** , fare clic su **Fine**, quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'esecuzione dell'individuazione delle informazioni  
+##  <a name="FollowUp"></a>Completamento: fasi successive all'esecuzione dell'individuazione delle informazioni  
  Dopo avere aggiunto le informazioni alla Knowledge Base nel processo computerizzato di individuazione delle informazioni, è possibile utilizzare immediatamente la Knowledge Base per un progetto di pulizia o è possibile eseguire un'attività di gestione del dominio prima di eseguirne la pulizia. Per altre informazioni sulla pulizia dei dati o sulla gestione del dominio, vedere [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md) o [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
-##  <a name="Meaning"></a> Significato dei valori Corretti, Errori e Non validi  
+##  <a name="Meaning"></a>Il significato dei valori corretti, errori e non validi  
  A ogni valore nella tabella **Valore** della pagina **Valori di dominio** è assegnata un'impostazione **Tipo** di **Corretti**, **Errori**o **Non validi**. Il tipo del valore viene generato inizialmente dall'attività di individuazione delle informazioni ma è possibile modificarlo nel modo desiderato. Il tipo finale, basato sia sulle modifiche di individuazione che su quelle interattive, viene generato dall'attività di pulizia. Le impostazioni hanno il significato seguente:  
   
--   **Corretto:** si tratta di un valore che appartiene al dominio e non contiene errori di sintassi. Ad esempio, "Chicago" in un dominio Città è corretto.  
+-   **Corretto:** Si tratta di un valore che appartiene al dominio e non contiene errori di sintassi. Ad esempio, "Chicago" in un dominio Città è corretto.  
   
--   **Errore:** si tratta di un valore che appartiene al dominio, ma non è corretto. Ad esempio, "Shicago" anziché "Chicago" in un dominio Città è un errore. In DQS un valore viene definito come in errore quando nel processo di individuazione vengono rilevati un errore di sintassi e una correzione associata. Gli errori di sintassi includono gli errori di ortografia.  
+-   **Errore:** Si tratta di un valore che appartiene al dominio, ma non è un valore corretto. Ad esempio, "Shicago" anziché "Chicago" in un dominio Città è un errore. In DQS un valore viene definito come in errore quando nel processo di individuazione vengono rilevati un errore di sintassi e una correzione associata. Gli errori di sintassi includono gli errori di ortografia.  
   
--   **Non valido:** si tratta di un valore che non appartiene al dominio e a cui non è associata una correzione. Ad esempio, il valore "12345" in un dominio Città non è valido. In DQS un valore viene definito come non valido quando non supera una regola di dominio.  
+-   **Non valido:** Si tratta di un valore che non appartiene al dominio e non dispone di una correzione. Ad esempio, il valore "12345" in un dominio Città non è valido. In DQS un valore viene definito come non valido quando non supera una regola di dominio.  
   
  È possibile modificare manualmente l'impostazione Tipo scegliendo uno degli altri due valori. In DQS non viene applica la semantica della validità e dell'errore nelle operazioni manuali. È possibile immettere una correzione per un valore Non validi senza modificarne lo stato. È possibile definire un valore come non valido anche se ha superato una regola di dominio. È possibile definire un valore come in errore anche se il processo di individuazione non ha rilevato un errore di sintassi. È inoltre possibile rimuovere una correzione a un valore Errori, contrassegnato come Corretti, senza modificarne lo stato.  
   
  Quando si esegue la pulizia interattiva dei dati nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** , nella scheda **Non validi** della pagina **Gestisci e visualizza risultati** vengono inclusi sia i valori in errore che quelli non validi.  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a>Come visualizzare i valori appropriati  
  È possibile modificare la visualizzazione come segue:  
   
--   **Filtrare** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato nell'elenco a discesa **Filtro** .  
+-   **Filtrare** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato nell'elenco a discesa **filtro** .  
   
--   **Trovare** i dati che si desidera controllare o modificare immettendo una o più lettere da cercare nella casella di testo **Trova** . Tali lettere verranno evidenziate in tutti i valori visualizzati.  
+-   **Trovare** i dati che si desidera controllare o modificare immettendo una o più lettere da cercare nella casella di testo **trova** . Tali lettere verranno evidenziate in tutti i valori visualizzati.  
   
 -   Fare clic su **Mostra solo nuovi** per limitare i valori visualizzati nella tabella solo ai valori individuati nella sessione corrente, non nelle sessioni precedenti.  
   
@@ -231,36 +231,36 @@ ms.locfileid: "65481300"
   
 -   Fare clic sul pulsante **Mostra/Nascondi il pannello della cronologia delle modifiche dei valori di dominio** per visualizzare un'anteprima popup nella parte inferiore della tabella dei valori in cui vengono mostrate le modifiche recenti alla raccolta dei valori di dominio.  
   
-##  <a name="Profiler"></a> Statistiche del profiler  
+##  <a name="Profiler"></a>Statistiche Profiler  
  Nella scheda Profiler sono fornite statistiche tramite cui viene indicata la qualità dei dati di origine. Le statistiche non misurano la qualità della Knowledge Base. Il profiling nell'individuazione informazioni fornisce informazioni essenziali quanto a completezza e univocità ma non misura l'accuratezza. Il profiling per la gestione delle informazioni consente di valutare l'importanza dell'origine dati per la compilazione e il miglioramento delle informazioni in una Knowledge Base.  
   
  La scheda **Profiler** fornisce le statistiche seguenti per il processo di individuazione, per campo e dominio:  
   
--   **Record**: numero di record individuati nei dati di esempio  
+-   **Record**: numero di record individuati nel campione di dati  
   
 -   **Valori totali**: numero di valori totali trovati per ogni campo e in totale  
   
--   **Nuovi valori**: numero di valori totali nuovi dall'ultimo processo di individuazione per ogni campo e per tutti i campi di cui è stato eseguito il mapping, con la percentuale corrispondente rispetto ai valori totali  
+-   **Nuovi valori**: numero di valori totali per ogni campo e per tutti i campi di cui è stato eseguito il mapping nuovi rispetto all'ultimo processo di individuazione e relativa percentuale dei valori totali  
   
--   **Valori univoci**: numero di valori totali univoci per ogni campo e per tutti i campi di cui è stato eseguito il mapping, con la percentuale corrispondente rispetto ai valori totali  
+-   **Valori univoci**: numero di valori totali per ogni campo e per tutti i campi di cui è stato eseguito il mapping e relativa percentuale dei valori totali  
   
--   **Nuovi valori univoci**: numero di valori univoci nuovi dall'ultimo processo di individuazione per ogni campo e per tutti i campi di cui è stato eseguito il mapping, con la percentuale corrispondente rispetto ai valori totali  
+-   **Nuovi valori univoci**: numero di valori univoci per ogni campo e per tutti i campi di cui è stato eseguito il mapping nuovi dall'ultimo processo di individuazione e percentuale dei valori totali  
   
--   **Validi nei valori di dominio**: numero di valori totali validi per ogni campo e per tutti i campi di cui è stato eseguito il mapping, con la percentuale corrispondente rispetto ai valori totali  
+-   **Valido nei valori di dominio**: numero di valori totali per ogni campo e per tutti i campi mappati validi e relativa percentuale dei valori totali  
   
  Le statistiche relative ai campi includono:  
   
--   **Campo**: nome del campo nel database di origine  
+-   **Field**: nome del campo nel database di origine  
   
--   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo  
+-   **Dominio**: nome del dominio di cui viene eseguito il mapping al campo  
   
--   **Nuovo**: numero di valori nuovi e percentuale di questi rispetto ai valori esistenti nel campo  
+-   **Nuovo**: numero di nuovi valori e percentuale di nuovi valori rispetto ai valori esistenti nel campo  
   
--   **Valori univoci**: numero di record univoci nel campo e percentuale di questi rispetto al totale  
+-   **Unique**: numero di record univoci nel campo e relativa percentuale del totale  
   
--   **Valido nel dominio**: numero di valori di dominio validi e percentuale di questi rispetto al totale  
+-   **Valido nel dominio**: numero di valori di dominio validi e relativa percentuale del totale  
   
--   **Completezza**: completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di individuazione delle corrispondenze  
+-   **Completezza**: la completezza di ogni campo di origine di cui è stato eseguito il mapping per l'esercizio corrispondente  
   
  Il profiling nell'individuazione informazioni fornisce informazioni essenziali quanto a completezza. Se il profiling suggerisce che un campo è relativamente incompleto, è necessario rimuoverlo dalla Knowledge Base di un progetto Data Quality. È possibile che il profiling non fornisca statistiche di completezza affidabili per i domini compositi. Se sono necessarie statistiche di completezza, utilizzare domini singoli anziché domini compositi. Se si desidera utilizzare domini compositi, è consigliabile creare una Knowledge Base con domini singoli di cui eseguire il profiling per determinare la completezza, quindi creare un altro dominio con un dominio composito per il processo di pulizia. Ad esempio, il profiling potrebbe mostrare una completezza del 95% per record relativi a indirizzi, utilizzando un dominio composito, ma potrebbe esservi un livello di incompletezza molto più alto per una delle colonne, ad esempio una colonna relativa al codice postale (CAP). In questo esempio, è necessario misurare la completezza della colonna del CAP con un solo dominio. Il profiling fornirà probabilmente statistiche di accuratezza affidabili per i domini compositi perché è possibile misurare l'accuratezza di più colonne allo stesso tempo. Il valore di questi dati sta nell'aggregazione composta, pertanto è consigliabile misurarne l'accuratezza con un dominio composito.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "65481300"
   
 -   Nella fase **Esecuzione regole di dominio** la colonna **Valido nel dominio** viene popolata non appena le regole di dominio vengono tutte eseguite come unità atomica di ogni valore di dominio.  
   
--   Nella fase **Esecuzione individuazione** non viene eseguito l'aggiornamento di nuovi dati nella scheda Profiler. Tutti gli errori di sintassi rilevati possono essere visualizzati nel passaggio successivo della procedura guidata, la fase **Gestisci valori di dominio**.  
+-   Nella fase di **individuazione in esecuzione** non vengono aggiornati nuovi dati nella scheda Profiler. Eventuali errori di sintassi rilevati possono essere visualizzati nel passaggio successivo della procedura guidata, la fase **Gestisci valori di dominio** .  
   
  Per l'attività di individuazione delle informazioni, le condizioni seguenti generano notifiche:  
   

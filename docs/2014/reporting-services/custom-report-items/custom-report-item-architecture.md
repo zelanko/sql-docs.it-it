@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264950"
 ---
 # <a name="custom-report-item-architecture"></a>Architettura di un elemento del report personalizzato
@@ -25,16 +25,16 @@ ms.locfileid: "63264950"
 ## <a name="the-run-time-component"></a>Componente della fase di esecuzione  
  Il componente della fase di esecuzione per un elemento del report personalizzato viene chiamato da Elaborazione report in fase di esecuzione. Questo componente accetta i dati passati da Elaborazione report in fase di esecuzione, elabora tali dati e restituisce un'immagine contenente l'elemento del report personalizzato di cui è stato eseguito il rendering.  
   
- ![Componente runtime dell'elemento del report personalizzato](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Componente runtime dell'elemento del report personalizzato")  
+ ![Componente di run-time di un elemento di report personalizzato](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Componente di run-time di un elemento di report personalizzato")  
   
 ## <a name="the-design-time-component"></a>Componente della fase di progettazione  
  Il componente della fase di progettazione consente la definizione e la modifica dell'elemento del report personalizzato nell'interfaccia di Progettazione report in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Questo componente è costituito da diversi controlli secondari che definiscono l'aspetto e le proprietà dell'elemento del report personalizzato nell'ambiente di progettazione.  
   
- ![Componente dell'elemento del report personalizzato per la fase di progettazione](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Componente dell'elemento del report personalizzato per la fase di progettazione")  
+ ![Componente della fase di progettazione di un elemento di report personalizzato](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Componente della fase di progettazione di un elemento di report personalizzato")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un componente runtime dell'elemento del report personalizzato](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Procedura: Distribuire un elemento del report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Creazione di un componente della fase di progettazione di un elemento del report personalizzato](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Procedura: Distribuzione di un elemento del report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

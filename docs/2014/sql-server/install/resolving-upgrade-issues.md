@@ -31,16 +31,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092497"
 ---
 # <a name="resolving-upgrade-issues"></a>Risoluzione dei problemi di aggiornamento
   Negli argomenti di questa sezione vengono descritti i problemi relativi all'aggiornamento rilevabili e quelli non rilevabili che possono tuttavia influire sull'esecuzione dell'aggiornamento o del post-aggiornamento. I problemi sono organizzati per componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Problemi di aggiornamento più recenti](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66092497"
   
 -   [Problemi di aggiornamento della replica](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Problemi di aggiornamento di Reporting Services &#40;Preparazione aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Problemi di aggiornamento Reporting Services &#40;preparazione aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
 -   [Problemi di aggiornamento di SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
@@ -66,9 +66,9 @@ ms.locfileid: "66092497"
   
 -   [Rinominare l'utente sys](../../../2014/sql-server/install/rename-user-sys.md)  
   
--   [Usare sp_rename per rinominare gli indici duplicati](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
+-   [Utilizzare sp_rename per rinominare gli indici duplicati](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

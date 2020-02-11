@@ -16,18 +16,18 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056483"
 ---
-# <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
+# <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un articolo da una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,38 +43,38 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione dalla quale eliminare un articolo. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione dalla quale eliminare un articolo. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo da eliminare dalla pubblicazione specificata. *articolo*viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se *articolo* viene **tutte**, la pubblicazione ancora deve essere eliminata separatamente dall'articolo.  
+`[ @article = ] 'article'`Nome dell'articolo da eliminare dalla pubblicazione specificata. *article*è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se l' *articolo* è **tutto**, la pubblicazione deve ancora essere eliminata separatamente dall'articolo.  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**.  
+`[ @ignore_distributor = ] ignore_distributor`Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
   
-`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **nvarchar(20)** , con un valore predefinito è NULL.  
+`[ @reserved = ] reserved`È riservato per usi futuri. *riservato* è di **tipo nvarchar (20)** e il valore predefinito è null.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido.  
+ **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot.  
   
- **1** significa che le modifiche apportate all'articolo di merge potrebbe invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
+ **1** indica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot. in tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Conferma eliminazione dell'articolo che richiede la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Conferma che l'eliminazione dell'articolo richiede la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è **0**.  
   
- **0** indica che se si elimina l'articolo non causano la reinizializzazione della sottoscrizione.  
+ **0** specifica che l'eliminazione dell'articolo non comporta la reinizializzazione della sottoscrizione.  
   
- **1** significa che l'eliminazione dell'articolo comporta la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
+ **1** indica che l'eliminazione dell'articolo comporta la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`Solo per uso interno.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_dropmergearticle** viene utilizzata nella replica di tipo merge. Per altre informazioni sull'eliminazione di articoli, vedere [aggiungere ed eliminare articoli in pubblicazioni esistenti](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+## <a name="remarks"></a>Osservazioni  
+ **sp_dropmergearticle** viene utilizzata nella replica di tipo merge. Per ulteriori informazioni sull'eliminazione di articoli, vedere [aggiungere ed eliminare articoli in pubblicazioni esistenti](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- L'esecuzione **sp_dropmergearticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere questi oggetti manualmente, se necessario.  
+ L'esecuzione di **sp_dropmergearticle** per eliminare un articolo da una pubblicazione non comporta la rimozione dell'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere questi oggetti manualmente, se necessario.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergearticle**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropmergearticle**.  
   
 ## <a name="example"></a>Esempio  
   
@@ -157,9 +157,9 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un articolo](../../relational-databases/replication/publish/delete-an-article.md)   
  [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

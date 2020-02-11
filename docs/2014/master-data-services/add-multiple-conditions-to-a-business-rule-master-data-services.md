@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480187"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "65480187"
 > [!NOTE]  
 >  Se si crea una regola di business che usa l'operatore **OR** , considerare la possibilità di creare una regola separata per ogni istruzione condizionale che può essere valutata indipendentemente. È quindi possibile escludere regole in base alle esigenze, offrendo maggiore flessibilità e una più facile risoluzione dei problemi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   È necessario che sia presente una regola business. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65480187"
   
 4.  Dall'elenco **Entità** selezionare un'entità.  
   
-5.  Dal **tipo di membro** selezionare un tipo di membro.  
+5.  Dall'elenco **tipo di membro** selezionare un tipo di membro.  
   
 6.  Dall'elenco **Attributo** selezionare un attributo o lasciare inalterata l'impostazione predefinita **Tutti**.  
   
@@ -52,28 +52,28 @@ ms.locfileid: "65480187"
   
 8.  Fare clic su **Modifica regola business selezionata**.  
   
-9. Nel **componenti** riquadro, espandere il **operatori logici** nodo.  
+9. Nel riquadro **componenti** espandere il nodo **operatori logici** .  
   
-10. Fare clic su **AND** oppure **OR** e trascinarlo in modo che il **IF** del riquadro **AND** etichetta.  
+10. Fare clic su **and** o **or** e trascinarlo sull'etichetta **e** del riquadro **if** .  
   
 11. Nel riquadro **Componenti** espandere il nodo **Condizioni** .  
   
-12. Fare clic su una condizione e trascinarla **IF** riquadro, al **AND** oppure **OR** etichetta nel passaggio 10.  
+12. Fare clic su una condizione e trascinarla nel riquadro **if** , nell'etichetta **and** o **or** del passaggio 10.  
   
-13. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo in modo che le **modifica condizione** del riquadro **Seleziona attributo** etichetta.  
+13. Nel riquadro **attributi** fare clic su un attributo e trascinarlo sull'etichetta **Seleziona attributo** del riquadro **Modifica condizione** .  
   
-14. Nel **modifica condizione** riquadro, completare tutti i campi obbligatori.  
+14. Nel riquadro **Modifica condizione** completare tutti i campi obbligatori.  
   
 15. Nel riquadro **Modifica condizione** fare clic su **Salva elemento**.  
   
-16. Facoltativamente, aggiungere altre condizioni, dal **componenti** riquadro trascinare **AND** oppure **OR** a qualsiasi **AND** o **OR**nel **IF** riquadro. Seguire quindi i passaggi da 13 a 15.  
+16. Facoltativamente, per aggiungere altre condizioni, dal riquadro **componenti** trascinare **and** o **or su any** **and** o or nel **riquadro** **if** . Seguire quindi i passaggi da 13 a 15.  
   
     > [!TIP]  
-    >  Per eliminare una condizione, fare clic sul nome della condizione e nel **modifica condizione** riquadro, fare clic su **l'eliminazione dell'elemento**.  
+    >  Per eliminare una condizione, fare clic sul nome della condizione e nel riquadro **Modifica condizione** fare clic su **Elimina elemento**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Configurare regole business per l'invio di notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

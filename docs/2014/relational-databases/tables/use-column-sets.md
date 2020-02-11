@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298627"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
@@ -106,13 +106,13 @@ GO
   
  In questo esempio per la colonna `i`non è stato specificato alcun valore, ma è stato inserito il valore `0` .  
   
-## <a name="using-the-sqlvariant-data-type"></a>Utilizzo del tipo di dati sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Utilizzo del tipo di dati sql_variant  
  Il tipo di dati `sql_variant` consente di archiviare più tipi di dati diversi, ad esempio `int`, `char` e `date`. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore `sql_variant` come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
   
-|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scala|  
+|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precision|Scalabilità|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|Impostazione predefinita|0|0|8000|Non applicabile**|Non applicabile|  
-|`nvarchar`|-1|Impostazione predefinita|0|0|4.000|Non applicabile|Non applicabile|  
+|`nvarchar`|-1|Impostazione predefinita|0|0|4000|Non applicabile|Non applicabile|  
 |`decimal`, `float`, `real`|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|18|0|  
 |`integer`, `bigint`, `tinyint`, `smallint`|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|  
 |`datetime2`|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|7|  
@@ -125,7 +125,7 @@ GO
   
  ** Non applicabile = Non viene restituito alcun valore per questi attributi durante un'operazione di selezione sul set di colonne. Quando per questo attributo viene specificato un valore dal chiamante nella rappresentazione XML fornita per un set di colonne in un'operazione di inserimento o di aggiornamento, viene generato un errore.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Il funzionamento del modello di sicurezza per un set di colonne è analogo a quello del modello di sicurezza che esiste tra una tabella e le relative colonne. I set di colonne possono essere visualizzati come una tabella di dimensioni ridotte e un'operazione di selezione è analoga a un'operazione SELECT * eseguita su tale tabella. La relazione tra il set di colonne e le colonne di tipo sparse, tuttavia, rappresenta un raggruppamento anziché rappresentare esclusivamente un contenitore. Il modello controlla la sicurezza sulla colonna del set di colonne e applica le operazioni DENY sulle colonne di tipo sparse sottostanti. Di seguito sono riportate le caratteristiche aggiuntive del modello di sicurezza.  
   
 -   È possibile concedere e revocare le autorizzazioni di sicurezza alla colonna del set di colonne, analogamente a qualsiasi altra colonna della tabella.  
@@ -139,7 +139,7 @@ GO
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti una tabella in cui sono contenuti i documenti è presente il set di colonne comune `DocID` e `Title`. Il gruppo Production richiede una colonna `ProductionSpecification` e una colonna `ProductionLocation` per tutti i documenti relativi alla produzione, mentre il gruppo Marketing richiede una colonna `MarketingSurveyGroup` per i documenti relativi al marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Creazione di una tabella in cui è presente un set di colonne  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Creazione di una tabella in cui è presente un set di colonne  
  Nell'esempio seguente viene creata la tabella che utilizza colonne di tipo sparse e include il set di colonne `SpecialPurposeColumns`. Vengono inserite due righe nella tabella, quindi vengono selezionati dati dalla tabella.  
   
 > [!NOTE]  

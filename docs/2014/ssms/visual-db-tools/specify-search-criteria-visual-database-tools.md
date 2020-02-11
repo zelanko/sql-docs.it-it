@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277116"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Specifica di criteri di ricerca (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63277116"
   
  Per informazioni dettagliate sulla procedura per la creazione di criteri di ricerca, vedere gli argomenti indicati nella tabella seguente.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Regole per l'immissione di valori di ricerca &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritto come immettere testo, numeri, date o valori logici.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63277116"
  Viene descritto come creare sottoquery o query nidificate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
+ [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
  Vengono forniti collegamenti ad argomenti relativi alle procedure per l'esecuzione delle attività di query più comuni.  
   
  [Tipi di query &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  

@@ -16,26 +16,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482315"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Convalidare una versione rispetto a regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]convalidare una versione per applicare regole di business a tutti i membri nella versione del modello.  
   
- In questa procedura viene illustrato come usare l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per convalidare i dati. Se si dispone dell'autorizzazione nel database MDS, è possibile utilizzare una stored procedure. Per altre informazioni, vedere [Validation Stored Procedure &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md).  
+ In questa procedura viene illustrato come usare l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per convalidare i dati. Se si dispone dell'autorizzazione nel database MDS, è possibile utilizzare una stored procedure. Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md).  
   
 > [!NOTE]  
 >  Tutti i membri devono superare la convalida prima che possa essere eseguito il commit di una versione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Lo stato della versione deve essere **Aperto** o **Bloccato**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65482315"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stati di convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
- [Stored procedure di convalida &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
+ [&#40;della stored procedure di convalida Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
  [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  

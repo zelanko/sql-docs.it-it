@@ -18,18 +18,18 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056312"
 ---
-# <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
+# <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le colonne chiave primaria (una riga per ogni colonna chiave) per la tabella remota specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,16 +42,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_server = ] 'table_server'_` È il nome del server collegato da cui restituire informazioni sulla chiave primarie. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'_`Nome del server collegato da cui si desidera ottenere informazioni sulla chiave primaria. *table_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @table_name = ] 'table_name'` È il nome della tabella per cui si desidera ottenere informazioni sulla chiave primarie. *TABLE_NAME*viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_name = ] 'table_name'`Nome della tabella per cui si desidera ottenere informazioni sulla chiave primaria. *table_name*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_schema = ] 'table_schema'` È lo schema della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella.  
+`[ @table_schema = ] 'table_schema'`Schema della tabella. *TABLE_SCHEMA* è di **tipo sysname**e il valore predefinito è null. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella.  
   
-`[ @table_catalog = ] 'table_catalog'` È il nome del catalogo in cui l'oggetto specificato *table_name* risiede. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_catalog = ] 'table_catalog'`Nome del catalogo in cui risiede il *table_name* specificato. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- Nessuna  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,12 +64,12 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Numero sequenziale della colonna in una chiave primaria a più colonne.|  
 |**PK_NAME**|**sysname**|Identificatore della chiave primaria. Se non è applicabile all'origine dei dati, restituisce NULL.|  
   
-## <a name="remarks"></a>Note  
- **sp_primarykeys** viene eseguita tramite una query di set di righe PRIMARY_KEYS del **IDBSchemaRowset** interfaccia del provider OLE DB corrispondente a *table_server*. Il *nome_tabella*, *table_schema*, *table_catalog*, e *colonna* i parametri vengono passati a questa interfaccia per limitare le righe restituito.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_primarykeys** viene eseguita eseguendo una query sul set di righe PRIMARY_KEYS dell'interfaccia **IDBSchemaRowset** del provider di OLE DB corrispondente a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
- **sp_primarykeys** restituisce un risultato vuoto se il provider OLE DB del server collegato specificato non supporta il set di righe PRIMARY_KEYS di impostare il **IDBSchemaRowset** interfaccia.  
+ **sp_primarykeys** restituisce un set di risultati vuoto se il provider di OLE DB del server collegato specificato non supporta il set di righe PRIMARY_KEYS dell'interfaccia **IDBSchemaRowset** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -83,14 +83,14 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distributed query Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Stored procedure per query distribuite &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479608"
 ---
 # <a name="master-data-services-database"></a>Database Master Data Services
@@ -33,19 +33,19 @@ ms.locfileid: "65479608"
   
 -   Fornisce le viste per i sistemi di sottoscrizione per il quali è necessario il recupero di dati dal database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [&#40;Master Data Services della tabella di staging del membro foglia&#41;](leaf-member-staging-table-master-data-services.md)  
   
--   [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabella di staging membri consolidata &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabella di staging delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
 -   [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un database Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Sicurezza di oggetti di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
- [Account di accesso, utenti e ruoli di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
+ [Creazione di un database di Master Data Services](install-windows/create-a-master-data-services-database.md)   
+ [&#40;di sicurezza degli oggetti di database Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
+ [Account di accesso, utenti e ruoli del database &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

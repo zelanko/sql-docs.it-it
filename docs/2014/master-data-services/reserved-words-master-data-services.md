@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482569"
 ---
 # <a name="reserved-words-master-data-services"></a>Parole riservate (Master Data Services)
@@ -32,26 +32,26 @@ ms.locfileid: "65482569"
   
 -   [Gerarchie esplicite](#exhierarchies)  
   
--   [Attributi](#attributes)  
+-   [Attributes](#attributes)  
   
--   [Membri](#members)  
+-   [Members](#members)  
   
-##  <a name="models"></a> Modelli  
- Se si crea un modello con il nome impostato su **Name**, non si seleziona **Crea entità con lo stesso nome del modello** perché **nome** non può essere usato per il nome di un'entità.  
+##  <a name="models"></a>Modelli  
+ Se si crea un modello con il nome impostato su **nome**, non selezionare **Crea entità con lo stesso nome del modello** perché non è possibile utilizzare il **nome** per il nome di un'entità.  
   
-##  <a name="entities"></a> Entità  
+##  <a name="entities"></a>Entità  
  Per i nomi dell'entità, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a> Gerarchie esplicite  
+##  <a name="exhierarchies"></a>Gerarchie esplicite  
  Per i nomi della gerarchia espliciti, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="attributes"></a> Attributi  
+##  <a name="attributes"></a>Attributi  
   
 -   **ID**  
   
--   **Code**  
+-   **Codice**  
   
--   **Name**  
+-   **Nome**  
   
 -   **EnterDTM**  
   
@@ -69,8 +69,8 @@ ms.locfileid: "65482569"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Membri  
- Per i membri, non è possibile utilizzare **MDMMemberStatus** oppure **radice** per il **codice** valore dell'attributo.  
+##  <a name="members"></a>Membri  
+ Per i membri, non è possibile usare **MDMMemberStatus** o **root** per il valore dell'attributo **Code** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Master Data Services](master-data-services-overview-mds.md)  

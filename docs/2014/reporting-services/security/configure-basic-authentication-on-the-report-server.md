@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102168"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
@@ -38,7 +38,7 @@ ms.locfileid: "66102168"
   
 1.  Aprire RSReportServer.config in un editor di testo.  
   
-     Il file si trova in  *\<unità >:* \Programmi\Microsoft SQL Server\MSRS12. Services\ReportServer MSSQLSERVER\Reporting.  
+     Il file si trova in * \<unità>:* \Programmi\Microsoft SQL Server\MSRS12. Services\ReportServer. MSSQLSERVER\Reporting  
   
 2.  Trovare <`Authentication`>.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66102168"
           </AuthenticationTypes>  
     ```  
   
-4.  Incollare la struttura sulle voci esistenti per <`Authentication`>.  
+4.  Incollarlo sulle voci esistenti per <`Authentication`>.  
   
      Se si utilizzano più tipi di autenticazione, aggiungere solo l'elemento `RSWindowsBasic`, ma non eliminare le voci relative a `RSWindowsNegotiate`, `RSWindowsNTLM` o `RSWindowsKerberos`.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66102168"
   
      Si noti che non è possibile utilizzare `Custom` con altri tipi di autenticazione.  
   
-5.  Sostituire i valori vuoti per <`Realm`> o <`DefaultDomain`> con i valori validi per l'ambiente.  
+5.  Sostituire i valori vuoti per `Realm` <> o `DefaultDomain` <> con valori validi per l'ambiente in uso.  
   
 6.  Salvare il file.  
   
@@ -84,9 +84,11 @@ ms.locfileid: "66102168"
 ## <a name="rswindowsbasic-reference"></a>Riferimento per RSWindowsBasic  
  Quando si configura l'autenticazione di base, è possibile specificare gli elementi seguenti.  
   
-|Elemento|Obbligatorio|Valori validi|  
+|Elemento|Obbligatoria|Valori validi|  
 |-------------|--------------|------------------|  
-|LogonMethod|Yes<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|`2` = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> `3` = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: I valori 0 (per accesso interattivo) e 1 (per accesso batch) non sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sì<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|
+  `2` = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> 
+  `3` = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: i valori 0 (per accesso interattivo) e 1 (per accesso batch) NON sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Facoltativo|Specifica una partizione delle risorse che include le caratteristiche di autorizzazione e autenticazione utilizzate per controllare l'accesso alle risorse protette nell'organizzazione.|  
 |DefaultDomain|Facoltativo|Specifica il dominio utilizzato dal server per autenticare l'utente. Questo valore è facoltativo, ma se non viene specificato il server di report utilizzerà il nome del computer come dominio. Se il computer è un membro di dominio, tale dominio rappresenta il dominio predefinito. Se il server di report è stato installato in un controller di dominio, il dominio utilizzato è quello controllato dal computer.|  
   
@@ -101,11 +103,11 @@ ms.locfileid: "66102168"
   
 -   Aggiungere l'elemento `IsReportBuilderAnonymousAccessEnabled` a RSReportServer.config e impostarlo su `True`. Dopo aver salvato il file, il server di report crea un nuovo endpoint in Generatore report. Tale endpoint viene utilizzato internamente per accedere ai file del programma e non include un'interfaccia programmatica che è possibile utilizzare nel codice. Grazie a un endpoint distinto, Generatore report può eseguire il proprio dominio applicazione con il limite di processo del servizio del server di report.  
   
--   Se si desidera, è possibile specificare un account con privilegi minimi per elaborare le richieste in un contesto di sicurezza diverso rispetto a quello del server di report. Questo account diventa l'account anonimo per l'accesso ai file di Generatore report in un server di report. L'account imposta l'identità del thread nel processo di lavoro ASP.NET. Le richieste eseguite in tale thread vengono passate al server di report senza controllo di autenticazione. Questo account è equivalente a IUSR_\<machine > account in Internet Information Services (IIS), che viene usato per impostare il contesto di sicurezza di thread di lavoro ASP.NET elabora quando sono abilitati l'accesso anonimo e la rappresentazione. Per specificare l'account, aggiungerlo in un file Web.config di Generatore report.  
+-   Se si desidera, è possibile specificare un account con privilegi minimi per elaborare le richieste in un contesto di sicurezza diverso rispetto a quello del server di report. Questo account diventa l'account anonimo per l'accesso ai file di Generatore report in un server di report. L'account imposta l'identità del thread nel processo di lavoro ASP.NET. Le richieste eseguite in tale thread vengono passate al server di report senza controllo di autenticazione. Questo account è equivalente all'account IUSR_\<Machine> in Internet Information Services (IIS), utilizzato per impostare il contesto di sicurezza per i processi di lavoro di ASP.NET quando sono abilitati l'accesso anonimo e la rappresentazione. Per specificare l'account, aggiungerlo in un file Web.config di Generatore report.  
   
  Se si desidera abilitare l'accesso anonimo ai file del programma Generatore report, è necessario che il server di report sia configurato per l'autenticazione di base. Se il server di report non è configurato per l'autenticazione di base e si prova ad abilitare l'accesso anonimo, viene generato un errore.  
   
- Per altre informazioni sui problemi di autenticazione e Generatore Report, vedere [configurare l'accesso a Generatore Report](../report-server/configure-report-builder-access.md).  
+ Per ulteriori informazioni sui problemi di autenticazione e Generatore report, vedere [Configure Generatore report Access](../report-server/configure-report-builder-access.md).  
   
 #### <a name="to-configure-report-builder-access-on-a-report-server-configured-for-basic-authentication"></a>Per configurare l'accesso a Generatore report in un server di report configurato per l'autenticazione di base  
   
@@ -137,7 +139,7 @@ ms.locfileid: "66102168"
   
      Se si include un file Web.config, la modalità di autenticazione deve essere impostata su `Windows`.  
   
-     `Identity impersonate` può essere `True` o `False`.  
+     `Identity impersonate`può essere `True` o `False`.  
   
     -   Impostarla su `False` se non si desidera che ASP.NET legga il token di sicurezza. La richiesta verrà eseguita nel contesto di sicurezza del servizio del server di report.  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ae5ff9bf9fe78ca7230865c6f3df5f2b1333f005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480852"
 ---
 # <a name="dqs-security"></a>Sicurezza relativa a DQS
@@ -31,7 +31,7 @@ ms.locfileid: "65480852"
   
 -   Il **DQS KB Operator** (ruolo dqs_kb_operator) può modificare ed eseguire un progetto. Non può eseguire qualsiasi altro tipo di gestione delle informazioni né creare o modificare una Knowledge Base. Può visualizzare i dati di monitoraggio delle attività, ma non interrompere o arrestare un'attività o eseguire attività amministrative.  
   
-## <a name="user-management"></a>Gestione degli utenti  
+## <a name="user-management"></a>User Management  
  L'amministratore di database (DBA) crea gli utenti di DQS e li associa ai ruoli DQS in SQL Server Management Studio. Il DBA gestisce le autorizzazioni aggiungendo account di accesso SQL come utenti del database DQS_MAIN e associando ogni utente a uno dei ruoli DQS. A ogni ruolo vengono concesse autorizzazioni per un set di stored procedure nel database DQS_MAIN. I tre ruoli DQS non sono disponibili per i database DQS_PROJECTS e DQS_STAGING_DATA.  
   
 ## <a name="related-tasks"></a>Attività correlate  

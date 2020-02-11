@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di database | Microsoft Docs'
+title: 'Scenario: Aggiunta e modifica di un diagramma di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273739"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procedura dettagliata: Aggiunta e modifica di un diagramma di database
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
   In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per completare questo scenario, saranno necessari gli elementi seguenti:  
   
 -   Accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -70,11 +70,11 @@ ms.locfileid: "63273739"
   
 1.  Fare clic con il pulsante destro del mouse su Progettazione diagrammi all'esterno delle tabelle esistenti e scegliere **Nuova tabella**.  
   
-2.  Nel **Scegli nome** finestra di dialogo, fare clic su **OK** per accettare il nome predefinito `Table1`.  
+2.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome `Table1`predefinito.  
   
      Verrà visualizzata una nuova griglia della tabella con tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
   
-3.  Aggiungere le informazioni seguenti per `Table1`:  
+3.  Aggiungere le informazioni seguenti a `Table1`:  
   
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |---------------------|-------------------|---------------------|  
@@ -88,9 +88,9 @@ ms.locfileid: "63273739"
   
 5.  Scegliere **Salva Diagram1** dal menu **File**.  
   
-6.  Nel **Scegli nome** finestra di dialogo, fare clic su **OK** per accettare il nome predefinito `Diagram1`.  
+6.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome `Diagram1`predefinito.  
   
-7.  Verrà visualizzata la finestra di dialogo **Salva** con un messaggio che indica che `Table1` verrà salvata nel database. Scegliere **Sì**.  
+7.  Verrà visualizzata la finestra di dialogo **Salva** con un messaggio che indica che `Table1` verrà salvata nel database. Fare clic su **Sì**.  
   
 ## <a name="modifying-table-structure"></a>Modifica della struttura della tabella  
  È possibile aggiungere vincoli CHECK e creare relazioni tra le tabelle in Progettazione diagrammi.  
@@ -101,7 +101,7 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Vincoli CHECK** .  
   
-2.  Scegliere **Aggiungi**.  
+2.  Fare clic su **Aggiungi**.  
   
      Verrà visualizzato un nuovo vincolo nell'elenco **Selected Check Constraint** (Vincolo CHECK selezionato), con il nome predefinito `CK_Table1`.  
   
@@ -111,9 +111,10 @@ ms.locfileid: "63273739"
   
 4.  Digitare `T1col3 > 5` e fare clic su **OK**.  
   
-     `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
+     
+  `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 #### <a name="to-create-relationships-between-tables"></a>Per creare relazioni tra le tabelle  
   
@@ -145,7 +146,7 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Indici/chiavi** .  
   
-2.  Scegliere **Aggiungi**.  
+2.  Fare clic su **Aggiungi**.  
   
      Verrà visualizzato un nuovo indice nell'elenco **Chiave o indice primario/univoco selezionato** , con un nome predefinito simile a `IX_Table1`.  
   
@@ -173,11 +174,11 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Indici XML** .  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   
      Un indice XML con valori predefiniti verrà aggiunto all'elenco **Selected XML Index** (Indice XML selezionato).  
   
-4.  Scegliere **Chiudi**.  
+4.  Fare clic su **Close**.  
   
     > [!NOTE]  
     >  Gli indici XML vengono creati per colonna. Il primo indice XML è primario, eventuali indici aggiuntivi sono secondari.  
@@ -207,12 +208,12 @@ ms.locfileid: "63273739"
 -   Copia del diagramma in una bitmap  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzazione della quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Impostare Progettazione diagrammi di Database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [Aggiungere tabelle a diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Creare relazioni tra tabelle in un diagramma &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
- [Creare indici XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copiare negli Appunti un'immagine di un diagramma di Database &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Personalizzare la quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [Creazione di relazioni tra tabelle in un diagramma &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Creazione di indici XML](../../relational-databases/xml/create-xml-indexes.md)   
+ [Copiare un'immagine di un diagramma di database negli Appunti &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Utilizzare il layout di un diagramma &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

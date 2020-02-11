@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313015"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
   Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibile specificare la modalità di stampa di un documento.  
   
 ## <a name="printer"></a>Stampante  
- **Name**  
+ **Nome**  
  Specifica la stampante. Selezionare una stampante dall'elenco. La stampante selezionata diviene la stampante predefinita fino alla chiusura di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o alla selezione di un'altra stampante. Le informazioni visualizzate nei campi sotto l'elenco si applicano alla stampante selezionata.  
   
- **Stato**  
+ **Status**  
  Descrive la stato della stampante selezionata, che può essere ad esempio occupata o pronta.  
   
  **Tipo**  

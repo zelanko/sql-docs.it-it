@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4f4bc927b5b82402977328b592185e14286c2466
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479001"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>Cercare la corrispondenza tra dati simili (componente aggiuntivo MDS per Excel)
@@ -26,11 +26,11 @@ ms.locfileid: "65479001"
   
 -   Creare una Knowledge Base DQS e criteri di corrispondenza personalizzati. Per altre informazioni, vedere [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   È necessario disporre di un foglio di lavoro contenente dati gestiti da MDS. Per altre informazioni, vedere [caricare i dati da MDS in Excel](export-data-to-excel-from-master-data-services.md).  
   
--   Facoltativo. È possibile combinare altri dati con i dati gestiti da MDS prima di verificare le analogie. Per altre informazioni, vedere [Combinare i dati &#40;componente aggiuntivo MDS per Excel&#41;](combine-data-mds-add-in-for-excel.md).  
+-   Facoltativa. È possibile combinare altri dati con i dati gestiti da MDS prima di verificare le analogie. Per altre informazioni, vedere [Combinare i dati &#40;componente aggiuntivo MDS per Excel&#41;](combine-data-mds-add-in-for-excel.md).  
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>Per trovare analogie utilizzando la Knowledge Base predefinita  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65479001"
 -   Visualizzare informazioni aggiuntive per determinare quali dati sono simili. Per altre informazioni, vedere [Colonne corrispondenti Data Quality &#40;componente aggiuntivo MDS per Excel&#41;](data-quality-matching-columns-mds-add-in-for-excel.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Corrispondenza Data Quality nel Componente aggiuntivo MDS per Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Corrispondenza di dati](../../data-quality-services/data-matching.md)  
   
   

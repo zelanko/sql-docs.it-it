@@ -1,5 +1,5 @@
 ---
-title: Tipi di cursore scorrevoli | Microsoft Docs
+title: Tipi di cursori scorrevoli | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061633"
 ---
 # <a name="scrollable-cursor-types"></a>Tipi di cursore scorrevoli
-I quattro tipi di cursori scorrevoli sono statici, dinamici, gestito da keyset e mista. I cursori statici rilevare le modifiche apportate poche o nessuna ma sono relativamente economici da implementare. I cursori dinamici rilevano tutte le modifiche, ma sono costosi da implementare. I cursori keyset e misti si trovano rilevano la maggior parte delle modifiche ma meno spese rispetto ai cursori dinamici.  
+I quattro tipi di cursori scorrevoli sono statici, dinamici, gestiti da keyset e misti. I cursori statici rilevano poche o nessuna modifica, ma sono relativamente convenienti da implementare. I cursori dinamici rilevano tutte le modifiche ma sono costose da implementare. I cursori gestiti da keyset e i cursori misti si trovano tra, rilevando la maggior parte delle modifiche ma a meno spese rispetto ai cursori dinamici.  
   
  I termini seguenti vengono usati per definire le caratteristiche di ogni tipo di cursore scorrevole:  
   
--   **Il proprietario degli aggiornamenti, eliminazioni e inserimenti.** Gli aggiornamenti, eliminazioni e inserimenti eseguiti nel cursore, con una chiamata a **SQLBulkOperations** oppure **SQLSetPos** o con un oggetto posizionato istruzione update o delete.  
+-   **Aggiornamenti, eliminazioni e inserimenti personalizzati.** Aggiornamenti, eliminazioni e inserimenti eseguiti tramite il cursore, con una chiamata a **SQLBulkOperations** o **SQLSetPos** o con un'istruzione Update o DELETE posizionata.  
   
--   **Altri aggiornamenti, si elimina e si inserisce.** Gli aggiornamenti, eliminazioni e inserimenti non effettuati dal cursore, comprese quelle apportate da altre operazioni nella stessa transazione, quelle effettuate tramite altre transazioni e quelle apportate da altre applicazioni.  
+-   **Altri aggiornamenti, eliminazioni e inserimenti.** Aggiornamenti, eliminazioni e inserimenti non eseguiti dal cursore, inclusi quelli creati da altre operazioni nella stessa transazione, quelli eseguiti attraverso altre transazioni e quelli creati da altre applicazioni.  
   
--   **Appartenenza al gruppo.** Il set di righe nel set di risultati.  
+-   **Appartenenza.** Set di righe nel set di risultati.  
   
--   **Ordine.** L'ordine in cui vengono restituite righe dal cursore.  
+-   **Ordine.** Ordine in cui le righe vengono restituite dal cursore.  
   
--   **valori.** I valori in ogni riga nel set di risultati.  
+-   **Valori.** Valori in ogni riga del set di risultati.  
   
- Per informazioni su come aggiornare, eliminare e inserire i dati, vedere [Panoramica di aggiornamento dati](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Per informazioni su come aggiornare, eliminare e inserire i dati, vedere [Cenni preliminari sull'aggiornamento dei dati](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

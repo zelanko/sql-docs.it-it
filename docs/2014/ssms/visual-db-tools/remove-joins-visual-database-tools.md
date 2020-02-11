@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253489"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Rimozione di join (Visual Database Tools)
@@ -36,8 +36,8 @@ ms.locfileid: "63253489"
  In Progettazione query e Progettazione viste verrà rimossa la linea di join e modificata l'istruzione nel [riquadro SQL](sql-pane-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Unire tabelle automaticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [Join manuale &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [Unire tabelle in modo automatico &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Unione di tabelle manualmente &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [Eseguire query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

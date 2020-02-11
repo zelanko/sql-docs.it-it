@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482705"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Visualizzare tutte le annotazioni o transazioni per un membro (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]visualizzare le annotazioni (commenti) e le transazioni per le righe di dati (membri) quando si vuole visualizzare gli aggiornamenti ai dati nel corso del tempo.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario avere un foglio di lavoro attivo che contenga i dati gestiti da MDS.  
@@ -29,11 +29,11 @@ ms.locfileid: "65482705"
   
 1.  Fare clic su una cella nella riga che contiene le transazioni che si desidera visualizzare.  
   
-2.  Pulsante destro del mouse e dal menu visualizzato, fare clic su **Visualizza transazioni**.  
+2.  Fare clic con il pulsante destro del mouse e dal menu visualizzato fare clic su **Visualizza transazioni**.  
   
 3.  Nella finestra di dialogo **Visualizza transazioni** viene visualizzato l'elenco di transazioni. Per visualizzare tutte le annotazioni associate a una transazione, fare clic su una riga nella griglia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicazione di dati &#40;componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

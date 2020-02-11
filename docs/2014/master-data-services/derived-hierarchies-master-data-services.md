@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479412"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Gerarchie derivate (Master Data Services)
@@ -57,7 +57,7 @@ ms.locfileid: "65479412"
   
  In una gerarchia derivata è possibile evidenziare la relazione tra Product e Subcategory, quindi tra Subcategory e Category. Quando si visualizzano i membri in questa gerarchia, ogni livello nell'albero contiene i membri della stessa entità.  
   
- ![Esempio di gerarchia derivata relativo alla mountain bike](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Esempio di gerarchia derivata relativo alla mountain bike")  
+ ![Esempio di gerarchia derivata di mountain bike](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Esempio di gerarchia derivata di mountain bike")  
   
  Questo tipo di gerarchia non consente lo spostamento di un membro in un livello non valido. È ad esempio possibile spostare la bicicletta Road-650 da una sottocategoria, Road Bikes, in un'altra, Mountain Bikes. Non è possibile spostare Road-650 direttamente in una categoria, ad esempio 1 {Bikes}. Ogni volta che si sposta un membro nell'albero gerarchico, il valore dell'attributo basato su dominio del membro viene modificato in modo da riflettere lo spostamento.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65479412"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare una nuova gerarchia derivata.|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare livelli di una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare livelli in una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
 |Modificare il nome di una gerarchia derivata esistente.|[Modificare il nome di una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Eliminare una gerarchia derivata esistente.|[Eliminare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  

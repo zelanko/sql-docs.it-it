@@ -14,35 +14,35 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479567"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminare un gruppo di attributi (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile eliminare un gruppo di attributi quando non è più necessario visualizzare la scheda nell'area funzionale **Visualizzatore** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   **Nota** Se sono presenti gruppi di attributi, gli attributi che non appartengono a un gruppo non saranno visualizzati nel **Visualizzatore**. Quando non sono presenti gruppi di attributi, vengono visualizzati tutti gli attributi.  
+-   **Nota** Quando esistono gruppi di attributi, gli attributi che non appartengono a un gruppo di attributi non vengono visualizzati in **Esplora**. Quando non sono presenti gruppi di attributi, vengono visualizzati tutti gli attributi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute-group"></a>Per eliminare un gruppo di attributi  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
-2.  Nel **Vista modelli** pagina, dalla barra dei menu scegliere **Gestisci** e fare clic su **gruppi di attributi**.  
+2.  Nella pagina **vista modelli** scegliere **Gestisci** dalla barra dei menu, quindi fare clic su **gruppi di attributi**.  
   
-3.  Selezionare un modello dall'elenco **Modello** .  
+3.  Dall'elenco **Modello** , selezionare un modello.  
   
 4.  Dall'elenco **Entità** selezionare un'entità.  
   
-5.  Fare clic sul segno più per espandere **gruppi di foglie**, **gruppi consolidati**, o **gruppi di raccolte**, a seconda del tipo di gruppo che si desidera eliminare.  
+5.  Fare clic sul segno più per espandere **gruppi foglia**, **gruppi consolidati**o **gruppi di raccolte**, a seconda del tipo di gruppo che si desidera eliminare.  
   
 6.  Fare clic sul gruppo di attributi che si desidera eliminare.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "65479567"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Creare un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Creazione di un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481001"
 ---
 # <a name="create-a-knowledge-base"></a>Creare una Knowledge Base
@@ -33,9 +33,9 @@ ms.locfileid: "65481001"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare una Knowledge Base, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Createaknowledgebase"></a> Create a knowledge base  
+##  <a name="Createaknowledgebase"></a>Creare una Knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fare clic su **Nuova Knowledge Base**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65481001"
   
 6.  Fare clic su **Crea**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di una Knowledge Base  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di una Knowledge base  
  Dopo avere creato una Knowledge Base, vengono visualizzate una procedura guidata che consente di eseguire l'individuazione delle informazioni, una procedura guidata per creare i criteri di corrispondenza o le pagine per eseguire la gestione del dominio. Per altre informazioni sull'individuazione delle informazioni, sulla gestione del dominio o sui criteri di corrispondenza, vedere [Eseguire l'individuazione di informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md), o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   
