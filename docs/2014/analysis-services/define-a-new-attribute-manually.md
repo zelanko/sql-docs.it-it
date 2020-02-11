@@ -14,33 +14,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082342"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definire manualmente un nuovo attributo
-  Questa procedura descrive come creare un nuovo attributo in una dimensione utilizzando la **attributi** riquadro nella finestra di progettazione dimensioni.  
+  In questa procedura viene descritto come creare un nuovo attributo in una dimensione utilizzando il riquadro **attributi** in Progettazione dimensioni.  
   
 ### <a name="to-create-a-new-attribute-manually"></a>Per creare un nuovo attributo manualmente  
   
 1.  In Progettazione dimensioni aprire la dimensione in cui si desidera creare l'attributo.  
   
-2.  Assicurarsi che il **attributi** riquadro è in formato griglia.  
+2.  Verificare che il riquadro **attributi** sia in formato griglia.  
   
-     Fare doppio clic sulla **attributi** riquadro, scegliere **Mostra attributi in**, quindi fare clic su **griglia**.  
+     Fare clic con il pulsante destro del mouse sul riquadro **attributi** , scegliere **Mostra attributi in**e quindi fare clic su **griglia**.  
   
-3.  Scorrere fino all'ultima riga della griglia e quindi fare clic su  **\<nuovo attributo >** .  
+3.  Scorrere fino all'ultima riga della griglia e quindi fare clic su ** \<nuovo attributo>**.  
   
 4.  Digitare un nome da assegnare all'attributo per impostare la proprietà `Name` e quindi premere INVIO.  
   
      È possibile accettare i valori predefiniti per l'utilizzo dell'attributo, il tipo, la colonna chiave e la colonna del nome oppure è possibile selezionare nuovi valori nell'elenco a discesa.  
   
-5.  Fare doppio clic dell'attributo e quindi fare clic su **proprietà** per configurare altre proprietà.  
+5.  Fare clic con il pulsante destro del mouse sull'attributo e quindi scegliere **Proprietà** per configurare le altre proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

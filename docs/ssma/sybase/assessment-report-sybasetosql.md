@@ -10,37 +10,37 @@ ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083498"
 ---
 # <a name="assessment-report-sybasetosql"></a>Report di valutazione (SybaseToSQL)
-La finestra di Report di valutazione Mostra i risultati della conversione di oggetti di database da [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi, e può inoltre la Guida è stimare la complessità e i costi dei progetti di migrazione.  
+La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database [!INCLUDE[tsql](../../includes/tsql-md.md)] nella sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
   
-Per accedere al Report di valutazione, selezionare gli oggetti da convertire in Visualizzatore metadati di origine, fare doppio clic su **database**, quindi selezionare **crea Report**.  
+Per accedere al report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**.  
   
 ## <a name="options"></a>Opzioni  
 **Statistiche di conversione**  
-Mostra le statistiche di conversione dal tipo di istruzione. Questo riquadro è visibile solo quando un oggetto di gruppo, ad esempio uno schema, o nel riquadro di sinistra è selezionato un oggetto senza codice.  
+Mostra le statistiche di conversione per tipo di istruzione. Questo riquadro è visibile solo quando si seleziona un oggetto gruppo, ad esempio uno schema, o un oggetto senza codice nel riquadro sinistro.  
   
-**Oggetti in base alla categoria**  
-Mostra le statistiche di conversione dal tipo di oggetto. Questo riquadro è visibile solo quando un oggetto di gruppo, ad esempio uno schema, o nel riquadro di sinistra è selezionato un oggetto senza codice.  
+**Oggetti per categoria**  
+Mostra le statistiche di conversione per tipo di oggetto. Questo riquadro è visibile solo quando si seleziona un oggetto gruppo, ad esempio uno schema, o un oggetto senza codice nel riquadro sinistro.  
   
 **Statistiche**  
-Mostra le statistiche di conversione per l'oggetto selezionato. Questo riquadro è visibile solo quando è selezionato un oggetto singoli con il codice nel riquadro sinistro. Potrebbe essere necessario espandere **statistiche** per visualizzare questo riquadro.  
+Mostra le statistiche di conversione per l'oggetto selezionato. Questo riquadro è visibile solo quando si seleziona un singolo oggetto con codice nel riquadro sinistro. Potrebbe essere necessario espandere **statistiche** per visualizzare questo riquadro.  
   
-**Navigazione di origine**  
-Visualizzare il codice di ambiente del servizio App per l'oggetto selezionato ed evidenzia il codice che non è stato convertito in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questo riquadro è visibile solo quando è selezionato un oggetto singoli con il codice nel riquadro sinistro.  
+**Navigazione origine**  
+Mostra il codice dell'ambiente del servizio app per l'oggetto selezionato ed evidenzia il codice che [!INCLUDE[tsql](../../includes/tsql-md.md)]non è stato convertito in. Questo riquadro è visibile solo quando si seleziona un singolo oggetto con codice nel riquadro sinistro.  
   
-Fare clic sui numeri di riga per selezionare o deselezionare i segnalibri. Usare i pulsanti nella parte superiore del riquadro per esplorare il codice.  
+Per impostare o cancellare i segnalibri, fare clic sui numeri di riga. Utilizzare i pulsanti nella parte superiore del riquadro per spostarsi nel codice.  
   
 **Navigazione di destinazione**  
-Mostra la conversione del risultante [!INCLUDE[tsql](../../includes/tsql-md.md)] codice per l'oggetto selezionato e i messaggi di errore per il codice che non è stato convertito. Questo riquadro è visibile solo quando è selezionato un oggetto singoli con il codice nel riquadro sinistro.  
+Mostra il codice risultante [!INCLUDE[tsql](../../includes/tsql-md.md)] della conversione per l'oggetto selezionato e i messaggi di errore per il codice che non è stato convertito. Questo riquadro è visibile solo quando si seleziona un singolo oggetto con codice nel riquadro sinistro.  
   
-Fare clic sui numeri di riga per selezionare o deselezionare i segnalibri. Usare i pulsanti nella parte superiore del riquadro per esplorare il codice.  
+Per impostare o cancellare i segnalibri, fare clic sui numeri di riga. Utilizzare i pulsanti nella parte superiore del riquadro per spostarsi nel codice.  
   
-**Riquadro messaggi**  
-Viene illustrato l'errori, avvisi e messaggi di informazioni che vengono generati quando si crea il report di valutazione. I messaggi vengono raggruppati per numero. Per visualizzare il codice che ha causato l'errore, fare clic su **errore**, **avviso**, o **Info**, espandere la categoria dei messaggi e quindi fare clic su un messaggio.  
+**riquadro Messaggi**  
+Mostra gli errori, gli avvisi e i messaggi informativi generati durante la creazione del report di valutazione. I messaggi sono raggruppati per numero. Per visualizzare il codice che ha causato l'errore, fare clic su **errore**, **avviso**o **informazioni**, espandere la categoria di messaggi e quindi fare clic su un messaggio.  
   

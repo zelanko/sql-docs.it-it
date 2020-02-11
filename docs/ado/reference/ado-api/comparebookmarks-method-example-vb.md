@@ -15,16 +15,16 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919601"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Esempio del metodo CompareBookmarks (VB)
-Questo esempio viene illustrato il [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (metodo). Il valore relativo di segnalibri è raramente necessaria, a meno che un determinato segnalibro è in qualche modo particolare.  
+Questo esempio illustra il metodo [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Il valore relativo dei segnalibri è raramente necessario, a meno che un particolare segnalibro non sia in qualche modo speciale.  
   
- Definire una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dalle ***autori*** tabella come destinazione di una ricerca. Quindi visualizzare la posizione di ogni riga rispetto alla che hanno come destinazione.  
+ Designare una riga casuale di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivato dalla tabella ***authors*** come destinazione di una ricerca. Visualizzare quindi la posizione di ogni riga relativa a tale destinazione.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -133,6 +133,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [Metodo CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

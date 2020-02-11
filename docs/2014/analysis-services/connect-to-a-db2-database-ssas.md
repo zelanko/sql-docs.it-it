@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database di DB2 (SSAS) | Microsoft Docs
+title: Connettersi a un database DB2 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087380"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Connettersi a un database di DB2 (SSAS)
@@ -43,7 +43,7 @@ ms.locfileid: "66087380"
  Specificare una password per la connessione al database.  
   
  **Salva password**  
- Specificare se la password immessa nella casella **Password** è stata archiviata.  
+ Specificare se archiviare la password immessa nella casella **Password** .  
   
  **Nome database**  
  Selezionare un database dall'elenco di database.  
@@ -54,7 +54,7 @@ ms.locfileid: "66087380"
  **Schema predefinito**  
  Specificare il nome dello schema predefinito per il database selezionato.  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
  **Test connessione**  

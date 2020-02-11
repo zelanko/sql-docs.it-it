@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044446"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe di evento QN:Parameter Table
@@ -26,27 +26,28 @@ ms.locfileid: "63044446"
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>Colonne di dati della classe di evento QN:Parameter table  
   
-|Colonna di dati|Type|Descrizione|Numero colonna|Filtrabile|  
+|Colonna di dati|Type|Descrizione|Numero di colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|ApplicationName|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Yes|  
-|ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Yes|  
-|DatabaseID|`int`|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita alcuna istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene visualizzato il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
-|DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Yes|  
+|ApplicationName|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
+|ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
+|DatabaseID|`int`|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita alcuna istruzione USE *database*. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene visualizzato il nome del database se la colonna di dati ServerName viene acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|`Int`|Tipo di evento = 200.|27|No|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Tabella creata: Indica che una tabella di parametri è stata creata nel database.<br /><br /> Tentativo di eliminazione tabella: Indica che il database ha provato a eliminare automaticamente una tabella di parametri inutilizzata per liberare risorse.<br /><br /> Tentativo di eliminazione tabella non riuscito: Indica che il database ha provato a eliminare una tabella di parametri inutilizzata e che non è riuscita. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] verrà automaticamente ripianificata l'eliminazione della tabella di parametri per liberare risorse.<br /><br /> Tabella eliminata: Indica che il database ha eliminato correttamente una tabella di parametri.<br /><br /> Tabella aggiunta: Indica che la tabella di parametri è contrassegnata per l'utilizzo corrente dall'elaborazione interna.<br /><br /> Tabella unpinned: Indica che la tabella di parametri è stata rimossa. L'elaborazione interna non richiede più l'utilizzo della tabella.<br /><br /> Numero di utenti incrementato: Indica che il numero di sottoscrizioni di notifica di query che fanno riferimento a una tabella di parametri è aumentato.<br /><br /> Numero di utenti ridotto: Indica che il numero di sottoscrizioni di notifica di query che fanno riferimento a una tabella di parametri è diminuito.<br /><br /> Reimposta contatore LRU: Indica che è stato reimpostato il conteggio di utilizzo per la tabella di parametri.<br /><br /> Attività di pulizia avviata: Indica quando è stata avviata la pulizia per tutte le sottoscrizioni in questa tabella di parametri. In genere, questa operazione ha inizio all'avvio del database o all'eliminazione di una tabella sottostante le sottoscrizioni di questa tabella di parametri.<br /><br /> Fine attività di pulizia: Indica quando è stata terminata la pulizia per tutte le sottoscrizioni in questa tabella di parametri.|21|Yes|  
-|GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
-|HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Table created: indica che nel database è stata creata una tabella di parametri.<br /><br /> Table drop attempt: indica che il database ha provato a eliminare automaticamente una tabella di parametri inutilizzata per liberare risorse.<br /><br /> Table drop attempt failed: indica che il database ha provato a eliminare una tabella di parametri inutilizzata e che l'operazione non è riuscita. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] verrà automaticamente ripianificata l'eliminazione della tabella di parametri per liberare risorse.<br /><br /> Table dropped: indica che il database ha eliminato correttamente una tabella di parametri.<br /><br /> Table pinned: indica che la tabella di parametri è stata contrassegnata per l'utilizzo corrente dall'elaborazione interna.<br /><br /> Table unpinned: indica che la tabella di parametri è stata rimossa. L'elaborazione interna non richiede più l'utilizzo della tabella.<br /><br /> Number of users incremented: indica che il numero di sottoscrizioni di notifica delle query che fanno riferimento a una tabella di parametri è aumentato.<br /><br /> Number of users decremented: indica che il numero di sottoscrizioni di notifica delle query che fanno riferimento a una tabella di parametri è diminuito.<br /><br /> LRU counter reset: indica che il conteggio degli utilizzi per la tabella di parametri è stato reimpostato.<br /><br /> Cleanup task started: indica quando è stata avviata la pulizia per tutte le sottoscrizioni in questa tabella di parametri. In genere, questa operazione ha inizio all'avvio del database o all'eliminazione di una tabella sottostante le sottoscrizioni di questa tabella di parametri.<br /><br /> Cleanup task finished: indica quando è stata terminata la pulizia per tutte le sottoscrizioni in questa tabella di parametri.|21|Sì|  
+|GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
+|HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di Windows nel formato *DOMAIN*\\*Username*).|11|No|  
-|LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
-|NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
-|NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
-|RequestID|`int`|Identificatore della richiesta contenente l'istruzione.|49|Yes|  
-|ServerName|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio un'applicazione si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 ed esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica "Login1" e LoginName indica "Login2". In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
-|SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
-|StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  
-|TextData|`ntext`|Restituisce un documento XML contenente informazioni specifiche per questo evento. Questo documento è conforme XML Schema disponibile nella pagina [Schema di eventi di SQL Server Profiler correlati alle notifiche delle query](https://go.microsoft.com/fwlink/?LinkId=63331) .|1|Yes|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso di sicurezza di o credenziali di accesso di Windows nel formato *dominio*\\*nomeutente*).|11|No|  
+|LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
+|NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
+|RequestID|`int`|Identificatore della richiesta contenente l'istruzione.|49|Sì|  
+|ServerName|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio un'applicazione si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 ed esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica "Login1" e LoginName indica "Login2". In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
+|SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Sì|  
+|StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
+|TextData|`ntext`|Restituisce un documento XML contenente informazioni specifiche per questo evento. Questo documento è conforme XML Schema disponibile nella pagina [Schema di eventi di SQL Server Profiler correlati alle notifiche delle query](https://go.microsoft.com/fwlink/?LinkId=63331) .|1|Sì|  
   
   

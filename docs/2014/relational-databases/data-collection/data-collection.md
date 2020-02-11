@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919062"
 ---
-# <a name="data-collection"></a>Raccolta dati
+# <a name="data-collection"></a>Raccolta di dati
   L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
   
 ## <a name="benefits-of-data-collector"></a>Vantaggi dell'agente di raccolta dati  
@@ -36,31 +36,31 @@ ms.locfileid: "62919062"
 ## <a name="data-collector-concepts"></a>Concetti sull'agente di raccolta dati  
  L'agente di raccolta dati è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e fa ampio uso di entrambi. Pertanto, prima di utilizzare l'agente di raccolta dati è necessario comprendere alcuni concetti relativi a ognuno di questi componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene usato per pianificare ed eseguire i processi di raccolta. È necessario comprendere i seguenti concetti:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent viene utilizzato per pianificare ed eseguire i processi di raccolta. È necessario comprendere i seguenti concetti:  
   
 -   Processo  
   
--   Passaggio processo  
+-   Passaggio del processo  
   
 -   Pianificazioni processo  
   
--   Sottosistema  
+-   Subsystem  
   
 -   Account proxy  
   
  Per altre informazioni, vedere [Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) viene usato per eseguire pacchetti che raccolgono dati da singoli provider di dati. È necessario conoscere i seguenti strumenti e concetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
--   Pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]pacchetto  
   
--   Configurazione pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configurazione pacchetto  
   
  Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="data-collector-terminology"></a>Terminologia relativa all'agente di raccolta dati  
  target  
- Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la raccolta dati. Per altre informazioni sulle edizioni supportate, vedere la sezione "Gestibilità" del [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la raccolta dati. Per ulteriori informazioni sulle edizioni supportate, vedere la sezione relativa alla gestibilità delle [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Una *radice di destinazione* definisce un sottoalbero nella gerarchia di destinazione. Un *set di destinazioni* è il gruppo di destinazioni risultante dell'applicazione di un filtro a un sottoalbero definito da una radice di destinazione. Una radice di destinazione può essere un database, un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un'istanza del computer.  
   
@@ -111,8 +111,8 @@ ms.locfileid: "62919062"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come gestire aspetti diversi della raccolta di dati, ad esempio l'abilitazione o disabilitazione della raccolta di dati, la modifica di una raccolta di set di configurazione o la visualizzazione dei dati nel data warehouse di gestione.|[Gestire raccolta dati](manage-data-collection.md)|  
+|Viene illustrato come gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.|[Gestire raccolta dati](manage-data-collection.md)|  
 |Viene descritto come utilizzare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.|[Report per i set di raccolta dati di sistema](system-data-collection-set-reports.md)|  
-|Viene descritto come utilizzare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[Data warehouse di gestione](management-data-warehouse.md)|  
+|Viene descritto come utilizzare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[data warehouse di gestione](management-data-warehouse.md)|  
   
   

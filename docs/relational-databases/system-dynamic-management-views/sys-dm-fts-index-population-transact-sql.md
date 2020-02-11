@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983110"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
@@ -37,20 +37,20 @@ ms.locfileid: "73983110"
 |**database_id**|**int**|ID del database contenente l'indice full-text in fase di popolamento.|  
 |**catalog_id**|**int**|ID del catalogo full-text contenente l'indice full-text.|  
 |**table_id**|**int**|ID della tabella per la quale l'indice full-text è in fase di popolamento.|  
-|**memory_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per rappresentare un popolamento attivo.|  
-|**population_type**|**int**|Tipo di popolamento. I tipi validi sono:<br /><br /> 1 = Popolamento completo<br /><br /> 2 = Popolamento incrementale basato su timestamp<br /><br /> 3 = Aggiornamento manuale delle modifiche rilevate<br /><br /> 4 = Aggiornamento in background delle modifiche rilevate|  
-|**population_type_description**|**nvarchar(120)**|Descrizione del tipo di popolamento.|  
+|**memory_address**|**varbinary (8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per rappresentare un popolamento attivo.|  
+|**population_type**|**int**|Tipo di popolamento. Uno dei seguenti:<br /><br /> 1 = Popolamento completo<br /><br /> 2 = Popolamento incrementale basato su timestamp<br /><br /> 3 = Aggiornamento manuale delle modifiche rilevate<br /><br /> 4 = Aggiornamento in background delle modifiche rilevate|  
+|**population_type_description**|**nvarchar (120)**|Descrizione del tipo di popolamento.|  
 |**is_clustered_index_scan**|**bit**|Indica se il popolamento implica un'analisi dell'indice cluster.|  
 |**range_count**|**int**|Numero di intervalli secondari in cui il popolamento è stato suddiviso mediante parallelismo.|  
 |**completed_range_count**|**int**|Numero di intervalli per i quali l'elaborazione è completata.|  
-|**outstanding_batch_count**|**int**|Numero corrente di batch in attesa per questo popolamento. Per ulteriori informazioni, vedere [sys. dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**status**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Stato del popolamento. Nota: alcuni stati sono temporanei. I tipi validi sono:<br /><br /> 3 = avvio in corso<br /><br /> 5 = elaborazione normale in corso<br /><br /> 7 = elaborazione arrestata<br /><br /> Questo stato si verifica ad esempio quando è in corso un'unione automatica.<br /><br /> 11 = popolamento interrotto<br /><br /> 12 = Elaborazione in corso di un'estrazione della somiglianza semantica|  
-|**status_description**|**nvarchar(120)**|Descrizione dello stato del popolamento.|  
+|**outstanding_batch_count**|**int**|Numero corrente di batch in attesa per questo popolamento. Per ulteriori informazioni, vedere [sys. dm_fts_outstanding_batches &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**stato**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Stato del popolamento. Nota: alcuni stati sono temporanei. Uno dei seguenti:<br /><br /> 3 = avvio in corso<br /><br /> 5 = elaborazione normale in corso<br /><br /> 7 = elaborazione arrestata<br /><br /> Questo stato si verifica ad esempio quando è in corso un'unione automatica.<br /><br /> 11 = popolamento interrotto<br /><br /> 12 = Elaborazione in corso di un'estrazione della somiglianza semantica|  
+|**status_description**|**nvarchar (120)**|Descrizione dello stato del popolamento.|  
 |**completion_type**|**int**|Stato della modalità di completamento del popolamento.|  
-|**completion_type_description**|**nvarchar(120)**|Descrizione del tipo di completamento.|  
+|**completion_type_description**|**nvarchar (120)**|Descrizione del tipo di completamento.|  
 |**worker_count**|**int**|Il valore è sempre 0 .|  
 |**queued_population_type**|**int**|Tipo di popolamento in base alle modifiche rilevate che verrà eseguito dopo l'eventuale popolamento corrente.|  
-|**queued_population_type_description**|**nvarchar(120)**|Descrizione dell'eventuale popolamento successivo. Ad esempio, quando CHANGE TRACKING = AUTO e il popolamento completo iniziale è in corso, questa colonna potrebbe visualizzare un messaggio relativo al popolamento automatico.|  
+|**queued_population_type_description**|**nvarchar (120)**|Descrizione dell'eventuale popolamento successivo. Ad esempio, quando CHANGE TRACKING = AUTO e il popolamento completo iniziale è in corso, questa colonna potrebbe visualizzare un messaggio relativo al popolamento automatico.|  
 |**start_time**|**datetime**|Ora di inizio del popolamento.|  
 |**incremental_timestamp**|**timestamp**|Rappresenta il timestamp iniziale per il popolamento completo. Per tutti gli altri tipi di popolamento questo valore corrisponde all'ultimo checkpoint di cui è stato eseguito il commit che rappresenta lo stato dei popolamenti.|  
   
@@ -59,15 +59,15 @@ ms.locfileid: "73983110"
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
-Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="physical-joins"></a>Join fisici  
- ![Join significativi di questa vista a gestione dinamica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Join significativi di questa vista a gestione dinamica")  
+ ![Join significativi di questa DMV](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Join significativi di questa DMV")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|Relazione|  
+|Da|A|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno-a-uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno-a-uno|  
@@ -75,7 +75,7 @@ Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica e funzioni &#40;di ricerca full-text e di ricerca semantica Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

@@ -16,27 +16,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109202"
 ---
 # <a name="expression-dialog-box"></a>Finestra di dialogo Espressione
-  Usare la **espressione** finestra di dialogo per scrivere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] le proprietà degli elementi delle espressioni di report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
+  Utilizzare la finestra di dialogo **espressione** per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] scrivere espressioni per le proprietà degli elementi del report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
   
- Un'espressione può essere semplice o complessa. È possibile digitare le espressioni semplici direttamente in una casella di testo nell'area di progettazione o in una finestra di dialogo. Per creare espressioni complesse, usare il **espressione** nella finestra di dialogo. È possibile creare un'espressione alla volta. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Un'espressione può essere semplice o complessa. È possibile digitare le espressioni semplici direttamente in una casella di testo nell'area di progettazione o in una finestra di dialogo. Per creare espressioni complesse, utilizzare la finestra di dialogo **espressione** . È possibile creare un'espressione alla volta. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- Per aprire la finestra di dialogo **Espressione** , fare clic sul pulsante Espressione (**fx**) disponibile nelle finestre di dialogo oppure scegliere **Espressione** dal menu di scelta rapida o selezionarlo negli elenchi a discesa nel riquadro Proprietà. Per altre informazioni, vedere [uso delle espressioni nei report di &#40;Generatore Report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ Per aprire la finestra di dialogo **Espressione** , fare clic sul pulsante Espressione (**fx**) disponibile nelle finestre di dialogo oppure scegliere **Espressione** dal menu di scelta rapida o selezionarlo negli elenchi a discesa nel riquadro Proprietà. Per ulteriori informazioni, vedere [utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  La finestra di dialogo **Espressione** include una finestra del codice, un albero delle categorie, gli elementi delle categorie, un riquadro di descrizione e un riquadro di esempio.  
   
  Poiché la finestra di dialogo **Espressione** è sensibile al contesto, le descrizioni e gli elementi delle categorie variano a seconda della categoria di espressione che si sta usando. Questa finestra di dialogo supporta IntelliSense, il completamento delle istruzioni, esempi di chiamate a funzioni e la colorazione della sintassi, che consente di rilevare facilmente gli errori.  
   
 ## <a name="expression-constructs"></a>Costrutti di espressione  
- Le espressioni iniziano con un segno di uguale (=) e possono includere costanti, valori letterali, operatori e riferimenti a campi predefiniti, raccolte predefinite, funzioni predefinite, funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classi Common Language Runtime di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funzioni personalizzate. Nell'elenco seguente vengono descritti le categorie e i valori che è possibile aggiungere in un'espressione.  
+ Le espressioni iniziano con un segno di uguale (=) e possono includere costanti, valori letterali, operatori e riferimenti a campi predefiniti, raccolte predefinite, funzioni predefinite, funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , classi Common Language Runtime di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funzioni personalizzate. Nell'elenco seguente vengono descritti le categorie e i valori che è possibile aggiungere in un'espressione.  
   
- **Imposta espressione per:**  _\<PropertyName >_  
+ **Imposta espressione per:**  _\<PropertyName>_  
  Nome della proprietà per cui si definisce un'espressione. È anche possibile impostare questa proprietà, per nome, nel riquadro Proprietà.  
   
  **Costanti**  
@@ -47,13 +47,13 @@ ms.locfileid: "66109202"
  **Campi predefiniti**  
  Consente di visualizzare un elenco degli elementi della raccolta globale che possono essere utilizzati in un'espressione. Alcune raccolte sono supportate solo dopo la pubblicazione del report nel server. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
- **Parametri**  
+ **Parameters**  
  Consente di visualizzare un elenco di parametri del report.  
   
- **Campi (**  _\<set di dati selezionato >_ **)**  
+ **Campi (** _ \<set di dati selezionato>_ **)**  
  Consente di visualizzare l'elenco di campi per il set di dati selezionato nella categoria Set di dati. Fare doppio clic su un campo per copiarlo nella casella **Espressione** .  
   
- **Set di dati**  
+ **Set**  
  Consente di visualizzare un elenco di set di dati disponibili e i relativi campi membri.  
   
  **Variabili**  
@@ -65,7 +65,7 @@ ms.locfileid: "66109202"
  **Funzioni comuni**  
  Consente di visualizzare funzioni comuni, raggruppate per tipo. Quando si seleziona una funzione nel riquadro Elemento, verranno visualizzati una descrizione e un esempio.  
   
- Le funzioni comuni includono le funzioni predefinite di report e aggregazione, le funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e le classi Common Language Runtime (CLR) di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] negli spazi dei nomi <xref:System.Math> e <xref:System.Convert>. È anche possibile aggiungere riferimenti a classi CLR e assembly esterni non riportati nell'elenco di categorie. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Le funzioni comuni includono le funzioni predefinite di report e aggregazione, le funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e le classi Common Language Runtime (CLR) di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] negli spazi dei nomi <xref:System.Math> e <xref:System.Convert>. È anche possibile aggiungere riferimenti a classi CLR e assembly esterni non riportati nell'elenco di categorie. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)sottostante.  
   
 ## <a name="options"></a>Opzioni  
  Finestra del codice  
@@ -78,7 +78,7 @@ ms.locfileid: "66109202"
  Quando si digita il nome di una funzione seguito da una parentesi aperta, verrà visualizzata una descrizione comando con informazioni sui parametri e sui valori restituiti della funzione.  
   
  **Categoria**  
- Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Ad esempio, per un'espressione per il valore di una casella di testo, espandere funzioni comuni e selezionare le funzioni di aggregazione da visualizzare `Avg`, `Count`e altre funzioni il **elemento** riquadro.  
+ Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Per un'espressione per un valore di casella di testo, ad esempio, espandere funzioni comuni e selezionare funzioni di `Avg`aggregazione per visualizzare, `Count`e altre funzioni nel riquadro **elemento** .  
   
  **Elemento**  
  Consente di visualizzare l'elenco di valori validi per la categoria selezionata. Fare doppio clic su un elemento per aggiungere il testo dell'espressione per l'elemento specifico in corrispondenza del punto di inserimento nella finestra del codice.  
