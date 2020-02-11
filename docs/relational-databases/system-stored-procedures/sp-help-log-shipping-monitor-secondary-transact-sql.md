@@ -18,19 +18,19 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001003"
 ---
-# <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le informazioni relative a un database secondario dalle tabelle di monitoraggio.  
   
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +42,18 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @secondary_server = ] 'secondary_server'` È il nome del server secondario. *secondary_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_server = ] 'secondary_server'`Nome del server secondario. *secondary_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @secondary_database = ] 'secondary_database'` È il nome del database secondario. *secondary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'`Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|**secondary_server**|Il nome dell'istanza secondaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping.|  
+|**secondary_server**|Nome dell'istanza secondaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping.|  
 |**secondary_database**|Nome del database secondario nella configurazione di log shipping.|  
 |**secondary_id**|ID del server secondario nella configurazione per il log shipping.|  
 |**primary_server**|Nome dell'istanza primaria di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione per il log shipping.|  
@@ -69,11 +69,11 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) dell'ultima operazione di ripristino nel database secondario.|  
 |**history_retention_period**|Periodo di tempo, in minuti, durante il quale i record della cronologia di log shipping vengono mantenuti per un database secondario specificato prima di essere eliminati.|  
   
-## <a name="remarks"></a>Note  
- **sp_help_log_shipping_monitor_secondary** deve essere eseguita la **master** database nel server di monitoraggio.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_help_log_shipping_monitor_secondary** deve essere eseguito dal database **Master** sul server di monitoraggio.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011946"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>File di formato per l'importazione o l'esportazione di dati (SQL Server)
@@ -35,12 +35,12 @@ ms.locfileid: "66011946"
 -   Consente di eseguire l'importazione bulk dei dati senza necessità di aggiungere o eliminare dati superflui o di ripetere l'ordinamento dei dati esistenti nel file di dati. I file di formato sono particolarmente utili quando è presente una mancata corrispondenza tra i campi nel file di dati e le colonne nella tabella.  
   
 ##  <a name="ExamplesOfFFs"></a> Esempi di file di formato  
- Negli esempi seguenti viene illustrato il layout di un file di formato non XML e di un file di formato XML. Questi file di formato corrispondono alla tabella `HumanResources.myTeam` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa tabella contiene quattro colonne: `EmployeeID`, `Name`, `Title` e `ModifiedDate`.  
+ Negli esempi seguenti viene illustrato il layout di un file di formato non XML e di un file di formato XML. Questi file di formato corrispondono alla tabella `HumanResources.myTeam` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa tabella contiene quattro colonne: `EmployeeID`, `Name`, `Title`e `ModifiedDate`.  
   
 > [!NOTE]  
 >  Per informazioni su questa tabella e su come crearla, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
   
-### <a name="a-using-a-non-xml-format-file"></a>A. Utilizzo di un file di formato non XML  
+### <a name="a-using-a-non-xml-format-file"></a>R. Utilizzo di un file di formato non XML  
  Il file di formato non XML seguente utilizza il formato di dati nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella `HumanResources.myTeam` . Questo file di formato è stato creato utilizzando il comando `bcp` seguente.  
   
 ```  
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   I caratteri di terminazione o le lunghezze di prefisso sono diverse all'interno delle colonne del file di dati.  
   
 > [!NOTE]  
->  In assenza di un file di formato, se in un comando **bcp** viene specificata un'opzione di formato di dati (**-n**, **-c**, **-w**o **-N**) o se in un'operazione BULK INSERT viene specificata l'opzione DATAFILETYPE, il formato di dati specificato viene usato come metodo predefinito per l'interpretazione dei campi del file di dati.  
+>  In assenza di un file di formato, se in un comando **bcp** viene specificata un'opzione di formato di dati ( **-n**, **-c**, **-w**o **-N**) o se in un'operazione BULK INSERT viene specificata l'opzione DATAFILETYPE, il formato di dati specificato viene usato come metodo predefinito per l'interpretazione dei campi del file di dati.  
   
  
   
@@ -129,7 +129,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
   
 ## <a name="see-also"></a>Vedere anche  
- [File in formato non XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [File di formato non XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   

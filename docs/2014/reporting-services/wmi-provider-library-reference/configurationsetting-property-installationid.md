@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef29435686b14f248cae6646f2c2f299aa882f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097728"
 ---
-# <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>Proprietà InstallationID (MSReportServer_ConfigurationSetting WMI)
+# <a name="installationid-property-wmi-msreportserver_configurationsetting"></a>Proprietà InstallationID (MSReportServer_ConfigurationSetting WMI)
   Questa proprietà restituisce un identificatore univoco per un'istanza del server di report specifica.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,7 +39,7 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056315"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usare il formato carattere Unicode per importare o esportare dati (SQL Server)
@@ -35,13 +35,13 @@ ms.locfileid: "74056315"
 |[Considerazioni speciali sull'uso del formato carattere Unicode, di bcp e di un file di formato](#special_considerations)|
 |[Opzioni di comando per il formato carattere Unicode](#command_options)|
 |[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)|
-|[Esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'esportazione di dati](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'importazione di dati senza un file di formato](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'importazione di dati con un file di formato non XML](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere Unicode senza un file di formato](#bulk_widechar)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere Unicode con un file di formato non XML](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato carattere Unicode con un file di formato non XML](#openrowset_widechar_fmt)|
+|[esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'esportazione di dati](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'importazione di dati senza un file di formato](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere Unicode per l'importazione di dati con un file di formato non XML](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere Unicode senza un file di formato](#bulk_widechar)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere Unicode con un file di formato non XML](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato carattere Unicode con un file di formato non XML](#openrowset_widechar_fmt)|
 |[Attività correlate](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
  
 ## Considerazioni sull'uso del formato carattere Unicode<a name="considerations"></a>
 Quando si usa il formato carattere Unicode, è necessario tenere presenti i fattori seguenti:  
 
-* Per impostazione predefinita, quando si esegue l'[utilità bcp](../../tools/bcp-utility.md) i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga.  Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+* Per impostazione predefinita, quando si esegue l' [utilità bcp](../../tools/bcp-utility.md) i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga.  Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
 * I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) archiviati in un file di dati in formato carattere Unicode funzionano così come in un file in formato carattere, con la differenza che vengono archiviati come dati [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) anziché [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
 
@@ -238,7 +238,7 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

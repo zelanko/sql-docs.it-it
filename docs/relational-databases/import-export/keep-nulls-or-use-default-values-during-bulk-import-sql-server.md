@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055960"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenere i valori Null o i valori predefiniti durante un'importazione bulk (SQL Server)
@@ -37,7 +37,7 @@ Un'istruzione INSERT regolare mantiene invece il valore Null anziché inserire u
 
 |Riquadro|
 |---|
-|[Mantenimento dei valori Null](#keep_nulls)<br />[Uso dei valori predefiniti con INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di dati di esempio](#sample_data_file)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)<br />[Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk](#import_data)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Null senza un file di formato](#bcp_null)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Null con un file di formato non XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori predefiniti senza un file di formato](#bcp_default)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori predefiniti con un file di formato non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Null senza un file di formato](#bulk_null)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Null con un file di formato non XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori predefiniti senza un file di formato](#bulk_default)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori predefiniti con un file di formato non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET(BULK...) e mantenimento dei valori Null con un file di formato non XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET(BULK...) e dei valori predefiniti con un file di formato non XML](#openrowset__default_fmt)
+|[Mantenimento dei valori Null](#keep_nulls)<br />[Uso dei valori predefiniti con INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di dati di esempio](#sample_data_file)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)<br />[Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk](#import_data)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Null senza un file di formato](#bcp_null)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Null con un file di formato non XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori predefiniti senza un file di formato](#bcp_default)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori predefiniti con un file di formato non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Null senza un file di formato](#bulk_null)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Null con un file di formato non XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori predefiniti senza un file di formato](#bulk_default)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori predefiniti con un file di formato non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET(BULK...) e mantenimento dei valori Null con un file di formato non XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET(BULK...) e dei valori predefiniti con un file di formato non XML](#openrowset__default_fmt)
 
 ## Mantenimento dei valori Null<a name="keep_nulls"></a>  
 I qualificatori seguenti specificano che un campo vuoto del file di dati mantiene il relativo valore Null durante l'importazione bulk anziché ereditare un valore predefinito (se disponibile) per le colonne della tabella.  Per impostazione predefinita, per [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)le colonne non specificate nell'operazione di importazione vengono impostate su NULL.
@@ -318,15 +318,15 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
  **Per utilizzare un file di formato**  
   
--   [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
+-   [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
@@ -342,11 +342,11 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
  **Per specificare i formati di dati per la compatibilità mediante bcp**  
   
--   [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
+-   [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
 -   [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Specificare il tipo di archiviazione di file con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

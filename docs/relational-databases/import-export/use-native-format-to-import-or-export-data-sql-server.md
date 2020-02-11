@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055914"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usare il formato nativo per importare o esportare dati (SQL Server)
@@ -42,7 +42,7 @@ L'utilizzo del formato nativo tra tabelle identiche consente di evitare la conve
 |[Gestione dei dati in formato nativo mediante l'utilità bcp](#considerations)|
 |[Opzioni di comando per il formato nativo](#command_options)|
 |[Condizioni di test di esempio](#etc)<br /><br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)|
-|[Esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'esportazione di dati](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'importazione di dati senza un file di formato](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'importazione di dati con un file di formato non XML](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo senza un file di formato](#bulk_native)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo con un file di formato non XML](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato nativo con un file di formato non XML](#openrowset_native_fmt)|
+|[esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'esportazione di dati](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'importazione di dati senza un file di formato](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato nativo per l'importazione di dati con un file di formato non XML](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo senza un file di formato](#bulk_native)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato nativo con un file di formato non XML](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato nativo con un file di formato non XML](#openrowset_native_fmt)|
 |[Attività correlate](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## Restrizioni<a name="restrictions"></a>  
@@ -244,7 +244,7 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   

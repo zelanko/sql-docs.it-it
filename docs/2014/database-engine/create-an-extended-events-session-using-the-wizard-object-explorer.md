@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065054"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Creare una sessione Eventi estesi utilizzando la procedura guidata (Esplora oggetti)
@@ -53,7 +53,7 @@ ms.locfileid: "66065054"
   
 -   [Imposta proprietà sessione](#BKMK_SetSessionProperties)  
   
--   [Scegliere il modello](#BKMK_ChooseTemplate)  
+-   [Scegli modello](#BKMK_ChooseTemplate)  
   
 -   [Seleziona eventi da acquisire](#BKMK_SelectEventsToCapture)  
   
@@ -63,39 +63,39 @@ ms.locfileid: "66065054"
   
 -   [Specifica l'archiviazione dei dati di sessione](#BKMK_SpecifySessionDataOutput)  
   
--   [Riepilogo](#BKMK_Summary)  
+-   [Summary](#BKMK_Summary)  
   
 -   [Crea sessione eventi](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a> Introduzione  
+##  <a name="BKMK_Welcome"></a>Introduzione  
  Nella pagina **Introduzione** eseguire queste operazioni:  
   
 -   Nella pagina **Introduzione** della Creazione guidata nuova sessione fare clic su **Avanti**.  
   
      Selezionare la casella di controllo **Non visualizzare più questa pagina** se si prevede di utilizzare la procedura guidata più volte e non si desidera leggere l'introduzione a ogni avvio della procedura.  
   
-##  <a name="BKMK_SetSessionProperties"></a> Imposta proprietà sessione  
+##  <a name="BKMK_SetSessionProperties"></a>Impostare le proprietà della sessione  
  Nella pagina **Imposta proprietà sessione** eseguire queste operazioni:  
   
 -   Nella casella **Nome sessione** digitare un nome significativo per la sessione eventi.  
   
      Se si vuole avviare la sessione quando si avvia il server, selezionare la casella di controllo **Avviare la sessione eventi all'avvio del server** , quindi fare clic su **Avanti**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Scegliere il modello  
+##  <a name="BKMK_ChooseTemplate"></a>Scegli modello  
  Nella pagina **Scegli modello** eseguire queste operazioni:  
   
 -   Selezionare l'opzione **Usa questo modello di sessione eventi** per eseguire una selezione da un set di modelli preconfigurati progettati per i problemi comuni. Selezionare il modello che si vuole usare dall'elenco a discesa, quindi fare clic su **Avanti**.  
   
-     oppure  
+     -OPPURE-  
   
 -   Selezionare l'opzione **Non usare un modello** se non si vuole usare un modello preconfigurato, quindi fare clic su **Avanti**.  
   
-##  <a name="BKMK_SelectEventsToCapture"></a> Seleziona eventi da acquisire  
+##  <a name="BKMK_SelectEventsToCapture"></a>Selezionare gli eventi da acquisire  
  Nella pagina **Seleziona eventi da acquisire** eseguire queste operazioni:  
   
 1.  Selezionare gli eventi che si vuole acquisire in **Libreria di eventi**, quindi fare clic sulla freccia rivolta verso destra. È possibile selezionare più eventi in Libreria di eventi utilizzando MAIUSC+clic CTRL+clic.  
   
-     È possibile scegliere come si desidera eseguire la ricerca degli eventi da acquisire nell'elenco a discesa. È ad esempio possibile cercare i nomi di evento oppure i nomi di evento e le relative descrizioni. È possibile cercare qualsiasi parola nella tabella immettendo il testo da cercare nella casella **Libreria di eventi** . Se, ad esempio, si vuole trovare l'evento **lock_acquired** , è possibile immettere **lock**o **lock acquire**.  
+     È possibile scegliere come si desidera eseguire la ricerca degli eventi da acquisire nell'elenco a discesa. È ad esempio possibile cercare i nomi di evento oppure i nomi di evento e le relative descrizioni. È possibile cercare qualsiasi parola nella tabella immettendo il testo da cercare nella casella **Libreria di eventi** . Se, ad esempio, si desidera trovare l'evento **lock_acquired** , è possibile immettere **Lock**o **Lock Acquire**.  
   
      Gli eventi selezionati vengono visualizzati nella casella **Eventi selezionati** . Per rimuovere gli eventi dalla casella **Eventi selezionati** , fare clic sulla freccia rivolta verso sinistra.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66065054"
     > [!NOTE]  
     >  Gli eventi del canale **Debug** sono nascosti per impostazione predefinita. Per visualizzare gli eventi di debug, selezionare **Debug** dall'elenco a discesa **Canale** .  
   
-##  <a name="BKMK_CaptureGlobalFields"></a> Acquisisci campi globali  
+##  <a name="BKMK_CaptureGlobalFields"></a>Acquisisci campi globali  
  I campi globali (anche definiti azioni) vengono utilizzati per associare singole azioni o più azioni per gli eventi selezionati. Se è stato selezionato un modello nella pagina **Scegli modello** , tutti i campi globali definiti nel modello vengono visualizzati in questa pagina.  
   
  Nella pagina **Acquisisci campi globali** eseguire queste operazioni:  
@@ -116,7 +116,7 @@ ms.locfileid: "66065054"
     > [!NOTE]  
     >  Le azioni selezionate vengono ordinate in base al campo **Nome** , per consentire la visualizzazione delle azioni associate in ordine alfabetico. È possibile eseguire l'ordinamento in base alla descrizione o allo stato di abilitazione/disabilitazione facendo clic sull'intestazione di colonna accanto al nome del campo.  
   
-##  <a name="BKMK_SetSessionEventFilters"></a> Imposta filtri di eventi di sessione  
+##  <a name="BKMK_SetSessionEventFilters"></a>Imposta filtri eventi sessione  
  È possibile applicare filtri (detti anche predicati) per limitare gli eventi che si desidera acquisire. Nella pagina **Imposta filtri di eventi di sessione** eseguire queste operazioni:  
   
 1.  Se non si usa un modello preconfigurato, creare i criteri di filtro personalizzati, quindi fare clic su **Avanti**.  
@@ -130,7 +130,7 @@ ms.locfileid: "66065054"
     > [!NOTE]  
     >  Quando si configura una clausola group per il filtro, le parentesi ridondanti vengono rimosse dal filtro dopo che il risultato è stato salvato. Se, ad esempio, si crea un filtro che raggruppa **Clausola 1** e **Clausola 2**, le clausole vengono racchiuse tra parentesi. Dopo avere salvato il filtro, le parentesi ridondanti vengono rimosse. La rimozione delle parentesi non influisce sulla logica di filtro.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a> Specifica l'archiviazione dei dati di sessione  
+##  <a name="BKMK_SpecifySessionDataOutput"></a>Specificare l'archiviazione dei dati della sessione  
  La pagina **Specifica l'archiviazione dei dati di sessione** consente di specificare la modalità di raccolta dei dati per l'analisi. Gli eventi estesi di SQL Server prevedono l'utilizzo di destinazioni per l'output dei dati. Le destinazioni consentono di archiviare i dati degli eventi ed eseguire azioni come la scrittura in un file e l'aggregazione dei dati degli eventi. Dopo avere stabilito la modalità di raccolta dei dati per l'analisi, nella pagina **Specifica l'archiviazione dei dati di sessione** eseguire queste operazioni:  
   
 1.  Per set di dati di grandi dimensioni e per la creazione di record cronologici, selezionare la casella di controllo **Salva i dati in un file per l'analisi successiva** , quindi eseguire queste operazioni:  
@@ -153,7 +153,7 @@ ms.locfileid: "66065054"
   
     4.  Nella casella **Numero di eventi da mantenere (per tipo)** immettere o selezionare il numero di eventi (per tipo) che si vuole mantenere usando le frecce rivolte verso l'alto e verso il basso.  
   
-##  <a name="BKMK_Summary"></a> Riepilogo  
+##  <a name="BKMK_Summary"></a>Riepilogo  
  Nella pagina **Riepilogo** eseguire queste operazioni:  
   
 1.  Verificare che le selezioni siano corrette. Espandere i nodi della sessione eventi per verificare che tutte le selezioni verranno incluse nella sessione eventi.  
@@ -162,7 +162,7 @@ ms.locfileid: "66065054"
   
 3.  Fare clic su **Fine** per creare la sessione eventi.  
   
-##  <a name="BKMK_CreateEventSession"></a> Crea sessione eventi  
+##  <a name="BKMK_CreateEventSession"></a>Crea sessione eventi  
  Dopo la creazione della sessione eventi, nella pagina **Crea sessione eventi** eseguire queste operazioni:  
   
 1.  Fare clic su **Avviare la sessione eventi subito dopo la creazione della sessione** per avviare la sessione dopo la chiusura della procedura guidata. Per poter visualizzare i dati dinamici, è necessario avviare la sessione eventi subito dopo la creazione della sessione.  
@@ -170,6 +170,6 @@ ms.locfileid: "66065054"
 2.  Fare clic su **Controllare i dati dinamici sullo schermo al momento dell'acquisizione** per visualizzare i dati dinamici per la sessione eventi. La traccia dei dati dinamici inizierà a essere visualizzata subito dopo la creazione della sessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una sessione Eventi estesi usando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Creare una sessione Eventi estesi utilizzando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

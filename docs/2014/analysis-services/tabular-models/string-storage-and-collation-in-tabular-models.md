@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874497"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
@@ -38,10 +38,10 @@ ms.locfileid: "70874497"
 |trEE|  
 |PlAnT|  
 |PlAnT|  
-|trEE|  
+|Albero|  
 |PlAnT|  
 |trEE|  
-|trEE|  
+|albero|  
 |PlAnT|  
 |trEE|  
   

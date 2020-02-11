@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811028"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
@@ -42,7 +42,7 @@ ms.locfileid: "68811028"
   
  È possibile porre rimedio alla frammentazione eseguendo la riorganizzazione o la ricompilazione dell'indice. Per gli indici partizionati compilati in base a uno schema di partizione è possibile procedere in uno dei metodi seguenti sull'intero indice o su una singola partizione. La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave ALL, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -52,13 +52,13 @@ ms.locfileid: "68811028"
   
      [Sicurezza](#Security)  
   
--   **Per controllare la frammentazione di un indice usando:**  
+-   **Per controllare la frammentazione di un indice utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **Per riorganizzare o ricompilare un indice usando:**  
+-   **Per riorganizzare o ricompilare un indice utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68811028"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Fragmentation"></a> Rilevamento della frammentazione  
+###  <a name="Fragmentation"></a>Rilevamento della frammentazione  
  Il primo passaggio per decidere il metodo di deframmentazione da usare consiste nell'eseguire un'analisi dell'indice per determinare il grado di frammentazione. La funzione di sistema [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)consente di rilevare la frammentazione in un indice specifico, in tutti gli indici di una tabella o vista indicizzata, in tutti gli indici di un database o in tutti gli indici di tutti i database. Per gli indici partizionati, **sys.dm_db_index_physical_stats** fornisce anche informazioni sulla frammentazione per ogni partizione.  
   
- Il set di risultati restituito dalla funzione **sys.dm_db_index_physical_stats** include le colonne seguenti.  
+ Il set di risultati restituito dalla funzione **sys. dm_db_index_physical_stats** include le colonne seguenti.  
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
@@ -79,15 +79,15 @@ ms.locfileid: "68811028"
   
  Una volta noto il grado di frammentazione, usare la tabella seguente per determinare il metodo migliore per la correzione della frammentazione.  
   
-|Valore di**avg_fragmentation_in_percent**|Istruzione correttiva|  
+|valore **avg_fragmentation_in_percent**|Istruzione correttiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% e \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
+<sup>1</sup> la ricompilazione di un indice può essere eseguita online o offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
   
 > [!TIP]
-> Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Se, ad esempio, un determinato indice viene utilizzato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in merito alle prestazioni è meno evidente per gli indici utilizzati principalmente per le operazioni di ricerca. Analogamente, la rimozione della frammentazione in un heap, ovvero una tabella senza un indice cluster, è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
+> Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Se ad esempio un determinato indice viene usato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in termini di prestazioni è meno evidente per gli indici usati principalmente per le operazioni di ricerca. Analogamente, la rimozione della frammentazione in un heap (una tabella senza indici cluster) è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
 
 Non è in genere consigliabile usare questi comandi per livelli di frammentazione ridotti (inferiori al 5%), poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice. 
 
@@ -95,19 +95,19 @@ Non è in genere consigliabile usare questi comandi per livelli di frammentazion
 > La ricompilazione o la riorganizzazione degli indici di dimensioni ridotte spesso non riduce la frammentazione. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice.
 
 ### <a name="index-defragmentation-considerations"></a>Considerazioni sulla deframmentazione dell'indice
-In determinate condizioni, la ricompilazione di un indice cluster ricreerà automaticamente tutti gli indici non cluster che fanno riferimento alla chiave di clustering, se gli identificatori fisici o logici contenuti nei record degli indici non cluster devono essere modificati.
+In determinate condizioni, la ricompilazione di un indice cluster ricreerà automaticamente tutti gli indici non cluster che fanno riferimento alla chiave di clustering, se è necessario modificare gli identificatori fisici o logici contenuti nei record degli indici non cluster.
 
 Scenari che forzano la ricompilazione automatica di tutti gli indici non cluster in una tabella:
 
 -  Creazione di un indice cluster in una tabella
--  Rimozione di un indice cluster, causa dell'archiviazione della tabella come heap
+-  Rimozione di un indice cluster, che causa l'archiviazione della tabella come heap
 -  Modifica della chiave di clustering per includere o escludere colonne
 
 Scenari che non richiedono la ricompilazione automatica di tutti gli indici non cluster in una tabella:
 
 -  Ricompilazione di un indice cluster univoco
 -  Ricompilazione di un indice cluster non univoco
--  Modifica dello schema dell'indice, ad esempio l'applicazione di uno schema di partizionamento a un indice cluster o il trasferimento dell'indice cluster in un filegroup diverso
+-  Modifica dello schema dell'indice, ad esempio tramite l'applicazione di uno schema di partizionamento a un indice cluster o lo spostamento dell'indice cluster in un filegroup diverso
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -124,7 +124,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione `ALTER` per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedureFrag"></a> Con SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
@@ -142,7 +142,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
      Le informazioni seguenti sono disponibili nella pagina **Frammentazione** :  
   
-     **Livello di riempimento pagina**  
+     **Completezza pagina**  
      Indica il livello medio di riempimento delle pagine di indice, espresso come percentuale. Il valore 100% indica che le pagine di indice sono completamente piene. Il valore 50% indica che ogni pagina di indice è piena all'incirca per metà.  
   
      **Frammentazione totale**  
@@ -151,10 +151,10 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
      **Dimensioni medie delle righe**  
      Dimensioni medie di una riga al livello foglia.  
   
-     **Livello nidificazione**  
+     **Profondità**  
      Numero di livelli dell'indice, compreso il livello foglia.  
   
-     **Record inoltrati**  
+     **Record sottotrasmessi**  
      Numero di record in un heap che hanno inoltrato puntatori a un altro percorso dei dati. Questo stato si verifica durante un aggiornamento, nel caso in cui non vi sia spazio sufficiente per archiviare la riga nel percorso originale.  
   
      **Righe fantasma**  
@@ -163,10 +163,10 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
      **Tipo di indice**  
      Tipo di indice. I valori possibili sono **Indice cluster**, **Indice non cluster**e **XML primario**. È inoltre possibile archiviare le tabelle come heap (senza indici), ma in questo caso non sarà possibile aprire la pagina Proprietà indice.  
   
-     **Righe al livello foglia**  
+     **Righe a livello foglia**  
      Numero di righe al livello foglia.  
   
-     **Dimensioni massime righe**  
+     **Dimensioni massime riga**  
      Dimensioni massime delle righe al livello foglia.  
   
      **Dimensioni minime righe**  
@@ -181,7 +181,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
      **Righe fantasma versione**  
      Numero di record fantasma mantenuti a causa di una transazione di isolamento dello snapshot in attesa.  
   
-##  <a name="TsqlProcedureFrag"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedureFrag"></a> Con Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
@@ -217,9 +217,9 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
     (6 row(s) affected)  
     ```  
   
- Per altre informazioni, vedere [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
+ Per ulteriori informazioni, vedere [sys. dm_db_index_physical_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> Con SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>Per riorganizzare o ricompilare un indice  
   
@@ -253,7 +253,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 6.  Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.  
   
-7.  Fare clic su **OK**.  
+7.  Scegliere **OK.**  
   
 #### <a name="to-rebuild-an-index"></a>Per ricompilare un indice  
   
@@ -273,7 +273,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 8.  Scegliere **OK.**  
   
-##  <a name="TsqlProcedureReorg"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedureReorg"></a> Con Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>Per riorganizzare un indice deframmentato  
   
@@ -330,9 +330,9 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
      [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
- Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+ Per ulteriori informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure consigliate relative alla deframmentazione degli indici in Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
+ [Procedure consigliate per la deframmentazione dell'indice Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

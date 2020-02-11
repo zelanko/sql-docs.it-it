@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di istanze di eventi ADO: Visual Basic | Microsoft Docs'
+title: 'Creazione di istanze evento ADO: Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926075"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Creazione di istanze di eventi ADO: Visual Basic
-Per gestire gli eventi ADO in Microsoft® Visual Basic®, è necessario dichiarare una variabile di a livello di modulo usando il **WithEvents** (parola chiave). La variabile può essere dichiarata solo come parte di un modulo di classe e deve essere dichiarata a livello di modulo. Questo non è più restrittivo come sembra, tuttavia, poiché Visual Basic **Form** gli oggetti sono classi. Il modo più semplice per gestire gli eventi ADO consiste nel dichiarare una variabile utilizzando **WithEvents**. L'esempio seguente viene gestito il **ConnectComplete** evento per un **connessione** oggetto:  
+Per gestire gli eventi ADO in Microsoft® Visual Basic®, è necessario dichiarare una variabile a livello di modulo usando la parola chiave **WithEvents** . La variabile può essere dichiarata solo come parte di un modulo di classe e deve essere dichiarata a livello di modulo. Questo non è altrettanto restrittivo come sembra, tuttavia, perché gli oggetti **Form** Visual Basic sono anche classi. Il modo più semplice per gestire gli eventi ADO consiste nel dichiarare una variabile mediante **WithEvents**. Nell'esempio seguente viene gestito l'evento **ConnectComplete** per un oggetto **Connection** :  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- Il **connessione** un oggetto dichiarato nel **Form** di livello utilizzando il **WithEvents** parola chiave per consentire la gestione degli eventi. Il gestore eventi Form_Load crea effettivamente l'oggetto tramite l'assegnazione di un nuovo **Connection** obiettare *connEvent* e quindi apre la connessione. Naturalmente, un'applicazione reale farebbe un'elaborazione più complessa nel gestore eventi Form_Load rispetto a quella illustrata di seguito.
+ L'oggetto **Connection** viene dichiarato a livello di **form** utilizzando la parola chiave **WithEvents** per abilitare la gestione degli eventi. Il gestore dell'evento Form_Load crea effettivamente l'oggetto assegnando un nuovo oggetto **connessione** a *connEvent* , quindi apre la connessione. Naturalmente, un'applicazione reale esegue una maggiore elaborazione nel gestore dell'evento Form_Load rispetto a quanto illustrato di seguito.

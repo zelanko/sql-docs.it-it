@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056332"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usare il formato carattere per importare o esportare dati (SQL Server)
@@ -35,7 +35,7 @@ Quando si utilizza il formato carattere, in tutte le colonne viene applicato il 
 |[Considerazioni sull'utilizzo del formato carattere](#considerations)|
 |[Opzioni del comando per il formato carattere](#command_options)|
 |[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)<br />|
-|[Esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'esportazione di dati](#bcp_char_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'importazione di dati senza un file di formato](#bcp_char_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'importazione di dati con un file di formato non XML](#bcp_char_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere senza un file di formato](#bulk_char)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere con un file di formato non XML](#bulk_char_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato carattere con un file di formato non XML](#openrowset_char_fmt)|
+|[esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'esportazione di dati](#bcp_char_export)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'importazione di dati senza un file di formato](#bcp_char_import)<br />&emsp;&#9679;&emsp;[Uso di bcp e del formato carattere per l'importazione di dati con un file di formato non XML](#bcp_char_import_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere senza un file di formato](#bulk_char)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e del formato carattere con un file di formato non XML](#bulk_char_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e del formato carattere con un file di formato non XML](#openrowset_char_fmt)|
 |[Attività correlate](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 
@@ -54,7 +54,7 @@ Quando si utilizza il formato carattere, è necessario tenere presenti i fattori
   
 -   Per impedire eventuali perdite di caratteri estesi durante la conversione, utilizzare il formato di carattere Unicode o specificare una tabella codici.  
   
--   I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) archiviati in un file di formato carattere risultano privi di metadati. Ogni valore viene convertito nel formato [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) in base alle regole di conversione dei dati implicita. I dati importati in colonne [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) risultano di tipo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). I dati importati in colonne con tipo di dati diverso da [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) vengono convertiti dal tipo di dati [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+-   I dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) archiviati in un file di formato carattere risultano privi di metadati. Ogni valore viene convertito nel formato [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) in base alle regole di conversione dei dati implicita. I dati importati in colonne [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) risultano di tipo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). I dati importati in colonne con tipo di dati diverso da [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)vengono convertiti dal tipo di dati [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 -   L [utilità bcp](../../tools/bcp-utility.md) esporta i valori [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) in file di dati in formato carattere con quattro cifre dopo il separatore dei decimali e senza simboli di raggruppamento delle cifre, quali i separatori delle migliaia. Ad esempio, una colonna [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
   
@@ -212,14 +212,14 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
