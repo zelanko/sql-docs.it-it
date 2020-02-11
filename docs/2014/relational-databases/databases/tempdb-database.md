@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916883"
 ---
 # <a name="tempdb-database"></a>Database tempdb
-  Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
+  Il database di sistema **tempdb** è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene utilizzata per conservare gli elementi seguenti:  
   
 -   Oggetti utente temporanei creati in modo esplicito, ad esempio tabelle temporanee globali o locali, stored procedure temporanee, variabili di tabella o cursori.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62916883"
   
 -   Versioni di riga generate dalle transazioni di modifica dei dati per le caratteristiche, ad esempio le operazioni sugli indici online, la caratteristica MARS (Multiple Active Result Set) e i trigger AFTER.  
   
- In **tempdb** viene registrato un numero minimo di operazioni Consente il rollback delle transazioni. **tempdb** viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, nessuna parte del database **tempdb** viene salvata per le sessioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le operazioni di backup e di ripristino non sono consentite nel database **tempdb**.  
+ In **tempdb** viene registrato un numero minimo di operazioni Consente il rollback delle transazioni. **tempdb** viene ricreato ogni volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, Pertanto, non c'è mai niente in **tempdb** da salvare da una sessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra. Le operazioni di backup e ripristino non sono consentite in **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Proprietà fisiche di tempdb  
  Nella tabella seguente sono elencati i valori iniziali di configurazione dei dati e dei file di log di **tempdb** . Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "62916883"
 |Dati primari|tempdev|tempdb.mdf|Crescita automatica del 10% fino a quando il disco risulta pieno|  
 |File di log|templog|templog.ldf|Aumento automatico delle dimensioni del 10% fino a un massimo di 2 TB|  
   
- Il valore pari **tempdb** possono influenzare le prestazioni di un sistema. Ad esempio, se il **tempdb** dimensioni sono troppo piccola, l'elaborazione del sistema potrebbe essere troppo occupata con l'aumento automatico delle dimensioni del database per supportare i requisiti di carico di lavoro ogni volta che avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare tale overhead, è possibile aumentare le dimensioni del **tempdb**.  
+ Le dimensioni di **tempdb** possono influire sulle prestazioni di un sistema. Se, ad esempio, le dimensioni di **tempdb** sono troppo ridotte, è possibile che l'elaborazione del sistema sia troppo occupata con l'aumento automatico del database per supportare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requisiti del carico di lavoro ogni volta che si avvia. Per evitare questo overhead, è possibile aumentare le dimensioni di **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Miglioramenti delle prestazioni in tempdb  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le prestazioni di **tempdb** sono state migliorate come segue:  
@@ -54,49 +54,49 @@ ms.locfileid: "62916883"
   
 -   L'overhead di registrazione per il database **tempdb** è stato ridotto. In questo modo si riduce l'utilizzo di banda per operazioni di I/O su disco nel file di log di **tempdb** .  
   
--   L'algoritmo per l'allocazione di pagine miste **tempdb** è stata migliorata.  
+-   È stato migliorato l'algoritmo per l'allocazione di pagine miste in **tempdb** .  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Spostamento dei dati e dei file di log di tempdb  
- Per spostare i file di log e i dati **tempdb** , vedere [Spostare i database di sistema](system-databases.md).  
+ Per spostare i file di dati e di log di **tempdb** , vedere [spostare i database di sistema](system-databases.md).  
   
 ### <a name="database-options"></a>Opzioni di database  
- Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni di database di **tempdb** e viene indicato se l'opzione è modificabile. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+ Nella tabella seguente sono elencati i valori predefiniti per ogni opzione di database del database **tempdb** e viene indicato se è possibile modificare l'opzione. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
-|ANSI_NULL_DEFAULT|OFF|Yes|  
-|ANSI_NULLS|OFF|Yes|  
-|ANSI_PADDING|OFF|Yes|  
-|ANSI_WARNINGS|OFF|Yes|  
-|ARITHABORT|OFF|Yes|  
-|AUTO_CLOSE|OFF|no|  
-|AUTO_CREATE_STATISTICS|ON|Yes|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Sì|  
+|ANSI_NULL_DEFAULT|OFF|Sì|  
+|ANSI_NULLS|OFF|Sì|  
+|ANSI_PADDING|OFF|Sì|  
+|ANSI_WARNINGS|OFF|Sì|  
+|ARITHABORT|OFF|Sì|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ON|Yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
 |CHANGE_TRACKING|OFF|No|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
-|CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> No<br /><br /> no|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
-|DB_CHAINING|ON|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
+|CURSOR_DEFAULT|GLOBAL|Sì|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
+|DB_CHAINING|ATTIVA|No|  
 |ENCRYPTION|OFF|No|  
-|NUMERIC_ROUNDABORT|OFF|Yes|  
-|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
-|PARAMETERIZATION|SIMPLE|Yes|  
-|QUOTED_IDENTIFIER|OFF|Yes|  
+|NUMERIC_ROUNDABORT|OFF|Sì|  
+|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
+|QUOTED_IDENTIFIER|OFF|Sì|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
-|RECOVERY|SIMPLE|no|  
-|RECURSIVE_TRIGGERS|OFF|Yes|  
-|Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
-|TRUSTWORTHY|OFF|no|  
+|RECOVERY|SEMPLICE|No|  
+|RECURSIVE_TRIGGERS|OFF|Sì|  
+|Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
+|TRUSTWORTHY|OFF|No|  
   
  Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
-## <a name="restrictions"></a>Restrictions  
- Di seguito sono riportate le operazioni che non è possibile eseguire sul database **tempdb** :  
+## <a name="restrictions"></a>Restrizioni  
+ Nel database **tempdb** non è possibile eseguire le operazioni seguenti:  
   
 -   Aggiunta di filegroup.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62916883"
   
 -   Eliminazione del database.  
   
--   Eliminazione dell'utente **guest** dal database.  
+-   Eliminazione dell'utente **Guest** dal database.  
   
 -   Abilitazione dell'acquisizione dei dati delle modifiche.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62916883"
   
 -   Impostazione del database o del filegroup primario su READ_ONLY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di utilizzarlo, tuttavia questa operazione non è consigliabile poiché in alcune operazioni di routine è richiesto l'utilizzo di tempdb.  
   
 ## <a name="related-content"></a>Contenuto correlato  

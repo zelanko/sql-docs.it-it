@@ -13,16 +13,16 @@ ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bfe5c91a90f874b514abb661ea06631be87e69c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086408"
 ---
 # <a name="sqlfreestmt-cursor-library"></a>SQLFreeStmt (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- In questo argomento viene illustrato l'utilizzo dei **SQLFreeStmt** funzione nella libreria di cursori. Per informazioni generali sul **SQLFreeStmt**, vedere [SQLFreeStmt-funzione](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
+ In questo argomento viene illustrato l'utilizzo della funzione **SQLFreeStmt** nella libreria di cursori. Per informazioni generali su **SQLFreeStmt**, vedere [funzione SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
   
- Se un'applicazione chiama **SQLFreeStmt** con l'opzione SQL_UNBIND dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, la libreria di cursori restituisce un errore. Prima possibile annullare l'associazione di colonne del set di risultati, un'applicazione deve chiamare **SQLCloseCursor** oppure **SQLFreeStmt** con l'opzione di SQL_CLOSE.
+ Se un'applicazione chiama **SQLFreeStmt** con l'opzione SQL_UNBIND dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**, la libreria di cursori restituisce un errore. Prima di poter separare le colonne del set di risultati, un'applicazione deve chiamare **SQLCloseCursor** o **SQLFreeStmt** con l'opzione SQL_CLOSE.

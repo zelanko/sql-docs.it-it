@@ -15,288 +15,288 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019196"
 ---
 # <a name="connection-transitions"></a>Transizioni di connessione
-Connessioni ODBC presentano gli stati seguenti.  
+Le connessioni ODBC hanno gli Stati seguenti.  
   
-|Stato|Descrizione|  
+|State|Descrizione|  
 |-----------|-----------------|  
-|C0|Ambiente non allocato, non allocato connessione|  
-|C1|Ambiente allocato, non allocato connessione|  
-|C2|Ambiente di connessione allocato allocata|  
-|C3|Funzione di connessione sono necessari dati|  
-|C4|Connessione connessi|  
-|C5|Connessione, allocate istruzione connesso|  
-|C6|Connessione connessi, delle transazioni in corso. È possibile che una connessione sia nello stato C6 senza istruzioni allocate nella connessione. Si supponga, ad esempio, la connessione è in modalità di commit manuale e si trova in stato C4. Se un'istruzione viene allocata, esecuzione (avvio di una transazione) e quindi liberata, la transazione rimane attiva, ma sono presenti istruzioni per la connessione.|  
+|C0|Ambiente non allocato, connessione non allocata|  
+|C1|Ambiente allocato, connessione non allocata|  
+|C2|Ambiente allocato, connessione allocata|  
+|C3|La funzione di connessione necessita di dati|  
+|C4|Connessione connessa|  
+|C5|Connessione connessa, istruzione allocata|  
+|C6|Connessione connessa, transazione in corso. È possibile che una connessione si trovi nello stato C6 senza alcuna istruzione allocata per la connessione. Si supponga, ad esempio, che la connessione sia in modalità di commit manuale e si trovi nello stato C4. Se un'istruzione viene allocata, eseguita (avviando una transazione) e quindi liberata, la transazione rimane attiva ma non sono presenti istruzioni per la connessione.|  
   
- Le tabelle seguenti mostrano come ogni funzione ODBC riguarda lo stato della connessione.  
+ Nelle tabelle seguenti viene illustrato il modo in cui ogni funzione ODBC influiscono sullo stato della connessione.  
   
-## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
+## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> Nessun Env.|C1 non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1 non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(IH)[4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IH 2|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IH 3|IH|(08003)|(08003)|C5|--[5]|--[5]|  
+|IH 4|IH|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
- [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  
+ [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_ENV.  
   
- [2] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DBC.  
+ [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DBC.  
   
- [3] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_STMT.  
+ [3] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
   
- [4] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DESC.  
+ [4] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
- [5] chiamante **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza tener conto per l'handle di ofthat contenuto precedente e può causare problemi per i driver ODBC. Si tratta di programmazione di applicazioni ODBC non corretta per chiamare **SQLAllocHandle** due volte alla stessa variabile di applicazione definita per  *\*OutputHandlePtr* senza chiamare  **SQLFreeHandle** per liberare l'handle prima la riallocazione. Sovrascrittura ODBC gli handle in questo modo possono causare un comportamento non coerente o errori da parte dei driver ODBC.  
+ [5] la chiamata a **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza considerare il contenuto precedente diquesto handle e potrebbe causare problemi per i driver ODBC. La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per * \*OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima della riallocazione. La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 C3 [d] [s]|-[d] C2 C4 [e] [s]|(08002)|(08002)|(08002)|  
+|IH|IH|C3 [d] C4 [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
+|IH|IH|IH|IH|IH|--|--[1] C5 [2]|  
   
- [1] la connessione è in modalità di commit manuale.  
+ [1] la connessione era in modalità di commit manuale.  
   
  [2] la connessione era in modalità autocommit.  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges e SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges e SQLTables  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] la connessione non è in modalità autocommit o l'origine dati non è iniziato una transazione.  
+ [1] la connessione era in modalità autocommit oppure l'origine dati non ha iniziato una transazione.  
   
- [2] la connessione non è in modalità di commit manuale e l'origine dati ha iniziato una transazione.  
+ [2] la connessione era in modalità di commit manuale e l'origine dati ha avviato una transazione.  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4|(08002)|(08002)|(08002)|(08002)|  
   
-## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField and SQLSetDescRec  
+## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField e SQLSetDescRec  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
+|IH|IH|IH|IH|--[1]|--|--|  
   
- [1] in questo stato, i descrittori soli disponibili per l'applicazione vengono allocati in modo esplicito i descrittori.  
+ [1] in questo stato, gli unici descrittori disponibili per l'applicazione sono descrittori allocati in modo esplicito.  
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources e SQLDrivers  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
+|IH|IH|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|S C4--n [f]|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4 s--n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--[3]|--[3]|--[3]|--|--|: [4] o ([5], [6] e [8]) C4 [5] e [7] C5 [5], [6] e [9]|  
-|(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
+|IH 1|--[3]|--[3]|--[3]|--|--|--[4] o ([5], [6] e [8]) C4 [5] e [7] C5 [5], [6] e [9]|  
+|IH 2|IH|(08003)|(08003)|--|--|C5|  
   
- [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  
+ [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_ENV.  
   
- [2] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DBC.  
+ [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DBC.  
   
- [3] perché la connessione non è in uno stato di connessione, è interessato dalla transazione.  
+ [3] perché la connessione non si trova in uno stato connesso, non è interessata dalla transazione.  
   
- [4] la connessione non riuscito il commit o rollback. La funzione restituisce SQL_ERROR in questo caso.  
+ [4] non è stato possibile eseguire il commit o il rollback sulla connessione. In questo caso la funzione restituisce SQL_ERROR.  
   
- [5] il commit o rollback ha avuto esito positivo della connessione. La funzione restituisce SQL_ERROR se il commit o il rollback non riuscita in un'altra connessione o la funzione restituisce SQL_SUCCESS se il commit o il rollback ha avuto esito positivo su tutte le connessioni.  
+ [5] il commit o il rollback è riuscito sulla connessione. La funzione restituisce SQL_ERROR se il commit o il rollback non è riuscito in un'altra connessione oppure la funzione restituisce SQL_SUCCESS se il commit o il rollback è riuscito in tutte le connessioni.  
   
- [6] si è verificato almeno un'istruzione allocata per la connessione.  
+ [6] è stata allocata almeno un'istruzione per la connessione.  
   
- [7] non esistevano alcun istruzioni allocate nella connessione.  
+ [7] non sono state allocate istruzioni per la connessione.  
   
- [8] la connessione ha almeno una sola istruzione per il quale si era un cursore aperto, e l'origine dati consente di mantenere i cursori quando le transazioni vengono eseguito il commit o rollback, a seconda di quale si applica (a seconda che *CompletionType* era SQL _ COMMIT o SQL_ROLLBACK). Per altre informazioni, vedere gli attributi SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
+ [8] la connessione include almeno un'istruzione per la quale è presente un cursore aperto e l'origine dati conserva i cursori quando viene eseguito il commit o il rollback delle transazioni, a seconda del fatto che *CompletionType* sia stato SQL_COMMIT o SQL_ROLLBACK). Per ulteriori informazioni, vedere gli attributi SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- [9] se la connessione ha tutte le istruzioni per il quale si sono verificati i cursori aperti, i cursori non sono stati mantenuti quando è stato eseguito il commit o il rollback della transazione.  
+ [9] se per la connessione erano presenti istruzioni per le quali erano presenti cursori aperti, i cursori non venivano conservati quando è stato eseguito il commit o il rollback della transazione.  
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect e SQLExecute  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2] C6 [3]|--|  
   
- [1] la connessione non è in modalità autocommit e dell'esecuzione dell'istruzione non è un *cursore* *specifica* (ad esempio, un'istruzione SELECT); o la connessione è in modalità di commit manuale e l'istruzione esecuzione non è iniziato una transazione.  
+ [1] la connessione era in modalità autocommit e l'istruzione eseguita non era una *specifica* del *cursore* , ad esempio un'istruzione SELECT. in alternativa, la connessione era in modalità di commit manuale e l'istruzione eseguita non ha iniziato una transazione.  
   
- [2] la connessione è in modalità autocommit e dell'esecuzione dell'istruzione è un' *cursore* *specification* (ad esempio, un'istruzione SELECT).  
+ [2] la connessione era in modalità autocommit e l'istruzione eseguita era una *specifica* del *cursore* , ad esempio un'istruzione SELECT.  
   
- [3] della connessione è in modalità di commit manuale e l'origine dati ha iniziato una transazione.  
+ [3] la connessione era in modalità di commit manuale e l'origine dati ha avviato una transazione.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4 [5], [6]|-C4 [7] [5] e [8] C5 [6] e [8]|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|IH 1|C0|HY010|HY010|HY010|HY010|HY010|  
+|IH 2|IH|C1|HY010|HY010|HY010|HY010|  
+|IH 3|IH|IH|IH|IH|C4 [5]--[6]|--[7] C4 [5] e [8] C5 [6] e [8]|  
+|IH 4|IH|IH|IH|--|--|--|  
   
- [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  
+ [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_ENV.  
   
- [2] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DBC.  
+ [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DBC.  
   
- [3] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_STMT.  
+ [3] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
   
- [4] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DESC.  
+ [4] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
- [5] si è verificato solo di un'istruzione allocata per la connessione.  
+ [5] è stata allocata una sola istruzione alla connessione.  
   
- [6] si sono verificati più istruzioni allocate nella connessione.  
+ [6] sono state allocate più istruzioni per la connessione.  
   
- [7] la connessione è in modalità di commit manuale.  
+ [7] la connessione era in modalità di commit manuale.  
   
  [8] la connessione era in modalità autocommit.  
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
-|(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|IH 1|IH|IH|IH|IH|--|C5 [3]--[4]|  
+|IH 2|IH|IH|IH|IH|--|--|  
   
- [1] questa riga Mostra le transazioni quando il *opzione* argomento è SQL_CLOSE.  
+ [1] Questa riga Mostra le transazioni quando l'argomento *Option* è SQL_CLOSE.  
   
- [2] questa riga Mostra le transazioni quando il *opzione* argomento è SQL_UNBIND o SQL_RESET_PARAMS.  
+ [2] Questa riga Mostra le transazioni quando l'argomento *Option* è SQL_UNBIND o SQL_RESET_PARAMS.  
   
- [3] la connessione non è in modalità autocommit e non i cursori sono stati aperti sulle istruzioni ad eccezione di questo.  
+ [3] la connessione è in modalità autocommit e nessun cursore è aperto in alcuna istruzione ad eccezione di questa.  
   
- [4] la connessione è in modalità di commit manuale, o era in modalità autocommit e un cursore è stato aperto in almeno un'altra istruzione.  
+ [4] la connessione era in modalità di commit manuale o era in modalità autocommit e un cursore era aperto in almeno un'altra istruzione.  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--|--|--|  
+|IH|IH|--[1] 08003 [2]|HY010|--|--|--|  
   
- [1] il *attributo* argomento era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE o fosse stato impostato un valore per l'attributo di connessione.  
+ [1] l'argomento dell' *attributo* è SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE oppure è stato impostato un valore per l'attributo Connection.  
   
- [2] il *attributo* argomento non era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE e non era stato impostato un valore per la connessione attributo.  
+ [2] l'argomento dell' *attributo* non è SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE e non è stato impostato un valore per l'attributo Connection.  
   
-## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagRec e SQLGetDiagField  
+## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField e SQLGetDiagRec  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--|--|--|--|--|--|  
-|(IH)[2]|(IH)|--|--|--|--|--|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|IH 1|--|--|--|--|--|--|  
+|IH 2|IH|--|--|--|--|--|  
+|IH 3|IH|IH|IH|IH|--|--|  
+|IH 4|IH|IH|IH|--|--|--|  
   
- [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  
+ [1] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_ENV.  
   
- [2] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DBC.  
+ [2] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DBC.  
   
- [3] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_STMT.  
+ [3] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_STMT.  
   
- [4] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_DESC.  
+ [4] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|08003|--|--|--|  
+|IH|IH|--[1] 08003 [2]|08003|--|--|--|  
   
- [1] il *InfoType* argomento era SQL_ODBC_VER.  
+ [1] l'argomento *InfoType* è stato SQL_ODBC_VER.  
   
- [2] il *InfoType* argomento non era SQL_ODBC_VER.  
+ [2] l'argomento *InfoType* non è stato SQL_ODBC_VER.  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--[3] C5 [1]|  
   
- [1] la connessione non è in modalità autocommit e la chiamata a **SQLMoreResults** l'elaborazione di un set di risultati di una specifica del cursore non è stato inizializzato.  
+ [1] la connessione era in modalità autocommit e la chiamata a **SQLMoreResults** non ha inizializzato l'elaborazione di un set di risultati di una specifica del cursore.  
   
- [2] la connessione non è in modalità autocommit e la chiamata a **SQLMoreResults** ha inizializzato l'elaborazione di un set di risultati di una specifica del cursore.  
+ [2] la connessione era in modalità autocommit e la chiamata a **SQLMoreResults** ha inizializzato l'elaborazione di un set di risultati di una specifica del cursore.  
   
- [3] della connessione è in modalità di commit manuale.  
+ [3] la connessione era in modalità di commit manuale.  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|(08003)|--|--|--|  
+|IH|IH|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] la connessione non è in modalità autocommit o l'origine dati non è iniziato una transazione.  
+ [1] la connessione era in modalità autocommit oppure l'origine dati non ha iniziato una transazione.  
   
- [2] la connessione non è in modalità di commit manuale e l'origine dati ha iniziato una transazione.  
+ [2] la connessione era in modalità di commit manuale e l'origine dati ha avviato una transazione.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|: [3] e [6] C5 [8] 08002 HY011 [4] [5] o [7]|  
+|IH|IH|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] e [6] C5 [8] 08002 [4] HY011 [5] o [7]|  
   
- [1] il *attributo* argomento non è stata SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
+ [1] l'argomento dell' *attributo* non è SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
   
- [2] il *attributo* argomento era SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
+ [2] l'argomento dell' *attributo* è stato SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
   
- [3] il *attributo* argomento non è stata SQL_ATTR_ODBC_CURSORS o SQL_ATTR_PACKET_SIZE.  
+ [3] l'argomento dell' *attributo* non è SQL_ATTR_ODBC_CURSORS o SQL_ATTR_PACKET_SIZE.  
   
- [4] di *attributo* argomento era SQL_ATTR_ODBC_CURSORS.  
+ [4] l'argomento dell' *attributo* è stato SQL_ATTR_ODBC_CURSORS.  
   
- [5] il *attributo* argomento era SQL_ATTR_PACKET_SIZE.  
+ [5] l'argomento dell' *attributo* è stato SQL_ATTR_PACKET_SIZE.  
   
- [6] al *attributo* argomento non era SQL_ATTR_AUTOCOMMIT, o il *attributo* argomento era SQL_ATTR_AUTOCOMMIT e l'impostazione di questo attributo non il commit della transazione.  
+ [6] l'argomento dell' *attributo* non è stato SQL_ATTR_AUTOCOMMIT oppure l'argomento dell' *attributo* è stato SQL_ATTR_AUTOCOMMIT e l'impostazione di questo attributo non ha eseguito il commit della transazione.  
   
- [7] al *attributo* argomento era SQL_ATTR_TXN_ISOLATION.  
+ [7] l'argomento dell' *attributo* è stato SQL_ATTR_TXN_ISOLATION.  
   
- [8] al *attributo* argomento era SQL_ATTR_AUTOCOMMIT e l'impostazione di questo attributo eseguito il commit della transazione.  
+ [8] l'argomento dell' *attributo* è stato SQL_ATTR_AUTOCOMMIT e l'impostazione di questo attributo ha eseguito il commit della transazione.  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|(HY010)|--|--|--|  
+|IH|--|--|HY010|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Tutte le altre funzioni ODBC  
   
-|C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
+|C0<br /><br /> Nessun ENV.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
+|IH|IH|IH|IH|IH|--|--|

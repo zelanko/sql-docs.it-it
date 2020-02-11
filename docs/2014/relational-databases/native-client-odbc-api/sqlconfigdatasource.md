@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067709"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-coppie parola chiave/valore specifico per i dati di origine le stringhe di attributi di configurazione.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varie coppie parola chiave/valore specifiche per le stringhe degli attributi di configurazione dell'origine dati.  
   
- Per un elenco delle parole chiave disponibili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, vedere [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per un elenco delle parole chiave disponibili nel driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLConfigDataSource Function](https://go.microsoft.com/fwlink/?LinkId=59337)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [SQLConfigDataSource (funzione)](https://go.microsoft.com/fwlink/?LinkId=59337)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

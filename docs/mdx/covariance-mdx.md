@@ -1,5 +1,5 @@
 ---
-title: La covarianza (MDX) | Microsoft Docs
+title: Covarianza (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ea3755fb103362b797735d74c9cbe67523aace59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047194"
 ---
 # <a name="covariance-mdx"></a>Covariance (MDX)
@@ -37,13 +37,13 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero che rappresenta i valori per l'asse X.  
   
-## <a name="remarks"></a>Note  
- Il **covarianza** funzione valuta il set specificato rispetto alla prima espressione numerica, per ottenere i valori per l'asse y. La funzione valuta quindi il set specificato in base alla seconda espressione numerica, se specificata, per ottenere il set di valori per l'asse x. Se il secondo expressionis numerica non specificata, la funzione utilizza il contesto corrente delle celle nel set specificato come valori per l'asse x.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Covariance** valuta il set specificato rispetto alla prima espressione numerica, per ottenere i valori per l'asse y. La funzione valuta quindi il set specificato in base alla seconda espressione numerica, se specificata, per ottenere il set di valori per l'asse x. Se la seconda espressione numerica non è specificata, la funzione utilizza il contesto corrente delle celle nel set specificato come valori per l'asse x.  
   
- Il **covarianza** funzione utilizza la formula della popolazione distorta. È in contrasto con la [CovarianceN](../mdx/covariancen-mdx.md) funzione che usa la formula della popolazione non distorta (dividendo il numero di coppie x-y, quindi sottraendo 1).  
+ La funzione **Covariance** usa la formula della popolazione distorta. Si differenzia dalla funzione [Covariant](../mdx/covariancen-mdx.md) che usa la formula della popolazione non distorta (dividendo il numero di coppie x-y, quindi sottraendo 1).  
   
 > [!NOTE]  
->  Il **covarianza** funzione ignora le celle vuote o che contengono testo o valori logici vengono ignorati. Tuttavia, la funzione include celle con valori zero.  
+>  La funzione **Covariance** ignora le celle vuote o le celle che contengono testo o valori logici vengono ignorate. Tuttavia, la funzione include celle con valori zero.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare la funzione Covariance:  
@@ -58,6 +58,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e018b225fc2cf113270b11cb12f2a2de37a1ca86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105663"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclusione di indicatori e misuratori in un pannello del misuratore (Generatore report e SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66105663"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Fare clic sul misuratore. Viene visualizzato il riquadro **Dati misuratore** .  
+6.  Fare clic sul misuratore. Viene visualizzato il riquadro **Dati del misuratore** .  
   
 7.  Nell'elenco a discesa **(Non specificato)** dell'area **Valori** fare clic sul campo di cui si vogliono visualizzare i valori nel misuratore. In alternativa, trascinare il campo da utilizzare dal set di dati del report.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66105663"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Fare clic sul misuratore. Viene visualizzato il riquadro **Dati misuratore** .  
+6.  Fare clic sul misuratore. Viene visualizzato il riquadro **Dati del misuratore** .  
   
 7.  Nell'elenco a discesa **(Non specificato)** dell'area **Valori** fare clic sul campo di cui si vogliono visualizzare i valori nel misuratore. In alternativa, trascinare il campo da utilizzare dal set di dati del report.  
   
