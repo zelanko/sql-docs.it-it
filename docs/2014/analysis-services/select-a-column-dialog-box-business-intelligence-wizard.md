@@ -1,5 +1,5 @@
 ---
-title: Selezionare una finestra di dialogo di colonna (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Finestra di dialogo Seleziona colonna (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a8feb2b80a629d51c7447843ff5a8b41f0700b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069835"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Finestra di dialogo Seleziona colonna (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la finestra di dialogo **Seleziona colonna** per selezionare una colonna da un elenco di tabelle presenti in una visualizzazione albero. Questa finestra di dialogo viene aperta dalla Configurazione guidata funzionalità di Business Intelligence.  
   
 ## <a name="options"></a>Opzioni  
- **Visualizzazione struttura ad albero**  
+ **Visualizzazione albero**  
  Fare clic su questo pulsante per selezionare una colonna per la Configurazione guidata funzionalità di Business Intelligence.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

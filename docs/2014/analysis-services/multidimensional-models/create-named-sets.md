@@ -1,5 +1,5 @@
 ---
-title: Creare set denominati | Microsoft Docs
+title: Creazione di set denominati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076134"
 ---
 # <a name="create-named-sets"></a>Creare set denominati
@@ -26,7 +26,7 @@ ms.locfileid: "66076134"
   
  Per creare un set denominato usare il comando **Nuovo set denominato** nella scheda **Calcoli** di Progettazione cubi. Questo comando è accessibile dal menu **Cubo** sulla barra degli strumenti della scheda **Calcoli** . e visualizza un form in cui è possibile specificare le opzioni seguenti per il set denominato:  
   
- **Name**  
+ **Nome**  
  Selezionare il nome del set denominato. Questo nome appare agli utenti finali quando visualizzano il cubo.  
   
  **Espressione**  
@@ -43,7 +43,7 @@ ms.locfileid: "66076134"
  È possibile copiare o trascinare componenti del cubo dalla scheda **Metadati** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** . È possibile copiare o trascinare funzioni dalla scheda **Funzioni** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** .  
   
 > [!IMPORTANT]  
->  Se si crea l'espressione set denominando in modo esplicito i membri del set, racchiudere l'elenco dei membri in una coppia di parentesi graffe ({}).  
+>  Se si crea l'espressione set assegnando in modo esplicito un nome ai membri del set, racchiudere l'elenco dei membri in una coppia di{}parentesi graffe ().  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)  

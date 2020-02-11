@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109684"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
@@ -33,23 +33,23 @@ ms.locfileid: "66109684"
   
  L'esercitazione è suddivisa in tre lezioni:  
   
- [Lezione 1: Creazione di un Database Sottoscrittore di esempio](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lezione 1: Creazione di un database di esempio del Sottoscrittore](lesson-1-creating-a-sample-subscriber-database.md)  
  In questa lezione verranno descritte le procedure per la creazione di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale che contiene informazioni sui Sottoscrittori.  
   
- [Lezione 2: Modifica delle proprietà dell'origine dati del report](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  In questa lezione verranno descritte le procedure per la modifica delle proprietà dell'origine dati del report in modo che il report possa essere eseguito automaticamente. Le credenziali archiviate sono necessarie per l'elaborazione automatica. Inoltre, verrà modificato il set di dati del report per includere un parametro fornito dai dati del sottoscrittore.  
   
- [Lezione 3: Definizione di una sottoscrizione guidata dai dati](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  In questa lezione verranno descritte le procedure per la definizione di una sottoscrizione guidata dai dati. In questa lezione viene introdotta la procedura guidata che consente di eseguire in modo semplificato i passaggi necessari per creare sottoscrizioni guidate dai dati.  
   
 ## <a name="requirements"></a>Requisiti  
  Le sottoscrizioni guidate dai dati vengono in genere create e gestite da amministratori di server di report. Per creare sottoscrizioni guidate dai dati è necessario conoscere le modalità di compilazione delle query e delle origini dei dati contenenti i dati del Sottoscrittore. È inoltre necessario disporre di autorizzazioni elevate per un server di report.  
   
- Nell'esercitazione verrà utilizzato il report creato nell'esercitazione [creare un Report tabella semplice &#40;esercitazione su SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) e i dati da [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ Nell'esercitazione viene utilizzato il report creato nell'esercitazione [creare un report tabella di base &#40;esercitazione di SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md) e i dati da[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   Un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che supporta sottoscrizioni guidate dai dati. Per altre informazioni, vedere [edizioni e componenti di SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che supporta sottoscrizioni guidate dai dati. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 -   Il server di report deve essere eseguito in modalità nativa. L'interfaccia utente descritta in questa esercitazione è basata su un server di report in modalità nativa. Le sottoscrizioni sono supportate in server di report in modalità SharePoint ma l'interfaccia utente sarà diversa da quella descritta in questa esercitazione.  
   

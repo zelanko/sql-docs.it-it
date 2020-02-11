@@ -1,5 +1,5 @@
 ---
-title: 'Attività 17: Verifica del progetto DQS Cleansing creato dal pacchetto SSIS | Microsoft Docs'
+title: 'Attività 17: Revisione del progetto di pulizia DQS creato dal pacchetto SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484716"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Attività 17: Verifica del progetto DQS Cleansing creato dal pacchetto SSIS
   In questa attività viene aperto il progetto DQS creato dal pacchetto SSIS nel client DQS, vengono esaminati i risultati del processo di pulizia e, facoltativamente, viene effettuata la pulizia interattiva e l'esportazione dei risultati.  
   
-1.  Avvio veloce **Client Data Quality**.  
+1.  Avviare **Data Quality Client**.  
   
-2.  Fare clic su **Monitoraggio attività** nel **amministrazione** riquadro.  
+2.  Fare clic su **monitoraggio attività** nel riquadro **Amministrazione** .  
   
-3.  Ordinare l'elenco in base alle **ora di inizio attività** per visualizzare il record più recente.  
+3.  Ordinare l'elenco in base all' **ora di inizio dell'attività** per visualizzare il record più recente.  
   
-4.  Si noti che un nome del progetto nel formato seguente: **Cleanseandcurate. CLEANSE Supplier Data. GUID**.  
+4.  Si noti che il nome del progetto viene visualizzato nel formato seguente: **CleanseAndCurate. cleane Supplier Data. Guid**.  
   
-     ![Progetto DQS Cleansing creato dal pacchetto SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "progetto DQS Cleansing creato dal pacchetto SSIS")  
+     ![Progetto DQS Cleansing creato dal pacchetto SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "Progetto DQS Cleansing creato dal pacchetto SSIS")  
   
-5.  Si noti che il valore di **attivo** campo è **Active**.  
+5.  Si noti che il valore nel campo **is Active** è **Active**.  
   
-6.  Fare clic su **Profiler** scheda nel riquadro inferiore per visualizzare statistiche del profiler per le attività di pulizia effettuata dal pacchetto SSIS.  
+6.  Fare clic sulla scheda **Profiler** nel riquadro inferiore per visualizzare le statistiche del profiler per l'attività di pulizia eseguita dal pacchetto SSIS.  
   
-7.  Fare clic su **chiudere** per chiudere la **amministrazione** dello schermo.  
+7.  Fare clic su **Chiudi** per chiudere la schermata di **Amministrazione** .  
   
-8.  Nella pagina principale del **Client DQS**, fare clic su **Apri progetto Data Quality** nel **progetti Data Quality** riquadro.  
+8.  Nella pagina principale del **client DQS**fare clic su **Apri progetto Data Quality** nel riquadro **progetti Data Quality** .  
   
-9. Nell'elenco di progetti selezionare il progetto creato dal componente SSIS DQS Cleansing. Il nome del progetto deve essere nel formato:  **Cleanseandcurate. CLEANSE Supplier Data. GUID (in rosso)** . Potrebbe essere necessario ordinare l'elenco in base alle **data di creazione** colonna e individuare il record più recente.  
+9. Nell'elenco di progetti selezionare il progetto creato dal componente SSIS DQS Cleansing. Il nome del progetto deve essere nel formato: **CleanseAndCurate. cleane Supplier Data. Guid (in rosso)**. Potrebbe essere necessario ordinare l'elenco in base alla colonna **Data di creazione** e cercare il record più recente.  
   
-10. Scegliere **Avanti**.  
+10. Fare clic su **Avanti**.  
   
-11. Il **Gestisci e Visualizza risultati** pagina dovrebbe essere familiare dalla pulizia interattiva effettuata precedentemente durante questa esercitazione.  
+11. La pagina **Gestisci e visualizza risultati** dovrebbe essere familiare dalla pulizia interattiva illustrata in precedenza in questa esercitazione.  
   
 12. Esaminare i risultati della pulizia. Inoltre, è possibile effettuare la pulizia interattiva ed esportare i risultati in un file di Excel o in un database nella pagina successiva.  
   
-13. Scegliere **Avanti**. In questo **esportare** pagina, è possibile esportare i risultati in un file di excel, file CSV, o a un database SQL.  
+13. Fare clic su **Avanti**. In questa pagina di **esportazione** è possibile esportare i risultati in un file di Excel, in un file CSV o in un database SQL.  
   
 14. Fare clic su **fine** per completare l'attività.  
   
-15. Nella pagina principale del **Client DQS**, fare clic su **Monitoraggio attività** nel **amministrazione** riquadro.  
+15. Nella pagina principale del **client DQS**fare clic su **monitoraggio attività** nel riquadro **Amministrazione** .  
   
-16. Si noti che il valore di **IsActive** campo per il progetto è **terminato** ora.  
+16. Si noti che il valore del campo **inactive** per il progetto è **terminato** adesso.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Conclusioni](../../2014/tutorials/conclusion.md)  
   
   
