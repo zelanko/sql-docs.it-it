@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637776"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server obsolete in SQL Server 2014
@@ -35,12 +35,13 @@ ms.locfileid: "73637776"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Funzionalità obsolete in SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Supporto della piattaforma a 64 bit in Reporting Services  
- A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare gli altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server°2008°R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
+ A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare gli altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server°2008°R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Funzionalità obsolete in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Eliminazione di SQL-DMO dall'installazione di SQL Server Express  
- SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti per la compatibilità con le versioni precedenti da [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
+ SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti per la compatibilità con [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] le versioni precedenti dal Feature Pack dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opzione rimossa per Pubblicazione guidata sul Web  
  L'opzione `sp_configure` per abilitare Pubblicazione guidata sul Web è stata rimossa da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. È consigliabile utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in alternativa.  
@@ -48,13 +49,13 @@ ms.locfileid: "73637776"
 ### <a name="surface-area-configuration-tool"></a>strumento Configurazione superficie di attacco  
  Lo strumento Configurazione superficie di attacco non è più disponibile per [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nella tabella seguente vengono illustrati gli elementi che è possibile utilizzare per configurare impostazioni, opzioni e funzionalità di componenti nella versione corrente.  
   
-|Impostazioni di sostituzione e funzionalità del componente|Modalità di configurazione|  
+|Impostazioni di sostituzione e funzionalità del componente|Come configurare|  
 |-------------------------------------------------|----------------------|  
 |Protocolli, opzioni di connessione e di avvio|Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|Funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilizzare la gestione basata su criteri, le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oppure sp_Configure.|  
-|Funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|Proprietà di sicurezza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-proprietà EnableIntegratedSecurity|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]: "Pianifica Eventi e recapito report" e "accesso HTTP e servizi Web"|Modificare il file di configurazione RSReportServer.config.|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)]funzionalità|Utilizzare la gestione basata su criteri, le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oppure sp_Configure.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]funzionalità|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - proprietà EnableIntegratedSecurity|Utilizzare le impostazioni delle proprietà in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]- "Eventi pianificati e recapito report" e "Accesso HTTP e servizi Web"|Modificare il file di configurazione RSReportServer.config.|  
 |Opzioni della riga di comando|Supporto non disponibile in questa versione.|  
 |Endpoint SOAP e [!INCLUDE[ssSB](../includes/sssb-md.md)]|Utilizzare [create endpoint](/sql/t-sql/statements/create-endpoint-transact-sql)e [ALTER endpoint](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
@@ -78,7 +79,7 @@ ms.locfileid: "73637776"
   
  <sup>1</sup> Questi parametri sono validi solo per l'installazione.  
   
- <sup>2</sup> A partire da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], specificare/Action = EditionUpgrade per aggiornare un'edizione esistente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'edizione diversa in qualsiasi momento senza usare il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> A [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]partire da, specificare/Action = EditionUpgrade per aggiornare un'edizione esistente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di a un'edizione diversa in qualsiasi momento senza usare il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

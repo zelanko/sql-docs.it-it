@@ -17,14 +17,14 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920010"
 ---
 # <a name="clone-method-ado"></a>Metodo Clone (ADO)
-Crea un duplicato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto da un oggetto esistente **Recordset** oggetto. Facoltativamente, specifica che il clone sia di sola lettura.  
+Crea un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) duplicato da un oggetto **Recordset** esistente. Facoltativamente, specifica che il clone deve essere di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,50 +34,50 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **Recordset** il riferimento all'oggetto.  
+ Restituisce un riferimento a un oggetto **Recordset** .  
   
 #### <a name="parameters"></a>Parametri  
  *rstDuplicate*  
- Una variabile oggetto che identifica il duplicato **Recordset** oggetto da creare.  
+ Variabile oggetto che identifica l'oggetto **Recordset** duplicato da creare.  
   
  *rstOriginal*  
- Una variabile oggetto che identifica la **Recordset** oggetto duplicazione.  
+ Variabile oggetto che identifica l'oggetto **Recordset** da duplicare.  
   
  *LockType*  
- Facoltativo. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che specifica il tipo di blocco dell'originale **Recordset**, o di una sola **Recordset**. I valori validi sono **adLockUnspecified** oppure **adLockReadOnly**.  
+ Facoltativa. Valore [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) che specifica il tipo di blocco del **Recordset**originale o un **Recordset**di sola lettura. I valori validi sono **adLockUnspecified** o **adLockReadOnly**.  
   
-## <a name="remarks"></a>Note  
- Usare la **Clone** metodo per creare più, Duplica **Recordset** oggetti, soprattutto se si vuole mantenere più di un record corrente in un determinato set di record. Usando il **Clone** è più efficiente rispetto alla creazione e apertura di un nuovo metodo **Recordset** oggetto che usa la stessa definizione dell'originale.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare il metodo **Clone** per creare più oggetti **Recordset** duplicati, soprattutto se si desidera mantenere più record correnti in un set di record specificato. L'utilizzo del metodo **Clone** è più efficiente rispetto alla creazione e all'apertura di un nuovo oggetto **Recordset** che utilizza la stessa definizione dell'originale.  
   
- Il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà dell'originale **Recordset**, se presente, non verranno applicate per il clone. Impostare il **filtro** proprietà del nuovo **Recordset** per filtrare i risultati. Il modo più semplice per copiare tutte le classi esistenti **filtro** valore consiste nell'assegnarlo direttamente, come indicato di seguito.  
+ La proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) del **Recordset**originale, se presente, non verrà applicata al clone. Impostare la proprietà **Filter** del nuovo **Recordset** per filtrare i risultati. Il modo più semplice per copiare qualsiasi valore di **filtro** esistente consiste nell'assegnarlo direttamente, come indicato di seguito.  
   
 ```  
 rsNew.Filter = rsOriginal.Filter  
 ```  
   
- Il record corrente di un clone appena creato è impostato per il primo record.  
+ Il record corrente di un clone appena creato viene impostato sul primo record.  
   
- Le modifiche apportate a uno **Recordset** oggetto saranno visibili in tutti i suoi cloni indipendentemente dal tipo di cursore. Tuttavia, dopo l'esecuzione [Requery](../../../ado/reference/ado-api/requery-method.md) sull'originale **Recordset**, non è più cloni verranno sincronizzati con la versione originale.  
+ Le modifiche apportate a un oggetto **Recordset** sono visibili in tutti i relativi cloni indipendentemente dal tipo di cursore. Tuttavia, dopo l'esecuzione di [Requery](../../../ado/reference/ado-api/requery-method.md) sul **Recordset**originale, i cloni non verranno più sincronizzati con quello originale.  
   
- Chiusura originale **Recordset** chiusa relative copie, non comporta la chiusura di una copia vicino originale o una delle altre copie.  
+ La chiusura del **Recordset** originale non comporta la chiusura delle copie, né la chiusura di una copia chiude l'originale o una delle altre copie.  
   
- È possibile duplicare solo una **Recordset** oggetto che supporta i segnalibri. I valori di segnalibro sono intercambiabili; vale a dire, un riferimento di segnalibro da una **Recordset** oggetto fa riferimento allo stesso record in uno qualsiasi dei suoi cloni.  
+ È possibile clonare solo un oggetto **Recordset** che supporta segnalibri. I valori dei segnalibri sono intercambiabili; ovvero, un riferimento a un segnalibro da un oggetto **Recordset** fa riferimento allo stesso record in uno dei relativi cloni.  
   
- Alcuni **Recordset** verificano anche gli eventi che vengono attivati in tutte le **Recordset** cloni. Tuttavia, poiché il record corrente può differire tra clonato **recordset**, gli eventi potrebbero non essere validi per il clone. Ad esempio, se si modifica un valore di un campo, una [WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md) evento verrà generato in modificato **Recordset** e in tutti i cloni. Il *i campi* parametro delle **WillChangeField** eventi di clonato **Recordset** (la modifica non effettuata) farà riferimento ai campi del record corrente del clone, che può essere un record diverso da quello corrente dell'originale **Recordset** in cui si è verificato durante la modifica.  
+ In tutti i cloni dei **Recordset** verranno generati anche alcuni eventi **Recordset** attivati. Tuttavia, poiché il record corrente può variare tra **Recordset**clonati, gli eventi potrebbero non essere validi per il clone. Se ad esempio si modifica un valore di un campo, si verificherà un evento [WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md) nel **Recordset** modificato e in tutti i cloni. Il parametro *Fields* dell'evento **WillChangeField** di un **Recordset** clonato (in cui la modifica non è stata apportata) fa riferimento ai campi del record corrente del clone, che può essere un record diverso rispetto al record corrente del **Recordset** originale in cui si è verificata la modifica.  
   
- Nella tabella seguente fornisce un elenco completo di tutte le **Recordset** gli eventi. Indica se sono valida e attivato per i cloni dei recordset generati usando il **Clone** (metodo).  
+ Nella tabella seguente viene fornito un elenco completo di tutti gli eventi **Recordset** . Indica se sono validi e attivati per tutti i cloni del recordset generati tramite il metodo **Clone** .  
   
-|event|Attivazione in cloni?|  
+|Event|Attivato nei cloni?|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|No|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|No|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|No|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sì|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sì|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sì|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sì|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
   
@@ -87,4 +87,4 @@ rsNew.Filter = rsOriginal.Filter
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo Clone (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Esempio di metodo Clone (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
- [Esempio di metodo Clone (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
+ [Esempio del metodo Clone (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

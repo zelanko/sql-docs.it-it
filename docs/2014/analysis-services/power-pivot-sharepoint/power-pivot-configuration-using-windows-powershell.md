@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782810"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configurazione di PowerPivot tramite Windows PowerShell
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include i cmdlet di Windows PowerShell che è possibile usare per configurare un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Per configurazione completamente un'installazione con PowerShell, è necessario utilizzare cmdlet sia di SharePoint che di PowerPivot per SharePoint. La maggior parte della configurazione può essere completata usando uno degli strumenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per ulteriori informazioni sugli strumenti, vedere [strumenti di configurazione di PowerPivot](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
@@ -27,7 +28,7 @@ ms.locfileid: "72782810"
  È possibile compilare i file di script di Windows PowerShell (con estensione ps1) per rendere automatiche le attività di configurazione. Si consiglia di adottare questo approccio se sono necessari passaggi di installazione e configurazione controllati da script eseguibili in qualsiasi server. Uno script di questo tipo può essere necessario come parte di un piano di ripristino di emergenza per ricompilare un server in caso di errore hardware.  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>Visualizzare un elenco di cmdlet PowerPivot in un server  
- Per visualizzare il contenuto ed esempi dei cmdlet di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vedere informazioni di [riferimento su PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
+ Per visualizzare il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenuto ed esempi dei cmdlet, vedere informazioni di [riferimento su PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
  Per utilizzare PowerShell per visualizzare un elenco di cmdlet di PowerPivot:  
   
@@ -39,13 +40,13 @@ ms.locfileid: "72782810"
     Get-Help *powerpivot*  
     ```  
   
-     Dovrebbe venire visualizzato un elenco di cmdlet nel cui nome è incluso PowerPivot. Ad esempio `Get-PowerPivotServiceApplication`. Il numero di cmdlet disponibili dipende dalla versione di Analysis Services in uso.  
+     Dovrebbe venire visualizzato un elenco di cmdlet nel cui nome è incluso PowerPivot. Ad esempio, `Get-PowerPivotServiceApplication`. Il numero di cmdlet disponibili dipende dalla versione di Analysis Services in uso.  
   
     -   10 cmdlet con il server SQL Server 2012 SP1 Analysis Services configurato nella modalità SharePoint e SharePoint 2013. La versione 2012 SP1 utilizza una nuova architettura che consente l'esecuzione di Analysis Server all'esterno della farm di SharePoint e richiede meno cmdlet di Windows PowerShell di gestione.  
   
     -   17 cmdlet con il server SQL Server 2012 SP1 Analysis Services configurato nella modalità SharePoint e SharePoint 2010.  
   
-     Se nell'elenco non viene restituito alcun comando o se viene visualizzato un messaggio di errore simile a "`get-help could not find *powerpivot* in a help file in this session.`", vedere la sezione successiva in questo argomento per istruzioni sull'abilitazione dei cmdlet PowerPivot nel server.  
+     Se nell'elenco non viene restituito alcun comando o se viene visualizzato un messaggio di errore simile`get-help could not find *powerpivot* in a help file in this session.`a "", vedere la sezione successiva in questo argomento per istruzioni sull'abilitazione dei cmdlet PowerPivot nel server.  
   
      Per tutti i cmdlet è disponibile la Guida. Nell'esempio seguente viene illustrato come visualizzare la Guida per il cmdlet `New-PowerPivotServiceApplication`:  
   
@@ -83,6 +84,6 @@ ms.locfileid: "72782810"
 ## <a name="related-content"></a>Contenuto correlato  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [Strumenti di configurazione PowerPivot](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
- [Informazioni di riferimento su PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [Riferimento a PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

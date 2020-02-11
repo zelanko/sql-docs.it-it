@@ -1,5 +1,5 @@
 ---
-title: Pagina elementi dipendenti (gestione Report) | Microsoft Docs
+title: Pagina elementi dipendenti (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109331"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
@@ -34,7 +34,7 @@ ms.locfileid: "66109331"
 4.  Selezionare la scheda **Elementi dipendenti** .  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome del report o del modello. Fare clic sul nome del report per aprirlo. Fare clic sul nome del modello per aprire le relative pagine delle proprietà.  
   
  **Descrizione**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109331"
  **Elimina**  
  Fare clic per eliminare il report o il  modello dal database del server di report. Prima di fare clic su **Elimina**, selezionare la casella di controllo accanto a ogni elemento che si desidera eliminare.  
   
- **Sposta**  
+ **Spostamento**  
  Fare clic per spostare un report o un modello all'interno della gerarchia di cartelle. Prima di fare clic su **Sposta**selezionare la casella di controllo accanto a ogni elemento che si desidera spostare. Verrà visualizzata la pagina di spostamento degli elementi, nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso.  
   
  **Modifica**  
@@ -58,13 +58,13 @@ ms.locfileid: "66109331"
  **Modificato da**  
  Mostra il nome dell'ultimo utente che ha modificato le proprietà dell'elemento.  
   
- **Quando viene eseguito**  
+ **Data ultima esecuzione**  
  Per i report eseguiti come snapshot dell'esecuzione del report, visualizza la data e l'ora dell'ultimo aggiornamento del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

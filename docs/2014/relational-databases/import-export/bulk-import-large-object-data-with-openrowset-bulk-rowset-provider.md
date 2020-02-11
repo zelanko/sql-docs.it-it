@@ -1,5 +1,5 @@
 ---
-title: Importazione BULK LOB tramite il Provider di set di righe OPENROWSET Bulk (SQL Server) | Microsoft Docs
+title: Importazione bulk di dati di oggetti di grandi dimensioni tramite il provider di set di righe con utilizzo bulk OPENROWSET (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6fe945ea90a150397abecfd83f0ce1c945f217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012106"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>Importazione bulk di dati di tipo LOB tramite il provider di set di righe con lettura bulk OPENROWSET (SQL Server)

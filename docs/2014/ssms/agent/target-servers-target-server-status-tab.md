@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245719"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Server di destinazione (scheda Stato server di destinazione)
@@ -35,16 +35,16 @@ ms.locfileid: "63245719"
  **Istruzioni non lette**  
  Consente di visualizzare il numero di istruzioni che il server di destinazione non ha ancora ricevuto.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare lo stato del server di destinazione.  
   
- **Imponi polling**  
+ **Forza polling**  
  Fare clic su questo pulsante per imporre ai server di destinazione selezionati di eseguire il polling sul server master.  
   
  **Imponi esclusione**  
  Fare clic su questo pulsante per imporre ai server di destinazione selezionati di escludersi dal server master.  
   
- **Invia istruzioni**  
+ **Istruzioni post**  
  Consente di inviare istruzioni ai server di destinazione selezionati.  
   
  **Abilita aggiornamento automatico**  

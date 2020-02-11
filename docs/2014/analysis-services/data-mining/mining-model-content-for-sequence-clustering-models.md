@@ -1,5 +1,5 @@
 ---
-title: Contenuto dei modelli per i modelli Sequence Clustering di data mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Contenuto dei modelli di data mining per i modelli Sequence Clustering (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083570"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering (Analysis Services - Data mining)
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Informazioni sulla struttura di un modello Sequence Clustering  
- Un modello Sequence Clustering include un singolo nodo padre (NODE_TYPE = 1) che rappresenta il modello e i relativi metadati. Il nodo padre, identificato con **(All)** , include un nodo di sequenza correlato (NODE_TYPE = 13) che elenca tutte le transizioni rilevate nei dati di training.  
+ Un modello Sequence Clustering include un singolo nodo padre (NODE_TYPE = 1) che rappresenta il modello e i relativi metadati. Il nodo padre, identificato con **(All)**, include un nodo di sequenza correlato (NODE_TYPE = 13) che elenca tutte le transizioni rilevate nei dati di training.  
   
- ![Struttura del modello sequence clustering](../media/modelcontent-seqclust.gif "struttura del modello sequence clustering")  
+ ![Struttura di un modello Sequence Clustering](../media/modelcontent-seqclust.gif "Struttura di un modello Sequence Clustering")  
   
  Tramite l'algoritmo vengono inoltre creati diversi cluster, in base alle transizioni rilevate nei dati e in qualsiasi altro attributo di input incluso alla creazione del modello, ad esempio i dati demografici del cliente. Ogni cluster (NODE_TYPE = 5) contiene un proprio nodo di sequenza (NODE_TYPE = 13) in cui sono elencate solo le transizioni utilizzate per generare quel cluster specifico. Dal nodo di sequenza, è possibile eseguire il drill-down per visualizzare i dettagli di singole transizioni di stato (NODE_TYPE = 14).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66083570"
  Sempre vuoto.  
   
  NODE_NAME  
- Nome del nodo. Attualmente lo stesso valore di NODE_UNIQUE_NAME.  
+ Il nome del nodo. Attualmente lo stesso valore di NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nome univoco del nodo.  
@@ -71,11 +71,11 @@ ms.locfileid: "66083570"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
- **Nodo radice del modello** Il valore di cardinalità corrisponde al numero di cluster più uno. Per altre informazioni, vedere [Cardinalità](#bkmk_cardinality).  
+ **Radice del modello** Il valore Cardinality è uguale al numero di cluster più uno. Per altre informazioni, vedere [Cardinalità](#bkmk_cardinality).  
   
- **Nodi del cluster** Il valore di cardinalità è sempre pari a 1, poiché ogni cluster dispone di un unico nodo figlio che contiene l'elenco delle sequenze nel cluster.  
+ **Nodi cluster** La cardinalità è sempre 1, perché ogni cluster dispone di un singolo nodo figlio che contiene l'elenco delle sequenze nel cluster.  
   
- **Nodi di sequenza** La cardinalità indica il numero di transizioni incluse in quel cluster. Ad esempio, la cardinalità del nodo di sequenza per il nodo radice del modello indica il numero di transizioni trovate nell'intero modello.  
+ **Nodi sequenza** La cardinalità indica il numero di transizioni incluse nel cluster. Ad esempio, la cardinalità del nodo di sequenza per il nodo radice del modello indica il numero di transizioni trovate nell'intero modello.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo.  
@@ -92,20 +92,20 @@ ms.locfileid: "66083570"
  Sempre vuoto.  
   
  NODE_PROBABILITY  
- **Nodo radice del modello** Sempre 0.  
+ **Radice del modello** Sempre 0.  
   
- **Nodi del cluster** La probabilità adattata del cluster nel modello. La somma delle probabilità adattate non dà 1, perché il metodo di clustering utilizzato nel clustering delle sequenze consente l'appartenenza parziale a più cluster.  
+ **Nodi cluster** Probabilità adattata del cluster nel modello. La somma delle probabilità adattate non dà 1, perché il metodo di clustering utilizzato nel clustering delle sequenze consente l'appartenenza parziale a più cluster.  
   
- **Nodi di sequenza** Sempre 0.  
+ **Nodi sequenza** Sempre 0.  
   
  **Nodi di transizione** Sempre 0.  
   
  MARGINAL_PROBABILITY  
- **Nodo radice del modello** Sempre 0.  
+ **Radice del modello** Sempre 0.  
   
- **Nodi del cluster** Lo stesso valore di NODE_PROBABILITY.  
+ **Nodi cluster** Lo stesso valore di NODE_PROBABILITY.  
   
- **Nodi di sequenza** Sempre 0.  
+ **Nodi sequenza** Sempre 0.  
   
  **Nodi di transizione** Sempre 0.  
   
@@ -115,11 +115,11 @@ ms.locfileid: "66083570"
  NODE_SUPPORT  
  Numero di transizioni che supportano il nodo. Pertanto, se sono presenti 30 esempi della sequenza "Prodotto A seguito da Prodotto B" nei dati di training, il supporto totale è 30.  
   
- **Nodo radice del modello** Numero totale di transizioni nel modello.  
+ **Radice del modello** Numero totale di transizioni nel modello.  
   
- **Nodi del cluster** Supporto non elaborato per il cluster che indica il numero di case di training che forniscono case al cluster.  
+ **Nodi cluster** Supporto non elaborato per il cluster, ovvero il numero di case di training che contribuiscono ai case al cluster.  
   
- **Nodi di sequenza** Sempre 0.  
+ **Nodi sequenza** Sempre 0.  
   
  **Nodi di transizione** Percentuale di case nel cluster che rappresentano una transizione specifica. Può essere 0 o un valore positivo. Viene calcolato moltiplicando il supporto non elaborato del nodo del cluster per la probabilità del cluster.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66083570"
   
  Nella tabella seguente viene illustrato il modo in cui le informazioni vengono archiviate nel modello e il modo in cui sono correlati i nodi.  
   
-|Node|Dispone di nodo figlio|Tabella NODE_DISTRIBUTION|  
+|Nodo|Dispone di nodo figlio|Tabella NODE_DISTRIBUTION|  
 |----------|--------------------|------------------------------|  
 |Nodo radice del modello|Più nodi del cluster<br /><br /> Nodo con sequenze per l'intero modello|Elenca tutti i prodotti nel modello, con supporto e probabilità.<br /><br /> Poiché il metodo di clustering consente l'appartenenza parziale a più cluster, il supporto e la probabilità possono presentare valori frazionari. Anziché contare una sola volta un singolo case, ogni case può appartenere potenzialmente a più cluster. Pertanto, quando viene determinata l'appartenenza al cluster finale, il valore viene adattato dalla probabilità di quel cluster.|  
 |Nodo di sequenza per il modello|Più nodi di transizione|Elenca tutti i prodotti nel modello, con supporto e probabilità.<br /><br /> Poiché è noto il numero di sequenze per il modello, a questo livello, i calcoli per supporto e probabilità sono semplici:<br /><br /> Supporto = conteggio dei case<br /><br /> Probabilità = probabilità non elaborata di ogni sequenza nel modello. La somma di tutte le probabilità dovrebbe dare 1.|  
@@ -151,14 +151,14 @@ ms.locfileid: "66083570"
 |Nodi di sequenza per singoli cluster|Più nodi con transizioni per sequenze solo in quel cluster|Esattamente le stesse informazioni dei nodi del cluster.|  
 |Transizioni|Nessun elemento figlio|Elenca le transizioni per il primo stato correlato.<br /><br /> Il supporto è un valore di supporto adattato che indica i case che prendono parte a ogni transizione. La probabilità è un valore di probabilità adattato, rappresentato come percentuale.|  
   
-###  <a name="bkmk_NODEDIST"></a> Tabella NODE_DISTRIBUTION  
+###  <a name="bkmk_NODEDIST"></a>Tabella NODE_DISTRIBUTION  
  Nella tabella NODE_DISTRIBUTION vengono fornite informazioni dettagliate sulla probabilità e sul supporto per le transizioni e le sequenze di un cluster specifico.  
   
- Viene sempre aggiunta una riga alla tabella delle transizioni per rappresentare i valori `Missing` possibili. Per informazioni su cosa il `Missing` indica di valore, mentre il modo in cui influisce sui calcoli, vedere [mancano valori &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Viene sempre aggiunta una riga alla tabella delle transizioni per rappresentare i valori `Missing` possibili. Per informazioni sul significato del `Missing` valore e sul modo in cui influiscono sui calcoli, vedere [valori mancanti &#40;Analysis Services-&#41;di data mining ](missing-values-analysis-services-data-mining.md).  
   
  I calcoli relativi a supporto e probabilità variano a seconda che il calcolo venga applicato ai case di training o al modello finito. Questo perché il metodo di clustering predefinito, Expectation Maximization (EM), presuppone che qualsiasi case possa appartenere a più di un cluster. Quando si calcola il supporto per i case nel modello, è possibile utilizzare conteggi non elaborati e probabilità non elaborate. Tuttavia, le probabilità di una particolare sequenza in un cluster devono essere ponderate dalla somma di ogni possibile combinazione di sequenze e cluster.  
   
-###  <a name="bkmk_cardinality"></a> Cardinalità  
+###  <a name="bkmk_cardinality"></a>Cardinalità  
  In un modello di clustering la cardinalità del nodo padre indica in genere il numero di cluster presenti nel modello. Tuttavia, un modello Sequence Clustering dispone di due tipi di nodo al livello del cluster: un tipo di nodo contiene cluster, l'altro contiene un elenco delle sequenze per il modello nel suo complesso.  
   
  Per conoscere il numero di cluster nel modello, sottrarre uno dal valore NODE_CARDINALITY per il nodo (All). Ad esempio, se il modello ha creato 9 cluster, la cardinalità del nodo radice del modello sarà 10. Questo perché il modello contiene 9 nodi del cluster, ognuno con il proprio nodo di sequenza, più un nodo di sequenza aggiuntivo identificato come cluster 10 che rappresenta le sequenze per il modello.  
@@ -232,18 +232,18 @@ ORDER BY Count(*) DESC
   
 |Prodotto|Supporto (tabella NODE_DISTRIBUTION)|Probabilità (tabella NODE_DISTRIBUTION)|Probabilità (da grafico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
-|mancanti|48.447887|0.138028169|(non mostrato)|  
+|Missing|48.447887|0.138028169|(non mostrato)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
-|Fender Set - Mountain|80.087324|0.228169014|0.23|  
+|Fender Set - Mountain|80.087324|0.228169014|0,23|  
 |Half-Finger Gloves|0.9887324|0.002816901|0,00|  
 |Hydration Pack|0.9887324|0.002816901|0,00|  
-|LL Mountain Tire|51.414085|0.146478873|0.15|  
+|LL Mountain Tire|51.414085|0.146478873|0,15|  
 |Long-Sleeve Logo Jersey|2.9661972|0.008450704|0.01|  
-|Mountain Bottle Cage|87.997183|0.250704225|0.25|  
+|Mountain Bottle Cage|87.997183|0.250704225|0,25|  
 |Mountain Tire Tube|16.808451|0.047887324|0.05|  
 |Short-Sleeve Classic Jersey|10.876056|0.030985915|0.03|  
 |Sport-100|20.76338|0.05915493|0.06|  
-|Water Bottle|18.785915|0.053521127|0.25|  
+|Water Bottle|18.785915|0.053521127|0,25|  
   
  Sebbene il case inizialmente selezionato dai dati di training contenesse il prodotto 'Mountain-500' seguito da 'LL Mountain Tire, si noti come siano possibili molte altre sequenze. Per trovare informazioni dettagliate relative a un qualsiasi cluster, è necessario eseguire il drill-drown dall'elenco di sequenze nel cluster fino alle transizioni effettive per ogni stato o prodotto.  
   
@@ -261,8 +261,8 @@ ORDER BY Count(*) DESC
  Per ottenere l'elenco dei percorsi osservati eseguendo una query sul contenuto del modello e per analizzare altri esempi di query su un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md)  
+ [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)  
   
   

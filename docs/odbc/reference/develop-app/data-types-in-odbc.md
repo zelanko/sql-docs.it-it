@@ -14,16 +14,16 @@ ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077002"
 ---
 # <a name="data-types-in-odbc"></a>Tipi di dati in ODBC
-ODBC usa due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi di dati SQL sono usati nell'origine dati, e tipi di dati C nel codice C nell'applicazione.  
+ODBC utilizza due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi di dati SQL vengono usati nell'origine dati e i tipi di dati C vengono usati nel codice C nell'applicazione.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Identificatori di tipi](../../../odbc/reference/develop-app/type-identifiers.md)  
   

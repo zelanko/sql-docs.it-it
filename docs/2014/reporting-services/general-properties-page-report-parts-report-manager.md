@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, Report parti (gestione Report) | Microsoft Docs
+title: Pagina delle proprietà generale, parti del report (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109096"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Pagina delle proprietà Generale, Parti di report (Gestione report)
@@ -49,13 +49,13 @@ ms.locfileid: "66109096"
  **Dimensione**  
  Specifica le dimensioni file della parte di report. Di sola lettura.  
   
- **Name**  
+ **Nome**  
  Digitare un nome per identificare la parte di report.  
   
  **Descrizione**  
  Vengono fornite informazioni sulla parte di report. La descrizione viene visualizzata nella pagina Contenuto in Gestione report. Tale descrizione può essere utilizzata come testo di ricerca quando si ricercano parti di report da uno strumento di creazione report.  
   
- **Nascondi in visualizzazione elenco**  
+ **Nascondi in visualizzazione Elenco**  
  Selezionare questa opzione per fare in modo che la parte di report non venga visualizzato per gli utenti che utilizzano la modalità di visualizzazione Elenco in Gestione report. La modalità di visualizzazione Elenco è il formato di visualizzazione predefinito utilizzato per l'esplorazione della gerarchia di cartelle del server di report. Gli elementi possono essere nascosti nella visualizzazione Elenco ma non nella visualizzazione Dettagli. Se si desidera limitare l'accesso a un elemento, è necessario creare un'assegnazione di ruolo.  
   
  **Tipo**  
@@ -67,21 +67,21 @@ ms.locfileid: "66109096"
  **Elimina**  
  Consente di rimuovere la parte di report dal database del server di report. L'eliminazione di una parte di report dal server non impedirà l'esecuzione del rendering di report esistenti a cui la parte di report è stata aggiunta.  
   
- **Sposta**  
- Fare clic per aprire la pagina per lo spostamento di elementi per spostare una parte di report all'interno della gerarchia delle cartelle del server di report. Per altre informazioni, vedere [pagina spostamento elementi &#40;gestione Report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Spostamento**  
+ Fare clic per aprire la pagina per lo spostamento di elementi per spostare una parte di report all'interno della gerarchia delle cartelle del server di report. Per ulteriori informazioni, vedere la [pagina di spostamento degli elementi &#40;Gestione report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Scarica**  
+ **Scaricare**  
  Consente di estrarre una copia della definizione della parte di report da salvare come file con estensione rsc. Il file con estensione rsc può essere caricato in una cartella del server di report oppure utilizzato per sostituire una parte di report esistente in una cartella del server di report.  
   
- **Sostituisci**  
+ **Sostituire**  
  Consente di sostituire la definizione della parte di report con una diversa da un file con estensione rsc.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di parti di Report](report-design/managing-report-parts.md)   
+ [Gestione di parti di report](report-design/managing-report-parts.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044968"
 ---
 # <a name="data-type-support"></a>Supporto dei tipi di dati
-Driver ODBC devono supportare almeno uno dei SQL_CHAR e SQL_VARCHAR. Supporto per altri tipi di dati è determinato dal livello di conformità SQL-92 dell'origine dati o del driver. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare i tipi di dati supportati dal driver.  
+I driver ODBC devono supportare almeno uno dei SQL_CHAR e SQL_VARCHAR. Il supporto per altri tipi di dati è determinato dal livello di conformità SQL-92 del driver o dell'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare i tipi di dati supportati dal driver.  
   
- Per altre informazioni sui tipi di dati, vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).
+ Per ulteriori informazioni sui tipi di dati, vedere [Appendice D: tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).

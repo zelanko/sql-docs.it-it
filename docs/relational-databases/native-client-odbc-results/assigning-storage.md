@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9afee1aa24f5f3cd15791038d12f5ac0bc842fe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779361"
 ---
 # <a name="assigning-storage"></a>Assegnazione di archiviazione
@@ -61,6 +61,6 @@ ms.locfileid: "73779361"
  Viene inoltre impostato SQL_ATTR_ROW_ARRAY_SIZE sul numero di elementi presenti nelle matrici di colonne o di righe e vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei &#40;risultati ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

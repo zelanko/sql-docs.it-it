@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073450"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operatori unari nelle dimensioni padre-figlio
-  In una dimensione contenente una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificare una colonna dell'operatore unario (o di rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
+  In una dimensione che contiene una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario specificare una colonna dell'operatore unario (o rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
   
  È possibile creare e specificare un calcolo denominato in una tabella della dimensione nella vista origine dati come colonna dell'operatore unario. L'espressione più semplice, ad esempio '+', restituisce lo stesso operatore per tutti i membri. È tuttavia possibile utilizzare qualsiasi espressione a condizione che restituisca un operatore per ogni membro.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66073450"
   
  I valori vuoti e qualsiasi altro valore non presente nella tabella vengono considerati come operatori unari (+). Poiché non esiste un ordine di precedenza tra gli operatori, l'ordine di valutazione è determinato dall'ordine dei membri archiviati nella colonna dell'operatore unario. Per modificare l'ordine di valutazione, creare un nuovo attributo, impostarne la proprietà **Type** su **Sequence**e quindi assegnare numeri di sequenza corrispondenti all'ordine di valutazione nella relativa proprietà **Source Column** . È inoltre necessario ordinare i membri dell'attributo in base a tale attributo. Per altre informazioni sull'uso di Configurazione guidata funzionalità di Business Intelligence per ordinare i membri di un attributo, vedere [Definire l'ordinamento di una dimensione](bi-wizard-define-the-ordering-for-a-dimension.md).  
   
- È possibile usare la proprietà **UnaryOperatorColumn** per specificare un calcolo denominato che restituisca un operatore unario come valore letterale per tutti i membri dell'attributo. È sufficiente digitare un carattere letterale quale `'*'` nel calcolo denominato. In questo modo l'operatore predefinito, ovvero il segno di addizione (+), viene sostituito dall'operatore di moltiplicazione, ovvero l'asterisco (*), per tutti i membri dell'attributo. Per altre informazioni, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ È possibile usare la proprietà **UnaryOperatorColumn** per specificare un calcolo denominato che restituisca un operatore unario come valore letterale per tutti i membri dell'attributo. È sufficiente digitare un carattere letterale quale `'*'` nel calcolo denominato. In questo modo l'operatore predefinito, ovvero il segno di addizione (+), viene sostituito dall'operatore di moltiplicazione, ovvero l'asterisco (*), per tutti i membri dell'attributo. Per ulteriori informazioni, vedere [definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Nella scheda **Esplorazione** di Progettazione dimensioni è possibile visualizzare gli operatori unari accanto a ogni membro di una gerarchia. È inoltre possibile modificare gli operatori unari in caso di utilizzo di una dimensione abilitata per la scrittura. Se la dimensione non è abilitata per la scrittura, è necessario utilizzare uno strumento per modificare direttamente l'origine dei dati.  
   

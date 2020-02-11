@@ -1,5 +1,5 @@
 ---
-title: Gli aggiornamenti (ODBC) posizionati | Microsoft Docs
+title: Aggiornamenti posizionati (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200529"
 ---
 # <a name="positioned-updates-odbc"></a>Aggiornamenti posizionati (ODBC)
@@ -46,39 +46,39 @@ ms.locfileid: "63200529"
  SQL_DELETE  
  Elimina la riga corrente dal cursore.  
   
- **SQLSetPos** può essere usato con qualsiasi istruzione set di risultati quando gli attributi del cursore handle di istruzione sono impostati per utilizzare i cursori del server. Le colonne del set di risultati devono essere associate a variabili di programma. Non appena il recupero di una riga chiama **SQLSetPos**(SQL_POSTION) per posizionare il cursore sulla riga. È possibile quindi chiamare SQLSetPos (SQL_DELETE) per eliminare la riga corrente o spostare i nuovi valori dei dati nelle variabili di programma associate e chiamare SQLSetPos (SQL_UPDATE) per aggiornare la riga corrente.  
+ **SQLSetPos** può essere utilizzato con qualsiasi set di risultati di istruzioni quando gli attributi del cursore dell'handle di istruzione sono impostati per utilizzare i cursori server. Le colonne del set di risultati devono essere associate a variabili di programma. Non appena l'applicazione ha recuperato una riga, chiama **SQLSetPos**(SQL_POSTION) per posizionare il cursore sulla riga. È possibile quindi chiamare SQLSetPos (SQL_DELETE) per eliminare la riga corrente o spostare i nuovi valori dei dati nelle variabili di programma associate e chiamare SQLSetPos (SQL_UPDATE) per aggiornare la riga corrente.  
   
- Le applicazioni possono aggiornare o eliminare qualsiasi riga nel set di righe con **SQLSetPos**. La chiamata **SQLSetPos** rappresenta un'alternativa utile alla creazione ed esecuzione di un'istruzione SQL. **SQLSetPos** agisce sui set di righe corrente e può essere usato solo dopo una chiamata a [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md).  
+ Le applicazioni possono aggiornare o eliminare qualsiasi riga del set di righe con **SQLSetPos**. La chiamata di **SQLSetPos** è una pratica alternativa alla costruzione e all'esecuzione di un'istruzione SQL. **SQLSetPos** opera sul set di righe corrente e può essere utilizzato solo dopo una chiamata a [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md).  
   
- Dimensioni del set di righe vengono impostate tramite una chiamata a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con un argomento di attributo di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** Usa una nuova dimensione di set di righe, ma solo dopo una chiamata a **SQLFetch** oppure **SQLFetchScroll**. Se vengono modificate le dimensioni del set di righe, ad esempio **SQLSetPos** viene chiamato e quindi **SQLFetch** oppure **SQLFetchScroll** viene chiamato. La chiamata a **SQLSetPos** Usa le dimensioni del set di righe precedente, ma **SQLFetch** oppure **SQLFetchScroll** Usa le nuove dimensioni del set di righe.  
+ Le dimensioni del set di righe vengono impostate da una chiamata a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con un argomento attribute di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** utilizza una nuova dimensione del set di righe, ma solo dopo una chiamata a **SQLFetch** o **SQLFetchScroll**. Se, ad esempio, le dimensioni del set di righe vengono modificate, viene chiamato **SQLSetPos** e viene chiamato **SQLFetch** o **SQLFetchScroll** . La chiamata a **SQLSetPos** usa le dimensioni del set di righe precedenti, ma **SQLFetch** o **SQLFetchScroll** usa le nuove dimensioni del set di righe.  
   
- La prima riga nel set di righe è il numero di riga 1. L'argomento RowNumber in **SQLSetPos** deve identificare una riga nel set di righe; vale a dire, il valore deve essere compreso nell'intervallo compreso tra 1 e il numero di righe recuperate più di recente. Questo valore potrebbe essere inferiore alle dimensioni del set di righe. Se RowNumber è 0, l'operazione viene applicata a ogni riga nel set di righe.  
+ La prima riga nel set di righe è il numero di riga 1. L'argomento RowNumber in **SQLSetPos** deve identificare una riga nel set di righe; ovvero, il valore deve essere compreso tra 1 e il numero di righe recuperate più di recente. Questo valore potrebbe essere inferiore alle dimensioni del set di righe. Se RowNumber è 0, l'operazione viene applicata a ogni riga nel set di righe.  
   
- L'operazione di eliminazione della **SQLSetPos** consente all'origine dati di eliminare uno o più righe selezionate di una tabella. Per eliminare le righe contenenti **SQLSetPos**, l'applicazione chiama **SQLSetPos** con Operation impostato su SQL_DELETE e RowNumber impostato sul numero della riga da eliminare. Se RowNumber è 0, tutte le righe nel set di righe vengono eliminate.  
+ L'operazione di eliminazione di **SQLSetPos** consente all'origine dati di eliminare una o più righe selezionate di una tabella. Per eliminare righe con **SQLSetPos**, l'applicazione chiama **SQLSetPos** con Operation set su SQL_DELETE e RowNumber impostato sul numero della riga da eliminare. Se RowNumber è 0, tutte le righe nel set di righe vengono eliminate.  
   
- Dopo aver **SQLSetPos** viene restituito, la riga eliminata è la riga corrente e lo stato è SQL_ROW_DELETED. La riga non può essere utilizzata in altre operazioni posizionate, ad esempio chiamate a [SQLGetData](../native-client-odbc-api/sqlgetdata.md) oppure **SQLSetPos**.  
+ Quando **SQLSetPos** restituisce, la riga eliminata è la riga corrente e il relativo stato è SQL_ROW_DELETED. La riga non può essere usata in altre operazioni posizionate, ad esempio le chiamate a [SQLGetData](../native-client-odbc-api/sqlgetdata.md) o **SQLSetPos**.  
   
- Quando si eliminano tutte le righe del set di righe (RowNumber è uguale a 0), l'applicazione può impedire il driver di eliminare determinate righe utilizzando la matrice di operazione riga esattamente come per l'operazione di aggiornamento dei **SQLSetPos**.  
+ Quando si eliminano tutte le righe del set di righe (RowNumber è uguale a 0), l'applicazione può impedire al driver di eliminare determinate righe usando la matrice dell'operazione di riga come per l'operazione di aggiornamento di **SQLSetPos**.  
   
  Ogni riga eliminata deve essere una riga che esiste nel set di risultati. Se dopo il recupero i buffer dell'applicazione risultano pieni e se è stata conservata una matrice di stato della riga, i valori in ognuna di queste posizioni delle righe non devono essere SQL_ROW_DELETED, SQL_ROW_ERROR o SQL_ROW_NOROW.  
   
- Gli aggiornamenti posizionati possono inoltre essere eseguiti utilizzando la clausola WHERE CURRENT OF nelle istruzioni UPDATE, DELETE e INSERT. WHERE CURRENT OF richiede un nome di cursore che ODBC genererà quando la [SQLGetCursorName](../native-client-odbc-api/sqlgetcursorname.md) viene chiamata la funzione, o che è possibile specificare chiamando **SQLSetCursorName**. Di seguito sono riportati i passaggi generali utilizzati per eseguire un aggiornamento di WHERE CURRENT OF in un'applicazione ODBC:  
+ Gli aggiornamenti posizionati possono inoltre essere eseguiti utilizzando la clausola WHERE CURRENT OF nelle istruzioni UPDATE, DELETE e INSERT. LADDOVE CURRENT OF richiede un nome di cursore che verrà generato da ODBC quando viene chiamata la funzione [SQLGetCursorName](../native-client-odbc-api/sqlgetcursorname.md) o che è possibile specificare chiamando **SQLSetCursorName**. Di seguito sono riportati i passaggi generali utilizzati per eseguire un aggiornamento di WHERE CURRENT OF in un'applicazione ODBC:  
   
--   Chiamare **SQLSetCursorName** per stabilire un nome di cursore per l'handle di istruzione.  
+-   Chiamare **SQLSetCursorName** per stabilire un nome di cursore per l'handle dell'istruzione.  
   
 -   Compilare un'istruzione SELECT con una clausola FOR UPDATE OF ed eseguirla.  
   
--   Chiamare **SQLFetchScroll** per recuperare un set di righe oppure **SQLFetch** per recuperare una riga.  
+-   Chiamare **SQLFetchScroll** per recuperare un set di righe o **SQLFetch** per recuperare una riga.  
   
 -   Chiamare **SQLSetPos** (SQL_POSITION) per posizionare il cursore sulla riga.  
   
--   Compilare ed eseguire un'istruzione UPDATE con una clausola WHERE CURRENT OF utilizzando il nome di cursore impostato con **SQLSetCursorName**.  
+-   Compilare ed eseguire un'istruzione UPDATE con una clausola WHERE CURRENT OF utilizzando il nome del cursore impostato con **SQLSetCursorName**.  
   
- In alternativa, è possibile chiamare **SQLGetCursorName** dopo l'esecuzione dell'istruzione SELECT anziché chiamare **SQLSetCursorName** prima di eseguire l'istruzione SELECT. **SQLGetCursorName** restituisce un nome di cursore predefinito assegnato da ODBC se non si imposta un nome di cursore mediante **SQLSetCursorName**.  
+ In alternativa, è possibile chiamare **SQLGetCursorName** dopo l'esecuzione dell'istruzione SELECT anziché chiamare **SQLSetCursorName** prima di eseguire l'istruzione SELECT. **SQLGetCursorName** restituisce un nome di cursore predefinito assegnato da ODBC se non si imposta un nome di cursore utilizzando **SQLSetCursorName**.  
   
- **SQLSetPos** è preferibile rispetto WHERE CURRENT OF quando si utilizzano cursori del server. Se si utilizza un cursore statico aggiornabile con la libreria di cursore ODBC, la libreria di cursori implementa gli aggiornamenti di WHERE CURRENT OF aggiungendo una clausola WHERE con i valori chiave per la tabella sottostante. Se le chiavi nella tabella non sono univoche, possono verificarsi aggiornamenti non desiderati.  
+ **SQLSetPos** è preferibile rispetto a where current of quando si utilizzano i cursori server. Se si utilizza un cursore statico aggiornabile con la libreria di cursore ODBC, la libreria di cursori implementa gli aggiornamenti di WHERE CURRENT OF aggiungendo una clausola WHERE con i valori chiave per la tabella sottostante. Se le chiavi nella tabella non sono univoche, possono verificarsi aggiornamenti non desiderati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di cursori &#40;ODBC&#41;](using-cursors-odbc.md)  
+ [Utilizzo di cursori &#40;&#41;ODBC](using-cursors-odbc.md)  
   
   

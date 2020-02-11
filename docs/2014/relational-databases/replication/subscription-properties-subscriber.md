@@ -1,5 +1,5 @@
 ---
-title: Proprietà sottoscrizione della replica di SQL Server - sottoscrittore | Microsoft Docs
+title: Proprietà replica di SQL Server sottoscrizione-Sottoscrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250265"
 ---
-# <a name="sql-server-replication-subscription-properties"></a>Proprietà di sottoscrizione della replica di SQL Server 
-In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione** nella finestra di dialogo. 
+# <a name="sql-server-replication-subscription-properties"></a>Proprietà replica di SQL Server sottoscrizione 
+In questa sezione vengono fornite informazioni sulla finestra di dialogo **Proprietà sottoscrizione** . 
 
 ## <a name="publisher-properties"></a>Proprietà server di pubblicazione 
   La finestra di dialogo **Proprietà sottoscrizione** nel server di pubblicazione consente di visualizzare e impostare proprietà per le sottoscrizioni push. Sebbene sia possibile visualizzare alcune proprietà per le sottoscrizioni pull, nella finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrizione sono incluse proprietà aggiuntive ed è possibile modificarle.  
@@ -39,27 +39,27 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
  **Sicurezza**  
- Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **...** ) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà ( **...** ).  
+ Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà (**...**) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà (**...**).  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ### <a name="publisher-options-for-transactional-subscriptions"></a>Opzioni del server di pubblicazione per le sottoscrizioni transazionali  
  **Impedisci il loop delle transazioni**  
- Consente di stabilire se l'agente di distribuzione reinvia le transazioni originate nel Sottoscrittore al Sottoscrittore. Questa opzione viene utilizzata per la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
+ Consente di stabilire se l'agente di distribuzione reinvia le transazioni originate nel Sottoscrittore al Sottoscrittore. Questa opzione viene utilizzata per la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](transactional/bidirectional-transactional-replication.md).  
   
  **Sottoscrizione aggiornabile**  
  Consente di stabilire se le modifiche del Sottoscrittore vengono replicate sul server di pubblicazione. È possibile replicare le modifiche utilizzando l'aggiornamento in coda o immediato. L'opzione **Metodo di aggiornamento del Sottoscrittore** determina quale metodo utilizzare. Per altre informazioni, vedere [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()** . Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()** , vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che utilizza filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore, ovvero **SUSER_SNAME()** o **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo di sottoscrizione** e **Priorità**  
+ **Tipo di sottoscrizione** e **priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
   
  Se si seleziona un tipo di sottoscrizione server nella Creazione guidata nuova sottoscrizione, al Sottoscrittore viene assegnata una priorità che verrà utilizzata nella risoluzione dei conflitti.  
   
- **Risoluzione interattiva**  
+ **Risoluzione interattiva dei conflitti**  
  Consente di indicare di utilizzare l'interfaccia utente del sistema di risoluzione dei conflitti interattivo durante la sincronizzazione di tipo merge. A tale scopo, è necessario impostare **Usa Gestione sincronizzazione Microsoft Windows** su **Abilita**. Per altre informazioni, vedere [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
 
 
@@ -78,16 +78,16 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
 >  Se non è stato ancora creato un processo dell'agente di merge o di distribuzione per la sottoscrizione, numerose proprietà non verranno visualizzate. Per creare un processo dell'agente per una sottoscrizione pull, eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) in caso di una sottoscrizione a una pubblicazione transazionale o snapshot o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) in caso di una sottoscrizione a una pubblicazione di tipo merge.  
   
 ### <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
- **Inizializza dati pubblicati da uno snapshot**  
+ **Inizializzare i dati pubblicati da uno snapshot**  
  Consente di stabilire se le sottoscrizioni vengono inizializzate tramite uno snapshot, impostazione predefinita, o un altro metodo. Per altre informazioni sull'inizializzazione delle sottoscrizioni, vedere [Inizializzare una sottoscrizione](initialize-a-subscription.md).  
   
  **Posizione snapshot**  
  Consente di determinare la posizione da cui si accede ai file di snapshot durante l'inizializzazione o una nuova inizializzazione. La posizione può essere uno dei valori seguenti:  
   
--   **Posizione predefinita**. Si tratta della posizione predefinita, che viene stabilita durante la configurazione di un server di distribuzione. Per altre informazioni, vedere [specificare la posizione predefinita degli Snapshot](snapshot-options.md#snapshot-folder-locations).    
--   **Cartella alternativa**. Si tratta di una posizione alternativa, che può essere specificata nella finestra di dialogo **Proprietà pubblicazione** . Per altre informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
--   **Cartella snapshot dinamici**. Si tratta di una posizione degli snapshot per pubblicazioni di tipo merge che utilizzano filtri di riga con parametri. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
--   **Cartella FTP**. È una cartella accessibile a un server FTP (File Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md).  
+-   **Percorso predefinito**: il percorso predefinito, che viene definito durante la configurazione di un database di distribuzione. Per ulteriori informazioni, vedere [specificare la posizione predefinita degli snapshot](snapshot-options.md#snapshot-folder-locations).    
+-   **Cartella alternativa**: un percorso alternativo, che può essere specificato nella finestra di dialogo **Proprietà pubblicazione** . Per altre informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
+-   **Cartella snapshot dinamici**: un percorso snapshot per le pubblicazioni di tipo merge che utilizzano filtri di riga con parametri. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Cartella FTP**: una cartella accessibile a un server ftp (file Transfer Protocol). Per altre informazioni, vedere [Trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md).  
   
  **Cartella snapshot**  
  Se si seleziona un valore qualsiasi diverso da **Posizione predefinita** per l'opzione **Posizione snapshot** , sarà necessario specificare un percorso per la cartella snapshot.  
@@ -96,11 +96,11 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
  Consente di stabilire se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Sicurezza**  
- Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà ( **...** ) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
+ Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà (**...**) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
   
--   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...** .    
--   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
--   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
+-   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...**.    
+-   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
+-   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -110,18 +110,18 @@ In questa sezione vengono fornite informazioni sul **proprietà sottoscrizione**
   
 ### <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Nel caso di una pubblicazione che usa filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore: **SUSER_SNAME()** or **HOST_NAME()** . Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()** , vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Nel caso di una pubblicazione che utilizza filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore, ovvero **SUSER_SNAME()** o **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo di sottoscrizione** e **Priorità**  
+ **Tipo di sottoscrizione** e **priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  
   
  Se si seleziona un tipo di sottoscrizione server nella Creazione guidata nuova sottoscrizione, al Sottoscrittore viene assegnata una priorità che verrà utilizzata nella risoluzione dei conflitti  
   
- **Risoluzione interattiva**  
+ **Risoluzione interattiva dei conflitti**  
  Consente di indicare di utilizzare l'interfaccia utente del sistema di risoluzione dei conflitti interattivo durante la sincronizzazione di tipo merge. A tale scopo, è necessario impostare **Usa Gestione sincronizzazione Microsoft Windows** su **Abilita**. Per altre informazioni, vedere [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronizzazione Web**  
- **Usa sincronizzazione Web** consente di indicare di sincronizzare la sottoscrizione tramite una connessione a un server [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Questa opzione è disponibile solo se la pubblicazione è abilitata per la sincronizzazione Web. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+ **Usa sincronizzazione Web** determina se connettersi a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] server Internet Information Services (IIS) per sincronizzare la sottoscrizione. Questa opzione è disponibile solo se la pubblicazione è abilitata per la sincronizzazione Web. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Se si seleziona **Vero** per **Usa sincronizzazione Web**:  
   

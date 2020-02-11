@@ -13,23 +13,23 @@ ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e9b7229882b3b7f94e6b059e04c6496bde09641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938047"
 ---
 # <a name="about-drivers-and-data-sources"></a>Informazioni su driver e origini dati
-*I driver* sono elencati i componenti che elaborano le richieste ODBC e restituiscono dati all'applicazione. Se necessario, i driver di modificare la richiesta di un'applicazione in un formato riconosciuto dall'origine dati. Per aggiungere o eliminare un driver dal computer, è necessario utilizzare il programma di installazione del driver.  
+I *driver* sono i componenti che elaborano le richieste ODBC e restituiscono i dati all'applicazione. Se necessario, i driver modificano la richiesta di un'applicazione in un modulo riconosciuto dall'origine dati. Per aggiungere o eliminare un driver dal computer, è necessario utilizzare il programma di installazione del driver.  
   
- *Zdroje dat* sono i database o i file aperti da un driver e sono identificati da un nome di origine dati (DSN). Utilizzare Amministrazione origine dati ODBC per aggiungere, configurare ed eliminare origini dati dal sistema. Nella tabella seguente sono descritti i tipi di origini dati che possono essere utilizzate.  
+ Le *origini dati* sono i database o i file a cui accede un driver e sono identificati da un nome dell'origine dati (DSN). Utilizzare Amministrazione origine dati ODBC per aggiungere, configurare ed eliminare origini dati dal sistema. I tipi di origini dati che è possibile utilizzare sono descritti nella tabella seguente.  
   
 |Origine dati|Descrizione|  
 |-----------------|-----------------|  
-|Utente|I DSN utente sono locali rispetto a un computer e possono essere usati solo dall'utente corrente. Vengono registrati nel sottoalbero del Registro di sistema HKEY_CURRENT_USER.|  
-|Sistema|DSN di sistema sono locali rispetto a un computer anziché dedicato a un utente. Il sistema o qualsiasi utente con privilegi possa utilizzare un'origine dati impostato con un DSN di sistema. DSN di sistema vengono registrati nel sottoalbero HKEY_LOCAL_MACHINE del Registro di sistema.|  
-|File|DSN file sono origini basate su file che possono essere condivisi tra tutti gli utenti che hanno gli stessi driver installati, quindi hanno accesso al database. Queste origini dati non devono essere dedicate a un utente né essere in un computer locale. Nomi delle origini dati di file non vengono identificate dalle voci del Registro di sistema dedicata; al contrario, vengono identificati da un nome di file con estensione. DSN.|  
+|Utente|I DSN utente sono locali in un computer e possono essere usati solo dall'utente corrente. Sono registrati nel sottoalbero del registro di sistema HKEY_CURRENT_USER.|  
+|Sistema|I DSN di sistema sono locali rispetto a un computer anziché dedicati a un utente. Il sistema o qualsiasi utente con privilegi può utilizzare un'origine dati configurata con un DSN di sistema. I DSN di sistema vengono registrati nel sottoalbero del registro di sistema HKEY_LOCAL_MACHINE.|  
+|File|I DSN di file sono origini basate su file che possono essere condivise tra tutti gli utenti con gli stessi driver installati e pertanto avere accesso al database. Queste origini dati non devono essere dedicate a un utente né essere locali in un computer. I nomi delle origini dati del file non sono identificati da voci del registro di sistema sono invece identificati da un nome file con estensione DSN.|  
   
- Origini dati utente e di sistema sono noti collettivamente come *machine* origini dei dati perché sono locali in un computer.  
+ Le origini dati utente e di sistema sono note collettivamente *come origini dati del computer perché* sono locali in un computer.  
   
- Ognuna di queste origini di dati include una scheda nella **Amministrazione origine dati ODBC** nella finestra di dialogo. Per altre informazioni sulle origini dati, vedere [Origini dati](../../odbc/reference/data-sources.md).
+ Ognuna di queste origini dati dispone di una scheda nella finestra di dialogo **Amministrazione origine dati ODBC** . Per altre informazioni sulle origini dati, vedere [Origini dati](../../odbc/reference/data-sources.md).

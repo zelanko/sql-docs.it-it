@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni (Generatore Report) | Microsoft Docs
+title: Esercitazioni (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107967"
 ---
 # <a name="tutorials-report-builder"></a>esercitazioni (Generatore report)
@@ -31,7 +31,7 @@ ms.locfileid: "66107967"
  [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per creare il primo report. In questa esercitazione viene illustrato come usare Generatore report per la creazione di una connessione a un'origine dati, la definizione di una query semplice, la compilazione di un layout contenente i dati desiderati, la formattazione del report e l'aggiunta di gruppi e totali.  
   
- [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Esercitazione: Creazione di un report matrice&#40;Generatore report&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere e configurare un report matrice. Verrà usata la Creazione guidata tabella o matrice per creare l'origine dati del report, il set di dati e il layout, quindi per ottimizzare la matrice all'interno della visualizzazione **Struttura** di Generatore report.  
   
  [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "66107967"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-builder/report-design-view-report-builder.md)   
- [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Esercitazione: Creare un Report grafico rapido Offline &#40;Generatore Report&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Generatore report SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
+ [Esercitazione: creare un report grafico rapido offline &#40;Generatore report&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

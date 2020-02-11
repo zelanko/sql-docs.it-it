@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016954"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
@@ -31,19 +31,19 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Se si specifica un'espressione numerica, la funzione dispone in ordine crescente le tuple nel set specificato in base al valore dell'espressione numerica specificata, valutato sul set. Il **BottomCount** funzione restituisce quindi il numero specificato di tuple con valore più basso.  
+## <a name="remarks"></a>Osservazioni  
+ Se si specifica un'espressione numerica, la funzione dispone in ordine crescente le tuple nel set specificato in base al valore dell'espressione numerica specificata, valutato sul set. La funzione **BottomCount** restituisce quindi il numero specificato di tuple con il valore più basso.  
   
 > [!IMPORTANT]  
->  Il **BottomCount** funzione, come le [TopCount](../mdx/topcount-mdx.md) function, rispetta mai la gerarchia.  
+>  La funzione **BottomCount** , come la funzione [tocount](../mdx/topcount-mdx.md) , interrompe sempre la gerarchia.  
   
- Se non viene specificata un'espressione numerica, la funzione restituisce il set di membri in ordine naturale, senza alcun ordinamento, analogamente i [Tail (MDX)](../mdx/tail-mdx.md) (funzione).  
+ Se non viene specificata un'espressione numerica, la funzione restituisce il set di membri in ordine naturale, senza alcun ordinamento, che si comporti come la funzione [tail (MDX)](../mdx/tail-mdx.md) .  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la misura Reseller Order Quantity per ogni anno di calendario per le cinque sottocategorie di prodotti meno vendute, ordinate in base alla misura Reseller Sales Amount.  
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

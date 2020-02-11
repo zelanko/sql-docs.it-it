@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770377"
 ---
 # <a name="create-relationships"></a>Crea relazioni
@@ -51,7 +51,7 @@ ms.locfileid: "62770377"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor trasformazione Ricerca &#40;scheda Colonne&#41;](../../lookup-transformation-editor-columns-page.md)   
+ [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../lookup-transformation-editor-columns-page.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

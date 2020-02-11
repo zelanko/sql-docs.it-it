@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807458"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
@@ -40,15 +40,15 @@ ms.locfileid: "62807458"
   
 6.  Nella finestra di dialogo **Aggiunta server di controllo del mirroring** fare clic su **Sì**e quindi su **Avanti**.  
   
-7.  Nella finestra di dialogo **Selezione dei server da configurare** viene automaticamente selezionata la casella di controllo **Istanza server di controllo del mirroring** . Scegliere **Avanti**.  
+7.  Nella finestra di dialogo **Selezione dei server da configurare** viene automaticamente selezionata la casella di controllo **Istanza server di controllo del mirroring** . Fare clic su **Avanti**.  
   
-8.  Nella finestra di dialogo **Istanza server principale** mantenere la porta e l'endpoint esistenti. Scegliere **Avanti**.  
+8.  Nella finestra di dialogo **Istanza server principale** mantenere la porta e l'endpoint esistenti. Fare clic su **Avanti**.  
   
 9. Nella finestra di dialogo **Istanza server di controllo del mirroring** fare clic su **Connetti**.  
   
 10. Nella finestra di dialogo **Connetti al server** specificare l'istanza del server di controllo del mirroring nel campo **Nome server** e usare l'autenticazione di Windows (impostazione predefinita). Fare clic su **Connetti**.  
   
-11. Dopo avere stabilito la connessione, nella finestra di dialogo **Istanza server di controllo del mirroring** vengono visualizzati la porta di attesa e l'endpoint del mirroring del database dell'istanza del server di controllo del mirroring. Scegliere **Avanti**.  
+11. Dopo avere stabilito la connessione, nella finestra di dialogo **Istanza server di controllo del mirroring** vengono visualizzati la porta di attesa e l'endpoint del mirroring del database dell'istanza del server di controllo del mirroring. Fare clic su **Avanti**.  
   
 12. Nella finestra di dialogo **Account di servizio** sono contenuti i campi per gli account di servizio del dominio delle istanze dei server principale, mirror e di controllo del mirroring.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62807458"
   
     -   Se l'istanza del server di controllo del mirroring usa un account di servizio diverso da uno degli altri partner, immettere il nome dell'account nei campi **Server principale**, **Server mirror**e **Server di controllo del mirroring** :  
   
-         *DOMAINNAME* **\\** *nome utente*  
+         **\\** *Nome utente* *NomeDominio*  
   
          Il nome del dominio deve essere scritto in lettere maiuscole.  
   
-     Scegliere **Avanti**.  
+     Fare clic su **Avanti**.  
   
 13. Nella schermata di riepilogo **Completare la procedura guidata** verificare, facoltativamente, la configurazione del server di controllo del mirroring e quindi fare clic su **Fine**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62807458"
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
+ [Stabilire una sessione di mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  
   
   

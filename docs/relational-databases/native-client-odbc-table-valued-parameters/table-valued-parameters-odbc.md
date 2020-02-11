@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790473"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73790473"
 
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
   
- Per informazioni sui parametri con valori di tabella nel server, vedere [usare i parametri &#40;con valori di&#41;tabella motore di database](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Per informazioni sui parametri con valori di tabella nel server, vedere [usare i parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC è possibile inviare parametri con valori di tabella al server in due modi:  
   
@@ -40,8 +40,8 @@ ms.locfileid: "73790473"
   
  È possibile creare vincoli e chiavi primarie durante la creazione della variabile di tabella. I vincoli rappresentano un ottimo metodo per assicurarsi che i dati di una tabella soddisfino requisiti specifici.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Usi dei parametri con valori di tabella in ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Utilizzi dei parametri con valori di tabella in ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
  Vengono descritti gli scenari utente principali per i parametri con valori di tabella e ODBC.  
   
  [Tipo SQL ODBC per parametri con valori di tabella](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-sql-type-for-table-valued-parameters.md)  
@@ -81,7 +81,7 @@ ms.locfileid: "73790473"
  Viene descritta l'esecuzione delle attività più comuni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Parametri &#40;con valori di tabella SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Parametri con valori di tabella &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

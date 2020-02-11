@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127100"
 ---
-# <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype (API delle stored procedure estese)
+# <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API delle stored procedure estese)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce il tipo di dati di un parametro di chiamata a una stored procedure remota.  
   
@@ -58,7 +59,7 @@ n
 ## <a name="returns"></a>Valori di codice restituiti  
  Un valore di token per il tipo di dati del parametro. Per informazioni sui tipi di dati, vedere [Tipi di dati &#40;API Stored procedure estesa&#41;](data-types-extended-stored-procedure-api.md). Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
- Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] di dati.  
   
 |Nuovi tipi di dati|Valore restituito|  
 |--------------------|------------------|  
@@ -71,14 +72,14 @@ n
 |`NVARCHAR`|VARCHAR|  
 |`NTEXT`|-1|  
   
-## <a name="remarks"></a>Note  
- Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
+## <a name="remarks"></a>Osservazioni  
+ Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene ancora chiamato, ma sembra che non siano presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
- [srv_paraminfo &#40;API delle stored procedure estese&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;API delle stored procedure estese&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_paraminfo &#40;API stored procedure estesa&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
+ [srv_rpcparams &#40;API stored procedure estesa&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

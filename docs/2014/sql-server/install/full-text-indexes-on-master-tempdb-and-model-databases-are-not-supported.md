@@ -1,5 +1,5 @@
 ---
-title: Non sono supportati gli indici full-text nei database master, tempdb e model | Microsoft Docs
+title: Gli indici full-text nei database master, tempdb e modello non sono supportati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 743c7153b034cf5e1267c6a0da1e585845800980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095194"
 ---
 # <a name="full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported"></a>Gli indici full-text nei database master, tempdb e model non sono supportati
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente indici full-text in un database di sistema.  
   
 ## <a name="description"></a>Descrizione  
  In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] gli indici full-text sono supportati nei database master, tempdb e model.  
   
- Cataloghi full-text nel master, tempdb e modello di database vengono rimossi durante l'aggiornamento.  
+ Eventuali cataloghi full-text nei database master, tempdb e modello vengono rimossi durante l'aggiornamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

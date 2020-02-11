@@ -11,58 +11,58 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262906"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mapping di schemi Oracle a schemi SQL Server (OracleToSQL)
-In Oracle, ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema Oracle per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato per lo schema di database. Tuttavia, è possibile personalizzare il mapping tra schemi Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+In Oracle ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema Oracle a un database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database Oracle.  
   
-## <a name="oracle-and-sql-server-schemas"></a>Oracle e schemi SQL Server  
-Un database Oracle contiene gli schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
+## <a name="oracle-and-sql-server-schemas"></a>Schemi Oracle e SQL Server  
+Un database Oracle contiene schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
   
-Il concetto di Oracle di uno schema esegue il mapping al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di un database e uno dei relativi schemi. Ad esempio, Oracle può avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**, e all'interno del database sono gli schemi. Uno schema è il **dbo** (o proprietario del database) dello schema. Per impostazione predefinita, lo schema di Oracle **HR** verrà mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema e il database **HR.dbo**. SSMA si intende il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e nello schema come schema.  
+Il concetto Oracle di uno schema viene mappato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al concetto di database e di uno dei relativi schemi. Ad esempio, Oracle potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, verrà eseguito il mapping dell' **ora** dello schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle al database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
-È possibile modificare il mapping tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi.  
+È possibile modificare il mapping tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli schemi.  
   
-## <a name="modifying-the-target-database-and-schema"></a>Modifica il Database di destinazione e lo Schema  
-In SSMA, è possibile mappare uno schema Oracle per eventuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello schema.  
+## <a name="modifying-the-target-database-and-schema"></a>Modifica del database di destinazione e dello schema  
+In SSMA è possibile eseguire il mapping di uno schema Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualsiasi schema disponibile.  
   
-**Per modificare il database e dello schema**  
+**Per modificare il database e lo schema**  
   
-1.  Nel Visualizzatore metadati Oracle, selezionare **schemi**.  
+1.  In Esplora metadati Oracle selezionare **schemi**.  
   
-    Il **dello Schema di Mapping** della scheda è disponibile anche quando si seleziona un singolo database, il **schemi** cartelle o singoli schemi. Nell'elenco il **Schema di Mapping** scheda personalizzata per l'oggetto selezionato.  
+    La scheda **mapping dello schema** è disponibile anche quando si seleziona un singolo database, la cartella **schemi** o singoli schemi. L'elenco nella scheda **mapping dello schema** è personalizzato per l'oggetto selezionato.  
   
-2.  Nel riquadro di destra, scegliere il **Schema di Mapping** scheda.  
+2.  Nel riquadro di destra fare clic sulla scheda **mapping dello schema** .  
   
-    Verrà visualizzato un elenco di tutti gli schemi di Oracle, seguito da un valore di destinazione. Questa destinazione è identificata in una notazione di due parti (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verranno migrati i dati e oggetti.  
+    Viene visualizzato un elenco di tutti gli schemi Oracle, seguiti da un valore di destinazione. Questa destinazione è indicata in una notazione in due parti (*database. Schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui verrà eseguita la migrazione degli oggetti e dei dati.  
   
-3.  Selezionare la riga che contiene il mapping che si desidera modificare e quindi fare clic su **Modify**.  
+3.  Selezionare la riga che contiene il mapping che si desidera modificare, quindi fare clic su **modifica**.  
   
-    Nel **scegliere lo Schema di destinazione** della finestra di dialogo è possibile esplorare per database di destinazione disponibili e dello schema o un tipo di database e lo schema assegnare un nome nella casella di testo in una notazione di due parti (database.schema) e quindi fare clic su **OK**.  
+    Nella finestra di dialogo **Scegli schema di destinazione** è possibile cercare il database e lo schema di destinazione disponibili oppure digitare il nome del database e dello schema nella casella di testo in una notazione in due parti (database. Schema), quindi fare clic su **OK**.  
   
-4.  La destinazione viene modificato nel **Schema di Mapping** scheda.  
+4.  La destinazione cambia nella scheda **mapping dello schema** .  
   
-**Modalità di Mapping**  
+**Modalità di mapping**  
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita viene eseguito il mapping di database di origine alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database con cui si è connessi con SSMA. Se il database di destinazione in corso il mapping è inesistente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi verrà richiesto con un messaggio **"il Database e/o schema non esiste nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei metadati. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare?"** Fare clic su Sì. Analogamente, è possibile mappare lo schema allo schema non esistente nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mappato al database di destinazione con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mapping non è presente in, verrà visualizzato un messaggio che indica che **il database e/o lo schema non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esistente nel database di destinazione che verrà creato durante la sincronizzazione.  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>Viene ripristinato il Database predefinito e lo Schema  
-Se si personalizza il mapping tra uno schema Oracle e un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello schema, è possibile ripristinare il mapping ai valori predefiniti.  
+## <a name="reverting-to-the-default-database-and-schema"></a>Ripristino del database e dello schema predefiniti  
+Se si Personalizza il mapping tra uno schema Oracle e uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema, è possibile ripristinare i valori predefiniti del mapping.  
   
-**Per ripristinare il database predefinito e lo schema**  
+**Per ripristinare il database e lo schema predefiniti**  
   
-1.  Nella scheda mapping dello schema, selezionare una riga qualsiasi e fare clic su **Ripristina predefinito** per ripristinare il database predefinito e lo schema.  
+1.  Nella scheda mapping dello schema selezionare una riga qualsiasi e fare clic su **Reimposta per impostazione predefinita** per ripristinare il database e lo schema predefiniti.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Se si desidera analizzare la conversione degli oggetti Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è possibile [creare un report di conversione](assessing-oracle-schemas-for-conversion-oracletosql.md). In caso contrario, è possibile [convertire le definizioni degli oggetti di database Oracle](converting-oracle-schemas-oracletosql.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definizioni di oggetto.  
+Se si desidera analizzare la conversione degli oggetti Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è possibile [creare un report di conversione](assessing-oracle-schemas-for-conversion-oracletosql.md). In caso contrario, è possibile [convertire le definizioni degli oggetti di database Oracle](converting-oracle-schemas-oracletosql.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definizioni di oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
-[La connessione a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[La migrazione da Oracle database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Connessione a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

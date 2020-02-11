@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579982"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
@@ -44,7 +44,7 @@ Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzio
 
 La web part Visualizzatore di report è disponibile nell'Area download Microsoft.
 
-[Scaricare il pacchetto della soluzione web part Visualizzatore report](https://www.microsoft.com/download/details.aspx?id=55949)
+[Scaricare il pacchetto della soluzione web part Visualizzatore di report](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Distribuire la soluzione farm
 
@@ -148,7 +148,7 @@ La web part supporta le lingue seguenti:
 * Cinese (semplificato - zh-HANS e zh-CHS)
 * Cinese (tradizionale - zh-HANT e zh-CHT)
 
-## <a name="troubleshoot"></a>Risoluzione dei problemi
+## <a name="troubleshoot"></a>Risolvere problemi
 
 * Errore durante la disinstallazione di SSRS se è configurata la modalità integrata SharePoint:
 
@@ -161,7 +161,7 @@ La web part supporta le lingue seguenti:
 
 * Errore durante il tentativo di aggiornamento di SharePoint se è configurata la modalità integrata SharePoint:
 
-    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. Impossibile trovare il file specificato. 00000000-0000-0000-0000-000000000000
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. Non è possibile trovare il file specificato. 00000000-0000-0000-0000-000000000000
     
     Soluzione
     1. Rimuovere la web part Visualizzatore report

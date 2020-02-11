@@ -14,11 +14,11 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889221"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi-Rimuovi tabelle (Analysis Services-Dati multidimensionali)
@@ -32,27 +32,27 @@ ms.locfileid: "68889221"
  **Origine dati**  
  Consente di selezionare l'origine dei dati per l'aggiunta o la rimozione di tabelle.  
   
- **Oggetti disponibili**  
+ **Available objects**  
  Consente di visualizzare gli oggetti e i relativi tipi nell'origine dei dati non ancora inclusi nella vista origine dati.  
   
- Fare clic su **>>** per trasferire in **Oggetti inclusi** tutti gli oggetti elencati in **Oggetti disponibili** oppure selezionare uno o più oggetti e quindi fare clic su **>** per trasferire gli oggetti selezionati in **Oggetti inclusi**.  
+ Fare **>>** clic su questo pulsante per trasferire tutti gli oggetti elencati in **oggetti disponibili** in **oggetti inclusi**oppure selezionare uno o **>** più oggetti e quindi fare clic su per trasferire gli oggetti selezionati in **oggetti inclusi**.  
   
  **Filter**  
  Digitare il filtro utilizzato per limitare gli oggetti inclusi nell'elenco **Oggetti disponibili** e quindi fare clic sul pulsante per applicare il filtro agli oggetti elencati.  
   
- **Mostra oggetti di sistema**  
+ **Show system objects**  
  Selezionare questa opzione per visualizzare gli oggetti di sistema relativi all'origine dati in **Oggetti disponibili**.  
   
- **Oggetti inclusi**  
+ **Included objects**  
  Consente di visualizzare gli oggetti e i relativi tipi già aggiunti alla vista origine dati.  
   
- Fare clic su **<<** per trasferire in **Oggetti inclusi** tutti gli oggetti elencati in **Oggetti disponibili** oppure selezionare uno o più oggetti e quindi fare clic su **<** per trasferire gli oggetti selezionati in **Oggetti inclusi**.  
+ Fare **<<** clic su questo pulsante per trasferire tutti gli oggetti elencati in **oggetti inclusi** in **oggetti disponibili**oppure selezionare uno o **<** più oggetti e quindi fare clic su per trasferire gli oggetti selezionati in **oggetti disponibili**.  
   
- **Aggiungi tabelle correlate**  
+ **Add related tables**  
  Fare clic su questo pulsante per aggiungere tutte le tabelle correlate a quelle selezionate in **Oggetti inclusi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione Analysis Services e &#40;finestre di dialogo dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
- [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Progettazione vista origine dati &#40;Analysis Services Dati multidimensionali&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

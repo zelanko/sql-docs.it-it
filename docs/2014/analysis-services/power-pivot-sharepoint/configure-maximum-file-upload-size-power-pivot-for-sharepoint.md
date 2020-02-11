@@ -1,5 +1,5 @@
 ---
-title: Configurare dimensioni massime caricamento File (PowerPivot per SharePoint) | Microsoft Docs
+title: Configurare le dimensioni massime di caricamento file (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071815"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurare le dimensioni massime di caricamento dei file (PowerPivot per SharePoint)
@@ -32,7 +32,7 @@ ms.locfileid: "66071815"
   
 2.  Fare clic sul nome dell'applicazione Excel Services.  
   
-3.  Fare clic su **Percorsi attendibili file**.  
+3.  Fare clic su **Posizioni attendibili file**.  
   
 4.  Fare clic sulla posizione per modificare le proprietà. Per impostazione predefinita, in Excel Services l'applicazione Web predefinita viene considerata sito attendibile. Se si usa l'applicazione Web predefinita, fare clic su **http://** per aprire la pagina di configurazione per questo percorso.  
   

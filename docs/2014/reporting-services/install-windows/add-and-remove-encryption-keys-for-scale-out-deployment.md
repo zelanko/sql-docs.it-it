@@ -1,5 +1,5 @@
 ---
-title: Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale (Gestione configurazione SSRS) | Microsoft Docs
+title: Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale (Configuration Manager SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108919"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale (Gestione configurazione SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66108919"
   
 1.  Eseguire **rskeymgmt.exe** localmente nel computer che ospita un server di report già membro della distribuzione con scalabilità orizzontale.  
   
-2.  Utilizzare l'argomento `-j` per unire in join un server di report al database del server di report. Utilizzare gli argomenti `-m` e `-n` per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Utilizzare gli argomenti `-u` e `-v` per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da utilizzare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md).  
+2.  Utilizzare l'argomento `-j` per unire in join un server di report al database del server di report. Utilizzare gli argomenti `-m` e `-n` per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Utilizzare gli argomenti `-u` e `-v` per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da usare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md).  
   
      Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare se si sta unendo in join un server di report remoto a una distribuzione con scalabilità orizzontale (è possibile omettere le credenziali se si dispone di autorizzazioni di amministratore sul computer remoto):  
   

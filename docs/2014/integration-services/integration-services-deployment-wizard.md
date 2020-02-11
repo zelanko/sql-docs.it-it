@@ -1,5 +1,5 @@
 ---
-title: Distribuzione guidata di Integration Services | Microsoft Docs
+title: Distribuzione guidata Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,42 +13,42 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058013"
 ---
 # <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   Con la Distribuzione guidata [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile distribuire progetti nel catalogo SSISDB in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando il modello di distribuzione del progetto.  
   
- Per avviare il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuzione guidata da un progetto aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], selezionare **Distribuisci** dal **progetto** menu. Per avviare la procedura guidata in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], espandere il **cataloghi di Integration Services** > **SSISDB** fare clic sul nodo in Esplora oggetti il **progetti** cartella e quindi fare clic su **Distribuisci progetto**.  
+ Per avviare la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuzione guidata da un progetto aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], selezionare **Distribuisci** dal menu **progetto** . Per avviare la procedura guidata [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]in, espandere il nodo > **SSISDB** **cataloghi Integration Services**in Esplora oggetti, fare clic con il pulsante destro del mouse sulla cartella **progetti** , quindi scegliere **Distribuisci progetto**.  
   
- La procedura guidata prevede inoltre i quattro passaggi seguenti. Fare clic su **successivo** per procedere al passaggio successivo, o **Previous** per tornare al passaggio precedente.  
+ La procedura guidata prevede inoltre i quattro passaggi seguenti. Fare clic su **Avanti** per passare al passaggio successivo o **indietro** per tornare al passaggio precedente.  
   
-1.  **Seleziona origine** : selezionare il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto che si desidera distribuire.  
+1.  **Selezionare l'origine** : selezionare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] il progetto che si desidera distribuire.  
   
-2.  **Seleziona destinazione** -selezionare la destinazione del progetto.  
+2.  **Selezionare destinazione** : selezionare la destinazione del progetto.  
   
-3.  **Revisione** -consente di visualizzare le opzioni selezionate.  
+3.  **Verifica** : consente di visualizzare le selezioni effettuate.  
   
-4.  **Distribuisci/risultati** : distribuisce il progetto e visualizza i risultati.  
+4.  **Deploy/results** : distribuisce il progetto e Visualizza i risultati.  
   
-## <a name="select-source"></a>Seleziona origine  
- Per distribuire un file di progetto di distribuzione che è stato creato, selezionare **file distribuzione progetto** e immettere il percorso del file con estensione ispac o fare clic su **Sfoglia** per individuarlo nella [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] cartella del progetto. Per distribuire un progetto che si trova nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.  
+## <a name="select-source"></a>Selezionare l'origine  
+ Per distribuire un file di distribuzione del progetto creato, selezionare **file distribuzione progetto** e immettere il percorso del file con estensione ispac oppure fare clic su **Sfoglia** per trovarlo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nella cartella del progetto. Per distribuire un progetto che si trova nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo.  
   
- Se si inizia la procedura guidata in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], per impostazione predefinita tramite la procedura guidata viene selezionato il progetto aperto come origine e questo passaggio viene ignorato. Per tornare a questo passaggio e selezionare un'origine diversa, fare clic su **Previous** oppure fare clic su **Seleziona origine** nel riquadro sinistro.  
+ Se si inizia la procedura guidata in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], per impostazione predefinita tramite la procedura guidata viene selezionato il progetto aperto come origine e questo passaggio viene ignorato. Per tornare a questo passaggio e selezionare un'altra origine, fare clic su **indietro** o su **Seleziona origine** nel riquadro sinistro.  
   
 ## <a name="select-destination"></a>Seleziona destinazione  
  Per selezionare la cartella di destinazione per il progetto nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , immettere l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o fare clic su **Sfoglia** per effettuare una selezione da un elenco di server. Immettere il percorso del progetto in SSISDB o fare clic su **Sfoglia** per selezionarlo.  
   
  Se si inizia la procedura guidata in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per impostazione predefinita tramite la procedura guidata viene selezionata l'istanza del server connessa e viene immesso il percorso al progetto selezionato. È possibile modificare questi valori per distribuire il progetto in un percorso diverso.  
   
-## <a name="review"></a>Verifica  
+## <a name="review"></a>Revisione  
  Con la procedura guidata è possibile verificare le impostazioni selezionate prima di distribuire il progetto. È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.  
   
 ## <a name="deployresults"></a>Distribuisci/Risultati  
- Quando fa clic su **Deploy** dal **revisione** pagina, il progetto viene distribuito e il **risultati** pagina viene visualizzato l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva Report...**  per salvare i risultati in un file XML.  
+ Quando si fa clic su **Distribuisci** nella pagina **Verifica** , il progetto viene distribuito e nella pagina **risultati** viene visualizzato l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML.  
   
  Per uscire dalla procedura guidata, fare clic su **Chiudi**.  
   

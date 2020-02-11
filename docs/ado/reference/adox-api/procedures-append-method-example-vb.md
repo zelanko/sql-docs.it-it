@@ -1,5 +1,5 @@
 ---
-title: Procedure di esempio del metodo Append (VB) | Microsoft Docs
+title: Esempio di metodo Append di Procedures (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965422"
 ---
 # <a name="procedures-append-method-example-vb"></a>Esempio del metodo Append di Procedures (VB)
-Il codice seguente viene illustrato come utilizzare un [comandi](../../../ado/reference/ado-api/command-object-ado.md) oggetto e il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per creare una nuova stored procedure nell'origine dati sottostante.  
+Nel codice seguente viene illustrato come utilizzare un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) della raccolta [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) per creare una nuova procedura nell'origine dati sottostante.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,7 +75,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

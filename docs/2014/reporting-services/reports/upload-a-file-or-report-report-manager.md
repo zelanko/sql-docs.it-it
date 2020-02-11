@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102403"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Caricare un file o un report (Gestione report)
@@ -42,16 +42,16 @@ ms.locfileid: "66102403"
   
 4.  Fare clic su **Sfoglia** per selezionare il file da caricare. È possibile caricare un file di definizione del report, un'immagine, un documento o qualsiasi altro file che si desidera rendere disponibile nel server di report.  
   
-5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi ma non i caratteri riservati, ovvero ; ? : \@ & = + , $ / * \< > |.  
+5.  Digitare un nome per il nuovo elemento. Il nome di un elemento può includere spazi ma non i caratteri riservati, ovvero ; ? : \@ & = +, $/* \< > |.  
   
 6.  Se si desidera sostituire un elemento esistente con il nuovo elemento, selezionare **Sovrascrivi se esistente**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
- [Pagina Carica file &#40;Gestione report&#41;](../upload-file-page-report-manager.md)   
+ [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
+ [Carica &#40;della pagina file Gestione report&#41;](../upload-file-page-report-manager.md)   
  [Caricare file in una cartella](../report-server/upload-files-to-a-folder.md)  
   
   

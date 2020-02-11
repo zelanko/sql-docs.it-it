@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244891"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifica della posizione di un punto di interruzione
@@ -29,7 +29,7 @@ ms.locfileid: "75244891"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Posizione** dal menu di scelta rapida.  
   
-     -Oppure-  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e quindi scegliere **Posizione** dal menu di scelta rapida.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75244891"
      L'opzione **Il codice sorgente può essere diverso dalla versione originale** non ha effetto nel caso di debug di [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare un numero di passaggi](specify-a-hit-count.md)   
+ [Specifica di un numero di passaggi](specify-a-hit-count.md)   
  [Specificare un'azione del punto di interruzione](specify-a-breakpoint-action.md)   
- [Specificare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
- [Specificare un filtro per il punto di interruzione](specify-a-breakpoint-filter.md)  
+ [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
+ [Specificare un filtro per un punto di interruzione](specify-a-breakpoint-filter.md)  

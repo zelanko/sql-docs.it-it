@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255586"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
@@ -29,14 +29,14 @@ ms.locfileid: "75255586"
   
  Dopo aver creato un dominio composito, è possibile modificarne le proprietà, allegarvi un servizio dati di riferimento, creare regole tra domini o relazioni di valori. A tale scopo, selezionare il dominio composito nell'elenco **Dominio** della pagina **Gestione dominio** , quindi selezionare la scheda appropriata.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per creare un dominio composito, è necessario avere creato e aperto una Knowledge Base e almeno due singoli domini da aggiungere al dominio composito.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare un dominio composito.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Creazione di un dominio composito nell'attività di individuazione delle informazioni  
