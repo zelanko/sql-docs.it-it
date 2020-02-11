@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011718"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utilizzo di un file di formato per escludere un campo di dati (SQL Server)
   È possibile che un file di dati contenga un numero di campi maggiore del numero di colonne presenti nella tabella. In questo argomento viene descritta la modifica dei file di formato XML e non XML per consentire l'utilizzo di un file di dati con un numero maggiore di campi tramite il mapping delle colonne della tabella ai campi dati corrispondenti e l'esclusione dei campi aggiuntivi.  
   
 > [!NOTE]  
->  È possibile usare un file di formato non XML o XML per importare in blocco un file di dati nella tabella usando un comando **bcp**, l'istruzione BULK INSERT o l'istruzione INSERT... Istruzione SELECT * FROM OPENROWSET(BULK...). Per altre informazioni, vedere [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  È possibile utilizzare un file di formato non XML o XML per importare in blocco un file di dati nella tabella utilizzando un comando **bcp** , un'istruzione BULK INSERT o un'istruzione INSERT... Istruzione SELECT * FROM OPENROWSET (BULK...). Per altre informazioni, vedere [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-data-file-and-table"></a>File di dati e tabella di esempio  
  Gli esempi di file di formato modificati contenuti in questo argomento sono basati sulla tabella e sul file di dati seguenti.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
- Per gli esempi, è necessario che nel database di esempio `myTestSkipField` venga creata una tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basata sullo schema `dbo` . Per creare la tabella, nell'editor di query di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
+ Per gli esempi, è necessario che nel database di esempio `myTestSkipField` venga creata una tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basata sullo schema `dbo` . Per creare questa tabella, nell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor di query di eseguire il codice seguente:  
   
 ```  
 USE AdventureWorks2012;  
@@ -45,7 +45,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>File di dati di esempio  
- Il file di dati `myTestSkipField-c.dat`include i record seguenti:  
+ Il file di dati `myTestSkipField-c.dat` include i record seguenti:  
   
 ```  
 1,Skipme,DataField3,DataField4  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="xml-format-file-for-more-data-fields"></a>File di formato XML per un maggior numero di campi dati  
- Il file di formato utilizzato in questo esempio è basato su un altro file di formato, `myTestSkipField.xml`, che utilizza il formato di dati carattere e i cui campi corrispondono esattamente per numero e ordine alle colonne della tabella `myTestSkipField`. Per visualizzare il contenuto del file di formato, vedere [Creare un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
+ Il file di formato utilizzato in questo esempio è basato su un altro file di formato, `myTestSkipField.xml`, che utilizza il formato di dati carattere e i cui campi corrispondono esattamente per numero e ordine alle colonne della tabella `myTestSkipField` . Per visualizzare il contenuto del file di formato, vedere [Creare un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
  Il file di formato seguente, `myTestSkipField.xml`, esegue il mapping dei campi di `myTestSkipField-c.dat` alle colonne della tabella `myTestSkipField` Il file di formato utilizza dati di tipo carattere.  
   
@@ -142,10 +142,10 @@ GO
 >  Per altre informazioni sulla sintassi dell'XML Schema e ulteriori esempi di file di formato XML, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [Usare un file di formato per ignorare una colonna di tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011963"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabella di esempio HumanResources.myTeam (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "66011963"
   
  Nella tabella **myTeam** sono incluse le colonne seguenti.  
   
-|colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
+|Colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Non Null|Chiave primaria per le righe. ID dipendente di un membro del team.|  
-|**Name**|`nvarchar(50)`|Non Null|Nome di un membro del team.|  
-|**Title**|`nvarchar(50)`|Ammette valori Null|Titolo professionale del dipendente nel team.|  
+|**Nome**|`nvarchar(50)`|Non Null|Nome di un membro del team.|  
+|**Titolo**|`nvarchar(50)`|Nullable|Titolo professionale del dipendente nel team.|  
 |**Background**|`nvarchar(50)`|Non Null|Data e ora dell'ultimo aggiornamento della riga. Valore predefinito.|  
   
  **Per creare HumanResources.myTeam**  

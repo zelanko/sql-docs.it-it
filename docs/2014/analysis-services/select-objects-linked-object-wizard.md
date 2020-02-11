@@ -1,5 +1,5 @@
 ---
-title: Selezionare gli oggetti (collegamento guidato oggetti) | Microsoft Docs
+title: Selezione oggetti (collegamento guidato oggetti) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069320"
 ---
 # <a name="select-objects-linked-object-wizard"></a>Seleziona oggetti (Collegamento guidato oggetti)
@@ -26,7 +26,7 @@ ms.locfileid: "66069320"
 >  vengono collegati le dimensioni e i gruppi di misure, incluse le misure associate. Le azioni, gli indicatori di prestazioni chiave (KPI) e i calcoli vengono importati.  
   
 ## <a name="options"></a>Opzioni  
- **Oggetti disponibili**  
+ **Available objects**  
  Consente di selezionare gli oggetti da collegare o importare.  
   
 > [!NOTE]  

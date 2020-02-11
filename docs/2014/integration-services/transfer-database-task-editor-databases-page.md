@@ -1,5 +1,5 @@
 ---
-title: Editor attività Trasferisci Database (pagina database) | Microsoft Docs
+title: Editor attività Trasferisci database (pagina database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055107"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor attività Trasferisci database (pagina Database)
@@ -26,10 +26,10 @@ ms.locfileid: "66055107"
   
 ## <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabaseName**  
  Specificare il nome del database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server di destinazione.  
@@ -48,12 +48,12 @@ ms.locfileid: "66055107"
 > [!NOTE]  
 >  Se i file di database vengono individuati tramite il pulsante Sfoglia, il percorso dei file viene immesso usando l'annotazione dell'unità locale, ad esempio c:\\. È necessario sostituire questa annotazione con quella di condivisione di rete, includendo il nome del computer e il nome di condivisione. In caso di condivisione amministrativa predefinita, è necessario utilizzare l'annotazione $ e disporre di accesso amministrativo alla condivisione.  
   
- **DestinationOverwrite**  
+ **Proprietà DestinationOverwrite**  
  Indicare se il database nel server di destinazione può essere sovrascritto.  
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Sovrascrive il database del server di destinazione.|  
 |**False**|Non sovrascrive il database del server di destinazione.|  
@@ -82,7 +82,7 @@ ms.locfileid: "66055107"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Ricollega il database di origine.|  
 |**False**|Non ricollega il database di origine.|  
@@ -90,8 +90,8 @@ ms.locfileid: "66055107"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci database &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Trasferisci database &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
- [Gestione connessione SMO](connection-manager/smo-connection-manager.md)  
+ [gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

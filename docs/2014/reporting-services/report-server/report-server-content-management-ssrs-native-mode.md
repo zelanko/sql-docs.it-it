@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103517"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
@@ -44,11 +44,12 @@ ms.locfileid: "66103517"
   
 -   Bilanciare le richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
--   Fornire le autorizzazioni per eseguire attività di gestione usando ruoli predefiniti: **Amministratore di sistema** e **Content Manager**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
+-   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
   
- Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o Gestione report. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Gestione report consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e utilizzare report e altri tipi di contenuto, nonché visualizzare e utilizzare tutti gli elementi condivisi e le funzionalità di distribuzione del report. Per altre informazioni, vedere [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
+ Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o Gestione report. 
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Gestione report consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e utilizzare report e altri tipi di contenuto, nonché visualizzare e utilizzare tutti gli elementi condivisi e le funzionalità di distribuzione del report. Per altre informazioni, vedere [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Elementi del server di report  
+##  <a name="bkmk_ReportServerItems"></a>Elementi del server di report  
  Gli elementi del server di report includono report, origini dati condivise, set di dati condivisi, parti del report, risorse (elementi archiviati ma non elaborati in un server di report) e cartelle. Gli elementi possono dipendere da altri elementi, ad esempio un report può dipendere dalle origini dati condivise a cui fa riferimento. Se si sposta un elemento dipendente, le informazioni di riferimento vengono aggiornate automaticamente dal server di report.  
   
  È possibile spostare gli elementi del server di report in percorsi di cartelle diversi nella gerarchia di cartelle del server di report. Quando si sposta un elemento, tutte le proprietà, incluse le impostazioni di sicurezza, vengono spostate con l'elemento nel nuovo percorso. Quando si sposta una cartella, vengono spostati tutti gli elementi contenuti nella cartella.  
@@ -57,16 +58,16 @@ ms.locfileid: "66103517"
   
 |Icona|Elemento spostabile|  
 |----------|-------------------|  
-|![Icona di report](../media/hlp-16doc.gif "Icona di report")|Report|  
+|![Icona del report](../media/hlp-16doc.gif "Icona Rapporto")|Report|  
 |![Icona di report collegato](../media/hlp-16linked.gif "Icona di report collegato")|Report collegato|  
 |![Icona di cartella](../media/hlp-16folder.gif "Icona di cartella")|Cartella|  
-|![Icona di risorsa generica](../media/hlp-16file.gif "Icona di risorsa generica")|Risorsa generica|  
-|![Icona di origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
+|![icona di risorsa generica](../media/hlp-16file.gif "Icona di risorsa generica")|Risorsa generica|  
+|![Icona dell'origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
- Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per spostare un elemento verrà comunicata quando vengono selezionate le seguenti operazioni nell'assegnazione di ruolo per l'elemento in questione: "Gestione report," "Gestisci modelli", "Gestione di cartelle" e "Gestione di origini dati".  
+ Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  
   
-##  <a name="bkmk_Folders"></a> Cartelle  
+##  <a name="bkmk_Folders"></a>Cartelle  
  Per fare riferimento agli elementi archiviati e gestiti da un server di report viene utilizzata una gerarchia di cartelle.  Per impostazione predefinita, la struttura di cartelle è costituita da un nodo radice denominato Home e da cartelle riservate che supportano la funzionalità facoltativa Report personali. Le cartelle aggiuntive vengono definite dall'utente. Le cartelle del server di report sono utili se si desidera concedere lo stesso livello di accesso a più elementi. Le autorizzazioni impostate per la cartella possono essere ereditate dagli elementi di tale cartella e in cartelle aggiuntive incluse in essa. È ad esempio possibile creare un set di cartelle sotto la cartella Home, assegnare autorizzazioni del team a ogni cartella, quindi consentire a membri del team di personalizzare le cartelle incluse nella cartella del team in base alle necessità.  
   
  Se si utilizza un browser per connettersi direttamente a un server di report, il nome della directory virtuale del server di report corrisponde al nome del nodo radice della struttura di cartelle. Dal nodo radice, è possibile creare, modificare ed eliminare cartelle come necessario per organizzare i contenuti del server di report. È possibile aggiungere contenuti a una cartella, spostare elementi da una cartella all'altra, modificare i nomi o i percorsi delle cartelle ed eliminare le cartelle non più necessarie.  
@@ -117,16 +118,16 @@ ms.locfileid: "66103517"
   
  La visibilità di un elemento in una cartella dipende sia dalle assegnazioni dei ruoli, ovvero l'autorizzazione per visualizzare un elemento, sia dalle opzioni di visualizzazione in uso per tale cartella. In Gestione report è possibile impostare nella pagina Contenuto la visualizzazione di un elenco o di dettagli. È possibile che in alcuni casi un report o un elemento non siano visualizzati in visualizzazione Elenco. Prima di eliminare il contenuto di una cartella, verificare che sia attivata la visualizzazione Dettagli.  
   
-##  <a name="bkmk_Resources"></a> Risorse  
- Una risorsa è un elemento gestito che viene archiviato, ma non elaborato, in un server di report. In genere, una risorsa fornisce contenuto esterno per gli utenti dei report. Esempi di risorsa sono un'immagine in un file con estensione jpg, un file di forma ESRI contenente dati spaziali o un file HTML che descrive le regole business utilizzate in un report. Il file in formato JPG, SHP o HTML viene archiviato nel server di report, che tuttavia lo invia direttamente browser anziché elaborarlo. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) e la sezione "Aggiunta di dati a una mappa" in [Mappe &#40;Generatore report e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
+##  <a name="bkmk_Resources"></a>Risorse  
+ Una risorsa è un elemento gestito che viene archiviato, ma non elaborato, in un server di report. In genere, una risorsa fornisce contenuto esterno per gli utenti dei report. Esempi di risorsa sono un'immagine in un file con estensione jpg, un file di forma ESRI contenente dati spaziali o un file HTML che descrive le regole business utilizzate in un report. Il file in formato JPG, SHP o HTML viene archiviato nel server di report, che tuttavia lo invia direttamente browser anziché elaborarlo. Per ulteriori informazioni, vedere [immagini &#40;Generatore report e ssrs&#41;](../report-design/images-report-builder-and-ssrs.md) e la sezione "aggiunta di dati a una mappa" in [Maps &#40;Generatore report e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Aggiunta e visualizzazione di una risorsa  
  Per aggiungere una risorsa a un server di report, caricare o pubblicare un file:  
   
-|Operazione|Tipo di file|  
+|Operazione|Tipo file|  
 |---------------|---------------|  
-|Caricamento|Per caricare una risorsa, utilizzare Gestione report se il server di report è in esecuzione in modalità nativa o una pagina di applicazione su un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per altre informazioni, vedere [caricare un File o un Report &#40;gestione Report&#41; ](../reports/upload-a-file-or-report-report-manager.md) oppure [caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Pubblicazione|Tutti i file in un progetto che non sono report, parti del report, origini dati o set di dati, vengono caricati come risorse. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
+|Caricamento|Per caricare una risorsa, utilizzare Gestione report se il server di report è in esecuzione in modalità nativa o una pagina di applicazione su un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per ulteriori informazioni, vedere [caricare un file o un Report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md) o [caricare documenti in una raccolta di sharepoint &#40;Reporting Services in modalità SharePoint&#41;]. /upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Pubblica|Tutti i file in un progetto che non sono report, parti del report, origini dati o set di dati, vengono caricati come risorse. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
   
  Tutte le risorse provengono da file presenti nel file system, caricati successivamente in un server di report. Ad eccezione dei limiti per le dimensioni del file predefinite di 4 MB imposte da ASP.NET, non sono presenti restrizioni sui tipi di file che è possibile caricare. Alcuni tipi di file risultano tuttavia più adatti di altri con tipo MIME equivalente per la pubblicazione in un server di report come risorse. Ad esempio, le risorse basate su file HTML e JPG vengono aperte in una finestra del browser quando l'utente fa clic sulla risorsa. In tal modo i file HTML vengono visualizzati come pagine Web e i file JPG come immagini visibili all'utente. Al contrario le risorse con tipi MIME non equivalenti, ad esempio file di applicazioni desktop, non vengono visualizzate in alcun modo nella finestra del browser.  
   
@@ -146,7 +147,7 @@ ms.locfileid: "66103517"
   
  Per altre informazioni, vedere [Aggiornare una risorsa &#40;Gestione report&#41;](update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Report personali  
+##  <a name="bkmk_MyReports"></a>Report personali  
  La cartella Report personali è un'area di lavoro personale specifica di ogni utente che accede a un server di report con un account di dominio valido. Questa cartella speciale può essere utilizzata per archiviare report non ancora definitivi, report che non saranno soggetti a un'ampia distribuzione o report che sono stati modificati per rispondere a esigenze specifiche. Non è possibile limitare la quantità né le dimensioni degli elementi che possono essere archiviati in una cartella Report personali, né è possibile configurare una cartella Report personali per la condivisione tra più utenti.  
   
  Tecnicamente, la funzionalità Report personali esegue il mapping tra il nome di una cartella virtuale visualizzata da ogni utente (Report personali) e una sottocartella univoca (il cui nome si basa sul nome dell'utente) della cartella Cartelle utenti generale. Quando un utente accede alla propria cartella Report personali, viene in realtà reindirizzato alla propria sottocartella di Cartelle utenti. In ogni sottocartella vengono archiviati i report e gli elementi che un utente aggiunge alla propria cartella Report personali.  
@@ -161,11 +162,11 @@ ms.locfileid: "66103517"
   
 |Carattere|Valore di escape|Esempio|  
 |---------------|------------------|-------------|  
-|(spazio)|[ ]|*Firstname Lastname* diventa *Firstname[ ]Lastname*|  
-|\ (barra rovesciata)|Sostituito con uno spazio|*DomainName\Username* diventa *DomainName Username*|  
-|@ (simbolo di chiocciola)|[at]|*username*@hotmail.com diventa *username*[at]hotmail.com|  
-|& (e commerciale)|[amp]|*username*@*company*&*company.com* diventa *username*[at]*company*[amp]*company.com*|  
-|$ (segno di dollaro)|[dollar]|*User* $*Name* diventa *User*[ ][dollar]*Name*|  
+|(spazio)|[ ]|*FirstName LastName* diventa *FirstName [] LastName*|  
+|\ (barra rovesciata)|Sostituito con uno spazio|*NomeDominio\NomeUtente* diventa *DomainName Username*|  
+|@ (simbolo di chiocciola)|[at]|*username* @hotmail.com diventa *username*[at] hotmail. com|  
+|& (e commerciale)|[amp]|*username*@** Company&*Company.com* diventa *username*[at]*Company*[amp]*Company.com*|  
+|$ (segno di dollaro)|[dollar]|** $*Nome* utente diventa *User*[] [Dollar]*nome*|  
   
  La funzionalità Report personali è facoltativa. Quando si installa un server di report, la funzionalità Report personali è disabilitata per impostazione predefinita. Per altre informazioni sull'abilitazione di questa funzionalità, vedere [Abilitare e disabilitare la funzionalità Report personali](enable-and-disable-my-reports.md). Per altre informazioni, vedere [Proteggere i report personali](../security/secure-my-reports.md).  
   

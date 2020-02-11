@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f4ab373c9827adff6e0138a81b5eaa57d1c4414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755173"
 ---
-# <a name="xpcmdshell-server-configuration-option"></a>Opzione di configurazione del server xp_cmdshell
+# <a name="xp_cmdshell-server-configuration-option"></a>Opzione di configurazione del server xp_cmdshell
   L'opzione **xp_cmdshell** è un'opzione di configurazione server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente agli amministratori di sistema di controllare se la stored procedure estesa **xp_cmdshell** può essere eseguita in un sistema. Nelle nuove installazioni l'opzione **xp_cmdshell** è disabilitata per impostazione predefinita e può essere abilitata usando la gestione basata su criteri oppure eseguendo la stored procedure di sistema **sp_configure** , come illustrato nell'esempio di codice seguente:  
   
 ```  

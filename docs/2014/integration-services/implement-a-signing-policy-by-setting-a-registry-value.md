@@ -1,5 +1,5 @@
 ---
-title: Implementare criteri per le firme impostando un valore del Registro di sistema | Microsoft Docs
+title: Implementare i criteri di firma impostando un valore del registro di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058223"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
@@ -34,7 +34,7 @@ ms.locfileid: "66058223"
   
  Nella tabella seguente sono elencati i valori validi dei dati DWORD e i criteri associati.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Nessuna restrizione amministrativa.|  
 |1|Blocco delle firme non valide.<br /><br /> Con questa impostazione non vengono bloccati i pacchetti non firmati.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66058223"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nella finestra di dialogo Esegui, digitare `Regedit`, quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo Esegui digitare `Regedit`e quindi fare clic su **OK**.  
   
 3.  Individuare la chiave del Registro di sistema: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66058223"
   
 5.  Aggiornare il nome del nuovo valore impostandolo su `BlockedSignatureStates`.  
   
-6.  Fare doppio clic su `BlockedSignatureStates` e fare clic su **Modify**.  
+6.  Fare clic con `BlockedSignatureStates` il pulsante destro del mouse e scegliere **modifica**.  
   
 7.  Nella finestra di dialogo **Modifica valore DWORD** digitare il valore 0, 1, 2 o 3.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66058223"
 9. Scegliere **Esci** dal menu **File**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

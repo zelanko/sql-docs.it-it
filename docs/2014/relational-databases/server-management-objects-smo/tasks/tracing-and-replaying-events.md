@@ -1,5 +1,5 @@
 ---
-title: Traccia e riproduzione di eventi | Documenti di Microsoft
+title: Traccia e riproduzione di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724791"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
@@ -51,7 +51,7 @@ ms.locfileid: "62724791"
   
 -   Riprodurre file di traccia o tabelle di traccia.  
   
- Dati di traccia le `Trace` e `Replay` oggetti possono essere utilizzati dall'applicazione SMO o possono essere esaminato manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono anche compatibili con il [traccia SQL](../../sql-trace/sql-trace.md) stored procedure che forniscono anche le funzionalità di traccia.  
+ I dati di traccia degli `Trace` oggetti `Replay` e possono essere usati dall'applicazione SMO oppure possono essere esaminati manualmente usando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono inoltre compatibili con le stored procedure di [traccia SQL](../../sql-trace/sql-trace.md) che forniscono anche le funzionalità di traccia.  
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   

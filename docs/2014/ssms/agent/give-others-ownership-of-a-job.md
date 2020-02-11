@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798225"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  In questo argomento viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.  
+  In questo argomento viene descritto come riassegnare la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proprietà dei processi di Agent a un altro utente.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Prima di iniziare:**  [limitazioni e restrizioni](#Restrictions), [sicurezza](#Security)  
   
 -   **Per assegnare ad altri utenti la proprietà di un processo usando:**  
   
@@ -47,15 +47,15 @@ ms.locfileid: "72798225"
  Per motivi di sicurezza, solo il proprietario del processo o un membro del ruolo **sysadmin** può modificare la definizione del processo. Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare la proprietà di un processo ad altri utenti ed eseguire qualsiasi processo, indipendentemente dal proprietario.  
   
 > [!NOTE]  
->  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)], verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
+>  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] , verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Con SQL Server Management Studio  
  **Per assegnare ad altri utenti la proprietà di un processo**  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**e quindi **Processi**, fare clic con il pulsante destro del mouse sul processo e scegliere **Proprietà**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72798225"
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra query immettere le istruzioni seguenti che usano la [sp_manage_jobs_by_login &#40;stored procedure di sistema Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
+3.  Nella finestra query immettere le istruzioni seguenti che utilizzano il [sp_manage_jobs_by_login &#40;&#41;di sistema Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) stored procedure. In questo esempio tutti i processi di `danw` vengono riassegnati a `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -91,4 +91,4 @@ ms.locfileid: "72798225"
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)   
- [Creare processi](create-jobs.md)  
+ [Crea processi](create-jobs.md)  

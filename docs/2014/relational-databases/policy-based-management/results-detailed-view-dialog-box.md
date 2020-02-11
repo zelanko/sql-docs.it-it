@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691702"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Finestra di dialogo Visualizzazione dettagliata risultati
@@ -45,7 +45,7 @@ ms.locfileid: "62691702"
  **Descrizione criteri**  
  Descrizione dei criteri.  
   
- **Guida aggiuntiva**  
+ **Informazioni aggiuntive**  
  Fare clic sul collegamento ipertestuale per aprire una pagina Web correlata ai criteri. Il collegamento ipertestuale Guida aggiuntiva viene configurato durante la creazione dei criteri e può essere vuoto o non disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  

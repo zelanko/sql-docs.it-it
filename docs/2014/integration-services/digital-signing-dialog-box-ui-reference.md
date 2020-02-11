@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'interfaccia utente di finestra di dialogo firma digitale | Microsoft Docs
+title: Riferimento all'interfaccia utente della finestra di dialogo firma digitale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059453"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
@@ -27,7 +27,7 @@ ms.locfileid: "66059453"
  Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md) e [Firma di un pacchetto tramite certificato digitale](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
 ## <a name="options"></a>Opzioni  
- **Firma**  
+ **Sign**  
  Fare clic per aprire la finestra di dialogo **Seleziona certificato** e selezionare il certificato da usare.  
   
  **Rimuovi**  

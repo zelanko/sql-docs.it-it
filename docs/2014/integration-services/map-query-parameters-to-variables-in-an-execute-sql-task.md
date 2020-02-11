@@ -1,5 +1,5 @@
 ---
-title: Mapping dei parametri di Query a variabili in un'attività Esegui SQL | Microsoft Docs
+title: Eseguire il mapping dei parametri di query a variabili in un'attività Esegui SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057801"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapping di parametri di query a variabili in un'attività Esegui SQL
@@ -38,7 +38,7 @@ ms.locfileid: "66057801"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Se il pacchetto non include già un'attività Esegui SQL, aggiungerne una al flusso di controllo del pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Se il pacchetto non include già un'attività Esegui SQL, aggiungerne una al flusso di controllo del pacchetto. Per altre informazioni, vedere [aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Fare doppio clic sull'attività Esegui SQL.  
@@ -58,7 +58,7 @@ ms.locfileid: "66057801"
     |Tipo di connessione|Marcatore di parametro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
+    |ADO.NET e SQLMOBILE|@\<Nome parametro>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66057801"
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET e SQLMOBILE|@\<nome parametro>|  
+    |ADO.NET e SQLMOBILE|@\<Nome parametro>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66057801"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
- [I parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

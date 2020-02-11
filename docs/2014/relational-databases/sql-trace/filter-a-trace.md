@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714718"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
@@ -62,7 +62,7 @@ ms.locfileid: "62714718"
   
 |Operatore relazionale|Simbolo operatore|Descrizione|  
 |-------------------------|---------------------|-----------------|  
-|Simile a|Simile a|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
+|Simile a|LIKE|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
 |Non simile a|Non simile a|Specifica che i dati dell'evento di traccia devono essere diversi dal testo specificato. Supporta più valori.|  
 |Uguale a|=|Specifica che i dati dell'evento di traccia devono essere uguali al valore specificato. Supporta più valori.|  
 |Diverso da|<>|Specifica che i dati dell'evento di traccia devono essere diversi dal valore specificato. Supporta più valori.|  
@@ -85,9 +85,9 @@ ms.locfileid: "62714718"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Durata**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
-|**Errore**|=, <>, >=, <=|  
+|**Error (Errore) (Error (Errore)e)**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
 |**GUID**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -102,7 +102,7 @@ ms.locfileid: "62714718"
 |**LoginName**|LIKE, NOT LIKE|  
 |**LoginSid**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**MethodName**|LIKE, NOT LIKE|  
-|**Mode**|=, <>, >=, <=|  
+|**Modalità**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE, NOT LIKE|  
 |**NTUserName**|LIKE, NOT LIKE|  
@@ -126,8 +126,8 @@ ms.locfileid: "62714718"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Stato**|=, <>, >=, <=|  
-|**Esito positivo**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714718"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se si tracciano eventi dal **osql** utilità o le **sqlcmd** utilità, aggiungere sempre **%** ai filtri nella **TextData**  colonna di dati.  
+ <sup>1</sup> se si tracciano eventi dall'utilità **osql** o dall'utilità **SQLCMD** , aggiungere **%** sempre ai filtri nella colonna di dati **TextData** .  
   
  A titolo di sicurezza, Traccia SQL omette automaticamente dalla traccia le informazioni sulle stored procedure correlate alla sicurezza che coinvolgono le password. Tale meccanismo di sicurezza non è configurabile ed è sempre attivo. In tale modo viene impedito che le password possano essere acquisite dagli utenti, i quali sono autorizzati a tenere traccia di tutte le attività in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

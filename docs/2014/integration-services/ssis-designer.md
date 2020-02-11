@@ -18,14 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea0776247555b9a5b63e2bbaa9ae9243abf6863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766430"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è uno strumento grafico che è possibile usare per creare e gestire pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nell'ambito di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è uno strumento grafico che è possibile usare per creare e gestire pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nell'ambito di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  È possibile utilizzare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per eseguire le attività seguenti:  
   
@@ -41,14 +43,16 @@ ms.locfileid: "62766430"
   
  Nella figura seguente vengono illustrate le finestre Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e **Casella degli strumenti** .  
   
- ![Screenshot di Progettazione SSIS e Casella degli strumenti SSIS](media/denali-designerandtoolbox.gif "Screenshot di Progettazione SSIS e Casella degli strumenti SSIS")  
+ ![Schermata di Progettazione SSIS e della casella degli strumenti](media/denali-designerandtoolbox.gif "Schermata di Progettazione SSIS e della casella degli strumenti")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ulteriori finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili finestre e finestre di dialogo che consentono di configurare l'ambiente di sviluppo e usare i pacchetti. Per altre informazioni, vedere [Interfaccia utente di Integration Services](integration-services-user-interface.md).  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include ulteriori finestre e finestre di dialogo per l'aggiunta di funzionalità ai pacchetti e in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili finestre e finestre di dialogo che consentono di configurare l'ambiente di sviluppo e usare i pacchetti. Per altre informazioni, vedere [Interfaccia utente di Integration Services](integration-services-user-interface.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS non ha dipendenze da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , il servizio responsabile della gestione e del monitoraggio dei pacchetti, ed è pertanto possibile creare e modificare pacchetti in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] anche quando tale servizio non è in esecuzione. Se tuttavia si arresta il servizio mentre è aperta la finestra di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , non sarà più possibile aprire le finestre di dialogo di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] ed è possibile che venga visualizzato il messaggio di errore "Server RPC non disponibile". Per reimpostare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e continuare a usare il pacchetto, è necessario chiudere la finestra di progettazione, uscire da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]e riaprire [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e il pacchetto.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS non ha dipendenze da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , il servizio responsabile della gestione e del monitoraggio dei pacchetti, ed è pertanto possibile creare e modificare pacchetti in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] anche quando tale servizio non è in esecuzione. Se tuttavia si arresta il servizio mentre è aperta la finestra di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , non sarà più possibile aprire le finestre di dialogo di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] ed è possibile che venga visualizzato il messaggio di errore "Server RPC non disponibile". Per reimpostare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e continuare a usare il pacchetto, è necessario chiudere la finestra di progettazione, uscire da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e riaprire [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e il pacchetto.  
   
 ## <a name="undo-and-redo"></a>Annullare e ripristinare  
- È possibile annullare e ripristinare fino a 20 azioni in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per un pacchetto, la funzionalità di annullamento o ripristino è disponibile nelle schede **Flusso di controllo**, **Flusso di dati**, **Gestori eventi**e **Parametri** e nella finestra **Variabili** . Per un progetto, tale funzionalità è disponibile nella finestra **Parametri progetto** .  
+ È possibile annullare e ripristinare fino a 20 azioni in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)]. Per un pacchetto, la funzionalità di annullamento o ripristino è disponibile nelle schede **Flusso di controllo**, **Flusso di dati**, **Gestori eventi** e **Parametri** e nella finestra **Variabili**. Per un progetto, tale funzionalità è disponibile nella finestra **Parametri progetto** .  
   
  Non è possibile annullare/ripristinare le modifiche apportate alla nuova **Casella degli strumenti SSIS**.  
   
@@ -57,17 +61,18 @@ ms.locfileid: "62766430"
  Per annullare un'azione, fare clic sul pulsante sulla barra degli strumenti, scegliere la voce di menu **Modifica/Annulla** o premere CTRL+Z. Per ripetere un'azione, fare clic sul pulsante sulla barra degli strumenti, scegliere la voce di menu **Annulla/Ripeti** o premere CTRL+Y. Per annullare e ripetere più azioni, fare clic sulla freccia accanto al pulsante sulla barra degli strumenti, evidenziare più azioni nell'elenco a discesa e fare clic nell'elenco.  
   
 ## <a name="parts-of-the-ssis-designer"></a>Parti di Progettazione SSIS  
- [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS contiene cinque schede permanenti: tre consentono di compilare, rispettivamente, il flusso di controllo, i flussi di dati e i gestori eventi del pacchetto e una consente di visualizzare il contenuto del pacchetto. In fase di esecuzione viene visualizzata una sesta scheda che mostra lo stato di esecuzione del pacchetto, mentre è in esecuzione, e i risultati ottenuti, al termine dell'esecuzione.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS contiene cinque schede permanenti: tre consentono di compilare, rispettivamente, il flusso di controllo, i flussi di dati e i gestori eventi del pacchetto e una consente di visualizzare il contenuto del pacchetto. In fase di esecuzione viene visualizzata una sesta scheda che mostra lo stato di esecuzione del pacchetto, mentre è in esecuzione, e i risultati ottenuti, al termine dell'esecuzione.  
   
  Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] include inoltre l'area Gestioni connessioni, in cui è possibile aggiungere e configurare le gestioni connessioni utilizzate dal pacchetto per connettersi ai dati.  
   
 ### <a name="control-flow-tab"></a>Scheda Flusso di controllo  
- L'area di progettazione della scheda **Flusso di controllo** consente di costruire il flusso di controllo di un pacchetto. Trascinare gli elementi desiderati da **Casella degli strumenti** all'area di progettazione e connetterli in modo da formare un flusso di controllo, facendo clic sull'icona di un elemento e trascinando la freccia verso un altro elemento.  
+ Il flusso di controllo in un pacchetto viene costruito nell'area di progettazione della scheda **flusso di controllo** . trascinare gli elementi dalla **casella degli strumenti** all'area di progettazione e connetterli in un flusso di controllo facendo clic sull'icona dell'elemento e trascinando la freccia da un elemento a un altro.  
   
  Per altre informazioni, vedere [Flusso di controllo](control-flow/control-flow.md).  
   
 ### <a name="data-flow-tab"></a>Scheda Flusso di dati  
- Se un pacchetto contiene un'attività Flusso di dati, sarà possibile aggiungere flussi di dati al pacchetto. Per costruire flussi di dati in un pacchetto è possibile usare l'area di progettazione della scheda **Flusso di dati** . Trascinare gli elementi desiderati da **Casella degli strumenti** all'area di progettazione e connetterli in modo da formare un flusso di dati, facendo clic sull'icona di un elemento e trascinando la freccia verso un altro elemento.  
+ Se un pacchetto contiene un'attività Flusso di dati, sarà possibile aggiungere flussi di dati al pacchetto. È possibile costruire i flussi di dati in un pacchetto nell'area di progettazione della scheda **flusso di dati** . trascinare gli elementi dalla **casella degli strumenti** all'area di progettazione e connetterli in un flusso di dati facendo clic sull'icona dell'elemento e trascinando la freccia da un elemento a un altro.  
   
  Per altre informazioni, vedere [Flusso di dati](data-flow/data-flow.md).  
   
@@ -80,7 +85,7 @@ ms.locfileid: "62766430"
 >  I parametri sono disponibili solo per i progetti sviluppati per il modello di distribuzione del progetto. Pertanto, la scheda Parametri sarà disponibile solo per i pacchetti che fanno parte di un progetto configurato per l'utilizzo del modello di distribuzione del progetto.  
   
 ### <a name="event-handlers-tab"></a>Scheda Gestori eventi  
- Per costruire gli eventi di un pacchetto, usare l'area di progettazione della scheda **Gestori eventi** . Nella scheda **Gestori eventi** selezionare il pacchetto o l'oggetto del pacchetto per cui si vuole creare un gestore di evento e quindi selezionare l'evento da associare al gestore di evento. Un gestore di evento include un flusso di controllo e flussi di dati facoltativi.  
+ Per costruire gli eventi in un pacchetto, è possibile utilizzare l'area di progettazione della scheda **gestori eventi** . Nella scheda **gestori eventi** selezionare il pacchetto o l'oggetto pacchetto per cui si vuole creare un gestore eventi, quindi selezionare l'evento da associare al gestore eventi. Un gestore di evento include un flusso di controllo e flussi di dati facoltativi.  
   
  Per altre informazioni, vedere [Aggiunta di un gestore eventi a un pacchetto](../../2014/integration-services/add-an-event-handler-to-a-package.md).  
   
@@ -90,13 +95,14 @@ ms.locfileid: "62766430"
  Per altre informazioni, vedere [Visualizzazione di oggetti di pacchetto](view-package-objects.md).  
   
 #### <a name="progressexecution-result-tab"></a>Scheda Stato o Risultati esecuzione  
- Durante l'esecuzione di un pacchetto nella scheda **Stato** viene mostrato lo stato di esecuzione del pacchetto. Al termine dell'esecuzione i risultati rimangono disponibili nella scheda **Risultati esecuzione** .  
+ Durante l'esecuzione di un pacchetto nella scheda **Stato** viene mostrato lo stato di esecuzione del pacchetto. Al termine dell'esecuzione i risultati rimangono disponibili nella scheda **Risultati esecuzione**.  
   
 > [!NOTE]  
 >  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** .  
   
 ##### <a name="connection-managers-area"></a>Area Gestioni connessioni  
- Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.  
+ Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.  
   
  Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../../2014/integration-services/create-connection-managers.md).  
   

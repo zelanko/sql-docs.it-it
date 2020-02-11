@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058052"
 ---
 # <a name="import-project-wizard"></a>Importazione guidata progetto
@@ -24,7 +24,7 @@ ms.locfileid: "66058052"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Per creare un progetto basato su un progetto nel file .ispac o nel catalogo  
   
-1.  Fare clic su **Nuovo**dal menu **File**, quindi fare clic su Progetto.  
+1.  Fare clic su **file**, scegliere **nuovo**e fare clic su progetto.  
   
 2.  Espandere **Business Intelligence**e fare clic su **Integration Services**.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66058052"
   
 8.  La pagina **Risultati** deve visualizzare i risultati dall'operazione di importazione che la procedura guidata ha eseguito. Fare clic su **Salva report** per salvare il report in un file XML.  
   
-9. Per chiudere la procedura guidata, fare clic su **Chiudi** .  
+9. Fare clic su **Chiudi** per chiudere la procedura guidata.  
   
   

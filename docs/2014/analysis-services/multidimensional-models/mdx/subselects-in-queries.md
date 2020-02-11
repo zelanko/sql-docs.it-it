@@ -1,5 +1,5 @@
 ---
-title: Le sub-SELECT nelle query | Microsoft Docs
+title: Sub-SELECT nelle query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073894"
 ---
 # <a name="subselects-in-queries"></a>Sub-SELECT nelle query
@@ -202,7 +202,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Importo vendite Internet|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|Stati Uniti|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -230,7 +230,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Importo vendite Internet|Reseller Sales Amount|  
 |All Customers|$2,467,248.34|$80,450,596.98|  
-|United States|$2,467,248.34|$80,450,596.98|  
+|Stati Uniti|$2,467,248.34|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
@@ -255,9 +255,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessorio|Componenti|Mountain|Road|Touring|  
+||All Products|Accessorio|Componenti|Mountain|Strada|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|Stati Uniti|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -280,9 +280,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessorio|Componenti|Mountain|Road|Touring|  
+||All Products|Accessorio|Componenti|Mountain|Strada|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|Stati Uniti|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Tutti i territori di vendita|Australia|Canada|Nord-ovest|Sud-ovest|United Kingdom|  
+||Tutti i territori di vendita|Australia|Canada|Nord-ovest|Sud-ovest|Regno Unito|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 argento, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 argento, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Come è possibile notare, ci sono differenze nei risultati in entrambi i set. La prima query ha risposto alla domanda sui prodotti più venduti nelle 5 aree principali, la seconda query ha risposto alla domanda sulle aree in cui si è verificato il maggior numero di vendite dei 5 prodotti più venduti.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Osservazioni  
  Le sub-SELECT sono sottoposte alle restrizioni e limitazioni seguenti:  
   
 -   La clausola WHERE non filtra il sottospazio.  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clausola HAVING non è consentita in una clausola dell'asse; usare invece un'espressione della funzione [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) .  
   
--   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, singola per ogni sessione, assegnando un valore per il `SubQueries` proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROP_MSMD_SUBQUERIES` proprietà nel [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Visualizzare [membri calcolati in sub-SELECT e sottocubi](calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati a seconda dei valori di `SubQueries` o `DBPROP_MSMD_SUBQUERIES`.  
+-   Per impostazione predefinita, i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata in base a ogni sessione, assegnando un valore alla proprietà della `SubQueries` stringa di connessione nella <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> proprietà `DBPROP_MSMD_SUBQUERIES` o nelle [Proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Vedere [membri calcolati in sub-SELECT e sottocubi](calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati a seconda dei valori di `SubQueries` o. `DBPROP_MSMD_SUBQUERIES`  
   
   

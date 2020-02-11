@@ -13,14 +13,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014226"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  `GeometryCollection` è una raccolta di zero o più istanze `geometry` o `geography`. `GeometryCollection` può essere vuoto.  
+  
+  `GeometryCollection` è una raccolta di zero o più istanze `geometry` o `geography`. 
+  `GeometryCollection` può essere vuoto.  
   
 ## <a name="geometrycollection-instances"></a>Istanze GeometryCollection  
   
@@ -50,7 +52,8 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` non è valida, poiché l'istanza `Polygon` nell'istanza `GeometryCollection` non è valida.  
+ 
+  `@g4` non è valida, poiché l'istanza `Polygon` nell'istanza `GeometryCollection` non è valida.  
   
  Per altre informazioni sulle istanze accettate e valide, vedere [Point](point.md), [MultiPoint](multipoint.md), [LineString](linestring.md), [MultiLineString](multilinestring.md), [Polygon](polygon.md)e [MultiPolygon](multipolygon.md).  
   

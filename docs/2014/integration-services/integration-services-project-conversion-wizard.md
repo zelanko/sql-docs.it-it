@@ -1,5 +1,5 @@
 ---
-title: Conversione guidata di progetto di Integration Services | Microsoft Docs
+title: Conversione guidata progetto Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057980"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Conversione guidata progetto di Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "66057980"
   
  **Per saperne di più**  
   
--   [Aprire la Conversione guidata progetti di Integration Services](#open_dialog)  
+-   [Aprire la conversione guidata progetto di Integration Services](#open_dialog)  
   
 -   [Impostare le opzioni nella pagina Individua pacchetti](#locate)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66057980"
   
 -   [Impostare le opzioni nella pagina Seleziona destinazione](#destination)  
   
--   [Impostare le opzioni nella pagina Specificare le proprietà del progetto](#projectProperties)  
+-   [Impostare le opzioni nella pagina specifica proprietà del progetto](#projectProperties)  
   
 -   [Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto](#executePackage)  
   
@@ -47,9 +47,9 @@ ms.locfileid: "66057980"
   
 -   [Impostare le opzioni nella pagina Verifica](#review)  
   
--   [Impostare le opzioni nella pagina Esegui conversione](#conversion)  
+-   [Impostare le opzioni nella conversione di esecuzione](#conversion)  
   
-##  <a name="open_dialog"></a> Aprire la Conversione guidata progetti di Integration Services  
+##  <a name="open_dialog"></a>Aprire la conversione guidata progetto di Integration Services  
  Eseguire una delle operazioni seguenti per aprire la **Conversione guidata progetto di Integration Services** .  
   
 -   Aprire il progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
@@ -58,7 +58,7 @@ ms.locfileid: "66057980"
   
  Le diverse attività di conversione eseguite dalla **Conversione guidata progetto di Integration Services** variano a seconda che la procedura guidata venga eseguita da [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a> Impostare le opzioni nella pagina Individua pacchetti  
+##  <a name="locate"></a>Impostare le opzioni nella pagina Individua pacchetti  
   
 > [!NOTE]  
 >  La pagina **Individua pacchetti** è disponibile solo quando si esegue la procedura guidata da [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -84,7 +84,7 @@ ms.locfileid: "66057980"
  **Usa autenticazione di Windows**  
  Tale modalità consente di connettersi tramite un account utente di Windows. Se si utilizza l'autenticazione di Windows non è necessario specificare un nome utente o una password.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Quando un utente si connette da una connessione non trusted con un nome di account di accesso e una password specificati, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autentica la connessione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
   
  **Nome utente**  
@@ -96,14 +96,14 @@ ms.locfileid: "66057980"
  **Cartella**  
  Digitare il percorso del pacchetto o passare al pacchetto facendo clic su **Sfoglia**.  
   
-##  <a name="selectPackages"></a> Impostare le opzioni nella pagina Seleziona pacchetti  
+##  <a name="selectPackages"></a>Impostare le opzioni nella pagina Seleziona pacchetti  
  **Nome pacchetto**  
  Viene elencato il file del pacchetto.  
   
- **Stato**  
+ **Status**  
  Viene indicato se un pacchetto è pronto per la conversione nel modello di distribuzione del progetto.  
   
- **Message**  
+ **Messaggio**  
  Viene visualizzato un messaggio associato al pacchetto.  
   
  **Password**  
@@ -115,7 +115,7 @@ ms.locfileid: "66057980"
  **Aggiorna**  
  Viene aggiornato l'elenco dei pacchetti.  
   
-##  <a name="destination"></a> Impostare le opzioni nella pagina Seleziona destinazione  
+##  <a name="destination"></a>Impostare le opzioni nella pagina Seleziona destinazione  
  In questa pagina specificare il nome e il percorso di un nuovo file di distribuzione progetto (con estensione ispac) o selezionare un file esistente.  
   
 > [!NOTE]  
@@ -124,30 +124,30 @@ ms.locfileid: "66057980"
  **Percorso di output**  
  Digitare il percorso del file di distribuzione o passare al file facendo clic su **Sfoglia**.  
   
- **Nome del progetto**  
+ **Nome progetto**  
  Digitare il nome del progetto.  
   
  **Livello di protezione**  
  Selezionare il livello di protezione. Per altre informazioni, vedere [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
- **Descrizione progetto**  
+ **Descrizione del progetto**  
  Digitare una descrizione facoltativa per il progetto.  
   
-##  <a name="projectProperties"></a> Impostare le opzioni nella pagina Specificare le proprietà del progetto  
+##  <a name="projectProperties"></a>Impostare le opzioni nella pagina specifica proprietà del progetto  
   
 > [!NOTE]  
 >  La pagina **Specifica proprietà del progetto** è disponibile solo quando si esegue la procedura guidata da [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
- **Nome del progetto**  
+ **Nome progetto**  
  Viene elencato il nome del progetto.  
   
  **Livello di protezione**  
  Selezionare un livello di protezione per i pacchetti contenuti nel progetto. Per altre informazioni sui livelli di protezione, vedere [Controllo dell'accesso per dati sensibili nei pacchetti](security/access-control-for-sensitive-data-in-packages.md).  
   
- **Descrizione progetto**  
+ **Descrizione del progetto**  
  Digitare una descrizione facoltativa del progetto.  
   
-##  <a name="executePackage"></a> Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto  
+##  <a name="executePackage"></a>Impostare le opzioni nella pagina Aggiorna attività Esegui pacchetto  
  Aggiornare le attività Esegui pacchetto contenute nei pacchetti al fine di utilizzare un riferimento basato sul progetto. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Pacchetto padre**  
@@ -162,7 +162,7 @@ ms.locfileid: "66057980"
  **Assegna riferimento**  
  Selezionare un pacchetto figlio archiviato nel progetto.  
   
-##  <a name="configurations"></a> Impostare le opzioni nella pagina Seleziona configurazioni  
+##  <a name="configurations"></a>Impostare le opzioni nella pagina Seleziona configurazioni  
  Selezionare le configurazioni del pacchetto che si desidera sostituire con i parametri.  
   
  **Pacchetto**  
@@ -174,7 +174,7 @@ ms.locfileid: "66057980"
  **Stringa di configurazione**  
  Viene elencato il percorso del file di configurazione.  
   
- **Stato**  
+ **Status**  
  Viene visualizzato un messaggio di stato per la configurazione. Fare clic sul messaggio per visualizzare il relativo testo completo.  
   
  **Aggiungi configurazioni**  
@@ -183,12 +183,12 @@ ms.locfileid: "66057980"
  **Aggiorna**  
  Fare clic su questa opzione per aggiornare l'elenco delle configurazioni.  
   
- **Rimuovi configurazioni da tutti i pacchetti dopo la conversione**  
+ **Rimuovi le configurazioni da tutti i pacchetti dopo la conversione**  
  È consigliabile rimuovere tutte le configurazioni dal progetto selezionando questa opzione.  
   
  Se non si seleziona questa opzione, vengono rimosse solo le configurazioni selezionate per la sostituzione con i parametri.  
   
-##  <a name="createParameters"></a> Impostare le opzioni nella pagina Crea parametri  
+##  <a name="createParameters"></a>Impostare le opzioni nella pagina Crea parametri  
  Selezionare il nome e l'ambito del parametro per ogni proprietà di configurazione.  
   
  **Pacchetto**  
@@ -197,14 +197,14 @@ ms.locfileid: "66057980"
  **Nome parametro**  
  Viene elencato il nome del parametro.  
   
- **Ambito**  
+ **Scope**  
  Selezionare l'ambito del parametro, vale a dire pacchetto o progetto.  
   
-##  <a name="configureParameters"></a> Impostare le opzioni nella pagina Configura parametri  
- **Name**  
+##  <a name="configureParameters"></a>Impostare le opzioni nella pagina Configura parametri  
+ **Nome**  
  Viene elencato il nome del parametro.  
   
- **Ambito**  
+ **Scope**  
  Viene elencato l'ambito del parametro.  
   
  **Valore**  
@@ -218,16 +218,16 @@ ms.locfileid: "66057980"
   
  Nella finestra di dialogo **Imposta dettagli parametri** sono inoltre elencati il tipo di dati del valore del parametro e l'origine del parametro.  
   
-##  <a name="review"></a> Impostare le opzioni nella pagina Verifica  
+##  <a name="review"></a>Impostare le opzioni nella pagina Verifica  
  Usare la pagina **Verifica** per confermare le opzioni selezionate per la conversione del progetto.  
   
  **Precedente**  
  Fare clic su questo pulsante per modificare un'opzione.  
   
- **Converti**  
+ **Convertire**  
  Fare clic su questa opzione per convertire il progetto nel modello di distribuzione del progetto.  
   
-##  <a name="conversion"></a> Impostare le opzioni nella pagina Esegui conversione  
+##  <a name="conversion"></a>Impostare le opzioni nella conversione di esecuzione  
  Nella pagina Esegui conversione viene mostrato lo stato della conversione del progetto.  
   
  **Azione**  
@@ -238,7 +238,7 @@ ms.locfileid: "66057980"
   
  La conversione del progetto non viene salvata fino al salvataggio del progetto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
- **Salva report**  
+ **Salvare il report**  
  Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  
   
 ## <a name="see-also"></a>Vedere anche  

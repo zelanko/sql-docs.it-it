@@ -1,5 +1,5 @@
 ---
-title: Set di risultati della mappa a variabili in un'attività Esegui SQL | Microsoft Docs
+title: Mapping di set di risultati a variabili in un'attività Esegui SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057762"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapping di set di risultati a variabili in un'attività Esegui SQL
@@ -34,7 +34,7 @@ ms.locfileid: "66057762"
   
 3.  Fare clic sulla scheda **Flusso di controllo** .  
   
-4.  Se il pacchetto non include già un'attività Esegui SQL, aggiungerne una al flusso di controllo del pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Se il pacchetto non include già un'attività Esegui SQL, aggiungerne una al flusso di controllo del pacchetto. Per altre informazioni, vedere [aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Fare doppio clic sull'attività Esegui SQL.  
@@ -63,9 +63,9 @@ ms.locfileid: "66057762"
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Set di risultati nell'attività Esegui SQL](result-sets-in-the-execute-sql-task.md)   
  [Attività Esegui pacchetto](control-flow/execute-package-task.md)   
- [SSIS](../../2014/integration-services/package-configurations.md)   
- [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)   
- [Usare i valori delle variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
+ [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
+ [Usare i valori di variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

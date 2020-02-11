@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito sessione celle calcolate | Microsoft Docs
+title: Creazione di celle calcolate con ambito sessione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074434"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Creazione di celle calcolate con ambito sessione
@@ -24,7 +24,7 @@ ms.locfileid: "66074434"
 > [!IMPORTANT]  
 >  Questa sintassi è deprecata e deve essere sostituita da istruzioni MDX di assegnazione. Per altre informazioni sull'assegnazione, vedere [Script MDX di base &#40;MDX&#41;](the-basic-mdx-script-mdx.md).  
   
- Per creare celle calcolate disponibili a tutte le query di una stessa sessione, è possibile usare l'istruzione [CREATE CELL CALCULATION](/sql/mdx/mdx-data-definition-create-cell-calculation) oppure l'istruzione [ALTER CUBE](/sql/mdx/mdx-data-definition-alter-cube). Entrambe le istruzioni restituiscono lo stesso risultato.  
+ Per creare celle calcolate disponibili a tutte le query di una stessa sessione, è possibile usare l'istruzione [CREATE CELL CALCULATION](/sql/mdx/mdx-data-definition-create-cell-calculation) oppure l'istruzione [ALTER CUBE](/sql/mdx/mdx-data-definition-alter-cube) . Entrambe le istruzioni restituiscono lo stesso risultato.  
   
 ## <a name="create-cell-calculation-syntax"></a>Sintassi di CREATE CELL CALCULATION  
   
@@ -79,10 +79,10 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
-|Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio di questo è il *Level_Expression*.`Members` . Per includere i membri calcolati, usare il *Level_Expression*.`AllMembers` .<br /><br /> Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di questo è il `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) funzione MDX.<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio è la *Level_Expression*.`Members` . Per includere i membri calcolati, utilizzare il *Level_Expression*.`AllMembers` .<br /><br /> Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un `Descendants`esempio è la funzione MDX (*Member_Expression*, *Level_Expression* *Desc_Flag*).<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx) (Discendenti &#40;MDX&#41;).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione di formule per il calcolo di celle in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Compilazione di calcoli di celle in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

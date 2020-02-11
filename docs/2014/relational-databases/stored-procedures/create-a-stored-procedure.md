@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796416"
 ---
 # <a name="create-a-stored-procedure"></a>Creazione di una stored procedure
@@ -27,9 +27,9 @@ ms.locfileid: "72796416"
 ##  <a name="Top"></a>   
 -   **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
   
--   **Per creare una stored procedure:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare una stored procedure, usare:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
   
 ##  <a name="Procedures"></a> Procedura: creazione di una stored procedure  
@@ -56,7 +56,7 @@ ms.locfileid: "72796416"
     |---------------|-----------|  
     |Autore|*Nome dell'utente*|  
     |Data di creazione|*Data corrente*|  
-    |Description|Restituisce i dati dei dipendenti.|  
+    |Descrizione|Restituisce i dati dei dipendenti.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -65,7 +65,7 @@ ms.locfileid: "72796416"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Nell' **editor di query**sostituire l'istruzione SELECT con l'istruzione seguente:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72796416"
 > [!WARNING]  
 >  Convalidare sempre input di tutti gli utenti. Non concatenare l'input dell'utente prima di averlo convalidato. Non eseguire mai un comando creato dall'input dell'utente non convalidato.  
   
-###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare una stored procedure nell'editor di query**  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Programmazione di Server ADOMD.NET | Microsoft Docs
+title: Programmazione del server ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62703032"
 ---
 # <a name="adomdnet-server-programming"></a>Programmazione di server ADOMD.NET
-  I componenti server ADOMD.NET di ADOMD.NET si trovano nello spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` (in msmgdsrv.dll). Utilizzare questi componenti server per creare funzioni MDX (Multidimensional Expressions) personalizzate e stored procedure che vengono eseguite in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli oggetti server forniscono le funzionalità per l'esecuzione di query su cubi e modelli di data mining e per la valutazione di espressioni in un contesto specifico. I vantaggi relativi alla creazione di funzioni e stored procedure personalizzate includono un'esecuzione rapida, una distribuzione centralizzata e una gestibilità migliorata.  
+  I componenti server ADOMD.NET di ADOMD.NET si trovano nello spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` (in msmgdsrv.dll). Questi componenti server vengono utilizzati per creare funzioni MDX (Multidimensional Expression) personalizzate e stored procedure eseguite in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli oggetti server forniscono le funzionalità per l'esecuzione di query su cubi e modelli di data mining e per la valutazione di espressioni in un contesto specifico. I vantaggi relativi alla creazione di funzioni e stored procedure personalizzate includono un'esecuzione rapida, una distribuzione centralizzata e una gestibilità migliorata.  
   
  Gli argomenti indicati nella tabella seguente consentiranno di sviluppare applicazioni server ADOMD.NET.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62703032"
 |[Funzioni definite dall'utente e stored procedure](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Illustra il processo di creazione di una funzione definita dall'utente o di una stored procedure.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di Client ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [Programmazione client ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
  [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   

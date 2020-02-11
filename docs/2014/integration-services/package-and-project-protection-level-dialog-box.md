@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo livello di protezione di progetto e pacchetto | Microsoft Docs
+title: Finestra di dialogo livello di protezione pacchetto e progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056951"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
@@ -28,7 +28,7 @@ ms.locfileid: "66056951"
  Per comprendere i requisiti e le opzioni per la sicurezza del pacchetto, può essere utile vedere [Controllo dell'accesso per dati sensibili nei pacchetti](security/access-control-for-sensitive-data-in-packages.md) e [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
 ## <a name="options"></a>Opzioni  
- **Package protection level**  
+ **Livello di protezione del pacchetto**  
  Selezionare un livello di protezione dall'elenco.  
   
  **Password**  

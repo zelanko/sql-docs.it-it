@@ -15,21 +15,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011481"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le query full-text consentono di eseguire una ricerca di sinonimi dei termini specificati dall'utente tramite l'utilizzo di un thesaurus. In un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *di* viene definito un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. La corrispondenza con il thesaurus si verifica per tutte le query [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) e per tutte le query [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che specificano la clausola FORMSOF THESAURUS.  
   
-##  <a name="tasks"></a> Attività di base per la configurazione di un File del Thesaurus  
+##  <a name="tasks"></a>Attività di base per la configurazione di un file del thesaurus  
  Prima che le query di ricerca full-text nell'istanza del server siano in grado di eseguire la ricerca di sinonimi in una determinata lingua, è necessario definire mapping del thesaurus (sinonimi) per tale lingua. È necessario configurare manualmente ogni thesaurus per definire gli elementi seguenti:  
   
 -   Impostazione dei segni diacritici  
   
-     Per un determinato thesaurus, tutti i criteri di ricerca sono sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde ( **~** ), mark latino ( **??** ), o umlaut ( **??** ) (vale a dire *accentati/non accentati* oppure */non accentati*). Ad esempio, si supponga di che specifica il modello "caf??" per essere sostituito con altri criteri in una query full-text. Se il thesaurus distinzione caratteri accentati, ricerca full-text verrà sostituito i modelli "caf??" e "Cafe". Se il thesaurus è sensibile alla distinzione tra caratteri accentati, ricerca full-text verrà sostituito solo il modello "caf??". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
+     Per un determinato thesaurus, tutti i criteri di ricerca sono sensibili o insensibili ai segni diacritici, ad esempio**~** una tilde (), un segno di accento acuto (**??**) o una diereszione (**??**) (ovvero, *distinzione tra caratteri accentati* o senza distinzione tra *caratteri*accentati). Si supponga, ad esempio, di specificare il modello "CAF??" con altri criteri in una query di ricerca full-text. Se il thesaurus è senza distinzione tra caratteri accentati, la ricerca full-text sostituisce i modelli "CAF??" e "cafe". Se il thesaurus è con distinzione tra caratteri accentati, la ricerca full-text sostituisce solo il modello "CAF??". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
   
 -   Set di espansione  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011481"
      Un set di sostituzione include un criterio di testo da sostituire con parole specifiche. Vedere, ad esempio, la sezione "Struttura XML di un set di sostituzione" più avanti in questo argomento.  
   
   
-##  <a name="initial_thesaurus_files"></a> Contenuto iniziale dei file del Thesaurus  
+##  <a name="initial_thesaurus_files"></a>Contenuto iniziale dei file del thesaurus  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di file XML del thesaurus, uno per ogni lingua supportata. Tali file sono essenzialmente vuoti e contengono solo la struttura XML di livello principale comune a tutti i thesaurus di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un thesaurus di esempio costituito da commenti.  
   
  Tutti i file del thesaurus disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contengono il codice XML seguente:  
@@ -74,10 +74,10 @@ ms.locfileid: "66011481"
 ```  
   
   
-##  <a name="location"></a> Percorso dei file del Thesaurus  
+##  <a name="location"></a>Percorso dei file del thesaurus  
  Il percorso predefinito dei file del thesaurus è il seguente:  
   
- *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
   
  Tale percorso predefinito contiene i file seguenti:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66011481"
   
      Per i nomi predefiniti dei file del thesaurus viene usato il formato seguente:  
   
-     'ts' + \<abbreviazione lingua di tre lettere > + '. XML'  
+     ' ts ' + \<abbreviazione lingua di tre lettere> +'. xml '  
   
      Il nome del file del thesaurus per una lingua specifica è indicato nel valore del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<nome-istanza>\MSSearch\\<abbrev-lingua>.  
   
@@ -97,23 +97,23 @@ ms.locfileid: "66011481"
   
  È possibile modificare il percorso e il nome di un file del thesaurus modificando la relativa chiave del Registro di sistema. Per ogni lingua, il percorso del file del thesaurus viene specificato nel seguente valore del Registro di sistema:  
   
- HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/\<instance name>/MSSearch/Language/\<language-abbreviation>/TsaurusFile  
+ HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/\<nome istanza> abbreviazione lingua/MSSearch/Language/\<>/TsaurusFile  
   
  Il file del thesaurus globale corrisponde alla lingua neutra con LCID 0. Questo valore può essere modificato solo dagli amministratori.  
   
   
-##  <a name="how_queries_use_tf"></a> Funzionamento dei file di query usare Thesaurus  
+##  <a name="how_queries_use_tf"></a>Modalità di utilizzo dei file del thesaurus nelle query  
  Una query sul thesaurus usano sia un thesaurus specifico della lingua sia un thesaurus globale. La query esegue innanzitutto la ricerca in un file specifico della lingua e lo carica per l'elaborazione, a meno che non sia già caricato. La query viene quindi espansa per includere i sinonimi specifici della lingua indicati dalle regole del set di espansione e del set di sostituzione nel file del thesaurus. Questi passaggi vengono quindi ripetuti per il thesaurus globale. Se, tuttavia, nel file del thesaurus specifico della lingua è già stata individuata una corrispondenza per un termine, tale termine non può essere considerato valido per la corrispondenza nel thesaurus globale.  
   
   
-##  <a name="structure"></a> Informazioni sulla struttura di un File del Thesaurus  
- Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento `<!--` ... `-->` che contiene un thesaurus di esempio. Il thesaurus è definito in un \<thesaurus > elemento contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, set di espansione e set di sostituzione, come indicato di seguito:  
+##  <a name="structure"></a>Informazioni sulla struttura di un file del thesaurus  
+ Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento `<!--` ... `-->` che contiene un thesaurus di esempio. Il thesaurus è definito in un \<elemento del thesaurus> contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, i set di espansione e i set di sostituzione, come indicato di seguito:  
   
 -   Struttura XML dell'impostazione dei segni diacritici  
   
      L'impostazione dei segni diacritici di un thesaurus è specificata in un singolo elemento <diacritics_sensitive>, che contiene un valore intero che determina il supporto della distinzione tra caratteri accentati e non accentati, come indicato di seguito:  
   
-    |Impostazione dei segni diacritici|Value|XML|  
+    |Impostazione dei segni diacritici|valore|XML|  
     |------------------------|-----------|---------|  
     |non supportano la distinzione tra caratteri accentati e non accentati|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |supportano la distinzione tra caratteri accentati e non accentati|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -123,7 +123,7 @@ ms.locfileid: "66011481"
   
 -   Struttura XML di un set di espansione  
   
-     Ogni set di espansione è racchiuso in un \<espansione > elemento. All'interno di questo elemento, è possibile specificare uno o più sostituzioni in un \<sub > elemento. Nel set di espansione è possibile specificare un gruppo di sostituzioni che sono sinonimi una dell'altra.  
+     Ogni set di espansione è racchiuso \<in un elemento> di espansione. All'interno di questo elemento è possibile specificare una o più sostituzioni \<in un elemento Sub>. Nel set di espansione è possibile specificare un gruppo di sostituzioni che sono sinonimi una dell'altra.  
   
      Ad esempio, è possibile modificare la sezione di espansione per considerare le sostituzioni "writer", "author" e "journalist" come sinonimi. per includere tutte le altre sostituzioni specificate nel set di espansione, vengono espanse le query di ricerca full-text che contengono corrispondenze in una sostituzione. Di conseguenza, quando nell'esempio precedente si esegue una query FORMS OF THESAURUS o FREETEXT per la parola "author", vengono restituiti anche i risultati di ricerca contenenti le parole "writer" e "journalist".  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66011481"
   
 -   Struttura XML di un set di sostituzione  
   
-     Ogni set di sostituzione è racchiuso in un \<sostituzione > elemento. All'interno di questo elemento è possibile specificare uno o più criteri in un \<pat > elemento e zero o più sostituzioni in \<sub > elementi, uno per sinonimo. È possibile specificare un criterio da sostituire con un set di sostituzione. I criteri e le sostituzioni possono contenere una parola o una sequenza di parole. Se non viene specificata alcuna sostituzione per un criterio, questo verrà rimosso dalla query dell'utente.  
+     Ogni set di sostituzione è racchiuso \<in un elemento> sostitutivo. All'interno di questo elemento è possibile specificare uno o più modelli \<in un elemento Pat> e zero o più sostituzioni in \<elementi sub>, uno per sinonimo. È possibile specificare un criterio da sostituire con un set di sostituzione. I criteri e le sostituzioni possono contenere una parola o una sequenza di parole. Se non viene specificata alcuna sostituzione per un criterio, questo verrà rimosso dalla query dell'utente.  
   
      Si supponga, ad esempio, di voler eseguire query per sostituire il criterio "Win8" con "Windows Server 2012" o "Windows 8.0". Se si esegue una query full-text per "Win8", verranno restituiti solo i risultati di ricerca full-text contenenti le sostituzioni "Windows Server 2012" o "Windows 8.0". ma non quelli contenenti "Win8". Questo accade perché "Win8" è stato "sostituito" con "Windows Server 2012" e "Windows 8.0".  
   
@@ -173,24 +173,24 @@ ms.locfileid: "66011481"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a> Uso dei file del Thesaurus  
+##  <a name="working_with_thesaurus_files"></a>Utilizzo dei file del thesaurus  
  **Per modificare un file del thesaurus**  
   
--   [Modifica di un File del Thesaurus](#editing)  
+-   [Modifica di un file del thesaurus](#editing)  
   
  **Per caricare un file del thesaurus aggiornato**  
   
 -   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
- **Per visualizzare il risultato della Tokenizzazione di una combinazione di word breaker, thesaurus ed elenco di parole significative**  
+ **Per visualizzare il risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenchi di parole non significative**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a> Modifica di un File del Thesaurus  
- È possibile configurare il thesaurus per una lingua specifica modificando il relativo file XML. Durante l'installazione, svuotare i file del thesaurus che contengono solo le \<xml > contenitore e un esempio di commento \<thesaurus > elemento installate. Esecuzione delle query di ricerca full-text sinonimi per il corretto funzionamento, è necessario creare un vero e proprio \<thesaurus > elemento che definisce un set di sinonimi. È possibile definire due forme di sinonimi, i set di espansione e i set di sostituzione.  
+##  <a name="editing"></a>Modifica di un file del thesaurus  
+ È possibile configurare il thesaurus per una lingua specifica modificando il relativo file XML. Durante l'installazione, vengono installati file del thesaurus vuoti \<che contengono solo il contenitore di> XML e un \<elemento del thesaurus di esempio commentato>. Per consentire il corretto funzionamento delle query di ricerca full-text che cercano sinonimi, è necessario creare un \<thesaurus effettivo> elemento che definisce un set di sinonimi. È possibile definire due forme di sinonimi, i set di espansione e i set di sostituzione.  
   
- **Restrizioni per i file del thesaurus**  
+ **Restrizioni relative ai file del thesaurus**  
   
  Alla modifica di un file del thesaurus si applicano le restrizioni seguenti:  
   
@@ -202,13 +202,13 @@ ms.locfileid: "66011481"
   
 -   Le frasi nel file del thesaurus non devono essere costituite da più di 512 caratteri.  
   
--   Un thesaurus non deve contenere alcuna voce duplicata fra le \<sub > dei set di espansione e \<pat > elementi dei set di sostituzione.  
+-   Un thesaurus non deve contenere voci duplicate tra le \<voci Sub> dei set di espansione e \<gli elementi Pat> dei set di sostituzione.  
   
- **Consigli per i file del thesaurus**  
+ **Indicazioni per i file del thesaurus**  
   
  È consigliabile che le voci del file del thesaurus non contengano caratteri speciali, in quanto i word breaker rivelano comportamenti imprevedibili in presenza di tale tipo di caratteri. Se una voce del thesaurus contiene un carattere speciale, i word breaker usati in combinazione con la voce possono avere un comportamento imprevisto con implicazioni su una query full-text.  
   
- È consigliabile che \<sub > voci non contengano alcun parole non significative in quanto tali parole vengono omesse dall'indice full-text. Le query vengono espanse per includere il \<sub > voci da un file del thesaurus e, se un \<sub > voce contiene parole non significative, le dimensioni della query aumentano inutilmente.  
+ È consigliabile che \<le voci di> secondarie non contengano parole non significative poiché parole non significative vengono omesse dall'indice full-text. Le query vengono espanse per \<includere le voci di sotto> da un file del thesaurus \<e se una voce Sub> contiene parole non significative, le dimensioni della query aumentano inutilmente.  
   
 #### <a name="to-edit-a-thesaurus-file"></a>Per modificare un file del thesaurus  
   

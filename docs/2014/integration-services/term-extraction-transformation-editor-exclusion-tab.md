@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione estrazione termini (scheda esclusione) | Microsoft Docs
+title: Editor trasformazione Estrazione termini (scheda esclusione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055233"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor trasformazione Estrazione termini (scheda Esclusione)
@@ -33,7 +33,7 @@ ms.locfileid: "66055233"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione a un database usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Tabella o vista**  
@@ -49,6 +49,6 @@ ms.locfileid: "66055233"
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Trasformazione Ricerca termini](data-flow/transformations/lookup-transformation.md)  
+ [Ricerca termini - trasformazione](data-flow/transformations/lookup-transformation.md)  
   
   

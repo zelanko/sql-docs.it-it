@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento dei report mediante le classi generate dallo Schema RDL (esercitazione su SSRS) | Microsoft Docs
+title: Aggiornamento di report mediante le classi generate dallo schema RDL (esercitazione su SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746115"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aggiornamento dei report mediante le classi generate dallo schema RDL (esercitazione SSRS)
-  Questa esercitazione illustra come usare lo strumento XML Schema Definition (Xsd.exe.) per generare le classi che consentono di serializzare e deserializzare i file di definizione del report (con estensione rdl e rdlc) con i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
+  In questa esercitazione viene illustrato come utilizzare lo strumento XML Schema Definition (XSD. exe) per generare classi che consentono di serializzare e deserializzare i file di definizione dei report (con estensione rdl e rdlc [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> ) con la classe.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  Durante questa esercitazione verranno eseguite le attività seguenti:  
   
--   Creare un'applicazione usando il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] modello di progetto applicazione Console.  
+-   Creare un'applicazione usando il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] modello di progetto applicazione console.  
   
--   Generare classi dallo schema di definizione del linguaggio RDL (Report) mediante il **xsd** dello strumento.  
+-   Generare classi dallo schema Report Definition Language (RDL) utilizzando lo strumento **xsd** .  
   
 -   Connessione a un server di report e recupero di una definizione del report.  
   
@@ -53,25 +53,25 @@ ms.locfileid: "62746115"
   
 -   Il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] installato in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales 2012. Per altre informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales 2012. Per ulteriori informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
 >  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Tempo previsto per il completamento dell'esercitazione:** 30 minuti  
+ **Tempo stimato per il completamento dell'esercitazione:** 30 minuti  
   
 ## <a name="tasks"></a>Attività  
- [Lezione 1: Creare il progetto di Visual Studio Schema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Lezione 1: Creazione del progetto di Visual Studio per lo schema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Lezione 2: Generazione delle classi dallo schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Lezione 3: Caricare una definizione del Report dal Server di Report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Lezione 3: Caricamento della definizione di un report dal Server report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Lezione 4: Aggiornare la definizione del Report a livello di codice](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Lezione 4: Aggiornamento della definizione del report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Lezione 5: Pubblicare la definizione del Report nel Server di Report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Lezione 5: Pubblicazione della definizione del report nel Server report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [Lezione 6: Eseguire l'applicazione dello Schema RDL &#40;Visual Basic-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [Lezione 6: eseguire l'applicazione dello schema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

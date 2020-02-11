@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874877"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -36,22 +36,23 @@ ms.locfileid: "70874877"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID di lingua univoco.|  
-|dateformat|**nchar(3)**|Formato di data, ad esempio DMY.|  
+|dateformat|**nchar (3)**|Formato di data, ad esempio DMY.|  
 |datefirst|**tinyint**|Primo giorno della settimana: 1 per lunedì, 2 per martedì e così via fino a 7 per domenica.|  
-|aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
+|Aggiornamento|**int**|Riservato per l'utilizzo nel sistema.|  
 |name|**sysname**|Nome della lingua ufficiale, ad esempio, Français.|  
 |alias|**sysname**|Nome di lingua alternativo, ad esempio Francese.|  
-|months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
-|shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
-|days|**nvarchar(217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
-|lcid|**int**|ID delle impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relative alla lingua.|  
+|months|**nvarchar (372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
+|shortmonths|**nvarchar (132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
+|days|**nvarchar (217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ID delle impostazioni locali di Windows per la lingua.|  
 |msglangid|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
   
-|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ID gruppo di messaggi|  
 |---------------------|------------------|-----------------------------------------|  
-|Inglese|1033|1033|  
+|Inglese|1040|1040|  
 |Tedesco|1031|1031|  
 |Francese|1036|1036|  
 |Giapponese|1041|1041|  
@@ -74,7 +75,7 @@ ms.locfileid: "70874877"
 |Bulgaro|1026|1026|  
 |Russo|1049|1049|  
 |Turco|1055|1055|  
-|Inglese (Regno Unito)|2057|1033|  
+|Inglese (Regno Unito)|2057|1040|  
 |Estone|1061|1061|  
 |Lettone|1062|1062|  
 |Lituano|1063|1063|  
@@ -86,7 +87,7 @@ ms.locfileid: "70874877"
 |Thai|1054|1054|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste &#40;di compatibilità Transact-&#41; SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapping di tabelle di sistema a &#40;viste di sistema Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

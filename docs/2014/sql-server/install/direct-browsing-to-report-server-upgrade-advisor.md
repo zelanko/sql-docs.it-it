@@ -11,29 +11,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952216"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>Esplorazione diretta nel server di report (Upgrade Advisor)
-  È stata rilevata l'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di passare direttamente alla directory virtuale del server di report.  
+  È stata rilevata l'installazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] corrente di che consente di passare direttamente alla directory virtuale del server di report.  
   
 ||  
 |-|  
-|modalità SharePoint **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità SharePoint di.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- È stata rilevata l'installazione corrente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sta passando direttamente alla directory virtuale del server di report, ad esempio **http://\<Server nome >/ReportServer**. Non è supportato nelle versioni correnti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ È stata rilevata l'installazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] corrente di in cui viene eseguito l'esplorazione diretta della directory virtuale del server di report, ad esempio il **nome del server\<http://>/ReportServer**. Non è supportato nelle versioni correnti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  La regola costituisce un avviso e l'aggiornamento non viene bloccato.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Sfogliare usando l'interfaccia utente di SharePoint per le raccolte documenti o usare **http://\<Server nome > sito/sharepoint >/_vti_bin/ReportServer**.  
+ Sfogliare usando l'interfaccia utente di SharePoint per le raccolte documenti o usare il **nome del server http://\<> sito/sharepoint>/_vti_bin/ReportServer**.  
   
   

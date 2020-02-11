@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076417"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
  Durante l’utilizzo di una tabella esistente per creare una dimensione, Creazione guidata dimensione consente di effettuare in modo semplificato i seguenti passaggi:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66076417"
 ## <a name="selecting-dimension-attributes"></a>Selezione degli attributi della dimensione  
  Dopo avere selezionato tutte le tabelle dimensione, tramite la pagina **Selezione attributi dimensione** scegliere gli attributi che si desidera includere nella dimensione da tali tabelle. Tutte le colonne sottostanti di queste tabelle sono disponibili come potenziali attributi della dimensione. L'attributo chiave della dimensione deve essere selezionato e deve essere abilitato per esplorare.  
   
- Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo su `Regular` per questo attributo, si potrebbe voler eseguire il mapping di questo attributo per il `Account Number` tipo.  
+ Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo su `Regular` per questo attributo, è consigliabile eseguire il `Account Number` mapping di questo attributo al tipo.  
   
 > [!NOTE]  
 >  Se il tipo di dimensione e i tipi di attributo standard non sono stati definiti al momento della creazione della dimensione, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per impostare tali valori dopo aver creato la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione](bi-wizard-add-dimension-intelligence-to-a-dimension.md) o (per una dimensione di tipo conti) [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
@@ -87,9 +87,9 @@ ms.locfileid: "66076417"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
- [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)   
- [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)   
+ [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

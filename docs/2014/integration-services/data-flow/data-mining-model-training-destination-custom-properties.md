@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70d32549bb99458b06b835240e826d15967d9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827808"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Proprietà personalizzate della destinazione Training modello di data mining
@@ -24,9 +24,9 @@ ms.locfileid: "62827808"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|ASConnectionId|String|Identificatore univoco della gestione connessione.|  
-|ASConnectionString|String|Stringa di connessione a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|ObjectRef|String|Tag XML che identifica la struttura di data mining utilizzata dalla trasformazione.|  
+|ASConnectionId|string|Identificatore univoco della gestione connessione.|  
+|ASConnectionString|string|Stringa di connessione a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|ObjectRef|string|Tag XML che identifica la struttura di data mining utilizzata dalla trasformazione.|  
   
  L'input e le colonne di input della destinazione Training modelli di data mining non includono proprietà personalizzate.  
   

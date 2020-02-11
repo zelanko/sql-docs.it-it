@@ -1,5 +1,5 @@
 ---
-title: Riferimento al messaggio di errore del database locale di SQL Server Express | Microsoft Docs
+title: Riferimento ai messaggi di errore del database locale SQL Server Express | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714908"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>Riferimento ai messaggi di errore del database locale di SQL Server Express
@@ -69,7 +69,7 @@ ms.locfileid: "62714908"
  Buffer di input troppo corto. Troncamento non necessario.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
  [LOCALDB_ERROR_INVALID_INSTANCE_NAME](localdb-error-invalid-instance-name.md)  
  Nome dell'stanza specificata non valido.  

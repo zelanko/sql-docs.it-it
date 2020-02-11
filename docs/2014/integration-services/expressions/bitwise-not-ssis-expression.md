@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769497"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (NOT bit per bit) (espressione SSIS)
@@ -38,8 +38,8 @@ ms.locfileid: "62769497"
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *integer_expression.*  
   
-## <a name="remarks"></a>Note  
- None  
+## <a name="remarks"></a>Osservazioni  
+ nessuno  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene applicato l'operatore ~ (NOT) bit per bit al numero 170 (0000 0000 1010 1010). Il numero è un valore integer con segno.  

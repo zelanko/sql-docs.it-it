@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo "Impostazioni del server di distribuzione" | Microsoft Docs
+title: Finestra di dialogo ' Impostazioni database di distribuzione ' | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721354"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Finestra di dialogo "Impostazioni del server di distribuzione" replica di SQL Server
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Replica di SQL Server finestra di dialogo ' Impostazioni database di distribuzione '
   La finestra di dialogo **Impostazioni del server di distribuzione** consente di modificare le impostazioni dei server di distribuzione aggiunti al riquadro sinistro di Monitoraggio replica.  
   
 ## <a name="options"></a>Opzioni  
  **Connetti automaticamente all'avvio di Monitoraggio replica**  
  Selezionare questa opzione per consentire la connessione di Monitoraggio replica al server di distribuzione e per recuperare informazioni sullo stato.  
   
- **Connessione**  
+ **Connection**  
  Fare clic su questa opzione per visualizzare la finestra di dialogo **Connetti al server** . In questo modo sarà possibile visualizzare e modificare le proprietà e le credenziali di connessione utilizzate da Monitoraggio replica per la connessione al server di distribuzione.  
   
  **Aggiorna automaticamente lo stato del server di distribuzione e delle sue pubblicazioni**  

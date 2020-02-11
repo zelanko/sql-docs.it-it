@@ -1,5 +1,5 @@
 ---
-title: Uso delle proprietà dei membri (MDX) | Microsoft Docs
+title: Utilizzo delle proprietà membro (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074154"
 ---
 # <a name="using-member-properties-mdx"></a>Utilizzo delle proprietà dei membri (MDX)
@@ -40,10 +40,10 @@ ms.locfileid: "66074154"
   
  Per altre informazioni, vedere [Proprietà dei membri definite dall'utente &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Entrambe le proprietà dei membri intrinseche e definite dall'utente può essere recuperata tramite l'utilizzo dei `PROPERTIES` parola chiave o il [proprietà](/sql/mdx/properties-mdx) (funzione).  
+ Sia le proprietà intrinseche dei membri che quelle definite dall'utente possono essere recuperate `PROPERTIES` usando la parola chiave o la funzione [Properties](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Utilizzo della parola chiave PROPERTIES  
- La parola chiave `PROPERTIES` specifica le proprietà dei membri che devono essere utilizzate per una determinata dimensione dell'asse. Il `PROPERTIES` parola chiave viene utilizzata nell'ambito di `<axis specification>` clausola di MDX [seleziona](/sql/mdx/mdx-data-manipulation-select) istruzione:  
+ La parola chiave `PROPERTIES` specifica le proprietà dei membri che devono essere utilizzate per una determinata dimensione dell'asse. La `PROPERTIES` parola chiave viene nascosta all' `<axis specification>` interno della clausola dell'istruzione MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,9 +69,9 @@ SELECT [<axis_specification>
   
  Il dettaglio della sintassi di `<property>` dipende dalla proprietà su cui viene eseguita la query:  
   
--   Le proprietà dei membri intrinseche e sensibili al contesto devono essere precedute dal nome della dimensione o del livello. Le proprietà dei membri intrinseche e non sensibili al contesto non possono essere invece qualificate dal nome della dimensione o del livello. Per altre informazioni su come usare il `PROPERTIES` parola chiave con le proprietà intrinseche dei membri, vedere [proprietà intrinseche dei membri &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
+-   Le proprietà dei membri intrinseche e sensibili al contesto devono essere precedute dal nome della dimensione o del livello. Le proprietà dei membri intrinseche e non sensibili al contesto non possono essere invece qualificate dal nome della dimensione o del livello. Per ulteriori informazioni sull'utilizzo della parola chiave `PROPERTIES` con le proprietà intrinseche dei membri, vedere [proprietà intrinseche dei membri &#40;&#41;MDX ](mdx-member-properties-intrinsic-member-properties.md).  
   
--   Le proprietà dei membri definite dall'utente devono essere precedute dal nome del livello in cui si trovano. Per altre informazioni su come usare il `PROPERTIES` parola chiave con proprietà dei membri definite dall'utente, vedere [le proprietà dei membri definite dall'utente &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
+-   Le proprietà dei membri definite dall'utente devono essere precedute dal nome del livello in cui si trovano. Per ulteriori informazioni sull'utilizzo della parola chiave `PROPERTIES` con le proprietà dei membri definite dall'utente, vedere [proprietà dei membri definite dall'utente &#40;&#41;MDX ](mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  

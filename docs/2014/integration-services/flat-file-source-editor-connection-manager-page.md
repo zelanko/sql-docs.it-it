@@ -1,5 +1,5 @@
 ---
-title: Flat File Source Editor (pagina Gestione connessione) | Microsoft Docs
+title: Editor origine file flat (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058685"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor origine file flat (pagina Gestione connessione)
@@ -33,13 +33,13 @@ ms.locfileid: "66058685"
  Per ulteriori informazioni sull'origine file flat, vedere [Flat File Source](data-flow/flat-file-source.md).  
   
 ## <a name="options"></a>Opzioni  
- **Flat file connection manager**  
+ **Gestione connessione file flat**  
  Consente di selezionare una gestione connessione esistente nell'elenco o di creare una nuova gestione connessione facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione file flat** .  
   
- **Mantieni i valori Null dell'origine come valori Null nel flusso di dati**  
+ **Mantieni i valori null dell'origine come valori null nel flusso di dati**  
  Consente di specificare se mantenere i valori Null durante l'estrazione dei dati. Il valore predefinito della proprietà è **false**. Quando questo valore è f`alse`, l'origine del file flat sostituisce i valori Null dai dati di origine con i valori predefiniti corretti per ogni colonna, ad esempio stringhe vuote per colonne con stringhe e zero per colonne numeriche.  
   
  **Anteprima**  
@@ -47,8 +47,8 @@ ms.locfileid: "66058685"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine file flat &#40;pagina Colonne&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Editor origine file flat &#40;pagina Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Editor origine file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Editor origine file flat &#40;pagina output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

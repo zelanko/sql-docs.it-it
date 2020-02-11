@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'interfaccia utente di installazione guidata del pacchetto | Microsoft Docs
+title: Informazioni di riferimento sull'interfaccia utente dell'installazione guidata pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056831"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Riferimento all'interfaccia utente dell'Installazione guidata pacchetti
-  Usare l'**Installazione guidata pacchetti** per distribuire un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], inclusi i pacchetti, i file contenuti ed eventuali dipendenze dei pacchetti.  
+  Usare l' **Installazione guidata pacchetti** per distribuire un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusi i pacchetti, i file contenuti ed eventuali dipendenze dei pacchetti.  
   
- Prima di distribuire i pacchetti, è possibile creare configurazioni e distribuirle con i pacchetti. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa le configurazioni per aggiornare in modo dinamico le proprietà di pacchetti e oggetti relativi in fase di esecuzione. La stringa di connessione di una connessione OLE DB può essere ad esempio impostata dinamicamente in fase di esecuzione, specificando una configurazione che esegue il mapping di un valore alla proprietà contenente la stringa di connessione.  
+ Prima di distribuire i pacchetti, è possibile creare configurazioni e distribuirle con i pacchetti. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa le configurazioni per aggiornare in modo dinamico le proprietà di pacchetti e oggetti relativi in fase di esecuzione. La stringa di connessione di una connessione OLE DB può essere ad esempio impostata dinamicamente in fase di esecuzione, specificando una configurazione che esegue il mapping di un valore alla proprietà contenente la stringa di connessione.  
   
- Non è possibile eseguire l'Installazione guidata pacchetti finché non si compila un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e non si crea un'utilità di distribuzione. Per altre informazioni, vedere [Distribuzione dei pacchetti utilizzando l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
+ Non è possibile eseguire l'Installazione guidata pacchetti finché non si compila un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e non si crea un'utilità di distribuzione. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
  Nelle sezioni seguenti vengono descritte le pagine della procedura guidata.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66056831"
  **Non visualizzare più questa pagina iniziale**  
  Selezionare questa opzione per ignorare la pagina iniziale quando si esegue nuovamente la procedura guidata.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
  **Fine**  
@@ -56,7 +57,7 @@ ms.locfileid: "66056831"
  **File di configurazione**  
  Consente di modificare il contenuto di un file di configurazione selezionando il file dall'elenco.  
   
- **Argomenti correlati:** [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
+ **Argomenti correlati:** [creare configurazioni di pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
  **Percorso**  
  Indica il percorso della proprietà da configurare.  
@@ -67,7 +68,7 @@ ms.locfileid: "66056831"
  **Valore**  
  Consente di specificare il valore della configurazione.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
  **Fine**  
@@ -76,10 +77,10 @@ ms.locfileid: "66056831"
 ## <a name="confirm-installation-page"></a>Pagina Conferma installazione  
  La pagina **Conferma installazione** consente di avviare l'installazione dei pacchetti, visualizzare lo stato e visualizzare informazioni che verranno usate dalla procedura guidata per l'installazione dei file dal progetto specificato.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di installare i pacchetti e le relative dipendenze, quindi di passare alla pagina successiva della procedura al termine dell'installazione.  
   
- **Stato**  
+ **Status**  
  Mostra lo stato dell'installazione del pacchetto.  
   
  **Fine**  
@@ -89,16 +90,16 @@ ms.locfileid: "66056831"
  Usare la pagina **Distribuzione pacchetti SSIS** per specificare il percorso d'installazione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e delle relative dipendenze.  
   
 ### <a name="options"></a>Opzioni  
- **Distribuzione nel file system**  
+ **Distribuzione del file System**  
  Consente di distribuire i pacchetti e le dipendenze in una cartella specificata del file system.  
   
- **Distribuzione in SQL Server**  
+ **Distribuzione SQL Server**  
  Consente di distribuire i pacchetti e le dipendenze in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Usare questa opzione se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] condivide i pacchetti tra i server. Le eventuali dipendenze dei pacchetti vengono installate nella cartella specificata del file system.  
   
  **Convalida pacchetti dopo l'installazione**  
  Consente di specificare se convalidare i pacchetti dopo l'installazione.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
  **Fine**  
@@ -107,7 +108,7 @@ ms.locfileid: "66056831"
 ## <a name="packages-validation-page"></a>Pagina Convalida pacchetti  
  Usare la pagina **Convalida pacchetti** per visualizzare lo stato e i risultati della convalida dei pacchetti.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
 ## <a name="select-installation-folder-page"></a>Pagina Selezione cartella di destinazione  
@@ -120,7 +121,7 @@ ms.locfileid: "66056831"
  **Sfoglia**  
  Consente di selezionare la cartella di destinazione utilizzando la finestra di dialogo **Sfoglia cartella** .  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
  **Fine**  
@@ -136,7 +137,7 @@ ms.locfileid: "66056831"
  **Usa autenticazione di Windows**  
  Consente di specificare se utilizzare l'autenticazione di Windows per l'accesso al server. Per una maggiore sicurezza è consigliabile utilizzare l'autenticazione di Windows.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Consente di specificare se il pacchetto deve utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'accesso al server. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
  **Nome utente**  
@@ -148,15 +149,15 @@ ms.locfileid: "66056831"
  **Percorso pacchetto**  
  Consente di specificare il nome della cartella logica o immettere "/" per la cartella predefinita.  
   
- Per selezionare la cartella nella finestra di dialogo **Pacchetto SSIS** , fare clic su Sfoglia (...). Tuttavia, la finestra di dialogo non consente di selezionare la cartella predefinita. Se si desidera utilizzare la cartella predefinita, è necessario immettere "/" nella casella di testo.  
+ Per selezionare la cartella nella finestra di dialogo **pacchetto SSIS** , fare clic su Sfoglia (...). Tuttavia, nella finestra di dialogo non è disponibile alcun mezzo per selezionare la cartella predefinita. Se si desidera utilizzare la cartella predefinita, è necessario immettere "/" nella casella di testo.  
   
 > [!NOTE]  
 >  Se non si immette un percorso del pacchetto valido, viene visualizzato il messaggio di errore seguente: "Uno o più argomenti non sono validi."  
   
- **Usa l'archiviazione su server per la crittografia**  
+ **Basarsi sull'archiviazione server per la crittografia**  
  Selezionare questa opzione per usare le funzionalità di sicurezza del [!INCLUDE[ssDE](../includes/ssde-md.md)] per proteggere i pacchetti.  
   
- **Avanti**  
+ **Prossimo**  
  Consente di passare alla pagina successiva della procedura guidata.  
   
  **Fine**  
@@ -169,6 +170,6 @@ ms.locfileid: "66056831"
  Fare clic su **Fine**per uscire dalla procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione del pacchetto &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

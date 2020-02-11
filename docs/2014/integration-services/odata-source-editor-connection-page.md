@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057320"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor origine OData (pagina Connessione)
@@ -26,7 +26,7 @@ ms.locfileid: "66057320"
  **Gestione connessione OData**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione OData** .  
   
  **Usa percorso risorsa o raccolta**  
@@ -34,7 +34,7 @@ ms.locfileid: "66057320"
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|Collection|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
+|Raccolta|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
 |Percorso risorsa|Recuperare i dati dall'origine OData utilizzando un percorso della risorsa.|  
   
  **Opzioni query**  
@@ -49,16 +49,16 @@ ms.locfileid: "66057320"
 ## <a name="dynamic-options"></a>Opzioni dinamiche  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Usa percorso risorsa o raccolta = Raccolta  
- **Collection**  
+ **Raccolta**  
  Selezionare una raccolta dall'elenco a discesa.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Usa percorso risorsa o raccolta = Percorso risorsa  
  **Resource path**  
- Digitare un percorso della risorsa. Ad esempio:  Employees  
+ Digitare un percorso della risorsa. Ad esempio: Employees  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine OData &#40;pagina Colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Editor origine OData &#40;pagina Output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+ [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Editor origine OData &#40;pagina output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   
   

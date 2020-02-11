@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771277"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
@@ -137,7 +137,7 @@ ms.locfileid: "62771277"
   
 2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "62771277"
   
 -   Nella scheda **Flusso di controllo** aggiungere un'attività Flusso di dati e connettere l'attività che ha concatenato la stringa di query.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere preparato la stringa di query e avere configurato l'attività Flusso di dati, il passaggio successivo consiste nel creare la funzione valutata a livello di tabella per il recupero dei dati delle modifiche dal database.  
   
  **Argomento successivo:** [Creare la funzione per il recupero dei dati delle modifiche](create-the-function-to-retrieve-the-change-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 Data Access Components | Microsoft Docs
+title: Componenti di accesso ai dati SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014347"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Componenti per l'accesso ai dati SQLXML 4.0
+  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include tre provider di dati in grado di inserire dati XML in e recuperare dati XML da un database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   provider SQLXMLOLEDB  
@@ -33,14 +34,14 @@ ms.locfileid: "66014347"
   
 -   classi gestite SQLXML  
   
-     Espone la funzionalità di SQLXML in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per altre informazioni, vedere [le classi gestite SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
+     Espone la funzionalità di SQLXML in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per ulteriori informazioni, vedere [SQLXML Managed Classes](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 -   SQL Server Native Client (SQLNCLI11)  
   
      Espone la funzionalità di SQLXML 4.0 tramite una nuova tecnologia di accesso ai dati che estende e integra le versioni correnti di Microsoft Data Access Components (MDAC). SQLNCLI11 fornisce supporto completo per le caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Provider SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
  Viene descritto il provider SQLXMLOLEDB e ne viene illustrato l'utilizzo.  
   
   

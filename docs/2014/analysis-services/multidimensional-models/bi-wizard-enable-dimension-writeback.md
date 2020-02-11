@@ -1,5 +1,5 @@
 ---
-title: Abilitazione writeback della dimensione | Microsoft Docs
+title: Abilitare il writeback della dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076845"
 ---
 # <a name="enable-dimension-writeback"></a>Attivazione writeback della dimensione
@@ -40,7 +40,7 @@ ms.locfileid: "66076845"
 ## <a name="setting-dimension-writeback-capability"></a>Impostazione della funzionalità di writeback della dimensione  
  Nella seconda pagina della procedura guidata **Abilitazione writeback della dimensione** è possibile effettivamente impostare l'opzione **Consenti writeback della dimensione** . Selezionando questa opzione, la proprietà `WriteEnabled` della dimensione viene impostata automaticamente su `True`. Deselezionando questa opzione la proprietà viene impostata automaticamente su `False`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando si crea un nuovo membro, è necessario includere ogni attributo di una dimensione. Non è possibile inserire un membro senza specificare un valore per l'attributo chiave della dimensione. La creazione di membri è pertanto soggetta a tutti i vincoli, ad esempio valori di chiave non Null, definiti nella tabella della dimensione. È consigliabile considerare inoltre le colonne che possono essere specificate dalle proprietà della dimensione, ad esempio le colonne specificate nelle proprietà della dimensione `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn`.  
   
 > [!WARNING]  
@@ -50,7 +50,7 @@ ms.locfileid: "66076845"
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  Per altre informazioni vedere [Utilizzo di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  Per ulteriori informazioni, vedere [utilizzo di più set di risultati attivi &#40;&#41;Mars ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  

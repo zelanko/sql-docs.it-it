@@ -1,5 +1,5 @@
 ---
-title: Selezionare la pagina sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità AlwaysOn) | Microsoft Docs
+title: Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789471"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate Gruppi di disponibilità AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "62789471"
   
 
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Sospendere le attività di backup dei log per i database primari durante la sincronizzazione dati iniziale.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62789471"
   
      Se è necessario proteggere le operazioni di backup e ripristino con una sicurezza elevata, si consiglia di selezionare l'opzione **Solo join** o **Ignora sincronizzazione dati iniziale** .  
   
-##  <a name="Full"></a> Completo  
+##  <a name="Full"></a>Completo  
  Per ogni database primario, tramite l'opzione **Completo** vengono eseguite diverse operazioni in un flusso di lavoro: creare un backup completo e del log del database primario, creare i database secondari corrispondenti ripristinando i backup in ogni istanza del server in cui è ospitata una replica secondaria e creare un join di ogni database secondario al gruppo di disponibilità.  
   
  Selezionare questa opzione solo se l'ambiente soddisfa i prerequisiti seguenti per l'utilizzo della sincronizzazione dati iniziale completa e si desidera avviare automaticamente la sincronizzazione dati tramite la procedura guidata.  
@@ -87,18 +87,18 @@ ms.locfileid: "62789471"
   
 -   Ripristinare manualmente un backup recente del database primario utilizzando RESTORE WITH NORECOVERY, quindi ripristinare ogni successivo backup del log utilizzando RESTORE WITH NORECOVERY. Se i percorsi di file del database primario e del database secondario sono diversi, è necessario utilizzare l'opzione WITH MOVE. Eseguire questa sequenza di ripristino in ogni istanza del server che ospita una replica secondaria per il gruppo di disponibilità.  È possibile utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per eseguire tali operazioni di backup e ripristino.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
      [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   Se vengono aggiunti uno o più database primari per il log shipping a un gruppo di disponibilità, è possibile eseguire la migrazione di uno o più database secondari corrispondenti da log shipping a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, vedere [prerequisiti per la migrazione dal Log Shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+-   Se vengono aggiunti uno o più database primari per il log shipping a un gruppo di disponibilità, è possibile eseguire la migrazione di uno o più database secondari corrispondenti da log shipping a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per ulteriori informazioni, vedere [prerequisiti per la migrazione dal log shipping a Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  Dopo aver creato tutti i database secondari per il gruppo di disponibilità, se si desidera eseguire backup nelle repliche secondarie, sarà necessario configurare nuovamente le preferenze di backup automatico del gruppo di disponibilità.  
   
-     **Per ulteriori informazioni:**  
+     **Per altre informazioni:**  
   
-     [Prerequisiti per la migrazione dal Log Shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [Prerequisiti per la migrazione dal log shipping a Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62789471"
   
 -   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Avviare lo spostamento dati su un Database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+-   [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
 -   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

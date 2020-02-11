@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667134"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica
@@ -30,18 +30,18 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
 
   In Monitoraggio replica sono disponibili le schede seguenti che includono le informazioni sulla pubblicazione selezionata:  
   
--   **Tutte le sottoscrizioni** -questa scheda vengono visualizzate informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
+-   **Tutte le sottoscrizioni** : questa scheda Visualizza le informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
   
--   **Gli agenti** -questa scheda vengono visualizzate informazioni su tutti gli agenti utilizzati da una pubblicazione:  
+-   **Agents** -in questa scheda vengono visualizzate informazioni su tutti gli agenti utilizzati da una pubblicazione:  
   
     -   Agente snapshot, utilizzato da tutte le pubblicazioni.    
     -   Agente di lettura log, utilizzato da tutte le pubblicazioni transazionali.    
     -   Agente di lettura coda, utilizzato dalle pubblicazioni transazionali contenenti sottoscrizioni ad aggiornamento in coda.  
   
--   **Avvisi** (per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive)   
+-   **Avvisi** (per i distributori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] che eseguono e versioni successive)   
     -   Questa scheda consente di specificare avvisi per gli agenti.  
   
--   **Token di traccia** (solo replica transazionale, per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive).  
+-   **Token di traccia** (solo replica transazionale, per i distributori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] che eseguono e versioni successive)  
   
      Questa scheda consente di misurare la latenza, ovvero l'intervallo di tempo che intercorre tra il commit di una transazione nel server di pubblicazione e il commit della transazione corrispondente nel Sottoscrittore.  
   
@@ -53,20 +53,20 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
 2.  Per visualizzare e modificare le proprietà della pubblicazione, fare clic con il pulsante destro del mouse sulla pubblicazione e quindi scegliere **Proprietà**.    
 3.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **Tutte le sottoscrizioni** .  
   
-     Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+     Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività in questa scheda. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Per visualizzare informazioni sugli agenti, fare clic sulla scheda **Agenti** . In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).    
-5.  Per visualizzare informazioni su avvisi e valore soglia dell'agente, fare clic sulla scheda **Avvisi** . Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
-6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **Token di traccia** . Per ulteriori informazioni sulle modalità di utilizzo dei token di traccia, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](measure-latency-and-validate-connections-for-transactional-replication.md).  
+4.  Per visualizzare le informazioni sugli agenti, fare clic sulla scheda **agenti** . È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività in questa scheda. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).    
+5.  Per visualizzare le informazioni sugli avvisi e le soglie degli agenti, fare clic sulla scheda **avvisi** . Per ulteriori informazioni, vedere [impostare soglie e avvisi in Monitoraggio replica](set-thresholds-and-warnings-in-replication-monitor.md).   
+6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **token di traccia** . Per ulteriori informazioni sull'utilizzo dei token di traccia, vedere [misurare la latenza e convalidare le connessioni per la replica transazionale](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Per un server di pubblicazione
   In Monitoraggio replica sono disponibili le schede seguenti in cui vengono visualizzate informazioni sul server di pubblicazione selezionato:  
   
--   **Le pubblicazioni** -questa scheda vengono visualizzate informazioni su tutte le pubblicazioni nel server di pubblicazione selezionato.  
+-   **Pubblicazioni** : questa scheda Visualizza le informazioni su tutte le pubblicazioni nel server di pubblicazione selezionato.  
   
--   **Elenco verifica sottoscrizioni** -questa scheda consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato con errori, avvisi o prestazioni insufficiente. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di SQL Server precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Elenco** verifica sottoscrizioni: questa scheda consente di visualizzare informazioni sulle sottoscrizioni di tutte le pubblicazioni disponibili nel server di pubblicazione selezionato che presentano errori, avvisi o prestazioni più ridotte. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   **Gli agenti** scheda - questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
+-   Scheda **agenti** : questa scheda consente di visualizzare informazioni dettagliate sugli agenti e sui processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
  Per visualizzare ulteriori informazioni sulle opzioni disponibili nelle singole schede, fare clic sulla scheda nel riquadro destro e quindi su **?** nella barra dei menu. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  
   
@@ -90,9 +90,9 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
 
   In Monitoraggio replica sono disponibili le schede seguenti, che includono informazioni sulle sottoscrizioni:  
   
--   **Tutte le sottoscrizioni** -questa scheda vengono visualizzate informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
+-   **Tutte le sottoscrizioni** : questa scheda Visualizza le informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
   
--   **Elenco verifica sottoscrizioni** -questa scheda consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato con errori, avvisi o prestazioni insufficiente. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di SQL Server precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Elenco** verifica sottoscrizioni: questa scheda consente di visualizzare informazioni sulle sottoscrizioni di tutte le pubblicazioni disponibili nel server di pubblicazione selezionato che presentano errori, avvisi o prestazioni più ridotte. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Per ulteriori informazioni sulle opzioni di ogni scheda, fare clic sulla scheda nel riquadro a destra e quindi fare clic su **?** sulla barra dei menu. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  
   
@@ -100,18 +100,18 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.   
 2.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **Tutte le sottoscrizioni** . Per visualizzare solo le sottoscrizioni in uno stato specifico, ad esempio in sincronizzazione, selezionare un'opzione nell'elenco a discesa **Mostra** .   
-3.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività in questa scheda. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="subscription-watch-list-tab"></a>Scheda Elenco verifica sottoscrizioni  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro e quindi fare clic su un server di pubblicazione.   
 2.  Per visualizzare informazioni sulle sottoscrizioni, fare clic sulla scheda **Elenco verifica sottoscrizioni** .  
 3.  Selezionare il tipo di sottoscrizione da visualizzare nell'elenco a discesa **Mostra sottoscrizioni \<TipoSottoscrizione>** . Per visualizzare solo le sottoscrizioni in uno stato specifico, ad esempio in sincronizzazione, selezionare un'opzione nell'elenco a discesa **Mostra** .    
-4.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. È inoltre possibile accedere a informazioni più dettagliate ed eseguire attività in questa scheda. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Per gli agenti di pubblicazione
 
-  In Monitoraggio replica è disponibile la scheda **Agenti** , in cui sono presenti informazioni sugli agenti associati alla pubblicazione selezionata. L'agente di distribuzione e dell'agente di Merge sono associati alle sottoscrizioni; per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
+  In Monitoraggio replica è disponibile la scheda **Agenti** , in cui sono presenti informazioni sugli agenti associati alla pubblicazione selezionata. Le agente di distribuzione e agente di merge sono associate alle sottoscrizioni. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
  In questa scheda vengono visualizzate informazioni relative agli agenti seguenti:    
 -   Agente snapshot, utilizzato da tutte le pubblicazioni.    
@@ -136,9 +136,9 @@ Monitoraggio replica offre schede e opzioni per visualizzare le informazioni ed 
 ### <a name="view-information-and-perform-tasks"></a>Visualizzare le informazioni ed eseguire attività
   In Monitoraggio replica sono disponibili due schede che consentono di accedere a informazioni sugli agenti associati a una sottoscrizione:  
   
--   **Tutte le sottoscrizioni** -questa scheda vengono visualizzate informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
+-   **Tutte le sottoscrizioni** : questa scheda Visualizza le informazioni su tutte le sottoscrizioni della pubblicazione selezionata.  
   
--   **Elenco verifica sottoscrizioni** -questa scheda consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato con errori, avvisi o prestazioni insufficiente. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di SQL Server precedenti a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Elenco** verifica sottoscrizioni: questa scheda consente di visualizzare informazioni sulle sottoscrizioni di tutte le pubblicazioni disponibili nel server di pubblicazione selezionato che presentano errori, avvisi o prestazioni più ridotte. Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Per ulteriori informazioni sulle opzioni di ogni scheda, fare clic sulla scheda nel riquadro a destra e quindi fare clic su **?** sulla barra dei menu. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  
   

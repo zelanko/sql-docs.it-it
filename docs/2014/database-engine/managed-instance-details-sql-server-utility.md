@@ -1,5 +1,5 @@
 ---
-title: Gestito i dettagli dell'istanza (utilità SQL Server) | Microsoft Docs
+title: Dettagli Istanza gestita (Utilità SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774343"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
   Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- Visualizzazione Elenco  
+ Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati relativi a singole stanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] elencate nelle righe per NomeComputer/NomeIstanza.  
   
  Le icone di stato di integrità forniscono lo stato riepilogativo per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in base alla categoria di utilizzo:  
   
--   Segno di spunta verde ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized"): numero di istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Numero di istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che non stanno violando i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia verde rivolta verso il basso ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia rossa rivolta verso l'alto ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)** . Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)**. Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   CPU istanza - Consente di visualizzare lo stato di integrità di utilizzo del processore allocato a questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU istanza - Consente di visualizzare lo stato di integrità di utilizzo del processore allocato a questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
--   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "62774343"
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole / minuscole: (True o False)  
+-   Distinzione maiuscole/minuscole: (Vero o Falso)  
   
--   Lingua:  
+-   Language:  
   
--   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'utilizzo della CPU del computer.  
@@ -171,13 +171,13 @@ ms.locfileid: "62774343"
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole / minuscole: (True o False)  
+-   Distinzione maiuscole/minuscole: (Vero o Falso)  
   
--   Lingua:  
+-   Language:  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dettagli di applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Dashboard utilità &#40;utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Attività e funzionalità di Utilità SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  

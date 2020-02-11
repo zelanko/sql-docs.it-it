@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736241"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
@@ -41,9 +41,9 @@ ms.locfileid: "62736241"
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella SQL|  
 |Funzione con valori di tabella inline SQL|Stored procedure SQL|  
-|visualizzazione|Tabella<sup>1</sup> (definita dall'utente)|  
+|Visualizza|Tabella<sup>1</sup> (definita dall'utente)|  
   
- <sup>1</sup> include tabelle temporanee globali e locali  
+ <sup>1</sup> include tabelle temporanee locali e globali  
   
 > [!NOTE]  
 >  I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  
@@ -64,7 +64,7 @@ ms.locfileid: "62736241"
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Elimina|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "62736241"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Elimina|  
 |EXECUTE|Sub-SELECT|  
   
  Quando si utilizzano i sinonimi nei contesti citati, l'istruzione viene eseguita sull'oggetto di base. Ad esempio, se un sinonimo fa riferimento a un oggetto di base che è una tabella e si inserisce una riga nel sinonimo, la riga verrà inserita nella tabella referenziata.  
@@ -98,7 +98,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|NEGA|  
 |REVOKE||  
   
  I sinonimi non sono associati a uno schema, pertanto non è possibile farvi riferimento con i seguenti contesti di espressione associati a schema:  
@@ -112,7 +112,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Per altre informazioni sulle funzioni associate a schema, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Recupero di informazioni sui sinonimi  
- La vista del catalogo sys.synonyms contiene una voce per ogni sinonimo incluso in un database specifico. La vista del catalogo espone i metadati dei sinonimi, ad esempio il nome del sinonimo e il nome dell'oggetto di base. Per altre informazioni sul `sys.synonyms` vista del catalogo, vedere [Synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ La vista del catalogo sys.synonyms contiene una voce per ogni sinonimo incluso in un database specifico. La vista del catalogo espone i metadati dei sinonimi, ad esempio il nome del sinonimo e il nome dell'oggetto di base. Per ulteriori informazioni sulla vista `sys.synonyms` del catalogo, vedere [sys. sinonims &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Utilizzando proprietà estese, è possibile aggiungere istruzioni o descrizioni, maschere di input e regole di formattazione come proprietà di un sinonimo. Poiché la proprietà viene archiviata nel database, tutte le applicazioni che leggono la proprietà possono valutare l'oggetto nello stesso modo. Per altre informazioni, vedere [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

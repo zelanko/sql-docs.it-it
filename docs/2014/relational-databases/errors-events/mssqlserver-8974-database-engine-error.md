@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762166"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762166"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE). La pagina P_ID2, slot S_ID2 e la pagina P_ID3, slot P_ID3 puntano al nodo di dati all'esterno di righe alla pagina P_ID1, slot S_ID1, ID di testo TEXT_ID.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO). La pagina P_ID2, slot S_ID2 e la pagina P_ID3, slot P_ID3 puntano al nodo di dati all'esterno di righe alla pagina P_ID1, slot S_ID1, ID di testo TEXT_ID.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Un nodo di dati all'esterno di righe viene elencato come nodo figlio da due record di dati o di indice. Un nodo può disporre di un solo nodo padre.  

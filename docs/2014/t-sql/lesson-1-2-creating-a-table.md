@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704564"
 ---
 # <a name="creating-a-table-tutorial"></a>Esercitazione per la creazione di una tabella
@@ -71,7 +71,7 @@ ms.locfileid: "62704564"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Inserimento e aggiornamento di dati in una tabella &#40;Esercitazione&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [Inserimento e aggiornamento di dati in una tabella &#40;esercitazione&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  

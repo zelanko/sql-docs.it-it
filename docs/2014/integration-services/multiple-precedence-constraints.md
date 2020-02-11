@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057408"
 ---
 # <a name="multiple-precedence-constraints"></a>Più vincoli di precedenza
@@ -32,7 +32,7 @@ ms.locfileid: "66057408"
 ## <a name="logicaland-property"></a>Proprietà LogicalAnd  
  Se a un'attività o contenitore sono applicati più vincoli, la proprietà `LogicalAnd` specificherà se il corrispondente vincolo di precedenza viene valutato singolarmente o insieme ad altri vincoli.  
   
- È possibile impostare il `LogicalAnd` proprietà usando la **Editor vincoli di precedenza** in [!INCLUDE[ssIS](../includes/ssis-md.md)] finestra di progettazione o nella finestra delle proprietà che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornisce.  
+ È possibile impostare la `LogicalAnd` proprietà utilizzando **Editor vincoli di precedenza** in [!INCLUDE[ssIS](../includes/ssis-md.md)] progettazione o nella finestra proprietà fornita da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Impostazione delle proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

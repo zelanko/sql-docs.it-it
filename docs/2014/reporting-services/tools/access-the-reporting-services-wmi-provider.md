@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783210"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
@@ -34,8 +34,8 @@ ms.locfileid: "72783210"
   
 |Classe|Spazio dei nomi|Descrizione|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\ RS_ *\<nomeistanzacodificato >* \v11|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\ RS_ *\<nomeistanzacodificato >* \v11\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\ RS_*\<nomeistanzacodificato>* \v11|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\ RS_*\<nomeistanzacodificato>* \v11\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
   
  Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -88,4 +88,4 @@ $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>Vedere anche
  [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

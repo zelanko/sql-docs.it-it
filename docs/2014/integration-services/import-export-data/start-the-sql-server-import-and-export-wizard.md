@@ -1,5 +1,5 @@
 ---
-title: Eseguire SQL Server importazione / esportazione guidata | Microsoft Docs
+title: Eseguire l'importazione/esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,34 +16,34 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768033"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Esecuzione dell'Importazione/Esportazione guidata SQL Server
-  Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce il metodo più semplice per la copia di dati tra origini dati e per la costruzione di pacchetti di base. Per altre informazioni sulla procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce il metodo più semplice per la copia di dati tra origini dati e per la costruzione di pacchetti di base. Per ulteriori informazioni sulla procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Per un video che illustra come usare SQL Server importazione / esportazione guidata per creare un pacchetto che Esporta dati da un database di SQL Server in un foglio di calcolo di Microsoft Excel, vedere [esportazione di dati di SQL Server in Excel (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131024).  
+ Per un video che illustra come utilizzare l'importazione/esportazione guidata di SQL Server per creare un pacchetto che esporta dati da un database SQL Server a un foglio di calcolo di Microsoft Excel, vedere [esportazione di dati di SQL Server in Excel (video SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Per avviare Importazione/Esportazione guidata SQL Server  
   
--   Nel **avviare** dal menu **tutti i programmi**, scegliere**Microsoft SQL Server** e quindi fare clic su **importare ed esportare dati**.  
+-   Dal menu **Start** scegliere **tutti i programmi**,**Microsoft SQL Server** e quindi fare clic su **Importa ed Esporta dati**.  
   
-     oppure  
+     -oppure-  
   
-     Nelle [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare doppio clic il **pacchetti SSIS** cartella e quindi fare clic su **SSISImport / esportazione guidata**.  
+     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **pacchetti SSIS** , quindi scegliere **SSISImport ed esportazione guidata**.  
   
-     oppure  
+     -oppure-  
   
-     Nella [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]via il **Project** menu, fare clic su **SSISImport / esportazione guidata**.  
+     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]scegliere **SSISImport ed Export Wizard**dal menu **progetto** .  
   
-     oppure  
+     -oppure-  
   
-     Nella [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo di server, espandere database, fare doppio clic su un database, scegliere **attività**e quindi fare clic su **Import Data** o **esportare i dati**.  
+     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al tipo di [!INCLUDE[ssDE](../../includes/ssde-md.md)] server, espandere database, fare clic con il pulsante destro del mouse su un database, scegliere **attività**, quindi fare clic su **Importa dati** o **Esporta dati**.  
   
-     oppure  
+     -oppure-  
   
      In una finestra del prompt dei comandi eseguire DTSWizard.exe, disponibile in C:\Programmi\Microsoft SQL Server\100\DTS\Binn.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62768033"
   
     -   Indicare se creare un nuovo database e impostarne le proprietà. Non è possibile configurare le proprietà seguenti, per le quali vengono utilizzati i valori predefiniti specificati:  
   
-        |Proprietà|Value|  
+        |Proprietà|valore|  
         |--------------|-----------|  
         |Regole di confronto|Latin1_General_CS_AS_KS_WS|  
         |modello di recupero|Full|  
@@ -117,9 +117,9 @@ ms.locfileid: "62768033"
   
 6.  Salvare ed eseguire un pacchetto.  
   
-     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. È facoltativamente possibile salvare il pacchetto per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database o nel file System. Per altre informazioni sul **msdb** del database, vedere [Gestione pacchetti &#40;servizio SSIS&#41;](../service/package-management-ssis-service.md).  
+     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. Facoltativamente, è possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database **msdb** o nel file System. Per ulteriori informazioni sul database **msdb** , vedere [Gestione pacchetti &#40;&#41;del servizio SSIS ](../service/package-management-ssis-service.md).  
   
-     Quando si salva il pacchetto, è possibile impostarne il livello di protezione e, se per quest'ultimo si utilizza una password, specificarla. Per altre informazioni sui livelli di protezione del pacchetto, vedere [controllo di accesso per dati sensibili nei pacchetti](../security/access-control-for-sensitive-data-in-packages.md).  
+     Quando si salva il pacchetto, è possibile impostarne il livello di protezione e, se per quest'ultimo si utilizza una password, specificarla. Per ulteriori informazioni sui livelli di protezione dei pacchetti, vedere [Access Control for sensitive data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Se la procedura guidata viene avviata da un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], non sarà possibile eseguire il pacchetto dalla procedura guidata. Il pacchetto verrà invece aggiunto al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da cui è stata avviata la procedura guidata. e potrà quindi essere eseguito in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62768033"
     >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importazione/Esportazione guidata SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Importazione/esportazione guidata SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Creare pacchetti in SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   
   

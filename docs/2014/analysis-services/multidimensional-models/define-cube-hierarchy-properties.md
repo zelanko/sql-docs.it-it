@@ -1,5 +1,5 @@
 ---
-title: Definire le proprietà di gerarchia del cubo | Microsoft Docs
+title: Definire le proprietà della gerarchia del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075710"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Definire le proprietà della gerarchia del cubo
@@ -27,7 +27,9 @@ ms.locfileid: "66075710"
 |--------------|-----------------|  
 |`Enabled`|Determina l'eventuale abilitazione della gerarchia per la dimensione del cubo.|  
 |`HierarchyID`|Contiene l'identificatore univoco (ID) della gerarchia.|  
-|`OptimizedState`|Determina il livello di ottimizzazione applicato alla gerarchia. I possibili valori della proprietà sono i seguenti:<br /><br /> `FullyOptimized`: L'istanza compila indici per la gerarchia allo scopo di migliorare le prestazioni di esecuzione delle query. Rappresenta il valore predefinito.<br /><br /> `NotOptimized`: L'istanza non compila indici aggiuntivi.|  
+|`OptimizedState`|Determina il livello di ottimizzazione applicato alla gerarchia. I possibili valori della proprietà sono i seguenti:<br /><br /> 
+  `FullyOptimized`: l'istanza compila indici per la gerarchia allo scopo di migliorare le prestazioni delle query. Si tratta del valore predefinito.<br /><br /> 
+  `NotOptimized`: l'istanza non compila indici aggiuntivi.|  
 |`Visible`|Determina la visibilità della gerarchia del cubo. Il valore predefinito è `True`.|  
   
 ## <a name="see-also"></a>Vedere anche  

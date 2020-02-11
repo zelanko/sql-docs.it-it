@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83476172dc43e99394dd1c5d5a71f3d835f47f10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097125"
 ---
-# <a name="editionname-property-wmi-msreportserverinstance"></a>Proprietà EditionName (MSReportServer_Instance WMI)
+# <a name="editionname-property-wmi-msreportserver_instance"></a>Proprietà EditionName (MSReportServer_Instance WMI)
   Restituisce il nome leggibile dell'edizione del server di report. Di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,7 +39,7 @@ public string EditionName;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_Instance](msreportserver-instance-members.md)  

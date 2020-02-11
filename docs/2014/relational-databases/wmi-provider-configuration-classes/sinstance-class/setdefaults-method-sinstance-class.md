@@ -1,5 +1,5 @@
 ---
-title: Metodo SetDefaults (classe SInstance) | Microsoft Docs
+title: Metodo sedefaults (classe SInstance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720943"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Metodo SetDefaults (classe SInstance)
-  Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere dati esistenti.  
+  Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
- Un' [classe SInstance](sinstance-class.md) oggetto che rappresenta un'istanza del server.  
+ *oggetto*  
+ Oggetto della [classe SInstance](sinstance-class.md) che rappresenta un'istanza del server.  
   
 #### <a name="parameters"></a>Parametri  
   
@@ -52,9 +52,9 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754459"
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
@@ -36,7 +36,7 @@ ms.locfileid: "62754459"
 > [!NOTE]  
 >  Per registrare i database in più istanze del server, dopo aver terminato il controllo dei database desiderati per un'istanza del server, fare clic su **Applica**, quindi selezionare un'altra istanza del server.  
   
- **Connect**  
+ **Connettere**  
  Per specificare nuove credenziali per l'istanza del server, fare clic su **Connetti** e stabilire la connessione usando le nuove credenziali. Durante la connessione a un'istanza del server, Monitoraggio mirroring del database visualizza il messaggio **In attesa di dati**.  
   
  **Database con mirroring**  
@@ -46,7 +46,7 @@ ms.locfileid: "62754459"
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: Per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring**, selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione**.|  
+|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  
 |**Ruolo corrente**|Ruolo del mirroring corrente del database, Principale o Mirror, sull'istanza del server selezionata.|  
 |**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** sono le stringhe visualizzate tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
@@ -64,6 +64,6 @@ ms.locfileid: "62754459"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

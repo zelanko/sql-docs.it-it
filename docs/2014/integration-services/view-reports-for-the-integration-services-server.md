@@ -1,5 +1,5 @@
 ---
-title: Visualizzare i report per il Server Integration Services | Microsoft Docs
+title: Visualizzare i report per il server di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054545"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Visualizzare i report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per semplificare il monitoraggio di progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che sono stati distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Per visualizzare i report per il server Integration Services  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66054545"
     -   **Tutte le connessioni**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
+ [Report per il server di Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
  [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

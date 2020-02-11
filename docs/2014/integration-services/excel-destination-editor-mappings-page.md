@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione Excel (pagina Mapping) | Microsoft Docs
+title: Editor destinazione Excel (pagina mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059178"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Editor destinazione Excel (pagina Mapping)
@@ -42,7 +42,7 @@ ms.locfileid: "66059178"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor destinazione Excel &#40;pagina Output degli errori&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
+ [Editor destinazione Excel &#40;pagina output degli errori&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

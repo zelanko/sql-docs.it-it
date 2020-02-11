@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058185"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
@@ -32,7 +32,7 @@ ms.locfileid: "66058185"
   
  Poiché non sono previste limitazioni, durante la progettazione dei pacchetti figlio è possibile inserire qualsiasi funzionalità nei pacchetti. Se tuttavia il pacchetto deve accedere a dati, è necessario verificare che il server in cui viene eseguito il pacchetto abbia accesso a tali dati.  
   
- Per identificare il pacchetto padre che esegue i pacchetti figlio, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fare clic con il pulsante destro del mouse sul pacchetto in Esplora soluzioni e quindi scegliere **Pacchetto punto di ingresso**.  
+ Per identificare il pacchetto padre che esegue i pacchetti figlio, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fare clic con il pulsante destro del mouse sul pacchetto in Esplora soluzioni, quindi scegliere **Pacchetto punto di ingresso**.  
   
  Terminata la progettazione dei pacchetti figlio è necessario distribuirli nei server remoti.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66058185"
   
 -   Esportazione di pacchetti tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Distribuzione di pacchetti compilando un'utilità di distribuzione per il progetto contenente i pacchetti da distribuire, quindi esecuzione dell'Installazione guidata pacchetti per installare i pacchetti nel file system o in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [pacchetto di distribuzione &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Distribuzione di pacchetti compilando un'utilità di distribuzione per il progetto contenente i pacchetti da distribuire, quindi esecuzione dell'Installazione guidata pacchetti per installare i pacchetti nel file system o in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [distribuzione di pacchetti &#40;&#41;SSIS ](packages/legacy-package-deployment-ssis.md).  
   
  È necessario ripetere la distribuzione su tutti i server remoti che si desidera utilizzare.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058185"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Debug dei processi di SQL Server Agent e dei pacchetti figlio  
  Per il test dei processi di SQL Server Agent e dei relativi pacchetti figlio è possibile utilizzare uno dei metodi seguenti:  
   
--   Eseguire ogni pacchetto figlio in Progettazione SSIS, scegliendo **Debug** / **Avvia senza eseguire debug**.  
+-   Esecuzione di ogni pacchetto figlio in Progettazione SSIS, facendo clic su **debug** / **Avvia senza eseguire debug**.  
   
 -   Eseguire ogni singolo processo di SQL Server Agent sul relativo computer remoto, tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per verificare che il pacchetto venga eseguito.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058185"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), su andyleonard.blog.  
+-   Intervento sul Blog relativo a [SSIS: accesso alle variabili in un pacchetto padre](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)in andyleonard. Blog.  
   
--   Articolo [attività Esegui pacchetto](../integration-services/control-flow/execute-package-task.md).  
+-   Articolo, [attività Esegui pacchetto](../integration-services/control-flow/execute-package-task.md).  
   
   

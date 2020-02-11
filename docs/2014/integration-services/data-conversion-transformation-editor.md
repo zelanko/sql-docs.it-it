@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione conversione dati | Microsoft Docs
+title: Editor trasformazione Conversione dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060047"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
   Usare la finestra di dialogo **Editor trasformazione Conversione dati** per selezionare le colonne da convertire e i tipi di dati in cui convertire la colonna e impostare gli attributi di conversione.  
   
 > [!NOTE]  
->  Il `FastParse` proprietà delle colonne di output della trasformazione conversione dati non è disponibile nel **Editor trasformazione conversione dati**, ma può essere impostata utilizzando la **Editor avanzato**. Per altre informazioni su questa proprietà, vedere la sezione relativa alla trasformazione Conversione dati in [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md).  
+>  La `FastParse` proprietà delle colonne di output della trasformazione Conversione dati non è disponibile nell' **Editor trasformazione Conversione dati**, ma può essere impostata tramite il **Editor avanzato**. Per altre informazioni su questa proprietà, vedere la sezione relativa alla trasformazione Conversione dati in [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md).  
   
  Per sapere di più sulla trasformazione conversione dati, vedere [Trasformazione Conversione dati](data-flow/transformations/data-conversion-transformation.md).  
   
@@ -42,19 +42,19 @@ ms.locfileid: "66060047"
  **Tipo di dati**  
  Consente di selezionare un tipo di dati disponibile nell'elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
   
- **Lunghezza**  
+ **Length**  
  Consente di selezionare la lunghezza della colonna per dati di tipo stringa.  
   
- **Precisione**  
+ **Precision**  
  Consente di impostare la precisione per dati numerici.  
   
- **Scala**  
+ **Scalabilità**  
  Consente di impostare la scala per dati numerici.  
   
  **Tabella codici**  
  Consente di selezionare la tabella codici appropriata per le colonne di tipo DT_STR.  
   
- **Configura output errori**  
+ **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Vedere anche  

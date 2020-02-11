@@ -1,5 +1,5 @@
 ---
-title: Collegamenti nella sicurezza dell'integrazione CLR | Microsoft Docs
+title: Collegamenti nella sicurezza dell'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781070"
 ---
 # <a name="links-in-clr-integration-security"></a>Collegamenti nella sicurezza per l'integrazione con CLR
@@ -32,7 +32,7 @@ ms.locfileid: "62781070"
  I collegamenti di accesso alle tabelle corrispondono al recupero o alla modifica dei valori in una tabella, una visualizzazione o una funzione con valori di tabella. Sono simili ai collegamenti di chiamata, con l'eccezione che dispongono di un controllo di accesso con granularità fine per le autorizzazioni SELECT, INSERT, UPDATE e DELETE.  
   
 ## <a name="gated-links"></a>Collegamenti controllati  
- I collegamenti controllati indicano che durante l'esecuzione non viene effettuato il controllo delle autorizzazioni all'interno della relazione tra gli oggetti stabilita. Quando è presente un collegamento controllato tra due oggetti (ad esempio, di oggetti **x** e l'oggetto **y**), le autorizzazioni sull'oggetto **y** e altri oggetti accessibili dall'oggetto **y** vengono controllati solo al momento della creazione dell'oggetto **x**. Al momento della creazione dell'oggetto **x**, `REFERENCE` autorizzazione viene controllata nel **y** per il proprietario di **x**. In fase di esecuzione (ad esempio, quando un utente chiama oggetto **x**), non sono disponibili autorizzazioni confrontate **y** o altri oggetti cui fa riferimento in modo statico. In fase di esecuzione, un'autorizzazione appropriata verrà controllata con l'oggetto **x** stesso.  
+ I collegamenti controllati indicano che durante l'esecuzione non viene effettuato il controllo delle autorizzazioni all'interno della relazione tra gli oggetti stabilita. Quando è presente un collegamento gestito tra due oggetti (ad esempio, l'oggetto **x** e l'oggetto **y**), le autorizzazioni per l'oggetto **y** e altri oggetti a cui si accede dall'oggetto **y** vengono controllate solo in fase di creazione dell'oggetto **x**. Al momento della creazione dell'oggetto **x**, `REFERENCE` l'autorizzazione viene controllata in **y** sul proprietario di **x**. In fase di esecuzione, ad esempio quando un utente chiama l'oggetto **x**, non vengono controllate le autorizzazioni per **y** o altri oggetti a cui fa riferimento in modo statico. In fase di esecuzione, verrà verificata un'autorizzazione appropriata per l'oggetto **x** stesso.  
   
  I collegamenti controllati vengono sempre utilizzati con la dipendenza dei metadati tra due oggetti. Tale dipendenza è una relazione stabilita nei cataloghi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che impedisce che un oggetto venga eliminato finché un altro oggetto dipende da questo.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066695"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
@@ -43,10 +43,10 @@ ms.locfileid: "66066695"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="what"></a> Vantaggi  
+##  <a name="what"></a>Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantità|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
@@ -54,9 +54,9 @@ ms.locfileid: "66066695"
   
  Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Si tratta dell'approccio usato nei *database relazionali* come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>Clienti  
   
-|[CustomerID]|Nome|EMail|  
+|[CustomerID]|Nome|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -68,9 +68,9 @@ ms.locfileid: "66066695"
 |1|.05|  
 |2|0,10|  
   
-### <a name="orders"></a>Orders  
+### <a name="orders"></a>Ordini  
   
-|[CustomerID]|OrderID|OrderDate|Prodotto|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Prodotto|Quantità|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|07/01/2010|Compact Digital|11|  
 |1|255|03/01/2010|SLR Camera|15|  
@@ -98,7 +98,7 @@ ms.locfileid: "66066695"
   
  Nella tabella seguente sono riportate le relazioni tra le tre tabelle:  
   
-|Relazione|Type|colonna di ricerca|colonna|  
+|Relazione|Type|colonna di ricerca|Colonna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno-a-uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno-a-molti|Customers.CustomerID|Orders.CustomerID|  
@@ -106,13 +106,13 @@ ms.locfileid: "66066695"
 ### <a name="relationships-and-performance"></a>Relazioni e prestazioni  
  Dopo aver creato una relazione, Progettazione modelli richiede generalmente il ricalcolo delle formule in cui sono usate le colonne provenienti dalle tabelle della relazione appena creata. L'elaborazione può richiedere del tempo, a seconda della quantità di dati e della complessità delle relazioni.  
   
-##  <a name="requirements"></a> Requisiti per le relazioni  
+##  <a name="requirements"></a>Requisiti per le relazioni  
  Progettazione modelli prevede che vengano rispettati diversi requisiti durante la creazione di relazioni:  
   
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Non è possibile creare una relazione tra le tabelle \<tabella 1 > e \<la tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \*Relazione: tabella [colonna 1]-> tabella [colonna 2]-stato: errore-motivo: Impossibile creare una relazione tra le tabelle \<tabella 1> e \<tabella 2>. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   
@@ -137,8 +137,8 @@ ms.locfileid: "66066695"
   
  Se si desidera creare una relazione tra due tabelle in Progettazione modelli e sono presenti più colonne che consentono di definire le chiavi primarie ed esterne, è necessario combinare i valori per creare una singola colonna chiave prima di creare la relazione. Tale operazione può essere effettuata prima di importare i dati oppure in Progettazione modelli creando una colonna calcolata.  
   
-###  <a name="bkmk_many_to_many"></a> Relazioni molti-a-molti  
- I modelli tabulari non supportano relazioni molti-a-molti e non è possibile aggiungere semplicemente *tabelle di collegamento* in Progettazione modelli. È tuttavia possibile usare funzioni DAX per modellare relazioni molti-a-molti.  
+###  <a name="bkmk_many_to_many"></a>Relazioni molti-a-molti  
+ I modelli tabulari non supportano relazioni molti-a-molti e non è possibile aggiungere semplicemente *tabelle di collegamento* in Progettazione modelli. È tuttavia possibile utilizzare funzioni DAX per modellare relazioni molti-a-molti.  
   
 ### <a name="self-joins-and-loops"></a>Self-join e cicli  
  I self-join non sono consentiti nelle tabelle del modello tabulare. Un self-join è una relazione ricorsiva tra una tabella e se stessa. I self-join vengono spesso utilizzati per definire gerarchie padre-figlio. Ad esempio, è possibile unire una tabella Employees a se stessa in modo da creare una gerarchia che mostra la catena di gestione di un'azienda.  
@@ -153,7 +153,7 @@ ms.locfileid: "66066695"
   
  Se si tenta di creare una relazione che comporterebbe la creazione di un ciclo, viene generato un errore.  
   
-##  <a name="detection"></a> Inferenza delle relazioni  
+##  <a name="detection"></a>Inferenza delle relazioni  
  In alcuni casi, le relazioni tra le tabelle vengono concatenate automaticamente. Se ad esempio si crea una relazione tra i primi due set di tabelle indicati di seguito, viene dedotta l'esistenza di una relazione tra le altre due tabelle e viene stabilita automaticamente una relazione.  
   
  Products e Category -- creata manualmente  
@@ -164,20 +164,20 @@ ms.locfileid: "66066695"
   
  Affinché relazioni vengano concatenate automaticamente, le relazioni devono andare in una direzione, come riportato in precedenza. Se le relazioni iniziali erano tra, ad esempio, Sales e Products e Sales e Customers, la relazione non viene dedotta. Ciò avviene perché la relazione tra Products e Customers è una relazione molti-a-molti.  
   
-##  <a name="bkmk_detection"></a> Rilevamento di relazioni durante l'importazione di dati  
+##  <a name="bkmk_detection"></a>Rilevamento di relazioni durante l'importazione di dati  
  Quando si importano dati da una tabella dell'origine dati relazionale, l'Importazione guidata tabella rileva le relazioni esistenti in tali tabelle di origine basate sui dati dello schema di origine. Se vengono importate tabelle correlate, tali relazioni verranno duplicate nel modello.  
   
-##  <a name="bkmk_manually_create"></a> Creazione manuale di relazioni  
+##  <a name="bkmk_manually_create"></a>Creazione manuale di relazioni  
  Sebbene la maggior parte delle relazioni tra tabelle in una singola origine dati relazionale vengano rilevate automaticamente e create nel modello tabulare, vi sono casi in cui le relazioni tra le tabelle del modello devono essere create manualmente.  
   
  Se il modello contiene dati da più origini, è probabile che le relazioni debbano essere create manualmente. È ad esempio possibile importare le tabelle Customers, CustomerDiscounts e Orders da un'origine dati relazionale. Le relazioni esistenti tra queste tabelle all'origine vengono create automaticamente nel modello. È quindi possibile aggiungere un'altra tabella da un'origine diversa, ad esempio, importare dati dell'area da una tabella Geography in una cartella di lavoro di Microsoft Excel. È quindi possibile creare manualmente una relazione tra una colonna nella tabella Customers e una colonna nella tabella Geography.  
   
  Per creare manualmente relazioni in un modello tabulare, è possibile utilizzare Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Nella Vista diagramma sono visualizzate le tabelle, con le relative relazioni, in formato grafico. È possibile fare clic su una colonna in una tabella e trascinare il cursore in un'altra tabella per creare facilmente una relazione, nell'ordine corretto, tra le tabelle. Nella finestra di dialogo Gestisci relazioni vengono visualizzate relazioni tra tabelle in un formato tabella semplice. Per istruzioni sulla creazione manuale di relazioni, vedere [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
-##  <a name="bkmk_dupl_errors"></a> Valori duplicati e altri errori  
+##  <a name="bkmk_dupl_errors"></a>Valori duplicati e altri errori  
  Se si sceglie una colonna che non può essere utilizzata nella relazione, accanto alla colonna viene visualizzata una X rossa. È possibile passare il cursore sull'icona di errore per visualizzare un messaggio in cui sono contenute ulteriori informazioni sul problema. Di seguito sono riportati alcuni dei problemi che possono impedire la creazione di una relazione tra le colonne selezionate:  
   
-|Problema o messaggio|Soluzione|  
+|Problema o messaggio|Risoluzione|  
 |------------------------|----------------|  
 |Impossibile creare la relazione perché in entrambe le colonne selezionate sono contenuti valori duplicati.|Per creare una relazione valida, in almeno una colonna della coppia selezionata devono essere contenuti solo valori univoci.<br /><br /> È possibile modificare le colonne per rimuovere i duplicati o invertire l'ordine delle colonne in modo che la colonna in cui sono contenuti i valori univoci venga usata come **Colonna di ricerca correlata**.|  
 |Nella colonna è presente un valore Null o vuoto.|Non è possibile creare un join tra le colonne di dati in base a un valore Null. In entrambe le colonne utilizzate in una relazione deve essere presente un valore per ogni riga.|  

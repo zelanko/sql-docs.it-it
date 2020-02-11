@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39dd8c4f333df1528f3894ffc6dfe01a48a91f2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065020"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Creare una sessione Eventi estesi utilizzando la finestra di dialogo Nuova sessione
@@ -31,7 +31,7 @@ ms.locfileid: "66065020"
   
  La [Creazione guidata nuova sessione](../ssms/object/object-explorer.md) consente anche di definire una sessione di eventi estesi che supporta la maggior parte delle funzionalità degli eventi estesi.  
   
-## <a name="before-you-begin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a>Operazioni preliminari  
  Per aprire la finestra di dialogo Nuova sessione, in Esplora oggetti espandere il nodo **Gestione** , quindi espandere **Eventi estesi**. Fare clic con il pulsante destro del mouse su **Sessioni**, quindi scegliere **Nuova sessione**.  
   
 ##  <a name="BeforeYouBegin"></a> Autorizzazioni  
@@ -58,7 +58,7 @@ ms.locfileid: "66065020"
   
 6.  Nella sezione **Rilevamento causalità** selezionare la casella di controllo **Tenere traccia della correlazione degli eventi** per tenere traccia del lavoro in più attività.  
   
-     Per altre informazioni sul rilevamento della causalità, vedere "Contenuto e caratteristiche della sessione" nel [sessioni eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md) argomento.  
+     Per ulteriori informazioni sul rilevamento della causalità, vedere "contenuto e caratteristiche della sessione" nell'argomento [SQL Server di sessioni degli eventi estesi](../relational-databases/extended-events/sql-server-extended-events-sessions.md) .  
   
      Per aggiungere eventi alla sessione, fare clic su **Eventi** nella sezione **Selezione pagina**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66065020"
   
 -   **event_file**. Consente di scrivere l'output della sessione eventi restituito dai buffer di memoria completi su disco.  
   
--   **histogram**. Consente di calcolare il numero di volte in cui si verifica un evento specificato, in base a un'azione o una colonna di evento specificata.  
+-   **istogramma**. Consente di calcolare il numero di volte in cui si verifica un evento specificato, in base a un'azione o una colonna di evento specificata.  
   
 -   **pair_matching**. Consente di determinare quando un evento associato specificato non si verifica in un set corrispondente.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "66065020"
      Gli eventi contengono diversi campi che vengono sempre raccolti e che sono visualizzati nella scheda **Campi evento** senza caselle di controllo. Un evento può disporre anche di campi facoltativi che non vengono raccolti per impostazione predefinita. I campi facoltativi con costo elevato non sono ad esempio selezionati. I campi facoltativi sono elencati anche nella scheda **Campi evento** con le caselle di controllo. Per raccogliere un campo facoltativo, selezionare la casella di controllo corrispondente.  
   
     > [!NOTE]  
-    >  Nelle opzioni del campo evento verranno visualizzati i campi che saranno acquisiti e visualizzati nei risultati della traccia. Tramite gli eventi estesi vengono visualizzati solo i tipi di dati dei campi evento. I campi evento di sola lettura non vengono ad esempio visualizzati. Se si selezionano due o più eventi, nella finestra di dialogo Nuova sessione viene visualizzato uno spazio vuoto nella scheda **Campi evento**.  
+    >  Nelle opzioni del campo evento verranno visualizzati i campi che saranno acquisiti e visualizzati nei risultati della traccia. Tramite gli eventi estesi vengono visualizzati solo i tipi di dati dei campi evento. I campi evento di sola lettura non vengono ad esempio visualizzati. Se si selezionano due o più eventi, nella finestra di dialogo Nuova sessione viene visualizzato uno spazio vuoto nella scheda **Campi evento** .  
   
 5.  Per aggiungere destinazioni a una sessione eventi, selezionare **Archivio dati** nella sezione **Selezione pagina**.  
   
@@ -161,12 +161,12 @@ ms.locfileid: "66065020"
   
     |Destinazione|Proprietà destinazione|  
     |------------|-----------------------|  
-    |**etw_classic_sync_target**|**Nome del file di log sessione sul server**. Immettere il nome e la directory del file di log nel server oppure fare clic su **Sfoglia** per trovare e selezionare il file di log.<br /><br /> **Dimensioni massime file di log**. Immettere le dimensioni massime del file di log per l'evento ETW (Event Tracing for Windows, Analisi eventi per Windows). Il valore predefinito è 20 megabyte (MB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Dimensioni buffer**. Immettere le dimensioni del buffer in memoria per la sessione eventi. Il valore predefinito è 128 kilobyte (KB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Nome sessione**. Immettere un nome di sessione ETW significativo.<br /><br /> **Riprova in caso di errore durante la scrittura di ETW**. Selezionare questa casella di controllo se si desidera che venga eseguito un nuovo tentativo di pubblicazione dell'evento nel sottosistema ETW.<br /><br /> **Numero massimo di tentativi**. Immettere il numero massimo di volte per cui si desidera che venga eseguito un nuovo tentativo di pubblicazione dell'evento nel sottosistema ETW prima di eliminare l'evento. Il numero di tentativi predefinito è zero (0). Per questa proprietà di destinazione, il valore zero (0) indica che non viene eseguito alcun tentativo.|  
+    |**etw_classic_sync_target**|**Nome del file di log della sessione nel server**. Immettere il nome e la directory del file di log nel server oppure fare clic su **Sfoglia** per trovare e selezionare il file di log.<br /><br /> **Dimensioni massime del file di log**. Immettere le dimensioni massime del file di log per l'evento ETW (Event Tracing for Windows, Analisi eventi per Windows). Il valore predefinito è 20 megabyte (MB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Dimensioni del buffer**. Immettere le dimensioni del buffer in memoria per la sessione eventi. Il valore predefinito è 128 kilobyte (KB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Nome della sessione**. Immettere un nome di sessione ETW significativo.<br /><br /> **Riprovare a scrivere errori in ETW**. Selezionare questa casella di controllo se si desidera che venga eseguito un nuovo tentativo di pubblicazione dell'evento nel sottosistema ETW.<br /><br /> **Numero massimo di tentativi**. Immettere il numero massimo di volte per cui si desidera che venga eseguito un nuovo tentativo di pubblicazione dell'evento nel sottosistema ETW prima di eliminare l'evento. Il numero di tentativi predefinito è zero (0). Per questa proprietà di destinazione, il valore zero (0) indica che non viene eseguito alcun tentativo.|  
     |**event_counter**|Non vi sono proprietà di destinazione per il contatore eventi.|  
-    |**event_file**|**Nome file sul server**. Immettere la directory e il nome del file di destinazione nel server oppure fare clic su **Sfoglia** per trovare e selezionare il file di destinazione.<br /><br /> **Dimensioni massime file**. Specificare le dimensioni massime del file per la destinazione file. Se non si specifica un valore massimo, le dimensioni del file aumenteranno fino a quando il disco non è pieno. Le dimensioni predefinite del file sono di 1 gigabyte (GB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Consenti rollover dei file**. Selezionare questa casella di controllo per abilitare il rollover dei file per la destinazione file.<br /><br /> **Numero massimo di file**. Immettere il numero massimo di file che si desidera mantenere nel file system.|  
-    |**histogram**|**Evento in base a cui filtrare**. Selezionare l'evento in base al quale si desidera applicare il filtro nell'elenco a discesa. È possibile applicare un filtro in base a qualsiasi evento incluso nella sessione eventi. È anche possibile selezionare  **\<None >** nell'elenco di riepilogo a discesa per includere tutti gli eventi e i bucket di base sull'azione.<br /><br /> **Bucket di base in: Azione**. Selezionare questa opzione per basare i bucket sul nome dell'azione utilizzato come origine dati, quindi selezionare l'azione nell'elenco a discesa.<br /><br /> **Bucket di base in: Campo**. Selezionare questa opzione per basare i bucket sul campo evento utilizzato come origine dati, quindi selezionare il campo nell'elenco a discesa.<br /><br /> **Numero massimo di bucket**. Immettere il numero massimo di bucket che si desidera mantenere. Quando questo valore viene raggiunto, nella sessione eventi vengono ignorati i nuovi eventi che non appartengono ai bucket esistenti.|  
-    |**pair_matching**|**Eventi: Iniziare con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento iniziale in una sequenza associata.<br /><br /> **Eventi: Terminare con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento finale in una sequenza associata.<br /><br /> **Campi e azioni: Iniziare con**. Selezionare nell'elenco a discesa il campo e/o l'azione iniziale in una sequenza associata.<br /><br /> **Campi e azioni: Terminare con**. Selezionare nell'elenco a discesa il campo e/o l'azione finale in una sequenza associata.<br /><br /> **Elimina nuovi eventi non associati in caso di memoria insufficiente**. Selezionare questa casella di controllo per interrompere la raccolta di eventi nella destinazione pair_matching quando vi è un utilizzo eccessivo della memoria del computer. La raccolta di eventi riprenderà non appena viene liberata memoria.<br /><br /> **Numero massimo di eventi orfani**. Specificare il numero massimo di eventi orfani che si desidera mantenere in memoria.|  
-    |**ring_buffer**|**Numero di eventi da mantenere**. Utilizzare le frecce rivolte verso l'alto e verso il basso per specificare il numero di eventi che si desidera mantenere. Il valore predefinito è 1000.<br /><br /> **Dimensioni massime memoria buffer**. Immettere la quantità massima di memoria che può essere utilizzata. Quando questo valore viene raggiunto, gli eventi esistenti vengono eliminati. Il valore predefinito per le dimensioni della memoria è 0 megabyte (MB), che indica dimensioni illimitate. È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Mantenere un numero specificato di eventi (per tipo) quando il buffer è pieno**. Selezionare questa opzione per mantenere il numero specificato di eventi di ogni tipo nel buffer.<br /><br /> **Numero di eventi da mantenere (per tipo)** . Immettere il numero desiderato di eventi di ogni tipo da mantenere nel buffer.|  
+    |**event_file**|**Nome file nel server**. Immettere la directory e il nome del file di destinazione nel server oppure fare clic su **Sfoglia** per trovare e selezionare il file di destinazione.<br /><br /> **Dimensioni massime del file**. Specificare le dimensioni massime del file per la destinazione file. Se non si specifica un valore massimo, le dimensioni del file aumenteranno fino a quando il disco non è pieno. Le dimensioni predefinite del file sono di 1 gigabyte (GB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Abilitare il rollover dei file**. Selezionare questa casella di controllo per abilitare il rollover dei file per la destinazione file.<br /><br /> **Numero massimo di file**. Immettere il numero massimo di file che si desidera mantenere nel file system.|  
+    |**istogramma**|**Evento da filtrare**. Selezionare l'evento in base al quale si desidera applicare il filtro nell'elenco a discesa. È possibile applicare un filtro in base a qualsiasi evento incluso nella sessione eventi. È anche possibile selezionare ** \<None>** dall'elenco a discesa per includere tutti gli eventi e i bucket di base sull'azione.<br /><br /> **Bucket di base in: azione**. Selezionare questa opzione per basare i bucket sul nome dell'azione utilizzato come origine dati, quindi selezionare l'azione nell'elenco a discesa.<br /><br /> **Bucket di base in: campo**. Selezionare questa opzione per basare i bucket sul campo evento utilizzato come origine dati, quindi selezionare il campo nell'elenco a discesa.<br /><br /> **Numero massimo di bucket**. Immettere il numero massimo di bucket che si desidera mantenere. Quando questo valore viene raggiunto, nella sessione eventi vengono ignorati i nuovi eventi che non appartengono ai bucket esistenti.|  
+    |**pair_matching**|**Eventi: iniziare con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento iniziale in una sequenza associata.<br /><br /> **Eventi: termina con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento finale in una sequenza associata.<br /><br /> **Campi e azioni: iniziare con**. Selezionare nell'elenco a discesa il campo e/o l'azione iniziale in una sequenza associata.<br /><br /> **Campi e azioni: termina con**. Selezionare nell'elenco a discesa il campo e/o l'azione finale in una sequenza associata.<br /><br /> **Elimina i nuovi eventi non associati se si verifica**un numero eccessivo di richieste di memoria. Selezionare questa casella di controllo per interrompere la raccolta di eventi nella destinazione pair_matching quando vi è un utilizzo eccessivo della memoria del computer. La raccolta di eventi riprenderà non appena viene liberata memoria.<br /><br /> **Numero massimo di eventi orfani**. Specificare il numero massimo di eventi orfani che si desidera mantenere in memoria.|  
+    |**ring_buffer**|**Numero di eventi da contenere**. Utilizzare le frecce rivolte verso l'alto e verso il basso per specificare il numero di eventi che si desidera mantenere. Il valore predefinito è 1000.<br /><br /> **Dimensioni massime memoria buffer**. Immettere la quantità massima di memoria che può essere utilizzata. Quando questo valore viene raggiunto, gli eventi esistenti vengono eliminati. Il valore predefinito per le dimensioni della memoria è 0 megabyte (MB), che indica dimensioni illimitate. È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Mantiene un numero specificato di eventi (per tipo) quando il buffer è pieno**. Selezionare questa opzione per mantenere il numero specificato di eventi di ogni tipo nel buffer.<br /><br /> **Numero di eventi da memorizzare (per tipo)**. Immettere il numero desiderato di eventi di ogni tipo da mantenere nel buffer.|  
   
 5.  Per impostare le proprietà di configurazione avanzate, selezionare **Avanzate** nella sezione **Selezione pagina** .  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66065020"
   
     2.  **Perdita di più eventi**. Selezionare questa opzione per consentire la perdita di più eventi.  
   
-    3.  **Perdita di nessun evento**. Selezionare questa opzione se si desidera impedire la perdita di eventi. Questa opzione non è consigliata.  
+    3.  **Nessuna perdita di eventi**. Selezionare questa opzione se si desidera impedire la perdita di eventi. Questa opzione non è consigliata.  
   
         > [!NOTE]  
         >  Alcuni eventi, ad esempio l'evento **sqlos.wait_info** , non sono compatibili con la modalità di memorizzazione **Perdita di nessun evento** .  
@@ -200,7 +200,7 @@ ms.locfileid: "66065020"
   
 6.  Per specificare le opzioni di **Modalità partizione di memoria** per la sessione eventi, procedere come segue:  
   
-    1.  **None**. Selezionare questa opzione se non si desidera una modalità di partizione di memoria.  
+    1.  **Nessuno**. Selezionare questa opzione se non si desidera una modalità di partizione di memoria.  
   
     2.  **Per nodo**. Selezionare questa opzione se si desidera partizionare la memoria per nodo.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66065020"
  Per ripristinare i valori predefiniti della configurazione per le proprietà della sessione precedente, fare clic su **Ripristina impostazioni predefinite**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una sessione eventi estesi utilizzando l'Editor di Query](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
+ [Creare una sessione eventi estesi tramite l'editor di query](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
  [Creare una sessione eventi estesi utilizzando la procedura guidata &#40;Esplora oggetti&#41;](../ssms/object/object-explorer.md)   
  [Creare uno script per una sessione Eventi estesi](../../2014/database-engine/script-an-extended-event-session.md)  
   

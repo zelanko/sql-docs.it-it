@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797747"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico (Gruppi di disponibilità AlwaysOn)
@@ -31,7 +31,7 @@ ms.locfileid: "72797747"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Limitations"></a> Limitazioni sui failover automatici  
+###  <a name="Limitations"></a>Limitazioni sui failover automatici  
   
 -   Affinché si verifichi un failover automatico, la replica primaria corrente e una replica secondaria devono essere configurate per la modalità di disponibilità con commit sincrono e failover automatico e la replica secondaria deve essere sincronizzata con quella primaria.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "72797747"
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
   
-2.  Per un nuovo gruppo di disponibilità, usare l'istruzione [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] . Se si modifica un gruppo di disponibilità esistente, usare l'istruzione [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+2.  Per un nuovo gruppo di disponibilità, usare l'istruzione [create Availability Group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Se si modifica un gruppo di disponibilità esistente, utilizzare l'istruzione [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
-    -   Per impostare il livello di condizione del failover, utilizzare l'opzione FAILURE_CONDITION_LEVEL = *n* dove *n* è un intero da 1 a 5.  
+    -   Per impostare il livello di condizione del failover, usare l'opzione FAILURE_CONDITION_LEVEL = *n* dove *n* è un numero intero da 1 a 5.  
   
          Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente modifica il livello di condizione di errore di un gruppo di disponibilità esistente, `AG1`, nel livello uno:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72797747"
   
          La relazione di questi valori interi con i livelli di condizione di errore è la seguente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valore|Level|Il failover automatico viene avviato...|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)]Valore|Level|Il failover automatico viene avviato...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|In caso di server inaccessibile. Il servizio SQL Server viene arrestato a causa di un failover o un riavvio.|  
         |2|Due|In caso di mancata risposta del server. Viene soddisfatta qualsiasi condizione di valore inferiore, il servizio SQL Server è connesso al cluster e viene superata la soglia di Timeout controllo integrità o la replica primaria corrente si trova in uno stato di errore.|  
@@ -93,7 +93,7 @@ ms.locfileid: "72797747"
   
 2.  Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityGroup`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityGroup`.  
   
-    -   Per impostare il livello di condizione del failover, usare il parametro `FailureConditionLevel`*Level* , dove *Level* è uno dei valori seguenti:  
+    -   Per impostare il livello di condizione del failover, `FailureConditionLevel`usare il parametro *Level* , dove *Level* è uno dei valori seguenti:  
   
         |valore|Level|Il failover automatico viene avviato...|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "72797747"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Per impostare la soglia di timeout controllo integrità, usare il parametro `HealthCheckTimeout`*n* , dove *n* è un numero intero compreso tra 15000 millisecondi (15 secondi) e 4294967295 millisecondi. Il valore predefinito è 30000 millisecondi (30 secondi).  
+    -   Per impostare la soglia di timeout controllo integrità, usare `HealthCheckTimeout`il parametro *n* , dove *n* è un numero intero compreso tra 15000 millisecondi (15 secondi) e 4294967295 millisecondi. Il valore predefinito è 30000 millisecondi (30 secondi).  
   
          Ad esempio, il comando seguente modifica la soglia di Timeout controllo integrità di un gruppo di disponibilità esistente, `AG1`, in 120.000 millisecondi (due minuti).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "72797747"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Visualizzazione della Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Visualizzare la Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
- [Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
- [Failover e modalità &#40;di failover&#41; gruppi di disponibilità AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modalità di disponibilità (Gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Failover e modalità di failover &#40;Gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [Windows Server failover clustering &#40;&#41; WSFC con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Criteri di failover per le istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
+ [sp_server_diagnostics &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  

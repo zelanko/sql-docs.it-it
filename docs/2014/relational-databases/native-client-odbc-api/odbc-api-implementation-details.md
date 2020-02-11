@@ -1,5 +1,5 @@
 ---
-title: I dettagli di implementazione di API ODBC | Microsoft Docs
+title: Dettagli di implementazione dell'API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62715088"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   In questa sezione vengono illustrate le funzioni ODBC che presentano comportamenti specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utilizzate con il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. In questa sede non vengono trattate tutte le funzioni ODBC. Nei singoli argomenti vengono descritti solo problemi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per una funzione ODBC. Tali argomenti non costituiscono un riferimento esaustivo per le funzioni ODBC.  
   
- Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51 e, se si utilizza Windows 7 SDK, alla specifica ODBC 3.8. Per un riferimento completo di ODBC, visualizzare il [riferimento per programmatori ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51 e, se si utilizza Windows 7 SDK, alla specifica ODBC 3.8. Per un riferimento ODBC completo, vedere la documentazione online [di ODBC Programmer ' s Reference](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [SQLBindCol](sqlbindcol.md)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62715088"
 -   [SQLTables](sqltables.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client &#40;ODBC&#41; riferimento](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+ [SQL Server Native Client &#40;riferimento&#41; ODBC](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [Compilazione di applicazioni con SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

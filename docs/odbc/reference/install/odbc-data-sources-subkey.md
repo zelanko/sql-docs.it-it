@@ -15,24 +15,24 @@ ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71207684"
 ---
 # <a name="odbc-data-sources-subkey"></a>Sottochiave origini dati ODBC
 
-I valori `ODBC Data Sources` nella sottochiave elencano le origini dati. Il formato di questi valori è illustrato nella tabella seguente.
+I valori nella `ODBC Data Sources` sottochiave elencano le origini dati. Il formato di questi valori è illustrato nella tabella seguente.
 
-| Nome | Tipo di dati | Data |
+| Nome | Tipo di dati | data |
 | :--- | :-------- | :--- |
-| *nome origine dati* | REG_SZ | *driver-description* |
+| *nome origine dati* | REG_SZ | *Driver-Descrizione* |
 | &nbsp; | &nbsp; | &nbsp; |
 
 Il valore del *nome dell'origine dati* è definito dal programma di amministrazione (che in genere richiede l'utente) e *driver-Description* viene definito dallo sviluppatore del driver (si tratta in genere del nome del DBMS associato al driver).
 
-Si supponga, ad esempio, che siano state definite tre origini dati: Inventario, che usa SQL Server; Payroll, che usa dBASE; e il personale, che usa file di testo formattato. I valori nella `ODBC Data Sources` sottochiave potrebbero essere i seguenti:
+Si supponga, ad esempio, che siano state definite tre origini dati: Inventory, che usa SQL Server; Payroll, che usa dBASE; e il personale, che usa file di testo formattato. I valori nella `ODBC Data Sources` sottochiave potrebbero essere i seguenti:
 
 ```console
 Inventory : REG_SZ : SQL Server

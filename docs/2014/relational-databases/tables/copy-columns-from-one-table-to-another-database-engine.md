@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736354"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
   In questo argomento viene illustrato come copiare colonne di una tabella a un'altra copiando solo la definizione di colonna oppure la definizione e i dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62736354"
   
      [Sicurezza](#Security)  
   
--   **Per copiare le colonne tramite:**  
+-   **Per eseguire l'intimidazione delle colonne, utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62736354"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736354"
      Se si sta effettuando la copia di righe all'interno di una stessa tabella, sarà possibile aggiungere la tabella di origine come tabella di destinazione.  
   
     > [!NOTE]  
-    >  In**Progettazione query** non è possibile stabilire in anticipo le tabelle e le viste da aggiornare. Pertanto, nell'elenco delle tabelle nella finestra di dialogo **Scegliere la tabella di destinazione per Accodamento** sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che potrebbero non essere valide come tabelle o viste di destinazione.  
+    >  **Progettazione query** non è in grado di determinare in anticipo quali tabelle e viste è possibile aggiornare. Pertanto, nell'elenco delle tabelle nella finestra di dialogo **Scegliere la tabella di destinazione per Accodamento** sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che potrebbero non essere valide come tabelle o viste di destinazione.  
   
 5.  Fare clic con il pulsante destro del mouse nel corpo del riquadro Diagramma, quindi scegliere **Aggiungi tabella a diagramma**dal menu di scelta rapida.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "62736354"
   
      Se non si specifica alcuna condizione di ricerca, tutte le righe della tabella di origine verranno copiate nella tabella di destinazione.  
   
-10. Se si desidera copiare le informazioni di riepilogo, specificare le opzioni di **raggruppamento** . Per i dettagli, vedere [Riepilogare o aggregare valori per tutte le righe di una tabella &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
+10. Se si desidera copiare le informazioni di riepilogo, specificare le opzioni **di raggruppamento** . Per i dettagli, vedere [Riepilogare o aggregare valori per tutte le righe di una tabella &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
   
 11. Scegliere il pulsante **Esegui SQL** per eseguire la query.  
   
-     Quando si esegue una query di accodamento, non viene restituito alcun risultato nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Viene invece visualizzato un messaggio che indica il numero di righe copiate.  
+     Quando si esegue una query di Accodamento, non viene restituito alcun risultato nel [riquadro risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Viene invece visualizzato un messaggio che indica il numero di righe copiate.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   

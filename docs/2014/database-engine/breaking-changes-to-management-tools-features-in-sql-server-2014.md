@@ -1,5 +1,5 @@
 ---
-title: Modifiche di rilievo alla gestione delle funzionalità degli strumenti in SQL Server 2014 | Microsoft Docs
+title: Modifiche di rilievo apportate alle funzionalità degli strumenti di gestione in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787016"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Modifiche di rilievo nelle funzionalità degli strumenti di gestione in SQL Server 2014
@@ -31,12 +31,12 @@ ms.locfileid: "62787016"
 ### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>SMO è stato modificato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  È possibile che il codice sviluppato con SMO da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o versioni precedenti non venga compilato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] senza modifiche minori. Per altre informazioni, vedere [Compatibilità con le versioni precedenti in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
 
-## <a name="previous-versions"></a> Modifiche di rilievo in SQL Server 2005  
+## <a name="previous-versions"></a>Modifiche di rilievo nella SQL Server 2005  
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
- [Informazioni sulle modifiche di rilievo alle funzionalità degli strumenti di gestione in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
+ [Ulteriori informazioni sulle modifiche di rilievo apportate alle funzionalità degli strumenti di gestione in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

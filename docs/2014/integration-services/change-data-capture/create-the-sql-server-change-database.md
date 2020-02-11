@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771367"
 ---
 # <a name="create-the-sql-server-change-database"></a>Creare il database delle modifiche di SQL Server
@@ -35,16 +35,16 @@ ms.locfileid: "62771367"
  **Oracle CDC Instance**  
  Specificare le informazioni seguenti sull'istanza di CDC che si desidera creare.  
   
--   **Nome**: digitare un nome per il nuovo servizio. Sarà anche il nome del nuovo database delle modifiche.  
+-   **Name**: digitare un nome per il nuovo servizio. Sarà anche il nome del nuovo database delle modifiche.  
   
--   **Descrizione**: digitare una descrizione per la nuova istanza che consenta di identificarla. Operazione facoltativa.  
+-   **Description**: digitare una descrizione per la nuova istanza che consenta di identificarla. Operazione facoltativa.  
   
  **SQL Server Change Database**  
  Questa sezione viene utilizzata per creare il database.  
   
-1.  **Modifica database**: nome del nuovo database. Il nome del database equivale al nome specificato per l'istanza. In questo campo di sola lettura viene visualizzato il percorso completo del database.  
+1.  **Change Database**: nome del nuovo database delle modifiche. Il nome del database equivale al nome specificato per l'istanza. In questo campo di sola lettura viene visualizzato il percorso completo del database.  
   
-2.  **Crea database**: fare clic su **Crea database** per creare il database.  
+2.  **Create Database**: fare clic su **Create Database** per creare il database.  
   
      Per creare il database, l'account di accesso deve disporre del ruolo del server `sysasmin` . Per ulteriori informazioni, vedere la nota sulla sicurezza.  
   

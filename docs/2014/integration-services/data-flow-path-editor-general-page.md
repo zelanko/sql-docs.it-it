@@ -1,5 +1,5 @@
 ---
-title: Flusso di dati percorso Editor (pagina generale) | Microsoft Docs
+title: Editor percorso flusso di dati (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059960"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor percorso flusso di dati (pagina Generale)
@@ -27,7 +27,7 @@ ms.locfileid: "66059960"
  Utilizzare il nodo **Generale** della finestra di dialogo **Editor percorso flusso di dati** per assegnare un nome e una descrizione al percorso e per specificare le opzioni relative all'annotazione del percorso.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per il percorso.  
   
  **ID**  
@@ -42,16 +42,16 @@ ms.locfileid: "66059960"
  **PathAnnotation**  
  Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per abilitare le annotazioni su richiesta, **SourceName** per aggiungere automaticamente le annotazioni utilizzando il valore dell'opzione **SourceName** e **PathName** per aggiungere automaticamente le annotazioni utilizzano il valore della proprietà **Nome** .  
   
- **DestinationName**  
+ **Destinazione**  
  Consente di visualizzare l'input corrispondente alla fine del percorso.  
   
  **SourceName**  
  Indica l'output che corrisponde all'inizio del percorso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor percorso flusso di dati &#40;pagina dei metadati&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [Editor percorso flusso di dati &#40;pagina metadati&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flusso di dati](data-flow/data-flow.md)   
- [Usare le annotazioni nei pacchetti](use-annotations-in-packages.md)  
+ [Utilizzo di annotazioni nei pacchetti](use-annotations-in-packages.md)  
   
   

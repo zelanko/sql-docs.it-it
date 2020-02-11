@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103920"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Creare, eliminare o modificare una cartella (Gestione report)
@@ -35,7 +35,7 @@ ms.locfileid: "66103920"
   
      Verrà visualizzata la pagina **Nuova cartella** .  
   
-3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = + , $ / * \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
+3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = +, $/* \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
   
 4.  Se lo si desidera, digitare una descrizione.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "66103920"
 7.  Fare clic su **Applica** per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Nuova cartella &#40;Gestione report&#41;](../new-folder-page-report-manager.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
+ [Pagina nuova cartella &#40;Gestione report&#41;](../new-folder-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

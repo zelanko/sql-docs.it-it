@@ -1,5 +1,5 @@
 ---
-title: Abilitare la registrazione in SQL Server Data Tools di pacchetti | Microsoft Docs
+title: Abilitare la registrazione di pacchetti in SQL Server Data Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059274"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Abilitare la registrazione di pacchetti in SQL Server Data Tools
@@ -43,7 +43,7 @@ ms.locfileid: "66059274"
   
     -   Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]utilizzare una gestione connessione OLE DB. Per altre informazioni, vedere [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md).  
   
-    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../includes/ssis-md.md)] crea automaticamente il registro.  
+    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../includes/ssis-md.md)]crea automaticamente il log.  
   
     -   Per file XML utilizzare una gestione connessione file.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66059274"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;la registrazione&#41; SSIS](performance/integration-services-ssis-logging.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

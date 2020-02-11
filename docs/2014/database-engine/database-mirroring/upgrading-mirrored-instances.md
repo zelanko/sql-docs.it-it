@@ -1,5 +1,5 @@
 ---
-title: Ridurre al minimo i tempi di inattività per i database con mirroring quando si aggiornano le istanze del Server | Microsoft Docs
+title: Ridurre i tempi di inattività per i database con mirroring durante l'aggiornamento delle istanze del server Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754280"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server
-  Durante l'aggiornamento di istanze del server possano [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento sequenza, noto come un *aggiornamento in sequenza*. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza del server che attualmente funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento del primo server principale e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa e dal numero/layout della sessione di mirroring in esecuzione nelle istanze del server da aggiornare.  
+  Quando si aggiornano istanze [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]del server a, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento sequenziale, noto come *aggiornamento in sequenza*. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza del server che attualmente funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento del primo server principale e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa e dal numero/layout della sessione di mirroring in esecuzione nelle istanze del server da aggiornare.  
   
 > [!NOTE]  
->  Per informazioni su come eseguire un aggiornamento in sequenza per installare un service pack o hotfix, vedere [installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Per informazioni sull'esecuzione di un aggiornamento in sequenza per installare un Service Pack o un hotfix, vedere [installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Preparazione consigliata (procedure consigliate)**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62754280"
   
     -   [Failover manuale di una sessione di mirroring del database &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Failover manuale in una sessione di mirroring del database &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   Eseguire [il failover manuale di una sessione di mirroring del Database &#40;&#41;Transact-SQL ](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
     > [!NOTE]  
     >  Per informazioni sul funzionamento del failover manuale, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "62754280"
   
     1.  Eseguire un backup completo di ogni database principale:  
   
-         [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+         [Creare un backup completo del Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
     2.  Eseguire il comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) in ogni database principale.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62754280"
     > [!IMPORTANT]  
     >  Se il server mirror è geograficamente distante dal server principale, un aggiornamento in sequenza potrebbe non essere appropriato.  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Modifica il **modalità operativa** possibilità **protezione elevata senza failover automatico (sincrona)** utilizzando il [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) del **Database Proprietà** nella finestra di dialogo. Per informazioni su come accedere a questa pagina, vedere [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Protezione elevata senza failover automatico (sincrona)** usando la [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database**. Per informazioni su come accedere a questa pagina, vedere [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Impostare la sicurezza della transazione su FULL. Per altre informazioni, vedere [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: impostare la sicurezza della transazione su FULL. Per ulteriori informazioni, vedere [modifica della protezione delle transazioni in una sessione di mirroring del Database &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Per rimuovere un server di controllo del mirroring da una sessione  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62754280"
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Per eseguire l'aggiornamento in sequenza  
   
-1.  Per ridurre al minimo i tempi di inattività, si consiglia quanto segue: Avviare l'aggiornamento in sequenza aggiornando qualsiasi partner di mirroring che è attualmente il server mirror in tutte le sue sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
+1.  Per ridurre al minimo i tempi di inattività, si consiglia di applicare la seguente procedura: avviare l'aggiornamento in sequenza aggiornando qualsiasi server partner di mirroring che è attualmente il server mirror in tutte le sue sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
   
     > [!NOTE]  
     >  Un server di controllo del mirroring può essere aggiornato in qualsiasi punto nel processo di aggiornamento in sequenza. Ad esempio, se un'istanza del server è un server mirror nella sessione 1 e un server di controllo del mirroring nella sessione 2, è possibile aggiornare l'istanza del server.  
@@ -101,14 +101,14 @@ ms.locfileid: "62754280"
   
      L'obiettivo di questo passaggio è consentire a un'altra istanza del server di diventare il server mirror in tutte le sessione di mirroring in cui è un server partner.  
   
-     **Restrizioni dopo l'esecuzione del failover in un'istanza server aggiornata.**  
+     **Restrizioni dopo il failover in un'istanza del server aggiornata.**  
   
      Dopo il failover da un'istanza del server precedente a un'istanza del server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , la sessione del database viene sospesa. Non può essere ripristinata finché l'altro server partner non sarà stato aggiornato. Tuttavia, il server principale continua ad accettare connessioni e a consentire l'accesso ai dati e le modifiche sul database principale.  
   
     > [!NOTE]  
     >  L'avvio di una nuova sessione di mirroring richiede che tutte le istanze server eseguano la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Dopo avere effettuato il failover, è consigliabile eseguire la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal database.  
+3.  Dopo il failover, è consigliabile eseguire il comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) nel database theprincipal.  
   
 4.  Aggiornare ciascuna istanza server che ora è il server mirror in tutte le sessioni di mirroring nelle quali è un server partner. In questa fase potrebbe essere necessario aggiornare più server.  
   
@@ -126,19 +126,19 @@ ms.locfileid: "62754280"
   
 1.  Facoltativamente, tornare alla modalità a elevate prestazioni utilizzando uno dei metodi seguenti:  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Modifica il **modalità operativa** possibilità **prestazioni elevate (asincrona)** utilizzando il [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) del **le proprietà del Database**finestra di dialogo.  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Uso [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)per la protezione delle transazioni è impostata su OFF.  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)per impostare la protezione della transazione su OFF.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Per aggiungere un server di controllo nuovamente in una sessione di mirroring  
   
 1.  Facoltativamente, nella modalità a protezione elevata, ristabilire il server di controllo del mirroring su ciascuna sessione di mirroring.  
   
-     **Per integrare un server di controllo del mirroring**  
+     **Per restituire un server di controllo del mirroring**  
   
     -   [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Aggiungere un server di controllo del mirroring del database utilizzando l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database di ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
@@ -147,8 +147,8 @@ ms.locfileid: "62754280"
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Utilizzo forzato del servizio in una sessione di mirroring del database &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)  
+ [Forzare il servizio in una sessione di mirroring del database &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

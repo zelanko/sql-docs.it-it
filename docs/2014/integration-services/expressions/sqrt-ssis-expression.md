@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768767"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (espressione SSIS)
@@ -37,7 +37,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, SQRT restituirà Null.  
   
  Se l'argomento è un valore negativo, SQRT restituirà un errore.  

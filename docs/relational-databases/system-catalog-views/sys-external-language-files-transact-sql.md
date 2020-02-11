@@ -1,5 +1,5 @@
 ---
-title: Sys.external_language_files (Transact-SQL) - SQL Server | Microsoft Docs
+title: sys. external_language_files (Transact-SQL)-SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -20,34 +20,34 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65995089"
 ---
-# <a name="sysexternallanguagefiles-transact-sql"></a>Sys.external_language_files (Transact-SQL)
+# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa vista del catalogo fornisce un elenco dei file di estensione di linguaggio esterno nel database. **R** e **Python** sono nomi riservati e nessun linguaggio esterno può essere creato con tali nomi specifici.
+Questa vista del catalogo fornisce un elenco dei file di estensione del linguaggio esterno nel database. **R** e **Python** sono nomi riservati e non è possibile creare lingue esterne con questi nomi specifici.
 
-Quando viene creato un linguaggio esterno da un file_spec, l'estensione stessa e le relative proprietà sono elencate in questa visualizzazione. Questa vista contiene una voce per ogni linguaggio, per ogni sistema operativo.
+Quando viene creata una lingua esterna da un file_spec, in questa visualizzazione viene elencata l'estensione stessa e le relative proprietà. Questa vista conterrà una voce per ogni lingua, per sistema operativo.
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
-Sys.external_language_files la vista del catalogo include una riga per ogni estensione del linguaggio esterna nel database. Parametri
+La vista del catalogo sys. external_language_files elenca una riga per ogni estensione del linguaggio esterno nel database. Parametri
 
 |Nome colonna |Tipo di dati | Descrizione|
 |------|------|------|
 |external_language_id |INT | ID della lingua esterna|
-|content|varbinary(max) |Contenuto del file di estensione del linguaggio esterno|
-|file_name|nvarchar(266)|Nome del file di estensione del linguaggio|
-|Piattaforma|TINYINT|ID della piattaforma host in cui è installato SQL Server|
-|platform_desc |nvarchar(60)|Nome della piattaforma dell'host. I valori validi sono 'WINDOWS', 'LINUX'.|
-|parameters|nvarchar(4000)|Linguaggio esterno prameters|
-|environment_variables |nvarchar(4000)|Variabili di ambiente di linguaggio esterno|
+|content|varbinary(max) |Contenuto del file di estensione della lingua esterna|
+|file_name|nvarchar (266)|Nome del file di estensione del linguaggio|
+|Piattaforma|tinyint|ID della piattaforma host in cui è installato SQL Server|
+|platform_desc |nvarchar(60)|Nome della piattaforma host. I valori validi sono ' WINDOWS ',' LINUX '.|
+|Parametri|nvarchar(4000)|Prameters lingua esterna|
+|environment_variables |nvarchar(4000)|Variabili di ambiente della lingua esterna|
 
 ## <a name="see-also"></a>Vedere anche  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
-+ [CREAZIONE DI LINGUAGGIO ESTERNO](../../t-sql/statements/create-external-language-transact-sql.md)  
++ [CREA LINGUA ESTERNA](../../t-sql/statements/create-external-language-transact-sql.md)  

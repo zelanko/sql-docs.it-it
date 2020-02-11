@@ -11,25 +11,25 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: d3b9dca69afecc78a680459caf03d085ef17857e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251335"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant per Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle è uno strumento per la migrazione di database Oracle a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 in Windows e Linux, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 in Windows e Linux e nel database SQL di Azure. SSMA per Oracle converte gli oggetti di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database, crea tali oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi esegue la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle è uno strumento per la migrazione di database [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, 2017 in Windows e [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Linux, 2019 su Windows e Linux e il database SQL di Azure. SSMA per Oracle converte gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database Oracle in oggetti di database, crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tali oggetti in, quindi esegue la migrazione dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dati da Oracle a.  
   
-In questa documentazione viene presentata la SSMA per Oracle e vengono fornite istruzioni dettagliate per la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La tabella seguente illustra gli articoli che consentono di ottenere ulteriori informazioni:  
+In questa documentazione viene presentata la SSMA per Oracle e vengono fornite istruzioni dettagliate per la migrazione dei database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La tabella seguente illustra gli articoli che consentono di ottenere ulteriori informazioni:  
   
 ## <a name="contents"></a>Sommario  
   
 |Sezione|Descrizione|
 |-----------|---------------|
 |[Novità di SSMA per Oracle](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|Novità di questa versione di SSMA per Oracle|  
-|[Installazione di SSMA per &#40;Oracle OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Contiene articoli che forniscono prerequisiti e istruzioni per l'installazione di SSMA per il client Oracle e i componenti necessari nel computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Installazione di SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Contiene articoli che forniscono prerequisiti e istruzioni per l'installazione di SSMA per il client Oracle e i componenti necessari nel computer in cui è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione.|  
 |[Introduzione con SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Introduce l'interfaccia utente, i progetti e le opzioni di configurazione.|  
-|[Migrazione di database Oracle a &#40;SQL Server OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Viene fornita una panoramica del processo di conversione e informazioni dettagliate su ogni passaggio del processo.|  
-|[Riferimento &#40;all'interfaccia utente OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Contiene la documentazione per le finestre di dialogo SSMA per Oracle.|  
+|[Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Viene fornita una panoramica del processo di conversione e informazioni dettagliate su ogni passaggio del processo.|  
+|[Informazioni di riferimento sull'interfaccia utente &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Contiene la documentazione per le finestre di dialogo SSMA per Oracle.|  
 |[Uso di SSMA per la console Oracle](working-with-ssma-for-oracle-console-oracletosql.md)|Contiene la documentazione sull'applicazione console SSMA|  
 |[Recupero di SSMA per l'assistenza Oracle](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fornisce informazioni su come ottenere assistenza aggiuntiva.|  

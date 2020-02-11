@@ -14,26 +14,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779901"
 ---
 # <a name="exclude-files-from-source-control"></a>Esclusione di file dal controllo del codice sorgente
-  Se la soluzione si sta lavorando contiene file che non richiedono servizi di controllo di origine, è possibile usare la **Escludi da controllo del codice sorgente** comando per escludere il file dal controllo del codice sorgente. In questo caso, il file rimarrà nel database di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe ma non verrà più archiviato o estratto con il progetto.  
+  Se la soluzione in uso contiene file che non richiedono servizi di controllo del codice sorgente, è possibile usare il comando **Escludi dal controllo del codice** sorgente per escludere il file dal controllo del codice sorgente. In questo caso, il file rimarrà nel database di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe ma non verrà più archiviato o estratto con il progetto.  
   
- È consigliabile usare la **Escludi da controllo del codice sorgente** comando solo sui file generati. Un file generato è uno che può essere interamente ricreati da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] basata sul contenuto di un altro file nella soluzione.  
+ Usare il comando **Escludi dal controllo del codice sorgente** solo nei file generati. Un file generato è un file che può essere interamente ricreato da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in base al contenuto di un altro file nella soluzione.  
   
 ### <a name="to-exclude-a-file-from-source-control"></a>Per escludere un file dal controllo del codice sorgente  
   
 1.  In Esplora soluzioni selezionare il file che si desidera escludere.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente**e quindi fare clic su **escludere**  *\<nomefile >* **da Controllo del codice sorgente**.  
+2.  Scegliere **controllo del codice sorgente**dal menu **file** , quindi fare clic su **Escludi** * \<nome file>* **dal controllo del codice sorgente**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali di controlli di origine](../../2014/database-engine/source-control-basics.md)   
- [Impostare le opzioni di controllo di origine](../../2014/database-engine/set-source-control-options.md)   
- [Modificare le connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)  
+ [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
+ [Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)   
+ [Modifica delle connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059062"
 ---
 # <a name="execute-package-task-editor"></a>Editor attività Esegui pacchetto
@@ -26,22 +26,22 @@ ms.locfileid: "66059062"
   
  **Per saperne di più**  
   
--   [Aprire l'editor attività Esegui pacchetto](#open)  
+-   [Aprire l'Editor attività Esegui pacchetto](#open)  
   
--   [Impostare le opzioni nella pagina Generale](#general)  
+-   [Impostare le opzioni nella pagina generale](#general)  
   
--   [Impostare le opzioni nella pagina Pacchetto](#package)  
+-   [Impostare le opzioni nella pagina del pacchetto](#package)  
   
--   [Impostare le opzioni nella pagina Associazioni di parametro](#parameter)  
+-   [Impostare le opzioni nella pagina Binding parametro](#parameter)  
   
-##  <a name="open"></a> Aprire l'editor attività Esegui pacchetto  
+##  <a name="open"></a>Aprire l'Editor attività Esegui pacchetto  
   
 1.  Aprire un progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] contenente un'attività Esegui pacchetto.  
   
 2.  Fare clic con il pulsante destro del mouse sull'attività disponibile in Progettazione SSIS, quindi scegliere **Modifica**.  
   
-##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
- **Name**  
+##  <a name="general"></a>Impostare le opzioni nella pagina generale  
+ **Nome**  
  Specificare un nome univoco per l'attività Esegui pacchetto. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "66059062"
  **Descrizione**  
  Digitare una descrizione dell'attività Esegui pacchetto.  
   
-##  <a name="package"></a> Impostare le opzioni nella pagina Pacchetto  
+##  <a name="package"></a>Impostare le opzioni nella pagina del pacchetto  
  **ReferenceType**  
  Selezionare **Riferimento al progetto** per pacchetti figlio inclusi nel progetto. Selezionare **Riferimento esterno** per pacchetti figlio posizionati esternamente al pacchetto  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66059062"
  Se il pacchetto figlio è protetto con password, specificare la password del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) per creare una nuova password per il pacchetto figlio.  
   
  `ExecuteOutOfProcess`  
- Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su `False`, e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su `true`, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su `true`, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](install-windows/install-integration-services.md).  
+ Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su `False`e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su `true`, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su `true`, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Opzioni dinamiche relative a ReferenceType  
   
@@ -69,10 +69,10 @@ ms.locfileid: "66059062"
  **Location**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**SQL Server**|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**File system**|Impostare il percorso sul file system.|  
+|**File System**|Impostare il percorso sul file system.|  
   
  **Connessione**  
  Selezionare il tipo di posizione di archiviazione del pacchetto figlio.  
@@ -90,21 +90,21 @@ ms.locfileid: "66059062"
  **Connessione**  
  Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [Configura gestione connessione OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Argomenti correlati:** [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [configurazione OLE DB gestione connessione](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) e quindi individuare il pacchetto.  
   
 #### <a name="location--file-system"></a>Percorso = File system  
  **Connessione**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Viene visualizzato il nome del pacchetto.  
   
-##  <a name="parameter"></a> Impostare le opzioni nella pagina Associazioni di parametro  
+##  <a name="parameter"></a>Impostare le opzioni nella pagina Binding parametro  
  È possibile passare i valori del pacchetto padre o del progetto al pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre.  
   
  Per informazioni sulla conversione dei progetti nel modello di distribuzione del progetto, vedere [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
@@ -115,7 +115,7 @@ ms.locfileid: "66059062"
  **Parametro o variabile di associazione**  
  Selezionare il parametro o la variabile contenente il valore che si desidera passare al pacchetto figlio.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questa opzione per eseguire il mapping di un parametro o una variabile a un parametro del pacchetto figlio.  
   
  **Rimuovi**  

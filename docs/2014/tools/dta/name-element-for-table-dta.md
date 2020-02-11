@@ -1,5 +1,5 @@
 ---
-title: Nome di elemento per Table (DTA) | Microsoft Docs
+title: Elemento Name per Table (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657246"
 ---
 # <a name="name-element-for-table-dta"></a>Elemento Name per Table (DTA)
@@ -38,7 +38,7 @@ ms.locfileid: "62657246"
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`string`, tra 1 e 255 caratteri.|  
-|**Valore predefinito**|Nessuna.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio. Una volta per ogni elemento `Table`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -46,7 +46,7 @@ ms.locfileid: "62657246"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Table per Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio d'uso, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  

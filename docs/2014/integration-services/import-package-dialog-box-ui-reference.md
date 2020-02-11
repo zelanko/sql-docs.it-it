@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'interfaccia utente della finestra dialogo pacchetto di importazione | Microsoft Docs
+title: Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058075"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto
@@ -37,7 +37,7 @@ ms.locfileid: "66058075"
  **Server**  
  Consente di digitare il nome del server o di selezionarlo nell'elenco.  
   
- **Autenticazione**  
+ **autenticazione**  
  Consente di selezionare l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Questa opzione è disponibile solo se è stato selezionato il percorso di archiviazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -64,7 +64,7 @@ ms.locfileid: "66058075"
 ## <a name="see-also"></a>Vedere anche  
  [Salva copia del pacchetto](../../2014/integration-services/save-copy-of-package.md)   
  [Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Salvataggio di pacchetti](save-packages.md)   
+ [Salvare i pacchetti](save-packages.md)   
  [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

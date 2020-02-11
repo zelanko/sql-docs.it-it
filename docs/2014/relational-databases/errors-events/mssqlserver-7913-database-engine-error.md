@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f15575b5a410fdc2430d4914b3c2bc0456f54158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762306"
 ---
-# <a name="mssqlserver7913"></a>MSSQLSERVER_7913
+# <a name="mssqlserver_7913"></a>MSSQLSERVER_7913
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62762306"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|Testo del messaggio|Correzione: L'extent P_ID è stato deallocato dall'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE).|  
+|Testo del messaggio|Correzione: l'extent P_ID è stato deallocato dall'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Spiegazione  
  Messaggio informativo inviato da REPAIR che indica che un extent è stato deallocato dall'oggetto specificato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

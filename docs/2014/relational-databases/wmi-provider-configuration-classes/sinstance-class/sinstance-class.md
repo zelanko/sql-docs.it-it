@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720992"
 ---
 # <a name="sinstance-class"></a>Classe SInstance
-  Il [classe SInstance](sinstance-class.md) rappresenta un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  La [classe SInstance](sinstance-class.md) rappresenta un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il [classe SInstance](sinstance-class.md) può essere utilizzato per gestire protocolli e librerie associate all'istanza di rete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È inoltre possibile specificare un certificato di sicurezza per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ La [classe SInstance](sinstance-class.md) può essere utilizzata per gestire protocolli e librerie di rete associati all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È inoltre possibile specificare un certificato di sicurezza per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667065"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62667065"
   
 -   Viene utilizzata una tabella con una colonna Identity, ma la colonna non è gestita in modo appropriato.  
   
--   Nella replica di tipo merge questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**; l'errore generato è simile a: Impossibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents'.  
+-   Nella replica di tipo merge questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**. L'errore generato è simile all'errore "Impossibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents'".  
   
 ## <a name="user-action"></a>Azione dell'utente  
  L'azione richiesta dipende dal motivo per il quale è stato generato l'errore:  

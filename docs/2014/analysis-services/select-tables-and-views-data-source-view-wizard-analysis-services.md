@@ -1,5 +1,5 @@
 ---
-title: Selezione tabelle e viste (Creazione guidata vista origine di dati) (Analysis Services) | Microsoft Docs
+title: Selezione tabelle e viste (creazione guidata vista origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069245"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selezione tabelle e viste (Creazione guidata vista origine dati) (Analysis Services)
   La pagina **Selezione tabelle e viste** consente di selezionare le tabelle o le viste dall'origine dati da includere nella vista origine dati.  
   
 ## <a name="options"></a>Opzioni  
- **Oggetti disponibili**  
+ **Available objects**  
  Elenca le tabelle e le viste nello schema dell'origine dei dati. Se è presente più di uno schema, il nome dello schema viene anteposto al nome dei singoli oggetti. Se è presente un solo schema, ai nomi degli oggetti non verrà anteposto il nome dello schema.  
   
  Per riordinare l'elenco in ordine crescente o decrescente, fare clic su **Nome** o **Tipo**.  
   
- **Oggetti inclusi**  
+ **Included objects**  
  Elenca le tabelle e le viste nella vista origine dati.  
   
  Per riordinare l'elenco in ordine crescente o decrescente, fare clic su **Nome** o **Tipo**.  
@@ -38,21 +38,21 @@ ms.locfileid: "66069245"
   
  È possibile includere i caratteri jolly inclusi nella tabella seguente in qualsiasi punto della stringa di filtro.  
   
-|Carattere jolly|Value|  
+|Carattere jolly|valore|  
 |------------------------|-----------|  
 |**\***|Qualsiasi stringa di caratteri|  
 |**%**|Qualsiasi stringa di caratteri|  
 |**?**|Un singolo carattere|  
-|**"** *string* **"**|Una stringa letterale di caratteri. Questo carattere jolly corrisponderà a qualsiasi sottostringa nel nome dell'oggetto.|  
+|**"** *stringa* **"**|Una stringa letterale di caratteri. Questo carattere jolly corrisponderà a qualsiasi sottostringa nel nome dell'oggetto.|  
   
- **Mostra oggetti di sistema**  
+ **Show system objects**  
  Mostra gli oggetti di sistema in **Oggetti disponibili**. Questa opzione è disponibile solo se il provider dell'origine dei dati espone gli oggetti di sistema. Se si rimuove un oggetto di sistema dall'elenco **Oggetti inclusi** , questa opzione viene automaticamente selezionata.  
   
- **Aggiungere tabelle correlate**  
+ **Add related tables**  
  Aggiunge tutte le tabelle correlate a quelle elencate in **Oggetti inclusi**. Questa opzione non consente di aggiungere visualizzazioni, bensì permette di aggiungere tabelle partizionate. Se si seleziona un criterio di corrispondenza dei nomi nella pagina **Corrispondenza nomi** della procedura guidata, questa opzione include anche le tabelle logicamente correlate in base al criterio selezionato. Vengono inoltre incluse le tabelle correlate a nuove tabelle correlate aggiunte e quelle che presentano una struttura identica alla tabella originale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Guida sensibile al contesto della creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

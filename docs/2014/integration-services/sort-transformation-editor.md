@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055489"
 ---
 # <a name="sort-transformation-editor"></a>Editor trasformazione Ordinamento
@@ -30,7 +30,7 @@ ms.locfileid: "66055489"
  **Colonne di input disponibili**  
  Consente di specificare le colonne da ordinare utilizzando le caselle di controllo.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome di ogni colonna di input disponibile.  
   
  **Pass-through**  

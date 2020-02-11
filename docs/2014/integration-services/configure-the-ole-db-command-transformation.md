@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060560"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurazione della trasformazione Comando OLE DB
@@ -72,7 +72,7 @@ ms.locfileid: "66060560"
 15. Per salvare il pacchetto aggiornato, scegliere **Salva** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+ [Trasformazione comando OLE DB](data-flow/transformations/ole-db-command-transformation.md)   
  [Trasformazioni di Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
  [Attività Flusso di dati](control-flow/data-flow-task.md)  

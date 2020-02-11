@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761618"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
   In questo argomento si illustra come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62761618"
   
  Per la creazione di una chiave esterna in una tabella esistente è richiesta l'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Per creare una relazione di chiave esterna in Progettazione tabelle  
   
@@ -79,21 +79,21 @@ ms.locfileid: "62761618"
   
 3.  Nella finestra di dialogo **Relazioni chiavi esterne** fare clic su **Aggiungi**.  
   
-     La relazione verrà visualizzata nell'elenco **Relazione selezionata** con un nome specificato dal sistema nel formato FK_\<*nometabella*>_\<*nometabella*>, dove *nometabella* è il nome della tabella di chiave esterna.  
+     La relazione verrà visualizzata nell' **elenco relazione selezionata** con un nome fornito dal sistema nel formato FK_\<*TableName*>_\<*TableName*>, dove *TableName* è il nome della tabella della chiave esterna.  
   
 4.  Fare clic sulla relazione nell'elenco **Relazione selezionata** .  
   
-5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra e quindi sul pulsante con i puntini di sospensione ( **...** ) a destra della proprietà.  
+5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra e quindi sul pulsante con i puntini di sospensione (**...**) a destra della proprietà.  
   
 6.  Nella finestra di dialogo **Tabelle e colonne** selezionare dall'elenco a discesa **Chiave primaria** la tabella che si troverà sul lato chiave primaria della relazione.  
   
 7.  Nella griglia sottostante selezionare le colonne che contribuiranno alla chiave primaria della tabella. Nella cella adiacente alla sinistra di ciascuna colonna selezionare la corrispondente colonna chiave esterna della tabella di chiave esterna.  
   
-     **Progettazione tabelle** suggerisce automaticamente un nome da assegnare alla relazione. Per specificare un nome diverso, modificare il contenuto della casella di testo **Nome relazione** .  
+     **Progettazione tabelle** suggerisce un nome per la relazione. Per specificare un nome diverso, modificare il contenuto della casella di testo **Nome relazione** .  
   
 8.  Scegliere **OK** per creare la relazione.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Per creare una chiave esterna in una nuova tabella  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62761618"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una chiave esterna nella colonna `TempID` e si fa riferimento alla colonna `SalesReasonID` nella tabella `Sales.SalesReason`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea una chiave esterna nella colonna `TempID` e si fa riferimento alla colonna `SalesReasonID` nella tabella `Sales.SalesReason` .  
   
     ```  
     USE AdventureWorks2012;  

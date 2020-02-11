@@ -18,10 +18,10 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305094"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305094"
   Rimuove tutti i log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent specificati con gli argomenti. Utilizzare questo stored procedure per gestire la tabella **nella sysjobstepslogs** nel database **msdb** .  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,35 +43,35 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] 'job_id'` il numero di identificazione del processo che contiene il log dei passaggi del processo da rimuovere. *job_id* è di **tipo int**e il valore predefinito è null.  
+`[ @job_id = ] 'job_id'`Numero di identificazione del processo che contiene il log dei passaggi del processo da rimuovere. *job_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` il nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'`Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > **Nota:** È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @step_id = ] step_id` il numero di identificazione del passaggio del processo per cui deve essere eliminato il log dei passaggi di processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono eliminati a meno che non vengano specificati **\@older_than** o **\@larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id`Numero di identificazione del passaggio del processo per il quale è necessario eliminare il log dei passaggi del processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono ** \@** eliminati a meno che non vengano specificati older_than o ** \@larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @step_name = ] 'step_name'` il nome del passaggio del processo per il quale è necessario eliminare il log dei passaggi di processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'`Nome del passaggio del processo per cui deve essere eliminato il log dei passaggi del processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > **Nota:** È possibile specificare *step_id* o *step_name* , ma non è possibile specificarli entrambi.  
   
-`[ @older_than = ] 'date'` la data e l'ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia **\@older_than** che **\@larger_than** .  
+`[ @older_than = ] 'date'`Data e ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia ** \@older_than** che ** \@larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'` le dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia **\@larger_than** che **\@older_than** .  
+`[ @larger_than = ] 'size_in_bytes'`Dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia ** \@larger_than** che ** \@older_than** .  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_jobsteplog** si trova nel database **msdb** .  
   
- Se non viene specificato alcun argomento eccetto **\@job_id** o **\@job_name** , vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
+ Se non viene specificato alcun argomento eccetto ** \@job_id** o ** \@job_name** , vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -97,7 +97,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
  Nell'esempio seguente viene rimosso il log relativo al passaggio 2 del processo `Weekly Sales Data Backup`.  
   
 ```  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Stored procedure &#40;di SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [sp_help_jobsteplog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

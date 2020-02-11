@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065875"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensionale  
   
  In un modello di dati multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile incorporare più traduzioni di una didascalia per fornire stringhe specifiche delle impostazioni locali in base all'identificatore LCID. È possibile aggiungere traduzioni per il nome del database, gli oggetti cubo e gli oggetti dimensione del database.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66065875"
  Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo), e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
   
 > [!TIP]  
->  È possibile usare le applicazioni client quali Excel, Management Studio e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per restituire le stringhe tradotte. Per informazioni dettagliate, vedere [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+>  È possibile usare le applicazioni client quali Excel, Management Studio e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per restituire le stringhe tradotte. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>Configurazione di un modello per supportare i membri tradotti  
  Un modello di dati usato in una soluzione multilingue non richiede solo le etichette tradotte (nomi di campo e descrizioni), ma è necessario fornire anche i valori dei dati articolati in vari alfabeti. Per ottenere una soluzione multilingue è necessario che i singoli attributi associati alle colonne in un database esterno restituiscano i dati.  
@@ -45,7 +45,7 @@ ms.locfileid: "66065875"
   
 1.  Aprire il modello multidimensionale Adventure Works nella finestra di progettazione.  
   
-2.  In Esplora soluzioni aprire viste origine dati e fare doppio clic su Adventure Works DW\<versione > DSV.  
+2.  In Esplora soluzioni aprire viste origine dati e fare doppio clic su Adventure Works DW\<versione>. dsv.  
   
 3.  Trovare dimDate, dimProduct, dimProductCategory o dimProductSubcateogry. Tutte queste dimensioni contengono gli attributi dei membri tradotti per mese, giorno della settimana, nome del prodotto, nome della categoria e così via.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66065875"
   
  I formati di data, ora e valuta non vengono implementati tramite le traduzioni. Per fornire in modo dinamico i formati specifici della lingua in base alle impostazioni locali del client, usare la Conversione guidata valuta e la proprietà `FormatString`. Per informazioni dettagliate, vedere [Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) ed [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md) nelle esercitazioni su Analysis Services illustrerà i passaggi per creare e testare le traduzioni.  
+ [Lezione 9: definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md) nella Analysis Services esercitazione illustra i passaggi per creare e testare le traduzioni.  
   
 ## <a name="defining-translations"></a>Definizione di traduzioni  
  La definizione di una traduzione crea un oggetto `Translation` come elemento figlio dell'oggetto cubo, dimensione o database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Usare [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per aprire la soluzione e definire le traduzioni.  
@@ -63,7 +63,7 @@ ms.locfileid: "66065875"
   
 1.  In Esplora soluzioni fare doppio clic sul nome del cubo per aprire Progettazione cubi.  
   
-2.  Fare clic sulla scheda **Traduzioni** . In questa pagina vengono elencati tutti gli oggetti che supportano le traduzioni.  
+2.  Fare clic sulla scheda **traduzioni** . In questa pagina sono elencati tutti gli oggetti che supportano le traduzioni.  
   
 3.  Per ogni oggetto specificare la lingua di destinazione (viene risolta internamente in un LCID), la didascalia tradotta e la descrizione tradotta. L'elenco delle lingue è coerente in Analysis Services, sia che si imposti la lingua del server in Management Studio sia che si aggiunga un override della traduzione per un singolo attributo.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66065875"
   
 1.  In Esplora soluzioni fare doppio clic sul nome della dimensione per aprire Progettazione dimensioni.  
   
-2.  Fare clic sulla scheda **Traduzioni** . In questa pagina sono elencati tutti gli oggetti dimensione che supportano le traduzioni.  
+2.  Fare clic sulla scheda **traduzioni** . In questa pagina sono elencati tutti gli oggetti dimensione che supportano le traduzioni.  
   
      Per ogni oggetto specificare la lingua di destinazione (viene risolta in un LCID), la didascalia tradotta e la descrizione tradotta. L'elenco delle lingue è coerente in Analysis Services, sia che si imposti la lingua del server in Management Studio sia che si aggiunga un override della traduzione per un singolo attributo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66065875"
   
 4.  Compilare e distribuire il progetto.  
   
-5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
+5.  Connettersi al database tramite un'applicazione client, ad esempio Excel, modificando la stringa di connessione in modo da usare l'identificatore delle impostazioni locali. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Aggiungere una traduzione del nome del database  
  A livello di database, è possibile aggiungere le traduzioni per il nome e la descrizione del database. Il nome del database tradotto potrebbe essere visibile nelle connessioni client che specificano l'identificatore LCID della lingua, ma questo dipende dallo strumento. Ad esempio, se si visualizza il database in Management Studio il nome tradotto non sarà visibile anche se si specifica l'identificatore delle impostazioni locali per la connessione. L'API usata da Management Studio per connettersi ad Analysis Services non legge la proprietà `Language`.  
@@ -120,6 +120,6 @@ ms.locfileid: "66065875"
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

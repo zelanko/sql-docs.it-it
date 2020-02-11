@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952422"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
   La pagina **Distribuzione con scalabilità orizzontale** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o di creare un join di un server di report per una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
  Per *server di report inizializzato* si intende un server in grado di crittografare e decrittografare dati riservati archiviati in un database del server di report. Le credenziali archiviate e le stringhe di connessione sono esempi di dati crittografati archiviati nel database. L'inizializzazione è un requisito necessario per il funzionamento del server di report.  
   
- La *distribuzione con scalabilità orizzontale* viene utilizzata negli scenari seguenti:  
+ La *distribuzione con scalabilità orizzontale* viene usata negli scenari seguenti:  
   
 -   Come prerequisito per il bilanciamento del carico di più server di report in un cluster di server. Prima di bilanciare il carico di più server di report, è innanzitutto necessario configurare i server di report per la condivisione dello stesso database del server di report.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "71952422"
   
  Per configurare una distribuzione con scalabilità orizzontale, iniziare con una o più istanze del server di report tutte connesse allo stesso database del server di report. In seguito all'installazione di tutte le istanze, connettersi al primo server di report e quindi utilizzare la pagina Distribuzione con scalabilità orizzontale aggiungere ogni istanza aggiuntiva. Solo un server di report già inizializzato per l'utilizzo di un database può inizializzare nodi aggiuntivi.  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome SQL Server**  
- Consente di specificare il nome dell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report.  
+ **Nome server SQL**  
+ Consente di specificare il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di che ospita il database del server di report.  
   
- **Database Name**  
+ **Nome database**  
  Consente di specificare il nome del database a cui è attualmente connessa l'istanza del server di report.  
   
  **Modalità server**  
@@ -52,7 +52,7 @@ ms.locfileid: "71952422"
  **Istanza**  
  Indica il nome dell'istanza del server di report. Le istanze del server di report sono basate su istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Stato**  
+ **Status**  
  Indica se il server di report è inizializzato o in attesa di essere unito a una distribuzione con scalabilità orizzontale:  
   
 -   Per un server di report autonomo che non fa parte di una distribuzione con scalabilità orizzontale, questa pagina indica che l'istanza del server di report è inizializzata rispetto al relativo database del server di report dedicato. Lo stato è impostato su **Unione eseguita**.  
@@ -73,10 +73,10 @@ ms.locfileid: "71952422"
   
  A scopo cautelativo, accertarsi di creare una copia di backup della chiave simmetrica prima di rimuoverla. Dopo aver rimosso le chiavi di crittografia dell'ultimo server di report dell'elenco, specificare i nuovi requisiti per tutte le successive inizializzazioni del server di report per il database. In base al nuovo requisito, al termine dell'inizializzazione di un server di report è necessario ripristinare una copia di backup della chiave simmetrica. Il ripristino della chiave simmetrica è necessario per accedere ai dati crittografati attualmente archiviati nel database del server di report.  
   
- Se i dati crittografati non sono più necessari o se non si dispone di una copia di backup della chiave, sarà necessario eliminare i dati crittografati. Per altre informazioni, vedere [chiavi &#40;di crittografia&#41;modalità nativa SSRS](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Se i dati crittografati non sono più necessari o se non si dispone di una copia di backup della chiave, sarà necessario eliminare i dati crittografati. Per ulteriori informazioni, vedere [chiavi di crittografia &#40;&#41;modalità nativa SSRS ](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Inizializzare un server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   

@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798197"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  In questo argomento si illustra come impostare opzioni di notifica in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects, in modo che tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia possibile inviare notifiche agli operatori relative ai processi.  
+  In questo argomento viene descritto come impostare le opzioni [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di notifica [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in [!INCLUDE[tsql](../../includes/tsql-md.md)]utilizzando, o SQL Server Management Objects, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che tramite Agent sia possibile inviare notifiche agli operatori relativi ai processi.  
   
  **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per notificare lo stato di un processo a un operatore mediante:**  
+-   **Per notificare lo stato di un processo a un operatore utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -43,14 +43,14 @@ ms.locfileid: "72798197"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Per notificare lo stato di un processo a un operatore  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**e **Processi**, fare clic con il pulsante destro del mouse sul processo che si vuole modificare e scegliere **Proprietà**.  
   
@@ -58,29 +58,29 @@ ms.locfileid: "72798197"
   
 4.  Se si vuole inviare una notifica a un operatore tramite posta elettronica, selezionare la casella **Posta elettronica**, selezionare un operatore nell'elenco e scegliere una delle opzioni seguenti:  
   
-    -   **In caso di esito positivo processo** per inviare la notifica all'operatore se il processo è stato completato correttamente.  
+    -   **Quando il processo riesce** a inviare una notifica all'operatore quando il processo viene completato correttamente.  
   
-    -   **In caso di esito negativo processo** per inviare all'operatore una notifica del completamento non riuscito del processo.  
+    -   **Quando il processo non riesce** a inviare una notifica all'operatore quando il processo non viene completato correttamente.  
   
-    -   **Al termine del processo** per inviare la notifica all'operatore indipendentemente dallo stato di completamento.  
+    -   **Quando il processo viene completato** per notificare l'operatore indipendentemente dallo stato di completamento.  
   
 5.  Se si desidera inviare una notifica a un operatore tramite cercapersone, selezionare la casella **Cercapersone**, selezionare un operatore nell'elenco e quindi scegliere una delle opzioni seguenti:  
   
-    -   **In caso di esito positivo processo** per inviare la notifica all'operatore se il processo è stato completato correttamente.  
+    -   **Quando il processo riesce** a inviare una notifica all'operatore quando il processo viene completato correttamente.  
   
-    -   **In caso di esito negativo processo** per inviare all'operatore una notifica del completamento non riuscito del processo.  
+    -   **Quando il processo non riesce** a inviare una notifica all'operatore quando il processo non viene completato correttamente.  
   
-    -   **Al termine del processo** per inviare la notifica all'operatore indipendentemente dallo stato di completamento.  
+    -   **Quando il processo viene completato** per notificare l'operatore indipendentemente dallo stato di completamento.  
   
 6.  Se si desidera inviare una notifica a un operatore tramite Net Send, selezionare la casella **Net Send**, selezionare un operatore nell'elenco e quindi scegliere una delle opzioni seguenti:  
   
-    -   **In caso di esito positivo processo** per inviare la notifica all'operatore se il processo è stato completato correttamente.  
+    -   **Quando il processo riesce** a inviare una notifica all'operatore quando il processo viene completato correttamente.  
   
-    -   **In caso di esito negativo processo** per inviare all'operatore una notifica del completamento non riuscito del processo.  
+    -   **Quando il processo non riesce** a inviare una notifica all'operatore quando il processo non viene completato correttamente.  
   
-    -   **Al termine del processo** per inviare la notifica all'operatore indipendentemente dallo stato di completamento.  
+    -   **Quando il processo viene completato** per notificare l'operatore indipendentemente dallo stato di completamento.  
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Per notificare lo stato di un processo a un operatore  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72798197"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_notification &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
 ##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per notificare lo stato di un processo a un operatore**  

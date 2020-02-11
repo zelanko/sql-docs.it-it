@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773477"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Specifica di una versione come ultima versione
@@ -28,9 +28,9 @@ ms.locfileid: "62773477"
   
  Per impostare l'ultima versione:  
   
--   **Bloccare una versione**. Quando si blocca una versione del file, le versioni più recenti di quella bloccata non vengono eliminate. È inoltre possibile sbloccare un file bloccato in precedenza. In questo caso, l'ultima versione del file sarà quella archiviata più di recente. Non è tuttavia possibile estrarre un file bloccato.  
+-   **Aggiunta di una versione**. Quando si blocca una versione del file, le versioni più recenti di quella bloccata non vengono eliminate. È inoltre possibile sbloccare un file bloccato in precedenza. In questo caso, l'ultima versione del file sarà quella archiviata più di recente. Non è tuttavia possibile estrarre un file bloccato.  
   
--   **Eseguire il rollback a una versione specificata**. Quando viene eseguito il ripristino di una versione, tutte le versioni più recenti di quella ripristinata verranno eliminate dal controllo del codice sorgente. È possibile quindi estrarre l'ultima versione rimanente.  
+-   **Rollback a una versione specificata**. Quando viene eseguito il ripristino di una versione, tutte le versioni più recenti di quella ripristinata verranno eliminate dal controllo del codice sorgente. È possibile quindi estrarre l'ultima versione rimanente.  
   
 ### <a name="to-pin-a-version"></a>Per bloccare una versione  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62773477"
   
 2.  In Esplora soluzioni selezionare il file che si desidera specificare come ultima versione.  
   
-3.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **ViewHistory**.  
+3.  Scegliere **controllo del codice sorgente** dal menu **file** e fare clic su **ViewHistory**.  
   
-4.  Nel **cronologia delle** \<file > finestra di dialogo, selezionare la versione che si desidera specificare come la versione più recente e fare clic su **Pin**.  
+4.  Nella finestra **di** \<dialogo Cronologia file> selezionare la versione che si desidera specificare come ultima e quindi fare clic su **Aggiungi**.  
   
      Accanto alla versione selezionata viene visualizzato un simbolo di blocco per indicare che si tratta della versione corrente del file. Se in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è caricata una versione diversa, viene chiesto di ricaricare il file.  
   
@@ -50,18 +50,18 @@ ms.locfileid: "62773477"
   
 2.  In Esplora soluzioni selezionare l'elemento che si desidera specificare come ultima versione.  
   
-3.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **cronologia**.  
+3.  Scegliere **controllo del codice sorgente** dal menu **file** e fare clic su **cronologia**.  
   
-4.  Nel **opzioni relative alla cronologia** finestra di dialogo, fare clic su **OK** per visualizzare il **cronologia di File** nella finestra di dialogo.  
+4.  Nella finestra di dialogo **Opzioni cronologia** fare clic su **OK** per visualizzare la finestra **di dialogo Cronologia file** .  
   
-5.  Nel **cronologia** , selezionare la versione che si desidera specificare come la versione più recente e fare clic su **Rollback**.  
+5.  Nella casella **cronologia del file** selezionare la versione che si desidera specificare come ultima versione, quindi fare clic su **rollback**.  
   
      Verrà visualizzato un messaggio che informa che tutte le versioni successive a quella selezionata verranno eliminate.  
   
-6.  Fare clic su **Sì** eseguire il rollback alla versione selezionata.  
+6.  Fare clic su **Sì** per eseguire il rollback alla versione selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)   
+ [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Archiviazione di file](../../2014/database-engine/check-in-files.md)  
   
   

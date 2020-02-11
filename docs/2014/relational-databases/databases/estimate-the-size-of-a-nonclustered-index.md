@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054115"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
@@ -181,7 +181,7 @@ ms.locfileid: "66054115"
   
 5.  Calcolare le dimensioni della riga di indice:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (per l'overhead dell'intestazione di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
+     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (per l'overhead dell'intestazione di riga di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
   
 6.  Calcolare il numero di righe di indice per pagina (8096 byte liberi per pagina):  
   
@@ -189,7 +189,7 @@ ms.locfileid: "66054115"
   
      Poiché le righe di indice non si estendono su più pagine, il numero di righe di indice per pagina deve essere arrotondato alla riga completa più vicina. Il numero 2 nella formula si riferisce alla voce della riga nella matrice di slot della pagina.  
   
-7.  Calcolare il numero di righe libere riservate per pagina, sulla base del [fattore di riempimento](../indexes/specify-fill-factor-for-an-index.md) specificato:  
+7.  Calcolare il numero di righe libere riservate per pagina, in base al [fattore di riempimento](../indexes/specify-fill-factor-for-an-index.md) specificato:  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
@@ -210,19 +210,19 @@ ms.locfileid: "66054115"
   
 1.  Calcolare il numero di livelli non foglia dell'indice:  
   
-     ***I livelli non foglia*** = 1 + log Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Livelli non foglia*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Arrotondare questo valore per eccesso al numero intero più vicino. Nel valore non è incluso il livello foglia dell'indice non cluster.  
   
 2.  Calcolare il numero di pagine non foglia dell'indice:  
   
-     ***Num_Index_Pages*** = ∑ Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>livello</sup>) dove 1 < = Level < = ***livelli***  
+     ***Num_Index_Pages*** = livello di ∑ (<sup>livello</sup>di***Num_Leaf_Pages/Index_Rows_Per_Page***) dove 1 <= livello <= ***livelli***  
   
      Arrotondare ogni addendo al numero intero più vicino. Per un esempio semplice, considerare un indice in cui ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. Nel primo livello dell'indice sopra il livello foglia vengono archiviate 1000 righe di indice, ovvero una riga di indice per pagina foglia, ed è possibile inserire 25 righe di indice per pagina. Per archiviare le 1000 righe di indice, sono quindi necessarie 40 pagine. Nel livello successivo dell'indice devono invece essere archiviate 40 righe, pertanto sono necessarie 2 pagine. Nel livello finale dell'indice devono essere archiviate 2 righe, pertanto è necessaria una sola pagina. Si ottengono quindi 43 pagine di indice non foglia. Se nella formula precedente si utilizzano questi numeri, il risultato sarà il seguente:  
   
-     ***Non leaf Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Non-leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ovvero il numero di pagine descritto nell'esempio.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, ovvero il numero di pagine descritte nell'esempio.  
   
 3.  Calcolare le dimensioni dell'indice (8192 byte totali per pagina):  
   
@@ -253,7 +253,7 @@ ms.locfileid: "66054115"
   
 -   Colonne di tipo sparse  
   
-     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../tables/use-sparse-columns.md).  
+     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Utilizzo di colonne di tipo sparse](../tables/use-sparse-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Descrizione di indici cluster e non cluster.](../indexes/clustered-and-nonclustered-indexes-described.md)   

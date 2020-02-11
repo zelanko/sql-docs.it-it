@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106143"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
@@ -50,13 +50,13 @@ ms.locfileid: "66106143"
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza** .  
   
-2.  Nel riquadro Proprietà espandere la `Padding` nodo, fare clic su **a sinistra**e nell'elenco a discesa, selezionare  **\<espressione... >** .  
+2.  Nel riquadro Proprietà espandere il `Padding` nodo, fare clic su a **sinistra**e nell'elenco a discesa selezionare ** \<espressione... >**.  
   
 3.  Nel riquadro Espressione digitare l'espressione seguente:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione `Level` per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sul `Level` funzione, vedere [livello](report-builder-functions-level-function.md).  
+     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione `Level` per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sulla `Level` funzione, vedere [Level](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

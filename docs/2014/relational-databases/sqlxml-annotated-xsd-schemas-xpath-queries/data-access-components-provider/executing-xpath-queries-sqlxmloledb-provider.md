@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query XPath (Provider SQLXMLOLEDB) | Microsoft Docs
+title: Esecuzione di query XPath (provider SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10539c4eb4a8953a968ea4a6acff1e25e0298aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013101"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di query XPath (provider SQLXMLOLEDB)
@@ -32,7 +32,7 @@ ms.locfileid: "66013101"
   
 -   `Mapping Schema`  
   
- In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un  **\<contatti >** elemento con **ContactID**, **FirstName**, e **LastName** attributi. Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
+ In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un ** \<elemento Contacts>** con gli attributi **ContactID**, **FirstName**e **LastName** . Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -54,14 +54,14 @@ ms.locfileid: "66013101"
 </xsd:schema>  
 ```  
   
- La proprietà dello Schema di Mapping fornisce lo schema di mapping sul quale viene eseguita la query XPath. Tale schema può essere XSD o XDR. La proprietà Path di Base fornisce il percorso del file per lo schema di mapping.  
+ La proprietà Schema di mapping fornisce lo schema di mapping sul quale viene eseguita la query XPath. Tale schema può essere XSD o XDR. La proprietà percorso di base fornisce il percorso del file allo schema di mapping.  
   
- Proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
+ La proprietà ClientSideXML è impostata su true. pertanto il documento XML viene generato sul client.  
   
  Nell'applicazione viene specificata direttamente una query XPath e pertanto è necessario includere il sottolinguaggio XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56}.  
   
 > [!NOTE]  
->  Nel codice è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per altre informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Nel codice è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) per il provider di dati che richiede l'installazione di un software client di rete aggiuntivo. Per ulteriori informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

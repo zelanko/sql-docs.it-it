@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105096"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "66105096"
   
         2.  **Area dati come feed di dati.** Con le autorizzazioni appropriate, un lettore di report può creare un feed di dati ATOM da un'area dati.  
   
--   Usare i caratteri di sottolineatura anziché gli spazi nei nomi dei report. Se si scarica un report da Gestione report, gli spazi vengono sostituiti da caratteri di sottolineatura. Se si usa la funzionalità di download per salvare i report in modalità locale, includendoli quindi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilizzo dei caratteri di sottolineatura consente di preservare le dipendenze del report per i sottoreport e i collegamenti drill-through.  
+-   Utilizzare i caratteri di sottolineatura anziché gli spazi nei nomi dei report. Se si scarica un report da Gestione report, gli spazi vengono sostituiti da caratteri di sottolineatura. Se si usa la funzionalità di download per salvare i report in modalità locale, includendoli quindi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilizzo dei caratteri di sottolineatura consente di preservare le dipendenze del report per i sottoreport e i collegamenti drill-through.  
   
 ##  <a name="Data"></a> Utilizzo dei dati  
   
@@ -158,8 +158,8 @@ ms.locfileid: "66105096"
  La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+ [Generatore report SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)  
+ [Esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md)  
   
   

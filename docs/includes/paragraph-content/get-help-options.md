@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 01525143197146f8d4c34734d7333d651d93b840
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451838"
----
-## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Supporto
+## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Ottenere aiuto
 
 - [UserVoice: suggerimenti per migliorare SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Configurazione e aggiornamento: forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

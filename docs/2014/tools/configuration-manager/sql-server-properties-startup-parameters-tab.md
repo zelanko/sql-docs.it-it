@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679164"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
@@ -69,7 +69,7 @@ ms.locfileid: "62679164"
 > [!CAUTION]  
 >  Alcuni parametri facoltativi possono modificare il comportamento del server e incidere sulle prestazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utilizzo di questa pagina è limitato a utenti che possono modificare le voci correlate nel Registro di sistema. Sono inclusi gli utenti indicati di seguito.  
   
 -   Membri del gruppo Administrators locale.  
@@ -77,6 +77,6 @@ ms.locfileid: "62679164"
 -   Account di dominio utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per essere in esecuzione in un account di dominio.  
   
 ## <a name="books-online-references"></a>Riferimenti della documentazione online  
- Per altre informazioni sui parametri di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Procedura: Configurare le opzioni di avvio Server ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) "in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+ Per informazioni aggiuntive sui parametri di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere "Procedura: Configurazione delle opzioni di avvio del server (Gestione configurazione[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

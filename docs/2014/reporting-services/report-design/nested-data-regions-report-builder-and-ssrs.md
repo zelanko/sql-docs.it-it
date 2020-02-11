@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105514"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Aree dati nidificate (Generatore report e SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105514"
   
  Nell'elenco seguente viene descritto l'ambito per le celle delle aree Tablix seguenti:  
   
--   **Angolo della Tablix** L'ambito comprende i dati dell'area dati collegata all'area dati Tablix dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati e della Tablix esterna.  
+-   **Angolo Tablix** L'ambito è dato dall'area dati collegata all'area dati Tablix dopo l'applicazione delle espressioni di filtro e di ordinamento per il set di dati e la Tablix esterna.  
   
--   **Gruppo di colonne della Tablix** I dati del gruppo di colonne più interno dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di colonne.  
+-   **Gruppo di colonne Tablix** I dati del gruppo di colonne più interno dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di colonne.  
   
--   **Gruppo di righe della Tablix** I dati del gruppo di righe più interno dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di righe.  
+-   **Gruppo di righe Tablix** I dati nel gruppo di righe più interno dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di righe.  
   
--   **Corpo della Tablix** I dati del gruppo di colonne più interno rappresentato dall'intersezione dei gruppi di righe e colonne dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di righe e di colonne.  
+-   **Corpo Tablix** I dati del gruppo più interno rappresentato dall'intersezione dei gruppi di righe e di colonne dopo l'applicazione delle espressioni di filtro e ordinamento del set di dati, della Tablix esterna e dei gruppi di righe e di colonne.  
   
  Per altre informazioni, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Creare le configurazioni di pacchetto | Microsoft Docs
+title: Creazione di configurazioni di pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060172"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  È inoltre possibile accedere a **Libreria configurazioni pacchetto** facendo clic sul pulsante con i puntini di sospensione accanto alla proprietà **Configuration**. Quest'ultima viene visualizzata nella finestra delle proprietà del pacchetto.  
+>  È inoltre possibile accedere a **Libreria configurazioni pacchetto**facendo clic sul pulsante con i puntini di sospensione accanto alla proprietà di **configurazione** . Quest'ultima viene visualizzata nella finestra delle proprietà del pacchetto.  
   
 > [!NOTE]  
->  Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Nella finestra di dialogo **Libreria configurazioni pacchetto** è possibile abilitare l'uso delle configurazione da parte dei pacchetti, aggiungere ed eliminare configurazioni, nonché impostare l'ordine preferito di caricamento delle configurazioni.  
   
@@ -66,28 +66,28 @@ ms.locfileid: "66060172"
   
  "\Package" rappresenta la radice, mentre gli oggetti che definiscono il percorso della proprietà aggiornata dalla configurazione sono separati da punti (.). I nomi di variabili e proprietà sono racchiusi tra parentesi quadre. Il termine Package è sempre utilizzato nella configurazione, indipendentemente dal nome del pacchetto. Per tutti gli altri oggetti inclusi nel percorso vengono tuttavia utilizzati i relativi nomi definiti dall'utente.  
   
- Al completamento della procedura guidata la nuova configurazione viene aggiunta all'elenco delle configurazioni nella finestra di dialogo **Libreria configurazioni pacchetto**.  
+ Al completamento della procedura guidata la nuova configurazione viene aggiunta all'elenco delle configurazioni nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
 > [!NOTE]  
->  Nell'ultima pagina di Configurazione guidata pacchetto, Completamento procedura guidata, sono elencate le proprietà di destinazione presenti nella configurazione. Per aggiornare le proprietà quando i pacchetti vengono eseguiti con l'utilità del prompt dei comandi **dtexec**, è possibile eseguire la Configurazione guidata pacchetto per generare le stringhe che rappresentano i percorsi delle proprietà e quindi copiarle e incollarle nella finestra del prompt dei comandi per usarle con l'opzione set di **dtexec**.  
+>  Nell'ultima pagina di Configurazione guidata pacchetto, Completamento procedura guidata, sono elencate le proprietà di destinazione presenti nella configurazione. Per aggiornare le proprietà quando i pacchetti vengono eseguiti con l'utilità del prompt dei comandi **dtexec** , è possibile eseguire la Configurazione guidata pacchetto per generare le stringhe che rappresentano i percorsi delle proprietà e quindi copiarle e incollarle nella finestra del prompt dei comandi per usarle con l'opzione set di **dtexec**.  
   
  Nella tabella seguente vengono descritte le colonne dell'elenco delle configurazioni visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
-|**Nome configurazione**|Nome della configurazione.|  
-|**Tipo configurazione**|Tipo di configurazione.|  
+|**Nome della configurazione**|Nome della configurazione.|  
+|**Tipo di configurazione**|Tipo di configurazione.|  
 |**Stringa di configurazione**|Posizione della configurazione. La posizione può corrispondere a un percorso, a una variabile di ambiente, a una chiave del Registro di sistema, a un nome di variabile del pacchetto padre oppure a una tabella in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Oggetto di destinazione**|Nome dell'oggetto a cui è associata una proprietà con configurazione. Se la configurazione è un file di configurazione XML, la colonna è vuota in quanto questo tipo di configurazione può aggiornare più oggetti.|  
 |**Proprietà di destinazione**|Nome della proprietà. Se tramite la configurazione si scrive in un file di configurazione XML o in una tabella di SQL Server, la colonna risulta vuota perché la configurazione può aggiornare più oggetti.|  
   
 ### <a name="to-create-a-package-configuration"></a>Per creare una configurazione di pacchetto  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] fare clic sulla scheda **Flusso di controllo**, **Flusso di dati**, **Gestore evento** o **Esplora pacchetti**.  
+3.  In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] fare clic sulla scheda **Flusso di controllo**, **Flusso di dati**, **Gestore evento**o **Esplora pacchetti** .  
   
 4.  Scegliere **Configurazioni pacchetto** dal menu **SSIS**.  
   
@@ -106,19 +106,19 @@ ms.locfileid: "66060172"
   
 10. La configurazione sarà visibile nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-11. Scegliere **Chiudi**.  
+11. Fare clic su **Close**.  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo tecnico [Informazioni sulle configurazioni dei pacchetti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643) sul sito Web msdn.microsoft.com  
+-   Articolo tecnico [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643) (Informazioni sulle configurazioni dei pacchetti di Integration Services) sul sito Web msdn.microsoft.com  
   
--   Intervento nel blog concernente [creazione di pacchetti nel codice, le configurazioni di pacchetto](https://go.microsoft.com/fwlink/?LinkId=217663), su www.sqlis.com.  
+-   Intervento nel Blog sulla [creazione di pacchetti in configurazioni di pacchetti di codice](https://go.microsoft.com/fwlink/?LinkId=217663)in www.sqlis.com.  
   
--   Intervento nel blog concernente [esempio di API: a livello di codice aggiunge un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), su blogs.msdn.com.  
+-   Intervento nel Blog relativo [all'esempio di API: aggiungere a livello di codice un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), in Blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SSIS](../../2014/integration-services/package-configurations.md)   
- [Distribuzione del pacchetto &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
+ [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Utilizzo delle variabili a livello di programmazione](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

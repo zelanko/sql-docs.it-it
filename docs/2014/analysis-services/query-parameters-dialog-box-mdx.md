@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Parametri (MDX) query | Microsoft Docs
+title: Finestra di dialogo parametri query (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070532"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Finestra di dialogo Parametri query (MDX)
@@ -29,7 +29,7 @@ ms.locfileid: "66070532"
  **Dimension**  
  Scegliere una dimensione esistente dall'elenco.  
   
- **Hierarchy**  
+ **Gerarchia**  
  Scegliere una gerarchia dall'elenco, se il parametro viene applicato a una gerarchia specifica.  
   
  **Più valori**  
@@ -38,7 +38,7 @@ ms.locfileid: "66070532"
  **Default**  
  Indicare il valore predefinito per il parametro, se disponibile. Per impostazione predefinita, non è assegnato alcun valore.  
   
- **Altro**  
+ **Altri**  
  Utilizzare il tasto CANC o il pulsante X per rimuovere i parametri non più utilizzati. Utilizzare i tasti di direzione per spostare il parametro evidenziato sopra o sotto nell'elenco. Le regole seguenti si applicano all'ordinamento dei parametri:  
   
 -   Ambito dei parametri.  

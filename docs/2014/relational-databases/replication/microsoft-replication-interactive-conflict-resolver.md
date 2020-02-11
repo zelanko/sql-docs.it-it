@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667283"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Sistema di risoluzione dei conflitti di replica interattivo Microsoft
@@ -32,7 +32,7 @@ ms.locfileid: "62667283"
  **Risoluzione suggerita**  
  Risoluzione suggerita indicata dal sistema di risoluzione dei conflitti per l'articolo.  
   
- **Server di pubblicazione**  
+ **Autore**  
  Il valore di dati nel server di pubblicazione.  
   
  **Sottoscrittore**  

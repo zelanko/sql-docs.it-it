@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704912"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Finestra di dialogo Proprietà facet, pagina Criteri dipendenti
   Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento al facet della gestione basata su criteri.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Indica il nome dei criteri che fanno riferimento al facet corrente.  
   
- **Abilitata**  
+ **Enabled**  
  Un segno di spunta indica che i criteri sono attualmente abilitati. Se i criteri non sono abilitati, questo campo è vuoto.  
   
- **Cronologia**  
+ **History**  
  Fare clic sul collegamento ipertestuale **Visualizza cronologia** per visualizzare il report della cronologia di esecuzione.  
   
- **Data creazione**  
+ **Creato**  
  Data di creazione dei criteri.  
   
 ## <a name="see-also"></a>Vedere anche  

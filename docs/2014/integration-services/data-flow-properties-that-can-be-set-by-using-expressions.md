@@ -1,5 +1,5 @@
 ---
-title: Le proprietà che possono essere impostate utilizzando espressioni del flusso di dati | Microsoft Docs
+title: Proprietà del flusso di dati che possono essere impostate tramite espressioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059935"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
@@ -35,7 +35,7 @@ ms.locfileid: "66059935"
   
  Per specificare un'espressione di proprietà per una delle proprietà degli oggetti del flusso di dati elencate in questo argomento, visualizzare la finestra **Proprietà** per l'attività flusso di dati selezionando l'attività flusso di dati nell'area di progettazione **Flusso di controllo** o selezionando la scheda **Flusso di dati** della finestra di progettazione senza selezionare componenti o percorsi singoli. Selezionare la proprietà **Espressioni** e fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Editor espressioni di proprietà** . Visualizzare l'elenco a discesa **Proprietà** per selezionare una proprietà, quindi digitare un'espressione nella casella di testo **Espressione** o fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Generatore di espressioni** .  
   
- Nell'elenco **Proprietà** vengono visualizzate le proprietà disponibili per gli oggetti del flusso di dati già posizionati nell'area di progettazione **Flusso di dati** . Pertanto, non è possibile usare l'elenco **Proprietà** per visualizzare tutte le possibili proprietà degli oggetti del flusso di dati che supportano le espressioni di proprietà. Ad esempio, se è stata posizionata un'origine ADO NET nell'area di progettazione, il **proprietà** elenco contiene una voce per il `[ADO NET Source].[SqlCommand]` proprietà. Nell'elenco vengono anche visualizzate molte proprietà dell'attività Flusso di dati.  
+ Nell'elenco **Proprietà** vengono visualizzate le proprietà disponibili per gli oggetti del flusso di dati già posizionati nell'area di progettazione **Flusso di dati** . Pertanto, non è possibile usare l'elenco **Proprietà** per visualizzare tutte le possibili proprietà degli oggetti del flusso di dati che supportano le espressioni di proprietà. Se, ad esempio, è stata posizionata un'origine ADO NET nell'area di progettazione, l'elenco delle **Proprietà** contiene una `[ADO NET Source].[SqlCommand]` voce per la proprietà. Nell'elenco vengono anche visualizzate molte proprietà dell'attività Flusso di dati.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Proprietà degli oggetti del flusso di dati che supportano le espressioni Proprietà  
  È possibile specificare i valori delle proprietà del seguente elenco utilizzando le espressioni di proprietà.  
@@ -70,8 +70,8 @@ ms.locfileid: "66059935"
 |----------------------|--------------|  
 |Destinazione ADO NET|Proprietà TableOrViewName<br /><br /> Proprietà BatchSize<br /><br /> Proprietà CommandTimeout|  
 |file flat - destinazione|Proprietà dell'intestazione|  
-|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Proprietà TableName|  
-|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destinazione Compact|Proprietà TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destinazione|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

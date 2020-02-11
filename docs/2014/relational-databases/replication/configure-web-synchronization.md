@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721653"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
@@ -101,7 +101,8 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
  Se si utilizza un server di pubblicazione per la prima volta, è necessario configurare un server di distribuzione e una condivisione snapshot. L'agente di merge in ogni sottoscrittore deve disporre delle autorizzazioni di lettura per la condivisione snapshot. Per altre informazioni, vedere [Configurare la distribuzione](configure-distribution.md) e [Proteggere la cartella snapshot](security/secure-the-snapshot-folder.md).  
   
- `gen` è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate `gen`.  
+ 
+  `gen` è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurazione della sottoscrizione  
  Dopo avere abilitato una pubblicazione e configurato IIS, creare una sottoscrizione pull e specificare che deve essere sincronizzata utilizzando IIS. La sincronizzazione Web è supportata solo per le sottoscrizioni pull.  
@@ -124,7 +125,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato usando il`DownloadGenerationsPerBatch` e -`UploadGenerationsPerBatch` parametri dell'agente di Merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato usando i parametri-`DownloadGenerationsPerBatch` e-`UploadGenerationsPerBatch` del agente di merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
      Per ulteriori informazioni sulle autorizzazioni richieste dagli agenti, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Specificare lo stesso account di dominio utilizzato dall'agente di merge quando si specifica un account e una password nella pagina **Informazioni sul server Web** della Creazione guidata nuova sottoscrizione o quando si specificano i valori per i parametri **@internet_url** e **@internet_login** di [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
+-   Specificare lo stesso account di dominio utilizzato dal agente di merge quando si specifica un account e una password nella pagina **informazioni server Web** della creazione guidata nuova sottoscrizione o quando si specificano i valori per i **@internet_url** parametri **@internet_login** e di [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
 -   Ogni pubblicazione deve utilizzare una directory virtuale separata per IIS.  
   

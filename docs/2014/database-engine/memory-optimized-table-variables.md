@@ -1,5 +1,5 @@
 ---
-title: Le variabili di tabella ottimizzate | Microsoft Docs
+title: Variabili di tabella con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774416"
 ---
 # <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
@@ -36,9 +36,9 @@ ms.locfileid: "62774416"
   
 -   Le variabili di tabella possono essere utilizzate per simulare i cursori in stored procedure compilate in modo nativo, con cui è possibile risolvere le limitazioni della superficie di attacco in stored procedure compilate in modo nativo.  
   
- Come per le tabelle ottimizzate per la memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera una DLL per ogni tipo di tabella ottimizzata per la memoria. (La compilazione viene richiamata quando viene creato il tipo di tabella con ottimizzazione per la memoria e non quando viene utilizzato per creare le variabili di tabella con ottimizzazione per la memoria). La DLL include le funzioni per l'accesso a indici e il recupero dei dati dalle variabili di tabella. Quando una variabile di tabella ottimizzata per la memoria viene dichiarata in base al tipo di tabella, nella sessione utente viene creata un'istanza delle strutture di indice e della tabella corrispondenti al tipo di tabella. La variabile di tabella può quindi essere utilizzata in modo analogo alle variabili di tabella basata su disco. È possibile inserire, aggiornare ed eliminare righe nella variabile di tabella, nonché utilizzare le variabili nelle query di [!INCLUDE[tsql](../includes/tsql-md.md)] . È inoltre possibile passare le variabili alle stored procedure compilate in modo nativo e interpretate, come parametri con valori di tabella.  
+ Come per le tabelle ottimizzate per la memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera una DLL per ogni tipo di tabella ottimizzata per la memoria. La compilazione viene richiamata quando viene creato il tipo di tabella ottimizzata per la memoria e non quando viene utilizzata per creare variabili di tabella ottimizzata per la memoria. Questa DLL include le funzioni per l'accesso agli indici e il recupero dei dati dalle variabili di tabella. Quando una variabile di tabella ottimizzata per la memoria viene dichiarata in base al tipo di tabella, nella sessione utente viene creata un'istanza delle strutture di indice e della tabella corrispondenti al tipo di tabella. La variabile di tabella può quindi essere utilizzata in modo analogo alle variabili di tabella basata su disco. È possibile inserire, aggiornare ed eliminare righe nella variabile di tabella, nonché utilizzare le variabili nelle query di [!INCLUDE[tsql](../includes/tsql-md.md)] . È inoltre possibile passare le variabili alle stored procedure compilate in modo nativo e interpretate, come parametri con valori di tabella.  
   
- L'esempio seguente viene illustrato un tipo di tabella con ottimizzazione per la memoria dall'esempio basato su AdventureWorks OLTP In memoria ([esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
+ L'esempio seguente illustra un tipo di tabella ottimizzata per la memoria dall'esempio di OLTP in memoria basato su AdventureWorks ([SQL Server esempio di OLTP in memoria 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,7 +60,8 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  Nell'esempio viene illustrato che la sintassi dei tipi di tabella ottimizzata per la memoria è simile ai tipi di tabella basati su disco, con le seguenti eccezioni:  
   
--   `MEMORY_OPTIMIZED=ON` indica se il tipo di tabella è ottimizzato per la memoria.  
+-   
+  `MEMORY_OPTIMIZED=ON` indica se il tipo di tabella è ottimizzato per la memoria.  
   
 -   Il tipo deve contenere almeno un indice. Analogamente alle tabelle ottimizzate per la memoria, è possibile utilizzare indici hash e non cluster.  
   

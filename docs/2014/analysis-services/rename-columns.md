@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Rinominare le colonne | Microsoft Docs'
+title: 'Lezione 3: rinominare le colonne | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070323"
 ---
 # <a name="lesson-3-rename-columns"></a>Lezione 3: Rinominare colonne
@@ -23,10 +23,10 @@ ms.locfileid: "66070323"
 > [!IMPORTANT]  
 >  La ridenominazione delle colonne non è necessaria per completare questa esercitazione. Nelle lezioni successive, in particolare in quelle che prevedono la creazione di relazioni e di colonne e misure calcolate utilizzando formule DAX, viene tuttavia fatto riferimento ai nomi descrittivi delle colonne indicati in questa lezione. Se si sceglie di non rinominare le colonne, sarà necessario modificare le formule DAX nelle lezioni 5, 6 e 7 per utilizzare i nomi originali delle colonne di origine forniti in questa lezione.  
   
- Tempo stimato per il completamento della lezione: **20 minuti**  
+ Tempo previsto per il completamento della lezione: **20 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 2: Aggiungere dati](lesson-2-add-data.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 2: Aggiungere dati](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Rinominare colonne  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66070323"
   
      Quando si fa clic su una scheda, tale tabella diventa attiva nella finestra di Progettazione modelli.  
   
-2.  Fare doppio clic il **CustomerKey** colonna nome, quindi digitare `Customer  Id`, quindi premere INVIO.  
+2.  Fare doppio clic sul nome della colonna **CustomerKey** , `Customer  Id`quindi digitare e premere INVIO.  
   
     > [!TIP]  
-    >  È anche possibile rinominare una colonna nel **nome della colonna** proprietà della colonna **proprietà** finestra o nella vista diagramma.  
+    >  È inoltre possibile rinominare una colonna nella proprietà **nome colonna** nella finestra **Proprietà** della colonna o nella vista diagramma.  
   
 3.  Rinominare le colonne rimanenti della tabella **Customer** e le colonne delle tabelle rimanenti, sostituendo il nome di origine con il nome descrittivo:  
   
@@ -55,17 +55,17 @@ ms.locfileid: "66070323"
     |NameStyle|Name Style|  
     |BirthDate|Birth Date|  
     |MaritalStatus|Marital Status|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|Indirizzo di posta elettronica|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|Formazione|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|Phone Number|  
+    |Telefono|Numero di telefono|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66070323"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|Data|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070323"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **Geografia**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
@@ -97,10 +97,10 @@ ms.locfileid: "66070323"
     |StateProvinceName|State Province Name|  
     |CountryRegionCode|Country Region Code|  
     |EnglishCountryRegionName|Country Region Name|  
-    |PostalCode|Postal Code|  
+    |PostalCode|CAP|  
     |SalesTerritoryKey|ID territorio vendita|  
   
-     **Product**  
+     **Prodotto**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "66070323"
     |DaysToManufacture|Days to Manufacture|  
     |ProductLine|Product Line|  
     |Dealer Price|Dealer Price|  
-    |ModelName|Model Name|  
+    |ModelName|Model Name (Nome modello)|  
     |LargePhoto|Large Photo|  
     |EnglishDescription|Descrizione|  
     |StartDate|Product Start Date|  
@@ -134,7 +134,7 @@ ms.locfileid: "66070323"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **Sottocategoria di prodotto**  
+     **Product Subcategory**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070323"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internet Sales**  
+     **Vendite Internet**  
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
@@ -170,7 +170,7 @@ ms.locfileid: "66070323"
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 4: Contrassegna come tabella data](lesson-3-mark-as-date-table.md).  
   
   

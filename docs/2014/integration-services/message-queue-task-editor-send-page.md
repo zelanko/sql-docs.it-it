@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057594"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
@@ -42,10 +42,10 @@ ms.locfileid: "66057594"
  **MessageType**  
  Consente di selezionare il tipo di messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
-|**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
+|**Messaggio variabile**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
 |**Messaggio stringa**|Il messaggio viene archiviato nell'attività Message Queue. La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
   
 ## <a name="messagetype-dynamic-options"></a>Opzioni dinamiche di MessageType  
@@ -58,7 +58,7 @@ ms.locfileid: "66057594"
  **VariableMessage**  
  Digitare i nomi delle variabili o fare clic sui puntini di sospensione **(...)** e quindi selezionare le variabili. Le variabili sono separate da virgole.  
   
- **Argomenti correlati:** Seleziona variabili  
+ **Argomenti correlati:** Selezionare le variabili  
   
 ### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
  **StringMessage**  
@@ -66,8 +66,8 @@ ms.locfileid: "66057594"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Message Queue &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Message Queue &#40;pagina Ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor attività Message Queue &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Message Queue &#40;pagina ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

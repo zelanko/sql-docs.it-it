@@ -1,5 +1,5 @@
 ---
-title: Seleziona variabili | Microsoft Docs
+title: Selezionare le variabili | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055921"
 ---
 # <a name="select-variables"></a>Seleziona variabili
@@ -31,18 +31,18 @@ ms.locfileid: "66055921"
  **Variabili selezionate**  
  Consente di selezionare una o più variabili.  
   
- **Freccia DESTRA**  
+ **Frecce a destra**  
  Consente di spostare le variabili selezionate nell'elenco **Variabili selezionate** .  
   
- **Freccia SINISTRA**  
+ **Frecce sinistre**  
  Consente di spostare nuovamente le variabili selezionate nell'elenco **Variabili disponibili** .  
   
  **Nuova variabile**  
  Consente di creare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività Message Queue](control-flow/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688663"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   Legge una definizione di formato di file di dati dal file di formato specificato.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,17 +52,17 @@ szFormatFile
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
- Dopo aver `bcp_readfmt` legge i valori di formato, effettua le chiamate appropriate a [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
+## <a name="remarks"></a>Osservazioni  
+ Dopo `bcp_readfmt` la lettura dei valori di formato, effettua le chiamate appropriate a [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
   
- Per rendere persistente un file di formato, chiamare [bcp_writefmt](bcp-writefmt.md). Le chiamate a `bcp_readfmt` può fare riferimento ai formati salvati. Per altre informazioni, vedere [bcp_init](bcp-init.md).  
+ Per salvare in modo permanente un file di formato, chiamare [bcp_writefmt](bcp-writefmt.md). Le chiamate `bcp_readfmt` a possono fare riferimento ai formati salvati. Per ulteriori informazioni, vedere [bcp_init](bcp-init.md).  
   
- In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definito dall'utente nei file che possono essere utilizzati dalle `bcp_readfmt`. Per altre informazioni sul **bcp** utilità e la struttura dei **bcp** i file di formato di dati, vedere [l'importazione ed esportazione dei dati &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definiti dall'utente nei file a cui può fare `bcp_readfmt`riferimento. Per ulteriori informazioni sull'utilità **bcp** e sulla struttura dei file di formato dei dati **bcp** , vedere [importazione ed esportazione Bulk di dati &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- Il `BCPDELAYREADFMT` pari al *eOption* parametro dei [bcp_control](bcp-control.md) modifica il comportamento di bcp_readfmt.  
+ Il `BCPDELAYREADFMT` valore del parametro *eOption* di [bcp_control](bcp-control.md) modifica il comportamento di bcp_readfmt.  
   
 > [!NOTE]  
->  Il file di formato è stato prodotto dalla versione 4.2 o versione successiva del **bcp** utilità.  
+>  Il file di formato deve essere stato prodotto dalla versione 4,2 o successiva dell'utilità **bcp** .  
   
 ## <a name="example"></a>Esempio  
   

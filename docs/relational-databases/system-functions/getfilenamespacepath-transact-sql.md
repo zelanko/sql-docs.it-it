@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278338"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
@@ -37,25 +37,25 @@ ms.locfileid: "72278338"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *column-name*  
- Nome di colonna della colonna **FILE_STREAM** varbinary (max) in una tabella FileTable.  
+ *Nome colonna*  
+ Nome della colonna **FILE_STREAM** varbinary (max) in una tabella FileTable.  
   
  Il valore del *nome della colonna* deve essere un nome di colonna valido. Non può essere un'espressione o un valore convertito o di cui sia stato eseguito il cast da una colonna di un altro tipo di dati.  
   
  *is_full_path*  
- Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* può avere uno dei valori seguenti:  
+ Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* possibile avere uno dei valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
+|**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Questo è il valore predefinito|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
   
- *\@Opzione*  
- Espressione Integer che definisce la formattazione del componente server del percorso. *\@Opzione* può avere uno dei valori seguenti:  
+ *\@opzione*  
+ Espressione Integer che definisce la formattazione del componente server del percorso. l'opzione può avere uno dei valori seguenti: * \@*  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Rappresenta il valore predefinito.|  
+|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Restituisce il percorso completo del server, ad esempio:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come chiamare la funzione **GetFileNamespacePath** per ottenere il percorso UNC per un file o una directory in una tabella FileTable.  

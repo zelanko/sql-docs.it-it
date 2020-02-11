@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Creazione di un File danneggiato | Microsoft Docs'
+title: 'Passaggio 2: Creazione di un file danneggiato | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767383"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Passaggio 2: Creazione di un file danneggiato
@@ -28,18 +28,18 @@ ms.locfileid: "62767383"
   
      I dati di esempio sono inclusi nei pacchetti di lezioni di SSIS. Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Passare a [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
-    2.  Fare clic sulla scheda **DOWNLOADS** .  
+    2.  Fare clic sulla scheda **Downloads** .  
   
     3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Usare la ricerca dell'editor di testo e sostituire funzionalità per trovare tutte le istanze del `VEB` e sostituirle con `BAD`.  
+2.  Utilizzare la funzionalità Trova e Sostituisci dell'editor di testo per trovare tutte `VEB` le istanze di e `BAD`sostituirle con.  
   
 3.  Nella stessa cartella degli altri file di dati di esempio, salvare il file modificato come `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Verificare che l'opzione `Currency_BAD.txt` viene salvato nella stessa cartella degli altri file di dati di esempio.  
+    >  Assicurarsi che `Currency_BAD.txt` venga salvato la stessa cartella degli altri file di dati di esempio.  
   
 4.  Chiudere l'editor di testo.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767383"
     >  Il numero 27 è l'ID del componente. Questo valore viene assegnato quando si compila il flusso di dati e può essere diverso da quello nel pacchetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 3: Aggiunta del reindirizzamento del flusso di errore](lesson-4-3-adding-error-flow-redirection.md)  
+ [Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori](lesson-4-3-adding-error-flow-redirection.md)  
   
   

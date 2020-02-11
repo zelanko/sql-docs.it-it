@@ -1,5 +1,5 @@
 ---
-title: DQS Cleansing nella finestra di dialogo Editor trasformazione | Microsoft Docs
+title: Finestra di dialogo Editor trasformazione pulizia DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059422"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Finestra di dialogo Editor trasformazione DQS Cleansing
@@ -47,14 +47,14 @@ ms.locfileid: "66059422"
  **Gestione connessione Data Quality**  
  Consente di selezionare una gestione connessione DQS esistente nell'elenco oppure di crearne una facendo clic sul pulsante **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione DQS Cleansing** . Per altre informazioni, vedere [Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing](#manager).  
   
  **Data Quality Knowledge Base**  
  Selezionare una Knowledge Base DQS esistente per l'origine dati connessa. Per altre informazioni sulla Knowledge Base DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Crittografia connessione**  
- specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il Server DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]DQS e.  
   
  **Domini disponibili**  
  Consente di elencare i domini disponibili per la Knowledge Base selezionata. Esistono due tipi di domini, cioè singoli e composti. In questi ultimi sono contenuti due o più domini singoli.  
@@ -68,7 +68,7 @@ ms.locfileid: "66059422"
   
  Di seguito sono riportati i valori validi:  
   
--   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Rappresenta il valore predefinito.  
+-   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Si tratta del valore predefinito.  
   
 -   **Reindirizza riga**: indica che i dati di input non vengono inseriti nel database di Data Quality Services e che vengono reindirizzati all'output degli errori.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66059422"
  Consente di specificare se restituire dati aggiuntivi ricevuti da un provider di dati di riferimento esistente. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  **Schema dati accodati**  
- Consente di specificare se restituire lo schema dati. Per altre informazioni, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Consente di specificare se restituire lo schema dati. Per ulteriori informazioni, vedere [la pagina relativa alla connessione di un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="manager"></a> Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing  
  **Nome server**  
@@ -126,9 +126,9 @@ ms.locfileid: "66059422"
   
 2.  Fare clic con il pulsante destro sull'area relativa alle connessioni, scegliere **Nuova connessione**e quindi fare clic su **DQS**.  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Applicazione delle regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+ [Applicare le regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9441a002f7c6e7113970bd4fb847f3371fd67909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762058"
 ---
-# <a name="mssqlserver7935"></a>MSSQLSERVER_7935
+# <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762058"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_MISSING_COLUMN|  
-|Testo del messaggio|Errore di tabella: Una directory Filestream che f_id ID esiste per una colonna di ID di oggetto O_ID, ID di indice I_ID, partizione con ID PN_ID, ma tale colonna non esiste nella partizione.|  
+|Testo del messaggio|Errore di tabella: l'ID di directory FileStream F_ID esiste per una colonna dell'ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ma tale colonna non esiste nella partizione.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Durante DBCC CHECKDB è stata trovata una directory FILESTREAM per una colonna nell'oggetto specificato, ma la colonna non è presente nei metadati della partizione corrispondenti.  

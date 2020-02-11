@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057615"
 ---
 # <a name="multicast-transformation-editor"></a>Editor trasformazione Multicast
@@ -35,6 +35,6 @@ ms.locfileid: "66057615"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Trasformazione Suddivisione condizionale](data-flow/transformations/conditional-split-transformation.md)  
+ [Suddivisione condizionale - trasformazione](data-flow/transformations/conditional-split-transformation.md)  
   
   
