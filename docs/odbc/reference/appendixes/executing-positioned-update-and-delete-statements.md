@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di istruzioni di eliminazione e aggiornamento posizionato | Microsoft Docs
+title: Esecuzione di istruzioni Update e Delete posizionate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,51 +16,51 @@ ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913623"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Esecuzione di istruzioni di eliminazione e aggiornamento posizionato
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Dopo che un'applicazione ha recuperato un blocco di dati con **SQLFetchScroll**, può aggiornare o eliminare i dati nel blocco. Per eseguire un aggiornamento posizionato o delete, l'applicazione:  
+ Dopo che un'applicazione ha recuperato un blocco di dati con **SQLFetchScroll**, può aggiornare o eliminare i dati nel blocco. Per eseguire un aggiornamento o un'eliminazione posizionata, l'applicazione:  
   
-1.  Le chiamate **SQLSetPos** per posizionare il cursore sulla riga deve essere aggiornato o eliminato.  
+1.  Chiama **SQLSetPos** per posizionare il cursore sulla riga da aggiornare o eliminare.  
   
-2.  Costruisce un aggiornamento posizionato o istruzione delete con la sintassi seguente:  
+2.  Costruisce un'istruzione Update o DELETE posizionata con la sintassi seguente:  
   
-     **UPDATE** *-nome della tabella*  
+     **Aggiorna** *nome tabella*  
   
-     **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+     **Set** *column-identifier* **=** {*Expression* &#124; **null**}  
   
-     [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
+     **=** [**,** *identificatore di colonna* {*Expression* &#124; **null**}]  
   
-     **WHERE CURRENT OF** *-nome del cursore*  
+     **Where current of** *Cursor-Name*  
   
-     **DELETE FROM** *nome tabella* **WHERE CURRENT OF** *-nome del cursore*  
+     **Elimina da** *nome tabella* in **cui Current of** *Cursor-Name*  
   
-     Il modo più semplice per costruire il **impostata** clausola in un'istruzione di aggiornamento posizionato consiste nell'usare i marcatori di parametro per ogni colonna da aggiornare e usare **SQLBindParameter** da associare al buffer di set di righe per il riga da aggiornare. In questo caso, il tipo di dati C del parametro sarà quello utilizzato per il tipo di dati C del buffer di righe.  
+     Il modo più semplice per costruire la clausola **set** in un'istruzione UPDATE posizionata consiste nell'utilizzare marcatori di parametro per ogni colonna da aggiornare e utilizzare **SQLBindParameter** per associarli ai buffer del set di righe per la riga da aggiornare. In questo caso, il tipo di dati C del parametro sarà uguale al tipo di dati C del buffer del set di righe.  
   
-3.  Consente di aggiornare i buffer di righe per la riga corrente se eseguirlo un'istruzione per gli aggiornamenti posizionati. Dopo aver eseguito correttamente un'istruzione di aggiornamento posizionato, la libreria di cursori copia i valori di ogni colonna nella riga corrente nella relativa cache.  
-  
-    > [!CAUTION]  
-    >  Se l'applicazione non aggiornano correttamente il buffer di set di righe prima di eseguire un'istruzione di aggiornamento posizionato, i dati nella cache non saranno corretto dopo l'esecuzione dell'istruzione.  
-  
-4.  Esegue l'aggiornamento posizionato o istruzione delete tramite un'istruzione diversa rispetto all'istruzione associato al cursore.  
+3.  Aggiorna i buffer del set di righe per la riga corrente se eseguirà un'istruzione UPDATE posizionata. Una volta eseguita correttamente un'istruzione UPDATE posizionata, la libreria di cursori copia i valori di ogni colonna della riga corrente nella relativa cache.  
   
     > [!CAUTION]  
-    >  Il **in cui** clausola costruito dalla libreria di cursori per identificare la riga corrente può non riuscire a identificare tutte le righe, identificare una riga diversa o per identificare più di una riga. Per altre informazioni, vedere [costruzione di istruzioni di eseguire la ricerca](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+    >  Se l'applicazione non aggiorna correttamente i buffer del set di righe prima di eseguire un'istruzione UPDATE posizionata, i dati nella cache non saranno corretti dopo l'esecuzione dell'istruzione.  
   
- Tutti posizionato aggiornamento e istruzioni di eliminazione richiedono un nome di cursore. Per specificare il nome del cursore, un'applicazione chiama **SQLSetCursorName** prima dell'apertura del cursore. Per usare il nome di cursore generato dal driver, un'applicazione chiama **SQLGetCursorName** dopo l'apertura del cursore.  
+4.  Esegue l'istruzione Update o DELETE posizionata utilizzando un'istruzione diversa rispetto all'istruzione associata al cursore.  
   
- Dopo il cursore libreria esegue un aggiornamento posizionato o istruzione delete, la matrice di stato, i buffer di righe e cache gestita dalla libreria di cursori contengono i valori mostrati nella tabella seguente.  
+    > [!CAUTION]  
+    >  La clausola **where** costruita dalla libreria di cursori per identificare la riga corrente può non essere in grado di identificare le righe, identificare una riga diversa o identificare più di una riga. Per ulteriori informazioni, vedere [creazione di istruzioni ricercate](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
-|Istruzione utilizzata|Valore nella matrice di stato riga|Valori in<br /><br /> buffer di righe|Valori in<br /><br /> buffer di cache|  
+ Tutte le istruzioni Update e Delete posizionate richiedono un nome di cursore. Per specificare il nome del cursore, un'applicazione chiama **SQLSetCursorName** prima dell'apertura del cursore. Per utilizzare il nome del cursore generato dal driver, un'applicazione chiama **SQLGetCursorName** dopo l'apertura del cursore.  
+  
+ Dopo che la libreria di cursori ha eseguito un'istruzione Update o DELETE posizionata, la matrice di stato, i buffer dei set di righe e la cache gestiti dalla libreria di cursori contengono i valori indicati nella tabella seguente.  
+  
+|Istruzione utilizzata|Valore nella matrice di stato della riga|Valori in<br /><br /> buffer dei set di righe|Valori in<br /><br /> buffer della cache|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
-|Aggiornamento posizionato|SQL_ROW_UPDATED|Nuovi valori di [1]|Nuovi valori di [1]|  
-|Delete posizionata|SQL_ROW_DELETED|Valori precedenti|Valori precedenti|  
+|Aggiornamento posizionato|SQL_ROW_UPDATED|Nuovi valori [1]|Nuovi valori [1]|  
+|Eliminazione posizionata|SQL_ROW_DELETED|Valori precedenti|Valori precedenti|  
   
- [1] l'applicazione deve aggiornare i valori nei buffer di set di righe prima di eseguire l'istruzione per gli aggiornamenti posizionati. Dopo l'esecuzione dell'istruzione di aggiornamento posizionato, la libreria di cursori copia i valori nei buffer di set di righe per la propria cache.
+ [1] l'applicazione deve aggiornare i valori nei buffer del set di righe prima di eseguire l'istruzione UPDATE posizionata; dopo l'esecuzione dell'istruzione UPDATE posizionata, la libreria di cursori copia i valori nei buffer del set di righe nella relativa cache.

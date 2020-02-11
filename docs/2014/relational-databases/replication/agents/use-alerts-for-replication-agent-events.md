@@ -22,32 +22,33 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210738"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utilizzare gli avvisi per gli eventi degli agenti di replica
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consentono di monitorare gli eventi, ad esempio quelli dell'agente di replica, mediante gli avvisi. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consentono di monitorare gli eventi, ad esempio gli eventi dell'agente di replica, mediante gli avvisi. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
   
  Quando un computer viene configurato come server di distribuzione, vengono installati gli avvisi seguenti:  
   
 |ID del messaggio|Avviso predefinito|Condizione che genera l'avviso|Inserimento di informazioni aggiuntive in msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**Replica: operazione dell'agente riuscita**|La chiusura dell'agente è stata completata correttamente.|Yes|  
-|14151|**Replica: errore dell'agente**|Si è verificato un errore durante la chiusura dell'agente.|Yes|  
-|14152|**Replica: nuovo tentativo dell'agente**|La chiusura dell'agente avviene in seguito al tentativo non riuscito di ripetere un'operazione. In questo caso, l'agente rileva un errore quale la non disponibilità del server, un deadlock, un errore di connessione o un errore di timeout.|Yes|  
+|14150|**Replica: operazione dell'agente riuscita**|La chiusura dell'agente è stata completata correttamente.|Sì|  
+|14151|**Replica: errore dell'agente**|Si è verificato un errore durante la chiusura dell'agente.|Sì|  
+|14152|**Replica: nuovo tentativo dell'agente**|La chiusura dell'agente avviene in seguito al tentativo non riuscito di ripetere un'operazione. In questo caso, l'agente rileva un errore quale la non disponibilità del server, un deadlock, un errore di connessione o un errore di timeout.|Sì|  
 |14157|**Replica: eliminata sottoscrizione scaduta**|La sottoscrizione scaduta è stata eliminata.|No|  
 |20572|**Replica: la sottoscrizione è stata reinizializzata dopo l'errore di convalida**|Il processo di risposta "Reinizializzazione delle sottoscrizioni con errori di convalida dei dati" reinizializza una sottoscrizione correttamente.|No|  
-|20574|**Replica: la convalida dei dati nel Sottoscrittore non è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge non è riuscita.|Yes|  
-|20575|**Replica: la convalida dei dati nel Sottoscrittore è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge ha avuto esito positivo.|Yes|  
+|20574|**Replica: la convalida dei dati nel Sottoscrittore non è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge non è riuscita.|Sì|  
+|20575|**Replica: la convalida dei dati nel Sottoscrittore è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge ha avuto esito positivo.|Sì|  
 |20578|**Replica: arresto dell'agente personalizzato**|||  
-|22815|**Avviso di rilevamento dei conflitti peer-to-peer**|L'agente di distribuzione ha rilevato un conflitto durante il tentativo di applicare una modifica a un nodo peer-to-peer.|Yes|  
+|22815|**Avviso di rilevamento dei conflitti peer-to-peer**|L'agente di distribuzione ha rilevato un conflitto durante il tentativo di applicare una modifica a un nodo peer-to-peer.|Sì|  
   
- In aggiunta a questi avvisi, in Monitoraggio replica è disponibile un set di avvisi relativi allo stato e alle prestazioni. Per altre informazioni, vedere [impostare soglie e avvisi in Monitoraggio replica](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infrastruttura degli avvisi. Per altre informazioni, vedere [Creare un evento definito dall'utente](../../../ssms/agent/create-a-user-defined-event.md).  
+ In aggiunta a questi avvisi, in Monitoraggio replica è disponibile un set di avvisi relativi allo stato e alle prestazioni. Per ulteriori informazioni, vedere [impostare soglie e avvisi nell'infrastruttura di avvisi di monitoraggio replica](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) . Per altre informazioni, vedere [Creare un evento definito dall'utente](../../../ssms/agent/create-a-user-defined-event.md).  
   
- **Per configurare gli avvisi predefiniti della replica**  
+ **Per configurare gli avvisi di replica predefiniti**  
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68210738"
 ### <a name="framework-for-automating-responses"></a>Struttura per le risposte automatiche  
  Quando viene generato un avviso, le informazioni necessarie per comprenderne le causa e determinare l'intervento appropriato in genere sono contenute nel messaggio di avviso stesso. L'analisi di queste informazioni può essere soggetta a errori e richiedere tempi lunghi. La replica semplifica l'automatizzazione delle risposte grazie alla specifica di informazioni aggiuntive sull'avviso nella tabella di sistema **sysreplicationalerts** . Le informazioni fornite sono già analizzate in un formato facilmente utilizzabile in programmi personalizzati.  
   
- Se, ad esempio, i dati della tabella **Sales.SalesOrderHeader** nel Sottoscrittore A non vengono convalidati, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene attivato il messaggio di avviso 20574 per avvisare l'utente dell'errore. Il messaggio visualizzato sarà: "Sottoscrittore 'A', sottoscrizione articolo 'SalesOrderHeader' della pubblicazione 'MyPublication' non ha superato la convalida dei dati."  
+ Se, ad esempio, i dati della tabella **Sales.SalesOrderHeader** nel Sottoscrittore A non vengono convalidati, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene attivato il messaggio di avviso 20574 per avvisare l'utente dell'errore. Il messaggio visualizzato sarà il seguente: "La sottoscrizione del Sottoscrittore 'A' dell'articolo 'SalesOrderHeader' della pubblicazione 'MyPublication' non ha superato la convalida dei dati".  
   
  Se si crea una risposta in base al messaggio, è necessario analizzare in modo manuale il nome del Sottoscrittore, il nome dell'articolo, il nome della pubblicazione e l'errore indicato nel messaggio. Poiché, tuttavia, l'agente di distribuzione e l'agente di merge scrivono le stesse informazioni nella tabella di sistema **sysreplicationalerts** , il processo di risposta può ricavare le informazioni appropriate direttamente dalla tabella, insieme a dettagli quali il tipo di agente, l'ora di attivazione dell'avviso, il database di pubblicazione, il database del Sottoscrittore e il tipo di pubblicazione. Sebbene non sia possibile associare la riga esatta a un'istanza specifica dell'avviso, la tabella include una colonna **status** che consente di tenere traccia delle voci elaborate. Le voci di questa tabella sono disponibili per l'intero periodo di memorizzazione della cronologia.  
   
@@ -89,6 +90,6 @@ deallocate hc
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](replication-agent-administration.md)   
  [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
- [Monitoraggio &#40;replica&#41;](../monitoring-replication.md)  
+ [Monitoraggio &#40;&#41;di replica](../monitoring-replication.md)  
   
   

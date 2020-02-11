@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493981"
 ---
 # <a name="browsing-the-deployed-cube"></a>Esplorazione di un cubo distribuito
@@ -22,7 +22,7 @@ ms.locfileid: "69493981"
   
 ### <a name="to-browse-the-deployed-cube"></a>Per esplorare il cubo distribuito  
   
-1.  Per passare a Progettazione cubi in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], fare doppio clic sul cubo **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** nella cartella **Cubi** di Esplora soluzioni.  
+1.  Per passare a Progettazione cubi in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], fare doppio clic sul ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial** nella cartella **cubi** della Esplora soluzioni.  
   
 2.  Aprire la scheda **Esplorazione** , quindi fare clic sul pulsante **Riconnetti** nella barra degli strumenti della finestra di progettazione.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69493981"
   
      Verranno visualizzate le vendite realizzate nel mese di febbraio 2006 tramite Internet in base alla regione e alla linea di prodotti, come illustrato nella figura seguente.  
   
-     ![Vendite Internet per area e linea di prodotti](../../2014/tutorials/media/l3-cube-browser-finish.gif "Vendite Internet per area e linea di prodotti")  
+     ![Vendite Internet per regione e linea di prodotti](../../2014/tutorials/media/l3-cube-browser-finish.gif "Vendite Internet per regione e linea di prodotti")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Definizione di proprietà avanzate per attributi e dimensioni](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lezione 4: Definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063373"
 ---
 # <a name="sql-92-compliance"></a>Conformità SQL-92
-I driver di Database Desktop ODBC e di gestione di Microsoft Jet sottostante non sono compatibili con SQL-92. Supportano molte funzionalità che sono state definite in SQL-92. Alcune funzionalità è supportata nel driver non sono supportati in SQL-92. Per altre informazioni, vedere la *Guida per programmatori di Microsoft Jet Database Engine*. Di seguito è le differenze principali tra i due:  
+I driver del database desktop ODBC e il motore Microsoft Jet sottostante non sono conformi a SQL-92. Supportano numerose funzionalità definite in SQL-92. Alcune funzionalità supportate nel driver non sono supportate in SQL-92. Per ulteriori informazioni, vedere la *Guida per programmatori Microsoft Jet motore di database*. Di seguito sono riportate le principali differenze tra le due:  
   
--   Il codice SQL usato dai driver di Database Desktop supporta espressioni più efficaci rispetto a quelli specificati dal SQL-92.  
+-   Il database SQL utilizzato dai driver del database desktop supporta espressioni più potenti rispetto a quelle specificate da SQL-92.  
   
--   Diverse regole si applicano al predicato BETWEEN.  
+-   Regole diverse si applicano al predicato BETWEEN.  
   
--   Il codice SQL utilizzato dal driver di Database Desktop e ANSI SQL supporta le parole chiave diverse.  
+-   SQL utilizzato dai driver del database desktop e ANSI SQL supporta parole chiave diverse.  
   
- Le seguenti funzionalità di SQL-92 non sono supportate da Microsoft Jet SQL:  
+ Le funzionalità SQL-92 seguenti non sono supportate da Microsoft Jet SQL:  
   
--   Istruzioni di sicurezza, ad esempio GRANT e blocco.  
+-   Istruzioni di sicurezza, ad esempio GRANT e LOCK.  
   
--   Parola chiave DISTINCT con riferimenti a funzioni di aggregazione.  
+-   DISTINCT con riferimenti a funzioni di aggregazione.  
   
- Miglioramenti nel linguaggio SQL utilizzato per i driver di Database Desktop non sono specificati da SQL-92 sono le seguenti funzionalità:  
+ Le funzionalità seguenti sono i miglioramenti apportati a SQL utilizzati dai driver del database desktop non specificati da SQL-92:  
   
--   L'istruzione di trasformazione che fornisce supporto per le query a campi incrociati.  
+-   L'istruzione TRANSFORM fornisce supporto per le query a campi incrociati.  
   
--   Altre funzioni di aggregazione (**StDev** e **VarP**).  
+-   Funzioni di aggregazione aggiuntive (**StDev** e **VarP**).  
   
 > [!NOTE]  
->  I driver di Database Desktop supportano la sintassi ANSI standard per % (percentuale) e _ (carattere di sottolineatura), non * (asterisco) e? (punto interrogativo).
+>  I driver del database desktop supportano la sintassi standard ANSI per% (percentuale) e _ (carattere di sottolineatura), non * (asterisco) e? (punto interrogativo).

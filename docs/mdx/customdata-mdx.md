@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d2884e23cbee78acacdb72e386f0e99610e9629f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135832"
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 
 
-  Restituisce il valore della **CustomData** proprietà di stringa di connessione se definito; in caso contrario, **null**.  
+  Restituisce il valore della proprietà della stringa di connessione **CustomData** se definito; in caso contrario, **null**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,10 +28,10 @@ CustomData()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **CustomData** funzione consente di recuperare le **CustomData** proprietà della stringa di connessione e passare un'impostazione da utilizzare per le funzioni MDX (Multidimensional Expressions) e istruzioni, ad esempio di configurazione [UserName (MDX)](../mdx/username-mdx.md) e [istruzione CALL (MDX)](../mdx/mdx-data-manipulation-call.md). Ad esempio, questa funzione può essere utilizzata in un'espressione di sicurezza dinamica per selezionare i membri del set consentiti/negati per il valore di stringa nel **CustomData** proprietà della stringa di connessione.  
+ La funzione **CustomData** può recuperare la proprietà della stringa di connessione **CustomData** e passare un'impostazione di configurazione che verrà utilizzata dalle funzioni MDX (Multidimensional Expressions) e dalle istruzioni, ad esempio [username (MDX)](../mdx/username-mdx.md) e [Call Statement (MDX)](../mdx/mdx-data-manipulation-call.md). Questa funzione, ad esempio, può essere usata in un'espressione di sicurezza dinamica per selezionare i membri impostati consentiti/negati per il valore stringa nella proprietà della stringa di connessione **CustomData** .  
   
 ## <a name="example"></a>Esempio  
- La query seguente consente di visualizzare il valore restituito per il **CustomData** funzione in una misura calcolata:  
+ Nella query seguente viene visualizzato il valore restituito dalla funzione **CustomData** in una misura calcolata:  
   
 ```  
 WITH MEMBER [Measures].CUSTOMDATADEMO AS CUSTOMDATA()  
@@ -41,6 +41,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impostazione del contenuto di un asse della Query (MDX) | Microsoft Docs
+title: Impostazione del contenuto di un asse della query (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074079"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Impostazione del contenuto di un asse della query (MDX)
@@ -71,7 +71,7 @@ FROM [Adventure Works]
   
 ```  
   
- La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Ad esempio, negli esempi che abbiamo visto finora non vi è alcun dato nel cubo dall'agosto 2004 e versioni successive. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
+ La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Ad esempio, negli esempi che abbiamo visto finora non sono presenti dati nel cubo a partire dal 2004 agosto. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -115,6 +115,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Specifica del contenuto di un asse di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

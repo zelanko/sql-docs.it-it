@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251717"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
@@ -46,7 +46,7 @@ ms.locfileid: "75251717"
 ##  <a name="Projects"></a>Concetti relativi ai progetti Data Quality  
  L'amministratore dei dati esegue le operazioni di qualità dei dati (pulizia e corrispondenza) utilizzando un progetto Data Quality nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Pulizia dei dati**  
+ **Data Cleansing**  
   
  La pulizia dei dati in DQS viene effettuata in base alle informazioni incluse nella Knowledge Base DQS e prevede un processo in due passaggi:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75251717"
   
  In seguito al processo di pulizia, l'amministratore può esportare i dati elaborati in un database di SQL Server, un file con estensione csv o un file di Excel. Per altre informazioni, vedere [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
- **Corrispondenza dei dati**  
+ **Corrispondenza di dati**  
   
  Con il processo di corrispondenza l'amministratore dei dati può confrontare i dati in modo da poter allineare quelli simili tramite il processo di deduplicazione. La deduplicazione in DQS viene eseguita in base alle regole di corrispondenza contenute nella Knowledge Base. L'amministratore dei dati specifica i parametri per il processo di corrispondenza all'interno di un progetto Data Quality. Per altre informazioni, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "75251717"
   
 -   Configurare i livelli di gravità per i file di log DQS a livello di attività o a livello di modulo, che rappresenta la modalità più avanzata. Per altre informazioni, vedere [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
- **Sicurezza DQS**  
+ **Sicurezza relativa a DQS**  
   
  È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS Security](../data-quality-services/dqs-security.md).  
   

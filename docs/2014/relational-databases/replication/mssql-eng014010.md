@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811123"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
@@ -46,7 +46,7 @@ ms.locfileid: "68811123"
   
      10.193.17.129 inst1  
   
--   Rimuovere la replica, registrare ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi ristabilire la replica. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, attenersi alla procedura seguente:  
+-   Rimuovere la replica, registrare ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi ristabilire la replica. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire questa procedura:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

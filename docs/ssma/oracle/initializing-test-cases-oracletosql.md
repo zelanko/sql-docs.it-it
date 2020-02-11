@@ -1,5 +1,5 @@
 ---
-title: Inizializzazione di Test case (OracleToSQL) | Microsoft Docs
+title: Inizializzazione di test case (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264367"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Inizializzazione di test case (OracleToSQL)
-In questa fase è specificare le informazioni iniziali per il nuovo test case.  
+In questo passaggio vengono specificate le informazioni iniziali per la nuova test case.  
   
 ## <a name="parameters"></a>Parametri  
-**Nome del test Case**  
-Immettere il nome per identificare test case.  
+**Nome test case**  
+Immettere il nome per identificare il test case.  
   
 **Data creazione**  
-Oggi corrente della data, definita automaticamente.  
+Data corrente, definita automaticamente.  
   
-**Data dell'ultima modifica**  
-Inserita automaticamente; non deve essere modificata.  
+**Data Ultima modifica**  
+Compilato automaticamente; non devono essere modificate.  
   
-**Descrizione del test Case**  
+**Descrizione del test case**  
 Immettere eventuali informazioni aggiuntive per identificare lo scopo del test case.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
 [Selezione e configurazione degli oggetti da testare &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Test di oggetti di database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

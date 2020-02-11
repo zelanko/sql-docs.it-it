@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244993"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifica dello stile, delle dimensioni e del colore del carattere
@@ -43,7 +43,7 @@ ms.locfileid: "75244993"
  Le impostazioni per il colore del testo e il tipo di carattere sono globali per tutti i tipi di elemento testo, ad esempio commenti, stringhe e così via.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stampare codice e risultati](print-code-and-results.md)   
- [Codifica a colori negli editor di query](color-coding-in-query-editors.md)  
+ [Stampa di codice e risultati](print-code-and-results.md)   
+ [Codifica con colori negli editor di query](color-coding-in-query-editors.md)  
   
   

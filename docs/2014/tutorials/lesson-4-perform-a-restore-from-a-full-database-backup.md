@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Eseguire un ripristino da un backup completo del database | Microsoft Docs'
+title: 'Lezione 4: eseguire un ripristino da un backup completo del database | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153406"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lezione 4: Eseguire un ripristino da un backup completo del database
@@ -40,9 +40,9 @@ ms.locfileid: "70153406"
   
     ```  
   
-5.  Verificare l'istruzione T-SQL e fare clic su **Esegui**.  
+5.  Verificare l'istruzione T-SQL e fare clic su **Esegui** .  
   
 ### <a name="return-to-tutorials-portal"></a>Ritornare al portale delle esercitazioni  
- [Esercitazione: SQL Server il backup e il ripristino nel servizio](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)di archiviazione BLOB di Azure.  
+ [Esercitazione: SQL Server il backup e il ripristino nel servizio di archiviazione BLOB di Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

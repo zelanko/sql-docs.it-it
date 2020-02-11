@@ -1,5 +1,5 @@
 ---
-title: Supporto per i tipi UDT di grandi dimensioni | Documenti di Microsoft
+title: Supporto per i tipi definiti dall'utente di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205547"
 ---
 # <a name="support-for-large-udts"></a>Supporto per tipi definiti dall'utente di grandi dimensioni
@@ -22,7 +22,7 @@ ms.locfileid: "68205547"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni sul supporto per i tipi UDT di grandi dimensioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Per ulteriori informazioni sul supporto di tipi definiti dall'utente di grandi dimensioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C#. Incollarlo in un file denominato LargeStringUDT.cs e compilarlo in una DLL. Copiare LargeStringUDT.dll nella directory radice dell'unità C.  

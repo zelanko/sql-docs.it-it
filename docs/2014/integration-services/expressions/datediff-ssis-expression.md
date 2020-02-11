@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898086"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (espressione SSIS)
@@ -43,21 +43,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencate le parti della data e le abbreviazioni riconosciute dall'analizzatore di espressioni.  
   
-|datepart|Abbreviazioni|  
+|parte di una data|Abbreviazioni|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Giorno|dd, d|  
 |Week|wk, ww|  
-|Giorno feriale|dw, w|  
+|Giorno della settimana|dw, w|  
 |Ora|Hh|  
 |Minuto|mi, n|  
-|Secondo|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  Se un argomento qualsiasi è Null, DATEDIFF restituirà Null.  
@@ -81,7 +81,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- In questo esempio viene restituito il numero delle settimane tra la data nella colonna **ModifiedDate** e quella nella variabile **YearEndDate** . Se **YearEndDate** ha una `date` tipo di dati, non è necessario alcun cast esplicito.  
+ In questo esempio viene restituito il numero delle settimane tra la data nella colonna **ModifiedDate** e quella nella variabile **YearEndDate** . Se **YearEndDate** ha un `date` tipo di dati, non è necessario alcun cast esplicito.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

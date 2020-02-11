@@ -27,19 +27,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082709"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce i valori delle proprietà estese degli oggetti di database.  
  
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,32 +57,32 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- {impostazione predefinita | «*property_name*' | NULL}  
- Nome della proprietà. *property_name* viene **sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
+ {impostazione predefinita | '*property_name*' | NULL  
+ Nome della proprietà. *property_name* è di **tipo sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
   
- {impostazione predefinita | «*level0_object_type*' | NULL}  
- Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)** , con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
+ {impostazione predefinita | '*level0_object_type*' | NULL  
+ Utente o tipo definito dall'utente. *level0_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
- {impostazione predefinita | «*level0_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | '*level0_object_name*' | NULL  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* è di **tipo sysname** e il valore predefinito è null. I possibili valori sono default, NULL o un nome di oggetto.  
   
- {impostazione predefinita | «*level1_object_type*' | NULL}  
- Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ {impostazione predefinita | '*level1_object_type*' | NULL  
+ Tipo di oggetto di livello 1. *level1_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
 > [!NOTE]  
 >  Per il valore predefinito viene eseguito il mapping a NULL e per il parametro 'default' viene eseguito il mapping al tipo di oggetto DEFAULT.  
   
- {impostazione predefinita | «*level1_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | '*level1_object_name*' | NULL  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* è di **tipo sysname** e il valore predefinito è null. I possibili valori sono default, NULL o un nome di oggetto.  
   
- {impostazione predefinita | «*level2_object_type*' | NULL}  
- Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono colonne, vincolo, EVENT NOTIFICATION, INDEX, parametro, TRIGGER e NULL.  
+ {impostazione predefinita | '*level2_object_type*' | NULL  
+ Tipo di oggetto di livello 2. *level2_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono Column, Constraint, Event Notification, index, Parameter, trigger e null.  
   
- {impostazione predefinita | «*level2_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ {impostazione predefinita | '*level2_object_name*' | NULL  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è di **tipo sysname** e il valore predefinito è null. I possibili valori sono default, NULL o un nome di oggetto.  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
  Il formato delle tabelle restituite da fn_listextendedproperty è il seguente.  
@@ -96,14 +96,14 @@ fn_listextendedproperty (
   
  Se la tabella restituita è vuota, significa che all'oggetto non sono associate proprietà estese o che l'utente non è autorizzato a elencare le proprietà estese dell'oggetto. In caso di restituzione di proprietà estese per il database, le colonne objtype e objname saranno NULL.  
   
-## <a name="remarks"></a>Note  
- Se il valore per *property_name* è NULL o default, fn_listextendedproperty restituisce tutte le proprietà per l'oggetto specificato.  
+## <a name="remarks"></a>Osservazioni  
+ Se il valore per *property_name* è null o predefinito, fn_listextendedproperty restituisce tutte le proprietà per l'oggetto specificato.  
   
  Se è specificato il tipo di oggetto e il valore del nome oggetto corrispondente è NULL o default, fn_listextendedproperty restituisce tutte le proprietà estese di tutti gli oggetti del tipo specificato.  
   
  Gli oggetti si differenziano in base al livello compreso tra 0, il livello superiore, e 2, il livello inferiore. Se si specificano il nome e il tipo di un oggetto di livello inferiore (1 o 2), per il tipo e il nome dell'oggetto padre è necessario assegnare valori diversi da NULL o dal valore predefinito. In caso contrario, la funzione restituisce un set di risultati vuoto.  
   
- **objname** viene risolto come Latin1_General_CI_AI. Tuttavia è possibile soluzione alternativa in questo eseguendo l'override delle regole di confronto per il confronto.  
+ **ObjName** è fisso come Latin1_General_CI_AI. Tuttavia, è possibile aggirare questo problema eseguendo l'override delle regole di confronto.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -115,7 +115,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per elencare le proprietà estese degli oggetti variano in base al tipo di oggetto.  
   
 ## <a name="examples"></a>Esempi  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Visualizzazione delle proprietà estese in tutte le colonne di una tabella  
- L'esempio seguente elenca le proprietà estese delle colonne di `ScrapReason` tabella. inclusa nello schema `Production`.  
+ Nell'esempio seguente vengono elencate le proprietà estese per `ScrapReason` le colonne nella tabella. inclusa nello schema `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Visualizzazione delle proprietà estese in tutte le tabelle incluse in uno schema  
- L'esempio seguente elenca le proprietà estese per tutte le tabelle contenute nel `Sales` dello schema.  
+ Nell'esempio seguente vengono elencate le proprietà estese per tutte le `Sales` tabelle contenute nello schema.  
   
 ```  
 USE AdventureWorks2012;  
@@ -178,9 +178,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sp_addextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys. extended_properties &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

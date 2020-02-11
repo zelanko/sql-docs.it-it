@@ -17,10 +17,10 @@ ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 682c8cde8fcb03d7660edddaee82a0f00ce505dd
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659309"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>Proprietà BinaryPath (classe SqlService)
@@ -35,7 +35,7 @@ object.BinaryPath [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

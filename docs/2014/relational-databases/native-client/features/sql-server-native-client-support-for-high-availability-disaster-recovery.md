@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206637"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata
-  In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [la creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell’applicazione &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è connessa a un database in un gruppo di disponibilità, la connessione originale viene interrotta e deve esserne aperta una nuova per l'applicazione affinché quest'ultima possa continuare a funzionare dopo il failover.  
   
@@ -28,9 +28,10 @@ ms.locfileid: "68206637"
 >  L'aumento del timeout di connessione e l'implementazione della logica di riesecuzione per le connessioni aumentano le probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché potrebbe non essere possibile stabilire una connessione a causa del failover di un gruppo di disponibilità, è opportuno implementare la logica di riesecuzione delle connessioni, finché non si ottiene la riconnessione.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
- Specificare sempre `MultiSubnetFailover=Yes` in caso di connessione a un listener del gruppo di disponibilità di SQL Server 2012 o a un'istanza del cluster di failover di SQL Server 2012. `MultiSubnetFailover` consente un failover più veloce per tutti i gruppi di disponibilità, permette di abilitare l'istanza del cluster di failover in SQL Server 2012, nonché di ridurre in modo significativo la durata del failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà ritentata in modo insistente la connessione TCP.  
+ Specificare sempre `MultiSubnetFailover=Yes` in caso di connessione a un listener del gruppo di disponibilità di SQL Server 2012 o a un'istanza del cluster di failover di SQL Server 2012. 
+  `MultiSubnetFailover` consente un failover più veloce per tutti i gruppi di disponibilità, permette di abilitare l'istanza del cluster di failover in SQL Server 2012, nonché di ridurre in modo significativo la durata del failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà ritentata in modo insistente la connessione TCP.  
   
- La proprietà di connessione `MultiSubnetFailover` indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà effettuato un tentativo di connessione al database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primaria tentando di connettersi a tutti gli indirizzi IP. Quando si `MultiSubnetFailover=Yes` viene specificato per una connessione, il client Riprova tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefiniti del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
+ La proprietà di connessione `MultiSubnetFailover` indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verrà effettuato un tentativo di connessione al database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primaria tentando di connettersi a tutti gli indirizzi IP. Quando `MultiSubnetFailover=Yes` si specifica per una connessione, il client riesegue i tentativi di connessione TCP più velocemente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
   
  Per altre informazioni sulle parole chiave della stringa di connessione, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68206637"
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Comportamento di un'applicazione che utilizza il `MultiSubnetFailover` proprietà di connessione non è interessata in base al tipo di autenticazione: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'autenticazione, l'autenticazione Kerberos o autenticazione di Windows.  
+-   Il comportamento di un'applicazione in cui viene utilizzata la proprietà di connessione `MultiSubnetFailover` non è influenzato dal tipo di autenticazione, cioè Autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticazione Kerberos o Autenticazione di Windows.  
   
 -   È possibile aumentare il valore di `loginTimeout` per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68206637"
   
  La parola chiave `ApplicationIntent` non funziona con i database legacy di sola lettura.  
   
- Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. (Questa operazione viene eseguita con il `ALLOW_CONNECTIONS` clausola del `PRIMARY_ROLE` e `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni.)  
+ Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la `ALLOW_CONNECTIONS` clausola delle istruzioni `PRIMARY_ROLE` e `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  La parola chiave `ApplicationIntent` è utilizzata per abilitare il routing di sola lettura.  
   
@@ -111,8 +112,10 @@ ms.locfileid: "68206637"
 |Funzione|Descrizione|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|L'elenco di server restituiti da `SQLBrowseConnect` non includerà i nomi di rete virtuale. Verrà visualizzato solo un elenco di server senza indicazione del fatto che il server sia un server autonomo oppure un server primario o secondario in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se si esegue la connessione a un server e viene restituito un errore, è possibile che sia stata stabilita la connessione a un server e l'impostazione `ApplicationIntent` non sia compatibile con la configurazione del server.<br /><br /> Poiché `SQLBrowseConnect` non riconosce i server in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la parola chiave della stringa di connessione `SQLBrowseConnect` viene ignorata da `MultiSubnetFailover`.|  
-|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` supporta sia `ApplicationIntent` sia `MultiSubnetFailover` tramite un nome di origine dati (DSN) o proprietà di connessione.|  
-|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|`SQLDriverConnect` supporta `ApplicationIntent` e `MultiSubnetFailover` tramite parole chiave della stringa di connessione, proprietà di connessione o DSN.|  
+|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|
+  `SQLConnect` supporta sia `ApplicationIntent` sia `MultiSubnetFailover` tramite un nome di origine dati (DSN) o proprietà di connessione.|  
+|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|
+  `SQLDriverConnect` supporta `ApplicationIntent` e `MultiSubnetFailover` tramite parole chiave della stringa di connessione, proprietà di connessione o DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non supporta la parola chiave `MultiSubnetFailover`.  
@@ -134,13 +137,16 @@ ms.locfileid: "68206637"
  Un'applicazione OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può utilizzare, per specificare la finalità dell'applicazione, uno dei metodi seguenti:  
   
  `IDBInitialize::Initialize`  
- `IDBInitialize::Initialize` prevede l'utilizzo del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
+ 
+  `IDBInitialize::Initialize` prevede l'utilizzo del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
   
  `IDataInitialize::GetDataSource`  
- `IDataInitialize::GetDataSource` accetta una stringa di connessione di input che può contenere la parola chiave `Application Intent`.  
+ 
+  `IDataInitialize::GetDataSource` accetta una stringa di connessione di input che può contenere la parola chiave `Application Intent`.  
   
  `IDBProperties::GetProperties`  
- `IDBProperties::GetProperties` consente di recuperare il valore della proprietà attualmente impostata sull'origine dati.  È possibile recuperare il valore di `Application Intent` tramite la proprietà DBPROP_INIT_PROVIDERSTRING e la proprietà SSPROP_INIT_APPLICATIONINTENT.  
+ 
+  `IDBProperties::GetProperties` consente di recuperare il valore della proprietà attualmente impostata sull'origine dati.  È possibile recuperare il valore di `Application Intent` tramite la proprietà DBPROP_INIT_PROVIDERSTRING e la proprietà SSPROP_INIT_APPLICATIONINTENT.  
   
  `IDBProperties::SetProperties`  
  Per impostare il valore della proprietà `ApplicationIntent`, chiamare `IDBProperties::SetProperties` passando la proprietà `SSPROP_INIT_APPLICATIONINTENT` con un valore "`ReadWrite`" o "`ReadOnly`" oppure la proprietà `DBPROP_INIT_PROVIDERSTRING` con un valore contenente "`ApplicationIntent=ReadOnly`" o "`ApplicationIntent=ReadWrite`".  

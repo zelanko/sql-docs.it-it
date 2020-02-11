@@ -1,5 +1,5 @@
 ---
-title: Scheda di rete di dipendenze (Visualizzatore modello di Data Mining) | Microsoft Docs
+title: Scheda rete di dipendenze (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081936"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Scheda Rete di dipendenze (Visualizzatore modello di data mining)
@@ -24,11 +24,11 @@ ms.locfileid: "66081936"
   
  La scheda **Rete di dipendenze**  viene utilizzata per diversi tipi di modelli di data mining, inclusi i modelli Naive Bayes, di albero delle decisioni e di associazione. Per ulteriori informazioni su come interpretare il contenuto della scheda **Rete di dipendenze**  nel contesto di questi modelli, vedere i collegamenti seguenti:  
   
- [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
- [Visualizzare un modello usando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
- [Visualizzare un modello usando il Visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -40,10 +40,10 @@ ms.locfileid: "66081936"
  **Visualizzatore**  
  Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. Per ogni modello è possibile utilizzare il visualizzatore personalizzato fornito per ogni modello di data mining o Visualizzatore contenuto di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se disponibili, è anche possibile utilizzare i visualizzatori plug-in. Microsoft Generic Content Tree Viewer può essere utilizzato con tutti i modelli e rappresenta il contenuto del modello in una tabella HTML.  
   
- **Eseguire lo zoom avanti**  
+ **Zoom avanti**  
  Consente di eseguire lo zoom avanti del diagramma in modo da poter visualizzare più dettagliatamente gli attributi.  
   
- **Eseguire lo zoom indietro**  
+ **Zoom indietro**  
  Consente di eseguire lo zoom indietro del diagramma in modo da poter visualizzare più attributi e i relativi collegamenti.  
   
  **Copia parte visibile del grafico**  
@@ -52,7 +52,7 @@ ms.locfileid: "66081936"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Links**  
+ **Collegamenti**  
  Consente di impostare il numero di collegamenti (bordi) e nodi mostrati dal visualizzatore regolando l'indicatore di scorrimento a destra degli attributi. Trascinando la barra del dispositivo di scorrimento verso il basso viene aumentato il valore soglia in modo da visualizzare solo i collegamenti più attendibili. Per ogni tipo di modello, viene utilizzato un valore leggermente diverso per rappresentare i collegamenti nel grafico:  
   
 -   In un modello di **albero delle decisioni** i bordi rappresentano l'attendibilità predittiva della connessione, determinata in parte dal punteggio di divisione.  
@@ -64,7 +64,7 @@ ms.locfileid: "66081936"
  Una regola generale per tutti i tipi di modelli prevede che maggiore è l'attendibilità del collegamento, maggiore sarà l'attendibilità della relazione predittiva tra i due attributi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

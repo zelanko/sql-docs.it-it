@@ -1,5 +1,5 @@
 ---
-title: Viste a gestione dinamica ricerca full-Text e semantica - funzioni | Microsoft Docs
+title: Viste a gestione dinamica per la ricerca full-text e semantica-funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130774"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Viste a gestione dinamica ricerca full-Text e semantica - funzioni
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Viste a gestione dinamica per la ricerca full-text e semantica-funzioni
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione sono contenute le funzioni e le DMV relative alla ricerca full-text e semantica riportate di seguito.  
@@ -69,6 +69,6 @@ ms.locfileid: "68130774"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
