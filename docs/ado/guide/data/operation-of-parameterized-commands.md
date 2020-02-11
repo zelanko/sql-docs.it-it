@@ -1,5 +1,5 @@
 ---
-title: Funzionamento dei comandi con parametri | Microsoft Docs
+title: Operazione di comandi con parametri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924731"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
-Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  
+Se si utilizza un **Recordset**figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset**padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
   
- Oggetto *senza parametri comando* recupera intera padre e figlio **recordset**, aggiunge una colonna a capitoli a padre e quindi assegna un riferimento al capitolo figlio correlati per ogni riga padre .  
+ Un *comando senza parametri* recupera l'intero **Recordset**padre e figlio, aggiunge una colonna del capitolo all'elemento padre e quindi assegna un riferimento al capitolo figlio correlato per ogni riga padre.  
   
- Oggetto *comando con parametri* recupera l'elemento padre intera **Recordset**, ma recupera solo il capitolo **Recordset** quando si accede alla colonna del capitolo. Questa differenza nella strategia di recupero può produrre vantaggi significativi delle prestazioni.  
+ Un *comando con parametri* recupera l'intero **Recordset**padre, ma recupera solo il **Recordset** del capitolo quando si accede alla colonna del capitolo. Questa differenza nella strategia di recupero può produrre vantaggi significativi a livello di prestazioni.  
   
  Ad esempio, è possibile specificare quanto segue:  
   
@@ -35,26 +35,26 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Le tabelle padre e figlio hanno in comune, un nome di colonna *cust_id*. Il *comando figlio* dispone di un "?" segnaposto, a cui fa riferimento la clausola RELATE (vale a dire, "... PARAMETRO 0").  
+ Le tabelle padre e figlio hanno un nome di colonna in comune *cust_id*. Il *comando figlio* dispone di un segnaposto "?", a cui fa riferimento la clausola di correlazione (ovvero "... PARAMETRO 0 ").  
   
 > [!NOTE]
->  La clausola parametro riguarda esclusivamente la sintassi dei comandi di forma. Non è associato uno ADO [parametri](../../../ado/reference/ado-api/parameter-object.md) oggetto o il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta.  
+>  La clausola PARAMETER riguarda esclusivamente la sintassi del comando Shape. Non è associato né all'oggetto [parametro](../../../ado/reference/ado-api/parameter-object.md) ADO né alla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
   
- Quando viene eseguito il comando di forma con parametri, si verifica quanto segue:  
+ Quando viene eseguito il comando Shape con parametri, si verifica quanto segue:  
   
-1.  Il *comando padre* non viene eseguita e restituisce un elemento padre **Recordset** dalla tabella Customers.  
+1.  Il *comando padre* viene eseguito e restituisce un **Recordset** padre dalla tabella Customers.  
   
-2.  Una colonna del capitolo viene aggiunto all'elemento padre **Recordset**.  
+2.  Una colonna del capitolo viene aggiunta al **Recordset**padre.  
   
-3.  Quando si accede la colonna a capitoli di una riga padre, il *comando figlio* viene eseguita usando il valore di Customer. cust_id come il valore del parametro.  
+3.  Quando si accede alla colonna del capitolo di una riga padre, il *comando figlio* viene eseguito usando il valore di customer. cust_id come valore del parametro.  
   
-4.  Tutte le righe nel set di righe del provider dati creato nel passaggio 3 vengono usate per popolare l'elemento figlio **Recordset**. In questo esempio, ovvero tutte le righe della tabella di ordini in cui il cust_id è uguale al valore di Customer. cust_id. Per impostazione predefinita, l'elemento figlio **Recordset**s verrà memorizzata nel client fino a tutti i riferimenti all'elemento padre **Recordset** vengono rilasciati. Per modificare questo comportamento, impostare il **Recordset** [proprietà dinamica](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **righe figlio Cache** al **False**.  
+4.  Tutte le righe nel set di righe del provider di dati creato nel passaggio 3 vengono utilizzate per popolare il **Recordset**figlio. In questo esempio, si tratta di tutte le righe della tabella Orders in cui il cust_id è uguale al valore di Customer. cust_id. Per impostazione predefinita, il **Recordset**figlio verrà memorizzato nella cache del client fino a quando non vengono rilasciati tutti i riferimenti al **Recordset** padre. Per modificare questo comportamento, impostare le **righe figlio della cache** della [proprietà dinamica](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Recordset** su **false**.  
   
-5.  Un riferimento alle righe figlio recuperati (vale a dire, il capitolo dell'elemento figlio **Recordset**) viene inserito nella colonna del capitolo della riga corrente dell'elemento padre **Recordset**.  
+5.  Un riferimento alle righe figlio recuperate, ovvero il capitolo del **Recordset**figlio, viene inserito nella colonna capitolo della riga corrente del **Recordset**padre.  
   
-6.  Quando si accede alla colonna del capitolo di un'altra riga, vengono ripetuti i passaggi 3-5.  
+6.  I passaggi 3-5 vengono ripetuti quando si accede alla colonna del capitolo di un'altra riga.  
   
- Il **righe figlio della Cache** dinamica è impostata su **True** per impostazione predefinita. Il comportamento di memorizzazione nella cache varia in base ai valori di parametro della query. In una query con un singolo parametro, l'elemento figlio **Recordset** per un determinato parametro valore verrà memorizzato tra le richieste per un elemento figlio con tale valore. Il codice seguente illustra questo processo:  
+ Per impostazione predefinita, la proprietà dinamica **righe figlio della cache** è impostata su **true** . Il comportamento di memorizzazione nella cache varia a seconda dei valori dei parametri della query. In una query con un solo parametro, il **Recordset** figlio per un valore di parametro specificato verrà memorizzato nella cache tra le richieste per un elemento figlio con tale valore. Il codice seguente illustra questo processo:  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -67,12 +67,12 @@ Rst1.MoveNext      ' Next cust_id passed to Param 0, & new rs fetched
 Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.  
 ```  
   
- In una query con due o più parametri, un elemento figlio memorizzati nella cache viene usato solo se i valori dei parametri corrispondono ai valori memorizzati nella cache.  
+ In una query con due o più parametri, un elemento figlio memorizzato nella cache viene usato solo se tutti i valori dei parametri corrispondono ai valori memorizzati nella cache.  
   
-## <a name="parameterized-commands-and-complex-parent-child-relations"></a>I comandi con parametri e relazioni complesse padre-figlio  
- Oltre a usare i comandi con parametri per migliorare le prestazioni di una gerarchia di tipo equijoin, è possono utilizzare i comandi con parametri per supportare più complesse relazioni padre-figlio. Ad esempio, si consideri un database lega con due tabelle: un sistema costituito i team (team_id, team_name) e l'altro dei giochi (date, home_team, visiting_team).  
+## <a name="parameterized-commands-and-complex-parent-child-relations"></a>Comandi con parametri e relazioni padre-figlio complesse  
+ Oltre a utilizzare i comandi con parametri per migliorare le prestazioni di una gerarchia dei tipi equi-join, è possibile utilizzare i comandi con parametri per supportare relazioni padre-figlio più complesse. Si consideri ad esempio un piccolo database di League con due tabelle: uno costituito dai team (team_id, team_name) e l'altro dei giochi (date, home_team, visiting_team).  
   
- Utilizzo di una gerarchia senza parametri, non è possibile correlare le tabelle di giochi e i team in modo che l'elemento figlio **Recordset** per ogni team contiene la pianificazione completa. È possibile creare capitoli che contengono la pianificazione iniziale o la pianificazione di viaggio, ma non entrambi. Infatti, la clausola RELATE è limitato a relazioni padre-figlio del form (pc1 = cc1) AND (pc2 = pc2). Pertanto, se il comando include "Sono correlati team_id a home_team, team_id TO visiting_team", si otterrebbe solo giochi in cui un team ricopriva stesso. È invece preferibile "(team_id=home_team) o (team_id = visiting_team)", ma il provider Shape non supporta la clausola OR.  
+ Utilizzando una gerarchia senza parametri, non è possibile correlare le tabelle teams e Games in modo tale che il **Recordset** figlio per ogni team contenga la pianificazione completa. È possibile creare capitoli che contengono la pianificazione Home o la pianificazione stradale, ma non entrambi. Ciò è dovuto al fatto che la clausola RELATE consente di limitare le relazioni padre-figlio del form (PC1 = CC1) e (PC2 = PC2). Quindi, se il comando includesse "CORRELAre team_id a home_team, team_id a visiting_team", si otterrebbero solo giochi in cui un team stava giocando a se stesso. Si vuole usare "(team_id = home_team) o (team_id = visiting_team)", ma il provider di forme non supporta la clausola o.  
   
  Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
   
@@ -83,12 +83,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- In questo esempio sfrutta la maggiore flessibilità nella clausola WHERE SQL per ottenere il risultato che è necessario.  
+ Questo esempio sfrutta la maggiore flessibilità della clausola SQL WHERE per ottenere i risultati necessari.  
   
 > [!NOTE]
->  Quando nelle clausole WHERE, parametri possano non usare i tipi di dati SQL per text, ntext e image o verrà generato un errore che contiene la descrizione seguente: `Invalid operator for data type`.  
+>  Quando si usano le clausole WHERE, i parametri non possono usare i tipi di dati SQL per text, ntext e image. in caso contrario, verrà generato `Invalid operator for data type`un errore che contiene la descrizione seguente:.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)

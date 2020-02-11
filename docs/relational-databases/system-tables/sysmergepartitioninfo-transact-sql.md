@@ -18,10 +18,10 @@ ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c188cf1ad72033976136496914844c14c3a35867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029834"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
@@ -37,19 +37,19 @@ ms.locfileid: "68029834"
 |**repl_view_id**|**int**|Da aggiungere.|  
 |**partition_deleted_view_rule**|**nvarchar(4000)**|Istruzione SQL utilizzata all'interno di un trigger di replica di tipo merge per recuperare l'ID di partizione per ogni riga eliminata o aggiornata in base ai relativi valori di colonna precedenti.|  
 |**partition_inserted_view_rule**|**nvarchar(4000)**|Istruzione SQL utilizzata all'interno di un trigger di replica di tipo merge per recuperare l'ID di partizione per ogni riga inserita o aggiornata in base ai relativi nuovi valori di colonna.|  
-|**membership_eval_proc_name**|**sysname**|Il nome della procedura che restituisce l'ID di partizione correnti delle righe **MSmerge_contents**.|  
+|**membership_eval_proc_name**|**sysname**|Nome della procedura che valuta gli ID di partizione correnti delle righe in **MSmerge_contents**.|  
 |**column_list**|**nvarchar(4000)**|Elenco separato da virgole delle colonne replicate in un articolo.|  
 |**column_list_blob**|**nvarchar(4000)**|Elenco separato da virgole delle colonne replicate in un articolo, comprese le colonne BLOB.|  
 |**expand_proc**|**sysname**|Nome della procedura che restituisce nuovamente gli ID di partizione per tutte le righe figlio di una riga padre appena inserita e per le righe padre sottoposte a modifica a livello di partizione oppure che sono state eliminate.|  
 |**logical_record_parent_nickname**|**int**|Nome alternativo del padre di livello principale di un articolo specifico in un record logico.|  
 |**logical_record_view**|**int**|Vista che ha come output la colonna rowguid dell'articolo padre di livello principale corrispondente a ogni colonna rowguid figlio.|  
-|**logical_record_deleted_view_rule**|**nvarchar(4000)**|Simile a **logical_record_view**, l'unica differenza è il Mostra le righe figlio nella tabella "eliminata" nei trigger update e delete.|  
-|**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = o colonna a livello di riga viene utilizzato il rilevamento dei conflitti.<br /><br /> **1** = logico viene utilizzato il rilevamento dei conflitti di record, in cui una modifica in una riga nel server di pubblicazione e modifica in una riga logica uguale record nel sottoscrittore viene gestita come un conflitto.<br /><br /> Quando questo valore è **1**, può essere utilizzata solo la risoluzione dei conflitti a livello di record logico.|  
-|**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = o colonna a livello di riga viene utilizzata la risoluzione.<br /><br /> **1** = In caso di conflitto, l'intero record logico prevalente sovrascrive l'intero record logico nella parte interessata.<br /><br /> Un valore pari **1** può essere utilizzato con entrambi rilevamento a livello di record logico e con il rilevamento a livello di riga o di colonna.|  
-|**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro dell'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ad esempio una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML apportati nel Sottoscrittore non è possibile modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro dell'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori ricevono la stessa partizione.<br /><br /> **3** = il filtro dell'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.|  
+|**logical_record_deleted_view_rule**|**nvarchar(4000)**|Simile a **logical_record_view**, ad eccezione del fatto che visualizza le righe figlio nella tabella "Deleted" nei trigger UPDATE e DELETE.|  
+|**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzato il rilevamento dei conflitti a livello di riga o di colonna.<br /><br /> **1** = viene utilizzato il rilevamento dei conflitti tra record logici, in cui una modifica in una riga del server di pubblicazione e la modifica in una riga distinta lo stesso record logico nel Sottoscrittore viene gestita come un conflitto.<br /><br /> Se questo valore è **1**, è possibile utilizzare solo la risoluzione dei conflitti a livello di record logico.|  
+|**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzata la risoluzione a livello di riga o di colonna.<br /><br /> **1** = in caso di conflitto, l'intero record logico del vincitore sovrascrive l'intero record logico sul lato perduto.<br /><br /> Il valore **1** può essere utilizzato sia con il rilevamento a livello di record logico che con il rilevamento a livello di riga o di colonna.|  
+|**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro per l'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro per l'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori possono ricevere la stessa partizione.<br /><br /> **3** = il filtro per l'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

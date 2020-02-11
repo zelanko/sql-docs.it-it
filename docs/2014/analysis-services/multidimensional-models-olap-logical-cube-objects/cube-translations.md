@@ -1,5 +1,5 @@
 ---
-title: Le conversioni del cubo | Microsoft Docs
+title: Traduzioni di cubi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728504"
 ---
 # <a name="cube-translations"></a>Traduzioni di cubi
@@ -29,7 +29,8 @@ ms.locfileid: "62728504"
   
  Un oggetto <xref:Microsoft.AnalysisServices.Translation> semplice è composto dal numero ID della lingua e dalla didascalia tradotta. Il numero ID della lingua è un valore `Integer` con l'ID della lingua. La didascalia tradotta è il testo tradotto.  
   
- Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], conversione di un cubo è una rappresentazione specifica del linguaggio del nome di un oggetto cubo, ad esempio una didascalia o una cartella di visualizzazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta anche conversioni di dimensione e nomi del membro.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una traduzione del cubo è una rappresentazione specifica della lingua del nome di un oggetto cubo, ad esempio una didascalia o una cartella di visualizzazione. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta anche conversioni di dimensione e nomi del membro.  
   
  Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. Spesso, i dati dei cubi vengono visualizzati da utenti di paesi diversi. La possibilità di tradurre i diversi elementi di un cubo in diverse lingue è utile in quanto consente a tali utenti di visualizzare e comprendere i metadati del cubo. Un utente aziendale in Francia, ad esempio, può accedere a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi e visualizzare i valori delle proprietà dell'oggetto in francese. Analogamente, un utente aziendale in Germania può accedere allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche e visualizzare i valori delle proprietà dell'oggetto in tedesco.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "62728504"
   
 ## <a name="see-also"></a>Vedere anche  
  [Traduzioni delle dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [Le traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
+ [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

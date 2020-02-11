@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921641"
 ---
 # <a name="activecommand-property-example-vc"></a>Esempio della proprietà ActiveCommand (VC++)
-Questo esempio viene illustrato il [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) proprietà.  
+In questo esempio viene illustrata la proprietà [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Una subroutine viene assegnata un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) il cui **ActiveCommand** proprietà viene utilizzata per visualizzare il testo del comando e parametro che ha creato il **Recordset**.  
+ A una subroutine viene assegnato un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) la cui proprietà **ActiveCommand** viene utilizzata per visualizzare il testo del comando e il parametro che ha creato il **Recordset**.  
   
 ## <a name="example"></a>Esempio  
   
@@ -206,13 +206,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Esempio di Input  
+## <a name="sample-input"></a>Input di esempio  
   
 ```  
 Ringer  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  
@@ -221,5 +221,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807066"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Attività Riorganizza indice (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Riorganizza indice** per razionalizzare l'ordine di ricerca delle pagine dell'indice. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+  Utilizzare la finestra di dialogo **attività Riorganizza indice** per spostare le pagine dell'indice in un ordine di ricerca più efficiente. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
@@ -40,26 +40,26 @@ ms.locfileid: "62807066"
   
 -   **Tutti i database di sistema**  
   
-     Consente di generare un piano per l'esecuzione delle attività di manutenzione in ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
+     Generare un piano di manutenzione per l'esecuzione di attività di manutenzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su ogni database di sistema, ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
   
 -   **Tutti i database utente**  
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Database specifici**  
+-   **Questi database specifici**  
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
- **Oggetto**  
+ **Object**  
  Consente di limitare la griglia **Selezione** per visualizzare tabelle, viste o entrambe.  
   
  **Selezione**  
- Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella **Oggetto** .  
+ Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Non disponibile quando si seleziona **tabelle e viste** nella casella **oggetto** .  
   
  **Compatta oggetti di grandi dimensioni**  
  Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX LOB_COMPACTION = ON`  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "62807066"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -78,11 +78,11 @@ ms.locfileid: "62807066"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ **Usa la sicurezza integrata di Windows**  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -92,6 +92,6 @@ ms.locfileid: "62807066"
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
- [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)  
+ [DBCC INDEXDEFRAG &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)  
   
   

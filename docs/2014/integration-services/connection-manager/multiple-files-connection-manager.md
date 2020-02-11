@@ -18,24 +18,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833640"
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  
   
 > [!NOTE]  
->  Le attività predefinite e i componenti del flusso di dati in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non utilizzano la gestione connessione per più file. È tuttavia possibile utilizzare la gestione connessione nell'attività Script o nel componente di script. Per informazioni sull'uso delle gestioni connessioni nell'attività Script, vedere [Connessione a origini dati nell'attività Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Per informazioni sull'utilizzo di gestioni connessioni nel componente Script, vedere [connessione a origini dati nel componente Script] (.. / extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
+>  Le attività predefinite e i componenti del flusso di dati in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non utilizzano la gestione connessione per più file. È tuttavia possibile utilizzare la gestione connessione nell'attività Script o nel componente di script. Per informazioni sull'uso delle gestioni connessioni nell'attività Script, vedere [Connessione a origini dati nell'attività Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Per informazioni sull'utilizzo delle gestioni connessioni nel componente script, vedere [connessione a origini dati nel componente script] (.. /extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Tipi di utilizzo per la gestione connessione per più file  
  La proprietà `FileUsageType` della gestione connessione per più file specifica la modalità di utilizzo della connessione. La gestione connessione per più file consente sia di creare file e cartelle, sia di utilizzare file e cartelle esistenti.  
   
  Nella tabella seguente vengono elencati i possibili valori di `FileUsageType`.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|La gestione connessione per più file utilizza un file esistente.|  
 |**1**|La gestione connessione per più file crea un file.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62833640"
   
  \<*percorso*>|\<*percorso*>  
   
- Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Ad esempio, fare riferimento a tutti i file di testo in C unità, il valore della `ConnectionString` può essere impostata su c:\\*. txt.  
+ Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore `ConnectionString` della proprietà può essere impostato su C\\: *. txt.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   

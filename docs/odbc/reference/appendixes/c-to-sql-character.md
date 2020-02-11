@@ -1,5 +1,5 @@
 ---
-title: 'Da C a SQL: Carattere | Microsoft Docs'
+title: 'Da C a SQL: carattere | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037725"
 ---
-# <a name="c-to-sql-character"></a>Da C a SQL: Carattere
-Gli identificatori per il carattere di tipo di dati ODBC C sono:  
+# <a name="c-to-sql-character"></a>Da C a SQL: carattere
+Gli identificatori per il tipo di dati C ODBC di tipo carattere sono:  
   
  SQL_C_CHAR  
   
  SQL_C_WCHAR  
   
- La tabella seguente illustra il codice SQL ODBC dei tipi di dati a cui possono essere convertiti i dati di tipo carattere C. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ La tabella seguente illustra i tipi di dati ODBC SQL in cui è possibile convertire i dati di tipo carattere C. Per una spiegazione delle colonne e dei termini della tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 > [!NOTE]  
->  Quando i dati di caratteri C viene convertiti in dati Unicode SQL, la lunghezza dei dati Unicode deve essere un numero pari.  
+>  Quando i dati di tipo carattere C vengono convertiti in dati SQL Unicode, la lunghezza dei dati Unicode deve essere un numero pari.  
   
-|Identificatore di tipo SQL|Test|SQLSTATE|  
+|Identificatore del tipo SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte dei dati < = lunghezza della colonna.<br /><br /> Lunghezza in byte di dati > lunghezza della colonna.|n/d<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza dei dati in caratteri < = lunghezza della colonna.<br /><br /> Lunghezza dei dati in caratteri > lunghezza della colonna.|n/d<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Dati convertiti senza troncamenti<br /><br /> I dati convertiti con troncamento delle cifre frazionarie [e]<br /><br /> Conversione dei dati comporta la perdita di cifre intero (in contrapposizione frazionari) [e]<br /><br /> Valore dati non è un *letterali numerici*|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Data è compreso nell'intervallo del tipo di dati a cui il numero viene convertito<br /><br /> I dati non rientra nell'intervallo del tipo di dati a cui il numero viene convertito<br /><br /> Valore dati non è un *letterali numerici*|n/d<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BIT|I dati sono 0 o 1<br /><br /> I dati sono maggiori di 0, inferiore a 2 e non è uguale a 1<br /><br /> I dati sono minore di 0 oppure maggiore o uguale a 2<br /><br /> I dati non sono un *letterali numerici*|n/d<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Lunghezza in byte dei dati) / 2 < = lunghezza di colonna in byte<br /><br /> (Lunghezza in byte dei dati) / 2 > lunghezza di colonna in byte<br /><br /> Valore di dati non è un valore esadecimale|n/d<br /><br /> 22001<br /><br /> 22018|  
-|SQL_TYPE_DATE|Valore dei dati è un valido *valore letterale di data ODBC*<br /><br /> Valore dei dati è un valido *ODBC-timestamp-literal*; la parte dell'ora è uguale a zero<br /><br /> Valore dei dati è un valido *ODBC-timestamp-literal*; la parte dell'ora è diverso da zero [a]<br /><br /> Valore di dati non valido *ODBC-Data-literal* o *ODBC-timestamp-literal*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIME|Valore dei dati è un valido *valore letterale di ora ODBC*<br /><br /> Valore dei dati è un valido *ODBC-timestamp-literal*; frazionari parte relativa ai secondi è pari a zero [b]<br /><br /> Valore dei dati è un valido *ODBC-timestamp-literal*; frazionari parte relativa ai secondi sia diverso da zero [b]<br /><br /> Valore di dati non valido *ODBC-tempo-literal* o *ODBC-timestamp-literal*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Valore dei dati è un valido *ODBC-timestamp-literal*; frazionari parte relativa ai secondi non troncato<br /><br /> Valore dei dati è un valido *ODBC-timestamp-literal*; frazionaria troncata parte relativa ai secondi<br /><br /> Valore dei dati è un valido *valore letterale di data ODBC*[c]<br /><br /> Valore dei dati è un valido *valore letterale di ora ODBC*[d]<br /><br /> Valore di dati non valido *ODBC-Data-literal*, *valore letterale di ora ODBC*, o *ODBC-timestamp-literal*|n/d<br /><br /> 22008<br /><br /> n/d<br /><br /> n/d<br /><br /> 22018|  
-|Tutti i tipi di intervallo SQL|Valore dei dati è un valido *valore dell'intervallo*; nessun troncamento si verifica<br /><br /> Valore dei dati è un valido *valore dell'intervallo*; viene troncato il valore in uno dei campi<br /><br /> Il valore dei dati non è un intervallo valido di valore letterale|n/d<br /><br /> 22015<br /><br /> 22018|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte dei dati <= lunghezza della colonna.<br /><br /> Lunghezza in byte dei dati > lunghezza della colonna.|n/d<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza in caratteri della <dati = lunghezza della colonna.<br /><br /> Lunghezza in caratteri dei dati > lunghezza della colonna.|n/d<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Dati convertiti senza troncamento<br /><br /> Dati convertiti con troncamento di cifre frazionarie [e]<br /><br /> La conversione dei dati comporterebbe la perdita di cifre intere (anziché frazionarie) [e]<br /><br /> Il valore dei dati non è un valore *letterale numerico*|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|I dati sono compresi nell'intervallo del tipo di dati in cui viene convertito il numero<br /><br /> I dati non rientrano nell'intervallo del tipo di dati in cui viene convertito il numero<br /><br /> Il valore dei dati non è un valore *letterale numerico*|n/d<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BIT|I dati sono 0 o 1<br /><br /> I dati sono maggiori di 0, minori di 2 e diversi da 1<br /><br /> I dati sono minori di 0 oppure maggiori o uguali a 2<br /><br /> I dati non sono *valori letterali numerici*|n/d<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Lunghezza in byte dei dati)/2 <= lunghezza in byte della colonna<br /><br /> (Lunghezza in byte dei dati)/2 > lunghezza in byte della colonna<br /><br /> Il valore dei dati non è un valore esadecimale|n/d<br /><br /> 22001<br /><br /> 22018|  
+|SQL_TYPE_DATE|Il valore dei dati è un valore *ODBC-date-Literal* valido<br /><br /> Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; la parte relativa all'ora è zero<br /><br /> Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; la parte relativa all'ora è diversa da zero [a]<br /><br /> Il valore dei dati non è un valore *letterale di data/ora ODBC* valido o *ODBC-timestamp-Literal*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIME|Il valore dei dati è un valore *letterale di ora ODBC* valido<br /><br /> Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; la parte relativa ai secondi frazionari è zero [b]<br /><br /> Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; la parte relativa ai secondi frazionari è diversa da zero [b]<br /><br /> Il valore dei dati non è un valore *letterale ODBC-time-literal* valido o *ODBC-timestamp-Literal*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; parte relativa ai secondi frazionari non troncata<br /><br /> Il valore dei dati è un valore *letterale ODBC-timestamp-valore*valido; parte relativa ai secondi frazionari troncata<br /><br /> Il valore dei dati è un valore *ODBC-date-Literal*valido [c]<br /><br /> Il valore dei dati è un valore *letterale di ora ODBC*valido [d]<br /><br /> Il valore dei dati non è un valore *ODBC-date-* Literal, un valore letterale di tipo ODBC- *Time-* Literal o un valore *letterale ODBC-timestamp*|n/d<br /><br /> 22008<br /><br /> n/d<br /><br /> n/d<br /><br /> 22018|  
+|Tutti i tipi di intervallo SQL|Il valore dei dati è un *valore di intervallo*valido. nessun troncamento<br /><br /> Il valore dei dati è un *valore di intervallo*valido. il valore in uno dei campi è troncato<br /><br /> Il valore dei dati non è un valore letterale di intervallo valido|n/d<br /><br /> 22015<br /><br /> 22018|  
   
- [a] parte relativa all'ora del timestamp viene troncato.  
+ [a] la parte relativa all'ora del timestamp è troncata.  
   
- [b] la parte relativa alla data del timestamp viene ignorato.  
+ [b] la parte relativa alla data del timestamp viene ignorata.  
   
- [c] la parte relativa all'ora del timestamp è impostato su zero.  
+ [c] la parte relativa all'ora del timestamp è impostata su zero.  
   
- [d] la parte relativa alla data del timestamp è impostato sulla data corrente.  
+ [d] la parte relativa alla data del timestamp è impostata sulla data corrente.  
   
- [e] l'origine dati/driver attende in modo efficace fino a quando non è stata ricevuta l'intera stringa (anche se i dati di carattere vengono inviati in parti dalle chiamate a **SQLPutData**) prima di provare a eseguire la conversione.  
+ [e] l'origine dati/driver attende in modo efficace fino a quando non viene ricevuta l'intera stringa (anche se i dati di tipo carattere vengono inviati in parti dalle chiamate a **SQLPutData**) prima di tentare di eseguire la conversione.  
   
- Quando i dati di tipo carattere C viene convertito in numerico, data, ora o timestamp dei dati SQL, iniziali e gli spazi vuoti finali vengono ignorati.  
+ Quando i dati di tipo C vengono convertiti in dati numerici, data, ora o timestamp SQL, gli spazi vuoti iniziali e finali vengono ignorati.  
   
- Quando i dati di caratteri C viene convertiti in dati binari SQL, ogni due byte di dati di tipo carattere vengono convertiti in un singolo byte (8 bit) di dati binari. Ogni due byte di dati di tipo carattere rappresenta un numero in formato esadecimale. Ad esempio, "01" viene convertito in un binario 00000001 e "FF" viene convertito in un binario 11111111.  
+ Quando i dati di tipo carattere C vengono convertiti in dati SQL binari, ogni due byte di dati di tipo carattere viene convertito in un singolo byte (8 bit) di dati binari. Ogni due byte di dati di tipo carattere rappresenta un numero in formato esadecimale. Ad esempio, "01" viene convertito in un 00000001 binario e "FF" viene convertito in un 11111111 binario.  
   
- Il driver sempre converte le coppie di cifre esadecimali a byte singoli e ignora il byte di terminazione null. Per questo motivo, se la lunghezza della stringa di caratteri è dispari, l'ultimo byte della stringa (escluso il byte di terminazione null, se presente) non viene convertito.  
+ Il driver converte sempre le coppie di cifre esadecimali in byte singoli e ignora il byte di terminazione null. Per questo motivo, se la lunghezza della stringa di caratteri è dispari, l'ultimo byte della stringa (escluso il byte di terminazione null, se presente) non viene convertito.  
   
 > [!NOTE]  
->  Gli sviluppatori di applicazioni sono sconsigliati dall'associazione di dati carattere C a un tipo di dati binario di SQL. Questa conversione è in genere lenti e poco efficiente.
+>  Gli sviluppatori di applicazioni si sconsigliano di associare i dati di tipo C a un tipo di dati binary SQL. Questa conversione è in genere inefficiente e lenta.

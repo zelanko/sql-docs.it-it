@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245419"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Risolvere i problemi relativi a processi multiserver che utilizzano proxy
@@ -25,7 +25,7 @@ ms.locfileid: "63245419"
   
 -   "Per questo passaggio del processo è necessario un account proxy, ma l'individuazione dei proxy è disabilitata nel server di destinazione."  
   
-     Per risolvere questo problema, impostare la sottochiave del registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** su **1 (vero)** . Per impostazione predefinita, questa sottochiave è impostata su **0** (`false`). Il valore di **MSSQL.** \<*n*> è il nome dell'istanza, ad esempio, **MSSQL.1** o **MSSQL.3**.  
+     Per correggere l'errore, impostare **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** >**** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName su sottochiave del registro di sistema a **1 (true)**. Per impostazione predefinita, questa sottochiave è **** impostata su`false`0 (). Il valore di **MSSQL.** \< *n*> è il nome dell'istanza; ad esempio **MSSQL. 1** o **MSSQL. 3**.  
   
 -   "Impossibile trovare il proxy."  
   

@@ -15,18 +15,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209690"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   È possibile creare o configurare entità Resource Governor, ad esempio pool di risorse e gruppi di carico di lavoro, tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-1.  **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
+1.  **Prima di iniziare:**  [autorizzazioni](#Permissions)  
   
-2.  **Per visualizzare le proprietà di Resource Governor, utilizzando:**  [Pagina delle proprietà di Resource Governor](#ViewRGProp)  
+2.  **Per visualizzare le proprietà Resource Governor utilizzando:**  [Resource Governor pagina Proprietà](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Oltre a visualizzare le proprietà di entità Resource Governor, è possibile eseguire diverse attività di configurazione tramite la pagina **Proprietà di Resource Governor** . Per altre informazioni, vedere gli argomenti seguenti:  
@@ -54,8 +54,8 @@ ms.locfileid: "63209690"
 ###  <a name="Permissions"></a> Autorizzazioni  
  Per visualizzare le proprietà di Resource Governor è necessaria l'autorizzazione VIEW SERVER STATER. Per le attività di configurazione di Resource Governor è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Visualizzare la pagina delle proprietà di Resource Governor  
- **Per visualizzare le proprietà di Resource Governor tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="ViewRGProp"></a>Visualizzare la pagina delle proprietà Resource Governor  
+ **Per visualizzare le proprietà di Resource Governor tramite la pagina proprietà Resource Governor in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63209690"
   
 4.  Per salvare eventuali modifiche, fare clic su **OK**.  
   
-##  <a name="RGProp"></a> Proprietà di Resource Governor  
+##  <a name="RGProp"></a>Proprietà Resource Governor  
  **Nome della funzione di classificazione**  
  Consente di specificare la funzione di classificazione selezionandola nell'elenco.  
   
@@ -73,32 +73,32 @@ ms.locfileid: "63209690"
  Consente di abilitare o disabilitare Resource Governor selezionando o deselezionando la casella di controllo.  
   
  **Pool di risorse**  
- Consente di creare o modificare la configurazione del pool di risorse utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui pool interni e sui pool predefiniti. Selezionare un pool da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo pool di risorse, fare clic sulla riga preceduta dall'asterisco ( **&#42;** ).  
+ Consente di creare o modificare la configurazione del pool di risorse utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui pool interni e sui pool predefiniti. Selezionare un pool da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo pool di risorse, fare clic sulla riga preceduta dall'asterisco (**&#42;**).  
   
- **Name**  
+ **Nome**  
  Consente di specificare il nome del pool di risorse.  
   
  **% CPU minima**  
  Consente di specificare la larghezza di banda media garantita della CPU concessa per tutte le richieste nel pool di risorse, in caso di conflitto di CPU. L'intervallo è compreso tra 0 e 100.  
   
- **% massima CPU**  
+ **% massima di CPU**  
  Consente di specificare la larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse in caso di conflitto di CPU. L'intervallo è compreso tra 0 e 100. L'impostazione predefinita è 100.  
   
- **% memoria minima**  
+ **% Memoria minima**  
  Consente di specificare la quantità minima di memoria riservata al pool di risorse non condivisibile con altri pool di risorse. L'intervallo è compreso tra 0 e 100.  
   
- **% memoria massima**  
+ **% massima di memoria**  
  Consente di specificare la memoria totale del server utilizzabile dalle richieste in questo pool di risorse. L'intervallo è compreso tra 0 e 100. L'impostazione predefinita è 100.  
   
- Per altre informazioni, vedere [crea POOL di risorse &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
+ Per altre informazioni, vedere [creare un pool di risorse &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
- **Gruppi del carico di lavoro per pool di risorse**  
- Consente di creare o modificare la configurazione del gruppo del carico di lavoro utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui gruppi interni e sui gruppi predefiniti. Selezionare un gruppo da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo gruppo del carico di lavoro, fare clic sulla riga preceduta dall'asterisco ( **&#42;** ).  
+ **Gruppi del carico di lavoro per il pool di risorse**  
+ Consente di creare o modificare la configurazione del gruppo del carico di lavoro utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui gruppi interni e sui gruppi predefiniti. Selezionare un gruppo da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo gruppo del carico di lavoro, fare clic sulla riga preceduta dall'asterisco (**&#42;**).  
   
- **Name**  
+ **Nome**  
  Consente di specificare il nome del gruppo del carico di lavoro.  
   
- **Priorità**  
+ **Importanza**  
  Consente di specificare l'importanza relativa di una richiesta nel gruppo del carico di lavoro. Le impostazioni disponibili sono Minima, Media e Massima.  
   
  **Numero massimo di richieste**  
@@ -107,7 +107,7 @@ ms.locfileid: "63209690"
  **Tempo CPU (sec)**  
  Consente di specificare la quantità massimo di tempo della CPU utilizzabile da una richiesta. Deve essere 0 o un valore intero positivo. Se è 0, il tempo è illimitato.  
   
- **% concessione memoria**  
+ **% Di concessione di memoria**  
  Consente di specificare la quantità massima di memoria utilizzabile dal pool da una richiesta singola. L'intervallo è compreso tra 0 e 100.  
   
  **Timeout concessione (sec)**  
@@ -119,7 +119,7 @@ ms.locfileid: "63209690"
  Per altre informazioni, vedere [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql).  
   
 ## <a name="view-resource-governor-properties-by-using-transact-sql"></a>Visualizzare le proprietà di Resource Governor utilizzando Transact-SQL  
- **Visualizzare le proprietà di Resource Governor utilizzando Transact-SQL**  
+ **Visualizzare le proprietà di Resource Governor tramite Transact-SQL**  
   
 1.  Per visualizzare le definizioni delle entità resource governor, usare le [Viste del catalogo di Resource Governor &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql).  
   
@@ -127,9 +127,9 @@ ms.locfileid: "63209690"
   
 ## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Abilitare Resource Governor](enable-resource-governor.md)   
- [Pool di risorse di Resource Governor](resource-governor-resource-pool.md)   
- [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
+ [Abilita Resource Governor](enable-resource-governor.md)   
+ [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   
+ [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
  [Funzione di classificazione di Resource Governor](resource-governor-classifier-function.md)  
   
   

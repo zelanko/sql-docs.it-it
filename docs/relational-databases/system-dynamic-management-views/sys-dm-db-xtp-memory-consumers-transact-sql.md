@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026823"
 ---
-# <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
+# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Indica i consumer di memoria a livello di database nel motore di database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Nella vista viene restituita una riga per ogni consumer di memoria utilizzato dal motore di database. Utilizzare questa DMV per vedere come la memoria viene distribuita tra diversi oggetti interni.  
+  Indica i consumer di memoria a livello di database nel motore di database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Nella vista viene restituita una riga per ogni consumer di memoria utilizzato dal motore di database. Usare questa DMV per vedere come la memoria viene distribuita tra oggetti interni diversi.  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -38,10 +38,10 @@ ms.locfileid: "68026823"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Tipo di consumer di memoria:<br /><br /> 0=Aggregazione. Aggrega l'utilizzo della memoria due o più consumer. Non deve essere visualizzato.<br /><br /> 2=VARHEAP. Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 3=HASH. Tiene traccia dell'utilizzo di memoria per un indice.<br /><br /> 5=pool di pagine del DB. Tiene traccia dell'utilizzo di memoria per un pool di pagine del database per le operazioni di runtime. Ad esempio, le variabili di tabella e alcune analisi serializzabili. È disponibile un solo consumer di memoria di questo tipo per database).|  
-|memory_consumer_type_desc|**nvarchar(64)**|Tipo di consumer di memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0 - (non deve essere visualizzato.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap del database. Utilizzo per allocare i dati utente per un database (righe).<br />Heap di sistema del database. Utilizzato per allocare i dati del database che verranno inclusi nei dump della memoria e non includono dati utente.<br />Heap dell'indice dell'intervallo. Heap privato utilizzato dall'indice dell'intervallo per allocare pagine BW.<br /><br /> HASH: Nessuna descrizione poiché object_id indica la tabella e index_id l'indice hash.<br /><br /> PGPOOL: Per il database è presente una sola pagina pool riserva di paging di 64K del Database.|  
+|memory_consumer_type_desc|**nvarchar (64)**|Tipo di consumer di memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0: non deve essere visualizzato.<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP <br />Heap del database. Utilizzo per allocare i dati utente per un database (righe).<br />Heap di sistema del database. Utilizzato per allocare i dati del database che verranno inclusi nei dump della memoria e non includono dati utente.<br />Heap dell'indice dell'intervallo. Heap privato utilizzato dall'indice dell'intervallo per allocare pagine BW.<br /><br /> HASH: nessuna descrizione poiché la object_id indica la tabella e l'index_id indice hash.<br /><br /> PGPOOL: per il database è presente un solo pool di pagine 64K del database del pool di pagine.|  
 |object_id|**bigint**|ID oggetto a cui è attribuita la memoria allocata. Un valore negativo per gli oggetti di sistema.|  
-|xtp_object_id|**bigint**|L'ID di oggetto per la tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|ID oggetto per la tabella ottimizzata per la memoria.|  
 |index_id|**int**|ID dell'indice del consumer, se disponibile. NULL per le tabelle di base.|  
 |allocated_bytes|**bigint**|Numero di byte riservati al consumer.|  
 |used_bytes|**bigint**|Byte utilizzati dal consumer. Si applica solo a varheap.|  
@@ -51,12 +51,12 @@ ms.locfileid: "68026823"
 |min_sizeclass|**int**|Solo per uso interno.|  
 |max_sizeclass|**int**|Solo per uso interno.|  
 |memory_consumer_address|**varbinary**|Indirizzo interno del consumer. Solo per uso interno.|  
-|xtp_object_id|**bigint**|L'ID di oggetto OLTP in memoria corrispondente alla tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|ID oggetto OLTP in memoria che corrisponde alla tabella ottimizzata per la memoria.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nell'output gli allocatori a livello di database fanno riferimento a tabelle utente, indici e tabelle di sistema. VARHEAP con object_id = NULL indica la memoria allocata alle tabelle con colonne a lunghezza variabile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Vengono restituite tutte le righe se si dispone dell'autorizzazione VIEW DATABASE STATE per il database corrente. In caso contrario, viene restituito un set di righe vuoto.  
   
  Se non si dispone dell'autorizzazione VIEW DATABASE, verranno restituite tutte le colonne per le righe nelle tabelle per cui si dispone dell'autorizzazione SELECT.  
@@ -64,7 +64,7 @@ ms.locfileid: "68026823"
  Vengono restituite le tabelle di sistema solo per gli utenti con l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Quando una tabella con ottimizzazione per la memoria dispone di un indice columnstore, alcune tabelle interne, che consumano una certa quantità di memoria, il sistema utilizza per tenere traccia dei dati per l'indice columnstore. Per informazioni dettagliate su queste tabelle interne e le query di esempio che mostra il consumo di memoria, vedere [Sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Quando una tabella ottimizzata per la memoria dispone di un indice columnstore, il sistema usa alcune tabelle interne che utilizzano una certa quantità di memoria per tenere traccia dei dati per l'indice columnstore. Per informazioni dettagliate su queste tabelle interne e query di esempio che mostrano il consumo di memoria, vedere [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Esempi  
@@ -111,7 +111,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- La memoria totale allocata e utilizzata da questa DMV è uguale a livello di oggetto nella [DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ La memoria totale allocata e utilizzata da questa DMV corrisponde al livello dell'oggetto in [sys. dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -124,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

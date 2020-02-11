@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7922638ed06f52740a3c34f6e66ff72dbb5bbd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714808"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Creare ed eseguire tracce utilizzando stored procedure Transact-SQL
@@ -37,11 +37,11 @@ ms.locfileid: "62714808"
     > [!NOTE]  
     >  Mediante le stored procedure di sistema di [!INCLUDE[tsql](../../includes/tsql-md.md)] viene creata una traccia sul lato server, evitando in tal modo la perdita di eventi a condizione che lo spazio su disco sia sufficiente e non si verifichino errori di scrittura. Se il disco si riempie o si verifica un errore, l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua ma la traccia viene arrestata. Se l'opzione **c2 audit mode** è impostata e si verifica un errore di scrittura, la traccia viene arrestata e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiusa. Per altre informazioni sull'impostazione **c2 audit mode** , vedere [Opzione di configurazione del server c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Ottimizzare l'utilizzo di Traccia SQL](sql-trace.md)|Contiene informazioni sulle strategie per ridurre gli effetti della traccia sulle prestazioni del sistema.|  
+|[Ottimizzare l'uso di Traccia SQL](sql-trace.md)|Contiene informazioni sulle strategie per ridurre gli effetti della traccia sulle prestazioni del sistema.|  
 |[Filtrare una traccia](filter-a-trace.md)|Contiene informazioni sull'utilizzo di filtri per la traccia.|  
 |[Limitare le dimensioni di file di traccia e tabelle](limit-trace-file-and-table-sizes.md)|Contiene informazioni sulla procedura per limitare le dimensioni di file e tabelle in cui sono registrati i dati di traccia. Si noti che è possibile registrare informazioni di traccia nelle tabelle solo tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .|  
 |[Pianificare tracce](schedule-traces.md)|Contiene informazioni sull'impostazione dell'ora di inizio e di fine della traccia.|  

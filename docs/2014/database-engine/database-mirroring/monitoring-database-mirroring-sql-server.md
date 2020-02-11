@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755362"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62755362"
   
      Nella tabella seguente vengono illustrate le stored procedure per la gestione e l'utilizzo del monitoraggio del mirroring del database in modo indipendente da Monitoraggio mirroring del database.  
   
-    |Routine|Descrizione|  
+    |Procedura|Descrizione|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|Crea un processo che aggiorna periodicamente le informazioni relative allo stato per ogni database con mirroring nell'istanza del server.|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|Cambia il valore di un parametro del monitoraggio di mirroring del database.|  
@@ -129,8 +129,8 @@ ms.locfileid: "62755362"
   
      Gli amministratori di sistema possono usare la stored procedure di sistema **sp_dbmmonitorresults** per visualizzare e, facoltativamente, aggiornare la tabella dello stato, se non è stata aggiornata entro i 15 secondi precedenti. Questa stored procedure chiama la stored procedure **sp_dbmmonitorupdate** e restituisce una o più righe di cronologia, in base a quanto richiesto nella chiamata di procedura. Per informazioni sullo stato nel set di risultati, vedere [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Monitoraggio dello stato di mirroring del database (membri di dbm_monitor)  
- Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per conoscere l'ora dello stato visualizzato, osservare l'ora indicata in corrispondenza delle etichette **Log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** nella pagina **Stato**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitoraggio dello stato di mirroring del database (membri di dbm_monitor)  
+ Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per conoscere la durata dello stato visualizzato, un utente può esaminare i tempi nelle etichette **log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** nella pagina **stato** .  
   
  I membri del ruolo predefinito del database **dbm_monitor** dipendono dal **Processo di Monitoraggio mirroring del database** per l'aggiornamento della tabella dello stato a intervalli regolari. Se il processo non esiste o se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato non è più aggiornato e potrebbe non riflettere più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62755362"
   
 -   Ruolo corrente  
   
-     Ruolo corrente dell'istanza del server. I possibili stati sono i seguenti:  
+     Ruolo corrente dell'istanza del server. Gli stati possibili sono elencati di seguito:  
   
     -   Server principale  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62755362"
   
 -   Stato mirroring  
   
-     I possibili stati sono i seguenti:  
+     Gli stati possibili sono elencati di seguito:  
   
     -   Unknown  
   
@@ -170,13 +170,13 @@ ms.locfileid: "62755362"
   
     -   Sincronizzato  
   
-    -   Sospeso  
+    -   Suspended  
   
     -   Disconnesso  
   
 -   Connessione server di controllo del mirroring del database  
   
-     Stato di connessione del server di controllo del mirroring del database. I possibili stati sono i seguenti:  
+     Stato di connessione del server di controllo del mirroring del database. Gli stati possibili sono elencati di seguito:  
   
     -   Unknown  
   

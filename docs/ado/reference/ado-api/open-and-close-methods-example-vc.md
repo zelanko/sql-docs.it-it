@@ -1,5 +1,5 @@
 ---
-title: Apertura e chiusura di esempio di metodi (VC + +) | Microsoft Docs
+title: Esempio di metodi Open e Close (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917935"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Esempio dei metodi Open e Close (VC++)
-Questo esempio Usa la **aperto** e [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) su entrambi i metodi [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [connessione](../../../ado/reference/ado-api/connection-object-ado.md) gli oggetti che sono state aperte.  
+In questo esempio vengono utilizzati i metodi **Open** e [Close](../../../ado/reference/ado-api/close-method-ado.md) per gli oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [Connection](../../../ado/reference/ado-api/connection-object-ado.md) aperti.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -209,5 +209,5 @@ void PrintComError(_com_error &e) {
  [Metodo Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: COME carattere di Escape nel predicato | Microsoft Docs
+title: Carattere di escape del predicato LIKE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027236"
 ---
 # <a name="like-predicate-escape-character"></a>Carattere di escape nel predicato LIKE
-In un **, ad esempio** predicato, il segno di percentuale (%) corrisponde a zero o più di qualsiasi carattere e il carattere di sottolineatura (_) corrisponde a qualsiasi carattere. In base a un segno di percentuale effettivo o un carattere di sottolineatura un **, ad esempio** predicato, un carattere di escape deve precedere il segno di percentuale o un carattere di sottolineatura. La sequenza di escape che definisce il **, ad esempio** carattere di escape nel predicato è:  
+In un predicato **like** , il segno di percentuale (%) trova la corrispondenza di zero o più caratteri e il carattere di sottolineatura (_) corrisponde a un qualsiasi carattere. Per trovare la corrispondenza con un segno di percentuale effettivo o un carattere di sottolineatura in un predicato **like** , un carattere di escape deve precedere il segno di percentuale o il carattere La sequenza di escape che definisce il carattere di escape del predicato **like** è:  
   
  **{escape '** *carattere di escape* **'}**  
   
- in cui *carattere di escape* è qualsiasi carattere supportati dall'origine dati.  
+ dove *Escape-Character* è qualsiasi carattere supportato dall'origine dati.  
   
- Per altre informazioni su questo tipo di sequenza di escape, vedere [come sequenza di Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) nell'appendice c: Grammatica SQL.  
+ Per ulteriori informazioni sulla sequenza di escape LIKE, vedere [like escape sequence](../../../odbc/reference/appendixes/like-escape-sequence.md) in Appendice C: grammatica SQL.  
   
- Le istruzioni SQL seguenti, ad esempio, creano lo stesso set di risultati del cliente nomi che iniziano con i caratteri "% AAA". La prima istruzione Usa la sintassi di escape-sequence. La seconda istruzione viene utilizzata la sintassi nativa per Microsoft® Access e non è interoperativa. Si noti che la percentuale secondo carattere in ognuno **, ad esempio** predicato è un carattere jolly che corrisponde a zero o più di qualsiasi carattere.  
+ Ad esempio, le istruzioni SQL seguenti creano lo stesso set di risultati dei nomi dei clienti che iniziano con i caratteri "% AAA". La prima istruzione usa la sintassi della sequenza di escape. La seconda istruzione usa la sintassi nativa per Microsoft® Access e non è interoperativa. Si noti che il secondo carattere di percentuale in ogni predicato **like** è un carattere jolly che corrisponde a zero o più caratteri.  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- Per determinare se il **, ad esempio** caratteri di escape nel predicato sono supportata da un'origine dati, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_LIKE_ESCAPE_CLAUSE.
+ Per determinare se il carattere di escape del predicato **like** è supportato da un'origine dati, un'applicazione chiama **SQLGetInfo** con l'opzione SQL_LIKE_ESCAPE_CLAUSE.

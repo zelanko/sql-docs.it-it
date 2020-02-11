@@ -1,5 +1,5 @@
 ---
-title: Connessione a origini dati | Microsoft Docs
+title: Connessione alle origini dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,18 +13,18 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925791"
 ---
 # <a name="connecting-to-data-sources"></a>Connessione a origini dati
-Un oggetto ADO **connessione** oggetto rappresenta una sessione univoca con un'origine dati, inclusi un DBMS, un archivio di file o un file di testo delimitato da virgole. Nel caso di un sistema di database client/server, la connessione di ADO può essere una connessione di rete effettivo al server.  
+Un oggetto **connessione** ADO rappresenta una sessione univoca con un'origine dati, tra cui un DBMS, un archivio di file o un file di testo delimitato da virgole. Nel caso di un sistema di database client/server, la connessione ADO può essere una connessione di rete effettiva al server.  
   
- Il **Connection** oggetto supporta vari [proprietà e metodi](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) per specificare le configurazioni delle connessioni, apertura e chiusura delle connessioni, la creazione e l'esecuzione di comandi sull'origine dati e fornire informazioni sulla progettazione dell'origine dati sottostante sotto forma di set di righe dello schema, e così via. A seconda delle funzionalità supportate dal provider, alcune raccolte, metodi o proprietà di un **connessione** oggetto potrebbe non essere disponibile.  
+ L'oggetto **Connection** supporta varie [proprietà e metodi](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) per specificare le configurazioni di connessione, aprire e chiudere le connessioni, creare ed eseguire comandi sull'origine dati e fornire informazioni sulla progettazione dell'origine dati sottostante sotto forma di set di righe dello schema e così via. A seconda della funzionalità supportata dal provider, alcune raccolte, metodi o proprietà di un oggetto **connessione** potrebbero non essere disponibili.  
   
- È possibile connettersi a un'origine dati tramite un **Connection** dell'oggetto o usando un **Recordset** oggetto.  
+ È possibile connettersi a un'origine dati utilizzando un oggetto **connessione** o un oggetto **Recordset** .  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -34,6 +34,6 @@ Un oggetto ADO **connessione** oggetto rappresenta una sessione univoca con un'o
   
 -   [Creazione di una stringa di connessione](../../../ado/guide/data/creating-a-connection-string.md)  
   
--   [Specificazione delle proprietà della connessione](../../../ado/guide/data/specifying-connection-properties.md)  
+-   [Specifica delle proprietà di connessione](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Controllo delle transazioni](../../../ado/guide/data/controlling-transactions-ado.md)

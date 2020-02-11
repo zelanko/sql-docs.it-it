@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLGetFunctions (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,42 +13,42 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003325"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: Livello 1  
+ Conformità API ODBC: livello 1  
   
  Restituisce TRUE per tutte le funzioni supportate.  
   
- Il Driver ODBC Visual FoxPro supporta funzioni tutte le API ODBC Core e livello 1. Nella tabella seguente indica se il driver supporta una funzione specifica di livello 2.  
+ Il driver ODBC Visual FoxPro supporta tutte le funzioni core API ODBC e di livello 1. Nella tabella seguente viene indicato se il driver supporta una funzione di livello 2 specifica.  
   
 |*Funzione*|Supportato|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|No|  
 |SQL_API_SQLCOLUMNPRIVELEGES|No|  
-|SQL_API_SQLDATASOURCES|Yes|  
+|SQL_API_SQLDATASOURCES|Sì|  
 |SQL_API_SQLDESCRIBEPARAM|No|  
-|SQL_API_SQLDRIVERS|Yes|  
-|SQL_API_SQLEXTENDEDFETCH|Yes|  
+|SQL_API_SQLDRIVERS|Sì|  
+|SQL_API_SQLEXTENDEDFETCH|Sì|  
 |SQL_API_SQLFOREIGNKEYS|No|  
-|SQL_API_SQLMORERESULTS|Yes|  
+|SQL_API_SQLMORERESULTS|Sì|  
 |SQL_API_SQLNATIVESQL|No|  
-|SQL_API_SQLNUMPARAMS|Yes|  
-|SQL_API_SQLPARAMOPTIONS|Yes|  
-|SQL_API_SQLPRIMARYKEYS|Yes|  
+|SQL_API_SQLNUMPARAMS|Sì|  
+|SQL_API_SQLPARAMOPTIONS|Sì|  
+|SQL_API_SQLPRIMARYKEYS|Sì|  
 |SQL_API_SQLPROCEDURECOLUMNS|No|  
 |SQL_API_SQLPROCEDURES|No|  
-|SQL_API_SQLSETPOS|Yes|  
-|SQL_API_SQLSETSCROLLOPTIONS|Yes|  
+|SQL_API_SQLSETPOS|Sì|  
+|SQL_API_SQLSETSCROLLOPTIONS|Sì|  
 |SQL_API_SQLTABLEPRIVILEGES|No|  
   
- Per altre informazioni, vedere [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in *ODBC Programmer ' s Reference*.

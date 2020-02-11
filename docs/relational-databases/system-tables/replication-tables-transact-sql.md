@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910230"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelle di replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Una topologia di replica è supportata dalle tabelle di replica di sistema. Quando un database utente viene configurato come server di pubblicazione o Sottoscrittore, la replica aggiunge tabelle di sistema al database. Tali tabelle vengono rimosse non appena un database utente viene rimosso da una topologia di replica. Per le regole generali relative a utilizzo tabelle di sistema, vedere [tabelle di sistema &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
+  Una topologia di replica è supportata dalle tabelle di replica di sistema. Quando un database utente viene configurato come server di pubblicazione o Sottoscrittore, la replica aggiunge tabelle di sistema al database. Tali tabelle vengono rimosse non appena un database utente viene rimosso da una topologia di replica. Per le regole generali relative all'utilizzo delle tabelle di sistema, vedere [tabelle di sistema &#40;&#41;Transact-SQL ](system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tabelle di replica  
  Nell'elenco seguente sono riportate le tabelle di sistema utilizzate dalla replica, raggruppate in base al database.  
@@ -34,7 +34,7 @@ ms.locfileid: "67910230"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;&#41;Transact-SQL](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>Tabelle di replica nel database msdb  
@@ -73,7 +73,7 @@ ms.locfileid: "67910230"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- Queste tabelle nel database di distribuzione vengono utilizzate per la replica dei dati da non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. Per altre informazioni, vedere [server di pubblicazione Non SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Queste tabelle nel database di distribuzione vengono utilizzate per la replica di dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. Per ulteriori informazioni, vedere [editori Non SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910230"
  
 |||  
 |-|-|  
-|[conflict_\<schema > _\<tabella >](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<schema>_\<tabella>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

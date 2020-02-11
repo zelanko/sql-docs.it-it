@@ -1,5 +1,5 @@
 ---
-title: Esempio di AbsolutePosition e CursorLocation in proprietà XML (VC + +) | Microsoft Docs
+title: Esempio di proprietà AbsolutePosition e CursorLocation (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921703"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Esempio di AbsolutePosition e CursorLocation in proprietà XML (VC + +)
-Questo esempio viene illustrato come la [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) proprietà può tenere traccia dell'avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà per abilitare il **AbsolutePosition** proprietà impostando il cursore su un cursore client.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Esempio di proprietà AbsolutePosition e CursorLocation (VC + +)
+In questo esempio viene illustrato il modo in cui la proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) è in grado di tenere traccia dello stato di avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) per abilitare la proprietà **AbsolutePosition** impostando il cursore su un cursore client.  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  

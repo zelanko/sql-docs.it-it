@@ -1,5 +1,5 @@
 ---
-title: Uso delle estensioni di Visual C++ | Microsoft Docs
+title: Uso delle estensioni Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,134 +16,134 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926459"
 ---
-# <a name="visual-c-extensions"></a>Estensioni di Visual C++
-## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
- Le estensioni di Microsoft Visual C++ per ADO associano, o binding, i campi di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto alle variabili di C/C++. Ogni volta che la riga corrente del limite **Recordset** cambia, tutti i campi associati nel **Recordset** vengono copiate le variabili di C/C++. Se necessario, i dati copiati viene convertiti nel tipo di dati dichiarato della variabile di C/C++.
+# <a name="visual-c-extensions"></a>Estensioni Visual C++
+## <a name="the-iadorecordbinding-interface"></a>Interfaccia IADORecordBinding
+ Le estensioni Microsoft Visual C++ per ADO associate, o bind, i campi di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) alle variabili C/C++. Ogni volta che la riga corrente del **Recordset** associato viene modificata, tutti i campi associati nel **Recordset** vengono copiati nelle variabili C/C++. Se necessario, i dati copiati vengono convertiti nel tipo di dati dichiarato della variabile C/C++.
 
- Il **BindToRecordset** metodo per il **IADORecordBinding** interfaccia campi vengono associati alle variabili di C/C++. Il **AddNew** metodo aggiunge una nuova riga al limite **Recordset**. Il **Update** metodo popola i campi in nuove righe delle **Recordset**, o ne aggiorna i campi nelle righe esistenti, con il valore delle variabili di C/C++.
+ Il metodo **BindToRecordset** dell'interfaccia **IADORecordBinding** associa i campi alle variabili C/C++. Il metodo **AddNew** aggiunge una nuova riga al **Recordset**associato. Il metodo **Update** compila i campi in nuove righe del **Recordset**o aggiorna i campi nelle righe esistenti, con il valore delle variabili C/C++.
 
- Il **IADORecordBinding** viene implementata mediante il **Recordset** oggetto. Non codificare l'implementazione.
+ L'interfaccia **IADORecordBinding** viene implementata dall'oggetto **Recordset** . L'implementazione non viene codificata manualmente.
 
-## <a name="binding-entries"></a>Voci di associazione
- Le estensioni di Visual C++ per ADO mappare i campi di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto alle variabili di C/C++. La definizione di un mapping di un campo a una variabile viene chiamata un *associazione di voce*. Macro di forniscono le voci di associazione di dati numerici a lunghezza fissa e a lunghezza variabile. Le voci di associazione e le variabili di C/C++ vengono dichiarate in una classe derivata dalla classe di estensioni di Visual C++ **CADORecordBinding**. Il **CADORecordBinding** classe è definita internamente dalle macro di ingresso di associazione.
+## <a name="binding-entries"></a>Voci di binding
+ Le estensioni Visual C++ per i campi di mapping ADO di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a variabili C/C++. La definizione di un mapping tra un campo e una variabile è detta *voce di associazione*. Le macro forniscono voci di binding per dati numerici, a lunghezza fissa e a lunghezza variabile. Le voci di binding e le variabili C/C++ vengono dichiarate in una classe derivata dalla classe Visual C++ Extensions, **CADORecordBinding**. La classe **CADORecordBinding** è definita internamente dalle macro della voce di associazione.
 
- ADO esegue il mapping internamente i parametri in queste macro per OLE DB **DBBINDING** strutturare e crea OLE DB **della funzione di accesso** oggetto per gestire lo spostamento e la conversione dei dati tra i campi e variabili. OLE DB definisce i dati, costituito da tre parti: Oggetto *buffer* indica dove sono archiviati i dati; un *stato* che indica se un campo è stato correttamente archiviato nel buffer, o il modo in cui la variabile deve essere ripristinata al campo; e *lunghezza* dei dati. (Vedere [introduzione e l'impostazione dei dati (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)nel riferimento delle per programmatori OLE DB, per altre informazioni.)
+ ADO esegue internamente il mapping dei parametri in queste macro a una struttura OLE DB **DBBINDING** e crea un oggetto **funzione di accesso** OLE DB per gestire lo spostamento e la conversione dei dati tra campi e variabili. OLE DB definisce i dati come composti da tre parti: un *buffer* in cui sono archiviati i dati; *stato* che indica se un campo è stato archiviato correttamente nel buffer o in che modo è necessario ripristinare la variabile nel campo; e la *lunghezza* dei dati. Per ulteriori informazioni, vedere [recupero e impostazione dei dati (OLE DB) nella Guida](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)di riferimento per i programmatori di OLE DB.
 
 ## <a name="header-file"></a>File di intestazione
- Nell'applicazione per poter usare le estensioni di Visual C++ per ADO, includere il file seguente:
+ Includere il file seguente nell'applicazione per usare le estensioni Visual C++ per ADO:
 
 ```cpp
 #include <icrsint.h>
 ```
 
-## <a name="binding-recordset-fields"></a>Associazione dei campi del Recordset
+## <a name="binding-recordset-fields"></a>Binding di campi recordset
 
-#### <a name="to-bind-recordset-fields-to-cc-variables"></a>Per associare i campi del Recordset alle variabili di C/C++
+#### <a name="to-bind-recordset-fields-to-cc-variables"></a>Per associare campi recordset a variabili C/C++
 
-1.  Creare una classe derivata dal **CADORecordBinding** classe.
+1.  Creare una classe derivata dalla classe **CADORecordBinding** .
 
-2.  Specificare le voci di associazione e le variabili di C/C++ corrispondente nella classe derivata. Racchiudere tra parentesi quadre le voci di associazione tra **le macro BEGIN_ADO_BINDING** e **END_ADO_BINDING** macro. Non terminare le macro con virgole o punti e virgola. Delimitatori appropriati vengono specificati automaticamente da tutte le macro.
+2.  Specificare le voci di binding e le variabili C/C++ corrispondenti nella classe derivata. Racchiudere le voci di binding tra **BEGIN_ADO_BINDING** e **END_ADO_BINDING** macro. Non terminare le macro con virgole o punti e virgola. I delimitatori appropriati vengono specificati automaticamente da ogni macro.
 
-     Specificare una voce di associazione per ogni campo può essere mappata a una variabile di C/C++. Un membro appropriato da usare la **ADO_FIXED_LENGTH_ENTRY**, **ADO_NUMERIC_ENTRY**, o **ADO_VARIABLE_LENGTH_ENTRY** della famiglia di macro.
+     Specificare una voce di binding per ogni campo di cui eseguire il mapping a una variabile C/C++. Usare un membro appropriato da **ADO_FIXED_LENGTH_ENTRY**, **ADO_NUMERIC_ENTRY**o **ADO_VARIABLE_LENGTH_ENTRY** famiglia di macro.
 
-3.  Nell'applicazione, creare un'istanza della classe derivata da **CADORecordBinding**. Ottenere il **IADORecordBinding** dell'interfaccia dalle **Recordset**. Chiamare quindi il **BindToRecordset** metodo a cui associare il **Recordset** campi alle variabili di C/C++.
+3.  Nell'applicazione creare un'istanza della classe derivata da **CADORecordBinding**. Ottenere l'interfaccia **IADORecordBinding** dal **Recordset**. Chiamare quindi il metodo **BindToRecordset** per associare i campi del **Recordset** alle variabili C/C++.
 
- Per altre informazioni, vedere la [esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md).
+ Per ulteriori informazioni, vedere l' [esempio Visual C++ Extensions](../../../ado/guide/appendixes/visual-c-extensions-example.md).
 
 ## <a name="interface-methods"></a>Metodi di interfaccia
- Il **IADORecordBinding** interfaccia dispone di tre metodi: **BindToRecordset**, **AddNew**, e **Update**. L'unico argomento per ogni metodo è un puntatore a un'istanza della classe derivata da **CADORecordBinding**. Pertanto, il **AddNew** e **Update** metodi non possono specificare uno dei parametri dei relativi omonimi ADO.
+ L'interfaccia **IADORecordBinding** ha tre metodi: **BindToRecordset**, **AddNew**e **Update**. L'unico argomento per ogni metodo è un puntatore a un'istanza della classe derivata da **CADORecordBinding**. Pertanto, i metodi **AddNew** e **Update** non possono specificare i parametri del metodo ADO omonimi.
 
 ## <a name="syntax"></a>Sintassi
- Il **BindToRecordset** metodo associa il **Recordset** campi con le variabili di C/C++.
+ Il metodo **BindToRecordset** associa i campi **Recordset** alle variabili C/C++.
 
 ```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
- Il **AddNew** metodo richiama il relativo omonimo, ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo, aggiungere una nuova riga per il **Recordset**.
+ Il metodo **AddNew** richiama il suo omonimo, il metodo ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) , per aggiungere una nuova riga al **Recordset**.
 
 ```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
- Il **aggiornare** metodo richiama il relativo omonimo, ADO [aggiornare](../../../ado/reference/ado-api/update-method.md) metodo, per aggiornare il **Recordset**.
+ Il metodo **Update** richiama l'omonimo metodo di [aggiornamento](../../../ado/reference/ado-api/update-method.md) ADO, per aggiornare il **Recordset**.
 
 ```cpp
 Update(CADORecordBinding *binding)
 ```
 
-## <a name="binding-entry-macros"></a>Macro di voci di associazione
- Macro di voci di associazione definiscono l'associazione di un **Recordset** campo e una variabile. Una macro di inizio e fine delimita il set di voci di associazione.
+## <a name="binding-entry-macros"></a>Macro di immissione di associazione
+ Le macro di immissione delle associazioni definiscono l'associazione di un campo del **Recordset** e una variabile. Una macro iniziale e finale delimita il set di voci di associazione.
 
- Famiglie di macro vengono fornite per i dati a lunghezza fissa, ad esempio **adDate** oppure **adBoolean**; numerico i dati, ad esempio **adTinyInt**, **tutti**, oppure **adDouble**; e i dati a lunghezza variabile, ad esempio **famiglia**, **adVarChar** oppure **adVarBinary**. Tutti i tipi numerici, ad eccezione di **adVarNumeric**, sono anche tipi a lunghezza fissa. Ogni famiglia è costituita da diversi set di parametri in modo che è possibile escludere le informazioni di associazione di alcun interesse.
+ Le famiglie di macro sono fornite per i dati a lunghezza fissa, ad esempio **addate** o **adBoolean**; dati numerici, ad esempio **adTinyInt**, **adInteger**o **adDouble**; e dati a lunghezza variabile, ad esempio **adChar**, **adVarChar** o **adVarBinary**. Anche tutti i tipi numerici, ad eccezione di **adVarNumeric**, sono tipi a lunghezza fissa. Ogni famiglia ha insiemi diversi di parametri, in modo che sia possibile escludere le informazioni di binding che non sono di alcun interesse.
 
- Per altre informazioni, vedere [appendice a: Tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), di riferimento per programmatori OLE DB.
+ Per ulteriori informazioni, vedere [Appendice A: tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)di OLE DB Programmer ' s Reference.
 
-### <a name="begin-binding-entries"></a>Iniziare a voci di associazione
- **Le macro BEGIN_ADO_BINDING**(*classe*)
+### <a name="begin-binding-entries"></a>Inizio binding voci
+ **BEGIN_ADO_BINDING**(*classe*)
 
 ### <a name="fixed-length-data"></a>Dati a lunghezza fissa
- **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, lo stato, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, buffer, stato, modifica*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, tipo di dati, del Buffer, modificare*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, DataType, buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dati numerici
- **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, Buffer, precisione, scala, lo stato, modificare*)
+ **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, buffer, precisione, scala, stato, modifica*)
 
- **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, Buffer, precisione, scala, modificare*)
+ **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, buffer, precisione, scala, modifica*)
 
 ### <a name="variable-length-data"></a>Dati a lunghezza variabile
- **ADO_VARIABLE_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, lunghezza, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*ordinale, tipo di dati, buffer, dimensioni, stato, lunghezza, modifica*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, buffer, dimensioni, stato, modifica*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, Buffer, le dimensioni, lunghezza, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, buffer, dimensioni, lunghezza, modifica*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, Buffer, le dimensioni, modificare*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, buffer, dimensioni, modifica*)
 
-### <a name="end-binding-entries"></a>Associazione voci finali
+### <a name="end-binding-entries"></a>Termina voci di binding
  **END_ADO_BINDING**()
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Classe*|Classe in cui sono definite le voci di associazione e le variabili di C/C++.|
-|*Ordinal*|Numero ordinale a partire da uno, del **Recordset** campo corrispondente alla variabile di C/C++.|
-|*DataType*|Tipo di dati ADO equivalente della variabile di C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore della **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
-|*Buffer*|Nome della variabile C/C++ in cui il **Recordset** campo verrà archiviato.|
-|*Dimensione*|Dimensioni massime in byte del *Buffer*. Se *Buffer* conterrà una stringa a lunghezza variabile, consentire spazio per un terminazione zero.|
-|*Status*|Nome di una variabile che indica se il contenuto del *Buffer* validi e se la conversione del campo da *DataType* ha avuto esito positivo.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, ovvero la conversione ha avuto esito positivo; e **adFldNull**, ovvero il valore del campo sarebbe una variante di tipo VT_NULL e non semplicemente vuoto.<br /><br /> I possibili valori per *stato* sono elencati nella tabella seguente, "Valori dello stato".|
-|*Modificare*|Flag booleano. Se TRUE, indica ad ADO è consentito aggiornare corrispondente **Recordset** con il valore contenuto nel campo *Buffer*.<br /><br /> Impostare il valore booleano *modificare* parametro su TRUE per abilitare ADO aggiornare il campo associato e FALSE se si desidera esaminare il campo, ma non modificarlo.|
-|*Precisione*|Numero di cifre che può essere rappresentato in una variabile numerica.|
-|*Scala*|Numero di posizioni decimali in una variabile numerica.|
-|*Lunghezza*|Nome di una variabile a quattro byte che contiene la lunghezza effettiva dei dati in *Buffer*.|
+|*Classe*|Classe in cui sono definite le voci di associazione e le variabili C/C++.|
+|*Ordinal*|Numero ordinale, conteggio da uno, del campo **Recordset** corrispondente alla variabile C/C++.|
+|*DataType*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Se necessario, il valore del campo **Recordset** verrà convertito in questo tipo di dati.|
+|*Buffer*|Nome della variabile C/C++ in cui verrà archiviato il campo del **Recordset** .|
+|*Dimensione*|Dimensione massima, in byte, del *buffer*. Se il *buffer* contiene una stringa a lunghezza variabile, consentire lo spazio per uno zero di terminazione.|
+|*Status*|Nome di una variabile che indicherà se il contenuto del *buffer* è valido e se la conversione del campo nel *tipo* di dati è stata eseguita correttamente.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, il che significa che la conversione è stata eseguita correttamente. e **adFldNull**, che indica che il valore del campo è una variante di tipo VT_NULL e non è semplicemente vuota.<br /><br /> I valori possibili per *lo stato* sono elencati nella tabella seguente, "valori di stato".|
+|*Modifica*|Flag booleano; Se TRUE, indica che ADO è autorizzato ad aggiornare il campo **Recordset** corrispondente con il valore contenuto nel *buffer*.<br /><br /> Impostare il parametro booleano *Modify* su true per abilitare ADO per aggiornare il campo associato e false se si desidera esaminare il campo senza modificarlo.|
+|*Precision*|Numero di cifre che possono essere rappresentate in una variabile numerica.|
+|*Scalabilità*|Numero di posizioni decimali in una variabile numerica.|
+|*Length*|Nome di una variabile a quattro byte che conterrà la lunghezza effettiva dei dati nel *buffer*.|
 
 ## <a name="status-values"></a>Valori di stato
- Il valore della *stato* variabile indica se un campo è stato correttamente copiato a una variabile.
+ Il valore della variabile di *stato* indica se un campo è stato copiato correttamente in una variabile.
 
- Quando si impostano i dati, *lo stato* può essere impostato su **adFldNull** per indicare il **Recordset** campo deve essere impostato su null.
+ Quando si impostano i dati, *lo stato* può essere impostato su **adFldNull** per indicare che il campo **Recordset** deve essere impostato su null.
 
-|Costante|Value|Descrizione|
+|Costante|valore|Descrizione|
 |--------------|-----------|-----------------|
-|**adFldOK**|0|È stato restituito un valore del campo non null.|
-|**adFldBadAccessor**|1|Associazione non è valida.|
-|**adFldCantConvertValue**|2|Valore non è stato convertito per motivi diversi da overflow o non corrispondenza di segno.|
-|**adFldNull**|3|Quando si recupera un campo, indica che è stato restituito un valore null.<br /><br /> Quando si imposta un campo, indica il campo deve essere impostato su **NULL** quando non è possibile codificare il campo **NULL** stesso (ad esempio, una matrice di caratteri o un numero intero).|
-|**adFldTruncated**|4|Dati a lunghezza variabile o valori numerici sono stati troncati.|
-|**adFldSignMismatch**|5|Valore è con segno mentre il tipo di dati della variabile è senza segno.|
-|**adFldDataOverFlow**|6|Il valore è maggiore di possono essere archiviati nel tipo di dati della variabile.|
-|**adFldCantCreate**|7|Tipo di colonna sconosciuto e il campo è già aperta.|
-|**adFldUnavailable**|8|Valore del campo non è stato possibile determinare ad esempio, su un campo di nuovo, non assegnato non prevede alcun valore predefinito.|
-|**adFldPermissionDenied**|9|Quando non si aggiorna, nessuna autorizzazione per scrivere i dati.|
-|**adFldIntegrityViolation**|10|Durante l'aggiornamento, il valore del campo violerebbe l'integrità della colonna.|
-|**adFldSchemaViolation**|11|Durante l'aggiornamento, il valore del campo violerebbe dello schema di colonna.|
-|**adFldBadStatus**|12|Quando si aggiorna, parametro di stato non valido.|
-|**adFldDefault**|13|Durante l'aggiornamento, è stato usato un valore predefinito.|
+|**adFldOK**|0|È stato restituito un valore di campo non null.|
+|**adFldBadAccessor**|1|Binding non valido.|
+|**adFldCantConvertValue**|2|Non è stato possibile convertire il valore per motivi diversi dalla non corrispondenza di segno o dall'overflow dei dati.|
+|**adFldNull**|3|Quando si recupera un campo, indica che è stato restituito un valore null.<br /><br /> Quando si imposta un campo, indica che il campo deve essere impostato su **null** quando il campo non può codificare **null** (ad esempio, una matrice di caratteri o un Integer).|
+|**adFldTruncated**|4|I dati a lunghezza variabile o le cifre numeriche sono stati troncati.|
+|**adFldSignMismatch**|5|Il valore è firmato e il tipo di dati della variabile è senza segno.|
+|**adFldDataOverFlow**|6|Il valore è maggiore di quello che può essere archiviato nel tipo di dati della variabile.|
+|**adFldCantCreate**|7|Il tipo di colonna e il campo sconosciuti sono già aperti.|
+|**adFldUnavailable**|8|Non è stato possibile determinare il valore del campo, ad esempio in un nuovo campo non assegnato senza alcun valore predefinito.|
+|**adFldPermissionDenied**|9|Quando si esegue l'aggiornamento, non sono disponibili autorizzazioni per la scrittura di dati.|
+|**adFldIntegrityViolation**|10|Quando si esegue l'aggiornamento, il valore del campo viola l'integrità della colonna.|
+|**adFldSchemaViolation**|11|Quando si esegue l'aggiornamento, il valore del campo viola lo schema della colonna.|
+|**adFldBadStatus**|12|Durante l'aggiornamento, parametro di stato non valido.|
+|**adFldDefault**|13|Quando si esegue l'aggiornamento, viene utilizzato un valore predefinito.|
 
 ## <a name="see-also"></a>Vedere anche
- [Esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [intestazione delle estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Esempio di estensioni Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) estensioni [Visual C++ estensioni](../../../ado/guide/appendixes/visual-c-extensions-header.md)

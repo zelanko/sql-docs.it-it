@@ -1,5 +1,5 @@
 ---
-title: Disconnessione da una Data sorgente o il Driver | Microsoft Docs
+title: Disconnessione da un'origine dati o da un driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039765"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Disconnessione da un'origine dati o driver
-Quando un'applicazione ha terminato di utilizzare un'origine dati, viene chiamato **SQLDisconnect**. **SQLDisconnect** libera le istruzioni allocate nella connessione e disconnette il driver dell'origine dati. Restituisce un errore se una transazione è in corso.  
+Quando un'applicazione ha terminato di usare un'origine dati, chiama **SQLConnect**. **SQLConnect** libera tutte le istruzioni allocate sulla connessione e disconnette il driver dall'origine dati. Restituisce un errore se una transazione è in corso.  
   
- Dopo la disconnessione, l'applicazione può chiamare **SQLFreeHandle** per liberare la connessione. Dopo avere liberato la connessione, è un'applicazione un errore di programmazione per l'uso di handle di connessione in una chiamata a una funzione ODBC; Questa operazione ha conseguenze non definiti, ma probabilmente irreversibile. Quando **SQLFreeHandle** viene chiamato, le versioni di driver la struttura utilizzata per archiviare le informazioni sulla connessione.  
+ Dopo la disconnessione, l'applicazione può chiamare **SQLFreeHandle** per liberare la connessione. Una volta liberata la connessione, si tratta di un errore di programmazione dell'applicazione per l'utilizzo dell'handle della connessione in una chiamata a una funzione ODBC. Questa operazione ha conseguenze indefinite ma probabilmente fatali. Quando viene chiamato **SQLFreeHandle** , il driver rilascia la struttura utilizzata per archiviare le informazioni sulla connessione.  
   
- L'applicazione può anche riutilizzare la connessione, per connettersi a un'origine dati diversa o riconnettersi alla stessa origine dati. La decisione di rimanere connessi, invece di disconnessione e riconnessione in seguito, è necessario che il writer dell'applicazione dei costi relativi di ogni opzione. sia la connessione a un'origine dati e rimanere connessi può essere relativamente costosi a seconda del supporto di connessione. Effettuare un compromesso corretto, l'applicazione deve anche fare ipotesi sulla probabilità e sui tempi di altre operazioni sulla stessa origine dati.
+ L'applicazione può anche riutilizzare la connessione per connettersi a un'origine dati diversa oppure riconnettersi alla stessa origine dati. La decisione di rimanere connessa, anziché disconnettersi e riconnettersi in un secondo momento, richiede che il writer di applicazioni consideri i costi relativi di ogni opzione. la connessione a un'origine dati e rimanente connessa può essere relativamente costosa a seconda del supporto di connessione. Per garantire un compromesso corretto, l'applicazione deve anche ipotizzare la probabilità e la tempistica di ulteriori operazioni sulla stessa origine dati.

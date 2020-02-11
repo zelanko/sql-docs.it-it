@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667184"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
-  In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] In Monitoraggio replica vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
   
  Quando si attiva un avviso, si specifica una soglia. Quando tale soglia viene soddisfatta o superata, viene visualizzato un avviso, a meno che non sia necessario visualizzare un problema con una priorità più elevata. Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. È possibile abilitare avvisi per le seguenti condizioni:  
   
@@ -47,25 +47,25 @@ ms.locfileid: "62667184"
   
  Per altre informazioni sugli avvisi **Prestazioni critiche** e **Merge con esecuzione prolungata**, vedere [Monitoraggio delle prestazioni con Monitoraggio replica](monitor-performance-with-replication-monitor.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   [Impostare soglie e avvisi per una pubblicazione transazionale](#Transactional)  
   
--   [Impostare valore soglia e avvisi per una pubblicazione di tipo merge](#Merge)  
+-   [Impostare soglie e avvisi per una pubblicazione di tipo merge](#Merge)  
   
--   [Impostare valore soglia e avvisi per una pubblicazione di snapshot](#Snapshot)  
+-   [Impostare soglie e avvisi per una pubblicazione snapshot](#Snapshot)  
   
-##  <a name="Transactional"></a> Per impostare soglie e avvisi per una pubblicazione transazionale  
+##  <a name="Transactional"></a>Per impostare soglie e avvisi per una pubblicazione transazionale  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
-2.  Fare clic sulla scheda **Avvisi** . Per visualizzare ulteriori informazioni sulle opzioni di questa scheda, fare clic su **?** sulla barra dei menu.  
+2.  Fare clic sulla scheda **avvisi** . Per visualizzare ulteriori informazioni sulle opzioni disponibili in questa scheda, **fare clic su** ? sulla barra dei menu.  
   
 3.  Abilitare un avviso selezionando la casella di controllo appropriata tra **Avvisa se una sottoscrizione scade entro il valore soglia** e **Avvisa se la latenza supera il valore soglia**.  
   
 4.  Impostare una soglia per gli avvisi nella colonna **Soglia** . Se, ad esempio, nel passaggio 3 è stata selezionata la casella di controllo **Avvisa se la latenza supera il valore soglia** , è possibile impostare una latenza di **60 secondi** nella colonna **Soglia** .  
   
-5.  Fare clic su **salvare le modifiche**.  
+5.  Fare clic su **Save Changes**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -85,29 +85,29 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
-##  <a name="Merge"></a> Impostare valore soglia e avvisi per una pubblicazione di tipo merge  
+##  <a name="Merge"></a>Impostare soglie e avvisi per una pubblicazione di tipo merge  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
-2.  Fare clic sulla scheda **Avvisi** . Per visualizzare altre informazioni relative alle opzioni della scheda, fare clic su **?** sulla barra dei menu.  
+2.  Fare clic sulla scheda **avvisi** . Per visualizzare ulteriori informazioni sulle opzioni **disponibili in questa scheda, fare clic** su? sulla barra dei menu.  
   
 3.  Abilitare un avviso selezionando la casella di controllo appropriata tra  
   
-    -   **Avvisa se una sottoscrizione scade entro il valore soglia**  
+    -   **Avvisa se una sottoscrizione scade entro la soglia**  
   
-    -   **Avvisa se la durata del processo di merge per le connessioni remote supera il valore soglia**  
+    -   **Avvisa se la durata del merge per le connessioni remote supera la soglia**  
   
-    -   **Avvisa se la durata del processo di merge per le connessioni LAN supera il valore soglia**  
+    -   **Avvisa se la durata del merge per le connessioni LAN supera la soglia**  
   
-    -   **Avvisa se il numero di righe al secondo di cui è stato eseguito il merge per le connessioni LAN è minore del valore soglia**  
+    -   **Avvisa se le righe unite al secondo per le connessioni LAN sono inferiori alla soglia**  
   
-    -   **Avvisa se il numero di righe al secondo di cui è stato eseguito il merge per le connessioni remote è minore del valore soglia**  
+    -   **Avvisa se le righe unite al secondo per le connessioni remote sono inferiori alla soglia**  
   
 4.  Impostare i valore soglia per gli avvisi nella colonna **Soglia** . Ad esempio, se si seleziona **Avvisa se la durata del processo di merge per le connessioni remote supera il valore soglia** nel passaggio 3, è possibile selezionare un periodo di **10 minuti** nella colonna **Soglia** .  
   
-5.  Fare clic su **Salva modifiche**.  
+5.  Fare clic su **Save Changes**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie.  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -127,19 +127,19 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
-##  <a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
+##  <a name="Snapshot"></a>Impostare soglie e avvisi per una pubblicazione snapshot  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
-2.  Fare clic sulla scheda **Avvisi** . Per visualizzare ulteriori informazioni sulle opzioni di questa scheda, scegliere **?** dal menu disponibile nella parte superiore.  
+2.  Fare clic sulla scheda **avvisi** . Per visualizzare ulteriori informazioni sulle opzioni disponibili in questa scheda, **fare clic su** ? nel menu in alto.  
   
 3.  Abilitare un avviso selezionando la casella di controllo **Avvisa se una sottoscrizione scade entro il valore soglia**.  
   
 4.  Impostare una soglia per l'avviso nella colonna **Soglia** . È ad esempio possibile selezionare un valore di **70%** nella colonna **Soglia** .  
   
-5.  Fare clic su **salvare le modifiche**.  
+5.  Fare clic su **Save Changes**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)  

@@ -1,5 +1,5 @@
 ---
-title: Stream oggetto (ADO) | Microsoft Docs
+title: Oggetto Stream (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,65 +16,65 @@ ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916727"
 ---
 # <a name="stream-object-ado"></a>Oggetto Stream (ADO)
 Rappresenta un flusso di dati binari o testo.  
   
- Nelle gerarchie di struttura ad albero, ad esempio un file system o un sistema di posta elettronica, un [Record](../../../ado/reference/ado-api/record-object-ado.md) può essere un flusso di binari predefinito di bit associato che include il contenuto del file o posta elettronica. Oggetto **Stream** oggetto può essere utilizzato per modificare i campi o record che contengono questi flussi di dati. Oggetto **Stream** oggetto può essere ottenuto nei modi seguenti:  
+ Nelle gerarchie strutturate ad albero quali un file system o un sistema di posta elettronica, è possibile che a un [record](../../../ado/reference/ado-api/record-object-ado.md) sia associato un flusso binario predefinito di bit che contenga il contenuto del file o del messaggio di posta elettronica. Un oggetto **flusso** può essere usato per modificare campi o record contenenti questi flussi di dati. È possibile ottenere un oggetto **flusso** nei modi seguenti:  
   
--   Da un URL che punta a un oggetto (in genere un file) contenente dati binari o testo. Questo oggetto può essere un semplice documento, un **Record** oggetto che rappresenta un documento strutturato o in una cartella.  
+-   Da un URL che punta a un oggetto (in genere un file) contenente dati binari o di testo. Questo oggetto può essere un documento semplice, un oggetto **record** che rappresenta un documento strutturato o una cartella.  
   
--   Aprendo il valore predefinito **Stream** oggetto associato a un **Record** oggetto. È possibile ottenere il flusso predefinito associato con un **Record** oggetto quando il **Record** viene aperto, per eliminare un round trip per aprire il flusso.  
+-   Aprendo l'oggetto **flusso** predefinito associato a un oggetto **record** . È possibile ottenere il flusso predefinito associato a un oggetto **record** quando il **record** viene aperto, per eliminare un round trip solo per aprire il flusso.  
   
--   Creando un **Stream** oggetto. Questi **Stream** oggetti possono essere utilizzati per archiviare i dati ai fini dell'applicazione. A differenza di una **Stream** associato a un URL o il valore predefinito **Stream** di un **Record**, un'istanza **Stream** non ha alcuna associazione con un origine sottostante per impostazione predefinita.  
+-   Creando un'istanza di un oggetto **flusso** . Questi oggetti **flusso** possono essere usati per archiviare i dati ai fini dell'applicazione. A differenza di un **flusso** associato a un URL o al **flusso** predefinito di un **record**, per impostazione predefinita un **flusso** di cui è stata creata un'istanza non ha alcuna associazione con un'origine sottostante.  
   
- Con i metodi e proprietà di un **Stream** dell'oggetto, è possibile eseguire le operazioni seguenti:  
+ Con i metodi e le proprietà di un oggetto **flusso** , è possibile eseguire le operazioni seguenti:  
   
--   Aprire un **Stream** dell'oggetto da un **Record** o l'URL con il [Open](../../../ado/reference/ado-api/open-method-ado-stream.md) (metodo).  
+-   Aprire un oggetto **flusso** da un **record** o un URL con il metodo [Open](../../../ado/reference/ado-api/open-method-ado-stream.md) .  
   
--   Chiudi una **Stream** con il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) (metodo).  
+-   Chiudere un **flusso** con il metodo [Close](../../../ado/reference/ado-api/close-method-ado.md) .  
   
--   Input byte o il testo da un **Stream** con il [scrivere](../../../ado/reference/ado-api/write-method.md) e [WriteText](../../../ado/reference/ado-api/writetext-method.md) metodi.  
+-   Byte di input o testo in un **flusso** con i metodi [Write](../../../ado/reference/ado-api/write-method.md) e [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md) .  
   
--   Leggere i byte dal **Stream** con il [lettura](../../../ado/reference/ado-api/read-method.md) e [ReadText](../../../ado/reference/ado-api/readtext-method.md) metodi.  
+-   Leggere i byte dal **flusso** con i metodi [Read](../../../ado/reference/ado-api/read-method.md) e [READTEXT](../../../ado/reference/ado-api/readtext-method.md) .  
   
--   Scrivere eventuali **Stream** dati ancora in ADO buffer all'oggetto sottostante con il [Flush](../../../ado/reference/ado-api/flush-method-ado.md) (metodo).  
+-   Scrivere i dati di **flusso** ancora presenti nel buffer ADO nell'oggetto sottostante con il metodo [Flush](../../../ado/reference/ado-api/flush-method-ado.md) .  
   
--   Copiare il contenuto di un **Stream** a un'altra **Stream** con il [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) (metodo).  
+-   Copiare il contenuto di un **flusso** in un altro **flusso** con il metodo [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) .  
   
--   Controllare come le righe vengono lette dal file di origine con il [SkipLine](../../../ado/reference/ado-api/skipline-method.md)metodo e il [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) proprietà.  
+-   Controllare il modo in cui le righe vengono lette dal file di origine con il metodo [SkipLine](../../../ado/reference/ado-api/skipline-method.md)e la proprietà [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) .  
   
--   Determinare la fine della posizione di flusso con il [EOS](../../../ado/reference/ado-api/eos-property.md)proprietà e [SetEOS](../../../ado/reference/ado-api/seteos-method.md) (metodo).  
+-   Determinare la fine della posizione del flusso con la proprietà [EOS](../../../ado/reference/ado-api/eos-property.md)e il metodo [SetEOS](../../../ado/reference/ado-api/seteos-method.md) .  
   
--   Salvare e ripristinare i dati in file con il [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)e [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) metodi.  
+-   Salvare e ripristinare i dati nei file con i metodi [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)e [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) .  
   
--   Specificare il set di caratteri utilizzato per archiviare il **Stream** con il [Charset](../../../ado/reference/ado-api/charset-property-ado.md) proprietà.  
+-   Specificare il set di caratteri utilizzato per archiviare il **flusso** con la proprietà [CharSet](../../../ado/reference/ado-api/charset-property-ado.md) .  
   
--   HALT asincrono **Stream** operazione con il [Annulla](../../../ado/reference/ado-api/cancel-method-ado.md) (metodo).  
+-   Arrestare un'operazione di **flusso** asincrona con il metodo [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   
--   Determinare il numero di byte in una **Stream** con il [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) proprietà.  
+-   Determinare il numero di byte in un **flusso** con la proprietà [size](../../../ado/reference/ado-api/size-property-ado-stream.md) .  
   
--   Controllare la posizione corrente all'interno di un **Stream** con il [posizione](../../../ado/reference/ado-api/position-property-ado.md) proprietà.  
+-   Controllare la posizione corrente all'interno di un **flusso** con la proprietà [position](../../../ado/reference/ado-api/position-property-ado.md) .  
   
--   Determinare il tipo di dati in un **Stream** con il [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) proprietà.  
+-   Determinare il tipo di dati in un **flusso** con la proprietà [Type](../../../ado/reference/ado-api/type-property-ado-stream.md) .  
   
--   Determinare lo stato corrente del **Stream** (chiuso, aperto, o l'esecuzione) con i [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà.  
+-   Determinare lo stato corrente del **flusso** (chiuso, aperto o in esecuzione) con la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Specificare la modalità di accesso per il **Stream** con il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà.  
+-   Specificare la modalità di accesso per il **flusso** con la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) .  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- Il **Stream** oggetto è sicuro per lo scripting.  
+ L'oggetto **flusso** è sicuro per lo scripting.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Le proprietà dell'oggetto Stream, metodi ed eventi](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Record e flussi](../../../ado/guide/data/records-and-streams.md)

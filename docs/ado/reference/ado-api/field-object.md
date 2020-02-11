@@ -16,43 +16,43 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918679"
 ---
 # <a name="field-object"></a>Oggetto Field
 Rappresenta una colonna di dati con un tipo di dati comune.  
   
-## <a name="remarks"></a>Note  
- Ciascuna **campo** corrisponde a una colonna in oggetto il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Si utilizza il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di **campo** oggetti da impostare o restituire i dati per il record corrente. A seconda della funzionalità espone il provider, alcune raccolte, metodi o proprietà di un **campo** oggetto potrebbe non essere disponibile.  
+## <a name="remarks"></a>Osservazioni  
+ Ogni oggetto **campo** corrisponde a una colonna nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usare la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) degli oggetti **Field** per impostare o restituire i dati per il record corrente. A seconda delle funzionalità esposte dal provider, alcune raccolte, metodi o proprietà di un oggetto **campo** potrebbero non essere disponibili.  
   
- Con le raccolte, i metodi e proprietà di un **campo** dell'oggetto, è possibile eseguire le operazioni seguenti:  
+ Con le raccolte, i metodi e le proprietà di un oggetto **campo** , è possibile eseguire le operazioni seguenti:  
   
--   Restituire il nome di un campo con il [nome](../../../ado/reference/ado-api/name-property-ado.md) proprietà.  
+-   Restituisce il nome di un campo con la proprietà [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Visualizzare o modificare i dati nel campo con il **valore** proprietà. **Valore** è la proprietà predefinita di **campo** oggetto.  
+-   Visualizzare o modificare i dati nel campo con la proprietà **value** . **Value** è la proprietà predefinita dell'oggetto **Field** .  
   
--   Restituisce le caratteristiche di base di un campo con il [tipo](../../../ado/reference/ado-api/type-property-ado.md), [precisione](../../../ado/reference/ado-api/precision-property-ado.md), e [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) proprietà.  
+-   Restituire le caratteristiche di base di un campo con il [tipo](../../../ado/reference/ado-api/type-property-ado.md), la [precisione](../../../ado/reference/ado-api/precision-property-ado.md)e le proprietà [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) .  
   
--   Restituire la dimensione dichiarata di un campo con il [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) proprietà.  
+-   Restituisce la dimensione dichiarata di un campo con la proprietà [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) .  
   
--   Restituisce le dimensioni effettive dei dati in un determinato campo con il [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) proprietà.  
+-   Restituisce le dimensioni effettive dei dati in un campo specificato con la proprietà [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) .  
   
--   Determinare i tipi di funzionalità sono supportati per un determinato campo con il [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà e [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
+-   Determinare quali tipi di funzionalità sono supportati per un determinato campo con la proprietà [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) e la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Modificare i valori dei campi che contengono dati long carattere o binari long con il [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) metodi.  
+-   Modificare i valori dei campi contenenti dati di tipo long binary o Long character con i metodi [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) .  
   
--   Se il provider supporta aggiornamenti batch, risolvere eventuali discrepanze nei valori dei campi durante l'aggiornamento in batch con il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà.  
+-   Se il provider supporta gli aggiornamenti batch, risolvere le discrepanze nei valori di campo durante l'aggiornamento in batch con le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Tutte le proprietà dei metadati (**Name**, **tipo**, **DefinedSize**, **precisione**, e **NumericScale**) sono disponibili prima di aprire la **campo** dell'oggetto **Recordset**. Impostarli in quel momento è utile per la creazione dinamica di form.  
+ Tutte le proprietà dei metadati (**Name**, **Type**, **DefinedSize**, **Precision**e **NumericScale**) sono disponibili prima di aprire il **Recordset**dell'oggetto **campo** . L'impostazione in quel momento è utile per la costruzione dinamica dei moduli.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
--   [Campo oggetto proprietà, metodi ed eventi](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
+-   [Proprietà, metodi ed eventi dell'oggetto Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

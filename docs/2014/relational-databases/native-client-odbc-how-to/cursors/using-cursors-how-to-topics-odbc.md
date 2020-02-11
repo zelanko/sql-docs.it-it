@@ -1,5 +1,5 @@
 ---
-title: Utilizzando procedure cursori (ODBC) | Documenti di Microsoft
+title: Procedure per l'utilizzo di cursori (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200423"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Procedure di utilizzo dei cursori (ODBC)
   Per utilizzare i cursori ODBC, è necessario prima impostare gli attributi delle istruzioni e di connessione che ne controllano il comportamento. I cursori consentono a un'applicazione di recuperare più righe per volta e di eseguire le istruzioni UPDATE, INSERT o DELETE nella posizione corrente del cursore.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Utilizzare i cursori &#40;ODBC&#41;](use-cursors-odbc.md)  
+-   [Utilizzare cursori &#40;&#41;ODBC](use-cursors-odbc.md)  
   
--   [Utilizzare l'associazione Rowset &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
+-   [Utilizzare l'associazione di set di righe &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
   
--   [Recuperare e aggiornare i set di righe &#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
+-   [Recuperare e aggiornare set di righe &#40;&#41;ODBC](fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a ODBC](../odbc-how-to-topics.md)  
+ [Procedure per l'utilizzo di ODBC](../odbc-how-to-topics.md)  
   
   

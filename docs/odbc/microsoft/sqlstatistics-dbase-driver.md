@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics (Driver dBASE) | Microsoft Docs
+title: SQLStatistics (driver dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3ccd07ad517b52a18dc25ddb3cb3882bd2eb61e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037836"
 ---
 # <a name="sqlstatistics-dbase-driver"></a>SQLStatistics (driver dBASE)
 > [!NOTE]  
->  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Colonna|Commenti|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Il percorso di una directory.<br /><br /> Criteri di ricerca non sono supportata nel *szTableQualifier* argomento.|  
-|TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  
-|TABLE_NAME|Nome della tabella non delimitato.<br /><br /> Criteri di ricerca non sono supportata nel *szTableName* argomento.|  
+|TABLE_QUALIFIER|Percorso di una directory.<br /><br /> I criteri di ricerca non sono supportati nell'argomento *szTableQualifier* .|  
+|TABLE_OWNER|In questa colonna viene restituito NULL perché il nome del proprietario non è supportato.|  
+|TABLE_NAME|Nome di tabella non delimitato.<br /><br /> I criteri di ricerca non sono supportati nell'argomento *szTableName* .|  
 |INDEX_QUALIFIER|Viene sempre restituito NULL.|  
-|INDEX_NAME|Indice dipendente.|  
-|TYPE|Verranno restituiti solo SQL_TABLE_STAT o SQL_INDEX_OTHER per tipo.|  
-|SEQ_IN_INDEX|Indice dipendente.|  
-|COLUMN_NAME|Indice dipendente.|  
-|COLLATION|Indice dipendente.|  
+|INDEX_NAME|Dipendente dall'indice.|  
+|TYPE|Per il tipo verranno restituiti solo SQL_TABLE_STAT o SQL_INDEX_OTHER.|  
+|SEQ_IN_INDEX|Dipendente dall'indice.|  
+|COLUMN_NAME|Dipendente dall'indice.|  
+|COLLATION|Dipendente dall'indice.|  
 |PAGES|Viene sempre restituito NULL.|  
   
- Il filtro si basa sull'univocità (la *fUnique* argomento). Il *fAccuracy* parametro viene ignorato.
+ Il filtro è basato sull'univocità (argomento *fUnique* ). Il parametro *fAccuracy* viene ignorato.

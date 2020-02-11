@@ -1,5 +1,5 @@
 ---
-title: Mapping di origine e i database di destinazione (AccessToSQL) | Microsoft Docs
+title: Mapping dei database di origine e di destinazione (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,56 +18,56 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907154"
 ---
-# <a name="mapping-source-and-target-databases-accesstosql"></a>Mapping di origine e i database di destinazione (AccessToSQL)
-Quando ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario specificare un database di destinazione per la migrazione. Se si dispone di più database di Access è possibile eseguirne il mapping a più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (o gli schemi) o a più schemi inclusi nel database di SQL Azure connesso.  
+# <a name="mapping-source-and-target-databases-accesstosql"></a>Mapping dei database di origine e di destinazione (AccessToSQL)
+Quando ci si connette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o SQL Azure, è necessario specificare un database di destinazione per la migrazione. Se si dispone di più database di Access, è possibile eseguirne il mapping a più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (o schemi) o a più schemi nel database di SQL Azure connesso.  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server o schemi del Database SQL Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database utilizzano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria è stato possibile usare tre schemi denominati **libri**, **audio**, e **video** per separare gli oggetti di audio e video libro intitolato uni dagli altri. Per impostazione predefinita, il database di access viene eseguito il mapping a **master** database e **dbo** schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in un database connesso e **dbo** dello schema in SQL Azure.  
+## <a name="sql-server-or-sql-azure-database-schemas"></a>Schemi di database SQL Server o SQL Azure  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i database utilizzano il concetto di schemi per separare gli oggetti all'interno di un database in gruppi logici. Ad esempio, un database di libreria può utilizzare tre schemi denominati **libri**, **audio**e **video** per separare gli oggetti book, audio e video tra loro. Per impostazione predefinita, il database di Access viene mappato al database **Master** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allo schema **dbo** in e al database connesso e allo schema **dbo** in SQL Azure.  
   
-Non è stato personalizzato il mapping tra ogni database di Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e dello schema, verrà eseguita la migrazione di SSMA tutti gli schemi e dati associati al database l'accesso al database predefinito mappato.  
+A meno che non si Personalizza il mapping tra ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access e il database e lo schema, SSMA eseguirà la migrazione di tutti gli schemi e i dati associati al database di Access al database predefinito mappato.  
   
-## <a name="modifying-the-target-database-and-schema"></a>Modifica il Database di destinazione e lo Schema  
-SSMA consente di eseguire il mapping di ogni database di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure e lo schema. La procedura seguente descrive come personalizzare il mapping per ogni database.  
+## <a name="modifying-the-target-database-and-schema"></a>Modifica del database di destinazione e dello schema  
+SSMA consente di eseguire il mapping di ogni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Access a o SQL Azure database e schema. Nella procedura riportata di seguito viene descritto come personalizzare il mapping per ogni database.  
   
-**Per modificare il database di destinazione e lo schema**  
+**Per modificare il database e lo schema di destinazione**  
   
-1.  Nel riquadro di esplorazione di metadati di accesso, selezionare **accedere ai metadati**.  
+1.  Nel riquadro Access Metadata Explorer selezionare **Access-Metadata**.  
   
-    Mapping dello schema è disponibile anche quando si seleziona il **database** nodo o un qualsiasi nodo del database. L'elenco di mapping dello schema viene personalizzato per l'oggetto selezionato.  
+    Il mapping dello schema è disponibile anche quando si seleziona il nodo **database** o qualsiasi nodo del database. L'elenco di mapping dello schema è personalizzato per l'oggetto selezionato.  
   
-2.  Nel riquadro di destra, scegliere il **Schema di Mapping** scheda.  
+2.  Nel riquadro di destra fare clic sulla scheda **mapping dello schema** .  
   
-    Si noterà una tabella che include l'accesso dello schema di Sql Azure e relativi ssNoVersion corrispondente o nomi di database. Lo schema di destinazione è identificato in una notazione di due parti (database.schema).  
+    Viene visualizzata una tabella contenente i nomi dei database di Access e il relativo schema ssNoVersion o SQL Azure corrispondente. Lo schema di destinazione è indicato in una notazione in due parti (database. Schema).  
   
-3.  Selezionare la riga che contiene il mapping che si desidera personalizzare e quindi fare clic su **Modify**.  
+3.  Selezionare la riga che contiene il mapping che si desidera personalizzare, quindi fare clic su **modifica**.  
   
-4.  Nel **scegliere lo Schema di destinazione** della finestra di dialogo è possibile esplorare per database di destinazione disponibili e dello schema o un tipo di database e lo schema assegnare un nome nella casella di testo in una notazione di due parti (database.schema) e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **Scegli schema di destinazione** è possibile cercare il database e lo schema di destinazione disponibili oppure digitare il nome del database e dello schema nella casella di testo in una notazione in due parti (database. Schema), quindi fare clic su **OK**.  
   
-**Modalità di Mapping**  
+**Modalità di mapping**  
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita viene eseguito il mapping di database di origine alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database con cui si è connessi con SSMA. Se il database di destinazione in corso il mapping non esiste sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi verrà richiesto con un messaggio **"il Database e/o schema non esiste nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei metadati. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare?"** Fare clic su Sì. Analogamente, è possibile mappare lo schema allo schema non esistente nella destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mappato al database di destinazione con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il mapping non esiste in, verrà visualizzato **il messaggio "il database e/o lo schema non esiste nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esistente nel database di destinazione che verrà creato durante la sincronizzazione.  
   
--   Il mapping a SQL Azure  
+-   Mapping a SQL Azure  
   
-È possibile eseguire il mapping del database di origine alla destinazione connessa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database o per qualsiasi schema nel database di destinazione connessi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Se si esegue il mapping dello Schema di origine ad alcuno schema non esistente nel database di destinazione connesso, quindi verrà richiesto con un messaggio **"dello Schema non esiste nei metadati di destinazione. Ne verrà creato uno durante la sincronizzazione. Si desidera continuare? "** Fare clic su Sì.  
+È possibile eseguire il mapping del database di origine al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di destinazione connesso o a qualsiasi schema nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione connesso. Se si esegue il mapping dello schema di origine a qualsiasi schema non esistente nel database di destinazione connesso, verrà visualizzato un messaggio in cui viene visualizzato il messaggio **"lo schema non esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì.  
   
-## <a name="reverting-to-your-initial-database-and-schema"></a>Viene ripristinato il Database iniziale e lo Schema  
-Se si personalizza il mapping tra un database di Access e un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure e lo schema, è possibile ripristinare il mapping nel database specificato quando connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+## <a name="reverting-to-your-initial-database-and-schema"></a>Ripristino del database e dello schema iniziali  
+Se si Personalizza il mapping tra un database di Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uno o SQL Azure database e schema, è possibile ripristinare il mapping al database specificato quando si è connessi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
-**Per reimpostare lo schema e il database predefinito**  
+**Per ripristinare il database e lo schema predefiniti**  
   
-1.  Nella scheda mapping dello schema, selezionare una riga qualsiasi e fare clic su **Ripristina predefinito** per ripristinare il database predefinito e lo schema.  
+1.  Nella scheda mapping dello schema selezionare una riga qualsiasi e fare clic su **Reimposta per impostazione predefinita** per ripristinare il database e lo schema predefiniti.  
   
-## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo del processo di migrazione consiste [conversione di oggetti di database](converting-access-database-objects-accesstosql.md)  
+## <a name="next-step"></a>passaggio successivo  
+Il passaggio successivo del processo di migrazione consiste nella [conversione degli oggetti di database](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

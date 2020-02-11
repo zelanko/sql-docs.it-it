@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017134"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
@@ -38,21 +38,21 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *distanza*  
+ *Distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
-## <a name="remarks"></a>Note  
- Con il **predecessore** (funzione), specifica la funzione con un'espressione di membro MDX e quindi specificare un'espressione MDX di un livello predecessore del membro oppure un'espressione numerica che rappresenta il numero di livelli sopra tale membro. Con queste informazioni, il **predecessori** funzione restituisce il membro predecessore a tale livello.  
+## <a name="remarks"></a>Osservazioni  
+ Con la funzione **predecessore** , si fornisce la funzione con un'espressione di membro MDX e quindi si fornisce un'espressione MDX di un livello che è un predecessore del membro o un'espressione numerica che rappresenta il numero di livelli al di sopra di tale membro. Con queste informazioni, la funzione **progenitori** restituisce il membro predecessore a tale livello.  
   
 > [!NOTE]  
->  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (funzione).  
+>  Per restituire un set contenente il membro predecessore, anziché solo il membro predecessore, usare i predecessori [&#40;funzione MDX&#41;](../mdx/ancestors-mdx.md) .  
   
- Se viene specificata un'espressione di livello, il **predecessore** funzione restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
+ Se viene specificata un'espressione di livello, la funzione **predecessore** restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
   
- Se viene specificata una distanza, la **predecessore** funzione restituisce il predecessore del membro specificato che corrisponde al numero di passaggi specificato nella gerarchia specificata dall'espressione di membro. Un membro può essere specificato come membro di una gerarchia dell'attributo, una gerarchia definita dall'utente o, in alcuni casi, una gerarchia padre-figlio. Con il numero 1 viene restituito l'elemento padre di un membro, mentre con il numero 2 viene restituito l'elemento padre del padre di un membro, se esistente. Il numero 0 restituisce il membro stesso.  
+ Se viene specificata una distanza, la funzione **predecessore** restituisce il predecessore del membro specificato che corrisponde al numero di passaggi specificato nella gerarchia specificata dall'espressione del membro. Un membro può essere specificato come membro di una gerarchia dell'attributo, una gerarchia definita dall'utente o, in alcuni casi, una gerarchia padre-figlio. Con il numero 1 viene restituito l'elemento padre di un membro, mentre con il numero 2 viene restituito l'elemento padre del padre di un membro, se esistente. Il numero 0 restituisce il membro stesso.  
   
 > [!NOTE]  
->  Utilizzare questa forma del **predecessore** funzione nei casi in cui il livello dell'elemento padre è sconosciuto o non può essere rinominato.  
+>  Utilizzare questo formato della funzione **predecessore** per i casi in cui il livello dell'elemento padre è sconosciuto o non può essere denominato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la relativa percentuale sul totale delle vendite su Internet per l'Australia.  
@@ -99,6 +99,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,38 +16,38 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920781"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
-Il **ADOStreamConstruction** interfaccia viene utilizzata per costruire un oggetto ADO **Stream** oggetto da OLE DB **IStream** oggetto in un'applicazione C/C++.  
+L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.  
   
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Lettura/scrittura. Ottiene o imposta un DB OLE **Stream** oggetto.|  
+|[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
-## <a name="remarks"></a>Note  
- Dato un OLE DB **IStream** oggetto (`pStream`), la costruzione di un oggetto ADO **Stream** oggetto (`adoStr`) gli importi per le tre operazioni fondamentali seguenti:  
+## <a name="remarks"></a>Osservazioni  
+ Dato un oggetto OLE DB **IStream** (`pStream`), la costruzione di un oggetto **flusso** ADO (`adoStr`) equivale alle tre operazioni di base seguenti:  
   
-1.  Creare un oggetto ADO **Stream** oggetto:  
+1.  Creazione di un oggetto **flusso** ADO:  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  Query di **IADOStreamConstruction** interfaccia le **Stream** oggetto:  
+2.  Eseguire una query sull'interfaccia **IADOStreamConstruction** sull'oggetto **Stream** :  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +55,7 @@ Il **ADOStreamConstruction** interfaccia viene utilizzata per costruire un ogget
                          (void**)&adoStrConstruct);  
     ```  
   
- Chiamare il `IADOStreamConstruction::get_Stream` metodo di proprietà da impostare OLE DB **IStream** sull'oggetto ADO **Stream** oggetto:  
+ Chiamare il `IADOStreamConstruction::get_Stream` Metodo Property per impostare il OLE DB oggetto **IStream** sull'oggetto **flusso** ADO:  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,14 +63,14 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- I risultanti `adoStr` oggetto rappresenta ora ADO **Stream** oggetto costruito da OLE DB **IStream** oggetto.  
+ L' `adoStr` oggetto risultante rappresenta ora l'oggetto **flusso** ADO costruito dal OLE DB oggetto **IStream** .  
   
 ## <a name="requirements"></a>Requisiti  
- **Versione:** ADO 2.0 o versione successiva  
+ **Versione:** ADO 2,0 o versione successiva  
   
- **Libreria:** msado15.dll  
+ **Libreria:** msado15. dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
+ [Informazioni di riferimento sull'API ADO](../../../ado/reference/ado-api/ado-api-reference.md)

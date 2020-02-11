@@ -1,5 +1,5 @@
 ---
-title: Append e CreateParameter metodi (VC + +) | Microsoft Docs
+title: Esempio di metodi Append e CreateParameter (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920698"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>Append e CreateParameter metodi (VC + +)
-Questo esempio Usa la [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) metodi per eseguire una stored procedure con un parametro di input.  
+# <a name="append-and-createparameter-methods-example-vc"></a>Esempio di metodi Append e CreateParameter (VC + +)
+In questo esempio vengono utilizzati i metodi [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) per eseguire una stored procedure con un parametro di input.  
   
 ## <a name="example"></a>Esempio  
   
@@ -194,7 +194,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 Authors with 25 percent royalty  

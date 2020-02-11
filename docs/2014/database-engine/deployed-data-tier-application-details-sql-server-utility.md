@@ -1,5 +1,5 @@
 ---
-title: Distribuito i dettagli dell'applicazione livello dati (utilità SQL Server) | Microsoft Docs
+title: Dettagli dell'applicazione livello dati distribuita (Utilità SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,24 +19,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754097"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- Visualizzazione Elenco  
+ Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
--   Segno di spunta verde ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized"): numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia verde rivolta verso il basso ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow"): le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia rossa rivolta verso l'alto ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow"): le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62754097"
   
 -   Nome - Nome dell'applicazione del livello dati.  
   
--   CPU applicazione - Consente di visualizzare lo stato di integrità di utilizzo del processore per questa applicazione del livello dati. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'applicazione del livello dati e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU applicazione - Consente di visualizzare lo stato di integrità di utilizzo del processore per questa applicazione del livello dati. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per l'applicazione del livello dati e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa applicazione livello dati o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
--   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere [Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU computer - Consente di visualizzare lo stato di integrità di utilizzo del processore del computer. Lo stato di integrità per questo parametro è determinato in base al set dei criteri di utilizzo della CPU per il computer e all'impostazione di configurazione per i criteri di valutazione di risorse volatili. Per altre informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Per visualizzare la cronologia di utilizzo del processore per questa applicazione livello dati o per visualizzare o modificare i limiti dei criteri, fare clic sulla scheda **Utilizzo CPU**.  
   
@@ -76,17 +76,17 @@ ms.locfileid: "62754097"
   
 -   Data di distribuzione  
   
--   Trustworthy: (True o False)  
+-   Attendibile: (True o False)  
   
 -   Regole di confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (True o False)  
+-   Crittografia abilitata: (Vero o Falso)  
   
--   Modello di recupero: (Semplice, completo o con registrazione minima delle operazioni Bulk)  
+-   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'applicazione del livello dati e all'utilizzo della CPU del computer.  
@@ -153,21 +153,21 @@ ms.locfileid: "62754097"
   
 -   Data di distribuzione  
   
--   Trustworthy: (True o False)  
+-   Attendibile: (True o False)  
   
 -   Regole di confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (True o False)  
+-   Crittografia abilitata: (Vero o Falso)  
   
--   Modello di recupero: (Semplice, completo o con registrazione minima delle operazioni Bulk)  
+-   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
- [Dashboard utilità &#40;utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

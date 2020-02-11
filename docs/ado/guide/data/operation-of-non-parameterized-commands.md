@@ -1,5 +1,5 @@
 ---
-title: Funzionamento dei comandi senza parametri | Microsoft Docs
+title: Operazione di comandi senza parametri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924744"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funzionamento dei comandi senza parametri
-Per i comandi senza parametri, vengono eseguiti tutti i comandi di provider e il **recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **recordset** verrà popolato completamente. Se è stata selezionata una modalità di popolamento asincrono, lo stato di popolamento del **recordset** variano in base alla modalità di popolamento e la dimensione delle **recordset**.  
+Per i comandi senza parametri, vengono eseguiti tutti i comandi del provider e i **Recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **Recordset** verranno popolati in modo completo. Se è stata selezionata una modalità di popolamento asincrono, lo stato popolato dei **Recordset** dipenderà dalla modalità di popolamento e dalle dimensioni dei **Recordset**.  
   
- Ad esempio, il *comando padre* potrebbe restituire una **Recordset** dei clienti per una società da una tabella Customers e il *comando figlio* potrebbe restituire un **Recordset** degli ordini per tutti i clienti da una tabella degli ordini.  
+ Ad esempio, il *comando padre* può restituire un **Recordset** di clienti per una società di una tabella Customers e il *comando figlio* può restituire un **Recordset** di ordini per tutti i clienti da una tabella Orders.  
   
 ```  
 SHAPE {SELECT * FROM Customers}   
@@ -31,17 +31,17 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- Per le relazioni padre-figlio senza parametri, ogni elemento padre e figlio **Recordset** oggetto deve avere una colonna in comune per associarli. Le colonne sono denominate nella clausola RELATE *colonna padre* prima e quindi *colonna figlio*. Le colonne possono avere nomi diversi nei rispettivi **Recordset** oggetti, ma deve fare riferimento alle stesse informazioni per specificare una relazione significativa. Ad esempio, il **clienti** e **ordini Recordset** oggetti potrebbe avere un campo customerID. Poiché l'appartenenza dell'elemento figlio **Recordset** è determinato dal comando del provider, l'elemento figlio **Recordset** possono contenere righe orfane. Queste righe orfane non sono accessibili senza modificare la forma aggiuntive.  
+ Per le relazioni padre-figlio senza parametri, ogni oggetto **Recordset** padre e figlio deve disporre di una colonna in comune per associarli. Le colonne vengono denominate nella clausola di CORRELAzione, prima della *colonna padre* e quindi della *colonna figlio*. Le colonne possono avere nomi diversi nei rispettivi oggetti **Recordset** , ma devono fare riferimento alle stesse informazioni per poter specificare una relazione significativa. Ad esempio, gli oggetti recordset **Customers** e **Orders** possono avere entrambi un campo CustomerID. Poiché l'appartenenza al **Recordset** figlio è determinata dal comando del provider, il **Recordset** figlio può contenere righe orfane. Queste righe orfane sono inaccessibili senza ulteriori rishaping.  
   
- Il data shaping aggiunge una colonna a capitoli all'elemento padre **Recordset**. I valori nella colonna del capitolo sono i riferimenti alle righe nell'elemento figlio **Recordset**, che soddisfano la clausola RELATE. Lo stesso valore è nel *colonna padre* di una riga padre specificato come è la *colonna figlio* di tutte le righe dell'oggetto figlio capitolo. Quando più clausole TO vengono utilizzate nella clausola RELATE stesso, vengono combinati in modo implicito usando l'operatore AND. Se le colonne nella clausola RELATE padre non costituiscono una chiave per l'elemento padre **Recordset**, una riga di singolo elemento figlio può avere più righe padre.  
+ Data Shaping aggiunge una colonna del capitolo al **Recordset**padre. I valori nella colonna capitolo sono riferimenti a righe nel **Recordset**figlio, che soddisfano la clausola di correlazione. Ovvero, lo stesso valore si trova nella *colonna padre* di una riga padre specificata, così come si trova nella *colonna figlio* di tutte le righe del capitolo figlio. Quando più clausole TO vengono utilizzate nella stessa clausola CORRELAta, vengono combinate in modo implicito utilizzando un operatore AND. Se le colonne padre nella clausola di CORRELAzione non costituiscono una chiave per il **Recordset**padre, una singola riga figlio può avere più righe padre.  
   
- Quando si accede al riferimento nella colonna del capitolo, ADO recupererà automaticamente il **Recordset** rappresentata dal riferimento. Si noti che in un comando senza parametri, anche se l'elemento figlio intera **Recordset** è stato recuperato, il capitolo include solo un subset di righe.  
+ Quando si accede al riferimento nella colonna capitolo, ADO recupera automaticamente il **Recordset** rappresentato dal riferimento. Si noti che in un comando senza parametri, sebbene sia stato recuperato l'intero **Recordset** figlio, il capitolo presenta solo un subset di righe.  
   
- Se non include la colonna accodata *capitolo-alias*, verrà generato un nome per tale automaticamente. Oggetto [campo](../../../ado/reference/ado-api/field-object.md) la colonna verrà aggiunta al relativo oggetto il **Recordset** dell'oggetto [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta e il relativo tipo di dati sarà **adChapter**.  
+ Se la colonna accodata non dispone di un *alias di capitolo*, verrà generato automaticamente un nome. Un oggetto [campo](../../../ado/reference/ado-api/field-object.md) per la colonna verrà accodato alla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) dell'oggetto **Recordset** e il tipo di dati sarà **adChapter**.  
   
- Per informazioni sulla navigazione gerarchico **Recordset**, vedere [accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Per informazioni sull'esplorazione di un **Recordset**gerarchico, vedere [accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)

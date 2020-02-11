@@ -20,22 +20,22 @@ ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c81d3643c677b201aff9a3a7742c01b99c63b5c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036334"
 ---
 # <a name="sqlallocconnect-function"></a>Funzione SQLAllocConnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
+ Versione introdotta: conformità agli standard ODBC 1,0: deprecato  
   
- **Riepilogo**  
- In ODBC 3. *x*, di ODBC 2. *x* funzione **SQLAllocConnect** è stata sostituita da **SQLAllocHandle**. Per altre informazioni, vedere [SQLAllocHandle-funzione](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ **Summary**  
+ In ODBC 3. *x*, ODBC 2. la funzione *x* **SQLAllocConnect** è stata sostituita da **SQLAllocHandle**. Per altre informazioni, vedere [funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Per altre informazioni su quali il Driver Manager esegue il mapping a questa funzione quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* , vedere [mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Appendice G: linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

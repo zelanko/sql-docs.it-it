@@ -16,14 +16,14 @@ ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920111"
 ---
 # <a name="cancelupdate-method-ado"></a>Metodo CancelUpdate (ADO)
-Annulla tutte le modifiche apportate alla riga corrente o nuova di un' [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, prima di chiamare il [Update ](../../../ado/reference/ado-api/update-method.md) (metodo).  
+Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oppure alla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) , prima di chiamare il metodo [Update](../../../ado/reference/ado-api/update-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,17 +32,17 @@ Annulla tutte le modifiche apportate alla riga corrente o nuova di un' [Recordse
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="recordset"></a>recordset  
- Usare la **CancelUpdate** metodo per annullare le modifiche apportate alla riga corrente oppure per eliminare una riga appena aggiunta. Non è possibile annullare le modifiche apportate alla riga corrente o a una nuova riga dopo la chiamata il **Update** metodo, a meno che le modifiche siano parte di una transazione di cui è possibile eseguire il rollback con la [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (metodo), o in parte un aggiornamento batch. Nel caso di un aggiornamento batch, è possibile annullare il **aggiornare** con il **CancelUpdate** oppure [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) (metodo).  
+ Utilizzare il metodo **CancelUpdate** per annullare tutte le modifiche apportate alla riga corrente o per eliminare una nuova riga aggiunta. Non è possibile annullare le modifiche apportate alla riga corrente o a una nuova riga dopo aver chiamato il metodo **Update** , a meno che le modifiche non facciano parte di una transazione di cui è possibile eseguire il rollback con il metodo [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) o che facciano parte di un aggiornamento batch. Nel caso di un aggiornamento batch, è possibile annullare l' **aggiornamento** con il metodo **CancelUpdate** o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
   
- Se si aggiunge una nuova riga quando si chiama il **CancelUpdate** metodo, la riga corrente diventa la riga corrente prima di [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) chiamare.  
+ Se si aggiunge una nuova riga quando si chiama il metodo **CancelUpdate** , la riga corrente diventa la riga corrente prima della chiamata a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
   
- Se si sono in modalità di modifica e si vuole eseguire la migrazione del record corrente (ad esempio, tramite il [spostare](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), o [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodi), è possibile usare  **Metodo CancelUpdate** per annullare le modifiche in sospeso. Potrebbe essere necessario eseguire questa operazione se l'aggiornamento non è possibile inviare all'origine dati. Ad esempio, un tentativo di eliminazione che ha esito negativo a causa di violazioni di integrità referenziale lascerà il **Recordset** in modalità di modifica dopo una chiamata a [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
+ Se si è in modalità di modifica e si vuole spostare il record corrente (ad esempio, usando i metodi [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ), è possibile usare **CancelUpdate** per annullare le modifiche in sospeso. Potrebbe essere necessario eseguire questa operazione se l'aggiornamento non può essere pubblicato correttamente nell'origine dati. Ad esempio, un tentativo di eliminazione che ha esito negativo a causa di violazioni di integrità referenziale lascerà il **Recordset** in modalità di modifica dopo una chiamata a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
 ## <a name="record"></a>Record  
- Il **CancelUpdate** metodo annulla tutte le operazioni di inserimento o eliminazione di in sospeso [campo](../../../ado/reference/ado-api/field-object.md) oggetti e Annulla gli aggiornamenti dei campi esistenti in sospeso e li Ripristina i valori originali. Il [lo stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà di tutti i campi il **campi** raccolta è impostata su **adFieldOK**.  
+ Il metodo **CancelUpdate** Annulla tutti gli inserimenti o le eliminazioni in sospeso degli oggetti [campo](../../../ado/reference/ado-api/field-object.md) e Annulla gli aggiornamenti in sospeso dei campi esistenti e li ripristina nei valori originali. La proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) di tutti i campi nella raccolta **Fields** è impostata su **adFieldOK**.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -51,12 +51,12 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 |[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornamento metodi e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Aggiornamento metodi e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
+ [Esempio di metodi Update e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
+ [Esempio di metodi Update e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Metodo Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)   
+ [Metodo Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Metodo CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Metodo CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [Metodo Update](../../../ado/reference/ado-api/update-method.md)

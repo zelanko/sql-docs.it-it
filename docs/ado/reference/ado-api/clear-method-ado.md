@@ -17,14 +17,14 @@ ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96bd13f130966b1830d07e49633842e4154b52b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920069"
 ---
 # <a name="clear-method-ado"></a>Metodo Clear (ADO)
-Rimuove tutti i [errore](../../../ado/reference/ado-api/error-object.md) oggetti dalle [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta.  
+Rimuove tutti gli oggetti [Error](../../../ado/reference/ado-api/error-object.md) dalla raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,22 +33,22 @@ Rimuove tutti i [errore](../../../ado/reference/ado-api/error-object.md) oggetti
 Errors.Clear  
 ```  
   
-## <a name="remarks"></a>Note  
- Usare il **chiaro** metodo sulle [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta da cui rimuovere tutte le [errore](../../../ado/reference/ado-api/error-object.md) oggetti dalla raccolta. Quando si verifica un errore, ADO Cancella automaticamente la **errori** raccolta e la riempie con **errore** gli oggetti in base al nuovo errore.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare il metodo **Clear** sulla raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) per rimuovere tutti gli oggetti [Error](../../../ado/reference/ado-api/error-object.md) esistenti dalla raccolta. Quando si verifica un errore, ADO cancella automaticamente la raccolta degli **errori** e la riempie con gli oggetti **Error** in base al nuovo errore.  
   
- Alcune proprietà e metodi restituiscono gli avvisi che vengono visualizzati come **errore** gli oggetti nel **errori** raccolta ma non arrestano l'esecuzione del programma. Prima di chiamare il [Risincronizza](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) metodi su un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ; dell'oggetto di [aprire](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo su un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ; dell'oggetto o impostare il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà su un **Recordset** dell'oggetto, chiamare il **Clear**metodo su di **errori** raccolta. In questo modo, è possibile leggere il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà delle **errori** insieme per provare gli avvisi restituiti.  
+ Alcune proprietà e metodi restituiscono avvisi visualizzati come oggetti **Error** nella raccolta **Errors** ma non interrompono l'esecuzione di un programma. Prima di chiamare i metodi [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) su un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ; metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) su un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . in alternativa, impostare la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per un oggetto **Recordset** , chiamare il metodo **Clear** sulla raccolta **Errors** . In questo modo, è possibile leggere la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) della raccolta **Errors** per verificare la presenza di avvisi restituiti.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Raccolta Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire, rieseguire una query ed eliminare i metodi esempio (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [Eseguire, rieseguire una query ed eliminare i metodi esempio (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [Eseguire, rieseguire una query ed eliminare i metodi esempio (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [Esempio di metodi Execute, Requery e Clear (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Esempio di metodi Execute, Requery e Clear (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Esempio di metodi Execute, Requery e Clear (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [Metodo CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Metodo Delete (raccolta Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Metodo Delete (insieme di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Elimina metodo (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
- [Proprietà filtro](../../../ado/reference/ado-api/filter-property.md)   
- [Metodo Resync](../../../ado/reference/ado-api/resync-method.md)   
+ [Metodo Delete (raccolta di campi ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Metodo Delete (raccolta Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
+ [Metodo Delete (recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Filter (proprietà)](../../../ado/reference/ado-api/filter-property.md)   
+ [Metodo di risincronizzazione](../../../ado/reference/ado-api/resync-method.md)   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

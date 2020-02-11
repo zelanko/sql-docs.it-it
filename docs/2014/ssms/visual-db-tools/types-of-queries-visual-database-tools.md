@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204579"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipi di query (Visual Database Tools)
   In Progettazione query e Progettazione viste sono disponibili caratteristiche incorporate per alcuni tipi di query, ovvero query di selezione (Select), di accodamento (Insert Results), di accodamento valori (Insert Values), di aggiornamento (Update), di eliminazione (Delete) e di creazione tabella (Make Table), e sono supportate le query di unione (UNION), di ricerca full-text e con l'espressione CASE.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Tipi di query supportati &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Vengono descritti i tipi di query che è possibile utilizzare con Progettazione query e Progettazione viste.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63204579"
  [Creare query di accodamento &#40;Visual Database Tools&#41;](create-insert-results-queries-visual-database-tools.md)  
  Viene descritto come creare una query per l'inserimento dei risultati di un'istruzione SELECT in una tabella.  
   
- [Creare query di accodamento valori&#40;Visual Database Tools&#41;](create-insert-values-queries-visual-database-tools.md)  
+ [Creazione di query di accodamento valori&#40;Visual Database Tools&#41;](create-insert-values-queries-visual-database-tools.md)  
  Viene descritto come creare una query per l'inserimento di valori in una tabella.  
   
  [Creare query di creazione tabella &#40;Visual Database Tools&#41;](create-make-table-queries-visual-database-tools.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "63204579"
  [Creare query di aggiornamento &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  Viene descritto come creare una query per l'aggiornamento di una tabella.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  [Proprietà delle query &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Vengono illustrate le proprietà disponibili quando si progettano le query.  
   

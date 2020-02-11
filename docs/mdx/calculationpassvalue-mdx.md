@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016868"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -41,27 +41,27 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Espressione numerica valida che specifica il numero della sessione di calcolo.  
   
  ABSOLUTE  
- Il valore di un flag di accesso che specifica che il *Pass_Value* parametro contiene l'indice in base zero della sessione di calcolo. ABSOLUTE è il valore del flag di accesso predefinito se non viene specificato alcun valore per il flag di accesso.  
+ Valore del flag di accesso che specifica che il parametro *Pass_Value* contiene l'indice in base zero della sessione di calcolo. ABSOLUTE è il valore del flag di accesso predefinito se non viene specificato alcun valore per il flag di accesso.  
   
  RELATIVE  
- Il valore di un flag di accesso che specifica che il *Pass_Value* parametro contiene un offset relativo dalla sessione di calcolo del calcolo del trigger. Se l'offset viene risolto in un indice di sessione di calcolo minore di 0, verrà utilizzata la sessione di calcolo 0 e non verrà generato alcun errore.  
+ Valore del flag di accesso che specifica che il parametro *Pass_Value* contiene un offset relativo rispetto alla sessione di calcolo del calcolo di attivazione. Se l'offset viene risolto in un indice di sessione di calcolo minore di 0, verrà utilizzata la sessione di calcolo 0 e non verrà generato alcun errore.  
   
  ALL  
  Quando questo flag è impostato, tutti i valori sono Null a eccezione di quelli caricati dal motore di archiviazione. Quando non è impostato, i valori vengono aggregati senza l'applicazione di alcun calcolo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si specifica un'espressione numerica, la funzione restituisce un valore numerico valutando l'espressione numerica MDX specificata nella sessione di calcolo specificata, facoltativamente modificato da un flag di accesso e da un modificatore di flag di accesso.  
   
- Se viene fornita un'espressione stringa, la funzione restituisce un valore stringa valutando l'espressione stringa MDX specificata nella sessione di calcolo specificato e, facoltativamente modificato da un flag di accesso e un modificatore di flag di accesso *.*  
+ Se viene specificata un'espressione stringa, la funzione restituisce un valore stringa valutando l'espressione stringa MDX specificata nella sessione di calcolo specificata e, facoltativamente, modificata da un flag di accesso e da un modificatore di flag di accesso *.*  
   
- Con la risoluzione automatica delle ricorsioni in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], questa funzione ha molte applicazioni pratiche.  
+ Con la risoluzione della ricorsione automatica in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], questa funzione non ha un uso pratico.  
   
 > [!NOTE]  
->  Solo gli amministratori possono utilizzare il **CalculationPassValue** funzione all'interno di uno script MDX. Se si esegue uno script MDX che contiene questa funzione nel contesto di un ruolo che non dispone di privilegi di amministratore, verrà generato un errore.  
+>  Solo gli amministratori possono utilizzare la funzione **CalculationPassValue** in uno script MDX. Se si esegue uno script MDX che contiene questa funzione nel contesto di un ruolo che non dispone di privilegi di amministratore, verrà generato un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40;&#41;MDX](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

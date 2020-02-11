@@ -1,5 +1,5 @@
 ---
-title: 'Da C a SQL: Binary | Microsoft Docs'
+title: 'Da C a SQL: binario | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7220497bfac2b74e933595cb7debfd35b98fc07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037735"
 ---
-# <a name="c-to-sql-binary"></a>Da C a SQL: Binary
-L'identificatore per il tipo di dati C ODBC binario è:  
+# <a name="c-to-sql-binary"></a>Da C a SQL: dati binari
+Identificatore per il tipo di dati ODBC C binario:  
   
  SQL_C_BINARY  
   
- La tabella seguente illustra il codice SQL ODBC dei tipi di dati a cui possono essere convertiti i dati binari di C. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Nella tabella seguente sono illustrati i tipi di dati ODBC SQL in cui è possibile convertire i dati binari C. Per una spiegazione delle colonne e dei termini della tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificatore di tipo SQL|Test|SQLSTATE|  
+|Identificatore del tipo SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte dei dati < = lunghezza di colonna in byte<br /><br /> Lunghezza in byte di dati > lunghezza di colonna in byte|n/d<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza dei dati in caratteri < = lunghezza in caratteri colonna<br /><br /> Lunghezza dei dati in caratteri > lunghezza in caratteri colonna|n/d<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Lunghezza in byte di dati = lunghezza dei dati SQL<br /><br /> Lunghezza in byte di lunghezza dei dati di data <> SQL|n/d<br /><br /> 22003|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Lunghezza dei dati < = lunghezza della colonna<br /><br /> Lunghezza dei dati > lunghezza della colonna|n/d<br /><br /> 22001|
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte del <dati = lunghezza in byte colonna<br /><br /> Lunghezza in byte dei dati > lunghezza in byte della colonna|n/d<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza in caratteri della <dati = lunghezza carattere colonna<br /><br /> Lunghezza in caratteri della lunghezza dei caratteri > colonna|n/d<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Lunghezza in byte dei dati = lunghezza dati SQL<br /><br /> Lunghezza in byte dei dati <> lunghezza dati SQL|n/d<br /><br /> 22003|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Lunghezza dei dati <= lunghezza della colonna<br /><br /> Lunghezza dei dati > lunghezza della colonna|n/d<br /><br /> 22001|

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026844"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Queste statistiche sono utili per la comprensione e l'ottimizzazione del numero di bucket. Possono anche essere utilizzate per rilevare i casi in cui la chiave di indice ha molti duplicati.  
@@ -41,29 +41,29 @@ ms.locfileid: "68026844"
 Le catene molto lunghe possono influire significativamente sulle prestazioni delle operazioni DML sulle singole righe, incluse SELECT e INSERT. Le catene corte associate a un numero di bucket vuoto elevato indicano un valore bucket_count troppo elevato. Ne consegue un calo delle prestazioni delle analisi degli indici.  
   
 > [!WARNING]
-> **DM db_xtp_hash_index_stats** analizza l'intera tabella. Pertanto, se sono presenti tabelle di grandi dimensioni nel database **DM db_xtp_hash_index_stats** potrebbe richiedere molto tempo esecuzione.  
+> **sys. dm_db_xtp_hash_index_stats** esegue l'analisi dell'intera tabella. Se nel database sono presenti tabelle di grandi dimensioni, **sys. dm_db_xtp_hash_index_stats** potrebbe richiedere molto tempo.  
   
-Per altre informazioni, vedere [Hash Indexes for Memory-Optimized Tables indici](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Per altre informazioni, vedere [indici hash per le tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|ID oggetto della tabella padre.|  
-|xtp_object_id|**bigint**|ID della tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|ID della tabella ottimizzata per la memoria.|  
 |index_id|**int**|ID indice.|  
 |total_bucket_count|**bigint**|Numero totale di bucket di hash nell'indice.|  
 |empty_bucket_count|**bigint**|Numero totale di bucket di hash vuoti nell'indice.|  
 |avg_chain_length|**bigint**|La lunghezza media della riga concatena tutti i bucket di hash nell'indice.|  
 |max_chain_length|**bigint**|Lunghezza massima delle catene di righe nel bucket di hash.|  
-|xtp_object_id|**bigint**|L'ID di oggetto OLTP in memoria corrispondente alla tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|ID oggetto OLTP in memoria che corrisponde alla tabella ottimizzata per la memoria.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
 
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>R. Risoluzione dei problemi relativi al numero di bucket dell'indice hash
 
-La query seguente può essere utilizzata per risolvere il numero di bucket dell'indice hash di una tabella esistente. La query restituisce statistiche sulla percentuale di bucket vuoti e lunghezza della catena per tutti gli indici hash nelle tabelle utente.
+La query seguente può essere utilizzata per risolvere i problemi relativi al numero di bucket dell'indice hash di una tabella esistente. La query restituisce statistiche sulla percentuale di bucket vuoti e la lunghezza della catena per tutti gli indici hash nelle tabelle utente.
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ La query seguente può essere utilizzata per risolvere il numero di bucket dell'
   ORDER BY [table], [index];  
 ``` 
 
-Per informazioni dettagliate su come interpretare i risultati della query, vedere [risoluzione dei problemi di indici Hash per tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Per informazioni dettagliate su come interpretare i risultati di questa query, vedere [risoluzione dei problemi relativi agli indici hash per le tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiche dell'indice hash per le tabelle interne
+### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiche sugli indici hash per le tabelle interne
 
-Alcune funzionalità di usare le tabelle interne che consentono di sfruttare gli indici hash, ad esempio gli indici columnstore nelle tabelle ottimizzate per la memoria. La query seguente restituisce statistiche per gli indici hash in tabelle interne in cui sono collegate alle tabelle utente.
+Alcune funzionalità usano tabelle interne che sfruttano gli indici hash, ad esempio gli indici columnstore nelle tabelle ottimizzate per la memoria. La query seguente restituisce le statistiche per gli indici hash nelle tabelle interne collegate alle tabelle utente.
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ Alcune funzionalità di usare le tabelle interne che consentono di sfruttare gli
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Si noti che non è possibile modificare il valore di BUCKET_COUNT dell'indice per le tabelle interne, pertanto l'output di questa query deve essere considerata informativo solo. Non è richiesta alcuna azione.  
+Si noti che non è possibile modificare il BUCKET_COUNT di indice nelle tabelle interne, pertanto l'output di questa query deve essere considerato solo informativo. non è necessaria alcuna azione.  
 
-Questa query non è previsto per restituire tutte le righe, a meno che non si usa una funzionalità che sfrutta gli indici hash nelle tabelle interne. La tabella con ottimizzazione per la memoria seguente contiene un indice columnstore. Dopo la creazione di questa tabella, si vedrà gli indici hash per le tabelle interne.
+Non è previsto che la query restituisca alcuna riga a meno che non si usi una funzionalità che utilizza gli indici hash nelle tabelle interne. La tabella ottimizzata per la memoria seguente contiene un indice columnstore. Dopo aver creato questa tabella, vengono visualizzati gli indici hash nelle tabelle interne.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -125,6 +125,6 @@ Questa query non è previsto per restituire tutte le righe, a meno che non si us
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

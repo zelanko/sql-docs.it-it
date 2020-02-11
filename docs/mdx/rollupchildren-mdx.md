@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037053"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
@@ -34,12 +34,12 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  Espressione stringa valida che specifica un operatore unario.  
   
-## <a name="remarks"></a>Note  
- Il **RollupChildren** funzione rollup dei valori degli elementi figlio del membro specificato usando l'operatore unario specificato.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **RollupChildren** esegue il rollup dei valori degli elementi figlio del membro specificato utilizzando l'operatore unario specificato.  
   
  Nella tabella seguente vengono descritti gli operatori unari validi per questa funzione.  
   
-|Operator|Risultato|  
+|Operatore|Risultato|  
 |--------------|------------|  
 |**+**|totale = totale + membro figlio corrente|  
 |**-**|totale = totale - membro figlio corrente|  
@@ -51,7 +51,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  Se l'operatore nella proprietà del membro non è elencato nella tabella precedente, viene generato un errore. L'ordine di valutazione è determinato dall'ordine degli elementi di pari livello, non dalla precedenza degli operatori.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata una proprietà di membro denominata "Alternate Rollup Operator" contenente valori alternativi per gli operatori unari per eseguire il rollup degli elementi figlio della gerarchia Net Profit nella dimensione Account in un modo alternativo. Questa proprietà non esiste nel cubo Adventure Works, ma potrebbe essere creata. Questo utilizzo dei **RollupChildren** funzione potrebbe essere utilizzata in un'applicazione di budget per l'analisi di simulazione.  
+ Nell'esempio seguente viene utilizzata una proprietà di membro denominata "Alternate Rollup Operator" contenente valori alternativi per gli operatori unari per eseguire il rollup degli elementi figlio della gerarchia Net Profit nella dimensione Account in un modo alternativo. Questa proprietà non esiste nel cubo Adventure Works, ma potrebbe essere creata. Questo utilizzo della funzione **RollupChildren** può essere utilizzato in un'applicazione di budget per l'analisi di simulazione.  
   
 ```  
 RollupChildren  
@@ -60,6 +60,6 @@ RollupChildren
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

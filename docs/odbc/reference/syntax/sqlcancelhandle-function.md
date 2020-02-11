@@ -15,22 +15,22 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036127"
 ---
 # <a name="sqlcancelhandle-function"></a>Funzione SQLCancelHandle
 **Conformità**  
- Versione introdotta: ODBC 3.8  
+ Versione introdotta: ODBC 3,8  
   
- Conformità agli standard: Nessuna  
+ Conformità agli standard: nessuna  
   
- È previsto che la maggior parte dei driver ODBC 3.8 (e versioni successive) implementerà questa funzione. Se un driver non, una chiamata a **SQLCancelHandle** con una connessione da gestire nel *gestire* parametro restituirà SQL_ERROR con SQLSTATE di IM001 e messaggio ' Driver non supporta questa funzione ' una chiamata per **SQLCancelHandle** con un'istruzione come handle di *gestire* parametro verrà mappato a una chiamata a **SQLCancel** da Gestione Driver e possono essere elaborati se il driver implementa **SQLCancel**. Un'applicazione può utilizzare **SQLGetFunctions** per determinare se un driver supporta **SQLCancelHandle**.  
+ Si prevede che la maggior parte dei driver ODBC 3,8 (e versioni successive) implementerà questa funzione. Se non è presente un driver, una chiamata a **SQLCancelHandle** con un handle di connessione nel parametro *handle* restituirà SQL_ERROR con un valore SQLSTATE di IM001 e il driver message ' non supporta questa funzione '' una chiamata a **SQLCancelHandle** con un handle di istruzione perché il parametro *handle* verrà mappato a una chiamata a **SQLCancel** da Gestione driver e può essere elaborato se il driver implementa **SQLCancel**. Un'applicazione può usare **SQLGetFunctions** per determinare se un driver supporta **SQLCancelHandle**.  
   
- **Riepilogo**  
- **SQLCancelHandle** Annulla l'elaborazione di una connessione o l'istruzione. Gestione Driver esegue il mapping di una chiamata a **SQLCancelHandle** a una chiamata a **SQLCancel** quando *HandleType* è SQL_HANDLE_STMT.  
+ **Summary**  
+ **SQLCancelHandle** Annulla l'elaborazione in una connessione o in un'istruzione. Gestione driver esegue il mapping di una chiamata a **SQLCancelHandle** a una chiamata a **SQLCancel** quando *HandleType* è SQL_HANDLE_STMT.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,70 +43,70 @@ SQLRETURN SQLCancelHandle(
   
 ## <a name="arguments"></a>Argomenti  
  *HandleType*  
- [Input] Tipo di handle in cui l'elaborazione cacel. I valori validi sono SQL_HANDLE_DBC o SQL_HANDLE_STMT.  
+ Input Tipo dell'handle su cui cacel l'elaborazione. I valori validi sono SQL_HANDLE_DBC o SQL_HANDLE_STMT.  
   
- *Handle*  
- [Input] Il punto di controllo quale annullare l'elaborazione.  
+ *Gestire*  
+ Input Handle su cui annullare l'elaborazione.  
   
- Se *gestiscono* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** non restituisca SQL_INVALID_HANDLE.  
+ Se *handle* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** restituisce SQL_INVALID_HANDLE.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLCancelHandle** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un'istruzione gestiscono *gestiscono* o una *HandleType* SQL_HANDLE_DBC e un handle di connessione *gestire*.  
+ Quando **SQLCancelHandle** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con una *HandleType* di SQL_HANDLE_STMT e un handle di handle di *istruzione o un* *HandleType* di SQL_HANDLE_DBC e un handle *di handle di connessione.*  
   
- Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLCancelHandle** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLCancelHandle** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore nella sequenza della funzione|Una funzione in modo asincrono in esecuzione, correlato alla istruzione è stata chiamata per uno degli handle di istruzione associati con la *gestiscono*, e *HandleType* è stato impostato su SQL_HANDLE_DBC. La funzione asincrona era ancora in esecuzione quando **SQLCancelHandle** è stato chiamato.<br /><br /> (DM) di *HandleType* argomento era SQL_HANDLE_STMT; una funzione in modo asincrono in esecuzione è stata chiamata nell'handle di connessione associata; e la funzione era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati il *gestire* e *HandleType* è stato impostato su SQL_HANDLE_DBC e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima per tutti i parametri trasmessi sono stati recuperati i dati.<br /><br /> **SQLBrowseConnect** è stato chiamato per *ConnectionHandle*e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima di completare il processo di esplorazione.|  
-|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY092|Identificatore di attributo/opzione non è valido|*HandleType* è stato impostato su SQL_HANDLE_ENV o SQL_HANDLE_DESC.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver non supporta questa funzione|Il driver (DM) associato il *gestire* non supporta la funzione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento * \*buffer MessageText* descrive l'errore e la relativa origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY010|Errore sequenza funzione|È stata chiamata una funzione in esecuzione asincrona, correlata all'istruzione per uno degli handle di istruzione associati all' *handle*e *HandleType* è stato impostato su SQL_HANDLE_DBC. La funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLCancelHandle** .<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT; una funzione in esecuzione asincrona è stata chiamata sull'handle di connessione associato; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_DBC e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> **SQLBrowseConnect** è stato chiamato per *connectionHandle*e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima del completamento del processo di esplorazione.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY092|Identificatore di attributo/opzione non valido|*HandleType* è stato impostato su SQL_HANDLE_ENV o SQL_HANDLE_DESC.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato all' *handle* non supporta la funzione.|  
   
- Se **SQLCancelHandle** viene chiamato con *HandleType* impostato su SQL_HANDLE_STMT, può restituire qualsiasi valore SQLSTATE che può essere restituiti dalla funzione **SQLCancel**.  
+ Se viene chiamato **SQLCancelHandle** con *HandleType* impostato su SQL_HANDLE_STMT, può restituire qualsiasi SQLSTATE che può essere restituito dalla funzione **SQLCancel**.  
   
 ## <a name="comments"></a>Commenti  
- Questa funzione è simile a **SQLCancel** ma potrebbe richiedere alcuni handle di istruzione o una connessione come parametro anziché solo un handle di istruzione. Gestione Driver esegue il mapping di una chiamata a **SQLCancelHandle** a una chiamata a **SQLCancel** quando *HandleType* è SQL_HANDLE_STMT. Ciò consente alle applicazioni di utilizzare **SQLCancelHandle** per annullare le operazioni di istruzione, anche se il driver non implementa **SQLCancelHandle**.  
+ Questa funzione è simile a **SQLCancel** , ma può richiedere un handle di connessione o di istruzione come parametro anziché solo un handle di istruzione. Gestione driver esegue il mapping di una chiamata a **SQLCancelHandle** a una chiamata a **SQLCancel** quando *HandleType* è SQL_HANDLE_STMT. In questo modo le applicazioni possono utilizzare **SQLCancelHandle** per annullare le operazioni di istruzione, anche se il driver non implementa **SQLCancelHandle**.  
   
- Per altre informazioni sull'annullamento in corso un'operazione di istruzione, vedere [funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md).  
+ Per ulteriori informazioni sull'annullamento di un'operazione di istruzione, vedere [funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md).  
   
- Se non sono presenti operazioni in corso sul *gestiscono* la chiamata a **SQLCancelHandle** non ha alcun effetto.  
+ Se non sono in corso operazioni per *gestire* la chiamata a **SQLCancelHandle** non ha alcun effetto.  
   
- **SQLCancelHandle** su una connessione handle può annullare i tipi di elaborazione seguenti:  
+ **SQLCancelHandle** su un handle di connessione può annullare i tipi di elaborazione seguenti:  
   
--   Una funzione in esecuzione in modalità asincrona sulla connessione.  
+-   Funzione in esecuzione in modo asincrono sulla connessione.  
   
--   Una funzione in esecuzione nell'handle di connessione in un altro thread.  
+-   Funzione in esecuzione nell'handle di connessione su un altro thread.  
   
- Quando **SQLCancelHandle** viene chiamato per annullare una funzione che esegue in modo asincrono in una connessione, i record di diagnostica inseriti dai **SQLCancelHandle** vengono accodati a quelli restituiti dall'operazione in corso annullato. **SQLCancelHandle** non restituisce i record di diagnostica, tuttavia, quando si annulla una funzione in esecuzione su una connessione in un altro thread.  
+ Quando **SQLCancelHandle** viene chiamato per annullare una funzione in esecuzione in modo asincrono in una connessione, i record di diagnostica pubblicati da **SQLCancelHandle** vengono aggiunti a quelli restituiti dall'operazione annullata; Tuttavia, **SQLCancelHandle** non restituisce i record di diagnostica quando si annulla una funzione in esecuzione in una connessione in un altro thread.  
   
- Usando **SQLCancelHandle** annullare **SQLEndTran** eventualmente la connessione in stato sospeso. Per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ L'utilizzo di **SQLCancelHandle** per annullare **SQLEndTran** può impostare la connessione nello stato Suspended. Per altre informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 > [!NOTE]  
->  Per informazioni su come usare **SQLCancelHandle** in un'applicazione che verrà distribuita in un sistema operativo Windows precedente a Windows 7, vedere [matrice di compatibilità](../../../odbc/reference/develop-app/compatibility-matrix.md).  
+>  Per informazioni sull'utilizzo di **SQLCancelHandle** in un'applicazione che verrà distribuita in un sistema operativo Windows precedente a Windows 7, vedere [Compatibility Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
-#### <a name="canceling-connection-related-asynchronous-processing"></a>Annullare l'elaborazione asincrona correlati alla connessione  
- Se una funzione restituisce SQL_STILL_EXECUTING, un'applicazione può chiamare **SQLCancelHandle** per annullare l'operazione. Se ha esito positivo, la richiesta di annullamento **SQLCancelHandle** restituisce SQL_SUCCESS. Ciò non significa che la funzione originale è stata annullata; indica che è stata elaborata la richiesta di annullamento. Il driver e origine dati determinano quando o se l'operazione è annullata. L'applicazione deve continuare a chiamare la funzione originale fino a quando il codice restituito non SQL_STILL_EXECUTING. Se la funzione originale è stata annullata, il codice restituito è SQL_ERROR e SQLSTATE HY008 (operazione annullata). Se la funzione originale è stata completata la normale elaborazione (non è stato annullato), il codice restituito è SQL_SUCCESS o SQL_SUCCESS_WITH_INFO o SQL_ERROR e un valore SQLSTATE di diverso da HY008 (operazione annullata), se la funzione originale non è riuscita.  
+#### <a name="canceling-connection-related-asynchronous-processing"></a>Annullamento dell'elaborazione asincrona relativa alla connessione  
+ Se una funzione restituisce SQL_STILL_EXECUTING, un'applicazione può chiamare **SQLCancelHandle** per annullare l'operazione. Se la richiesta di annullamento ha esito positivo, **SQLCancelHandle** restituisce SQL_SUCCESS. Ciò non significa che la funzione originale è stata annullata; indica che la richiesta di annullamento è stata elaborata. Il driver e l'origine dati determinano quando o se l'operazione viene annullata. L'applicazione deve continuare a chiamare la funzione originale fino a quando non viene SQL_STILL_EXECUTING il codice restituito. Se la funzione originale è stata annullata, il codice restituito è SQL_ERROR e SQLSTATE HY008 (operazione annullata). Se la funzione originale ha completato l'elaborazione normale (non è stata annullata), il codice restituito è SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, oppure SQL_ERROR e un valore SQLSTATE diverso da HY008 (operazione annullata), se la funzione originale non è riuscita.  
   
-#### <a name="canceling-functions-executing-on-another-thread"></a>Annullamento di funzioni in esecuzione su un altro Thread  
- In un'applicazione multithread, l'applicazione può annullare un'operazione che è in esecuzione in un altro thread. Per annullare l'operazione, l'applicazione chiama **SQLCancelHandle** con l'handle utilizzato dalla funzione, ma in un thread diverso. Il driver e del sistema operativo determinano la modalità con cui l'operazione viene annullata. Il **SQLCancelHandle** restituire codice indica se il driver di elaborata la richiesta, restituendo SQL_SUCCESS o SQL_ERROR (viene restituita alcuna informazione di diagnostica). Se l'elaborazione della funzione originale è annullata, la funzione originale restituisce SQL_ERROR e SQLSTATE HY008 (operazione annullata).  
+#### <a name="canceling-functions-executing-on-another-thread"></a>Annullamento di funzioni in esecuzione su un altro thread  
+ In un'applicazione multithread, l'applicazione può annullare un'operazione in esecuzione su un altro thread. Per annullare l'operazione, l'applicazione chiama **SQLCancelHandle** con l'handle usato dalla funzione, ma su un thread diverso. Il driver e il sistema operativo determinano il modo in cui viene annullata l'operazione. Il codice restituito **SQLCancelHandle** indica se il driver ha elaborato la richiesta, restituendo SQL_SUCCESS o SQL_ERROR (non vengono restituite informazioni di diagnostica). Se l'elaborazione sulla funzione originale viene annullata, la funzione originale restituisce SQL_ERROR e SQLSTATE HY008 (operazione annullata).  
   
- Se una funzione viene eseguita quando **SQLCancelHandle** viene chiamato su un altro thread per annullare la funzione, è possibile che la funzione abbia esito positivo e restituisce SQL_SUCCESS, l'annullamento per rendere effettive. Una chiamata a **SQLCancelHandle** non ha alcun effetto se l'operazione è stata completata prima **SQLCancelHandle** è stato in grado di annullare l'operazione.  
+ Se una funzione viene eseguita quando **SQLCancelHandle** viene chiamato su un altro thread per annullare la funzione, è possibile che la funzione abbia esito positivo e restituisca SQL_SUCCESS prima che l'annullamento possa essere applicato. Una chiamata a **SQLCancelHandle** non ha alcun effetto se l'operazione è stata completata prima che **SQLCancelHandle** fosse in grado di annullare l'operazione.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Annullamento di una funzione in esecuzione in modalità asincrona su un handle di istruzione, annullamento di una funzione in un'istruzione che necessita di dati o l'annullamento di una funzione in esecuzione in un'istruzione in un altro thread.|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Annullamento di una funzione in esecuzione in modo asincrono in un handle di istruzione, annullamento di una funzione in un'istruzione che necessita di dati o annullamento di una funzione in esecuzione in un'istruzione in un altro thread.|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Esecuzione asincrona (metodo di polling)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

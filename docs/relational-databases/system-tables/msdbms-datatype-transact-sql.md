@@ -18,31 +18,31 @@ ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907517"
 ---
-# <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
+# <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSdbms_datatype** tabella contiene l'elenco completo dei tipi di dati nativi in ogni sistema di gestione supportate del database (DBMS) utilizzato come server di pubblicazione o sottoscrittore nella replica di database eterogenei. Questa tabella è archiviata nel **msdb** database.  
+  La tabella **MSdbms_datatype** contiene l'elenco completo dei tipi di dati nativi in ogni sistema di gestione di database (DBMS) supportato utilizzato come server di pubblicazione o sottoscrittore nella replica di database eterogenei. Questa tabella è archiviata nel database **msdb** .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|Identifica ogni tipo di dati univoco.|  
 |**dbms_id**|**int**|Identifica il sistema DBMS al quale appartiene il tipo.|  
-|**type**|**sysname**|Nome del tipo di dati (nativo).|  
-|**createparams**|**int**|Mappa di bit che descrive la combinazione di lunghezza, precisione e scala valida per ogni tipo di dati, che include:<br /><br /> **0x1** = PRECISION.<br /><br /> **0x2** = scala.<br /><br /> **0x4** = lunghezza.|  
+|**tipo**|**sysname**|Nome del tipo di dati (nativo).|  
+|**CreateParams**|**int**|Mappa di bit che descrive la combinazione di lunghezza, precisione e scala valida per ogni tipo di dati, che include:<br /><br /> **0x1** = Precision.<br /><br /> **0x2** = scala.<br /><br /> **0x4** = length.|  
   
-## <a name="remarks"></a>Note  
- Questa tabella contiene le voci per i tipi di dati di SQL Server perché un'istanza di SQL Server può sottoscrivere un database non SQL Server sia per un sottoscrittore non SQL Server di pubblicazione.  
+## <a name="remarks"></a>Osservazioni  
+ Questa tabella contiene le voci per i tipi di dati di SQL Server in quanto un'istanza di SQL Server può sottoscrivere un database non SQL Server e pubblicare in un Sottoscrittore non SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Specificare i mapping dei tipi di dati per un server di pubblicazione Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,21 +18,22 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eebf9be216d61163c018e0d43075e636cb383d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006931"
 ---
-# <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
+# <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifica il nome di un database.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare ALTER DATABASE MODIFY NAME in alternativa. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare ALTER DATABASE MODIFY NAME in alternativa. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,15 +43,15 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'old_name'` È il nome del database corrente. *vecchio_nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @dbname = ] 'old_name'`Nome corrente del database. *old_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @newname = ] 'new_name'` È il nuovo nome del database. *new_name* devono rispettare le regole per gli identificatori. *new_name* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @newname = ] 'new_name'`Nuovo nome del database. *new_name* necessario attenersi alle regole per gli identificatori. *new_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** oppure **dbcreator** ruoli predefiniti del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** o **dbcreator** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato il database `Accounting` e quindi il nome viene modificato in `Financial`. Viene quindi eseguita una query sulla vista del catalogo `sys.databases` per verificare il nuovo nome del database.  
@@ -69,10 +70,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_changedbowner &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_helpdb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

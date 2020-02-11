@@ -1,5 +1,5 @@
 ---
-title: Proprietà dinamica (ADO) prompt | Microsoft Docs
+title: Proprietà richiesta-dinamica (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931588"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Proprietà dinamica Prompt (ADO)
-Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.  
+Specifica se il provider di OLE DB deve richiedere all'utente le informazioni di inizializzazione.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) valore.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) .  
   
-## <a name="remarks"></a>Note  
- **Messaggio di richiesta** è una proprietà dinamica, che possono essere aggiunti al [Connection](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta in base al provider OLE DB. Per richiedere le informazioni sull'inizializzazione, i provider OLE DB in genere visualizzerà una finestra di dialogo per l'utente.  
+## <a name="remarks"></a>Osservazioni  
+ **Prompt** è una proprietà dinamica, che può essere aggiunta alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) dal provider OLE DB. Per richiedere informazioni di inizializzazione, OLE DB provider visualizzeranno in genere una finestra di dialogo per l'utente.  
   
- Proprietà dinamiche di un' [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto vengono perse quando il **connessione** viene chiuso. Il **dei messaggi di richiesta** proprietà deve essere reimpostata prima di riaprire il **connessione** per utilizzare un valore diverso da quello predefinito.  
+ Le proprietà dinamiche di un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) vengono perse quando la **connessione** viene chiusa. È necessario reimpostare la proprietà **prompt** prima di aprire nuovamente la **connessione** per utilizzare un valore diverso da quello predefinito.  
   
 > [!NOTE]
->  Non si specifica che il provider deve richiedere all'utente in scenari in cui l'utente non sarà in grado di rispondere alla finestra di dialogo. Ad esempio, l'utente non sarà in grado di rispondere se l'applicazione è in esecuzione in un sistema server invece che sul client dell'utente, o se l'applicazione è in esecuzione in un sistema senza utente connesso. In questi casi, l'applicazione attende una risposta per un periodo illimitato e sembra bloccarsi.  
+>  Non specificare che il provider deve richiedere all'utente in scenari in cui l'utente non sarà in grado di rispondere alla finestra di dialogo. Ad esempio, l'utente non sarà in grado di rispondere se l'applicazione è in esecuzione in un sistema server invece che nel client dell'utente oppure se l'applicazione è in esecuzione in un sistema senza utente connesso. In questi casi, l'applicazione attende indefinitamente una risposta e sembra bloccarsi.  
   
 ## <a name="usage"></a>Uso  
   

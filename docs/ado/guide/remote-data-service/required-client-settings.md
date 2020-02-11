@@ -1,5 +1,5 @@
 ---
-title: Le impostazioni Client necessarie | Microsoft Docs
+title: Impostazioni client obbligatorie | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,29 +13,29 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922299"
 ---
 # <a name="required-client-settings"></a>Impostazioni obbligatorie dei client
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Specificare le impostazioni seguenti per usare una classe personalizzata **DataFactory** gestore.  
+ Specificare le impostazioni seguenti per usare un gestore di **DataFactory** personalizzato.  
   
--   Specificare "Provider = Remote MS" nel [connessione ADO (Object)](../../../ado/reference/ado-api/connection-object-ado.md) oggetto [Provider di proprietà (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o i **connessione** stringa di connessione dell'oggetto "**Provider**= "parola chiave.  
+-   Specificare "provider = MS Remote" nella proprietà dell' [oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) Object [provider Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) o nella **stringa di connessione dell'oggetto Connection "** **provider**=".  
   
--   Impostare il [proprietà CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient**.  
+-   Impostare la proprietà [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
   
--   Specificare il nome del gestore da utilizzare nel [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto **gestore** proprietà o i [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md) stringa di connessione dell'oggetto " **Gestore**= "parola chiave. (Non è possibile impostare il gestore di **connessione** oggetto stringa di connessione.)  
+-   Specificare il nome del gestore da utilizzare nella proprietà del **gestore** dell'oggetto [datacontrollo (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) o nella stringa di connessione dell'oggetto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) "**handler**=". Non è possibile impostare il gestore nella stringa di connessione dell'oggetto **connessione** .  
   
- Servizi Desktop remoto fornisce un gestore predefinito nel server denominato **MSDFMAP. Gestore**. (Il file di personalizzazione predefinito denominato MSDFMAP. INI).  
+ RDS fornisce un gestore predefinito sul server denominato **MSDFMAP. Gestore**. Il file di personalizzazione predefinito è denominato MSDFMAP. INI).  
   
  **Esempio**  
   
- Si supponga che le sezioni seguenti **MSDFMAP. INI** e il nome dell'origine dati AdvWorks, sono stati definiti in precedenza:  
+ Si supponga che le sezioni seguenti in **MSDFMAP. INI** e il nome dell'origine dati, AdvWorks, sono stati definiti in precedenza:  
   
 ```console
 [connect CustomerDataBase]  
@@ -46,9 +46,9 @@ Connect="DSN=AdvWorks"
 SQL="SELECT * FROM Customers WHERE CustomerID = ?"  
 ```  
   
- I seguenti frammenti di codice sono scritti in Visual Basic:  
+ I frammenti di codice seguenti sono scritti in Visual Basic:  
   
-## <a name="rdsdatacontrol-version"></a>SERVIZI DESKTOP REMOTO. Versione DataControl  
+## <a name="rdsdatacontrol-version"></a>RDS. Versione di DataControl  
   
 ```vb
 Dim dc as New RDS.DataControl  
@@ -59,16 +59,16 @@ Set dc.SQL = "CustomerById(4)"
 dc.Refresh  
 ```  
   
-## <a name="recordset-version"></a>Versione del recordset  
+## <a name="recordset-version"></a>Versione recordset  
   
 ```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
   
- Specificare il [proprietà del gestore (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md) proprietà o una parola chiave; il [Provider di proprietà (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o una parola chiave; e il *CustomerById* e  *CustomerDatabase* gli identificatori. Quindi aprire il **Recordset** oggetto  
+ Specificare la proprietà o la parola chiave [handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) ; Proprietà o parola chiave del [provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; e gli identificatori *CustomerByID* e *CustomerDatabase* . Aprire quindi l'oggetto **Recordset**  
   
- rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
+ RS. Aprire "CustomerById (4)", "Handler = MSDFMAP. Gestore; "& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
@@ -76,11 +76,11 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sezione sulla connessione del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sezione SQL del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sezione UserList del File personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Informazioni sul file di personalizzazione.](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Sezione connessione file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Sezione SQL del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Sezione utenti del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Impostazioni client obbligatorie](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

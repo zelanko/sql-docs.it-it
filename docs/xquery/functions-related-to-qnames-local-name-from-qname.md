@@ -16,16 +16,16 @@ ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004566"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funzioni correlate a elementi QName - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un xs: NCName che rappresenta la parte locale di QName specificata da *$arg*. Il risultato è una sequenza vuota se *$arg* è una sequenza vuota.  
+  Restituisce XS: NCNAME che rappresenta la parte locale di QName specificata da *$arg*. Se *$arg* è una sequenza vuota, il risultato è una sequenza vuota.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,15 +38,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  QName da cui deve essere estratto il nome locale.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate **** in diverse colonne di tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML nel database.  
   
- L'esempio seguente usa il **local-name-from-QName()** parti di funzione per recuperare il nome locale e l'URI dello spazio dei nomi da un valore di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  
+ Nell'esempio seguente viene usata la funzione **local-name-from-QName ()** per recuperare le parti del nome locale e dell'URI dello spazio dei nomi da un valore di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  
   
 -   Viene creata una raccolta di XML Schema.  
   
 -   Viene creata una tabella con una colonna di tipo XML. Il tipo XML viene tipizzato tramite la raccolta di XML Schema.  
   
--   Viene archiviata un'istanza XML di esempio nella tabella. Usando il **query ()** metodo del tipo di dati xml, l'espressione di query viene eseguito per recuperare la parte del nome locale del valore di tipo QName dall'istanza.  
+-   Viene archiviata un'istanza XML di esempio nella tabella. Utilizzando il metodo **query ()** del tipo di dati XML, viene eseguita l'espressione di query per recuperare la parte del nome locale del valore del tipo QName dall'istanza di.  
   
 ```sql
 DROP TABLE T  
@@ -76,6 +76,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni correlate a elementi QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Funzioni correlate a QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

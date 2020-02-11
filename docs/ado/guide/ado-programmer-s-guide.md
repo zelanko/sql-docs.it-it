@@ -13,25 +13,25 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927046"
 ---
-# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guida per programmatori ADO per l'uso di oggetti ADO
-Questa documentazione offre una panoramica su come usare gli oggetti ADO per lavorare con i dati da diverse origini dati. L'introduzione in primo luogo, vengono riepilogate le nuove funzionalità e i requisiti per l'installazione, uso e ridistribuire il componente di ADO. Le sezioni successive illustrano l'utilizzo dei vari tipi di oggetti ADO. Infine, appendici illustrano vari dati forniti da Microsoft e i provider di servizi, i messaggi di errore e suggerimenti su come utilizzare ADO in diversi linguaggi, oltre a esempi e un glossario.
+# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guida per programmatori ADO per l'utilizzo di oggetti ADO
+In questa documentazione viene fornita una panoramica su come utilizzare gli oggetti ADO per lavorare con i dati di diverse origini dati. In primo luogo, l'introduzione riepiloga le nuove funzionalità e i requisiti per l'installazione, l'utilizzo e la ridistribuzione del componente ADO. Nelle sezioni successive viene illustrato l'utilizzo dei vari tipi di oggetti ADO. Infine, le appendici illustrano i diversi provider di servizi e dati forniti da Microsoft, i messaggi di errore e suggerimenti su come usare ADO in diversi linguaggi di programmazione, oltre agli esempi e a un glossario.
 
  In questa sezione vengono trattati gli argomenti seguenti.
 
 -   [Introduzione](../../ado/guide/ado-introduction.md)
 
--   [ADO (ActiveX Data Objects)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ActiveX Data Objects (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [Servizi dati remoto (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [Servizi Desktop remoto (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
--   [ADO (multidimensionale) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
+-   [ADO (Multidimensional) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 
--   [Estensioni ADO per Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [ADO Extensions for Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
 -   [Appendici](../../ado/guide/appendixes/ado-appendixes.md)

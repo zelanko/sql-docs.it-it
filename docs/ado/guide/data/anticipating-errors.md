@@ -1,5 +1,5 @@
 ---
-title: Prevenzione degli errori | Microsoft Docs
+title: Errori previsti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,21 +15,21 @@ ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d92d96e3b8cdfea5cacea35d852e8859de65dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925989"
 ---
 # <a name="anticipating-errors"></a>Prevenzione degli errori
-Prevenzione di errore è almeno tanto importante quanto la gestione degli errori. Questa sezione finale contiene un elenco ridotto di precauzioni che l'applicazione può richiedere per rendere meno probabile che si verificano errori.  
+La prevenzione degli errori è importante almeno quanto la gestione degli errori. Questa sezione finale contiene un breve elenco di precauzioni che l'applicazione può eseguire per rendere meno probabile che si verifichino errori.  
   
- Controllare lo stato degli oggetti controllando il valore **stato** proprietà prima di provare a eseguire un'operazione utilizzando gli oggetti. Ad esempio, se l'applicazione usa globale **connessione**, controllare relativo **stato** proprietà per verificare se è già aperta prima di chiamare il **aprire** (metodo).  
+ Verificare lo stato degli oggetti controllando il valore nella proprietà **state** prima di provare a eseguire un'operazione utilizzando tali oggetti. Se, ad esempio, l'applicazione usa una **connessione**globale, controllare la proprietà **state** per verificare se è già aperta prima di chiamare il metodo **Open** .  
   
--   Qualsiasi programma che accetta i dati da un utente deve includere il codice per convalidare che i dati prima dell'invio all'archivio dati. Non è possibile utilizzare l'archivio dati, il provider, ADO o persino il linguaggio di programmazione per notificare eventuali problemi. È necessario controllare ogni singolo byte immesso dagli utenti, assicurandosi che i dati sono il tipo corretto per il campo e che i campi obbligatori non sono vuoti.  
+-   Tutti i programmi che accettano dati da un utente devono includere il codice per convalidare i dati prima di inviarli all'archivio dati. Non è possibile utilizzare l'archivio dati, il provider, ADO o anche il linguaggio di programmazione per notificare eventuali problemi. È necessario controllare ogni byte immesso dagli utenti, assicurandosi che i dati siano del tipo corretto per il campo e che i campi obbligatori non siano vuoti.  
   
- Controllare i dati prima di provare a scrivere dati nell'archivio dati. Il modo più semplice per eseguire questa operazione è per gestire il **WillMove** eventi o il **WillUpdateRecordset** evento. Per una descrizione più completa di gestione degli eventi ADO, vedere [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Controllare i dati prima di provare a scrivere i dati nell'archivio dati. Il modo più semplice per eseguire questa operazione consiste nel gestire l'evento **WillMove** o l'evento **WillUpdateRecordset** . Per informazioni più complete sulla gestione degli eventi ADO, vedere [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md).  
   
- Verificare che l'opzione **Recordset** gli oggetti non sono presenti oltre i limiti delle **Recordset** prima di provare a spostare il puntatore di record. Se si tenta **MoveNext** quando **EOF** è impostata su True o **MovePrev** quando **BOF** è True, si verificherà un errore. Se si esegue una delle **spostare** metodi quando entrambe **EOF** e **BOF** sono True, verrà generato un errore.  
+ Prima di tentare di spostare il puntatore del record, verificare che gli oggetti **Recordset** non superino i limiti del **Recordset** . Se si tenta di eseguire **MoveNext** quando **EOF** è true o **MovePrev** quando **BOF** è true, si verificherà un errore. Se si esegue uno dei metodi **Move** quando sia **EOF** che **BOF** sono true, verrà generato un errore.  
   
- Errori si verificano anche se si prova a eseguire operazioni quali **Seek** e **trovare** su un oggetto vuoto **Recordset**.
+ Si verificheranno errori anche se si tenta di eseguire operazioni quali **Seek** e **Find** in un **Recordset**vuoto.

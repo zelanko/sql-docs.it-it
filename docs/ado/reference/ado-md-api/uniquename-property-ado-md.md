@@ -20,17 +20,17 @@ ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913957"
 ---
 # <a name="uniquename-property-ado-md"></a>Proprietà UniqueName (ADO MD)
-Indica un nome univoco per l'oggetto corrente.  
+Indica un nome non ambiguo per l'oggetto corrente.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **stringa** ed è di sola lettura.  
+ Restituisce una **stringa** ed è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
   

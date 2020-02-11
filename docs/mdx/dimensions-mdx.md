@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999971"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
@@ -38,16 +38,16 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Espressione stringa valida che specifica il nome di una gerarchia.  
   
-## <a name="remarks"></a>Note  
- Se viene specificato un numero di gerarchia, il **dimensioni** funzione restituisce una gerarchia la cui posizione in base zero all'interno del cubo è un numero di gerarchia specificato.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificato un numero di gerarchia, la funzione **Dimensions** restituisce una gerarchia la cui posizione in base zero all'interno del cubo è specificata come numero di gerarchia.  
   
- Se viene specificato un nome di gerarchia, il **dimensioni** funzione restituisce la gerarchia specificata. In genere, si utilizza questa versione di stringa di **dimensioni** funzione con funzioni definite dall'utente.  
+ Se viene specificato un nome di gerarchia, la funzione **Dimensions** restituisce la gerarchia specificata. In genere, questa versione di stringa della funzione **Dimensions** viene utilizzata con funzioni definite dall'utente.  
   
 > [!NOTE]  
->  Il **misure** dimensione è sempre rappresentata dallo `Dimensions(0)`.  
+>  La dimensione **measures** è sempre rappresentata da `Dimensions(0)`.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti usano il **dimensioni** funzione per restituire il nome, numero di livelli e conteggio dei membri di una gerarchia specificata, utilizzando un'espressione numerica sia un'espressione stringa.  
+ Negli esempi seguenti viene utilizzata la funzione **Dimensions** per restituire il nome, il numero di livelli e il numero di membri di una gerarchia specificata, utilizzando un'espressione numerica e un'espressione stringa.  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

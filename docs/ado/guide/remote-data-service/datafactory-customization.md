@@ -1,5 +1,5 @@
 ---
-title: Personalizzazione di DataFactory | Microsoft Docs
+title: Personalizzazione di datafactory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922775"
 ---
 # <a name="datafactory-customization"></a>Personalizzazione di Data Factory
-Servizio dati remoto (RDS) fornisce un modo per eseguire facilmente l'accesso ai dati in un sistema a tre livelli client/server. Un controllo client di dati specifica i parametri della stringa di connessione e comando per eseguire una query su un'origine dati remota o stringa di connessione e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) parametri per eseguire un aggiornamento dell'oggetto.  
+Remote Data Service (RDS) fornisce un modo per eseguire facilmente l'accesso ai dati in un sistema client/server a tre livelli. Un controllo dati client specifica la connessione e i parametri della stringa di comando per eseguire una query su un'origine dati remota, oppure su una stringa di connessione e parametri dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per eseguire un aggiornamento.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- I parametri vengono passati a un'applicazione server, che esegue l'operazione di accesso ai dati nell'origine dati remota. Servizi Desktop remoto offre un programma server predefinito denominato il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto. Il **RDSServer** oggetto restituisce qualsiasi **Recordset** oggetto generato da una query al client.  
+ I parametri vengono passati a un programma server che esegue l'operazione di accesso ai dati nell'origine dati remota. RDS fornisce un programma server predefinito denominato oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . L'oggetto **RDSServer. DataFactory** restituisce al client qualsiasi oggetto **Recordset** prodotto da una query.  
   
- Tuttavia, il **RDSServer** è limitato all'esecuzione di query e aggiornamenti. Non può eseguire qualsiasi convalida o l'elaborazione sulle stringhe di connessione o un comando.  
+ Tuttavia, **RDSServer. DataFactory** è limitato all'esecuzione di query e aggiornamenti. Non può eseguire alcuna convalida o elaborazione sulla connessione o sulle stringhe di comando.  
   
- Con ADO, è possibile specificare che il **DataFactory** funzionano in combinazione con un altro tipo di programma server chiamato un' *gestore*. Il gestore può modificare stringhe di comando e di connessione client prima che vengano utilizzate per accedere all'origine dati. Inoltre, il gestore di è possibile applicare diritti di accesso, che regolano la capacità del client di leggere e scrivere dati nell'origine dati.  
+ Con ADO è possibile specificare che la **DataFactory** funzioni insieme a un altro tipo di programma server chiamato *gestore*. Il gestore può modificare la connessione client e le stringhe di comando prima che vengano utilizzate per accedere all'origine dati. Inoltre, il gestore può applicare i diritti di accesso, che regolano la capacità del client di leggere e scrivere i dati nell'origine dati.  
   
- I parametri che il gestore Usa per modificare i parametri del client e i diritti di accesso sono specificati nelle sezioni di un file di personalizzazione.  
+ I parametri utilizzati dal gestore per modificare i parametri client e i diritti di accesso vengono specificati nelle sezioni di un file di personalizzazione.  
   
- Gli argomenti seguenti forniscono altre informazioni sulla personalizzazione il **DataFactory** oggetto.  
+ Negli argomenti seguenti vengono fornite ulteriori informazioni sulla personalizzazione dell'oggetto **DataFactory** .  
   
 -   [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
   

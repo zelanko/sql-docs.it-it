@@ -1,5 +1,5 @@
 ---
-title: Configurare un Server per l'ascolto su una porta TCP specifica (Gestione configurazione SQL Server) | Microsoft Docs
+title: Configurare un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813587"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)
@@ -30,14 +30,14 @@ ms.locfileid: "62813587"
  Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Quando si seleziona un numero di porta, vedere la pagina [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) per un elenco di numeri di porta assegnati ad applicazioni specifiche. Selezionare un numero di porta non assegnato. Per altre informazioni, vedere la pagina relativa all' [intervallo di porte dinamiche predefinite per TCP/IP modificato in Windows Vista e in Windows Server 2008](https://support.microsoft.com/kb/929851).  
+>  Quando si seleziona un numero di porta [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) , consultare un elenco di numeri di porta assegnati ad applicazioni specifiche. Selezionare un numero di porta non assegnato. Per altre informazioni, vedere la pagina relativa all' [intervallo di porte dinamiche predefinite per TCP/IP modificato in Windows Vista e in Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  L'ascolto viene iniziato dal motore di database su una nuova porta al momento del riavvio. Tuttavia, tramite il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene monitorato il Registro di sistema e viene segnalato il nuovo numero di porta appena la configurazione viene modificata, anche se non in uso da parte del motore di database. Riavviare il motore di database per garantire coerenza ed evitare errori di connessione.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
--   **Per configurare un server per l'attesa su una porta TCP specifica utilizzando:**  
+-   **Per configurare un server per l'ascolto su una porta TCP specifica utilizzando:**  
   
      [Gestione configurazione SQL Server](#SSMSProcedure)  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62813587"
   
 1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** , quindi **Protocolli per \<instance name>** e infine fare doppio clic su **TCP/IP**.  
   
-2.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP nel computer. Fare clic con il pulsante destro del mouse su ogni indirizzo e quindi scegliere **Proprietà** per identificare l'indirizzo IP da configurare.  
+2.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP nel computer. Fare clic con il pulsante destro del mouse su ogni indirizzo e scegliere **Proprietà** per identificare l'indirizzo IP da configurare.  
   
 3.  Se nella finestra di dialogo **Porte dinamiche TCP** è incluso il valore **0**, che indica che [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche, eliminare tale valore.  
   
-4.  Nella casella dell'area **Proprietà** **IP**_n_ immettere nella casella **Porta TCP** il numero di porta da assegnare per l'attesa a questo indirizzo IP e quindi fare clic su **OK**.  
+4.  Nella casella dell'area **Proprietà**_n_ **IP** immettere nella casella **Porta TCP** box, type the port number you want this Proprietà address to listen on, and then click **OK**.  
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<nome istanza>**)** , quindi fare clic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]su **Riavvia**per arrestare e riavviare.  
   
  Dopo la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'ascolto su una porta specifica sono disponibili tre soluzioni per connettersi a una porta specifica con un'applicazione client:  
   
@@ -66,6 +66,6 @@ ms.locfileid: "62813587"
 -   Programmare il client affinché si connetta utilizzando una stringa di connessione personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+ [Creare o eliminare un alias server per l'uso da un client &#40;Gestione configurazione SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

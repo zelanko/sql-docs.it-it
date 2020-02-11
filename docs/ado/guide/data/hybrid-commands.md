@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925035"
 ---
 # <a name="hybrid-commands"></a>Comandi ibridi
-Comandi ibridi sono i comandi con parametri parzialmente. Ad esempio:  
+I comandi ibridi sono comandi con parametri parziali. Ad esempio:  
   
 ```  
 SHAPE {select * from plants}   
@@ -31,9 +31,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- Il comportamento di memorizzazione nella cache per un comando ibrida è uguale a quello dei comandi con parametri normali.  
+ Il comportamento di memorizzazione nella cache per un comando ibrido è identico a quello dei normali comandi con parametri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
