@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'API dell'istanza SQL Server Express LocalDB | Microsoft Docs
+title: Riferimento all'API dell'istanza di SQL Server Express database locale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,42 +11,42 @@ ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68021955"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Informazioni di riferimento su SQL Server Express LocalDB - API dell'istanza
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In SQL Server basato su servizi, tradizionale, le singole istanze di SQL Server installate in un solo computer sono separate fisicamente; ovvero, ogni istanza deve essere installata e rimossa separatamente. Inoltre, ciascuna istanza dispone di un set separato di file binari e si esegue in un processo del servizio separato. Il nome dell'istanza di SQL Server viene utilizzato per specificare l'istanza di SQL Server a cui l'utente desidera effettuare la connessione.  
   
- L'istanza di SQL Server Express LocalDB API Usa un modello di istanza semplificato e "light". Anche se le istanze del database locale singole sono separate sul disco e nel Registro di sistema, in esse viene utilizzato lo stesso set di file binari condivisi del database locale. Inoltre, nel database locale non vengono utilizzati servizi. Le istanze del database locale vengono avviate su richiesta tramite le chiamate API dell'istanza del database locale. Nel database locale il nome dell'istanza viene utilizzato per specificare quali delle istanze del database locale l'utente desideri utilizzare.  
+ Nell'API dell'istanza di SQL Server Express database locale viene utilizzato un modello di istanza semplificato, "Light". Anche se le istanze del database locale singole sono separate sul disco e nel Registro di sistema, in esse viene utilizzato lo stesso set di file binari condivisi del database locale. Inoltre, nel database locale non vengono utilizzati servizi. Le istanze del database locale vengono avviate su richiesta tramite le chiamate API dell'istanza del database locale. Nel database locale il nome dell'istanza viene utilizzato per specificare quali delle istanze del database locale l'utente desideri utilizzare.  
   
- Un'istanza di Local DB deve appartenere a un singolo utente e sia visibile e accessibile solo dal contesto dell'utente, a meno che non è abilitata la condivisione di istanza.  
+ Un'istanza del database locale è sempre di proprietà di un singolo utente ed è visibile e accessibile solo dal contesto di questo utente, a meno che non sia abilitata la condivisione dell'istanza.  
   
- Anche se tecnicamente le istanze del database locale non corrispondono a istanze di SQL Server tradizionali, l'utilizzo previsto è simile. Vengono chiamati *istanze* per enfatizzare questa somiglianza e per renderle più intuitive agli utenti di SQL Server.  
+ Anche se tecnicamente le istanze del database locale non corrispondono a istanze di SQL Server tradizionali, l'utilizzo previsto è simile. Sono denominate *istanze* per evidenziare questa somiglianza e per renderle più intuitive per SQL Server gli utenti.  
   
  Il database locale supporta due tipi di istanze, ovvero automatiche e denominate. L'identificatore per un'istanza del database locale è il nome dell'istanza.  
   
 ## <a name="automatic-localdb-instances"></a>Istanze automatiche del database locale  
- Le istanze automatiche del database locale sono "pubbliche"; vengono creati e gestiti automaticamente per l'utente e può essere usato da qualsiasi applicazione. Un'istanza di Local DB automatica esiste per ogni versione di Local DB installato nel computer dell'utente.  
+ Le istanze automatiche del database locale sono "pubbliche"; vengono create e gestite automaticamente per l'utente e possono essere utilizzate da qualsiasi applicazione. Un'istanza di local DB automatica esiste per ogni versione di local DB installata nel computer dell'utente.  
   
  Le istanze automatiche del database locale forniscono una gestione continua dell'istanza. L'utente non deve creare l'istanza; in questo modo egli può facilmente installare applicazioni ed eseguire la migrazione a computer diversi. Se nel computer di destinazione è installata la versione specificata del database locale, l'istanza automatica di tale database per quella versione è disponibile anche su quel computer.  
   
 ### <a name="automatic-instance-management"></a>Gestione dell'istanza automatica  
- Un utente non deve creare un'istanza automatica del database locale. L'istanza viene creato in modo differito la prima volta che l'istanza viene utilizzata, condizione che la versione specificata del database locale è disponibile nel computer dell'utente. Dal punto di vista dell'utente, l'istanza automatica è sempre presente se sono presenti i file binari del database locale.  
+ Un utente non deve creare un'istanza automatica del database locale. L'istanza viene creata in modalità differita la prima volta che si utilizza l'istanza, purché la versione specificata del database locale sia disponibile nel computer dell'utente. Dal punto di vista dell'utente, l'istanza automatica è sempre presente se sono presenti i file binari del database locale.  
   
  Per le istanze automatiche sono valide anche altre operazioni di gestione dell'istanza, quali eliminazione, condivisione e non condivisione. In particolare, l'eliminazione di un'istanza automatica consente di reimpostare in modo efficiente l'istanza, che verrà ricreata alla successiva operazione di avvio. L'eliminazione di un'istanza automatica può essere necessaria nel caso in cui i database di sistema siano danneggiati.  
   
 ### <a name="automatic-instance-naming-rules"></a>Regole di denominazione dell'istanza automatica  
  Le istanze automatiche del database locale dispongono di un modello speciale per il nome dell'istanza che appartiene a uno spazio dei nomi riservato. È necessario evitare conflitti di nomi con le istanze denominate del database locale.  
   
- Il nome dell'istanza automatica è il numero di versione del rilascio della linea di base LocalDB preceduto da un carattere singolo "v". Questa è simile a "v" più due numeri con un punto tra di essi; ad esempio, v11.0 o V12.00.  
+ Il nome dell'istanza automatica è il numero di versione della versione di base del database locale preceduto da un singolo carattere "v". Questo aspetto è simile a "v" più due numeri con un punto tra di essi. ad esempio, v 11.0 o V 12.00.  
   
  Esempi di nomi di istanze automatiche non consentiti sono:  
   
--   11.0 (manca il carattere "v" all'inizio)  
+-   11,0 (carattere "v" mancante all'inizio)  
   
 -   v11 (punto e secondo numero della versione mancanti)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68021955"
 -   v11.0.1.2 (numero di versione con più di due parti)  
   
 ## <a name="named-localdb-instances"></a>Istanze denominate del database locale  
- Istanze denominate del database locale sono "private"; un'istanza è di proprietà da un'unica applicazione che ha la responsabilità per la creazione e gestione dell'istanza. Le istanze denominate del database locale forniscono isolamento e migliorano le prestazioni.  
+ Le istanze denominate del database locale sono "private"; un'istanza è di proprietà di una singola applicazione responsabile della creazione e della gestione dell'istanza. Le istanze denominate del database locale forniscono isolamento e migliorano le prestazioni.  
   
 ### <a name="named-instance-creation"></a>Creazione di istanze denominate  
  L'utente deve creare istanze denominate in modo esplicito tramite l'API di gestione del database locale o in modo implicito tramite il file app.config per un'applicazione gestita. È possibile che in un'applicazione gestita venga utilizzata anche l'API.  
@@ -63,22 +63,22 @@ ms.locfileid: "68021955"
  Ogni istanza denominata dispone di una versione associata del database locale, ovvero che punta a un set specificato di file binari del database locale. La versione per l'istanza denominata viene impostata durante il processo di creazione dell'istanza.  
   
 ### <a name="named-instance-naming-rules"></a>Regole di denominazione dell'istanza denominata  
- Il nome di un'istanza di Local DB può avere fino a un massimo di 128 caratteri (il limite viene imposto per la **sysname** tipo di dati). Si tratta di una differenza significativa rispetto ai nomi di istanze di SQL Server tradizionali, che sono limitati a nomi NetBIOS di 16 caratteri ASCII. Il motivo di questa differenza è che considera i file di database LocalDB e pertanto implica una semantica basata su file, in modo che sia intuitiva per gli utenti affinché abbiano più libertà nella scelta di nomi di istanza.  
+ Il nome di un'istanza del database locale può avere un totale di 128 caratteri (il limite viene imposto dal tipo di dati **sysname** ). Si tratta di una differenza significativa rispetto ai nomi di istanze di SQL Server tradizionali, che sono limitati a nomi NetBIOS di 16 caratteri ASCII. Il motivo di questa differenza è che il database locale considera i database come file e pertanto implica la semantica basata su file, pertanto è intuitivo per gli utenti avere più libertà nella scelta dei nomi di istanza.  
   
- Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. Caratteri non validi in un componente del nome file è generalmente includono i caratteri seguenti: Caratteri ASCII/Unicode 1 a 31, nonché virgolette ("), minore di (\<), maggiore di (>), barra verticale (|), backspace (\b), tabulazione (\t), due punti (:), asterisco (*), punto interrogativo (?), barra rovesciata (\\) e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
+ Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. I caratteri non validi in un componente filename includono in genere i caratteri seguenti: caratteri ASCII/Unicode da 1 a 31, nonché virgolette ("),\<minore di (), maggiore di (>), pipe (|), BACKSPACE (\b), Tab (\t), due punti (:), asterisco (*), punto interrogativo (\\?), barra rovesciata () e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
   
 > [!NOTE]  
 >  L'elenco di caratteri non consentiti può dipendere dal sistema operativo e può essere modificato nelle versioni successive.  
   
  Gli spazi vuoti iniziali e finali nei nomi dell'istanza vengono ignorati e saranno tagliati.  
   
- Per evitare conflitti di denominazione, denominati LocalDB istanze non possono avere un nome che segue il modello di denominazione per le istanze automatiche, come descritto in precedenza in "Regole di automatica Naming di istanza". Un tentativo di creare un'istanza denominata con un nome che segue in modo efficace il modello di denominazione istanza automatica consente di creare un'istanza predefinita.  
+ Per evitare conflitti di denominazione, le istanze del database locale denominate non possono avere un nome che segue il modello di denominazione per le istanze automatiche, come descritto in precedenza in "regole di denominazione automatica dell'istanza". Un tentativo di creare un'istanza denominata con un nome che segue il modello di denominazione dell'istanza automatica crea in modo efficace un'istanza predefinita.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Argomenti di riferimento al database locale di SQL Server Express  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
  Vengono fornite informazioni sul file di intestazione e le chiavi del Registro di sistema per l'individuazione dell'API dell'istanza del database locale.  
   
- [Strumento di gestione da riga di comando: SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
+ [Strumento di gestione della riga di comando: SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
  Viene descritto SqlLocalDB.exe, uno strumento per la gestione delle istanze del database locale dalla riga di comando.  
   
  [Funzione LocalDBCreateInstance](../../relational-databases/express-localdb-instance-apis/localdbcreateinstance-function.md)  

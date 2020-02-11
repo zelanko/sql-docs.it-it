@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232363"
 ---
 # <a name="xml-data-sql-server"></a>Dati XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
   
--   Tipo di dati `xml`. I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati `xml` che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. La colonna XML può essere indicizzata.  
+-   Tipo di dati `xml`. I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati `xml` che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. È possibile indicizzare la colonna XML.  
   
 -   Possibilità di specificare una query XQuery sui dati XML archiviati in colonne e variabili di tipo `xml`.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63232363"
   
 -   Funzione OPENXML per recuperare i dati XML in formato relazionale.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Colonne e tipo di dati XML &#40;SQL Server&#41;](xml-data-type-and-columns-sql-server.md)  
  [Indici XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
  [Raccolte di XML Schema &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
@@ -41,6 +41,6 @@ ms.locfileid: "63232363"
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Esempi di importazione ed esportazione in blocco di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+ [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)  
   

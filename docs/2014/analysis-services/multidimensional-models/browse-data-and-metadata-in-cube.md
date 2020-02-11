@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076763"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
@@ -22,7 +22,7 @@ ms.locfileid: "66076763"
   
  Prima di visualizzare un cubo, è necessario elaborarlo e riconnetterlo. Al termine dell'elaborazione, aprire la scheda **Esplorazione** di Progettazione cubi. Sulla barra degli strumenti fare clic sul pulsante Riconnetti per aggiornare la connessione.  
   
- Il **Browser** scheda include tre riquadri: il riquadro dei metadati, il riquadro filtro e il riquadro dei dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
+ La scheda **esplorazione** dispone di tre riquadri: il riquadro dei metadati, il riquadro del filtro e il riquadro dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
   
 ## <a name="setting-up-the-browser"></a>Configurazione di Esplorazione  
  Per preparare la visualizzazione di un cubo, è possibile specificare una prospettiva o una traduzione che si desidera utilizzare. Aggiungere misure e dimensioni al riquadro Dati e specificare tutti i filtri nel riquadro Filtro.  
@@ -31,7 +31,7 @@ ms.locfileid: "66076763"
  Usare l'elenco **Prospettiva** per scegliere una prospettiva da definire per il cubo. Le prospettive vengono definite nella scheda **Prospettive** di Progettazione cubi. Per passare a una prospettiva diversa, selezionare una qualsiasi prospettiva nell'elenco.  
   
 ##### <a name="specifying-a-translation"></a>Specifica di una traduzione  
- Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni sono definite nella scheda **Traduzioni** di Cube Designer. La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
+ Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni vengono definite nella relativa scheda di Progettazione cubi. **** La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
   
 ##### <a name="formatting-the-data-pane"></a>Formattazione del riquadro Dati  
  È possibile formattare didascalie e celle nel riquadro Dati. Fare clic con il pulsante destro del mouse sulle celle o didascalie selezionate che si vuole formattare e quindi fare clic su **Comandi e opzioni**. A seconda della selezione, nella finestra di dialogo **Comandi e opzioni** vengono visualizzate le impostazioni per **Formato**, **Filtra e raggruppa**, **Report**e **Comportamento**.  
@@ -57,14 +57,14 @@ ms.locfileid: "66076763"
   
      \- - oppure -  
   
--   Nel **dimensione** della colonna della **filtro** riquadro, fare clic su  **\<selezionare una dimensione >** e selezionare una dimensione dall'elenco, quindi fare clic su  **\<Seleziona gerarchia >** nel **gerarchia** colonna e selezionare una gerarchia dall'elenco.  
+-   Nella colonna **dimensione** del riquadro **filtro** fare clic su ** \<seleziona>dimensione** e selezionare una dimensione nell'elenco, quindi fare clic su ** \<seleziona>gerarchia** nella colonna **gerarchia** e selezionare una gerarchia nell'elenco.  
   
  Dopo aver specificato la gerarchia, indicare l'operatore e l'espressione di filtro. Nella tabella seguente vengono descritti gli operatori e le espressioni di filtro.  
   
 |Operatore|Espressione filtro|Descrizione|  
 |--------------|-----------------------|-----------------|  
-|Uguale a|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
-|Diverso da|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
+|Uguale|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
+|Diverso|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
 |In|Uno o più set denominati|I valori devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Non incluso|Uno o più set denominati|I valori non devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Intervallo (inclusivo)|Uno o due membri di delimitazione di un intervallo|I valori devono essere compresi tra o uguali ai membri di delimitazione. Se i membri di delimitazione sono uguali o solo un membro viene specificato, non viene applicato alcun intervallo e tutti i valori sono consentiti.<br /><br /> Supportato solo per le gerarchie di attributi. L'intervallo deve trovarsi in un livello di una gerarchia. Gli intervalli non associati non sono attualmente supportati.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66076763"
   
  Per gerarchie definite dall'utente in cui è possibile specificare più membri nell'espressione di filtro, tutti i membri specificati devono essere allo stesso livello e condividere lo stesso padre. Questa restrizione non viene applicata alle gerarchie padre-figlio.  
   
-## <a name="working-with-data"></a>Utilizzo dei dati  
+## <a name="working-with-data"></a>Uso dei dati  
   
 ##### <a name="drilling-down-into-a-member"></a>Drill-down di un membro  
  Per eseguire il drill-down di un particolare membro, fare clic sul segno più (+) accanto al membro o fare doppio clic sul membro.  

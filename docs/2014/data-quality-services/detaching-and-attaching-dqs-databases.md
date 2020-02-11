@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480688"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Scollegamento e collegamento di database DQS
@@ -41,8 +41,8 @@ ms.locfileid: "65480688"
   
 -   È necessario disporre del ruolo dqs_administrator sul database DQS_MAIN per interrompere qualsiasi attività in esecuzione o arrestare processi in corso in DQS.  
   
-##  <a name="Detach"></a> Scollegare i database DQS  
- Quando si scollega un database DQS utilizzando SQL Server Management Studio, i file scollegati non vengono eliminati dal computer e possono essere ricollegati alla stessa istanza di SQL Server o possono essere spostati in un altro server dove vengono collegati. I file di database DQS sono in genere disponibili nel computer Data Quality Services al percorso seguente: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Nome_istanza >* \MSSQL\DATA.  
+##  <a name="Detach"></a>Scollega database DQS  
+ Quando si scollega un database DQS utilizzando SQL Server Management Studio, i file scollegati non vengono eliminati dal computer e possono essere ricollegati alla stessa istanza di SQL Server o possono essere spostati in un altro server dove vengono collegati. I file del database DQS sono in genere disponibili nel seguente percorso nel computer Data Quality Services: C:\Programmi\Microsoft SQL Server\MSSQL12. *<Instance_Name>* \Mssql\Data.  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65480688"
   
  È inoltre possibile scollegare i database DQS tramite le istruzioni Transact-SQL utilizzando la stored procedure sp_detach_db. Per ulteriori informazioni sullo scollegamento di database tramite istruzioni Transact-SQL, vedere [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) in [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="Attach"></a> Collegare i database DQS  
+##  <a name="Attach"></a>Connetti database DQS  
  Utilizzare le istruzioni seguenti per collegare un database DQS alla stessa istanza di SQL Server, da cui è stato scollegato, o a un'istanza di SQL Server diversa in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
@@ -71,7 +71,7 @@ ms.locfileid: "65480688"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (...).  
+5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( ... ).  
   
 6.  Fare clic su **OK** per collegare il database DQS_MAIN.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "65480688"
  È inoltre possibile collegare i database DQS utilizzando le istruzioni Transact-SQL. Per ulteriori informazioni sul collegamento di database tramite istruzioni Transact-SQL, vedere [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i database DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   
