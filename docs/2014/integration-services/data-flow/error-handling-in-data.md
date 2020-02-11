@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827147"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
@@ -68,7 +68,7 @@ ms.locfileid: "62827147"
 ## <a name="adding-the-error-description"></a>Aggiunta della descrizione dell'errore  
  Per impostazione predefinita l'output egli errori include il codice numerico dell'errore e contiene in genere l'identificatore della colonna in cui si è verificato l'errore. È possibile utilizzare il componente script per includere la descrizione dell'errore in una colonna aggiuntiva, utilizzando una singola riga di script per chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- Il componente script può essere aggiunto al segmento del flusso di dati relativo agli errori, in qualsiasi punto a valle dei componenti del flusso di dati di cui si desidera acquisire gli errori, ma viene in genere collocato immediatamente prima della scrittura delle righe di errore in una destinazione. In questo modo, lo script cerca solo le descrizioni relative alle righe di errore da scrivere. Se ad esempio il segmento del flusso di dati relativo agli errori corregge alcuni errori, le relative righe di errore non verranno scritte in una destinazione degli errori. Per altre informazioni, vedere [ottimizzazione un Output degli errori con il componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ Il componente script può essere aggiunto al segmento del flusso di dati relativo agli errori, in qualsiasi punto a valle dei componenti del flusso di dati di cui si desidera acquisire gli errori, ma viene in genere collocato immediatamente prima della scrittura delle righe di errore in una destinazione. In questo modo, lo script cerca solo le descrizioni relative alle righe di errore da scrivere. Se ad esempio il segmento del flusso di dati relativo agli errori corregge alcuni errori, le relative righe di errore non verranno scritte in una destinazione degli errori. Per ulteriori informazioni, vedere [ottimizzazione di un output degli errori con il componente script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>Per configurare un output degli errori  
   
@@ -76,8 +76,8 @@ ms.locfileid: "62827147"
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow.md)   
- [Trasformazione di dati con le trasformazioni](transformations/transform-data-with-transformations.md)   
- [Connessione di componenti con i percorsi](../connect-components-with-paths.md)   
+ [Trasformare i dati con le trasformazioni](transformations/transform-data-with-transformations.md)   
+ [Connettere i componenti con i percorsi](../connect-components-with-paths.md)   
  [Attività Flusso di dati](../control-flow/data-flow-task.md)   
  [Flusso di dati](data-flow.md)  
   

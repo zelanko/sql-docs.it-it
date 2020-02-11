@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482758"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modificare il tipo di attributo (componente aggiuntivo MDS per Excel)
@@ -25,12 +25,12 @@ ms.locfileid: "65482758"
 > [!NOTE]  
 >  Non è possibile aggiornare il tipo o la lunghezza delle colonne **Nome** o **Codice**.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Devono essere disponibili un modello esistente, un'entità e un attributo.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65482758"
   
 -   Modificare il tipo di dati dell'attributo.  
   
--   Generare una copia dell'attributo con il suffisso old"che non contiene alcun valore. Questa operazione viene definita un' **deprecato** attributo.  
+-   Genera una copia dell'attributo con il suffisso "_old" che non contiene alcun valore. Questa operazione è denominata attributo **deprecato** .  
   
  Tutte le dipendenze esistenti dall'attributo originale faranno tuttavia riferimento all'attributo deprecato e non a quello modificato.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65482758"
   
 -   È necessario aggiornare le regole business in modo che facciano riferimento all'attributo modificato, in quanto la logica potrebbe non essere la stessa applicata al nuovo tipo di dati dell'attributo. Sarà necessario modificare ogni regola interessata, quindi rielaborare le espressioni in modo che vengano rimossi i riferimenti dall'attributo deprecato (_old) e venga fatto riferimento all'attributo aggiornato.  
   
--   È necessario aprire tutte le viste sottoscrizioni nella selezione di Gestione integrazione, selezionare la riga della vista, aprirlo e modificarlo facendo clic sull'icona a forma di matita e quindi fare clic sui **salvataggio disco** icona per aggiornare la definizione della vista. Non sono necessarie altre modifiche per rigenerare la sintassi della vista.  
+-   È necessario aprire tutte le viste sottoscrizioni sotto la selezione gestione integrazione, selezionare la riga Visualizza, aprirla per la modifica facendo clic sull'icona della matita, quindi fare clic sull'icona **Salva disco** per aggiornare la definizione della vista. Non sono necessarie altre modifiche per rigenerare la sintassi della vista.  
   
 -   Alle tabelle di gestione temporanea che includono l'attributo verrà una colonna per l'attributo deprecato e ciò influirà sul codice di gestione temporanea. Per eliminare l'attributo deprecato, è possibile eliminarlo dopo avere aggiornato regole business e le viste sottoscrizioni.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "65482758"
   
  Prima di eliminare qualsiasi attributo deprecato, è necessario rimuovere tutti i riferimenti all'attributo, ad esempio correggere le regole business e rigenerare le viste sottoscrizioni come descritto in precedenza. In caso contrario, quando si tenta di eliminare l'attributo deprecato, verrà generato un errore nella pagina Web di amministrazione del sistema nel quale è indicato che l'attributo non può essere eliminato perché un oggetto fa riferimento a tale attributo.  
   
- Per eliminare un attributo, vedere [eliminazione di un attributo &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
+ Per eliminare un attributo, vedere [eliminare un attributo &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
   
 > [!TIP]  
 >  Modificare i tipi di dati per gli attributi MDS con dati esistenti ed entità correlate è un'operazione complessa, soprattutto se è presente una regola business o una vista sottoscrizioni dichiarata che dipende dall'entità. La procedura consigliata consiste nell'iniziare con un tipo di dati sufficientemente flessibile per contenere i valori necessari. Ad esempio, le stringhe potrebbero essere brevi inizialmente, ma con il tempo potrebbe essere necessario allungarle, quindi è consigliabile considerare il peggiore dei casi. Una lunghezza aggiuntiva della stringa di testo può essere gravosa, ad esempio le caselle di testo di grandi dimensioni della GUI sono difficili da adattare alla schermata, quindi è opportuno evitare stringhe troppo lunghe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [Compilazione di un modello &#40;componente aggiuntivo MDS per Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [Compilazione di un modello &#40;Componente aggiuntivo MDS per Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   
