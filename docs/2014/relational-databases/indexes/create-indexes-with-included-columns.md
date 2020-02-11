@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156815"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
@@ -39,17 +39,17 @@ ms.locfileid: "63156815"
 > [!NOTE]  
 >  Quando in un indice sono contenute tutte le colonne a cui fa riferimento una query, viene generalmente indicato come *copertura della query*.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Indicazioni sulla progettazione](#DesignRecs)  
+     [Suggerimenti per la progettazione](#DesignRecs)  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
      [Sicurezza](#Security)  
   
--   **Per creare un indice con colonne non chiave utilizzando:**  
+-   **Per creare un indice con colonne colonne utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63156815"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
@@ -102,19 +102,19 @@ ms.locfileid: "63156815"
   
 6.  Nella scheda **Colonne chiave indice** scegliere **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ Selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
   
 8.  Fare clic su **OK**.  
   
 9. Nella scheda **Colonne incluse** scegliere **Aggiungi**.  
   
-10. Nella finestra di dialogo **Seleziona colonne da**_table_name_ selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
+10. Nella finestra di dialogo **Seleziona colonne da**_table_name_ Selezionare le caselle di controllo della colonna o delle colonne della tabella da aggiungere all'indice come colonne colonne.  
   
 11. Fare clic su **OK**.  
   
 12. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   

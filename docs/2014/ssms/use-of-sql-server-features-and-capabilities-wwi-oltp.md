@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280485"
 ---
 # <a name="arguments-for-external-tools"></a>Strumenti esterni - Argomenti
@@ -25,7 +25,7 @@ ms.locfileid: "63280485"
   
  Nella tabella seguente vengono elencati gli argomenti per gli strumenti esterni.  
   
-|nome|Argomento|Descrizione|  
+|Nome|Argomento|Descrizione|  
 |----------|--------------|-----------------|  
 |**Percorso elemento**|$(ItemPath)|Il nome file completo dell'origine corrente (definito come unità + percorso + nome file); vuoto se è attiva una finestra non di origine.|  
 |**Directory elemento**|$(ItemDir)|La directory dell'origine corrente (definita come unità + percorso); vuoto se è attiva una finestra non di origine.|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280485"
 |**Directory soluzione**|$(SolutionDir)|La directory della soluzione corrente (definita come unità + percorso).|  
 |**Nome file soluzione**|$(SolutionFileName)|Il nome file della soluzione corrente (definito come unità + percorso + nome file).|  
   
- <sup>1</sup> la riga corrente, la colonna corrente o testo corrente è basato sulla posizione del cursore nell'editor di testo, come mostrato nella barra di stato.  
+ <sup>1</sup> la riga corrente, la colonna corrente o il testo corrente si basa sulla posizione del cursore nell'editor di testo, come illustrato nella barra di stato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Strumenti esterni](external-tools-dialog-box.md)   
+ [Finestra di dialogo strumenti esterni](external-tools-dialog-box.md)   
  [Elementi generali dell'interfaccia utente](general-user-interface-elements.md)  
   
   

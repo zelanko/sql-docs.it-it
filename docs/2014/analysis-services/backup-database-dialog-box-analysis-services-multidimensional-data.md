@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Database (Analysis Services - dati multidimensionali) di backup | Microsoft Docs
+title: Finestra di dialogo Backup database (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064375"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Backup database (Analysis Services - Dati multidimensionali)
@@ -25,7 +25,7 @@ ms.locfileid: "66064375"
 > [!IMPORTANT]  
 >  Per ogni file di backup, l'utente che esegue il comando di backup deve disporre delle autorizzazioni per scrivere nel percorso di backup specificato per ogni file. Inoltre, l'utente deve avere uno dei ruoli seguenti: deve essere un membro di un ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oppure un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) sul database di cui eseguire il backup.  
   
- **Per visualizzare la finestra di dialogo Backup Database**  
+ **Per visualizzare la finestra di dialogo Backup database**  
   
 -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Database** di un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o su un database in **Esplora oggetti**, quindi fare clic su **Backup**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66064375"
  Selezionare questa opzione per sovrascrivere un file di backup esistente o un file di backup remoto, se disponibile.  
   
 > [!NOTE]  
->  Se questa opzione non viene selezionata e il file di backup specificato in **File di backup** o il file di backup remoto specificato in **File di backup remoto** esiste, si verifica un errore.  
+>  Se questa opzione non è selezionata e il file di backup specificato in file di **backup** o in un file di backup remoto specificato in **file di backup remoto** esiste, si verificherà un errore.  
   
  **Applica compressione**  
  Selezionare questa opzione per comprimere il contenuto del file di backup e dei file di backup remoti eventualmente specificati.  
@@ -70,13 +70,13 @@ ms.locfileid: "66064375"
  Consente di digitare la password da utilizzare per la crittografia del file di backup e dei file di backup remoti eventualmente specificati.  
   
 > [!NOTE]  
->  Questa opzione è attivata solo se viene selezionato **Crittografa file di backup** .  
+>  Questa opzione è abilitata solo se è selezionato **Crittografa file di backup** .  
   
  **Conferma password**  
  Consente di digitare la password immessa in **Password** per confermare la password per il file di backup e i file di backup remoti eventualmente specificati.  
   
 > [!NOTE]  
->  Questa opzione è attivata solo se viene selezionato **Crittografa file di backup** .  
+>  Questa opzione è abilitata solo se è selezionato **Crittografa file di backup** .  
   
  **Backup partizioni remote**  
  Selezionare questa opzione per includere le informazioni sulla partizione e i dati per le partizioni remote nel file di backup.  
@@ -87,7 +87,7 @@ ms.locfileid: "66064375"
  **Percorso backup partizioni remote**  
  Consente di visualizzare il percorso delle partizioni remote associate al database selezionato, nonché il file di backup remoto utilizzato per il backup di dati e metadati per le partizioni remote. Sono disponibili le colonne seguenti.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Server**|Visualizza l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce le partizioni remote.|  
 |**Database**|Visualizza il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che contiene le partizioni remote.|  
@@ -95,7 +95,7 @@ ms.locfileid: "66064375"
 |**File di backup remoto**|Digitare il percorso completo e il nome di file del file di backup remoto da usare oppure fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Salva file con nome** e selezionare il percorso e il nome di file del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Salva file con nome** vedere [Finestra di dialogo Salva file con nome &#40;Analysis Services - Dati multidimensionali&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
