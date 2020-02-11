@@ -14,25 +14,25 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925568"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
-Se è necessario gestire in modalità immediata del Recordset, vi è molto meno possibilità di problemi di concorrenza si verifichi. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, potrebbe esserci un'ottima possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica il record stesso. In tal caso, è consigliabile l'applicazione per gestire normalmente il conflitto. Potrebbe essere ogni vostro desiderio che ultima persona che ha inviato un aggiornamento nel server "wins". In alternativa, è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo quest'ultimo con una scelta tra i due valori in conflitto.  
+Se si sta lavorando con il recordset in modalità immediata, è possibile che si verifichino problemi di concorrenza. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, è possibile che un utente possa modificare un record prima che vengano salvate le modifiche apportate da un altro utente che modifica lo stesso record. In tal caso, si desidera che l'applicazione gestisca normalmente il conflitto. Potrebbe essere necessario che l'ultima persona invii un aggiornamento al server "WINS". In alternativa, è possibile consentire all'utente più recente di decidere quale aggiornamento deve avere la precedenza, offrendogli una scelta tra i due valori in conflitto.  
   
- In entrambi i casi, ADO fornisce le proprietà di esempio di OriginalValue e UnderlyingValue dell'oggetto campo per gestire questi tipi di conflitti. Usare queste proprietà in combinazione con il metodo Resync e la proprietà di filtro del set di record.  
+ In ogni caso, ADO fornisce le proprietà UnderlyingValue e OriginalValue dell'oggetto Field per gestire questi tipi di conflitti. Utilizzare queste proprietà in combinazione con il metodo di risincronizzazione e la proprietà Filter del recordset.  
   
-## <a name="remarks"></a>Note  
- Quando ADO rileva un conflitto durante un aggiornamento batch, un avviso verrà aggiunto alla raccolta di errori. Pertanto, è consigliabile sempre ricercare gli errori immediatamente dopo aver chiamato il metodo BatchUpdate e se si trova, iniziare il test si presuppone che si è verificato un conflitto. Il primo passaggio consiste nell'impostare la proprietà di filtro nel Recordset uguale a adFilterConflictingRecords. Questo limita la vista sul Recordset in modo che solo i record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si conosce che l'errore è stato generato da un valore diverso da un conflitto.  
+## <a name="remarks"></a>Osservazioni  
+ Quando ADO rileva un conflitto durante un aggiornamento batch, viene aggiunto un avviso alla raccolta Errors. Pertanto, è consigliabile controllare sempre gli errori immediatamente dopo la chiamata a BatchUpdate e, se li si trova, iniziare a testare il presupposto che si sia verificato un conflitto. Il primo passaggio consiste nell'impostare la proprietà Filter sul recordset uguale a adFilterConflictingRecords. Questo limita la visualizzazione del recordset solo ai record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si sa che l'errore è stato generato da qualcosa di diverso da un conflitto.  
   
- Quando si chiama il metodo BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che determinate origini dati presentano limitazioni in cui i tipi di colonne possono essere utilizzati in una clausola WHERE.  
+ Quando si chiama BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che alcune origini dati presentano limitazioni sui tipi di colonne che è possibile utilizzare in una clausola WHERE.  
   
- Successivamente, chiamare il metodo di risincronizzazione sul set di record con l'argomento AffectRecords impostato su adAffectGroup e l'argomento ResyncValues impostato su adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto Recordset corrente dal database sottostante. Usando adAffectGroup, si garantisce che solo i record visibili con il filtro corrente l'impostazione, vale a dire, solo i record in conflitto, vengono sincronizzati con il database. Questo potrebbe rendere una differenza significativa se è necessario gestire un set di record di grandi dimensioni. Se si imposta l'argomento ResyncValues adResyncUnderlyingValues durante la chiamata di risincronizzazione, assicurarsi che la proprietà UnderlyingValue conterrà il valore (in conflitto) dal database, che la proprietà Value manterrà il valore immesso dall'utente, e che la proprietà OriginalValue conterrà il valore originale del campo (il valore che aveva prima è stato effettuato l'ultima chiamata riuscita UpdateBatch). È quindi possibile usare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare il valore che verrà utilizzato.  
+ Chiamare quindi il metodo Resync sul recordset con il set di argomenti AffectRecords uguale a adAffectGroup e il set di argomenti ResyncValues uguale a adResyncUnderlyingValues. Il metodo Resync aggiorna i dati nell'oggetto recordset corrente dal database sottostante. Utilizzando adAffectGroup, si garantisce che solo i record visibili con l'impostazione del filtro corrente, ovvero solo i record in conflitto, vengano risincronizzati con il database. Questo potrebbe rendere una differenza significativa nelle prestazioni se si sta utilizzando un recordset di grandi dimensioni. Impostando l'argomento ResyncValues su adResyncUnderlyingValues quando si chiama la risincronizzazione, si garantisce che la proprietà UnderlyingValue conterrà il valore (in conflitto) del database, che la proprietà Value manterrà il valore immesso dall'utente e che la proprietà OriginalValue conterrà il valore originale per il campo (il valore che aveva prima che venisse eseguita l'ultima chiamata UpdateBatch completata). È quindi possibile usare questi valori per risolvere il conflitto a livello di codice o richiedere all'utente di selezionare il valore che verrà usato.  
   
- Questa tecnica è illustrata nell'esempio di codice seguente. L'esempio artificially crea un conflitto con un set di record separato per modificare un valore nella tabella sottostante prima che venga chiamato UpdateBatch.  
+ Questa tecnica è illustrata nell'esempio di codice seguente. Nell'esempio viene creato in modo artificiale un conflitto utilizzando un recordset separato per modificare un valore nella tabella sottostante prima della chiamata a UpdateBatch.  
   
 ```  
 'BeginConflicts  
@@ -111,9 +111,9 @@ Se è necessario gestire in modalità immediata del Recordset, vi è molto meno 
 'EndConflicts  
 ```  
   
- È possibile usare la proprietà Status del Record corrente o di un campo specifico per determinare il tipo di un conflitto si è verificato.  
+ È possibile utilizzare la proprietà Status del record corrente o di un campo specifico per determinare il tipo di conflitto che si è verificato.  
   
- Per informazioni dettagliate sulla gestione degli errori, vedere [Error Handling](../../../ado/guide/data/error-handling.md).  
+ Per informazioni dettagliate sulla gestione degli errori, vedere [gestione degli errori](../../../ado/guide/data/error-handling.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità batch](../../../ado/guide/data/batch-mode.md)

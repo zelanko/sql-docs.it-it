@@ -1,5 +1,5 @@
 ---
-title: Gli handle di istruzione | Microsoft Docs
+title: Handle di istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107265"
 ---
 # <a name="statement-handles"></a>Handle di istruzione
-Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad esempio **seleziona \* dipendente da**. Tuttavia, un'istruzione è solo un'istruzione SQL: è costituito da tutte le informazioni associate a tale istruzione SQL, ad esempio qualsiasi set di risultati creati tramite l'istruzione e i parametri usati nell'esecuzione dell'istruzione. Un'istruzione non è neanche necessario disporre di un'istruzione SQL definito dall'applicazione. Ad esempio, quando una funzione di catalogo, ad esempio **SQLTables** viene eseguita in un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  
+Un' *istruzione* è più facilmente pensata come istruzione SQL, ad esempio **Select \* from Employee**. Tuttavia, un'istruzione non è solo un'istruzione SQL, bensì tutte le informazioni associate a tale istruzione SQL, ad esempio i set di risultati creati dall'istruzione e i parametri utilizzati nell'esecuzione dell'istruzione. Un'istruzione non deve nemmeno avere un'istruzione SQL definita dall'applicazione. Quando, ad esempio, una funzione di catalogo come **SQLTables** viene eseguita su un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  
   
- Ogni istruzione viene identificata da un handle di istruzione. Un'istruzione è associata a una singola connessione, e possono essere presenti più istruzioni in tale connessione. Alcuni driver limitare il numero di istruzioni attive che supportano; opzione il SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** specifica quanti istruzioni attive supporta un driver in un'unica connessione. Viene definita come un'istruzione *active* se è presente in attesa di risultati, in cui risultati sono un set di risultati o conteggio delle righe interessate da un' **Inserisci**, **UPDATE**, o **Eliminare** istruzione o i dati viene inviato con più chiamate a **SQLPutData**.  
+ Ogni istruzione è identificata da un handle di istruzione. Un'istruzione è associata a una singola connessione e possono essere presenti più istruzioni su tale connessione. Alcuni driver limitano il numero di istruzioni attive supportate; l'opzione SQL_MAX_CONCURRENT_ACTIVITIES in **SQLGetInfo** specifica il numero di istruzioni attive supportate da un driver in una singola connessione. Un'istruzione è definita come *attiva* se presenta risultati in sospeso, in cui i risultati sono un set di risultati o il numero di righe interessate da un'istruzione **Insert**, **Update**o **Delete** oppure se i dati vengono inviati con più chiamate a **SQLPutData**.  
   
- All'interno di un frammento di codice che implementa ODBC (gestione Driver o un driver), l'handle di istruzione identifica una struttura che contiene informazioni di istruzione, ad esempio:  
+ All'interno di un frammento di codice che implementa ODBC (Gestione driver o driver), l'handle di istruzione identifica una struttura che contiene informazioni sull'istruzione, ad esempio:  
   
 -   Stato dell'istruzione  
   
--   La diagnostica a livello di istruzione corrente  
+-   Diagnostica a livello di istruzione corrente  
   
--   Gli indirizzi delle variabili di applicazione associati ai parametri dell'istruzione e le colonne del set di risultati  
+-   Indirizzi delle variabili dell'applicazione associati ai parametri dell'istruzione e alle colonne del set di risultati  
   
--   Le impostazioni correnti di ogni attributo di istruzione  
+-   Impostazioni correnti di ogni attributo di istruzione  
   
- Gli handle di istruzione vengono utilizzati nella maggior parte delle funzioni ODBC. In particolare, vengono usati nelle funzioni per associare i parametri e le colonne del set di risultati (**SQLBindParameter** e **SQLBindCol**), preparare ed eseguire le istruzioni (**SQLPrepare** **SQLExecute**, e **SQLExecDirect**), recuperare i metadati (**SQLColAttribute** e **SQLDescribeCol**), recupero i risultati (**SQLFetch**) e recuperare dati diagnostici (**SQLGetDiagField** e **SQLGetDiagRec**). Vengono usati anche nelle funzioni di catalogo (**SQLColumns**, **SQLTables**e così via) e un numero di altre funzioni.  
+ Gli handle di istruzione vengono utilizzati nella maggior parte delle funzioni ODBC. In particolare, vengono utilizzate nelle funzioni per associare i parametri e le colonne del set di risultati **(SQLBindParameter** e **SQLBindCol**), le istruzioni di preparazione ed esecuzione (**SQLPrepare**, **SQLExecute**e **SQLExecDirect**), il recupero dei metadati (**SQLColAttribute** e **SQLDescribeCol**), il recupero dei risultati (**SQLFetch**) e il recupero della diagnostica (**SQLGetDiagField** e **SQLGetDiagRec**). Vengono inoltre utilizzati nelle funzioni di catalogo (**SQLColumns**, **SQLTables**e così via) e in alcune altre funzioni.  
   
  Gli handle di istruzione vengono allocati con **SQLAllocHandle** e liberati con **SQLFreeHandle**.

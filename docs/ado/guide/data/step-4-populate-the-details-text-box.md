@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4: Popolare la casella di testo di informazioni | Microsoft Docs'
+title: 'Passaggio 4: popolare la casella di testo Dettagli | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924060"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Passaggio 4: Popolare la casella di riepilogo Details
-Per popolare la casella di testo di informazioni dettagliate, creare una nuova subroutine denominata **recFields** e inserire il codice seguente:  
+Per popolare la casella di testo dettagli, creare una nuova subroutine denominata **recFields** e inserire il codice seguente:  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Questo codice popola `lstDetails` con i campi e valori del record semplice passato a `recFields`. Se la risorsa è un file di testo, viene aperto un Stream testo dal record di risorse. Il codice determina se il set di caratteri ASCII e copia il contenuto di Stream in `txtDetails`.  
+ Questo codice viene popolato `lstDetails` con i campi e i valori del record semplice passato `recFields`a. Se la risorsa è un file di testo, viene aperto un flusso di testo dal record di risorse. Il codice determina se il set di caratteri è ASCII e copia il contenuto del `txtDetails`flusso in.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Internet Publishing](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Passaggio 3: Popolare la casella di riepilogo di campi](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Scenario di pubblicazione Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
+ [Passaggio 3: Popolare la casella di riepilogo Fields](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

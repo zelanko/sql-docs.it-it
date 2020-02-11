@@ -1,5 +1,5 @@
 ---
-title: Ordinare l'esempio di proprietà (VC + +) | Microsoft Docs
+title: Esempio di proprietà Sort (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930963"
 ---
 # <a name="sort-property-example-vc"></a>Esempio della proprietà Sort (VC++)
-Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di una **Recordset** derivato dal ***autori*** tabella di il **Pubs** database. Una routine di utilità secondario consente di stampare ogni riga.  
+In questo esempio viene utilizzata la proprietà di [ordinamento](../../../ado/reference/ado-api/sort-property.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per riordinare le righe di un **Recordset** derivato dalla tabella ***authors*** del database **pubs** . Una routine di utilità secondaria stampa ogni riga.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -133,5 +133,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)

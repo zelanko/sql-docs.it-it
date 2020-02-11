@@ -1,5 +1,5 @@
 ---
-title: Sull'interagiscono tra i gestori di eventi | Microsoft Docs
+title: Interazione tra i gestori eventi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,43 +18,43 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925045"
 ---
 # <a name="how-event-handlers-work-together"></a>Interazione tra i gestori eventi
-A meno che la programmazione in Visual Basic, tutti i gestori di eventi per **Connection** e **Recordset** gli eventi devono essere implementati, indipendentemente dal fatto che è effettivamente elaborare tutti gli eventi. La quantità di lavoro di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per altre informazioni, vedere [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+A meno che non si stia programmando in Visual Basic, è necessario implementare tutti i gestori eventi per gli eventi di **connessione** e **Recordset** , indipendentemente dal fatto che si elaborino effettivamente tutti gli eventi. La quantità di operazioni di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per ulteriori informazioni, vedere [creazione di un'istanza dell'evento ADO in base al linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Gestori eventi associati  
- È associato un ciascun gestore eventi verrà **completa** gestore dell'evento. Ad esempio, quando l'applicazione modifica il valore di un campo, il **WillChangeField** gestore eventi viene chiamato. Se la modifica è accettabile, l'applicazione non modifica il **adStatus** parametro invariato e viene eseguita l'operazione. Al termine dell'operazione, un **FieldChangeComplete** evento informa l'applicazione che l'operazione è stata completata. Se completata correttamente, **adStatus** contiene **adStatusOK**; in caso contrario, **adStatus** contiene **adStatusErrorsOccurred** e è necessario controllare la **errore** oggetto per determinare la causa dell'errore.  
+ A ogni gestore eventi viene associato un gestore eventi **completo** . Ad esempio, quando l'applicazione modifica il valore di un campo, viene chiamato il gestore dell'evento **WillChangeField** . Se la modifica è accettabile, l'applicazione lascia invariato il parametro **adStatus** e l'operazione viene eseguita. Al termine dell'operazione, un evento **FieldChangeComplete** notifica all'applicazione che l'operazione è stata completata. Se il completamento è stato completato correttamente, **adStatus** contiene **adStatusOK**; in caso contrario, **adStatus** contiene **adStatusErrorsOccurred** ed è necessario controllare l'oggetto **Error** per determinare la provocazione dell'errore.  
   
- Quando **WillChangeField** viene chiamato, si potrebbe determinare che la modifica non dovrebbe essere eseguita. In questo caso, impostare **adStatus** a **adStatusCancel.** L'operazione sia annullata e il **FieldChangeComplete** evento riceve un **adStatus** pari a **adStatusErrorsOccurred**. Il **errore** oggetto contiene **adErrOperationCancelled** in modo che il **FieldChangeComplete** gestore riconosce che l'operazione è stata annullata. Tuttavia, è necessario controllare il valore della **adStatus** prima di modificarla, perché l'impostazione del parametro **adStatus** a **adStatusCancel** non ha alcun effetto se è stato impostato il parametro per **adStatusCantDeny** sulla voce per la procedura.  
+ Quando viene chiamato **WillChangeField** , è possibile determinare che la modifica non deve essere apportata. In tal caso, impostare **adStatus** su **adStatusCancel.** L'operazione viene annullata e l'evento **FieldChangeComplete** riceve un valore **adStatus** di **adStatusErrorsOccurred**. L'oggetto **Error** contiene **adErrOperationCancelled** , in modo che il gestore **FieldChangeComplete** sappia che l'operazione è stata annullata. Tuttavia, è necessario controllare il valore del parametro **adStatus** prima di modificarlo, perché l'impostazione di **adStatus** su **adStatusCancel** non produce alcun effetto se il parametro è stato impostato su **adStatusCantDeny** alla voce della procedura.  
   
- In alcuni casi un'operazione può generare più di un evento. Ad esempio, il **Recordset** oggetto dispone di eventi per accoppiati **campo** modifiche e **Record** le modifiche. Quando l'applicazione modifica il valore di una **campo**, il **WillChangeField** gestore eventi viene chiamato. Se determina che l'operazione può continuare, la **WillChangeRecord** gestore eventi viene inoltre generato. Se questo gestore consente anche l'evento continuare, la modifica venga apportata e il **FieldChangeComplete** e **RecordChangeComplete** vengono chiamati i gestori di eventi. L'ordine in cui vengono chiamati i gestori di eventi verranno per una determinata operazione non è definito, è consigliabile evitare la scrittura di codice che dipende da una determinata sequenza di chiamata dei gestori.  
+ A volte un'operazione può generare più di un evento. Ad esempio, l'oggetto **Recordset** presenta eventi associati per le modifiche dei **campi** e **registra** le modifiche. Quando l'applicazione modifica il valore di un **campo**, viene chiamato il gestore dell'evento **WillChangeField** . Se determina che l'operazione può continuare, viene generato anche il gestore dell'evento **WillChangeRecord** . Se questo gestore consente anche di continuare, viene apportata la modifica e vengono chiamati i gestori eventi **FieldChangeComplete** e **RecordChangeComplete** . L'ordine in cui vengono chiamati i gestori eventi per una determinata operazione non è definito, pertanto è consigliabile evitare di scrivere codice che dipende dalla chiamata di gestori in una determinata sequenza.  
   
- Nelle istanze quando vengono generati più eventi Will, uno degli eventi può annullare l'operazione in sospeso. Ad esempio, quando l'applicazione modifica il valore di una **campo**, entrambi **WillChangeField** e **WillChangeRecord** viene chiamati in genere i gestori eventi. Tuttavia, se l'operazione viene annullata nel primo gestore dell'evento, a esso associata **completa** gestore viene chiamato immediatamente con **adStatusOperationCancelled**. Il secondo gestore non viene mai chiamato. Se, tuttavia, il primo gestore dell'evento consente all'evento di procedere, verrà chiamato il gestore di evento. Se Annulla quindi l'operazione, entrambe **completa** eventi verranno chiamati come negli esempi precedenti.  
+ Nei casi in cui vengono generati più eventi, uno degli eventi potrebbe annullare l'operazione in sospeso. Ad esempio, quando l'applicazione modifica il valore di un **campo**, i gestori eventi **WillChangeField** e **WillChangeRecord** vengono in genere chiamati. Tuttavia, se l'operazione viene annullata nel primo gestore eventi, il gestore **completo** associato viene chiamato immediatamente con **adStatusOperationCancelled**. Il secondo gestore non viene mai chiamato. Se, tuttavia, il primo gestore eventi consente la prosecuzione dell'evento, verrà chiamato l'altro gestore eventi. Se l'operazione viene annullata, verranno chiamati entrambi gli eventi **completi** , come negli esempi precedenti.  
   
 ## <a name="unpaired-event-handlers"></a>Gestori di eventi non abbinati  
- Fino a quando lo stato passati per l'evento non è **adStatusCantDeny**, è possibile disattivare le notifiche degli eventi per qualsiasi evento restituendo **adStatusUnwantedEvent** nel *stato*parametro. Ad esempio, quando le **completa** gestore eventi viene chiamato la prima volta, è possibile restituire **adStatusUnwantedEvent**. Successivamente verranno ricevuti solo **verranno** gli eventi. Tuttavia, alcuni eventi possono essere attivati per più di un motivo. In tal caso, l'evento avrà un *motivo* parametro. Quando si torna **adStatusUnwantedEvent**, verrà interrotta la ricezione delle notifiche per l'evento solo quando si verificano per tale motivo particolare. In altre parole, potenzialmente si riceverà la notifica per ogni possibile motivo che è stato attivato l'evento.  
+ Finché lo stato passato all'evento non è **adStatusCantDeny**, è possibile disattivare le notifiche degli eventi per qualsiasi evento restituendo **AdStatusUnwantedEvent** nel parametro *status* . Ad esempio, quando il gestore eventi **completo** viene chiamato per la prima volta, è possibile restituire **adStatusUnwantedEvent**. **Si riceveranno successivamente solo gli** eventi. Tuttavia, alcuni eventi possono essere attivati per più di un motivo. In tal caso, l'evento avrà un parametro *reason* . Quando si restituisce **adStatusUnwantedEvent**, si interrompe la ricezione delle notifiche per l'evento solo quando si verificano per quel particolare motivo. In altre parole, si riceverà una notifica per ogni possibile motivo per cui l'evento potrebbe essere attivato.  
   
- Singolo **verranno** gestori di eventi possono essere utili quando si desidera esaminare i parametri che verranno usati in un'operazione. È possibile modificare i parametri dell'operazione o annullare l'operazione.  
+ I gestori **eventi singoli possono** essere utili quando si desidera esaminare i parametri che verranno utilizzati in un'operazione. È possibile modificare i parametri dell'operazione o annullare l'operazione.  
   
- In alternativa, lasciare **completa** attivata la notifica evento. Quando viene chiamato il primo gestore dell'evento verrà, restituire **adStatusUnwantedEvent**. Successivamente verranno ricevuti solo **completa** gli eventi.  
+ In alternativa, lasciare abilitata la notifica **completa** degli eventi. Quando viene chiamato il primo gestore eventi, restituisce **adStatusUnwantedEvent**. Si riceveranno successivamente solo gli eventi **completi** .  
   
- Singolo **completa** gestori di eventi possono essere utili per la gestione delle operazioni asincrone. Ogni operazione asincrona ha un'apposita **completa** evento.  
+ Singoli gestori eventi **completi** possono essere utili per la gestione delle operazioni asincrone. Ogni operazione asincrona ha un evento **completo** appropriato.  
   
- Ad esempio, può richiedere molto tempo per popolare un grande [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Se l'applicazione è scritta correttamente, è possibile avviare un `Recordset.Open(...,adAsyncExecute)` operazione e continuare con altre attività di elaborazione. Sarà infine una notifica quando la **Recordset** viene popolato da un **ExecuteComplete** evento.  
+ Ad esempio, il popolamento di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di grandi dimensioni può richiedere molto tempo. Se l'applicazione è scritta in modo appropriato, è possibile avviare `Recordset.Open(...,adAsyncExecute)` un'operazione e continuare con altre elaborazioni. Alla fine, si riceverà una notifica quando il **Recordset** viene popolato da un evento **ExecuteComplete** .  
   
-## <a name="single-event-handlers-and-multiple-objects"></a>I gestori eventi singolo e più oggetti  
- La flessibilità di un linguaggio di programmazione, ad esempio Microsoft Visual C++® consente di avere uno degli eventi di processo del gestore eventi da più oggetti. Ad esempio, si potrebbe avere uno **Disconnect** evento gestore elaborare eventi da diversi **connessione** oggetti. Se una delle connessioni è terminata, il **Disconnect** gestore eventi viene chiamato. È possibile indicare connessione che ha causato l'evento perché il parametro dell'oggetto del gestore eventi potrebbe essere impostato su corrispondente **connessione** oggetto.  
+## <a name="single-event-handlers-and-multiple-objects"></a>Gestori di eventi singoli e più oggetti  
+ La flessibilità di un linguaggio di programmazione come Microsoft Visual C++® consente di disporre di un gestore eventi per elaborare eventi da più oggetti. Ad esempio, è possibile avere un gestore eventi di **disconnessione** per elaborare eventi da diversi oggetti **connessione** . Se una delle connessioni è terminata, viene chiamato il gestore eventi di **disconnessione** . È possibile stabilire quale connessione ha causato l'evento perché il parametro dell'oggetto gestore eventi verrebbe impostato sull'oggetto **connessione** corrispondente.  
   
 > [!NOTE]
->  Questa tecnica non può essere usata in Visual Basic perché tale lingua è in grado di correlare un solo oggetto a un gestore eventi.  
+>  Questa tecnica non può essere usata in Visual Basic perché tale linguaggio può correlare un solo oggetto a un gestore eventi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riepilogo dei gestori eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Parametri di evento](../../../ado/guide/data/event-parameters.md)   
+ [Riepilogo del gestore eventi ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Creazione di un'istanza di evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [Parametri evento](../../../ado/guide/data/event-parameters.md)   
  [Tipi di eventi](../../../ado/guide/data/types-of-events.md)

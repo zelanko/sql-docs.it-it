@@ -15,26 +15,26 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051118"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
-Un numero di funzionalità del linguaggio, ad esempio gli outer join e le chiamate di funzione scalare, è in genere implementato dai sistemi DBMS. Tuttavia, la sintassi per queste funzionalità tendono a essere specifici del DBMS, anche quando la sintassi standard sono definita da vari organismi standard. Per questo motivo, ODBC definisce sequenze di escape contenenti le sintassi standard per le funzionalità del linguaggio seguenti:  
+Diverse funzionalità del linguaggio, ad esempio outer join e chiamate di funzioni scalari, sono comunemente implementate da DBMS. Tuttavia, le sintassi per queste funzionalità tendono a essere specifiche di DBMS, anche quando le sintassi standard sono definite dai vari corpi degli standard. Per questo motivo, ODBC definisce sequenze di escape che contengono sintassi standard per le funzionalità del linguaggio seguenti:  
   
--   Valori letterali di intervallo di date, time, timestamp e datetime  
+-   Valori letterali di data, ora, timestamp e intervallo DateTime  
   
--   Funzioni scalari, ad esempio numerici, stringa e funzioni di conversione di tipi di dati  
+-   Funzioni scalari come funzioni di conversione di tipi di dati, stringhe e numerici  
   
--   COME carattere di escape nel predicato  
+-   Carattere di escape del predicato LIKE  
   
 -   Outer join  
   
--   Chiamate di procedura  
+-   Chiamate di procedure  
   
- La sequenza di escape utilizzata da ODBC è il seguente:  
+ La sequenza di escape utilizzata da ODBC è la seguente:  
   
 ```  
   
@@ -42,19 +42,19 @@ Un numero di funzionalità del linguaggio, ad esempio gli outer join e le chiama
   
 ```  
   
-## <a name="remarks"></a>Note  
- La sequenza di escape viene riconosciuta e analizzata dal driver, che sostituiscono le sequenze di escape con la grammatica per DBMS specifici. Per altre informazioni sulla sintassi della sequenza di escape, vedere [sequenze di Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nell'appendice c: Grammatica SQL.  
+## <a name="remarks"></a>Osservazioni  
+ La sequenza di escape viene riconosciuta e analizzata dai driver, che sostituiscono le sequenze di escape con la grammatica specifica di DBMS. Per ulteriori informazioni sulla sintassi della sequenza di escape, vedere [sequenze di escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nell'Appendice C: grammatica SQL.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, questo era la sintassi standard della sequenza di escape: **-(\*vendor (** _-nome del fornitore_ **), prodotto (** _-nome del prodotto_ **)** _estensione_  **\*):**  
+>  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **--(\*fornitore (**_nome-fornitore_**),******_estensione_ ** \*** prodotto (_nome prodotto_))--  
 >   
->  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{** _estensione_ **}**  
+>  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{**_Extension_**}**  
 >   
->  In ODBC 3. *x*, la forma estesa della sequenza di escape è deprecata e viene usato esclusivamente la sintassi abbreviata.  
+>  In ODBC 3. *x*, la forma estesa della sequenza di escape è stata deprecata e il form abbreviato viene usato in modo esclusivo.  
   
- Poiché le sequenze di escape vengono mappate dal driver per tipi di sintassi specifici del DBMS, un'applicazione può utilizzare la sequenza di escape o sintassi specifici del DBMS. Le applicazioni che usano la sintassi specifici del DBMS, tuttavia, non sarà interoperative. Quando si usa la sequenza di escape, le applicazioni devono assicurarsi che l'attributo di istruzione SQL_ATTR_NOSCAN è disattivato, ovvero l'impostazione predefinita. In caso contrario, la sequenza di escape verrà inviata direttamente all'origine dati, in cui in genere causerà un errore di sintassi.  
+ Poiché le sequenze di escape vengono mappate dal driver a sintassi specifiche di DBMS, un'applicazione può utilizzare la sequenza di escape o la sintassi specifica del sistema DBMS. Tuttavia, le applicazioni che utilizzano la sintassi specifica di DBMS non saranno interoperative. Quando si usa la sequenza di escape, le applicazioni devono verificare che l'attributo dell'istruzione SQL_ATTR_NOSCAN sia disattivato, che è per impostazione predefinita. In caso contrario, la sequenza di escape verrà inviata direttamente all'origine dati, in cui in genere viene generato un errore di sintassi.  
   
- I driver supportano solo le sequenze di escape che possono eseguire il mapping alle caratteristiche linguistiche sottostante. Ad esempio, se l'origine dati non supporta gli outer join, verranno né il driver. Per determinare quali sequenze di escape sono supportate, un'applicazione chiama **SQLGetTypeInfo** e **SQLGetInfo**. Per altre informazioni, vedere la sezione successiva [Date, Time e Timestamp valori letterali](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ I driver supportano solo le sequenze di escape di cui è possibile eseguire il mapping alle funzionalità del linguaggio sottostante. Se, ad esempio, l'origine dati non supporta outer join, il driver non viene né. Per determinare quali sequenze di escape sono supportate, un'applicazione chiama **SQLGetTypeInfo** e **SQLGetInfo**. Per ulteriori informazioni, vedere la sezione successiva, [data, ora e valori letterali timestamp](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -64,6 +64,6 @@ Un numero di funzionalità del linguaggio, ad esempio gli outer join e le chiama
   
 -   [Carattere di escape nel predicato LIKE](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
--   [Outer Join](../../../odbc/reference/develop-app/outer-joins.md)  
+-   [Outer join](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md)

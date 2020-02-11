@@ -1,5 +1,5 @@
 ---
-title: Configurare Reporting Services per usare un nome alternativo del soggetto | Microsoft Docs
+title: Configurare Reporting Services per l'uso di un nome alternativo del soggetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109736"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
@@ -22,7 +22,7 @@ ms.locfileid: "66109736"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modalità nativa|  
   
  Le istruzioni si applicano all'URL Reporting Service nonché all'URL servizio Web.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66109736"
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver. config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

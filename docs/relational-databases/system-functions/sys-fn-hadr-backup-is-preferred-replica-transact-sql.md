@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs
+title: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120251"
 ---
-# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Utilizzato per determinare se la replica corrente è la replica di backup preferita.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +43,13 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- «*dbname*»  
+ '*dbname*'  
  Nome del database di cui eseguire il backup. *dbname* è di tipo sysname.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  Restituisce 1 se il database nell'istanza corrente è nella replica preferita. In caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare questa funzione in uno script di backup per determinare se il database corrente si trova nella replica preferita per i backup. È possibile eseguire uno script in ogni replica di disponibilità. Ognuno di questi processi analizza gli stessi dati per determinare il processo da eseguire in modo tale che solo uno dei processi pianificati procede effettivamente alla fase di backup. Il codice di esempio avrà un aspetto analogo al seguente:  
   
 ```  
@@ -63,7 +63,7 @@ END
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>R. Utilizzo di sys.fn_hadr_backup_is_preferred_replica  
+### <a name="a-using-sysfn_hadr_backup_is_preferred_replica"></a>R. Utilizzo di sys.fn_hadr_backup_is_preferred_replica  
  Nell'esempio seguente viene restituito 1 se il database corrente è la replica di backup preferita.  
   
 ```  
@@ -76,10 +76,10 @@ GO
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni dei gruppi di disponibilità Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Funzioni di gruppi di disponibilità Always On &#40;&#41;Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[gruppi di disponibilità Always On viste del catalogo &#40;Transact-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ Repliche secondarie [attive: backup in repliche secondarie &#40;always on gruppi di disponibilità&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always on viste del catalogo dei gruppi di disponibilità &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

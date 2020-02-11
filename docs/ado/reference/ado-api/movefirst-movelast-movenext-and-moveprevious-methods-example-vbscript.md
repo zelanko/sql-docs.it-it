@@ -1,5 +1,5 @@
 ---
-title: Spostare il puntatore di Record del Recordset esempio (VBScript) | Microsoft Docs
+title: Esempio di spostare il puntatore di record del recordset (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,16 +18,16 @@ ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918118"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (esempio di metodi (VBScript)
-Questo esempio Usa la [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) metodi per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato sul comando specificato.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VBScript)
+Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base al comando fornito.  
   
- Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **MoveFirstVBS**. È possibile visualizzare il risultato in qualsiasi browser.  
+ Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **MoveFirstVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser.  
   
 ```  
 <!-- BeginMoveFirstVBS -->  
@@ -184,5 +184,5 @@ Questo esempio Usa la [MoveFirst](../../../ado/reference/ado-api/movefirst-movel
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious metodi (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

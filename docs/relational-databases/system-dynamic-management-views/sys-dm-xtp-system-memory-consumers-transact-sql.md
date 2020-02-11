@@ -1,5 +1,5 @@
 ---
-title: DM xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090092"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Segnala i consumer di memoria a livello di sistema per [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria per i consumer proviene dal pool predefinito (se l'allocazione è nel contesto di un thread utente) o nel pool interno (se l'allocazione è nel contesto di un thread di sistema).  
+  Segnala i consumer di memoria a livello di sistema per [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria per questi consumer deriva dal pool predefinito (quando l'allocazione è nel contesto di un thread utente) o dal pool interno (se l'allocazione è nel contesto di un thread di sistema).  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,12 +37,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
-|memory_consumer_type|**int**|Numero intero che rappresenta il tipo del consumer di memoria con uno dei valori seguenti:<br /><br /> 0 - non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1 - ELENCO LOOKASIDE DA: Tiene traccia dell'utilizzo di memoria per un lookaside del sistema.<br /><br /> 2 - VARHEAP: Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: riserva di paging IO: Tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema utilizzato per le operazioni dei / o.|  
-|memory_consumer_type_desc|**nvarchar(16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0 - non deve essere visualizzato.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap di sistema. Uso generale. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />oppure<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: Per il sistema dei / o i pool vi sono tre dimensioni diverse: Riserva di paging System 4K, System 64 KB riserva di paging e System 256K pagina del pool.|  
+|memory_consumer_type|**int**|Intero che rappresenta il tipo di consumer di memoria con uno dei valori seguenti:<br /><br /> 0: non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1-LOOKASIDE: tiene traccia dell'utilizzo di memoria per un LOOKASIDE di sistema.<br /><br /> 2-VARHEAP: tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: pool di pagine IO: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema usato per operazioni di i/o.|  
+|memory_consumer_type_desc|**nvarchar (16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0: non deve essere visualizzato.<br /><br /> 1-LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP <br />Heap di sistema. Utilizzo generico. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />-OPPURE-<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: per i pool di sistema IO sono disponibili tre dimensioni diverse: il pool di pagine di sistema 4K, il pool di pagine del sistema 64 K e il pool di pagine del sistema 256 K.|  
 |lookaside_id|**bigint**|ID del provider di memoria dell'elenco lookaside e locale a livello di thread.|  
 |pagepool_id|**bigint**|ID del provider di memoria del pool di pagine e locale a livello di thread.|  
 |allocated_bytes|**bigint**|Numero di byte riservati al consumer.|  
@@ -54,7 +54,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|Solo per uso interno.|  
 |memory_consumer_address|**varbinary**|Indirizzo interno del consumer.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="user-scenario"></a>Scenario utente  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Uso dei segnalibri | Microsoft Docs
+title: Uso di segnalibri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923614"
 ---
 # <a name="using-bookmarks"></a>Uso dei segnalibri
-È spesso utile restituire direttamente a un record specifico dopo aver visto spostamenti all'interno di **Recordset** senza dover scorrere tutti i record e confrontare i valori. Ad esempio, se si prova a cercare un record usando il **trovare** metodo, ma la ricerca non restituisce alcun record, viene automaticamente indirizzato alle due estremità della **Recordset**. Se il provider supporta questa funzionalità, i segnalibri possono essere usati per contrassegnare la stessa posizione prima di usare la **trovare** metodo in modo che è possibile tornare alla località. Un segnalibro è un **Variant** tipo di valore che identifica in modo univoco un record in un **Recordset** oggetto.  
+Spesso è utile tornare direttamente a un record specifico dopo aver spostato il **Recordset** senza dover scorrere ogni record e confrontare i valori. Se, ad esempio, si tenta di cercare un record utilizzando il metodo **Find** , ma la ricerca non restituisce alcun record, si viene posizionati automaticamente a una delle estremità del **Recordset**. Se il provider li supporta, è possibile usare i segnalibri per contrassegnare il posto prima di usare il metodo **Find** , in modo da poter tornare al percorso. Un segnalibro è un valore di tipo **Variant** che identifica in modo univoco un record in un oggetto **Recordset** .  
   
- È anche possibile usare una matrice di varianti dei segnalibri con il **Recordset filtro** metodo per filtrare un set di record selezionato. Per informazioni dettagliate su questa tecnica, vedere filtrando i risultati nell'argomento [utilizzo di recordset](../../../ado/guide/data/working-with-recordsets.md), più avanti in questa sezione.  
+ È anche possibile usare una matrice Variant di segnalibri con il metodo di **filtro Recordset** per filtrare in un set di record selezionato. Per informazioni dettagliate su questa tecnica, vedere filtro dei risultati nell'argomento [utilizzo di recordset](../../../ado/guide/data/working-with-recordsets.md), più avanti in questa sezione.  
   
- È possibile usare la **segnalibro** per ottenere un segnalibro per un record, o impostare il record corrente un **Recordset** oggetto nel record identificato da un segnalibro valido. Il codice seguente usa il **segnalibro** proprietà per impostare un segnalibro e quindi tornare al record di segnalibro dopo lo spostamento ai record di altri. Per determinare se le **Recordset** supporta segnalibri, utilizzare il **supporta** (metodo).  
+ È possibile utilizzare la proprietà **Bookmark** per ottenere un segnalibro per un record o impostare il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido. Il codice seguente usa la proprietà **Bookmark** per impostare un segnalibro e quindi tornare al record con segnalibro dopo aver spostato gli altri record. Per determinare se il **Recordset** supporta segnalibri, utilizzare il metodo **Supports** .  
   
 ```  
 'BeginBookmarkEg  
@@ -46,6 +46,6 @@ End If
 'EndBookmarkEg  
 ```  
   
- Il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo verrà discussa in modo più dettagliato più avanti.  
+ Il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) viene trattato in modo più dettagliato in un secondo momento.  
   
- Ad eccezione del caso di clonato **recordset**, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene usato lo stesso comando. Ciò significa che è possibile usare una **segnalibro** ottenute da uno **Recordset** spostare allo stesso record in un secondo **Recordset** aperta con lo stesso comando.
+ Ad eccezione del caso di **Recordset**clonati, i segnalibri sono univoci per il **Recordset** in cui sono stati creati, anche se viene usato lo stesso comando. Ciò significa che non è possibile utilizzare un **segnalibro** ottenuto da un **Recordset** per spostarsi nello stesso record in un secondo **Recordset** aperto con lo stesso comando.

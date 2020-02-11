@@ -1,5 +1,5 @@
 ---
-title: Creazione di file di Script (MySQLToSQL) | Microsoft Docs
+title: Creazione di file di script (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,39 +15,39 @@ ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103055"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creazione di file di script (MySQLToSQL)
-Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
+Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se necessario, creare il file di valore della variabile e il file di connessione del server.  
   
-Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei..,:  
+Il file di script può essere suddiviso in tre sezioni, vale a dire...:  
   
-1.  **config:** Consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
+1.  **configurazione:** Consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
   
-2.  **Server:** Consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
+2.  **Server:** Consente all'utente di impostare le definizioni del server di origine/destinazione. Può inoltre trovarsi in un file di connessione server separato.  
   
-3.  **script-commands:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
+3.  **script-comandi:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
-Ogni sezione viene descritto in dettaglio di seguito:  
+Ogni sezione è descritta in dettaglio di seguito:  
   
-## <a name="configuring-mysql-console-settings"></a>Configurazione delle impostazioni di Console MySQL  
+## <a name="configuring-mysql-console-settings"></a>Configurazione delle impostazioni della console MySQL  
 Le configurazioni di uno script vengono visualizzate nel file di script della console.  
   
-Se viene specificato uno degli elementi nel nodo di configurazione, sono configurate come l'impostazione globale, ovvero sono applicabili per tutti i comandi di script. Questi elementi di configurazione anche possono essere impostati all'interno di ogni comando nella sezione del comando script se l'utente desidera eseguire l'override dell'impostazione globale.  
+Se uno degli elementi viene specificato nel nodo di configurazione, questi vengono impostati come impostazione globale, ovvero sono applicabili a tutti i comandi di script. Questi elementi di configurazione possono essere impostati anche all'interno di ogni comando della sezione script-command se l'utente vuole eseguire l'override dell'impostazione globale.  
   
 Le opzioni configurabili dall'utente includono:  
   
-1.  **Provider di finestra di output:** Se-Elimina messaggi attributo è impostato su 'true', la specifica del comando messaggi non visualizzati nella console. Di seguito è riportata la descrizione degli attributi:  
+1.  **Provider finestra di output:** Se l'attributo non è impostato su' true ', i messaggi specifici del comando non vengono visualizzati nella console. La descrizione degli attributi è riportata di seguito:  
   
-    -   Destinazione: Specifica se l'output deve ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
+    -   destinazione: specifica se l'output deve essere stampato in un file o in stdout. Per impostazione predefinita, questo valore è false.  
   
-    -   nome del file: Il percorso del file (facoltativo).  
+    -   nome file: il percorso del file (facoltativo).  
   
-    -   eliminare-messages: Elimina i messaggi nella console. Ciò è 'false' per impostazione predefinita.  
+    -   Ometti-messaggi: disattiva i messaggi sulla console. Per impostazione predefinita, è "false".  
   
     **Esempio:**  
   
@@ -66,7 +66,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <...All commands...>  
@@ -84,13 +84,13 @@ Le opzioni configurabili dall'utente includono:
     </...All commands...>  
     ```  
   
-2.  **Provider di connessione dati della migrazione:** Specifica che il server di origine/destinazione è da considerare per la migrazione dei dati.  Origine-usare-last-used indica che viene utilizzato l'ultimo server di origine usati per la migrazione dei dati. Allo stesso modo destinazione Usa-ultimo usato indica che viene utilizzato l'ultimo server di destinazione usata per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) con il server di origine degli attributi o server di destinazione.  
+2.  **Provider connessione migrazione dati:** Consente di specificare il server di origine/destinazione da considerare per la migrazione dei dati.  Source-Use-last-used indica che l'ultimo server di origine usato viene usato per la migrazione dei dati. Analogamente a target-use-last-used indica che l'ultimo server di destinazione usato viene usato per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) usando gli attributi Source-Server o target-server.  
   
-    Solo uno o l'altro attributo specificato può essere utilizzato, ad esempio:  
+    È possibile utilizzare solo uno o l'altro attributo specificato, ad esempio:  
   
-    - origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
+    - Source-Use-last-used = "true" (impostazione predefinita) o Source-Server = "source_servername"  
   
-    - destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
+    - target-use-last-used = "true" (impostazione predefinita) o target-server = "target_servername"  
   
     **Esempio:**  
   
@@ -103,7 +103,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <migrate-data>  
@@ -115,17 +115,17 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-3.  **Popup di Input utente:** In questo modo la gestione degli errori, quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e in caso di errore, la console prosegue come se l'utente specifica.  
+3.  **Popup input utente:** In questo modo è possibile gestire gli errori quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e, in caso di errore, la console continua come specificato dall'utente.  
   
-    Le modalità comprendono:  
+    Le modalità includono:  
   
-    -   **chiedere-utente -** chiede all'utente continue('yes') o generato un errore ('no').  
+    -   **Ask-utente-** Richiede all'utente di continuare (' Sì') o di errore (' No ').  
   
-    -   **errore -** la console viene visualizzato un errore e arresta l'esecuzione.  
+    -   **errore-** Nella console viene visualizzato un errore e l'esecuzione viene interrotta.  
   
-    -   **continuare-** console procede con l'esecuzione.  
+    -   **continua-** La console continua con l'esecuzione.  
   
-    La modalità predefinita è **errore**.  
+    La modalità predefinita è **Error**.  
   
     **Esempio:**  
   
@@ -136,7 +136,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -148,15 +148,15 @@ Le opzioni configurabili dall'utente includono:
     </connect-target-database>  
     ```  
   
-4.  **Ristabilire la connessione del Provider:** Ciò consente all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
+4.  **Riconnetti provider:** Ciò consente all'utente di impostare le impostazioni di riconnessione in caso di errori di connessione. Questo può essere impostato per i server di origine e di destinazione.  
   
     Le modalità di riconnessione sono:  
   
-    -   ristabilire la connessione-last-utilizzato-server: Se la connessione non è attiva, tenta di riconnettersi all'ultimo server utilizzato al massimo 5 volte.  
+    -   Riconnetti a ultimo server usato: se la connessione non è attiva, tenta di riconnettersi all'ultimo server usato al massimo 5 volte.  
   
-    -   generare un-errore: Se la connessione non è attiva, viene generato un errore.  
+    -   generate-an-error: se la connessione non è attiva, viene generato un errore.  
   
-    La modalità predefinita è **generare un errore**.  
+    La modalità predefinita è **generate-an-error**.  
   
     **Esempio:**  
   
@@ -169,7 +169,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ Le opzioni configurabili dall'utente includono:
   
     </synchronize-target>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <!--data migration-->  
@@ -196,15 +196,15 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-5.  **Convertitore di sovrascrittura del Provider:** Ciò consente all'utente di gestire gli oggetti che sono già presenti nella destinazione della metabase. Le possibili azioni includono:  
+5.  **Provider sovrascrittura convertitore:** Ciò consente all'utente di gestire gli oggetti già presenti nella metabase di destinazione. Le azioni possibili includono:  
   
-    -   Errore: La console viene visualizzato un errore e arresta l'esecuzione.  
+    -   errore: nella console viene visualizzato un errore e l'esecuzione viene interrotta.  
   
-    -   sovrascrittura: Sovrascrive i valori di oggetto esistente. Questa azione viene eseguita per impostazione predefinita.  
+    -   Sovrascrivi: sovrascrive i valori degli oggetti esistenti. Questa azione viene eseguita per impostazione predefinita.  
   
-    -   Skip: La console ignora gli oggetti che esistono già nel database  
+    -   Skip: la console ignora gli oggetti già esistenti nel database  
   
-    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   Ask-user: richiede l'input dell'utente (' Sì'/' No ')  
   
     **Esempio:**  
   
@@ -215,7 +215,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -225,7 +225,7 @@ Le opzioni configurabili dall'utente includono:
     </convert-schema>  
     ```  
   
-6.  **Provider di prerequisiti con errori:** Ciò consente all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', eccezione generato per la mancata soddisfino i prerequisiti.  
+6.  **Provider prerequisiti non riuscito:** Ciò consente all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità Strict è "false". Se è impostato su "true", viene generata un'eccezione in caso di errore che soddisfi i prerequisiti.  
   
     **Esempio:**  
   
@@ -237,21 +237,21 @@ Le opzioni configurabili dall'utente includono:
     </output-providers>  
     ```  
   
-7.  **Arrestare l'operazione:** Durante l'operazione a metà, se l'utente desidera arrestare l'operazione, quindi **'Ctrl + C'** tasti di scelta rapida può essere utilizzato. SSMA per la MySQL Console attenderà il completamento dell'operazione e termina l'esecuzione della console.  
+7.  **Interrompi operazione:** Durante l'operazione intermedia, se l'utente vuole arrestare l'operazione, è possibile usare il tasto di scelta rapida **"CTRL + C"** . SSMA per la console MySQL attende il completamento dell'operazione e termina l'esecuzione della console.  
   
-    Se l'utente desidera arrestare l'esecuzione immediatamente, quindi **'Ctrl + C'** tasti di scelta rapida è possibile premere nuovamente per la chiusura improvvisa di applicazione Console SSMA  
+    Se l'utente vuole arrestare immediatamente l'esecuzione, è possibile premere di nuovo il tasto di scelta rapida **"CTRL + C"** per terminare bruscamente l'applicazione console SSMA  
   
-8.  **Provider di stato di avanzamento:** Indica lo stato di avanzamento di ogni comando della console. Questo è disabilitato per impostazione predefinita. Gli attributi di report di stato includono quanto segue:  
+8.  **Provider di stato:** Informa lo stato di avanzamento di ogni comando della console. Questa opzione è disabilitata per impostazione predefinita. Gli attributi di report di stato comprendono:  
   
-    -   off  
+    -   spento  
   
-    -   ogni 1%  
+    -   ogni-1%  
   
-    -   ogni 2%  
+    -   ogni-2%  
   
-    -   ogni 5%  
+    -   ogni-5%  
   
-    -   ogni 10%  
+    -   ogni-10%  
   
     -   ogni 20%  
   
@@ -268,7 +268,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <...All commands...>  
@@ -284,22 +284,22 @@ Le opzioni configurabili dall'utente includono:
     </...All commands...>  
     ```  
   
-9. **Livello di dettaglio del logger:** Set di log a livello di dettaglio. Questo corrisponde all'opzione di tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "error".  
+9. Livello di **dettaglio del logger:** Imposta il livello di dettaglio del log. Corrisponde all'opzione tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "Error".  
   
     Le opzioni a livello di logger includono:  
   
-    -   Errore irreversibile: Vengono registrati solo i messaggi di errore irreversibile.  
+    -   errore irreversibile: vengono registrati solo i messaggi di errore irreversibile.  
   
-    -   Errore: Vengono registrati solo i messaggi di errore ed errore irreversibile.  
+    -   errore: vengono registrati solo i messaggi di errore e di errore irreversibile.  
   
-    -   Avviso: Tutti i livelli ad eccezione dei messaggi di debug e le informazioni vengono registrati.  
+    -   avviso: vengono registrati tutti i livelli eccetto i messaggi di debug e di informazioni.  
   
-    -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
+    -   Info: vengono registrati tutti i livelli eccetto i messaggi di debug.  
   
-    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
+    -   debug: tutti i livelli dei messaggi registrati.  
   
     > [!NOTE]  
-    > Obbligatori vengono registrati a qualsiasi livello.  
+    > I messaggi obbligatori vengono registrati a qualsiasi livello.  
   
     **Esempio:**  
   
@@ -310,7 +310,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o Gestione configurazione*  
+    *o*  
   
     ```xml  
     <...All commands...>  
@@ -320,13 +320,13 @@ Le opzioni configurabili dall'utente includono:
     </...All commands...>  
     ```  
   
-10. **Eseguire l'override Password crittografate:** Se 'true', la password come testo non crittografato specificato nella sezione Definizione server dei file di connessione del server o nel file di script, gli override la password crittografata archiviata nell'archivio protetto, se presente. Se non viene specificata alcuna password in testo non crittografato, l'utente viene richiesto di immettere la password.  
+10. **Sostituisci password crittografata:** Se è impostata su' true ', la password non crittografata specificata nella sezione relativa alla definizione del server del file di connessione del server o nel file di script sostituisce la password crittografata archiviata in un archivio protetto, se esistente. Se non viene specificata alcuna password in testo non crittografato, all'utente viene richiesto di immettere la password.  
   
-    Qui si verificano due casi:  
+    Si verificano due casi:  
   
-    1.  Se ignorare l'opzione viene **false**, l'ordine della ricerca sarà protetto archiviazione -&gt;Script di File -&gt;File Server di connessione -&gt; Chiedi conferma all'utente.  
+    1.  Se l'opzione di override è **false**, l'ordine di ricerca sarà protetto da&gt;file di script&gt;di archiviazione-server&gt; di connessione file-server.  
   
-    2.  Se l'opzione di override è **true**, l'ordine della ricerca sarà File di Script -&gt;File Server di connessione -&gt;Chiedi conferma all'utente.  
+    2.  Se l'opzione di override è impostata su **true**, l'ordine di ricerca sarà&gt;l'utente del&gt;prompt dei file di connessione file-server.  
   
     **Esempio:**  
   
@@ -340,17 +340,17 @@ Le opzioni configurabili dall'utente includono:
   
 L'opzione non configurabile è:  
   
--   **Numero massimo di tentativi di riconnessione:** Quando una connessione stabilita scade o viene interrotta a causa di errori di rete, il server è necessario la riconnessione. I tentativi di riconnessione sono consentiti al massimo **5** tentativi dopo questa operazione, la console esegue automaticamente la riconnessione. La funzionalità di riconnessione automatica riduce l'impegno nell'eseguire nuovamente lo script.  
+-   **Numero massimo di tentativi di riconnessione:** Quando si verifica un timeout o si interrompe una connessione stabilita a causa di un errore di rete, è necessario riconnettere il server. I tentativi di riconnessione sono consentiti fino a un massimo di **5** tentativi dopo i quali la console esegue automaticamente la riconnessione. La funzionalità di riconnessione automatica riduce il lavoro richiesto per la riesecuzione dello script.  
   
-## <a name="server-connection-parameters"></a>Parametri di connessione server  
-Parametri di connessione server possono essere definiti nel file di script o nel file di connessione del server. Consultare il [creazione di file di connessione del Server &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) sezione per altri dettagli.  
+## <a name="server-connection-parameters"></a>Parametri di connessione del server  
+È possibile definire i parametri di connessione del server nel file di script o nel file di connessione del server. Per altri dettagli, vedere la sezione [creazione dei file di connessione Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
   
 ## <a name="script-commands"></a>Comandi script  
-Il file script contiene una sequenza di comandi del flusso di lavoro migrazione in formato XML. L'applicazione console SSMA elabora la migrazione nell'ordine i comandi visualizzati nel file di script.  
+Il file di script contiene una sequenza di comandi del flusso di lavoro di migrazione nel formato XML. L'applicazione console SSMA elabora la migrazione in base all'ordine dei comandi visualizzati nel file di script.  
   
-Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database MySQL segue la gerarchia di: Database -&gt; tabella.  
+Ad esempio, una tipica migrazione dei dati di una tabella specifica in un database MySQL segue la gerarchia di: database&gt; -Table.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](creating-variable-value-files-mysqltosql.md) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file di script è più o meno statico con le informazioni sulle variabili contenute in un file di valori di [variabile](creating-variable-value-files-mysqltosql.md) o in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   
@@ -377,28 +377,28 @@ Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'appl
   
 </ssma-script-file>  
 ```  
-Modelli costituito da 3 file script (per l'esecuzione di diversi scenari di), file di valore della variabile e un file di connessione del server sono disponibili nella cartella Scripts Console di esempio di directory del prodotto:  
+I modelli costituiti da 3 file di script (per l'esecuzione di diversi scenari), da un file di valori di variabile e da un file di connessione del server sono disponibili nella cartella script della console di esempio della directory del prodotto:  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample. XML  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample. XML  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample. XML  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample. XML  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample. XML  
   
-È possibile eseguire i modelli (file) dopo la modifica dei parametri visualizzati al suo interno per pertinenza.  
+È possibile eseguire i modelli (file) dopo aver modificato i parametri visualizzati per rilevarli.  
   
-Elenco completo dei comandi di script è reperibile nel [esecuzione della Console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+L'elenco completo dei comandi di script è disponibile nell' [esecuzione della console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="script-file-validation"></a>Convalida del File script  
-L'utente può facilmente convalidare il file di script in base al file di definizione dello schema **'M2SSConsoleScriptSchema.xsd'** disponibile nella cartella "Schemi".  
+## <a name="script-file-validation"></a>Convalida file script  
+L'utente può convalidare facilmente il proprio file di script in base al file di definizione dello schema **' 2ssconsolescriptschema. xsd '** disponibile nella cartella ' schemi '.  
   
-## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo in costi operativi console consiste [creazione di file di valore variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+## <a name="next-step"></a>passaggio successivo  
+Il passaggio successivo per la gestione della console consiste nella [creazione di file di valori di variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di file di valore della variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[Creazione di file di valori di variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

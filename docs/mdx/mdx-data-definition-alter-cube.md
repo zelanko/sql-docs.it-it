@@ -1,5 +1,5 @@
 ---
-title: Istruzione ALTER CUBE Statement (MDX) | Microsoft Docs
+title: Istruzione ALTER CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098518"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 
 
-  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per altre informazioni sull'utilizzo del writeback in un'applicazione, vedere questo blog post: [Creazione di un'applicazione di Writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di Blog sulla [compilazione di un'applicazione di writeback con Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977) .  
   
  Si tenga presente che i writeback delle dimensioni concorrenti possono provocare un deadlock, dove il primo writeback viene bloccato da un commit a causa del blocco condiviso tenuto dal secondo writeback. In tale situazione non viene generato alcun errore ma non potrà essere eseguita alcuna operazione. Infine, viene eseguito il rollback sia del timeout che delle modifiche.  
   
@@ -91,13 +91,13 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del padre del nuovo membro della dimensione, a meno che questo non venga creato nella radice.  
   
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *Key_Value*  
  Espressione scalare valida che definisce il valore chiave del nuovo membro della dimensione.  
   
- *Property_name*  
+ *Property_Name*  
  Identificatore MDX (Multidimensional Expression) valido che rappresenta la proprietà di un membro.  
   
  *Property_Value*  
@@ -113,11 +113,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Espressione stringa valida che specifica il nome o la chiave di un membro.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Osservazioni  
  Se non si utilizza la clausola WITH DESCENDANTS, i figli del membro eliminato diventano figli del padre di tale membro. Se si utilizza la clausola WITH DESCENDANTS, vengono inoltre eliminati tutti i discendenti e le relative righe nella tabella della dimensione.  
   
 > [!NOTE]  
->  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere [DROP MEMBER-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP impostare l'istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere istruzione [DROP MEMBER &#40;mdx&#41;](../mdx/mdx-data-definition-drop-member.md), [drop set statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [drop action statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)e [Drop Cell calculation Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aggiornamento del membro predefinito in una dimensione  
  Questa clausola consente di aggiornare il membro predefinito di un cubo e viene utilizzata nello script di calcolo MDX per definire un membro predefinito. È possibile specificare il membro predefinito per la dimensione del database, la dimensione di un cubo o l'account di accesso di un utente. È inoltre possibile cambiare il membro predefinito durante una sessione.  
@@ -129,7 +129,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Espressione MDX valida che restituisce un unico membro.  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Osservazioni  
  L'espressione MDX specificata può essere statica o dinamica.  
   
 ## <a name="moving-a-dimension-member"></a>Spostamento di un membro in una dimensione  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Espressione stringa valida che specifica il nome del nuovo padre per il membro della dimensione da spostare.  
   
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  Unsigned_*Integer*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  La clausola UPDATE DIMENSION MEMBER consente di modificare le proprietà di un membro oltre alla formula personalizzata membro associata a un membro.  
   
 ### <a name="arguments"></a>Argomenti  
- *Nome membro*  
+ *MemberName*  
  Espressione stringa valida che specifica il nome di un membro.  
   
  *MDX_Expression*  
@@ -161,9 +161,9 @@ CELL CALCULATION Calculation_Name
  Espressione scalare MDX valida che definisce il valore della proprietà di un membro calcolato.  
   
 ## <a name="creating-a-cell-calculation"></a>Creazione di una formula per il calcolo di celle  
- Per altre informazioni sulla creazione di un calcolo di celle tramite l'istruzione ALTER CUBE, vedere [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Per ulteriori informazioni sulla creazione di un calcolo di celle utilizzando l'istruzione ALTER CUBE, vedere [istruzione drop Cell calculation &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

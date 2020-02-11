@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1ad62871870dc98b5de1e514150cc837ac16e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097155"
 ---
 # <a name="using-mathematical-functions"></a>Utilizzo di funzioni matematiche
@@ -23,6 +23,6 @@ ms.locfileid: "68097155"
  Per impostazione predefinita, un numero passato a una funzione matematica viene interpretato come valore a virgola mobile a precisione doppia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)  
+ [Funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)  
   
   

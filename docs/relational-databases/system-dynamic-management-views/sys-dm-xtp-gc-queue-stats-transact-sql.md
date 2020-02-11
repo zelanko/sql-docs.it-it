@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090203"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -34,12 +34,12 @@ ms.locfileid: "68090203"
   
  Il thread principale di Garbage Collection (thread inattivo) tiene traccia delle righe aggiornate, eliminate e inserite per tutte le transazioni completate adll'ultima chiamata del thred principale di Garbage Collection. Il thread di Garbage Collection una volta attivato determina se il timestamp della transazione attiva meno recente è cambiato. Se la transazione attiva meno recente è cambiata, il thread inattivo accoda gli elementi di lavoro (in blocchi di 16 righe) delle transazioni i cui set di scrittura non sono più necessari. Ad esempio, se si eliminano 1.024 righe, verranno accodati 64 elementi di lavoro di Garbage Collection ciascuno contenente 16 righe eliminate.  Dopo il commit di una transazione utente, vengono selezionati tutti gli elementi accodati nell'utilità di pianificazione. Se non vi sono elementi accodati nell'utilità di pianificazione, la transazione utente cercherà in ogni coda del nodo NUMA corrente.  
   
- È possibile determinare se Garbage Collection libera la memoria delle righe eliminate eseguendo sys.dm_xtp_gc_queue_stats per vedere se il lavoro accodato viene eseguito. Se le voci di current_queue_depth non vengono elaborate o se nessun nuovo elemento di lavoro viene aggiunti a current_queue_depth, questo è un valore che indica che la garbage collection non sta liberando la memoria. Ad esempio, non può eseguire operazioni di garbage collection se è presente una transazione con esecuzione prolungata.  
+ È possibile determinare se Garbage Collection libera la memoria delle righe eliminate eseguendo sys.dm_xtp_gc_queue_stats per vedere se il lavoro accodato viene eseguito. Se le voci nell'current_queue_depth non vengono elaborate o se non vengono aggiunti nuovi elementi di lavoro al current_queue_depth, questo indica che Garbage Collection non libera la memoria. Ad esempio, non è possibile eseguire Garbage Collection se è presente una transazione a esecuzione prolungata.  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificatore univoco della coda.|  
 |total_enqueues|**bigint**|Numero totale degli elementi di lavoro di Garbage Collection nella coda dall'avvio del server.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68090203"
 |maximum_queue_depth|**bigint**|Profondità massima della coda.|  
 |last_service_ticks|**bigint**|Tick della CPU quando è stata servita la coda.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
 ## <a name="user-scenario"></a>Scenario utente  
@@ -66,6 +66,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

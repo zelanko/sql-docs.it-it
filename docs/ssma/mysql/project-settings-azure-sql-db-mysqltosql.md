@@ -10,35 +10,35 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908823"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Impostazioni del progetto (database SQL di Azure) (MySQLToSQL)
-Le impostazioni del progetto di SQL Azure consentono di configurare il suffisso del database SQL Azure da aggiungere nella finestra di dialogo di connessione e consente inoltre l'implementazione di meccanismo di heartbeat in connessione SQL Azure.  
+Le impostazioni del progetto SQL Azure consentono di configurare il suffisso del database SQL Azure da aggiungere nella finestra di dialogo di connessione e di consentire anche l'implementazione del meccanismo heartbeat in SQL Azure connessione.  
   
-Nel riquadro SQL Azure è disponibile nel **impostazioni del progetto** e **impostazioni di progetto predefinite** finestre di dialogo.  
+Il riquadro SQL Azure è disponibile nelle finestre di dialogo **Impostazioni progetto** e **Impostazioni progetto predefinite** .  
   
--   Utilizzare la finestra di dialogo Impostazioni di progetto per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni di SQL Azure, nel **degli strumenti** dal menu **le impostazioni del progetto**, fare clic su **generali** nella parte inferiore del riquadro a sinistra e quindi selezionare **SQL Azure**.  
+-   Utilizzare la finestra di dialogo Impostazioni progetto per impostare le opzioni di configurazione per il progetto corrente. Per accedere alle impostazioni di SQL Azure, nel menu **strumenti** selezionare **Impostazioni progetto**, fare clic su **generale** nella parte inferiore del riquadro a sinistra e quindi selezionare **SQL Azure**.  
   
--   Utilizzare la finestra di dialogo Impostazioni di progetto predefinito per impostare le opzioni di configurazione per tutti i progetti. Per accedere a impostazioni di SQL Azure, scegliere il **strumenti** dal menu **DefaultProject impostazioni**, selezionare il tipo di progetto di migrazione come SQL Azure da **versione di destinazione della migrazione** drop fino a accesso le impostazioni nel riquadro SQL Azure, fare clic su **generali** nella parte inferiore del riquadro a sinistra e quindi selezionare **di SQL Azure**.  
+-   Utilizzare la finestra di dialogo Impostazioni progetto predefinite per impostare le opzioni di configurazione per tutti i progetti. Per accedere alle impostazioni di SQL Azure, nel menu **strumenti** selezionare **Impostazioni DefaultProject**, selezionare tipo di progetto di migrazione come SQL Azure dall'elenco a discesa **versione destinazione migrazione** per accedere alle impostazioni nel riquadro SQL Azure, fare clic su **generale** nella parte inferiore del riquadro sinistro, quindi selezionare **SQL Azure**.  
   
 ## <a name="options"></a>Opzioni  
   
 ## <a name="connectivity"></a>Connettività  
-**Intervallo di heartbeat**  
+**Intervallo heartbeat**  
   
-Specifica un intervallo di tempo da utilizzare per il meccanismo di heartbeat per mantenere la connessione di SQL Azure attivo in ' minuti: formato secondi.  
+Specifica un intervallo di tempo da usare per il meccanismo di heartbeat per tenere attiva la connessione SQL Azure nel formato "minuti: secondi".  
   
-**Il valore predefinito**:' 4:45 '  
+**Valore predefinito**:' 4:45'  
   
-Il valore deve essere specificato in sto: formato degli ss (ad esempio, ' 4:45 ' o ' 0:50 ').  
+Il valore deve essere specificato nel formato ' m:SS ' (ad esempio,' 4:45' o ' 0:50').  
   
-**Suffisso di Server SQL Azure**  
+**Suffisso del server SQL Azure**  
   
 Specifica il suffisso del server SQL Azure  
   
-**Il valore predefinito**: 'database.windows.net'.  
+**Valore predefinito**:' database.Windows.NET '.  
   

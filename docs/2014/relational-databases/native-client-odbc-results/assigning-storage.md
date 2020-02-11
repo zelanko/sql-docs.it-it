@@ -1,5 +1,5 @@
 ---
-title: Assegnazione di archiviazione | Documenti di Microsoft
+title: Assegnazione dell'archiviazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200036"
 ---
 # <a name="assigning-storage"></a>Assegnazione di archiviazione
   In un'applicazione è possibile assegnare l'archiviazione per i risultati prima o dopo l'esecuzione di un'istruzione SQL. Se la preparazione o l'esecuzione dell'istruzione SQL avviene prima, è possibile richiedere informazioni sul set di risultati prima di archiviare i risultati. Se ad esempio il set di risultati non è noto, è necessario recuperare il numero di colonne prima dell'assegnazione dell'archiviazione.  
   
- Per associare l'archiviazione per una colonna di dati, un'applicazione chiama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e lo passa a:  
+ Per associare lo spazio di archiviazione per una colonna di dati, un'applicazione chiama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e la passa:  
   
 -   Tipo di dati nel quale devono essere convertiti i dati.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "63200036"
   
 -   L'associazione a livello di colonna è completa quando ogni colonna è associata alla rispettiva matrice di variabili.  
   
-     L'associazione per colonna viene specificata chiamando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con *attributo* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato su SQL_BIND_BY_COLUMN. Tutte le matrici devono avere lo stesso numero di elementi.  
+     L'associazione per colonna viene specificata chiamando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con *Attribute* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato su SQL_BIND_BY_COLUMN. Tutte le matrici devono avere lo stesso numero di elementi.  
   
 -   L'associazione a livello di riga è completa quando tutti i parametri dell'istruzione SQL vengono associati come un'unità a una matrice di strutture contenenti le singole variabili per i parametri.  
   
-     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *attributo* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostata sulle dimensioni dell'azienda struttura il colonne di impostare le variabili che riceveranno il risultato.  
+     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *Attribute* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato sulle dimensioni della struttura che contiene le variabili che riceveranno le colonne del set di risultati.  
   
  Viene inoltre impostato SQL_ATTR_ROW_ARRAY_SIZE sul numero di elementi presenti nelle matrici di colonne o di righe e vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'elaborazione dei risultati &#40;ODBC&#41;](processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

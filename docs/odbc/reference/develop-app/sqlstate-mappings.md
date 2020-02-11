@@ -1,5 +1,5 @@
 ---
-title: Mapping di SQLSTATE | Microsoft Docs
+title: Mapping SQLSTATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107357"
 ---
 # <a name="sqlstate-mappings"></a>Mapping di SQLSTATE
-Questo argomento vengono descritti i valori SQLSTATE per ODBC *2.x* e ODBC *3.x*. Per altre informazioni su ODBC *3.x* valori SQLSTATE, vedere [appendice a: Codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+In questo argomento vengono illustrati i valori SQLSTATE per ODBC *2. x* e ODBC *3. x*. Per ulteriori informazioni sui valori SQLSTATE ODBC *3. x* , vedere [Appendice A: codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
- In ODBC *3.x*HYxxx SQLSTATE restituiti anziché S1xxx e 42Sxx SQLSTATE restituiti anziché S00XX. Questa operazione è stata eseguita per conformità con gli standard Open Group e ISO. In molti casi, il mapping non è uno a uno standard hanno ridefinito l'interpretazione di SQLSTATE diversi.  
+ In ODBC *3. x*, vengono restituiti HYxxx sqlstates anziché S1xxx e vengono restituiti 42Sxx sqlstates anziché S00XX. Questa operazione è stata eseguita per l'allineamento con gli standard Open Group e ISO. In molti casi, il mapping non è uno-a-uno perché gli standard hanno ridefinito l'interpretazione di diversi SQLSTATE.  
   
- Quando un'applicazione ODBC *2.x* dell'applicazione viene aggiornata a un database ODBC *3.x* dell'applicazione, l'applicazione deve essere modificato in modo da prevedere ODBC *3.x* SQLSTATE anziché ODBC *2.x* SQLSTATE. La tabella seguente elenca ODBC *3.x* SQLSTATEs che ogni ODBC *2.x* SQLSTATE è mappata a.  
+ Quando un'applicazione ODBC *2. x* viene aggiornata a un'applicazione ODBC *3. x* , è necessario modificare l'applicazione in modo da prevedere sqlstates ODBC *3. x* anziché ODBC *2. x* sqlstates. Nella tabella seguente sono elencati i SQLState ODBC *3. x* a cui è stato eseguito il mapping di ogni SQLState ODBC *2. x* .  
   
- Quando l'attributo di ambiente SQL_ATTR_ODBC_VERSION è impostato su SQL_OV_ODBC2, il driver invia ODBC *2.x* SQLSTATE anziché ODBC *3.x* SQLSTATEs quando **funzione SQLGetDiagField**oppure **SQLGetDiagRec** viene chiamato. Un mapping specifico può essere determinato mediante ODBC notare *2.x* nella colonna 1 della tabella seguente che corrisponde a ODBC SQLSTATE *3.x* SQLSTATE nella colonna 2.  
+ Quando l'attributo SQL_ATTR_ODBC_VERSION Environment è impostato su SQL_OV_ODBC2, il driver invia sqlstates ODBC *2. x* invece di ODBC *3. x* sqlstates quando viene chiamato **SQLGetDiagField** o **SQLGetDiagRec** . Per determinare un mapping specifico, è possibile notare il valore SQLSTATE ODBC *2. x* nella colonna 1 della tabella seguente che corrisponde al valore SQLSTATE ODBC *3. x* nella colonna 2.  
   
-|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|Commenti|  
+|ODBC *2. x* SQLSTATE|ODBC *3. x* SQLSTATE|Commenti|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -49,20 +49,20 @@ Questo argomento vengono descritti i valori SQLSTATE per ODBC *2.x* e ODBC *3.x*
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC *2.x* viene eseguito il mapping di SQLSTATE S1002 a ODBC *3.x* SQLSTATE 07009 se la funzione sottostante **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**, oppure **SQLGetData**.|  
+|S1002|07009|ODBC *2. x* SQLSTATE S1002 è mappato a *ODBC 3. x* SQLSTATE 07009 se la funzione sottostante è **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**o **SQLGetData**.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|Restituito per un uso non valido di un puntatore null.|  
+|S1009|HY009|Restituito per un utilizzo non valido di un puntatore null.|  
 |S1009|HY024|Restituito per un valore di attributo non valido.|  
-|S1009|HY092|Per l'aggiornamento o eliminazione dei dati restituiti da una chiamata a **SQLSetPos**, o l'aggiunta, aggiornamento o eliminazione dei dati da una chiamata a **SQLBulkOperations**, quando la concorrenza è di sola lettura.|  
-|S1010|HY010 HY007 L'|Viene eseguito il mapping di SQLSTATE S1010 a hy007 l'errore SQLSTATE quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**, o una funzione di catalogo per il *StatementHandle*. SQLSTATE S1010 in caso contrario, viene eseguito il mapping di SQLSTATE HY010.|  
+|S1009|HY092|Restituito per l'aggiornamento o l'eliminazione di dati tramite una chiamata a **SQLSetPos**o per l'aggiunta, l'aggiornamento o l'eliminazione di dati tramite una chiamata a **SQLBulkOperations**, quando la concorrenza è di sola lettura.|  
+|S1010|HY010 HY007|Viene eseguito il mapping di SQLSTATE S1010 a SQLSTATE HY007 quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**o una funzione di catalogo per *statementHandle*. In caso contrario, viene eseguito il mapping di SQLSTATE S1010 a SQLSTATE HY010.|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC *3.x* viene eseguito il mapping di SQLSTATE 07009 a ODBC *2.x* SQLSTATE S1093 se la funzione sottostante **SQLBindParameter** o **SQLDescribeParam**.|  
+|S1093|07009|ODBC *3. x* SQLSTATE 07009 è mappato a ODBC *2. x* SQLSTATE S1093 se la funzione sottostante è **SQLBindParameter** o **SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -82,4 +82,4 @@ Questo argomento vengono descritti i valori SQLSTATE per ODBC *2.x* e ODBC *3.x*
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC *3.x* viene eseguito il mapping di SQLSTATE 07008 a ODBC *2.x* SQLSTATE S1000.
+>  ODBC *3. x* SQLSTATE 07008 è mappato a ODBC *2. x* SQLSTATE S1000.

@@ -1,5 +1,5 @@
 ---
-title: Stato proprietà (ADO) | Microsoft Docs
+title: Proprietà state (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,24 +16,24 @@ ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930857"
 ---
 # <a name="state-property-ado"></a>Proprietà State (ADO)
-Indica tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto è in esecuzione un metodo asincrono, indica se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero.  
+Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto esegue un metodo asincrono, indica se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **lungo** valore che può essere un' [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) valore. Il valore predefinito è **adStateClosed**.  
+ Restituisce un valore **Long** che può essere un valore [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) . Il valore predefinito è **adStateClosed**.  
   
-## <a name="remarks"></a>Note  
- È possibile usare la **stato** proprietà per determinare lo stato corrente di un determinato oggetto in qualsiasi momento.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile utilizzare la proprietà **state** per determinare lo stato corrente di un determinato oggetto in qualsiasi momento.  
   
- L'oggetto **stato** proprietà può avere una combinazione di valori. Ad esempio, se un'istruzione è in esecuzione, questa proprietà sarà necessario un valore combinato del **adStateOpen** e **adStateExecuting**.  
+ La proprietà **state** dell'oggetto può avere una combinazione di valori. Se, ad esempio, un'istruzione è in esecuzione, questa proprietà avrà un valore combinato di **adStateOpen** e **adStateExecuting**.  
   
- Il **stato** proprietà è di sola lettura.  
+ La proprietà **state** è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -43,5 +43,5 @@ Indica tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso
 |[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [ConnectionString, ConnectionTimeout ed esempio di proprietà State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Esempio ConnectionString, ConnectionTimeout e proprietà State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Esempio di proprietà ConnectionString, ConnectionTimeout e state (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   

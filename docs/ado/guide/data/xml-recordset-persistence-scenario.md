@@ -1,5 +1,5 @@
 ---
-title: Scenario di persistenza Recordset XML | Microsoft Docs
+title: Scenario di persistenza recordset XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923369"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scenario di persistenza di recordset XML
-In questo scenario si creerà un'applicazione Active Server Pages (ASP) che consente di salvare il contenuto di un oggetto Recordset direttamente per l'oggetto risposta ASP.  
+In questo scenario verrà creata un'applicazione di Active Server Pages (ASP) che salva il contenuto di un oggetto recordset direttamente nell'oggetto risposta ASP.  
   
 > [!NOTE]
->  Questo scenario richiede che il server installato Internet Information Server 5.0 (IIS) o versione successiva.  
+>  Per questo scenario è necessario che nel server sia installato Internet Information Server 5,0 (IIS) o versione successiva.  
   
- Il set di record restituito viene visualizzato in Internet Explorer tramite una [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ Il recordset restituito viene visualizzato in Internet Explorer utilizzando un [oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
   
- I passaggi seguenti sono necessari per creare questo scenario:  
+ Per creare questo scenario, sono necessari i passaggi seguenti:  
   
 -   Configurare l'applicazione  
   
@@ -37,11 +37,11 @@ In questo scenario si creerà un'applicazione Active Server Pages (ASP) che cons
   
 -   Ricevere e visualizzare i dati  
   
-## <a name="step-1-set-up-the-application"></a>Passaggio 1: Configurare l'applicazione  
- Creare una directory virtuale IIS denominata "XMLPersist" con script per autorizzazioni. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, denominati "XMLResponse," l'altra denominata "default. htm."  
+## <a name="step-1-set-up-the-application"></a>Passaggio 1: configurare l'applicazione  
+ Creare una directory virtuale IIS denominata "xmlpermanente" con autorizzazioni di script. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, uno denominato "XMLResponse. asp", l'altro denominato "default. htm".  
   
-## <a name="step-2-get-the-data"></a>Passaggio 2: Ottenere i dati  
- In questo passaggio si scriverà il codice per aprire un Recordset ADO e preparazione per l'invio al client. Aprire il file XMLResponse con un editor di testo, ad esempio Blocco note e inserire il codice seguente.  
+## <a name="step-2-get-the-data"></a>Passaggio 2: ottenere i dati  
+ In questo passaggio verrà scritto il codice per aprire un recordset ADO e prepararsi per inviarlo al client. Aprire il file XMLResponse. asp con un editor di testo, ad esempio Blocco note, e inserire il codice seguente.  
   
 ```  
 <%@ language="VBScript" %>  
@@ -65,12 +65,12 @@ In questo scenario si creerà un'applicazione Active Server Pages (ASP) che cons
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- Assicurarsi di modificare il valore della `Data Source` parametro in `strCon` sul nome del computer di Microsoft SQL Server.  
+ Assicurarsi di modificare il valore del `Data Source` parametro in `strCon` sul nome del computer Microsoft SQL Server.  
   
- Mantenere il file aperto e procedere al passaggio successivo.  
+ Lasciare aperto il file e continuare con il passaggio successivo.  
   
-## <a name="step-3-send-the-data"></a>Passaggio 3: Inviare i dati  
- Dopo aver creato un set di record, è necessario inviare al client tramite il salvataggio in formato XML per l'oggetto risposta ASP. Aggiungere il codice seguente alla fine della XMLResponse.  
+## <a name="step-3-send-the-data"></a>Passaggio 3: inviare i dati  
+ Ora che si dispone di un recordset, è necessario inviarlo al client salvando il file come XML nell'oggetto risposta ASP. Aggiungere il codice seguente alla fine di XMLResponse. ASP.  
   
 ```  
   Response.ContentType = "text/xml"  
@@ -84,12 +84,12 @@ In questo scenario si creerà un'applicazione Active Server Pages (ASP) che cons
 %>  
 ```  
   
- Si noti che l'oggetto risposta ASP è specificato come destinazione per il Recordset [metodo Save](../../../ado/reference/ado-api/save-method.md). La destinazione del metodo Save può essere qualsiasi oggetto che supporta l'interfaccia IStream, ad esempio un oggetto ADO [oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), o un nome di file che include il percorso completo al quale viene salvato il Recordset.  
+ Si noti che l'oggetto di risposta ASP viene specificato come destinazione per il [metodo Save](../../../ado/reference/ado-api/save-method.md)del recordset. La destinazione del metodo Save può essere un oggetto che supporta l'interfaccia IStream, ad esempio un oggetto ADO [Stream](../../../ado/reference/ado-api/stream-object-ado.md)o un nome di file che include il percorso completo in cui deve essere salvato il recordset.  
   
- Salvare e chiudere XMLResponse prima di procedere al passaggio successivo. Copiare anche il file Adovbs dalla cartella di installazione della libreria ADO predefinito nella stessa cartella in cui è stato salvato il file XMLResponse.  
+ Salvare e chiudere XMLResponse. asp prima di andare al passaggio successivo. Copiare inoltre il file Adovbs. Inc dalla cartella di installazione predefinita della libreria ADO alla stessa cartella in cui è stato salvato il file XMLResponse. ASP.  
   
-## <a name="step-4-receive-and-display-the-data"></a>Passaggio 4: Ricevere e visualizzare i dati  
- In questo passaggio si creerà un file HTML con un embedded [oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto che punta al file XMLResponse per ottenere il Recordset. Aprire Default. htm con un editor di testo, ad esempio Blocco note e aggiungere il codice seguente. Sostituire "sqlserver" nell'URL con il nome del server.  
+## <a name="step-4-receive-and-display-the-data"></a>Passaggio 4: ricevere e visualizzare i dati  
+ In questo passaggio verrà creato un file HTML con un oggetto [datacontrollo incorporato (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) che punta al file XMLResponse. asp per ottenere il recordset. Aprire default. htm con un editor di testo, ad esempio Blocco note, e aggiungere il codice seguente. Sostituire "SqlServer" nell'URL con il nome del server.  
   
 ```  
 <HTML>  
@@ -110,8 +110,8 @@ In questo scenario si creerà un'applicazione Active Server Pages (ASP) che cons
 </HTML>  
 ```  
   
- Chiudere il file default. htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. Usando Internet Explorer 4.0 o versioni successive, aprire l'URL https://*sqlserver*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. A questo punto aprire l'URL https:// *sqlserver* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
+ Chiudere il file default. htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. ASP. Utilizzando Internet Explorer 4,0 o versione successiva, aprire l'URL https://*SqlServer*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. A questo punto aprire l'URL https:// *SqlServer* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Save](../../../ado/reference/ado-api/save-method.md)   
+ [Save (metodo)](../../../ado/reference/ado-api/save-method.md)   
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

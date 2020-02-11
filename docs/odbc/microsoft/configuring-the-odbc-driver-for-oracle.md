@@ -1,5 +1,5 @@
 ---
-title: Configurazione del Driver ODBC per Oracle | Microsoft Docs
+title: Configurazione del driver ODBC per Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc163f53c9dc234702f6f74426eb65f57cec26b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096681"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Configurazione del driver ODBC per Oracle
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- È possibile controllare le prestazioni del Driver ODBC per Oracle di conoscere l'ambiente dei dati e correttamente impostando i parametri di connessione all'origine dati tramite il [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md) dialogo casella o per la connessione parametri della stringa. La finestra di dialogo fornisce i seguenti controlli per la connessione a un'origine dati tramite la finestra di dialogo o usando stringhe di connessione:  
+ È possibile controllare le prestazioni del driver ODBC per Oracle conoscendo l'ambiente dei dati e impostando correttamente i parametri della connessione all'origine dati tramite la finestra di dialogo [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md) o mediante parametri di stringa di connessione. Nella finestra di dialogo sono disponibili i controlli seguenti per la connessione a un'origine dati tramite la finestra di dialogo o l'utilizzo di stringhe di connessione:  
   
--   **Scheda DSN utente** Elenca i nomi delle origini dati locali nel computer.  
+-   **Scheda DSN utente** Elenca i nomi delle origini dati locali per il computer.  
   
--   **Scheda DSN di sistema** consente di aggiungere o rimuovere un'origine dati di sistema. Origini dati di sistema sono accessibili da tutti gli utenti nel computer locale.  
+-   **Scheda DSN di sistema** Consente di aggiungere o rimuovere un'origine dati di sistema. È possibile accedere alle origini dati di sistema da tutti gli utenti nel computer locale.  
   
--   **Nella scheda DSN su file** consente di aggiungere o rimuovere un'origine dati file dal computer locale. Origini dati dei file possono essere condiviso da tutti gli utenti autorizzati a installare il driver stesso.  
+-   **Scheda DSN file** Consente di aggiungere o rimuovere un'origine dati file dal computer locale. Le origini dati dei file possono essere condivise da tutti gli utenti in cui è installato lo stesso driver.  
   
--   **Scheda driver** Elenca driver ODBC installati.  
+-   **Scheda driver** Elenca i driver ODBC installati.  
   
--   **Scheda Tracing** consente di specificare la modalità gestione Driver ODBC tiene traccia di chiamate alle funzioni ODBC. È possibile configurare la traccia separatamente per ogni applicazione ODBC installati.  
+-   **Scheda traccia** Consente di specificare il modo in cui gestione driver ODBC traccia le chiamate alle funzioni ODBC. È possibile configurare la traccia separatamente per ogni applicazione ODBC installata.  
   
--   **Scheda connessione Pooling** consente di selezionare le opzioni di connessione per ogni driver installato.  
+-   **Scheda pool di connessioni** Consente di selezionare le opzioni di connessione per ogni driver installato.  
   
--   **Informazioni sulla scheda** sono elencati i file dei componenti ODBC installati.  
+-   **Scheda informazioni** Elenca i file dei componenti ODBC installati.  
   
- Dopo aver aggiunto un'origine dati, è possibile usare la **Amministrazione origine dati ODBC** finestra di dialogo per configurare l'accesso all'origine dati. Selezionare un'origine dati e quindi fare clic su una delle schede per modificare o esaminare le informazioni.
+ Dopo avere aggiunto un'origine dati, è possibile utilizzare la finestra di dialogo **Amministrazione origine dati ODBC** per configurare l'accesso all'origine dati. Selezionare un'origine dati, quindi fare clic su una delle schede per modificare o rivedere le informazioni.

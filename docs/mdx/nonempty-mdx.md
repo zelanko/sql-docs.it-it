@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) | Microsoft Docs
+title: Non Empty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088337"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
@@ -34,17 +34,17 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Questa funzione restituisce le tuple del primo set specificato che risultano non vuote quando vengono valutate sulle tuple del secondo set. Il **NonEmpty** funzione tiene conto dei calcoli e mantiene le tuple duplicate. Se non viene specificato un secondo set, l'espressione viene valutata nel contesto delle coordinate correnti dei membri delle gerarchie degli attributi e delle misure del cubo.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione restituisce le tuple del primo set specificato che risultano non vuote quando vengono valutate sulle tuple del secondo set. La funzione **NonEmpty** prende in considerazione i calcoli e conserva le tuple duplicate. Se non viene specificato un secondo set, l'espressione viene valutata nel contesto delle coordinate correnti dei membri delle gerarchie degli attributi e delle misure del cubo.  
   
 > [!NOTE]  
->  Utilizzare questa funzione anziché deprecate [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) (funzione).  
+>  Usare questa funzione invece della funzione deprecata [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md) .  
   
 > [!IMPORTANT]  
 >  Non sono le tuple a essere non vuote, bensì le celle a cui fanno riferimento le tuple.  
   
 ## <a name="examples"></a>Esempi  
- La query seguente viene illustrato un esempio semplice di **NonEmpty**, restituendo tutti i clienti che hanno un valore non null per Internet Sales Amount in data 1 luglio 2001:  
+ La query seguente mostra un semplice esempio di non **empty**, restituendo tutti i clienti che hanno un valore non null per Internet Sales Amount il 1 ° luglio 2001:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -60,7 +60,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- L'esempio seguente restituisce il set di tuple contenente i clienti e le date di acquisto, utilizzando il **filtro** (funzione) e il **NonEmpty** funzioni per individuare l'ultima data in cui ogni cliente ha eseguito un acquisto:  
+ Nell'esempio seguente viene restituito il set di tuple contenente i clienti e le date di acquisto, utilizzando la funzione di **filtro** e le funzioni non **vuote** per individuare l'ultima data in cui ogni cliente ha effettuato un acquisto:  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -87,10 +87,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [DefaultMember &#40;&#41;MDX](../mdx/defaultmember-mdx.md)   
+ [Filtrare &#40;&#41;MDX](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)  
   
   

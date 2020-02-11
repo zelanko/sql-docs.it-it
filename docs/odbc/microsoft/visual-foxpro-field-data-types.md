@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati Visual FoxPro campo | Microsoft Docs
+title: Tipi di dati dei campi di Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087948"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Tipi di dati dei campi Visual FoxPro
-Nella tabella seguente sono elencati i valori per il *FieldType* argomento nell'istruzione ALTER TABLE e CREATE TABLE indicando se *nFieldWidth* e *nPrecision* gli argomenti sono Obbligatorio.  
+Nella tabella seguente sono elencati i valori per l'argomento *FieldType* in alter table e create table e viene indicato se sono necessari gli argomenti *nFieldWidth* e *nPrecision* .  
   
 |*FieldType*|*NFieldWidth*|*nPrecision*|Descrizione|  
 |-----------------|-------------------|------------------|-----------------|  
-|b|-|d|Double|  
-|C|N|-|Campo di caratteri della larghezza *n*|  
-|D|-|-|Date|  
-|F|N|d|Mobile campo numerico della larghezza *n* con *1!d* posizioni decimali|  
+|b|-|d|DOUBLE|  
+|C|N|-|Campo carattere della larghezza *n*|  
+|D|-|-|Data|  
+|F|N|d|Campo numerico a virgola mobile con larghezza *n* con *d* posizioni decimali|  
 |G|-|-|Generale|  
 |I|-|-|Integer|  
 |L|-|-|Logico|  
 |M|-|-|Memo|  
-|N|N|d|Campo numerico della larghezza *n* con *1!d* posizioni decimali|  
-|T|-|-|DateTime|  
-|Y|-|-|Currency|
+|N|N|d|Campo numerico della larghezza *n* con *d* posizioni decimali|  
+|T|-|-|Datetime|  
+|S|-|-|Valuta|

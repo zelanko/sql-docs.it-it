@@ -1,5 +1,5 @@
 ---
-title: Uso di un oggetto connessione | Microsoft Docs
+title: Utilizzo di un oggetto Connection | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923641"
 ---
 # <a name="using-a-connection-object"></a>Uso di un oggetto Connection
-Prima di aprire una **connessione** dell'oggetto, è necessario definire alcune informazioni sull'origine dati e tipo di connessione. Viene assegnata la maggior parte di queste informazioni il *ConnectionString* parametro del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) sul **connessione** oggetto, o tramite il [ConnectionString proprietà](../../../ado/reference/ado-api/connectionstring-property-ado.md) nella **connessione** oggetto. Una stringa di connessione è costituita da un elenco di coppie di argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Ad esempio:  
+Prima di aprire un oggetto **connessione** , è necessario definire determinate informazioni sull'origine dati e il tipo di connessione. La maggior parte di queste informazioni viene mantenuta dal parametro *ConnectionString* del [metodo Open](../../../ado/reference/ado-api/open-method-ado-connection.md) nell'oggetto **Connection** o dalla [proprietà ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) nell'oggetto **Connection** . Una stringa di connessione è costituita da un elenco di coppie argomento/valore separate da punti e virgola, con i valori racchiusi tra virgolette singole. Ad esempio:  
   
 ```  
 Dim sConn As String  
@@ -29,9 +29,9 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  È anche possibile specificare un nome di origine dati ODBC (DSN) o in un file di Data Link (UDL) in una stringa di connessione. Per altre informazioni sui nomi, vedere [gestione di origini dati](../../../odbc/admin/managing-data-sources.md) nel riferimento per programmatori ODBC. Per altre informazioni sui file UDL, vedere [Introduzione all'API di collegamento dati](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) nel riferimento delle per programmatori OLE DB.  
+>  È inoltre possibile specificare un nome di origine dati (DSN) ODBC o un file di collegamento dati (UDL) in una stringa di connessione. Per ulteriori informazioni sui DSN, vedere [gestione delle origini dati](../../../odbc/admin/managing-data-sources.md) in ODBC Programmer ' s Reference. Per altre informazioni su UDL, vedere [Cenni preliminari sulle API di data link](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) in OLE DB Programmer ' s Reference.  
   
- In genere, si stabilisce una connessione chiamando il **venga** metodo con un oggetto appropriato un *stringa di connessione* come parametro. Nel frammento di codice Visual Basic seguente è riportato un esempio:  
+ In genere, è possibile stabilire una connessione chiamando il metodo **Connection. Open** con una *stringa di connessione* appropriata come parametro. Un esempio è illustrato nel frammento di codice Visual Basic seguente:  
   
 ```  
 Dim oConn As ADODB.Connection  
@@ -57,7 +57,7 @@ Set oConn = Nothing
   
 ```  
   
- Di seguito **oRs.Open** accetta un **connessione** oggetto (*oConn*) variabile come valore del relativo *ActiveConnection* parametro. Inoltre, il **Connection.CursorLocation** proprietà si presuppone che il valore predefinito **adUseServer**. Per ovviare a questo per il [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) riportato nella sezione precedente. L'istruzione seguente comporta errori di run-time.  
+ Qui **ORS. Open** accetta una variabile dell'oggetto **Connection** (*oConn*) come valore del parametro *ActiveConnection* . Inoltre, la proprietà **Connection. CursorLocation** presuppone il valore predefinito di **adUseServer come**. Confrontare questo esempio con l'esempio [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) nella sezione precedente. L'istruzione seguente genera errori in fase di esecuzione.  
   
 ```  
 oRs.MarshalOptions = adMarshalModifiedOnly  

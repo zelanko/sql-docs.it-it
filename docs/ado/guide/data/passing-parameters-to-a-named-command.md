@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924699"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando con nome
-Così come il risultato del comando viene passato come un *out* variabile di comando denominato, parametri per un comando con parametri è stato passato come *in* variabili per il comando specificato.  
+Proprio come il risultato del comando viene passato come variabile *out* del comando denominato, i parametri per un comando con parametri possono essere passati come *nelle* variabili al comando denominato.  
   
- Nell'esempio di codice riportato di seguito viene tentato il recupero di tutti gli ordini effettuati dal cliente la cui proprietà **CustomerID** è "Base al ALKFI" dal database Northwind. Il valore di **CustomerID** viene fornito al momento quando viene chiamato il comando specificato.  
+ Nell'esempio di codice seguente si tenta di recuperare tutti gli ordini effettuati dal cliente il cui **CustomerID** è "ALKFI" dal database Northwind. Il valore di **CustomerID** viene specificato al momento della chiamata del comando denominato.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,13 +76,13 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Si noti che tutti i parametri di input devono precedere qualsiasi variabile di output e i tipi di dati dei parametri devono corrispondere o possono essere convertiti a quelle dei campi corrispondenti. L'istruzione seguente:  
+ Si noti che tutti i parametri di input devono precedere qualsiasi variabile di output e i tipi di dati dei parametri devono corrispondere o possono essere convertiti in quelli dei campi corrispondenti. L'istruzione seguente:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -verrà generato un errore di tipi di dati non corrispondenti, perché il parametro di input obbligatorio è di un **stringa** tipo, non di un **Integer** tipo.  
+ -genera un errore di tipi di dati non corrispondenti, perché il parametro di input obbligatorio è di tipo **stringa** , non di un tipo **Integer** .  
   
  La chiamata seguente:  
   
@@ -90,7 +90,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -è valido, ma verrà restituito un risultato vuoto impostato perché tale record non esiste nel database.  
+ -è valido, ma produrrà un set di risultati vuoto perché nel database non sono presenti record di questo tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

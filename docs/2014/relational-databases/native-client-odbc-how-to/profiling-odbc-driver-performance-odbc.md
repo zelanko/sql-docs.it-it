@@ -1,5 +1,5 @@
 ---
-title: Profilatura di ODBC Driver procedure relative alle prestazioni (ODBC) | Documenti di Microsoft
+title: Procedure per la profilatura delle prestazioni del driver ODBC (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200289"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Procedure di analisi delle prestazioni del driver ODBC (ODBC)
@@ -24,13 +24,13 @@ ms.locfileid: "63200289"
   
  Il driver può registrare anche query con esecuzione prolungata (query che non ottengono una risposta dal server entro un periodo di tempo specificato). Tali query possono essere analizzate in un secondo momento da programmatori e amministratori del database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Profiling dei dati sulle prestazioni del Driver &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Dati sulle prestazioni del driver del profilo &#40;&#41;ODBC](profiling-odbc-driver-performance-data.md)  
   
 -   [Registrare query con esecuzione prolungata &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a ODBC](odbc-how-to-topics.md)  
+ [Procedure per l'utilizzo di ODBC](odbc-how-to-topics.md)  
   
   

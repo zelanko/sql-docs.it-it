@@ -17,14 +17,14 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931178"
 ---
 # <a name="save-method"></a>Metodo Save
-Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file o [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un oggetto file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,40 +35,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- facoltativo. Oggetto **Variant** che rappresenta il nome del percorso completo del file in cui le **Recordset** deve essere salvato, o un riferimento a una **Stream** oggetto.  
+ Facoltativa. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
   
  *PersistFormat*  
- facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui le **Recordset** devono essere salvati (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativa. Valore [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
-## <a name="remarks"></a>Note  
- Il [metodo Save](../../../ado/reference/ado-api/save-method.md) metodo può essere richiamato solo su un elemento aperto **Recordset**. Usare la [metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo di ripristino successive il **Recordset** dalla *destinazione*.  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [Save](../../../ado/reference/ado-api/save-method.md) può essere richiamato solo su un **Recordset**aperto. Utilizzare il metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
   
- Se il [proprietà Filter](../../../ado/reference/ado-api/filter-property.md) proprietà è valida per il **Recordset**, quindi vengono salvate solo le righe accessibili in base al filtro. Se il **Recordset** è di tipo gerarchico, quindi il membro figlio corrente **Recordset** e i relativi elementi figlio viene salvati, incluso l'elemento padre **Recordset**. Se il metodo Save di un elemento figlio **Recordset** viene chiamato, l'elemento figlio e i relativi elementi figlio viene salvati, ma non è l'elemento padre.  
+ Se la proprietà [Filter Property](../../../ado/reference/ado-api/filter-property.md) è attiva per il **Recordset**, verranno salvate solo le righe accessibili nel filtro. Se il **Recordset** è gerarchico, verranno salvati il **Recordset** figlio corrente e i relativi elementi figlio, incluso il **Recordset**padre. Se viene chiamato il metodo Save di un **Recordset** figlio, l'elemento figlio e tutti i relativi elementi figlio vengono salvati, ma l'elemento padre non lo è.  
   
- La prima volta che salva il **Recordset**, è possibile specificare facoltativamente *destinazione*. Se si omette *destinazione*, verrà creato un nuovo file con un nome impostato sul valore della proprietà dell'origine delle **Recordset**.  
+ La prima volta che si salva il **Recordset**, è facoltativo specificare la *destinazione*. Se si omette la *destinazione*, verrà creato un nuovo file con un nome impostato sul valore della proprietà Source del **Recordset**.  
   
- Omettere *destinazione* quando si chiama successivamente **salvare** dopo il primo salvataggio o un errore di run-time si verificherà. Se successivamente si chiama **salvare** con un nuovo oggetto *destinazione*, il **Recordset** viene salvato nella nuova destinazione. Tuttavia, la nuova destinazione e la destinazione originale entrambi saranno aperte.  
+ Omettere la *destinazione* quando si chiama successivamente **Save** dopo il primo salvataggio o si verificherà un errore di run-time. Se successivamente si chiama **Save** con una nuova *destinazione*, il **Recordset** viene salvato nella nuova destinazione. Tuttavia, la nuova destinazione e la destinazione originale saranno entrambe aperte.  
   
- **Salvare** non chiude il **Recordset** o *destinazione*, quindi è possibile continuare a lavorare con i **Recordset** e salvare le modifiche più recenti. *Destinazione* rimane aperta fino a quando il **Recordset** viene chiuso.  
+ **Salva** non chiude il **Recordset** o la *destinazione*, pertanto è possibile continuare a lavorare con il **Recordset** e salvare le modifiche più recenti. La *destinazione* rimane aperta fino alla chiusura del **Recordset** .  
   
- Per motivi di sicurezza, il **salvare** metodo consente solo l'uso delle impostazioni di sicurezza personalizzato e basso da uno script eseguito da Microsoft Internet Explorer.  
+ Per motivi di sicurezza, il metodo **Save** consente solo l'utilizzo di impostazioni di protezione minime e personalizzate da uno script eseguito da Microsoft Internet Explorer.  
   
- Se il **salvare** viene chiamato durante un'asincrona **Recordset** recuperare, eseguire o aggiornare operazione è in corso, quindi **Salva** attende che l'operazione asincrona è stata completata.  
+ Se il metodo **Save** viene chiamato mentre è in corso un'operazione di recupero, esecuzione o aggiornamento di un **Recordset** asincrono, **Salva** attende fino al completamento dell'operazione asincrona.  
   
- Vengono salvati i record che iniziano con la prima riga del **Recordset**. Quando la **salvare** metodo termina, la posizione della riga corrente viene spostata sulla prima riga del **Recordset**.  
+ I record vengono salvati a partire dalla prima riga del **Recordset**. Al termine del metodo **Save** , la posizione della riga corrente viene spostata nella prima riga del **Recordset**.  
   
- Per ottenere risultati ottimali, impostare il [proprietà CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient** con **Salva**. Se il provider non supporta tutte le funzionalità necessarie per salvare **Recordset** oggetti, il servizio di cursore fornirà tale funzionalità.  
+ Per ottenere risultati ottimali, impostare la proprietà [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient** con **Save**. Se il provider non supporta tutte le funzionalità necessarie per salvare gli oggetti **Recordset** , il servizio Cursor fornirà tale funzionalità.  
   
- Quando un **Recordset** persistente con il **CursorLocation** proprietà impostata su **adUseServer**, la funzionalità di aggiornamento per il **Recordset**è limitato. In genere, solo tabella singola aggiornamenti, inserimenti ed eliminazioni sono consentite (dipenderà dalle funzionalità del provider). Il [metodo Resync](../../../ado/reference/ado-api/resync-method.md) metodo è anche disponibile in questa configurazione.  
+ Quando un **Recordset** viene reso permanente con la proprietà **CursorLocation** impostata su **adUseServer come**, la funzionalità di aggiornamento per il **Recordset** è limitata. In genere, sono consentiti solo aggiornamenti, inserimenti ed eliminazioni a tabella singola (dipendenti dalla funzionalità del provider). Anche il metodo di [Risincronizzazione](../../../ado/reference/ado-api/resync-method.md) non è disponibile in questa configurazione.  
   
 > [!NOTE]
->  Salvataggio di un **Recordset** con **campi** di tipo **adVariant**, **adIDispatch**, o **adIUnknown** è non è supportato da ADO e può causare risultati imprevedibili.  
+>  Il salvataggio di un **Recordset** con **campi** di tipo **adVariant**, **ADIDISPATCH**o **adIUnknown** non è supportato da ADO e può causare risultati imprevedibili.  
   
- Consente di filtrare solo sotto forma di stringhe di criteri (ad esempio DataOrdine > ' 12/31/1999 ') influiscono sul contenuto di un persistente **Recordset**. I filtri creati con una matrice di **segnalibri** o usando un valore compreso il [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) non influirà il contenuto della classe resa persistente **Recordset**. Queste regole si applicano ai **Recordset**creati con i cursori lato client o lato server.  
+ Solo i filtri sotto forma di stringhe di criteri (ad esempio, OrderDate >' 12/31/1999') influiscono sul contenuto di un **Recordset**permanente. I filtri creati con una matrice di **segnalibri** o con un valore di [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) non influiscono sul contenuto del **Recordset**salvato in modo permanente. Queste regole si applicano ai **Recordset**creati con i cursori lato client o lato server.  
   
- Poiché il *destinazione* parametro può accettare qualsiasi oggetto che supporta l'interfaccia IStream OLE DB, è possibile salvare una **Recordset** direttamente per l'oggetto risposta ASP. Per altre informazioni, vedere la **Scenario di persistenza Recordset XML**.  
+ Poiché il parametro di *destinazione* può accettare qualsiasi oggetto che supporti l'interfaccia IStream di OLE DB, è possibile salvare un **Recordset** direttamente nell'oggetto risposta ASP. Per altri dettagli, vedere lo **scenario di persistenza dei recordset XML**.  
   
- È inoltre possibile salvare una **Recordset** in formato XML a un'istanza di un oggetto DOM MSXML, come è illustrato nel codice Visual Basic seguente:  
+ È inoltre possibile salvare un **Recordset** in formato XML in un'istanza di un oggetto DOM MSXML, come illustrato nel codice Visual Basic seguente:  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -83,9 +83,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Due limitazioni si applicano quando si salva il recordset gerarchici (forme di dati) in formato XML. Se non è possibile salvare in XML la gerarchica **Recordset** include aggiornamenti, in sospeso e non è possibile salvare un con parametri gerarchici **Recordset**.  
+>  Quando si salvano recordset gerarchici (forme dati) in formato XML, si applicano due limitazioni. Non è possibile salvare in XML se il **Recordset** gerarchico contiene aggiornamenti in sospeso e non è possibile salvare un **Recordset**gerarchico con parametri.  
   
- Oggetto **Recordset** salvati in formato XML formato viene salvato usando il formato UTF-8. Quando tale file viene caricato in un Stream ADO, l'oggetto Stream non tenterà di aprire una **Recordset** dal flusso, a meno che la proprietà set di caratteri del flusso è impostata sul valore appropriato per il formato UTF-8.  
+ Un **Recordset** salvato in formato XML viene salvato utilizzando il formato UTF-8. Quando tale file viene caricato in un flusso ADO, l'oggetto flusso non tenterà di aprire un **Recordset** dal flusso, a meno che la proprietà charset del flusso non sia impostata sul valore appropriato per il formato UTF-8.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -94,8 +94,8 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvare e aprire l'esempio di metodi (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Salvare e aprire l'esempio di metodi (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Esempio di metodi Save e Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Esempio di metodi Save e Open (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)

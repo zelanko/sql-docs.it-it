@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec6663028f2c0e133996053a31acfc0e04b49738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914680"
 ---
-# <a name="mssqlserver2519"></a>MSSQLSERVER_2519
+# <a name="mssqlserver_2519"></a>MSSQLSERVER_2519
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62914680"
  Questo messaggio informativo indica che Query Processor non è riuscito a fornire a DBCC un oggetto interno per consentire la restituzione delle colonne calcolate e dei tipi CLR (Common Language Runtime) definiti dall'utente. Ciò significa che non verrà controllata la correttezza delle colonne calcolate e dei tipi CLR definiti dall'utente o che questi non verranno utilizzati durante il controllo DBCC della consistenza tra indici e tabelle di base.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [MSSQLSERVER_2518](mssqlserver-2518-database-engine-error.md)  

@@ -24,25 +24,25 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106157"
 ---
 # <a name="descriptor-handles"></a>Handle del descrittore
-Oggetto *descrittore* è una raccolta di metadati che descrivono i parametri di un'istruzione SQL o le colonne di un set di risultati, come illustrato per l'applicazione o il driver (noto anche come il *implementazione*). Di conseguenza, un descrittore può compilare uno qualsiasi dei quattro ruoli:  
+Un *descrittore* è una raccolta di metadati che descrive i parametri di un'istruzione SQL o le colonne di un set di risultati, come osservato dall'applicazione o dal driver (noto anche come *implementazione*). Pertanto, un descrittore può riempire uno dei quattro ruoli:  
   
--   **Descrittore di parametri dell'applicazione (APD).** Contiene informazioni sui buffer di applicazione associate ai parametri in un'istruzione SQL, ad esempio relativi indirizzi, le lunghezze e tipi di dati C.  
+-   **Descrittore del parametro dell'applicazione (APD).** Contiene informazioni sui buffer dell'applicazione associati ai parametri in un'istruzione SQL, ad esempio i relativi indirizzi, lunghezze e tipi di dati C.  
   
--   **Descrizione del parametro di implementazione (IPD).** Contiene informazioni sui parametri in un'istruzione SQL, ad esempio i tipi di dati SQL, le lunghezze e supporto dei valori null.  
+-   **Descrittore del parametro di implementazione (dpi).** Contiene informazioni sui parametri in un'istruzione SQL, ad esempio i tipi di dati SQL, le lunghezze e il supporto di valori null.  
   
--   **Descrittore delle righe dell'applicazione (ARD).** Contiene informazioni sui buffer di applicazione associati alle colonne in un set di risultati, ad esempio relativi indirizzi, le lunghezze e tipi di dati C.  
+-   **Descrittore di riga dell'applicazione (ARD).** Contiene informazioni sui buffer dell'applicazione associati alle colonne di un set di risultati, ad esempio indirizzi, lunghezze e tipi di dati C.  
   
--   **Descrittore riga di implementazione (IRD).** Contiene informazioni sulle colonne in un set di risultati, ad esempio i tipi di dati SQL, le lunghezze e supporto di valori null.  
+-   **Descrittore della riga di implementazione (IRD).** Contiene informazioni sulle colonne di un set di risultati, ad esempio i tipi di dati, le lunghezze e il supporto di valori null.  
   
- I descrittori di quattro (un riempimento di ogni ruolo) vengono allocati automaticamente quando viene allocata un'istruzione. Si parla *allocato automaticamente descrittori* e sempre associate a tale istruzione. Le applicazioni possono inoltre allocare descrittori con **SQLAllocHandle**. Si parla *allocata in modo esplicito i descrittori*. Essi vengono allocate in una connessione e può essere associati a una o più istruzioni in tale connessione per soddisfare il ruolo di un APD o ARD su tali istruzioni.  
+ I quattro descrittori (uno che riempie ogni ruolo) vengono allocati automaticamente quando viene allocata un'istruzione. Questi sono noti come *descrittori allocati automaticamente* e sono sempre associati a tale istruzione. Le applicazioni possono inoltre allocare descrittori con **SQLAllocHandle**. Questi sono noti come *descrittori allocati in modo esplicito*. Vengono allocate in una connessione e possono essere associate a una o più istruzioni su tale connessione per soddisfare il ruolo di un oggetto APD o ARD su tali istruzioni.  
   
- La maggior parte delle operazioni in ODBC possono essere eseguite senza l'utilizzo esplicito di descrittori di dall'applicazione. Tuttavia, i descrittori forniscono un comodo collegamento per alcune operazioni. Si supponga, ad esempio, che un'applicazione vuole inserire i dati da due set diversi di buffer. Per usare il primo set di buffer, doveva chiamare ripetutamente **SQLBindParameter** associazione ai parametri in un **Inserisci** istruzione e quindi eseguire l'istruzione. Per usare il secondo set di buffer, è necessario ripetere questo processo. In alternativa, è possibile configurare le associazioni per il primo set di buffer nel descrittore di uno e il secondo set di buffer nel descrittore di un altro. Per passare tra i set di associazioni, l'applicazione chiama semplicemente **SQLSetStmtAttr** e associare il descrittore corretto con l'istruzione come APD.  
+ La maggior parte delle operazioni in ODBC può essere eseguita senza l'utilizzo esplicito di descrittori da parte dell'applicazione. Tuttavia, i descrittori forniscono un comodo collegamento per alcune operazioni. Si supponga, ad esempio, che un'applicazione voglia inserire dati da due diversi set di buffer. Per usare il primo set di buffer, chiama ripetutamente **SQLBindParameter** per associarli ai parametri in un'istruzione **Insert** , quindi eseguire l'istruzione. Per usare il secondo set di buffer, questo processo viene ripetuto. In alternativa, è possibile impostare Binding per il primo set di buffer in un descrittore e per il secondo set di buffer in un altro descrittore. Per spostarsi tra i set di binding, l'applicazione chiama semplicemente **SQLSetStmtAttr** e associa il descrittore corretto all'istruzione come APD.  
   
- Per altre informazioni sui descrittori, vedere [tipi di descrittori](../../../odbc/reference/develop-app/types-of-descriptors.md).
+ Per ulteriori informazioni sui descrittori, vedere [tipi di descrittori](../../../odbc/reference/develop-app/types-of-descriptors.md).

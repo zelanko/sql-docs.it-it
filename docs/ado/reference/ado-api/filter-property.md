@@ -1,5 +1,5 @@
 ---
-title: Filtra proprietà | Microsoft Docs
+title: Proprietà Filter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,84 +16,84 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918633"
 ---
 # <a name="filter-property"></a>Proprietà Filter
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti
 
-Imposta o restituisce un **Variant** valore, che può contenere uno dei seguenti elementi:  
+Imposta o restituisce un valore **Variant** , che può contenere uno degli elementi seguenti:  
   
--   **Stringa di criteri:** Una stringa costituita da uno o più clausole singoli concatenate **AND** oppure **OR** operatori.  
+-   **Stringa criteri:** Stringa costituita da una o più clausole concatenate con gli operatori **and** o **or** .  
   
--   **Matrice di segnalibri:** Matrice di segnalibro univoco che puntano ai record in più valori di **Recordset** oggetto.  
+-   **Matrice di segnalibri:** Matrice di valori di segnalibro univoci che puntano a record nell'oggetto **Recordset** .  
   
--   Oggetto [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valore.  
+-   Valore [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Usare la **filtro** proprietà allo schermo in modo selettivo i record in un **Recordset** oggetto. Filtrati **Recordset** diventa il cursore corrente. Altre proprietà che restituiscono valori basati sull'oggetto corrente **cursore** interessati, ad esempio [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), e [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Impostando il **filtro** proprietà su un nuovo valore specifico del record corrente è passata al primo record che soddisfano il nuovo valore.
+Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)e la [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
   
-La stringa di criteri è costituita da clausole nel formato *valore dell'operatore FieldName* (ad esempio, `"LastName = 'Smith'"`). È possibile creare clausole composte da singole clausole con l'operatore di concatenazione **AND** (ad esempio, `"LastName = 'Smith' AND FirstName = 'John'"`) o **OR** (ad esempio, `"LastName = 'Smith' OR LastName = 'Jones'"`). Per le stringhe di criteri, usare le linee guida seguenti:
+La stringa di criteri è costituita da clausole nel formato *FieldName-operator-value* (ad esempio, `"LastName = 'Smith'"`). È possibile creare clausole composte concatenando singole clausole con **e** (ad `"LastName = 'Smith' AND FirstName = 'John'"`esempio,) o **o** (ad `"LastName = 'Smith' OR LastName = 'Jones'"`esempio,). Per le stringhe dei criteri, attenersi alle linee guida seguenti:
 
--   *FieldName* deve essere un nome di campo valido dal **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome nelle parentesi quadre.  
+-   *FieldName* deve essere un nome di campo valido del **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   Operatore deve essere uno dei seguenti: \<, >, \<=, > =, <>, =, o **, ad esempio**.  
+-   L'operatore deve essere uno dei seguenti: \<, >, \<=, >=,  <>, = o **like**.  
   
--   Valore è quello con cui si confronteranno i valori di campo (ad esempio, 'Smith', #, #8/24/95 12,345 o $50,00). Usare le virgolette singole con segni di cancelletto (#) con date e stringhe. Per i numeri, è possibile utilizzare la notazione scientifica i separatori decimali e simboli del dollaro. Se l'operatore **, ad esempio**, valore possa usare caratteri jolly. Solo l'asterisco (*) e segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere nella stringa. Valore non può essere null.  
+-   Value è il valore con cui si confronteranno i valori dei campi (ad esempio,' Smith ', #8/24/95 #, 12,345 o $50,00). Usare le virgolette singole con stringhe e segni di cancelletto (#) con date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se l'operatore è **simile a**, il valore può usare caratteri jolly. Solo l'asterisco (*) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il valore non può essere null.  
   
 > [!NOTE]
->  Per includere le virgolette singole (') nel valore del filtro, usare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa con segni di cancelletto (#). Ad esempio, per filtrare '1', la stringa di criteri deve essere `"col1 = #'1'#"`.  
+>  Per includere virgolette singole (') nel valore del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su Malley, `"col1 = 'O''Malley'"`la stringa di criteri deve essere. Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa con i segni di cancelletto (#). Ad esempio, per applicare un filtro su "1", la stringa di `"col1 = #'1'#"`criteri deve essere.  
   
--   Non vi è alcuna priorità tra AND e o. Le clausole possono essere raggruppate all'interno delle parentesi. Tuttavia, non è possibile raggruppare le clausole unite mediante l'operatore OR e quindi aggiungere il gruppo a un'altra clausola con l'operatore AND, come nel frammento di codice seguente:  
+-   Non esiste alcuna precedenza tra AND e OR. Le clausole possono essere raggruppate tra parentesi. Tuttavia, non è possibile raggruppare le clausole unite da un oggetto o, quindi unire il gruppo a un'altra clausola con e, come nel frammento di codice seguente:  
  `(LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'`  
   
--   In alternativa, è possibile creare il filtro seguente:  
+-   Al contrario, è necessario creare questo filtro come  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In un **, ad esempio** clausola, è possibile usare un carattere jolly all'inizio e alla fine del modello. Ad esempio, è possibile usare `LastName Like '*mit*'`. O con **, ad esempio** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio `LastName Like 'Smit*'`.  
+-   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. Ad esempio, è possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio: `LastName Like 'Smit*'`.  
   
- Le costanti del filtro rendono più semplice risolvere singoli record conflitti durante la modalità di aggiornamento batch in quanto consente di visualizzare, ad esempio, solo i record che sono stati interessati durante l'ultima [metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) chiamata al metodo.  
+ Le costanti di filtro semplificano la risoluzione dei singoli conflitti di record durante la modalità di aggiornamento batch consentendo di visualizzare, ad esempio, solo i record interessati durante l'ultima chiamata al metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
-Impostando il **filtro** proprietà stessa potrebbe non riuscire a causa di un conflitto con i dati sottostanti. Ad esempio, questo errore può verificarsi quando un record è già stato eliminato da un altro utente. In tal caso, il provider restituisce avvisi per i [raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta, ma non arrestano l'esecuzione del programma. Solo se sono presenti conflitti in tutti i record richiesti, si verifica un errore in fase di esecuzione. Usare la [proprietà Status (Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per individuare i record con conflitti.  
+L'impostazione della proprietà **Filter** potrebbe avere esito negativo a causa di un conflitto con i dati sottostanti. Questo errore può verificarsi, ad esempio, quando un record è già stato eliminato da un altro utente. In tal caso, il provider restituisce avvisi alla raccolta [Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , ma non interrompe l'esecuzione del programma. Un errore in fase di esecuzione si verifica solo se sono presenti conflitti in tutti i record richiesti. Utilizzare la proprietà [Status (recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) per individuare i record con conflitti.  
   
-Impostando il **filtro** proprietà in una stringa di lunghezza zero ("") ha lo stesso effetto utilizzando il **adFilterNone** costante.
+L'impostazione della proprietà **Filter** su una stringa di lunghezza zero ("") ha lo stesso effetto dell'utilizzo della costante **adFilterNone** .
   
-Ogni volta che il **filtro** è impostata, sposta la posizione corrente per il primo record in subset filtrato dei record nelle **Recordset**. Analogamente, quando la **filtro** proprietà è deselezionata, la posizione del record corrente viene spostato sul primo record nelle **Recordset**.
+Ogni volta che la proprietà **Filter** è impostata, la posizione corrente del record viene spostata sul primo record del subset filtrato di record nel **Recordset**. Analogamente, quando la proprietà **Filter** viene deselezionata, la posizione corrente del record viene spostata sul primo record del **Recordset**.
 
-Si supponga che un **Recordset** viene applicato un filtro basato su un campo di un tipo variant, ad esempio il tipo sql_variant. Un errore (DISP_E_TYPEMISMATCH o 80020005) si verifica quando i sottotipi dei valori di campo e il filtro utilizzati nella stringa di criteri non corrispondono. Si supponga ad esempio:
+Si supponga che un **Recordset** venga filtrato in base a un campo di un tipo Variant, ad esempio il tipo sql_variant. Si verifica un errore (DISP_E_TYPEMISMATCH o 80020005) quando i sottotipi del campo e i valori di filtro utilizzati nella stringa dei criteri non corrispondono. Si supponga, ad esempio, che:
 
-- Oggetto **Recordset** oggetto (rs) contiene una colonna (C) di tipo sql_variant.
-- E un campo di questo articolo è stato assegnato un valore pari a 1 del tipo I4. La stringa di criteri è impostata su `rs.Filter = "C='A'"` sul campo.
+- Un oggetto **Recordset** (RS) contiene una colonna (C) del tipo di sql_variant.
+- A un campo di questa colonna è stato assegnato il valore 1 del tipo i4. La stringa dei criteri è impostata `rs.Filter = "C='A'"` su nel campo.
 
-Questa configurazione genera l'errore durante la fase di esecuzione. Tuttavia, `rs.Filter = "C=2"` applicato sullo stesso campo non produrrà un errore. E il campo è escludere tramite filtro i set di record corrente.
+Questa configurazione genera l'errore in fase di esecuzione. Tuttavia, `rs.Filter = "C=2"` applicato nello stesso campo non verrà generato alcun errore. E il campo viene escluso dal set di record corrente.
 
-Vedere le [proprietà Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per una spiegazione dei valori di segnalibro da cui è possibile compilare una matrice da usare con la proprietà di filtro.
+Per una spiegazione dei valori di segnalibro da cui è possibile compilare una matrice da usare con la proprietà Filter, vedere la proprietà [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) .
 
-Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un persistente **Recordset**. Un esempio di una stringa di criteri è `OrderDate > '12/31/1999'`. I filtri creati con una matrice di segnalibri o usando un valore compreso il **FilterGroupEnum**, non influiscono sul contenuto della classe resa persistente **Recordset**. Queste regole si applicano a Recordset creato con cursori sul lato client o lato server.
+Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un **Recordset**salvato in modo permanente. Un esempio di stringa di criteri è `OrderDate > '12/31/1999'`. I filtri creati con una matrice di segnalibri o con un valore di **FilterGroupEnum**non influiscono sul contenuto del **Recordset**salvato in modo permanente. Queste regole si applicano ai recordset creati con cursori sul lato client o sul lato server.
   
 > [!NOTE]
->  Quando il flag adFilterPendingRecords si applica a un filtrato e modificata **Recordset** in modalità di aggiornamento batch, il risultante **Recordset** è vuoto se il filtro è basato sul campo di chiave di un chiave singola tabella e la modifica è stata apportata ai valori di campo chiave. I risultanti **Recordset** sarà non vuoto se viene soddisfatta una delle istruzioni seguenti:  
+>  Quando si applica il flag adFilterPendingRecords a un **Recordset** filtrato e modificato in modalità di aggiornamento batch, il **Recordset** risultante è vuoto se il filtro è basato sul campo chiave di una tabella a chiave singola ed è stata apportata la modifica ai valori dei campi chiave. Il **Recordset** risultante non sarà vuoto se si verifica una delle seguenti istruzioni:  
   
--   Il filtro è basato sui campi non chiave in una tabella di chiave singola.  
+-   Il filtro è basato su campi non chiave in una tabella a chiave singola.  
   
--   Il filtro è basato su tutti i campi in una tabella a più chiavi.  
+-   Il filtro è basato su tutti i campi in una tabella con più chiavi.  
   
--   Sono state apportate modifiche nei campi non chiave in una tabella di chiave singola.  
+-   Sono state apportate modifiche ai campi non chiave in una tabella a chiave singola.  
   
--   Sono state apportate modifiche su tutti i campi in una tabella a più chiavi.  
+-   Sono state apportate modifiche a tutti i campi in una tabella con più chiavi.  
   
-Nella tabella seguente sono riepilogati gli effetti delle **adFilterPendingRecords** in diverse combinazioni di filtri e le modifiche. La colonna a sinistra mostra le modifiche possibili. È possibile apportare modifiche in uno qualsiasi dei campi non chiave, il campo chiave in una tabella di chiave singola, o in uno qualsiasi dei campi chiave in una tabella a più chiavi. La prima riga Mostra il criterio di filtro. Filtro può essere basato su uno dei campi non chiave, il campo chiave in una tabella di chiave singola, o uno qualsiasi dei campi chiave in una tabella a più chiavi. Le celle intersecate mostrano i risultati. Oggetto **+** segno significa che tale applicazione **adFilterPendingRecords** comporterà una non vuota **Recordset**. Oggetto **-** meno (-) indica che un oggetto vuoto **Recordset**.  
+Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtro e modifiche. La colonna sinistra mostra le possibili modifiche. È possibile apportare modifiche in uno qualsiasi dei campi non con chiave, nel campo chiave di una tabella a chiave singola o in uno qualsiasi dei campi chiave di una tabella con più chiavi. La riga superiore mostra il criterio di filtro. I filtri possono essere basati su uno qualsiasi dei campi non con chiave, il campo chiave in una tabella a chiave singola o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle di intersezione mostrano i risultati. Un **+** segno più significa che l'applicazione di **AdFilterPendingRecords** restituisce un **Recordset**non vuoto. Un **-** segno meno indica un **Recordset**vuoto.  
   
-||Chiavi non|Singola chiave|Più chiavi|
+||Non chiavi|Chiave singola|Più chiavi|
 |-|--------------|----------------|-------------------|
-|**Chiavi non**|+|+|+|
-|**Singola chiave**|+|-|N/D|
+|**Non chiavi**|+|+|+|
+|**Chiave singola**|+|-|N/D|
 |**Più chiavi**|+|N/D|+|
 |||||
   
@@ -103,7 +103,7 @@ Nella tabella seguente sono riepilogati gli effetti delle **adFilterPendingRecor
   
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di proprietà RecordCount (VB) e di filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[esempio di proprietà RecordCount (VC + +) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Ottimizzare proprietà dinamica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Proprietà Filter e RecordCount esempio (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
+[Filter e proprietà RecordCount esempio (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
+[metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)
+[optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

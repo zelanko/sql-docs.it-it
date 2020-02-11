@@ -15,23 +15,23 @@ ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925019"
 ---
 # <a name="immediate-mode"></a>Modalità immediata
-Modalità immediata è attiva quando la **LockType** è impostata su **adLockOptimistic** oppure **adLockPessimistic**. In modalità immediata, propagazione delle modifiche a un record nell'origine dati, non appena si dichiara il lavoro in una riga completa chiamando il **Update** (metodo).  
+La modalità immediata è attiva quando la proprietà **LockType** è impostata su **adLockOptimistic** o **adLockPessimistic**. In modalità immediata le modifiche apportate a un record vengono propagate nell'origine dati non appena si dichiara il lavoro su una riga completa chiamando il metodo **Update** .  
   
-## <a name="calling-update"></a>Chiamata al metodo Update  
- Se si sposta dal record si aggiunge o modifica prima di chiamare il **Update** metodo, verrà automaticamente chiamato **Update** per salvare le modifiche. È necessario chiamare il **CancelUpdate** metodo prima dello spostamento se si desidera annullare eventuali modifiche apportate al record corrente oppure eliminare il record appena aggiunto.  
+## <a name="calling-update"></a>Chiamata di Update  
+ Se si passa dal record che si aggiunge o si modifica prima di chiamare il metodo **Update** , ADO chiamerà automaticamente **Update** per salvare le modifiche. È necessario chiamare il metodo **CancelUpdate** prima della navigazione se si desidera annullare le modifiche apportate al record corrente o eliminare un record appena aggiunto.  
   
- Il record corrente rimane invariato dopo aver chiamato il **Update** (metodo).  
+ Il record corrente rimane aggiornato dopo la chiamata al metodo **Update** .  
   
-## <a name="cancelupdate"></a>Metodo CancelUpdate  
- Usare la **CancelUpdate** metodo per annullare le modifiche apportate alla riga corrente oppure per eliminare una riga appena aggiunta. Non è possibile annullare le modifiche apportate alla riga corrente o a una nuova riga dopo la chiamata il **Update** metodo, a meno che le modifiche siano parte di una transazione di cui è possibile eseguire il rollback con la **RollbackTrans** metodo o in parte un aggiornamento batch. Nel caso di un aggiornamento batch, è possibile annullare il **aggiornare** con il **CancelUpdate** oppure **CancelBatch** (metodo).  
+## <a name="cancelupdate"></a>CancelUpdate  
+ Utilizzare il metodo **CancelUpdate** per annullare tutte le modifiche apportate alla riga corrente o per eliminare una nuova riga aggiunta. Non è possibile annullare le modifiche apportate alla riga corrente o a una nuova riga dopo aver chiamato il metodo **Update** , a meno che le modifiche non facciano parte di una transazione di cui è possibile eseguire il rollback con il metodo **RollbackTrans** o parte di un aggiornamento batch. Nel caso di un aggiornamento batch, è possibile annullare l' **aggiornamento** con il metodo **CancelUpdate** o **CancelBatch** .  
   
- Se si aggiunge una nuova riga quando si chiama il **CancelUpdate** metodo, la riga corrente diventa la riga corrente prima di **AddNew** chiamare.  
+ Se si aggiunge una nuova riga quando si chiama il metodo **CancelUpdate** , la riga corrente diventa la riga corrente prima della chiamata a **AddNew** .  
   
- Se non si hanno modificato la riga corrente o aggiunta una nuova riga, la chiamata di **CancelUpdate** metodo genera un errore.
+ Se la riga corrente non è stata modificata o è stata aggiunta una nuova riga, la chiamata del metodo **CancelUpdate** genera un errore.

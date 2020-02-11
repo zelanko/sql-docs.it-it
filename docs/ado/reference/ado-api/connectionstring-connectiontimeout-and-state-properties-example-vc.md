@@ -17,17 +17,17 @@ ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919452"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Esempio ConnectionString, ConnectionTimeout e proprietà State (VC + +)
-Questo esempio illustra diversi modi per usare la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) per aprire una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Viene inoltre utilizzata la [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) proprietà per impostare un periodo di timeout della connessione e il [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà per controllare lo stato delle connessioni. La funzione GetState è necessaria per eseguire questa procedura.  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Esempio di proprietà ConnectionString, ConnectionTimeout e state (VC + +)
+In questo esempio vengono illustrate diverse modalità di utilizzo della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) per aprire un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . USA inoltre la proprietà [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) per impostare un periodo di timeout della connessione e la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) per verificare lo stato delle connessioni. Per eseguire questa procedura, è necessaria la funzione GetState.  
   
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.  
   
 ```  
 // ConnectionStringSampleCpp.cpp  

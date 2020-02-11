@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creare un report grafico rapido offline (Generatore report) | Microsoft Docs'
+title: 'Tutorial: Create a Quick Chart Report Offline (Report Builder) (Esercitazione: Creare un report grafico rapido offline (Generatore report)) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f345eaa2a51b5e6789f2a03968f8a1e68b12519a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107565"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
-  In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Entrambi i metodi presentano stesso risultato: un grafico a torta simile a quello nell'illustrazione seguente:  
+  In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Entrambi i metodi hanno lo stesso risultato, ovvero un grafico a torta simile a quello illustrato nella figura seguente:  
   
- ![Consente di visualizzare "Mio primo grafico a torta" in esecuzione](../media/rs-my1stpierunview.gif "My primo grafico a torta nella visualizzazione Esegui")  
+ !["Primo grafico a torta" nella visualizzazione Esegui](../media/rs-my1stpierunview.gif "Primo grafico a torta in Run View")  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Se si utilizzano dati XML o una query [!INCLUDE[tsql](../../../includes/tsql-md.md)], è necessario avere accesso a Generatore report di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. È possibile eseguire la versione autonoma o la versione ClickOnce disponibile in Gestione report o in un sito di SharePoint. Per le versioni ClickOnce, l'unica differenza riguarda il primo passaggio, ovvero l'apertura di Generatore report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Se si utilizzano dati XML o una query [!INCLUDE[tsql](../../../includes/tsql-md.md)], è necessario avere accesso a Generatore report di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. È possibile eseguire la versione autonoma o la versione ClickOnce disponibile in Gestione report o in un sito di SharePoint. Per le versioni ClickOnce, l'unica differenza riguarda il primo passaggio, ovvero l'apertura di Generatore report. Per ulteriori informazioni, vedere [installazione, disinstallazione e supporto Generatore report](../install-uninstall-and-report-builder-support.md).  
   
-##  <a name="TwoWays"></a> Due modi per eseguire questa esercitazione  
+##  <a name="TwoWays"></a>Due modi per eseguire questa esercitazione  
   
 -   [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
@@ -50,22 +50,22 @@ ms.locfileid: "66107565"
  [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)  
   
 ## <a name="also-in-this-article"></a>Ulteriore contenuto dell'articolo  
- [Dopo aver eseguito la procedura guidata](#AfterWizard)  
+ [Dopo l'esecuzione della procedura guidata](#AfterWizard)  
   
- [Quali sono le novità](#WhatsNext)  
+ [Passaggi successivi](#WhatsNext)  
   
-##  <a name="CreatePieChartXML"></a> Creazione del grafico a torta con dati XML  
+##  <a name="CreatePieChartXML"></a>Creazione del grafico a torta con dati XML  
   
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Per creare il grafico a torta con dati XML  
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
+     Verrà visualizzata la finestra di dialogo **Introduzione** .  
   
     > [!NOTE]  
-    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
+    >  Se la finestra di dialogo **Introduzione** non viene visualizzata, dal pulsante **Generatore report** fare clic su **nuovo**.  
   
-2.  Nel riquadro sinistro, verificare che **Report** sia selezionata.  
+2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **report** .  
   
 3.  Nel riquadro destro fare clic su **Creazione guidata grafico**, quindi scegliere **Crea**.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "66107565"
   
 6.  È possibile assegnare qualsiasi nome a un'origine dati. Nella casella **Nome** digitare **Grafico a torta**.  
   
-7.  Nel **Seleziona tipo di connessione** fare clic su **XML.**  
+7.  Nella casella **Seleziona tipo di connessione** fare clic su **XML.**  
   
-8.  Fare clic sulla scheda **Credenziali**, selezionare **Use current Windows user (Usa utente di Windows corrente). Potrebbe essere necessaria la delega Kerberos**, quindi fare clic su **OK**.  
+8.  Fare clic sulla scheda **credenziali** , selezionare **USA utente di Windows corrente. Potrebbe essere richiesta la delega Kerberos**, quindi fare clic su **OK**.  
   
 9. Nella pagina **Scegliere una connessione a un'origine dei dati** fare clic su **Grafico a torta**, quindi su **Avanti**.  
   
-10. Copiare il testo seguente e incollarlo nella casella grande al centro della **Progettazione query** pagina.  
+10. Copiare il testo seguente e incollarlo nella casella grande al centro della pagina **Progetta query** .  
   
     ```  
     <Query>  
@@ -110,9 +110,9 @@ ms.locfileid: "66107565"
     </Query>  
     ```  
   
-11. (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati su cui si baserà il grafico.  
+11. (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-12. Scegliere **Avanti**.  
+12. Fare clic su **Avanti**.  
   
 13. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
@@ -122,23 +122,23 @@ ms.locfileid: "66107565"
   
 15. Trascinare il campo **FullName** dalla casella **Campi disponibili** alla casella **Categorie**. In alternativa è possibile fare doppio clic sul campo per spostarlo nella casella **Categorie**. Al termine fare clic su **Avanti**.  
   
-16. Nel **scegliere uno stile** pagina **Oceano** è selezionata per impostazione predefinita. Fare clic sugli altri stili per visualizzarne l'aspetto.  
+16. Per impostazione predefinita, nella pagina **Scegli uno stile** è selezionata l'opzione **oceano** . Fare clic sugli altri stili per visualizzarne l'aspetto.  
   
-17. Scegliere **Fine**.  
+17. Fare clic su **Fine**.  
   
      Osservare ora il nuovo report grafico a torta nell'area di progettazione. Gli elementi visualizzati sono esemplificativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
 18. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
+ ![Icona freccia usata con il collegamento Torna](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") all'inizio [all'inizio](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Creazione del grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
+##  <a name="CreatePieQueryData"></a>Creazione del grafico a torta con [!INCLUDE[tsql](../../../includes/tsql-md.md)] una query  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Per creare il grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)] contenente dati  
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-2.  Nel **nuovo report o set di dati** finestra di dialogo, verificare che **Report** sia selezionata nel riquadro sinistro.  
+2.  Nella finestra di dialogo **nuovo report o set di dati** verificare che il **report** sia selezionato nel riquadro sinistro.  
   
 3.  Nel riquadro destro fare clic su **Creazione guidata grafico**, quindi scegliere **Crea**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66107565"
     > [!NOTE]  
     >  L'origine dati scelta non ha importanza purché si disponga delle autorizzazioni appropriate. Non verranno recuperati dati dall'origine dati. Per altre informazioni, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md).  
   
-6.  Nella pagina **Progetta query** fare clic su **Modifica come testo**.  
+6.  Nella pagina **Progetta query** fare clic su **modifica come testo**.  
   
 7.  Incollare la query seguente nel relativo riquadro:  
   
@@ -161,9 +161,9 @@ ms.locfileid: "66107565"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 10. Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**.  
   
@@ -175,15 +175,15 @@ ms.locfileid: "66107565"
   
 13. Per impostazione predefinita, nella pagina **Scegliere uno stile** è selezionato lo stile Oceano. Fare clic sugli altri stili per visualizzarne l'aspetto.  
   
-14. Scegliere **Fine**.  
+14. Fare clic su **Fine**.  
   
      Osservare ora il nuovo report grafico a torta nell'area di progettazione. Gli elementi visualizzati sono esemplificativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
 15. Per visualizzare il grafico a torta effettivo, fare clic su **Esegui** nella scheda **Home** della barra multifunzione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
+ ![Icona freccia usata con il collegamento Torna](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") all'inizio [all'inizio](#TwoWays)  
   
-##  <a name="AfterWizard"></a> Al termine della procedura guidata  
+##  <a name="AfterWizard"></a>Dopo l'esecuzione della procedura guidata  
  Dopo aver terminato la creazione del report del grafico a torta, è possibile modificarlo nel modo desiderato. Nella scheda **Esegui** della barra multifunzione fare clic su **Progettazione**per continuare a modificarlo.  
   
 ### <a name="make-the-chart-bigger"></a>Ingrandire il grafico  
@@ -196,31 +196,32 @@ ms.locfileid: "66107565"
   
 ##### <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>Per visualizzare valori in percentuale come etichette in un grafico a torta  
   
-1.  Fare clic sul grafico a torta e selezionare **Mostra etichette dati**. Le etichette dati dovrebbero apparire in ogni sezione del grafico a torta.  
+1.  Fare clic con il pulsante destro del mouse sul grafico a torta e scegliere **Mostra etichette dati**. Le etichette dati dovrebbero apparire in ogni sezione del grafico a torta.  
   
-2.  Fare clic su etichette e scegliere **proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
+2.  Fare clic con il pulsante destro del mouse sulle etichette e scegliere **Proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
   
-3.  Tipo di `#PERCENT{P0}` per il **dati etichetta** opzione.  
+3.  Digitare `#PERCENT{P0}` per l'opzione **dati etichetta** .  
   
-     Il testo `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Ne sono disponibili anche diverse altre.  
+     Il testo `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. 
+  `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Ne sono disponibili anche diverse altre.  
   
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
+ ![Icona freccia usata con il collegamento Torna](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") all'inizio [all'inizio](#TwoWays)  
   
-##  <a name="WhatsNext"></a> Operazioni successive  
- Al termine della creazione del primo report in Generatore report, è possibile provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire Generatore Report, è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio database, con un *stringa di connessione*, che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
+##  <a name="WhatsNext"></a>Passaggi successivi  
+ Al termine della creazione del primo report in Generatore report, è possibile provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire Generatore report, è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio i database, con una *stringa di connessione*che connette effettivamente all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
  Per eseguire le altre esercitazioni, è necessario disporre del nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   
- Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Per altre informazioni, vedere [concetti di creazione di Report &#40;Generatore Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Per altre informazioni, vedere [pianificazione di un Report &#40;Generatore Report&#41;](../report-design/planning-a-report-report-builder.md).  
+ Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Per ulteriori informazioni, vedere [concetti relativi alla creazione di Report &#40;Generatore report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Per ulteriori informazioni, vedere [pianificazione di un Report &#40;Generatore report&#41;](../report-design/planning-a-report-report-builder.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
+ ![Icona freccia usata con il collegamento Torna](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") all'inizio [all'inizio](#TwoWays)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
+ [Esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

@@ -16,27 +16,27 @@ ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b4125d0ecb1f15fab00119a8ef4ed361b6db72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087744"
 ---
 # <a name="unicode-applications"></a>Applicazioni Unicode
-È possibile ricompilare un'applicazione come un'applicazione Unicode in uno dei due modi:  
+È possibile ricompilare un'applicazione come applicazione Unicode in uno dei due modi seguenti:  
   
--   Includere Unicode **#define** contenute nel file di intestazione sqlucode nell'applicazione.  
+-   Includere il **#define** Unicode contenuto nel file di intestazione Sqlucode. h nell'applicazione.  
   
--   Compilare l'applicazione con l'opzione del compilatore Unicode. (Questa opzione sarà diversa per diversi compilatori.)  
+-   Compilare l'applicazione con l'opzione Unicode del compilatore. Questa opzione sarà diversa per i diversi compilatori.  
   
- Per convertire un'applicazione ANSI in Unicode, scrivere l'applicazione per archiviare e passare i dati Unicode. Inoltre, le chiamate alle funzioni che supportano gli argomenti SQLPOINTER devono essere convertite per utilizzare il numero di byte.  
+ Per convertire un'applicazione ANSI in un'applicazione Unicode, scrivere l'applicazione in modo da archiviare e passare i dati Unicode. Inoltre, le chiamate alle funzioni che supportano gli argomenti SQLPOINTER devono essere convertite in modo da utilizzare il conteggio di byte.  
   
- Dopo che un'applicazione viene compilata come un'applicazione Unicode, se l'applicazione chiama una funzione API ODBC (senza un suffisso), gestione Driver riconosce l'applicazione come un'applicazione Unicode e converte la chiamata di funzione a una funzione Unicode (con il  *W* suffisso) se il driver sottostante supporta Unicode. Quando un'applicazione ANSI esegue una funzione chiamate senza un suffisso, gestione Driver lo converte in ANSI se il driver sottostante supporta ANSI. Se l'applicazione e il driver supporta la stessa codifica dei caratteri, Gestione driver passa le chiamate tramite il driver (con alcune eccezioni per le applicazioni ANSI).  
+ Quando un'applicazione viene compilata come applicazione Unicode, se l'applicazione chiama una funzione API ODBC (senza suffisso), gestione driver riconosce l'applicazione come applicazione Unicode e converte la chiamata di funzione in una funzione Unicode (con il suffisso *W* ) se il driver sottostante supporta Unicode. Quando un'applicazione ANSI esegue una chiamata di funzione senza un suffisso, gestione driver la converte in ANSI se il driver sottostante supporta ANSI. Se sia l'applicazione che il driver supportano la stessa codifica dei caratteri, gestione driver passa le chiamate al driver (con determinate eccezioni per le applicazioni ANSI).  
   
- Un'applicazione può chiamare entrambe le funzioni Unicode (con il *W* suffisso) e funzioni ANSI (con o senza il *oggetto* suffisso). È possibile combinare le chiamate di funzione ANSI e Unicode. Se viene utilizzata la libreria di cursori, tuttavia, le chiamate di funzione Unicode e ANSI non possono essere combinate. La libreria di cursori è un valore Unicode o ANSI, non usare una combinazione.  
+ Un'applicazione può chiamare sia funzioni Unicode (con il suffisso *W* ) che funzioni ANSI (con o senza il suffisso *a* ). Le chiamate di funzione Unicode e ANSI possono essere combinate. Se è necessario utilizzare la libreria di cursori, tuttavia, non è possibile combinare le chiamate di funzione Unicode e ANSI. La libreria di cursori può essere Unicode o ANSI, non una combinazione.  
   
- Un'applicazione può essere scritta in modo che può essere compilato come un'applicazione Unicode o come applicazioni ANSI. In questo caso, i tipi di dati carattere possono essere dichiarati come SQL_C_TCHAR. Si tratta di una macro che inserisce SQL_C_WCHAR se l'applicazione viene compilata come un'applicazione Unicode oppure ne inserisce SQL_C_CHAR se viene compilato come applicazioni ANSI. Il programmatore di applicazioni deve essere un'attenta delle funzioni che accettano SQLPOINTER come argomento, poiché le dimensioni dell'argomento length cambierà (per i tipi di dati stringa) a seconda che l'applicazione sia ANSI o Unicode.  
+ È possibile scrivere un'applicazione in modo che possa essere compilata come applicazione Unicode o come applicazione ANSI. In questo caso, i tipi di dati character possono essere dichiarati come SQL_C_TCHAR. Si tratta di una macro che inserisce SQL_C_WCHAR se l'applicazione viene compilata come applicazione Unicode o inserisce SQL_C_CHAR se viene compilata come applicazione ANSI. Il programmatore di applicazioni deve prestare attenzione alle funzioni che accettano SQLPOINTER come argomento, perché la dimensione dell'argomento length cambierà (per i tipi di dati stringa) a seconda che l'applicazione sia ANSI o Unicode.  
   
- Una funzione può essere chiamata in uno dei tre modi: come una chiamata di funzione solo Unicode (con il *W* suffisso), come una chiamata di funzione solo ANSI (con il *oggetto* suffisso), o come chiamata di funzione ODBC senza alcun suffisso. Gli argomenti per le tre forme di una funzione sono identici. Solo le funzioni con SQLCHAR \* argomenti o argomenti SQLPOINTER che puntano alle stringhe richiedono form Unicode e ANSI. Per le funzioni con argomenti che possono essere dichiarati come tipo di carattere, ad esempio **SQLBindCol** oppure **SQLGetData** (che non hanno formati ANSI e Unicode), l'argomento può essere dichiarato come tipo di Unicode, ANSI digitare oppure nel caso di C argomento, la macro SQL_C_TCHAR. Per altre informazioni, vedere [dati Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
+ Una funzione può essere chiamata in uno dei tre modi seguenti: come chiamata di funzione solo Unicode (con il suffisso *W* ), come chiamata di funzione solo ANSI (con il suffisso *a* ) o come chiamata di funzione ODBC senza suffisso. Gli argomenti per le tre forme di una funzione sono identici. Solo le funzioni con argomenti SQLCHAR \* o argomenti SQLPOINTER che puntano a stringhe richiedono form Unicode e ANSI. Per le funzioni con argomenti che possono essere dichiarati come tipo di carattere, ad esempio **SQLBindCol** o **SQLGetData** (che non hanno form Unicode e ANSI), l'argomento può essere dichiarato come tipo Unicode, tipo ANSI o nel caso di un argomento di tipo C, la SQL_C_TCHAR macro. Per ulteriori informazioni, vedere [dati Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
- Un'applicazione può essere scritta come un'applicazione Unicode, anche se non sono disponibili per farli funzionare con i driver Unicode. Gestione Driver verrà eseguito il mapping tipi di dati e le funzioni Unicode ad ANSI. Esistono alcune restrizioni per la versione Unicode ai mapping ANSI che possono essere eseguite. L'esistenza di un driver di Unicode per l'applicazione di Unicode lavorare con comporterà prestazioni migliori e rimuoverà le limitazioni intrinseche in Unicode per il mapping ANSI.
+ Un'applicazione può essere scritta come applicazione Unicode anche se non sono disponibili driver Unicode per l'utilizzo. Gestione driver eseguirà il mapping di funzioni e tipi di dati Unicode a ANSI. Esistono alcune restrizioni per i mapping Unicode ai mapping ANSI che è possibile eseguire. L'esistenza di un driver Unicode per l'applicazione Unicode con può comportare prestazioni migliori e rimuoverà le restrizioni inerenti i mapping Unicode ai mapping ANSI.

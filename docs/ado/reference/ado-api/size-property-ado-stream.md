@@ -1,5 +1,5 @@
 ---
-title: Proprietà (ADO Stream) Size | Microsoft Docs
+title: Proprietà Size (flusso ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916928"
 ---
 # <a name="size-property-ado-stream"></a>Proprietà Size (Stream - ADO)
 Indica le dimensioni del flusso in numero di byte.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **lungo** valore che specifica le dimensioni del flusso in numero di byte. Il valore predefinito è la dimensione di flusso, oppure -1 se la dimensione del flusso non è noto.  
+ Restituisce un valore **Long** che specifica le dimensioni del flusso in numero di byte. Il valore predefinito corrisponde alla dimensione del flusso oppure-1 se la dimensione del flusso non è nota.  
   
-## <a name="remarks"></a>Note  
- **Le dimensioni** può essere utilizzata solo con open [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti.  
+## <a name="remarks"></a>Osservazioni  
+ Le **dimensioni** possono essere utilizzate solo con gli oggetti [flusso](../../../ado/reference/ado-api/stream-object-ado.md) aperti.  
   
 > [!NOTE]
->  Qualsiasi numero di bit può essere archiviato un **Stream** oggetto, limitato solo dalle risorse di sistema. Se il **Stream** contiene più bit che può essere rappresentato da un **lungo** valore **dimensioni** viene troncato e pertanto non rappresentare accuratamente la lunghezza del **Stream**.  
+>  Un numero qualsiasi di bit può essere archiviato in un oggetto **flusso** , limitato solo dalle risorse di sistema. Se il **flusso** contiene più bit di quelli che possono essere rappresentati da un valore **Long** , le **dimensioni** vengono troncate e pertanto non rappresentano accuratamente la lunghezza del **flusso**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà Size (parametro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Proprietà Size (Parameter - ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

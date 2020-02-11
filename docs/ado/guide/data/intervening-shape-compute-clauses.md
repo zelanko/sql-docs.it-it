@@ -1,5 +1,5 @@
 ---
-title: Clausole COMPUTE di Shape coinvolti | Microsoft Docs
+title: Clausole COMPUTE di forme coinvolte | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924957"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Clausole COMPUTE intermedie di Shape
-È possibile incorporare uno o più clausole COMPUTE tra padre e figlio in un comando di forma con parametri, come nell'esempio seguente:  
+È possibile incorporare una o più clausole COMPUTE tra l'elemento padre e l'elemento figlio in un comando Shape con parametri, come nell'esempio seguente:  
   
 ```  
 SHAPE {select au_lname, state from authors} APPEND   
@@ -36,6 +36,6 @@ RELATE state TO PARAMETER 0)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217809"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Conteggio delle righe di una tabella (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63217809"
   
 2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In [Progettazione query e Progettazione viste](visual-database-tools.md) verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
   
-3.  Selezionare  **\* (tutte le colonne)** nel rettangolo che rappresenta la tabella o oggetto con valori di tabella.  
+3.  Selezionare ** \* (tutte le colonne)** nel rettangolo che rappresenta la tabella o l'oggetto con valori di tabella.  
   
      In Progettazione query e Progettazione viste verrà inserito automaticamente il termine **Count** nella colonna **Group By** nel riquadro Criteri e verrà assegnato un alias alla colonna di cui si sta eseguendo il riepilogo. Tale alias generato automaticamente può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63217809"
   
 2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In Progettazione query e Progettazione viste verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
   
-3.  Selezionare  **\*(tutte le colonne)** nel rettangolo che rappresenta la tabella o un oggetto strutturato a tabella.  
+3.  Selezionare ** \*(tutte le colonne)** nel rettangolo che rappresenta la tabella o l'oggetto con struttura di tabella.  
   
      In Progettazione query e Progettazione viste verrà inserito automaticamente il termine **Count** nella colonna **Group By** nel riquadro Criteri e verrà assegnato un alias alla colonna di cui si sta eseguendo il riepilogo. Per creare un'intestazione di colonna più utile nell'output della query, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63217809"
 5.  Consente di eseguire la query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

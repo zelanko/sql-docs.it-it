@@ -15,16 +15,16 @@ ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922996"
 ---
 # <a name="referencing-the-ado-libraries"></a>Riferimenti alle librerie ADO
-La versione più recente di ADO presenta la forma *msado15.dll*. Come vengono compresse le versioni più recenti di ADO MD e ADOX *msadom.dll* e *Msadox*, rispettivamente. Queste librerie vengono installate per impostazione predefinita in *$installDir*, dove *$installDir* è l'acronimo per il percorso della directory in cui la libreria ADO è stata installata nel computer. Per usare le librerie ADO in un'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  
+La versione più recente di ADO viene assemblata come *msado15. dll*. Le versioni più recenti di ADO MD e ADOX vengono assemblate rispettivamente come *msadom. dll* e *msadox. dll*. Per impostazione predefinita, queste librerie vengono installate in *$InstallDir*, dove *$InstallDir* rappresenta il percorso della directory in cui è stata installata la libreria ADO nel computer. Per usare le librerie ADO nell'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  
   
- Di seguito sono indicati i passaggi che è possibile eseguire per fare riferimento a librerie ADO:  
+ Di seguito sono riportati i passaggi che è possibile eseguire per fare riferimento alle librerie ADO:  
   
 -   [In un'applicazione Visual Basic](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   

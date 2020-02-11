@@ -1,5 +1,5 @@
 ---
-title: Elemento proprietà (ADO) | Microsoft Docs
+title: Proprietà Item (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918359"
 ---
 # <a name="item-property-ado"></a>Proprietà Item (ADO)
-Indica un membro specifico di una raccolta, per nome o numero ordinale.  
+Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,16 +62,16 @@ Set object = collection.Item ( Index )
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un riferimento all'oggetto.  
+ Restituisce un riferimento a un oggetto.  
   
 ## <a name="parameters"></a>Parametri  
- *Index*  
- Oggetto **Variant** espressione che restituisce il nome o al numero ordinale di un oggetto in una raccolta.  
+ *Indice*  
+ Espressione **Variant** che restituisce il nome o il numero ordinale di un oggetto in una raccolta.  
   
-## <a name="remarks"></a>Note  
- Usare la **elemento** proprietà per restituire un oggetto specifico in una raccolta. Se **elemento** non è possibile trovare un oggetto nella raccolta corrispondente per il *indice* si verifica un errore di argomento. Inoltre, alcune raccolte non supportano gli oggetti denominati. Per queste raccolte, è necessario usare riferimenti di un numero ordinale.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **Item** per restituire un oggetto specifico in una raccolta. Se **Item** non riesce a trovare un oggetto nella raccolta corrispondente all'argomento *index* , si verificherà un errore. Inoltre, alcune raccolte non supportano gli oggetti denominati; per queste raccolte, è necessario usare i riferimenti numerici ordinali.  
   
- Il **elemento** proprietà la proprietà predefinita per tutte le raccolte; pertanto, sono intercambiabili le forme di sintassi seguente:  
+ La proprietà **Item** è la proprietà predefinita per tutte le raccolte. Pertanto, i seguenti formati di sintassi sono intercambiabili:  
   
 ```  
 collection.Item (Index)  
@@ -82,14 +82,14 @@ collection (Index)
   
 ||||  
 |-|-|-|  
-|[Raccolta Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Raccolta Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta Levels (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
+|[Raccolta Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Raccolta Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Raccolta Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Raccolta di Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Raccolta Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Raccolta Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta Levels (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Esempio di proprietà Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
+ [Esempio della proprietà Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

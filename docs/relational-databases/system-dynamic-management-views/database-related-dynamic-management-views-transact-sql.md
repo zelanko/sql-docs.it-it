@@ -1,5 +1,5 @@
 ---
-title: Database correlati viste a gestione dinamica (Transact-SQL) | Microsoft Docs
+title: Viste a gestione dinamica relative ai database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090883"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Viste a gestione dinamica relative ai database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In questa sezione vengono descritti gli oggetti a gestione dinamica seguenti in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e in alcuni casi nel Database SQL.  
+  In questa sezione vengono descritti gli oggetti a gestione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] dinamica seguenti in e talvolta nel database SQL.  
   
 |||  
 |-|-|  
@@ -36,13 +36,13 @@ ms.locfileid: "68090883"
 |[sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
 
-Univoco al Database SQL o SQL Data Warehouse del DMV sys.   
+La DMV è univoca per il database SQL o SQL Data Warehouse.   
 
 | | | 
 |-|-|  
-|[Sys.dm_db_wait_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
-|[DM db_resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[Sys.dm_db_objects_impacted_on_version_change &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
-|[DM operation_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
+|[sys. dm_db_wait_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys. dm_database_copies &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
+|[sys. dm_db_resource_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys. dm_db_objects_impacted_on_version_change &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
+|[sys. dm_operation_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

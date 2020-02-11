@@ -16,29 +16,29 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920350"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-Specifica un segnalibro che indica dove iniziare l'operazione.  
+Specifica un segnalibro che indica dove deve iniziare l'operazione.  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Inizia in corrispondenza del record corrente.|  
-|**adBookmarkFirst**|1|Inizia in corrispondenza del primo record.|  
+|**adBookmarkFirst**|1|Inizia dal primo record.|  
 |**adBookmarkLast**|2|Inizia dall'ultimo record.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.Bookmark.CURRENT|  
-|AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums. Bookmark. CURRENT|  
+|AdoEnums. Bookmark. FIRST|  
+|AdoEnums. Bookmark. LAST|  
   
 ## <a name="applies-to"></a>Si applica a  
   

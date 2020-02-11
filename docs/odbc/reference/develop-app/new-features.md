@@ -17,24 +17,24 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086337"
 ---
 # <a name="new-features"></a>Nuove funzionalità
-In ODBC è stata introdotta la nuova funzionalità seguente *3.x*. Un database ODBC *3.x* funziona con un database ODBC *2.x* driver non sarà in grado di usare questa funzionalità. ODBC *3.x* gestione Driver non eseguire il mapping di queste funzionalità quando si lavora con un database ODBC *2.x* driver.  
+Le seguenti nuove funzionalità sono state introdotte in ODBC *3. x*. Un'applicazione ODBC *3. x* che utilizza un driver ODBC *2. x* non sarà in grado di utilizzare questa funzionalità. Gestione driver ODBC *3. x* non esegue il mapping di queste funzionalità quando si utilizza un driver ODBC *2. x* .  
   
--   Le funzioni che accettano un descrittore di handle come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, e **SQLCopyDesc**.  
+-   Funzioni che accettano un handle di descrittore come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**e **SQLCopyDesc**.  
   
--   Le funzioni **SQLSetEnvAttr** e **SQLGetEnvAttr**.  
+-   Funzioni **SQLSetEnvAttr** e **SQLGetEnvAttr**.  
   
--   L'uso di **SQLAllocHandle** per allocare un handle di descrittore. (L'uso di **SQLAllocHandle** per allocare gli handle di ambiente, connessione e istruzione è una funzionalità non nuova e duplicate.)  
+-   Utilizzo di **SQLAllocHandle** per allocare un handle del descrittore. (L'utilizzo di **SQLAllocHandle** per allocare gli handle di ambiente, di connessione e di istruzione è duplicato, non nuovo, funzionalità).  
   
--   L'uso di **SQLGetConnectAttr** per ottenere gli attributi di connessione SQL_ATTR_AUTO_IPD. (L'uso di **SQLSetConnectAttr** per impostare, e **SQLGetConnectAttr** per ottenere, altri attributi di connessione è una funzionalità non nuova e duplicate.)  
+-   Utilizzo di **SQLGetConnectAttr** per ottenere gli attributi di connessione SQL_ATTR_AUTO_IPD. (L'uso di **SQLSetConnectAttr** per impostare e **SQLGetConnectAttr** per ottenere, altri attributi di connessione sono duplicati, non nuovi, funzionalità).  
   
--   L'uso di **SQLSetStmtAttr** per impostare, e **SQLGetStmtAttr** per ottenere i seguenti attributi di istruzione. (L'uso di **SQLSetStmtAttr** per impostare, e **SQLGetStmtAttr** per ottenere, altri attributi di istruzione è una funzionalità non nuova e duplicate.)  
+-   L'uso di **SQLSetStmtAttr** per impostare e **SQLGetStmtAttr** per ottenere gli attributi dell'istruzione seguenti. (L'uso di **SQLSetStmtAttr** per impostare e **SQLGetStmtAttr** da ottenere, altri attributi di istruzione sono duplicati, non nuovi, funzionalità).  
   
      SQL_ATTR_APP_ROW_DESC  
   
@@ -66,46 +66,46 @@ In ODBC è stata introdotta la nuova funzionalità seguente *3.x*. Un database O
   
      SQL_ATTR_ROW_ARRAY_SIZE  
   
--   L'uso di **SQLGetStmtAttr** per ottenere i seguenti attributi di istruzione. (L'uso di **SQLGetStmtAttr** per ottenere un'altra istruzione degli attributi è una funzionalità duplicate, non nuove funzionalità.)  
+-   Utilizzo di **SQLGetStmtAttr** per ottenere gli attributi dell'istruzione seguenti. (L'uso di **SQLGetStmtAttr** per ottenere altri attributi di istruzione è una funzionalità duplicata, non una nuova funzionalità).  
   
      SQL_ATTR_IMP_ROW_DESC SQL_ATTR_IMP_PARAM_DESC  
   
--   Uso del tipo di dati di intervallo C, i tipi di dati di intervallo SQL, i tipi di dati BIGINT C e la struttura di data SQL_C_NUMERIC.  
+-   Viene utilizzato il tipo di dati interval C, i tipi di dati interval SQL, i tipi di dati BIGINT C e la struttura dei dati SQL_C_NUMERIC.  
   
--   L'associazione di parametri.  
+-   Associazione di parametri per riga.  
   
--   Offset in base al segnalibro recupera, ad esempio la chiamata **SQLFetchScroll** con un *FetchOrientation* argomento di SQL_FETCH_BOOKMARK e specificando un offset diverso da 0.  
+-   Recupero di segnalibri basati su offset, ad esempio la chiamata a **SQLFetchScroll** con un argomento *FetchOrientation* di SQL_FETCH_BOOKMARK e la specifica di un offset diverso da 0.  
   
--   **SQLFetch** che restituisce la matrice di stato di riga, numero di righe recuperate, il recupero di più righe, combinare le chiamate con **SQLFetchScroll**e combinare le chiamate con **SQLBulkOperations** o **SQLSetPos**. Per altre informazioni, vedere la sezione successiva [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti per le applicazioni ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+-   **SQLFetch** che restituisce la matrice di stato della riga, il numero di righe recuperate, il recupero di più righe, la combinazione di chiamate con **SQLFetchScroll**e la combinazione di chiamate con **SQLBulkOperations** o **SQLSetPos**. Per ulteriori informazioni, vedere la sezione successiva, [bloccare i cursori, i cursori scorrevoli e la compatibilità con le versioni precedenti per le applicazioni ODBC 3. x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
 -   Parametri denominati.  
   
--   Uno qualsiasi dei ODBC *3.x*-specifici **SQLGetInfo** opzioni. (Se un database ODBC *3.x* funziona con un database ODBC *2.x* driver chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1, che sono sostituiti ODBC diversi *2.x* tipi di informazioni, alcune informazioni potrebbero essere affidabile, ma alcuni potrebbero non essere affidabili. Per altre informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Tutte le opzioni **SQLGetInfo** specifiche di ODBC *3. x*. Se un'applicazione ODBC *3. x* che utilizza un driver ODBC *2. x* chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1, che hanno sostituito diversi tipi di informazioni ODBC *2. x* , alcune informazioni potrebbero essere affidabili, ma alcune potrebbero non essere affidabili. Per ulteriori informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
--   Associare gli offset.  
+-   Offset di binding.  
   
--   L'aggiornamento, aggiornamento ed eliminazione per i segnalibri (tramite una chiamata a **SQLBulkOperations**).  
+-   Aggiornamento, aggiornamento ed eliminazione da segnalibri (tramite una chiamata a **SQLBulkOperations**).  
   
--   La chiamata **SQLBulkOperations** oppure **SQLSetPos** nello stato S5.  
+-   Chiamata di **SQLBulkOperations** o **SQLSetPos** nello stato S5.  
   
--   I campi ROW_NUMBER e col nel record di diagnostica (che devono essere recuperati dalle funzioni di sostituzione **SQLGetDiagField** oppure **SQLGetDiagRec**).  
+-   I campi ROW_NUMBER e COLUMN_NUMBER nel record di diagnostica (che devono essere recuperati dalle funzioni di sostituzione **SQLGetDiagField** o **SQLGetDiagRec**).  
   
--   Conteggio righe approssimative.  
+-   Conteggio approssimativo delle righe.  
   
--   Le informazioni sull'avviso (da SQL_ROW_SUCCESS_WITH_INFO **SQLFetchScroll**).  
+-   Informazioni sugli avvisi (SQL_ROW_SUCCESS_WITH_INFO da **SQLFetchScroll**).  
   
--   Segnalibri di lunghezza variabile.  
+-   Segnalibri a lunghezza variabile.  
   
--   Informazioni dettagliate sull'errore per le matrici di parametri.  
+-   Informazioni estese sull'errore per le matrici di parametri.  
   
--   Tutte le nuove colonne in set di risultati restituiti dalle funzioni di catalogo.  
+-   Tutte le nuove colonne nei set di risultati restituiti dalle funzioni di catalogo.  
   
--   Sfrutta **SQLDescribeCol** e **SQLColAttribute** sulla colonna 0.  
+-   Utilizzo di **SQLDescribeCol** e **SQLColAttribute** sulla colonna 0.  
   
--   Uso di qualsiasi ODBC *3.x*-attributi di colonna specifica in una chiamata a **SQLColAttribute**.  
+-   Utilizzo di qualsiasi attributo di colonna specifico di ODBC *3. x*in una chiamata a **SQLColAttribute**.  
   
 -   Utilizzo di più handle di ambiente.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti per le applicazioni ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

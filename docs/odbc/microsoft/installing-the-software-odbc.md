@@ -1,5 +1,5 @@
 ---
-title: Installazione del Software (ODBC) | Microsoft Docs
+title: Installazione del software (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3be4f2ce9a3388d53a4d8474e5c1ca172842b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085513"
 ---
 # <a name="installing-the-software-odbc"></a>Installazione del software (ODBC)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Il Driver ODBC per Oracle è uno dei componenti di accesso ai dati. Fornito con gli altri componenti ODBC, ad esempio Amministrazione origine dati di ODBC e deve essere già installato. Il driver sono disponibili anche in "I driver e altri download" nel sito Web servizi di supporto tecnico Microsoft Online nella [www.microsoft.com](https://www.microsoft.com).  
+ Il driver ODBC per Oracle è uno dei componenti di accesso ai dati. Accompagna altri componenti ODBC, ad esempio Amministrazione origine dati ODBC, e dovrebbe già essere installato. Il driver è disponibile anche in "driver e altri download" nel sito Web del servizio supporto tecnico Microsoft disponibile all'indirizzo [www.Microsoft.com](https://www.microsoft.com).  
   
- Software di rete deve essere installato in base alla propria documentazione. Il Driver ODBC per Oracle non richiede nessun considerazioni sull'installazione speciale, purché il software di rete è supportato.  
+ Il software di rete deve essere installato in base alla relativa documentazione. Il driver ODBC per Oracle non richiede particolari considerazioni sull'installazione purché il software di rete sia supportato.  
   
- Deve essere installato il software Oracle in base alla propria documentazione. Il Driver ODBC per Oracle non richiede in genere considerazioni sull'installazione speciale, purché il driver supporta la versione. Tuttavia, per mantenere i prodotti compatibili, installare il Driver ODBC per Oracle cognome per assicurarsi di che aver la versione più recente del driver. Oracle gestisce un sito FTP pubblico in cui esegue il postback, tra le altre cose, le patch per i prodotti server Oracle e il componente client che viene fornito con i prodotti server. Queste patch sono necessarie per il funzionamento corretto di diversi prodotti e tecnologie Microsoft. Per altre informazioni su questo sito, vedere [patch del Software Oracle](../../odbc/microsoft/oracle-software-patches.md).  
+ È necessario installare il software Oracle in base alla relativa documentazione. Il driver ODBC per Oracle non richiede in genere considerazioni di installazione speciali, purché il driver supporti la versione. Tuttavia, per mantenere compatibili i prodotti, installare il driver ODBC per Oracle per verificare di disporre della versione più recente del driver. Oracle gestisce un sito FTP pubblico in cui inserisce, tra le altre cose, le patch per i prodotti server Oracle e il componente client fornito con i prodotti server. Queste patch sono necessarie per il corretto funzionamento di diversi prodotti e tecnologie Microsoft. Per ulteriori informazioni su questo sito, vedere [patch software Oracle](../../odbc/microsoft/oracle-software-patches.md).  
   
 > [!CAUTION]  
->  Installazione del software Oracle in MDAC/Windows dell'applicazione livello dati potrebbero essere sovrascritte le versioni correnti di MDAC. Se si verificano problemi con i componenti ODBC, reinstallare MDAC.
+>  L'installazione di software Oracle su MDAC/Windows DAC può sovrascrivere le versioni correnti di MDAC. Se si verificano problemi utilizzando i componenti ODBC, reinstallare MDAC.

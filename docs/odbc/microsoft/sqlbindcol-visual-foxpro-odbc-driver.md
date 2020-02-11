@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLBindCol (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 706677b71d1243baac0ca576bb3087d50abb6796
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098305"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: A livello centrale  
+ Conformità API ODBC: livello principale  
   
- Assegna lo spazio di archiviazione per una colonna di risultati e specifica il tipo del risultato. Quando [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) oppure [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) viene chiamato, il driver inserisce i dati per tutte le colonne associate nei percorsi assegnati. Visualizzare [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) per il mapping tra tipi di dati ODBC e Visual FoxPro.  
+ Assegna lo spazio di archiviazione per una colonna risultato e specifica il tipo del risultato. Quando si chiama [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) o [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) , il driver inserisce i dati per tutte le colonne con binding nei percorsi assegnati. Vedere [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) per il mapping tra i tipi di dati ODBC e Visual FoxPro.  
   
- Per altre informazioni, vedere [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) in *ODBC Programmer ' s Reference*.

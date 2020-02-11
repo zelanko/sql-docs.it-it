@@ -1,5 +1,5 @@
 ---
-title: Garantire spazio sufficiente per TempDB | Microsoft Docs
+title: Verifica dello spazio TempDB sufficiente | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,47 +13,47 @@ ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922652"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantire spazio sufficiente per TempDB
-Se si verificano durante la gestione degli errori [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti che richiedono spazio su Microsoft SQL Server 6.5 di elaborazione, potrebbe essere necessario aumentare le dimensioni di TempDB. (Alcune query richiedono lo spazio di elaborazione temporaneo, ad esempio, una query con una clausola ORDER BY richiede una sorta del **Recordset**, che richiede spazio temporaneo.)  
+Se si verificano errori durante la gestione di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che richiedono spazio di elaborazione in Microsoft SQL Server 6,5, potrebbe essere necessario aumentare le dimensioni di tempdb. Per alcune query è necessario uno spazio di elaborazione temporaneo. ad esempio, una query con una clausola ORDER BY richiede un tipo di **Recordset**, che richiede uno spazio temporaneo.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!IMPORTANT]
->  Leggere questa procedura prima di eseguire le azioni poiché non è sufficiente compattare un dispositivo quando viene espanso.  
+>  Leggere questa procedura prima di eseguire le azioni perché non è facile compattare un dispositivo dopo che è stato espanso.  
   
 > [!NOTE]
->  Per inMicrosoft predefinita SQL Server 7.0 e versioni successive, database TempDB è impostato su aumenta automaticamente in base alle esigenze. Pertanto, questa procedura solo potrebbe essere necessaria nei server che eseguono versioni precedenti alla 7.0.  
+>  Per impostazione predefinita, in Microsoft SQL Server 7,0 e versioni successive, TempDB viene impostato in modo da espandersi automaticamente in base alle esigenze. Questa procedura può pertanto essere necessaria solo nei server che eseguono versioni precedenti alla 7,0.  
   
-### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Per aumentare lo spazio di TempDB in SQL Server 6.5  
+### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Per aumentare lo spazio TempDB in SQL Server 6,5  
   
-1.  Avviare Microsoft SQL Server Enterprise Manager, aprire l'albero per il Server e quindi aprire l'albero di dispositivi di Database.  
+1.  Avviare Microsoft SQL Server Enterprise Manager, aprire l'albero per il server, quindi aprire l'albero dispositivi di database.  
   
-2.  Selezionare un dispositivo (fisico) per espandere, ad esempio Master e fare doppio clic sul dispositivo aprire il **modificare il dispositivo Database** nella finestra di dialogo.  
+2.  Selezionare un dispositivo (fisico) da espandere, ad esempio master, quindi fare doppio clic sul dispositivo per aprire la finestra di dialogo **modifica dispositivo database** .  
   
-     Questa finestra di dialogo Mostra la quantità di spazio usano i database correnti.  
+     In questa finestra di dialogo viene visualizzata la quantità di spazio utilizzata dai database correnti.  
   
-3.  Nel **dimensioni** casella, aumentare il dispositivo nella quantità desiderata (ad esempio, 50 megabyte (MB) di spazio su disco).  
+3.  Nella casella **dimensioni** aumentare il dispositivo fino alla quantità desiderata (ad esempio, 50 megabyte (MB) di spazio su disco rigido).  
   
-4.  Fare clic su **Change Now** per aumentare la quantità di spazio in cui è possibile espandere il database temporaneo (logico).  
+4.  Fare clic su **Cambia ora** per aumentare la quantità di spazio in cui il tempdb (Logical) può espandersi.  
   
-5.  Aprire la struttura di database nel server e quindi fare doppio clic su **TempDB** per aprire il **Modifica Database** nella finestra di dialogo. Il **Database** Elenca la quantità di spazio attualmente allocato in TempDB (**dimensione dati**). Per impostazione predefinita, questo è 2 MB.  
+5.  Aprire l'albero dei database nel server, quindi fare doppio clic su **tempdb** per aprire la finestra di dialogo **modifica database** . Nella scheda **database** è elencata la quantità di spazio attualmente allocata a tempdb (**dimensione dati**). Per impostazione predefinita, questo valore è pari a 2 MB.  
   
-6.  Sotto il **dimensioni** gruppo, fare clic su **Espandi**. I grafici mostrano lo spazio disponibile e allocato in tutti i dispositivi fisici. Le barre di colore bordeaux rappresentano lo spazio disponibile.  
+6.  Nel gruppo **dimensioni** fare clic su **Espandi**. I grafici mostrano lo spazio disponibile e allocato in ogni dispositivo fisico. Le barre in colore marrone rappresentano lo spazio disponibile.  
   
-7.  Selezionare una **dispositivo Log**, ad esempio Master, per visualizzare le dimensioni disponibili nel **dimensioni (MB)** casella.  
+7.  Selezionare un **dispositivo di log**, ad esempio master, per visualizzare le dimensioni disponibili nella casella **dimensioni (MB)** .  
   
-8.  Fare clic su **espandere ora** per allocare lo spazio nel database TempDB.  
+8.  Fare clic su **Espandi ora** per allocare lo spazio al database tempdb.  
   
-     Il **Modifica Database** nella finestra di dialogo consente di visualizzare la nuova dimensione allocata per il database TempDB.  
+     Nella finestra di dialogo **modifica database** vengono visualizzate le nuove dimensioni allocate per tempdb.  
   
- Per altre informazioni su questo argomento, consultare il file della Guida di Microsoft SQL Server Enterprise Manager per la "Finestra di dialogo espandere Database".  
+ Per ulteriori informazioni su questo argomento, consultare il file della Guida di Microsoft SQL Server Enterprise Manager per la finestra di dialogo "Espandi database".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

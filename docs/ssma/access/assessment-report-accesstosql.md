@@ -13,29 +13,29 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910679"
 ---
 # <a name="assessment-report-accesstosql"></a>Report di valutazione (AccessToSQL)
-La finestra di Report di valutazione Mostra i risultati della conversione di oggetti di database da [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi, e può inoltre la Guida è stimare la complessità e i costi dei progetti di migrazione.  
+La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database [!INCLUDE[tsql](../../includes/tsql-md.md)] nella sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
   
-Per creare un report di valutazione, selezionare gli oggetti da convertire in metadati Esplora codice sorgente, fare doppio clic su **database**, quindi selezionare **crea Report**. È anche possibile visualizzare questo rapporto automaticamente dopo la conversione di schemi. Tuttavia, il nome del report sarà Report di conversione. Per altre informazioni, vedere [Project. le impostazioni (GUI) (SSMA comuni)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+Per creare un report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**. È inoltre possibile visualizzare questo report automaticamente dopo la conversione degli schemi. Il nome del report sarà tuttavia un report di conversione. Per ulteriori informazioni, vedere [Impostazioni progetto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 ## <a name="options"></a>Opzioni  
 **Riquadro di esplorazione**  
-Contiene una gerarchia di oggetti nel report di valutazione. Espandere le cartelle per visualizzare i sottocomponenti e singoli oggetti. Quando si fa clic su una categoria o un oggetto, le statistiche di conversione relative alla categoria o oggetto visualizzate nel riquadro dei dettagli.  
+Contiene una gerarchia di oggetti nel report di valutazione. Espandere cartelle per visualizzare singoli oggetti e sottocomponenti. Quando si fa clic su una categoria o un oggetto, nel riquadro dei dettagli vengono visualizzate le statistiche relative alla conversione per tale categoria o oggetto.  
   
 **Riquadro dei dettagli**  
-Mostra la conversione dei messaggi di avviso o di statistiche e di errore per l'oggetto selezionato. Ad esempio, se si seleziona la cartella di tabelle, riquadro dei dettagli mostrerà il numero di chiavi esterne, indici, chiavi primarie e le tabelle che sono state convertite.  
+Mostra le statistiche di conversione o i messaggi di errore e di avviso per l'oggetto selezionato. Se, ad esempio, è selezionata la cartella tabelle, nel riquadro dei dettagli verrà visualizzato il numero di chiavi esterne, indici, chiavi primarie e tabelle convertite.  
   
-**Riquadro messaggi**  
-Viene illustrato l'errori, avvisi e messaggi informativi che sono stati generati quando è stato creato il report di valutazione. I messaggi vengono raggruppati per numero.  
+**riquadro Messaggi**  
+Mostra gli errori, gli avvisi e i messaggi informativi generati al momento della creazione del report di valutazione. I messaggi sono raggruppati per numero.  
   
-Per visualizzare i dettagli del messaggio, fare clic su **errori**, **avvisi**, o **messaggi**, quindi espandere un messaggio. SSMA verrà visualizzato l'elenco di oggetti che hanno questo errore. Fare clic su un oggetto per visualizzare tutte le informazioni dettagliate sulla conversione per l'oggetto.  
+Per visualizzare i dettagli del messaggio, fare clic su **errori**, **avvisi**o **messaggi**, quindi espandere un messaggio. SSMA visualizzerà l'elenco di oggetti con questo errore. Fare clic su un oggetto per visualizzare tutti i dettagli di conversione per l'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021622"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Pubblicazione (replica peer-to-peer)
   La pagina **Pubblicazione** visualizza le pubblicazioni transazionali abilitate per la replica peer-to-peer. Le pubblicazioni vengono abilitate nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** .  
   
 ## <a name="options"></a>Opzioni  
- **Server di pubblicazione**  
+ **Autore**  
  Consente di visualizzare il server al quale si è connessi. Per connettersi a un server diverso, selezionare **Trova server di pubblicazione SQL Server**.  
   
  **Database e pubblicazioni**  

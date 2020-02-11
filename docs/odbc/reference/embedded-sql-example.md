@@ -1,5 +1,5 @@
 ---
-title: Embedded SQL riportato di seguito | Microsoft Docs
+title: Esempio di SQL incorporato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068663"
 ---
 # <a name="embedded-sql-example"></a>Esempio di SQL incorporato
-Il codice seguente è un programma SQL incorporato semplice, scritto in C. Il programma illustra le tecniche SQL molte, ma non tutti, l'oggetto incorporato. Il programma richiede l'immissione di un numero di ordine, recupera il numero di cliente, venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  
+Il codice seguente è un semplice programma SQL incorporato, scritto in C. Nel programma sono illustrate molte, ma non tutte, le tecniche di SQL embedded. Il programma richiede all'utente un numero di ordine, recupera il numero del cliente, il venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  
   
 ```cpp  
 int main() {  
@@ -64,12 +64,12 @@ bad_number:
 }  
 ```  
   
- Tenere presente quanto segue su questo programma:  
+ Tenere presente quanto segue per questo programma:  
   
--   **Ospitare variabili** vengono dichiarate le variabili di host in una sezione racchiusa tra il **BEGIN sezione dichiarare** e **sezioni finali dichiarare** parole chiave. Ogni nome di variabile host è preceduto da due punti (:) quando viene visualizzata in un'istruzione SQL. I due punti consente precompilatore distinguere tra le variabili di host e gli oggetti di database, ad esempio tabelle e colonne, che hanno lo stesso nome.  
+-   **Variabili host** Le variabili host sono dichiarate in una sezione racchiusa tra le parole chiave della sezione **BEGIN DECLARE** e **end Declare** . Ogni nome di variabile host è preceduto dai due punti (:) Quando viene visualizzato in un'istruzione SQL incorporata. I due punti consentono al precompilatore di distinguere tra variabili host e oggetti di database, ad esempio tabelle e colonne, che hanno lo stesso nome.  
   
--   **Tipi di dati** possono essere piuttosto diversi tipi di dati supportati da un sistema DBMS e un linguaggio host. Questo influisce sulle variabili host poiché essi svolgono un duplice ruolo. Un lato, le variabili di host sono variabili di programma, dichiarato e manipolato dalla istruzioni del linguaggio host. D'altra parte, vengono utilizzati in istruzioni SQL incorporate per recuperare i dati del database. Se è disponibile alcun tipo di linguaggio host che corrisponde a un tipo di dati DBMS, il sistema DBMS converte automaticamente i dati. Tuttavia, poiché ogni DBMS presenta regole e peculiarità associata al processo di conversione, i tipi di variabili host devono essere scelta attentamente.  
+-   **Tipi di dati** I tipi di dati supportati da un sistema DBMS e un linguaggio host possono essere molto diversi. Ciò influiscono sulle variabili host perché svolgono un ruolo doppio. Da un lato, le variabili host sono variabili di programma, dichiarate e modificate dalle istruzioni del linguaggio host. D'altra parte, vengono usati nelle istruzioni SQL incorporate per recuperare i dati del database. Se non è presente alcun tipo di linguaggio host corrispondente a un tipo di dati DBMS, il sistema DBMS converte automaticamente i dati. Tuttavia, poiché ogni DBMS ha regole e idiosincrasie proprie associate al processo di conversione, è necessario scegliere con attenzione i tipi di variabili host.  
   
--   **Gestione degli errori** il sistema DBMS segnala errori di run-time per il programma di applicazioni tramite un'Area di comunicazioni SQL, o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è SQLCA INCLUDONO. In questo modo il precompilatore per includere la struttura SQLCA nel programma. Ciò è necessario ogni volta che il programma elaborerà gli errori restituiti dal sistema DBMS. WHENEVER... Istruzione GOTO indica precompilatore per generare il codice di gestione degli errori che si verifica un'etichetta specifica quando un errore dei rami.  
+-   **Gestione degli errori** Il sistema DBMS segnala gli errori di run-time al programma applicazioni tramite un'area di comunicazione SQL, o SQLCA. Nell'esempio di codice precedente, la prima istruzione SQL incorporata è INCLUDE SQLCA. Indica al precompilatore di includere la struttura SQLCA nel programma. Questa operazione è necessaria ogni volta che il programma elabora gli errori restituiti dal sistema DBMS. Oggetto quando... L'istruzione GOTO indica al precompilatore di generare codice di gestione degli errori che si dirama a un'etichetta specifica quando si verifica un errore.  
   
--   **Singleton selezionare** l'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton; ovvero, restituisce solo una singola riga di dati. Di conseguenza, l'esempio di codice non dichiara o utilizzare i cursori.
+-   **Selezione singleton** L'istruzione utilizzata per restituire i dati è un'istruzione SELECT singleton; ovvero restituisce solo una singola riga di dati. Pertanto, l'esempio di codice non dichiara né utilizza i cursori.

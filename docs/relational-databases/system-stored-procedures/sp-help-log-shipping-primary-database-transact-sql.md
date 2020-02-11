@@ -18,18 +18,18 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937911"
 ---
-# <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Recupera le impostazioni del database primario.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,12 +41,12 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` È il nome del database primario di log shipping. *database* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @database = ] 'database'`Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @primary_id = ] 'primary_id'` L'ID del database primario per la configurazione di log shipping. *primary_id* viene **uniqueidentifier** e non può essere NULL.  
+`[ @primary_id = ] 'primary_id'`ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -57,26 +57,26 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario.|  
 |**backup_share**|Percorso di rete o UNC della directory di backup.|  
 |**backup_retention_period**|Intervallo di tempo, espresso in minuti, di conservazione del file di backup dei log nella directory di backup trascorso il quale il file viene eliminato.|  
-|**backup_compression**|Indica se utilizza la configurazione di log shipping [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitata. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitato. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione delle [visualizzare o configurare l'opzione di configurazione del Server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Rappresenta il valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
-|**backup_job_id**|Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID processo dell'agente associato con il processo di backup nel server primario.|  
+|**backup_compression**|Indica se la configurazione di log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitato. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitata. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione dell' [opzione di configurazione del server visualizzazione o configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
+|**backup_job_id**|ID del processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associato al processo di backup nel server primario.|  
 |**monitor_server**|Nome dell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzata come server di monitoraggio nella configurazione del log shipping.|  
-|**monitor_server_security_mode**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
+|**monitor_server_security_mode**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di.|  
 |**backup_threshold**|Numero di minuti consentiti tra le operazioni di backup prima che venga generato un avviso.|  
 |**threshold_alert**|Avviso da generare quando viene superata la soglia per il backup.|  
-|**threshold_alert_enabled**|Determina se sono abilitati gli avvisi relativi alla soglia per il backup.<br /><br /> **1** = abilitato.<br /><br /> **0** = disabilitata.|  
+|**threshold_alert_enabled**|Determina se sono abilitati gli avvisi relativi alla soglia per il backup.<br /><br /> **1** = abilitata.<br /><br /> **0** = disabilitato.|  
 |**last_backup_file**|Percorso assoluto del backup del log delle transazioni più recente.|  
 |**last_backup_date**|Data e ora dell'ultima operazione di backup dei log.|  
 |**last_backup_date_utc**|Data e ora dell'ultima operazione di backup del log delle transazioni nel database primario in base all'ora UTC (Coordinated Universal Time).|  
 |**history_retention_period**|Intervallo di tempo, espresso in minuti, di conservazione dei record relativi alla cronologia di log shipping per un database primario specifico trascorso il quale i record vengono eliminati.|  
   
-## <a name="remarks"></a>Note  
- **sp_help_log_shipping_primary_database** deve essere eseguita la **master** database nel server primario.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_help_log_shipping_primary_database** deve essere eseguito dal database **Master** nel server primario.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo **sp_help_log_shipping_primary_database** per recuperare le impostazioni di database primario per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ In questo esempio viene illustrato l'utilizzo di **sp_help_log_shipping_primary_database** per recuperare le impostazioni del [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database primario per il database.  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  

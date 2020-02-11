@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096056"
 ---
-# <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
+# <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Viene restituito un elenco di oggetti su cui è possibile eseguire una query nell'ambiente corrente, ovvero qualsiasi tabella o vista eccetto gli oggetti sinonimo.  
   
 > [!NOTE]  
->  Per determinare il nome dell'oggetto di base di un sinonimo, eseguire una query di [Synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md) vista del catalogo.  
+>  Per determinare il nome dell'oggetto di base di un sinonimo, eseguire una query sulla vista del catalogo [sys. sinonims](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,23 +48,23 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_name = ] 'name'` La tabella viene utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar (384)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
+`[ @table_name = ] 'name'`Tabella utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
   
-`[ @table_owner = ] 'owner'` È il proprietario della tabella della tabella utilizzata per restituire informazioni del catalogo. *proprietario* viene **nvarchar (384)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
+`[ @table_owner = ] 'owner'`Proprietario della tabella utilizzata per restituire le informazioni del catalogo. *owner* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se owner viene omesso e l'utente corrente non è il proprietario di una tabella avente il nome specificato, viene eseguita la ricerca di una tabella avente il nome specificato e il cui proprietario corrisponde al proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
-`[ @table_qualifier = ] 'qualifier'` È il nome del qualificatore della tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_ **.** _owner_ **.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @table_qualifier = ] 'qualifier'`Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` È un elenco di valori, separati da virgole, che fornisce informazioni su tutte le tabelle dei tipi di tabella specificati. Questi includono **tabella**, **SYSTEMTABLE**, e **visualizzazione**. *tipo di* viene **varchar(100)** , con un valore predefinito è NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]``Elenco di valori separati da virgole, che fornisce informazioni su tutte le tabelle dei tipi di tabella specificati. Sono incluse **Table**, **SYSTEMTABLE**e **View**. il *tipo* è **varchar (100)** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario racchiudere ogni tipo di tabella tra virgolette singole e l'intero parametro tra virgolette doppie. I tipi di tabella devono essere specificati in maiuscolo. Se l'opzione SET QUOTED_IDENTIFIER è impostata su ON, è necessario sostituire le virgolette singole con quelle doppie e racchiudere l'intero parametro tra virgolette singole.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) e tra parentesi quadre ([o]) caratteri vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([o]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- Nessuna  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -73,17 +73,17 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_QUALIFIER**|**sysname**|Nome del qualificatore della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. Questo campo può essere NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
-|**TABLE_TYPE**|**varchar(32)**|Tabella, tabella di sistema o vista.|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**TABLE_TYPE**|**varchar (32)**|Tabella, tabella di sistema o vista.|  
+|**OSSERVAZIONI**|**varchar (254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway siano utilizzati solo i caratteri jolly standard SQL-92, ovvero i caratteri % e _.  
   
- Le informazioni sui privilegi relativi all'accesso in lettura o scrittura dell'utente corrente per una tabella specifica non vengono necessariamente verificate e di conseguenza l'accesso non è garantito. Questo set di risultati include non solo tabelle e viste, ma anche sinonimi e alias di gateway dei prodotti DBMS che supportano questi tipi. Se l'attributo del server **sp_server_info** è Y nel set di risultati **sp_server_info**, vengono restituite solo le tabelle che sono accessibili dall'utente corrente.  
+ Le informazioni sui privilegi relativi all'accesso in lettura o scrittura dell'utente corrente per una tabella specifica non vengono necessariamente verificate e di conseguenza l'accesso non è garantito. Questo set di risultati include non solo tabelle e viste, ma anche sinonimi e alias di gateway dei prodotti DBMS che supportano questi tipi. Se l'attributo server **ACCESSIBLE_TABLES** è Y nel set di risultati per **sp_server_info**, vengono restituite solo le tabelle a cui è possibile accedere dall'utente corrente.  
   
- **sp_tables** equivale a **SQLTables** in ODBC. I risultati restituiti vengono ordinati **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, e **TABLE_NAME**.  
+ **sp_tables** equivale a **SQLTables** in ODBC. I risultati restituiti vengono ordinati in base **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -117,7 +117,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Restituzione di informazioni sulle tabelle in uno schema specificato  
- L'esempio seguente restituisce informazioni sulle tabelle delle dimensioni nei `AdventureWorksPDW201` database.  
+ Nell'esempio seguente vengono restituite informazioni sulle tabelle delle dimensioni `AdventureWorksPDW201` nel database.  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,7 +129,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys. sinonimi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

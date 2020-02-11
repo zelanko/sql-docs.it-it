@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126075"
 ---
 # <a name="add-a-data-source-odbc"></a>Aggiungere un'origine dei dati (ODBC)
-  È possibile aggiungere un'origine dati tramite Amministratore ODBC, a livello di programmazione (tramite [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), o creando un file.  
+  È possibile aggiungere un'origine dati tramite amministratore ODBC, a livello di codice (tramite [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) o creando un file.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Per aggiungere un'origine dati tramite Amministratore ODBC.  
   
-1.  Dal **Pannello di controllo**, accesso **strumenti di amministrazione** e quindi **origine dati (ODBC)** . In alternativa, è possibile richiamare odbcad32.exe.  
+1.  Dal **Pannello di controllo**accedere a **strumenti di amministrazione** e quindi a **origini dati (ODBC)**. In alternativa, è possibile richiamare odbcad32.exe.  
   
-2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda e quindi fare clic su **Aggiungi**.  
+2.  Fare clic sulla scheda **DSN utente**, **DSN di sistema**o **DSN su file** e quindi fare clic su **Aggiungi**.  
   
 3.  Fare clic su **SQL Server**, quindi fare clic su **fine**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63126075"
   
 ### <a name="to-add-a-file-data-source"></a>Per aggiungere un 'origine dati file  
   
-1.  Chiamare [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) con SAVEFILE = nome_file parametro nella stringa di connessione. Se la connessione viene eseguita correttamente, il driver ODBC crea un'origine dati file con i parametri di connessione nel percorso a cui punta il parametro SAVEFILE.  
+1.  Chiamare [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) con un parametro SAVEFILE = file_name nella stringa di connessione. Se la connessione viene eseguita correttamente, il driver ODBC crea un'origine dati file con i parametri di connessione nel percorso a cui punta il parametro SAVEFILE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione delle procedure del driver ODBC di SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  

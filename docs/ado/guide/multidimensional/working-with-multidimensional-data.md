@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei dati multidimensionali | Microsoft Docs
+title: Utilizzo di dati multidimensionali | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,55 +13,55 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923139"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
-Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un' *asse* è una raccolta di membri di uno o più dimensioni, che consente di individuare o filtrare i valori specifici in un cubo.  
+Un *celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di una o più dimensioni, utilizzata per individuare o filtrare valori specifici in un cubo.  
   
- Oggetto *posizione* è un punto lungo un asse. Per un asse è costituito da una singola dimensione, queste posizioni sono un subset di membri della dimensione. Se un asse è costituito da più di una dimensione, quindi ogni posizione è un'entità composta che contiene *n* parti where *n* è il numero di dimensioni orientati lungo l'asse. Ogni parte della posizione è un membro da una dimensione che lo costituiscono.  
+ Una *posizione* è un punto lungo un asse. Per un asse costituito da una singola dimensione, queste posizioni sono un subset dei membri della dimensione. Se un asse è costituito da più di una dimensione, ogni posizione è un'entità composta, che include *n* parti, dove *n* è il numero di dimensioni orientate lungo l'asse. Ogni parte della posizione è un membro di una dimensione costituente.  
   
- Ad esempio, se le dimensioni di geografia e prodotto da un cubo contenente i dati di vendita sono orientate lungo l'asse x di un set di celle, una posizione dell'asse può contenere membri "USA" e "Computer". In questo esempio, per stabilire una posizione lungo l'asse x è necessario che i membri da ogni dimensione sono orientati lungo l'asse.  
+ Se, ad esempio, le dimensioni Geography e Product di un cubo contenente i dati di vendita sono orientate lungo l'asse x di un insieme di celle, una posizione lungo questo asse può contenere i membri "USA" e "computer". In questo esempio, per determinare una posizione lungo l'asse x, è necessario che i membri di ogni dimensione siano orientati lungo l'asse.  
   
- Oggetto *cella* è un oggetto posizionato in corrispondenza dell'intersezione delle coordinate dell'asse. Ogni cella dispone di più parti di informazioni associate, tra cui i dati stessi, una stringa formattata (visualizzabile forma dei dati delle celle) e il valore ordinale della cella. (Ogni cella è un valore ordinale univoco nel set di celle. Il valore ordinale della prima cella nel set di celle è zero, mentre la cella a sinistra nella seconda riga di un set di celle con otto colonne avrebbe un valore ordinale pari a otto.)  
+ Una *cella* è un oggetto posizionato in corrispondenza dell'intersezione tra le coordinate dell'asse. A ogni cella sono associate più informazioni, inclusi i dati stessi, una stringa formattata (la forma visualizzabile dei dati della cella) e il valore ordinale della cella. Ogni cella è un valore ordinale univoco nel celle. Il valore ordinale della prima cella nel celle è zero, mentre la cella più a sinistra nella seconda riga di un insieme di celle con otto colonne avrà un valore ordinale di otto.  
   
- Ad esempio, un cubo con le sei dimensioni seguenti (si noti che questo schema cubo differisce leggermente dall'esempio considerato [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Un cubo, ad esempio, ha le sei dimensioni seguenti (si noti che questo schema del cubo è leggermente diverso dall'esempio fornito in [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
 -   Venditore  
   
--   Geography (gerarchia naturale) - continenti, paesi, stati e così via  
+-   Geografia (gerarchia naturale)-continenti, Paesi, Stati e così via  
   
--   Trimestri-trimestri, mesi, giorni  
+-   Trimestri, mesi, giorni  
   
 -   Years  
   
--   Misure: vendite, valori, VenditePreviste  
+-   Measures-Sales, PercentChange, BudgetedSales  
   
--   Products  
+-   Prodotti  
   
- Il set di celle seguente rappresenta le vendite per 1991 per tutti i prodotti:  
+ Il seguente insieme di celle rappresenta le vendite per 1991 per tutti i prodotti:  
   
 > [!NOTE]
->  I valori delle celle nell'esempio possono essere considerati come coppia ordinata di numeri ordinali di posizione dell'asse in cui la prima cifra rappresenta la posizione dell'asse x e la seconda cifra alla posizione di asse y.  
+>  I valori delle celle nell'esempio possono essere visualizzati come coppie ordinate di ordinali di posizione dell'asse in cui la prima cifra rappresenta la posizione dell'asse x e la seconda cifra la posizione dell'asse y.  
   
- Come indicato di seguito sono riportate le caratteristiche di questo set di celle:  
+ Di seguito sono riportate le caratteristiche di questo celle:  
   
--   Dimensioni dell'asse: Trimestri, venditore, Geography  
+-   Dimensioni asse: trimestri, venditori, geografia  
   
--   Dimensioni di filtro: Le misure, anni, i prodotti  
+-   Dimensioni filtro: misure, anni, prodotti  
   
--   Due assi: COLONNA (x o asse 0) e riga (y, o asse 1)  
+-   Due assi: colonna (x o asse 0) e riga (y o asse 1)  
   
--   asse x: due dimensioni nidificate, venditore e area geografica  
+-   asse x: due dimensioni nidificate, venditore e geografia  
   
--   asse y: Dimensione trimestri  
+-   asse y: dimensione trimestri  
   
- L'asse x dispone di due dimensioni annidate: Venditore e area geografica. Da geografia, sono selezionati quattro membri: Seattle, Boston, Stati Uniti-meridionale e Giappone. Dall'agente sono selezionati due membri: San Valentino e Nash. Ciò produce un totale di otto posizioni in questo asse (4 * 8 = 2).  
+ L'asse x è costituito da due dimensioni nidificate: venditore e geografia. Da geografia sono selezionati quattro membri: Seattle, Boston, USA-Sud e Giappone. Sono stati selezionati due membri da venditore: Valentine e Nash. Viene restituito un totale di otto posizioni su questo asse (8 = 4 * 2).  
   
- Ogni coordinata è rappresentato come una posizione con due membri: uno dalla dimensione di venditore e l'altro della dimensione Geografia:  
+ Ogni coordinata è rappresentata come una posizione con due membri, uno dalla dimensione SalesPerson e l'altro dalla dimensione Geography:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -69,13 +69,13 @@ Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È co
 (Nash, Japan)  
 ```  
   
- L'asse y contiene solo una dimensione, che contiene otto posizioni riportate di seguito:  
+ L'asse y ha una sola dimensione, che contiene le otto posizioni seguenti:  
   
 ```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Set di celle, le celle, assi e le posizioni sono tutti rappresentate in ADO MD dagli oggetti corrispondenti: [Set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Celle, celle, assi e posizioni sono tutti rappresentati in ADO MD dagli oggetti corrispondenti: [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) [, celle,](../../../ado/reference/ado-md-api/cell-object-ado-md.md) [assi](../../../ado/reference/ado-md-api/axis-object-ado-md.md)e [posizioni](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

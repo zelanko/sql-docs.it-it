@@ -1,5 +1,5 @@
 ---
-title: Uso di repository Test (OracleToSQL) | Microsoft Docs
+title: Uso di repository di test (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,68 +13,68 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086797"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso di repository test (OracleToSQL)
-Gli archivi di Repository Test SSMA SSMA Tester test case e risultati dei test per un uso successivo. I dati del Repository vengono salvati nelle tabelle di SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nello schema **ssma_oracle_utilities** del **ssmatesterdb** database.  
+Il repository di test di SSMA archivia i test case e i risultati dei test di SSMA tester per un uso successivo. I dati del repository vengono salvati nelle tabelle SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nella **ssma_oracle_utilities** dello schema del database **ssmatesterdb** .  
   
-I pulsanti seguenti sono disponibili nella finestra di dialogo del Repository del Test case:  
+Nella finestra di dialogo repository dei test case sono disponibili i pulsanti seguenti:  
   
--   Scegliere il **Aggiorna** pulsante per aggiornare l'elenco di Test case o i risultati dei Test.  
+-   Fare clic sul pulsante **Aggiorna** per aggiornare l'elenco di test case o risultati test.  
   
--   Scegliere il **chiudere** per chiudere la finestra di dialogo del Repository del Test case.  
+-   Fare clic sul pulsante **Chiudi** per chiudere la finestra di dialogo repository dei test case.  
   
-## <a name="test-cases-repository"></a>Repository di test case  
-È possibile visualizzare il Repository di Test case facendo **Test case...**  dal **Tester** menu. SSMA consente quindi di visualizzare il **Repository del Test case** finestra di dialogo con un elenco dei case di test salvati sulle **Test case** pagina.  
+## <a name="test-cases-repository"></a>Repository test case  
+È possibile visualizzare il repository dei test case facendo clic su **test case...** dal menu **tester** . SSMA Visualizza quindi la finestra di dialogo **repository di test case** con un elenco di test case salvati nella pagina **test case** .  
   
 Nella griglia vengono visualizzate le informazioni seguenti su ogni test case:  
   
--   Nome: Il nome del test case.  
+-   Nome: nome del test case.  
   
--   Create: La data di creazione test case.  
+-   Created: data di creazione test case.  
   
--   Modificato: Data dell'ultima modifica del test case.  
+-   Modificato: la data dell'Ultima modifica del test case.  
   
--   Descrizione: Le descrizioni dei test case.  
+-   Descrizione: le descrizioni del test case.  
   
-I pulsanti seguenti sono disponibili nella pagina di Test case:  
+Nella pagina test case sono disponibili i pulsanti seguenti:  
   
--   Scegliere il **Add** pulsante per eseguire la procedura guidata di Test Case e creare un nuovo test.  
+-   Fare clic sul pulsante **Aggiungi** per eseguire la procedura guidata test case e creare un nuovo test.  
   
--   Scegliere il **rimuovere** pulsante per eliminare il test selezionato dal repository. Quando un Test Case viene eliminato, vengono eliminati anche tutti i risultati dei Test correlati.  
+-   Fare clic sul pulsante **Rimuovi** per eliminare il test selezionato dal repository. Quando un test case viene eliminato, vengono eliminati anche tutti i Risultati test correlati.  
   
--   Scegliere il **modifica** pulsante per eseguire la procedura guidata di Test Case e modificare il test selezionato.  
+-   Fare clic sul pulsante **modifica** per eseguire la procedura guidata test case e modificare il test selezionato.  
   
--   Fare clic sui **eseguiti** pulsante per aprire il [che esegue Test case (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) finestra di dialogo ed eseguire il test selezionato.  
+-   Fare clic sul pulsante **Run (Esegui** ) per aprire la finestra di dialogo [esecuzione di test case (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) ed eseguire il test selezionato.  
   
-## <a name="test-results-repository"></a>Repository dei risultati del test  
-È possibile visualizzare il Repository dei risultati del Test nella **i risultati del Test** pagina della **Repository del Test case** finestra. Aprirlo facendo **i risultati dei Test...**  dal **Tester** menu.  
+## <a name="test-results-repository"></a>Repository Risultati test  
+È possibile visualizzare il repository Risultati test nella pagina **risultati test** della finestra **repository della finestra test case** . Per aprirlo, fare clic su **risultati test...** dal menu **tester** .  
   
-È possibile usare due filtri sul **i risultati dei Test** pagina:  
+È possibile usare due filtri nella pagina **risultati test** :  
   
--   Il filtro di nome del Test Case: Consente di scegliere i risultati dei test dal nome del test case. Questo filtro **tutti i Test case** valore consente di visualizzare i risultati dei test per tutti i test case.  
+-   Filtro del nome del test case: consente di scegliere i risultati dei test per nome test case. Il valore di **tutti i test case** di questo filtro consente la visualizzazione dei risultati dei test per tutti i test case.  
   
--   Il filtro data di esecuzione di Test Case: I filtri, i risultati dei test per la data di salvataggio. Questo filtro **periodo tutti** valore consente di visualizzare i risultati dei test per una data di salvataggio.  
+-   Filtro data esecuzione test case: filtra i risultati dei test in base alla data di salvataggio. Il valore di **tutto il periodo** del filtro consente di visualizzare i risultati dei test per qualsiasi data di salvataggio.  
   
-Le informazioni seguenti sui risultati dei test viene visualizzate nella griglia.  
+Nella griglia vengono visualizzate le informazioni seguenti relative ai risultati dei test.  
   
--   Nome: Nome del test case.  
+-   Nome: nome del test case.  
   
--   Salvato: Test case data di salvataggio.  
+-   Saved: data del test case del salvataggio.  
   
--   Risultati: Un breve riepilogo dell'esecuzione del test (descrizione comando della cella, questo visualizza un riepilogo completo dell'esecuzione del test).  
+-   Risultati: un breve riepilogo dell'esecuzione dei test (la descrizione comando di questa cella Visualizza un riepilogo completo dell'esecuzione dei test).  
   
-I pulsanti seguenti sono disponibili nella pagina dei risultati dei Test:  
+Nella pagina dei risultati del test sono disponibili i pulsanti seguenti:  
   
--   Fare clic sui **View** per aprire [visualizzazione di report di Test Case &#40;OracleToSQL&#41; ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) del risultato del Test Case corrente.  
+-   Fare clic sul pulsante **Visualizza** per aprire la [visualizzazione dei report del test case &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) del risultato del test case corrente.  
   
--   Scegliere il **eliminare** pulsante per eliminare il risultato del Test selezionato  
+-   Fare clic sul pulsante **Elimina** per eliminare il risultato del test selezionato  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di Test case &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Esecuzione di test case &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Test di oggetti di database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

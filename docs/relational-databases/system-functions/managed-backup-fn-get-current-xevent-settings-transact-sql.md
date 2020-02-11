@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910238"
 ---
-# <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restituisce 1 riga per ogni tipo di evento esteso supportato da Smart Admin.  
   
  Utilizzare questa funzione per restituire o rivedere le impostazioni di eventi estesi correnti per identificare il tipo di eventi che sono configurabili e le configurazioni correnti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,13 +51,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Tipo di evento esteso|  
-|is_configurable|NVARCHAR(128)|È impostato su **True** se l'evento è configurabile, altrimenti è impostato su **False**.|  
+|is_configurable|NVARCHAR(128)|Questa impostazione è impostata su **true** se l'evento è configurabile. in caso contrario, viene impostato su **false**.|  
 |is_enabled|NVARCHAR(128)|Viene impostato su True se l'evento è abilitato; in caso contrario, viene impostato su False. Utilizzare smart_admin.sp_set_parameter per abilitare gli eventi di debug.|  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- È necessario **seleziona** autorizzazioni nella funzione.  
+### <a name="permissions"></a>Autorizzazioni  
+ Sono richieste le autorizzazioni **Select** per la funzione.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti gli eventi estesi con lo stato corrente.  

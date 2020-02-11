@@ -18,13 +18,13 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091926"
 ---
-# <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
+# <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Associa un processo esistente a un piano di manutenzione.  
@@ -34,7 +34,7 @@ ms.locfileid: "68091926"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,21 +44,21 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @plan_id = ] 'plan_id'` Specifica l'ID del piano di manutenzione. *plan_id* viene **uniqueidentifier**, e deve essere un ID valido.  
+`[ @plan_id = ] 'plan_id'`Specifica l'ID del piano di manutenzione. *plan_id* è di tipo **uniqueidentifier**e deve essere un ID valido.  
   
-`[ @job_id = ] 'job_id'` Specifica l'ID del processo da associare al piano di manutenzione. *job_id* viene **uniqueidentifier**, e deve essere un ID valido. Per creare uno o più processi, eseguire **sp_add_job**, o utilizzare SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'`Specifica l'ID del processo da associare al piano di manutenzione. *job_id* è di tipo **uniqueidentifier**e deve essere un ID valido. Per creare un processo o i processi, eseguire **sp_add_job**o utilizzare SQL Server Management Studio.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_add_maintenance_plan_job** deve essere eseguita la **msdb** database.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_add_maintenance_plan_job** deve essere eseguito dal database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_maintenance_plan_job**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio viene aggiunto il processo "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" al piano di manutenzione creato tramite **sp_add_maintenance_plan_job**.  
+ In questo esempio il processo "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" viene aggiunto al piano di manutenzione creato utilizzando **sp_add_maintenance_plan_job**.  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
@@ -66,6 +66,6 @@ EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N
   
 ## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Piano di manutenzione database Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Stored procedure del piano di manutenzione del database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

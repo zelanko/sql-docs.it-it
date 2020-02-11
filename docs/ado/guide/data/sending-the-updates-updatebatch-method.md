@@ -1,5 +1,5 @@
 ---
-title: 'Invio di aggiornamenti: Metodo UpdateBatch | Microsoft Docs'
+title: 'Invio degli aggiornamenti: metodo UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,16 +11,16 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924251"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: Metodo UpdateBatch
-Il codice seguente viene aperto un Recordset in modalità batch impostando la proprietà LockType adLockBatchOptimistic e CursorLocation a adUseClient. Aggiunge due nuovi record e modifica il valore di un campo in un record esistente, salvando i valori originali e quindi chiama il metodo UpdateBatch per restituire le modifiche all'origine dati.  
+# <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: metodo UpdateBatch
+Il codice seguente apre un recordset in modalità batch impostando la proprietà LockType su adLockBatchOptimistic e CursorLocation su adUseClient. Aggiunge due nuovi record e modifica il valore di un campo in un record esistente, salvando i valori originali, quindi chiama UpdateBatch per restituire le modifiche all'origine dati.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ```  
 'BeginBatchUpdate  
@@ -52,7 +52,7 @@ Il codice seguente viene aperto un Recordset in modalità batch impostando la pr
 'EndBatchUpdate  
 ```  
   
- Se si modifica il record corrente o aggiungere un nuovo record quando si chiama il metodo UpdateBatch, ADO automaticamente chiamerà il metodo di aggiornamento per salvare eventuali modifiche in sospeso al record corrente prima di trasmettere le modifiche in batch al provider.  
+ Se si modifica il record corrente o si aggiunge un nuovo record quando si chiama il metodo UpdateBatch, ADO chiamerà automaticamente il metodo Update per salvare le modifiche in sospeso apportate al record corrente prima di trasmettere le modifiche in batch al provider.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità batch](../../../ado/guide/data/batch-mode.md)

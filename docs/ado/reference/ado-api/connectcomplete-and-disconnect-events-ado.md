@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919573"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventi ConnectComplete e Disconnect (ADO)
-Il **ConnectComplete** eventi viene chiamato dopo l'avvio di una connessione. Il **Disconnect** eventi viene chiamato dopo la fine di una connessione.  
+L'evento **ConnectComplete** viene chiamato dopo l'avvio di una connessione. L'evento di **disconnessione** viene chiamato al termine di una connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,17 +39,17 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Parametri  
  *pError*  
- Un' [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Viene descritto l'errore generato se il valore di *adStatus* viene **adStatusErrorsOccurred**; in caso contrario, non è impostata.  
+ Oggetto [Error](../../../ado/reference/ado-api/error-object.md) . Viene descritto l'errore che si è verificato se il valore di *adStatus* è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
   
  *adStatus*  
- Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore indica che è sempre **adStatusOK**.  
+ Valore [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) che restituisce sempre **adStatusOK**.  
   
- Quando **ConnectComplete** viene chiamato, questo parametro è impostato su **adStatusCancel** se un **WillConnect** eventi ha richiesto l'annullamento della connessione in sospeso.  
+ Quando viene chiamato **ConnectComplete** , questo parametro è impostato su **adStatusCancel** se un evento **WillConnect** ha richiesto l'annullamento della connessione in sospeso.  
   
- Prima che l'evento restituito, questo parametro impostato su **adStatusUnwantedEvent** per evitare le notifiche successivi. Tuttavia, chiudere e riaprire il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) fa in modo che questi eventi si verifichi nuovamente.  
+ Prima della restituzione di uno degli eventi, impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive. Tuttavia, la chiusura e la riapertura della [connessione](../../../ado/reference/ado-api/connection-object-ado.md) comporta la riesecuzione di questi eventi.  
   
  *pConnection*  
- Il **connessione** dell'oggetto per cui si applica questo evento.  
+ Oggetto **connessione** per cui si applica questo evento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

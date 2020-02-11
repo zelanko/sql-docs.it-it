@@ -10,41 +10,41 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103003"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Modificare il mapping dei tipi (MySQLToSQL)
-Il **modifica del mapping dei tipi** nella finestra di dialogo consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e destinazione.  
+La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
   
 È possibile accedere a questa finestra di dialogo in diverse posizioni:  
   
--   Quando si seleziona un database di origine o di un oggetto di database, il **Mapping dei tipi** verrà visualizzata la scheda a destra della finestra di esplorazione di metadati. Fare clic su **Add** per aggiungere un nuovo mapping dei tipi, o fare clic su **modificare** per modificare un mapping di tipo esistente.  
+-   Quando si seleziona un database di origine o un oggetto di database, la scheda **mapping dei tipi** viene visualizzata a destra di Esplora metadati. Fare clic su **Aggiungi** per aggiungere un nuovo mapping dei tipi oppure fare clic su **modifica** per modificare un mapping dei tipi esistente.  
   
--   Nel **Tools** dal menu **le impostazioni del progetto** o **impostazioni di progetto predefinite**. Nella finestra di dialogo visualizzata, selezionare **Mapping dei tipi**. Fare clic su **Add** per aggiungere un nuovo mapping dei tipi, o fare clic su **modificare** per modificare un mapping di tipo esistente.  
+-   Scegliere **Impostazioni progetto** o **Impostazioni progetto predefinite**dal menu **strumenti** . Nella finestra di dialogo risultante selezionare **mapping dei tipi**. Fare clic su **Aggiungi** per aggiungere un nuovo mapping dei tipi oppure fare clic su **modifica** per modificare un mapping dei tipi esistente.  
   
--   Mapping dei tipi di tabella specifiche di eseguire l'override del database e i mapping dei tipi di progetto. Mapping di specifiche del database di eseguire l'override dei mapping di progetto.  
+-   I mapping dei tipi specifici della tabella sostituiscono i mapping dei tipi di progetto e di database. I mapping specifici del database sostituiscono i mapping del progetto.  
   
 ## <a name="options"></a>Opzioni  
   
 ##### <a name="source-type"></a>Tipo di origine  
-Selezionare il tipo di dati di origine per eseguire il mapping a un tipo di dati di SQL Server.  
+Consente di selezionare il tipo di dati di origine di cui eseguire il mapping a un tipo di dati SQL Server.  
   
-Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati sotto **Sourcetype**:  
+Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati in **sourceType**:  
   
-##### <a name="from"></a>From  
-Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo inizi a **nchar (10).**  
+##### <a name="from"></a>Da  
+Consente di specificare la lunghezza minima per questo mapping. Per il tipo di dati **nchar** , ad esempio, è possibile immettere 10 per specificare che il mapping è relativo a un intervallo a partire da **nchar (10).**  
   
-##### <a name="to"></a>Per  
-Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **nchar(20).**  
+##### <a name="to"></a>A  
+Consente di specificare la lunghezza massima consentita per questo mapping. Per il tipo di dati **nchar** , ad esempio, è possibile immettere 20 per specificare che il mapping è per un intervallo che termina con **nchar (20).**  
   
 ##### <a name="target-type"></a>Tipo di destinazione  
-Selezionare il tipo di dati di SQL Server a cui viene eseguito il mapping al tipo di origine. Quando SSMA viene creata la tabella o in SQL Server, il tipo di dati di origine passerà a questo tipo di dati.  
+Consente di selezionare il tipo di dati SQL Server a cui viene eseguito il mapping del tipo di dati di origine. Quando SSMA crea la tabella o nel SQL Server, il tipo di dati di origine verrà modificato in questo tipo di dati.  
   
-Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato nella **tipo di destinazione**:  
+Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato in **tipo di destinazione**:  
   
 ##### <a name="replace-with"></a>Sostituire con  
-Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20).**  
+Specificare la lunghezza di destinazione per questo mapping. Per il tipo di dati **nvarchar** , ad esempio, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20).**  
   

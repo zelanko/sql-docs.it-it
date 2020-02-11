@@ -1,5 +1,5 @@
 ---
-title: Denominato comandi | Microsoft Docs
+title: Comandi denominati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924821"
 ---
 # <a name="named-commands"></a>Comandi con nome
-[Creazione ed esecuzione di un semplice comando](../../../ado/guide/data/creating-and-executing-a-simple-command.md) illustra un modo per eseguire un comando. Non vi è un altro modo: è possibile renderlo un comando con nome e quindi chiamare il comando direttamente sulla denominato il **connessione** oggetto (assegnato al **ActiveConnection** proprietà del **comando** oggetto). Denominazione di un comando indica che l'assegnazione di un nome per il **Name** proprietà di un **comando** oggetto. Ad esempio,  
+[La creazione e l'esecuzione di un semplice comando](../../../ado/guide/data/creating-and-executing-a-simple-command.md) Mostra un modo per eseguire un comando. Esiste un altro modo: è possibile impostarlo come comando denominato, quindi chiamare questo comando denominato direttamente nell'oggetto **Connection** (assegnato alla proprietà **ActiveConnection** dell'oggetto **Command** ). La denominazione di un comando indica l'assegnazione di un nome alla proprietà **Name** di un oggetto **Command** . Ad esempio,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,9 +29,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- Il comando denominato agisce come se fosse un metodo"personalizzato" sul **connessione** oggetto. Il risultato del comando viene restituito come parametro out di questo metodo"personalizzato".  
+ Il comando denominato funge da "metodo personalizzato" per l'oggetto **connessione** . Il risultato del comando viene restituito come parametro out di questo "metodo personalizzato".  
   
- Nell'esempio seguente viene illustrata questa funzionalità.  
+ Questa funzionalità è illustrata nell'esempio seguente.  
   
 ```  
 'BeginNamedCmd  

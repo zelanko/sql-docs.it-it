@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5d243ef273badd182066fcc42484fa95fa13461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107491"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report (Generatore report e SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107491"
   
 ### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>Per aggiornare la raccolta di campi nel riquadro dei dati del report per il set di dati  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul set di dati e scegliere **Query**.  
+1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sul set di dati e quindi scegliere **Query**.  
   
 2.  Fare clic su **Aggiorna campi**.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "66107491"
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Strumenti di progettazione query in Reporting Services](../reporting-services-query-designers.md)   
- [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
+ [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

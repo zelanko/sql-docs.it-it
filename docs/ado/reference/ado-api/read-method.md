@@ -17,14 +17,14 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917413"
 ---
 # <a name="read-method"></a>Metodo Read
-Legge un numero specificato di byte da un file binario [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Legge un numero specificato di byte da un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) binario.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parametri  
  *NumBytes*  
- facoltativo. Oggetto **lungo** valore che specifica il numero di byte da leggere dal file o la [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore **adReadAll**, ovvero l'impostazione predefinita.  
+ Facoltativa. Valore **Long** che specifica il numero di byte da leggere dal file o il valore [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) **adReadAll**, che corrisponde all'impostazione predefinita.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **Read** metodo legge un numero specificato di byte o dell'intero flusso da un **Stream** dell'oggetto e restituisce i dati risultanti come una **Variant**.  
+ Il metodo **Read** legge un numero specificato di byte o l'intero flusso da un oggetto **Stream** e restituisce i dati risultanti come **Variant**.  
   
-## <a name="remarks"></a>Note  
- Se *NumBytes* è maggiore del numero di byte a sinistra nel **Stream**, vengono restituiti solo i byte rimanenti. I dati letti non possono essere riempiti per corrispondere alla lunghezza specificata da *NumBytes*. Se sono presenti byte rimanenti da leggere, viene restituita una variante con un valore null. **Lettura** non può essere usato per leggere le versioni precedenti.  
+## <a name="remarks"></a>Osservazioni  
+ Se *numBytes* è maggiore del numero di byte rimanenti nel **flusso**, vengono restituiti solo i byte rimanenti. I dati letti non vengono riempiti in modo da corrispondere alla lunghezza specificata da *numBytes*. Se non ci sono byte rimanenti da leggere, viene restituita una variante con un valore null. Impossibile utilizzare **Read** per leggere le versioni precedenti.  
   
 > [!NOTE]
->  *NumBytes* misura sempre i byte. Per il testo **Stream** oggetti ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) viene **adTypeText**), usare [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
+>  *NumBytes* misura sempre i byte. Per gli oggetti del **flusso** di testo ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**), usare [READTEXT](../../../ado/reference/ado-api/readtext-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

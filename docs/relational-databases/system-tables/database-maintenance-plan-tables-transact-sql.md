@@ -1,5 +1,5 @@
 ---
-title: Database delle tabelle dei piani di manutenzione (Transact-SQL) | Microsoft Docs
+title: Tabelle del piano di manutenzione del database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084753"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Tabelle dei piani di manutenzione dei database (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68084753"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)  
  Include una o più righe per ogni database a cui è associato un piano di manutenzione del database aggiornato.  
   

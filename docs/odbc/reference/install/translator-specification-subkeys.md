@@ -1,5 +1,5 @@
 ---
-title: Sottochiavi di specifica di Microsoft Translator | Microsoft Docs
+title: Sottochiavi di specifica del traduttore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093803"
 ---
 # <a name="translator-specification-subkeys"></a>Sottochiavi di specifica dei convertitori
-Ogni funzione di conversione elencate nella sottochiave ODBC Translators ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore della sottochiave ODBC Translators corrispondente. I valori sotto questa sottochiave elencare i percorsi completi della funzione di conversione e file DLL di installazione di Microsoft translator e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  
+Ogni traduttore elencato nella sottochiave dei convertitori ODBC dispone di una sottochiave. Questa sottochiave ha lo stesso nome del valore corrispondente nella sottochiave ODBC Translator. I valori in questa sottochiave elencano i percorsi completi delle DLL di installazione di Translator e Translator e il conteggio di utilizzo. I formati dei valori sono indicati nella tabella seguente.  
   
-|Name|Tipo di dati|Data|  
+|Nome|Tipo di dati|data|  
 |----------|---------------|----------|  
-|Funzione di conversione|REG_SZ|*translator-DLL-path*|  
-|Configurazione|REG_SZ|*il programma di installazione-DLL-path*|  
-|UsageCount|REG_DWORD|*count*|  
+|Translator|REG_SZ|*translator-DLL-percorso*|  
+|Installazione|REG_SZ|*programma di installazione-DLL-percorso*|  
+|UsageCount|REG_DWORD|*conteggio*|  
   
- Per informazioni su conteggi dell'utilizzo, vedere [Conteggio utilizzi](../../../odbc/reference/install/usage-counting.md) più indietro in questa sezione.  
+ Per informazioni sui conteggi di utilizzo, vedere [conteggio di utilizzo](../../../odbc/reference/install/usage-counting.md) in precedenza in questa sezione.  
   
- Le applicazioni non devono impostare il conteggio di utilizzo. ODBC manterrà questo conteggio.  
+ Le applicazioni non devono impostare il conteggio dell'utilizzo. Il conteggio verrà mantenuto da ODBC.  
   
- Si supponga, ad esempio, la pagina di codice di Microsoft Translator ha una traduzione DLL denominata Mscpxl32, che le funzioni di installazione di Microsoft translator sono nella stessa DLL, e che la funzione di conversione sia stata installata per tre volte. I valori nella sottochiave Microsoft Translator pagina codice potrebbero essere come segue:  
+ Si supponga, ad esempio, che il convertitore della tabella codici Microsoft disponga di una DLL di traduzione denominata mscpxl32. dll, che le funzioni di installazione del convertitore si trovino nella stessa DLL e che il traduttore sia stato installato tre volte. I valori nella sottochiave di conversione della tabella codici Microsoft potrebbero essere i seguenti:  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  
