@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165906"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -58,7 +58,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Le regole per la specifica del valore *stmt* sono le stesse di quelle per sp_cursoropen, con l'eccezione che il tipo di dati stringa *stmt* deve essere **ntext**.  
   
- *options*  
+ *Opzioni*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *options* richiede il valore di input **int** seguente.  
   
 |valore|Descrizione|  
@@ -104,7 +104,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Come con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possibile assegnare un valore diverso da quello richiesto.  
+ Come per *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può assegnare un valore diverso da quello richiesto.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il parametro di stato RPC è uno degli elementi seguenti:  
@@ -112,7 +112,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |valore|Descrizione|  
 |-----------|-----------------|  
 |0|Operazione completata|  
-|0x0001|Failure|  
+|0x0001|Operazioni non riuscite|  
 |1FF6|Non è stato possibile restituire metadati.<br /><br /> Nota: il motivo è che l'istruzione non produce un set di risultati. ad esempio, si tratta di un'istruzione INSERT o DDL.|  
   
 ## <a name="examples"></a>Esempi  
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  Quando *stmt* è con parametri e il valore di *scrollopt* PARAMETERIZED_STMT è on, il formato della stringa è il seguente:  
   
- { *\<nome della variabile locale > * *\<tipo di dati >* } [ ,... *n* ]  
+ { * \<nome variabile locale> * *\<tipo di dati>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

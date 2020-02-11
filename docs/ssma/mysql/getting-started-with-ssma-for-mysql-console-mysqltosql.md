@@ -1,5 +1,5 @@
 ---
-title: Introduzione a SSMA per la Console MySQL (MySQLToSQL) | Microsoft Docs
+title: Introduzione con SSMA per la console MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,56 +13,56 @@ ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075421"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
-In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console MySQL. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
+Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazione console MySQL. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
   
-## <a name="launching-ssma-console"></a>Avviare Console SSMA  
-Per avviare l'applicazione console SSMA, procedere come segue:  
+## <a name="launching-ssma-console"></a>Avvio della console SSMA  
+Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:  
   
-1.  Passare a **avviare** e scegliere **tutti i programmi**.  
+1.  Passare a **Start** e puntare a **tutti i programmi**.  
   
-2.  Scegliere il **SQL Server Migration Assistant per MySQL Prompt dei comandi** scelta rapida.  
+2.  Fare clic sul collegamento del **prompt dei comandi SQL Server Migration Assistant per MySQL** .  
   
-    Viene visualizzato il menu di utilizzo della Console SSMA e `(/? Help)`, che consentono di iniziare a usare l'applicazione console.  
+    Viene visualizzato il menu di utilizzo della console `(/? Help)`SSMA e, che consente di iniziare a usare l'applicazione console.  
   
-## <a name="procedure-for-using-the-ssma-console"></a>Procedure per l'utilizzo della Console SSMA  
-Dopo che la console viene avviata correttamente nel sistema Windows, è possibile utilizzare i passaggi seguenti per risolverlo:  
+## <a name="procedure-for-using-the-ssma-console"></a>Procedura per l'uso della console di SSMA  
+Dopo che la console è stata avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di essa:  
   
-1.  Configurare Console SSMA tramite i file di script. Per altre informazioni su questa sezione, vedere [creazione di file di Script &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
+1.  Configurare la console SSMA tramite i file di script. Per ulteriori informazioni su questa sezione, vedere [creazione di file di Script &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
   
-2.  [Creazione di file di valore della variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+2.  [Creazione di file di valori di variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-3.  [Creazione di file di connessione del Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+3.  [Creazione dei file di connessione del server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-4.  [Esecuzione della Console SSMA &#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) secondo le esigenze di progetto  
+4.  [Esecuzione della console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) in base alle esigenze del progetto  
   
 Altre funzionalità:  
   
-1.  [Protezione di Password](managing-passwords-mysqltosql.md) ed esportare / importare in un altro computer della finestra  
+1.  [Protezione della password](managing-passwords-mysqltosql.md) ed esportazione/importazione in altre macchine Windows  
   
-2.  [Generare report](generating-reports-mysqltosql.md) per visualizzare il codice xml dettagliate dell'output di report per la migrazione di dati e /conversion assessment. I report di errore dettagliati possono anche essere generati per i comandi di aggiornamento e la sincronizzazione.  
+2.  [Generare report](generating-reports-mysqltosql.md) per visualizzare i report di output XML dettagliati per la valutazione/conversion e la migrazione dei dati. È anche possibile generare report di errore dettagliati per i comandi di aggiornamento e sincronizzazione.  
   
-## <a name="ssma-console-output-conventions"></a>Convenzioni di Output di Console SSMA  
-Dopo l'esecuzione di comandi di script SSMA e le opzioni, il programma di console vengono visualizzati i risultati e messaggi (le informazioni, errore, e così via) per l'utente nella console o se necessario, reindirizza a un file di output xml. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo di colore bianco indica i comandi di file di script; quello di colore verde rappresenta un prompt dei comandi per l'input utente e così via.  
+## <a name="ssma-console-output-conventions"></a>Convenzioni di output della console SSMA  
+Quando si eseguono i comandi e le opzioni di script di SSMA, il programma console Visualizza i risultati e i messaggi (informazioni, errore e così via) per l'utente nella console o, se necessario, reindirizza a un file di output XML. Ogni tipo di messaggio nell'output è identificato da un colore univoco. Ad esempio, il messaggio di testo in colore bianco denota i comandi del file di script; quello in verde rappresenta una richiesta per l'input dell'utente e così via.  
   
 ![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
-Colore dall'interpretazione dell'output della console nella tabella seguente:  
+Interpretazione dei colori dell'output della console nella tabella seguente:  
   
 |Colore|Descrizione|  
 |---------|---------------|  
 |Rosso|Errore irreversibile durante l'esecuzione|  
-|Grigio|Data e un timestamp, messaggio all'utente|  
-|Bianco|Comandi di file di script, il tipo di messaggio|  
+|Grigio|Indicatore di data e ora, messaggio all'utente|  
+|Bianco|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
-|azzurro|Inizio, fine e il risultato di un'operazione|  
+|azzurro|Inizio, fine e risultato di un'operazione|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per MySQL](installing-ssma-for-mysql-mysqltosql.md)  

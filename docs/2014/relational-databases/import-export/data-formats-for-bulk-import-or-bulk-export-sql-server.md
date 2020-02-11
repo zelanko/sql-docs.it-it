@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012080"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formati di dati per l'importazione o l'esportazione bulk (SQL Server)
@@ -35,19 +35,19 @@ ms.locfileid: "66012080"
 |Operazione|Nativo|nativi Unicode|Carattere|carattere Unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |Trasferimenti bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati che non contiene caratteri estesi o DBCS (Double-Byte Character Set). A meno che non venga utilizzato un file di formato, la definizione delle tabelle deve essere identica.|Sì<sup>1</sup>|-|-|-|  
-|Per le colonne `sql_variant` è consigliabile utilizzare il formato di dati nativo perché, a differenza dei formati carattere o Unicode, mantiene i metadati per ogni valore `sql_variant`.|Yes|-|-|-|  
-|Trasferimenti bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS.|-|Yes|-|-|  
-|Importazione bulk di dati da un file di testo creato da un altro programma.|-|-|Yes|-|  
-|Esportazione bulk di dati in un file di testo che verrà utilizzato in un altro programma.|-|-|Yes|-|  
-|Trasferimenti bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente dati Unicode e che non contiene caratteri estesi o DBCS.|-|-|-|Yes|  
+|Per le colonne `sql_variant` è consigliabile utilizzare il formato di dati nativo perché, a differenza dei formati carattere o Unicode, mantiene i metadati per ogni valore `sql_variant`.|Sì|-|-|-|  
+|Trasferimenti bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS.|-|Sì|-|-|  
+|Importazione bulk di dati da un file di testo creato da un altro programma.|-|-|Sì|-|  
+|Esportazione bulk di dati in un file di testo che verrà utilizzato in un altro programma.|-|-|Sì|-|  
+|Trasferimenti bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente dati Unicode e che non contiene caratteri estesi o DBCS.|-|-|-|Sì|  
   
- <sup>1</sup> metodo più veloce per l'esportazione bulk di dati dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando si usa **bcp**.  
+ <sup>1</sup> metodo più veloce per l'esportazione bulk di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando si usa **bcp**.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
 -   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà FetchOptions (Servizi Desktop remoto) | Microsoft Docs
+title: Proprietà FetchOptions (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,38 +14,38 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964129"
 ---
 # <a name="fetchoptions-property-rds"></a>Proprietà FetchOptions (Servizi Desktop remoto)
 Indica il tipo di recupero asincrono.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="setting-and-return-values"></a>Impostazioni e valori restituiti  
+## <a name="setting-and-return-values"></a>Impostazione e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
 |Costante|Descrizione|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Tutti i record della [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. L'intero **Recordset** viene recuperato prima che l'applicazione può eseguire alcuna operazione con esso.|  
-|**adcFetchBackground**|Controllo può restituire all'applicazione, non appena il primo batch di record è stato recuperato. Una lettura successiva del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà ritardata fino al recupero record ricercato è in realtà, a ogni controllo viene restituito all'applicazione.|  
-|**adcFetchAsync**|Valore predefinito. Il controllo ritorna immediatamente all'applicazione mentre vengono recuperati i record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, verrà letto il record più vicino a quello cercato e controllo restituirà immediatamente, che indica che alla fine corrente del **Recordset** è stato raggiunto. Ad esempio, una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) sposterà la posizione corrente all'ultimo record effettivamente recuperate, anche se più record continuerà popolare le **Recordset**.|  
+|**adcFetchUpFront**|Tutti i record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) vengono recuperati prima che il controllo venga restituito all'applicazione. Il **Recordset** completo viene recuperato prima che l'applicazione possa eseguire qualsiasi operazione.|  
+|**adcFetchBackground**|Il controllo può tornare all'applicazione non appena il primo batch di record è stato recuperato. Una successiva lettura del **Recordset** che tenta di accedere a un record non recuperato nel primo batch verrà posticipata fino a quando il record cercato non viene effettivamente recuperato, a cui il controllo del tempo torna all'applicazione.|  
+|**adcFetchAsync**|Default. Il controllo viene restituito immediatamente all'applicazione durante il recupero dei record in background. Se l'applicazione tenta di leggere un record che non è ancora stato recuperato, il record più vicino al record cercato verrà letto e il controllo verrà restituito immediatamente, a indicare che è stata raggiunta la fine corrente del **Recordset** . Una chiamata a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , ad esempio, sposterà la posizione del record corrente nell'ultimo record effettivamente recuperato, anche se più record continueranno a popolare il **Recordset**.|  
   
 > [!NOTE]
->  Ogni file eseguibile dal lato client che usa le costanti debba fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni costante desiderati dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinito per la libreria di servizi desktop remoto.  
+>  Ogni file eseguibile lato client che utilizza queste costanti deve fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costanti desiderate dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinita per la libreria RDS.  
   
-## <a name="remarks"></a>Note  
- In un'applicazione Web, è possibile usare **adcFetchAsync** (valore predefinito), poiché garantisce prestazioni migliori. In un'applicazione client compilata, è possibile usare **il valore adcFetchBackground**.  
+## <a name="remarks"></a>Osservazioni  
+ In un'applicazione Web, in genere si vuole usare **adcFetchAsync** (valore predefinito), perché fornisce prestazioni migliori. In un'applicazione client compilata, in genere si vuole usare **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà ExecuteOptions e FetchOptions (esempio di proprietà (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Esempio di proprietà ExecuteOptions e FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Metodo Cancel (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

@@ -16,18 +16,18 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078163"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Suddivide una pubblicazione di tipo merge in partizioni verticali. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,35 +43,35 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo nella pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo della pubblicazione. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @column = ] 'column'` Identifica le colonne su cui creare la partizione verticale. *colonna* viene **sysname**, con un valore predefinito è NULL. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. *colonna* non può essere NULL quando *operazione* è impostata su **drop**. Per escludere le colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall'oggetto specificato *articolo*.  
+`[ @column = ] 'column'`Identifica le colonne su cui creare la partizione verticale. *Column* è di **tipo sysname**e il valore predefinito è null. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. la *colonna* non può essere null quando l' *operazione* è impostata su **Drop**. Per escludere colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare la `@operation = N'drop'` *colonna* e per ogni colonna da rimuovere dall' *articolo*specificato.  
   
-`[ @operation = ] 'operation'` È lo stato di replica. *operazione* viene **nvarchar(4)** , con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
+`[ @operation = ] 'operation'`Stato della replica. *Operation* è di **tipo nvarchar (4)** e il valore predefinito è Add. **Aggiungi** contrassegna la colonna per la replica. **Drop** Cancella la colonna.  
   
-`[ @schema_replication = ] 'schema_replication'` Specifica che una modifica dello schema verrà propagata quando viene eseguito l'agente di Merge. *schema_replication* viene **nvarchar(5**, con un valore predefinito è FALSE.  
+`[ @schema_replication = ] 'schema_replication'`Specifica che una modifica dello schema verrà propagata durante l'esecuzione del agente di merge. *schema_replication* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
 > [!NOTE]  
->  Solo **FALSE** è supportata per *schema_replication*.  
+>  Per *schema_replication*è supportato solo il valore **false** .  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge verranno non invalidano lo snapshot non è valido.  
+ **0** specifica che le modifiche apportate all'articolo di merge non saranno valide per lo snapshot.  
   
- **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
+ **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot. in tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_` Abilita o disabilita la possibilità di reinizializzare la sottoscrizione. *force_reinit_subscription* è di tipo bit e il valore predefinito **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`Abilita o Disabilita la possibilità di reinizializzare della sottoscrizione. *force_reinit_subscription* è un bit e il valore predefinito è **0**.  
   
- **0** indica che le modifiche apportate all'articolo di merge non comportano la reinizializzazione della sottoscrizione.  
+ **0** specifica che le modifiche apportate all'articolo di merge non comporteranno la reinizializzazione della sottoscrizione.  
   
- **1** specifica che le modifiche apportate all'articolo di merge possono causare la reinizializzazione della sottoscrizione e se è il caso, il valore **1** concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
+ **1** specifica che le modifiche apportate all'articolo di merge possono causare la reinizializzazione della sottoscrizione. in tal caso, il valore **1** consente la reinizializzazione della sottoscrizione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_mergearticlecolumn** viene utilizzata nella replica di tipo merge.  
   
  Non è possibile eliminare una colonna Identity dall'articolo se viene utilizzata la gestione automatica degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -83,8 +83,8 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_mergearticlecolumn**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
