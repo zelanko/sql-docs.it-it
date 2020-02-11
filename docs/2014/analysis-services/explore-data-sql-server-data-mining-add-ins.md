@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Esplorazione dei dati (SQL Server componenti aggiuntivi Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081312"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Esplorazione dati (componenti aggiuntivi Data mining di SQL Server)
-  ![Explore Data wizard](media/dmc-explore.gif "procedura guidata esplorazione dati")  
+  ![Procedura guidata Esplorazione dati](media/dmc-explore.gif "Procedura guidata Esplorazione dati")  
   
- Il **Esplora dati** procedura guidata consente di conoscere il tipo e la quantità di dati della tabella dati. La procedura guidata consente di creare un grafico della distribuzione e dei valori delle colonne selezionate, una alla volta. È quindi possibile provare a modificare il modo in cui i dati vengono raggruppati o copiare il grafico del contenuto in una cartella di lavoro di Excel per esaminarlo.  
+ La procedura guidata **Esplora dati** consente di comprendere il tipo e la quantità di dati nella tabella dati. La procedura guidata consente di creare un grafico della distribuzione e dei valori delle colonne selezionate, una alla volta. È quindi possibile provare a modificare il modo in cui i dati vengono raggruppati o copiare il grafico del contenuto in una cartella di lavoro di Excel per esaminarlo.  
   
  Se nei dati sono contenuti dati numerici continui, è possibile passare tra queste due viste:  
   
@@ -34,22 +34,22 @@ ms.locfileid: "66081312"
   
  Quando tramite la procedura guidata vengono trovati gruppi nei dati, si utilizza la distribuzione effettiva dei valori dei dati. Pertanto, il grafico a barre non visualizza i valori numerici in base a indicatori numerici tipici dell'asse costituiti da numeri interi, ad esempio 10 o 100. Gli intervalli visualizzati nel grafico a barre possono invece essere simili al seguente: 43521-55603 (per la colonna Income).  
   
- Se si desidera raggruppare i dati in altri intervalli, è necessario eseguire questa operazione in Excel prima di analizzare i dati. In alternativa, è possibile modificare le etichette dei dati usando il [Modifica etichette](relabel-sql-server-data-mining-add-ins.md) procedura guidata.  
+ Se si desidera raggruppare i dati in altri intervalli, è necessario eseguire questa operazione in Excel prima di analizzare i dati. In alternativa, è possibile rietichettare i dati tramite la procedura guidata modifica [etichette](relabel-sql-server-data-mining-add-ins.md) .  
   
 ## <a name="using-the-explore-data-wizard"></a>Utilizzo della procedura guidata Esplorazione dati  
   
-1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **Esplora dati**.  
+1.  Sulla barra multifunzione **data mining** fare clic su **Esplora dati**.  
   
-2.  Nel **selezionare l'origine** finestra di dialogo, selezionare la tabella o un intervallo di celle contenente i dati.  
+2.  Nella finestra di dialogo **Seleziona origine** selezionare la tabella o l'intervallo di celle contenente i dati.  
   
-3.  Nel **Seleziona colonna** finestra di dialogo scegliere la colonna da analizzare dai dati di esempio visualizzati nel riquadro.  
+3.  Nella finestra di dialogo **Seleziona colonna** scegliere la colonna da analizzare, dai dati di esempio visualizzati nel riquadro.  
   
-4.  Nel **Esplora dati** finestra di dialogo scegliere i tipi di grafico per visualizzare la distribuzione dei dati.  
+4.  Nella finestra di dialogo **Esplora dati** scegliere i tipi di grafico per la visualizzazione della distribuzione dei dati.  
   
 5.  È possibile aggiungere nuove colonne ai dati, cambiare il modo in cui i dati sono segmentati o copiare il grafico in Excel.  
   
 ### <a name="requirements"></a>Requisiti  
- Usare la **Esplora dati** procedura guidata, i dati devono essere in una tabella di dati di Excel.   
+ Per utilizzare la procedura guidata **esplorazione dati** , è necessario che i dati si trovino in una tabella dati di Excel.   
   
 ## <a name="see-also"></a>Vedere anche  
  [Elenco di controllo per la preparazione di data mining](checklist-of-preparation-for-data-mining.md)  
