@@ -1,5 +1,5 @@
 ---
-title: Verifica di coerenza | Microsoft Docs
+title: Verifica coerenza | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125526"
 ---
 # <a name="consistency-check"></a>Verifica della coerenza
-Verifica di coerenza viene eseguita automaticamente dal driver ogni volta che un'applicazione imposta il campo SQL_DESC_DATA_PTR del APD, ARD o IPD. Ogni volta che questo campo è impostato, il driver verificherà che il valore del campo SQL_DESC_TYPE e i valori applicabili per il campo SQL_DESC_TYPE nello stesso record siano validi e coerenti.  
+Una verifica della coerenza viene eseguita automaticamente dal driver ogni volta che un'applicazione imposta il campo SQL_DESC_DATA_PTR di APD, ARD o dip. Ogni volta che viene impostato questo campo, il driver verifica che il valore del campo SQL_DESC_TYPE e i valori applicabili al campo SQL_DESC_TYPE nello stesso record siano validi e coerenti.  
   
- Il campo SQL_DESC_DATA_PTR di un IPD non è in genere impostato; Tuttavia, un'applicazione può farlo per forzare un controllo di consistenza dei campi IPD. Il valore impostato per il campo SQL_DESC_DATA_PTR dell'IPD non viene effettivamente archiviato e non può essere recuperato da una chiamata a **SQLGetDescField** oppure **SQLGetDescRec**; l'impostazione viene eseguita solo per forzare il verifica della coerenza. Impossibile eseguire una verifica coerenza su un'implementazione.  
+ Il campo SQL_DESC_DATA_PTR di un oggetto dpi non è impostato normalmente; Tuttavia, un'applicazione può eseguire questa operazione per forzare una verifica di coerenza dei campi di dpi. Il valore che il campo SQL_DESC_DATA_PTR di dpi è impostato su non è effettivamente archiviato e non può essere recuperato da una chiamata a **SQLGetDescField** o **SQLGetDescRec**; l'impostazione viene eseguita solo per forzare la verifica della coerenza. Non è possibile eseguire una verifica di coerenza su un IRD.  
   
- Per ulteriori informazioni sulla verifica di coerenza, vedere [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).
+ Per ulteriori informazioni sulla verifica della coerenza, vedere [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).

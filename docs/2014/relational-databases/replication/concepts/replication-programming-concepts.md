@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721809"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
@@ -81,9 +81,9 @@ ms.locfileid: "62721809"
   
  Negli argomenti seguenti vengono fornite informazioni sulla sicurezza:  
   
--   [Sicurezza della replica di SQL Server](../security/view-and-modify-replication-security-settings.md)  
+-   [Sicurezza replica di SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
--   [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Scelta di un ambiente di sviluppo  
  Nello sviluppo di un'applicazione di replica è necessario considerare tre ambienti di sviluppo di base. Ogni ambiente di sviluppo dispone dell'accesso alle stesse funzionalità di replica, ma con alcune eccezioni. Le applicazioni di replica possono essere sviluppate in ognuno degli ambienti seguenti.  
@@ -103,7 +103,7 @@ ms.locfileid: "62721809"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>Scegliere l'interfaccia di programmazione della replica appropriata  
  L'ultimo passaggio della pianificazione consiste nello scegliere l'interfaccia di programmazione della replica appropriata che consenta di implementare le funzionalità di replica desiderate per l'ambiente di sviluppo scelto. Nella tabella seguente vengono illustrate le interfacce di programmazione della replica disponibili.  
   
-|Interfaccia|Ambiente|Utilizzi|  
+|Interfaccia|Environment|Utilizzi|  
 |---------------|-----------------|----------|  
 |[Concetti di base relativi a RMO (Replication Management Objects)](replication-management-objects-concepts.md)|Codice gestito|Amministrazione, monitoraggio e sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication>|Codice gestito|Sincronizzazione.|  
@@ -120,7 +120,7 @@ ms.locfileid: "62721809"
   
 2.  Oltre all'accesso ai dati tipico richiesto per un'applicazione di vendita, questa applicazione deve consentire a un venditore di sincronizzare la sottoscrizione pull su richiesta facendo clic su un pulsante. Dopo aver installato ed eseguito l'applicazione, i rappresentanti dovranno inoltre essere in grado di configurare una sottoscrizione e applicare lo snapshot iniziale al client. L'applicazione utilizzerà eventualmente l'infrastruttura fornita da Windows per individuare la connettività wireless e per sincronizzare automaticamente la sottoscrizione nel momento in cui viene rilevata una connessione.  
   
-3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. In caso di implementazione della sincronizzazione Web, utilizzare una connessione SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configurare la sincronizzazione Web](../configure-web-synchronization.md).  
+3.  Seguire tutte le linee guida per la sicurezza della replica, incluso l'utilizzo dell'autenticazione di Windows e di una rete privata virtuale (VPN, Virtual Private Network) per la connessione al server di pubblicazione. In caso di implementazione della sincronizzazione Web, utilizzare una connessione SSL (Secure Sockets Layer). Per altre informazioni, vedere [Configure Web Synchronization](../configure-web-synchronization.md).  
   
 4.  Per sfruttare le caratteristiche offerte da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], l'applicazione viene sviluppata utilizzando un linguaggio di codice gestito.  
   

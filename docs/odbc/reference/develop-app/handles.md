@@ -1,5 +1,5 @@
 ---
-title: Gestisce | Microsoft Docs
+title: Handle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139035"
 ---
 # <a name="handles"></a>Selettori
-Gli handle sono opachi a 32 bit di valori che identificano un particolare elemento; in ODBC, questo elemento può essere un ambiente, connessione, istruzione o descrittore. Quando l'applicazione chiama **SQLAllocHandle**, il Driver Manager o il driver consente di creare un nuovo elemento del tipo specificato e restituisce il relativo handle all'applicazione. L'applicazione in un secondo momento Usa l'handle per identificare tale elemento quando si chiama funzioni ODBC. Il gestore dei Driver e il driver utilizza l'handle per individuare informazioni sull'elemento.  
+Gli handle sono valori opachi, a 32 bit che identificano un particolare elemento; in ODBC questo elemento può essere un ambiente, una connessione, un'istruzione o un descrittore. Quando l'applicazione chiama **SQLAllocHandle**, il driver o la gestione driver crea un nuovo elemento del tipo specificato e ne restituisce l'handle per l'applicazione. Nell'applicazione in un secondo momento viene utilizzato l'handle per identificare l'elemento durante la chiamata di funzioni ODBC. Gestione driver e driver utilizzano l'handle per individuare le informazioni sull'elemento.  
   
- Ad esempio, il codice seguente usa due handle di istruzione (*hstmtOrder* e *hstmtLine*) per identificare le istruzioni in cui creare il set di risultati di sales orders e sales ordinare i numeri di riga. In un secondo momento Usa i punti di controllo per identificare il set di risultati per recuperare i dati da.  
+ Nel codice seguente, ad esempio, vengono utilizzati due handle di istruzione (*hstmtOrder* e *hstmtLine*) per identificare le istruzioni per la creazione di set di risultati di ordini di vendita e numeri di riga degli ordini di vendita. USA quindi questi handle per identificare il set di risultati da cui recuperare i dati.  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -71,15 +71,15 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- Gli handle sono significativi solo per il componente ODBC che ha creato. vale a dire, the Driver Manager può interpretare gli handle di gestione Driver e solo un driver in grado di interpretare i proprio handle.  
+ Gli handle sono significativi solo per il componente ODBC che li ha creati. ovvero solo la gestione driver può interpretare gli handle di gestione driver e solo un driver può interpretare i propri handle.  
   
- Si supponga, ad esempio, il driver nell'esempio precedente viene allocata una struttura per archiviare le informazioni su un'istruzione e restituisce il puntatore alla struttura come l'handle di istruzione. Quando l'applicazione chiama **SQLPrepare**, passa un'istruzione SQL e l'handle di istruzione usato per i numeri di riga ordine di vendita. Il driver invia l'istruzione SQL per l'origine dati che prepara e restituisce un identificatore del piano di accesso. Il driver utilizza l'handle per individuare la struttura in cui archiviare questo identificatore.  
+ Si supponga, ad esempio, che il driver nell'esempio precedente allochi una struttura per archiviare le informazioni su un'istruzione e restituisce il puntatore a questa struttura come handle di istruzione. Quando l'applicazione chiama **SQLPrepare**, passa un'istruzione SQL e l'handle dell'istruzione utilizzata per i numeri di riga degli ordini di vendita. Il driver invia l'istruzione SQL all'origine dati, che la prepara e restituisce un identificatore del piano di accesso. Il driver utilizza l'handle per trovare la struttura in cui archiviare questo identificatore.  
   
- Successivamente, quando l'applicazione chiama **SQLExecute** per generare il set di risultati di numeri di riga per un particolare ordine di vendita, passa l'handle stesso. Il driver utilizza l'handle per recuperare l'identificatore del piano di accesso dalla struttura. Invia l'identificatore per l'origine dati per indicare che pianifica l'esecuzione.  
+ In seguito, quando l'applicazione chiama **SQLExecute** per generare il set di risultati di numeri di riga per un determinato ordine di vendita, passa lo stesso handle. Il driver utilizza l'handle per recuperare l'identificatore del piano di accesso dalla struttura. Invia l'identificatore all'origine dati per indicare quale piano eseguire.  
   
- ODBC prevede due livelli di handle: Handle di Gestione driver e gli handle di driver. L'applicazione usa gli handle di gestione Driver quando si chiama funzioni ODBC perché chiama le funzioni di gestione Driver. Gestione Driver Usa questo handle per trovare l'handle di driver corrispondenti e l'handle del driver quando si chiama la funzione nel driver. Per un esempio di come vengono usati driver e gli handle di gestione Driver, vedere [ruolo di gestione Driver nel processo di connessione](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC dispone di due livelli di handle: handle di gestione driver e handle del driver. L'applicazione utilizza gli handle di gestione driver quando si chiamano le funzioni ODBC perché chiama tali funzioni in Gestione driver. Gestione driver utilizza questo handle per trovare l'handle del driver corrispondente e utilizza l'handle del driver quando si chiama la funzione nel driver. Per un esempio di come vengono usati gli handle di driver e di gestione driver, vedere [ruolo di gestione driver nel processo di connessione](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
- Che sono disponibili due livelli di handle è un elemento dell'architettura ODBC; Nella maggior parte dei casi, non è rilevante per l'applicazione o driver. Anche se non è in genere necessario eseguire questa operazione, è possibile che l'applicazione per determinare i punti di controllo driver chiamando **SQLGetInfo**.  
+ La presenza di due livelli di handle è un artefatto dell'architettura ODBC. nella maggior parte dei casi non è pertinente per l'applicazione o il driver. Anche se in genere non esiste alcun motivo per eseguire questa operazione, è possibile che l'applicazione determini gli handle del driver chiamando **SQLGetInfo**.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -89,6 +89,6 @@ SQLCloseCursor(hstmtOrder);
   
 -   [Handle di istruzione](../../../odbc/reference/develop-app/statement-handles.md)  
   
--   [Handle descrittore](../../../odbc/reference/develop-app/descriptor-handles.md)  
+-   [Handle del descrittore](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [Transizioni di stato](../../../odbc/reference/develop-app/state-transitions.md)

@@ -1,5 +1,5 @@
 ---
-title: "Esempio: Ridenominazione dell'elemento &lt;row&gt; | Microsoft Docs"
+title: "Esempio: ridenominazione dell'elemento &lt;row&gt; | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704910"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Esempio: Ridenominazione dell'elemento &lt;row&gt;
+# <a name="example-renaming-the-ltrowgt-element"></a>Esempio: ridenominazione dell'elemento &lt;row&gt;
   Nella modalità RAW viene creato un elemento `<row>`per ogni riga del set di risultati. È possibile specificare un nome diverso per l'elemento impostando un argomento facoltativo per la modalità RAW, come illustrato nella query seguente. La query restituisce un elemento <`ProductModel`> per ogni riga del set di righe.  
   
 ## <a name="example"></a>Esempio  
@@ -42,6 +42,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

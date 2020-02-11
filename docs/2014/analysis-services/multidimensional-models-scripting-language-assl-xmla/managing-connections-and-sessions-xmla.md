@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62701990"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestione di connessioni e sessioni (XMLA)
-  *Le informazioni sullo stato* è una condizione durante il quale il server mantiene le identità e il contesto di un client tra le chiamate di metodo. *Concetto* è una condizione durante il quale il server non ricorda l'identità e il contesto di un client dopo il completamento di una chiamata al metodo.  
+  *Informazioni sullo stato* è una condizione durante la quale il server conserva l'identità e il contesto di un client tra le chiamate al metodo. L' *assenza* di stato è una condizione durante la quale il server non memorizza l'identità e il contesto di un client al termine di una chiamata al metodo.  
   
- Per fornire le informazioni sullo stato, XML for Analysis (XMLA) supporta *sessioni* che consentono a una serie di istruzioni da eseguire tra loro. Un esempio di tale serie di istruzioni potrebbe essere la creazione di un membro calcolato da utilizzare in query successive.  
+ Per fornire informazioni sullo stato, XML for Analysis (XMLA) supporta le *sessioni* che consentono di eseguire insieme una serie di istruzioni. Un esempio di tale serie di istruzioni potrebbe essere la creazione di un membro calcolato da utilizzare in query successive.  
   
  In genere le sessioni in XMLA si comportano nel modo indicato dalla specifica OLE DB 2.6 e descritto di seguito:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62701990"
   
 -   È possibile eseguire più comandi nel contesto di una singola sessione.  
   
--   Supporto per le transazioni nel contesto di XMLA è tramite comandi specifici del provider inviati con il [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo).  
+-   Il supporto per le transazioni nel contesto XMLA è tramite comandi specifici del provider inviati con il metodo [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
  XMLA definisce una modalità per supportare sessioni in un ambiente Web in modo analogo all'approccio utilizzato dal protocollo DAV (Distributed Authoring and Versioning) per implementare il blocco in un ambiente a regime di controllo libero. L'analogia con il protocollo DAV consiste nel fatto che è consentita la scadenza delle sessioni nel provider per diversi motivi, ad esempio se si verifica un timeout o un errore di connessione. Quando le sessioni sono supportate, i servizi Web devono essere consapevoli e pronti per gestire di set interrotti di comandi che devono essere riavviati.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62701990"
 |-----------------|-----------------|  
 |BeginSession|Questa intestazione richiede al provider di creare una nuova sessione. Il provider deve rispondere costruendo una nuova sessione e restituendo l'ID di sessione come parte dell'intestazione Session nella risposta SOAP.|  
 |SessionId|Area del valore che contiene l'ID di sessione da utilizzare in ogni chiamata al metodo per il resto della sessione. Nella risposta SOAP il provider invia questo tag, che deve essere inviato inoltre anche dal client con ogni elemento dell'intestazione Session.|  
-|Sessione|Per ogni chiamata al metodo che si verifica nella sessione, questa intestazione deve essere utilizzata e l'ID di sessione deve essere incluso nell'area del valore dell'intestazione.|  
+|sessione|Per ogni chiamata al metodo che si verifica nella sessione, questa intestazione deve essere utilizzata e l'ID di sessione deve essere incluso nell'area del valore dell'intestazione.|  
 |EndSession|Per terminare la sessione, utilizzare questa intestazione. L'ID di sessione deve essere incluso con l'area del valore.|  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "62701990"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Il messaggio di risposta SOAP dal provider include l'ID di sessione nell'area di intestazione restituita con il tag di intestazione XMLA \<SessionId >.  
+2.  Il messaggio di risposta SOAP del provider include l'ID sessione nell'area dell'intestazione restituita, utilizzando il tag \<di intestazione XMLA>.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +93,7 @@ ms.locfileid: "62701990"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Quando la sessione è stata completata, il \<EndSession > tag viene usato, che contiene il valore di ID di sessione correlato.  
+4.  Al termine della sessione, viene usato \<il tag> EndSession, che contiene il valore dell'ID di sessione correlato.  
   
     ```  
     <SOAP-ENV:Header>  

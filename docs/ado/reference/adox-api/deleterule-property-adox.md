@@ -20,23 +20,23 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966428"
 ---
 # <a name="deleterule-property-adox"></a>Proprietà DeleteRule (ADOX)
 Indica l'azione eseguita quando viene eliminata una chiave primaria.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **lungo** valore che può essere uno delle [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) costanti. Il valore predefinito è **adRINone**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Note  
- Questa proprietà è di sola lettura sul [chiave](../../../ado/reference/adox-api/key-object-adox.md) già aggiunti a una raccolta di oggetti.  
+## <a name="remarks"></a>Osservazioni  
+ Questa proprietà è di sola lettura sugli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà DeleteRule (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+ [Esempio della proprietà DeleteRule (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)

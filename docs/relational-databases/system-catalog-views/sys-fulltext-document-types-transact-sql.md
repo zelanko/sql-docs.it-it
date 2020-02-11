@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types (Transact-SQL) | Microsoft Docs
+title: sys. fulltext_document_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133847"
 ---
-# <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
+# <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni tipo di documento disponibile per operazioni di indicizzazione full-text. Ogni riga rappresenta l'interfaccia IFilter registrata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,13 +35,13 @@ ms.locfileid: "68133847"
  
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|Estensione di file del tipo di documento supportato.<br /><br /> Questo valore può essere utilizzato per identificare il filtro che verrà usato durante l'indicizzazione full-text di colonne di tipo **varbinary (max)** oppure **immagine**.|  
+|**document_type**|**sysname**|Estensione di file del tipo di documento supportato.<br /><br /> Questo valore può essere utilizzato per identificare il filtro che verrà utilizzato durante l'indicizzazione full-text di colonne di tipo **varbinary (max)** o **Image**.|  
 |**class_id**|**uniqueidentifier**|GUID della classe IFilter che supporta l'estensione di file.|  
-|**path**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile ai membri del solo il **serveradmin** ruolo predefinito del server.|  
-|**version**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
-|**manufacturer**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: Solo documenti il cui il produttore [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**percorso**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo ai membri del ruolo predefinito del server **serveradmin** .|  
+|**Versione**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
+|**manufacturer**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: solo i documenti con il produttore [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  

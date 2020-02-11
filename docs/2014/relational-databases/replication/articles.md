@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721993"
 ---
 # <a name="articles"></a>Articoli
@@ -66,14 +66,14 @@ ms.locfileid: "62721993"
     >  Le modifiche apportate alle proprietà nella finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** sostituiscono tutte le modifiche eseguite precedentemente nella finestra di dialogo **Proprietà articolo - \<NomeOggetto>** . Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
   
  **La tabella evidenziata è di tipo solo download**  
- Solo per la replica di tipo merge. Solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Selezionare questa opzione per indicare che non è possibile apportare modifiche nel Sottoscrittore se si utilizza una sottoscrizione client. Poiché non è possibile aggiornare gli articoli di solo download nel Sottoscrittore, i metadati di rilevamento non vengono inviati ai Sottoscrittori. Ciò può comportare uno spazio di archiviazione ridotto sui Sottoscrittori e un vantaggio in termini di prestazioni, soprattutto se la connessione di rete è lenta. Questa opzione corrisponde all'impostazione dell'opzione **Direzione sincronizzazione** sul valore **Solo download sul Sottoscrittore, non consentire modifiche del Sottoscrittore** nella finestra di dialogo **Proprietà articolo** . Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Solo per la replica di tipo merge. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Selezionare questa opzione per indicare che non è possibile apportare modifiche nel Sottoscrittore se si utilizza una sottoscrizione client. Poiché non è possibile aggiornare gli articoli di solo download nel Sottoscrittore, i metadati di rilevamento non vengono inviati ai Sottoscrittori. Ciò può comportare uno spazio di archiviazione ridotto sui Sottoscrittori e un vantaggio in termini di prestazioni, soprattutto se la connessione di rete è lenta. Questa opzione corrisponde all'impostazione dell'opzione **Direzione sincronizzazione** sul valore **Solo download sul Sottoscrittore, non consentire modifiche del Sottoscrittore** nella finestra di dialogo **Proprietà articolo** . Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Mostra solo oggetti selezionati nell'elenco**  
  Selezionare questa casella di controllo per visualizzare solo gli articoli selezionati nel riquadro degli oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicare dati e oggetti di database](publish/publish-data-and-database-objects.md)   
- [Creare una pubblicazione](publish/create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)  
   
   
