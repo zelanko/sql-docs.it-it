@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250533"
 ---
 # <a name="scripting-replication"></a>Creazione di script di replica
-  Gli script di tutti i componenti di replica inclusi in una topologia devono essere creati come parte di un piano di ripristino di emergenza. Gli script possono inoltre essere utilizzati per automatizzare attività ripetitive. Uno script contiene le stored procedure di sistema Transact-SQL necessarie per l'implementazione dei componenti di replica, ad esempio una pubblicazione o una sottoscrizione. Gli script possono essere creati mediante una procedura guidata, quale Creazione guidata nuova pubblicazione, o in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo aver creato un componente. È possibile visualizzare, modificare ed eseguire lo script utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Gli script possono essere memorizzati con file di backup da utilizzare nel caso in cui sia necessario riconfigurare una topologia di replica.  
+  Gli script di tutti i componenti di replica inclusi in una topologia devono essere creati come parte di un piano di ripristino di emergenza. Gli script possono inoltre essere utilizzati per automatizzare attività ripetitive. Uno script contiene le stored procedure di sistema Transact-SQL necessarie per l'implementazione dei componenti di replica, ad esempio una pubblicazione o una sottoscrizione. Gli script possono essere creati in una procedura guidata, ad esempio la creazione guidata nuova pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , o in dopo la creazione di un componente. È possibile visualizzare, modificare ed eseguire lo script utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Gli script possono essere memorizzati con file di backup da utilizzare nel caso in cui sia necessario riconfigurare una topologia di replica.  
   
  È necessario creare un nuovo script per un componente se vengono apportate modifiche alle proprietà. Se si utilizzano stored procedure personalizzate con la replica transazionale, è consigliabile archiviare una copia di ogni procedura con gli script, aggiornando la copia in caso di modifica della procedura. Le procedure vengono in genere aggiornate in seguito a modifiche dello schema o a nuove esigenze applicative. Per altre informazioni sulle procedure personalizzate, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -54,17 +54,17 @@ ms.locfileid: "63250533"
   
 -   [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md)  
   
--   [Create a Publication](publish/create-a-publication.md)  
+-   [Creare una pubblicazione](publish/create-a-publication.md)  
   
--   [Create a Push Subscription](create-a-push-subscription.md)  
+-   [Creare una sottoscrizione push](create-a-push-subscription.md)  
   
--   [Create a Pull Subscription](create-a-pull-subscription.md)  
+-   [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)  
   
 #### <a name="to-script-an-object-from-a-replication-wizard"></a>Per creare script per un oggetto da una procedura guidata di replica  
   
 1.  Nella pagina **Azioni procedura guidata** della procedura guidata selezionare la casella di controllo appropriata:  
   
-    -   **Genera un file script con i passaggi per la creazione della pubblicazione**  
+    -   **Genera un file script con i passaggi per la creazione di una pubblicazione**  
   
     -   **Genera un file script con i passaggi per la creazione delle sottoscrizioni**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63250533"
   
 3.  Fare clic con il pulsante destro del mouse su una pubblicazione o una sottoscrizione e quindi scegliere **Genera script**.  
   
-4.  Specificare le opzioni nella finestra di dialogo **Genera script SQL - \<OggettoReplica>** .  
+4.  Specificare le opzioni nella finestra di dialogo **Genera script SQL - \<OggettoReplica>**.  
   
 5.  Fare clic su **Genera script nel file**.  
   
