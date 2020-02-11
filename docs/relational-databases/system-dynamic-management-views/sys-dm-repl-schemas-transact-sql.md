@@ -1,5 +1,5 @@
 ---
-title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
+title: sys. dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088577"
 ---
-# <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
+# <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle colonne di tabella pubblicate dalla replica.  
@@ -32,24 +32,24 @@ ms.locfileid: "68088577"
  
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary(8)**|Indirizzo in memoria della struttura dello schema nella cache per l'articolo di tabella pubblicato.|  
+|**artcache_schema_address**|**varbinary (8)**|Indirizzo in memoria della struttura dello schema nella cache per l'articolo di tabella pubblicato.|  
 |**tabid**|**bigint**|ID della tabella replicata.|  
 |**indexid**|**smallint**|ID di un indice cluster nella tabella pubblicata.|  
 |**idSch**|**bigint**|ID dello schema di tabella.|  
-|**tabschema**|**nvarchar(510)**|Nome dello schema di tabella.|  
+|**tabschema**|**nvarchar (510)**|Nome dello schema di tabella.|  
 |**ccTabschema**|**smallint**|Lunghezza in caratteri dello schema di tabella.|  
-|**TabName**|**nvarchar(510)**|Nome della tabella pubblicata.|  
+|**tabname**|**nvarchar (510)**|Nome della tabella pubblicata.|  
 |**ccTabname**|**smallint**|Lunghezza in caratteri del nome della tabella pubblicata.|  
 |**rowsetid_delete**|**bigint**|ID della riga eliminata.|  
 |**rowsetid_insert**|**bigint**|ID della riga inserita.|  
 |**num_pk_cols**|**int**|Numero di colonne chiave primaria.|  
-|**pcitee**|**binary(8000)**|Puntatore alla struttura dell'espressione di query utilizzato per valutare la colonna calcolata.|  
+|**pcitee**|**binario (8000)**|Puntatore alla struttura dell'espressione di query utilizzato per valutare la colonna calcolata.|  
 |**re_numtextcols**|**int**|Numero di colonne BLOB nella tabella replicata.|  
-|**re_schema_lsn_begin**|**binary(8000)**|Numero di sequenza iniziale del file di log (LSN) della registrazione della versione dello schema.|  
-|**re_schema_lsn_end**|**binary(8000)**|LSN finale della registrazione della versione dello schema.|  
+|**re_schema_lsn_begin**|**binario (8000)**|Numero di sequenza iniziale del file di log (LSN) della registrazione della versione dello schema.|  
+|**re_schema_lsn_end**|**binario (8000)**|LSN finale della registrazione della versione dello schema.|  
 |**re_numcols**|**int**|Numero di colonne pubblicate.|  
 |**re_colid**|**int**|Identificatore di colonna nel server di pubblicazione.|  
-|**re_awcName**|**nvarchar(510)**|Nome della colonna pubblicata.|  
+|**re_awcName**|**nvarchar (510)**|Nome della colonna pubblicata.|  
 |**re_ccName**|**smallint**|Numero di caratteri nel nome di colonna.|  
 |**re_pk**|**tinyint**|Indica se la colonna pubblicata appartiene a una chiave primaria.|  
 |**re_unique**|**tinyint**|Indica se la colonna pubblicata appartiene a un indice univoco.|  
@@ -64,8 +64,8 @@ ms.locfileid: "68088577"
 |**re_fAnsiTrim**|**tinyint**|Specifica se nella colonna pubblicata viene utilizzata la rimozione di spazi ANSI.|  
 |**re_computed**|**smallint**|Specifica se la colonna pubblicata è una colonna calcolata.|  
 |**se_rowsetid**|**bigint**|ID del set di righe.|  
-|**se_schema_lsn_begin**|**binary(8000)**|LSN iniziale della registrazione della versione dello schema.|  
-|**se_schema_lsn_end**|**binary(8000)**|LSN finale della registrazione della versione dello schema.|  
+|**se_schema_lsn_begin**|**binario (8000)**|LSN iniziale della registrazione della versione dello schema.|  
+|**se_schema_lsn_end**|**binario (8000)**|LSN finale della registrazione della versione dello schema.|  
 |**se_numcols**|**int**|Numero di colonne.|  
 |**se_colid**|**int**|ID della colonna nel Sottoscrittore.|  
 |**se_maxlen**|**smallint**|Lunghezza massima della colonna.|  
@@ -80,15 +80,15 @@ ms.locfileid: "68088577"
 |**se_computed**|**smallint**|Specifica se la colonna è una colonna calcolata.|  
 |**se_nullBitInLeafRows**|**int**|Specifica se il valore di colonna è NULL.|  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione VIEW DATABASE STATE nel database di pubblicazione per chiamare **dm_repl_schemas**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione VIEW DATABASE STATE per il database di pubblicazione per chiamare **dm_repl_schemas**.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Vengono restituite informazioni solo per gli oggetti di database replicati caricati nella cache dell'articolo di replica.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative alle repliche &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative alla replica &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Sys. trigger_events (Transact-SQL) | Microsoft Docs
+title: sys. trigger_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,33 +21,33 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091938"
 ---
-# <a name="systriggerevents-transact-sql"></a>sys.trigger_events (Transact-SQL)
+# <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni evento per cui viene attivato un trigger.  
   
 > [!NOTE]  
->  **Sys. trigger_events** non è valida per le notifiche degli eventi.  
+>  **sys. trigger_events** non si applica alle notifiche degli eventi.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<Colonne ereditate da Sys. Events >**|Non applicabile|Eredita le **object_id**, **tipo**, **type_desc** colonne [Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
+|**\<Colonne ereditate da sys. Events>**|Non applicabile|Eredita la **object_id**, **** il tipo **type_desc** colonne da [sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|Contrassegna il trigger come il primo da attivare per questo evento.|  
 |**is_last**|**bit**|Contrassegna il trigger come l'ultimo da attivare per questo evento.|  
 |**event_group_type**|**int**|Gruppo di eventi nel quale viene creato il trigger o null se non viene creato in un gruppo di eventi.|  
-|**event_group_type_desc**|**nvarchar(60)**|Descrizione del gruppo di eventi nel quale viene creato il trigger o null se non viene creato in un gruppo di eventi.|  
+|**event_group_type_desc**|**nvarchar (60)**|Descrizione del gruppo di eventi nel quale viene creato il trigger o null se non viene creato in un gruppo di eventi.|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

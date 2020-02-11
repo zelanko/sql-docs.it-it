@@ -18,18 +18,18 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107901"
 ---
-# <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
+# <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina un oggetto OLE creato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,21 +40,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>Argomenti  
  *objecttoken*  
- È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
+ Token dell'oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
   
- Per altre informazioni sui codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Per ulteriori informazioni sui codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Note  
- Se **sp_OADestroy** non viene chiamato, l'oggetto creato oggetto OLE viene eliminato automaticamente alla fine del batch.  
+## <a name="remarks"></a>Osservazioni  
+ Se **sp_OADestroy** non viene chiamato, l'oggetto OLE creato viene eliminato automaticamente alla fine del batch.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente elimina creato in precedenza **SQLServer** oggetto.  
+ Nell'esempio seguente viene distrutto l'oggetto **SqlServer** creato in precedenza.  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -66,7 +66,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

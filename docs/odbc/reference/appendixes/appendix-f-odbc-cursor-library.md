@@ -1,5 +1,5 @@
 ---
-title: 'Appendice F: Libreria di cursori ODBC | Microsoft Docs'
+title: 'Appendice F: libreria di cursori ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090828"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Appendice F: Libreria di cursori ODBC
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- La libreria di cursori ODBC (Odbccr32) supporta i cursori scorrevoli di blocco per qualsiasi driver conforme con il livello di conformità di livello 1 API e può essere ridistribuita dagli sviluppatori con applicazioni o driver. La libreria di cursori supporta anche istruzioni di eliminazione e aggiornamento posizionato per set di risultati generati da **seleziona** istruzioni. Anche se supporta solo cursori statici e forward-only, la libreria di cursori soddisfa le esigenze di molte applicazioni. Inoltre, può fornire buone prestazioni, soprattutto per set di risultati di dimensioni piccole o medie dimensioni e per le applicazioni che non è supportata buona cursore.  
+ La libreria di cursori ODBC (Odbccr32. dll) supporta i cursori scorrevoli a blocchi per qualsiasi driver conforme al livello di conformità dell'API di livello 1 e può essere ridistribuito dagli sviluppatori con le applicazioni o i driver. La libreria di cursori supporta inoltre le istruzioni Update e Delete posizionate per i set di risultati generati dalle istruzioni **Select** . Sebbene supporti solo cursori statici e di sola trasmissione, la libreria di cursori soddisfa le esigenze di molte applicazioni. Inoltre, può fornire buone prestazioni, soprattutto per set di risultati di dimensioni ridotte o medie, e per le applicazioni che non dispongono di un corretto supporto per i cursori.  
   
- La libreria di cursori è una libreria di collegamento dinamico (DLL) che risiede tra gestione Driver e il driver. Quando un'applicazione chiama una funzione, gestione Driver chiama la funzione nella libreria di cursori, che esegue la funzione o chiama tale driver specificato. Per una determinata connessione, un'applicazione specifica se la libreria di cursori viene sempre usata, utilizzata se il driver non supporta i cursori scorrevoli o mai utilizzata.  
+ La libreria di cursori è una libreria di collegamento dinamico (DLL) che risiede tra Gestione driver e il driver. Quando un'applicazione chiama una funzione, gestione driver chiama la funzione nella libreria di cursori, che esegue la funzione o la chiama nel driver specificato. Per una determinata connessione, un'applicazione specifica se la libreria di cursori è sempre utilizzata, utilizzata se il driver non supporta i cursori scorrevoli o non viene mai usato.  
   
- La libreria di cursori viene visualizzato come un driver per la gestione di Driver. Se la libreria di cursori si trova tra la gestione di Driver e un database ODBC *2.x* driver, la libreria di cursori viene visualizzato come un database ODBC *2.x* driver. Se la libreria di cursori si trova tra la gestione di Driver e un database ODBC *3.x* driver, la libreria di cursori viene visualizzato come un database ODBC *3.x* driver. Comportamento anomalo dalla libreria di cursori varia a seconda della versione del driver può essere utilizzato con, fatta eccezione per gli offset di associazione, che è supportato per entrambi ODBC *2.x* e ODBC *3.x* driver.  
+ La libreria di cursori viene visualizzata come driver per Gestione driver. Se la libreria di cursori risiede tra Gestione driver e un driver ODBC *2. x* , la libreria di cursori viene visualizzata come un driver ODBC *2. x* . Se la libreria di cursori risiede tra Gestione driver e un driver ODBC *3. x* , la libreria di cursori viene visualizzata come un driver ODBC *3. x* . Il comportamento esposto dalla libreria di cursori dipende dalla versione del driver che sta utilizzando, ad eccezione degli offset di binding, supportato per i driver ODBC *2. x* e ODBC *3. x* .  
   
- Per implementare cursori a blocchi nei **SQLFetch** e **SQLFetchScroll**, la libreria di cursori chiama ripetutamente **SQLFetch** nel driver. Per implementare lo scorrimento, memorizza nella cache i dati che sono recuperati nella memoria e nei file di disco. Quando un'applicazione richiede un nuovo set di righe, la libreria di cursori recupera in base alle esigenze dal driver o dalla cache.  
+ Per implementare cursori a blocchi in **SQLFetch** e **SQLFetchScroll**, la libreria di cursori chiama ripetutamente **SQLFetch** nel driver. Per implementare lo scorrimento, memorizza nella cache i dati recuperati in memoria e nei file su disco. Quando un'applicazione richiede un nuovo set di righe, la libreria di cursori lo recupera secondo necessità dal driver o dalla cache.  
   
- Per implementare l'aggiornamento posizionato ed eliminare le istruzioni, la libreria di cursori costruisce un **aggiornare** oppure **eliminare** istruzione con un **in cui** clausola che specifica memorizzato nella cache valore di ogni colonna associata nella riga. Quando viene eseguita un'istruzione di aggiornamento posizionato, la libreria di cursori Aggiorna la cache da quelli nei buffer di set di righe.  
+ Per implementare le istruzioni Update e Delete posizionate, la libreria di cursori crea un'istruzione **Update** o **Delete** con una clausola **where** che specifica il valore memorizzato nella cache di ogni colonna associata nella riga. Quando viene eseguita un'istruzione UPDATE posizionata, la libreria di cursori aggiorna la cache dai valori nei buffer del set di righe.  
   
- Per altre informazioni sulla libreria di cursori ODBC, vedere le sezioni seguenti di questa appendice:  
+ Per ulteriori informazioni sulla libreria di cursori ODBC, vedere le sezioni seguenti di questa appendice:  
   
 -   [Uso della libreria di cursori ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
@@ -44,6 +44,6 @@ ms.locfileid: "68090828"
   
 -   [Esempio di codice della libreria di cursori](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [Note di implementazione](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [Note sull'implementazione](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [Codici di errore della libreria di cursori ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
