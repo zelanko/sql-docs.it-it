@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
+title: sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017855"
 ---
-# <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
+# <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Abilita la raccolta per statistiche di query di tutte le stored procedure compilate in modo nativo per l'istanza o stored procedure specifiche compilate in modo nativo.  
   
  Le prestazioni diminuiscono quando si abilita la raccolta delle statistiche. Se è necessario risolvere il problema di una o poche stored procedure compilate in modo nativo, è possibile abilitare la raccolta delle statistiche solo per tali stored procedure compilate in modo nativo.  
   
- Per abilitare la raccolta delle statistiche a livello di routine per tutte le stored procedure compilate in modo nativo, vedere [Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ Per abilitare la raccolta delle statistiche a livello di routine per tutte le stored procedure compilate in modo nativo, vedere [sys. sp_xtp_control_proc_exec_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,23 +43,23 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @new_collection_value = *valore*  
+ @new_collection_value= *valore*  
  Determina se la raccolta delle statistiche a livello di stored procedure è attivata (1) o disattivata (0).  
   
- @new_collection_value è impostato su zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato.  
+ @new_collection_valueviene impostato su zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato.  
   
- @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
- L'ID database e l'ID oggetto per la stored procedure compilata in modo nativo. Se la raccolta delle statistiche è abilitata per l'istanza di ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), le statistiche per una stored procedure compilata in modo nativo vengono raccolte. La disabilitazione della raccolta delle statistiche dell'istanza non disabilita la raccolta delle statistiche delle singole stored procedure compilate in modo nativo.  
+ @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ L'ID database e l'ID oggetto per la stored procedure compilata in modo nativo. Se la raccolta delle statistiche è abilitata per l'istanza ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), vengono raccolte le statistiche su una stored procedure compilata in modo nativo. La disabilitazione della raccolta delle statistiche dell'istanza non disabilita la raccolta delle statistiche delle singole stored procedure compilate in modo nativo.  
   
- Uso [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md), oppure [OBJECT_ID &#40;Transact-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md) per ottenere gli ID per un database e la stored procedure.  
+ Utilizzare [sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys. Procedures &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), DB_ID &#40;[Transact-SQL ](../../t-sql/functions/db-id-transact-sql.md)&#41;oppure OBJECT_ID &#40;[Transact-SQL](../../t-sql/functions/object-id-transact-sql.md) per ottenere gli ID per un database e&#41;.  
   
- @old_collection_value = *valore*  
+ @old_collection_value= *valore*  
  Restituisce lo stato corrente.  
   
 ## <a name="return-code"></a>Codice restituito  
  0 per l'esito positivo. Diverso da zero per l'esito negativo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito sysadmin.  
   
 ## <a name="code-sample"></a>Codice di esempio  

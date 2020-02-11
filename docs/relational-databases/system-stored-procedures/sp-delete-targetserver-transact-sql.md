@@ -18,18 +18,18 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111989"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove il server specificato dall'elenco dei server di destinazione disponibili.  
    
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,23 +41,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'` Il nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)** , non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server'`Nome del server da rimuovere come server di destinazione disponibile. il *Server* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* viene **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* viene **0**, l'elenco di download non viene cancellata.  
+`[ @clear_downloadlist = ] clear_downloadlist`Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**e il valore predefinito è **1**. Quando *clear_downloadlist* è **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* è **0**, l'elenco di download non viene cancellato.  
   
-`[ @post_defection = ] post_defection` Specifica se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**, con un valore predefinito è 1. Quando *post_defection* viene **1**, la procedura invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* viene **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
+`[ @post_defection = ] post_defection`Specifica se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**e il valore predefinito è 1. Quando *post_defection* è **1**, la procedura Invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* è **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="remarks"></a>Note  
- Normalmente per eliminare un server di destinazione consiste nel chiamare **sp_msx_defect** nel server di destinazione. Uso **sp_delete_targetserver** solo quando è necessaria un'esclusione in modo manuale.  
+## <a name="remarks"></a>Osservazioni  
+ Il modo normale per eliminare un server di destinazione consiste nel chiamare **sp_msx_defect** nel server di destinazione. Usare **sp_delete_targetserver** solo quando è necessario un errore manuale.  
   
-## <a name="permissions"></a>Permissions  
- Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il server `LONDON1` viene rimosso dall'elenco dei server di processo disponibili.  
@@ -72,8 +72,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

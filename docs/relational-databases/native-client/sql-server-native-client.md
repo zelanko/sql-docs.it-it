@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759348"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,13 +29,13 @@ SNAC, o SQL Server Native Client, è un termine che è stato usato in modo inter
 > Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il [post di Blog](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)relativo al ciclo di vita di snac.
 > Per ulteriori informazioni sul driver ODBC per SQL Server, vedere [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Informazioni sulle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'ultima versione disponibile di SQL Server Native Client:
+ Informazioni sulle funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'ultima versione disponibile di SQL Server Native Client:
 
--   [Supporto di SQL Server Native Client per Local DB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
+-   [Supporto SQL Server Native Client per il database locale](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
 -   [Individuazione dei metadati](../../relational-databases/native-client/features/metadata-discovery.md)  
 
--   [Supporto di UTF-16 in SQL Server Native Client 11.0](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
+-   [Supporto per UTF-16 in SQL Server Native Client 11.0](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
 
 -   [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
 
@@ -47,7 +47,7 @@ ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 -   Estendibilità del tipo di dati C. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
-     Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire **SQL_C_SS_TIME2** (per i tipi di **ora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (per **DateTimeOffset**) invece di **SQL_C_BINARY**, se l'applicazione USA ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+     Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire **SQL_C_SS_TIME2** (per i tipi di **ora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (per **DateTimeOffset**) anziché **SQL_C_BINARY**, se l'applicazione usa ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
 -   Chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 

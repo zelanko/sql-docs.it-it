@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714918"
 ---
 # <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo
@@ -33,7 +33,7 @@ ms.locfileid: "62714918"
   
 -   [Costrutti supportati in stored procedure compilate in modo nativo](supported-features-for-natively-compiled-t-sql-modules.md)  
   
--   [Uso di try...catch in stored procedure compilate in modo nativo](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
+-   [Utilizzo di try...catch in stored procedure compilate in modo nativo](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
   
 -   [Costrutti supportati su stored procedure compilate in modo nativo](supported-ddl-for-natively-compiled-t-sql-modules.md)  
   
@@ -46,6 +46,6 @@ ms.locfileid: "62714918"
 -   [Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
   
   

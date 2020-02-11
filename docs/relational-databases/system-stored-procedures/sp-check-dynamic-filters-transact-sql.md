@@ -27,18 +27,18 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771295"
 ---
-# <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
+# <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Visualizza informazioni sulle proprietà dei filtri di riga con parametri per una pubblicazione, specificando in particolare le funzioni utilizzate per generare una partizione di dati filtrati per una pubblicazione e se la pubblicazione consente l'utilizzo di partizioni pre-calcolate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,27 +56,27 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Indica se la pubblicazione è idonea per l'utilizzo di partizioni pre-calcolate. dove **1** indica che è possibile utilizzare le partizioni pre-calcolate e **0** indica che non è possibile utilizzarle.|  
 |**has_dynamic_filters**|**bit**|Indica se nella pubblicazione è stato definito almeno un filtro di riga con parametri. dove **1** indica che sono presenti uno o più filtri di riga con parametri e **0** indica che non esistono filtri dinamici.|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un punto e virgola.|  
-|**validate_subscriber_info**|**nvarchar(500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un segno più (+).|  
-|**uses_host_name**|**bit**|Se per i filtri di riga con parametri viene utilizzata la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) , dove **1** indica che questa funzione viene utilizzata per l'applicazione di filtri dinamici.|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un punto e virgola.|  
+|**validate_subscriber_info**|**nvarchar (500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un segno più (+).|  
+|**uses_host_name**|**bit**|Se la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) viene utilizzata nei filtri di riga con parametri, dove **1** indica che questa funzione viene utilizzata per l'applicazione di filtri dinamici.|  
 |**uses_suser_sname**|**bit**|Se la funzione [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) viene utilizzata nei filtri di riga con parametri, dove **1** indica che questa funzione viene utilizzata per l'applicazione di filtri dinamici.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_check_dynamic_filters** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_check_dynamic_filters** viene utilizzata nella replica di tipo merge.  
   
- Se è stata definita una pubblicazione per l'utilizzo di partizioni pre-calcolate, **sp_check_dynamic_filters** verifica la presenza di eventuali violazioni delle restrizioni delle partizioni pre-calcolate. Se viene rilevata una qualsiasi violazione, viene restituito un errore. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Se è stata definita una pubblicazione per l'utilizzo di partizioni pre-calcolate, **sp_check_dynamic_filters** verifica eventuali violazioni delle restrizioni delle partizioni pre-calcolate. Se viene rilevata una qualsiasi violazione, viene restituito un errore. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Se una pubblicazione è stata definita in modo da includere filtri di riga con parametri ma non viene rilevato alcun filtro, viene restituito un errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [sp_check_join_filter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

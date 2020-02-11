@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867730"
 ---
-# <a name="mssqlserver601"></a>MSSQLSERVER_601
+# <a name="mssqlserver_601"></a>MSSQLSERVER_601
     
 ## <a name="details"></a>Dettagli  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62867730"
   
 ## <a name="see-also"></a>Vedere anche  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
+ [Hint di tabella &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   
