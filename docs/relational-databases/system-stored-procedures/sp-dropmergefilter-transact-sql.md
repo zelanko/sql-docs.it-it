@@ -16,18 +16,18 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933961"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un filtro di merge. **sp_dropmergefilter** Elimina tutte le colonne di filtro merge definite nel filtro che si desidera eliminare. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Elimina un filtro di merge. **sp_dropmergefilter** Elimina tutte le colonne del filtro di merge definite nel filtro di merge da eliminare. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filtername = ] 'filtername'` È il nome del filtro da eliminare. *FilterName* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'`Nome del filtro da eliminare. *FilterName* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido.  
+ **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot.  
   
- **1** significa che le modifiche apportate all'articolo di merge potrebbe invalidare lo snapshot non è valido. Se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
+ **1** indica che le modifiche apportate all'articolo di merge possono causare l'invalidità dello snapshot. In tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Abilita o disabilita la possibilità di contrassegnare una sottoscrizione come non valido. *force_reinit_subscription* è un **bit**, con un valore predefinito **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Abilita o Disabilita la possibilità di contrassegnare una sottoscrizione come non valida. *force_reinit_subscription* è un **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate al filtro di articolo di merge non invalidano le sottoscrizioni non è valido.  
+ **0** specifica che le modifiche apportate al filtro dell'articolo di merge non invalidano le sottoscrizioni.  
   
- **1** significa che le modifiche apportate al filtro di articolo di merge invalidano le sottoscrizioni non è valido.  
+ **1** indica che le modifiche apportate al filtro dell'articolo di merge fanno sì che le sottoscrizioni non siano valide.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropmergefilter** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergefilter**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

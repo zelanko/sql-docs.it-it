@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760714"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
@@ -71,7 +71,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Rete  
   
--   time  
+-   Tempo  
   
  Nella tabella seguente le descrizioni dei campi per la struttura dei dati SQLPERF vengono applicate anche alle statistiche registrate nel file di log delle prestazioni.  
   
@@ -100,7 +100,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Numero di handle di istruzione attualmente aperti in tutte le connessioni aperte nel driver.|  
 |MaxOpenStmt|Numero massimo di handle di istruzione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumOpenStmt|Numero di handle di istruzione aperti dopo SQL_PERF_START.|  
-|**Statistiche connessione:**||  
+|**Statistiche sulla connessione:**||  
 |CurrentConnectionCount|Numero corrente di handle di connessione attivi aperti dall'applicazione nel server.|  
 |MaxConnectionsOpened|Numero massimo di handle di connessione aperti contemporaneamente dopo SQL_PERF_START.|  
 |SumConnectionsOpened|Somma del numero di handle di connessione aperti dopo SQL_PERF_START.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native client &#40; &#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Procedure per la profilatura delle prestazioni del &#40;driver ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

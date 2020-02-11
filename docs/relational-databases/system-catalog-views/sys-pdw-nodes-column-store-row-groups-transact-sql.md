@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399868"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
@@ -24,14 +24,14 @@ ms.locfileid: "74399868"
 
   Fornisce informazioni sugli indici columnstore cluster in base a ogni segmento, in modo da consentire all'amministratore di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]prendere decisioni di gestione del sistema in. **sys. pdw_nodes_column_store_row_groups** include una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Utilizzare **sys. pdw_nodes_column_store_row_groups** per determinare quali gruppi di righe hanno una percentuale elevata di righe eliminate e devono essere ricompilati.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella sottostante. Si tratta della tabella fisica nel nodo di calcolo, non della object_id per la tabella logica sul nodo di controllo. Ad esempio, object_id non corrisponde al object_id in sys. Tables.<br /><br /> Per eseguire il join con sys. Tables, utilizzare sys. pdw_index_mappings.|  
 |**index_id**|**int**|ID dell'indice columnstore cluster nella tabella *object_id* .|  
 |**partition_number**|**int**|ID della partizione della tabella che include *row_group_id*di gruppi di righe. È possibile utilizzare *partition_number* per aggiungere questa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID di questo gruppo di righe. Univoco all'interno della partizione.|  
 |**dellta_store_hobt_id**|**bigint**|Hobt_id per i gruppi di righe delta o NULL se il tipo del gruppo di righe non è delta. Un gruppo di righe delta è un gruppo di righe di lettura/scrittura che accetta nuovi record. Lo stato di un gruppo di righe Delta è **aperto** . Un gruppo di righe delta presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.|  
-|**stato**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar (60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> APRIRE: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe compilato ma non ancora compresso dal processo del motore di Tuple.<br /><br /> COMPRESSO: gruppo di righe che è stato riempito e compresso.|  
 |**total_rows**|**bigint**|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
 |**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe contrassegnate per l'eliminazione.<br /><br /> Sempre 0 per i gruppi di righe DELTA.|  

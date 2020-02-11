@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Aggiunta e configurazione di registrazione | Microsoft Docs'
+title: 'Passaggio 2: Aggiunta e configurazione di funzionalità di registrazione | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892437"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Passaggio 2: Aggiunta e configurazione di funzionalità di registrazione
@@ -28,17 +28,17 @@ ms.locfileid: "62892437"
   
 3.  Nella casella **Tipo provider** della scheda **Provider e log** selezionare **Provider di log SSIS per file di testo**e quindi fare clic su **Aggiungi**.  
   
-     Integration Services consente di aggiungere un nuovo provider di log per file di testo al pacchetto con il nome predefinito **Provider di log SSIS per file di testo**. È ora possibile configurare il nuovo provider di log.  
+     Integration Services aggiunge un nuovo provider di log file di testo al pacchetto con il nome predefinito **provider di log SSIS per file di testo**. È ora possibile configurare il nuovo provider di log.  
   
-4.  Nel **Name** colonna, tipo `Lesson 3 Log File`.  
+4.  Nella colonna **nome** Digitare `Lesson 3 Log File`.  
   
 5.  Facoltativamente, modificare la **Descrizione**.  
   
-6.  Nel **Configuration** colonna, fare clic su  **\<nuova connessione >** per specificare la destinazione in cui viene scritto le informazioni del log.  
+6.  Nella colonna **configurazione** fare clic su ** \<nuova connessione>** per specificare la destinazione in cui vengono scritte le informazioni sul log.  
   
      Nella finestra di dialogo **Editor gestione connessione file** per **Tipo di utilizzo**selezionare **Crea file**e quindi fare clic su **Sfoglia**. Per impostazione predefinita, la finestra di dialogo **Seleziona file** apre la cartella di progetto; tuttavia è possibile salvare le informazioni sulla registrazione in qualsiasi posizione.  
   
-7.  Nel **seleziona File** nella finestra di dialogo il **nome File** nella casella `TutorialLog.log`, fare clic su **Open**.  
+7.  Nella finestra di dialogo **Seleziona file** `TutorialLog.log`digitare, nella casella **nome file** , quindi fare clic su **Apri**.  
   
 8.  Fare clic su **OK** per chiudere la finestra di dialogo **Editor gestione connessione file** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "62892437"
   
 12. Fare clic su **Standard** per nascondere le categorie delle informazioni.  
   
-13. Nel **Provider e log** nella scheda il **Name** colonna, selezionare `Lesson 3 Log File`. Dopo aver creato un provider di log per il pacchetto, è possibile disabilitare temporaneamente la registrazione senza la necessità di eliminarlo e ricrearlo.  
+13. Nella colonna **nome** della scheda `Lesson 3 Log File` **provider e log** selezionare. Dopo aver creato un provider di log per il pacchetto, è possibile disabilitare temporaneamente la registrazione senza la necessità di eliminarlo e ricrearlo.  
   
 14. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 3: Il pacchetto della lezione 3 dell'esercitazione di test](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

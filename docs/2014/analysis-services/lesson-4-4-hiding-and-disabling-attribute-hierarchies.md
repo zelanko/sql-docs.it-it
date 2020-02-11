@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530850"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Come nascondere e disabilitare le gerarchie degli attributi
@@ -49,25 +49,25 @@ ms.locfileid: "69530850"
   
 2.  Verificare che le seguenti gerarchie degli attributi vengano visualizzate nell'elenco **Gerarchia** :  
   
-    -   **Base Rate**  
+    -   **Tariffa di base**  
   
-    -   **Birth Date**  
+    -   **Data di nascita**  
   
-    -   **ID accesso**  
+    -   **ID di accesso**  
   
-    -   **Manager SSN**  
+    -   **SSN responsabile**  
   
     -   **SSN**  
   
 3.  Passare alla scheda **Struttura dimensione** , quindi selezionare gli attributi seguenti nel riquadro **Attributi** . Per selezionare più misure, fare clic su ognuna di esse tenendo premuto CTRL:  
   
-    -   **Base Rate**  
+    -   **Tariffa di base**  
   
-    -   **Birth Date**  
+    -   **Data di nascita**  
   
-    -   **ID accesso**  
+    -   **ID di accesso**  
   
-    -   **Manager SSN**  
+    -   **SSN responsabile**  
   
     -   **SSN**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530850"
   
      Nella figura seguente viene illustrata la proprietà **AttributeHierarchyEnabled** impostata su False per gli attributi selezionati.  
   
-     ![Proprietà AttributeHierarchyEnabled impostata su false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Proprietà AttributeHierarchyEnabled impostata su false")  
+     ![Proprietà AttributeHierarchyEnabled impostata su False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Proprietà AttributeHierarchyEnabled impostata su False")  
   
 5.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu **Compila**.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "69530850"
   
     -   **Nome completo**  
   
-    -   **Postal Code**  
+    -   **Cap**  
   
 3.  Passare alla scheda **Struttura dimensione** e quindi selezionare gli attributi nel riquadro **Attributi** utilizzando CTRL per selezionare più attributi contemporaneamente.  
   
     -   **Nome completo**  
   
-    -   **Postal Code**  
+    -   **Cap**  
   
 4.  Nella finestra Proprietà impostare il valore della proprietà **AttributeHierarchyVisible** su **False** per gli attributi selezionati.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530850"
   
      La figura seguente illustra la proprietà **AttributeHierarchyVisible** impostata su False.  
   
-     ![Proprietà AttributeHierarchyVisible impostata su false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Proprietà AttributeHierarchyVisible impostata su false")  
+     ![Proprietà AttributeHierarchyVisible impostata su False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Proprietà AttributeHierarchyVisible impostata su False")  
   
 5.  Trascinare l'attributo **Postal Code** dal riquadro **Attributi** nella gerarchia utente **Customer Geography** all'interno del riquadro **Gerarchie e livelli** immediatamente sotto il livello **City** .  
   

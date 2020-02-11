@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137064"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
@@ -31,7 +31,7 @@ ms.locfileid: "63137064"
   
 -   Provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo potente strumento consente di creare, modificare e gestire sessioni Eventi estesi. Per altre informazioni, vedere [Utilizzare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Questo strumento consente di creare ed eseguire gli esempi di codice forniti negli argomenti relativi agli eventi estesi. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questo strumento consente di creare ed eseguire gli esempi di codice forniti negli argomenti relativi agli eventi estesi. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md).  
   
  Oltre alle sessioni create, nel server è presente una sessione di integrità di sistema predefinita. Tale sessione consente di raccogliere dati di sistema che è possibile utilizzare per risolvere i problemi relativi alle prestazioni. Per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md).  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63137064"
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|Elenca tutte le definizioni di sessione di evento.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|Restituisce una riga per ogni azione su ogni evento di una sessione dell'evento.|  
-|[sys.server_event_session_events &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql)|Restituisce una riga per ogni evento in una sessione dell'evento.|  
+|[sys.server_event_session_events &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql)|Restituisce una riga per ogni evento in una sessione di eventi.|  
 |[sys.server_event_session_events &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql)|Restituisce una riga per ogni colonna personalizzabile che è impostata in modo esplicito su eventi e destinazioni.|  
 |[sys.server_event_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql)|Restituisce una riga per ogni destinazione di evento per una sessione eventi.|  
   
-## <a name="dynamic-management-views"></a>DMV  
+## <a name="dynamic-management-views"></a>DMV (Dynamic Management View)  
  Le DMV seguenti consentono di ottenere metadati e dati delle sessioni. I metadati vengono ottenuti dalle viste del catalogo e i dati della sessione vengono creati quando si avvia e si esegue una sessione eventi.  
   
 > [!NOTE]  
@@ -87,6 +87,6 @@ ms.locfileid: "63137064"
  [Viste del catalogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
  [Tabelle degli eventi estesi di SQL Server &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
  [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md)   
- [Utilizzare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md)  
+ [Usare il provider PowerShell per eventi estesi](use-the-powershell-provider-for-extended-events.md)  
   
   

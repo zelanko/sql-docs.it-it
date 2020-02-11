@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729233"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729233"
 
   Le autorizzazioni membri gerarchia sono facoltative e devono essere utilizzate solo quando si desidera che un utente abbia accesso limitato a membri specifici. Se non si assegnano autorizzazioni nella scheda **Membri gerarchia** , le autorizzazioni dell'utente sono basate esclusivamente su quelle assegnate nella scheda **Modelli** .  
   
- Le autorizzazioni membri gerarchia vengono assegnate nell'area funzionale **autorizzazioni utenti e gruppi** della scheda **membri della gerarchia** nell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Queste autorizzazioni determinano a quali membri può accedere un utente nell'area funzionale **Esplora** dell'interfaccia utente.  
+ Le autorizzazioni dei [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] membri della gerarchia vengono assegnate nell'area funzionale **autorizzazioni utenti e gruppi** della scheda **membri gerarchia** nell'interfaccia utente (UI). Queste autorizzazioni determinano a quali membri può accedere un utente nell'area funzionale **Esplora** dell'interfaccia utente.  
   
  Nella scheda **Membri gerarchia** ogni gerarchia è rappresentata come albero. Quando si assegna un'autorizzazione a un nodo dell'albero, tutti i figli la ereditano, a meno che non sia stato assegnata in modo esplicito a un livello inferiore.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "73729233"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|I membri vengono visualizzati.<br /><br /> <br /><br /> Nota: se si assegna l'autorizzazione di **Read** a **Radice**, i membri in **Radice** sono di sola lettura. Nelle gerarchie esplicite e nelle raccolte l'utente può invece spostare i membri in **Radice** e aggiungere nuovi membri a **Radice**.|  
-|**Create**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
-|**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
-|**Delete**|I membri vengono visualizzati e l'utente può eliminarli.|  
+|**Creare**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
+|**Aggiornamento**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
+|**Elimina**|I membri vengono visualizzati e l'utente può eliminarli.|  
 |**Nega**|I membri non vengono visualizzati.|  
   
- Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende **dall'impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende dall'**impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
 > [!NOTE]  
 >  Non è possibile assegnare autorizzazioni membri gerarchie a gerarchie ricorsive, gerarchie derivate con estremità esplicite e a gerarchie derivate con livelli nascosti.  
@@ -60,7 +60,7 @@ ms.locfileid: "73729233"
   
 -   Se a un nodo della gerarchia viene assegnata l'autorizzazione di **aggiornamento** e di **creazione** e a un altro viene assegnata l'autorizzazione di **aggiornamento** e di **eliminazione** , i membri del nodo possono essere aggiornati.  
   
--   Se a un nodo della gerarchia viene assegnata una qualsiasi combinazione delle autorizzazioni **Create**/**Read**/**Update**/**Delete** e a un altro nodo vengono assegnate le autorizzazioni **Deny** , l'accesso ai membri del nodo viene negato.  
+-   Se a un nodo della gerarchia viene assegnata una qualsiasi combinazione di autorizzazioni **create**/**Read**/**Update**/**Delete** e a un altro nodo vengono assegnate autorizzazioni **Deny** , l'accesso ai membri del nodo viene negato.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Post del blog sui [miglioramenti della sicurezza](https://go.microsoft.com/fwlink/p/?LinkId=615376)su msdn.com.  

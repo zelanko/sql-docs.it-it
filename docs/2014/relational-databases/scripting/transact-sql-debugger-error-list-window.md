@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243093"
 ---
 # <a name="error-list-window-management-studio"></a>Finestra Elenco errori (Management Studio)
@@ -78,13 +78,13 @@ ms.locfileid: "75243093"
  **Ordine predefinito**  
  Visualizza un valore intero che indica l'ordine in cui le voci sono state generate.  
   
- **Description**  
+ **Descrizione**  
  Visualizza il testo della voce di errore. Le descrizioni più lunghe vengono suddivise in più righe.  
   
  **File**  
  Visualizza il nome del file script che ha generato l'errore.  
   
- **Riga**  
+ **Linea**  
  Visualizza un numero intero che indica la riga del codice che contiene l'errore.  
   
  **Colonna**  

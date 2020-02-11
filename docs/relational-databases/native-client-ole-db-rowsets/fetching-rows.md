@@ -18,15 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761709"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   **IRowset** è l'interfaccia di base dei set di righe. L'interfaccia **IRowset** comprende metodi che consentono di recuperare le righe in modo sequenziale, ottenere dati dalle righe e gestire le righe. I consumer utilizzano i metodi disponibili in **IRowset** per tutte le operazioni di base relative ai set di righe, incluse quelle che consentono di recuperare e rilasciare le righe nonché ottenere i valori delle colonne.  
   
  Quando un consumer ottiene un puntatore di interfaccia su un set di righe, il primo passaggio consiste, in genere, nel determinare le funzionalità del set di righe mediante il metodo **IRowsetInfo::GetProperties**. In questo modo vengono restituite le informazioni sulle interfacce esposte dal set di righe nonché le funzionalità del set di righe che non vengono visualizzate come interfacce distinte, ad esempio il numero massimo di righe attive e il numero di righe che possono presentare aggiornamenti in sospeso contemporaneamente.  
@@ -64,7 +65,7 @@ ms.locfileid: "73761709"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [posizione del recupero successivo](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
+-   [Posizione del recupero successivo](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

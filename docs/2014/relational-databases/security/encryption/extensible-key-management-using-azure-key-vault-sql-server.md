@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957198"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
@@ -96,9 +96,9 @@ ms.locfileid: "74957198"
   
      Collegamenti alla documentazione dell'insieme di credenziali delle chiavi di Azure  
   
-    -   [Che cos'è Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [Cos'è l'insieme di credenziali chiave di Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Inizia a usare Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
     -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "74957198"
   
 ##  <a name="Step3"></a>Passaggio 3: configurare SQL Server per l'uso di un provider EKM per il Key Vault  
   
-###  <a name="Permissions"></a>Autorizzazioni  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per completare l'intero processo è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** . Le azioni specifiche richiedono le autorizzazioni seguenti:  
   
 -   Per creare un provider di crittografia è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** .  
@@ -201,17 +201,17 @@ ms.locfileid: "74957198"
 > [!TIP]  
 >  Gli utenti che ricevono l'errore **Non è stato possibile esportare la chiave pubblica dal provider. Codice di errore del provider: 2053.** devono verificare le autorizzazioni **get**, **list**, **wrapKey**e **unwrapKey** nell'insieme di credenziali delle chiavi.  
   
- Per altre informazioni, vedere gli argomenti seguenti:   
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [sp_configure &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [CREAZIONE del PROVIDER di crittografia &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [CREAZIONE di credenziali &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Crea account di accesso &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
@@ -276,9 +276,9 @@ ms.locfileid: "74957198"
     GO  
     ```  
   
-     Per altre informazioni, vedere gli argomenti seguenti:   
+     Per altre informazioni, vedere gli argomenti seguenti:  
   
-    -   [CREAZIONE della chiave di crittografia del DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
@@ -345,10 +345,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE del PROVIDER di crittografia &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [CREAZIONE di credenziali &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql)   
- [CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Extensible Key Management &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [Abilitare Transparent Data Encryption con EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Crittografia dei backup](../../backup-restore/backup-encryption.md)   

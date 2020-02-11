@@ -1,5 +1,5 @@
 ---
-title: FileStream e viste a gestione dinamica FileTable (Transact-SQL) | Microsoft Docs
+title: Viste a gestione dinamica FILESTREAM e FileTable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbe626428e0b7ffcf8c3fe4153c8b7c4938a4246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130803"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>DMV per FILESTREAM e tabelle FileTable (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68130803"
 
 ## <a name="see-also"></a>Vedere anche
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
-<br>[Tabelle Filetable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Tabelle FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Viste del catalogo Filestream e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Stored procedure di sistema per Filestream e tabelle FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   

@@ -1,5 +1,5 @@
 ---
-title: Ricerca e visualizzazione dei report in Gestione Report (Generatore Report e SSRS) | Microsoft Docs
+title: Ricerca e visualizzazione di report in Gestione report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107870"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report in Gestione report (Generatore report e SSRS)
-  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  
+  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Planning for Reporting Services e Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  
   
  Le autorizzazioni che l'amministratore di sistema ha impostato sul server di report determinano gli elementi che vengono visualizzati quando si utilizza Gestione report. Le autorizzazioni vengono concesse tramite un'assegnazione di ruolo. Per individuare e visualizzare report, è necessario disporre di un'assegnazione di ruolo che includa l'attività Visualizzazione di report. Per individuare un report in un server di report, cercarlo in base al nome o alla descrizione oppure esplorare le cartelle del server di report. È possibile cercare o individuare solo report pubblicati o caricati nel server di report. Per altre informazioni su come eseguire la ricerca di un report, vedere [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -26,7 +26,7 @@ ms.locfileid: "66107870"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigazione della gerarchia delle cartelle in Gestione report  
- Per individuare i report che si desidera eseguire, è possibile utilizzare la Home page, visualizzata automaticamente quando si avvia Gestione report e quando si apre una qualsiasi cartella nella gerarchia delle cartelle. Nella Home page vengono visualizzati solo gli elementi per i quali si dispone delle autorizzazioni per la visualizzazione. Il percorso delle cartelle viene invece indicato come sequenza di collegamenti nella parte superiore della Home page. I nomi delle cartelle sono elencati in sequenza a partire dalla cartella radice (Home). Quando si apre un'altra cartella, il nome di tale cartella viene aggiunto al percorso indicato nella parte superiore della pagina. **(1)** nell'immagine illustrata di seguito. Se si apre un report, anche il nome del report viene aggiunto al percorso della cartella.  
+ Per individuare i report che si desidera eseguire, è possibile utilizzare la Home page, visualizzata automaticamente quando si avvia Gestione report e quando si apre una qualsiasi cartella nella gerarchia delle cartelle. Nella Home page vengono visualizzati solo gli elementi per i quali si dispone delle autorizzazioni per la visualizzazione. Il percorso delle cartelle viene invece indicato come sequenza di collegamenti nella parte superiore della Home page. I nomi delle cartelle sono elencati in sequenza a partire dalla cartella radice (Home). Quando si apre un'altra cartella, il nome di tale cartella viene aggiunto al percorso indicato nella parte superiore della pagina. **(1)** nell'immagine seguente. Se si apre un report, anche il nome del report viene aggiunto al percorso della cartella.  
   
  ![Barra multifunzione e navigazione in Gestione report](../media/rs-reportmanager-ribbon.gif "Barra multifunzione e navigazione in Gestione report")  
 Barra multifunzione di Gestione report  
@@ -56,6 +56,6 @@ Barra multifunzione di Gestione report
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

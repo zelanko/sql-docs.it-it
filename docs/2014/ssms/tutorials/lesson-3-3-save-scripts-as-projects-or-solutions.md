@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753043"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Salvare gli script come progetti o soluzioni
@@ -32,7 +32,7 @@ ms.locfileid: "62753043"
   
 3.  Nella casella di testo **Nome** digitare **StatusCheck**, fare clic su **Script di SQL Server** in **Modelli**, quindi fare clic su **OK** per aprire una nuova soluzione e progetto script.  
   
-4.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Connessioni**, quindi scegliere **Nuova connessione**. Verrà visualizzata la finestra di dialogo **Connetti al server** .  
+4.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Connessioni**, quindi scegliere **Nuova connessione**. Viene visualizzata la finestra di dialogo **Connetti al server** .  
   
 5.  Nella casella di riepilogo **Nome server** digitare il nome del server.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "62753043"
     > [!NOTE]  
     >  Se è necessario maggiore spazio per digitare la query, premere MAIUSC+ALT+INVIO per passare alla modalità a schermo intero.  
   
-11. In Esplora soluzioni fare clic con il pulsante destro del mouse su **SQLQuery1**, quindi scegliere **Rinomina**. Tipo di **Check workorders. SQL** come nuovo nome per la query e premere INVIO.  
+11. In Esplora soluzioni fare clic con il pulsante destro del mouse su **SQLQuery1**, quindi scegliere **Rinomina**. Digitare **Check Workorders. SQL** come nuovo nome della query e premere INVIO.  
   
 12. Per salvare la soluzione e il progetto script, scegliere **Salva tutto** dal menu **File**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Riepilogo: Soluzioni e progetti Script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Riepilogo: Soluzioni e progetti script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   
