@@ -1,5 +1,5 @@
 ---
-title: Analizza in Excel (SSAS tabulare) | Microsoft Docs
+title: Analizzare in Excel (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067693"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analizzare in Excel (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "66067693"
   
 -   [Attività correlate](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a> Vantaggi  
+##  <a name="bkmk_benefits"></a>Vantaggi  
  La caratteristica Analizza in Excel consente agli autori di modelli di verificare l'efficacia di un progetto di modello utilizzando l'applicazione per l'analisi dei dati comuni, ovvero Microsoft Excel. Per usare la caratteristica Analizza in Excel, è necessario che Microsoft Office 2003 o versione successiva sia installato nello stesso computer di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  

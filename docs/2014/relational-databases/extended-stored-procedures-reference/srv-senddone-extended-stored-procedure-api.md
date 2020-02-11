@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745522"
 ---
-# <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API delle stored procedure estese)
+# <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API delle stored procedure estese)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Invia messaggio di completamento dei risultati al client.  
   
@@ -58,7 +59,7 @@ count
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client, in questo caso l'handle che ha ricevuto la richiesta del linguaggio. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *status*  
+ *stato*  
  Campo a 2 byte per vari flag di *status*. È possibile impostare più flag usando gli operatori logici AND e OR con i valori dei flag di *status*. Nella tabella seguente sono elencati i possibili flag di *status*.  
   
 |Flag di stato|Descrizione|  
@@ -66,16 +67,16 @@ count
 |SRV_DONE_COUNT|Il parametro *count* contiene un conteggio valido.|  
 |SRV_DONE_ERROR|Il comando client corrente ha ricevuto un errore.|  
   
- *info*  
+ *informazioni*  
  Campo a 2 byte riservato. Impostare questo valore su 0.  
   
- *count*  
+ *conteggio*  
  Campo a 4 byte utilizzato per indicare un conteggio per il set di risultati corrente. Se il flag SRV_DONE_COUNT è impostato nel campo *status*, *count* include un conteggio valido.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Una richiesta del client può provocare l'esecuzione da parte del server di alcuni comandi e la restituzione di alcuni set di risultati. Per ogni set di risultati, **srv_senddone** deve restituire un messaggio di completamento dei risultati al client.  
   
  Il campo *count* indica il numero di righe interessate da un comando. Se il campo *count* contiene un conteggio, il flag SRV_DONE_COUNT deve essere impostato nel campo *status*. Questa impostazione consente al client di distinguere tra un valore di *count* pari a 0 e un campo *count* inutilizzato.  

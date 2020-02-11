@@ -1,5 +1,5 @@
 ---
-title: Comandi che generano risultati di più set di righe | Microsoft Docs
+title: Comandi che generano risultati con più set di righe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657681"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client può restituire più set di righe da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di righe dalle istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
   
 -   Le istruzioni SQL in batch vengono inviate come singolo comando.  
   
 -   Le stored procedure consentono di implementare un batch di istruzioni SQL.  
   
 ## <a name="batches"></a>Batch  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -44,9 +44,9 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 ## <a name="stored-procedures"></a>Stored procedure  
  Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito un set di risultati per ogni istruzione di una stored procedure. Pertanto, dalla maggior parte delle stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di risultati.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Uso di IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Comandi](commands.md)  

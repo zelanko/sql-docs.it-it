@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691797"
 ---
 # <a name="select-source-dialog-box"></a>Finestra di dialogo Seleziona origine
@@ -39,19 +39,19 @@ ms.locfileid: "62691797"
  **Server**  
  Consente di selezionare un server contenente i criteri che si desidera eseguire.  
   
- **Tipo server**  
+ **Tipo di server**  
  Solo i server del [!INCLUDE[ssDE](../../includes/ssde-md.md)] contengono criteri. Il contenuto di questa casella è di sola lettura.  
   
  **Nome server**  
  Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita, viene visualizzata l'istanza del server a cui è stata effettuata l'ultima connessione.  
   
- **Autenticazione**  
+ **autenticazione**  
  Sono disponibili due modalità di autenticazione per la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
  La modalità di autenticazione di Windows modalità consente di connettersi tramite un account utente di Windows.  
   
- **autenticazione di SQL Server**  
+ **Autenticazione di SQL Server**  
  Quando un utente si connette con un nome di accesso e una password da una connessione di tipo non trusted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'autenticazione verificando che sia impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che la password specificata corrisponda a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
   
 > [!IMPORTANT]  
@@ -60,7 +60,7 @@ ms.locfileid: "62691797"
  **Nome utente**  
  Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo si è scelto di utilizzare l'autenticazione di Windows per la connessione.  
   
- **Account di accesso**  
+ **Accesso**  
  Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
  **Password**  

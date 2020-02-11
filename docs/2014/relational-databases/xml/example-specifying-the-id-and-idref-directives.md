@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica delle direttive ID e IDREF | Microsoft Docs'
+title: 'Esempio: specifica delle direttive ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704834"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: Specifica delle direttive ID e IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: specifica delle direttive ID, IDREF
   Questo esempio è pressoché lo stesso di [Specificare la direttiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . L'unica differenza è che la query specifica le direttive **ID** e **IDREF** . Queste direttive sovrascrivono i tipi dell'attributo **SalesPersonID** negli elementi <`OrderHeader`> e <`OrderDetail`>. creano collegamenti tra più documenti. Per visualizzare i tipi sovrascritti è necessario lo schema. La query specifica pertanto l'opzione **XMLDATA** nella clausola FOR XML per ottenere il recupero dello schema.  
   
 ```  
@@ -106,6 +106,6 @@ FOR XML EXPLICIT, XMLDATA
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

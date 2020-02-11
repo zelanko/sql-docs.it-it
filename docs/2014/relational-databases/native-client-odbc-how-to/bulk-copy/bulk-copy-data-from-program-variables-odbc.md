@@ -1,5 +1,5 @@
 ---
-title: Copia bulk di dati dalle variabili di programma (ODBC) | Documenti di Microsoft
+title: Copia dati bulk da variabili di programma (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753643"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Eseguire una copia bulk di dati da variabili di programma (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "62753643"
   
  L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
- **Nota sulla sicurezza** quando possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Nota sulla sicurezza** Quando possibile, utilizzare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Per utilizzare le funzioni di copia bulk direttamente sulle variabili di programma  
   
@@ -43,22 +43,22 @@ ms.locfileid: "62753643"
   
     -   Nome di un file di dati per la ricezione di eventuali messaggi di errore della copia bulk (specificare NULL se non si desidera che venga creato un file dei messaggi).  
   
-    -   La direzione della copia: DB_IN dall'applicazione per la vista o tabella oppure DB_OUT per l'applicazione dalla tabella o vista.  
+    -   Direzione della copia, ovvero DB_IN per indicare la copia dall'applicazione alla vista o alla tabella oppure DB_OUT per indicare la copia dalla tabella o dalla vista all'applicazione.  
   
-5.  Chiamare [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna della copia bulk da associare alla colonna a una variabile di programma.  
+5.  Chiamare [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna della copia bulk per associare la colonna a una variabile di programma.  
   
-6.  Compilare le variabili di programma con i dati e chiamare [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati.  
+6.  Inserire i dati nelle variabili di programma e chiamare [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati.  
   
-7.  Dopo che sono state inviate diverse righe, chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) checkpoint delle righe già inviate. È buona norma chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) almeno una volta ogni 1000 righe.  
+7.  Dopo che sono state inviate più righe, chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) per eseguire il checkpoint delle righe già inviate. È consigliabile chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) almeno una volta per ogni 1000 righe.  
   
-8.  Dopo che tutte le righe sono state inviate, chiamare [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per completare l'operazione.  
+8.  Dopo l'invio di tutte le righe, chiamare [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per completare l'operazione.  
   
- È possibile variare il percorso e lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Uso [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) per impostare varie opzioni di copia bulk. Uso [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) inviare `text`, `ntext`, e `image` i dati in segmenti al server.  
+ È possibile variare il percorso e la lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilizzare [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) per impostare varie opzioni di copia bulk. Utilizzare [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) per inviare `text`i `ntext`dati di `image` , e in segmenti al server.  
   
 ## <a name="example"></a>Esempio  
  Questo esempio non è supportato in IA64.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -301,7 +301,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Procedure per la copia bulk con il driver ODBC di SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Copia bulk da variabili di programma](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

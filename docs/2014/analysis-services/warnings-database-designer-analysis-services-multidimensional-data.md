@@ -1,5 +1,5 @@
 ---
-title: Avvisi (progettazione Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Avvisi (Progettazione database) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065431"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avvisi (Progettazione database) (Analysis Services - Dati multidimensionali)
-  Usare la scheda **Avvisi** per visualizzare e ignorare totalmente le regole e per visualizzare e riattivare istanze specifiche di avvisi ignorati. Il **avvisi** scheda Visualizza due griglie: **Regole per gli avvisi di progettazione** e **avvisi ignorati**.  
+  Usare la scheda **Avvisi** per visualizzare e ignorare totalmente le regole e per visualizzare e riattivare istanze specifiche di avvisi ignorati. La scheda **Avvisi** visualizza due griglie: **Regole per gli avvisi di progettazione** e **Avvisi ignorati**.  
   
- **Per visualizzare la scheda avvisi**  
+ **Per visualizzare la scheda Avvisi**  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-2.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , fare clic su **Modifica database**e quindi sulla scheda **Avvisi** .  
+2.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , fare clic su **Modifica database**, quindi fare clic sulla scheda **Avvisi** .  
   
 ## <a name="design-warning-rules-grid"></a>Griglia Regole per gli avvisi di progettazione  
  La griglia **Regole per gli avvisi di progettazione** visualizza tutte le regole dell'avviso di progettazione. Questa griglia controlla anche quali regole sono attivate nel database. Per attivare o disabilitare una regola dell'avviso, selezionare o deselezionare la casella di controllo.  
@@ -36,7 +36,7 @@ ms.locfileid: "66065431"
  **Descrizione**  
  Visualizza il nome della regola. Le regole sono raggruppate per categoria.  
   
- **Priorità**  
+ **Importanza**  
  Visualizza la priorità assegnata alla regola.  
   
  **Commenti**  
@@ -47,7 +47,7 @@ ms.locfileid: "66065431"
   
  La griglia **Avvisi ignorati** ha i seguenti elementi :  
   
- **Oggetto**  
+ **Object**  
  Visualizza un'icona che rappresenta il tipo di oggetto e il nome dell'oggetto.  
   
  **Tipo**  
@@ -56,20 +56,20 @@ ms.locfileid: "66065431"
  **Descrizione**  
  Visualizza il nome della regola.  
   
- **Priorità**  
+ **Importanza**  
  Visualizza la priorità assegnata alla regola.  
   
  **Commenti**  
  Visualizza il commento immesso quando l'avviso è stato ignorato. Qui è possibile aggiungere o modificare un commento.  
   
- **Abilitare di nuovo**  
+ **Riabilita**  
  Riattiva gli avvisi selezionati.  
   
 > [!NOTE]  
 >  Se un oggetto ha un avviso, ma è in uno stato non valido o è stato rimosso manualmente dal progetto, verrà visualizzata un'icona Errori nell'elenco accanto all'avviso. Per ignorare l'avviso, selezionarlo, quindi fare clic su **Riabilita**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Chiudere la finestra di dialogo di avviso &#40;Analysis Services - dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [Generale &#40;finestra di progettazione del Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
+ [Finestra di dialogo Ignora avviso &#40;Analysis Services-Dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [&#40;generale di progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

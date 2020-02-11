@@ -1,5 +1,5 @@
 ---
-title: Elaborare un modello di Data Mining | Microsoft Docs
+title: Elaborare un modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083102"
 ---
 # <a name="process-a-mining-model"></a>Elaborare un modello di data mining
@@ -36,15 +36,15 @@ ms.locfileid: "66083102"
   
 2.  Scegliere **Elabora modello** dal menu **Modello di data mining**.  
   
-     Se sono state apportate modifiche alla struttura di data mining, prima di elaborare il modello verrà richiesto di ridistribuire la struttura. Scegliere **Sì**.  
+     Se sono state apportate modifiche alla struttura di data mining, prima di elaborare il modello verrà richiesto di ridistribuire la struttura. Fare clic su **Sì**.  
   
-3.  Nel **Elaboramodello di Data Mining - \<modello >** della finestra di dialogo fare clic su **eseguire**.  
+3.  Nella finestra di dialogo **elaborazione modello \<di data mining>** fare clic su **Esegui**.  
   
      Verrà visualizzata la finestra di dialogo **Stato elaborazione** contenente informazioni sull'elaborazione dei modelli.  
   
 4.  Al termine dell'elaborazione del modello, fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** .  
   
-5.  Fare clic su **Close** nel **Elaboramodello di Data Mining - \<modello >** nella finestra di dialogo.  
+5.  Fare clic su **Chiudi** nella finestra di dialogo **Elabora modello di data \<mining-modello>** .  
   
  Tramite questa procedura sono stati elaborati solo la struttura di data mining e il modello di data mining associato.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "66083102"
   
 1.  Nella scheda **Modelli di data mining** di Progettazione modelli di data mining scegliere **Elabora struttura di data mining e tutti i modelli** dal menu **Modello di data mining** .  
   
-2.  Se sono state apportate modifiche alla struttura di data mining, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Scegliere **Sì**.  
+2.  Se sono state apportate modifiche alla struttura di data mining, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Fare clic su **Sì**.  
   
-3.  Nel **Processing Mining Structure - \<struttura >** della finestra di dialogo fare clic su **eseguire**.  
+3.  Nella finestra di dialogo **elaborazione struttura \<di Data Mining-struttura>** fare clic su **Esegui**.  
   
 4.  Verrà visualizzata la finestra di dialogo **Stato elaborazione** contenente informazioni sull'elaborazione dei modelli.  
   
 5.  Al termine dell'elaborazione dei modelli, fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** .  
   
-6.  Fare clic su **Close** nel **elaborazione \<modello >** nella finestra di dialogo.  
+6.  Fare clic su **Chiudi** nella finestra di dialogo **>modello di elaborazione \<** .  
   
  Tramite questa procedura sono stati elaborati la struttura di data mining e tutti i modelli di data mining associati.  
   

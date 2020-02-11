@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione della struttura di Data Mining Bike Buyer | Microsoft Docs'
+title: 'Lezione 1: creazione della struttura di data mining Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678494"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Bike Buyer
-  In questa lezione verrà creata una struttura di data mining che consente di stimare se un potenziale cliente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] acquisterà una bicicletta. Se non si ha familiarità con le strutture di data mining e sul loro ruolo nel data mining, vedere [strutture di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+  In questa lezione verrà creata una struttura di data mining che consente di stimare se un potenziale cliente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] acquisterà una bicicletta. Se non si ha familiarità con le strutture di data mining e il relativo ruolo in data mining, vedere strutture di data mining [&#40;Analysis Services di data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- La struttura di data mining Bike Buyer che verrà creato in questa lezione supporta l'aggiunta di modelli di data mining in base il [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining di clustering per esaminare le diverse modalità di raggruppamento dei clienti e si utilizzeranno modelli di data mining di albero delle decisioni per stimare se un potenziale cliente acquisterà una bicicletta.  
+ La struttura di data mining Bike Buyer che verrà creata in questa lezione supporta l'aggiunta di modelli di data mining basati sull'algoritmo Microsoft [clustering algoritmo](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining di clustering per esaminare le diverse modalità di raggruppamento dei clienti e si utilizzeranno modelli di data mining di albero delle decisioni per stimare se un potenziale cliente acquisterà una bicicletta.  
   
 ## <a name="create-mining-structure-statement"></a>Istruzione CREATE MINING STRUCTURE  
- Per creare una struttura di data mining, usare il [Crea struttura di data MINING &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per creare una struttura di data mining, è possibile utilizzare l'istruzione [create mining structure &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Denominazione della struttura.  
   
@@ -50,7 +50,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Per informazioni sulla denominazione di un oggetto di Data Mining Extensions (DMX), vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Per informazioni sulla denominazione di un oggetto in DMX (Data Mining Extensions), vedere [identificatori &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  La riga successiva del codice definisce la colonna chiave per la struttura di data mining, che identifica in modo univoco un'entità nei dati di origine:  
   
@@ -66,11 +66,11 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- È possibile usare la funzione DISCRETIZE in \<le colonne della struttura di data mining > per discretizzare colonne continue utilizzando la sintassi seguente:  
+ È possibile utilizzare la funzione DISCRETIZZARE all' \<interno delle colonne della struttura di data mining> per discretizzare colonne continue utilizzando la sintassi seguente:  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- Per altre informazioni sulla discretizzazione delle colonne, vedere [metodi di discretizzazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Per altre informazioni sui tipi di cui è possibile definire le colonne della struttura di data mining, vedere [colonne della struttura di Data Mining](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Per ulteriori informazioni sulle colonne discretizzazione, vedere [metodi di discretizzazione &#40;&#41;di data mining ](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Per ulteriori informazioni sui tipi di colonne della struttura di data mining che è possibile definire, vedere [colonne della struttura di data mining](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
  L'ultima riga del codice definisce una partizione facoltativa nella struttura di data mining:  
   
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Modifica della query per creare la struttura di data mining.  
   
--   Esecuzione della query.  
+-   Eseguire la query.  
   
 ## <a name="creating-the-query"></a>Creazione della query  
  Il primo passaggio consiste nella connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e nella creazione di una nuova query DMX in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -96,9 +96,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Nel **Connetti al Server** della finestra di dialogo per **tipo di Server**, selezionare **Analysis Services**. Nelle **nome Server**, digitare `LocalHost`, oppure digitare il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che si desidera connettersi a fini di questa lezione. Fare clic su **Connetti**.  
+2.  Nella finestra di dialogo **Connetti al server** selezionare **Analysis Services**per **tipo di server**. In **nome server**Digitare `LocalHost`o digitare il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si desidera connettersi per questa lezione. Fare clic su **Connetti**.  
   
-3.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**e quindi fare clic su **DMX** per aprire la **Editor di Query**e una nuova query vuota.  
+3.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX** per aprire l' **editor di query** e una nuova query vuota.  
   
 ## <a name="altering-the-query"></a>Modifica della query  
  Il passaggio successivo consiste nella modifica dell'istruzione CREATE MINING STRUCTURE descritta in precedenza per creare la struttura di data mining Bike Buyer.  
@@ -191,29 +191,29 @@ WITH HOLDOUT (<holdout specifier>)
   
     ```  
   
-6.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+6.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-7.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Bike Buyer Structure.dmx`.  
+7.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Bike Buyer Structure.dmx`il nome.  
   
 ## <a name="executing-the-query"></a>Esecuzione della query  
- Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, è necessario eseguirla. Ovvero, l'istruzione deve essere eseguita per creare la struttura di data mining nel server. Per altre informazioni sull'esecuzione di query nell'Editor di Query, vedere [Editor di Query motore di Database &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, è necessario eseguirla. Ovvero, l'istruzione deve essere eseguita per creare la struttura di data mining nel server. Per ulteriori informazioni sull'esecuzione di query nell'editor di query, vedere [motore di database editor di query &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Per eseguire la query  
   
-1.  Nell'Editor di Query nella barra degli strumenti, fare clic su **Execute**.  
+1.  Nell'editor di query fare clic su **Esegui**sulla barra degli strumenti.  
   
-     Lo stato della query viene visualizzato nei **messaggi** scheda nella parte inferiore dell'Editor di Query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
+     Lo stato della query viene visualizzato nella scheda **messaggi** nella parte inferiore dell'editor di query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Una nuova struttura denominata **Bike Buyer** ora esista nel server.  
+     Nel server è presente una nuova struttura denominata **Bike Buyer** .  
   
  Nella lezione successiva verranno aggiunti modelli di data mining alla struttura appena creata.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

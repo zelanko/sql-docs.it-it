@@ -1,5 +1,5 @@
 ---
-title: Creare una nuova struttura di Data Mining relazionale | Microsoft Docs
+title: Creazione di una nuova struttura di data mining relazionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085392"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Creare una nuova struttura di data mining relazionale
-  Usare la Creazione guidata modello di data mining per creare una nuova struttura di data mining che usa dati da un database relazionale o da un'altra origine, quindi salvare la struttura ed eventuali modelli correlati in un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Utilizzare la creazione guidata modello di data mining per creare una nuova struttura di data mining, utilizzando i dati di un database relazionale o di un'altra origine, quindi salvare la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] struttura ed eventuali modelli correlati in un database di.  
   
 ### <a name="to-create-a-relational-mining-structure"></a>Per creare una struttura di data mining relazionale  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66085392"
   
      Per altre informazioni sugli algoritmi di data mining, vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-5.  Nella pagina **Selezione vista origine dati** in **Viste origine dati disponibili** fare clic sulla vista origine dati che si desidera usare, quindi su **Avanti**.  
+5.  Nella pagina **Selezione vista origine dati** in **Viste origine dati disponibili**fare clic sulla vista origine dati che si desidera usare, quindi su **Avanti**.  
   
      Per altre informazioni sulla creazione di una vista origine dati, vedere [Viste origine dati in modelli multidimensionali](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
@@ -48,14 +48,14 @@ ms.locfileid: "66085392"
   
      Dopo avere selezionato la colonna stimabile, è possibile fare clic sul pulsante **Suggerisci** per visualizzare la finestra di dialogo **Suggerisci colonne correlate** . È possibile accettare le colonne suggerite facendo clic su **OK** in questa finestra di dialogo per includere le colonne selezionate nella struttura di data mining oppure modificare le selezioni nella colonna **Input** , quindi fare clic su **OK**. Per ignorare i suggerimenti, fare clic su **Annulla**.  
   
-8.  Scegliere **Avanti**.  
+8.  Fare clic su **Avanti**.  
   
 9. Nella pagina **Impostazione tipo di contenuto e dati delle colonne** in **Struttura modello di data mining**è possibile modificare il tipo di contenuto e di dati per ogni colonna.  
   
     > [!NOTE]  
-    >  È possibile fare clic su **Rileva** per rilevare automaticamente se una colonna contiene dati continui o discreti. Dopo avere fatto clic su questo pulsante, i tipi di contenuto e di dati verranno aggiornati nelle colonne **Tipo di contenuto** e **Tipo di dati**. Per altre informazioni sui tipi di contenuto e i tipi di dati, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md) e [Tipi di dati &#40;data mining&#41;](data-types-data-mining.md).  
+    >  È possibile fare clic su **Rileva** per rilevare automaticamente se una colonna contiene dati continui o discreti. Dopo avere fatto clic su questo pulsante, i tipi di contenuto e di dati verranno aggiornati nelle colonne **Tipo di contenuto** e **Tipo di dati** . Per altre informazioni sui tipi di contenuto e i tipi di dati, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md) e [Tipi di dati &#40;data mining&#41;](data-types-data-mining.md).  
   
-10. Scegliere **Avanti**.  
+10. Fare clic su **Avanti**.  
   
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la struttura di data mining e per il modello di data mining iniziale correlato di cui verrà eseguita la creazione, quindi fare clic su **Fine**.  
   

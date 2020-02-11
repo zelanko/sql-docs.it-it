@@ -1,5 +1,5 @@
 ---
-title: 'Le funzionalità seguenti non sono supportate in Excel Services e potrebbero non venire visualizzate del tutto o parzialmente: I commenti, forme o altri oggetti | Microsoft Docs'
+title: 'Le funzionalità seguenti non sono supportate da Excel Services e potrebbero non essere visualizzate o visualizzate solo parzialmente: commenti, forme o altri oggetti | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03411134eb1350adcd37badd458e7f7a0198a9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071915"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Le funzionalità seguenti non sono supportate in Excel Services e potrebbero non venire visualizzate del tutto o parzialmente: Commenti, forme o altri oggetti
@@ -30,7 +30,7 @@ ms.locfileid: "66071915"
 |Testo del messaggio|Le funzionalità seguenti non sono supportate in Excel Services e potrebbero non venire visualizzate del tutto o parzialmente:<br /><br /> Commenti, forme o altri oggetti<br /><br /> Alcune funzionalità, ad esempio le query su dati esterni, visualizzano i dati memorizzati nella cache che possono essere aggiornati solo in Microsoft Excel.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Questo errore viene visualizzato Excel Web Access quando si apre una cartella di lavoro di PowerPivot in un browser e si fa clic sul **informazioni dettagliate** pulsante per il messaggio **non supportate funzionalità questa cartella di lavoro non venga visualizzata come previsto**.  
+ In Excel Accesso Web questo errore viene visualizzato quando si apre una cartella di lavoro di PowerPivot in un browser e si fa clic sul pulsante **Dettagli** per il messaggio **funzionalità non supportate. questa cartella di lavoro potrebbe non essere visualizzata come previsto**.  
   
  Questo errore si verifica in quanto la cartella di lavoro di PowerPivot contiene filtri dei dati il cui layout viene controllato da un oggetto Shape nascosto in Excel. L'oggetto Shape controlla la formattazione e la collocazione dei filtri dei dati nelle posizioni orizzontali e verticali.  
   

@@ -1,5 +1,5 @@
 ---
-title: Specificare i dati di Training (Creazione guidata di Data Mining dati) | Microsoft Docs
+title: Impostazione dati di training (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068071"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Impostazione dati di training (Creazione guidata modello di data mining)
@@ -27,18 +27,18 @@ ms.locfileid: "66068071"
 > [!NOTE]  
 >  Gli algoritmi di data mining differenti utilizzano le chiavi in modo differente. Per altre informazioni sui diversi tipi di chiavi, vedere [Tipi di contenuto &#40;Data mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Per altre informazioni:** [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [le colonne del modello di Data Mining](data-mining/mining-model-columns.md), [guidata modello di Data &#40;Analysis Services - dati Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ Creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per ulteriori informazioni:** [strutture di data mining &#40;Analysis Services-&#41;di data mining ](data-mining/mining-structures-analysis-services-data-mining.md), [colonne del modello di data](data-mining/mining-model-columns.md)mining, creazione guidata modello di data [mining &#40;Analysis Services-Data mining ](data-mining/data-mining-wizard-analysis-services-data-mining.md)&#41;, [creazione di una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
- **Tabelle/colonne**  
+ **Tabelle/Colonne**  
  Consente di visualizzare le tabelle e le colonne selezionate nella pagina precedente della procedura guidata.  
   
- **\<casella di controllo >**  
+ **\<casella di controllo>**  
  Consente di selezionare le colonne da includere nella struttura di data mining.  
   
  Se l'origine dati include tabelle nidificate o più viste, espandere l'elenco delle colonne per visualizzare le tabelle nidificate.  
   
- **Key**  
+ **Chiave**  
  Selezionare questa opzione per utilizzare la colonna come identificatore univoco per i dati.  
   
  Per una tabella del case, la chiave è generalmente l'identificatore univoco.  
@@ -51,7 +51,7 @@ ms.locfileid: "66068071"
 > [!NOTE]  
 >  Questa colonna è disponibile solo durante la creazione di un modello di data mining insieme alla struttura di data mining.  
   
- **Predictable**  
+ **Stimabile**  
  Selezionare questa opzione affinché la tabella o la colonna risulti stimabile sulla base di input futuri aggiuntivi.  
   
  Se inoltre si contrassegna tale colonna come stimabile, diventerà stimabile l'intera tabella nidificata. Se nella tabella nidificata non è disponibile alcuna colonna contrassegnata come di input o stimabile, la tabella nidificata verrà visualizzata nella struttura di data mining, ma ignorata nel modello.  
@@ -64,9 +64,9 @@ ms.locfileid: "66068071"
  **Nota** Questa colonna è disponibile solo quando si crea un modello di data mining insieme alla struttura di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggerisci colonne correlate &#40;Creazione guidata di Data Mining&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)   
- [Specificare il contenuto e il tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   
+ [Specificare il tipo di dati e il contenuto della colonna &#40;creazione guidata modello di data mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

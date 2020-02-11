@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067896"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluzioni di modelli tabulari (SSAS tabulare)
   Negli argomenti di questa sezione si forniscono informazioni sulla creazione di modelli tabulari utilizzando la progettazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Progettazione di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-designer-ssas-tabular.md)  
   
  [Database dell'area di lavoro &#40;SSAS tabulare&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
- [Livello di compatibilità &#40;SP1 in formato tabulare SSAS&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Livello di compatibilità &#40;SSAS tabulare SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
  [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067896"
   
  [Misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md)  
   
- [Indicatori KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md)  
+ [Indicatori KPI &#40;&#41;tabulare SSAS](tabular-models/kpis-ssas-tabular.md)  
   
  [Gerarchie &#40;SSAS tabulare&#41;](tabular-models/hierarchies-ssas-tabular.md)  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66067896"
   
  [Ruoli &#40;SSAS tabulare&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [Analizzare in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analizza in Excel &#40;SSAS tabulare&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

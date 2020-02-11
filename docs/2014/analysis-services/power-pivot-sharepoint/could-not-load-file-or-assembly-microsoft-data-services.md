@@ -1,5 +1,5 @@
 ---
-title: Impossibile caricare il file o l'assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Microsoft Docs
+title: Impossibile caricare il file o l'assembly &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39; | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071672"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Impossibile caricare il file o l'assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Impossibile caricare il file o l'assembly &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   Negli ambienti di SharePoint 2010 in cui è disponibile PowerPivot per SharePoint, questo errore si verificherà se la distribuzione della soluzione a livello di applicazione per PowerPivot non è stata eseguita correttamente.  
   
 ## <a name="details"></a>Dettagli  

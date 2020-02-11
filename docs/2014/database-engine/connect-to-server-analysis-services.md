@@ -13,35 +13,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755602"
 ---
 # <a name="connect-to-server-analysis-services"></a>Connetti al server (Analysis Services)
-  Usare questa finestra di dialogo per visualizzare o specificare le opzioni per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Usare questa finestra di dialogo per visualizzare o specificare le opzioni [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]per la connessione a.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Per la registrazione di un server da Esplora oggetti, selezionare il tipo di server a cui connettersi, ovvero [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services o Integration Services. Nelle altre parti della finestra di dialogo vengono visualizzate solo le opzioni applicabili al tipo di server selezionato. Durante la registrazione di un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel componente Server registrati. Per registrare un tipo diverso di server, selezionare [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services o Integration Services nella barra degli strumenti Server registrati prima di avviare la registrazione di un nuovo server.  
   
  **Nome server**  
  Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
- **Autenticazione**  
- Modalità di autenticazione seguenti sono supportate quando ci si connette a un'istanza di Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticazione di Windows.  
+ **autenticazione**  
+ La modalità di autenticazione supportata per la connessione a un'istanza di Analysis Services è l'autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
- La modalità di**autenticazione di Windows** consente all'utente di usare un account utente di Windows per la connessione.  
+ La modalità di **autenticazione di Windows** consente a un utente di connettersi tramite un account utente di Windows.  
   
  **Nome utente**  
- Questa opzione non è disponibile in questa versione. Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo si è scelto di usare l' **autenticazione di Windows**per la connessione.  
+ Questa opzione non è disponibile in questa versione. Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di Windows**per la connessione.  
   
  **Password**  
  Questa opzione non è disponibile in questa versione. Immettere la password per l'account di accesso. Questa opzione è modificabile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione.  
   
- **Connect**  
+ **Connettere**  
  Fare clic su questo pulsante per connettersi al server selezionato.  
   
  **Opzioni**  

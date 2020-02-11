@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091602"
 ---
 # <a name="upgrade-advisor-overview"></a>Panoramica di Preparazione aggiornamento
@@ -39,10 +39,10 @@ ms.locfileid: "66091602"
   
 -   Guida di Preparazione aggiornamento  
   
- La prima volta che si utilizza Preparazione aggiornamento, eseguire l'Analisi guidata di Preparazione aggiornamento per analizzare un server. Al termine dell'analisi, fare clic su **avvia Report** dalla procedura guidata o tornare alla pagina iniziale di preparazione aggiornamento. Da questa pagina eseguire il Visualizzatore report di Preparazione aggiornamento per visualizzare il report. Il report fornisce collegamenti a informazioni che consentiranno di risolvere i problemi noti.  
+ La prima volta che si utilizza Preparazione aggiornamento, eseguire l'Analisi guidata di Preparazione aggiornamento per analizzare un server. Al termine dell'analisi da parte della procedura guidata, fare clic su **Avvia report** dalla procedura guidata o tornare alla pagina iniziale di preparazione aggiornamento. Da questa pagina eseguire il Visualizzatore report di Preparazione aggiornamento per visualizzare il report. Il report fornisce collegamenti a informazioni che consentiranno di risolvere i problemi noti.  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>Analisi guidata di Preparazione aggiornamento  
- Per eseguire un'analisi, fare clic su **avviare Analisi guidata Preparazione aggiornamento** nella pagina iniziale di preparazione aggiornamento. Verranno raccolte informazioni sul computer, sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sui componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sui file di traccia che si desidera analizzare. Dopo la raccolta e la verifica di tutte le informazioni, verranno analizzati i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per eseguire un'analisi, fare clic su **Avvia l'analisi guidata di preparazione aggiornamento** nella pagina iniziale di preparazione aggiornamento. Verranno raccolte informazioni sul computer, sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sui componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sui file di traccia che si desidera analizzare. Dopo la raccolta e la verifica di tutte le informazioni, verranno analizzati i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Ogni volta che si esegue l'Analisi guidata di Preparazione aggiornamento, viene generato un report separato e i report esistenti per i componenti selezionati non vengono sovrascritti. Tuttavia, nel visualizzatore di report vengono visualizzati solo gli ultimi cinque report.  
@@ -71,15 +71,15 @@ ms.locfileid: "66091602"
  Preparazione aggiornamento non analizza le stored procedure crittografate, il codice delle stored procedure estese e il codice sorgente in linguaggi diversi da [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="upgrade-advisor-report-viewer"></a>Visualizzatore report di Preparazione aggiornamento  
- Per visualizzare un report di preparazione aggiornamento, fare clic su **avviare Visualizzatore Report Preparazione aggiornamento** nella pagina iniziale di preparazione aggiornamento. All'avvio del Visualizzatore report di Preparazione aggiornamento verranno caricati i report presenti nella directory predefinita. I report non vengono visualizzati se non vengono trovati nella directory predefinita. Se la directory predefinita non contiene report, è possibile eseguire l'Analisi guidata di Preparazione aggiornamento per creare un report oppure caricare un report esistente da un altro server o da una sottodirectory.  
+ Per visualizzare un report di preparazione aggiornamento, fare clic su **Avvia Visualizzatore report di preparazione aggiornamento** nella pagina iniziale di preparazione aggiornamento. All'avvio del Visualizzatore report di Preparazione aggiornamento verranno caricati i report presenti nella directory predefinita. I report non vengono visualizzati se non vengono trovati nella directory predefinita. Se la directory predefinita non contiene report, è possibile eseguire l'Analisi guidata di Preparazione aggiornamento per creare un report oppure caricare un report esistente da un altro server o da una sottodirectory.  
   
- I report esistenti non vengono sovrascritti da Preparazione aggiornamento di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, nel visualizzatore di report vengono visualizzati solo gli ultimi cinque report. Per visualizzare un report precedente, selezionare il report dal **Report** casella di riepilogo a discesa. Il valore timestamp indica la data e l'ora in cui il report è stato generato.  
+ I report esistenti non vengono sovrascritti da Preparazione aggiornamento di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, nel visualizzatore di report vengono visualizzati solo gli ultimi cinque report. Per visualizzare un report precedente, selezionare il report dall'elenco a discesa **report** . Il valore timestamp indica la data e l'ora in cui il report è stato generato.  
   
  Quando i file XML dell'Analisi guidata di Preparazione aggiornamento vengono caricati nel Visualizzatore report di Preparazione aggiornamento, verrà visualizzato un report per ogni componente. Il report contiene tutti i problemi noti, sia rilevabili che non rilevabili, che è necessario risolvere. A ogni problema è associata un'icona che ne indica l'importanza, un'etichetta con informazioni su quando è necessario risolvere il problema e una breve descrizione. Se un problema viene espanso, verrà visualizzata una descrizione più lunga, un collegamento ai dettagli e un collegamento al file della Guida. La quantità di informazioni fornite per ogni problema dovrebbe essere sufficiente per consentirne la correzione.  
   
- La maggior parte dei componenti presenta problemi che non è possibile rilevare. Per visualizzare tali problemi, espandere la **altri problemi di aggiornamento** elemento per il componente e quindi fare clic sul collegamento per visualizzare informazioni aggiuntive sui problemi nella documentazione. Per ulteriori informazioni sui problemi relativi alla compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ La maggior parte dei componenti presenta problemi che non è possibile rilevare. Per visualizzare questi problemi, espandere l'elemento **altri problemi di aggiornamento** per il componente, quindi fare clic sul collegamento per visualizzare informazioni aggiuntive sui problemi nella documentazione. Per ulteriori informazioni sui problemi relativi alla compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

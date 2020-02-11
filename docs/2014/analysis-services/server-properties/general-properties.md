@@ -39,16 +39,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069025"
 ---
 # <a name="general-properties"></a>Proprietà generali
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** Modalità server multidimensionale e tabulare, se non diversamente specificato  
+ **Si applica a:** Modalità server multidimensionale e tabulare, se non specificato diversamente  
   
 ## <a name="non-specific-category"></a>Categoria Non-Specific  
  `AdminTimeout`  
@@ -60,7 +61,7 @@ ms.locfileid: "66069025"
  Proprietà stringa che specifica in un elenco delimitato le cartelle che è possibile esplorare durante il salvataggio, l'apertura e la ricerca di file nelle finestra di dialogo di Analysis Services. È necessario che l'account del servizio Analysis Services abbia letto e scritto le autorizzazioni a qualsiasi cartella aggiunta all'elenco.  
   
  `BackupDir`  
- Proprietà stringa che identifica il nome della directory in cui sono archiviati i file di backup per impostazione predefinita, nel caso in cui un percorso non è specificato come parte del comando Backup.  
+ Proprietà di stringa che identifica il nome della directory in cui vengono archiviati i file di backup per impostazione predefinita, nel caso in cui non sia stato specificato un percorso come parte del comando backup.  
   
  `CollationName`  
  Proprietà di stringa che identifica le regole di confronto del server. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -76,12 +77,14 @@ ms.locfileid: "66069025"
  `CoordinatorCancelCount`  
  Proprietà Integer a 32 bit con segno che definisce la frequenza con la quale il server controlla se si è verificato un evento di annullamento (basato su un conteggio di iterazione interno). Per aumentare la frequenza di controllo degli eventi di annullamento, a scapito delle prestazioni generali, è necessario diminuire il valore di questa proprietà.  
   
- `CoordinatorCancelCount` in modalità server tabulare viene ignorato.  
+ 
+  `CoordinatorCancelCount` in modalità server tabulare viene ignorato.  
   
  `CoordinatorExecutionMode`  
  Proprietà Integer a 32 bit con segno che definisce il numero massimo di operazioni parallele accettate dal server, comprese operazioni di elaborazione e query. Zero (0) indica che il numero delle operazioni verrà deciso dal server in base a un algoritmo interno. Un numero positivo indica il numero massimo totale delle operazioni. Un numero negativo indica il numero massimo di operazioni per processore.  
   
- `CoordinatorExecutionMode` in modalità server tabulare viene ignorato.  
+ 
+  `CoordinatorExecutionMode` in modalità server tabulare viene ignorato.  
   
  Il valore predefinito di questa proprietà è -4. Ciò significa che il funzionamento del server è limitato a 4 operazioni parallele per processore. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
@@ -95,13 +98,13 @@ ms.locfileid: "66069025"
  Proprietà di stringa che consente l'identificazione del nome della directory in cui sono archiviati i dati.  
   
  `DeploymentMode`  
- Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definità modalità server ' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|0|Rappresenta il valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
+|0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Consente di specificare le istanze di Analysis Services installate come parte di una distribuzione di PowerPivot per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che è parte di un'installazione di PowerPivot per SharePoint. I dati PowerPivot non verranno più eseguiti nel server se si cambia modalità.|  
 |2|Specifica la modalità tabulare usata per l'hosting dei database del modello tabulare che usano l'archiviazione in memoria o DirectQuery.|  
   
@@ -131,7 +134,8 @@ ms.locfileid: "66069025"
  Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` si applica ai comandi di elaborazione dei cubi e alle operazioni di writeback.  
+>  
+  `ForceCommitTimeout` si applica ai comandi di elaborazione dei cubi e alle operazioni di writeback.  
   
  `IdleConnectionTimeout`  
  Proprietà Integer che specifica un timeout, espresso in secondi, per le connessioni inattive.  
@@ -153,7 +157,7 @@ ms.locfileid: "66069025"
  Proprietà stringa che identifica il nome della directory contenente i log del server. Questa proprietà viene applicata solo quando per la registrazione vengono utilizzati file su disco invece di tabelle di database (condizione predefinita).  
   
  `MaxIdleSessionTimeout`  
- Proprietà Integer che definisce il timeout massimo in secondi per le sessioni inattive. L'impostazione predefinita è zero (0). Ciò significa che non si verifica mai un timeout per le sessioni. Le sessioni inattive verranno comunque rimosse se il server presenta vincoli di risorse.  
+ Proprietà Integer che definisce il timeout massimo in secondi per le sessioni inattive. Il valore predefinito è zero (0), che indica che non si è mai verificato il timeout delle sessioni. Tuttavia, le sessioni inattive verranno comunque rimosse se il server è sottoposto a vincoli di risorse.  
   
  `MinIdleSessionTimeout`  
  Proprietà Integer che definisce il timeout minimo in secondi per le sessioni inattive. Il valore predefinito è 2700 secondi. Trascorso questo tempo, al server è consentito terminare la sessione inattiva, operazione che viene eseguita solo quando è richiesta memoria.  
@@ -161,7 +165,7 @@ ms.locfileid: "66069025"
  `Port`  
  Proprietà Integer che definisce il numero di porta su cui il server rimarrà in attesa di connessioni client. Se questa proprietà non viene impostata, il server trova in modo dinamico la prima porta non utilizzata.  
   
- Il valore predefinito di questa proprietà è zero (0) al quale per impostazione predefinita viene assegnata la porta 2383. Per altre informazioni sulla configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Il valore predefinito di questa proprietà è zero (0) al quale per impostazione predefinita viene assegnata la porta 2383. Per altre informazioni sulla configurazione della porta, vedere [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  `ServerTimeout`  
  Proprietà Integer che definisce il timeout, in secondi, per le query. L'impostazione predefinita è 3600 secondi (o 60 minuti). Il valore zero (0) indica che non si verificherà alcun timeout per le query.  
@@ -177,7 +181,7 @@ ms.locfileid: "66069025"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

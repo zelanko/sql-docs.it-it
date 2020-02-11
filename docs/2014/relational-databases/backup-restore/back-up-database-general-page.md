@@ -13,25 +13,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155080"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
-  Utilizzare la pagina **Generale** della finestra di dialogo **Backup database** per visualizzare o modificare le impostazioni per un'operazione di backup del database.  
+  Utilizzare la pagina **generale** della finestra di dialogo **backup database** per visualizzare o modificare le impostazioni per un'operazione di backup del database.  
   
  Per altre informazioni di base sui backup di database, vedere [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
 >  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) corrispondente facendo clic sul pulsante **Script** e quindi selezionando una destinazione per lo script.  
   
- **Per utilizzare SQL Server Management Studio per la creazione di un backup**  
+ **Per usare SQL Server Management Studio per creare un backup**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
+-   [Creare un backup differenziale del database &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
     >  È possibile definire un piano di manutenzione database per creare backup di database. Per ulteriori informazioni, vedere [Piani di manutenzione dei database](../maintenance-plans/maintenance-plans.md) nella documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
@@ -42,13 +42,13 @@ ms.locfileid: "70155080"
   
 ## <a name="options"></a>Opzioni  
   
-### <a name="source"></a>Origine  
+### <a name="source"></a>Source (Sorgente)  
  Le opzioni del pannello **Origine** identificano il database e specificano il tipo di backup e il componente per l'operazione di backup.  
   
  **Database**  
  È possibile selezionare il database di cui eseguire il backup.  
   
- **Modello di recupero**  
+ **modello di recupero**  
  È possibile visualizzare il modello di recupero, ovvero SIMPLE, FULL o BULK_LOGGED, per il database selezionato.  
   
  **Tipo di backup**  
@@ -56,17 +56,17 @@ ms.locfileid: "70155080"
   
 |Tipo di backup|Disponibile per|Restrizioni|  
 |-----------------|-------------------|------------------|  
-|Completo|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
+|Full|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Differenziale|Database, file e filegroup|Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Log delle transazioni|Log delle transazioni|I backup dei log delle transazioni non sono disponibili per il modello di recupero con registrazione minima.|  
   
  **Backup di sola copia**  
- Selezionare questa opzione per creare un backup di sola copia. Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+ Selezionare questa opzione per creare un backup di sola copia. Un *backup di sola copia* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup indipendente dalla sequenza di backup convenzionali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
->  Quando si seleziona l'opzione **Differenziale**, non è possibile creare un backup di sola copia.  
+>  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
   
- **Componente di cui eseguire il backup**  
+ **Componente di backup**  
  Con questa opzione è possibile selezionare il componente del database di cui eseguire il backup. Se nell'elenco **Tipo backup** è selezionato **Log delle transazioni** , questa opzione non è attivata.  
   
  Selezionare uno dei pulsanti di opzione seguenti:  
@@ -82,19 +82,19 @@ ms.locfileid: "70155080"
 > [!NOTE]  
 >  Per informazioni sui dispositivi di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Backup su**  
+ **Esegui backup in**  
  Selezionare uno dei tipi di supporti seguenti su cui eseguire il backup. Le destinazioni selezionate vengono visualizzate nell'elenco **Backup su** .  
   
 |||  
 |-|-|  
 |**Disco**|Indica di eseguire il backup su disco. Può trattarsi di un file di sistema o di un dispositivo di backup logico su disco creato per il database. I dischi attualmente selezionati vengono visualizzati nell'elenco **Backup su** . È possibile selezionare fino a 64 dispositivi disco per l'operazione di backup.|  
-|**Tape**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**URL**|Esegue il backup nell'archiviazione BLOB di Azure.|  
   
  Il set successivo di opzioni visualizzate dipende dal tipo di destinazione selezionata. Se si seleziona Disco o Nastro, vengono visualizzate le opzioni riportate di seguito.  
   
- **Aggiungi**  
- È possibile aggiungere un file o un dispositivo all'elenco **Backup su** . È possibile eseguire il backup su 64 dispositivi contemporaneamente su un disco locale o remoto. Per specificare un file su un disco remoto, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).  
+ **Aggiungere**  
+ È possibile aggiungere un file o un dispositivo all'elenco **Backup su** . È possibile eseguire il backup su 64 dispositivi contemporaneamente su un disco locale o remoto. Per specificare un file su un disco remoto, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
  **Rimuovi**  
  È possibile rimuovere uno o più dispositivi attualmente selezionati dall'elenco **Backup su** .  
@@ -116,13 +116,13 @@ ms.locfileid: "70155080"
  **Contenitore di archiviazione di Azure**  
  Specificare il nome del contenitore di Archiviazione di Azure  
   
- **Prefisso URL**  
- Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<account di archiviazione.blob.core.windows.net**.  
+ **Prefisso URL:**  
+ Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso dall'account di ** \<archiviazione>. blob.Core.Windows.NET**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   

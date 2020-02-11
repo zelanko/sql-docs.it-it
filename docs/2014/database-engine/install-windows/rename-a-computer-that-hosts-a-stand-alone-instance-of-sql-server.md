@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775008"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Rinominare un computer che ospita un'istanza autonoma di SQL Server
-  Quando si modifica il nome del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nuovo nome viene riconosciuto durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è necessario eseguire nuovamente il programma di installazione per reimpostare il nome del computer. Utilizzare invece la procedura riportata di seguito per aggiornare i metadati di sistema archiviati in sys.servers e restituiti dalla funzione di sistema @@SERVERNAME. Aggiornare i metadati di sistema in modo da riflettere le modifiche apportate al nome del computer per le connessioni remote e le applicazioni che utilizzano @@SERVERNAME o che eseguono query sul nome del server da sys.servers.  
+  Quando si modifica il nome del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nuovo nome viene riconosciuto durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è necessario eseguire nuovamente il programma di installazione per reimpostare il nome del computer. Utilizzare invece la procedura riportata di seguito per aggiornare i metadati di sistema archiviati in sys.servers e restituiti dalla funzione di sistema @@SERVERNAME . Aggiornare i metadati di sistema in modo da riflettere le modifiche apportate al nome del computer per le connessioni remote e le applicazioni che utilizzano @@SERVERNAME o che eseguono query sul nome del server da sys.servers.  
   
  La procedura seguente non può essere utilizzata per rinominare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma solo per rinominare la parte del nome di istanza corrispondente al nome del computer. Ad esempio, è possibile modificare il nome di un computer denominato MB1 che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominata Instance1 trasformandolo in MB2. La parte del nome che si riferisce all'istanza, ovvero Instance1, rimarrà tuttavia invariata. In questo esempio \\\\*ComputerName*\\*InstanceName* verrebbe trasformato da \\\MB1\Instance1 in \\\MB2\Instance1.  
   
- **Operazioni preliminari**  
+ **Prima di iniziare**  
   
  Prima di iniziare il processo di ridenominazione, esaminare le informazioni seguenti:  
   
@@ -76,13 +76,13 @@ ms.locfileid: "62775008"
   
 #### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>Per verificare il corretto completamento dell'operazione di ridenominazione  
   
--   Selezionare le informazioni da @@SERVERNAME o sys.servers. La funzione @@SERVERNAME restituirà il nuovo nome e la tabella sys.servers includerà il nuovo nome. L'esempio di seguito mostra l'uso di @@SERVERNAME.  
+-   Selezionare le informazioni da @@SERVERNAME o sys.servers. La funzione @@SERVERNAME restituirà il nuovo nome e la tabella sys.servers includerà il nuovo nome. L'esempio di seguito mostra l'uso di @@SERVERNAME .  
   
     ```  
     SELECT @@SERVERNAME AS 'Server Name';  
     ```  
   
-## <a name="additional-considerations"></a>Ulteriori considerazioni  
+## <a name="additional-considerations"></a>Considerazione aggiuntive  
  **Account di accesso remoto** : se il computer dispone di account di accesso remoto, l'esecuzione di **sp_dropserver** può generare un errore simile al seguente:  
   
  `Server: Msg 15190, Level 16, State 1, Procedure sp_dropserver, Line 44 There are still remote logins for the server 'SERVER1'.`  

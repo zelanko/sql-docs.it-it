@@ -36,13 +36,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068879"
 ---
 # <a name="network-properties"></a>Proprietà di rete
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Si applica a:** Modalità server multidimensionale e tabulare  
@@ -55,7 +56,7 @@ ms.locfileid: "66068879"
  `IPV4Support`  
  Proprietà a valore integer a 32 bit con segno che definisce il supporto per il protocollo IPv4. Questa proprietà può assumere uno dei valori elencati nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*0*|IPv4 disabilitato; i client non possono connettersi.|  
 |*1*|(Impostazione predefinita) IPv4 non richiesto; il server non si avvia se non può restare in attesa di IPv4.|  
@@ -64,7 +65,7 @@ ms.locfileid: "66068879"
  `IPV6Support`  
  Proprietà a valore integer a 32 bit con segno che definisce il supporto per il protocollo IPv6. Questa proprietà può assumere uno dei valori elencati nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |*0*|IPv6 disabilitato; i client non possono connettersi.|  
 |*1*|(Impostazione predefinita) IPv6 non richiesto; il server non si avvia se non può restare in attesa di IPv6.|  
@@ -82,14 +83,14 @@ ms.locfileid: "66068879"
  `ServerSendTimeout`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="requests"></a>Richieste  
+## <a name="requests"></a>Requests  
  `EnableBinaryXML`  
  Proprietà booleana che stabilisce se il server riconoscerà il formato xml binario per richieste.  
   
  `EnableCompression`  
  Proprietà booleana che stabilisce se la compressione è abilitata per le richieste.  
   
-## <a name="responses"></a>Responses  
+## <a name="responses"></a>Risposte  
  `CompressionLevel`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -143,7 +144,7 @@ ms.locfileid: "66068879"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

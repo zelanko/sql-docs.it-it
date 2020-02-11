@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689082"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Utilizzato per trovare il valore della proprietà di formato di colonna.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,10 +57,10 @@ pcbLen
  *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
- *field*  
+ *campo*  
  Numero di colonna per cui viene recuperata la proprietà.  
   
- *property*  
+ *Proprietà*  
  Una delle costanti di proprietà.  
   
  *pValue*  
@@ -75,15 +75,15 @@ pcbLen
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
- Valori di proprietà di formato di colonna sono elencati nel [bcp_setcolfmt](bcp-setcolfmt.md) argomento. I valori di proprietà formato di colonna vengono impostati chiamando il **bcp_setcolfmt** funzione e il **bcp_getcolfmt** funzione viene utilizzata per trovare il valore di proprietà di formato di colonna.  
+## <a name="remarks"></a>Osservazioni  
+ I valori delle proprietà di formato della colonna sono elencati nell'argomento [bcp_setcolfmt](bcp-setcolfmt.md) . I valori delle proprietà di formato della colonna vengono impostati chiamando la funzione **bcp_setcolfmt** e viene utilizzata la funzione **bcp_getcolfmt** per individuare il valore della proprietà formato colonna.  
   
- Modifiche del comportamento possono essere ottenute durante la connessione a un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (o versione successiva) computer del server, rispetto alle versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
+ Le modifiche del comportamento possono essere osservate quando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ci si connette a un computer server (o versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successiva) rispetto alle versioni precedenti. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_getcolfmt per le caratteristiche avanzate di data e ora  
- I tipi utilizzati con il `BCP_FMT_TYPE` sono di proprietà per i tipi di data/ora come specificato nella [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_getcolfmt per le caratteristiche avanzate di data e ora  
+ I tipi utilizzati con la `BCP_FMT_TYPE` proprietà per i tipi data/ora sono specificati nelle [modifiche della copia bulk per i tipi di data e ora avanzati &#40;OLE DB e&#41;ODBC ](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  

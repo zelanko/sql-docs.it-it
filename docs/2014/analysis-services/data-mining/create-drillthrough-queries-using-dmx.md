@@ -1,5 +1,5 @@
 ---
-title: Creare query drill-through tramite DMX | Microsoft Docs
+title: Creazione di query drill-through tramite DMX | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085234"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Creare query drill-through tramite DMX
@@ -44,7 +44,7 @@ WHERE [Model Region] = 'M200 Pacific'
  In questo esempio viene utilizzato un alias per rinominare la colonna della struttura. Se non si assegna un alias alla colonna della struttura, la colonna viene restituita con il nome 'Expression'. Si tratta del comportamento predefinito per tutte le colonne senza nome.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query drill-through &#40;Data mining&#41;](drillthrough-queries-data-mining.md)   
+ [Query drill-through &#40;&#41;di data mining](drillthrough-queries-data-mining.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  
   
   

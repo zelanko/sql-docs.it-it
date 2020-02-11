@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757745"
 ---
 # <a name="perspective-representation-tabular"></a>Rappresentazione della prospettiva (tabulare)
   Una prospettiva è un meccanismo per semplificare o concentrare il modello in una parte più piccola per l'applicazione client.  
   
- Visualizzare [rappresentazione della prospettiva (tabulare)](perspective-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della prospettiva.  
+ Per una spiegazione dettagliata su come creare e modificare la rappresentazione della prospettiva, vedere [rappresentazione prospettica (tabulare)](perspective-representation-tabular.md) .  
   
 > [!WARNING]  
 >  Le prospettive non sono un meccanismo di sicurezza. L'utente può comunque accedere agli oggetti esterni alla prospettiva tramite altre interfacce.  

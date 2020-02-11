@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066514"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Creare una colonna calcolata (SSAS tabulare)
-  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, si crea una formula DAX che definisce i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. In questo argomento viene descritto come creare una nuova colonna calcolata tramite la barra della formula DAX in Progettazione modelli.  
+  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, viene creata una formula DAX che definisce i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. In questo argomento viene descritto come creare una nuova colonna calcolata tramite la barra della formula DAX in Progettazione modelli.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Per creare una nuova colonna calcolata  
   
 1.  In Vista dati di Progettazione modelli selezionare la tabella a cui si desidera aggiungere una colonna calcolata, fare clic sul menu **Colonna** , quindi scegliere **Aggiungi colonna**.  
   
-     L'opzione**Aggiungi colonna** viene evidenziata nella colonna vuota più a destra e il cursore si sposta nella barra della formula.  
+     **Aggiungi colonna** viene evidenziata sulla colonna vuota più a destra e il cursore si sposta sulla barra della formula.  
   
      Per creare una nuova colonna tra due colonne esistenti, fare clic con il pulsante destro del mouse su una colonna esistente e quindi scegliere **Inserisci colonna**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sulla barra degli strumenti (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Barra degli strumenti (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066046"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la barra degli strumenti per eseguire operazioni frequenti nella pagina **Struttura dimensione** di **Progettazione dimensioni**.  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungere funzionalità di Business Intelligence**  
+ **Aggiungi funzionalità di Business Intelligence**  
  Consente di visualizzare la **Configurazione guidata funzionalità di Business Intelligence** per aggiungere funzionalità di Business Intelligence.  
   
- **Process**  
+ **Processo**  
  Consente di visualizzare la finestra di dialogo **Elabora** per elaborare l'oggetto.  
   
  **Visualizza attributi come**  
  Fare clic su questo pulsante per selezionare una delle modalità di visualizzazione seguenti del riquadro **Attributi** :  
   
--   List  
+-   Elenco  
   
-     Consente di visualizzare un elenco di attributi per la dimensione corrente. Impostazione predefinita.  
+     Consente di visualizzare un elenco di attributi per la dimensione corrente. Questa è la modalità predefinita.  
   
--   Struttura ad albero  
+-   Albero  
   
      Consente di visualizzare una visualizzazione albero di attributi per la dimensione corrente, con le proprietà membro di un dato attributo visualizzate come nodo subordinato di tale attributo.  
   
--   Grid  
+-   Griglia  
   
      Consente di visualizzare un elenco dettagliato di attributi, che includono le proprietà **Name**, **Usage**e **Type** , il tipo di dati della colonna chiave, se applicabile, e l'eventuale corrispondenza tra la colonna nome e la colonna chiave.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66066046"
  **Mostra**  
  Fare clic su questo pulsante per selezionare una delle modalità di visualizzazione seguenti del riquadro **Vista origine dati** :  
   
--   Visualizzazione Diagramma  
+-   Vista Diagramma  
   
      Consente di visualizzare un diagramma delle tabelle e delle colonne associate alla dimensione corrente.  
   

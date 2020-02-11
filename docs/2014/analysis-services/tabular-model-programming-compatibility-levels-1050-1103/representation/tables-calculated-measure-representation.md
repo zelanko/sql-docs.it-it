@@ -1,5 +1,5 @@
 ---
-title: Calcolata (tabulare) rappresentazione della misura | Microsoft Docs
+title: Rappresentazione della misura calcolata (tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757656"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Rappresentazione della misura calcolata (tabulare)
@@ -23,7 +23,7 @@ ms.locfileid: "62757656"
 ## <a name="calculated-measure-representation"></a>Rappresentazione della misura calcolata  
   
 ### <a name="calculated-measure-in-amo"></a>Misure calcolate in AMO  
- Quando si utilizza AMO per gestire una misura calcolata del modello tabulare, è presente una corrispondenza uno-a-uno tra l'oggetto logico di misura calcolata e una misura definita in un oggetto <xref:Microsoft.AnalysisServices.Command> dell'oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Ogni **misure calcolate** viene definito come una `CREATE MEASURE` espressione all'interno di un <xref:Microsoft.AnalysisServices.Command> dell'oggetto e un punto e virgola. Tutte le misure calcolate in un modello tabulare corrispondono alla stringa di raccolta `CREATE MEASURE` in un oggetto comando in un oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Per ogni misura calcolata, è presente un mapping uno-a-uno con <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Quando si utilizza AMO per gestire una misura calcolata del modello tabulare, è presente una corrispondenza uno-a-uno tra l'oggetto logico di misura calcolata e una misura definita in un oggetto <xref:Microsoft.AnalysisServices.Command> dell'oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Ogni **misura calcolata** viene definita come `CREATE MEASURE` espressione all'interno <xref:Microsoft.AnalysisServices.Command> di un oggetto e separata da un punto e virgola. Tutte le misure calcolate in un modello tabulare corrispondono alla stringa di raccolta `CREATE MEASURE` in un oggetto comando in un oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Per ogni misura calcolata, è presente un mapping uno-a-uno con <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  Nel frammento di codice seguente viene illustrato come creare una misura calcolata.  
   

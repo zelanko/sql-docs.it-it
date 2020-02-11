@@ -1,5 +1,5 @@
 ---
-title: Le proprietà del cubo | Microsoft Docs
+title: Proprietà cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727647"
 ---
 # <a name="cube-properties"></a>Proprietà dei cubi
@@ -44,7 +44,7 @@ ms.locfileid: "62727647"
 > [!NOTE]  
 >  Alcune proprietà vengono impostate automaticamente quando si crea il cubo e non possono essere modificate.  
   
- Per altre informazioni su come impostare le proprietà dei cubi, vedere [Progettazione cubi &#40;Analysis Services - dati multidimensionali&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Per ulteriori informazioni su come impostare le proprietà del cubo, vedere [Progettazione cubi &#40;Analysis Services-&#41;di dati multidimensionali ](../cube-designer-analysis-services-multidimensional-data.md).  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
@@ -58,19 +58,19 @@ ms.locfileid: "62727647"
 |`Language`|Specifica l'identificatore della lingua predefinita del cubo.|  
 |`Name`|Specifica il nome descrittivo del cubo.|  
 |`ProactiveCaching`|Definisce le impostazioni di memorizzazione nella cache attiva per il cubo.|  
-|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni sono **regolari** o `lazy`.|  
+|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni **** sono regular `lazy`o.|  
 |`ProcessingPriority`|Determina la priorità di elaborazione del cubo durante operazioni in background, ad esempio indicizzazione e aggregazioni lente Il valore predefinito è **0**.|  
-|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni sono **regolari** e `lazy`.|  
+|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni **** sono regular `lazy`e.|  
 |`ScriptErrorHandlingMode`|Determina la gestione degli errori. Le opzioni disponibili sono `IgnoreNone` o `IgnoreAll`.|  
 |`Source`|Visualizza la vista origine dati utilizzata per il cubo.|  
 |`StorageLocation`|Specifica il percorso di archiviazione nel file system per il cubo. Se non viene specificato alcun valore, il percorso viene ereditato dal database contenente l'oggetto del cubo.|  
-|`StorageMode`|Specifica la modalità di archiviazione per il cubo. I valori sono `MOLAP`, `ROLAP`, o `HOLAP``.`|  
+|`StorageMode`|Specifica la modalità di archiviazione per il cubo. I valori `MOLAP`sono `ROLAP`, o`HOLAP``.`|  
 |`Visible`|Determina la visibilità del cubo.|  
   
 > [!NOTE]  
->  Per altre informazioni sull'impostazione di valori per la proprietà ErrorConfiguration quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Per ulteriori informazioni sull'impostazione dei valori per la proprietà ErrorConfiguration quando si utilizzano valori null e altri problemi di integrità dei dati, vedere [gestione dei problemi di integrità dei dati in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vedere anche  
- [La memorizzazione nella cache &#40;partizioni&#41;](partitions-proactive-caching.md)  
+ [Caching attivo &#40;partizioni&#41;](partitions-proactive-caching.md)  
   
   

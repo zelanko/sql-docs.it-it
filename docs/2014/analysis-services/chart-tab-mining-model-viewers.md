@@ -1,5 +1,5 @@
 ---
-title: Scheda (visualizzatori modello di Data Mining) del grafico | Microsoft Docs
+title: Scheda grafico (Visualizzatori modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088181"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Scheda Grafico (Visualizzatori modello di data mining)
   Usare il riquadro **Grafico** per visualizzare i dati cronologici utilizzati per il training di un modello Time Series insieme ai valori stimati. L'asse verticale del grafico rappresenta il valore della serie, mentre l'asse orizzontale rappresenta il tempo. Le stime future sono rappresentante dalle linee tratteggiate.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Per ulteriori informazioni:** [algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -34,16 +34,16 @@ ms.locfileid: "66088181"
  **Visualizzatore**  
  Consente di scegliere un visualizzatore per l'esplorazione del modello di data mining selezionato. È possibile utilizzare il visualizzatore personalizzato per i modelli Time Series o il Visualizzatore contenuto di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se disponibili, è anche possibile utilizzare i visualizzatori plug-in.  
   
- **Eseguire lo zoom avanti**  
+ **Zoom avanti**  
  Consente di eseguire lo zoom avanti del grafico.  
   
- **Eseguire lo zoom indietro**  
+ **Zoom indietro**  
  Consente di eseguire lo zoom indietro del grafico.  
   
- **Scalabilità adatta il diagramma alla finestra**  
+ **Ridimensiona e adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del grafico finché l'intero grafico non si adatta alla schermata.  
   
- **Abs**  
+ **ABS**  
  Consente di passare tra due viste del grafico: nella vista predefinita la rappresentazione grafica dei numeri del grafico è correlata alla distribuzione complessiva (in percentuale). Se si fa clic su **Abs**, la rappresentazione grafica dei numeri corrisponde a dei valori assoluti.  
   
  **Copia grafico negli Appunti**  
@@ -59,7 +59,7 @@ ms.locfileid: "66088181"
  Consente di aprire una finestra di dialogo in cui è possibile selezionare le serie da includere nel visualizzatore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

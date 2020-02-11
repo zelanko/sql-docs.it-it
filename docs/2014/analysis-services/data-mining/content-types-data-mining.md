@@ -1,5 +1,5 @@
 ---
-title: Tipi (Data Mining) del contenuto | Microsoft Docs
+title: Tipi di contenuto (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,14 +27,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085655"
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene utilizzato in un modello.  
   
  Il *tipo di dati* determina il modo in cui gli algoritmi elaborano i dati in tali colonne quando si creano modelli di data mining. La definizione del tipo di dati di una colonna indica all'algoritmo le informazioni sul tipo di dati delle colonne e le modalità di elaborazione dei dati. Ogni tipo di dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta uno o più tipi di contenuto per il data mining.  
   
@@ -45,21 +45,21 @@ ms.locfileid: "66085655"
  Nell'elenco seguente vengono descritti i tipi di contenuto utilizzati nel data mining e vengono identificati i tipi di dati che supportano ogni tipo di contenuto.  
   
 ## <a name="discrete"></a>Discrete  
- Il tipo di contenuto*Discrete* indica che la colonna contiene un numero finito di valori senza continuità. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
+ *Discrete* indica che la colonna contiene un numero finito di valori senza continuità tra i valori. Ad esempio, una colonna relativa al sesso è una tipica colonna attributo discreta, in quanto i dati rappresentano un numero specifico di categorie.  
   
  I valori di una colonna attributo discreta non possono implicare l'ordinamento, anche se si tratta di valori numerici. Anche se i valori utilizzati per la colonna discreta sono numerici, non è inoltre possibile calcolare valori frazionari. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti.  
   
  Il tipo di contenuto `Discrete` è supportato da tutti i tipi di dati di data mining.  
   
 ## <a name="continuous"></a>Continuo  
- Il tipo di contenuto*Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
+ *Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
   
  Quando una colonna contiene dati numerici continui e quando è noto il modo in cui i dati devono essere distribuiti, è possibile migliorare potenzialmente l'accuratezza dell'analisi specificando la distribuzione prevista dei valori. Poiché la distribuzione della colonna viene specificata a livello della struttura di data mining, l'impostazione si applica a tutti i modelli basati sulla struttura. Per altre informazioni, vedere [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
   
  Il tipo di contenuto `Continuous` è supportato dai tipi di dati `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizzato  
- Per*discretizzazione* si intende il processo di raggruppamento in bucket dei valori di un set di dati continuo in modo da limitare il numero di valori possibili. È possibile discretizzare solo dati numerici.  
+ La *discretizzazione* è il processo di inserimento dei valori di un set continuo di dati in bucket in modo da avere un numero limitato di valori possibili. È possibile discretizzare solo dati numerici.  
   
  Di conseguenza, il tipo di contenuto *discretized* indica che la colonna contiene valori che rappresentano gruppi o bucket di valori derivati da una colonna continua. I bucket vengono considerati valori ordinati e discreti.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66085655"
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]questo tipo di contenuto è supportato da tutti i tipi di dati del processo di data mining. Tuttavia, la maggior parte degli algoritmi trattano i valori ciclici come valori discreti e non eseguono un'elaborazione speciale.  
   
-## <a name="ordered"></a>Ordered  
+## <a name="ordered"></a>Ordinato  
  Il tipo di contenuto *Ordered* indica inoltre che la colonna contiene valori che definiscono una sequenza o un ordine. In questo tipo di contenuto, tuttavia, i valori utilizzati per l'ordinamento non implicano alcuna relazione di distanza o grandezza tra i valori del set. Se ad esempio una colonna attributo ordinata contiene informazioni sui livelli di competenza elencati in ordine di priorità da uno a cinque, la distanza tra i livelli di competenza non include alcuna informazione implicita, cioè un livello di competenza pari a cinque non è necessariamente superiore a un livello di competenza pari a uno.  
   
  Le colonne attributo ordinate vengono considerate discrete in relazione al tipo di contenuto.  
@@ -113,8 +113,8 @@ ms.locfileid: "66085655"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Tipi di dati &#40;data mining&#41;](data-types-data-mining.md)   
- [Tipi di dati &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+ [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)   
+ [Tipi di dati &#40;&#41;DMX](/sql/dmx/data-types-dmx)   
  [Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   

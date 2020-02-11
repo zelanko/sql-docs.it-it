@@ -1,5 +1,5 @@
 ---
-title: Rinominare una tabella o colonna (SSAS tabulare) | Microsoft Docs
+title: Rinominare una tabella o una colonna (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066692"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Rinominare una tabella o una colonna (SSAS tabulare)
@@ -46,7 +46,7 @@ ms.locfileid: "66066692"
   
 -   Caratteri di controllo  
   
--   I caratteri seguenti (che non sono validi nei nomi degli oggetti di Analysis Services):., ': / \\*|? & % $! + = [] (){}<>  
+-   I caratteri seguenti (che non sono validi nei nomi degli oggetti Analysis Services):.,;':/ \\*|? &% $! + = () []{}<>  
   
 -   Le parole chiave riservate di Analysis Services, inclusi i nomi delle funzioni e gli operatori MDX (Multidimensional Expressions) e DMX (Data Mining Extensions).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66066692"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
- [Importare da PowerPivot &#40;tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importare da Analysis Services &#40;SSAS tabulare&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Importazione da PowerPivot &#40;SSAS tabulare&#41;](import-from-power-pivot-ssas-tabular.md)   
+ [Importa da Analysis Services &#40;SSAS tabulare&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

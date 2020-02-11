@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743496"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
@@ -34,17 +34,17 @@ ms.locfileid: "62743496"
   
 ##  <a name="Security"></a> Sicurezza  
   
-### <a name="permissions"></a>Permissions  
- Quando si usa [!INCLUDE[tsql](../../includes/tsql-md.md)] (istruzioni), richiede `ALTER ANY LINKED SERVER` autorizzazione nel server o l'appartenenza al **setupadmin** ruolo predefinito del server. Quando si usa [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] richiede `CONTROL SERVER` autorizzazioni o appartenenza al gruppo il **sysadmin** ruolo predefinito del server.  
+### <a name="permissions"></a>Autorizzazioni  
+ Quando si [!INCLUDE[tsql](../../includes/tsql-md.md)] usano le istruzioni `ALTER ANY LINKED SERVER` , è richiesta l'autorizzazione per il server o l'appartenenza al ruolo predefinito del server **setupadmin** . Quando si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilizza `CONTROL SERVER` è richiesta l'autorizzazione o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="Procedures"></a> Come creare un server collegato  
+##  <a name="Procedures"></a>Come creare un server collegato  
  È possibile utilizzare uno degli elementi seguenti:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62743496"
      **Origine dati**  
      Consente di digitare il nome dell'origine dati in base alla modalità di interpretazione del provider OLE DB. Se ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare il nome dell'istanza.  
   
-     **Stringa provider**  
+     **Stringa del provider**  
      Digitare il ProgID univoco del provider OLE DB che corrisponde all'origine dati. Per esempi di stringhe provider valide, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
      **Location**  
@@ -88,7 +88,7 @@ ms.locfileid: "62743496"
      **Account di accesso locale**  
      Consente di specificare l'ID di accesso locale con cui è possibile connettersi al server collegato. L'account di accesso locale può essere un account basato sull'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account basato sull'autenticazione di Windows. Utilizzare questo elenco per limitare la connessione a determinati account di accesso o per consentire ad alcuni account di connettersi con un account di accesso diverso.  
   
-     **Impersonate**  
+     **Rappresentare**  
      Consente di passare il nome utente e la password dall'account di accesso locale al server collegato. Nel caso dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che nel server remoto esista un account di accesso con un nome e una password identici. Nel caso degli account di accesso Windows, è necessario che l'account di accesso sia valido nel server collegato.  
   
      Per utilizzare la funzionalità di rappresentazione, è indispensabile che la configurazione risponda ai requisiti per la delega.  
@@ -99,22 +99,22 @@ ms.locfileid: "62743496"
      **Password remota**  
      Consente di specificare la password dell'Utente remoto.  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Consente di aggiungere un nuovo account di accesso locale.  
   
      **Rimuovi**  
      Consente di rimuovere un account di accesso locale esistente.  
   
-     **Non verranno effettuate**  
+     **Non essere effettuate**  
      Consente di specificare che non verrà effettuata una connessione per gli account di accesso non definiti nell'elenco.  
   
-     **Verranno effettuate senza un contesto di sicurezza**  
+     **Essere effettuate senza usare un contesto di sicurezza**  
      Consente di specificare che verrà effettuata una connessione senza un contesto di sicurezza per gli account di accesso non definiti nell'elenco.  
   
-     **Verranno effettuate con il contesto di sicurezza corrente dell'account di accesso**  
+     **Essere effettuate usando il contesto di sicurezza corrente dell'account di accesso**  
      Consente di specificare che verrà effettuata una connessione con il contesto di sicurezza corrente dell'account di accesso per gli account di accesso non definiti nell'elenco. Se la connessione al server locale è stata effettuata utilizzando l'autenticazione di Windows, per la connessione al server remoto verranno utilizzate le credenziali di Windows. Se la connessione al server locale è stata effettuata utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , per la connessione al server remoto verranno utilizzati il nome e la password dell'account di accesso. In tal caso, è necessario che nel server remoto esista un account di accesso con un nome e una password identici.  
   
-     **Verranno effettuate con il contesto di sicurezza seguente**  
+     **Essere effettuate usando questo contesto di sicurezza**  
      Consente di specificare che verrà effettuata una connessione utilizzando l'account di accesso e la password specificati in **Account di accesso remoto** e **Password** per gli account di accesso non definiti nell'elenco. L'account di accesso remoto deve essere un account di accesso basato sull'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server remoto.  
   
 5.  Facoltativamente, visualizzare o specificare opzioni server, fare clic sulla pagina **Opzioni server**  .  
@@ -130,7 +130,7 @@ ms.locfileid: "62743496"
      **RPC**  
      Attiva l'esecuzione di chiamate RPC dal server specificato.  
   
-     **Chiamate RPC in uscita**  
+     **RPC in uscita**  
      Viene abilitata l'esecuzione di chiamate RPC al server specificato.  
   
      **Usa regole di confronto remote**  
@@ -140,7 +140,7 @@ ms.locfileid: "62743496"
   
      Se è false, per le query distribuite vengono sempre utilizzate le regole di confronto predefinite del server locale, mentre il nome delle regole di confronto e le regole di confronto delle colonne remote vengono ignorati. Il valore predefinito è false.  
   
-     **Nome regole di confronto**  
+     **Nome delle regole di confronto**  
      Consente di specificare il nome delle regole di confronto utilizzate dall'origine dei dati remota quando l'opzione Usa regole di confronto remote è true e l'origine dei dati non è un'origine dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -157,7 +157,7 @@ ms.locfileid: "62743496"
   
      Se 0, usare il valore predefinito **sp_configure** dell'opzione [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
-     **Abilita promozione delle transazioni distribuite**  
+     **Abilitare la promozione delle transazioni distribuite**  
      Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql).  
   
 6.  Fare clic su **OK**.  
@@ -166,7 +166,8 @@ ms.locfileid: "62743496"
   
 -   Per visualizzare le opzioni rese disponibili dal provider, fare clic sulla pagina **Opzioni provider** .  
   
-     Non tutti i provider dispongono delle stesse opzioni. Ad esempio, alcuni tipi di dati, a differenza di altri, dispongono di indici. Utilizzare questa finestra di dialogo per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di capire le funzionalità del provider. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa alcuni provider di dati comuni; tuttavia, quando il prodotto che fornisce i dati cambia, il provider installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non supportare tutte le funzionalità nuove. La migliore fonte di informazioni sulle funzionalità del prodotto che fornisce i dati è la documentazione di quel prodotto.  
+     Non tutti i provider dispongono delle stesse opzioni. Ad esempio, alcuni tipi di dati, a differenza di altri, dispongono di indici. Utilizzare questa finestra di dialogo per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di capire le funzionalità del provider. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa alcuni provider di dati comuni; tuttavia, quando il prodotto che fornisce i dati cambia, il provider installato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non supportare tutte le funzionalità nuove. La migliore fonte di informazioni sulle funzionalità del prodotto che fornisce i dati è la documentazione di quel prodotto.  
   
      **Parametro dinamico**  
      Indica che il provider consente l'utilizzo della sintassi con il marcatore di parametro "?" nel caso di query con parametri. Impostare questa opzione solo se il provider supporta l'interfaccia **ICommandWithParameters** e "?" come marcatore di parametro. L'impostazione di questa opzione consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire query con parametri sul provider. In determinati casi, la possibilità di eseguire query con parametri sul provider può determinare un miglioramento delle prestazioni.  
@@ -178,21 +179,25 @@ ms.locfileid: "62743496"
      Indica che sul provider vengono richiamate solo le interfacce OLE DB di livello 0.  
   
      **Consenti in-process**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando l'istanza del provider viene creata al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli aggiornamenti o gli inserimenti che fanno riferimento a colonne per valori di grandi dimensioni (`text`, `ntext` o `image`) non sono consentiti.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando l'istanza del provider viene creata al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli aggiornamenti o gli inserimenti che fanno riferimento a colonne per valori di grandi dimensioni (`text`, `ntext` o `image`) non sono consentiti.  
   
-     **Aggiornamenti non in transazioni**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente gli aggiornamenti anche se **ITransactionLocal** non è disponibile. Se questa opzione è abilitata, gli aggiornamenti sul provider non sono recuperabili poiché il provider non supporta le transazioni.  
+     **Aggiornamenti non transazionali**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]consente gli aggiornamenti anche se **ITransactionLocal** non è disponibile. Se questa opzione è abilitata, gli aggiornamenti sul provider non sono recuperabili poiché il provider non supporta le transazioni.  
   
-     **Indici come percorso di accesso**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare gli indici del provider per recuperare i dati. Per impostazione predefinita, gli indici vengono utilizzati solo per i metadati e non vengono mai aperti  
+     **Indice come percorso di accesso**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare gli indici del provider per recuperare i dati. Per impostazione predefinita, gli indici vengono utilizzati solo per i metadati e non vengono mai aperti  
   
-     **Accesso ad hoc non consentito**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente l'accesso ad hoc tramite le funzioni OPENROWSET e OPENDATASOURCE sul provider OLE DB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente l'accesso ad hoc anche se questa opzione non è impostata.  
+     **Non consentire l'accesso ad hoc**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente l'accesso ad hoc tramite le funzioni OPENROWSET e OPENDATASOURCE sul provider OLE DB. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente l'accesso ad hoc anche se questa opzione non è impostata.  
   
-     **Supporta l'operatore 'Like'**  
+     **Supporta l'operatore ' like '**  
      Indica che il provider supporta le query che utilizzano la parola chiave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Con Transact-SQL  
  Per creare un server collegato con [!INCLUDE[tsql](../../includes/tsql-md.md)], usare le istruzioni [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite Transact-SQL  
@@ -220,7 +225,7 @@ ms.locfileid: "62743496"
   
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi da effettuare dopo aver creato un server collegato  
+##  <a name="FollowUp"></a>Completamento: passaggi da eseguire dopo la creazione di un server collegato  
   
 #### <a name="to-test-the-linked-server"></a>Per testare il server collegato  
   
@@ -248,7 +253,7 @@ ms.locfileid: "62743496"
   
 ## <a name="see-also"></a>Vedere anche  
  [Server collegati &#40;Motore di database&#41;](linked-servers-database-engine.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
- [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
+ [sp_addlinkedserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
+ [sp_serveroption &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   
   

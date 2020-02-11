@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659639"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Rimozione di colonne da query (Visual Database Tools)
@@ -32,14 +32,14 @@ ms.locfileid: "62659639"
   
 -   Nel **riquadro Criteri**selezionare la riga della griglia che contiene la colonna da rimuovere e premere CANC.  
   
-     oppure  
+     -oppure-  
   
 -   Eliminare qualsiasi riferimento alla colonna nel [riquadro SQL](sql-pane-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere colonne a query &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Aggiunta di colonne a query &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Riepilogare i risultati delle query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

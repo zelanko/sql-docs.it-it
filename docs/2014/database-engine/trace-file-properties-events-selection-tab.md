@@ -1,5 +1,5 @@
 ---
-title: Proprietà File (scheda Selezione eventi) di traccia | Microsoft Docs
+title: Proprietà file di traccia (scheda Selezione eventi) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088795"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Proprietà file di traccia (scheda Selezione eventi)
   Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà modello di traccia** per visualizzare le proprietà delle colonne della traccia o per eliminare colonne di dati dalla traccia.  
   
- Per visualizzare questa finestra, aprire un file di traccia Scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
+ Per visualizzare questa finestra, aprire un file di traccia Scegliere **Proprietà**dal menu **file** , quindi fare clic sulla scheda **Selezione eventi** .  
   
 ## <a name="options"></a>Opzioni  
- Colonna**Eventi**  
+ Colonna **eventi**  
  Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. Inizialmente sono selezionati tutti gli eventi della traccia. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonne di dati  
@@ -50,7 +50,7 @@ ms.locfileid: "66088795"
 ## <a name="see-also"></a>Vedere anche  
  [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Filtrare gli eventi in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Visualizzare informazioni sui filtri &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Visualizza informazioni sui filtri &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Modificare un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

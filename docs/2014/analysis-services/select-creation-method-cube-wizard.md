@@ -1,5 +1,5 @@
 ---
-title: Selezione metodo di creazione (Creazione guidata cubo) | Microsoft Docs
+title: Selezione metodo di creazione (creazione guidata cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069624"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleziona metodo di creazione (Creazione guidata cubo)
@@ -26,13 +26,13 @@ ms.locfileid: "66069624"
  **Usa tabelle esistenti**  
  Selezionare per creare un cubo utilizzando le tabelle esistenti in un'origine dati. La procedura guidata descriverà dettagliatamente il processo di selezione e definizione dei gruppi di misure e delle dimensioni in base alle tabelle esistenti per compilare il cubo nuovo.  
   
- **Creare un cubo vuoto**  
+ **Crea un cubo vuoto**  
  Selezionare per creare un cubo vuoto. Questa opzione è utile per creare tutto manualmente o quando tutti i gruppi di misure nel cubo sono gruppi di misure collegati.  
   
 > [!NOTE]  
 >  Questa opzione è disponibile solo quando si lavora a un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non quando si è connessi direttamente a un database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Genera tabelle nell'origine dati**  
+ **Genera tabelle nell'origine dei dati**  
  Selezionare per creare prima un cubo e quindi generare tabelle nuove nell'origine dati in base alla definizione del cubo.  
   
 > [!NOTE]  
@@ -44,10 +44,10 @@ ms.locfileid: "66069624"
  Selezionare il modello che si desidera utilizzare per creare il cubo. I modelli offrono un set completo di definizioni orientate ad applicazioni aziendali specifiche.  
   
 > [!NOTE]  
->  Questa opzione è disponibile solo quando l'opzione viene selezionata l'opzione **Genera tabelle nell'origine dati** .  
+>  Questa opzione è disponibile solo quando è stata selezionata l'opzione **genera tabelle nell'origine dati** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

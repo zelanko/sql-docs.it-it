@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Pubblicazione dei dati tramite replica di tipo Merge | Microsoft Docs'
+title: 'Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721184"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>Lezione 1: Pubblicazione dei dati tramite replica di tipo Merge
-  In questa lezione verrà creata una pubblicazione di tipo merge con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset delle tabelle **Employee**, **SalesOrderHeader**e **SalesOrderDetail** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Queste tabelle vengono filtrate usando filtri di riga con parametri in modo che ogni sottoscrizione contenga una partizione univoca dei dati. Verrà inoltre aggiunto l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usato dall'agente di merge all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge
+  In questa lezione verrà creata una pubblicazione di tipo merge con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset delle tabelle **Employee**, **SalesOrderHeader**e **SalesOrderDetail** nel database di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esempio. Queste tabelle vengono filtrate usando filtri di riga con parametri in modo che ogni sottoscrizione contenga una partizione univoca dei dati. Verrà inoltre aggiunto l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usato dall'agente di merge all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Per creare una pubblicazione e definire articoli  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** , fare clic con il pulsante destro del mouse su **Pubblicazioni locali**e quindi scegliere **Nuova pubblicazione**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62721184"
   
 9. Selezionare **Una riga di questa tabella verrà inviata a una sola sottoscrizione**e quindi fare clic su **OK**.  
   
-10. Nella pagina **Filtro righe tabella** fare clic su **Employee (Human Resources)** , selezionare **Aggiungi** , quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
+10. Nella pagina **Filtro righe tabella** fare clic su **Employee (Human Resources)**, selezionare **Aggiungi** , quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
   
 11. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderHeader** in **Tabella unita in join**, selezionare **L'istruzione per il join verrà scritta manualmente**e quindi completare l'istruzione per il join come segue:  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62721184"
   
 18. In **Specificare le opzioni del join**selezionare **Chiave univoca**e quindi fare clic su **OK**.  
   
-19. Nella pagina **Filtro righe tabella** fare clic su **SalesOrderHeader (Sales)** , selezionare **Aggiungi**, quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
+19. Nella pagina **Filtro righe tabella** fare clic su **SalesOrderHeader (Sales)**, selezionare **Aggiungi**, quindi scegliere **Aggiungi join per estendere il filtro selezionato**.  
   
 20. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderDetail** in **Tabella unita in join**, fare clic su **OK**e quindi su **Avanti**.  
   
 21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot**e quindi fare clic su **Avanti**.  
   
-22. Nella pagina Sicurezza agente fare clic su **Impostazioni di sicurezza**, digitare \<_Nome_computer>_ **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**. Scegliere **Fine**.  
+22. Nella pagina sicurezza agente fare clic su **impostazioni di sicurezza**, \< _Machine_Name>_ **\ repl_snapshot** nella casella **account processo** , specificare la password per l'account, quindi fare clic su **OK**. Fare clic su **Fine**.  
   
 23. Nella pagina Completamento procedura guidata immettere **AdvWorksSalesOrdersMerge** nella casella **Nome pubblicazione** , quindi fare clic su **Fine**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721184"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Per visualizzare lo stato della generazione dello snapshot  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
+1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
   
 2.  Nella cartella Pubblicazioni locali fare clic con il pulsante destro del mouse su **AdvWorksSalesOrdersMerge**e quindi scegliere **Visualizza stato agente snapshot**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721184"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Per aggiungere l'account di accesso dell'agente di merge all'elenco di accesso alla pubblicazione  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
+1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
   
 2.  Nella cartella Pubblicazioni locali fare clic con il pulsante destro del mouse su **AdvWorksSalesOrdersMerge**e quindi scegliere **Proprietà**.  
   
@@ -107,14 +107,14 @@ ms.locfileid: "62721184"
   
 3.  Selezionare la pagina **Elenco di accesso alla pubblicazione** e fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare _<Nome_computer>_ **\repl_merge** e quindi fare clic su **OK**. Fare clic su **OK**.  
+4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare _<Machine_Name>_ **\ repl_merge** e fare clic su **OK**. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per la pubblicazione di tipo Merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati pubblicati](publish/filter-published-data.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
- [Define an Article](publish/define-an-article.md)  
+ [Definire un articolo](publish/define-an-article.md)  
   
   

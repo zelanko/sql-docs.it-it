@@ -1,5 +1,5 @@
 ---
-title: Procedure di risultati (ODBC) per l'elaborazione | Microsoft Docs
+title: Procedure per l'elaborazione dei risultati (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780796"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Procedure relative all'elaborazione dei risultati (ODBC)
-  L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi recuperare i dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oppure [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+  L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi il recupero dei dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Recuperare le informazioni sul Set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
+-   [Recuperare informazioni sul set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
--   [Elaborare i risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
+-   [Elaborare i risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Procedure per l'utilizzo di ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

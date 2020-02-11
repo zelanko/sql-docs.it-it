@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783234"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
@@ -63,13 +63,13 @@ ms.locfileid: "72783234"
     select @permissions  
     ```  
   
-4.  Creare una copia della tabella e copiare i dati dalla tabella originale alla copia della tabella. La copia può essere creata utilizzando la seguente [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>.  
+4.  Creare una copia della tabella e copiare i dati dalla tabella originale alla copia della tabella. La copia può essere creata utilizzando il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Se la memoria disponibile è sufficiente, `T_copy` potrebbe essere una tabella ottimizzata per la memoria, rendendo più veloce la copia dei dati. <sup>2</sup>  
+     Se la memoria disponibile è sufficiente, `T_copy` può essere una tabella ottimizzata per la memoria, che rende più veloce la copia dei dati. <sup>2</sup>  
   
 5.  Eliminare gli oggetti associati allo schema che fanno riferimento alla tabella originale.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783234"
   
 10. Avviare il carico di lavoro su `T`.  
   
- <sup>1</sup> si noti che in questo esempio `T_copy` viene salvato in modo permanente su disco. Se un backup di `T` è disponibile, l'utilità `T_copy` può essere una tabella temporanea o non durevole.  
+ <sup>1</sup> si noti `T_copy` che in questo esempio è salvato in modo permanente su disco. Se un backup di `T` è disponibile, l'utilità `T_copy` può essere una tabella temporanea o non durevole.  
   
- <sup>2</sup> è necessario disporre di memoria sufficiente per `T_copy`. La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
+ <sup>2</sup> è necessario disporre di memoria sufficiente `T_copy`per. La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
   
 ## <a name="changing-schema-powershell"></a>Modifica dello schema (PowerShell)  
  Gli script di PowerShell seguenti preparano e generano le modifiche dello schema creando lo script della tabella e delle autorizzazioni associate.  
@@ -223,7 +223,7 @@ Write-Host ""
   
  Il seguente script di PowerShell esegue le modifiche dello schema che erano state inserite nello script nell'esempio precedente. Questo script accetta come argomento una tabella ed esegue gli script delle modifiche dello schema generate per la tabella e le stored procedure associate.  
   
- Utilizzo: execute_schema_change. ps1 *nome_server * * db_name `schema_name`table_name*  
+ Utilizzo: execute_schema_change. ps1 *server_name * * db_name`schema_name`table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  

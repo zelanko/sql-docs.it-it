@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676600"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Impostazione del periodo di memorizzazione della cronologia (SQL Server Management Studio)
-  Specificare il periodo di memorizzazione della cronologia nella pagina **Generale** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . Questa impostazione controlla per quanto tempo verrà archiviata la cronologia dell'agente di replica. La pagina è accessibile dalla pagina **Generale** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md).  
+  Specificare il periodo di memorizzazione della cronologia nella pagina **generale** della finestra di dialogo **proprietà \<Database di distribuzione-DistributionDatabase>** . Questa impostazione controlla per quanto tempo verrà archiviata la cronologia dell'agente di replica. La pagina è accessibile dalla pagina **Generale** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-specify-the-history-retention-period"></a>Per specificare il periodo di memorizzazione della cronologia  
   

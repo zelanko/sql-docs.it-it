@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà (SSAS - tabulare) tabella | Microsoft Docs
+title: Finestra di dialogo Proprietà tabella (SSAS-tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067844"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Finestra di dialogo Proprietà tabella (SSAS - Tabulare)
@@ -26,12 +26,12 @@ ms.locfileid: "66067844"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Name**|Visualizza il nome della tabella.|  
+|**Nome**|Visualizza il nome della tabella.|  
 |**ID**|Visualizza l'identificatore della tabella.|  
 |**Descrizione**|Visualizza la descrizione della tabella.|  
-|**Timestamp creazione**|Visualizza la data e l'ora di creazione della tabella.|  
+|**Crea timestamp**|Visualizza la data e l'ora di creazione della tabella.|  
 |**Ultimo aggiornamento schema**|Visualizza la data e l'ora dell'ultimo aggiornamento dei metadati della tabella.|  
 |**Stato**|Visualizza lo stato di elaborazione della tabella. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Visualizza la data e l'ora dell'ultima elaborazione della tabella.|  

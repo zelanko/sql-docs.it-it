@@ -1,5 +1,5 @@
 ---
-title: Abilitare la modalità DirectQuery (SSAS tabulare) | Microsoft Docs
+title: Abilitare la modalità di progettazione DirectQuery (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067201"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Abilitare la modalità DirectQuery (SSAS tabulare)
@@ -38,7 +38,7 @@ ms.locfileid: "66067201"
   
 3.  Nel riquadro **Proprietà** impostare la proprietà **DirectQueryMode**su **Attivato**.  
   
-4.  Se sono presenti errori, in Visual Studio, aprire il **elenco errori** e risolvere eventuali problemi che impedirebbero di impostare la modalità DirectQuery per il modello.  
+4.  In caso di errori, in Visual Studio aprire il **Elenco errori** e risolvere eventuali problemi che impediscono il passaggio del modello alla modalità DirectQuery.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)  

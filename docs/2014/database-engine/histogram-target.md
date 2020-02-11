@@ -1,5 +1,5 @@
 ---
-title: Destinazione dell'istogramma | Microsoft Docs
+title: Destinazione istogramma | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064697"
 ---
 # <a name="histogram-target"></a>Destinazione dell'istogramma
@@ -29,9 +29,9 @@ ms.locfileid: "66064697"
 |Opzione|Valori consentiti|Descrizione|  
 |------------|--------------------|-----------------|  
 |slot|Qualsiasi valore intero. Questo valore è facoltativo.|Valore specificato dall'utente che indica il numero massimo di raggruppamenti da mantenere. Quando questo valore viene raggiunto, i nuovi eventi che non appartengono ai gruppi esistenti vengono ignorati.<br /><br /> Si noti che per migliorare le prestazioni, il numero di slot viene arrotondato alla potenza di 2 più vicina.|  
-|filtering_event_name|Qualsiasi evento presente nella sessione degli eventi estesi. Questo valore è facoltativo.|Valore specificato dall'utente utilizzato per identificare una classe di eventi. Nel bucket vengono inserite solo le istanze dell'evento specificato. Tutti gli altri eventi vengono ignorati.<br /><br /> Se si specifica questo valore, è necessario usare il formato *nome_pacchetto*.*nome_evento*, ad esempio `'sqlserver.checkpoint_end'`. Per identificare il nome del pacchetto, è possibile utilizzare la query seguente:<br /><br /> SELECT p.name, se.event_name<br />DA sys.dm_xe_session_events se<br />JOIN xe_packages p<br />ON se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Se non si specifica il valore filtering_event_name, l'opzione source_type deve essere impostata su 1 (impostazione predefinita).|  
+|filtering_event_name|Qualsiasi evento presente nella sessione degli eventi estesi. Questo valore è facoltativo.|Valore specificato dall'utente utilizzato per identificare una classe di eventi. Nel bucket vengono inserite solo le istanze dell'evento specificato. Tutti gli altri eventi vengono ignorati.<br /><br /> Se si specifica questo valore, è necessario usare il formato *nome_pacchetto*.*nome_evento*, ad esempio `'sqlserver.checkpoint_end'`. Per identificare il nome del pacchetto, è possibile utilizzare la query seguente:<br /><br /> SELEZIONARE p.name, se. event_name<br />DA sys. dm_xe_session_events se<br />JOIN sys. dm_xe_packages p<br />IN se_event_package_guid = p. Guid<br />ORDER BY p.name, se. event_name<br /><br /> <br /><br /> Se non si specifica il valore filtering_event_name, l'opzione source_type deve essere impostata su 1 (impostazione predefinita).|  
 |source_type|Tipo di oggetto su cui è basato il bucket. Si tratta di un valore facoltativo che, se non è specificato, assumerà il valore predefinito 1.|I valori consentiti sono i seguenti:<br /><br /> 0 per un evento<br /><br /> 1 per un'azione|  
-|source|Colonna di evento o nome dell'azione.|Colonna di evento o nome dell'azione utilizzato come origine dati.<br /><br /> Quando si specifica una colonna di evento per origine, è necessario specificare una colonna dall'evento utilizzato per il valore filtering_event_name. Per identificare le possibili colonne, utilizzare la query seguente:<br /><br /> SELECT name FROM sys.dm_xe_object_columns<br />WHERE object_name = '\<NomeEvento >'<br />AND column_type != 'readonly'<br /><br /> Quando si specifica una colonna di evento per origine, non è necessario includere il nome del pacchetto nel valore dell'origine.<br /><br /> Quando si specifica un nome di azione per origine, è necessario utilizzare una delle azioni configurate per la raccolta nella sessione eventi per cui viene utilizzata la destinazione specifica. Per individuare valori potenziali per il nome di azione, è possibile eseguire una query sulla colonna action_name della vista sys.dm_xe_sesssion_event_actions.<br /><br /> Se si usa un nome di azione come origine dati, è necessario specificare il valore dell'origine nel formato *nome_pacchetto*.*nome_azione*.|  
+|source|Colonna di evento o nome dell'azione.|Colonna di evento o nome dell'azione utilizzato come origine dati.<br /><br /> Quando si specifica una colonna di evento per origine, è necessario specificare una colonna dall'evento utilizzato per il valore filtering_event_name. Per identificare le possibili colonne, utilizzare la query seguente:<br /><br /> Selezionare il nome da sys. dm_xe_object_columns<br />DOVE object_name ='\<eventname>'<br />E column_type! =' ReadOnly '<br /><br /> Quando si specifica una colonna di evento per origine, non è necessario includere il nome del pacchetto nel valore dell'origine.<br /><br /> Quando si specifica un nome di azione per origine, è necessario utilizzare una delle azioni configurate per la raccolta nella sessione eventi per cui viene utilizzata la destinazione specifica. Per individuare valori potenziali per il nome di azione, è possibile eseguire una query sulla colonna action_name della vista sys.dm_xe_sesssion_event_actions.<br /><br /> Se si usa un nome di azione come origine dati, è necessario specificare il valore dell'origine nel formato *nome_pacchetto*.*nome_azione*.|  
   
  Nell'esempio seguente viene illustrato, a un livello elevato, il modo in cui i dati vengono raccolti nella destinazione dell'istogramma. Nell'esempio la destinazione dell'istogramma viene utilizzata per contare il numero di volte in cui si verifica ogni tipo di attesa. A tale scopo, è necessario specificare le opzioni seguenti quando si definisce la destinazione dell'istogramma:  
   
@@ -47,17 +47,17 @@ ms.locfileid: "66064697"
 |--------------------------|-------------------------|  
 |wait_info|file_io|  
 |wait_info|file_io|  
-|wait_info|di rete|  
-|wait_info|di rete|  
-|wait_info|sospensione|  
+|wait_info|Rete|  
+|wait_info|Rete|  
+|wait_info|sleep|  
   
  I valori relativi al tipo di attesa verranno suddivisi in tre slot, cui sono associati i valori e i conteggi di slot seguenti:  
   
-|Value|Conteggio di slot|  
+|valore|Conteggio di slot|  
 |-----------|----------------|  
 |file_io|2|  
-|di rete|2|  
-|sospensione|1|  
+|Rete|2|  
+|sleep|1|  
   
  Nella destinazione dell'istogramma vengono mantenuti solo i dati degli eventi per l'origine specificata. Nel caso in cui le dimensioni dei dati degli eventi siano troppo elevate per mantenere completamente i dati, questi ultimi vengono troncati. Quando i dati degli eventi sono troncati, il numero di byte è registrato e visualizzato come output XML.  
   

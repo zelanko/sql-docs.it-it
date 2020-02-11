@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito sessione denominati set (MDX) | Microsoft Docs
+title: Creazione di set denominati con ambito sessione (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074050"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Creazione di set denominati con ambito sessione (MDX)
-  Per creare un set denominato disponibile per un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Un set denominato creato utilizzando l'istruzione CREATE SET non viene rimosso fino alla chiusura della sessione MDX.  
+  Per creare un set denominato disponibile per un'intera sessione MDX (Multidimensional Expressions), è possibile usare l'istruzione [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Un set denominato creato utilizzando l'istruzione CREATE SET non viene rimosso fino alla chiusura della sessione MDX.  
   
  Come descritto in questo argomento, la sintassi della parola chiave WITH è intuitiva e facile da utilizzare.  
   

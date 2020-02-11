@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086684"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Creazione e utilizzo di valori di proprietà (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "66086684"
   
  Le proprietà intrinseche e definite dall'utente sono disponibili ai livelli seguenti:  
   
- **Proprietà dei membri**  
+ **Proprietà del membro**  
  Le proprietà dei membri contengono informazioni di base su ogni membro di ogni tupla. Tali informazioni di base includono il nome del membro, il livello padre, il numero di elementi figli e così via.  
   
  Per informazioni sulle proprietà dei membri e sul relativo uso, vedere [Utilizzo delle proprietà dei membri &#40;MDX&#41;](multidimensional-models/mdx/mdx-member-properties.md).  

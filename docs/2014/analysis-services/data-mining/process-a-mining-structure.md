@@ -1,5 +1,5 @@
 ---
-title: Elaborare una struttura di Data Mining | Microsoft Docs
+title: Elaborare una struttura di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083105"
 ---
 # <a name="process-a-mining-structure"></a>Elaborare una struttura di data mining
@@ -28,7 +28,7 @@ ms.locfileid: "66083105"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: Comando Process  
+-   XMLA: comando Process  
   
  Per informazioni sull'elaborazione di singoli modelli, vedere [Elaborare un modello di data mining](process-a-mining-model.md).  
   
@@ -36,15 +36,15 @@ ms.locfileid: "66083105"
   
 1.  Scegliere la voce di menu **Modello di data mining** , quindi **Elabora struttura di data mining e tutti i modelli** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-     Se sono state apportate modifiche alla struttura, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Scegliere **Sì**.  
+     Se sono state apportate modifiche alla struttura, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Fare clic su **Sì**.  
   
-2.  Fare clic su **eseguiti** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
+2.  Fare clic su **Esegui** nella finestra di dialogo **Elabora struttura di data \<mining-struttura>** .  
   
      Verrà aperta la finestra di dialogo **Stato elaborazione** in cui vengono visualizzate informazioni sull'elaborazione dei modelli.  
   
 3.  Fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** dopo che l'elaborazione dei modelli è stata completata.  
   
-4.  Fare clic su **Close** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
+4.  Fare clic su **Chiudi** nella finestra di dialogo **Elabora struttura di data \<mining-struttura>** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755284"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Opzioni di configurazione del server SMO e DMO XPs
@@ -24,12 +24,12 @@ ms.locfileid: "62755284"
   
  I valori possibili sono illustrati nella tabella seguente:  
   
-|Value|Significato|  
+|valore|Significato|  
 |-----------|-------------|  
 |0|Le stored procedure estese SMO non sono disponibili.|  
-|1|Le stored procedure estese SMO sono disponibili. Questa è l'impostazione predefinita.|  
+|1|Le stored procedure estese SMO sono disponibili. Questa è la modalità predefinita.|  
   
- L'impostazione diventa immediatamente effettiva.  
+ L'impostazione ha effetto immediato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono abilitate le stored procedure estese SMO.  

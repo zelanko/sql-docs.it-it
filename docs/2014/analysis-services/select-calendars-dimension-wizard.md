@@ -1,5 +1,5 @@
 ---
-title: Selezione calendari (Creazione guidata dimensione) | Microsoft Docs
+title: Selezione calendari (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069684"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selezione calendari (Creazione guidata dimensione)
@@ -50,7 +50,7 @@ ms.locfileid: "66069684"
 > [!NOTE]  
 >  Questa opzione è disponibile se è stata selezionata l'opzione **Calendario report (o marketing)** .  
   
- **Settimana dal modello mese**  
+ **Schema di settimane per mese**  
  Consente di selezionare lo schema di settimane per mese utilizzato dal calendario di report.  
   
 > [!NOTE]  
@@ -58,13 +58,13 @@ ms.locfileid: "66069684"
   
  nella tabella riportata di seguito vengono elencate le opzioni disponibili per lo schema di settimane per mese.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Settimana 445**|Il primo mese del trimestre è composto da 4 settimane, il secondo mese da 4 settimane e il terzo mese da 5 settimane.|  
 |**Settimana 454**|Il primo mese del trimestre è composto da 4 settimane, il secondo mese da 5 settimane e il terzo mese da 4 settimane.|  
-|**Settimana 544**|Il primo mese del trimestre è composto da 5 settimane, il secondo mese da 4 settimane e il terzo mese 4 settimane.|  
+|**544**|Il primo mese del trimestre è composto da 5 settimane, il secondo mese da 4 settimane e il terzo mese 4 settimane.|  
   
- **Calendario di produzione**  
+ **Calendario produzione**  
  Selezionare questa opzione per creare una gerarchia temporale basata su un calendario di produzione.  
   
  **Settimana e mese di inizio**  
@@ -83,8 +83,8 @@ ms.locfileid: "66069684"
  Selezionare questa opzione per creare una gerarchia basata sul calendario ISO 8601.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

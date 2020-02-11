@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761439"
 ---
 # <a name="delete-tables-database-engine"></a>Elimina tabelle (motore di database)
@@ -28,7 +28,7 @@ ms.locfileid: "62761439"
 > [!CAUTION]  
 >  Prima di eliminare una tabella, valutare le possibili conseguenze. Se query, viste, funzioni definite dall'utente, stored procedure o programmi esistenti fanno riferimento a tale tabella, la modifica renderà non validi tali oggetti.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62761439"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per lo schema a cui appartiene la tabella, l'autorizzazione CONTROL per la tabella o l'appartenenza al ruolo predefinito del database **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-table-from-the-database"></a>Per eliminare una tabella dal database  
   
@@ -69,12 +69,12 @@ ms.locfileid: "62761439"
   
 2.  Fare clic con il pulsante destro del mouse sulla tabella, quindi scegliere **Elimina** dal menu di scelta rapida.  
   
-3.  Verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione. Scegliere **Sì**.  
+3.  Verrà visualizzato un messaggio in cui viene chiesto di confermare l'eliminazione. Fare clic su **Sì**.  
   
     > [!NOTE]  
     >  Eliminando una tabella verranno eliminate automaticamente anche tutte le corrispondenti relazioni.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-a-table-in-query-editor"></a>Per eliminare una tabella in Editor di query  
   

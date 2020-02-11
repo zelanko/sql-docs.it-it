@@ -1,5 +1,5 @@
 ---
-title: Panoramica della sicurezza (Data Mining) | Microsoft Docs
+title: Panoramica della sicurezza (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082900"
 ---
 # <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
-  Il processo di protezione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avviene su più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
+  Il processo di sicurezza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si verifica a più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
   
-##  <a name="bkmk_Architecture"></a> Architettura di sicurezza  
+##  <a name="bkmk_Architecture"></a>Architettura di sicurezza  
  Per ulteriori informazioni sull'architettura di sicurezza di base di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluso il modo in cui in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene utilizzata l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per autenticare l'accesso utente, vedere le risorse seguenti.  
   
--   [Ruoli di sicurezza &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Ruoli di sicurezza &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Proprietà di sicurezza](../server-properties/security-properties.md)  
   
@@ -33,18 +33,18 @@ ms.locfileid: "66082900"
   
 -   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_Logon"></a> Configurazione dell'account di accesso per Analysis Services  
+##  <a name="bkmk_Logon"></a>Configurazione dell'account di accesso per Analysis Services  
  È necessario selezionare un account di accesso appropriato per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e specificare le autorizzazioni per questo account. È necessario verificare che l'account di accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga solo delle autorizzazioni necessarie per eseguire determinate attività, incluse le autorizzazioni appropriate per le origini dati sottostanti.  
   
  Per data mining è necessario un diverso set di autorizzazioni per compilare ed elaborare i modelli necessari per la visualizzazione o l'esecuzione di query sui modelli. L'esecuzione di stime su un modello è simile all'esecuzione di query con la differenza che non vengono richieste autorizzazioni amministrative.  
   
-##  <a name="bkmk_Instance"></a> Sicurezza di un'istanza di Analysis Services  
+##  <a name="bkmk_Instance"></a>Protezione di un'istanza di Analysis Services  
  È quindi necessario proteggere il computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il sistema operativo Windows nel computer di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le origini dei dati usate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-##  <a name="bkmk_Access"></a> Configurazione dell'accesso ad Analysis Services  
+##  <a name="bkmk_Access"></a>Configurazione dell'accesso a Analysis Services  
  Quando si configurano e si definiscono gli utenti autorizzati per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario determinare gli utenti a cui è inoltre necessario concedere le autorizzazioni per l'amministrazione di oggetti di database specifici, gli utenti che possono visualizzare la definizione di oggetti o esplorare i modelli e gli utenti che possono accedere direttamente alle origini dati.  
   
-##  <a name="bkmk_DMspecial"></a> Considerazioni speciali per data mining  
+##  <a name="bkmk_DMspecial"></a>Considerazioni speciali per il data mining  
  Per consentire a un analista o a uno sviluppatore di creare modelli di data mining ed eseguirne il test, è necessario concedergli le autorizzazioni amministrative per il database in cui sono archiviati i modelli di data mining. Di conseguenza, l'analista o lo sviluppatore di data mining può potenzialmente creare o eliminare gli altri oggetti che non sono correlati al data mining, inclusi gli oggetti di data mining creati e utilizzati da altri analisti o sviluppatori o oggetti OLAP che non sono inclusi nella soluzione di data mining.  
   
  Pertanto, quando si crea una soluzione per data mining, è necessario bilanciare le esigenze dell'analista o dello sviluppatore di sviluppare e ottimizzare i modelli, nonché di eseguirne il test, con le esigenze di altri utenti e adottare misure per proteggere gli oggetti di database esistenti. Un possibile approccio è creare un database separato dedicato al data mining o creare database separati per ogni analista.  

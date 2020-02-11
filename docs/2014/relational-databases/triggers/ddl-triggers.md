@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62654977"
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
@@ -112,11 +112,11 @@ GO
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Vengono descritte le procedure di creazione, modifica e disabilitazione dei trigger DDL.|[Implementazione di trigger DDL](implement-ddl-triggers.md)|  
+|Vengono descritte le procedure di creazione, modifica e disabilitazione dei trigger DDL.|[Implementare trigger DDL](implement-ddl-triggers.md)|  
 |Viene illustrato come creare un trigger CLR DDL.|[Creare trigger CLR](create-clr-triggers.md)|  
-|Viene descritto come restituire informazioni sui trigger DDL.|[Ottieni informazioni sui trigger DDL](get-information-about-ddl-triggers.md)|  
-|Viene descritto come restituire informazioni relative a un evento che attiva un trigger DDL utilizzando la funzione EVENTDATA.|[Utilizzo della funzione EVENTDATA](use-the-eventdata-function.md)|  
-|Viene descritto come gestire la sicurezza dei trigger.|[Gestione della sicurezza dei trigger](manage-trigger-security.md)|  
+|Viene descritto come restituire informazioni sui trigger DDL.|[Recuperare informazioni sui trigger DDL](get-information-about-ddl-triggers.md)|  
+|Viene descritto come restituire informazioni relative a un evento che attiva un trigger DDL utilizzando la funzione EVENTDATA.|[Usare la funzione EVENTDATA](use-the-eventdata-function.md)|  
+|Viene descritto come gestire la sicurezza dei trigger.|[Gestire la sicurezza dei trigger](manage-trigger-security.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trigger DML](dml-triggers.md)   

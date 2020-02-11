@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710507"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Salvataggio di diagrammi di database (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710507"
   
 ### <a name="to-save-the-database-diagram"></a>Per salvare il diagramma di database  
   
-1.  Dal **File** menu, scegliere **Salva < *`tablename`* >** .  
+1.  Scegliere **salva <*`tablename`* **dal menu **file** .  
   
 2.  Se si salvano diagrammi nuovi per la prima volta, viene visualizzata la finestra di dialogo **Salva con nome** . Digitare un nome per il diagramma.  
   

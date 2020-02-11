@@ -1,5 +1,5 @@
 ---
-title: Creazione di calcoli di celle in MDX (MDX) | Microsoft Docs
+title: Compilazione di calcoli di celle in MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074522"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Compilazione di formule per il calcolo di celle in MDX (MDX)
@@ -30,22 +30,22 @@ ms.locfileid: "66074522"
   
  Per generare valori calcolati per celle specifiche, è necessario utilizzare la caratteristica MDX per le celle calcolate. Le celle calcolate consentono di definire una specifica sezione di celle, detta *sottocubo di calcolo*, e di applicare una formula a ogni singola cella del sottocubo di calcolo in base a una condizione facoltativa applicabile a ogni cella.  
   
- Le celle calcolate offrono inoltre funzionalità complesse, ad esempio le formule per la ricerca dell'obiettivo utilizzate negli indicatori di prestazioni chiave (KPI) oppure le formule per l'analisi speculativa. Questo livello di funzionalità si basa sulla caratteristica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per l'ordine di calcolo, che consente l'uso di sessioni di calcolo ricorsive con le celle calcolate, applicando le formule di calcolo in sessioni specifiche nell'ordine di calcolo. Per altre informazioni sull'ordine di calcolo, vedere [Informazioni sull'ordine di calcolo e di valutazione &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
+ Le celle calcolate offrono inoltre funzionalità complesse, ad esempio le formule per la ricerca dell'obiettivo utilizzate negli indicatori di prestazioni chiave (KPI) oppure le formule per l'analisi speculativa. Questo livello di funzionalità deriva dalla funzionalità di pass-Order [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in che consente di eseguire passaggi ricorsivi con le celle calcolate, con le formule di calcolo applicate a passate specifiche nell'ordine di superamento. Per altre informazioni sull'ordine di calcolo, vedere [Informazioni sull'ordine di calcolo e di valutazione &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
  Per quanto concerne l'ambito di creazione, le celle calcolate sono simili sia ai set denominati che ai membri calcolati, poiché possono essere create temporaneamente per la durata di una sessione o di una singola query oppure possono essere rese disponibili a livello globale nell'ambito di un cubo.  
   
--   **Ambito query** Per creare una cella calcolata definita come parte di una query MDX e il cui ambito è pertanto limitato alla query, è necessario specificare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. Utilizzando questo approccio è possibile modificare la cella calcolata creata utilizzando la parola chiave `WITH` senza alterare l'istruzione SELECT.  
+-   Con **ambito query** Per creare una cella calcolata definita come parte di una query MDX e pertanto con ambito limitato alla query, è necessario utilizzare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. Utilizzando questo approccio è possibile modificare la cella calcolata creata utilizzando la parola chiave `WITH` senza alterare l'istruzione SELECT.  
   
      Per altre informazioni sulla creazione di membri calcolati mediante la parola chiave WITH, vedere [Creazione di formule per il calcolo di celle con ambito query &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
--   **Ambito sessione** Per creare una cella calcolata il cui ambito risulti più ampio del contesto della query, ovvero il cui ambito corrisponda alla durata della sessione MDX, è necessario usare l'istruzione CREATE CELL CALCULATION o l'istruzione ALTER CUBE.  
+-   Con **ambito sessione** Per creare un membro calcolato il cui ambito sia più ampio rispetto al contesto della query, ovvero il cui ambito corrisponde alla durata della sessione MDX, è possibile utilizzare l'istruzione CREATE CELL CALCULATION o ALTER CUBE.  
   
      Per altre informazioni sulla creazione di celle calcolate in una sessione mediante l'istruzione CREATE CELL CALCULATION o l'istruzione ALTER CUBE, vedere [Creazione di celle calcolate con ambito sessione](mdx-cell-calculations-session-scoped-calculated-cells.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione ALTER CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
+ [Istruzione ALTER CUBE &#40;&#41;MDX](/sql/mdx/mdx-data-definition-alter-cube)   
  [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [Creazione di formule per il calcolo di celle con ambito query &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Creazione di calcoli di celle con ambito query &#40;&#41;MDX](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definisci funzioni semiadditive | Microsoft Docs
+title: Definire il comportamento di funzioni semiadditive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075543"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
@@ -33,7 +33,7 @@ ms.locfileid: "66075543"
 ## <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva  
  Nella pagina **Definizione funzioni semiadditive** della procedura guidata selezionare la modalità di definizione delle funzioni semiadditive selezionando una delle opzioni seguenti:  
   
- **Disabilita funzioni semiadditive**  
+ **Disattiva il comportamento di funzioni semiadditive**  
  Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Se si seleziona questa opzione, una misura viene reimpostata su `SUM` se è impostata su uno dei tipi di funzione di aggregazione seguenti:  
   
 -   By Account  
@@ -48,17 +48,17 @@ ms.locfileid: "66075543"
   
 -   First Nonempty Child  
   
--   None  
+-   nessuno  
   
- Questa opzione non modifica le misure con una funzione di aggregazione regolare: `Sum`, `Min`, `Max`, `Count`, o `Distinct``Count`.  
+ Questa opzione non modifica le misure con una funzione di aggregazione `Sum`regolare `Min`: `Max`, `Count`,, `Distinct``Count`o.  
   
- **La procedura guidata ha rilevato il ' Account "dimensione di tipo conti, che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
+ **La procedura guidata ha rilevato la dimensione di tipo Conti ' account ', che contiene membri funzioni semiadditive. Il server aggrega i membri di questa dimensione in base al comportamento funzioni semiadditive specificato per ogni tipo di conto.**  
  Tutte le misure di un gruppo di misure dimensionate in base a una dimensione di tipo Conti verranno impostate dal sistema sulla funzione di aggregazione By Account e i membri della dimensione verranno aggregati dal server in base alle funzioni semiadditive specificate per ogni tipo di conto.  
   
 > [!NOTE]  
 >  Questa opzione è selezionata per impostazione predefinita se la procedura guidata rileva una dimensione di tipo Conti.  
   
- **Definisci funzioni semiadditive per singole misure**  
+ **Definire il comportamento di funzioni semiadditive per le singole misure**  
  Consente di selezionare individualmente le funzioni semiadditive di ogni misura. L'impostazione predefinita è `SUM` (additività completa).  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ ms.locfileid: "66075543"
 |---------------------------|-----------------|  
 |Average of Children|La funzione di aggregazione di un membro corrisponde alla media dei relativi figli.|  
 |ByAccount|Il sistema legge le funzioni semiadditive specificate per il tipo di conto.|  
-|Count|La funzione di aggregazione corrisponde a un conteggio dei membri.|  
+|Conteggio|La funzione di aggregazione corrisponde a un conteggio dei membri.|  
 |Distinct Count|La funzione di aggregazione corrisponde a un conteggio dei membri univoci.|  
 |First Child|Il valore del membro viene valutato come il valore del relativo primo figlio assieme alla dimensione temporale.|  
 |FirstNonEmpty|Il valore del membro viene valutato come il valore del relativo primo figlio assieme alla dimensione temporale contenente dati.|  
@@ -78,7 +78,7 @@ ms.locfileid: "66075543"
 |LastNonEmpty|Il valore del membro viene valutato come il valore del relativo ultimo figlio assieme alla dimensione temporale contenente dati.|  
 |Max|Viene applicata la funzione di aggregazione massima standard.|  
 |Min|Viene applicata la funzione di aggregazione minima standard.|  
-|None|Non viene applicata alcuna funzione di aggregazione.|  
+|nessuno|Non viene applicata alcuna funzione di aggregazione.|  
 |SUM|Viene applicata la funzione di somma standard.|  
   
  Al termine della procedura guidata le funzioni semiadditive esistenti vengono sovrascritte.  

@@ -1,5 +1,5 @@
 ---
-title: Dimensioni (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Dimensioni (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702428"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensioni (Analysis Services - Dati multidimensionali)
-  Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le dimensioni sono un componente essenziale dei cubi. Le dimensioni consentono di organizzare i dati in relazione a un'area di interesse per gli utenti, ad esempio relativa a clienti, archivi o dipendenti. Le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includono attributi corrispondenti a colonne nelle tabelle delle dimensioni. Questi attributi consistono in gerarchie degli attributi e possono essere organizzati in strutture gerarchiche definite dall'utente oppure possono essere definite come gerarchie padre-figlio basate su colonne nella tabella delle dimensioni sottostante. Queste gerarchie sono utilizzate per organizzare le misure incluse in un cubo. Negli argomenti seguenti viene fornita una panoramica di dimensioni, attributi e gerarchie.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]le dimensioni sono un componente fondamentale dei cubi. Le dimensioni consentono di organizzare i dati in relazione a un'area di interesse per gli utenti, ad esempio relativa a clienti, archivi o dipendenti. Le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includono attributi corrispondenti a colonne nelle tabelle delle dimensioni. Questi attributi consistono in gerarchie degli attributi e possono essere organizzati in strutture gerarchiche definite dall'utente oppure possono essere definite come gerarchie padre-figlio basate su colonne nella tabella delle dimensioni sottostante. Queste gerarchie sono utilizzate per organizzare le misure incluse in un cubo. Negli argomenti seguenti viene fornita una panoramica di dimensioni, attributi e gerarchie.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Introduzione alle dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)|Offre una panoramica dei concetti di base sulle dimensioni.|  
+|[Introduzione alle dimensioni &#40;Analysis Services Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)|Offre una panoramica dei concetti di base sulle dimensioni.|  
 |[Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)|Descrive gli attributi e le gerarchie degli attributi.|  
-|[Gerarchie utente](user-hierarchies.md)|Descrive le gerarchie di attributi definite dall'utente.|  
+|[Gerarchie definite dall'utente](user-hierarchies.md)|Descrive le gerarchie di attributi definite dall'utente.|  
 |[Dimensioni abilitate per la scrittura](write-enabled-dimensions.md)|Descrive le dimensioni abilitate per la scrittura.|  
 |[Traduzioni delle dimensioni](dimension-translations.md)|Descrive le traduzioni dei metadati delle dimensioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](../multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
   

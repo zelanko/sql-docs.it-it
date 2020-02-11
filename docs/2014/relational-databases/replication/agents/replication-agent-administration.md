@@ -23,23 +23,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721807"
 ---
 # <a name="replication-agent-administration"></a>Amministrazione dell'agente di replica
-  Gli agenti di replica eseguono numerose attività associate alla replica, tra cui la creazione di copie di schemi e di dati, il rilevamento di aggiornamenti nel server di pubblicazione o nel Sottoscrittore e la distribuzione delle modifiche tra i server. Per impostazione predefinita, gli agenti di replica eseguono passaggi di processo di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Gli agenti sono semplici file eseguibili che possono essere chiamati direttamente dalla riga di comando e dagli script batch. Ogni agente di replica supporta un set di parametri run-time utilizzati per controllarne il funzionamento. Tali parametri vengono specificati nei profili degli agenti o dalla riga di comando.  
+  Gli agenti di replica eseguono numerose attività associate alla replica, tra cui la creazione di copie di schemi e di dati, il rilevamento di aggiornamenti nel server di pubblicazione o nel Sottoscrittore e la distribuzione delle modifiche tra i server. Per impostazione predefinita, gli agenti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replica vengono eseguiti in passaggi di processo di Agent. Gli agenti sono semplici file eseguibili che possono essere chiamati direttamente dalla riga di comando e dagli script batch. Ogni agente di replica supporta un set di parametri run-time utilizzati per controllarne il funzionamento. Tali parametri vengono specificati nei profili degli agenti o dalla riga di comando.  
   
 > [!IMPORTANT]  
 >  Per impostazione predefinita, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è disabilitato durante l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a meno che non si scelga in modo esplicito di avviarlo automaticamente durante l'installazione.  
   
  I file dell'agente di replica si trovano in [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]\COM. Nella tabella seguente vengono riportati gli eseguibili di replica disponibili insieme al nome di file corrispondente. Fare clic sul collegamento corrispondente a ogni agente per visualizzarne i parametri di riferimento.  
   
-|Eseguibile agente|Nome file|  
+|Eseguibile agente|File Name|  
 |----------------------|---------------|  
-|[Agente snapshot repliche](replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](replication-distribution-agent.md)|distrib.exe|  
 |[Agente lettura log repliche](replication-log-reader-agent.md)|logread.exe|  
 |[Agente di lettura coda repliche](replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -49,9 +49,9 @@ ms.locfileid: "62721807"
   
  **Per eseguire gli agenti e i processi di manutenzione**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e Monitoraggio replica: [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e monitoraggio replica: [avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Programmazione della replica: [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   Programmazione della replica: [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>Profili agenti  
  Durante la configurazione della replica viene installato nel server di distribuzione un set di profili agenti. Un profilo agente contiene un set di parametri utilizzati a ogni esecuzione dell'agente. Durante il processo di avvio ogni agente esegue l'accesso al server di distribuzione ed esegue una query dei parametri nel proprio profilo. Per ogni agente viene fornito un profilo predefinito, mentre per l'agente di lettura log, l'agente di distribuzione e l'agente di merge vengono creati profili predefiniti aggiuntivi. Oltre a questi profili, è possibile creare profili specifici in base alle esigenze dell'applicazione. Per altre informazioni, vedere [Replication Agent Profiles](replication-agent-profiles.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "62721807"
   
     -   Agente di lettura coda  
   
-     Accedere a informazioni e attività associate a questi agenti tramite la scheda **Agenti** . Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Accedere alle informazioni e alle attività associate a questi agenti tramite la scheda **agenti** . Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Gli agenti seguenti sono associati alle sottoscrizioni in Monitoraggio replica:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62721807"
   
     -   Agente di merge  
   
-     Accedere a informazioni e attività associate a questi agenti tramite le schede seguenti: **Elenco verifica sottoscrizioni** (disponibile per ogni server di pubblicazione) o **Tutte le sottoscrizioni** (disponibile per ogni pubblicazione). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Per accedere alle informazioni e alle attività associate a questi agenti utilizzare le schede di pubblicazione seguenti: **Elenco verifica sottoscrizioni** (disponibile per tutti i server di pubblicazione) o **Tutte le sottoscrizioni** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agenti indipendenti e condivisi  
  Gli agenti indipendenti elaborano una sola sottoscrizione. Gli agenti condivisi elaborano più sottoscrizioni. Se è necessario sincronizzare più sottoscrizioni utilizzando lo stesso agente condiviso, per impostazione predefinita le sottoscrizioni vengono poste in attesa in una coda e quindi elaborate dall'agente una alla volta. Quando si utilizzano gli agenti indipendenti si ottiene una riduzione della latenza in quanto ciò consente di sincronizzare immediatamente la sottoscrizione ogni volta che è necessario. Per la replica di tipo merge vengono sempre utilizzati agenti indipendenti, mentre per la replica transazionale gli agenti indipendenti vengono utilizzati per impostazione predefinita per le pubblicazioni create con Creazione guidata nuova pubblicazione (nelle precedenti versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]per la replica transazionale vengono utilizzati per impostazione predefinita gli agenti condivisi).  
@@ -85,10 +85,10 @@ ms.locfileid: "62721807"
 ## <a name="replication-maintenance-jobs"></a>Processi di manutenzione della replica  
  Per eseguire operazioni di manutenzione pianificata e su richiesta vengono utilizzati i processi seguenti.  
   
-|Processo di eliminazione|Descrizione|Pianificazione predefinita|  
+|Pulire un processo|Descrizione|Pianificazione predefinita|  
 |------------------|-----------------|----------------------|  
-|Eliminazione del contenuto della cronologia dell'agente: Distribuzione|Rimuove la cronologia degli agenti di replica dal database di distribuzione.|Viene eseguito ogni dieci minuti.|  
-|Eliminazione del contenuto della distribuzione: Distribuzione|Rimuove le transazioni replicate dal database di distribuzione. Disattiva le sottoscrizioni che non sono state sincronizzate entro il periodo massimo di memorizzazione per la distribuzione.|Viene eseguito ogni dieci minuti.|  
+|Eliminazione del contenuto della cronologia dell'agente: distribuzione|Rimuove la cronologia degli agenti di replica dal database di distribuzione.|Viene eseguito ogni dieci minuti.|  
+|Eliminazione del contenuto della distribuzione: distribuzione|Rimuove le transazioni replicate dal database di distribuzione. Disattiva le sottoscrizioni che non sono state sincronizzate entro il periodo massimo di memorizzazione per la distribuzione.|Viene eseguito ogni dieci minuti.|  
 |Pulizia dei riferimenti alla sottoscrizione scaduta|Rileva e rimuove le sottoscrizioni scadute dai database di pubblicazione.|Viene eseguito ogni giorno alle ore 1.00 del mattino.|  
 |Reinizializzazione delle sottoscrizioni con errori di convalida dei dati|Rileva tutte le sottoscrizioni in cui si sono verificati errori di convalida dei dati e le contrassegna per la reinizializzazione. Alla successiva esecuzione dell'agente di merge o dell'agente di distribuzione verrà applicato ai Sottoscrittori un nuovo snapshot.|Nessuna pianificazione predefinita (per impostazione predefinita è disabilitato).|  
 |Controllo degli agenti di replica|Rileva gli agenti di replica che non registrano attivamente una cronologia. Scrive nel registro eventi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows l'eventuale esito negativo di un passaggio del processo.|Viene eseguito ogni dieci minuti.|  

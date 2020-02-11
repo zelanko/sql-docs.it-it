@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di elaborazione dei dati (SSAS tabulare) | Microsoft Docs
+title: Risolvere i problemi relativi all'elaborazione dei dati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065772"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Risolvere i problemi relativi all'elaborazione dei dati (SSAS tabulare)
@@ -24,24 +24,24 @@ ms.locfileid: "66065772"
   
 -   [Funzionamento dell'elaborazione dei dati](#bkmk_how_df_works)  
   
--   [Impatto dell'elaborazione dei dati](#bkmk_impact_of_df)  
+-   [Conseguenze dell'elaborazione dei dati](#bkmk_impact_of_df)  
   
 -   [Determinazione dell'origine dei dati](#bkmk_det_source)  
   
--   [Come stabilire la data dell'ultimo aggiornamento dei dati](#bkmk_det_last_ref)  
+-   [Determinazione dell'ultimo aggiornamento dei dati](#bkmk_det_last_ref)  
   
 -   [Restrizioni sulle origini dati aggiornabili](#bkmk_restrictions)  
   
--   [Restrizioni delle modifiche a un'origine dati](#bkmk_rest_changes)  
+-   [Limitazioni relative alle modifiche apportate a un'origine dati](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a> Funzionamento dell'elaborazione dei dati  
+##  <a name="bkmk_how_df_works"></a>Funzionamento dell'elaborazione dei dati  
  Quando si elaborano i dati, questi vengono sostituiti con nuovi dati in Progettazione modelli. Non è possibile importare solo le nuove righe di dati o solo i dati modificati. In Progettazione modelli non si tiene traccia delle righe aggiunte precedentemente.  
   
  L'elaborazione di dati si verifica come una transazione, ovvero può essere completata interamente o non esserla affatto. Non è previsto un aggiornamento parziale dei dati.  
   
  L'elaborazione manuale dei dati, che viene avviata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], viene gestita dall'istanza in memoria locale di Analysis Services. L'operazione di elaborazione dei dati può quindi influire sulle prestazioni di altre attività in esecuzione nel computer. Se tuttavia si pianifica l'elaborazione automatica dei dati in un modello distribuito tramite uno script, l'istanza di Analysis Services gestisce il processo di importazione e il relativo intervallo.  
   
-##  <a name="bkmk_impact_of_df"></a> Impatto dell'elaborazione dei dati  
+##  <a name="bkmk_impact_of_df"></a>Conseguenze dell'elaborazione dei dati  
  Un'elaborazione dei dati comporta di solito un ricalcolo dei dati.  Mediante l'elaborazione dei dati si ottengono i dati più recenti dalle origini esterne. Per ricalcolo si intende l'aggiornamento del risultato di tutte le formule che utilizzano i dati che sono stati modificati. Un'operazione di elaborazione generalmente comporta l'attivazione del ricalcolo.  
   
  Per questo motivo, è necessario tenere conto del potenziale impatto e delle possibili conseguenze prima di modificare le origini dati o di elaborare i dati ottenuti dall'origine dati.  
@@ -56,7 +56,7 @@ ms.locfileid: "66065772"
   
 -   Quando si modifica un filtro, è necessario ricalcolare l'intero modello.  
   
-##  <a name="bkmk_det_source"></a> Determinazione dell'origine dei dati  
+##  <a name="bkmk_det_source"></a>Determinazione dell'origine dei dati  
  In caso di dubbi sulla provenienza dei dati del modello, è possibile visualizzare i dettagli, inclusi il nome e il percorso del file di origine, utilizzando gli strumenti disponibili in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] .  
   
 #### <a name="to-find-the-source-of-existing-data"></a>Per individuare l'origine dei dati esistenti  
@@ -73,7 +73,7 @@ ms.locfileid: "66065772"
   
 6.  Nella finestra di dialogo **Modifica connessioni** visualizzare le informazioni di connessione, quali il nome del database, il percorso del file o il percorso del report.  
   
-##  <a name="bkmk_det_last_ref"></a> Come stabilire la data dell'ultimo aggiornamento dei dati  
+##  <a name="bkmk_det_last_ref"></a>Determinazione dell'ultimo aggiornamento dei dati  
  È possibile stabilire la data dell'ultimo aggiornamento dei dati utilizzando Proprietà tabella.  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>Per individuare la data e l'ora dell'ultima elaborazione della tabella  
@@ -84,7 +84,7 @@ ms.locfileid: "66065772"
   
 3.  In **Ultimo aggiornamento** della finestra di dialogo **Modifica proprietà tabella** viene indicata la data dell'ultimo aggiornamento della tabella.  
   
-##  <a name="bkmk_restrictions"></a> Restrizioni sulle origini dati aggiornabili  
+##  <a name="bkmk_restrictions"></a>Restrizioni sulle origini dati aggiornabili  
  Vengono applicate alcune restrizioni alle origini dati che possono essere elaborate automaticamente da un modello distribuito in un'istanza di Analysis Services. Assicurarsi di selezionare solo le origini dati che soddisfano i criteri seguenti:  
   
 -   L'origine dati deve essere disponibile quando si verifica l'elaborazione dei dati e nel percorso dichiarato. Se l'origine dati iniziale si trova in un'unità disco locale dell'utente che ha creato il modello, è necessario escludere tale origine dati dall'operazione di elaborazione dei dati o individuare un modo per pubblicare tale origine dati in un percorso accessibile tramite una connessione di rete. Se si sposta un'origine dati in un percorso della rete, assicurarsi di aprire il modello in Progettazione modelli e di ripetere i passaggi di recupero dei dati. Tale operazione è necessaria per riattivare le informazioni di connessione archiviate nelle proprietà di connessione dell'origine dati.  
@@ -97,7 +97,7 @@ ms.locfileid: "66065772"
   
      L'accesso a un'origine dati esterna viene eseguito tramite una stringa di connessione incorporata, un URL o un percorso UNC specificati quando i dati originali sono stati importati nel modello tramite l'Importazione guidata tabella. Le informazioni di connessione originali archiviate nella connessione all'origine dati vengono riutilizzate per le successive operazioni di aggiornamento dei dati. Non sono disponibili informazioni di connessione distinte create e gestite per l'elaborazione dei dati. Vengono utilizzate solo le informazioni di connessione esistenti.  
   
-##  <a name="bkmk_rest_changes"></a> Restrizioni delle modifiche a un'origine dati  
+##  <a name="bkmk_rest_changes"></a>Limitazioni relative alle modifiche apportate a un'origine dati  
  Esistono alcune restrizioni relativamente alle modifiche che è possibile apportare a un'origine dati:  
   
 -   I tipi di dati di una colonna possono essere modificati solo in un tipo di dati compatibile. Ad esempio, se nei dati della colonna sono inclusi i numeri decimali, non è possibile modificare il tipo di dati in numeri interi. Tuttavia, è possibile impostare i dati numerici su testo. Per altre informazioni sui tipi di dati, vedere [Tipi di dati supportati &#40;SSAS tabulare&#41;](tabular-models/data-types-supported-ssas-tabular.md).  

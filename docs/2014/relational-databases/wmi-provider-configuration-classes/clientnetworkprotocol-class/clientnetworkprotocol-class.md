@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62693516"
 ---
 # <a name="clientnetworkprotocol-class"></a>Classe ClientNetworkProtocol
-  Il [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) installati in un'istanza client che consente la comunicazione con un'istanza di protocolli di rete rappresenta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attraverso una rete.  
+  La [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) rappresenta i protocolli di rete installati in un'istanza del client che consente la comunicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un'istanza di in una rete.  
   
- Con il [classe ClientNetworkProtocol](clientnetworkprotocol-class.md), è possibile eseguire le attività seguenti:  
+ Con la [classe ClientNetworkProtocol](clientnetworkprotocol-class.md)è possibile eseguire le attività seguenti:  
   
 -   Impostare un valore di indice per selezionare un protocollo di rete del client dall'elenco di protocolli.  
   

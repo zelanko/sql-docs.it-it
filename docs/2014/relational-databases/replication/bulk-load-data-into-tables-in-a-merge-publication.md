@@ -1,5 +1,5 @@
 ---
-title: Caricamento bulk dei dati nelle tabelle in una pubblicazione di tipo Merge (programmazione Transact-SQL della replica) | Microsoft Docs
+title: Caricamento bulk di dati in tabelle in una pubblicazione di tipo merge (programmazione Transact-SQL della replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721763"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Caricamento bulk dei dati nelle tabelle in una pubblicazione di tipo merge (programmazione Transact-SQL della replica)
@@ -34,6 +34,6 @@ ms.locfileid: "62721763"
   
     -   Eseguire la copia bulk utilizzando l'opzione FIRE_TRIGGERS.  
   
-    -   Nel database in cui sono stati inseriti i dati eseguire [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Specificare il nome della tabella nella quale sono stati inseriti i dati per **@table_name** .  
+    -   Nel database in cui sono stati inseriti i dati eseguire [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Consente di **@table_name**specificare il nome della tabella in cui sono stati inseriti i dati.  
   
   

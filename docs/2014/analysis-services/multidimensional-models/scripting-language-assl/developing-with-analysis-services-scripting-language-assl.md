@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736517"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Sviluppo con Analysis Services Scripting Language (ASSL)
@@ -25,12 +25,12 @@ ms.locfileid: "62736517"
   
 -   Linguaggio DDL (Data Definition Language), o linguaggio di definizione dell'oggetto, che specifica e descrive un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nonché i database e gli oggetti di database che l'istanza contiene.  
   
--   Linguaggio di comando che invia comandi di azione, ad esempio `Create`, `Alter` o `Process`, a un'istanza di Analysis Services. Questo linguaggio di comando viene discusso nel [XML for Analysis &#40;XMLA&#41; riferimento](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
+-   Linguaggio di comando che invia comandi di azione, ad esempio `Create`, `Alter` o `Process`, a un'istanza di Analysis Services. Questo linguaggio di comando è illustrato nella [XML for Analysis &#40;riferimento&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  Per visualizzare l'ASSL che descrive una soluzione multidimensionale in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], è possibile utilizzare il comando Visualizza codice al livello del progetto. È inoltre possibile creare o modificare script ASSL in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] utilizzando l'editor di query XMLA. Gli script compilati possono essere utilizzati per gestire oggetti o eseguire comandi nel server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti ASSL e relative caratteristiche](assl-objects-and-object-characteristics.md)   
+ [Oggetti ASSL e caratteristiche oggetto](assl-objects-and-object-characteristics.md)   
  [Convenzioni XML di ASSL](assl-xml-conventions.md)   
  [Origini dati e associazioni &#40;SSAS multidimensionale&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   

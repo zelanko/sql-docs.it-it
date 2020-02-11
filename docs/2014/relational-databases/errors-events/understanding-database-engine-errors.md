@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761672"
 ---
 # <a name="understanding-database-engine-errors"></a>Informazioni sugli errori del Motore di database
-  Nella tabella seguente sono descritti gli attributi degli errori generati da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
+  Gli errori generati da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presentano gli attributi descritti nella tabella seguente.  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |Numero di errore|Numero di errore univoco per ogni messaggio di errore.|  
 |Stringa del messaggio di errore|Il messaggio di errore include informazioni di diagnostica relative alla causa dell'errore. Molti messaggi di errore contengono variabili di sostituzione con informazioni specifiche, ad esempio il nome dell'oggetto che ha generato l'errore.|  
-|Severity|Indica il livello di gravità dell'errore. Gli errori con un livello di gravità basso, ad esempio 1 o 2, sono messaggi informativi o avvisi di basso livello, mentre gli errori che presentano un livello di gravità elevato segnalano problemi da risolvere immediatamente. Per altre informazioni sui livelli di gravità, vedere [Gravità degli errori del Motore di database](database-engine-error-severities.md).|  
+|Gravità|Indica il livello di gravità dell'errore. Gli errori con un livello di gravità basso, ad esempio 1 o 2, sono messaggi informativi o avvisi di basso livello, mentre gli errori che presentano un livello di gravità elevato segnalano problemi da risolvere immediatamente. Per altre informazioni sui livelli di gravità, vedere [Gravità degli errori del Motore di database](database-engine-error-severities.md).|  
 |State|Alcuni messaggi di errore possono essere generati in più punti del codice di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a più condizioni diverse. A ogni condizione specifica che genera un errore viene assegnato un codice di stato univoco.<br /><br /> Quando si consultano database che contengono informazioni relative a problemi noti, ad esempio la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, è possibile utilizzare il numero di contesto per determinare se il problema registrato corrisponde all'errore che si è verificato. Se ad esempio un articolo della Knowledge Base descrive un errore 1105 che presenta uno stato 2, mentre il messaggio di errore 1105 ricevuto dall'utente presenta uno stato 3, è probabile che la causa dell'errore sia diversa da quella indicata nell'articolo.<br /><br /> Il codice di contesto di un errore consente inoltre al personale del supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] di individuare la posizione nel codice sorgente da cui è stato generato il codice di errore. Queste informazioni possono fornire indicazioni aggiuntive utili per la diagnostica del problema.|  
 |Nome della stored procedure|Rappresenta il nome della stored procedure o del trigger in cui si è verificato l'errore.|  
 |Numero di riga|Indica quale istruzione di un batch, di una stored procedure, di un trigger o di una funzione ha generato l'errore.|  

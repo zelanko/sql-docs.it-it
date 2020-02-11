@@ -14,30 +14,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688875"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Procedure per l'esecuzione di una copia bulk con il driver ODBC di SQL Server (ODBC)
   Se utilizzata con Microsoft SQL Server 2005, il driver ODBC SQL Server supporta le stesse funzioni di copia bulk supportate dall'API DB-Library.  
   
- Per informazioni su una modifica di rilievo nella copia bulk a partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vedere [esecuzione di &#40;operazioni&#41;di copia bulk ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni su una modifica di rilievo nella copia bulk a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]partire da, vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Copia bulk senza un file &#40;di formato ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [Eseguire una copia bulk senza un file di formato &#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   
--   [Copia bulk di un set &#40;di risultati di selezione ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [Copia bulk di un set di risultati SELECT &#40;ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
   
--   [Creazione di un file &#40;di formato per la copia bulk ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [Creazione di un file di formato per la copia bulk &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
   
--   [Eseguire una copia bulk utilizzando un file &#40;di formato ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [Eseguire una copia bulk utilizzando un file di formato &#40;ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [Copia dati bulk da variabili &#40;di programma ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [Copia dati bulk da variabili di programma &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a ODBC](../odbc-how-to-topics.md)  
+ [Procedure per l'utilizzo di ODBC](../odbc-how-to-topics.md)  
   
   

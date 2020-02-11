@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736394"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
@@ -36,9 +36,9 @@ ms.locfileid: "62736394"
   
  Per rappresentare la gerarchia di oggetti, in ASSL vengono utilizzate le convenzioni XML seguenti:  
   
--   Tutti gli oggetti e proprietà sono rappresentate come elementi, ad eccezione degli attributi XML standard, ad esempio "XML: lang".  
+-   Tutti gli oggetti e le proprietà sono rappresentati come elementi, ad eccezione degli attributi XML standard, ad esempio "XML: lang".  
   
--   Sia i nomi degli elementi e i valori di enumerazione seguono la convenzione di denominazione di Microsoft .NET Framework della convenzione Pascal maiuscole e minuscole senza caratteri di sottolineatura.  
+-   Sia i nomi di elemento che i valori di enumerazione seguono la convenzione di denominazione di Microsoft .NET Framework basata sulla convenzione Pascal senza caratteri di sottolineatura.  
   
 -   La combinazione di lettere maiuscole e minuscole di tutti i valori viene mantenuta. I valori relativi alle enumerazioni rispettano inoltre la distinzione tra maiuscole e minuscole.  
   
@@ -121,10 +121,10 @@ ms.locfileid: "62736394"
  In Analysis Services vengono utilizzati i seguenti tipi di dati XML Schema Definition Language (XSD) standard:  
   
  `Int`  
- Valore intero compreso nell'intervallo tra-231-1 231.  
+ Valore intero compreso tra-231 e 231-1.  
   
  `Long`  
- Valore intero nell'intervallo di -263 e 263-1.  
+ Un valore intero compreso tra-263 e 263-1.  
   
  `String`  
  Valore stringa conforme alle regole globali seguenti:  
@@ -135,10 +135,10 @@ ms.locfileid: "62736394"
   
 -   Mantenimento degli spazi vuoti interni.  
   
- Per le proprietà `Name` e `ID` sono presenti limitazioni speciali relative ai caratteri validi negli elementi della stringa. Per ulteriori informazioni sul `Name` e `ID` convenzioni, vedere [oggetti ASSL e relative caratteristiche](assl-objects-and-object-characteristics.md).  
+ Per le proprietà `Name` e `ID` sono presenti limitazioni speciali relative ai caratteri validi negli elementi della stringa. Per ulteriori informazioni sulle `Name` convenzioni e `ID` , vedere [oggetti ASSL e caratteristiche degli](assl-objects-and-object-characteristics.md)oggetti.  
   
  `DateTime`  
- Oggetto `DateTime` struttura da .NET Framework. Un valore `DateTime` non può essere NULL. La data meno recente supportata dal tipo di dati `DataTime` è rappresentata dall'1 gennaio 1601, disponibile per i programmatori come `DateTime.MinValue`. La data meno recente supportata indica che un valore `DateTime` è mancante.  
+ `DateTime` Struttura dalla .NET Framework. Un valore `DateTime` non può essere NULL. La data meno recente supportata dal tipo di dati `DataTime` è rappresentata dall'1 gennaio 1601, disponibile per i programmatori come `DateTime.MinValue`. La data meno recente supportata indica che un valore `DateTime` è mancante.  
   
  `Boolean`  
  Enumerazione con due soli valori, ovvero {true, false} o {0, 1}.  
@@ -150,13 +150,14 @@ ms.locfileid: "62736394"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (stringa vuota)|  
-|`Integer` o `Long`|0 (zero)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (corrispondente a una le versioni di .NET Framework `System.DateTime` con 0 tick)|  
+|`Integer`o`Long`|0 (zero)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (corrispondente a .NET Framework `System.DateTime` con 0 cicli)|  
   
  Un elemento presente, ma vuoto, viene interpretato come se il relativo valore fosse una stringa Null e non quello predefinito.  
   
 ### <a name="inherited-defaults"></a>Valori predefiniti ereditati  
- Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in oggetti figlio o discendenti. `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Le regole che Analysis Services applica ai valori predefiniti ereditati sono i seguenti:  
+ Alcune proprietà specificate per un oggetto forniscono i valori predefiniti per la stessa proprietà in oggetti figlio o discendenti. 
+  `Cube.StorageMode` fornisce ad esempio il valore predefinito per `Partition.StorageMode`. Le regole che Analysis Services applica ai valori predefiniti ereditati sono i seguenti:  
   
 -   Quando in XML la proprietà per l'oggetto figlio è Null, per impostazione predefinita viene utilizzato il valore ereditato. Se tuttavia si esegue una query relativa al valore nel server, viene restituito il valore Null dell'elemento XML.  
   
@@ -178,6 +179,6 @@ ms.locfileid: "62736394"
   
  `</Dimension>`  
   
- Per altre informazioni sui valori predefiniti ereditati, vedere [oggetti ASSL e relative caratteristiche](assl-objects-and-object-characteristics.md).  
+ Per ulteriori informazioni sui valori predefiniti ereditati, vedere [oggetti ASSL e caratteristiche degli](assl-objects-and-object-characteristics.md)oggetti.  
   
   

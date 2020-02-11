@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714764"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "62714764"
   
  Nella tabella seguente vengono descritte le notazioni utilizzate nel diagramma sopra riportato:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0..1|Zero o uno|  
 |1|Esattamente uno|  
@@ -64,7 +64,7 @@ ms.locfileid: "62714764"
   
 -   Un processore fisico può essere costituito da uno o più core. Un processore fisico corrisponde a un pacchetto del processore o a un socket.  
   
- Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Ad esempio, se si dispone di un computer che dispone di due processori quad core con hyper-threading abilitato e due thread per core, sono disponibili 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Vale la pena notare che:  
+ Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Ad esempio, se si dispone di un computer che dispone di due processori quad core con l'Hyper-Threading abilitato e due thread per core, si dispone di 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Vale la pena notare che:  
   
 -   La capacità di calcolo di un processore logico da un solo thread di un core con l'Hyper-Threading è inferiore alla capacità di calcolo di un processore logico da quello stesso core con l'Hyper-Threading disabilitato.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62714764"
   
  Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Edizione|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Gestione delle licenze basate su core<sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Sviluppatore|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Copia di valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Enterprise Edition: licenze basate su Core<sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Versione di valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Business Intelligence|Limitato a meno di 4 socket o 16 core|Valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  
 |Web|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  
@@ -92,9 +92,9 @@ ms.locfileid: "62714764"
 |Express with Tools|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 |Express with Advanced Services|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
   
- <sup>1</sup> Enterprise Edition con Server + CAL Client Access License () basati su licenza (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
+ <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] core per istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
   
- In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. Questi processori logici possono essere mappati alle macchine virtuali nel server con carico di calcolo delle macchine virtuali su quel processore logico eseguito il mapping a un thread di esecuzione nel processore fisico nel server host.  
+ In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il carico di calcolo delle macchine virtuali su quel processore logico di cui è stato eseguito il mapping in un thread di esecuzione nel processore fisico nel server host.  
   
  È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
   

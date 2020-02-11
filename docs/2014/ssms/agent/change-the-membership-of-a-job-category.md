@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782792"
 ---
-# <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
+# <a name="change-the-membership-of-a-job-category"></a>Modificare l'appartenenza a una categoria di processi
   In questo argomento viene descritto come modificare l'appartenenza della categoria di processi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
   
  Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È possibile creare categorie di processi personalizzate. È inoltre possibile modificare l'appartenenza dei processi di Microsoft SQL Server Agent alle categorie del processo.  
@@ -31,9 +31,9 @@ ms.locfileid: "72782792"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per modificare l'appartenenza a una categoria di processi usando:**  
+-   **Per modificare l'appartenenza di una categoria di processi utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -43,10 +43,10 @@ ms.locfileid: "72782792"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
@@ -56,15 +56,15 @@ ms.locfileid: "72782792"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e selezionare **Gestione categorie processi**.  
   
-4.  Nella finestra di dialogo **Gestione categorie processi**_nome_server_ selezionare la categoria di processi da modificare e fare clic su **Visualizza processi**.  
+4.  Nella finestra di dialogo **Gestisci categorie di processi**_server_name_ Selezionare la categoria di processi che si desidera modificare, quindi fare clic su **Visualizza processi**.  
   
 5.  Selezionare la casella di controllo **Mostra tutti i processi** .  
   
 6.  Per aggiungere un processo alla categoria, selezionare nella griglia principale la casella di controllo della colonna **Seleziona** corrispondente al processo. Per rimuovere un processo dalla categoria, deselezionare la casella. Al termine, fare clic su **OK**.  
   
-7.  Chiudere la finestra di dialogo **Gestione categorie processi**_nome_server_ .  
+7.  Chiudere la finestra di dialogo **Gestisci categorie di processi**_server_name_ .  
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
@@ -84,9 +84,9 @@ ms.locfileid: "72782792"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
 ##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
- **Per modificare l'appartenenza a una categoria di processi**  
+ **Per modificare l'appartenenza di una categoria di processi**  
   
  Usare la classe `JobCategory` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  

@@ -1,5 +1,5 @@
 ---
-title: Proprietà di log | Microsoft Docs
+title: Proprietà log | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -54,13 +54,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068923"
 ---
 # <a name="log-properties"></a>Proprietà dei log
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà dei log server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="general"></a>Generale  
@@ -76,7 +77,7 @@ ms.locfileid: "66068923"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>log degli errori  
- È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Visualizzare [configurazione errori per cubi, partizioni e l'elaborazione di dimensione &#40;SSAS - multidimensionale&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> per altre informazioni.  
+ È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Per ulteriori informazioni [, vedere la pagina relativa alla configurazione degli errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS-&#41;multidimensionali.](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>  
   
  **ErrorLog\ErrorLogFileName**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
@@ -87,12 +88,14 @@ ms.locfileid: "66068923"
  **ErrorLog\KeyErrorAction**  
  Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `ConvertToUnknown`: indica al server di allocare il valore della chiave con errore al membro sconosciuto.  
+-   
+  `ConvertToUnknown`: indica al server di allocare il valore della chiave con errore al membro sconosciuto.  
   
--   `DiscardRecord`: indica al server di escludere il record.  
+-   
+  `DiscardRecord`: indica al server di escludere il record.  
   
  **ErrorLog\KeyErrorLogFile**  
- Si tratta di un nome di file definito dall'utente che deve avere un'estensione di file log ed essere posizionato in una cartella in cui l'account del servizio dispone delle autorizzazioni di lettura-scrittura. Il file di log conterrà solo gli errori generati durante l'elaborazione. Se sono necessarie informazioni più dettagliate, usare utilità Traccia eventi.  
+ Si tratta di un nome di file definito dall'utente che deve avere un'estensione di file log ed essere posizionato in una cartella in cui l'account del servizio dispone delle autorizzazioni di lettura-scrittura. Il file di log conterrà solo gli errori generati durante l'elaborazione. Usare l'Utilità Traccia eventi se si necessita di informazioni più dettagliate.  
   
  **ErrorLog\KeyErrorLimit**  
  Numero massimo di errori di integrità dei dati che il server consentirà prima di interrompere l'elaborazione. Un valore pari a 1 indica che non vi sono limiti. L'impostazione predefinita è 0, che indica l'arresto dell'elaborazione dopo il primo errore. È inoltre possibile impostare come valore un numero intero.  
@@ -100,29 +103,34 @@ ms.locfileid: "66068923"
  **ErrorLog\KeyErrorLimitAction**  
  Specifica l'azione eseguita dal server quando il numero di errori di chiave ha raggiunto il limite superiore. Le risposte valide a questa azione sono le seguenti:  
   
--   `StopProcessing` indica al server di arrestare l'elaborazione quando il limite errori viene raggiunto.  
+-   
+  `StopProcessing` indica al server di arrestare l'elaborazione quando il limite errori viene raggiunto.  
   
--   `StopLogging` indica al server di arrestare la registrazione degli errori quando il limite errori viene raggiunto, senza interrompere però l'elaborazione.  
+-   
+  `StopLogging` indica al server di arrestare la registrazione degli errori quando il limite errori viene raggiunto, senza interrompere però l'elaborazione.  
   
- **ErrorLog\ LogErrorTypes\KeyNotFound**  
+ **Log degli errori \ LogErrorTypes\KeyNotFound**  
  Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `IgnoreError`: indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo ai fini del limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database e verrà rimosso o aggregato al membro sconosciuto, come determinato dalla proprietà `KeyErrorAction`.  
+-   
+  `IgnoreError`: indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo ai fini del limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database e verrà rimosso o aggregato al membro sconosciuto, come determinato dalla proprietà `KeyErrorAction`.  
   
--   `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo per il limite di errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
+-   
+  `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo per il limite di errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
--   `ReportAndStop` indica al server di registrare l'errore e di arrestare immediatamente l'elaborazione, indipendentemente dal limite di errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
+-   
+  `ReportAndStop` indica al server di registrare l'errore e di arrestare immediatamente l'elaborazione, indipendentemente dal limite di errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
- **ErrorLog\ LogErrorTypes\KeyDuplicate**  
+ **Log degli errori \ LogErrorTypes\KeyDuplicate**  
  Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
- **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
+ **Log degli errori \ LogErrorTypes\NullKeyConvertedToUnknown**  
  Specifica l'azione eseguita dal server quando una chiave Null è stata convertita nel membro sconosciuto. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
- **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
+ **Log degli errori \ LogErrorTypes\NullKeyNotAllowed**  
  Specifica l'azione eseguita dal server quando `NullProcessing` è impostato su `Error` per un attributo della dimensione. Viene generato un errore quando un valore Null non è consentito in un attributo specificato. Questa proprietà di configurazione errori indica il passaggio successivo, ovvero la segnalazione dell'errore e la continuazione dell'elaborazione fino al raggiungimento del limite degli errori. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
- **ErrorLog\ LogErrorTypes\CalculationError**  
+ **Log degli errori \ LogErrorTypes\CalculationError**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
   
  **ErrorLog\IgnoreDataTruncation**  
@@ -171,7 +179,7 @@ ms.locfileid: "66068923"
  Il valore predefinito di questa proprietà è vuoto, al quale per impostazione predefinita viene assegnato il nome di file FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Query Log  
- **Si applica a:** Solo in modalità server multidimensionale  
+ **Si applica a:** Solo modalità server multidimensionale  
   
  **QueryLog\QueryLogFileName**  
  Proprietà stringa che identifica il nome del file di log delle query. Questa proprietà viene applicata solo quando viene usato un file su disco per la registrazione invece che una tabella di database (condizione predefinita).  
@@ -198,7 +206,7 @@ ms.locfileid: "66068923"
  Il valore predefinito di questa proprietà è False e indica che il server non crea automaticamente la tabella del log e non registra eventi di query.  
   
 > [!NOTE]  
->  Per altre informazioni sulla configurazione del log di query, vedere [registrare le operazioni in Analysis Services](../instances/log-operations-in-analysis-services.md).  
+>  Per ulteriori informazioni sulla configurazione del log di query, vedere [operazioni di log in Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
@@ -232,7 +240,7 @@ ms.locfileid: "66068923"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

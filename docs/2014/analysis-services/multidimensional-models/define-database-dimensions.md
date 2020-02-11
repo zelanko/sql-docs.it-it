@@ -1,5 +1,5 @@
 ---
-title: Definire le dimensioni del Database | Microsoft Docs
+title: Definire le dimensioni del database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075608"
 ---
 # <a name="define-database-dimensions"></a>Definire le dimensioni del database
-  Usare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per configurare una dimensione di database esistente in un progetto o un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Progettazione dimensioni consente di eseguire le operazioni seguenti:  
+  Utilizzare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per configurare una dimensione di database esistente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un progetto o un database di. Progettazione dimensioni consente di eseguire le operazioni seguenti:  
   
 -   Configurare le proprietà a livello di dimensioni.  
   
@@ -42,23 +42,23 @@ ms.locfileid: "66075608"
   
 |Scheda|Descrizione|  
 |---------|-----------------|  
-|**Struttura dimensione**|Utilizzare questa scheda per operare sulla struttura di una dimensione per esaminare o creare lo schema della vista origine dati per una dimensione, per lavorare con gli attributi e organizzarli in gerarchie definite dall'utente.|  
+|**Struttura dimensione**|Utilizzare questa scheda per utilizzare la struttura di una dimensione: per esaminare o creare lo schema della vista origine dati per una dimensione, per utilizzare gli attributi e per organizzare gli attributi in gerarchie definite dall'utente.|  
 |**Relazioni tra attributi**|Utilizzare questa scheda per creare, modificare o eliminare le relazioni tra attributi di una dimensione.|  
 |**Traduzioni**|Utilizzare questa scheda per aggiungere e modificare traduzioni di metadati delle dimensioni in diverse lingue.|  
 |**Browser**|Utilizzare questa scheda per esaminare i membri di una dimensione elaborata e per controllare le traduzioni dei metadati delle dimensioni.|  
   
  Negli argomenti seguenti vengono descritte le attività che è possibile eseguire in Progettazioni dimensioni.  
   
- [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
  Descrive come definire e configurare un attributo di una dimensione.  
   
- [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
+ [Creazione di gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
  Descrive come definire e configurare una gerarchia definita dall'utente.  
   
  [Definire relazioni tra attributi](attribute-relationships-define.md)  
  Descrive come definire e configurare una relazione tra attributi.  
   
- [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Viene descritto come utilizzare la Configurazione guidata funzionalità di Business Intelligence per ottimizzare una dimensione.  
   
   

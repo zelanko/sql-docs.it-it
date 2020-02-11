@@ -1,5 +1,5 @@
 ---
-title: Elemento FeatureSet (DTA) | Microsoft Docs
+title: Elemento Featuret (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735754"
 ---
 # <a name="featureset-element-dta"></a>Elemento FeatureSet (DTA)
@@ -38,7 +38,8 @@ ms.locfileid: "62735754"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
 |**Valori consentiti**|**IDX_IV**<br /> Indici e viste indicizzate.<br /><br /> **IDX**<br /> Solo indici.<br /><br /> **IV**<br /> Solo viste indicizzate.<br /><br /> **NCL_IDX**<br /> Solo indici non cluster.<br /><br /> Con questo elemento utilizzare solo uno di questi valori.|  
 |**Valore predefinito**|**IDX**|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento `TuningOptions`, a meno che non venga utilizzato l'elemento `DropOnlyMode`. Se viene utilizzato `DropOnlyMode`, non sarà possibile utilizzare `FeatureSet`. Questi elementi si escludono a vicenda.|  
@@ -48,7 +49,7 @@ ms.locfileid: "62735754"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML semplice &#40;DTA&#41;](simple-xml-input-file-sample-dta.md).  

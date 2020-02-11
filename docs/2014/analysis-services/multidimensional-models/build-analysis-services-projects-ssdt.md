@@ -1,5 +1,5 @@
 ---
-title: Compilare progetti di Analysis Services (SSDT) | Microsoft Docs
+title: Creazione di progetti di Analysis Services (SSDT) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076776"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
@@ -43,22 +43,22 @@ ms.locfileid: "66076776"
   
 |File (nella cartella bin)|Descrizione|  
 |-----------------------------|-----------------|  
-|*Nomeprogetto*.asdatabase|Contiene gli elementi ASSL che definiscono i metadati per gli oggetti nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno di un file di script di distribuzione. Questo file viene usato dal motore di distribuzione per distribuire gli oggetti in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|*Nomeprogetto*.configsettings|Contiene le impostazioni di configurazione usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, la stringa di connessione per le origini dati).|  
-|*Nomeprogetto*.deploymenttargets|Contiene le impostazioni relative alla destinazione utilizzate durante la distribuzione, modificabili direttamente oppure nella Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i nomi di server e database).|  
-|*Nomeprogetto*.deploymentoptions|Contiene diverse impostazioni di opzioni usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i percorsi di archiviazione).|  
-|*Nomeassembly*/*nomedll*.dll|Cartelle separate per ogni assembly a cui viene fatto riferimento, ognuna delle quali contiene la DLL per l'assembly, qualsiasi assembly di riferimento e qualsiasi file con estensione pdb associato per le informazioni di debug dell'output.|  
+|*NomeProgetto*. asdatabase|Contiene gli elementi ASSL che definiscono i metadati per gli oggetti nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno di un file di script di distribuzione. Questo file viene usato dal motore di distribuzione per distribuire gli oggetti in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|*NomeProgetto*. configsettings|Contiene le impostazioni di configurazione usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, la stringa di connessione per le origini dati).|  
+|*NomeProgetto*. deploymenttargets|Contiene le impostazioni relative alla destinazione utilizzate durante la distribuzione, modificabili direttamente oppure nella Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i nomi di server e database).|  
+|*NomeProgetto*. deploymentoptions|Contiene diverse impostazioni di opzioni usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i percorsi di archiviazione).|  
+|*AssemblyName*/*dllname.* dll|Cartelle separate per ogni assembly a cui viene fatto riferimento, ognuna delle quali contiene la DLL per l'assembly, qualsiasi assembly di riferimento e qualsiasi file con estensione pdb associato per le informazioni di debug dell'output.|  
   
 |File (nella cartella obj)|Descrizione|  
 |-----------------------------|-----------------|  
-|\<Nome configurazione > \LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|\<Nome configurazione> \LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Questi file XML non contengono \<Crea > e \<Alter > tag, che vengono costruiti durante la distribuzione.  
+ Questi file XML non contengono \<i tag create> \<e alter>, che vengono costruiti durante la distribuzione.  
   
  Nella directory di output vengono inoltre copiati gli assembly a cui viene fatto riferimento, ad eccezione degli assembly di sistema standard e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In presenza di riferimenti ad altri progetti di una soluzione, tali progetti vengono innanzitutto compilati, utilizzando la configurazione di progetto appropriata e le dipendenze di compilazione stabilite dai riferimenti ai progetti, e quindi copiati nella cartella di output del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Distribuzione di progetti Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

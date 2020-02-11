@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661685"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
@@ -48,7 +48,7 @@ ms.locfileid: "62661685"
  Quando si esegue una query di eliminazione, non viene restituito alcun risultato nel [riquadro Risultati](results-pane-visual-database-tools.md). Viene invece visualizzato un messaggio che indica il numero di righe eliminate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di Query supportati &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Tipi di query supportati &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

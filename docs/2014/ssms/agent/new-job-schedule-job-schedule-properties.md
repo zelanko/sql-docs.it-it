@@ -14,45 +14,45 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704618"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>Nuova pianificazione processo: Proprietà pianificazione processo
+# <a name="new-job-schedule-job-schedule-properties"></a>Nuova pianificazione processo - Proprietà pianificazione processo
   Utilizzare questa pagina per visualizzare e modificare le proprietà della pianificazione.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nuovo nome per la pianificazione.  
   
  **Processi nella pianificazione**  
  Consente di visualizzare i processi che utilizzano la pianificazione.  
   
- **Tipo pianificazione**  
+ **Tipo di pianificazione**  
  Consente di selezionare il tipo di pianificazione.  
   
- **Abilitata**  
+ **Enabled**  
  Consente di abilitare o disabilitare la pianificazione.  
   
 ## <a name="recurring-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione periodica  
- **Ricorrenza**  
+ **Avviene**  
  Consente di selezionare l'intervallo in base al quale ripetere la pianificazione.  
   
  **Ogni**  
  Consente di selezionare il numero di giorni o di settimane quale intervallo di esecuzione delle pianificazioni. Questa opzione non è disponibile per le pianificazioni periodiche con frequenza mensile.  
   
- **Lunedì**  
+ **Monday**  
  Consente di impostare l'esecuzione del processo ogni lunedì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
  **Martedì**  
  Consente di impostare l'esecuzione del processo ogni martedì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Mercoledì**  
+ **Wednesday**  
  Consente di impostare l'esecuzione del processo ogni mercoledì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Giovedì**  
+ **Thursday**  
  Consente di impostare l'esecuzione del processo ogni giovedì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
  **Venerdì**  
@@ -61,28 +61,28 @@ ms.locfileid: "62704618"
  **Sabato**  
  Consente di impostare l'esecuzione del processo ogni sabato. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Domenica**  
+ **Sunday**  
  Consente di impostare l'esecuzione del processo ogni domenica. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Day**  
+ **Giorno**  
  Consente di selezionare il giorno del mese in cui eseguire la pianificazione. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
  **ogni**  
  Consente di selezionare il numero di mesi tra una pianificazione e l'altra. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
- **Ogni**  
+ **Il parametro**  
  Consente di specificare una pianificazione per un giorno specifico di una determinata settimana del mese. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
- **Una sola volta alle**  
+ **Si verifica una sola volta alle**  
  Consente di impostare l'ora per l'esecuzione giornaliera di un processo.  
   
- **Ogni**  
+ **Si verifica ogni**  
  Consente di impostare il numero di ore, di minuti o secondi tra le occorrenze.  
   
- **Data inizio**  
+ **Data di inizio**  
  Consente di impostare la data iniziale di validità per la pianificazione.  
   
- **Data fine**  
+ **Data di fine**  
  Consente di impostare la data finale di validità per la pianificazione.  
   
  **Nessuna data di fine**  
@@ -96,7 +96,7 @@ ms.locfileid: "62704618"
  Selezionare l'ora di esecuzione del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e collegare pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
- [Pianificare un processo](schedule-a-job.md)  
+ [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
+ [Schedule a Job](schedule-a-job.md)  
   
   

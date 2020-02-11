@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE e FORMAT_STRING in FORMATED_VALUE | Microsoft Docs
+title: LINGUA e FORMAT_STRING FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074402"
 ---
-# <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
+# <a name="language-and-format_string-on-formated_value"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
   
-## <a name="value-formatstring-language-properties"></a>Proprietà VALUE, FORMAT_STRING e LANGUAGE  
+## <a name="value-format_string-language-properties"></a>Proprietà VALUE, FORMAT_STRING e LANGUAGE  
  Nella tabella seguente vengono descritte queste proprietà e viene illustrato come utilizzarle insieme.  
   
- VALUE  
+ VALORE  
  Valore non formattato della cella.  
   
  FORMAT_STRING  
@@ -32,7 +32,7 @@ ms.locfileid: "66074402"
  LANGUAGE  
  Specifica delle impostazioni locali da applicare insieme a FORMAT_STRING per generare una versione localizzata di FORMATTED_VALUE  
   
-## <a name="formattedvalue-constructed"></a>Proprietà FORMATTED_VALUE costruita  
+## <a name="formatted_value-constructed"></a>Proprietà FORMATTED_VALUE costruita  
  La proprietà FORMATTED_VALUE viene costruita utilizzando il valore della proprietà VALUE e applicando a tale valore il modello di formato specificato nella proprietà FORMAT_STRING. Inoltre, ogni volta che il valore di formattazione è dato da un `named formatting literal`, la specifica della proprietà LANGUAGE modifica l'output di FORMAT_STRING per seguire l'utilizzo della lingua per la formattazione denominata. I valori letterali di formattazione denominati sono tutti definiti in modo da poter essere localizzati. Contrariamente al modello `"General Date"` che indica che la data deve essere presentata come definita dal modello indipendentemente dalla specifica della lingua, la specifica `"YYYY-MM-DD hh:nn:ss",` può essere localizzata.  
   
  Se si verifica un conflitto tra il modello FORMAT_STRING e la specifica LANGUAGE, il modello FORMAT_STRING esegue l'override della specifica LANGUAGE. Se, ad esempio, FORMAT_STRING="$ #0", LANGUAGE=1034 (Spagna) e VALUE=123.456, allora FORMATTED_VALUE="$ 123" anziché FORMATTED_VALUE="€ 123". Il formato previsto è in euro perché il valore del modello di formato esegue l'override della lingua specificata.  
@@ -78,9 +78,9 @@ ms.locfileid: "66074402"
   
 |Membro|FORMATTED_VALUE|Spiegazione|  
 |------------|----------------------|-----------------|  
-|A|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
-|B|€ 5.040,00|La proprietà FORMAT_STRING è impostata su `Currency` (valore ereditato da A) e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna), da qui il simbolo dell'euro e i separatori decimale e delle migliaia diversi.|  
-|c|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
+|Una|$5,040.00|La proprietà FORMAT_STRING è impostata su `Currency` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema|  
+|b|€ 5.040,00|La proprietà FORMAT_STRING è impostata su `Currency` (valore ereditato da A) e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna), da qui il simbolo dell'euro e i separatori decimale e delle migliaia diversi.|  
+|C|$5.040,00|La proprietà FORMAT_STRING è impostata su `$#,##0.00` un override di Currency, da A, e la proprietà LANGUAGE è impostata in modo esplicito su `1034` (Spagna). Poiché la proprietà FORMAT_STRING ha impostato in modo esplicito il simbolo di valuta su $, la proprietà FORMATTED_VALUE viene presentata con il simbolo $. Tuttavia, poiché `.` (punto) e `,` (virgola) sono rispettivamente segnaposto per il separatore decimale e il separatore delle migliaia, la specifica della lingua influisce su di essi generando un output localizzato per i separatori decimali e delle migliaia.|  
 |D|5.04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.|  
 |E|5,04E+03|La proprietà FORMAT_STRING è impostata su `Scientific` e la proprietà LANGUAGE è impostata in modo esplicito su `1034,` da qui la virgola ( `,` ) come separatore decimale.|  
 |F|50.40%|La proprietà FORMAT_STRING è impostata su `Percent` e la proprietà LANGUAGE su `1033`, valore ereditato dalle impostazioni locali del sistema, da qui il punto ( `.` ) come separatore decimale.<br /><br /> Si noti che la proprietà VALUE è stata modificata da 5040 a 0.5040|  
@@ -128,9 +128,9 @@ ms.locfileid: "66074402"
   
 |Membro|FORMATTED_VALUE|Spiegazione|  
 |------------|----------------------|-----------------|  
-|A|3/12/1959 6:30:00 AM|La proprietà FORMAT_STRING è impostata in modo implicito su `General Date` dall'espressione CDate() e la proprietà LANGUAGE è impostata su `1033` (Inglese), valore ereditato dalle impostazioni locali del sistema|  
-|B|Thursday, March 12, 1959|La proprietà FORMAT_STRING è impostata in modo esplicito su `Long Date` e la proprietà LANGUAGE è impostata su `1033` (inglese), valore ereditato dalle impostazioni locali del sistema|  
-|c|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
+|Una|3/12/1959 6:30:00 AM|La proprietà FORMAT_STRING è impostata in modo implicito su `General Date` dall'espressione CDate() e la proprietà LANGUAGE è impostata su `1033` (Inglese), valore ereditato dalle impostazioni locali del sistema|  
+|b|Thursday, March 12, 1959|La proprietà FORMAT_STRING è impostata in modo esplicito su `Long Date` e la proprietà LANGUAGE è impostata su `1033` (inglese), valore ereditato dalle impostazioni locali del sistema|  
+|C|12/03/1959 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1034` (spagnolo).<br /><br /> Rispetto allo stile di formattazione americano, mese e giorno sono invertiti.|  
 |D|jueves, 12 de marzo de 1959|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1034` (spagnolo).<br /><br /> In spagnolo mese e giorno della settimana sono riportati per esteso|  
 |E|1959/03/12 6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `General Date` e `1041` (giapponese).<br /><br /> La data presenta ora il formato anno/mese/giorno ora:minuti:secondi|  
 |F|1959年3月12日|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Date` e `1041` (giapponese).|  
@@ -142,8 +142,8 @@ ms.locfileid: "66074402"
 |L|06:30|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Short Time` e `1041` (giapponese).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Utilizzo delle proprietà delle celle &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Contenuto FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
+ [Utilizzo delle proprietà delle celle &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

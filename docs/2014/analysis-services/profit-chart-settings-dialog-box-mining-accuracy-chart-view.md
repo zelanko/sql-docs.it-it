@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Impostazioni grafico (vista grafico di accuratezza Data Mining) di profitto | Microsoft Docs
+title: Finestra di dialogo Impostazioni grafico profitti (visualizzazione Grafico accuratezza modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070692"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Impostazioni grafico profitti (visualizzazione Grafico accuratezza modello di data mining)
@@ -26,18 +26,18 @@ ms.locfileid: "66070692"
  **Popolazione**  
  Consente di immettere il numero di case nel set di dati utilizzato per creare il grafico dei profitti.  
   
- **Costi fissi**  
+ **Costo fisso**  
  Consente di immettere i costi fissi totali associati allo scenario aziendale in esame. Un costo fisso è ad esempio rappresentato dall'eventuale costo calcolato per la spedizione di volantini, indipendentemente dal numero di volantini che verranno inviati.  
   
- **Costi singolo contatto**  
+ **Costo individuale**  
  Consente di immettere individualmente costi aggiuntivi non inclusi in quelli fissi.  
   
- **Ricavi per singolo contatto**  
+ **Ricavi per singolo utente**  
  Consente di immettere il ricavo previsto per una vendita o l'acquisizione di un nuovo cliente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)  
   
   

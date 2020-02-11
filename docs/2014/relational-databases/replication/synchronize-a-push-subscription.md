@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745881"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizzazione di una sottoscrizione push
-  In questo argomento viene descritto come sincronizzare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](agents/replication-agents-overview.md)o RMO (Replication Management Objects).  
+  In questo argomento viene descritto come sincronizzare una sottoscrizione push [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
   
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione. Per altre informazioni sull'impostazione delle pianificazioni della sincronizzazione, vedere [Specificare le pianificazioni della sincronizzazione](specify-synchronization-schedules.md).  
   
  Una sottoscrizione può essere sincronizzata su richiesta dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e the **Tutte le sottoscrizioni** in Monitoraggio replica. Le sottoscrizioni a pubblicazioni Oracle non possono essere sincronizzate su richiesta dal Sottoscrittore. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "62745881"
   
 5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel Sottoscrittore)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62745881"
   
 5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>Per sincronizzare una sottoscrizione push su richiesta in Monitoraggio replica  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745881"
   
 4.  Per visualizzare lo stato della sincronizzazione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
-##  <a name="ReplProg"></a> Utilizzo degli agenti di replica  
+##  <a name="ReplProg"></a>Utilizzo degli agenti di replica  
  Le sottoscrizioni push possono essere sincronizzate a livello di programmazione e su richiesta richiamando il file eseguibile dell'agente di replica appropriato dal prompt dei comandi. Il file eseguibile dell'agente di replica richiamato dipenderà dal tipo di pubblicazione a cui appartiene la sottoscrizione push.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Per avviare l'agente di distribuzione per sincronizzare una sottoscrizione push di una pubblicazione transazionale  
   
 1.  Eseguire **distrib.exe**dal prompt dei comandi o in un file batch nel server di distribuzione. Specificare gli argomenti della riga di comando seguenti:  
   
-    -   **-Publisher**  
+    -   **-Editore**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-Database di distribuzione**  
   
-    -   **-Subscriber**  
+    -   **-Sottoscrittore**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745881"
   
 1.  Eseguire **replmerg.exe**dal prompt dei comandi o in un file batch nel server di distribuzione. Specificare gli argomenti della riga di comando seguenti:  
   
-    -   **-Publisher**  
+    -   **-Editore**  
   
     -   **-PublisherDB**  
   
-    -   **-Publication**  
+    -   **-Pubblicazione**  
   
-    -   **-Distributor**  
+    -   **-Database di distribuzione**  
   
-    -   **-Subscriber**  
+    -   **-Sottoscrittore**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745881"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Esempi (agenti di replica)  
+###  <a name="TsqlExample"></a>Esempi (agenti di replica)  
  Nell'esempio seguente viene avviato l'agente di distribuzione per sincronizzare una sottoscrizione push.  
   
  
@@ -271,7 +271,7 @@ REM -- The following command must be supplied without line breaks.
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di base relativi a RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Sincronizzare i dati](synchronize-data.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)  
   

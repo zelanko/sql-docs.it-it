@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710806"
 ---
 # <a name="run-queries-visual-database-tools"></a>Esecuzione di query (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "62710806"
   
 2.  Fare clic con il pulsante destro del mouse in un punto qualsiasi della finestra della query e scegliere **Esegui SQL** dal menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Premere CTRL+R.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62710806"
  Nel caso di una query di aggiornamento (Update), di accodamento (Insert From), di accodamento valori (Insert Into), di eliminazione (Delete) o di creazione tabella (Make Table), in Progettazione query e Progettazione viste verrà visualizzato un messaggio contenente il numero di righe interessate dalla query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare i dati nel riquadro dei risultati &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Utilizzare i dati nel riquadro risultati &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

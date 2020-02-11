@@ -1,5 +1,5 @@
 ---
-title: Dimensione traduzioni | Microsoft Docs
+title: Traduzioni delle dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728527"
 ---
 # <a name="dimension-translations"></a>Traduzioni delle dimensioni
@@ -29,7 +29,7 @@ ms.locfileid: "62728527"
   
  Un oggetto <xref:Microsoft.AnalysisServices.Translation> semplice è composto dal numero ID della lingua e dalla didascalia tradotta. Il numero ID della lingua è un valore `Integer` con l'ID della lingua. La didascalia tradotta è il testo tradotto.  
   
- Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], traduzione di una dimensione è una rappresentazione specifica del linguaggio del nome di una dimensione, il nome di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto o uno dei relativi membri, ad esempio una didascalia, membro o la gerarchia di livello. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta anche conversioni di oggetti del cubo.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una conversione della dimensione è una rappresentazione specifica della lingua del nome di una dimensione, del nome di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto o di uno dei relativi membri, ad esempio una didascalia, un membro o un livello di gerarchia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta inoltre le traduzioni di oggetti cubo.  
   
  Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. I cubi e le relative dimensioni spesso vengono visualizzati da utenti di paesi diversi. La possibilità di tradurre vari elementi di un cubo e le relative dimensioni in un'altra lingua consente a tali utenti di visualizzare e comprendere il cubo. Un utente aziendale in Francia, ad esempio, può accedere a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi e visualizzare i valori delle proprietà dell'oggetto in francese. Tuttavia, un utente aziendale in Germania che accede allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche visualizzerà gli stessi valori delle proprietà dell'oggetto in tedesco.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62728527"
   
 ## <a name="see-also"></a>Vedere anche  
  [Traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [Le traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
+ [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

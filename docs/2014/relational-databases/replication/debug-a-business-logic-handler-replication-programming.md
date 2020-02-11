@@ -1,5 +1,5 @@
 ---
-title: Eseguire il debug di un gestore della logica di Business | Microsoft Docs
+title: Eseguire il debug di un gestore della logica di business | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721501"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
@@ -33,9 +33,9 @@ ms.locfileid: "62721501"
   
 1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione della pubblicazione. Per altre informazioni, vedere [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md) e [Creare una pubblicazione](publish/create-a-publication.md).  
   
-2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Creare e registrare un gestore della logica di business. Per ulteriori informazioni, vedere [implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Creare un progetto RMO (Replication Management Objects) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio che avvia a livello di programmazione l'agente di merge in modo sincrono. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione pull](synchronize-a-pull-subscription.md).  
+3.  Creare un progetto RMO (Replication Management Objects) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio che avvia a livello di programmazione l'agente di merge in modo sincrono. Per altre informazioni, vedere [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 4.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721501"
   
 1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione pull della pubblicazione. La pubblicazione deve supportare la sincronizzazione Web o i Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Creare e registrare un gestore della logica di business. Per ulteriori informazioni, vedere [implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -82,6 +82,6 @@ ms.locfileid: "62721501"
 11. Presupponendo che non siano stati impostati altri punti di interruzione e che vengano replicati i comandi appropriati, l'esecuzione si arresta quando raggiunge il punto di interruzione nel gestore della logica di business.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementare un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementazione di un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

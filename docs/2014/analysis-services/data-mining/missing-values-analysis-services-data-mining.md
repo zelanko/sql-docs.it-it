@@ -1,5 +1,5 @@
 ---
-title: I valori mancanti (Analysis Services - Data Mining) | Microsoft Docs
+title: Valori mancanti (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083362"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
-  Una gestione corretta dei *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
+  Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definizione dei valori mancanti nel data mining  
  Un valore mancante può avere diversi significati. È possibile che il campo non fosse applicabile, che l'evento non si sia verificato o che i dati non fossero disponibili. Potrebbe essere accaduto che la persona che ha immesso i dati non conoscesse il valore corretto o non abbia verificato l'effettiva compilazione di un campo.  
@@ -48,7 +48,7 @@ ms.locfileid: "66083362"
   
  Ad esempio, nella tabella seguente è illustrata la distribuzione di valori per il nodo (Tutto) nel modello di albero delle decisioni creato per l'esercitazione Bike Buyer. Nello scenario di esempio la colonna [Bike Buyer] rappresenta l'attributo stimabile, dove 1 indica "Sì" e 0 indica "No".  
   
-|Value|Case|  
+|valore|Casi|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -64,7 +64,7 @@ ms.locfileid: "66083362"
 ## <a name="adjusting-probability-for-missing-states"></a>Adattamento della probabilità per gli stati mancanti  
  Oltre al conteggio dei valori, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito il calcolo della probabilità di qualsiasi valore nel set di dati. Lo stesso vale per il valore `Missing`. Nella tabella seguente sono, ad esempio, illustrate le probabilità per i case dell'esempio precedente:  
   
-|Value|Case|Probabilità|  
+|valore|Casi|Probabilità|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55%|  
 |1|9098|49,42%|  
@@ -108,13 +108,13 @@ ms.locfileid: "66083362"
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare i flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)|  
 |Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)|  
 |Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   
   

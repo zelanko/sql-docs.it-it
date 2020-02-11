@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727165"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserimento, aggiornamento ed eliminazione di membri (XMLA)
-  È possibile usare la [inserire](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [aggiornare](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), e [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per altre informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  È possibile utilizzare i comandi [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)e [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) in XML for Analysis (XMLA) rispettivamente per inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per altre informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)per la scrittura.  
   
 ## <a name="inserting-new-members"></a>Inserimento di nuovi membri  
  Il comando `Insert` consente di inserire nuovi membri in attributi specificati in una dimensione abilitata per la scrittura.  
@@ -46,9 +46,9 @@ ms.locfileid: "62727165"
   
  Il comando `Insert` accetta solo due proprietà:  
   
--   Il [oggetto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) proprietà, che contiene un riferimento all'oggetto per la dimensione in cui devono essere inseriti i membri. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
+-   Proprietà dell' [oggetto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) che contiene un riferimento all'oggetto per la dimensione in cui devono essere inseriti i membri. Il riferimento all'oggetto contiene l'identificatore di database, l'identificatore di cubo e l'identificatore di dimensione per la dimensione.  
   
--   Il [attributi](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) proprietà, che contiene uno o più [attributo](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) elementi per identificare gli attributi in cui devono essere inseriti i membri. Ogni elemento `Attribute` identifica un attributo e fornisce il nome, il valore, le conversioni, l'operatore unario, il rollup personalizzato e le relative proprietà e i livelli ignorati per un singolo membro da aggiungere all'attributo identificato.  
+-   Proprietà [Attributes](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) che contiene uno o più elementi [attribute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) per identificare gli attributi in cui devono essere inseriti i membri. Ogni elemento `Attribute` identifica un attributo e fornisce il nome, il valore, le conversioni, l'operatore unario, il rollup personalizzato e le relative proprietà e i livelli ignorati per un singolo membro da aggiungere all'attributo identificato.  
   
     > [!NOTE]  
     >  Tutte le proprietà per l'elemento `Attribute` devono essere incluse. In caso contrario, è possibile che si verifichi un errore.  
@@ -75,13 +75,13 @@ ms.locfileid: "62727165"
     > [!NOTE]  
     >  Tutte le proprietà per l'elemento `Attribute` devono essere incluse. In caso contrario, è possibile che si verifichi un errore.  
   
--   Il [in cui](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) proprietà, che contiene uno o più `Attribute` gli elementi che vincolano gli attributi in cui devono essere aggiornati i membri. La proprietà `Where` è di importanza fondamentale per limitare l'esecuzione di un comando `Update` su istanze specifiche di un membro. Se il `Where` proprietà non è specificata, vengono aggiornate tutte le istanze di un membro specifico. Si supponga ad esempio che siano presenti tre clienti per cui si desidera modificare il nome di città da Redmond in Bellevue. Per modificare il nome di città, è necessario specificare una proprietà `Where` che identifichi i tre membri dell'attributo Customer per cui è necessario modificare i membri dell'attributo City. Se non si specifica la proprietà `Where`, dopo l'esecuzione del comando `Update` a ogni cliente il cui nome di città è attualmente Redmond risulterebbe associato il nome di città Bellevue.  
+-   Proprietà [where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) , che contiene uno o più `Attribute` elementi che vincolano gli attributi in cui devono essere aggiornati i membri. La proprietà `Where` è di importanza fondamentale per limitare l'esecuzione di un comando `Update` su istanze specifiche di un membro. Se la `Where` proprietà non è specificata, vengono aggiornate tutte le istanze di un determinato membro. Si supponga ad esempio che siano presenti tre clienti per cui si desidera modificare il nome di città da Redmond in Bellevue. Per modificare il nome di città, è necessario specificare una proprietà `Where` che identifichi i tre membri dell'attributo Customer per cui è necessario modificare i membri dell'attributo City. Se non si specifica la proprietà `Where`, dopo l'esecuzione del comando `Update` a ogni cliente il cui nome di città è attualmente Redmond risulterebbe associato il nome di città Bellevue.  
   
     > [!NOTE]  
     >  Ad eccezione dei nuovi membri, il comando `Update` consente di aggiornare solo i valori di chiave dell'attributo per attributi non inclusi nella clausola `Where`. Quando ad esempio viene aggiornato un cliente, il relativo nome di città non può essere aggiornato. In caso contrario, il nome di città viene modificato per tutti i clienti.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Aggiornamento di membri in attributi padre  
- Per supportare gli attributi padre, il `Update` comando facoltativo [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)utilizza le proprietà. L'impostazione della proprietà `MoveWithDescendants` su true indica che lo spostamento del membro padre comporta lo spostamento dei relativi discendenti quando l'identificatore di tale membro padre viene modificato. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
+ Per supportare gli attributi padre, `Update` il comando facoltativo [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants proprietà. L'impostazione della proprietà `MoveWithDescendants` su true indica che lo spostamento del membro padre comporta lo spostamento dei relativi discendenti quando l'identificatore di tale membro padre viene modificato. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
   
  Durante l'aggiornamento dei membri di un attributo padre, il comando `Update` non può aggiornare membri di altri attributi.  
   
@@ -104,16 +104,16 @@ ms.locfileid: "62727165"
     >  Gli elementi `Attribute` inclusi in un comando `Drop` devono contenere solo le proprietà `AttributeName` e `Keys`. In caso contrario, è possibile che si verifichi un errore.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Eliminazione di membri in attributi padre  
- Impostando il [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) proprietà indica che i discendenti del membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
+ L'impostazione della proprietà [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) indica che i discendenti di un membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
   
 > [!IMPORTANT]  
 >  Per eliminare sia il membro padre che i relativi discendenti, è sufficiente che un utente disponga delle autorizzazioni per l'eliminazione del solo membro padre e non è necessario che disponga delle autorizzazioni per l'eliminazione dei discendenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento DROP &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
- [Inserire l'elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
- [Aggiornare l'elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
- [Definizione e identificazione di oggetti &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
+ [Elemento Drop &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [Elemento Insert &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Elemento Update &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Definizione e identificazione di oggetti &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Microsoft Docs
+title: Riferimento tecnico per l'algoritmo Microsoft Neural Network | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083856"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
@@ -88,13 +88,13 @@ ms.locfileid: "66083856"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Neural Network|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Valore predefinito.|  
-|Logistic Regression|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché non è possibile passare un parametro a questo algoritmo per controllare il comportamento della caratteristica di selezione degli attributi, vengono utilizzate le impostazioni predefinite. Se pertanto tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.|  
+|Neural Network|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Default.|  
+|Logistic Regression|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché non è possibile passare un parametro a questo algoritmo per controllare il comportamento della caratteristica di selezione degli attributi, vengono utilizzate le impostazioni predefinite. Se pertanto tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.|  
   
  I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di rete neurale sono MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES e MAXIMUM_STATES. È inoltre possibile controllare il numero di livelli nascosti impostando il parametro HIDDEN_NODE_RATIO.  
   
 ### <a name="scoring-methods"></a>Metodi di valutazione  
- La*valutazione* è una sorta di normalizzazione che, nel contesto del training di un modello di rete neurale, indica il processo di conversione di un valore, ad esempio un'etichetta di testo discreta, in un valore che può essere confrontato con altri tipi di input e ponderato nella rete. Se ad esempio un attributo di input è Gender e i valori possibili sono Male e Female, mentre un altro attributo di input è Income, con un intervallo variabile di valori, i valori per ogni attributo non sono direttamente confrontabili e pertanto devono essere codificati in una scala comune in modo da consentirne il calcolo del peso. La valutazione è il processo in base al quale tali input vengono normalizzati in valori numerici, nello specifico in un intervallo di probabilità. Le funzioni utilizzate per la normalizzazione consentono inoltre di distribuire in modo più uniforme il valore di input in modo che valori estremi non alterino i risultati dell'analisi.  
+ Il *Punteggio* è un tipo di normalizzazione che, nel contesto del training di un modello di rete neurale, indica il processo di conversione di un valore, ad esempio un'etichetta di testo discreta, in un valore che può essere confrontato con altri tipi di input e ponderato nella rete. Se ad esempio un attributo di input è Gender e i valori possibili sono Male e Female, mentre un altro attributo di input è Income, con un intervallo variabile di valori, i valori per ogni attributo non sono direttamente confrontabili e pertanto devono essere codificati in una scala comune in modo da consentirne il calcolo del peso. La valutazione è il processo in base al quale tali input vengono normalizzati in valori numerici, nello specifico in un intervallo di probabilità. Le funzioni utilizzate per la normalizzazione consentono inoltre di distribuire in modo più uniforme il valore di input in modo che valori estremi non alterino i risultati dell'analisi.  
   
  Vengono inoltre codificati gli output della rete neurale. Quando per l'output è disponibile una sola destinazione (ovvero la stima) oppure più destinazioni utilizzate esclusivamente per la stima e non per l'input, il modello crea una sola rete e la normalizzazione dei valori potrebbe sembrare non necessaria. Se tuttavia per l'input e la stima vengono utilizzati più attributi, il modello deve creare più reti, pertanto tutti i valori devono essere normalizzati e anche gli output devono essere codificati quando escono dalla rete.  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66083856"
   
  **Valori discreti**  
   
- Μg = p: probabilità precedente di uno stato  
+ μ = p: probabilità precedente di uno stato  
   
- StdDev  = sqrt(p(1-p))  
+ StdDev = sqrt (p (1-p))  
   
  **Valori continui**  
   
- Value present= 1 - μ/σ  
+ Valore presente = 1-μ/σ  
   
- No existing value= -μ/σ  
+ Nessun valore esistente =-μ/σ  
   
  Dopo che i valori sono stati codificati, gli input vengono sottoposti alla somma ponderata, in cui i pesi sono rappresentati dai bordi delle reti.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66083856"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente.  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized e Ordered|  
@@ -202,7 +202,7 @@ ms.locfileid: "66083856"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)  
   
   

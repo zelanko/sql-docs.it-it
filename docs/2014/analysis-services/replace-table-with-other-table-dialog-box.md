@@ -1,5 +1,5 @@
 ---
-title: Sostituisci tabella con un'altra finestra di dialogo tabella | Microsoft Docs
+title: Finestra di dialogo Sostituisci tabella con un'altra tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070264"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Finestra di dialogo Sostituisci tabella con un'altra tabella
@@ -34,11 +34,11 @@ ms.locfileid: "66070264"
  **Filter**  
  Digitare il filtro usato per limitare la visualizzazione degli oggetti elencati in **Griglia**, quindi fare clic sul pulsante per filtrare le tabelle elencate.  
   
- **Mostra oggetti di sistema**  
+ **Show system objects**  
  Selezionare questa opzione per visualizzare gli oggetti di sistema per l'origine dei dati selezionata in **Griglia**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Progettazione vista origine dati &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   
