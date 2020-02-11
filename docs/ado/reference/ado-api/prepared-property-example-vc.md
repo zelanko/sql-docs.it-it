@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà (VC + +) preparato | Microsoft Docs
+title: Esempio di proprietà preparata (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917580"
 ---
 # <a name="prepared-property-example-vc"></a>Esempio della proprietà Prepared (VC++)
-Questo esempio viene illustrato il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà aprendo due [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti - una preparazione e l'altra non preparato.  
+In questo esempio viene illustrata la proprietà [preparata](../../../ado/reference/ado-api/prepared-property-ado.md) aprendo due oggetti [comando](../../../ado/reference/ado-api/command-object-ado.md) , uno preparato e uno non preparato.  
   
 ## <a name="example"></a>Esempio  
   
@@ -141,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Risultati delle prestazioni:**  
-**Non è preparata:  0.016 secondi**  
-**Preparazione:      0.016 secondi**   
+**Non preparato: 0,016 secondi**  
+**Preparati: 0,016 secondi**   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Esempio di proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
