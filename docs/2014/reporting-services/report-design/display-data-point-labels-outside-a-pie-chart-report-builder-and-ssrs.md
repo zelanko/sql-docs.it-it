@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106052"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Visualizzazione delle etichette dei punti dati al di fuori di un grafico a torta (Generatore report e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106052"
   
 5.  Impostare la proprietà **PieLabelStyle** su **Outside**.  
   
-6.  Impostare il `PieLineColor` proprietà **nero**. La proprietà PieLineColor definisce le righe di callout per ogni etichetta di punti dati.  
+6.  Impostare la `PieLineColor` proprietà su **nero**. La proprietà PieLineColor definisce le righe di callout per ogni etichetta di punti dati.  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>Per impedire la sovrapposizione delle etichette visualizzate all'esterno di un grafico a torta  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66106052"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici a torta &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Raccogliere piccole sezioni in un grafico a torta &#40;Generatore report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Visualizzazione di valori percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

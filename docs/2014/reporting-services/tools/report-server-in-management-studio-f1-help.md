@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100081"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Guida sensibile al contesto del server di report in Management Studio
   In questa sezione sono inclusi gli argomenti relativi alle finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che è possibile utilizzare per gestire i server di report.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Annulla processi server di report](cancel-report-server-jobs-management-studio.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66100081"
 -   [Proprietà ruolo utente](user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento della funzionalità (Reporting Services)](../feature-reference-reporting-services.md)   
+ [Guida di riferimento alle funzionalità (Reporting Services)](../feature-reference-reporting-services.md)   
  [Introduzione a SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

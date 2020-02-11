@@ -1,5 +1,5 @@
 ---
-title: Modificare le applicazioni per prevedere valori bigint da sysperfinfo. cntr_value | Microsoft Docs
+title: Modificare le applicazioni in modo da prevedere valori bigint da sysperfinfo. cntr_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093951"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modificare le applicazioni in modo da prevedere valori bigint da sysperfinfo.cntr_value
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Modificare le applicazioni in modo da prevedere valori bigint da sysperfinfo.cntr_value
   sysperfinfo restituisce un `bigint` valore per la colonna cntr_value.  
   
 ## <a name="component"></a>Componente  
@@ -30,10 +30,10 @@ ms.locfileid: "66093951"
  Modificare le applicazioni che utilizzano sysperfinfo per assicurarsi che siano in grado di gestire i valori `bigint` della colonna cntr_value.  
   
 > [!NOTE]  
->  sysperfinfo è una vista di compatibilità. È consigliabile utilizzare la vista a gestione dinamica sys.dm_os_performance_counter.  
+>  sysperfinfo è una vista di compatibilità. Utilizzare invece la vista a gestione dinamica sys. dm_os_performance_counter.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

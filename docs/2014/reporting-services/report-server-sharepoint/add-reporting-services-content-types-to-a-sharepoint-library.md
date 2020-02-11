@@ -1,5 +1,5 @@
 ---
-title: Aggiungere la Web Part Visualizzatore Report a una pagina Web (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
+title: Aggiungere la Web part Visualizzatore report a una pagina Web (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104285"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere la web part Visualizzatore report a una pagina Web (Reporting Services in modalità integrata SharePoint)
@@ -38,15 +38,15 @@ ms.locfileid: "66104285"
   
 2.  Nella pagina **Azioni sito**fare clic su **Modifica pagina**.  
   
-3.  Fare clic su **Aggiungi web part**.  
+3.  Fare clic su **Aggiungi Web part**.  
   
 4.  Nell'elenco delle categorie di web part selezionare la categoria **Varie** e quindi selezionare **Visualizzatore report di SQL Server Reporting Services**.  
   
-5.  Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area. È possibile trascinarla in una posizione diversa all'interno dell'area.  
+5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area. È possibile trascinarla in una posizione diversa all'interno dell'area.  
   
 6.  Nel visualizzatore fare clic su **Fare clic qui per aprire il riquadro Strumenti**.  
   
-7.  Fare clic sul pulsante per la ricerca ( **...** ) e selezionare un report da una raccolta della raccolta siti corrente. In alternativa è possibile digitare l'URL del report. Per determinare l'URL di un report, fare clic con il pulsante destro del mouse sul report e scegliere **Proprietà**. Non fare clic sulla freccia verso il basso visualizzata accanto al report. L'URL del report non è indicato nella pagina Visualizza proprietà dell'elemento. Se si copia e si incolla l'URL dalla finestra di dialogo **Proprietà** , sostituire con uno spazio tutte le occorrenze del codice "%20" presenti nell'URL. Ad esempio, modificare "Vendite%20azienda" in "Vendite azienda".  
+7.  Fare clic sul pulsante per la ricerca (**...**) e selezionare un report da una raccolta della raccolta siti corrente. In alternativa è possibile digitare l'URL del report. Per determinare l'URL di un report, fare clic con il pulsante destro del mouse sul report e scegliere **Proprietà**. Non fare clic sulla freccia verso il basso visualizzata accanto al report. L'URL del report non è indicato nella pagina Visualizza proprietà dell'elemento. Se si copia e si incolla l'URL dalla finestra di dialogo **Proprietà** , sostituire con uno spazio tutte le occorrenze del codice "%20" presenti nell'URL. Ad esempio, modificare "Vendite%20azienda" in "Vendite azienda".  
   
     > [!NOTE]  
     >  Ogni web part Visualizzatore report può contenere un solo report. L'URL deve essere costituito dal percorso completo di un report presente nel sito di SharePoint corrente oppure in un sito disponibile nella stessa farm o applicazione Web. L'URL deve corrispondere a una raccolta documenti o a una cartella all'interno della raccolta documenti che contiene il report e deve includere l'estensione rdl del file. Se il report dipende da un file modello o di origine dati condivisa, non sarà necessario specificare tali file nell'URL, perché il report contiene riferimenti a tutti i file necessari.  
@@ -57,8 +57,8 @@ ms.locfileid: "66104285"
   
 ## <a name="see-also"></a>Vedere anche  
  [Web part Visualizzatore report in un sito di SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [Personalizzare la web part Visualizzatore report](../customize-the-report-viewer-web-part.md)   
+ [Personalizzare la Web part Visualizzatore report](../customize-the-report-viewer-web-part.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

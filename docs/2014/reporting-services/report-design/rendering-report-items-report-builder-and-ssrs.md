@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105347"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering degli elementi del report (Generatore report e SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105347"
   
      Le intestazioni hanno la precedenza rispetto ai piè di pagina. I gruppi ripetuti interni hanno la priorità rispetto ai gruppi esterni. Gli elementi con la proprietà `RepeatWith` impostata che si trovano più vicino all'area dati di destinazione hanno la priorità rispetto agli elementi che si trovano a una distanza maggiore.  
   
--   Elementi di report di piccole dimensioni, ad esempio caselle di testo o rettangoli, con la proprietà KeepTogether esplicita impostata su `true`.  
+-   Elementi del report di piccole dimensioni, ad esempio caselle di testo o rettangoli, con una proprietà `true`KeepTogether esplicita impostata su.  
   
--   Elementi di report di grandi dimensioni, ad esempio sottoreport o un membro tablix non più interno, con la proprietà KeepTogether esplicita impostata su `true`.  
+-   Elementi del report di grandi dimensioni, ad esempio sottoreport o un membro Tablix non più interno, con una proprietà KeepTogether esplicita impostata su `true`.  
   
--   Aree dati Tablix con la proprietà KeepTogether esplicita impostata su `true`.  
+-   Aree dati Tablix con una proprietà KeepTogether esplicita impostata `true`su.  
   
 ### <a name="subreports"></a>Sottoreport  
  Un sottoreport viene visualizzato come un rettangolo che contiene un altro report definito in un file rdl di report separato. Il file del sottoreport deve essere pubblicato in un server di report prima che il report padre possa accedervi.  

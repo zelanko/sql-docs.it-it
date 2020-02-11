@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105272"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Funzione First (Generatore report e SSRS)
@@ -40,7 +40,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione `First` restituisce il primo valore di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
  La funzione `First` non può essere utilizzata nelle espressioni di filtro di gruppo con altri ambiti ad eccezione dell'ambito corrente (predefinito).  
@@ -55,7 +55,7 @@ First(expression, scope)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Espressione* non deve contenere `First`, `Last`, `Previous`, o `RunningValue` funzioni.  
+-   L' *espressione* non deve `First`contenere `Last`funzioni `Previous`,, `RunningValue` o.  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   

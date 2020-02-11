@@ -1,5 +1,5 @@
 ---
-title: Guida di creazione guidata report | Microsoft Docs
+title: Guida della creazione guidata report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102985"
 ---
 # <a name="report-wizard-help"></a>Guida della Creazione guidata report
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Creazione guidata report. La Creazione guidata report consente di automatizzare il processo di creazione di report tabella e di report matrice. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
- Per aprire la creazione guidata Report, scegliere il **Project** menu, fare clic su **Aggiungi nuovo elemento**.  
+ Per aprire la creazione guidata report, scegliere **Aggiungi nuovo elemento**dal menu **progetto** .  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Creazione guidata report](../../2014/reporting-services/welcome-to-the-report-wizard.md)  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66102985"
   
 -   [Progettazione query](../../2014/reporting-services/design-the-query.md)  
   
--   [Generatore di query &#40;Creazione guidata Report&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [&#41;creazione guidata report &#40;Generatore di query](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [Selezione tipo di report](../../2014/reporting-services/select-the-report-type.md)  
   
--   [Progettare la tabella &#40;Creazione guidata Report&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [Progettazione della creazione guidata report &#40;tabella&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [Scelta layout tabella](../../2014/reporting-services/choose-the-table-layout.md)  
   

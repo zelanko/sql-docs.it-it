@@ -18,21 +18,21 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045934"
 ---
-# <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
+# <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verifica che un database sia configurato correttamente per la distribuzione su supporti rimovibili e segnala eventuali problemi.  
   
-> **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
+> **IMPORTANTE** [! In alternativa, includere[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,14 +43,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` Specifica il database da verificare. *dbname* viene **sysname**.  
+`[ @dbname = ] 'dbname'`Specifica il database da verificare. *dbname* è di **tipo sysname**.  
   
-`[ @autofix = ] 'auto'` Assegna la proprietà del database e tutti gli oggetti di database per l'amministratore di sistema e vengono eliminati tutti gli utenti del database creato dall'utente e le autorizzazioni non predefinite. *Auto* viene **nvarchar(4)** , con un valore predefinito è NULL.  
+`[ @autofix = ] 'auto'`Assegna la proprietà del database e di tutti gli oggetti di database all'amministratore di sistema ed elimina eventuali utenti del database creati dall'utente e le autorizzazioni non predefinite. *auto* è di **tipo nvarchar (4)** e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il database è configurato correttamente, **sp_certify_removable** esegue le operazioni seguenti:  
   
 -   Imposta il database offline per consentire la copia dei file.  
@@ -59,9 +59,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Contrassegna i filegroup di dati come filegroup di sola lettura per consentire la copia dei file su supporti di sola lettura.  
   
- L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto presente in tutti i server che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere necessario che esista quando il database viene distribuito e installato in un secondo momento.  
+ L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto presente in tutti i server in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione e può prevedere l'esistenza quando il database viene distribuito e installato in un secondo momento.  
   
- Se si esegue **sp_certify_removable** senza il **automatico** valore e restituisce informazioni su una delle condizioni seguenti:  
+ Se si esegue **sp_certify_removable** senza il valore **auto** e vengono restituite informazioni su una delle condizioni seguenti:  
   
 -   L'amministratore di sistema non è il proprietario del database.  
   
@@ -73,14 +73,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  È possibile correggere queste condizioni come indicato di seguito:  
   
--   Uso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli strumenti e le procedure e quindi eseguire **sp_certify_removable** nuovamente.  
+-   Utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti e procedure, quindi eseguire di nuovo **sp_certify_removable** .  
   
--   Eseguire semplicemente **sp_certify_removable** con il **automatico** valore.  
+-   È sufficiente eseguire **sp_certify_removable** con il valore **auto** .  
   
  Si noti che questa stored procedure controlla solo gli utenti e le autorizzazioni degli utenti. È consentito aggiungere gruppi al database e concedere autorizzazioni a tali gruppi. Per altre informazioni, vedere [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Eseguire le autorizzazioni sono limitate ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni Execute sono limitate ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene confermato che il database `inventory` è pronto per la rimozione.  
@@ -91,9 +91,9 @@ EXEC sp_certify_removable inventory, AUTO;
   
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [sp_create_removable &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

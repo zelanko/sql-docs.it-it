@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098271"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>Metodo ListReservedURLs (MSReportServer_ConfigurationSetting WMI)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>Metodo ListReservedURLs (MSReportServer_ConfigurationSetting WMI)
   Elenca gli URL riservati per tutte le applicazioni presenti nel server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,19 +37,19 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *Application[]*  
+ *Applicazione []*  
  [out] Applicazioni che dispongono di prenotazioni URL.  
   
- *UrlString[]*  
+ *UrlString []*  
  [out] URL riservati.  
   
- *Account[]*  
+ *Account []*  
  [out] Nomi account associati all'account per le prenotazioni URL.  
   
- *AccountSID[]*  
+ *AccountSID []*  
  [out] SID di account associati all'account per le prenotazioni URL.  
   
- *Lunghezza*  
+ *Length*  
  [out] Lunghezza delle matrici restituite dal metodo.  
   
  *HRESULT*  
@@ -58,10 +58,10 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

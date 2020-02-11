@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd6b3cc87757a8d0edc9067bd2f8f0911ccef238
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100472"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   Per aggiungere un nuovo report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile utilizzare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
   
 > [!NOTE]  
->  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per altre informazioni, vedere [creare un'origine dati condivisa o un Embedded &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
+>  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un'origine dati incorporata o condivisa &#40;&#41;SSRS ](../create-an-embedded-or-shared-data-source-ssrs.md).  
   
  Dopo l'aggiunta di un report, è possibile definire origini dati e set di dati, nonché progettarne il layout. Per iniziare, vedere [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md) o [Tabelle &#40;Generatore report e SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md).  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66100472"
   
     -   **Selezione tipo di report.** Nel terzo passaggio si seleziona il tipo di report desiderato. È possibile selezionare un report tabulare o matrice. Un report tabella include un numero fisso di colonne. Un report matrice, o a campi incrociati, include un numero variabile di colonne in base ai risultati della query. In un report mappa i dati analitici vengono visualizzati su uno sfondo geografico.  
   
-    -   **Scegliere uno stile.** In questo passaggio si applica uno stile al report tramite un modello di stili. Selezionare un modello per applicare stili di carattere, colore e bordo al report. Progettazione report sono disponibili sei modelli di stile: Ardesia, foresta, azienda, grassetto, Oceano e generico. È inoltre possibile aggiungere ulteriori modelli di stili.  
+    -   **Scegliere uno stile.** In questo passaggio si applica uno stile al report tramite un modello di stili. Selezionare un modello per applicare stili di carattere, colore e bordo al report. In Progettazione report sono disponibili sei modelli di stile: Ardesia, Foresta, Aziendale, Grassetto, Oceano e Generico. È inoltre possibile aggiungere ulteriori modelli di stili.  
   
         > [!NOTE]  
-        >  È possibile modificare i modelli esistenti o aggiungerne di nuovi modificando il file StyleTemplates XML in \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>cartella, dove \<lang > è il linguaggio in uso (ad esempio, se si usa la versione in lingua inglese di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il nome della cartella è "EN"). Questa cartella è disponibile nel computer in cui è installato Progettazione report. Sono disponibili due copie del file StyleTemplates.xml. Per modificare gli stili applicati tramite Creazione guidata report, modificare il file nella cartella creata per la lingua in uso.  
+        >  È possibile modificare i modelli esistenti o aggiungerne di nuovi modificando il file StyleTemplates. XML nella cartella \Programmi\microsoft Visual Studio 10.0 \ Common7\IDE\PrivateAssemblies\Business Intelligence\\ Wizards\Reports\Styles<\> lang, dove \<lang> è il linguaggio in uso (ad esempio, se si usa la versione in lingua inglese di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il nome della cartella è "en"). Questa cartella è disponibile nel computer in cui è installato Progettazione report. Sono disponibili due copie del file StyleTemplates.xml. Per modificare gli stili applicati tramite Creazione guidata report, modificare il file nella cartella creata per la lingua in uso.  
   
     -   **Assegnazione di un nome al report.**  Nell'ultimo passaggio della procedura guidata si assegna un nome al report e si verificano i campi che verranno inclusi nel report. Dopo il completamento di tutti i passaggi il report viene creato automaticamente e aggiunto al progetto server di report.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "66100472"
   
 2.  In **Modelli**fare clic su **Report**.  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   
      Un nuovo report vuoto verrà aggiunto al progetto e visualizzato nell'area di progettazione.  
   
 ### <a name="to-add-an-existing-report"></a>Per aggiungere un report esistente  
   
-1.  Dal **Project** menu, fare clic su **Add**e quindi **elemento esistente**.  
+1.  Scegliere **Aggiungi**dal menu **progetto** , quindi **elemento esistente**.  
   
 2.  Passare al percorso del file con estensione rdl, selezionarlo, quindi fare clic su **Aggiungi**.  
   

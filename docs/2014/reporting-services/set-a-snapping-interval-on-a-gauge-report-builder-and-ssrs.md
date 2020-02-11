@@ -1,5 +1,5 @@
 ---
-title: Impostare un intervallo di blocco su un misuratore (Generatore Report e SSRS) | Microsoft Docs
+title: Impostare un intervallo di blocco su un misuratore (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101370"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Impostazione di un intervallo di blocco su un misuratore (Generatore report e SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66101370"
 2.  Aprire il riquadro Proprietà.  
   
     > [!NOTE]  
-    >  Se non è possibile visualizzare il riquadro proprietà, fare clic sui **View** scheda e quindi selezionare la **proprietà** casella di controllo.  
+    >  Se il riquadro proprietà non è visualizzato, fare clic sulla scheda **Visualizza** , quindi selezionare la casella di controllo **Proprietà** .  
   
-3.  Nel **puntatori** proprietà, fare clic sul pulsante (...). Verrà aperto l'editor di raccolta indicatori di misura.  
+3.  Nella proprietà **puntatori** fare clic sul pulsante (...). Verrà aperto l'editor di raccolta indicatori di misura.  
   
-4.  Impostare il **SnappingEnabled** proprietà `True`.  
+4.  Impostare la proprietà **SnappingEnabled** su `True`.  
   
-5.  Impostare il **SnappingInterval** su un valore che rappresenta l'intervallo di blocco. L'indicatore di misura verrà bloccato sul multiplo di arrotondamento più vicino al valore specificato.  
+5.  Impostare **SnappingInterval** su un valore che rappresenta l'intervallo di blocco. L'indicatore di misura verrà bloccato sul multiplo di arrotondamento più vicino al valore specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

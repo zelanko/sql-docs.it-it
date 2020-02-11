@@ -1,5 +1,5 @@
 ---
-title: '* (Crossjoin) (MDX) | Microsoft Docs'
+title: '* Crossjoin (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047145"
 ---
-# <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - riferimento agli operatori MDX
+# <a name="crossjoin----mdx-operator-reference"></a>Guida di riferimento agli operatori MDX Crossjoin
 
 
   Esegue un'operazione sui set che restituisce il prodotto incrociato di due set.  
@@ -34,8 +34,8 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valore restituito  
  Set che contiene il prodotto incrociato di entrambi i parametri specificati.  
   
-## <a name="remarks"></a>Note  
- Il  **\* (Crossjoin)** è funzionalmente equivalente all'operatore il [Crossjoin](../mdx/crossjoin-mdx.md) (funzione).  
+## <a name="remarks"></a>Osservazioni  
+ L' ** \* operatore (Crossjoin)** è funzionalmente equivalente alla funzione [Crossjoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  
@@ -54,6 +54,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

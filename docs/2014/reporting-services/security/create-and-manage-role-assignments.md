@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102002"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
@@ -41,7 +41,7 @@ ms.locfileid: "66102002"
   
  Per creare un'assegnazione di ruolo, è necessario appartenere al gruppo locale Administrators nel server di report. È possibile delegare tale compito assegnando altri utenti al ruolo **Gestione contenuto** .  
   
- Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
+ Per ulteriori informazioni, vedere [concedere l'accesso utente a un server di Report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Creazione di un'assegnazione di ruolo a livello di sistema  
  Per creare o gestire un'assegnazione di ruolo a livello di sistema, utilizzare Gestione report e aprire la pagina Impostazioni sito.  

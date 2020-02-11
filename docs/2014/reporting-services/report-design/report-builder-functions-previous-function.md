@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105195"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Funzione Previous (Generatore report e SSRS)
@@ -35,26 +35,26 @@ Previous(expression, scope)
  (`Variant` o `Binary`) Espressione da utilizzare per identificare i dati e per cui recuperare il valore precedente, ad esempio `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
   
  *ambito*  
- (`String`) Facoltativo. Il nome di un gruppo o area dati o null (`Nothing` nelle [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), che specifica l'ambito da cui recuperare il valore precedente specificato da *espressione*.  
+ (`String`) Facoltativo. Nome di un gruppo o di un'area dati oppure null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) che specifica l'ambito da cui recuperare il valore precedente specificato da *Expression*.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore `Variant` o `Binary`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione `Previous` restituisce il valore precedente per l'espressione valutata nell'ambito specificato dopo l'applicazione di tutti i criteri di ordinamento e di filtro.  
   
- Se *espressione* non contiene un'aggregazione, il `Previous` funzionare il valore predefinito è l'ambito corrente per l'elemento del report.  
+ Se l' *espressione* non contiene un'aggregazione, `Previous` per impostazione predefinita la funzione viene impostata sull'ambito corrente per l'elemento del report.  
   
  In un gruppo di dettagli utilizzare `Previous` per specificare il valore di un riferimento di campo nell'istanza precedente della riga di dettaglio.  
   
 > [!NOTE]  
->  Il `Previous` funzione supporta solo riferimenti a campi nel gruppo di dettagli. Ad esempio, per una casella di testo nel gruppo di dettagli, tramite `=Previous(Fields!Quantity.Value)` vengono restituiti i dati per il campo `Quantity` dalla riga precedente. Nella prima riga tramite questa espressione viene restituito un valore Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
+>  La `Previous` funzione supporta solo i riferimenti ai campi nel gruppo dettagli. Ad esempio, per una casella di testo nel gruppo di dettagli, tramite `=Previous(Fields!Quantity.Value)` vengono restituiti i dati per il campo `Quantity` dalla riga precedente. Nella prima riga tramite questa espressione viene restituito un valore Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
   
- Se *espressione* contiene una funzione di aggregazione che usa un ambito predefinito, `Previous` aggregare i dati nell'istanza precedente dell'ambito specificato nell'aggregazione chiamata di funzione.  
+ Se *Expression* contiene una funzione di aggregazione che usa un ambito `Previous` predefinito, aggrega i dati all'interno dell'istanza precedente dell'ambito specificato nella chiamata di funzione di aggregazione.  
   
- Se *espressione* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito, il *ambito* parametro per il `Previous` funzione deve essere un ambito contenitore per l'ambito specificato la chiamata di funzione di aggregazione.  
+ Se *Expression* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito ** , il parametro scope `Previous` per la funzione deve essere un ambito contenitore per l'ambito specificato nella chiamata di funzione di aggregazione.  
   
- Le funzioni `Level`, `InScope`, `Aggregate` e `Previous` non può essere utilizzato nel *espressione*parametro. Non è possibile specificare il parametro *recursive* per una funzione di aggregazione.  
+ Le funzioni `Level`, `InScope` `Aggregate` e `Previous` non possono essere usate nel parametro *Expression*. Non è possibile specificare il parametro *recursive* per una funzione di aggregazione.  
   
  Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

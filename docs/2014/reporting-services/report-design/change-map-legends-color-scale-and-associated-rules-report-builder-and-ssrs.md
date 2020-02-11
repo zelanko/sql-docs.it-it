@@ -1,5 +1,5 @@
 ---
-title: Modificare legende della mappa, scala dei colori e regole (Generatore Report e SSRS) associate | Microsoft Docs
+title: Modificare legende della mappa, scala di colori e regole associate (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106360"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
@@ -45,22 +45,22 @@ ms.locfileid: "66106360"
   
  Le legende includono le parti seguenti di una mappa:  
   
--   **Legenda mappa** Visualizza una guida che agevola l'interpretazione dei dati analitici che variano la visualizzazione degli elementi di una mappa su un livello mappa. Una mappa può presentare più legende. Per ogni livello mappa, specificare quale legenda utilizzare. Una legenda può fornire una guida a più di un livello mappa.  
+-   **Legenda mappa** Visualizza una guida che consente di interpretare i dati analitici che variano la visualizzazione degli elementi di una mappa su un livello mappa. Una mappa può presentare più legende. Per ogni livello mappa, specificare quale legenda utilizzare. Una legenda può fornire una guida a più di un livello mappa.  
   
--   **Scala dei colori** Visualizza una guida che agevola l'interpretazione dei colori sulla mappa. Una mappa dispone di una scala dei colori. Più livelli possono fornire i dati per la scala dei colori.  
+-   **Scala colori** Visualizza una guida che consente di interpretare i colori sulla mappa. Una mappa dispone di una scala dei colori. Più livelli possono fornire i dati per la scala dei colori.  
   
--   **Scala distanza** Visualizza una guida che agevola l'interpretazione della scala della mappa. Una mappa dispone di una scala distanza. Il valore di zoom corrente del viewport mappa determina la scala distanza.  
+-   **Scala distanza** Visualizza una guida che consente di interpretare la scala della mappa. Una mappa dispone di una scala distanza. Il valore di zoom corrente del viewport mappa determina la scala distanza.  
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Viewport"></a> Per modificare la posizione di una legenda rispetto al viewport  
+##  <a name="Viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
-1.  Nella visualizzazione Progettazione fare doppio clic la legenda e aprire il  _\<elemento report ->_ **proprietà** pagina.  
+1.  Nella visualizzazione della struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina delle **proprietà** _ \<>elemento del report _.  
   
 2.  In **Posizione**fare clic sulla posizione che specifica il punto in cui visualizzare la legenda rispetto al viewport.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="MapLegend"></a> Per modificare il layout della legenda di una mappa  
+##  <a name="MapLegend"></a>Per modificare il layout della legenda di una mappa  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>Per modificare il layout della legenda di una mappa  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="MapLegendTitle"></a> Per mostrare o nascondere il titolo della legenda di una mappa  
+##  <a name="MapLegendTitle"></a>Per visualizzare o nascondere il titolo della legenda di una mappa  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>Per mostrare o nascondere il titolo della legenda di una mappa  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="ColorScaleTitle"></a> Per mostrare o nascondere il titolo della scala dei colori  
+##  <a name="ColorScaleTitle"></a>Per mostrare o nascondere il titolo della scala dei colori  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>Per mostrare o nascondere il titolo della scala dei colori  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="MoveItems"></a> Per spostare elementi all'esterno della prima legenda  
+##  <a name="MoveItems"></a>Per spostare elementi all'esterno della prima legenda  
  Creare il numero di legende aggiuntive desiderato, quindi aggiornare le regole per ogni livello mappa per specificare in quale legenda visualizzare i risultati delle regole.  
   
 #### <a name="to-create-a-new-legend"></a>Per creare una nuova legenda  
@@ -114,7 +114,7 @@ ms.locfileid: "66106360"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati desiderati e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -124,13 +124,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="TemplateStyle"></a> Per variare i colori degli elementi della mappa in base a uno stile modello  
+##  <a name="TemplateStyle"></a>Per variare i colori degli elementi della mappa in base a uno stile modello  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Per variare i colori degli elementi della mappa in base a uno stile modello  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati desiderati e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
 3.  Fare clic su **Applica stile modello**.  
   
@@ -140,13 +140,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="ColorPalette"></a> Per variare i colori degli elementi della mappa in base a una tavolozza colori  
+##  <a name="ColorPalette"></a>Per variare i colori degli elementi della mappa in base alla tavolozza dei colori  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Per variare i colori degli elementi della mappa in base a una tavolozza colori  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
 3.  Fare clic su **Visualizza dati tramite tavolozza colori**.  
   
@@ -160,13 +160,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="ColorRanges"></a> Per variare i colori degli elementi della mappa in base a intervalli di colori  
+##  <a name="ColorRanges"></a>Per variare i colori degli elementi della mappa in base a intervalli di colori  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Per variare i colori degli elementi della mappa in base a intervalli di colori  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
 3.  Fare clic su **Visualizza dati tramite intervalli colori**.  
   
@@ -184,13 +184,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="CustomColors"></a> Per variare i colori degli elementi della mappa in base a colori personalizzati  
+##  <a name="CustomColors"></a>Per variare i colori degli elementi della mappa in base ai colori personalizzati  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Per variare i colori degli elementi della mappa in base a colori personalizzati  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
 3.  Fare clic su **Visualizza dati tramite colori personalizzati**.  
   
@@ -204,27 +204,27 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="DistributionOptions"></a> Per impostare opzioni di distribuzione per una legenda  
+##  <a name="DistributionOptions"></a>Per impostare le opzioni di distribuzione per una legenda  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>Per impostare opzioni di distribuzione per una legenda  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
-3.  Selezionare il **Visualizza dati tramite** \<tipo di regola\> opzione. Per usare le opzioni di distribuzione, è necessario creare intervalli nella pagina **Distribuzione** in base ai dati analitici associati al livello.  
+3.  Selezionare l'opzione **Visualizza dati tramite** \<tipo\> di regola. Per usare le opzioni di distribuzione, è necessario creare intervalli nella pagina **Distribuzione** in base ai dati analitici associati al livello.  
   
 4.  Fare clic su **Distribuzione**.  
   
 5.  Selezionare uno dei seguenti tipi di distribuzione:  
   
-    -   **Intervallo equo**. Specifica gli intervalli che dividono i dati in intervalli equi.  
+    -   **EqualInterval**. Specifica gli intervalli che dividono i dati in intervalli equi.  
   
-    -   **Distribuzione equa**. Specifica gli intervalli che dividono i dati in modo che ogni intervallo disponga di un numero uguale di elementi.  
+    -   **EqualDistribution**. Specifica gli intervalli che dividono i dati in modo che ogni intervallo disponga di un numero uguale di elementi.  
   
     -   **Ottimale**. Specifica gli intervalli che regolano automaticamente la distribuzione per creare intervalli secondari equilibrati.  
   
-    -   **Personalizzato**. Specifica il numero di intervalli per controllare la distribuzione di valori.  
+    -   **Personalizzata**. Specifica il numero di intervalli per controllare la distribuzione di valori.  
   
      Per altre informazioni sulle opzioni di distribuzione, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -238,13 +238,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="RuleLegend"></a> Per modificare il contenuto di una legenda di regole  
+##  <a name="RuleLegend"></a>Per modificare il contenuto di una legenda di una regola  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Per modificare il contenuto di una legenda di tipo dimensioni, spessore o tipo di marcatore  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>regola tipo di elemento mappa_.****  
   
 3.  Verificare che l'opzione **Visualizza dati tramite** \<*tipo di regola*> sia selezionata.  
   
@@ -255,21 +255,21 @@ ms.locfileid: "66106360"
   
 5.  Fare clic su **Legenda**.  
   
-6.  In **Mostra in questa legenda**selezionare la legenda della mappa da usare per visualizzare i risultati della regola.  
+6.  In **Mostra in questa legenda** selezionare la legenda della mappa da usare per visualizzare i risultati della regola.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
   
-##  <a name="ColorScale"></a> Per modificare il contenuto della scala dei colori  
+##  <a name="ColorScale"></a>Per modificare il contenuto della scala dei colori  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Per modificare il contenuto della legenda della scala dei colori o dei colori  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>_**regola colore**tipo di elemento mappa.  
   
-3.  Selezionare l'opzione della regola colore da utilizzare. Per visualizzare gli elementi in una legenda della mappa o in una scala dei colori, è necessario selezionare una delle opzioni **Visualizza dati tramite** tipo di regola>\<.  
+3.  Selezionare l'opzione della regola colore da utilizzare. Per visualizzare gli elementi in una legenda della mappa o in una scala dei colori, è necessario selezionare una delle opzioni **Visualizza dati tramite tipo di regola>** \<.  
   
 4.  In **Campo dati**verificare che vengano selezionati i dati analitici visualizzati sul livello.  
   
@@ -284,13 +284,13 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="HideItems"></a> Per rimuovere tutti gli elementi da una legenda  
+##  <a name="HideItems"></a>Per rimuovere tutti gli elementi da una legenda  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>Per nascondere elementi in base a una regola  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>regola tipo di elemento mappa_.****  
   
 3.  Fare clic su **Legenda**.  
   
@@ -298,18 +298,18 @@ ms.locfileid: "66106360"
   
   
   
-##  <a name="ChangeFormatItems"></a> Per modificare il formato del contenuto in una legenda  
+##  <a name="ChangeFormatItems"></a>Per modificare il formato del contenuto in una legenda  
  Impostare le opzioni legenda per la regola associata alla legenda della mappa.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>Per modificare il formato del contenuto in una legenda  
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic sul livello che contiene i dati che si desidera e quindi fare clic su  _\<tipo di elemento mappa\>_ **regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati, quindi scegliere _ \<\>regola tipo di elemento mappa_.****  
   
 3.  Fare clic su **Legenda**.  
   
-4.  **Testo legenda** visualizza le parole chiave che specificano quali dati compaiono nella legenda. Utilizzare parole chiave e formati personalizzati per controllare il formato del testo della legenda. Ad esempio, #FROMVALUE {C2} specifica un formato valuta con due cifre decimali. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+4.  **Testo legenda** Visualizza parole chiave che specificano quali dati vengono visualizzati nella legenda. Utilizzare parole chiave e formati personalizzati per controllare il formato del testo della legenda. Ad esempio, #FROMVALUE {C2} specifica un formato valuta con due cifre decimali. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -319,7 +319,7 @@ ms.locfileid: "66106360"
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

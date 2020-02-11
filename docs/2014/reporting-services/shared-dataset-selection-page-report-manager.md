@@ -1,5 +1,5 @@
 ---
-title: Condiviso pagina di selezione di set di dati (gestione Report) | Microsoft Docs
+title: Pagina di selezione del set di dati condiviso (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101264"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Pagina di selezione del set di dati condiviso (Gestione report)
@@ -41,7 +41,7 @@ ms.locfileid: "66101264"
   
  Per modificare il set di dati condiviso a cui fa riferimento il nome di un set di dati, fare clic sul pulsante **Sfoglia** .  
   
- Il pulsante **Sfoglia** apre la struttura delle cartelle del server di report. Fare clic sul set di dati condiviso per aggiungere il percorso completo nel campo **Percorso** .  
+ Viene visualizzata la struttura di cartelle del server di report. **** Fare clic sul set di dati condiviso per aggiungere il percorso completo nel campo **Percorso** .  
   
  Fare clic su **OK** per selezionare un set di dati condiviso o su **Annulla** per annullare l'esplorazione di un set di dati condiviso.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66101264"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Gestire set di dati condivisi](report-data/manage-shared-datasets.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Set di DataSet incorporati e condivisi &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

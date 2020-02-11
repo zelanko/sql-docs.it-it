@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà del report del codice | Microsoft Docs
+title: Finestra di dialogo Proprietà report, codice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac600f2d8642162bb8f7a3c64b07933661715223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104457"
 ---
 # <a name="report-properties-dialog-box-code"></a>Finestra di dialogo Proprietà report, Codice
-  Selezionare **codice**nel **proprietà Report** finestra di dialogo per definire il codice personalizzato da utilizzare nelle espressioni all'interno del report.  
+  Selezionare **codice**nella finestra di dialogo **Proprietà report** per definire il codice personalizzato che verrà utilizzato dalle espressioni all'interno del report.  
   
 ## <a name="options"></a>Opzioni  
  **Codice personalizzato**  
- Consente di digitare i metodi da utilizzare nel report. Il codice deve essere scritto in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].  
+ Consente di digitare i metodi da utilizzare nel report. Il codice deve essere scritto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]in.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

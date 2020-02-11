@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07da79ea46ca0e9e23abb7197730821d8c31bfa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099994"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilità della riga di comando del server di report (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include diverse utilità della riga di comando che è possibile usare per gestire un server di report. Tali utilità vengono installate automaticamente al momento dell'installazione di un server di report.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in sono incluse diverse utilità della riga di comando che è possibile utilizzare per amministrare un server di report. Tali utilità vengono installate automaticamente al momento dell'installazione di un server di report.  
   
 |Nome|File di comando|Modalità di distribuzione supportata|Descrizione|  
 |----------|------------------|-------------------------------|-----------------|  

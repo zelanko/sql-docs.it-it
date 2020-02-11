@@ -1,5 +1,5 @@
 ---
-title: Individuare testo, numeri o date in un Report (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
+title: Trovare testo, numeri o date in un report (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102672"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Individuare testo, numeri o date in un report (Reporting Services in modalità integrata SharePoint)
@@ -43,6 +43,6 @@ ms.locfileid: "66102672"
 4.  Per cercare le occorrenze successive dello stesso valore, fare clic su **Avanti**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Aggiungere la web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

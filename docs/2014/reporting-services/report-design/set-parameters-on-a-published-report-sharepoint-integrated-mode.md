@@ -1,5 +1,5 @@
 ---
-title: Impostare i parametri in un Report pubblicato (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
+title: Impostare i parametri in un report pubblicato (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105021"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>Impostazione dei parametri per un report pubblicato (Reporting Services in modalità integrata SharePoint)
@@ -79,7 +79,7 @@ ms.locfileid: "66105021"
   
     3.  Selezionare **Interno** se si usa un valore predefinito e non si vuole che il parametro venga visualizzato nel riquadro Parametri o nelle pagine della sottoscrizione.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

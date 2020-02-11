@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101004"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101004"
   
  Quando si crea una sottoscrizione, il recapito può essere specificato in tre modi:  
   
--   **Raccolta documenti**: È possibile creare una sottoscrizione che recapita un documento basato sul report originale a una raccolta disponibile nello stesso sito di SharePoint del report originale. Non è possibile recapitare il documento a una raccolta disponibile in un altro server o in un altro sito della stessa raccolta siti. Per recapitare il documento, è necessario disporre dell'autorizzazione Aggiunta elementi per la raccolta a cui viene recapitato il report.  
+-   **Raccolta documenti**: è possibile creare una sottoscrizione che recapita un documento basato sul report originale a una raccolta disponibile nello stesso sito di SharePoint del report originale. Non è possibile recapitare il documento a una raccolta disponibile in un altro server o in un altro sito della stessa raccolta siti. Per recapitare il documento, è necessario disporre dell'autorizzazione Aggiunta elementi per la raccolta a cui viene recapitato il report.  
   
--   **Cartella di file:** È possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
+-   **Cartella di file** : è possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
   
--   **Messaggio di posta elettronica:** Se il server di report è configurato per usare l'estensione per il recapito tramite posta elettronica Server di Report, è possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in un formato di output disponibili) alla posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
+-   **Posta elettronica** : se il server di report è configurato in modo da usare l'estensione per il recapito tramite posta elettronica del server di report, è possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella Posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
   
  **Contenuto dell'argomento:**  
   
@@ -161,6 +161,6 @@ ms.locfileid: "66101004"
  [Recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Recapito tramite condivisione file in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Recapito tramite la raccolta di SharePoint in Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
- [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

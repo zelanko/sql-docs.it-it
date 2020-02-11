@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100701"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
   
- Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile utilizzare l'estensione per il recapito di SharePoint per sottoscrizioni create in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in Gestione report.  
+ Per usare l'estensione per il recapito di SharePoint, è necessario creare una sottoscrizione da una pagina dell'applicazione in un sito di SharePoint, quindi selezionare **Raccolta documenti di SharePoint** come tipo di recapito. Non è possibile utilizzare l'estensione per il recapito di SharePoint per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] le sottoscrizioni create in o Gestione report.  
   
 > [!NOTE]  
 >  L'estensione per il recapito non supporta l'invio di report a un sito di SharePoint se il server di report viene eseguito in modalità nativa. Se si tenta di chiamare l'estensione per il recapito a livello di programmazione per un server di report in modalità nativa, quest'ultimo restituirà l'errore `rsDeliveryExtensionNotFound` e registrerà l'errore `rsOperationNotSupportedSharePointMode` nei suoi file di log.  
@@ -73,8 +73,8 @@ ms.locfileid: "66100701"
  Titolo  
  Specifica una proprietà `Title` facoltativa per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
   
- `Path`  
- Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio: <http://mySharePointWeb/MySite/MyDocLib>; in cui "<http://mySharePointWeb>" indica l'applicazione Web, "MySite" è il sito di SharePoint e "MyDocLib" è la raccolta di SharePoint in cui verrà recapitato il report.  
+ Path  
+ Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio: <http://mySharePointWeb/MySite/MyDocLib>; dove "<http://mySharePointWeb>" indica l'applicazione Web, "sito" è il sito di SharePoint e "MyDocLib" è la raccolta di SharePoint in cui verrà recapitato il report.  
   
  Non è possibile specificare una pagina, un sito o un elenco. Il contenitore di destinazione deve essere una raccolta nello stesso sito o farm.  
   
@@ -82,10 +82,10 @@ ms.locfileid: "66100701"
  Specifica se un file con lo stesso nome e la stessa estensione viene sostituito da una versione più recente quando la sottoscrizione viene elaborata. Scegliere **Sovrascrivi** se si desidera sostituire un file esistente con una versione più recente. Scegliere **None** se non si desidera che la sottoscrizione sostituisca i file. In questo caso, se esiste già un file con il nome e l'estensione di destinazione il recapito non verrà eseguito. Scegliere **Incremento automatico** se si desidera aggiungere le versioni successive dello stesso file aggiungendo un numero alla fine del nome file.  
   
  Copia automatica  
- Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se è stata usata **Autoincrement** oppure **None**, il recapito avrà esito negativo e il `rsDeliveryError` errore si verifica.  
+ Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se è stato usato **AutoIncrement** o **None**, il recapito avrà esito negativo e si verificherà l' `rsDeliveryError` errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

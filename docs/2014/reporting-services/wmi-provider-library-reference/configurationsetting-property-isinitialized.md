@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ee60bcfc801cb3b9e886aa11e03ed9213712bdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097641"
 ---
-# <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>Proprietà IsInitialized (MSReportServer_ConfigurationSetting WMI)
+# <a name="isinitialized-property-wmi-msreportserver_configurationsetting"></a>Proprietà IsInitialized (MSReportServer_ConfigurationSetting WMI)
   Indica se l'istanza del server di report è inizializzata. Di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +45,7 @@ public Boolean DatabaseLogonName;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83dc56056e6000a789c8944b38326c23d7632bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049279"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
@@ -30,26 +30,26 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
  *Numeric_Expression*  
- facoltativo. Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
+ Facoltativa. Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
  *Include_Calc_Members*  
- Facoltativo. Parola chiave che consente di aggiungere i membri calcolati ai risultati del drill-down.  
+ Facoltativa. Parola chiave che consente di aggiungere i membri calcolati ai risultati del drill-down.  
   
-## <a name="remarks"></a>Note  
- Se viene specificata un'espressione numerica, la **DrilldownLevelBottom** funzione dispone in ordine crescente, gli elementi figlio di ogni membro nel set specificato, in base al valore specificato, valutato sul set di membri figlio. Se non è specificata un'espressione numerica, la funzione dispone in ordine crescente membri figlio di ciascun membro nel set specificato, in base ai valori delle celle rappresentate dal set di membri figlio, determinato dal contesto di query. Questo comportamento è simile alle funzioni BottomCount e Tail (MDX) che restituiscono un set di membri in ordine naturale, senza alcun ordinamento.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificata un'espressione numerica, la funzione **DrilldownLevelBottom** Ordina in ordine crescente gli elementi figlio di ogni membro nel set specificato, in base al valore specificato, valutato sul set di membri figlio. Se non è specificata un'espressione numerica, la funzione dispone in ordine crescente membri figlio di ciascun membro nel set specificato, in base ai valori delle celle rappresentate dal set di membri figlio, determinato dal contesto di query. Questo comportamento è simile alle funzioni BottomCount e Tail (MDX) che restituiscono un set di membri in ordine naturale, senza alcun ordinamento.  
   
- Dopo l'ordinamento, il **DrilldownLevelBottom** funzione restituisce un set che contiene i membri padre e il numero di membri figlio, specificato in *conteggio*, con il valore più basso.  
+ Dopo l'ordinamento, la funzione **DrilldownLevelBottom** restituisce un set contenente i membri padre e il numero di membri figlio, specificato in *count*, con il valore più basso.  
   
- Il **DrilldownLevelBottom** funzione è simile al [DrilldownLevel](../mdx/drilldownlevel-mdx.md) funzione, ma anziché includere tutti gli elementi figlio di ogni membro nel livello specificato, il  **DrilldownLevelBottom** funzione restituisce il numero più basso di membri figlio.  
+ La funzione **DrilldownLevelBottom** è simile alla funzione [DrilldownLevel](../mdx/drilldownlevel-mdx.md) , ma anziché includere tutti gli elementi figlio per ogni membro al livello specificato, la funzione **DrilldownLevelBottom** restituisce il numero più basso di membri figlio.  
   
- L'esecuzione di query la proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) per informazioni dettagliate.  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti gli ultimi tre membri figlio del livello Product Category in base alla misura predefinita. Nel cubo di esempio Adventure Works gli ultimi tre membri figlio per Accessories sono Tires and Tubes, Pumps e Panniers. Nella finestra Query MDX di Management Studio è possibile passare a Products | Product Categories | Members | All Products | Accessories per visualizzare l'elenco completo. È possibile incrementare l'argomento Count per restituire più membri.  
@@ -63,7 +63,7 @@ SELECT DrilldownLevelBottom
    FROM [Adventure Works]  
 ```  
   
- L'esempio seguente viene illustrato l'utilizzo di **include_calc_members** flag, per includere i membri calcolati di drill-down a livello di. La misura [Reseller Order Count] viene aggiunta per il **DrilldownLevelBottom** istruzione per assicurarsi che i risultati vengono ordinati in base a tale misura. Per visualizzare il membro calcolato, è necessario incrementare Count almeno a 9.  
+ Nell'esempio seguente viene illustrato l'uso del flag di **INCLUDE_CALC_MEMBERS** , usato per includere i membri calcolati nel livello di drill-down. La misura [Reseller Order Count] viene aggiunta all'istruzione **DrilldownLevelBottom** per garantire che i risultati siano ordinati in base a tale misura. Per visualizzare il membro calcolato, è necessario incrementare Count almeno a 9.  
   
 ```  
 WITH MEMBER   
@@ -81,7 +81,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel &#40;&#41;MDX](../mdx/drilldownlevel-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

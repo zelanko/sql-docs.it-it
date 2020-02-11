@@ -1,5 +1,5 @@
 ---
-title: Selezionare il tipo di Report | Microsoft Docs
+title: Selezionare il tipo di report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101432"
 ---
 # <a name="select-the-report-type"></a>Selezione tipo di report
   Utilizzare questa pagina della Creazione guidata report per selezionare un report tabella o un report matrice.  
   
 ## <a name="options"></a>Opzioni  
- **Tabella**  
+ **Tabulare**  
  Consente di creare un report contenente una tabella. Una tabella è un'area dati in cui i dati vengono disposti in colonne e righe. Le tabelle includono un set statico di colonne e un numero di righe variabile in base ai dati del set di dati.  
   
  Nelle pagine successive della creazione guidata sono incluse le opzioni per definire la tabella.  

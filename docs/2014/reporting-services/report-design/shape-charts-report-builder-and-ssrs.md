@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104943"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Grafici con forme (Generatore report e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104943"
   
 -   I grafici con forme sono particolarmente utili per visualizzare le percentuali proporzionali in maniera ordinata. Per garantire la coerenza, i valori del set di dati nel grafico non vengono tuttavia ordinati per impostazione predefinita. È possibile ordinare i valori dal più alto al più basso per rappresentare i dati sotto forma di imbuto o piramide e ottenere una maggiore precisione. Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   I valori Null, vuoti, negativi e zero non hanno effetto nel calcolo dei rapporti. Per questo motivo, tali valori non vengono visualizzati in un grafico con forme. Se si desidera indicare visivamente questi tipi di valori nel grafico, scegliere un tipo di grafico diverso dal grafico con forme. Per altre informazioni su come aggiungere punti vuoti a un grafico senza forme, vedere [aggiunta di punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   I valori Null, vuoti, negativi e zero non hanno effetto nel calcolo dei rapporti. Per questo motivo, tali valori non vengono visualizzati in un grafico con forme. Se si desidera indicare visivamente questi tipi di valori nel grafico, scegliere un tipo di grafico diverso dal grafico con forme. Per ulteriori informazioni sull'aggiunta di punti vuoti a un grafico senza forme, vedere [aggiungere punti vuoti al grafico &#40;Generatore report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se i colori di un grafico con forme vengono definiti utilizzando una tavolozza personalizzata, assicurarsi che tale tavolozza contenga un numero di colori sufficiente per evidenziare ogni punto dati in un colore univoco. Per altre informazioni, vedere [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   

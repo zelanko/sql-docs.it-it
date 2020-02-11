@@ -1,5 +1,5 @@
 ---
-title: 'Modifica del formato di archiviazione per i tipi xs: DateTime, xs: date e xs: Time | Microsoft Docs'
+title: 'Modifiche al formato di archiviazione per i tipi xs: dateTime, XS: date e xs: Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096613"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifiche al formato di archiviazione per i tipi xs:dateTime, xs:date e xs:time
@@ -29,7 +29,7 @@ ms.locfileid: "66096613"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Il formato di archiviazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per i tipi xs: DateTime, xs: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e consentire il mantenimento del fuso orario.  
+ Il formato di archiviazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in per i tipi xs: DateTime, XS: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e per consentire la conservazione del fuso orario.  
   
  Se una raccolta XML Schema fa riferimento a uno di tali tipi, gli indici XML di tutte le colonne associate alla raccolta verranno disabilitati dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sarà possibile sottoporli a query utilizzando SELECT e/o XQUERIES, ma l'indice XML non verrà utilizzato. Se viene rilevato un valore di anno negativo, verrà generato un errore di runtime.  
   

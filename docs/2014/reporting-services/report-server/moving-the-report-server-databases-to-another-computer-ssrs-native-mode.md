@@ -11,28 +11,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103715"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
-  È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
+  È possibile spostare i database del server di report utilizzati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] di in un'istanza di in un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
  Lo spostamento di un database non influisce sulle operazioni pianificate attualmente definite per gli elementi del server di report.  
   
 -   Le pianificazioni vengono ricreate la prima volta che si riavvia il servizio del server di report.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Agent i processi usati per attivare una pianificazione verranno ricreati nella istanza di database. Non è necessario spostare i processi nel nuovo computer, ma è necessario eliminare quelli che non verranno più utilizzati.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Agent i processi usati per attivare una pianificazione verranno ricreati nella istanza di database. Non è necessario spostare i processi nel nuovo computer, ma è necessario eliminare quelli che non verranno più utilizzati.  
   
 -   Le sottoscrizioni, gli snapshot e i report memorizzati nella cache vengono mantenuti nel database spostato. Se uno snapshot non esegue la scelta di dati aggiornati dopo che il database è stato spostato, deselezionare le opzioni relative in Gestione report, fare clic su **Applica** per salvare le modifiche, ricreare la pianificazione e fare nuovamente clic su **Applica** per salvare le modifiche.  
   
 -   Il report temporaneo e i dati della sessione utente archiviati nel database reportservertempdb vengono mantenuti quando si sposta il database.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili diversi modi per spostare i database, tra cui backup e ripristino, collegamento e scollegamento e copia. Non tutti gli approcci sono appropriati per spostare un database esistente in una nuova istanza del server. L'approccio da utilizzare per spostare il database del server di report dipende dai requisiti di disponibilità del sistema. Il modo più semplice per spostare i database del server di report consiste nel collegarli e scollegarli. Questo approccio richiede tuttavia di portare in modalità offline il server di report mentre lo si scollega. Il backup e il ripristino rappresentano un'opzione migliore se si desidera ridurre al minimo le interruzioni del servizio, tuttavia per eseguire queste operazioni è necessario usare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . La copia del database, in particolare l'utilizzo della procedura Copia guidata database, non è consigliabile in quanto non consente di mantenere le impostazioni delle autorizzazioni nel database.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili diversi modi per spostare i database, tra cui backup e ripristino, collegamento e scollegamento e copia. Non tutti gli approcci sono appropriati per spostare un database esistente in una nuova istanza del server. L'approccio da utilizzare per spostare il database del server di report dipende dai requisiti di disponibilità del sistema. Il modo più semplice per spostare i database del server di report consiste nel collegarli e scollegarli. Questo approccio richiede tuttavia di portare in modalità offline il server di report mentre lo si scollega. Il backup e il ripristino rappresentano un'opzione migliore se si desidera ridurre al minimo le interruzioni del servizio, tuttavia per eseguire queste operazioni è necessario usare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . La copia del database, in particolare l'utilizzo della procedura Copia guidata database, non è consigliabile in quanto non consente di mantenere le impostazioni delle autorizzazioni nel database.  
   
 > [!IMPORTANT]  
 >  È consigliabile eseguire la procedura descritta in questo argomento quando lo spostamento del database del server di report è l'unica modifica che si desidera apportare all'installazione esistente. Per la migrazione di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completa, vale a dire lo spostamento del database e la modifica dell'identità del servizio Windows ReportServer usato dal database, è necessario riconfigurare le informazioni di connessione e reimpostare la chiave di crittografia.  
@@ -46,7 +48,7 @@ ms.locfileid: "66103715"
   
 2.  Arrestare il servizio del server di report. Per eseguire questa operazione, è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita i database del server di report.  
+3.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e aprire una connessione all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di che ospita i database del server di report.  
   
 4.  Fare clic con il pulsante destro del mouse sul database del server di report, scegliere Attività, quindi **Scollega**. Ripetere il passaggio per il database temporaneo del server di report.  
   
@@ -58,7 +60,7 @@ ms.locfileid: "66103715"
   
 8.  Fare clic su **Aggiungi** per selezionare i file con estensione mdf e ldf del database del server di report che si desidera collegare. Ripetere il passaggio per il database temporaneo del server di report.  
   
-9. Dopo avere collegato i database, verificare che il `RSExecRole` è un ruolo del database in cui il database del server di report e il database temporaneo. `RSExecRole` deve avere select, insert, update, delete e le autorizzazioni di riferimento nelle tabelle del database server report e le autorizzazioni di esecuzione nelle stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../security/create-the-rsexecrole.md).  
+9. Dopo aver collegato i database, verificare che `RSExecRole` sia un ruolo del database nel database del server di report e nel database temporaneo. `RSExecRole`è necessario disporre delle autorizzazioni SELECT, INSERT, Update, DELETE e Reference sulle tabelle del database del server di report e delle autorizzazioni di esecuzione per le stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi al server di report.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "66103715"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Backup e ripristino dei database del server di report  
  Se il server di report non può essere portato in modalità offline, è possibile rilocare i database del server di report tramite backup e ripristino. Per eseguire queste due operazioni, è necessario usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Dopo aver ripristinato i database, è necessario configurare il server di report per utilizzare il database nella nuova istanza del server. Per ulteriori informazioni, vedere le istruzioni alla fine di questo argomento.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Utilizzo di BACKUP e COPY_ONLY per eseguire il backup dei database del server di report  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Utilizzo di BACKUP e COPY_ONLY per eseguire il backup dei database del server di report  
  Quando si esegue il backup dei database, impostare l'argomento COPY_ONLY. Accertarsi di eseguire il backup di entrambi i database e dei file di log.  
   
 ```  
@@ -201,15 +203,15 @@ GO
   
 1.  Avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi al server di report.  
   
-2.  Nella pagina Database fare clic su **Cambia database**. Scegliere **Avanti**.  
+2.  Nella pagina Database fare clic su **Cambia database**. Fare clic su **Avanti**.  
   
-3.  Fare clic su **Scegli un database del server di report esistente**. Scegliere **Avanti**.  
+3.  Fare clic su **Scegli un database del server di report esistente**. Fare clic su **Avanti**.  
   
-4.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita attualmente il database del server di report, quindi fare clic su **Test connessione**. Scegliere **Avanti**.  
+4.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita attualmente il database del server di report, quindi fare clic su **Test connessione**. Fare clic su **Avanti**.  
   
-5.  In Nome database selezionare il database del server di report da utilizzare. Scegliere **Avanti**.  
+5.  In Nome database selezionare il database del server di report da utilizzare. Fare clic su **Avanti**.  
   
-6.  In Credenziali specificare le credenziali che il server di report utilizzerà per la connessione al database relativo. Scegliere **Avanti**.  
+6.  In Credenziali specificare le credenziali che il server di report utilizzerà per la connessione al database relativo. Fare clic su **Avanti**.  
   
 7.  Fare clic su **Avanti** , quindi su **Fine**.  
   
@@ -217,12 +219,12 @@ GO
 >  Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è necessario che nell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sia incluso il ruolo `RSExecRole`. Quando si imposta la connessione al database del server di report tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vengono eseguite le operazioni di creazione dei ruoli, registrazione dell'account di accesso e assegnazione di ruoli. Se per configurare la connessione si utilizzano approcci alternativi, in particolare l'utilità della riga di comando rsconfig.exe, il server di report non si troverà in uno stato attivo. Per renderlo disponibile il server di report, potrebbe essere necessario scrivere codice WMI. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare RSExecRole](../security/create-the-rsexecrole.md)   
+ [Creare il RSExecRole](../security/create-the-rsexecrole.md)   
  [Avviare e arrestare il servizio del server di report](start-and-stop-the-report-server-service.md)   
- [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurare l'account di esecuzione automatica &#40;Configuration Manager SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
+ [Utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Database del server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)  
   

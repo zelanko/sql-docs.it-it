@@ -1,5 +1,5 @@
 ---
-title: Chiedere conferma all'utente le informazioni di connessione | Microsoft Docs
+title: Richiesta di informazioni di connessione all'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,31 +21,31 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079062"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Chiedere all'utente informazioni di connessione
-Se l'applicazione usa **SQLConnect** e deve richiedere all'utente le informazioni di connessione, ad esempio un nome utente e password, è necessario farlo se stesso. Mentre in questo modo l'applicazione di controllare il relativo "aspetto", potrebbe forzare l'applicazione contenga codice specifico del driver. Ciò si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifici del driver. Questa operazione presenta una situazione di comunicazione Impossibile per applicazioni generiche, che sono progettati per funzionare con tutti i driver, inclusi i driver che non esistono quando l'applicazione è scritta.  
+Se l'applicazione usa **SQLConnect** ed è necessario richiedere all'utente le informazioni di connessione, ad esempio un nome utente e una password, questa operazione deve essere eseguita automaticamente. Sebbene ciò consenta all'applicazione di controllare il proprio aspetto, potrebbe forzare l'applicazione a contenere codice specifico del driver. Questo errore si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifiche del driver. Si tratta di una situazione impossibile per le applicazioni generiche, progettate per funzionare con tutti i driver, inclusi i driver che non esistono durante la scrittura dell'applicazione.  
   
- **SQLDriverConnect** può chiedere all'utente le informazioni di connessione. Ad esempio, il programma personalizzato indicato in precedenza è stato possibile passare la stringa di connessione seguenti per **SQLDriverConnect**:  
+ **SQLDriverConnect** può richiedere all'utente le informazioni di connessione. Ad esempio, il programma personalizzato indicato in precedenza potrebbe passare la stringa di connessione seguente a **SQLDriverConnect**:  
   
 ```  
 DSN=XYZ Corp;  
 ```  
   
- Il driver può quindi visualizzare una finestra di dialogo che richiede gli ID utente e password, simile alla figura seguente.  
+ Il driver potrebbe quindi visualizzare una finestra di dialogo in cui vengono richiesti gli ID utente e le password, come illustrato nella figura seguente.  
   
- ![Finestra di dialogo che richiede gli ID utente e password](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![Finestra di dialogo in cui vengono richiesti gli ID utente e le password](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
- Che il driver può richiedere le informazioni di connessione è particolarmente utile per le applicazioni verticali e non generici. Queste applicazioni non devono contenere informazioni specifiche del driver e avere il prompt dei comandi di driver per le informazioni che necessarie mantiene queste informazioni dall'applicazione. Come illustrato nei due esempi precedenti. Quando l'applicazione passati solo il nome dell'origine dati del driver, l'applicazione non contiene le informazioni specifiche del driver e non è stato pertanto associato a un driver specifico. Quando l'applicazione passata una stringa di connessione completa al driver, quest'ultima è stata associata al driver che è stato possibile interpretare tale stringa.  
+ Che il driver possa richiedere informazioni di connessione è particolarmente utile per le applicazioni generiche e verticali. Queste applicazioni non devono contenere informazioni specifiche del driver e la richiesta del driver per le informazioni necessarie consente di mantenere le informazioni all'esterno dell'applicazione. Questa operazione viene illustrata nei due esempi precedenti. Quando l'applicazione ha passato solo il nome dell'origine dati al driver, l'applicazione non conteneva informazioni specifiche del driver e pertanto non era collegata a un driver specifico. Quando l'applicazione ha passato una stringa di connessione completa al driver, era collegata al driver che poteva interpretare tale stringa.  
   
- Un'applicazione generica potrebbe essere migliorano ulteriormente questo passaggio e non lo è nemmeno specificare un'origine dati. Quando **SQLDriverConnect** riceve una stringa di connessione vuota, il Driver Manager visualizza la finestra di dialogo seguente.  
+ Un'applicazione generica può eseguire ulteriormente questo passaggio e non specificare neanche un'origine dati. Quando **SQLDriverConnect** riceve una stringa di connessione vuota, gestione driver Visualizza la finestra di dialogo seguente.  
   
- ![Finestra di dialogo Selezione origine dati](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
+ ![Finestra di dialogo Seleziona origine dati](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
   
- Dopo che l'utente seleziona un'origine dati, gestione Driver costruisce una stringa di connessione che specifica tale origine dati e li passa al driver. Il driver può quindi richiedere all'utente le eventuali informazioni aggiuntive che necessarie.  
+ Dopo che l'utente ha selezionato un'origine dati, gestione driver crea una stringa di connessione che specifica l'origine dati e la passa al driver. Il driver può quindi richiedere all'utente informazioni aggiuntive necessarie.  
   
- Le condizioni in base alle quali il driver richiede all'utente vengono controllate per le *DriverCompletion* flag; sono disponibili le opzioni per Chiedi sempre conferma, chiederà di specificare se necessario, visualizzare mai la richiesta. Per una descrizione completa di questo flag, vedere la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.
+ Le condizioni in base alle quali il driver richiede che l'utente sia controllato dal flag *DriverCompletion* . sono disponibili opzioni per richiedere sempre, richiedere se necessario o mai chiedere conferma. Per una descrizione completa di questo flag, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .

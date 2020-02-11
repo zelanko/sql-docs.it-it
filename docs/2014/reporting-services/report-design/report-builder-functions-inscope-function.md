@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105245"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Funzione InScope (Generatore report e SSRS)
@@ -36,8 +36,8 @@ InScope(scope)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un oggetto `Boolean`.  
   
-## <a name="remarks"></a>Note  
- Il `InScope` funzione testa l'ambito dell'istanza corrente di un elemento del report per l'appartenenza nell'ambito specificato per il *ambito*parametro.  
+## <a name="remarks"></a>Osservazioni  
+ La `InScope` funzione testa l'ambito dell'istanza corrente di un elemento del report per l'appartenenza all'ambito specificato dal parametro *scope*.  
   
  *Scope* non può essere un'espressione.  
   

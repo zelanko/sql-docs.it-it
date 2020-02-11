@@ -1,5 +1,5 @@
 ---
-title: Opzioni di aggiornamento di ricerca full-Text | Microsoft Docs
+title: Opzioni di aggiornamento della ricerca full-text | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095092"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opzioni di aggiornamento della ricerca full-text
   Utilizzare la pagina Opzioni di aggiornamento della ricerca full-text dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per selezionare l'opzione di aggiornamento della ricerca full-text da utilizzare per l'aggiornamento dei database.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. A questo punto, un catalogo full-text è un concetto-a virtuale oggetto logico, che fa riferimento a un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il vecchio percorso del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. A questo punto, un catalogo full-text è un concetto logico, ovvero un oggetto virtuale, che fa riferimento a un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il vecchio percorso del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
   
 ## <a name="options"></a>Opzioni  
  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], scegliere una delle opzioni di aggiornamento full-text seguenti.  
@@ -38,10 +38,10 @@ ms.locfileid: "66095092"
   
  Per informazioni sull'impatto dell'importazione di un indice full-text, vedere "Considerazioni per la scelta di un'opzione di aggiornamento full-text" più avanti in questo argomento.  
   
- **Ricompilazione**  
+ **Ricompilare**  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere molto tempo. Dopo l'aggiornamento, inoltre, potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
- **Reimposta**  
+ **Reimpostazione**  
  I cataloghi full-text vengono ripristinati. Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file dei cataloghi full-text vengono rimossi, ma i metadati per i cataloghi full-text e gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
  Tutte queste opzioni di aggiornamento consentono ai database aggiornati di sfruttare appieno i miglioramenti delle prestazioni full-text.  
@@ -66,7 +66,7 @@ ms.locfileid: "66095092"
   
 -   Priorità della disponibilità online dell'istanza del server  
   
-     L'importazione o la ricompilazione durante l'aggiornamento richiede l'utilizzo di molte risorse della CPU ritardando in questo modo l'aggiornamento del resto dell'istanza del server e la disponibilità online dell'istanza stessa. Se la disponibilità online dell'istanza del server è essenziale e si vuole eseguire un popolamento manuale dopo l'aggiornamento, è consigliabile usare l'opzione **Reimposta** .  
+     L'importazione o la ricompilazione durante l'aggiornamento richiede l'utilizzo di molte risorse della CPU ritardando in questo modo l'aggiornamento del resto dell'istanza del server e la disponibilità online dell'istanza stessa. Se la disponibilità online dell'istanza del server è essenziale e si desidera eseguire un popolamento manuale dopo l'aggiornamento, è consigliabile utilizzare l'opzione **Reimposta** .  
   
 ## <a name="additional-resources"></a>Risorse aggiuntive  
   

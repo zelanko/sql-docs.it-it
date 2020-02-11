@@ -1,5 +1,5 @@
 ---
-title: Esempi di URL per elementi di Report pubblicati in un Server di Report in modalità SharePoint (SSRS) | Microsoft Docs
+title: Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099444"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
-  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
+  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
   
  Per i siti di SharePoint vengono usati indirizzi Web diversi rispetto a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. In una gerarchia Web di un sito di SharePoint sono inclusi l'applicazione Web di SharePoint, un sito principale, eventuali siti secondari e raccolte. È necessario conoscere la procedura per la creazione di un indirizzo URL che specifichi il server di SharePoint, nonché il percorso nella gerarchia dei siti di SharePoint in cui si desidera pubblicare un report o elementi correlati.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "66099444"
   
  Per accedere al contenuto del server di report e proteggerlo, è possibile utilizzare gli elementi della gerarchia Web indicati di seguito. Altri oggetti, quali elenchi e pagine, non vengono utilizzati per accedere al contenuto del server di report e non sono pertanto descritti nella tabella seguente.  
   
-|Object|Descrizione|  
+|Oggetto|Descrizione|  
 |------------|-----------------|  
-|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL, ad esempio http: *//nomeserver*, e può contenere più siti.|  
+|Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL, ad esempio http:*//nomeserver*, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
 |Raccolta di SharePoint|Una raccolta contiene documenti o cartelle. Gli unici oggetti di un sito nei quali possono essere archiviati report, origini dei dati condivise e immagini esterne sono le raccolte o le cartelle.|  
 |Elemento|Gli elementi del server di report ai quali è possibile fare riferimento in un URL includono definizione di report o sottoreport, modelli di report, origini dei dati condivise o immagini esterne.|  
@@ -44,14 +44,14 @@ ms.locfileid: "66099444"
 ### <a name="url-for-a-sharepoint-server"></a>URL per un server di SharePoint  
  Quando si distribuisce un progetto modello di report o server di report da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al server di report, è necessario utilizzare un URL del server di SharePoint.  
   
- Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio http: *//nomeserver*.  
+ Per trovare il nome del server da utilizzare, aprire un browser e individuare la raccolta di SharePoint in cui si desidera pubblicare un report. Il nome del server si trova immediatamente dopo il prefisso del protocollo, ad esempio http:*//nomeserver*.  
   
- L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio http: *//nomeserver:8080/reportserver*.  
+ L'utilizzo dell'endpoint proxy dell'URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato. Gli endpoint proxy includono un numero di porta, ad esempio http:*//nomeserver:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL per un sito o un sito secondario di SharePoint Server  
  Quando si distribuisce un report o un'origine dati del report, è necessario utilizzare un URL del sito e dell'eventuale sito secondario di SharePoint. Nell'URL il nome del sito si trova immediatamente dopo il nome del server, ad esempio http://*nomeserver/sito* o http://*nomeserver/sito/sitosecondario*.  
   
- In un'applicazione Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
+ In un' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] applicazione Web [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] o 2007, il sito e il sito secondario corrispondono spesso alle schede nel sito principale. Per trovare il nome del sito o del sito secondario, fare clic su **Home**e quindi su **Tutto il contenuto del sito**. Scorrere fino alla fine e cercare **Siti e aree di lavoro**. L'elenco dei siti si trova in questa sezione.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL di una raccolta di SharePoint  
  Quando si distribuisce un report o un elemento correlato in una raccolta di SharePoint, è necessario utilizzare l'URL di quest'ultima. L'URL da utilizzare per una raccolta varia a seconda della versione di SharePoint in uso.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099444"
 |Il report di esempio Company Sales nella cartella **Documents/Doc** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Il report di esempio Company Sales in un **Centro report** in un'istanza di [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a> Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
+##  <a name="publishingToDocLib"></a>Pubblicazione da uno strumento di creazione in una raccolta di SharePoint  
  Quando per pubblicare in una raccolta i report e i file correlati si utilizza uno strumento di creazione dei report, i file vengono convalidati prima di essere aggiunti. Se invece si caricano i report e i file correlati usando l'azione **Carica** in una raccolta di SharePoint, non viene eseguito alcun controllo di convalida. In questo caso, non sarà possibile sapere se il file è valido fino a quando non si accederà al report per gestirlo, modificarlo o eseguirlo.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66099444"
 ### <a name="file-names"></a>Nomi file  
  I nomi file inclusi negli URL degli elementi di report devono includere l'estensione. L'estensione del nome file determina il tipo di file. Quando si pubblicano elementi del report da uno strumento di creazione, l'estensione viene automaticamente aggiunta al nome file. Se si carica un elemento di report in una raccolta di SharePoint, è necessario aggiungere un'estensione al nome file.  
   
- In caso contrario, si verificherà l'errore `rsInvalidDataSourceReference`. I nomi di file non possono includere caratteri non riconosciuti come validi per i nomi di file dalle applicazioni di SharePoint. Non includere i seguenti caratteri: # % & *: \< >? / { | }.  
+ In caso contrario, si verificherà l'errore `rsInvalidDataSourceReference`. I nomi di file non possono includere caratteri non riconosciuti come validi per i nomi di file dalle applicazioni di SharePoint. Non includere i seguenti caratteri: #% & *: \< >? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Differenze tra caricamento e pubblicazione  
  Quando per pubblicare in una raccolta i report e i file correlati si utilizza Progettazione report o Generatore report, i file vengono convalidati prima di essere aggiunti. Se invece si caricano i report e i file correlati usando l'azione **Carica** in una raccolta di SharePoint, non viene eseguito alcun controllo di convalida. In questo caso, non sarà possibile sapere se il file è valido fino a quando non si accederà al report per gestirlo, modificarlo o eseguirlo.  

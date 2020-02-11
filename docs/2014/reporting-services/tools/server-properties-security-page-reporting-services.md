@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a49f56c4e898b0189ce0f8bf5008873e13dc6223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099563"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Proprietà server (pagina sicurezza) - Reporting Services
@@ -25,12 +25,12 @@ ms.locfileid: "66099563"
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un'istanza del server di report, fare clic con il pulsante destro del mouse sul nome del server di report e scegliere **Proprietà**. Fare clic su **sicurezza** per aprire la pagina.  
   
 ## <a name="options"></a>Opzioni  
- **Attiva la sicurezza integrata di Windows per le origini dati dei report**  
+ **Abilita la sicurezza integrata di Windows per le origini dati dei report**  
  Consente di specificare se è possibile stabilire una connessione all'origine dati di un report utilizzando il token di sicurezza di Windows dell'utente che ha richiesto il report.  
   
  Se si disattiva questa caratteristica, la sicurezza integrata di Windows non sarà disponibile nelle pagine delle proprietà dell'origine dati del report. Se le origini dati del report sono configurate per la sicurezza integrata di Windows e successivamente si disattiva questa caratteristica, nel server di report vengono immediatamente aggiornate tutte le proprietà di connessione all'origine dati in modo che vengano richieste le credenziali.  
   
- **Consenti reporting ad hoc**  
+ **Abilita reporting ad hoc**  
  Consente di specificare se gli utenti possono eseguire query ad hoc da un report di Generatore report, nel caso in cui i nuovi report vengano generati automaticamente quando un utente fa clic su dati di interesse.  
   
  L'impostazione di questa opzione determina se il valore della proprietà `EnableLoadReportDefinition` nel server di report è impostato su `True` o su `False`. Se si deseleziona questa opzione, la proprietà viene impostata su `False` e nel server di report non verranno generati report click-through creati durante l'esplorazione dei dati. Tutte le chiamate al metodo `LoadReportDefinition` verranno bloccate.  
@@ -40,6 +40,6 @@ ms.locfileid: "66099563"
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Specificare le credenziali e informazioni di connessione per origini dati del Report] (.. /report-Data/Specify-Credential-and-Connection-Information-for-report-Data-Sources.MD [Server di report in Management Studio F1 Guida](report-server-in-management-studio-f1-help.md)  
+ [Specificare le credenziali e le informazioni di connessione per le origini dati del report] (.. /report-data/Specify-Credential-and-Connection-Information-for-report-data-sources.MD [del server di report nella Guida sensibile al contesto Management Studio](report-server-in-management-studio-f1-help.md)  
   
   

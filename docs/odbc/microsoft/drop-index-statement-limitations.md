@@ -14,11 +14,11 @@ ms.assetid: a8ab9259-af47-438f-9fff-042e8ebb1c58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c9f578d632ab999edb6064fcbb949ba6f4e1b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071825"
 ---
 # <a name="drop-index-statement-limitations"></a>Limitazioni dell'istruzione DROP INDEX
-L'istruzione DROP INDEX non è supportata per il driver di Microsoft Excel o di testo.
+L'istruzione DROP INDEX non è supportata per Microsoft Excel o il driver di testo.

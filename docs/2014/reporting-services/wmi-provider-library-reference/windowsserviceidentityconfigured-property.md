@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096965"
 ---
-# <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>Proprietà WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting WMI)
+# <a name="windowsserviceidentityconfigured-property-wmi-msreportserver_configurationsetting"></a>Proprietà WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting WMI)
   Restituisce l'ultima identità con cui il servizio Windows ReportServer è stato configurato per l'esecuzione. Di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +45,7 @@ public string WindowsServiceIdentityConfigured;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -1,5 +1,5 @@
 ---
-title: Modificare le stored procedure che utilizzano proprietà di ricerca Full-Text obsolete | Microsoft Docs
+title: Modificare le stored procedure che utilizzano proprietà della ricerca full-text obsolete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093847"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Modificare le stored procedure che utilizzano proprietà della ricerca full-text obsolete
@@ -47,6 +47,6 @@ ms.locfileid: "66093847"
  Modificare le stored procedure per rimuovere queste proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Utilizzo di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

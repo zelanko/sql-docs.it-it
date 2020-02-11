@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104737"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelle (Generatore report e SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66104737"
 > [!NOTE]  
 >  È possibile pubblicare tabelle separatamente da un report come parti del report.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per una rapida introduzione alle tabelle, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;Esercitazione su SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Per una rapida introduzione alle tabelle, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
  Nei report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi diversi report in cui vengono usate tabelle. Per informazioni sulle tabelle, esplorare la definizione di un report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingTable"></a> Aggiunta di una tabella per la visualizzazione dei dati dettaglio  
+##  <a name="AddingTable"></a>Aggiunta di una tabella per la visualizzazione dei dati dettaglio  
  Aggiungere una tabella all'area di progettazione dalla scheda Inserisci sulla barra multifunzione. È possibile aggiungere una tabella tramite la Creazione guidata tabella o matrice in cui è inclusa la creazione di una connessione all'origine dati e un set di dati e la configurazione della tabella o di una tabella basata sul modello di tabella, che si configura manualmente.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "66104737"
   
  ![Modello di tabella selezionato nell'area di progettazione](../media/rs-tabletemplatenewselected.gif "Modello di tabella selezionato nell'area di progettazione")  
   
- L'handle di riga per la riga Dati visualizza il simbolo dei dettagli (![Handle di riga con 3 linee parallele per la riga di dettaglio](../media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")). Per visualizzare i dati in queste righe, trascinare i campi dal riquadro dei dati del report nella riga di intestazione o di dettaglio delle celle della tabella. Entrambe le righe verranno compilate contemporaneamente. Per inserire colonne aggiuntive, trascinare il campo nella tabella finché non verrà visualizzato un punto di inserimento. Dopo avere aggiunto i campi del set di dati alla tabella, è possibile modificare il formato predefinito per date e valuta in modo da controllarne la visualizzazione nel report. Nel diagramma seguente è riportata un'area dati della tabella con i campi Date, Order, Product, Qty e Line Total.  
+ L'handle di riga per la riga dati Mostra il simbolo dei dettagli (![handle di riga con 3 linee parallele per la riga di dettaglio](../media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")). Per visualizzare i dati in queste righe, trascinare i campi dal riquadro dei dati del report nella riga di intestazione o di dettaglio delle celle della tabella. Entrambe le righe verranno compilate contemporaneamente. Per inserire colonne aggiuntive, trascinare il campo nella tabella finché non verrà visualizzato un punto di inserimento. Dopo avere aggiunto i campi del set di dati alla tabella, è possibile modificare il formato predefinito per date e valuta in modo da controllarne la visualizzazione nel report. Nel diagramma seguente è riportata un'area dati della tabella con i campi Date, Order, Product, Qty e Line Total.  
   
  ![Progettazione, tabella con intestazioni di colonna in grassetto](../media/rs-basictabledetailsformatteddesign.gif "Progettazione, tabella con intestazioni di colonna in grassetto")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66104737"
   
  Per altre informazioni, vedere [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="AddingRowGroups"></a> Aggiunta di gruppi di righe a una tabella  
+##  <a name="AddingRowGroups"></a>Aggiunta di gruppi di righe a una tabella  
  Così come è possibile trascinare un campo dal riquadro dei dati del report in una cella per visualizzare i dati dettaglio, è possibile trascinare un campo nel riquadro Raggruppamento allo scopo di aggiungere un gruppo. Per una tabella, trascinare il campo nel riquadro Gruppi di righe. Dopo avere aggiunto un gruppo, la tabella aggiunge automaticamente celle nelle nuove colonne dell'area del gruppo di righe nelle quali visualizzare i valori di gruppo. Per altre informazioni sulle aree, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Nella figura seguente è illustrata una tabella con due gruppi di righe nidificati nella visualizzazione Progettazione. I gruppi di righe sono stati creati trascinando il campo Ordine e quindi il campo Data nel riquadro Gruppi di righe e inserendo ogni gruppo come elemento padre dei gruppi esistenti. Nella figura sono illustrati un gruppo padre basato sulla data e un gruppo figlio basato sul numero di ordine, nonché il gruppo dettagli specificato per impostazione predefinita.  
@@ -83,15 +83,15 @@ ms.locfileid: "66104737"
 ### <a name="adding-totals-to-row-groups"></a>Aggiunta dei totali ai gruppi di righe  
  Per visualizzare i totali per un gruppo, è possibile usare il comando sensibile al contesto **Aggiungi totale** . Per un gruppo di righe, il comando Aggiungi totale inserisce una riga all'esterno del gruppo in modo che venga ripetuta una sola volta in relazione al gruppo. Per i gruppi nidificati, la riga del totale relativa al gruppo figlio è esterna a quest'ultimo ma interna al gruppo padre. Per questo motivo può essere utile impostare il colore di sfondo della riga del totale per il gruppo figlio in modo da distinguerla dalle righe di dettaglio. È anche possibile usare un colore di sfondo differente per distinguere le righe di intestazione dalle righe dei piè di pagina della tabella. Nella figura seguente è illustrata la tabella con una riga del totale aggiunta per il gruppo in base ai numeri di ordine.  
   
- ![Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella](../media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta di righe del totale a un gruppo e una tabella")  
+ ![Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella](../media/rs-basictablegroupstotalscolordesign.gif "Visualizzazione Progettazione, aggiunta delle righe dei totali a un gruppo e a una tabella")  
   
  Quando si visualizza il report, la riga in cui sono riportati i subtotali degli ordini viene ripetuta una volta per ogni numero di ordine. Nel piè di pagina della tabella sono riportati i totali per tutte le date. Nelle ultime righe della figura seguente sono illustrate le ultime tre righe di dettaglio, il subtotale per l'ultimo ordine numero SO71952 e i totali per tutte le date riportate nella tabella.  
   
- ![Anteprima, tabella con totali per il gruppo, ultime righe](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali per il gruppo, ultime righe")  
+ ![Anteprima, tabella con totali dei gruppi, ultime righe](../media/rs-basictablegroupstotalscolorpreviewbottom.gif "Anteprima, tabella con totali dei gruppi, ultime righe")  
   
  Per altre informazioni, vedere [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="RemovingHidingRows"></a> Rimuovere o nascondere le righe di dettaglio  
+##  <a name="RemovingHidingRows"></a>Rimozione o nascondere le righe di dettaglio  
  Dopo avere visualizzato l'anteprima di una tabella in un report, è possibile decidere di rimuovere le righe di dettaglio esistenti. In alternativa, è possibile nasconderle per impostazione predefinita e consentire all'utente di passare da una visualizzazione dettagliata a una meno dettagliata e viceversa, come in un report drill-down.  
   
  Per rimuovere le righe di dettaglio da una tabella, usare il riquadro Raggruppamento. Selezionare il gruppo di dettaglio e usare il menu di scelta rapida per eliminare il gruppo e le righe contenenti i dati dettaglio. Nella figura seguente è illustrata la visualizzazione Progettazione per una tabella raggruppata per data e numero di ordine, ma senza righe di dettaglio. Alla tabella non sono state aggiunte righe dei totali.  

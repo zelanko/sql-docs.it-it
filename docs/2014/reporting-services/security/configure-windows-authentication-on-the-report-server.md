@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102130"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
@@ -32,9 +32,9 @@ ms.locfileid: "66102130"
     > [!IMPORTANT]  
     >  L'utilizzo di `RSWindowsNegotiate` comporterà un errore di autenticazione Kerberos se il servizio del server di report è stato configurato per essere eseguito con un account utente di dominio e non è stato registrato un nome SPN per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve essere configurato per usare l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer e gestione Report includono il \<modalità di autenticazione = "Windows" > impostazione. Se l'impostazione viene modificata in \<authentication mode="Forms">, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve essere configurato per usare l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer e Gestione report includono l' \<impostazione della modalità di autenticazione = "Windows" >. Se l'impostazione viene modificata in \<authentication mode="Forms">, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
   
--   Nei file Web. config per il servizio Web ReportServer e gestione Report deve avere \<identity impersonate = "true" / >.  
+-   I file Web. config per il servizio Web ReportServer e Gestione report devono avere \<Identity impersonate = "true"/>.  
   
 -   Nell'applicazione client o nel browser deve essere supportata la sicurezza integrata di Windows.  
   
@@ -45,7 +45,8 @@ ms.locfileid: "66102130"
  Le istruzioni seguenti sono relative a un server di report in modalità nativa. Se il server di report è distribuito in modalità integrata SharePoint, è necessario utilizzare le impostazioni di autenticazione predefinite che specificano la sicurezza integrata di Windows. Per supportare server di report in modalità integrata SharePoint, il server di report utilizza caratteristiche interne nell'estensione di autenticazione di Windows predefinita.  
   
 ## <a name="extended-protection-for-authentication"></a>Protezione estesa per l'autenticazione  
- A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La configurazione per la protezione estesa è determinata dalle impostazioni presenti nel file RSReportServer.config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La configurazione per la protezione estesa è determinata dalle impostazioni presenti nel file RSReportServer.config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per ulteriori informazioni, vedere [protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Per configurare un server di report per l'utilizzo della sicurezza integrata di Windows  
   
@@ -76,7 +77,7 @@ ms.locfileid: "66102130"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</Authentication>  
+     \<>/Authentication  
   
      La terza struttura XML specifica tutti i pacchetti di sicurezza utilizzati nella sicurezza integrata di Windows:  
   
@@ -96,7 +97,7 @@ ms.locfileid: "66102130"
           </AuthenticationTypes>  
     ```  
   
-4.  Incollare la struttura sulle voci esistenti per <`Authentication`>.  
+4.  Incollarlo sulle voci esistenti per <`Authentication`>.  
   
      Tenere presente che non è possibile utilizzare `Custom` con i tipi `RSWindows`.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "66102130"
   
 8.  Riavviare il server di report per cancellare qualsiasi sessione attualmente aperta.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Risoluzione degli errori di autenticazione Kerberos durante la connessione a un Server di Report  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a>Risoluzione degli errori di autenticazione Kerberos durante la connessione a un server di report  
  In un server di report configurato per l'autenticazione con negoziazione o Kerberos, se si verifica un errore di autenticazione Kerberos la connessione client al server di report avrà esito negativo. Di seguito vengono riportate le condizioni che indicano la presenza di errori di autenticazione Kerberos:  
   
 -   Il servizio del server di report è in esecuzione come account utente di dominio di Windows, ma non è stato registrato un nome SPN per l'account.  
@@ -124,7 +125,7 @@ ms.locfileid: "66102130"
   
  È possibile rilevare l'errore se è stata abilitata la registrazione Kerberos. Un altro sintomo dell'errore consiste in più richieste delle credenziali e successivamente nella visualizzazione di una finestra del browser vuota.  
   
- È possibile confermare che si è verificato un errore di autenticazione Kerberos, rimuovere < `RSWindowsNegotiate` / > dal file di configurazione, quindi riprovare a stabilire la connessione.  
+ È possibile verificare che si verifichi un errore di autenticazione Kerberos rimuovendo < `RSWindowsNegotiate` /> dal file di configurazione e ritentando la connessione.  
   
  Dopo avere confermato la presenza del problema, è possibile risolverlo nei modi seguenti:  
   
@@ -175,7 +176,7 @@ ms.locfileid: "66102130"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Per ulteriori informazioni, vedere [protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Scelta tra l'autenticazione negoziata Kerberos o NTLM da parte del browser  
  Quando si utilizza Internet Explorer per connettersi al server di report, nell'intestazione di autenticazione viene specificata l'autenticazione negoziata Kerberos o NTLM. Di seguito vengono riportati i casi in cui viene utilizzata l'autenticazione NTLM anziché l'autenticazione Kerberos:  

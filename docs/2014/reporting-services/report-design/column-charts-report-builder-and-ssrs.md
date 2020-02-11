@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106224"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
@@ -35,19 +35,19 @@ ms.locfileid: "66106224"
   
 -   **Cilindro 3D**. Istogramma con le barre a forma di cilindro in un grafico 3D.  
   
--   `Histogram` (Indici per tabelle con ottimizzazione per la memoria). Istogramma calcolato in modo tale che le barre siano disposte in una distribuzione normale.  
+-   `Histogram`. Istogramma calcolato in modo tale che le barre siano disposte in una distribuzione normale.  
   
--   `Pareto` (Indici per tabelle con ottimizzazione per la memoria). Istogramma con le barre disposte dal valore massimo al minimo.  
+-   `Pareto`. Istogramma con le barre disposte dal valore massimo al minimo.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Considerazioni sui dati per un istogramma  
   
--   Gli istogrammi e i grafici a barre vengono utilizzati principalmente per indicare i confronti tra gruppi. Se in un grafico sono presenti più di tre serie, è consigliabile utilizzare un grafico a barre o un istogramma in pila. È anche possibile raccogliere i grafici a barre o gli istogrammi in pila in più gruppi, se il grafico contiene diverse serie. Per altre informazioni, vedere [i grafici a barre &#40;Generatore Report e SSRS&#41; ](charts-report-builder-and-ssrs.md) e *istogrammi*.  
+-   Gli istogrammi e i grafici a barre vengono utilizzati principalmente per indicare i confronti tra gruppi. Se in un grafico sono presenti più di tre serie, è consigliabile utilizzare un grafico a barre o un istogramma in pila. È anche possibile raccogliere i grafici a barre o gli istogrammi in pila in più gruppi, se il grafico contiene diverse serie. Per ulteriori informazioni, vedere [grafici a barre &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md) *e istogrammi.*  
   
 -   In un istogramma è disponibile meno spazio per la visualizzazione in orizzontale delle etichette dell'asse delle categorie. Se tali etichette sono lunghe, è consigliabile utilizzare un grafico a barre o cambiare l'angolo di rotazione dell'etichetta.  
   
 -   È possibile aggiungere stili di disegno speciali alle singole barre di un istogramma per aumentarne l'impatto visivo. Gli stili di disegno includono spicchio, rilievo, cilindro e chiaroscuro. Tali effetti sono progettati per migliorare l'aspetto del grafico 2D. Se si utilizza un grafico 3D, gli stili di disegno vengono comunque applicati, ma non producono lo stesso effetto. Per altre informazioni su come aggiungere uno stile di disegno a un grafico a barre, vedere [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
--   La caratteristica univoca degli istogrammi è la possibilità di visualizzare il grafico come istogramma classico o grafico di Pareto. A tale scopo, impostare la proprietà ShowColumnAs `Histogram` oppure `Pareto` nella finestra proprietà per `true`.  
+-   La caratteristica univoca degli istogrammi è la possibilità di visualizzare il grafico come istogramma classico o grafico di Pareto. A tale scopo, impostare la proprietà ShowColumnAs su `Histogram` o `Pareto` nella finestra proprietà su `true`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   

@@ -14,31 +14,31 @@ ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076817"
 ---
 # <a name="deferred-fields"></a>Campi posticipati
-I valori della *posticipata campi* non vengono usati quando sono impostati, ma il driver vengono salvati gli indirizzi delle variabili per un effetto posticipata. Per un descrittore di parametri dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** oppure **SQLExecute**. Per un descrittore riga dell'applicazione, il driver utilizza il contenuto delle variabili al momento dell'operazione di recupero.  
+I valori dei *campi posticipati* non vengono usati quando sono impostati, ma il driver Salva gli indirizzi delle variabili per un effetto posticipato. Per un descrittore di parametri dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** o **SQLExecute**. Nel caso di un descrittore di riga dell'applicazione, il driver usa il contenuto delle variabili al momento del recupero.  
   
- Di seguito sono campi posticipati:  
+ Di seguito sono riportati i campi posticipati:  
   
--   I campi SQL_DESC_DATA_PTR e SQL_DESC_INDICATOR_PTR di un record del descrittore.  
+-   I campi SQL_DESC_DATA_PTR e SQL_DESC_INDICATOR_PTR di un record di descrittore.  
   
--   Il campo SQL_DESC_OCTET_LENGTH_PTR di un record del descrittore dell'applicazione.  
+-   Campo SQL_DESC_OCTET_LENGTH_PTR di un record del descrittore dell'applicazione.  
   
--   Nel caso di un'operazione di recupero con più righe, i campi SQL_DESC_ARRAY_STATUS_PTR e SQL_DESC_ROWS_PROCESSED_PTR di un'intestazione del descrittore.  
+-   Nel caso di un recupero più righe, i campi SQL_DESC_ARRAY_STATUS_PTR e SQL_DESC_ROWS_PROCESSED_PTR di un'intestazione del descrittore.  
   
- Quando si alloca un descrittore, i campi posticipati di ogni record del descrittore inizialmente sono associati un valore null. Come indicato di seguito è riportato il significato del valore null:  
+ Quando si alloca un descrittore, i campi rinviati di ogni record di descrittore hanno inizialmente un valore null. Il significato del valore null è il seguente:  
   
--   Se SQL_DESC_ARRAY_STATUS_PTR ha un valore null, un'operazione di recupero con più righe non riesce a restituire questo componente per ogni riga informazioni di diagnostica.  
+-   Se SQL_DESC_ARRAY_STATUS_PTR ha un valore null, un recupero più righe non riesce a restituire questo componente delle informazioni di diagnostica per riga.  
   
--   Se SQL_DESC_DATA_PTR ha un valore null, il record è non associato.  
+-   Se SQL_DESC_DATA_PTR ha un valore null, il record non è associato.  
   
--   Se il campo SQL_DESC_OCTET_LENGTH_PTR di un ARD ha un valore null, il driver non restituisce informazioni sulla lunghezza della colonna.  
+-   Se il SQL_DESC_OCTET_LENGTH_PTR campo di un ARD ha un valore null, il driver non restituisce informazioni sulla lunghezza per tale colonna.  
   
--   Se il campo SQL_DESC_OCTET_LENGTH_PTR di un APD ha un valore null e il parametro è una stringa di caratteri, il driver presuppone che stringa con terminazione null. Per i parametri dinamici di output, un valore null in questo campo impedisce il driver di restituzione di informazioni sulla lunghezza. (Se il campo SQL_DESC_TYPE non indica un parametro di stringa di caratteri, viene ignorato il campo SQL_DESC_OCTET_LENGTH_PTR.)  
+-   Se il campo SQL_DESC_OCTET_LENGTH_PTR di un oggetto APD ha un valore null e il parametro è una stringa di caratteri, il driver presuppone che la stringa sia con terminazione null. Per i parametri dinamici di output, un valore null in questo campo impedisce al driver di restituire informazioni sulla lunghezza. Se il campo SQL_DESC_TYPE non indica un parametro di stringa di caratteri, il campo SQL_DESC_OCTET_LENGTH_PTR viene ignorato.  
   
- L'applicazione non deve deallocare o eliminare le variabili usate per campi posticipati tra il momento che li associa i campi e l'ora il driver legge o scrive.
+ L'applicazione non deve deallocare o annullare le variabili usate per i campi posticipati tra il momento in cui vengono associate ai campi e il momento in cui il driver li legge o li scrive.

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104242"
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
@@ -34,7 +34,7 @@ ms.locfileid: "66104242"
   
 2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera impostare le proprietà relative alla memorizzazione nella cache, posizionare il puntatore del mouse sull'elemento e fare clic sulla freccia a discesa.  
   
-3.  Nel menu a discesa fare clic su **Gestisci**.  
+3.  Scegliere **Gestisci**dal menu a discesa.  
   
 4.  Nel riquadro di sinistra fare clic sulla scheda **Opzioni di elaborazione**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66104242"
   
     -   Per configurare una copia memorizzata nella cache affinché scada in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   

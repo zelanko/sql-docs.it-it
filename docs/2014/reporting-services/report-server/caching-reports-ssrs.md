@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104104"
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
@@ -75,7 +75,7 @@ ms.locfileid: "66104104"
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md)   
  [Pianificazioni](../subscriptions/schedules.md)   
- [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [Opzioni di aggiornamento cache &#40;Gestione report&#41;](../cache-refresh-options-report-manager.md)  
+ [Memorizzare nella cache i set di impostazioni &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
+ [Opzioni di aggiornamento della cache &#40;Gestione report&#41;](../cache-refresh-options-report-manager.md)  
   
   

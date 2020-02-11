@@ -18,18 +18,18 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044498"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza le informazioni relative a uno o più profili di posta.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,12 +39,12 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` Id del profilo per cui restituire informazioni. *profile_id* viene **int**, con un valore predefinito è NULL.  
+`[ @profile_id = ] profile_id`ID del profilo per cui restituire informazioni. *profile_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @profile_name = ] 'profile_name'` Il nome del profilo per cui restituire informazioni. *profile_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @profile_name = ] 'profile_name'`Nome del profilo per cui restituire informazioni. *profile_name* è di **tipo sysname**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Viene restituito un set di risultati con le colonne seguenti.  
@@ -53,19 +53,19 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |-|-|-|  
 |Nome colonna|Tipo di dati|Descrizione|  
 |**profile_id**|**int**|ID del profilo.|  
-|**name**|**sysname**|Nome del profilo.|  
-|**description**|**nvarchar(256)**|Descrizione del profilo.|  
+|**nome**|**sysname**|Nome del profilo.|  
+|**Descrizione**|**nvarchar(256)**|Descrizione del profilo.|  
   
-## <a name="remarks"></a>Note  
- Quando viene specificato un nome del profilo o l'id del profilo, **sysmail_help_profile_sp** restituisce informazioni relative al profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su tutti i profili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
+## <a name="remarks"></a>Osservazioni  
+ Quando viene specificato un nome di profilo o un ID profilo, **sysmail_help_profile_sp** restituisce informazioni su tale profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su ogni profilo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell'istanza.  
   
- La stored procedure **sysmail_help_profile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
+ Il stored procedure **sysmail_help_profile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Elencare tutti i profili**  
+ **A. Visualizzazione di tutti i profili**  
   
  Nell'esempio seguente vengono visualizzati tutti i profili disponibili nell'istanza.  
   
@@ -82,7 +82,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B. Elenco un profilo specifico**  
+ **B. Visualizzazione di un profilo specifico**  
   
  Nell'esempio seguente vengono visualizzate le informazioni relative al profilo `AdventureWorks Administrator`.  
   
@@ -101,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

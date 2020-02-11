@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d3fc7ae8ad4c3018bcc512296a670fdaac3b64e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097363"
 ---
-# <a name="msreportserverconfigurationsetting-methods"></a>Metodi di MSReportServer_ConfigurationSetting
+# <a name="msreportserver_configurationsetting-methods"></a>Metodi di MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting del provider WMI del server di report fornisce i seguenti metodi pubblici.  
   
 ## <a name="public-methods"></a>Metodi pubblici  
@@ -40,15 +40,15 @@ ms.locfileid: "66097363"
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|Genera uno script SQL che può essere utilizzato per creare il database del server di report.|  
 |[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)|Genera uno script SQL che può essere utilizzato per concedere a un utente le autorizzazioni per il database del server di report.|  
 |[GenerateDatabaseUpgradeScript](configurationsetting-method-generatedatabaseupgradescript.md)|Genera uno script SQL che può essere utilizzato per aggiornare un database del server di report.|  
-|[Metodo GetAdminSiteUrl &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ottiene l'URL assoluto del sito Web di Amministrazione centrale.|  
+|[Metodo GetAdminSiteUrl &#40;&#41;WMI](configurationsetting-method-getadminsiteurl.md)|Ottiene l'URL assoluto del sito Web di Amministrazione centrale.|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Ottiene il nome visualizzato di una stringa di versione di un database del server di report specifico.|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Inizializza l'istanza del server di report specificata.|  
-|[Metodo ListInstalledSharePointVersions &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Restituisce un set di token che rappresentano le versioni di Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] installate nello stesso computer del server di report.|  
+|[Metodo ListInstalledSharePointVersions &#40;&#41;WMI](configurationsetting-method-listinstalledsharepointversions.md)|Restituisce un set di token che rappresentano le versioni [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]di Microsoft, [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] installate nello stesso computer del server di report.|  
 |[Metodo ListIPAddresses &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-listipaddresses.md)|Elenca gli indirizzi IP per il computer.|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|Restituisce un elenco di installazioni del server di report presenti nel database del server di report, indipendentemente dal fatto che tali installazioni accedano o meno a informazioni protette.|  
 |[Metodo ListReservedURLs &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-listreservedurls.md)|Elenca gli URL riservati per tutte le applicazioni presenti nel server di report.|  
 |[Metodo ListSSLCertificateBindings &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-listsslcertificatebindings.md)|Elenca le associazioni certificato SSL presenti in HTTP.SYS e quelle previste da RSReportServer.config.|  
-|[Metodo ListSSLCertificate &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-listsslcertificates.md)|Elenca i certificati SSL installati nel computer.|  
+|[Metodo ListSSLCertificates &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-listsslcertificates.md)|Elenca i certificati SSL installati nel computer.|  
 |[ReencryptSecureInformation](configurationsetting-method-reencryptsecureinformation.md)|Genera una nuova chiave di crittografia e la utilizza per crittografare nuovamente tutte le informazioni protette nel database del server di report.|  
 |[Metodo RemoveSSLCertificateBindings &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-removesslcertificatebinding.md)|Rimuove un'associazione certificato SSL.|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|Elimina la voce relativa all'account di esecuzione automatica dalla configurazione del server di report.|  
@@ -66,6 +66,6 @@ ms.locfileid: "66097363"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Consente l'esecuzione del servizio ReportServer in base all'utente di Windows specificato e concede a tale account autorizzazioni per il file system sufficienti, in modo da consentire il funzionamento del server di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
+ [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
   

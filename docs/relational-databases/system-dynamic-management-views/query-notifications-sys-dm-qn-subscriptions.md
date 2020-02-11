@@ -1,5 +1,5 @@
 ---
-title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: sys. dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,35 +19,35 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061925"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>Eseguire una query notifiche - DM qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifiche di query-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle sottoscrizioni di notifica delle query attive nel server. È possibile utilizzare questa vista per individuare le sottoscrizioni attive nel server o in un database specificato oppure per individuare un'entità server specificata.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID di una sottoscrizione.|  
+|**ID**|**int**|ID di una sottoscrizione.|  
 |**database_id**|**int**|ID del database in cui la query di notifica viene eseguita. In questo database vengono archiviate le informazioni relative alla sottoscrizione.|  
-|**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'entità server che ha creato la sottoscrizione e di cui è proprietaria.|  
 |**object_id**|**int**|ID della tabella interna in cui sono archiviate le informazioni sui parametri di sottoscrizione.|  
-|**created**|**datetime**|Data e ora di creazione della sottoscrizione.|  
-|**timeout**|**int**|Timeout in secondi per la sottoscrizione. La notifica verrà contrassegnata per l'esecuzione non appena è trascorso l'intervallo di tempo specificato.<br /><br /> Nota: Il tempo di esecuzione effettiva potrebbe essere maggiore del timeout specificato. Tuttavia, se una modifica che invalida la sottoscrizione si verifica dopo il timeout specificato, ma prima che la sottoscrizione viene generata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assicura che la generazione si verifica nel momento in cui è stata apportata la modifica.|  
-|**status**|**int**|Indica lo stato della sottoscrizione. Per un elenco dei codici, vedere la tabella in Note.|  
+|**creato**|**datetime**|Data e ora di creazione della sottoscrizione.|  
+|**timeout**|**int**|Timeout in secondi per la sottoscrizione. La notifica verrà contrassegnata per l'esecuzione non appena è trascorso l'intervallo di tempo specificato.<br /><br /> Nota: il tempo di generazione effettivo potrebbe essere maggiore del timeout specificato. Tuttavia, se una modifica che invalida la sottoscrizione viene eseguita dopo il timeout specificato, ma prima che venga attivata la sottoscrizione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assicura che l'attivazione avvenga al momento della modifica.|  
+|**stato**|**int**|Indica lo stato della sottoscrizione. Per un elenco dei codici, vedere la tabella in Note.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|On|type|  
+|Da|A|Attivato|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il codice di stato 0 indica uno stato non definito.  
   
  I codici di stato seguenti indicano che è stata attivata una sottoscrizione a causa di una modifica:  
@@ -55,10 +55,10 @@ ms.locfileid: "68061925"
 |Codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |65798|La sottoscrizione è stata attivata perché i dati sono stati modificati|sottoscrizione attivata dall'inserimento|  
-|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Eliminare|  
-|65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Aggiorna|  
-|65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Merge|  
-|65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|troncamento di tabella|  
+|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Delete|  
+|65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Aggiornamento|  
+|65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Unione|  
+|65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|Tronca tabella|  
 |66048|La sottoscrizione è stata attivata perché il timeout è scaduto|modalità informazioni non definita|  
 |66315|La sottoscrizione è stata attivata perché un oggetto è stato modificato|oggetto o utente eliminato|  
 |66316|La sottoscrizione è stata attivata perché un oggetto è stato modificato|oggetto modificato|  
@@ -90,7 +90,7 @@ ms.locfileid: "68061925"
 |199168|La sottoscrizione è attiva|modalità informazioni non definita|  
 |199424|La sottoscrizione è stata inizializzata ma non è ancora attiva|modalità informazioni non definita|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel server.  
   
 > [!NOTE]  

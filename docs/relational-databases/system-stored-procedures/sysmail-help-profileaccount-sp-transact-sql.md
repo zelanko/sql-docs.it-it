@@ -18,18 +18,18 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044492"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elenca gli account associati a uno o più profili di Posta elettronica database.  
     
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +43,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` È l'ID del profilo del profilo all'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_id = ] profile_id`ID del profilo da elencare. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` È il nome del profilo del profilo all'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_name = ] 'profile_name'`Nome del profilo da elencare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @account_id = ] account_id` È l'ID account all'elenco. *account_id* viene **int**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
+`[ @account_id = ] account_id`ID dell'account da elencare. *account_id* è di **tipo int**e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
   
-`[ @account_name = ] 'account_name'` È il nome dell'account all'elenco. *account_name* viene **sysname**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
+`[ @account_name = ] 'account_name'`Nome dell'account da elencare. *account_name* è di **tipo sysname**e il valore predefinito è null. Quando *account_id* e *ACCOUNT_NAME* sono entrambi null, elenca tutti gli account nel profilo.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Viene restituito un set di risultati con le colonne seguenti.  
@@ -66,16 +66,16 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Nome dell'account.|  
 |**sequence_number**|**int**|Numero di sequenza dell'account all'interno del profilo.|  
   
-## <a name="remarks"></a>Note  
- Se non si specifica *profile_id* oppure *profile_name* è specificato, questa stored procedure restituisce informazioni per tutti i profili nell'istanza.  
+## <a name="remarks"></a>Osservazioni  
+ Quando non viene specificato alcun *profile_id* o *profile_name* , questo stored procedure restituisce informazioni per ogni profilo nell'istanza.  
   
- La stored procedure **sysmail_help_profileaccount_sp** è nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
+ Il stored procedure **sysmail_help_profileaccount_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni per questa routine per impostazione predefinita ai membri di esecuzione per il **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- **A. Elenco di account per un profilo specifico in base al nome**  
+ **A. Visualizzazione di un elenco degli account per un profilo specifico in base al nome**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per il profilo `AdventureWorks Administrator` specificando il nome del profilo.  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B. Elenco di account per un ID del profilo dal profilo specifico**  
+ **A. Visualizzazione di un elenco degli account per un profilo specifico in base all'ID del profilo**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per il profilo `AdventureWorks Administrator` specificando l'ID del profilo.  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C. Elenco di account per tutti i profili**  
+ **C. Visualizzazione di un elenco degli account di tutti i profili**  
   
  Nell'esempio seguente viene visualizzato un elenco di account per tutti i profili nell'istanza.  
   
@@ -131,8 +131,8 @@ profile_id  profile_name                 account_id  account_name         sequen
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Creare un Account di posta elettronica Database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Oggetti di configurazione di posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

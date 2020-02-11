@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094231"
 ---
 # <a name="instance-selection-uninstall"></a>Selezione istanza (disinstallazione)
-  Per la selezione istanza - disinstallazione pagina, usare la casella di riepilogo a discesa per specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disinstallare.  
+  Nella pagina Selezione istanza-disinstallazione utilizzare la casella di riepilogo a discesa per specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da disinstallare.  
   
 ## <a name="options"></a>Opzioni  
  È possibile specificare un'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure è possibile specificare che la disinstallazione deve riguardare solo le caratteristiche e gli strumenti di gestione condivisi.  

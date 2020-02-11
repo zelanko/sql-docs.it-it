@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102585"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
@@ -32,7 +32,7 @@ ms.locfileid: "66102585"
   
 3.  Per visualizzare un report, fare clic sul nome o sull'icona del report. L'icona seguente indica un report:  
   
-     ![Icona di report](../media/hlp-16doc.gif "Icona di report")  
+     ![Icona del report](../media/hlp-16doc.gif "Icona Rapporto")  
   
      Per alcuni report è richiesta l'immissione di nome utente e password o di un valore di parametro.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66102585"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

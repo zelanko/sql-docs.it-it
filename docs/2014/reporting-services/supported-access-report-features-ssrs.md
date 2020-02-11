@@ -1,5 +1,5 @@
 ---
-title: Caratteristiche supportate dei accesso Report (SSRS) | Microsoft Docs
+title: Funzionalità di report di Access supportati (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,26 +19,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100581"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
-  Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
+  Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
   
 ## <a name="importing-access-reports"></a>Importazione di report di Access  
  Alcune query contengono codice specifico di Access. Il codice di Access non viene importato con il report. Inoltre, se una query contiene stringhe incorporate, il report potrebbe essere importato in modo non corretto. Per risolvere il problema, sostituire le stringhe con un codice con caratteri. Sostituire, ad esempio, il carattere virgola (,) con CHAR(34).  
   
- Il processo di importazione non supera correttamente il punto e virgola (;) o caratteri di markup XML (\<, > e così via) nelle informazioni della stringa di connessione. Se una stringa di connessione include un punto e virgola o un carattere di markup XML, sarà necessario impostare manualmente la password nel nuovo report dopo l'importazione.  
+ Il processo di importazione non passa correttamente il punto e virgola (;) o caratteri di markup XML\<(, > e così via) nelle informazioni sulla stringa di connessione. Se una stringa di connessione include un punto e virgola o un carattere di markup XML, sarà necessario impostare manualmente la password nel nuovo report dopo l'importazione.  
   
  Durante l'importazione non vengono importate le impostazioni di connessione o di timeout generale nella stringa di connessione. Potrebbe essere necessario correggere queste impostazioni dopo l'importazione del report.  
   
  Se si importa un report che include una query con parametri, la query non verrà convertita durante l'importazione del report. Per importare la query insieme al report, sostituire temporaneamente i parametri della query nel report di Access con valori hardcoded, quindi sostituirli nuovamente con i parametri di query dopo l'importazione.  
   
 ## <a name="page-layout"></a>Layout di pagina  
- Il layout di pagina di Access è diverso rispetto a quello di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In Access gli elementi vengono organizzati in sezioni disposte verticalmente nella pagina. Queste sezioni possono includere l'intestazione e il piè di pagina del report, l'intestazione e il piè di pagina della pagina, gruppi e dettagli. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre un layout più flessibile. I raggruppamenti e il posizionamento dei dettagli vengono gestiti tramite aree dati ed è possibile posizionare più aree dati in qualsiasi punto nel corpo del report, anche in modo affiancato. Anche in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sezioni distinte per l'intestazione e il piè di pagina della pagina, simili a quelle di Access.  
+ Il layout di pagina di Access è diverso rispetto a quello di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In Access gli elementi vengono organizzati in sezioni disposte verticalmente nella pagina. Queste sezioni possono includere l'intestazione e il piè di pagina del report, l'intestazione e il piè di pagina della pagina, gruppi e dettagli. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre un layout più flessibile. I raggruppamenti e il posizionamento dei dettagli vengono gestiti tramite aree dati ed è possibile posizionare più aree dati in qualsiasi punto nel corpo del report, anche in modo affiancato. Anche in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sezioni distinte per l'intestazione e il piè di pagina della pagina, simili a quelle di Access.  
   
  Quando si importa un report da Access in Progettazione report, l'intestazione e il piè di pagina del report di Access vengono convertiti in intestazione e piè di pagina del report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Le sezioni dei gruppi e dei dettagli vengono convertite in un'area dati elenco. L'intestazione e il piè di pagina del report vengono inseriti nel corpo del report anziché in una sezione distinta. Ne consegue che gli elementi possono avere posizioni leggermente diverse rispetto al report di Access originale.  
   
@@ -46,28 +48,29 @@ ms.locfileid: "66100581"
 >  In alcuni report di Access, elementi del report che apparentemente sono adiacenti potrebbero in realtà essere sovrapposti. Quando si importa il report con Progettazione report, questa sovrapposizione non viene corretta e può dar luogo a risultati inattesi in fase di esecuzione del report.  
   
 ## <a name="data-sources"></a>Origini dati  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta origini dati OLE DB, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se i report vengono importati da un progetto di Access (file con estensione adp), la stringa di connessione per l'origine dei dati viene recuperata dalla stringa di connessione presente nel file con estensione adp. Nel caso di report importati da database di Access (file con estensione mdb o accdb), è possibile che la stringa di connessione punti al database di Access e che sia necessario correggerla dopo l'importazione dei report. Se l'origine dei dati del report di Access è una query, le informazioni della query vengono archiviate nel file RDL senza modifiche. Se invece l'origine dei dati è una tabella, durante il processo di conversione viene creata una query in base al nome della tabella e ai campi in essa contenuti.  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta origini dati OLE DB, ad esempio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se i report vengono importati da un progetto di Access (file con estensione adp), la stringa di connessione per l'origine dei dati viene recuperata dalla stringa di connessione presente nel file con estensione adp. Nel caso di report importati da database di Access (file con estensione mdb o accdb), è possibile che la stringa di connessione punti al database di Access e che sia necessario correggerla dopo l'importazione dei report. Se l'origine dei dati del report di Access è una query, le informazioni della query vengono archiviate nel file RDL senza modifiche. Se invece l'origine dei dati è una tabella, durante il processo di conversione viene creata una query in base al nome della tabella e ai campi in essa contenuti.  
   
 ## <a name="reports-with-custom-modules"></a>Report con moduli personalizzati  
- Se è presente personalizzato [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] codice contenuto all'interno dei moduli non viene convertito. Se vengono rilevati blocchi di codice durante il processo di importazione, un avviso viene generato e visualizzato nei **elenco attività** finestra.  
+ Se è presente un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] codice personalizzato all'interno di moduli, non viene convertito. Se Progettazione report rileva codice durante il processo di importazione, viene generato un avviso che viene visualizzato nella finestra di **elenco attività** .  
   
 ## <a name="report-controls"></a>Controlli dei report  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportati i seguenti controlli di Access, che vengono inclusi nelle definizioni dei report convertiti.  
   
 |||||  
 |-|-|-|-|  
-|Image|Label|Riga|Rectangle|  
-|SubForm|SubReport<br /><br /> **Nota** controllo mentre SubReport viene convertito nel report principale, il sottoreport vero e proprio viene convertito separatamente.|TextBox||  
+|Image|Etichetta|Grafico a linee|Rectangle|  
+|SubForm|SubReport<br /><br /> **Nota** Mentre un controllo del sottoreport viene convertito all'interno del report principale, il sottoreport stesso viene convertito separatamente.|TextBox||  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono supportati i seguenti controlli:  
   
 |||||  
 |-|-|-|-|  
-|BoundObjectFrame|CheckBox|ComboBox|CommandButton|  
+|BoundObjectFrame|CheckBox|Casella combinata|CommandButton|  
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Se vengono rilevati questi controlli durante il processo di importazione, un avviso viene generato e visualizzato nei **elenco attività** finestra.  
+ Se Progettazione report rileva uno di questi controlli durante il processo di importazione, viene generato un avviso che viene visualizzato nella finestra di **elenco attività** .  
   
  Gli altri controlli, ad esempio i controlli ActiveX e Office Web Components, non vengono importati. Se ad esempio un report di Access include un controllo grafico OWC, tale controllo non verrà convertito durante l'importazione del report.  
   
@@ -78,13 +81,13 @@ ms.locfileid: "66100581"
 |-|-|-|-|  
 |ColoreSfondo|StileSfondo|ColoreBordo|BorderStyle|  
 |SpessoreBordo|BottomMargin|Espandibile (casella di testo)|Riducibile (casella di testo)|  
-|Didascalia|FontBold|CarattereCorsivo|TipoCarattere|  
+|Sottotitolo|FontBold|CarattereCorsivo|FontName|  
 |FontSize|CarattereSottolineato|SpessoreCarattere|InterruzionePagina|  
-|ColorePrimoPiano|Altezza|HideDuplicates|Hyperlink|  
+|ColorePrimoPiano|Altezza:|HideDuplicates|Hyperlink|  
 |IsHyperlink|IsVisible|StampaSezioneUnita (gruppo)|Left|  
 |LeftMargin|InclinazioneLinea|LineSpacing|CollegaCampiSecondari|  
 |CollegaCampiMaster|NuovaRigaOColonna|PageFooter|PageHeader|  
-|Pages|Immagine|EspansioneImmagine (report)|ReadingOrder|  
+|Pagine|Immagine|EspansioneImmagine (report)|ReadingOrder|  
 |RipetiSezione|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Larghezza|  
   
@@ -93,11 +96,11 @@ ms.locfileid: "66100581"
 |||||  
 |-|-|-|-|  
 |CanGrow (sezione)|CanShrink (sezione)|DecimalPlaces|FastLaserPrinting|  
-|Filtro|ApplicaFiltro|Formato|FormatConditions|  
+|Filtro|ApplicaFiltro|Format|FormatConditions|  
 |ModalitàRaggruppamento|StampaSezioneUnita (sezione)|NumeralShapes|Orientamento|  
 |TavolozzaDisegno|OrigineTavolozza|AllineamentoImmagine|PagineImmagine|  
 |ModalitàRidimensImmagine|EspansioneImmagine (immagine)|BarreScorrimento|SpecialEffect|  
-|Verticale||||  
+|Vertical||||  
   
 ## <a name="grouping"></a>Raggruppamento  
  In Access, i livelli di raggruppamento vengono definiti tramite la combinazione di tre proprietà, ovvero l'espressione di raggruppamento, la proprietà `GroupOn` e la proprietà `GroupInterval`. Un gruppo senza intestazione o piè di pagina di gruppo viene unito al gruppo in esso contenuto. Se il gruppo non contiene un altro gruppo, l'ordinamento viene applicato alla sezione corpo e il gruppo viene eliminato.  
@@ -123,9 +126,9 @@ ms.locfileid: "66100581"
 |Asc|CBool|CByte|CCur|  
 |CDate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|Formato|  
+|CStr|CVar|CVDate|Format|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
-|Hex|Hex$|Nz|Oct|  
+|Hex|Hex$|Nz|ott|  
 |Oct$|Str|Str$|StrConv|  
 |Val||||  
   
@@ -156,11 +159,11 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Date|Date$|DateAdd|DateDiff|  
-|DatePart|DateSerial|DateValue|Day|  
+|Data|Date$|DateAdd|DateDiff|  
+|DatePart|DateSerial|DateValue|Giorno|  
 |Ora|Minuto|Month|MonthName|  
-|Adesso|Secondo|Time|Time$|  
-|Timer|TimeSerial|TimeValue|Giorno feriale|  
+|Now|Second|Tempo|Time$|  
+|Timer|TimeSerial|TimeValue|Giorno della settimana|  
 |WeekdayName|Year|||  
   
 #### <a name="ddeole-functions"></a>Funzioni DDE/OLE  
@@ -198,7 +201,7 @@ ms.locfileid: "66100581"
 |-|-|-|-|  
 |DDB|FV|IPmt|IRR|  
 |MIRR|NPer|NPV|Pmt|  
-|PPmt|PV|replica|SLN|  
+|PPmt|PV|Tariffa|SLN|  
 |SYD||||  
   
 #### <a name="interaction-functions"></a>Funzioni di interazione  
@@ -239,8 +242,8 @@ ms.locfileid: "66100581"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|Int|File di log|Rnd|  
-|Arrotondamento|Sgn|Sin|Sqr|  
+|Correzione|Int|File di log|Rnd|  
+|Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>Funzioni di messaggio  
@@ -255,15 +258,15 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Opzione||  
+|Scegliere|IIf|Opzione||  
   
 #### <a name="sql-aggregate-functions"></a>Funzioni di aggregazione SQL  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono supportate le funzioni aggregazione SQL seguenti:  
   
 |||||  
 |-|-|-|-|  
-|Avg|Count|Max|Min|  
-|StDev|StDevP|Sum|Var|  
+|Avg|Conteggio|Max|Min|  
+|StDev|StDevP|SUM|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Funzioni di testo  
@@ -271,12 +274,12 @@ ms.locfileid: "66100581"
   
 |||||  
 |-|-|-|-|  
-|Formato|Format$|InStr|InStrRev|  
+|Format|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|Sostituisci|Right|Right$|  
-|RTrim|Space|Space$|StrComp|  
-|StrConv|String|String$|StrReverse|  
+|Mid$|Replace|Right|Right$|  
+|RTrim|Spazio|Space$|StrComp|  
+|StrConv|string|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
 ### <a name="constants"></a>Costanti  
@@ -294,7 +297,7 @@ ms.locfileid: "66100581"
  In una definizione di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i rettangoli possono contenere altri elementi del report. Qualsiasi rettangolo con una larghezza maggiore dell'elemento del report e che si sovrappone a più del 90% dell'area dell'elemento diventa un contenitore per l'elemento del report.  
   
 ## <a name="bitmaps"></a>Bitmap  
- Tutte le bitmap incorporate in un report vengono convertite in formato BMP durante l'importazione del report, indipendentemente dal formato iniziale. Ad esempio, se il report include file con estensione jpg e gif, nel report importato le risorse risultanti saranno file con estensione bmp. Le bitmap vengono archiviate come immagini incorporate nel report. Per informazioni sulle immagini incorporate, vedere [immagini &#40;Generatore Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Tutte le bitmap incorporate in un report vengono convertite in formato BMP durante l'importazione del report, indipendentemente dal formato iniziale. Ad esempio, se il report include file con estensione jpg e gif, nel report importato le risorse risultanti saranno file con estensione bmp. Le bitmap vengono archiviate come immagini incorporate nel report. Per informazioni sulle immagini incorporate, vedere [immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Altre considerazioni  
  Per i report importati da Access sono valide anche le limitazioni seguenti, oltre a quanto indicato nelle sezioni precedenti:  

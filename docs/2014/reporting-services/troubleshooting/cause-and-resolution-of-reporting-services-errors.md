@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099374"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa e risoluzione degli errori di Reporting Services
   In questo argomento vengono fornite informazioni sulla causa e sulla risoluzione di diversi errori correlati a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Gli argomenti relativi ai messaggi di errore di questa sezione contengono una spiegazione del messaggio di errore, le possibili cause e le eventuali azioni da eseguire per risolvere il problema.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Errore|`Message`|  
+|Errore|Message|  
 |-----------|-------------|  
 |[rsAccessedDenied - Errore di Reporting Services](rsaccesseddenied-reporting-services-error.md)|Le autorizzazioni concesse all'utente 'mydomain\myAccount' non sono sufficienti per eseguire questa operazione. (rsAccessDenied) (ReportingServicesLibrary).|  
 |[rsInternalError - Errore di Reporting Services](rsinternalerror-reporting-services-error.md)|Errore interno nel server di report. Per altre informazioni, vedere il log degli errori.|  

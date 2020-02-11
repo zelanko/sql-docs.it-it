@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098330"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>Metodo ListSSLCertificates (MSReportServer_ConfigurationSetting WMI)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>Metodo ListSSLCertificates (MSReportServer_ConfigurationSetting WMI)
   Restituisce un elenco dei certificati presenti nel computer del server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,16 +37,16 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *CertificateHash[]*  
+ *CertificateHash []*  
  [out] Hash del certificato.  
   
- *CertName[]*  
+ *CertName []*  
  [out] Nomi del certificato.  
   
- *HostName[]*  
+ *Nome host []*  
  [out] Nomi host per i certificati.  
   
- *Lunghezza*  
+ *Length*  
  [out] Rappresenta la lunghezza delle matrici *CertificateHash*, *CertName* e *HostName* .  
   
  *HRESULT*  
@@ -55,10 +55,10 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

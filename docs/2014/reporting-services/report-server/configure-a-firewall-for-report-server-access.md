@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104157"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
@@ -29,8 +29,8 @@ ms.locfileid: "66104157"
   
  Se si accede ai database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in computer esterni o se il database del server di report si trova in un'istanza esterna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario aprire le porte 1433 e 1434 nel computer esterno. Per altre informazioni, vedere [Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisiti  
- In queste indicazioni si presuppone che sia già stato configurato l'account del servizio, sia già stato creato il database del server di report e che siano già stati configurati gli URL per il servizio Web ReportServer e per Gestione report. Per altre informazioni, vedere [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ In queste indicazioni si presuppone che sia già stato configurato l'account del servizio, sia già stato creato il database del server di report e che siano già stati configurati gli URL per il servizio Web ReportServer e per Gestione report. Per altre informazioni, vedere [Gestione di un server di report in modalità nativa](manage-a-reporting-services-native-mode-report-server.md).  
   
  È inoltre necessario avere verificato la possibilità di accedere al server di report tramite una connessione del browser all'istanza locale del server di report. Questo passaggio consente di stabilire che si dispone di un'installazione funzionante. Prima di procedere all'apertura delle porte, è necessario verificare la corretta configurazione dell'installazione. Per completare questo passaggio in Windows Server, è inoltre necessario avere aggiunto il server di report all'area dei siti attendibili. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -45,51 +45,51 @@ ms.locfileid: "66104157"
   
 3.  Fare clic su **Regole connessioni in entrata**.  
   
-4.  Fare clic su **Nuova regola** nella finestra **Azioni** **.**  
+4.  Fare clic su **nuova regola** nella finestra **azioni** **.**  
   
 5.  Fare clic su **Tipo di regola** in **Porta**.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Nella pagina **Protocollo e porte** selezionare **TCP**.  
   
 8.  Selezionare **Porte locali specifiche** e digitare il valore **80**.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 10. Nella pagina **Azione** fare clic su **Consenti la connessione**.  
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 12. Nella pagina **Profilo** fare clic sulle opzioni appropriate per l'ambiente.  
   
-13. Scegliere **Avanti**.  
+13. Fare clic su **Avanti**.  
   
 14. Nella pagina **Nome** immettere un nome di**ReportServer (TCP sulla porta 80)**  
   
-15. Scegliere **Fine**.  
+15. Fare clic su **Fine**.  
   
 16. Riavviare il computer.  
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Per aprire la porta 80 in Windows Vista o Windows Server 2008  
   
-1.  Dal **avviare** menu, fare clic su **Pannello di controllo**, fare clic su **sicurezza**e quindi fare clic su **Windows Firewall**.  
+1.  Dal menu **Start** fare clic su **Pannello di controllo**, fare clic su **sicurezza**e quindi su **Windows Firewall**.  
   
-2.  Fare clic su **consentire a un programma attraverso Windows Firewall**.  
+2.  Fare clic su **Consenti programma con Windows Firewall**.  
   
-3.  Scegliere **Continua**.  
+3.  Fare clic su **Continua**.  
   
-4.  Nella scheda eccezioni, fare clic su **Aggiungi porta**.  
+4.  Nella scheda eccezioni fare clic su **Aggiungi porta**.  
   
-5.  In nome digitare **ReportServer (TCP sulla porta 80)** .  
+5.  In nome digitare **ReportServer (TCP sulla porta 80)**.  
   
-6.  Nel numero di porta, digitare **80**.  
+6.  In numero porta digitare **80**.  
   
-7.  Verificare che **TCP** sia selezionata.  
+7.  Verificare che sia selezionato **TCP** .  
   
 8.  Fare clic su **Cambia ambito**.  
   
-9. Fare clic su **solo la rete (subnet) locale**, quindi fare clic su **OK**.  
+9. Fare clic su **rete personale (subnet)**, quindi fare clic su **OK**.  
   
 10. Scegliere **OK** per chiudere la finestra di dialogo.  
   

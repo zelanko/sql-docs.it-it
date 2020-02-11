@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098095"
 ---
-# <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetDatabaseConnection (MSReportServer_ConfigurationSetting WMI)
+# <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Metodo SetDatabaseConnection (MSReportServer_ConfigurationSetting WMI)
   Imposta la connessione al database del server di report su un database del server di report specifico.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -50,7 +50,7 @@ public void BackupEncryptionKey(string Server,
  Nome del database del server di report.  
   
  *CredentialsType*  
- Tipo di credenziali da utilizzare per la connessione. I valori possibili sono i seguenti.  
+ Tipo di credenziali da utilizzare per la connessione. I valori possibili sono:  
   
 -   0: Windows  
   
@@ -58,7 +58,7 @@ public void BackupEncryptionKey(string Server,
   
 -   2: servizio Windows  
   
- *UserName*  
+ *Nome utente*  
  Nome account utilizzato per la connessione al database del server di report.  
   
  *Password*  
@@ -70,7 +70,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando il parametro *CredentialsType* è impostato su 0 (Windows), è necessario impostare i parametri *UserName* e *Password* . Il parametro *UserName* deve avere il formato "dominio\nomeutente" e il valore deve rappresentare un account di accesso di Windows valido.  
   
  Quando il parametro *CredentialsType* è impostato su 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), il valore passato nel parametro *UserName* deve essere conforme ai requisiti di un nome account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il metodo [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risultante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

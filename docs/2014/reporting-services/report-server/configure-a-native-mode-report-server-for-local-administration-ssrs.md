@@ -18,18 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104187"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
-  Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se non si è ancora installato o configurato il server di report, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gestire un Reporting Services in modalità Server di Report nativa](manage-a-reporting-services-native-mode-report-server.md).  
+  Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se il server di report non è stato ancora installato o configurato, vedere [installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gestire un server di report Reporting Services in modalità nativa](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -51,27 +51,27 @@ ms.locfileid: "66104187"
   
 -   [Panoramica delle modifiche di configurazione](#bkmk_configuraiton_overview)  
   
--   [Per configurare l'amministrazione locale del server di report e Gestione report](#bkmk_configure_local_server)  
+-   [Per configurare il server di report locale e l'amministrazione di Gestione report](#bkmk_configure_local_server)  
   
 -   [Per configurare SQL Server Management Studio (SSMS) per l'amministrazione locale del server di report](#bkmk_configure_ssms)  
   
--   [Per configurare SQL Server Data Tools BI (SSDT) per la pubblicazione in un Server di Report locale](#bkmk_configure_ssdt)  
+-   [Per configurare SQL Server Data Tools BI (SSDT) per la pubblicazione in un server di report locale](#bkmk_configure_ssdt)  
   
 -   [Informazioni aggiuntive](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Panoramica delle modifiche di configurazione  
+##  <a name="bkmk_configuraiton_overview"></a>Panoramica delle modifiche di configurazione  
  Le seguenti modifiche di configurazione consentono di configurare il server in modo tale da utilizzare autorizzazioni utente standard per le gestione del contenuto e le operazioni del server di report:  
   
 -   Aggiungere gli URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ai siti attendibili. Per impostazione predefinita, nei sistemi operativi seguenti Internet Explorer viene eseguito in **modalità protetta**. Questa funzionalità impedisce alle richieste del browser di accedere a processi di alto livello in esecuzione nello stesso computer. È possibile disabilitare la modalità protetta per le applicazioni del server di report aggiungendo le applicazioni come Siti attendibili.  
   
 -   Creare assegnazioni di ruolo che concedono all'amministratore del server di report l'autorizzazione necessaria per gestire il contenuto e le operazioni senza dover utilizzare la funzionalità **Esegui come amministratore** in Internet Explorer. Creando assegnazioni di ruolo per l'account utente di Windows, è possibile accedere a un server di report con le autorizzazioni Gestione contenuto e Amministratore sistema tramite assegnazioni di ruolo esplicite che sostituiscono le assegnazioni di ruolo predefinite create da Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a> Per configurare l'amministrazione locale del server di report e Gestione report  
+##  <a name="bkmk_configure_local_server"></a>Per configurare il server di report locale e l'amministrazione di Gestione report  
  Se si sta esplorando un server di report locale e vengono visualizzati errori simili ai seguenti, completare i passaggi di configurazione riportati in questa sezione.  
   
 -   L'utente `'Domain\[user name]`' non dispone delle autorizzazioni necessarie. Verificare che siano state concesse autorizzazioni sufficienti e che le restrizioni di Controllo account utente di Windows siano state gestite.  
   
-###  <a name="bkmk_site_settings"></a> Impostazioni dei siti attendibili nel browser  
+###  <a name="bkmk_site_settings"></a>Impostazioni sito attendibili nel browser  
   
 1.  Aprire una finestra del browser utilizzando autorizzazioni Esegui come amministratore. Dal menu **Start** scegliere **Tutti i programmi**, fare clic con il pulsante destro del mouse su **Internet Explorer**e scegliere **Esegui come amministratore**.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "66104187"
   
 3.  Nell'indirizzo URL immettere l'URL di Gestione report. Per istruzioni, vedere [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  Fare clic su **Strumenti**.  
+4.  Fare clic su **strumenti**.  
   
 5.  Fare clic su **Opzioni Internet**.  
   
-6.  Fare clic su **Sicurezza**.  
+6.  Fare clic su **Security**.  
   
 7.  Fare clic su **Siti attendibili**.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "66104187"
   
 10. Se non si usa HTTPS per il sito predefinito, deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area** .  
   
-11. Scegliere **Aggiungi**.  
+11. Fare clic su **Aggiungi**.  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_folder_settings"></a> Impostazioni cartella Gestione report)  
+###  <a name="bkmk_configure_folder_settings"></a>Impostazioni cartella Gestione report  
   
 1.  Nella home page di Gestione report fare clic su **Impostazioni cartella**.  
   
@@ -111,16 +111,16 @@ ms.locfileid: "66104187"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_site_settings"></a> Impostazioni sito Gestione report  
+###  <a name="bkmk_configure_site_settings"></a>Impostazioni del sito Gestione report  
   
 1.  Aprire il browser con i privilegi di amministratore e accedere a Gestione report, `http://<server name>/reports`.  
   
 2.  Fare clic su **Impostazioni sito** nell'angolo superiore della home page.  
   
     > [!TIP]  
-    >  **Nota:** Se non viene visualizzato il **Impostazioni sito** opzione, chiudere e riaprire il browser e passare a Gestione report con privilegi amministrativi.  
+    >  **Nota:** Se l'opzione **Impostazioni sito** non è visualizzata, chiudere e riaprire il browser e passare a gestione report con privilegi amministrativi.  
   
-3.  Fare clic su **Sicurezza**.  
+3.  Fare clic su **sicurezza**.  
   
 4.  Fare clic su **Nuova assegnazione ruolo**.  
   
@@ -134,10 +134,10 @@ ms.locfileid: "66104187"
   
 9. Riaprire Gestione report in Internet Explorer senza usare le autorizzazioni **Esegui come amministratore**.  
   
-##  <a name="bkmk_configure_ssms"></a> Per configurare SQL Server Management Studio (SSMS) per l'amministrazione locale del server di report  
+##  <a name="bkmk_configure_ssms"></a>Per configurare SQL Server Management Studio (SSMS) per l'amministrazione locale del server di report  
  Per impostazione predefinita, non è possibile accedere a tutte le proprietà dei server di report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a meno che non si esegua [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con privilegi di amministratore.  
   
- **Per configurare proprietà e assegnazioni dei ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , pertanto, non è necessario avviare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con autorizzazioni elevate tutte le volte:  
+ **Per configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ** le proprietà del ruolo e le assegnazioni di ruolo, non è [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] necessario iniziare con autorizzazioni elevate ogni volta:  
   
 -   Dal menu **Start** scegliere **Tutti i programmi**e **SQL Server 2014**, fare clic con il pulsante destro del mouse su **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** e quindi scegliere **Esegui come amministratore**.  
   
@@ -157,32 +157,32 @@ ms.locfileid: "66104187"
   
  Quando si apre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non si seleziona esplicitamente **Esegui come amministratore** si ha accesso alle proprietà del server di report.  
   
-##  <a name="bkmk_configure_ssdt"></a> Per configurare SQL Server Data Tools BI (SSDT) per la pubblicazione in un Server di Report locale  
+##  <a name="bkmk_configure_ssdt"></a>Per configurare SQL Server Data Tools BI (SSDT) per la pubblicazione in un server di report locale  
  Se è stato installato [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] in uno dei sistemi operativi indicati nella prima sezione di questo argomento e si vuole che SSDT interagisca con un server di report in modalità nativa locale, si verificheranno problemi di autorizzazione a meno che non si apra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con autorizzazioni elevate o si configurino ruoli di Reporting Services. Ad esempio, se non si dispone di autorizzazioni sufficienti, si verificheranno problemi simili ai seguenti:  
   
 -   Quando si tenta di distribuire elementi dei report nel server di report del computer, viene visualizzato un messaggio di errore simile al seguente nella finestra **Elenco errori** :  
   
     -   Le autorizzazioni concesse all'utente 'Dominio\\<nome utente\>' non sono sufficienti per eseguire questa operazione.  
   
- **Per eseguire con autorizzazioni elevate tutte le volte che si apre SSDT:**  
+ **Per eseguire con autorizzazioni elevate ogni volta che si apre SSDT:**  
   
-1.  Dalla schermata start, digitare `sql server` e quindi fare doppio clic su **SQL Server Data Tools per Visual Studio**. Fare clic su **Esegui come amministratore**.  
+1.  Dalla schermata Start digitare `sql server` e quindi fare clic con il pulsante destro del mouse su **SQL Server Data Tools per Visual Studio**. Fare clic su **Esegui come amministratore**.  
   
-     **Oppure**, in sistemi operativi precedenti:  
+     In **alternativa**, nei sistemi operativi precedenti:  
   
      Dal menu **Start** fare clic su **Tutti i programmi**, selezionare **SQL Server 2014**, fare clic con il pulsante destro del mouse su **SQL Server Data Tools**, quindi scegliere **Esegui come amministratore**.  
   
-2.  Scegliere **Continua**.  
+2.  Fare clic su **Continua**.  
   
 3.  Fare clic su **Esegui programma**.  
   
  Sarà ora possibile distribuire report o altri elementi in un server di report locale.  
   
- **Per configurare proprietà e assegnazioni dei ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , pertanto, non è necessario avviare SSDT con autorizzazioni elevate tutte le volte:**  
+ **Per configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le assegnazioni di ruolo in modo da non dover avviare SSDT con autorizzazioni elevate ogni volta:**  
   
 -   Vedere le sezioni [Impostazioni cartella Gestione report)](#bkmk_configure_folder_settings) e [Impostazioni sito Gestione report](#bkmk_configure_site_settings) più indietro in questo argomento.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Informazioni aggiuntive  
+##  <a name="bkmk_addiitonal_informaiton"></a>Informazioni aggiuntive  
  Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Vedere anche  

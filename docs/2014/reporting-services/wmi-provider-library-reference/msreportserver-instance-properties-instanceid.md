@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba254f3cf1e5104a4ac56ca2bed587b150ac824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097211"
 ---
-# <a name="instanceid-property-wmi-msreportserverinstance"></a>Proprietà InstanceID (MSReportServer_Instance WMI)
+# <a name="instanceid-property-wmi-msreportserver_instance"></a>Proprietà InstanceID (MSReportServer_Instance WMI)
   Questo oggetto supporta l'infrastruttura di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e non può essere utilizzato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,7 +39,7 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_Instance](msreportserver-instance-members.md)  

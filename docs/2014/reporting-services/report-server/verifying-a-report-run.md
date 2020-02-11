@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103134"
 ---
 # <a name="verifying-a-report-run"></a>Verifica dell'esecuzione di un report
@@ -40,7 +40,7 @@ ms.locfileid: "66103134"
   
 |Tipo di report|Posizione delle informazioni sulla data e l'ora|Operazioni da eseguire per visualizzare le informazioni|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per altre informazioni, vedere [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md).|1) Individuare la cartella che contiene il report.<br />2) Impostare la visualizzazione Dettagli per la cartella.<br />3) 3) prendere nota della data e ora nella **, quando eseguita** colonna.|  
+|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per altre informazioni, vedere [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md).|1) Individuare la cartella che contiene il report.<br />2) Impostare la visualizzazione Dettagli per la cartella.<br />3) 3) prendere nota della data e dell'ora della colonna **durante l'esecuzione** .|  
 |Snapshot della cronologia del report|Pagina delle proprietà Cronologia. Per altre informazioni, vedere [Pagina delle proprietà Opzioni snapshot &#40;Gestione report&#41;](../snapshot-options-properties-page-report-manager.md).|1) Aprire il report.<br />2) Fare clic sulla pagina **Proprietà** .<br />3) Fare clic sulla scheda **Cronologia** .<br />4) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
 |Report memorizzato nella cache|Pianificazione utilizzata per creare e aggiornare il report memorizzato nella cache.|1) Aprire il report.<br />2) Fare clic sulla pagina **Proprietà** .<br />3) Fare clic sulla scheda **Esecuzione** .<br />4) Aprire la pianificazione.|  
   

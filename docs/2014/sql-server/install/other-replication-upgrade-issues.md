@@ -1,5 +1,5 @@
 ---
-title: Altri problemi di aggiornamento replica | Microsoft Docs
+title: Altri problemi di aggiornamento della replica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,17 +18,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093639"
 ---
 # <a name="other-replication-upgrade-issues"></a>Altri problemi di aggiornamento della replica
   In questo argomento vengono analizzati alcuni problemi relativi all'aggiornamento che non sono segnalati da Preparazione aggiornamento.  
   
 ## <a name="versions-supported"></a>Versioni supportate  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante l'aggiornamento di un nodo, non è necessario arrestare l'attività eseguita su altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante l'aggiornamento di un nodo, non è necessario arrestare l'attività eseguita su altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia.  
   
  È possibile eseguire funzionalità di replica tra versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anche se tali funzionalità sono in genere limitate a quelle supportate dalla versione meno recente utilizzata.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "66093639"
   
 -   Tutti i controlli ActiveX sono contrassegnati come non sicuri per la generazione di script e l'inizializzazione.  
   
--   Il controllo ActiveX snapshot è stato eliminato. È possibile creare e gestire snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure a livello di programmazione mediante stored procedure di replica. Per altre informazioni, vedere gli argomenti "procedura: Creare e applicare lo Snapshot iniziale ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "e" procedura: Creare lo Snapshot iniziale (programmazione Transact-SQL della replica) "in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+-   Il controllo ActiveX snapshot è stato eliminato. È possibile creare e gestire snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure a livello di programmazione mediante stored procedure di replica. Per ulteriori informazioni, vedere gli argomenti "Procedura: Creazione e applicazione dello snapshot iniziale ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" e "Procedura: Creazione dello snapshot iniziale (programmazione Transact-SQL della replica)" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   I controlli ActiveX distribuzione e ActiveX merge sono stati deprecati. Una funzionalità analoga viene fornita per applicazioni del codice gestito da oggetti RMO (Replication Management Objects). Per ulteriori informazioni, vedere l'argomento relativo alla sincronizzazione delle sottoscrizioni (programmazione RMO) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

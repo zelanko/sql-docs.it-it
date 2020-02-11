@@ -1,5 +1,5 @@
 ---
-title: Specificare un'immagine come indicatore di misura su un misuratore (Generatore Report e SSRS) | Microsoft Docs
+title: Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101150"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS)
-  Il misuratore include tre stili predefiniti utilizzabili per personalizzare l'aspetto dell'indicatore di misura. Per un misuratore radiale, gli stili predefiniti sono: Lancetta, marcatore e barre. mentre quelli per un misuratore lineare sono Marcatore, Barre e Termometro. Se è necessario un indicatore di misura univoco, l'utente può creare e specificare un'immagine utilizzabile come indicatore di misura con funzionalità complete.  
+  Il misuratore include tre stili predefiniti utilizzabili per personalizzare l'aspetto dell'indicatore di misura. Per un misuratore radiale, gli stili predefiniti sono Lancetta, Marcatore e Barre, mentre quelli per un misuratore lineare sono Marcatore, Barre e Termometro. Se è necessario un indicatore di misura univoco, l'utente può creare e specificare un'immagine utilizzabile come indicatore di misura con funzionalità complete.  
   
  Quando si specifica un'immagine per l'indicatore di misura, tale immagine deve includere le specifiche seguenti:  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66101150"
   
 1.  In visualizzazione della struttura fare clic sull'indicatore di misura del misuratore.  
   
-2.  (Facoltativo) Se è presente alcun indicatore del misuratore, fare clic sul misuratore e selezionare **Aggiungi indicatore di misura**. Al misuratore verrà aggiunto un indicatore di misura.  
+2.  Opzionale Se sul misuratore non è presente alcun puntatore, fare clic con il pulsante destro del mouse sul misuratore e scegliere **Aggiungi puntatore**. Al misuratore verrà aggiunto un indicatore di misura.  
   
-3.  Scegliere il **Inserisci** scheda della barra multifunzione e fare doppio clic sull'icona di immagine. Verrà visualizzata la finestra di dialogo **Proprietà immagine**.  
+3.  Fare clic sulla scheda **Inserisci** sulla barra multifunzione e fare doppio clic sull'icona dell'immagine. Verrà visualizzata la finestra di dialogo **Proprietà immagine**.  
   
-4.  Aggiungere un'immagine al report. Per altre informazioni, vedere [incorporare un'immagine in un Report &#40;Generatore Report e SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+4.  Aggiungere un'immagine al report. Per ulteriori informazioni, vedere [incorporare un'immagine in un Report &#40;Generatore report e SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 5.  Aprire il riquadro Proprietà.  
   
@@ -47,18 +47,18 @@ ms.locfileid: "66101150"
   
 7.  Espandere il nodo PointerImage.  
   
-8.  Nelle **origine**, selezionare **Embedded** nell'elenco a discesa.  
+8.  In **origine**selezionare **incorporata** dall'elenco a discesa.  
   
     > [!NOTE]  
-    >  Se l'immagine viene archiviata nel database o sul Web, è possibile specificare l'opzione adatta per questa proprietà. Per altre informazioni, vedere [finestra di dialogo Proprietà immagine, generale &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
+    >  Se l'immagine viene archiviata nel database o sul Web, è possibile specificare l'opzione adatta per questa proprietà. Per ulteriori informazioni, vedere finestra di [dialogo Proprietà immagine, generale &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
-9. Nelle **valore**, selezionare il nome dell'immagine nell'elenco a discesa.  
+9. In **valore**selezionare il nome dell'immagine dall'elenco a discesa.  
   
-10. Nelle **TransparentColor**, selezionare un valore di colore che si desidera rimuovere dall'immagine. In questo modo, l'aspetto dell'indicatore di misura nel misuratore risulterà migliore.  
+10. In **TransparentColor**selezionare un valore di colore che si desidera rimuovere dall'immagine. In questo modo, l'aspetto dell'indicatore di misura nel misuratore risulterà migliore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Aggiungere un misuratore a un Report &#40;Report e SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere un misuratore a un report &#40;Generatore report e SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   

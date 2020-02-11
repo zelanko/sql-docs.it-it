@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049264"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
@@ -34,35 +34,35 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
- *Hierarchy*  
+ *Gerarchia*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
- *Ricorsivo*  
+ *Ricorsiva*  
  Una parola chiave che indica il confronto ricorsivo tra set.  
   
  *Include_Calc_Members*  
  Una parola chiave per consentire l'inclusione dei membri calcolati nei risultati del drill-down.  
   
-## <a name="remarks"></a>Note  
- Se viene specificata un'espressione numerica, la **DrilldownMemberBottom** funzione dispone in ordine crescente, gli elementi figlio di ogni membro nel primo set, a seconda del valore dell'espressione numerica, valutato sul set di figlio membri. Se non viene specificata un'espressione numerica, la funzione dispone in ordine crescente i membri figlio di ogni membro nel primo set in base ai valori delle celle rappresentate dal set di membri figlio, come determinato dal contesto della query. Questo comportamento è simile alle funzioni BottomCount e Tail (MDX) che restituiscono un set di membri in ordine naturale, senza alcun ordinamento.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificata un'espressione numerica, la funzione **DrilldownMemberBottom** Ordina in ordine crescente gli elementi figlio di ogni membro nel primo set, in base al valore dell'espressione numerica, valutato sul set di membri figlio. Se non viene specificata un'espressione numerica, la funzione dispone in ordine crescente i membri figlio di ogni membro nel primo set in base ai valori delle celle rappresentate dal set di membri figlio, come determinato dal contesto della query. Questo comportamento è simile alle funzioni BottomCount e Tail (MDX) che restituiscono un set di membri in ordine naturale, senza alcun ordinamento.  
   
- Dopo l'ordinamento, il **DrilldownMemberBottom** funzione restituisce un set che contiene i membri padre e il numero di membri figlio, specificato in *conteggio,* con il valore più basso e sono contenuti in entrambi Imposta il valore.  
+ Dopo l'ordinamento, la funzione **DrilldownMemberBottom** restituisce un set contenente i membri padre e il numero di membri figlio, specificato in *Count,* con il valore più basso e sono contenuti in entrambi i set.  
   
- Se **RICORSIVA** viene specificato, la funzione ordina il primo set come descritto in precedenza, quindi confronta in modo ricorsivo i membri del primo set, organizzati in una gerarchia, con il secondo set. La funzione recupera il numero di membri figlio inferiore di ogni membro del primo set presente anche nel secondo.  
+ Se viene specificato **RIcorsivo** , la funzione ordina il primo set come descritto in precedenza, quindi confronta in modo ricorsivo i membri del primo set, organizzati in una gerarchia, rispetto al secondo set. La funzione recupera il numero di membri figlio inferiore di ogni membro del primo set presente anche nel secondo.  
   
  Il primo set può contenere tuple anziché membri. La funzione per il drill-down di tuple è un'estensione di OLE DB e restituisce un set di tuple anziché di membri.  
   
- Il **DrilldownMemberBottom** funzione è simile al [DrilldownMember](../mdx/drilldownmember-mdx.md) funzionare, ma anziché includere tutti gli elementi figlio per ogni membro nel primo set che è anche presente nel secondo set, il  **DrilldownMemberBottom** funzione restituisce il numero inferiore di membri figlio per ogni membro.  
+ La funzione **DrilldownMemberBottom** è simile alla funzione [DrilldownMember](../mdx/drilldownmember-mdx.md) , ma anziché includere tutti gli elementi figlio per ogni membro del primo set presente anche nel secondo set, la funzione **DrilldownMemberBottom** restituisce il numero inferiori di membri figlio per ogni membro.  
   
- L'esecuzione di query la proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) per informazioni dettagliate.  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

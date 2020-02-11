@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092855"
 ---
 # <a name="rename-user-sys"></a>Rinominare l'utente sys
@@ -26,16 +26,16 @@ ms.locfileid: "66092855"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Utente **sys** è riservato.  
+ L'utente **sys** è riservato.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
   
 ### <a name="before-upgrade-procedure"></a>Procedura precedente all'aggiornamento  
- Prima dell'aggiornamento, in ogni database che contiene l'utente **sys**, eseguire le operazioni seguenti:  
+ Prima di eseguire l'aggiornamento, in ogni database che contiene l'utente **sys**eseguire le operazioni seguenti:  
   
 1.  Creare un nuovo utente.  
   
-2.  Usare le istruzioni seguenti per visualizzare tutte le autorizzazioni concesse dall'utente **sys** e concesse all'utente **sys**.  
+2.  Utilizzare le istruzioni seguenti per visualizzare tutte le autorizzazioni concesse dall'utente **sys** e concesse all'utente **sys**.  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -44,16 +44,16 @@ ms.locfileid: "66092855"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  Trasferire la proprietà di tutti gli oggetti appartenenti **sys** al nuovo utente, usare **sp_changeobjectowner**.  
+3.  Per trasferire la proprietà di tutti gli oggetti di proprietà di **sys** al nuovo utente, utilizzare **sp_changeobjectowner**.  
   
-4.  Eliminare l'utente **sys**.  
+4.  Elimina utente **sys**.  
   
-5.  Per ripristinare le autorizzazioni originali acquisite nel passaggio 2, usare la clausola AS *new_user* clausola dell'istruzione GRANT.  
+5.  Per ripristinare le autorizzazioni originali acquisite nel passaggio 2, utilizzare la clausola AS *new_user* dell'istruzione Grant.  
   
 6.  Modificare gli script in modo che facciano riferimento al nuovo utente. Ad esempio, gli script che contengono istruzioni come `SELECT * FROM sys.my`_`table` devono essere modificati in `SELECT * FROM new_user.my_table`.  
   
 ### <a name="after-upgrade-procedure"></a>Procedura successiva all'aggiornamento  
- Se l'utente **sys** è stato rinominato non prima dell'aggiornamento, eseguire le operazioni seguenti:  
+ Se l'utente **sys** non è stato rinominato prima dell'aggiornamento, eseguire le operazioni seguenti:  
   
 1.  Eseguire l'istruzione `ALTER DATABASE db_name SET ONLINE`. Il database sarà in modalità SINGLE_USER.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66092855"
 3.  Eseguire l'istruzione `ALTER DATABASE db_name SET MULTI_USER`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

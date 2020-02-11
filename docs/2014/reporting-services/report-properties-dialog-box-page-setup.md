@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà, il programma di installazione di pagina report | Microsoft Docs
+title: Finestra di dialogo Proprietà report, Imposta pagina | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104382"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Finestra di dialogo Proprietà report, Imposta pagina
-  Selezionare **Imposta pagina** nel **proprietà Report**, finestra di dialogo per impostare le opzioni di pagina per l'intero report.  
+  Selezionare imposta **pagina** nella finestra di dialogo **Proprietà report**per impostare le opzioni della pagina per l'intero report.  
   
 ## <a name="options"></a>Opzioni  
  **Pollici**  
@@ -36,7 +36,7 @@ ms.locfileid: "66104382"
  **Orizzontale**  
  Specifica l'orientamento della pagina del report. Indica che la lunghezza della pagina è maggiore in orizzontale.  
   
- **Formato della carta**  
+ **Formato carta**  
  Selezionare una dimensione dall'elenco per inserire automaticamente le dimensioni nei controlli Larghezza e Altezza. In alternativa, selezionare **Dimensioni personalizzate** e quindi modificare i controlli Larghezza e Altezza in base alle dimensioni da utilizzare.  
   
  **Width**  
@@ -45,16 +45,16 @@ ms.locfileid: "66104382"
  **Height**  
  Visualizza l'altezza del formato della carta selezionato nell'elenco **Tipo carta** .  
   
- **Top**  
+ **In alto**  
  Imposta la distanza tra la parte superiore del report e la parte superiore della prima riga del report.  
   
- **nella parte inferiore**  
+ **In basso**  
  Imposta la distanza tra la parte inferiore del report e la parte inferiore dell'ultima riga del report.  
   
- **A sinistra**  
+ **Sinistra**  
  Imposta la distanza tra il margine sinistro del report e il margine sinistro delle righe del report.  
   
- **Right**  
+ **Ok**  
  Imposta la distanza tra il margine destro del report e il margine destro delle righe del report.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105410"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66105410"
   
      Dopo la pubblicazione, nella finestra di dialogo viene mostrato quali parti di report sono state pubblicate correttamente e quali non lo sono state. È possibile visualizzare i dettagli nella finestra di dialogo **Pubblica parti del report** per le parti del report non pubblicate correttamente.  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
   
 ### <a name="to-republish-a-report-part"></a>Per ripubblicare una parte di report  
   
@@ -59,8 +59,8 @@ ms.locfileid: "66105410"
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Risolvere i problemi relativi alle parti del report &#40;Generatore report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Verificare la disponibilità di aggiornamenti o disattivare gli aggiornamenti &#40;Generatore report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

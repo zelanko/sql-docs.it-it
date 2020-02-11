@@ -1,5 +1,5 @@
 ---
-title: Modificare le connessioni che usano protocolli di rete Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX SPX | Microsoft Docs
+title: Modificare le connessioni che utilizzano i protocolli di rete Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX SPX | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdbcaa39e3d9630bd4ea50919f31cdbb15a36d14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093896"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Modificare le connessioni che usano i protocolli di rete Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk o NWLink IPX/SPX
@@ -41,12 +41,12 @@ ms.locfileid: "66093896"
 ## <a name="corrective-action"></a>Azione correttiva  
  Modificare le applicazioni client in modo che utilizzino un protocollo supportato per la connessione al server. Se è stato installato un alias che utilizza uno dei protocolli non supportati, tale alias deve essere modificato in modo da utilizzare uno dei protocolli supportati.  
   
- Se la connessione all'applicazione di stringa in particolare utilizza o Carica uno di questi protocolli, per entrambe le reti specifica = DBMSRPCN per RPC, NETWORK = DBMSADSN per Appletalk o NETWORK = DBMSVINN per Banyan VINES proprietà, o utilizzando un prefisso esplicito quale "spx: *server\istanza*"per SPX," bv:*server*"per Banyan VINES," adsp:*server*"per AppleTalk, o" rpc:*server*"per Multiprotocol, quindi è necessario modificare l'applicazione per usare uno dei protocolli supportati.  
+ Se la stringa di connessione dell'applicazione USA o carica in modo specifico uno di questi protocolli, specificando NETWORK = DBMSRPCN per RPC, NETWORK = DBMSADSN per AppleTalk o NETWORK = DBMSVINN per la proprietà Banyan VINES oppure usando un prefisso esplicito, ad esempio "SPX:*Server\Istanza*" per SPX, "BV:*Server*" per Banyan VINES, "ADSP:*server*" per AppleTalk o "RPC:*Server*" per il multiprotocollo, è necessario modificare l'applicazione per usare uno dei protocolli supportati.  
   
  Per ulteriori informazioni, vedere "Scelta di un Protocollo di rete" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

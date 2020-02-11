@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102138"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurare l'autenticazione personalizzata o basata su form nel server di report
@@ -47,7 +47,7 @@ ms.locfileid: "66102138"
     </Authentication>  
     ```  
   
-4.  Incollare la struttura sulle voci esistenti per <`Authentication`>.  
+4.  Incollarlo sulle voci esistenti per <`Authentication`>.  
   
      Si noti che non è possibile utilizzare `Custom` con altri tipi di autenticazione.  
   
@@ -94,6 +94,6 @@ ms.locfileid: "66102138"
  [Autenticazione con il server di report](authentication-with-the-report-server.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurare l'autenticazione di base nel server di report](configure-basic-authentication-on-the-report-server.md)   
- [Configurare l'autenticazione di Windows nel server di report.](configure-windows-authentication-on-the-report-server.md)  
+ [Configurare l'autenticazione di Windows nel server di report](configure-windows-authentication-on-the-report-server.md)  
   
   

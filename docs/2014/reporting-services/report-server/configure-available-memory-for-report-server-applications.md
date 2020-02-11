@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80215f23b2544a442600a97112f3d0e2650f55e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103962"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
@@ -26,7 +26,8 @@ ms.locfileid: "66103962"
  In questo argomento vengono descritte le impostazioni di configurazione che è possibile specificare e le modalità di risposta del server quando l'utilizzo della memoria diventa un fattore da considerare nell'elaborazione delle richieste.  
   
 ## <a name="memory-management-policies"></a>Criteri di gestione della memoria  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rispetta i vincoli relativi alle risorse di sistema regolando la quantità di memoria allocata per applicazioni e tipi di elaborazione di richieste specifici. Di seguito vengono riportate le applicazioni eseguite nel servizio del server di report soggette alla gestione della memoria:  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rispetta i vincoli relativi alle risorse di sistema regolando la quantità di memoria allocata per applicazioni e tipi di elaborazione di richieste specifici. Di seguito vengono riportate le applicazioni eseguite nel servizio del server di report soggette alla gestione della memoria:  
   
 -   Gestione report, un'applicazione Web front-end per il server di report.  
   
@@ -38,9 +39,9 @@ ms.locfileid: "66103962"
   
  Se l'utilizzo di memoria nel sistema non è elevato, prima di ricevere le richieste ogni applicazione server richiede una parte di memoria all'avvio per garantire prestazioni ottimali in caso di ricezione delle richieste stesse. Man mano che l'utilizzo di memoria aumenta, il server di report regola il modello di processo come descritto nella tabella seguente.  
   
-|Utilizzo della memoria|Risposta del server|  
+|Uso elevato della memoria|Risposta del server|  
 |---------------------|---------------------|  
-|Bassa|L'elaborazione delle richieste correnti continua e le nuove richieste vengono accettate quasi sempre. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer.|  
+|Basso|L'elaborazione delle richieste correnti continua e le nuove richieste vengono accettate quasi sempre. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer.|  
 |Media|L'elaborazione delle richieste correnti continua e le nuove richieste potrebbero essere accettate. Alle richieste dirette all'applicazione di elaborazione in background viene assegnata una priorità più bassa rispetto a quella assegnata alle richieste dirette al servizio Web ReportServer. Le allocazioni di memoria per le tre applicazioni server sono ridotte, con riduzioni relativamente maggiori per l'elaborazione in background in modo da aumentare la memoria disponibile per le richieste del servizio Web.|  
 |Alto|L'allocazione della memoria è ridotta ulteriormente. Le applicazioni server che richiedono una quantità maggiore di memoria vengono negate, le richieste correnti vengono rallentate e completate in un tempo più lungo, mentre le nuove richieste non sono accettate. Il server di report esegue lo swapping dei file di dati in memoria sul disco.<br /><br /> Se i vincoli relativi alla memoria aumentano e non è più disponibile memoria per gestire le nuove richieste, il server di report restituirà l'errore HTTP 503 relativo alla non disponibilità del server, mentre le richieste correnti verranno completate. In alcuni casi i domini applicazione potrebbero essere riciclati per ridurre immediatamente l'utilizzo della memoria.|  
   
@@ -54,9 +55,11 @@ ms.locfileid: "66103962"
 ## <a name="configuration-settings-for-memory-management"></a>Impostazioni di configurazione per la gestione della memoria  
  Le impostazioni di configurazione che controllano l'allocazione di memoria per il server di report sono `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` e `MemoryThreshold`.  
   
--   `WorkingSetMaximum` e `WorkingSetMinimum` definiscono l'intervallo di memoria disponibile. È possibile configurare queste impostazioni per specificare un intervallo di memoria disponibile per le applicazioni del server di report. Questa operazione può essere utile se si ospitano più applicazioni nello stesso computer e si determina che il server di report utilizza una quantità non proporzionata di risorse di sistema rispetto alle altre applicazioni.  
+-   
+  `WorkingSetMaximum` e `WorkingSetMinimum` definiscono l'intervallo di memoria disponibile. È possibile configurare queste impostazioni per specificare un intervallo di memoria disponibile per le applicazioni del server di report. Questa operazione può essere utile se si ospitano più applicazioni nello stesso computer e si determina che il server di report utilizza una quantità non proporzionata di risorse di sistema rispetto alle altre applicazioni.  
   
--   `MemorySafetyMargin` e `MemoryThreshold` consentono di impostare i limiti per i livelli basso, medio e alto di utilizzo della memoria. Per ogni stato, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono eseguite azioni correttive per garantire che l'elaborazione del report e le altre richieste siano gestire in modo appropriato rispetto alla quantità di memoria disponibile nel computer. È possibile specificare impostazioni di configurazione per stabilire il limite tra i livelli basso, medio e alto di utilizzo della memoria.  
+-   
+  `MemorySafetyMargin` e `MemoryThreshold` consentono di impostare i limiti per i livelli basso, medio e alto di utilizzo della memoria. Per ogni stato, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono eseguite azioni correttive per garantire che l'elaborazione del report e le altre richieste siano gestire in modo appropriato rispetto alla quantità di memoria disponibile nel computer. È possibile specificare impostazioni di configurazione per stabilire il limite tra i livelli basso, medio e alto di utilizzo della memoria.  
   
      Sebbene sia possibile modificare le impostazioni di configurazione, questa operazione non migliorerà le prestazioni di elaborazione del report. La modifica delle impostazioni di configurazione è utile solo se le richieste vengono rilasciate prima che siano completate. Il modo migliore per ottimizzare le prestazioni del server consiste nel distribuire il server di report o le relative applicazioni singole in computer dedicati.  
   
@@ -87,12 +90,13 @@ ms.locfileid: "66103962"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Informazioni sulle impostazioni di configurazione della memoria ASP.NET  
- Sebbene il servizio Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione `processModel` di machine.config per le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
+ Sebbene il servizio Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione `processModel` di machine.config per le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)  
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Domini applicazione per applicazioni del server di report](application-domains-for-report-server-applications.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Report pagina della cronologia (gestione Report) | Microsoft Docs
+title: Pagina Cronologia report (Gestione report) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104476"
 ---
 # <a name="report-history-page-report-manager"></a>Pagina Cronologia report (Gestione report)
@@ -45,7 +45,7 @@ Per generare la cronologia, è necessario che il report possa essere eseguito in
  **Elimina**  
  Fare clic per eliminare uno o più snapshot. Prima di fare clic su **Elimina**selezionare la casella di controllo accanto allo snapshot che si desidera eliminare.  
   
- **Nuovo Snapshot**  
+ **Nuovo snapshot**  
  Fare clic per aggiungere uno snapshot alla cronologia del report. Questo pulsante è disponibile se si seleziona l'opzione **Consenti creazione manuale della cronologia** nella pagina delle proprietà Cronologia del report.  
   
  **Ultima esecuzione**  
@@ -55,8 +55,8 @@ Per generare la cronologia, è necessario che il report possa essere eseguito in
  Visualizza la dimensione della definizione e dei dati del report. Questo valore indica lo spazio occupato nel database del server di report dalla definizione e dai dati del report. Le dimensioni del report visualizzabile, che include elementi di formattazione, sono effettivamente più grandi. Le dimensioni totali, indicate tra parentesi, rappresentano la somma delle dimensioni di tutti gli snapshot presenti nella cronologia del report per il report corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare o eliminare la cronologia del Report &#40;gestione Report&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+ [Visualizzazione o eliminazione della cronologia del report &#40;Gestione report&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Pagina delle proprietà Opzioni snapshot &#40;gestione Report&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Pagina delle proprietà Opzioni snapshot &#40;Gestione report&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106054"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66106054"
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di righe verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di righe.  
   
-3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
+3.  Fare clic sul membro statico che corrisponde all'intestazione o al piè di pagina della riga che si desidera mantenere con le righe di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106054"
   
 2.  Sul lato destro del riquadro di raggruppamento fare clic sulla freccia rivolta verso il basso, quindi fare clic su **Modalità avanzata**. Nel riquadro Gruppi di colonne verranno visualizzati i membri statici e dinamici gerarchici della gerarchia dei gruppi di colonne.  
   
-3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix**.  
+3.  Fare clic sul membro statico che corrisponde alla colonna statica che si desidera mantenere con le colonne di gruppo. Nel riquadro Proprietà verranno visualizzate le proprietà dei **membri Tablix** .  
   
 4.  Nel riquadro Proprietà fare clic su **KeepWithGroup**e quindi scegliere uno dei valori seguenti nell'elenco a discesa:  
   
@@ -69,8 +69,8 @@ ms.locfileid: "66106054"
 5.  (Facoltativo) Visualizzare l'anteprima del report. Laddove possibile, il renderer del report mantiene il membro con i membri del gruppo di colonne specificati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Celle di regione dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Aree dell'area dati Tablix &#40;Report e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+ [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

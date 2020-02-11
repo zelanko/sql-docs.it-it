@@ -1,5 +1,5 @@
 ---
-title: Salvare i report nel Computer (Generatore Report) | Microsoft Docs
+title: Salvare i report nel computer (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102306"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvare i report nel computer in uso (Generatore report)
@@ -22,12 +22,12 @@ ms.locfileid: "66102306"
   
 ### <a name="to-save-a-report"></a>Per salvare un report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome** _\<Elemento del report>_ .  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Usare l'opzione **Salva con nome** per modificare il percorso.  
   
-2.  Facoltativamente, fare clic su **Desktop**, **documenti**, o **risorse del Computer** per salvare il report in una di queste cartelle.  
+2.  Facoltativamente, fare clic su **Desktop**, **documenti**o **computer locale** per salvare il report in una di queste cartelle.  
   
 3.  Individuare la posizione nel computer locale in cui si desidera salvare il report. In **Nome**digitare il nome del report.  
   
@@ -35,17 +35,17 @@ ms.locfileid: "66102306"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
+1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Viene visualizzata la finestra di dialogo **Salva con nome** _\<Elemento del report>_ .  
   
 2.  Individuare la posizione nel computer locale in cui si desidera salvare il report.  
   
-3.  In **Nome**digitare il nome del report. Facoltativamente, fare clic su **Desktop**, **documenti**, o **risorse del Computer** per salvare il report in una di queste cartelle.  
+3.  In **Nome**digitare il nome del report. Facoltativamente, fare clic su **Desktop**, **documenti**o **computer locale** per salvare il report in una di queste cartelle.  
   
 4.  In **Elementi di tipo**selezionare il tipo di elemento del report da salvare. Il tipo per i report è Report (* .rdl).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvataggio di report &#40;Generatore report&#41;](report-builder/saving-reports-report-builder.md)   
  [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

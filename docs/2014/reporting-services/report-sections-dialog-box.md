@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo delle sezioni di report | Microsoft Docs
+title: Finestra di dialogo Sezioni report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104312"
 ---
 # <a name="report-sections-dialog-box"></a>Finestra di dialogo Sezione del report
-  Quando si apre un report, progettazione Report consente di verificare che il report contiene solo una definizione del linguaggio RDL (Report)  **\<sezione >** elemento. L'apertura di un report con più elementi **\<sezione>** non è supportata.  
+  Quando si apre un report, progettazione report verifica che il report contenga solo una sezione Report Definition Language (RDL) ** \<>** elemento. L'apertura di un report con più ** \<sezioni>** elementi non è supportata.  
   
  Anche se è possibile generare una definizione del report con più sezioni a livello di programmazione, la modifica del report in un ambiente di creazione del report non è supportata.  
   
  Per identificare il formato di definizione del report corrente per un report, per un server di report, per un progetto o per l'ambiente di creazione dei report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Per continuare scegliere **OK** .  
+ Fare clic su **OK** per continuare.  
   
   

@@ -15,24 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094318"
 ---
 # <a name="installing-upgrade-advisor"></a>Installazione di Preparazione aggiornamento
-  Il computer in cui installare Preparazione aggiornamento a SQL Server 2014 dipende dai componenti che verranno analizzati. Preparazione aggiornamento supporta l'analisi remota di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si analizza istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile installare Preparazione aggiornamento in qualsiasi computer che possono connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e che soddisfa le [prerequisiti di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
+  Il computer in cui installare Preparazione aggiornamento a SQL Server 2014 dipende dai componenti che verranno analizzati. Preparazione aggiornamento supporta l'analisi remota di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si stanno analizzando le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]istanze di, è possibile installare Preparazione aggiornamento in qualsiasi computer in grado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di connettersi a e che soddisfi i [prerequisiti di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
   
- Eseguire la **sqlua. msi** file per installare Preparazione aggiornamento. È possibile eseguire l'installazione dal prompt dei comandi per installazioni automatiche e automatizzate. Visualizzare [installazione di preparazione aggiornamento dal Prompt dei comandi](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) per la sintassi ed esempi.  
+ Eseguire il file **SQLUA. msi** per installare Preparazione aggiornamento. È possibile eseguire l'installazione dal prompt dei comandi per installazioni automatiche e automatizzate. Per la sintassi e gli esempi, vedere [installazione di preparazione aggiornamento dal prompt dei comandi](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) .  
   
  Ottenere SQLUA.msi:  
   
--   Nel **redist** cartella della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporti del prodotto.  
+-   Nella cartella **Redist** del supporto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prodotto.  
   
--   Durante la [download di SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
+-   Come parte del [download del Feature Pack di SQL 2014](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 ## <a name="uninstalling-upgrade-advisor"></a>Disinstallazione di Preparazione aggiornamento  
- È possibile disinstallare Preparazione aggiornamento utilizzando **Aggiungi / Rimuovi programmi**. La sintassi del prompt dei comandi supporta anche la rimozione e/o la disinstallazione.  
+ È possibile disinstallare Preparazione aggiornamento utilizzando **Installazione applicazioni**. La sintassi del prompt dei comandi supporta anche la rimozione e/o la disinstallazione.  
   
   

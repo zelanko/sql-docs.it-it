@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103996"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurare e amministrare un server di report (modalità nativa SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66103996"
   
 -   Modificare i file di configurazione per cambiare le impostazioni delle applicazioni (facoltativo). Per altre informazioni su ogni file e le linee guida per modificarli, vedere [File di configurazione di Reporting Services](reporting-services-configuration-files.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Descrive come definire gli URL utilizzati per accedere al servizio del server di report e a Gestione report.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "66103996"
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Descrive come modificare la stringa di connessione usata dal server di report per la connessione al database.  
   
- [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Descrive come configurare un server di report in modo da supportare la distribuzione dei report tramite posta elettronica.  
   
  [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Descrive come configurare un account utente per l'esecuzione automatica dei report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'accesso a Generatore report](configure-report-builder-access.md)   
+ [Configurare l'accesso Generatore report](configure-report-builder-access.md)   
  [File di configurazione di Reporting Services](reporting-services-configuration-files.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md)   

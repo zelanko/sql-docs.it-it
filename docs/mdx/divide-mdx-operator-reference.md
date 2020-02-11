@@ -1,5 +1,5 @@
 ---
-title: (Divisione) (MDX) | Microsoft Docs
+title: Dividere (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049319"
 ---
-# <a name="divide---mdx-operator-reference"></a>Dividere - riferimento agli operatori MDX
+# <a name="divide---mdx-operator-reference"></a>Riferimento agli operatori divide-MDX
 
 
   Esegue un'operazione aritmetica di divisione di un numero per un altro.  
@@ -37,10 +37,10 @@ Dividend / Divisor
 ## <a name="return-value"></a>Valore restituito  
  Valore con il tipo di dati del parametro con precedenza maggiore.  
   
-## <a name="remarks"></a>Note  
- Il valore effettivo restituito per il **/ (divisione)** operatore rappresenta il quoziente della prima espressione divisa per la seconda espressione.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore effettivo restituito dall'operatore **/(divisione)** rappresenta il quoziente della prima espressione divisa per la seconda espressione.  
   
- È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se *divisore* restituisce un valore null, verrà generato un errore. Se entrambe *Divisor* e *dividendo* valutare su un valore null, l'operatore restituisce un valore null.  
+ È necessario che alle due espressioni sia applicato lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra espressione. Se *divisor* restituisce un valore null, l'operatore genera un errore. Se il *divisore* e il *dividendo* restituiscono un valore null, l'operatore restituirà un valore null.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  
@@ -100,6 +100,6 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

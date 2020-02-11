@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094285"
 ---
 # <a name="installation-type"></a>Tipo di installazione
@@ -29,8 +29,8 @@ ms.locfileid: "66094285"
   
      Se si seleziona l'opzione che consente di aggiungere caratteristiche a un'istanza esistente, utilizzare l'elenco a discesa per selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare.  
   
- È possibile aggiungere solo le funzionalità supportate da SysPrep -[!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-da un'immagine preparata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le altre caratteristiche non supportate da SysPrep possono essere aggiunte solo dopo aver completato l'istanza predisposta.  
+ È possibile aggiungere solo le funzionalità supportate da SysPrep[!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]a un'immagine preparata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le altre caratteristiche non supportate da SysPrep possono essere aggiunte solo dopo aver completato l'istanza predisposta.  
   
- **Nota** Non è possibile aggiungere caratteristiche a un'istanza del cluster di failover dopo averlo installato. Per aggiungere caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un cluster di failover esistente, è necessario eseguire una nuova installazione di un'istanza distinta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Nota** Non è possibile aggiungere funzionalità a un'istanza del cluster di failover dopo l'installazione. Per aggiungere caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un cluster di failover esistente, è necessario eseguire una nuova installazione di un'istanza distinta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

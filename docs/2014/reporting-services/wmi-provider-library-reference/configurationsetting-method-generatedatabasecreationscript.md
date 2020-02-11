@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098505"
 ---
-# <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Metodo GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting WMI)
+# <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>Metodo GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting WMI)
   Genera uno script SQL che può essere utilizzato per creare un database del server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,7 +42,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *Databasename*  
+ *DatabaseName*  
  Stringa che contiene il nome del database del server di report da creare.  
   
  *LCID*  
@@ -52,7 +52,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Indica se creare database in modalità nativa o in modalità SharePoint.  
   
 > [!IMPORTANT]  
->  A partire [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` non è supportata perché in modalità SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è SharePoint un servizio condiviso e non è controllato dal provider WMI. Questo parametro deve essere impostato sempre su `False`.  
+>  A partire [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]da, *IsSharePointMode* = `True` non è supportato perché in modalità SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è un servizio condiviso SharePoint e non è controllato dal provider WMI. Questo parametro deve essere impostato sempre su `False`.  
   
  *Script*  
  [out] Stringa che contiene lo script SQL generato.  
@@ -63,7 +63,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera uno script SQL che crea database del server di report per la versione del server di report attualmente connessa.  
   
  Il valore fornito nel parametro *DatabaseName* deve essere conforme alle convenzioni di denominazione dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -75,7 +75,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Lo script generato supporta [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092362"
 ---
 # <a name="select-features-upgrade"></a>Seleziona funzionalità (aggiornamento)
@@ -27,6 +27,6 @@ ms.locfileid: "66092362"
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [Usare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [Utilizzare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

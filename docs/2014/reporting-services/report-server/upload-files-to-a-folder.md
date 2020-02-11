@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103074"
 ---
 # <a name="upload-files-to-a-folder"></a>Caricare file in una cartella
@@ -39,13 +39,13 @@ ms.locfileid: "66103074"
   
  I file caricati in un database del server di report sono visualizzati nella gerarchia di cartelle con le icone seguenti.  
   
- ![Icona di report](../media/hlp-16doc.gif "Icona di report")  
+ ![Icona del report](../media/hlp-16doc.gif "Icona Rapporto")  
 Icona di report  
   
- ![Icona di modello](../media/model-icon.gif "Icona di modello")  
+ ![Icona modello](../media/model-icon.gif "Icona di modello")  
 Icona di modello di report  
   
- ![Icona di risorsa generica](../media/hlp-16file.gif "Icona di risorsa generica")  
+ ![icona di risorsa generica](../media/hlp-16file.gif "Icona di risorsa generica")  
 Icona di risorsa generica  
   
  I file caricati vengono inseriti automaticamente nella cartella selezionata. È pertanto possibile passare alla cartella desiderata prima di caricare il file oppure spostare il file nella cartella desiderata dopo averlo caricato.  
@@ -59,7 +59,7 @@ Icona di risorsa generica
 |Visualizzazione del contenuto di una cartella|Visualizzazione di risorse, Visualizzazione di report|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Report Manager  &#40;SSRS Native Mode&#41;]../report-manager-ssrs-native-mode.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;]. /report-manager-ssrs-native-mode.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](../security/tasks-and-permissions.md)   
  [Caricare un file o un report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md)  

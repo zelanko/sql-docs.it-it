@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105175"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Funzione RowNumber (Generatore report e SSRS)
@@ -34,8 +34,8 @@ RowNumber(scope)
  *ambito*  
  (`String`) Nome di un set di dati, area dati o gruppo oppure valore Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) tramite cui viene specificato il contesto in cui valutare il numero di righe. Tramite `Nothing` viene specificato il contesto più esterno, generalmente il set di dati del report.  
   
-## <a name="remarks"></a>Note  
- `RowNumber` Restituisce un valore corrente del conteggio delle righe all'interno dell'ambito specificato, proprio come [RunningValue](report-builder-functions-runningvalue-function.md) restituisce il valore corrente di una funzione di aggregazione. Durante la definizione di un ambito, si specifica quando reimpostare il conteggio delle righe su 1.  
+## <a name="remarks"></a>Osservazioni  
+ `RowNumber`Restituisce un valore corrente del conteggio di righe all'interno dell'ambito specificato, così come [RunningValue](report-builder-functions-runningvalue-function.md) restituisce il valore corrente di una funzione di aggregazione. Durante la definizione di un ambito, si specifica quando reimpostare il conteggio delle righe su 1.  
   
  *scope* non può essere un'espressione. Il parametro*scope* deve essere un ambito contenitore. I tipici ambiti, dal contenuto più esterno fino al più interno, sono set di dati di report, aree dati, gruppi di righe o di colonne.  
   

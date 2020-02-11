@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098135"
 ---
-# <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Metodo ReserveURL (MSReportServer_ConfigurationSetting WMI)
+# <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Metodo ReserveURL (MSReportServer_ConfigurationSetting WMI)
   Aggiunge una prenotazione URL per un'applicazione specifica.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,10 +42,10 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL per la prenotazione.  
   
- *lcid*  
+ *LCID*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione dell'errore che si è verificato.  
   
  *HRESULT*  
@@ -54,7 +54,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  *UrlString* non include il nome della directory virtuale. A tal fine, viene fornito il metodo [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) .  
   
  Le prenotazioni URL vengono create per l'account del servizio Windows corrente. La modifica dell'account del servizio Windows richiede l'aggiornamento manuale di tutte le prenotazioni URL.  
@@ -62,7 +62,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Questo metodo causa l'esecuzione dell'operazione di riciclo pesante da parte di tutti i domini applicazione. Una volta completata l'operazione, i domini applicazione vengono riavviati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

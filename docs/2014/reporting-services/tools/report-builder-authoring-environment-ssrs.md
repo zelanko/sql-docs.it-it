@@ -1,5 +1,5 @@
 ---
-title: Report di generatore (SSRS) | Microsoft Docs
+title: Generatore report (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100120"
 ---
 # <a name="report-builder-ssrs"></a>Generatore report (SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66100120"
  Generatore report e Progettazione report condividono molte caratteristiche. Per ulteriori informazioni sul Generatore report, vedere la [documentazione relativa a Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'accesso a Generatore report](../report-server/configure-report-builder-access.md)   
+ [Configurare l'accesso Generatore report](../report-server/configure-report-builder-access.md)   
  [Strumenti di Reporting Services](reporting-services-tools.md)   
  [Progettare report con Progettazione report &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

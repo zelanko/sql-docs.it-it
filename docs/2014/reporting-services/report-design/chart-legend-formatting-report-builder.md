@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106291"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formattazione della legenda in un grafico (Generatore report e SSRS)
   Nella legenda del grafico sono contenute le descrizioni per ogni categoria del grafico. In una legenda sono contenuti sempre uno o più elementi, ciascuno dei quali è costituito da una casella colorata che rappresenta la serie e da una stringa di testo che la descrive, come indicato nell'illustrazione seguente.  
   
- ![Legenda del grafico](../media/rs-legenddiagram.gif "Legenda del grafico")  
+ ![Diagramma della legenda di un grafico](../media/rs-legenddiagram.gif "Diagramma della legenda di un grafico")  
   
  Un elemento della legenda è collegato a una singola serie nel grafico, ad eccezione dei grafici con forme in cui la legenda è collegata a punti dati singoli. Nel grafico vengono aggiunti automaticamente elementi alla legenda in base alla serie generata dai dati inseriti dall'utente.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "66106291"
 ## <a name="formatting-the-legend-text"></a>Formattazione del testo della legenda  
  È possibile modificare il tipo di carattere, le dimensioni, lo stile e il colore del testo della legenda nella pagina **Carattere** della finestra di dialogo **Proprietà legenda** .  
   
- Per impostazione predefinita, il testo della legenda non viene ottimizzato in base alle dimensioni dell'area della legenda. Per generare il testo della legenda si adatti automaticamente allo spazio allocato, impostare la proprietà AutoFitTextDisabled su `False` e impostare le dimensioni minime del carattere per la proprietà minfontsize sulle dimensioni del carattere più bassa che si ritengono leggibili e che consentano comunque il della legenda ottimizzazione.  
+ Per impostazione predefinita, il testo della legenda non viene ottimizzato in base alle dimensioni dell'area della legenda. Per fare in modo che il testo della legenda si adatti automaticamente allo spazio allocato `False` , impostare la proprietà AutoFitTextDisabled su e impostare una dimensione minima del carattere per la proprietà MinFontSize sulla dimensione del carattere più bassa che si ritiene possa essere rappresentata e consentire comunque l'ottimizzazione della legenda.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà legenda, generale &#40;Generatore report e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

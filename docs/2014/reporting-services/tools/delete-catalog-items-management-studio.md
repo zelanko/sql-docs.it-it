@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100391"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Elimina elementi catalogo (Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "66100391"
  Non è possibile annullare un'operazione di eliminazione. Se si desidera recuperare un elemento eliminato, è necessario ricrearlo o ripristinare una copia di backup del database del server di report.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Indica il nome dell'elemento che si sta eliminando.  
   
  **Tipo**  
@@ -38,15 +38,15 @@ ms.locfileid: "66100391"
  **Proprietario**  
  Visualizza il nome del proprietario. Nella maggior parte dei casi, si tratta di System.  
   
- **Stato**  
+ **Status**  
  Visualizza le informazioni sullo stato dell'operazione di eliminazione.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Visualizza un codice se si verifica un errore durante l'eliminazione di un elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un elemento &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Creare, modificare ed eliminare pianificazioni](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

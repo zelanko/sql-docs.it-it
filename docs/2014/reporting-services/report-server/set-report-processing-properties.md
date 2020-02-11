@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103235"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
   
- Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. È inoltre possibile impostare le proprietà usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md).  
+ Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. È anche possibile impostare le proprietà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]usando. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md).  
   
 ## <a name="report-execution-modes"></a>Modalità di esecuzione dei report  
  I report possono essere eseguiti su richiesta o come snapshot. Nella sezione seguente vengono descritte le due diverse modalità.  
@@ -59,7 +59,7 @@ ms.locfileid: "66103235"
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [Procedura: Aggiunta di uno Snapshot alla cronologia del Report](add-a-snapshot-to-report-history-report-manager.md)   
+ [Procedura: aggiunta di uno snapshot alla cronologia del report](add-a-snapshot-to-report-history-report-manager.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

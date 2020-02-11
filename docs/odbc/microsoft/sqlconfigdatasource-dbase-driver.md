@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Driver dBASE) | Microsoft Docs
+title: SQLConfigDataSource (driver dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054105"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (driver dBASE)
 > [!NOTE]  
->  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Il **SQLConfigDataSource** funzione che consente di aggiungere, modificare o eliminare un'origine dati utilizza in modo dinamico le parole chiave seguenti.  
+ La funzione **SQLConfigDataSource** utilizzata per aggiungere, modificare o eliminare un'origine dati in modo dinamico utilizza le parole chiave seguenti.  
   
 |Parola chiave|Descrizione|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|La sequenza nella quale vengono ordinati i campi.<br /><br /> La sequenza può essere: ASCII (predefinito) o internazionale.<br /><br /> Consente di impostare la stessa opzione come **sequenza di collazione** nella finestra di dialogo programma di installazione.|  
-|DEFAULTDIR|La specifica del percorso della directory.|  
-|DELETED|Per il driver dBASE, specifica se le righe che sono state contrassegnate come eliminati possono essere recuperate o posizionato in corrispondenza. Se impostato su 1, le righe eliminate non viene visualizzata. Se impostato su 0, righe eliminate viene trattate come righe non è stato eliminato.<br /><br /> Consente di impostare la stessa opzione come **Mostra le righe eliminate** nella finestra di dialogo programma di installazione.|  
-|DESCRIPTION|Una descrizione dei dati nell'origine dati.<br /><br /> Consente di impostare la stessa opzione come **descrizione** nella finestra di dialogo programma di installazione.|  
-|DRIVER|Specifica il percorso alla DLL del driver.|  
-|DRIVERID|Un ID intero per il driver.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  
-|FIL|File digitare dBase III, dBase IV o dBase 5|  
-|PAGETIMEOUT|Specifica il periodo di tempo, in decimi di secondo, che una pagina, se non utilizzato, rimane nel buffer prima della rimozione. Il valore predefinito è 600 decimi di secondo (60 secondi). Si noti che questa opzione si applica a tutte le origini dati che usano il driver ODBC.<br /><br /> Consente di impostare la stessa opzione come **Page Timeout** nella finestra di dialogo programma di installazione.|  
-|READONLY|TRUE per rendere i file di sola lettura. FALSE per rendere i file non di sola lettura.<br /><br /> Consente di impostare la stessa opzione come **Read Only** nella finestra di dialogo programma di installazione.|  
-|STATISTICS|Per il driver dBASE, determina se le statistiche delle tabelle delle dimensioni sono approssimative. Si noti che questa opzione si applica a tutte le origini dati che usano il driver ODBC.<br /><br /> Consente di impostare la stessa opzione come **conteggio righe approssimative** nella finestra di dialogo programma di installazione.|  
-|THREAD|Il numero di thread in background per il motore da usare. Questo valore è 3 e non può essere modificato.<br /><br /> Consente di impostare la stessa opzione come **thread** nella finestra di dialogo programma di installazione.|
+|COLLATINGSEQUENCE|Sequenza in cui vengono ordinati i campi.<br /><br /> La sequenza può essere: ASCII (impostazione predefinita) o internazionale.<br /><br /> In questo modo viene impostata la stessa opzione della **sequenza di ordinamento** nella finestra di dialogo di installazione.|  
+|DEFAULTDIR|Specifica del percorso della directory.|  
+|DELETED|Per il driver dBASE, specifica se è possibile recuperare o posizionare le righe contrassegnate come eliminate. Se impostato su 1, le righe eliminate non vengono visualizzate. Se impostato su 0, le righe eliminate vengono gestite come righe non eliminate.<br /><br /> Viene impostata la stessa opzione **Mostra righe eliminate** nella finestra di dialogo del programma di installazione.|  
+|DESCRIZIONE|Descrizione dei dati nell'origine dati.<br /><br /> Questa opzione consente di impostare la stessa opzione della **Descrizione** nella finestra di dialogo di installazione.|  
+|DRIVER|Specifica del percorso per la DLL del driver.|  
+|DRIVERID|ID di tipo integer per il driver.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5,0)|  
+|FIL|Tipo di file dBase III, dBase IV o dBase 5|  
+|PAGETIMEOUT|Specifica il periodo di tempo, in decimi di secondo, che una pagina (se non utilizzata) rimane nel buffer prima di essere rimossa. Il valore predefinito è 600 decimi di secondo (60 secondi). Si noti che questa opzione si applica a tutte le origini dati che utilizzano il driver ODBC.<br /><br /> In questo modo viene impostata la stessa opzione del **timeout della pagina** nella finestra di dialogo di installazione.|  
+|READONLY|TRUE per rendere di sola lettura il file; FALSE per fare in modo che il file non sia di sola lettura.<br /><br /> Viene impostata la stessa opzione di **sola lettura** nella finestra di dialogo di installazione.|  
+|STATISTICS|Per il driver dBASE, determina se le statistiche sulle dimensioni della tabella sono approssimate. Si noti che questa opzione si applica a tutte le origini dati che utilizzano il driver ODBC.<br /><br /> In questo modo viene impostata la stessa opzione del **numero di righe approssimativo** nella finestra di dialogo di installazione.|  
+|THREAD|Numero di thread in background per il motore da usare. Questo valore è 3 e non può essere modificato.<br /><br /> Consente di impostare la stessa opzione dei **thread** nella finestra di dialogo di installazione.|

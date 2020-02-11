@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita tramite un File di configurazione | Microsoft Docs
+title: Installare Riesecuzione distribuita usando un file di configurazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094580"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Installare i componenti Riesecuzione distribuita tramite un file di configurazione
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base alle impostazioni predefinite del sistema e ai dati di input dell'utente. Se si specifica che si desidera installare gli strumenti di gestione, è possibile utilizzare il file di configurazione per distribuire i tre componenti Riesecuzione distribuita, ovvero lo strumento di amministrazione, il controller di Riesecuzione distribuita e il client Riesecuzione distribuita. Sono supportate le operazioni di installazione, ripristino e disinstallazione dei componenti Riesecuzione distribuita.  
   
  Il programma di installazione supporta l'utilizzo del file di configurazione solo tramite la riga di comando. L'ordine di elaborazione dei parametri durante l'utilizzo del file di configurazione viene indicato di seguito:  
@@ -26,7 +27,7 @@ ms.locfileid: "66094580"
   
 -   I valori della riga di comando sovrascrivono quelli presenti nel file di configurazione.  
   
- Per altre informazioni su come usare un file di configurazione, vedere [installare SQL Server 2014 tramite un File di configurazione](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+ Per ulteriori informazioni sull'utilizzo di un file di configurazione, vedere [Install SQL Server 2014 using a Configuration file](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
 > [!IMPORTANT]  
 >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  

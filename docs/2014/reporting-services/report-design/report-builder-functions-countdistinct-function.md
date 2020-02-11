@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33904b979bca1162b8f30009dcde3ac8ce5fd006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105300"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Funzione CountDistinct (Generatore report e SSRS)
@@ -38,12 +38,13 @@ CountDistinct(expression, scope, recursive)
  (`String`) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. 
+  `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore `Integer`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
  *Expression* può contenere chiamate alle funzioni di aggregazione nidificate con le eccezioni e le condizioni seguenti:  
@@ -52,7 +53,7 @@ CountDistinct(expression, scope, recursive)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Espressione* non deve contenere `First`, `Last`, `Previous`, o `RunningValue` funzioni.  
+-   L' *espressione* non deve `First`contenere `Last`funzioni `Previous`,, `RunningValue` o.  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   

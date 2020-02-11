@@ -1,5 +1,5 @@
 ---
-title: Report Log di esecuzione del Server e la vista ExecutionLog3 | Microsoft Docs
+title: Log di esecuzione del server di report e visualizzazione ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103464"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log di esecuzione del server di report e la vista ExecutionLog3
@@ -30,7 +30,7 @@ ms.locfileid: "66103464"
   
  Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer**per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte in versioni più recenti e contengono nuovi campi oppure campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog**3**.  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
 -   [Impostazioni di configurazione per un server di report in modalità SharePoint](#bkmk_sharepoint)  
   
@@ -108,22 +108,22 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta. Se nell'ambiente è disponibile più di un server di report, è possibile analizzare la distribuzione di InstanceName per monitorare e determinare se tramite il servizio di bilanciamento del carico di rete vengono distribuite richieste attraverso i server di report come previsto.|  
 |ItemPath|Percorso in cui viene archiviato un report o un elemento del report.|  
 |UserName|Identificatore dell'utente.|  
 |ExecutionID|L'identificatore interno associato a una richiesta. Le richieste nelle sessioni dello stesso utente condividono lo stesso ID esecuzione.|  
-|RequestType|I valori possibili sono:<br />**Interactive**<br />**Sottoscrizione**<br /><br /> <br /><br /> L'analisi dei dati del log filtrati in base RequestType=Subscription e ordinati per TimeStart può rivelare periodi di utilizzo eccessivo della sottoscrizione ed è pertanto necessario modificare alcune delle sottoscrizioni del report a un'ora diversa.|  
-|Formato|Formato di rendering.|  
+|RequestType|I valori possibili sono:<br />**Interattività**<br />**Sottoscrizione**<br /><br /> <br /><br /> L'analisi dei dati del log filtrati in base RequestType=Subscription e ordinati per TimeStart può rivelare periodi di utilizzo eccessivo della sottoscrizione ed è pertanto necessario modificare alcune delle sottoscrizioni del report a un'ora diversa.|  
+|Format|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
-|ItemAction|I valori possibili sono:<br /><br /> **Rendering**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Eseguire**<br /><br /> **RenderEdit**|  
+|ItemAction|Valori possibili:<br /><br /> **Rendering**<br /><br /> **Ordina**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Eseguire**<br /><br /> **RenderEdit**|  
 |TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
 |TimeEnd||  
 |TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|  
 |TimeProcessing|Numero di millisecondi impiegati per l'elaborazione del report.|  
 |TimeRendering|Numero di millisecondi impiegati per il rendering del report.|  
-|`Source`|Origine dell'esecuzione del report. I valori possibili sono:<br /><br /> **Live**<br /><br /> **Cache**: Indica un'esecuzione memorizzata nella cache, ad esempio, set di dati di query non vengono eseguite in tempo reale.<br /><br /> **Snapshot**<br /><br /> **Cronologia**<br /><br /> **Ad hoc** : Indica un report generato dinamicamente modello basati su report drill-through o un report di Generatore Report visualizzato in anteprima in un client che usa il server di report per l'elaborazione e rendering.<br /><br /> **Sessione**: Indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> **RDCE**:  Indica un Report Definition Customization Extension. Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
+|Source (Sorgente)|Origine dell'esecuzione del report. Valori possibili:<br /><br /> **Live**<br /><br /> **Cache**: indica un'esecuzione memorizzata nella cache, ad esempio, le query del set di dati non vengono eseguite in tempo reale.<br /><br /> **Snapshot**<br /><br /> **History**<br /><br /> **Adhoc** : indica un report drill-through basato su un modello di report generato dinamicamente o un report di Generatore report visualizzato in anteprima su un client che utilizza il server di report per l'elaborazione e il rendering.<br /><br /> **Session**: indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> **RDCE**: indica un'estensione per la personalizzazione della definizione del report. Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
 |Stato|Stato (rsSuccess oppure un codice di errore; in caso di più errori, viene registrato solo il primo).|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- Di seguito vengono descritte alcune delle proprietà che verrà visualizzato nel campo AdditionalInfo:  
+ Di seguito vengono descritte alcune delle proprietà che verranno visualizzate nel campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1=SQL Server 2005, 2=Nuovo motore di elaborazione su richiesta. Se nella maggior parte dei report viene ancora mostrato il valore 1, è possibile esaminare come riprogettare questi report in modo che in essi venga utilizzato il motore di elaborazione su richiesta più nuovo e più efficiente.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = nuovo motore di elaborazione su richiesta. Se nella maggior parte dei report viene ancora mostrato il valore 1, è possibile esaminare come riprogettare questi report in modo che in essi venga utilizzato il motore di elaborazione su richiesta più nuovo e più efficiente.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: Numero di millisecondi impiegati per l'esecuzione delle operazioni correlate alla scala nel motore di elaborazione. Un valore 0 indica che non è stato impiegato ulteriore tempo per operazioni di scala. Questo valore indica inoltre che la richiesta non ha determinato un utilizzo eccessivo della memoria.  
+-   **ScalabilityTime**: numero di millisecondi impiegati per l'esecuzione delle operazioni correlate alla scala nel motore di elaborazione. Un valore 0 indica che non è stato impiegato ulteriore tempo per operazioni di scala. Questo valore indica inoltre che la richiesta non ha determinato un utilizzo eccessivo della memoria.  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: Stima della quantità massima di memoria, in KB, usata da ogni componente durante una particolare richiesta.  
+-   **EstimatedMemoryUsageKB**: stima della quantità massima di memoria, espressa in kilobyte, utilizzata da ogni componente durante una determinata richiesta.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: Tipi di estensioni o di origini dei dati usate nel report. Il numero è quello delle occorrenze dell'origine dati specificata.  
+-   **Dataextension**: tipi di estensioni per i dati o origini dati utilizzate nel report. Il numero è quello delle occorrenze dell'origine dati specificata.  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**il valore è espresso in millisecondi. Queste informazioni possono essere usate nella diagnosi dei problemi di prestazioni. Il tempo necessario a recuperare le immagini da un webserver esterno può rallentare l'esecuzione del report complessiva. Componente aggiuntivo in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages** Il valore è in millisecondi. Queste informazioni possono essere usate nella diagnosi dei problemi di prestazioni. Il tempo necessario a recuperare le immagini da un webserver esterno può rallentare l'esecuzione del report complessiva. Aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Le connessioni**: Struttura multilivello. Componente aggiuntivo in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Connections**: struttura A più livelli. Aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -307,22 +307,22 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta.|  
 |ReportPath|Struttura del percorso del report.  Per un report denominato "test" nella cartella radice in Gestione report, ad esempio, ReportPath sarà "/test".<br /><br /> Per un report denominato "test" salvato nella cartella "samples" in Gestione report, ReportPath sarà "/Samples/test/".|  
 |UserName|Identificatore dell'utente.|  
 |ExecutionID||  
 |RequestType|Tipo di richiesta (utente o sistema).|  
-|Formato|Formato di rendering.|  
+|Format|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
-|ReportAction|I valori possibili sono: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
+|ReportAction|Valori possibili: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
 |TimeEnd||  
 |TimeDataRetrieval|Numero di millisecondi dedicati al recupero dei dati, all'elaborazione del report e al rendering del report.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Origine dell'esecuzione del report (1=Live, 2=Cache, 3=Snapshot, 4=History).|  
+|Source (Sorgente)|Origine dell'esecuzione del report (1=Live, 2=Cache, 3=Snapshot, 4=History).|  
 |Stato|Stato (rsSuccess oppure un codice di errore; in caso di più errori, viene registrato solo il primo).|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  
@@ -339,20 +339,20 @@ select * from ExecutionLog order by TimeStart DESC
   
  Nella tabella seguente vengono descritti i dati acquisiti nel log di esecuzione del report:  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |InstanceName|Nome dell'istanza del server di report tramite cui è stata gestita la richiesta.|  
 |ReportID|Identificatore del report.|  
 |UserName|Identificatore dell'utente.|  
-|RequestType|I valori possibili sono:<br /><br /> True = Richiesta di sottoscrizione<br /><br /> False= Richiesta interattiva|  
-|Formato|Formato di rendering.|  
+|RequestType|Valori possibili:<br /><br /> True = Richiesta di sottoscrizione<br /><br /> False= Richiesta interattiva|  
+|Format|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
 |TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
 |TimeEnd||  
 |TimeDataRetrieval|Numero di millisecondi dedicati al recupero dei dati, all'elaborazione del report e al rendering del report.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Origine dell'esecuzione del report. I valori possibili sono: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Source (Sorgente)|Origine dell'esecuzione del report. Valori possibili: 1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE.|  
 |Stato|Valori possibili: rsSuccess, rsProcessingAborted o un codice di errore. Se si verificano più errori, viene registrato solo il primo.|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  

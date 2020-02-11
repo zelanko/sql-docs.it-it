@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104966"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Specificare un'area del grafico per una serie (Generatore report e SSRS)
   Il grafico è il contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda. Per impostazione predefinita, il grafico contiene una sola area predefinita. L'area del grafico non è visibile sulla superficie del grafico, ma è possibile considerarla come un contenitore che include solo le etichette e il titolo degli assi, nonché l'area tracciato di una o più serie. Nell'illustrazione seguente viene mostrato il concetto di aree del grafico all'interno di un singolo grafico.  
   
- ![Visualizza un'area del grafico](../media/chartareasdiagram.gif "Visualizza un'area del grafico")  
+ ![Diagramma di un'area del grafico](../media/chartareasdiagram.gif "Diagramma di un'area del grafico")  
   
  Per impostazione predefinita, tutte le serie vengono aggiunte all'area del grafico predefinita. Quando si utilizzano grafici ad area, a dispersione, a linee e istogrammi, qualsiasi combinazione di queste serie può essere visualizzata nella stessa area del grafico. Se nella stessa area del grafico sono contenute diverse serie, la leggibilità del grafico risulterà ridotta. Potrebbe essere necessario separare i tipi di grafico in più aree del grafico allo scopo di migliorare la leggibilità e semplificare il confronto. I grafici azionari relativi a prezzi e volumi, ad esempio, includono spesso intervalli di valori differenti. È tuttavia possibile confrontare dati che si riferiscono allo stesso periodo di tempo.  
   

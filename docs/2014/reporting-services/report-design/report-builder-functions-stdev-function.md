@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105152"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>Funzione StDev (Generatore report e SSRS)
@@ -38,12 +38,13 @@ StDev(expression, scope, recursive)
  (`String`) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. 
+  `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore `Decimal` per le espressioni decimali e un valore `Double` per tutte le altre espressioni.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati. Per convertire dati con più tipi di dati numerici nello stesso tipo di dati, usare funzioni di conversione come `CInt`, `CDbl` o `CDec`. Per altre informazioni, vedere [Funzioni di conversione del tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
@@ -54,7 +55,7 @@ StDev(expression, scope, recursive)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Espressione* non deve contenere `First`, `Last`, `Previous`, o `RunningValue` funzioni.  
+-   L' *espressione* non deve `First`contenere `Last`funzioni `Previous`,, `RunningValue` o.  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   

@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097216"
 ---
-# <a name="msreportserverinstance-class"></a>classe MSReportServer_Instance
+# <a name="msreportserver_instance-class"></a>classe MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  
   
  Per un elenco di tutti i membri di questo tipo, vedere [Membri di MSReportServer_Instance](msreportserver-instance-members.md)  
@@ -45,9 +45,9 @@ public class MSReportServer_Instance
  Tutti i membri statici pubblici (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) di questo tipo sono sicuri per le operazioni a thread multipli. Non è invece garantita la sicurezza dei membri dell'istanza.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Piattaforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Piattaforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_Instance](msreportserver-instance-members.md)  

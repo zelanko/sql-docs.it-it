@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103171"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Avviare e arrestare il servizio del server di report
@@ -41,7 +41,7 @@ ms.locfileid: "66103171"
   
 ### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>Per avviare o arrestare il servizio utilizzando lo strumento Servizi in Strumenti di amministrazione  
   
--   In Strumenti di amministrazione aprire Servizi, fare clic con il pulsante destro del mouse su **SQL Server Reporting Services (MSSQLSERVER)** , quindi scegliere **Arresta** o **Riavvia**.  
+-   In Strumenti di amministrazione aprire Servizi, fare clic con il pulsante destro del mouse su **SQL Server Reporting Services (MSSQLSERVER)**, quindi scegliere **Arresta** o **Riavvia**.  
   
  Se si eseguono più istanze o se il server di report è in esecuzione come istanza denominata, verificare che il nome dell'istanza tra parentesi corrisponda all'istanza del server di report da arrestare o riavviare.  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102532"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Pubblicare un report in una raccolta di SharePoint
@@ -36,13 +36,13 @@ ms.locfileid: "66102532"
   
 4.  Se si desidera pubblicare le origini dati condivise nel progetto e sovrascrivere origini dati condivise pubblicate in precedenza, impostare **OverwriteDataSources** su **True**.  
   
-5.  (Facoltativo) Per la **TargetDataSourceFolder**, digitare l'URL di una raccolta di SharePoint o della cartella (ad esempio *http://TestServer/TestSite/Documents/DataSources)* .  
+5.  Opzionale Per **TargetDataSourceFolder**, digitare l'URL di una raccolta di SharePoint o di una cartella della raccolta *http://TestServer/TestSite/Documents/DataSources)*, ad esempio.  
   
      Se non si specifica alcun valore, verrà utilizzato il valore **TargetReportFolder** .  
   
-6.  Per la **TargetReportFolder**, digitare l'URL di una raccolta o della cartella (ad esempio *http://TestServer/TestSite/Documents/Reports)* .  
+6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, *http://TestServer/TestSite/Documents/Reports)* ad esempio.  
   
-7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, viene usato il sito principale predefinito (ad esempio, *http://servername* , *http://servername/site* , oppure *http://servername/site/subsite* ).  
+7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, viene utilizzato il sito principale predefinito, ad esempio *http://servername* *http://servername/site*,, o. *http://servername/site/subsite*  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

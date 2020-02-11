@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104923"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104923"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66104923"
   
 4.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66104923"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104923"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo dati. Nella maggior parte dei casi si tratta di un valore aggregato, ad esempio `=Sum(Fields!Quantity.Value)`.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66104923"
   
 7.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66104923"
  Per altre informazioni sul raggruppamento dei dati in un misuratore, vedere [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  

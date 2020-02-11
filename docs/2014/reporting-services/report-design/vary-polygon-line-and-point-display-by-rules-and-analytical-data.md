@@ -1,5 +1,5 @@
 ---
-title: Variare di poligoni, linee e visualizzazione dei punti di base a regole e dati analitici (Generatore Report e SSRS) | Microsoft Docs
+title: Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104623"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici (Generatore report e SSRS)
@@ -100,7 +100,7 @@ ms.locfileid: "66104623"
 ##  <a name="Distribution"></a> Informazioni sulle opzioni di distribuzione  
  Per creare una distribuzione di valori, è possibile dividere i dati in intervalli. Si specifica il tipo di distribuzione, il numero di intervalli secondari e i valori minimo e massimo dell'intervallo.  
   
- Nell'elenco seguente, si supponga di avere tre elementi della mappa e sei valori analitici correlati che spaziano da 1 a 9999 con i valori seguenti: 1, 10, 200, 2000, 4777, 8999.  
+ Nell'elenco seguente, si supponga di disporre di tre elementi della mappa e di sei valori analitici correlati che vanno da 1 a 9999 con i valori seguenti: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **Intervallo equo.** Crea intervalli che dividono i dati in intervalli uguali. Per l'esempio, i tre intervalli sarebbero 0-2999, 3000-5999, 6000-8999. Intervallo secondario 1: 1, 10, 200, 500. Intervallo secondario 2: 4777. Intervallo secondario 3: 8999. Questo metodo non prende in considerazione la modalità di distribuzione dei dati. Valori molto grandi o molto piccoli possono distorcere i risultati della distribuzione.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66104623"
   
 -   **Ottimale.** Crea intervalli che regolano automaticamente la distribuzione in modo da creare intervalli secondari equilibrati. Il numero di intervalli secondari è determinato dall'algoritmo.  
   
--   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione di valori. Per i dati di esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
+-   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione di valori. Per i dati dell'esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
   
  I valori di distribuzione vengono utilizzati dalle regole per variare i valori di visualizzazione degli elementi della mappa.  
   

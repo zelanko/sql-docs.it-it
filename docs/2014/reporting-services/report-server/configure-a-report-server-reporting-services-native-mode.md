@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104073"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurare un server di report (modalità nativa di Reporting Services)
@@ -29,7 +29,7 @@ ms.locfileid: "66104073"
   
 -   Un database del server di report che archivia i dati dell'applicazione, i report e altri elementi.  
   
- Il programma di installazione configura le impostazioni minime se si seleziona una delle opzioni di installazione seguenti: Configurazione predefinita della modalità nativa o configurazione predefinita della modalità integrata SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
+ Durante l'installazione vengono configurate le impostazioni minime se si seleziona una delle modalità di installazione seguenti: configurazione predefinita in modalità nativa o configurazione predefinita in modalità di integrazione con SharePoint. Se il server di report è stato installato in modalità "solo file", ovvero è stata selezionata l'opzione **Installa senza configurare il server di report** nell'Installazione guidata, viene configurato solo l'account del servizio. L'URL del servizio Web e il database del server di report devono essere configurati al termine dell'installazione.  
   
  Gestione report è una caratteristica facoltativa per un server di report in modalità nativa. È tuttavia consigliabile configurare questa funzionalità in modo da poter concedere agli utenti l'accesso al server di report e la gestione del relativo contenuto. Se il server di report è distribuito in modalità integrata SharePoint, utilizzare il front-end Web di un server di SharePoint per concedere l'accesso.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "66104073"
  Per verificare l'installazione, creare cartelle, caricare elementi ed eseguire report. Seguire le istruzioni in [Verificare un'installazione di Reporting Services](../install-windows/verify-a-reporting-services-installation.md) per verificare l'installazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di un server di report in modalità nativa](manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
- [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [Gestire un server di report Reporting Services in modalità nativa](manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurare un firewall per l'accesso al server di report](configure-a-firewall-for-report-server-access.md)   
+ [Configurare un server di report in modalità nativa per l'amministrazione locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurare un server di report per l'amministrazione remota](configure-a-report-server-for-remote-administration.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

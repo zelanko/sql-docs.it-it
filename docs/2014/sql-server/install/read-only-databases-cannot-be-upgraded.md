@@ -1,5 +1,5 @@
 ---
-title: Non è possibile aggiornare i database di sola lettura | Microsoft Docs
+title: I database di sola lettura non possono essere aggiornati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093365"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>Non è possibile aggiornare database di sola lettura
@@ -29,7 +29,7 @@ ms.locfileid: "66093365"
  È stato rilevato un database di sola lettura. Per aggiornare il database, è necessario che sia accessibile in scrittura dal programma di installazione.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Quando non venga utilizzato il database, usare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], oppure l'istruzione ALTER DATABASE per modificare il database in lettura / scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
+ Quando nessuno utilizza il database, utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzione di Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o alter database per modificare il database in lettura/scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
   
 ```  
 USE master;  
@@ -42,7 +42,7 @@ GO
  Per ulteriori informazioni sull'istruzione ALTER DATABASE, vedere l'argomento "ALTER DATABASE ([!INCLUDE[tsql](../../includes/tsql-md.md)])" argomento nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

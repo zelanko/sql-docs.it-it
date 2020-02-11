@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104225"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domini applicazione per applicazioni del server di report
@@ -32,18 +32,24 @@ ms.locfileid: "66104225"
   
 -   Modifiche alla configurazione sul server di report.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]modifiche di configurazione.  
   
 -   Errori di allocazione di memoria.  
   
  Nella tabella seguente viene riepilogato il comportamento del riciclo del dominio applicazione in risposta a questi eventi:  
   
-|Evento|Descrizione evento|Si applica a|Configurabile|Descrizione dell'operazione di riciclo|  
+|Event|Descrizione evento|Si applica a|Configurabile|Descrizione dell'operazione di riciclo|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Operazioni di riciclo pianificate eseguite a intervalli predefiniti|Per impostazione predefinita, i domini applicazione vengono riciclati ogni 12 ore.<br /><br /> Le operazioni di riciclo pianificate vengono in genere utilizzate per applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] che agevolano l'integrità complessiva del processo.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|Sì. L'impostazione di configurazione `RecycleTime` nel file RSReportServer.config determina l'intervallo di riciclo.<br /><br /> `MaxAppDomainUnloadTime` consente di impostare il tempo di attesa durante il quale è possibile completare l'elaborazione in background.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .<br /><br /> Per l'applicazione di elaborazione in background, il server di report crea un nuovo dominio applicazione per i nuovi processi avviati in base alle pianificazioni. I processi già in corso possono essere completati nel dominio applicazione corrente entro la scadenza del tempo di attesa.|  
-|Modifiche alla configurazione sul server di report|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i domini applicazione verranno riciclati in risposta alle modifiche apportate al file RSReportServer.config.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|No.|Non è possibile arrestare le operazioni di riciclo. Tuttavia, le operazioni di riciclo eseguite in risposta alle modifiche alla configurazione vengono gestite in modo analogo alle operazioni di riciclo pianificate. Per le nuove richieste vengono creati nuovi domini applicazione, mentre le richieste e i processi in corso vengono completati nel dominio applicazione corrente.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Modifiche alla configurazione|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Se sono presenti modifiche ai file monitorati, ad esempio machine.config, Web.config e i file di programma di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati.|Servizio Web ReportServer<br /><br /> Gestione report|No.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .<br /><br /> Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] non influiscono sul dominio applicazione dell'elaborazione in background.|  
-|Utilizzo della memoria ed errori di allocazione di memoria|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|No.|In condizioni di utilizzo alto della memoria, il server di report non accetterà nuove richieste nel dominio applicazione corrente. Durante il periodo in cui il server rifiuta nuove richieste, si verifica l'errore HTTP 503. Non verrà creato alcun nuovo dominio applicazione fino a quando quello obsoleto non viene scaricato. Questo significa che se si apporta una modifica al file di configurazione in condizioni di utilizzo alto della memoria da parte del server, richieste e processi in corso potrebbero non essere avviati o completati.<br /><br /> Nel caso in cui si verifichi un errore di allocazione di memoria, tutti i domini applicazione vengono riavviati immediatamente. I processi e le richieste in corso vengono eliminati ed è necessario riavviarli manualmente.|  
+|Operazioni di riciclo pianificate eseguite a intervalli predefiniti|Per impostazione predefinita, i domini applicazione vengono riciclati ogni 12 ore.<br /><br /> Le operazioni di riciclo pianificate vengono in genere utilizzate per applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] che agevolano l'integrità complessiva del processo.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|Sì. L'impostazione di configurazione `RecycleTime` nel file RSReportServer.config determina l'intervallo di riciclo.<br /><br /> 
+  `MaxAppDomainUnloadTime` consente di impostare il tempo di attesa durante il quale è possibile completare l'elaborazione in background.|
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .<br /><br /> Per l'applicazione di elaborazione in background, il server di report crea un nuovo dominio applicazione per i nuovi processi avviati in base alle pianificazioni. I processi già in corso possono essere completati nel dominio applicazione corrente entro la scadenza del tempo di attesa.|  
+|Modifiche alla configurazione sul server di report|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i domini applicazione verranno riciclati in risposta alle modifiche apportate al file RSReportServer.config.|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|No.|Non è possibile arrestare le operazioni di riciclo. Tuttavia, le operazioni di riciclo eseguite in risposta alle modifiche alla configurazione vengono gestite in modo analogo alle operazioni di riciclo pianificate. Per le nuove richieste vengono creati nuovi domini applicazione, mentre le richieste e i processi in corso vengono completati nel dominio applicazione corrente.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]modifiche alla configurazione|
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Se sono presenti modifiche ai file monitorati, ad esempio machine.config, Web.config e i file di programma di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati.|Servizio Web ReportServer<br /><br /> Gestione report|No.|
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .<br /><br /> Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] non influiscono sul dominio applicazione dell'elaborazione in background.|  
+|Utilizzo della memoria ed errori di allocazione di memoria|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Servizio Web ReportServer<br /><br /> Gestione report<br /><br /> Applicazione di elaborazione in background|No.|In condizioni di utilizzo alto della memoria, il server di report non accetterà nuove richieste nel dominio applicazione corrente. Durante il periodo in cui il server rifiuta nuove richieste, si verifica l'errore HTTP 503. Non verrà creato alcun nuovo dominio applicazione fino a quando quello obsoleto non viene scaricato. Questo significa che se si apporta una modifica al file di configurazione in condizioni di utilizzo alto della memoria da parte del server, richieste e processi in corso potrebbero non essere avviati o completati.<br /><br /> Nel caso in cui si verifichi un errore di allocazione di memoria, tutti i domini applicazione vengono riavviati immediatamente. I processi e le richieste in corso vengono eliminati ed è necessario riavviarli manualmente.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Operazioni di riciclo pianificate e non pianificate  
  Le operazioni di riciclo vengono pianificate o meno in base alle condizioni che determinano l'operazione:  
@@ -58,7 +64,8 @@ ms.locfileid: "66104225"
   
  I domini applicazione per il servizio Web ReportServer, Gestione report e l'applicazione di elaborazione in background potrebbero essere riciclati contemporaneamente o individualmente, in base alle circostanze che determinano il verificarsi del riciclo:  
   
--   Operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] interessano solo le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni: Servizio Web ReportServer e gestione Report. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati. Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sono in genere indipendenti da quelle per l'applicazione di elaborazione in background.  
+-   Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] influiscono solo sulle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni: servizio Web ReportServer e gestione report. 
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , i domini applicazione verranno riciclati. Le operazioni di riciclo avviate da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sono in genere indipendenti da quelle per l'applicazione di elaborazione in background.  
   
 -   Le operazioni di riciclo avviate dal server di report influiscono in genere sul servizio Web ReportServer, su Gestione report e sull'applicazione di elaborazione in background. Le operazioni di riciclo vengono eseguite in risposta alle modifiche alle impostazioni di configurazione e ai riavvii del servizio.  
   
@@ -81,7 +88,7 @@ ms.locfileid: "66104225"
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

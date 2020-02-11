@@ -15,29 +15,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100036"
 ---
 # <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
-  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere _\<Nome report progetto>_ **Proprietà**.  
+  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere _\<Nome report progetto>_**Proprietà**.  
   
  Dopo aver definito le proprietà di configurazione, è possibile selezionare una configurazione nell'elenco a discesa **Configurazioni soluzione** sulla barra degli strumenti.  
   
 ## <a name="options"></a>Opzioni  
  **Configurazione**  
- Consente di selezionare la configurazione da modificare. Inizialmente, sono disponibili le seguenti configurazioni: **Eseguire il debug**, **DebugLocal**, e **versione**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)** .  
+ Consente di selezionare la configurazione da modificare. Sono inizialmente disponibili tre configurazioni: **Debug**, **DebugLocal**e **Release**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)**.  
   
  Per visualizzare le proprietà per più configurazioni contemporaneamente, selezionare **Tutte le configurazioni** o **Più configurazioni**.  
   
  Per creare altre configurazioni, fare clic su **Gestione configurazione** sulla barra degli strumenti.  
   
  **Gestione configurazione**  
- Consente di gestire configurazioni per l'intera soluzione o per aggiungere altre configurazioni. Per altre informazioni, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
+ Consente di gestire configurazioni per l'intera soluzione o per aggiungere altre configurazioni. Per ulteriori informazioni, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentazione di.  
   
- **Percorso output**  
+ **OutputPath**  
  Digitare o incollare il percorso per archiviare la definizione del report utilizzata nella verifica della compilazione, nella distribuzione e nell'anteprima dei report. Il percorso deve essere diverso dal percorso utilizzato per il progetto e da un percorso relativo che rappresenta una sottocartella nel percorso del progetto.  
   
 > [!NOTE]  
@@ -53,31 +53,31 @@ ms.locfileid: "66100036"
  Selezionare **True** per sovrascrivere l'origine dati nel server con l'origine dati nel progetto durante la pubblicazione dei report. Selezionare **False** per lasciare l'origine dati esistente nel server.  
   
  **TargetServerVersion**  
- Selezionare il [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oppure [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **rileva versione** per determinare automaticamente la versione installata nel server identificata dal **TargetServer URL** proprietà. Il valore predefinito è **SQL Server 2008 R2**.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Selezionare la versione o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **Rileva versione** per determinare automaticamente la versione installata nel server identificato dalla proprietà **URL TargetServer** . Il valore predefinito è **SQL Server 2008 R2**.  
   
  **TargetDataSourceFolder**  
  Nome della cartella nella quale archiviare le origini dei dati pubblicate. Se non si specifica una cartella, l'origine dei dati viene pubblicata nella stessa cartella del report. Se la cartella non esiste nel server di report, verrà creata durante la pubblicazione dei report.  
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, specificare il percorso completo della gerarchia di cartelle a partire dalla radice. Ad esempio, Folder1/Folder2/Folder3.  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http:// *\<nomeserver > /\<sito >* /documenti/MyFolder.  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http://*\<ServerName>/\<site>*/documenti/myFolder.  
   
  **TargetReportFolder**  
  Nome della cartella nella quale archiviare i report pubblicati. Per impostazione predefinita, corrisponde al nome del progetto report. Se la cartella non esiste nel server di report, verrà creata durante la pubblicazione dei report.  
   
  Quando si pubblica in un server di report in esecuzione in modalità nativa, specificare il percorso completo della gerarchia di cartelle a partire dalla radice. Se una cartella si trova all'interno di un'altra cartella, includere il percorso della cartella a partire dalla radice, ad esempio Cartella1/Cartella2/Cartella3.  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http:// *\<nomeserver >* / *\<sito >* /documenti/MyFolder.  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL della raccolta di SharePoint. Ad esempio, http://*\<nomeserver>* / * \<sito>*/documenti/myFolder.  
   
  **TargetServerURL**  
  URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report.  
   
- Quando si pubblica in un server di report in esecuzione in modalità nativa, utilizzare l'URL della directory virtuale del server di report. Ad esempio, http://\<server > / reportserver. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato in una directory virtuale denominata "reportserver".  
+ Quando si pubblica in un server di report in esecuzione in modalità nativa, utilizzare l'URL della directory virtuale del server di report. Ad esempio, il\<server http://>/ReportServer. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato in una directory virtuale denominata "reportserver".  
   
- Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio, http://\<*nomeserver >* , http://&lt*servername*/\<*sito >* o http://\< *servername >* /\<*site >* /\<*sitosecondario >* .  
+ Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio, http://\<*ServerName>*, http://<*ServerName*/\<*site>* o http://\<*ServerName>* / \< *sito>* / \<sito secondario *>*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicazione di report](../publish-reports.md)   
+ [Pubblicare report](../publish-reports.md)   
  [Pubblicare un report in una raccolta di SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [Guida sensibile al contesto di Progettazione report](report-designer-f1-help.md)  

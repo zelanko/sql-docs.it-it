@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105116"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Funzione Union (Generatore report e SSRS)
@@ -38,12 +38,13 @@ Union(expression, scope, recursive)
  (`String`) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. 
+  `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return"></a>Return  
- Restituisce un oggetto spaziale, `SqlGeometry` o `SqlGeography`, in base al tipo di espressione. Per altre informazioni sulle `SqlGeometry` e `SqlGeography` tipi di dati spaziali, vedere [Cenni preliminari sui tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Restituisce un oggetto spaziale, `SqlGeometry` o `SqlGeography`, in base al tipo di espressione. Per ulteriori informazioni sui `SqlGeometry` tipi `SqlGeography` di dati spaziali e, vedere [Cenni preliminari sui tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati.  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Gli ambiti del set di dati non sono supportati. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
@@ -54,7 +55,7 @@ Union(expression, scope, recursive)
   
 -   *Scope* per le aggregazioni nidificate non può essere il nome di un set di dati.  
   
--   *Espressione* non deve contenere `First`, `Last`, `Previous`, o `RunningValue` funzioni.  
+-   L' *espressione* non deve `First`contenere `Last`funzioni `Previous`,, `RunningValue` o.  
   
 -   *Expression* non deve contenere aggregazioni nidificate che specificano *recursive*.  
   

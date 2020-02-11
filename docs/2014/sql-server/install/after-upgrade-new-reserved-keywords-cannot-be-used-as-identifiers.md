@@ -1,5 +1,5 @@
 ---
-title: Dopo l'aggiornamento, le parole chiave riservate non possono essere utilizzate come identificatori | Microsoft Docs
+title: Dopo l'aggiornamento, le nuove parole chiave riservate non possono essere usate come identificatori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096885"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Dopo l'aggiornamento, le parole chiave riservate non possono essere utilizzate come identificatori.
@@ -49,14 +49,14 @@ ms.locfileid: "66096885"
   
 -   Mantenere il livello di compatibilità del database 90 o inferiore.  
   
--   Fare riferimento all'oggetto utilizzando identificatori delimitati. Ad esempio, l'istruzione `CREATE TABLE [MERGE] ([MERGE] int);` utilizza parentesi quadre per delimitare il nome dell'oggetto MERGE.  
+-   Fare riferimento all'oggetto utilizzando identificatori delimitati. L'istruzione `CREATE TABLE [MERGE] ([MERGE] int);` , ad esempio, utilizza le parentesi quadre per delimitare il nome dell'oggetto merge.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- [Parole chiave riservate &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Parole chiave riservate &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Identificatori delimitati (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Identificatori delimitati (Motore di database)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

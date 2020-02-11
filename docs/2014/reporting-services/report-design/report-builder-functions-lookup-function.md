@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105219"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Funzione Lookup (Generatore report e SSRS)
@@ -32,13 +32,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio `=Fields!ProdID.Value`.  
+ (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio: `=Fields!ProdID.Value`.  
   
  *destination_expression*  
- (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio `=Fields!ProductID.Value`.  
+ (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio: `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio `=Fields!ProductName.Value`.  
+ (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*e che specifica il valore da recuperare. Ad esempio: `=Fields!ProductName.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio, "Prodotti".  
@@ -46,10 +46,10 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Restituisce `Variant` o `Nothing` se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la funzione `Lookup` per recuperare il valore dal set di dati specificato per una coppia nome/valore in cui esiste una relazione uno-a-uno. Ad esempio per un campo ID in una tabella, è possibile utilizzare `Lookup` per recuperare il campo Nome corrispondente da un set di dati non associato all'area dati.  
   
- Tramite la funzione `Lookup` vengono effettuate le operazioni seguenti:  
+ `Lookup`esegue le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   
@@ -59,9 +59,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Restituisce il valore dell'espressione di risultato.  
   
- Per recuperare più valori per un solo nome o un campo chiave in cui esiste una relazione uno-a-molti, usare [Funzione LookupSet &#40;Generatore report e SSRS&#41;](report-builder-functions-lookupset-function.md). Per chiamare `Lookup` per un set di valori, usare [funzione Multilookup &#40;Generatore Report e SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Per recuperare più valori per un solo nome o un campo chiave in cui esiste una relazione uno-a-molti, usare [Funzione LookupSet &#40;Generatore report e SSRS&#41;](report-builder-functions-lookupset-function.md). Per chiamare `Lookup` un set di valori, usare la [funzione multilookup &#40;Generatore report e SSRS&#41;](report-builder-functions-lookup-function.md).  
   
- Sono previste le restrizioni seguenti:  
+ Si applicano le restrizioni seguenti:  
   
 -   La funzione `Lookup` viene valutata dopo l'applicazione di tutte le espressioni di filtro.  
   

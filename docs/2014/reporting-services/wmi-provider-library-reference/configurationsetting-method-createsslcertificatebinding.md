@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098535"
 ---
-# <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Metodo CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting WMI)
+# <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>Metodo CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting WMI)
   Crea un'associazione certificato SSL.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,7 +53,7 @@ public void CreateSSLCertificateBinding(string application,
  *LCID*  
  Impostazioni locali da utilizzare per i messaggi di errore restituiti.  
   
- *Errore*  
+ *Error (Errore) (Error (Errore)e)*  
  [out] Descrizione degli errori che si sono verificati.  
   
  *HRESULT*  
@@ -62,7 +62,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo aggiunge un'associazione a rsreportserver.config per l'applicazione. Se in HTTP.SYS non esiste già un'associazione, questa viene creata.  
   
  Prima di creare l'associazione, la chiamata al metodo esamina le prenotazioni dell'URL affinché l'applicazione specificata determini se l'associazione certificato SSL è valida.  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  Esiste una prenotazione URL che specifica un nome host, ma il nome host non corrisponde al nome host del certificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

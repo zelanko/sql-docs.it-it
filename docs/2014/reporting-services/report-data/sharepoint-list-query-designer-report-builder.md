@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e16dc91040596b1d083226683abe76a7e2e2c4ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107065"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Progettazione query di elenco di SharePoint (Generatore report)
@@ -56,28 +56,28 @@ ms.locfileid: "66107065"
  [Risultati query](#QueryResults)  
  Visualizza i dati di esempio per il set di risultati per la query generata automaticamente.  
   
-###  <a name="DatabaseView"></a> Riquadro Elenchi SharePoint  
+###  <a name="DatabaseView"></a>Riquadro Elenchi SharePoint  
  Nel riquadro Elenchi SharePoint vengono visualizzati i metadati per gli oggetti di database per cui si dispone delle autorizzazioni per la visualizzazione. Tali oggetti sono determinati dalla connessione all'origine dati e dalle credenziali. Nella visualizzazione gerarchica, gli oggetti di database sono organizzati in base allo schema del database. Espandere il nodo di ogni schema per visualizzare tabelle, viste, stored procedure e funzioni con valori di tabella. Espandere la tabella o la vista per visualizzare le colonne.  
   
-###  <a name="SelectedFields"></a> Riquadro Campi selezionati  
+###  <a name="SelectedFields"></a>Riquadro campi selezionati  
  Il riquadro Campi selezionati visualizza i campi dell'elemento dell'elenco che si selezionano per gli elementi dell'elenco SharePoint. I campi visualizzati in questo riquadro diventano la raccolta dei campi per il set di dati del report. Dopo aver creato un set di dati e una query, utilizzare il riquadro dei dati del report per visualizzare la raccolta dei campi per un set di dati del report. Questi campi rappresentano i dati che si possono visualizzare in tabelle, grafici e altri elementi del report quando si visualizza un report.  
   
  Per aggiungere o rimuovere campi in questo riquadro, selezionare o deselezionare le caselle di controllo relative ai campi della tabella o della vista nel riquadro Elenchi SharePoint.  
   
-###  <a name="AppliedFilters"></a> Riquadro Filtri applicati  
+###  <a name="AppliedFilters"></a>Riquadro filtri applicati  
  Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro sono usati per generare una clausola WHERE di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
   
  Vengono visualizzate le colonne seguenti:  
   
--   **Nome campo** Visualizza il nome del campo al quale applicare i criteri.  
+-   **Nome campo** Consente di visualizzare il nome del campo a cui applicare i criteri.  
   
--   **Operatore** Visualizza l'operazione da usare nell'espressione di filtro.  
+-   **Operatore** di Consente di visualizzare l'operazione da utilizzare nell'espressione di filtro.  
   
--   **Valore** Visualizza il valore da usare nell'espressione di filtro.  
+-   **Valore** di Consente di visualizzare il valore da utilizzare nell'espressione di filtro.  
   
--   **Parametro** Visualizza l'opzione per aggiungere un parametro di query alla query. Per visualizzare la relazione tra il parametro del report e il parametro della query, utilizzare Proprietà set di dati.  
+-   **Parametro** di Consente di visualizzare l'opzione per l'aggiunta di un parametro di query alla query. Per visualizzare la relazione tra il parametro del report e il parametro della query, utilizzare Proprietà set di dati.  
   
-###  <a name="QueryResults"></a> Riquadro Risultati query  
+###  <a name="QueryResults"></a>Riquadro risultati query  
  Nel riquadro Risultati query vengono visualizzati i risultati della query generata automaticamente in base alle selezioni negli altri riquadri. Le colonne nel set di risultati sono costituite dai campi che si specificano nel riquadro Campi selezionati e i dati di riga sono limitati dai filtri che si specificano nel riquadro Filtri applicati.  
   
  Questi dati rappresentano i valori dell'origine dati al momento dell'esecuzione della query. I dati non sono salvati nella definizione del report. I dati effettivi del report vengono recuperati quando il report viene elaborato.  
@@ -87,14 +87,14 @@ ms.locfileid: "66107065"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  Nella barra degli strumenti di Progettazione query relazionale sono disponibili i pulsanti seguenti, che consentono di specificare o visualizzare i risultati di una query.  
   
-|Button|Descrizione|  
+|Pulsante|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  
-|**Esegui query**|Consente di eseguire la query. Il set di risultati viene visualizzato nel riquadro Risultati query.|  
+|**Eseguire la query**|Consente di eseguire la query. Il set di risultati viene visualizzato nel riquadro Risultati query.|  
 |**Mostra campi nascosti**|Consente di mostrare o nascondere i campi che sono stati generati automaticamente da SharePoint, quali ProgId e Level per gli elementi collegamento di SharePoint, ma che in genere non sono utilizzati nei report. Nascondendo questi campi, l'elenco dei campi diventa più breve e più facile da utilizzare.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
+ [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

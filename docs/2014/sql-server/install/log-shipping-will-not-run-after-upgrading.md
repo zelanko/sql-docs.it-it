@@ -1,5 +1,5 @@
 ---
-title: Il log shipping non verrà eseguito dopo l'aggiornamento | Microsoft Docs
+title: Il log shipping non viene eseguito dopo l'aggiornamento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093976"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Il log shipping non verrà eseguito dopo l'aggiornamento
   È in uso il log shipping. Il log shipping di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è compatibile con quello di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non può essere direttamente aggiornato. Dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], riconfigurare il log shipping utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o le stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Categoria di processi di SQL Server Agent log shipping comporta l'aggiornamento di](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
- [L'aggiornamento verrà modificato l'Account Proxy utente di SQL Server Agent dall'account temporaneo UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server Agent log shipping categoria di processi causa l'esito negativo dell'aggiornamento](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
+ [L'aggiornamento modificherà l'account proxy utente SQL Server Agent al UpgradedProxyAccount temporaneo](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

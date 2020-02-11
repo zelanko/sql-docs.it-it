@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102905"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Caratteristiche e attività di Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è organizzato in base ai report, le caratteristiche dei report, le caratteristiche del server di report e le caratteristiche dei prodotti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Server di report di Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)  
   
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  

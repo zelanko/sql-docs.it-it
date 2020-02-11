@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100112"
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
@@ -30,10 +30,10 @@ ms.locfileid: "66100112"
 ## <a name="options"></a>Opzioni  
  Utilizzare la barra degli strumenti per gestire le funzionalità di anteprima.  
   
- **Mostra o nasconde la mappa documento**  
+ **Mostra/Nascondi mappa documento**  
  Selezionare questa opzione per mostrare o nascondere la mappa del documento, se disponibile.  
   
- **Mostra / Nascondi parametri**  
+ **Mostra/Nascondi parametri**  
  Selezionare questa opzione per mostrare o nascondere le caselle dei parametri per i report con parametri.  
   
  **Prima pagina**  
@@ -54,16 +54,16 @@ ms.locfileid: "66100112"
  **Ultima pagina**  
  Selezionare questa opzione per passare all'ultima pagina del report.  
   
- **Torna a Report padre**  
+ **Torna al report padre**  
  Selezionare questa opzione per passare al report padre. Utilizzare questa opzione per passare ai report drill-through.  
   
- **Arresta Rendering**  
+ **Arresta rendering**  
  Selezionare questa opzione per arrestare il processo di rendering.  
   
  **Aggiorna**  
  Scegliere questa opzione per aggiornare la cache dei dati ed eseguire nuovamente il report.  
   
- **Print**  
+ **Stampa**  
  Selezionare questa opzione per stampare il report.  
   
  **Layout di stampa**  
@@ -81,14 +81,14 @@ ms.locfileid: "66100112"
  **Testo di ricerca**  
  Consente di digitare il testo da cercare nel report. Non è possibile utilizzare operatori di ricerca. Fare clic su **Trova** per cercare la prima occorrenza.  
   
- **Find**  
+ **Trovare**  
  Selezionare questa opzione per iniziare la ricerca del testo desiderato nel report.  
   
  **Trova successivo**  
  Selezionare questa opzione per cercare l'occorrenza successiva del testo desiderato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Anteprima dei report](../reports/previewing-reports.md)   
+ [Visualizzazione in anteprima di report](../reports/previewing-reports.md)   
  [Guida sensibile al contesto di Progettazione report](report-designer-f1-help.md)  
   
   

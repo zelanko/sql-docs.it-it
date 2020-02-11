@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102700"
 ---
 # <a name="create-a-linked-report"></a>Creare un report collegato
@@ -34,9 +34,11 @@ ms.locfileid: "66102700"
   
 2.  Digitare un nome per il nuovo report collegato. Se lo si desidera, digitare una descrizione.  
   
-3.  Per selezionare una cartella diversa per il report, fare clic su **Cambia percorso**. Selezionare la cartella che si vuole usare o digitare il nome della cartella nella casella **Percorso** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se non è stata selezionata una cartella diversa, il report collegato viene creato nella cartella corrente (dove è archiviato il report su cui si basa).  
+3.  Per selezionare una cartella diversa per il report, fare clic su **Cambia percorso**. Selezionare la cartella che si vuole usare o digitare il nome della cartella nella casella **Percorso** . 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se non è stata selezionata una cartella diversa, il report collegato viene creato nella cartella corrente (dove è archiviato il report su cui si basa).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Verrà aperto il report collegato.  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Verrà aperto il report collegato.  
   
      L'icona di un report collegato è diversa da quella di altri elementi gestiti da un server di report. L'icona seguente indica un report collegato:  
   
@@ -44,9 +46,9 @@ ms.locfileid: "66102700"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aprire e chiudere un report &#40;Gestione report&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Pagina Nuovo report collegato &#40;Gestione report&#41;](../new-linked-report-page-report-manager.md)   
- [Pagina Choose Item Location (Scegli percorso elemento) &#40;Gestione report&#41;](../choose-item-location-page-report-manager.md)   
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../general-properties-page-reports-report-manager.md)   
+ [Pagina nuovo report collegato &#40;Gestione report&#41;](../new-linked-report-page-report-manager.md)   
+ [Pagina Scegli percorso elemento &#40;Gestione report&#41;](../choose-item-location-page-report-manager.md)   
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../general-properties-page-reports-report-manager.md)   
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   

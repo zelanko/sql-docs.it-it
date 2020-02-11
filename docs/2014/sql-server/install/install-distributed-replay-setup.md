@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita (programma di installazione) | Microsoft Docs
+title: Installare Riesecuzione distribuita (programma di installazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094633"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
@@ -52,17 +52,19 @@ ms.locfileid: "66094633"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Strumenti  
   
-     \- oppure -  
+     \-O  
   
-     \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
+     
+  \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
   
 -   In un sistema a 64 bit:  
   
-     C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C:\Programmi\\ (x86) \120\Tools  
   
-     \- oppure -  
+     \-O  
   
-     \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
+     
+  \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
   
 ### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   
@@ -70,13 +72,13 @@ ms.locfileid: "66094633"
   
 2.  Nella pagina **Regole di supporto per l'installazione** sono riportati i problemi che si potrebbero verificare durante l'installazione dei file di supporto dell'installazione di SQL Server. Prima di continuare con l'installazione, è necessario correggere qualsiasi errore del supporto dell'installazione.  
   
-3.  Nella pagina **Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versione di produzione del prodotto con una chiave PID. Per altre informazioni, vedere [edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
+3.  Nella pagina **Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versione di produzione del prodotto con una chiave PID. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
-4.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Nella pagina **condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettare i termini e le condizioni di licenza. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  Nella pagina **Impostazione ruolo** selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
+6.  Nella pagina **impostazione ruolo** selezionare ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
   
 7.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si desidera installare.  
   
@@ -86,7 +88,7 @@ ms.locfileid: "66094633"
   
     -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
-     **Importante**: Quando si configura Distributed Replay controller, è possibile specificare uno o più account utente che verrà utilizzato per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: quando si configura riesecuzione distribuita controller, è possibile specificare uno o più account utente che verranno usati per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -102,21 +104,21 @@ ms.locfileid: "66094633"
   
 8.  Facoltativamente, fare clic sul pulsante con i puntini di sospensione (...) per modificare il percorso della directory delle funzionalità condivise.  
   
-    1.  Nei computer a 32 bit il percorso di installazione predefinito è **C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    1.  Nei computer a 32 bit il percorso di installazione predefinito è **c:\Programmi\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
-    2.  Nei computer a 64 bit il percorso di installazione predefinito è **C:\Programmi (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  Nei computer a 64 bit il percorso di installazione predefinito è **c:\Programmi (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
-9. Una volta finito, fare clic su **Avanti**.  
+9. Al termine dell'operazione scegliere **Avanti**.  
   
 10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una volta completato il processo di convalida, fare clic su **Avanti**.  
   
-11. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
+11. Nella pagina **requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
 12. Nella pagina **Segnalazione errori** specificare le informazioni che si desidera inviare a [!INCLUDE[msCoName](../../includes/msconame-md.md)] per contribuire a migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione Segnalazione errori è abilitata.  
   
 13. Nella pagina **Regole di configurazione per l'installazione** Controllo configurazione sistema consentirà di eseguire uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate.  
   
-14. Nella pagina **Installazione del programma** fare clic su **Installa**.  
+14. Nella pagina **Installazione del programma**, fare clic su **Installa**.  
   
     > [!IMPORTANT]  
     >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -132,9 +134,9 @@ ms.locfileid: "66094633"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisiti relativi a Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Riesecuzione distribuita](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Requisiti di Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

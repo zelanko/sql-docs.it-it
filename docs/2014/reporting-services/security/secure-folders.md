@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101712"
 ---
 # <a name="secure-folders"></a>Proteggere le cartelle
@@ -36,10 +36,10 @@ ms.locfileid: "66101712"
   
 |Selezionare questa attività|Per concedere l'autorizzazione per|  
 |----------------------|---------------------------|  
-|Visualizzazione di cartelle|Visualizzare la gerarchia di cartelle e le proprietà di sola lettura che indicano quando la cartella è stata creata e modificata.<br /><br /> Gli utenti non possono visualizzare gli elementi nella cartella a meno che non sono assegnati a ruoli che includono anche le attività seguenti: "Visualizzazione di report," "Visualizzazione di modelli", "Visualizzazione di risorse" e "Visualizzazione di origini dati".|  
+|Visualizzazione di cartelle|Visualizzare la gerarchia di cartelle e le proprietà di sola lettura che indicano quando la cartella è stata creata e modificata.<br /><br /> Gli elementi inclusi nella cartella possono essere visualizzati solo dagli utenti nelle cui assegnazioni di ruolo sono incluse anche le attività "Visualizzazione di report", "Visualizzazione di modelli", "Visualizzazione di risorse" e "Visualizzazione di origini dei dati".|  
 |Gestione di cartelle|Visualizzare le proprietà di una cartella, modificare il nome o la descrizione o spostare la cartella in un'altra posizione. Questa attività consente agli utenti di creare cartelle.|  
 |Gestione di report|Aggiungere report dal file system a una cartella e pubblicare i report da Progettazione report nel server di report.|  
-|Gestione di origini dei dati|Aggiungere nuove origini dei dati condivise a una cartella e modificare quelle esistenti.|  
+|Gestire le origini dati|Aggiungere nuove origini dei dati condivise a una cartella e modificare quelle esistenti.|  
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso alla cartella. Questa attività deve essere utilizzata con l'attività "Visualizzazione di cartelle" o "Gestione di cartelle". In caso contrario, non si avrà alcun effetto in quanto l'utente non sarà in grado di selezionare l'elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  

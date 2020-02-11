@@ -1,5 +1,5 @@
 ---
-title: Pagina sottoscrizioni (gestione Report) | Microsoft Docs
+title: Pagina sottoscrizioni (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101092"
 ---
 # <a name="subscriptions-page-report-manager"></a>Pagina Sottoscrizioni (Gestione report)
   La pagina Sottoscrizioni consente di visualizzare un elenco di tutte le sottoscrizioni del report o dell'origine dati condivisa corrente. Se sono disponibili autorizzazioni sufficienti (quelle assegnate dall'attività Gestione di tutte le sottoscrizioni) è possibile visualizzare le sottoscrizioni di tutti gli utenti. In caso contrario, in questa pagina vengono visualizzate solo le sottoscrizioni personali.  
   
 > [!NOTE]  
->  Le informazioni sulle sottoscrizioni sono disponibili anche in altre pagine. Per altre informazioni, vedere [pagina sottoscrizioni personali &#40;gestione Report&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) per accedere a tutte le sottoscrizioni in un'unica posizione o il [pagina nuova sottoscrizione o modifica sottoscrizione &#40;gestione Report&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) per creare o modificare una sottoscrizione.  
+>  Le informazioni sulle sottoscrizioni sono disponibili anche in altre pagine. Per ulteriori informazioni, vedere la [pagina Sottoscrizioni personali &#40;Gestione report&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md) per accedere a tutte le sottoscrizioni in un'unica posizione o nella [pagina nuova sottoscrizione o modifica sottoscrizione &#40;Gestione report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) per creare o modificare una sottoscrizione.  
   
  Alcune opzioni sono disponibili solo in presenza di sottoscrizioni esistenti. Se non esistono sottoscrizioni definite e si accede a questa pagina da un report, saranno disponibili solo i pulsanti **Nuova sottoscrizione** e **Nuova sottoscrizione guidata dai dati** .  
   
- Prima di creare una nuova sottoscrizione, è necessario verificare che l'origine dati del report utilizzi credenziali archiviate. Per archiviare le credenziali, utilizzare la pagina delle proprietà Origini dati. Per altre informazioni, vedere [pagina delle proprietà origini dati &#40;gestione Report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Prima di creare una nuova sottoscrizione, è necessario verificare che l'origine dati del report utilizzi credenziali archiviate. Per archiviare le credenziali, utilizzare la pagina delle proprietà Origini dati. Per ulteriori informazioni, vedere la [pagina delle proprietà origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
 > [!NOTE]  
 >  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "66101092"
  **Ultima esecuzione**  
  Mostra la data e ora dell'ultima elaborazione della sottoscrizione.  
   
- **Stato**  
+ **Status**  
  Mostra lo stato della sottoscrizione. In genere il valore dello stato corrisponde a Nuovo oppure alla data e ora dell'ultima esecuzione della sottoscrizione.  
   
  Il valore "Dati non validi" indica che la sottoscrizione include un puntatore a valori crittografati non più validi per le credenziali archiviate utilizzate per eseguire il report. I valori crittografati esistenti diventano inutilizzabili quando le chiavi simmetriche utilizzate per crittografare e decrittografare i dati vengono ricreate sul server di report.  
@@ -80,7 +80,7 @@ ms.locfileid: "66101092"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [Creare, modificare ed eliminare sottoscrizioni standard &#40;Reporting Services in modalità nativa&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

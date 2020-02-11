@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100244"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formattare un file script di Reporting Services
@@ -48,13 +48,13 @@ End Sub
 > [!IMPORTANT]  
 >  Le credenziali dell'utente vengono gestite dall'ambiente di script e vengono passate agli argomenti del prompt dei comandi tramite RS.exe. Anche se è possibile usare la variabile *rs* per impostare l'autenticazione del servizio Web, si consiglia di usare l'ambiente di script. Non è necessario autenticare il servizio Web nel file script. Per altre informazioni sull'autenticazione degli ambienti di script, vedere [Utilità RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting rende molti utili [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] spazi dei nomi disponibili: **System**, **Protocols**, **System. XML**, e **System.IO**.  
+ Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting rende disponibili molti spazi dei nomi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utili: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** e **System.IO**.  
   
  Per esempi di script, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)(Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../report-server-web-service/report-server-web-service.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Utilità RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [Utilità RS. exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   
   

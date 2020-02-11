@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b58c380b85e412554eb47315dfe356d3bff08d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097814"
 ---
-# <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseLogonType (MSReportServer_ConfigurationSetting WMI)
+# <a name="databaselogontype-property-wmi-msreportserver_configurationsetting"></a>Proprietà DatabaseLogonType (MSReportServer_ConfigurationSetting WMI)
   Specifica se il server di report usa un account del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, un account utente di Windows o un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database del server di report. Di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -44,7 +44,7 @@ public int DatabaseLogonType;
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I valori possibili sono:  
   
 -   0 per l'account di accesso di Windows  
@@ -60,7 +60,7 @@ public int DatabaseLogonType;
  Se si specifica 2 (servizio Windows), il server di report usa un account di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'account del servizio Windows per accedere al database del server di report. La proprietà DatabaseLogonAccount viene ignorata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

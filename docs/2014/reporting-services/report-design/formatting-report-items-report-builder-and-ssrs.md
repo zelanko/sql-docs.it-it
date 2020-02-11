@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105793"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105793"
   
  ![rs_FormattingReporttItems](../media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- A. Casella di testo con un bordo a doppia linea e una varietà di stili di formattazione, incluso un collegamento.  
+ R. Casella di testo con un bordo a doppia linea e una varietà di stili di formattazione, incluso un collegamento.  
   
  B. Casella di testo con un bordo tratteggiato e dati HTML non elaborati e dati HTML di cui è stato eseguito il rendering.  
   
@@ -32,16 +32,16 @@ ms.locfileid: "66105793"
   
  È possibile modificare le opzioni di formattazione selezionando l'elemento che si desidera formattare e quindi aprire la finestra di dialogo Proprietà dell'elemento. Ad esempio, se si desidera formattare il contenuto di un'intera casella di testo oppure una parola selezionata al suo interno, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà casella di testo**. Sarà quindi possibile applicare gli stili di formattazione desiderati.  
   
- Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Viene descritto come formattare il testo e come personalizzare le opzioni di formattazione per diversi blocchi di testo all'interno di una casella di testo.  
   
- [Importazione di codice HTML a un report &#40;Generatore report e SSRS &#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Viene descritto come inserire e utilizzare dati HTML in un report.  
   
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66105793"
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md)  
  Viene descritto come formattare linee, griglie, colori e immagini all'interno di elementi del report e aree dati.  
   
- [Definizione delle impostazioni locali per un report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Impostazione delle impostazioni locali per un report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Viene descritto come modificare l'impostazione dei formati di visualizzazione dati che differiscono in base alla lingua e al paese, ad esempio i valori relativi alla data, alla valuta e quelli numerici.  
   
 ## <a name="see-also"></a>Vedere anche  

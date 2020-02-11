@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106218"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
   Quando in un grafico a torta viene visualizzato un numero eccessivo di punti dati, l'aspetto finale risulta poco chiaro. Per risolvere questo problema, è possibile visualizzare tutti i dati al di sotto di un determinato valore come un'unica sezione del grafico a torta.  
   
- Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. Impostare le proprietà CollectedThreshold e CollectedThresholdUsePercent. Impostare la proprietà CollectedThreshold su una percentuale del grafico che il valore di raccolta non deve superare o il valore dei dati soglia effettivo per la raccolta. Impostare la proprietà CollectedThresholdUsePercent su `True` per usare una percentuale o `False` usare un valore effettivo.  
+ Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. Impostare le proprietà CollectedThreshold e CollectedThresholdUsePercent. Impostare la proprietà CollectedThreshold su una percentuale del grafico che il valore di raccolta non deve superare o il valore dei dati soglia effettivo per la raccolta. Impostare la proprietà CollectedThresholdUsePercent su `True` per usare una percentuale o `False` per usare un valore effettivo.  
   
  È anche possibile raccogliere le piccole sezioni in un secondo grafico a torta derivato da una sezione del primo grafico ottenuta tramite raccolta. Il secondo grafico a torta verrà disegnato a destra di quello originale.  
   
  Non è possibile combinare in un'unica sezione le sezioni di grafici a imbuto o a piramide.  
   
- Un esempio di questo grafico è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283) (Report di esempio di Generatore report e Progettazione report).  
+ Un esempio di questo grafico è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]altri, vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 ### <a name="to-collect-small-slices-into-a-single-slice-on-a-pie-chart"></a>Per raccogliere le piccole sezioni in una singola sezione di un grafico a torta  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66106218"
          Impostare la proprietà CollectedThreshold su **10**.  
   
         > [!NOTE]  
-        >  Se si imposta CollectedStyle su **SingleSlice**, CollectedThreshold su un valore maggiore **100**, e CollectedThresholdUsePercent è `True`, il grafico genererà un'eccezione perché non è possibile calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
+        >  Se si imposta CollectedStyle su **SingleSlice**, CollectedThreshold su un valore maggiore di **100**e CollectedThresholdUsePercent è `True`, il grafico genererà un'eccezione perché non è in grado di calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
   
     -   **Per valore di dati.** Ad esempio, per raccogliere in un'unica sezione tutte le sezioni del grafico a torta inferiori a 5000:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66106218"
   
 2.  Impostare la proprietà CollectedStyle su **CollectedPie**.  
   
-3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata **CollectedPie**, la proprietà CollectedThresholdUsePercentproperty è sempre impostata su `True`, e la soglia raccolta viene sempre misurata in percentuale.  
+3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata su **su CollectedPie**, CollectedThresholdUsePercentproperty è sempre impostato su `True`e la soglia raccolta viene sempre misurata in percentuale.  
   
 4.  (Facoltativo) Impostare le proprietà CollectedColor, CollectedLabel, CollectedLegendText e CollectedToolTip. Tutte le altre proprietà denominate "Collected" non si applicano alla torta raccolta.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106218"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici a torta &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Visualizzare le etichette dei punti dati all'esterno di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   

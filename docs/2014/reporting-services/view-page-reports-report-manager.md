@@ -1,5 +1,5 @@
 ---
-title: Pagina Visualizza, report (gestione Report) | Microsoft Docs
+title: Pagina Visualizza, report (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098736"
 ---
 # <a name="view-page-reports-report-manager"></a>Pagina Visualizza, Report (Gestione report)
   La pagina Visualizza per i report consente di visualizzare un report. La prima volta che si apre un report in Gestione report, questo viene visualizzato in formato HTML. I report HTML includono una barra degli strumenti dei report visualizzata nella parte superiore del report, che consente di spostarsi tra le pagine del report, eseguire ricerche all'interno di un report oppure esportarlo in un diverso formato. Nella figura seguente viene illustrata la barra degli strumenti dei report.  
   
- ![Barra degli strumenti dei report](media/htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
+ ![Barra degli strumenti report](media/htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
 Barra degli strumenti dei report  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]è possibile configurare i report per l'esecuzione su richiesta o da uno snapshot dell'esecuzione del report. Se un report viene eseguito su richiesta, tutte le operazioni di elaborazione dei dati e del report vengono eseguite ogni volta che il report viene aperto. Se si visualizza un report configurato per l'esecuzione come snapshot dell'esecuzione del report, l'elaborazione dei dati avviene alla creazione del report.  

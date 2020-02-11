@@ -1,5 +1,5 @@
 ---
-title: Errore di Gestione driver e controlli di avviso | Microsoft Docs
+title: Controlli di errore e di avviso di gestione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d0b136b9748de1991888abb0c19bc0d2ac65ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046974"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Errore di Gestione driver e controlli di avviso
-Gestione Driver completamente o parzialmente implementa una serie di funzioni e quindi verifica la presenza di tutti o alcuni degli errori e avvisi in tali funzioni.  
+Gestione driver implementa completamente o parzialmente una serie di funzioni, quindi controlla tutti gli errori e gli avvisi presenti in tali funzioni.  
   
--   Implementa gestione Driver **SQLDataSources** e **SQLDrivers** e verifica se tutti gli errori e avvisi in queste funzioni.  
+-   Gestione driver implementa **SQLDataSources** e **SQLDrivers** e controlla tutti gli errori e gli avvisi in queste funzioni.  
   
--   Gestione Driver verifica se un driver implementa **SQLGetFunctions**. Se il driver non implementa **SQLGetFunctions**, gestione Driver implementa e verifica la presenza di tutti gli errori e avvisi in esso.  
+-   Gestione driver controlla se un driver implementa **SQLGetFunctions**. Se il driver non implementa **SQLGetFunctions**, gestione driver implementa e controlla tutti gli errori e gli avvisi al suo interno.  
   
--   Gestione Driver implementa parzialmente **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**,  **SQLFreeHandle**, **SQLGetDiagRec**, e **SQLGetDiagField** e verifiche per alcuni errori in queste funzioni. Può restituire gli stessi errori come il driver per alcune di queste funzioni perché entrambi eseguono operazioni simili. Ad esempio, il Driver Manager o il driver può restituire SQLSTATE IM008 (finestra di dialogo non riuscita) se uno è in grado di visualizzare una finestra di dialogo account di accesso per **SQLDriverConnect**.
+-   Gestione driver implementa parzialmente **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, **SQLFreeHandle**, **SQLGetDiagRec**e **SQLGetDiagField** e verifica la presenza di alcuni errori in queste funzioni. Può restituire gli stessi errori del driver per alcune di queste funzioni perché entrambe eseguono operazioni simili. È ad esempio possibile che il driver o la gestione driver restituisca SQLSTATE IM008 (Dialog failed) se uno dei due non è in grado di visualizzare una finestra di dialogo di accesso per **SQLDriverConnect**.

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099924"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services di SQL Server Management Studio (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66099924"
   
  In questa sezione sono disponibili istruzioni dettagliate per l'esecuzione di varie attività con i report usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La creazione e la gestione di pianificazioni condivise possono essere inoltre eseguiti utilizzando Gestione report.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)  
   

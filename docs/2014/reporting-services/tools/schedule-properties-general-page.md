@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099734"
 ---
 # <a name="schedule-properties-general-page"></a>Proprietà pianificazione (pagina Generale)
@@ -26,13 +26,13 @@ ms.locfileid: "66099734"
   
  L'elaborazione delle pianificazioni si basa sull'orario locale del server di report che ospita ed elabora la pianificazione.  
   
- Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, aprire il **pianificazioni condivise** cartella, fare doppio clic su una pianificazione condivisa e selezionare **proprietà**.  
+ Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, aprire la cartella **pianificazioni condivise** , fare clic con il pulsante destro del mouse su una pianificazione condivisa e selezionare **proprietà**.  
   
 > [!NOTE]  
 >  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e questa pagina non è visualizzata quando si esegue un'edizione che non dispone di questa funzionalità. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare il nome della pianificazione condivisa.  
   
  **Inizia l'esecuzione della pianificazione il**  

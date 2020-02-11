@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098723"
 ---
 # <a name="url-access-ssrs"></a>Accesso con URL (SSRS)
@@ -93,7 +93,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  Carattere utilizzato per separare le coppie di nome e valore dei parametri di accesso tramite URL.  
   
  **prefix**  
- Facoltativo. Un prefisso per il parametro di accesso tramite URL (ad esempio, `rs:` o `rc:`) per l'accesso a un processo specifico in esecuzione nel server di report.  
+ Facoltativa. Un prefisso per il parametro di accesso tramite URL (ad esempio, `rs:` o `rc:`) per l'accesso a un processo specifico in esecuzione nel server di report.  
   
 > [!NOTE]  
 >  Se per un parametro di accesso tramite URL non viene incluso un prefisso, il parametro viene elaborato dal server di report come parametro del report. Nei parametri del report non si utilizzano prefissi dei parametri e non esistono distinzioni tra maiuscole e minuscole.  
@@ -101,16 +101,16 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  **param**  
  Nome del parametro.  
   
- *Valore*  
+ *value*  
  Testo dell'URL che corrisponde al valore del parametro utilizzato.  
   
- **Nota:** Per un elenco di parametri di accesso URL disponibili, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md). Per esempi di passaggi di parametri di report nell'URL, vedere [Passare un parametro del report in un URL](pass-a-report-parameter-within-a-url.md).  
+ **Nota:** per un elenco dei parametri di accesso tramite URL disponibili, vedere [Riferimento ai parametri di accesso con URL](url-access-parameter-reference.md). Per esempi di passaggi di parametri di report nell'URL, vedere [Passare un parametro del report in un URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizioni delle attività|Collegamenti|  
 |-----------------------|-----------|  
-|Accedere a elementi del server di report, quali report, origini dati condivise e risorse.|[Accesso agli elementi del server di report utilizzando l'accesso tramite URL](access-report-server-items-using-url-access.md)|  
+|Accedere a elementi del server di report, quali report, origini dati condivise e risorse.|[Accesso agli elementi del server di report usando l'accesso tramite URL](access-report-server-items-using-url-access.md)|  
 |Passare i parametri di report a un report.|[Passare un parametro del report in un URL](pass-a-report-parameter-within-a-url.md)|  
 |Impostare le impostazioni locali dei parametri del report nella stringa dell'accesso tramite URL che definisce le interpretazioni delle impostazioni locali di date, valute e così via.|[Impostare la lingua per i parametri del report in un URL](set-the-language-for-report-parameters-in-a-url.md)|  
 |Inviare le impostazioni specifiche dell'estensione di rendering che personalizzano l'esecuzione del rendering del report.|[Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](specify-device-information-settings-in-a-url.md)|  

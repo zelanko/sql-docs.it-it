@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106075"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definire i colori in un grafico mediante la tavolozza (Generatore report e SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106075"
   
 2.  Nell'area di progettazione fare clic sul grafico. Le proprietà dell'oggetto grafico verranno visualizzate nel riquadro Proprietà.  
   
-3.  Nel **grafico** sezione, per il `Palette` proprietà, selezionare **Custom**.  
+3.  Nella sezione **grafico** selezionare **personalizzata**per la `Palette` proprietà.  
   
 4.  Nella proprietà CustomPaletteColors fare clic sul pulsante di modifica della raccolta ( **…** ). Verrà visualizzata la finestra di dialogo **Editor raccolte ReportColorExpression** .  
   

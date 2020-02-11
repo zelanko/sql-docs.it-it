@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104263"
 ---
 # <a name="cache-a-shared-dataset"></a>Memorizzare nella cache un set di dati condiviso
@@ -41,7 +41,7 @@ ms.locfileid: "66104263"
   
 6.  Selezionare l'opzione che determina la scadenza della cache dopo 30 minuti. È inoltre possibile scegliere che la cache scada in base a una determinata pianificazione.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire set di dati condivisi](../report-data/manage-shared-datasets.md)  

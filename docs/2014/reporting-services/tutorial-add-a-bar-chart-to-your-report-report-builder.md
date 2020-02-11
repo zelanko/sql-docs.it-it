@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099202"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
@@ -30,14 +30,14 @@ ms.locfileid: "66099202"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
+##  <a name="BackToTop"></a>Cosa si apprenderà  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
 1.  [Creare un grafico da Creazione guidata grafico](#Chart)  
   
 2.  [Scegliere il tipo di grafico](#ChartType)  
   
-3.  [Visualizzare tutti i valori di categorie sull'asse verticale](#AllValues)  
+3.  [Visualizzare i valori di tutte le categorie sull'asse verticale](#AllValues)  
   
 4.  [Modificare la visualizzazione dei nomi sull'asse verticale](#Sort)  
   
@@ -45,24 +45,24 @@ ms.locfileid: "66099202"
   
 6.  [Spostare il titolo del grafico](#ChartTitle)  
   
-7.  [Formattare e assegnare un'etichetta asse orizzontale](#Horizontal)  
+7.  [Formattare l'asse orizzontale e assegnare un'etichetta](#Horizontal)  
   
 8.  [Aggiungere un filtro per visualizzare i primi cinque valori](#Filter)  
   
-9. [Aggiungere un titolo al Report](#Title)  
+9. [Aggiungere un titolo al report](#Title)  
   
-10. [Salvare il Report](#Save)  
+10. [Salva il report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Tempo stimato per completare questa esercitazione: 15 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Creare un report grafico da Creazione guidata grafico  
- Dal **introduttiva** nella finestra di dialogo Crea un set di dati incorporato, scegliere un'origine dati condivisa e creare un grafico a barre tramite Creazione guidata grafico.  
+##  <a name="Chart"></a>1. creare un report grafico da Creazione guidata grafico  
+ Nella finestra di dialogo **Introduzione** creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un grafico a barre utilizzando la creazione guidata grafico.  
   
 > [!NOTE]  
 >  Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -71,16 +71,16 @@ ms.locfileid: "66099202"
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
+     Verrà visualizzata la finestra di dialogo **Introduzione** .  
   
     > [!NOTE]  
-    >  Se il **Guida introduttiva** finestra di dialogo non vengono visualizzati, fare clic sul pulsante Generatore Report e quindi fare clic su **New**.  
+    >  Se la finestra di dialogo **Introduzione** non viene visualizzata, fare clic sul pulsante Generatore report, quindi fare clic su **nuovo**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**e fare clic su **Avanti**.  
+4.  Nella pagina **scegliere un set di dati** fare clic su **Crea un set di dati**, quindi fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099202"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
-##  <a name="ChartType"></a> 2. Scegliere il tipo di grafico  
+##  <a name="ChartType"></a>2. scegliere il tipo di grafico  
  È possibile scegliere tra diversi tipi di grafico predefiniti.  
   
 #### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
@@ -121,7 +121,7 @@ ms.locfileid: "66099202"
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-     Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2009 e SalesYear2008.  
+     Nella pagina **Disponi campi del grafico** sono presenti quattro campi nel riquadro **campi disponibili** : FirstName, LastName, SalesYear2009 e SalesYear2008.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -129,13 +129,13 @@ ms.locfileid: "66099202"
   
 5.  Trascinare SalesYear2008 nel riquadro Valori sotto SalesYear2009. SalesYear2008 rappresenta l'importo delle vendite di ogni venditore per l'anno 2008.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
-7.  Nel **scegliere uno stile** pagina, selezionare uno stile nel riquadro stili.  
+7.  Nel riquadro Stili della pagina **scegliere uno stile** selezionare uno stile.  
   
      Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo. Quando si seleziona uno stile, nel riquadro di anteprima viene visualizzato un esempio del grafico con lo stile selezionato.  
   
-8.  Scegliere **Fine**.  
+8.  Fare clic su **Fine**.  
   
      Il grafico verrà aggiunto all'area di progettazione.  
   
@@ -145,27 +145,27 @@ ms.locfileid: "66099202"
   
  Nel report viene visualizzato il grafico a barre relativo alle vendite di ogni venditore per gli anni 2008 e 2009. La lunghezza della barra corrisponde al totale delle vendite.  
   
-##  <a name="AllValues"></a> 3. Modificare la visualizzazione dei nomi sull'asse verticale  
+##  <a name="AllValues"></a>3. modificare la visualizzazione dei nomi sull'asse verticale  
  Per impostazione predefinita sull'asse verticale vengono visualizzati solo alcuni valori. È possibile modificare il grafico per visualizzare tutte le categorie.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Per visualizzare tutti i venditori lungo l'asse delle categorie di un grafico a barre  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare doppio clic dell'asse verticale e quindi fare clic su **proprietà asse verticale**.  
+2.  Fare clic con il pulsante destro del mouse sull'asse verticale, quindi scegliere **Proprietà asse verticale**.  
   
 3.  Nella casella **Intervallo**di **Intervallo asse** digitare **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Fare doppio clic su verticale **titolo asse** e deselezionare le **Mostra titolo asse** casella di controllo.  
+5.  Fare clic con il pulsante destro del mouse sul **titolo dell'asse** verticale e deselezionare la casella di controllo **Mostra titolo asse** .  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
 > [!NOTE]  
 >  Se i nomi dei venditori sull'asse verticale non sono leggibili, è possibile aumentare l'altezza del grafico o modificare le opzioni di formattazione per le etichette dell'asse.  
   
-###  <a name="CategoryExpression"></a> Visualizzare cognome e nome sull'asse verticale  
+###  <a name="CategoryExpression"></a>Visualizzare cognome e nome sull'asse verticale  
  È possibile modificare l'espressione delle categorie per includere il cognome seguito dal nome di ogni venditore.  
   
 ##### <a name="to-change-the-category-expression"></a>Per modificare l'espressione delle categorie  
@@ -193,7 +193,7 @@ ms.locfileid: "66099202"
 > [!NOTE]  
 >  Se i nomi dei venditori sull'asse verticale non sono leggibili, è possibile aumentare l'altezza del grafico o modificare le opzioni di formattazione per le etichette dell'asse.  
   
-##  <a name="Sort"></a> 4. Modificare l'ordinamento per i nomi sull'asse verticale  
+##  <a name="Sort"></a>4. modificare l'ordinamento dei nomi sull'asse verticale  
  Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'asse delle categorie.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Per ordinare i nomi in ordine alfabetico sul grafico a barre  
@@ -206,21 +206,21 @@ ms.locfileid: "66099202"
   
 4.  Fare clic su **Ordinamento**. Nella pagina **Modificare le opzioni di ordinamento** viene visualizzato un elenco di espressioni di ordinamento. Per impostazione predefinita, l'elenco dispone di un'unica espressione di ordinamento che equivale all'espressione originale di raggruppamento delle categorie.  
   
-5.  In Ordina per scegliere l'espressione (**Fx**) pulsante.  
+5.  In Ordina per fare clic sul pulsante espressione (**FX**).  
   
 6.  Digitare l'espressione seguente: `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
 7.  Fare clic su **OK**.  
   
-8.  Riaccenderle il **proprietà gruppo categorie** pagina il **ordine** elenco a discesa, seleziona **dalla Z alla A**. Ciò consente di selezionare ordine alfabetico inverso in modo che i nomi visualizzati nell'ordine dall'alto verso il basso.  
+8.  Tornare alla pagina **Proprietà gruppo categorie** nell'elenco a discesa **ordine** Selezionare **da Z a a**. Questa operazione consente di selezionare l'ordine alfabetico inverso in modo che i nomi vengano visualizzati in ordine dall'alto verso il basso.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
- I nomi sull'asse orizzontale vengono ordinati in ordine inverso, partendo **Alerca** nella parte superiore e **Zeng** nella parte inferiore.  
+ I nomi sull'asse orizzontale vengono ordinati in ordine inverso, con **partendo Alerca fino** nella parte superiore e **Zeng** nella parte inferiore.  
   
-##  <a name="Legend"></a> 5. Spostare la legenda  
+##  <a name="Legend"></a>5. spostare la legenda  
  Per migliorare la leggibilità dei valori del grafico, è possibile spostare la legenda del grafico. In un grafico a barre in cui le barre sono visualizzate orizzontalmente, è ad esempio possibile modificare la posizione della legenda in modo che si trovi al di sopra o al di sotto dell'area del grafico. In questo modo lo spazio orizzontale disponibile per le barre risulterà maggiore.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Per visualizzare la legenda al di sotto dell'area del grafico di un grafico a barre  
@@ -239,19 +239,19 @@ ms.locfileid: "66099202"
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="ChartTitle"></a> 6. Spostare il titolo del grafico  
+##  <a name="ChartTitle"></a>6. titolo del grafico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>Per modificare il titolo di un grafico a barre al di sopra dell'area del grafico  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il testo seguente: **Vendite per 2008 e 2009**.  
+2.  Selezionare le parole **titolo grafico** nella parte superiore del grafico, quindi digitare il testo seguente: **vendite per 2008 e 2009**.  
   
 3.  Fare clic in un punto qualsiasi all'esterno del testo.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Horizontal"></a> 7. Formattare l'asse orizzontale e assegnare un'etichetta  
+##  <a name="Horizontal"></a>7. formattare l'asse orizzontale e assegnare un'etichetta  
  Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori in un formato generale che viene ridimensionato automaticamente in base alle dimensioni del grafico.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>Per formattare i numeri sull'asse orizzontale  
@@ -260,25 +260,25 @@ ms.locfileid: "66099202"
   
 2.  Fare clic sull'asse orizzontale lungo il bordo inferiore del grafico per selezionarlo.  
   
-     Sulla barra multifunzione, nel **Home** nella scheda il **numero** raggruppare, fare clic il **valuta** pulsante. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
+     Sulla barra multifunzione, nel gruppo **numero** della scheda **Home** fare clic sul pulsante **valuta** . Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
   
 3.  (Facoltativo) Rimuovere le cifre decimali. Fare clic due volte sul pulsante **Diminuisci decimali** accanto al pulsante **Valuta** .  
   
 4.  Fare clic con il pulsante destro del mouse sull'asse orizzontale e scegliere **Proprietà asse orizzontale**.  
   
-5.  Nel **numero** scheda, seleziona **Mostra valori in migliaia.**  
+5.  Nella scheda **numero** selezionare **Mostra valori in migliaia.**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Fare doppio clic su **titolo asse** e fare clic su **proprietà titolo asse**.  
+7.  Fare clic con il pulsante destro del mouse su **titolo asse** e scegliere **Proprietà titolo asse**.  
   
-8.  Nel **testo titolo** , digitare **vendite in migliaia** e fare clic su **OK**.  
+8.  Nella casella di **testo titolo** digitare **vendite in migliaia** e fare clic su **OK**.  
   
 9. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
  Nel report l'importo delle vendite viene visualizzato sull'asse orizzontale come valuta in migliaia senza cifre decimali.  
   
-##  <a name="Filter"></a> 8. Aggiungere un filtro per visualizzare i primi cinque valori  
+##  <a name="Filter"></a>8. aggiungere un filtro per visualizzare i primi cinque valori  
  È possibile aggiungere un filtro al grafico per specificare quali dati del set di dati includere o escludere.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>Per aggiungere un filtro e visualizzare i primi cinque valori  
@@ -291,9 +291,9 @@ ms.locfileid: "66099202"
   
 4.  Fare clic su **Filtri**. Nella pagina **Modificare i filtri** può essere visualizzato un elenco di espressioni di filtro. Per impostazione predefinita, tale elenco è vuoto.  
   
-5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
+5.  Fare clic su **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
+6.  In **espressione**Digitare **[Sum (SalesYear2009)]**. Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   
@@ -309,21 +309,21 @@ ms.locfileid: "66099202"
   
  Nel grafico verranno visualizzati i primi cinque nomi di venditori in base ai dati relativi alle vendite del 2009.  
   
-##  <a name="Title"></a> 9. Aggiungere un titolo al report  
+##  <a name="Title"></a>9. aggiungere un titolo al report  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Tipo di **grafico a barre-vendite**, premere INVIO e quindi digitare **primi cinque venditori per 2009**, in modo che risulti simile al seguente:  
+2.  Digitare **grafico a barre-Vendite**, premere INVIO, quindi digitare **primi cinque venditori per 2009**, in modo da ottenere un aspetto simile al seguente:  
   
-     **Grafico a barre - Vendite**  
+     **Grafico a barre vendite**  
   
-     **Primi cinque venditori per 2009**  
+     **Primi cinque venditori per il 2009**  
   
 3.  Selezionare **Grafico a barre - Vendite**e fare clic sul pulsante **Grassetto** .  
   
-4.  Selezionare **primi cinque venditori per 2009**e il **Font** sezione il **Home** scheda, impostare la dimensione del carattere su **10**.  
+4.  Selezionare i **primi cinque venditori per 2009**e nella sezione **carattere** della scheda **Home** impostare le dimensioni del carattere su **10**.  
   
 5.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo Titolo.  
   
@@ -331,13 +331,13 @@ ms.locfileid: "66099202"
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="Save"></a> 10. Salvare il report  
+##  <a name="Save"></a>10. salvare il report  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
+2.  Dal pulsante **Generatore report** fare clic su **Salva con nome**.  
   
 3.  In **Nome**digitare **Grafico a barre - Vendite**.  
   
@@ -349,7 +349,7 @@ ms.locfileid: "66099202"
  Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a barre al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)   
+ [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)   
  [Generatore report in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

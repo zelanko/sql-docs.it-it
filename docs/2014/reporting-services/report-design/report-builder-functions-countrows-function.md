@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105274"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Funzione CountRows (Generatore report e SSRS)
@@ -35,13 +35,15 @@ CountRows(scope, recursive)
  (`String`) Nome di un set di dati, area dati o gruppo che contiene gli elementi del report da conteggiare.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. 
+  `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore `Integer`.  
   
-## <a name="remarks"></a>Note  
- `CountRows` conteggia tutte le righe nell'ambito specificato, incluse le righe con valori Null.  
+## <a name="remarks"></a>Osservazioni  
+ 
+  `CountRows` conteggia tutte le righe nell'ambito specificato, incluse le righe con valori Null.  
   
  Il valore di *scope* non può essere un'espressione e deve fare riferimento all'ambito corrente o a un ambito di contenuto.  
   

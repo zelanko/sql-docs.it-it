@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104720"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
@@ -25,15 +25,15 @@ ms.locfileid: "66104720"
   
  Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'area dati Tablix selezionata. Nella figura seguente sono mostrate le aree di una Tablix con gruppi di righe nidificati in base a categoria e sottocategoria, gruppi di colonne nidificati in base a geografia e paese/regione e un gruppo di colonne adiacenti basato sull'anno.  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Aree area dati Tablix](../media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
   
  Nell'elenco seguente vengono descritte le diverse aree.  
   
 -   **Area dell'angolo della Tablix**. (Facoltativo) Un angolo della Tablix si trova nell'angolo superiore sinistro o nell'angolo superiore destro nel caso dei layout da destra a sinistra. Quest'area viene creata automaticamente quando si aggiungono gruppi di righe e gruppi di colonne a un'area dati Tablix. In tale area è possibile unire le celle e aggiungere un'etichetta o incorporare un altro elemento del report. Nella figura le celle unite dell'angolo presentano l'etichetta Sales by Area and Year.  
   
--   **Area dei gruppi di colonne della Tablix**. (Facoltativo) I gruppi di colonne della Tablix si trovano nell'angolo superiore destro o nell'angolo superiore sinistro nel caso dei layout da destra a sinistra. Quest'area viene creata automaticamente quando si aggiunge un gruppo di colonne. Le celle di tale area rappresentano i membri della gerarchia di gruppi di colonne e contengono i valori delle istanze dei gruppi. Nella figura le celle in cui vengono visualizzati [Geography] e [CountryRegion] sono gruppi di colonne nidificati, mentre la cella in cui viene visualizzato [Year] è un gruppo di colonne adiacente. Nella colonna [Total] vengono visualizzati i totali aggregati in ogni riga.  
+-   **Area gruppi di colonne della Tablix**. (Facoltativo) I gruppi di colonne della Tablix si trovano nell'angolo superiore destro o nell'angolo superiore sinistro nel caso dei layout da destra a sinistra. Quest'area viene creata automaticamente quando si aggiunge un gruppo di colonne. Le celle di tale area rappresentano i membri della gerarchia di gruppi di colonne e contengono i valori delle istanze dei gruppi. Nella figura le celle in cui vengono visualizzati [Geography] e [CountryRegion] sono gruppi di colonne nidificati, mentre la cella in cui viene visualizzato [Year] è un gruppo di colonne adiacente. Nella colonna [Total] vengono visualizzati i totali aggregati in ogni riga.  
   
--   **Area dei gruppi di righe della Tablix**. (Facoltativo) I gruppi di righe della Tablix si trovano nell'angolo inferiore sinistro o nell'angolo inferiore destro nel caso dei layout da destra a sinistra. Quest'area viene creata automaticamente quando si aggiunge un gruppo di righe. Le celle di tale area rappresentano i membri della gerarchia di gruppi di righe e contengono i valori delle istanze dei gruppi. Nella figura le celle in cui vengono visualizzati [Category] e [Subcat] sono gruppi di righe nidificati. La riga Total al di sotto di Subcat si ripete con ogni gruppo di categorie per mostrare i subtotali aggregati di ogni colonna. Nella riga del totale complessivo sono mostrati i totali di tutte le categorie.  
+-   **Area gruppi di righe Tablix**. (Facoltativo) I gruppi di righe della Tablix si trovano nell'angolo inferiore sinistro o nell'angolo inferiore destro nel caso dei layout da destra a sinistra. Quest'area viene creata automaticamente quando si aggiunge un gruppo di righe. Le celle di tale area rappresentano i membri della gerarchia di gruppi di righe e contengono i valori delle istanze dei gruppi. Nella figura le celle in cui vengono visualizzati [Category] e [Subcat] sono gruppi di righe nidificati. La riga Total al di sotto di Subcat si ripete con ogni gruppo di categorie per mostrare i subtotali aggregati di ogni colonna. Nella riga del totale complessivo sono mostrati i totali di tutte le categorie.  
   
 -   **Area del corpo della Tablix**. Il corpo della Tablix si trova nell'angolo inferiore destro o nell'angolo inferiore sinistro nel caso di layout da destra a sinistra. Nel corpo della Tablix sono visualizzati dati dettaglio e dati raggruppati. In questo esempio vengono utilizzati solo dati aggregati. L'ambito dell'espressione è determinato dai gruppi più interni ai quali appartiene la casella di testo. Le celle nel corpo della Tablix contengono dati dettaglio quando sono membri di una riga di dettaglio e rappresentano dati di aggregazione quando sono membri di una riga o di una colonna associata a un gruppo. Per impostazione predefinita, le celle di una riga o di una colonna di gruppo che contengono espressioni semplici prive di funzioni di aggregazione restituiscono il primo valore nel gruppo. Nella figura le celle contengono i totali di aggregazione per i totali delle righe di tutti gli ordini di vendita.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "66104720"
   
  Nella figura seguente viene mostrata l'area dati Tablix nel riquadro Anteprima.  
   
- ![Anteprima, angolo Tablix, gruppi di righe di colonne, corpo](../media/rs-tablixareaspreview.gif "Anteprima, angolo Tablix, gruppi di righe di colonne, corpo")  
+ ![Anteprima, angolo Tablix, riga & gruppi di colonne, corpo](../media/rs-tablixareaspreview.gif "Anteprima, angolo Tablix, gruppi di righe di colonne, corpo")  
   
  Nell'area del gruppo di righe vengono visualizzate due istanze del gruppo di categorie relative a Clothing e Components. Il gruppo di colonne contiene un'istanza del gruppo geografia relativa al Nord America, con due istanze del gruppo paese/regione nidificate per Canada (CA) e Stati Uniti (US). Inoltre, nella colonna adiacente sono visualizzate due istanze del gruppo anno relative a 2003 e 2004. La riga della colonna Total contiene i totali delle righe. Nella riga dei totali che si ripete con il gruppo di categorie sono mostrati i totali delle sottocategorie mentre nella riga del totale complessivo sono visualizzati i totali delle categorie una volta per ogni area dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
+ [Esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

@@ -17,13 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101871"
 ---
-# <a name="role-assignments"></a>Assegnazioni di ruolo
+# <a name="role-assignments"></a>Assegnazioni di ruoli
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le *assegnazioni di ruolo* determinano l'accesso agli elementi archiviati e al server di report. Un'assegnazione di ruolo è composta dalle parti seguenti:  
   
 -   Un elemento a sicurezza diretta per il quale si desidera controllare l'accesso. Cartelle, report e risorse sono esempi di elementi a sicurezza diretta.  
@@ -36,7 +36,7 @@ ms.locfileid: "66101871"
   
  Nella figura seguente è illustrata un'assegnazione di ruolo in cui viene eseguito il mapping di un gruppo e di un utente specifico al ruolo **Server di pubblicazione** per la cartella B.  
   
- ![Diagramma di assegnazioni dei ruoli](../media/report-securityarch.gif "Diagramma di assegnazioni dei ruoli")  
+ ![Diagramma di assegnazione dei ruoli](../media/report-securityarch.gif "Diagramma di assegnazione dei ruoli")  
 Diagramma di assegnazione dei ruoli  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Assegnazioni di ruolo a livello di sistema e di elemento  
@@ -64,7 +64,7 @@ Diagramma di assegnazione dei ruoli
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
- [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Impostare le autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   
   

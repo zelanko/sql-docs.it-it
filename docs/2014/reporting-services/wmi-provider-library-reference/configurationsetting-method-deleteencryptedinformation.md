@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ffe9834ea57f3f4a0d48387f631ae08a45182ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098515"
 ---
-# <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>Metodo DeleteEncryptedInformation (MSReportServer_ConfigurationSetting WMI)
+# <a name="deleteencryptedinformation-method-wmi-msreportserver_configurationsetting"></a>Metodo DeleteEncryptedInformation (MSReportServer_ConfigurationSetting WMI)
   Elimina le informazioni crittografate dal database del server di report.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -48,7 +48,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando viene richiamato questo metodo, i seguenti dati vengono eliminati:  
   
 -   Informazioni sulle origini dati crittografate, tra cui nome utente e password.  
@@ -62,7 +62,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  La chiamata al metodo DeleteEncryptedInformation non influisce sul file di configurazione del server di report.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

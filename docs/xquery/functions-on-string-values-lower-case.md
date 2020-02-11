@@ -1,5 +1,5 @@
 ---
-title: funzione Lower-case (XQuery) | Microsoft Docs
+title: Funzione lower-case (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077666"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funzioni su valori stringa - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  La funzione Lower-case converte ogni carattere *$arg* a equivalente minuscolo. La modalità di conversione dei caratteri nell'equivalente minuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard non è identico al mapping per lo standard dei punti di codice Unicode.  
+  La funzione minuscola converte ogni carattere in *$arg* nell'equivalente minuscolo. La modalità di conversione dei caratteri nell'equivalente minuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard non è identico al mapping per lo standard dei punti di codice Unicode.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|Nome|Definizione|  
+|Termine|Definizione|  
 |*$arg*|Valore della stringa da convertire in lettere minuscole.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversione di una stringa in lettere maiuscole  
- L'esempio seguente modifica la stringa di input ' abcDEF! @4"in lettere minuscole.  
+ Nell'esempio seguente viene modificata la stringa di input ' abcDEF!' @4' in lettere minuscole.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

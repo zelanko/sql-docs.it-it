@@ -13,30 +13,30 @@ ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046783"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Abilitazione di Visual Studio Analyzer
 > [!IMPORTANT]  
->  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (Visual Studio Analyzer è stato incluso solo nelle versioni precedenti di Visual Studio). Per una meccanismo di risoluzione dei problemi in alternativa, usare l'analisi BID.  
+>  Il supporto per Visual Studio Analyzer è stato rimosso a partire da Windows 8 (Visual Studio Analyzer era incluso solo nelle versioni precedenti di Visual Studio). Per un meccanismo alternativo di risoluzione dei problemi, usare la traccia delle offerte.  
   
- Microsoft Visual Studio Analyzer è uno strumento di analisi delle applicazioni progettato per fornire una panoramica sulle prestazioni di un'applicazione in tutti i livelli e i sistemi. Approfondisce l'interazione tra componenti. Visual Studio Analyzer può essere avviato e arrestato dalla scheda di traccia dell'amministratore ODBC.  
+ Microsoft Visual Studio Analyzer è uno strumento di analisi delle applicazioni progettato per fornire un'analisi di alto livello delle prestazioni di un'applicazione in tutti i livelli e sistemi. Si concentra sull'interazione tra i componenti. Visual Studio Analyzer possibile avviare e arrestare la scheda traccia dell'amministratore ODBC.  
   
- Per visualizzare uno degli eventi che genera l'errore ODBC, seguire questa procedura:  
+ Per visualizzare gli eventi generati da ODBC, attenersi alla seguente procedura:  
   
-1.  Accesso amministratore origine dati ODBC.  
+1.  Accedere a Amministrazione origine dati ODBC.  
   
-2.  Scegliere il **traccia** scheda.  
+2.  Fare clic sulla scheda **traccia** .  
   
-3.  Fare clic su **Avvia traccia non di Visual Studio Analyzer**.  
+3.  Fare clic su **avvia Visual Studio Analyzer traccia**.  
   
 4.  Fare clic su **OK**.  
   
- Visual Studio Analyzer-generazione di eventi continua fino a quando **arresta analisi** sia selezionata.  
+ La generazione di eventi Visual Studio Analyzer continua fino a quando non si seleziona **arresta Visual Studio Analyzer traccia** .  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Eventi generati da Gestione driver ODBC](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)

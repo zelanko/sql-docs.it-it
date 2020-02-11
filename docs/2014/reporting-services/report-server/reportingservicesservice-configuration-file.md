@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103275"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
   Il file ReportingServicesService.exe.config contiene impostazioni di configurazione della funzionalità di traccia.  
   
-## <a name="file-location"></a>Percorso del file  
+## <a name="file-location"></a>Percorso file  
  Il file si trova nella cartella \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Linee guida per la modifica  
@@ -81,11 +81,11 @@ ms.locfileid: "66103275"
 |`Prefix`|Specifica un valore generato che distingue ogni istanza del log dalle altre. Per impostazione predefinita, ai nomi file dei log di traccia vengono aggiunti valori timestamp. Questo valore è impostato su "tid, time". Non modificare questa impostazione.|  
 |**TraceListeners**|Specifica una destinazione per l'output del contenuto del log di traccia. È possibile specificare più destinazioni, separandole con una virgola. I valori validi includono:<br /><br /> DebugWindow (valore predefinito)<br /><br /> File (valore predefinito)<br /><br /> StdOut|  
 |**TraceFileMode**|Specifica se i log di traccia devono contenere dati per un periodo di 24 ore. È consigliabile utilizzare un solo log di traccia al giorno per ogni componente. Questo valore è impostato su "Unique" (valore predefinito). Non modificare questo valore.|  
-|**Components**|Specifica per quali componenti devono essere creati log di traccia. Il valore predefinito è `all`. Anche i nomi dei componenti interni sono valori validi per questa impostazione. Non modificare questo valore.|  
+|**Componenti**|Specifica per quali componenti devono essere creati log di traccia. Il valore predefinito è `all`. Anche i nomi dei componenti interni sono valori validi per questa impostazione. Non modificare questo valore.|  
 |**Runtime**|Specifica le impostazioni di configurazione che supportano la compatibilità con la versione precedente. Le impostazioni di run-time vengono utilizzate per reindirizzare le richieste relative alla versione precedente di Microsoft.ReportingServices.Interfaces alla nuova versione.<br /><br /> Tutte le impostazioni di configurazione di questa sezione vengono descritte nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni, ricercare la voce "Runtime Schema Settings" nel sito Web MSDN o nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione di Reporting Services](reporting-services-configuration-files.md)   
- [Log di traccia del servizio del server di report](report-server-service-trace-log.md)  
+ [Report Server Service Trace Log](report-server-service-trace-log.md)  
   
   

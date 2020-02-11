@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddd145c5073003a8dc189e3ed9b1bbb25dc11d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096926"
 ---
 # <a name="word-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo Word
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  
   
-|Impostazione|Value|  
+|Impostazione|valore|  
 |-------------|-----------|  
-|`AutoFit`|`False` (Indici per tabelle con ottimizzazione per la memoria). L'impostazione di AutoFit è `false` in qualsiasi tabella di Word.<br /><br /> `True` (Indici per tabelle con ottimizzazione per la memoria). L'impostazione di AutoFit è `true` in tutte le tabelle di Word.<br /><br /> `Never` (Indici per tabelle con ottimizzazione per la memoria). I valori di AutoFit non sono impostati in alcuna tabella di Word e viene applicato il comportamento predefinito di Word.<br /><br /> `Default` (Indici per tabelle con ottimizzazione per la memoria). AutoFit è impostata per le tabelle più strette rispetto all'area di disegno fisica (larghezza fisica della pagina esclusi i margini) per la pagina logica.|  
+|`AutoFit`|`False`. L'impostazione di AutoFit è `false` in qualsiasi tabella di Word.<br /><br /> `True`. L'impostazione di AutoFit è `true` in tutte le tabelle di Word.<br /><br /> `Never`. I valori di AutoFit non sono impostati in alcuna tabella di Word e viene applicato il comportamento predefinito di Word.<br /><br /> `Default`. AutoFit è impostata per le tabelle più strette rispetto all'area di disegno fisica (larghezza fisica della pagina esclusi i margini) per la pagina logica.|  
 |`ExpandToggles`|Indica se per tutti gli elementi che possono essere attivati o disattivati deve venire eseguito il rendering nello stato completamente espanso. Il valore predefinito è `false`.|  
 |`FixedPageWidth`|Indica se la larghezza della pagina scritta nel file DOC aumenta in base alla larghezza della pagina più larga nel corpo del report. Il valore predefinito è `false`.|  
 |**OmitHyperlinks**|Indica se l'azione collegamento ipertestuale deve essere omessa in tutti gli elementi in cui è impostata. Il valore predefinito è `false`|  
@@ -33,7 +33,7 @@ ms.locfileid: "66096926"
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096608"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>Modifiche al comportamento dei flag di traccia
@@ -26,14 +26,15 @@ ms.locfileid: "66096608"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Si consiglia di disabilitare tutti i flag di traccia prima di eseguire l'aggiornamento. I flag di traccia che modificano le modalità di disponibilità o il ripristino di database potrebbero impedire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] da aggiornare correttamente l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile attivare i flag di traccia dopo avere verificato che sono necessari e sono ancora validi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se è necessario riabilitare i flag di traccia, eseguire test aggiuntivi sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si consiglia di disabilitare tutti i flag di traccia prima di eseguire l'aggiornamento. I flag di traccia che modificano la disponibilità o le modalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recupero del database potrebbero impedire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di di aggiornare correttamente l'istanza di. È possibile attivare i flag di traccia dopo avere verificato che sono necessari e sono ancora validi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se è necessario riabilitare i flag di traccia, eseguire test aggiuntivi sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta flag di traccia a livello di sessione e globale. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] i flag di traccia possono essere specificati come locali o globali utilizzando un argomento aggiuntivo (-1) nel comando DBCC TRACEON. Se questo argomento non viene specificato, il valore predefinito è locale.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta flag di traccia a livello di sessione e globale. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] i flag di traccia possono essere specificati come locali o globali utilizzando un argomento aggiuntivo (-1) nel comando DBCC TRACEON. Se questo argomento non viene specificato, il valore predefinito è locale.  
   
- Inoltre, in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], un flag di traccia impostato nella sessione A non diventa automaticamente effettivo in una sessione b già esistente Al contrario, questo flag di traccia ha effetto solo dopo la prima volta che un flag di traccia viene impostato nella sessione B. Questo comportamento è non deterministico in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ed è deterministico in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, in cui flag di traccia globali impostati nella sessione A vengono immediatamente impostati in altre sessioni simultanee.  
+ Inoltre, in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], un flag di traccia impostato nella sessione a non diventa automaticamente effettivo in una sessione B già esistente. Questo flag di traccia viene invece applicato solo dopo la prima volta che un flag di traccia viene impostato nella sessione B. Questo comportamento è non deterministico [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] in e è deterministico in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, in cui i flag di traccia globali impostati nella sessione a vengono impostati immediatamente in altre sessioni simultanee.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   
