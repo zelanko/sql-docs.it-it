@@ -1,5 +1,5 @@
 ---
-title: Partizione della Guida F1 di procedura guidata (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Guida sensibile al contesto della creazione guidata partizione (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072127"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Creazione guidata partizione (Analysis Services - Dati multidimensionali)
   La Creazione guidata partizione può essere utilizzata per definire le partizioni per un gruppo di misure in un cubo. Per impostazione predefinita, viene definita un'unica partizione per ogni gruppo di misure in un cubo. Ciò può avere tuttavia ripercussioni negative sulle prestazioni di accesso ed elaborazione nel caso di partizioni di dimensioni elevate. La creazione di più partizioni, contenenti ciascuna una parte dei dati per un gruppo di misure, consente di migliorare le prestazioni di accesso ed elaborazione di tale gruppo di misure.  
   
 > [!CAUTION]  
->  L'inclusione di righe duplicate nella pagina **Impostazione informazioni origine** o nella pagina **Limitazione righe** può comportare la creazione di partizioni contenenti dati non corretti.  
+>  È possibile creare partizioni che possono contenere dati non corretti includendo righe duplicate nella pagina **impostazione informazioni origine** o **Limita righe** .  
   
  La Creazione guidata partizione consente di eseguire in modo semplificato i passaggi seguenti:  
   
@@ -35,19 +35,19 @@ ms.locfileid: "66072127"
   
 -   Denominare e salvare la partizione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Impostazione informazioni origine &#40;Creazione guidata partizione&#41;](specify-source-information-partition-wizard.md)  
+-   [Impostazione &#40;partizione guidata informazioni origine&#41;](specify-source-information-partition-wizard.md)  
   
--   [Limitare le righe &#40;Creazione guidata partizione&#41;](restrict-rows-partition-wizard.md)  
+-   [Limitazione delle righe &#40;creazione guidata partizione&#41;](restrict-rows-partition-wizard.md)  
   
--   [Posizioni di elaborazione e archiviazione &#40;Creazione guidata partizione&#41;](processing-and-storage-locations-partition-wizard.md)  
+-   [Posizioni di elaborazione e archiviazione &#40;creazione guidata partizione&#41;](processing-and-storage-locations-partition-wizard.md)  
   
--   [Completamento procedura guidata &#40;Creazione guidata partizione&#41;](completing-the-wizard-partition-wizard.md)  
+-   [Completamento procedura guidata &#40;partizione guidata&#41;](completing-the-wizard-partition-wizard.md)  
   
--   [Cerca cartella remota, finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+-   [Finestra di dialogo Cerca cartella remota &#40;Analysis Services-Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà (ADOX) in cluster | Microsoft Docs
+title: Proprietà Clustered (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,25 +20,25 @@ ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966998"
 ---
 # <a name="clustered-property-adox"></a>Proprietà Clustered (ADOX)
-Indica se l'indice è cluster.  
+Indica se l'indice è di tipo cluster.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **booleana** valore.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore **booleano** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore predefinito è **False**.  
   
- Questa proprietà è di sola lettura sul [indice](../../../ado/reference/adox-api/index-object-adox.md) gli oggetti che sono già stati accodati a una raccolta.  
+ Questa proprietà è di sola lettura sugli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) che sono già stati accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Clustered (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+ [Esempio della proprietà Clustered (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

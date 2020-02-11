@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione cache (pagina Mapping) | Microsoft Docs
+title: Editor trasformazione cache (pagina mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061182"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor trasformazione cache (pagina Mapping)
@@ -47,6 +47,6 @@ ms.locfileid: "66061182"
  Consente di visualizzare le colonne di destinazione disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Editor trasformazione cache &#40;pagina Gestione connessione&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128677"
 ---
 # <a name="localdbunshareinstance-function"></a>Funzione LocalDBUnshareInstance
   Viene arrestata la condivisione dell'istanza del database locale di SQL Server Express specificata.  
   
- **File di intestazione:** SQLNCLI. h  
+ **File di intestazione:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,12 +64,12 @@ HRESULT LocalDBUnShareInstance(
  Per eseguire questa operazione, è necessario disporre dei privilegi di amministratore.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Note  
- Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Test di modelli (esercitazione di base di Data Mining) | Microsoft Docs'
+title: 'Lezione 5: Testing models (esercitazione di base sul data mining) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,43 +11,43 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185437"
 ---
-# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lezione 5: Test di modelli (esercitazione di base di Data Mining)
+# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lezione 5: Test di modelli (Esercitazione di base sul data mining)
   Ora che è stato elaborato il modello tramite il set di training dello scenario relativo al mailing diretto, verranno testati i modelli sul set di testing. La convalida è un passaggio importante del processo di data mining. Prima di distribuire i modelli per il mailing diretto in un ambiente di produzione, è fondamentale verificarne il comportamento in caso di applicazione ai dati real.  
   
- Poiché i dati nel set di testing contengono già valori noti per l'acquisto di biciclette, la correttezza delle stime del modello può essere determinata facilmente. Verrà utilizzato il modello che offre le prestazioni migliori per il [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] reparto marketing per identificare i clienti per la campagna di mailing diretto.  
+ Poiché i dati nel set di testing contengono già valori noti per l'acquisto di biciclette, la correttezza delle stime del modello può essere determinata facilmente. Il modello che esegue il migliore verrà usato dal reparto [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] marketing per identificare i clienti per la campagna di mailing diretto.  
   
  In questa lezione verranno convalidati i modelli utilizzando più metodi:  
   
-1.  Verranno apportate le stime sul set di testing per visualizzare il modello e valutare l'accuratezza è su risultati noti. Si userà una *grafico di accuratezza* per misurarne l'efficacia.  
+1.  Si eseguiranno stime sul set di testing per verificare l'accuratezza del modello nei risultati noti. Si userà un *grafico di accuratezza* per misurarne l'efficacia.  
   
-     [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+     [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 2.  I modelli verranno quindi testati su un subset filtrato dei dati. Sarà possibile confrontare più modelli nello stesso grafico di accuratezza.  
   
-     [Test di un modello filtrato &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
+     [Test di un modello filtrato &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
- Per altre informazioni sulla convalida dei modelli in generale, vedere [concetti di Data Mining](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
+ Per ulteriori informazioni sulla convalida dei modelli in generale, vedere [concetti di data mining](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
   
 ## <a name="first-task-in-lesson"></a>Prima attività della lezione  
- [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Lezione precedente  
- [Lezione 4: Esplorazione dei modelli di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [Lezione 4: esplorazione dei modelli di mailing diretto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: Creazione e utilizzo di stime &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lezione 6: creazione e utilizzo di stime &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scheda grafico di accuratezza &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
- [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Scheda matrice di classificazione &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Scheda grafico di accuratezza &#40;vista Grafico accuratezza modello di data mining&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
+ [Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Test e convalida &#40;&#41;di data mining](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Scheda matrice di classificazione &#40;vista Grafico accuratezza modello di data mining&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
+ [Matrice di classificazione &#40;Analysis Services-&#41;di data mining](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

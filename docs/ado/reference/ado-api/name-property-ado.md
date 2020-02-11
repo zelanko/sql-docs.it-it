@@ -1,5 +1,5 @@
 ---
-title: Assegnare un nome proprietà (ADO) | Microsoft Docs
+title: Proprietà Name (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,28 +17,28 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918029"
 ---
 # <a name="name-property-ado"></a>Proprietà Name (ADO)
 Indica il nome di un oggetto.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un **stringa** valore che indica il nome di un oggetto.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore **stringa** che indica il nome di un oggetto.  
   
-## <a name="remarks"></a>Note  
- Usare la **nome** proprietà per assegnare un nome a o recuperare il nome di un **comando**, **proprietà**, **campo**, o **parametro**  oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **Name** per assegnare un nome a o recuperare il nome di un **comando**, di una **proprietà**, di un **campo**o di un oggetto **Parameter** .  
   
- Il valore è di lettura/scrittura in un **comandi** oggetto e sola lettura su un **proprietà** oggetto.  
+ Il valore è in lettura/scrittura su un oggetto **Command** e in sola lettura su un oggetto **Property** .  
   
- Per un **campo** oggetto **nome** viene in genere di sola lettura. Tuttavia, per ottenere nuove **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md), **nome** è lettura/scrittura solo dopo che il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà per il **campo** è stato specificato e il provider di dati è stato aggiunto il nuovo **campo** chiamando il [ Update](../../../ado/reference/ado-api/update-method.md) metodo per il **campi** raccolta.  
+ Per un oggetto **campo** , il **nome** è in genere di sola lettura. Tuttavia, per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un [record](../../../ado/reference/ado-api/record-object-ado.md), il **nome** è di lettura/scrittura solo dopo che è stata specificata la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) per il **campo** e il provider di dati ha aggiunto correttamente il nuovo **campo** chiamando il metodo [Update](../../../ado/reference/ado-api/update-method.md) della raccolta **Fields** .  
   
- Per **parametri** gli oggetti non ancora aggiunto al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta, il **nome** è di lettura/scrittura. Per aggiungere **parametri** gli oggetti e tutti gli altri oggetti, il **nome** proprietà è di sola lettura. I nomi non sono necessario essere univoco all'interno di una raccolta.  
+ Per gli oggetti **Parameter** non ancora aggiunti alla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) , la proprietà **Name** è di lettura/scrittura. Per gli oggetti **parametro** accodati e per tutti gli altri oggetti, la proprietà **Name** è di sola lettura. Non è necessario che i nomi siano univoci all'interno di una raccolta.  
   
- È possibile recuperare il **nome** proprietà di un oggetto per un riferimento ordinale, dopo il quale è possibile fare riferimento all'oggetto direttamente per nome. Ad esempio, se `rstMain.Properties(20).Name` produce `Updatability`, successivamente è possibile fare riferimento a questa proprietà come `rstMain.Properties("Updatability")`.  
+ È possibile recuperare la proprietà **Name** di un oggetto in base a un riferimento ordinale, dopo di che è possibile fare riferimento all'oggetto direttamente in base al nome. Se `rstMain.Properties(20).Name` , ad esempio, restituisce `Updatability`, è possibile fare riferimento a questa proprietà come `rstMain.Properties("Updatability")`.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -48,5 +48,5 @@ Indica il nome di un oggetto.
 |[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Name (VB) e attributi](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Esempio di proprietà Name (VC + +) e attributi](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Esempio di proprietà Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Esempio di proprietà Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

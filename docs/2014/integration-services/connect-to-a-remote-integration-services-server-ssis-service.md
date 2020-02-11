@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Server di servizi di integrazione remota (servizio SSIS) | Microsoft Docs
+title: Connettersi a un server di Integration Services remoto (servizio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060417"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Eseguire una connessione a un server Integration Services remoto (servizio SSIS)
     
 > [!IMPORTANT] 
-> In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
+> In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]supporta il servizio per la compatibilità con le versioni precedenti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]di. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
  Per la connessione a un'istanza di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un server remoto da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o da un'altra applicazione di gestione, è necessario un set specifico di diritti nel server per gli utenti dell'applicazione.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66060417"
   
 2.  Scegliere **Connetti Esplora oggetti**dal menu **File** per visualizzare la finestra di dialogo **Connetti al server** .  
   
-3.  Nell'elenco **Tipo server** selezionare **Integration Services**.  
+3.  Nell'elenco **Tipo server** selezionare **Integration Services** .  
   
-4.  Nella casella di testo **Nome server** digitare il nome di un server di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+4.  Nella casella di testo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] digitare il nome di un server di **** .  
   
     > [!NOTE]  
     >  Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non è specifico dell'istanza. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione Integration Services.  
@@ -87,7 +87,7 @@ ms.locfileid: "66060417"
   
 2.  Nella pagina **Applicazioni** della finestra di dialogo **Proprietà - Configurazione Distributed COM** selezionare SQL Server Integration Services 11.0, quindi fare clic su **Proprietà**.  
   
-3.  Fare clic sulla scheda **Sicurezza** .  
+3.  Selezionare la pagina **Sicurezza** .  
   
 4.  Utilizzare le due finestre di dialogo separate per la configurazione delle **Autorizzazioni di accesso** e delle **Autorizzazioni di avvio**. Non è possibile fare distinzione tra l'accesso remoto e quello locale. Le autorizzazioni di accesso includono l'accesso remoto e locale e quelle di avvio includono l'avvio remoto e locale.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66060417"
  Se si utilizza un account di Windows locale in un computer client, è possibile connettersi al servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer remoto solo se nel computer remoto è presente un account locale con lo stesso nome, la stessa password e i diritti appropriati.  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Per impostazione predefinita, il servizio SSIS non supporta la delega  
-Per impostazione predefinita, il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non supporta la delega delle credenziali, a volte definita doppio hop. In questo scenario si usa un computer client, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è in esecuzione in un secondo computer e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione in un terzo computer. Prima di tutto, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa le credenziali dal computer client al secondo computer in cui è in esecuzione il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Dopo, tuttavia, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non può delegare le credenziali dal secondo computer al terzo computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
+Per impostazione predefinita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , il servizio non supporta la delega delle credenziali o ciò che viene talvolta definito come doppio hop. In questo scenario si usa un computer client, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è in esecuzione in un secondo computer e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione in un terzo computer. Prima di tutto, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa le credenziali dal computer client al secondo computer in cui è in esecuzione il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Dopo, tuttavia, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non può delegare le credenziali dal secondo computer al terzo computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
 È possibile abilitare la delega delle credenziali concedendo il diritto **Utente attendibile per la delega a qualsiasi servizio (solo Kerberos)** all'account del servizio SQL Server, che consente di avviare il servizio Integration Services (ISServerExec.exe) come processo figlio. Prima di concedere questo diritto, valutare se soddisfa i requisiti di sicurezza dell'organizzazione.
 

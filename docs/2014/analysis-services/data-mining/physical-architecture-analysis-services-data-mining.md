@@ -1,5 +1,5 @@
 ---
-title: Architettura fisica (Analysis Services - Data Mining) | Microsoft Docs
+title: Architettura fisica (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c9ee3db0a05107913d3b75fba20ebe8607f941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083202"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architettura fisica (Analysis Services – Data mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componenti server e client per fornire funzionalità di data mining alle applicazioni di Business Intelligence:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componenti server e client per fornire data mining funzionalità per le applicazioni business intelligence:  
   
 -   Il componente server viene implementato come un servizio di Microsoft Windows. È possibile avere più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sullo stesso computer, ognuna delle quali viene implementata come istanza separata del servizio di Windows.  
   
@@ -41,16 +41,17 @@ ms.locfileid: "66083202"
 > [!WARNING]  
 >  DSO è deprecato. Non utilizzare DSO per sviluppare soluzioni.  
   
- ![Diagramma dell'architettura di sistema di Analysis Services](../dev-guide/media/analysisservicessystemarchitecture.gif "diagramma dell'architettura di sistema di Analysis Services")  
+ ![Diagramma dell'architettura di sistema di Analysis Services](../dev-guide/media/analysisservicessystemarchitecture.gif "Diagramma dell'architettura di sistema di Analysis Services")  
   
 ## <a name="server-configuration"></a>Configurazione server  
  Un'istanza del server è in grado di supportare più database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ognuno con la propria istanza del servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che risponde alle richieste client ed elabora oggetti.  
   
- È necessario installare istanze separate se si desidera utilizzare sia modelli tabulari sia modelli di data mining e/o multidimensionali. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta l'installazione side-by-side di istanze in esecuzione in modalità tabulare, che usa il motore di analisi in memoria xVelocity (VertiPaq), e istanze in esecuzione in una delle configurazioni OLAP, MOLAP o ROLAP convenzionali. Per altre informazioni, vedere [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ È necessario installare istanze separate se si desidera utilizzare sia modelli tabulari sia modelli di data mining e/o multidimensionali. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta l'installazione side-by-side di istanze in esecuzione in modalità tabulare, che usa il motore di analisi in memoria xVelocity (VertiPaq), e istanze in esecuzione in una delle configurazioni OLAP, MOLAP o ROLAP convenzionali. Per altre informazioni, vedere [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Per tutte le comunicazioni tra un client e il server Analysis Services viene utilizzato XMLA, un protocollo indipendente da piattaforma e linguaggio. Quando viene ricevuta una richiesta da un client, Analysis Services determina se tale richiesta è correlata a OLAP o al data mining, quindi la indirizza nel modo appropriato. Per altre informazioni sui componenti server, vedere [Componenti del server del motore OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura logica &#40;Analysis Services - Data mining&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Architettura logica &#40;Analysis Services-&#41;di data mining](logical-architecture-analysis-services-data-mining.md)  
   
   

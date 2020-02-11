@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206965"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
-  L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Nella tabella seguente vengono descritte le istanze del contatore Caratteristiche deprecate di SQL Server.  
+ Nella tabella seguente vengono descritte le istanze del contatore Caratteristiche deprecate di SQL Server.  
   
 |Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM`  *\< nome_funzione >* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM` * \< function_name>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
-|ADDING TAPE DEVICE|La caratteristica deprecata sp_addumpdevice'`tape`' è stata rilevata. Utilizzare sp_addumpdevice'`disk`' invece. Si verifica una volta per ogni utilizzo.|  
+|ADDING TAPE DEVICE|È stata rilevata la`tape`funzionalità deprecata sp_addumpdevice ''. Usare invece sp_addumpdevice`disk`''. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Numero totale di volte in cui è stata usata la funzionalità deprecata TORN_PAGE_DETECTION di ALTER DATABASE dall'avvio dell'istanza del server. Usare la sintassi PAGE_VERIFY. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|È stata rilevata la sintassi deprecata ALTER LOGIN WITH SET CREDENTIAL o ALTER LOGIN WITH NO CREDENTIAL. Usare la sintassi ADD o DROP CREDENTIAL. Si verifica una volta per ogni compilazione.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68206965"
 |Hindi|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Indic_General_90.|  
 |Hint di tabella HOLDLOCK senza parentesi||  
 |IDENTITYCOL|È stata rilevata la sintassi IDENTITYCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $identity. Si verifica una volta per ogni compilazione.|  
-|Elenco di selezione di una vista indicizzata senza COUNT_BIG(\*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(\*).|  
+|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(\*).|  
 |INDEX_OPTION|È stata rilevata la sintassi CREATE TABLE, ALTER TABLE o CREATE INDEX senza parentesi per racchiudere le opzioni. Riscrivere le istruzioni in modo che utilizzino la sintassi corrente. Si verifica una volta per ogni query.|  
 |INDEXKEY_PROPERTY|È stata rilevata la sintassi INDEXKEY_PROPERTY. Riscrivere le istruzioni per eseguire query su sys.index_columns. Si verifica una volta per ogni compilazione.|  
 |Hint di funzione con valori di tabella indiretti|L'applicazione indiretta, tramite una vista, di hint di tabella a una chiamata di una funzione con valori di tabella con istruzioni multiple verrà rimossa in una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -102,7 +102,7 @@ ms.locfileid: "68206965"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto.|  
 |Lithuanian_Classic|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto.|  
-|Macedonian|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Macedonian_FYROM_90.|  
+|Macedone|L'evento si verifica una volta per ogni avvio del database e una volta per ogni utilizzo delle regole di confronto. Pianificare la modifica delle applicazioni che usano queste regole di confronto. Usare Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|È stata rilevata la sintassi MODIFY FILEGROUP READONLY. Riscrivere le istruzioni in modo che utilizzino la sintassi READ_ONLY. Si verifica una volta per ogni compilazione.|  
 |MODIFY FILEGROUP READWRITE|È stata rilevata la sintassi MODIFY FILEGROUP READWRITE. Riscrivere le istruzioni in modo che utilizzino la sintassi READ_WRITE. Si verifica una volta per ogni compilazione.|  
 |Nome di colonna in più di due parti|Una query usano un nome in tre o quattro parti nell'elenco di colonne. Modificare la query in modo che utilizzi nomi in due parti conformi allo standard. Si verifica una volta per ogni compilazione.|  
@@ -112,14 +112,14 @@ ms.locfileid: "68206965"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedure_parameters. Non usare. Si verifica una volta per ogni compilazione.|  
 |numbered_procedures|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedures. Non usare. Si verifica una volta per ogni compilazione.|  
-|Oldstyle RAISEERROR|Deprecata RAISERROR (formato: È stata rilevata la sintassi RAISERROR stringa di integer). Riscrivere l'istruzione in modo che utilizzi la sintassi RAISERROR corrente. Si verifica una volta per ogni compilazione.|  
+|Oldstyle RAISEERROR|È stata rilevata la sintassi deprecata RAISERROR (formato: RAISERROR stringa di tipo integer). Riscrivere l'istruzione in modo che utilizzi la sintassi RAISERROR corrente. Si verifica una volta per ogni compilazione.|  
 |OLEDB per connessioni ad hoc|SQLOLEDB non è un provider supportato. Per le connessioni ad hoc, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
 |PERMISSIONS|Sono stati rilevati riferimenti alla funzione intrinseca PERMISSIONS. Eseguire una query su sys.fn_my_permissions. Si verifica una volta per ogni query.|  
 |ProcNums|È stata rilevata la sintassi deprecata ProcNums. Riscrivere le istruzioni per rimuovere i riferimenti. Si verifica una volta per ogni compilazione.|  
 |READTEXT|È stata rilevata la sintassi READTEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi del tipo di dati `text`. Si verifica una volta per ogni query.|  
-|RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE ... WITH DBO_ONLY. In alternativa, usare RESTORE ... RESTRICTED_USER.|  
-|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE ... WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
-|RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE ... WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH DBO_ONLY|Il ripristino... È stata rilevata la sintassi DBO_ONLY. USA ripristino... In alternativa, RESTRICTED_USER.|  
+|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|Il ripristino... È stata rilevata la sintassi WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH PASSWORD|Il ripristino... È stata rilevata la sintassi con PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
 |Restituzione di risultati da un trigger|Questo evento si verifica una volta per ogni chiamata del trigger. Riscrivere il trigger in modo che non restituisca set di risultati.|  
 |ROWGUIDCOL|È stata rilevata la sintassi ROWGUIDCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $rowguid. Si verifica una volta per ogni compilazione.|  
 |SET ANSI_NULLS OFF|È stata rilevata la sintassi SET ANSI_NULLS OFF. Rimuovere questa sintassi deprecata. Si verifica una volta per ogni compilazione.|  
@@ -162,7 +162,7 @@ ms.locfileid: "68206965"
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
 |sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione `vardecimal`. Usare la compressione dei dati.|  
-|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. Usare ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
+|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. USA ALTER DATABASE... In alternativa, impostare COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
 |sp_dbremove|È stata rilevata la procedura sp_dbremove. In alternativa, usare DROP DATABASE. Si verifica una volta per ogni query.|  
@@ -251,7 +251,7 @@ ms.locfileid: "68206965"
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
 |TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
-|TIMESTAMP|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato `timestamp` in un'istruzione DDL. Usare il tipo di dati `rowversion`.|  
+|timestamp|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato `timestamp` in un'istruzione DDL. Usare il tipo di dati `rowversion`.|  
 |UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  
@@ -259,16 +259,16 @@ ms.locfileid: "68206965"
 |XMLDATA|È stata rilevata la sintassi FOR XML. Usare la generazione XSD per le modalità RAW e AUTO. Non sono disponibili sostituzioni per la modalità esplicita. Si verifica una volta per ogni compilazione.|  
 |XP_API|È stata rilevata un'istruzione di una stored procedure estesa. Non usare.|  
 |xp_grantlogin|È stata rilevata la procedura xp_grantlogin. In alternativa, usare CREATE LOGIN. Si verifica una volta per ogni compilazione.|  
-|xp_loginconfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
+|xp_loginConfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
 |xp_revokelogin|È stata rilevata la procedura xp_revokelogin. In alternativa, usare ALTER LOGIN DISABLE o DROP LOGIN. Si verifica una volta per ogni compilazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità del motore di Database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Funzionalità deprecate della ricerca Full-Text in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Classe di evento Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
- [Classe di evento Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Funzionalità del motore di Database non più utilizzate in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Funzionalità di ricerca Full-Text in SQL Server 2014 non più supportate](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Funzionalità di motore di database deprecate SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Funzionalità deprecate della ricerca full-text in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [Classe di evento Deprecation annuncio](../event-classes/deprecation-announcement-event-class.md)   
+ [Deprecation Final Support-classe di evento](../event-classes/deprecation-final-support-event-class.md)   
+ [Funzionalità di motore di database sospese in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Funzionalità di ricerca full-text non più supportate in SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Usare oggetti di SQL Server](use-sql-server-objects.md)  
   
   

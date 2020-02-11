@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Aggiornare la definizione del Report a livello di codice | Microsoft Docs'
+title: 'Lezione 4: aggiornare la definizione del report a livello di codice | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137458"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornare la definizione del report a livello di programmazione
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornamento della definizione del report a livello di programmazione
   Dopo aver caricato la definizione del report dal server di report e aver definito un riferimento alla definizione mediante il campo del report, è necessario aggiornare la definizione del report. Per questo esempio verrà aggiornata la proprietà `Description` per il report.  
   
 ### <a name="to-update-the-report-definition"></a>Per aggiornare la definizione del report  
   
-1.  Sostituire il codice per il metodo UpdateReportDefinition() nel file Program.cs (Module1.vb per [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) con il codice seguente:  
+1.  Sostituire il codice del metodo UpdateReportDefinition () nel file Program.cs (Module1. vb per [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) con il codice seguente:  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137458"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva la definizione del report aggiornata verrà salvata nel server di report. Vedere [Lezione 5: Pubblicare la definizione del Report nel Server di Report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Nella lezione successiva la definizione del report aggiornata verrà salvata nel server di report. Vedere [lezione 5: pubblicare la definizione del report nel server di report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [Aggiornamento dei report mediante le classi generate dallo schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

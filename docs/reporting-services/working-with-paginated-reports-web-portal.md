@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222680"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
@@ -145,7 +145,7 @@ Per altre informazioni, vedere [Uso degli snapshot (portale Web)](working-with-s
   
 ### <a name="cache-expiration"></a>Scadenza della cache  
   
-È possibile stabilire se si vuole che la cache scada, per il report impaginato, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa.  
+È possibile stabilire se si vuole che la cache scada, per il report impaginato, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa  
   
 > [!NOTE]
 > In questo caso, la cache non viene aggiornata.  

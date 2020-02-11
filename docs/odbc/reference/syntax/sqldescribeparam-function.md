@@ -21,17 +21,17 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c1ba115766b820cdcc4f671eeacf9eeec90a894
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68345443"
 ---
 # <a name="sqldescribeparam-function"></a>Funzione SQLDescribeParam
 **Conformità**  
- Versione introdotta: Conformità agli standard ODBC 1,0: ODBC  
+ Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
+ **Summary**  
  **SQLDescribeParam** restituisce la descrizione di un marcatore di parametro associato a un'istruzione SQL preparata. Queste informazioni sono disponibili anche nei campi del dip.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  Input Numero di marcatori di parametro ordinato sequenzialmente nell'ordine crescente del parametro, a partire da 1.  
   
  *DataTypePtr*  
- Output Puntatore a un buffer in cui restituire il tipo di dati SQL del parametro. Questo valore viene letto dal campo del record SQL_DESC_CONCISE_TYPE del dip. Si tratta di uno dei valori nella sezione [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) dell'appendice D: Tipi di dati o un tipo di dati SQL specifico del driver.  
+ Output Puntatore a un buffer in cui restituire il tipo di dati SQL del parametro. Questo valore viene letto dal campo record SQL_DESC_CONCISE_TYPE di dpi. Si tratta di uno dei valori nella sezione [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) di Appendice D: tipi di dati o di un tipo di dati SQL specifico del driver.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP verranno restituiti rispettivamente in  *\*DataTypePTR* per i dati di data, ora o timestamp, in ODBC 2.verranno restituiti x, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. Gestione driver esegue i mapping necessari quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* o quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* .  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP verranno restituiti in * \*DataTypePTR* per i dati di data, ora o timestamp, rispettivamente. in ODBC 2. verranno restituiti *x*, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. Gestione driver esegue i mapping necessari quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* o quando ODBC 3. l'applicazione *x* funziona con ODBC 2. driver *x* .  
   
- Quando *ColumnNumber* è uguale a 0 (per una colonna di segnalibro), SQL_BINARY viene restituito in  *\*DataTypePTR* per i segnalibri a lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da ODBC 3. applicazione *x* che utilizza ODBC 2. driver *x* o ODBC 2. applicazione *x* che utilizza un ODBC 3. driver *x* .)  
+ Quando *ColumnNumber* è uguale a 0 (per una colonna di segnalibro), SQL_BINARY viene restituito in * \*DataTypePTR* per i segnalibri a lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da ODBC 3. applicazione *x* che utilizza ODBC 2. driver *x* o ODBC 2. applicazione *x* che utilizza un ODBC 3. driver *x* .)  
   
- Per ulteriori informazioni, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'Appendice D: Tipi di dati. Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.  
+ Per altre informazioni, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) in Appendice D: tipi di dati. Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.  
   
  *ParameterSizePtr*  
  Output Puntatore a un buffer in cui restituire la dimensione, in caratteri, della colonna o dell'espressione del marcatore di parametro corrispondente come definito dall'origine dati. Per ulteriori informazioni sulle dimensioni delle colonne, vedere [dimensioni delle colonne, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
@@ -70,19 +70,19 @@ SQLRETURN SQLDescribeParam(
  Output Puntatore a un buffer in cui restituire il numero di cifre decimali della colonna o dell'espressione del parametro corrispondente come definito dall'origine dati. Per ulteriori informazioni sulle cifre decimali, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *NullablePtr*  
- Output Puntatore a un buffer in cui restituire un valore che indica se il parametro ammette valori NULL. Questo valore viene letto dal campo SQL_DESC_NULLABLE del dip. I tipi validi sono:  
+ Output Puntatore a un buffer in cui restituire un valore che indica se il parametro ammette valori NULL. Questo valore viene letto dal campo SQL_DESC_NULLABLE del dip. Uno dei seguenti:  
   
--   SQL_NO_NULLS: Il parametro non consente valori NULL (questo è il valore predefinito).  
+-   SQL_NO_NULLS: il parametro non consente valori NULL (questo è il valore predefinito).  
   
--   SQL_NULLABLE: Il parametro consente valori NULL.  
+-   SQL_NULLABLE: il parametro consente valori NULL.  
   
--   SQL_NULLABLE_UNKNOWN: Il driver non è in grado di determinare se il parametro ammette valori NULL.  
+-   SQL_NULLABLE_UNKNOWN: il driver non è in grado di determinare se il parametro ammette valori NULL.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLDescribeParam** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con HandleType SQL_HANDLE_STMT  e un *handle* di *statementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE restituiti in genere da **SQLDescribeParam** e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
+ Quando **SQLDescribeParam** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con *HandleType* di SQL_HANDLE_STMT e un *handle* di *statementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE restituiti in genere da **SQLDescribeParam** e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
@@ -90,9 +90,9 @@ SQLRETURN SQLDescribeParam(
 |07009|Indice del descrittore non valido|(DM) il valore specificato per l'argomento *ParameterNumber* è minore di 1.<br /><br /> Il valore specificato per l'argomento *ParameterNumber* è maggiore del numero di parametri nell'istruzione SQL associata.<br /><br /> Il marcatore di parametro fa parte di un'istruzione non DML.<br /><br /> Il marcatore di parametro fa parte di un elenco di **selezione** .|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
 |21S01|L'elenco di valori di inserimento non corrisponde all'elenco di colonne|Il numero di parametri nell'istruzione **Insert** non corrisponde al numero di colonne nella tabella specificata nell'istruzione.|  
-|HY000|Errore generale|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*buffer MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione  è stato chiamato SQLCancel o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione  , SQLCancel o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
+|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) la funzione è stata chiamata prima di chiamare **SQLPrepare** o **SQLExecDirect** per *statementHandle*.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLDescribeParam** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -173,10 +173,10 @@ free(LenOrIndArray);
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Associazione di un buffer a un parametro|[Funzione SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Associazione di un buffer a un parametro|[Pagina relativa alla funzione SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Esecuzione di un'istruzione SQL preparata|[Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|Preparazione di un'istruzione per l'esecuzione|[Funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|Preparazione di un'istruzione per l'esecuzione|[Pagina relativa alla funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

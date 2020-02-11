@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
+title: sys. fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811409"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68811409"
 
   Utilizzato per determinare se la replica corrente è la replica primaria.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>Valori di codice restituiti  
  Restituisce 1 se il database nell'istanza corrente è la replica primaria. In caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare questa funzione per determinare se l'istanza locale ospita la replica primaria del database di disponibilità specificato. Il codice di esempio avrà un aspetto analogo al seguente:  
   
 ```  
@@ -70,16 +70,16 @@ SELECT sys.fn_hadr_is_primary_replica ('TestDB');
 GO  
 ```    
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni &#40;di gruppi di disponibilità AlwaysOn Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [sys. dm _hadr_database_replica_states &#40;Transact-SQL&#41; ](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Funzioni Gruppi di disponibilità AlwaysOn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) &#40;SQL Server&#41;   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Gruppi di disponibilità AlwaysOn viste &#40;del catalogo Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
+ [Viste del catalogo di Gruppi di disponibilità AlwaysOn &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   

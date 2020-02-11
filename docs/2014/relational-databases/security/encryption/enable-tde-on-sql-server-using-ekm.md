@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957233"
 ---
 # <a name="enable-tde-using-ekm"></a>Abilitare TDE utilizzando EKM
@@ -27,7 +27,7 @@ ms.locfileid: "74957233"
   
  TDE esegue la crittografia dell'archiviazione di un intero database usando una chiave simmetrica detta "chiave di crittografia del database". È inoltre possibile proteggere la chiave di crittografia del database utilizzando un certificato protetto dalla chiave master del database master. Per altre informazioni sulla protezione della chiave di crittografia del database tramite la chiave master del database, vedere [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md). Per informazioni sulla configurazione di TDE quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in esecuzione in una macchina virtuale di Azure, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -37,9 +37,9 @@ ms.locfileid: "74957233"
   
 -   [Per abilitare TDE utilizzando EKM tramite Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a>Limitazioni e restrizioni  
+###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Per creare una chiave di crittografia del database e crittografare un database, è necessario essere un utente con privilegi elevati, ad esempio un amministratore di sistema, che possa essere autenticato dal modulo EKM.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "74957233"
   
 -   Le opzioni e i parametri richiesti dal provider EKM possono differire da quanto indicato nell'esempio di codice seguente. Per altre informazioni, rivolgersi al provider EKM.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  In questo argomento vengono utilizzate le autorizzazioni seguenti:  
   
 -   Per modificare un'opzione di configurazione ed eseguire l'istruzione RECONFIGURE, è necessario disporre dell'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
@@ -64,7 +64,7 @@ ms.locfileid: "74957233"
   
 -   È necessaria l'autorizzazione CONTROL nel database per crittografare il database.  
   
-##  <a name="TsqlProcedure"></a>Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>Per abilitare Transparent Data Encryption tramite Extensible Key Management  
   
@@ -73,14 +73,13 @@ ms.locfileid: "74957233"
 2.  Installare i certificati nel computer in base a quanto richiesto dal provider EKM.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non fornisce un provider EKM. Ogni provider EKM può richiedere procedure diverse per l'installazione, la configurazione e l'autorizzazione degli utenti.  Per completare questo passaggio, consultare la documentazione del provider EKM.  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non fornisce un provider EKM. Ogni provider EKM può richiedere procedure diverse per l'installazione, la configurazione e l'autorizzazione degli utenti.  Per completare questo passaggio, consultare la documentazione del provider EKM.  
   
-3.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+3.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 4.  Sulla barra Standard fare clic su **Nuova query**.  
   
-5.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+5.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Enable advanced options.  
@@ -148,25 +147,25 @@ ms.locfileid: "74957233"
     GO  
     ```  
   
- Per altre informazioni, vedere gli argomenti seguenti:   
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [sp_configure &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [CREAZIONE del PROVIDER di crittografia &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [CREAZIONE di credenziali &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Crea account di accesso &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [CREAZIONE della chiave di crittografia del DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [Extensible Key Management con Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 -   [Transparent Data Encryption con il database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   

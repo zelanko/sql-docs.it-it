@@ -16,30 +16,30 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921411"
 ---
-# <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Specifica quali campi possono essere usati per rilevare i conflitti durante un aggiornamento ottimistica di una riga dell'origine dati con un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+# <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
+Specifica i campi che è possibile utilizzare per rilevare i conflitti durante un aggiornamento ottimistico di una riga dell'origine dati con un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
- Utilizzare queste costanti con il **Recordset** "**criteri di aggiornamento**" proprietà dinamiche, che fa riferimento il [indice proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentate nel [ Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentazione.  
+ Utilizzare queste costanti con la proprietà dinamica "**criteri di aggiornamento**" del **Recordset** , a cui viene fatto riferimento nell' [indice della proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentato nel [servizio Microsoft Cursor per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentazione.  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adCriteriaAllCols**|1|Rileva i conflitti se qualsiasi colonna della riga di origine dati è stato modificato.|  
-|**adCriteriaKey**|0|Rileva i conflitti se la colonna chiave dei dati di riga dell'origine è stato modificato, il che significa che la riga è stata eliminata.|  
-|**adCriteriaTimeStamp**|3|Rileva se il timestamp dei dati di origine riga è in conflitto è stato modificato, vale a dire la riga è stato eseguito l'accesso dopo il **Recordset** è stato ottenuto.|  
-|**adCriteriaUpdCols**|2|Rileva i conflitti se le colonne dell'origine dati della riga che corrispondono ai campi aggiornati del **Recordset** sono state modificate.|  
+|**adCriteriaAllCols**|1|Rileva i conflitti se è stata modificata una colonna della riga dell'origine dati.|  
+|**adCriteriaKey**|0|Rileva i conflitti se la colonna chiave della riga dell'origine dati è stata modificata, il che significa che la riga è stata eliminata.|  
+|**adCriteriaTimeStamp**|3|Rileva i conflitti se il timestamp della riga dell'origine dati è stato modificato, il che significa che è stato eseguito l'accesso alla riga dopo che il **Recordset** è stato ottenuto.|  
+|**adCriteriaUpdCols**|2|Rileva i conflitti se una delle colonne della riga dell'origine dati che corrispondono ai campi aggiornati del **Recordset** è stata modificata.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.AdcPropUpdateCriteria.ALLCOLS|  
-|AdoEnums.AdcPropUpdateCriteria.KEY|  
-|AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
-|AdoEnums.AdcPropUpdateCriteria.UPDCOLS|
+|AdoEnums. AdcPropUpdateCriteria. ALLCOLS|  
+|AdoEnums. AdcPropUpdateCriteria. KEY|  
+|AdoEnums. AdcPropUpdateCriteria. TIMESTAMP|  
+|AdoEnums. AdcPropUpdateCriteria. UPDCOLS|

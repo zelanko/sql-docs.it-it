@@ -1,5 +1,5 @@
 ---
-title: Sincronizzare database di Analysis Services | Microsoft Docs
+title: Sincronizzare Analysis Services database | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072845"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include una funzionalità di sincronizzazione database che consente di rendere due database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalenti, copiando i dati e i metadati di un database situato su un server di origine in‌ un altro database situato su un server di destinazione. Utilizzare la funzionalità Sincronizzazione database per completare le attività seguenti:  
   
 -   Distribuire un database da un server temporaneo in un server di produzione.  
@@ -40,21 +41,21 @@ ms.locfileid: "66072845"
  Per sincronizzare i database, eseguire la sincronizzazione guidata database per sincronizzare immediatamente i database oppure per generare uno script di sincronizzazione che è possibile eseguire successivamente. Entrambi gli approcci possono essere utilizzati per aumentare la disponibilità e la scalabilità del cubo e dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  I seguenti white paper, scritti per le versioni precedenti di Analysis Services, rimangano validi per le soluzioni multidimensionali scalabili compilate con SQL Server 2012. Per altre informazioni, vedere [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) (Scalabilità orizzontale delle query con Analysis Services) e [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.) (Scalabilità orizzontale delle query per Analysis Services con i database di sola lettura)  
+>  I seguenti white paper, scritti per le versioni precedenti di Analysis Services, rimangano validi per le soluzioni multidimensionali scalabili compilate con SQL Server 2012. Per altre informazioni, vedere [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) (Scalabilità orizzontale delle query con Analysis Services) e [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.)(Scalabilità orizzontale delle query per Analysis Services con i database di sola lettura)  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Nel server di destinazione da cui viene avviata la sincronizzazione del database, è necessario essere un membro del ruolo di amministratore del server Analysis Services. Nel server di origine, l'account utente di Windows deve disporre di autorizzazioni Controllo completo sul database di origine. Se si esegue la sincronizzazione del database in modo interattivo, tenere presente che la sincronizzazione viene eseguita nel contesto di sicurezza dell'identità utente di Windows. Se all'account viene negato l'accesso a oggetti specifici, tali oggetti verranno esclusi dall'operazione. Per altre informazioni sui ruoli di amministratore server e le autorizzazioni del database, vedere [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [concedere le autorizzazioni di database &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Nel server di destinazione da cui viene avviata la sincronizzazione del database, è necessario essere un membro del ruolo di amministratore del server Analysis Services. Nel server di origine, l'account utente di Windows deve disporre di autorizzazioni Controllo completo sul database di origine. Se si esegue la sincronizzazione del database in modo interattivo, tenere presente che la sincronizzazione viene eseguita nel contesto di sicurezza dell'identità utente di Windows. Se all'account viene negato l'accesso a oggetti specifici, tali oggetti verranno esclusi dall'operazione. Per ulteriori informazioni sui ruoli di amministratore del server e le autorizzazioni di database, vedere concedere le autorizzazioni di [amministratore del server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [concedere autorizzazioni per il database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  La porta TCP 2383 deve essere aperta in entrambi i server per consentire le connessioni remote tra le istanze predefinite. Per altre informazioni sulla creazione di un'eccezione in Windows Firewall, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Server di origine e di destinazione deve essere la stessa versione e service pack. Poiché i metadati del modello sono inoltre sincronizzato, per garantire la compatibilità della compilazione numero per entrambi i server deve essere lo stesso. L'edizione di ogni installazione deve supportare la sincronizzazione del database. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la sincronizzazione del database è supportata nelle edizioni Enterprise, Developer e Business Intelligence. Per altre informazioni sulle funzionalità disponibili in ogni edizione, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Sia il server di origine che quello di destinazione devono avere la stessa versione e Service Pack. Poiché anche i metadati del modello sono sincronizzati, per garantire la compatibilità il numero di build per entrambi i server deve essere lo stesso. L'edizione di ogni installazione deve supportare la sincronizzazione del database. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la sincronizzazione del database è supportata nelle edizioni Enterprise, Developer e Business Intelligence. Per ulteriori informazioni sulle funzionalità di ogni edizione, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  La modalità di distribuzione server deve essere identica in ogni server. Se il database che si sta sincronizzando è multidimensionale, è necessario che sia il server di origine che quello di destinazione siano configurati per la modalità server multidimensionale. Per altre informazioni sulle modalità di distribuzione, vedere [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Disattivare l'elaborazione lenta delle aggregazioni se viene utilizzate nel server di origine. Le aggregazioni che vengono elaborate in background possono interferire con la sincronizzazione del database. Per altre informazioni sull'impostazione di questa proprietà server, vedere [Proprietà OLAP](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  La dimensione del database rappresentano un fattore determinante nello stabilire se la sincronizzazione è un approccio appropriato. Non sono previsti requisiti hardware, ma se la sincronizzazione è troppo lenta, provare a sincronizzare più server in parallelo, come descritto in questo white paper tecnico: [Le procedure consigliate di sincronizzazione di Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136).  
+>  La dimensione del database rappresentano un fattore determinante nello stabilire se la sincronizzazione è un approccio appropriato. Non esistono requisiti hardware, ma se la sincronizzazione è troppo lenta, provare a sincronizzare più server in parallelo, come descritto nella documentazione tecnica seguente: [Analysis Services Synchronization Best Practices](https://go.microsoft.com/fwlink/?LinkID=253136)(Procedure consigliate per la sincronizzazione di Analysis Services).  
   
 ## <a name="synchronize-database-wizard"></a>Sincronizzazione guidata database  
  Utilizzare la Sincronizzazione guidata database per eseguire la sincronizzazione unidirezionale da un database di origine a un database di destinazione o per generare uno script che specifica un'operazione di sincronizzazione del database. Durante il processo di sincronizzazione è possibile sincronizzare sia le partizioni remote che quelle locali nonché scegliere se includere i ruoli.  
@@ -81,7 +82,7 @@ ms.locfileid: "66072845"
   
 3.  Specificare il nome del server di origine e del database di origine. Nella pagina Selezione database da sincronizzare digitare il nome del server di origine e del database di origine in **Server di origine** e **Database di origine**. Se ad esempio si esegue la distribuzione da un ambiente di testing a un server di produzione, l'origine sarà il database nel server temporaneo.  
   
-     In**Server di destinazione** viene visualizzato il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con cui vengono sincronizzati i dati e i metadati dal database selezionato in **Database di origine** .  
+     **Server di destinazione** consente di visualizzare il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nome dell'istanza di con cui vengono sincronizzati i dati e i metadati del database selezionato nel **database di origine** .  
   
      Verrà eseguita la sincronizzazione per i database di origine e di destinazione aventi lo stesso nome. Se il server di destinazione dispone già di un database che condivide lo stesso nome del database di origine, il database di destinazione sarà aggiornato con i metadati e i dati dell'origine. Se il database non esiste, verrà creato nel server di destinazione.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "66072845"
      **Cartella di destinazione**  
      Consente di visualizzare il nome della cartella dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di destinazione in cui sincronizzare la partizione locale. Se nella colonna è incluso il valore "(Impostazione predefinita)", la partizione locale è contenuta nel percorso predefinito relativo all'istanza di destinazione.  
   
-     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni locali archiviate nel percorso selezionato.  
+     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni locali archiviate nel percorso selezionato.  
   
     > [!NOTE]  
     >  Non è possibile modificare questa colonna per le partizioni locali archiviate nel percorso predefinito relativo all'istanza di origine.  
@@ -110,7 +111,7 @@ ms.locfileid: "66072845"
   
      L'opzione **Partizioni nel percorso selezionato** consente di visualizzare una griglia in cui vengono descritte le partizioni locali archiviate nel percorso dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine specificata nella colonna **Cartella di origine** della riga selezionata in **Percorsi**.  
   
-     **Cube**  
+     **Cubo**  
      Consente di visualizzare il nome del cubo contenente la partizione.  
   
      **Gruppo di misure**  
@@ -129,7 +130,7 @@ ms.locfileid: "66072845"
   
      L'opzione **Percorsi** consente di visualizzare una griglia nella quale vengono elencate informazioni dettagliate sui percorsi in cui vengono archiviate le partizioni remote per il database di origine, incluse informazioni sulla destinazione e l'origine e le dimensioni di archiviazione usate da ogni percorso, disponibili dal database selezionato. La griglia include le colonne seguenti:  
   
-     **Sincronizza**  
+     **Sincronizzazione**  
      Selezionare questa opzione per includere un percorso contenente le partizioni remote durante la sincronizzazione.  
   
     > [!NOTE]  
@@ -144,19 +145,19 @@ ms.locfileid: "66072845"
      **Server di destinazione**  
      Consente di visualizzare il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno della quale devono essere sincronizzate le partizioni remote archiviate nel percorso specificato in **Server di origine** e **Cartella di origine** .  
   
-     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Gestione connessione** e specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui sincronizzare le partizioni remote archiviate nel percorso specificato.  
+     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Gestione connessione** e specificare un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui sincronizzare le partizioni remote archiviate nel percorso specificato.  
   
      **Cartella di destinazione**  
      Consente di visualizzare il nome della cartella dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di destinazione in cui sincronizzare la partizione remota. Se nella colonna è incluso il valore "(Impostazione predefinita)", la partizione remota è contenuta nel percorso predefinito relativo all'istanza di destinazione.  
   
-     Fare clic sui puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni remote archiviate nel percorso selezionato.  
+     Fare clic sui puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e specificare una cartella nell'istanza di destinazione all'interno della quale sincronizzare le partizioni remote archiviate nel percorso selezionato.  
   
      **Dimensione**  
      Consente di visualizzare le dimensioni stimate delle partizioni remote archiviate nel percorso.  
   
      L'opzione **Partizioni nel percorso selezionato** consente di visualizzare una griglia in cui vengono descritte le partizioni remote archiviate nel percorso dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine specificata nella colonna **Cartella di origine** della riga selezionata in **Percorsi**. La griglia include le colonne seguenti:  
   
-     **Cube**  
+     **Cubo**  
      Consente di visualizzare il nome del cubo contenente la partizione.  
   
      **Gruppo di misure**  
@@ -173,7 +174,7 @@ ms.locfileid: "66072845"
      **Copia tutto**  
      Selezionare questa opzione per includere definizioni di sicurezza e informazioni sull'appartenenza durante la sincronizzazione.  
   
-     **Ignora appartenenze**  
+     **Ignora appartenenza**  
      Selezionare questa opzione per includere le definizioni di sicurezza ma non le informazioni sull'appartenenza durante la sincronizzazione.  
   
      **Ignora tutto**  
@@ -187,8 +188,8 @@ ms.locfileid: "66072845"
  Se non viene eseguita la sincronizzazione di ruoli o appartenenze, ricordarsi di specificare ora le autorizzazioni di accesso utente nel database di destinazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
- [Distribuire soluzioni di modelli utilizzando XMLA](deploy-model-solutions-using-xmla.md)   
- [Distribuire soluzioni di modelli tramite la Distribuzione guidata](deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Elemento Synchronize &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [Distribuire soluzioni di modelli tramite XMLA](deploy-model-solutions-using-xmla.md)   
+ [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

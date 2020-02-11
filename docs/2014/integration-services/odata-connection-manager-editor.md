@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057378"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor gestione connessione OData
@@ -29,7 +29,7 @@ ms.locfileid: "66057378"
  **Percorso documento di servizio**  
  URL del servizio OData. Ad esempio: http://services.odata.org/V3/Northwind/Northwind.svc/.  
   
- **Autenticazione**  
+ **autenticazione**  
  Selezionare **Autenticazione di Windows** oppure **Usa il nome utente e la password seguenti** per l' **autenticazione**. Se si seleziona la seconda opzione immettere il **nome utente** e la **password**.  
   
  **Test connessione**  

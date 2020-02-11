@@ -1,5 +1,5 @@
 ---
-title: Cursore e le caratteristiche di blocco | Microsoft Docs
+title: Caratteristiche del cursore e del blocco | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,22 +15,22 @@ ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925670"
 ---
 # <a name="cursor-and-lock-characteristics"></a>Caratteristiche dei cursori e dei blocchi
-Mentre le caratteristiche di un cursore dipendono dalle funzionalità del provider, i seguenti vantaggi e svantaggi in genere si applicano ai vari tipi di cursori e blocchi.  
+Sebbene le caratteristiche di un cursore dipendano dalle funzionalità del provider, i vantaggi e gli svantaggi seguenti si applicano in genere ai vari tipi di cursori e blocchi.  
   
-|Tipo di cursore o di blocco|Vantaggi|Svantaggi|  
+|Cursore o tipo di blocco|Vantaggi|Svantaggi|  
 |-------------------------|----------------|-------------------|  
-|**adOpenForwardOnly**|-Requisiti di risorse basso|-Non è possibile scorrere all'indietro<br />-Nessun concorrenza dei dati|  
-|**adOpenStatic**|-Scorrevole|-Nessun concorrenza dei dati|  
-|**adOpenKeyset**|-Alcuni concorrenza dei dati<br />-Scorrevole|-Più elevati requisiti di risorse<br />-Non disponibile in uno scenario disconnesso|  
-|**adOpenDynamic**|-Concorrenza dei dati alto<br />-Scorrevole|-Requisiti di risorse massimo<br />-Non disponibile in uno scenario disconnesso|  
-|**adLockReadOnly**|-Requisiti di risorse basso<br />-Altamente scalabili|-I dati non è aggiornabili tramite cursore|  
-|**adLockBatchOptimistic**|-Gli aggiornamenti in batch<br />-Consente gli scenari disconnessi<br />-Altri utenti in grado di accedere ai dati|-Dati possono essere modificati contemporaneamente da più utenti|  
-|**adLockPessimistic**|-Data non può essere modificato da altri utenti durante il blocco|-Impedisce ad altri utenti l'accesso ai dati durante il blocco|  
-|**adLockOptimistic**|-Altri utenti in grado di accedere ai dati|-Dati possono essere modificati contemporaneamente da più utenti|
+|**adOpenForwardOnly**|-Requisiti di risorse insufficienti|-Impossibile scorrere all'indietro<br />-Nessuna concorrenza dei dati|  
+|**adOpenStatic**|-Scorrevole|-Nessuna concorrenza dei dati|  
+|**adOpenKeyset**|-Parte della concorrenza dei dati<br />-Scorrevole|-Requisiti di risorse maggiori<br />-Non disponibile in uno scenario disconnesso|  
+|**adOpenDynamic**|-Concorrenza elevata dei dati<br />-Scorrevole|-Requisiti massimi per le risorse<br />-Non disponibile in uno scenario disconnesso|  
+|**adLockReadOnly**|-Requisiti di risorse insufficienti<br />-Scalabilità elevata|-Dati non aggiornabili tramite cursore|  
+|**adLockBatchOptimistic**|-Aggiornamenti batch<br />-Consente scenari disconnessi<br />-Altri utenti in grado di accedere ai dati|-I dati possono essere modificati contemporaneamente da più utenti|  
+|**adLockPessimistic**|-I dati non possono essere modificati da altri utenti durante il blocco|-Impedisce ad altri utenti di accedere ai dati durante il blocco|  
+|**adLockOptimistic**|-Altri utenti in grado di accedere ai dati|-I dati possono essere modificati contemporaneamente da più utenti|

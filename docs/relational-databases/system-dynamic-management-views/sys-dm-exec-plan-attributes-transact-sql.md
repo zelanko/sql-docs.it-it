@@ -1,5 +1,5 @@
 ---
-title: exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255605"
 ---
-# <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
+# <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni attributo del piano specificato dall'handle di piano. È possibile utilizzare questa funzione con valori di tabella per recuperare informazioni dettagliate su un particolare piano, come i valori di chiave nella cache o il numero corrente di esecuzioni simultanee del piano.  
   
 > [!NOTE]  
->  Alcune delle informazioni restituite da questa funzione esegue il mapping per il [Sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vista di compatibilità con le versioni precedenti.
+>  Alcune delle informazioni restituite tramite questa funzione sono mappate alla vista di compatibilità con le versioni precedenti [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Sintassi  
 ```  
@@ -40,26 +40,26 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argomenti  
  *plan_handle*  
- Viene identificato in modo univoco un piano di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* viene **varbinary(64)** . L'handle di piano può essere ottenuto dal [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) vista a gestione dinamica.  
+ Viene identificato in modo univoco un piano di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* è di tipo **varbinary (64)**. È possibile ottenere l'handle del piano dalla vista a gestione dinamica [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|attributo|**varchar(128)**|Nome dell'attributo associato al piano. Immediatamente sotto questa tabella elenca i possibili attributi, i tipi di dati e le relative descrizioni.|  
+|attributo|**varchar (128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
 |Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
-La tabella precedente **attributo** può avere i valori seguenti:
+Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 
-|attribute|Tipo di dati|Descrizione|  
+|Attributo|Tipo di dati|Descrizione|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica i valori delle opzioni con cui è stato compilato il piano.|  
-|objectId|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Questo è l'ID di oggetto archiviato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
+|objectId|**int**|Una delle chiavi principali utilizzate per la ricerca di un oggetto nella cache. Si tratta dell'ID oggetto archiviato in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) per gli oggetti di database (procedure, viste, trigger e così via). Per i piani di tipo ad hoc o preparati, questo attributo corrisponde a un hash interno del testo del batch.|  
 |dbid|**int**|ID del database contenente l'entità alla quale fa riferimento il piano.<br /><br /> Per i piani ad hoc o preparati, corrisponde all'ID del database da cui viene eseguito il batch.|  
-|dbid_execute|**int**|Per gli oggetti di sistema archiviati nel **risorsa** del database, l'ID del database da cui viene eseguito il piano memorizzato nella cache. In tutti gli altri casi è 0.|  
-|user_id|**int**|Il valore -2 indica che il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo consigliato. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.| 
-|language_id|**smallint**|ID della lingua della connessione in cui è stato creato l'oggetto della cache. Per altre informazioni, vedere [Sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|dbid_execute|**int**|Per gli oggetti di sistema archiviati nel database **Resource** , l'ID del database da cui viene eseguito il piano memorizzato nella cache. In tutti gli altri casi è 0.|  
+|user_id|**int**|Il valore -2 indica che il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo preferito. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.| 
+|language_id|**smallint**|ID della lingua della connessione in cui è stato creato l'oggetto della cache. Per ulteriori informazioni, vedere [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Formato della data della connessione in cui è stato creato l'oggetto della cache. Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primo valore di data. Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bit di stato interni che fanno parte della chiave di ricerca nella cache.|  
@@ -78,20 +78,20 @@ La tabella precedente **attributo** può avere i valori seguenti:
 |sql_handle|**varbinary**(64)|Handle SQL per il batch.|  
 |merge_action_type|**smallint**|Il tipo di piano di esecuzione del trigger utilizzato come risultato di un'istruzione MERGE.<br /><br /> 0 indicano un piano non-trigger, un piano del trigger che non viene eseguito come risultato di un'istruzione MERGE o un piano del trigger che viene eseguito come risultato di un'istruzione MERGE in cui viene specificata solo un'azione DELETE.<br /><br /> 1 indica un piano di trigger INSERT che è in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 2 indica un piano di trigger UPDATE in esecuzione come risultato di un'istruzione MERGE.<br /><br /> 3 indica un piano di trigger DELETE che viene eseguito come risultato di un'istruzione MERGE che contiene un'azione INSERT o UPDATE corrispondente.<br /><br /> Per i trigger nidificati eseguiti da azioni a catena, questo valore è l'azione dell'istruzione MERGE che provoca la propagazione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="set-options"></a>Opzioni SET  
- Le copie dello stesso piano compilato possono differire solo per il valore di **set_options** colonna. Ciò indica che connessioni diverse utilizzano set di opzioni SET diversi per la stessa query. L'utilizzo di set diversi di opzioni è in genere poco consigliabile perché può causare compilazioni aggiuntive, un minore riutilizzo del piano e un aumento delle dimensioni della cache dei piani in seguito alla presenza di più copie dei piani.  
+ Le copie dello stesso piano compilato potrebbero differire solo per il valore nella colonna **set_options** . Ciò indica che connessioni diverse utilizzano set di opzioni SET diversi per la stessa query. L'utilizzo di set diversi di opzioni è in genere poco consigliabile perché può causare compilazioni aggiuntive, un minore riutilizzo del piano e un aumento delle dimensioni della cache dei piani in seguito alla presenza di più copie dei piani.  
   
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
- Per convertire il valore restituito in **set_options** le opzioni con cui è stato compilato il piano, sottrarre i valori dalle **set_options** valore, che inizia con il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Ad esempio, se il valore in **set_options** 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) e ANSI_PADDING (1).  
+ Per convertire il valore restituito in **set_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore **set_options** , iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Se, ad esempio, il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), piano parallelo (2) e ANSI_PADDING (1).  
   
-|Opzione|Value|  
+|Opzione|valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -111,17 +111,17 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessa
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica che l'opzione di database PARAMETERIZATION era impostata su FORCED al momento della compilazione del piano.|131072|  
-|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursori  
  I cursori inattivi vengono memorizzati nella cache in un piano compilato in modo che la memoria utilizzata per archiviare il cursore possa essere riutilizzata da utenti simultanei dei cursori. Si supponga, ad esempio, che un batch dichiari e utilizzi un cursore senza deallocarlo. Se due utenti eseguono lo stesso batch, saranno presenti due cursori attivi. Dopo la deallocazione dei cursori, potenzialmente in batch diversi, la memoria utilizzata per archiviare il cursore viene assegnata alla cache e non rilasciata. Questo elenco dei cursori inattivi viene mantenuto nel piano compilato. In occasione della successiva esecuzione del batch, la memoria per il cursore nella cache verrà riutilizzata e inizializzata in modo appropriato come cursore attivo.  
   
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
- Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, a partire da il valore massimo possibile, fino a raggiungere 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
+ Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|Value|  
+|Opzione|valore|  
 |------------|-----------|  
-|Nessuna|0|  
+|nessuno|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -169,7 +169,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
