@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729084"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
@@ -25,9 +25,9 @@ ms.locfileid: "73729084"
 
   
   
-## <a name="training"></a>Training  
-* Per esplorare le nuove funzionalità e le nuove funzionalità introdotte in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs) (è necessario l'accesso con il account Microsoft).  
-* Per sviluppare una soluzione [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e il [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
+## <a name="training"></a>Formazione  
+* Per esplorare le nuove funzionalità e le nuove funzionalità [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]introdotte in, provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs) (è necessario eseguire l'accesso con il account Microsoft).  
+* Per sviluppare una [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluzione per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare un [Lab autonomo](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
   
 ## <a name="videos"></a>Video  
 * Per scoprire le nuove funzionalità nella versione [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**guardare questo video**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
@@ -49,9 +49,9 @@ ms.locfileid: "73729084"
     * Master Data Services Security API Sample (Esempio di API per la sicurezza di Master Data Services)  
   
 ## <a name="sql-server-certification"></a>Certificazione di SQL Server  
-* [Training e certificazione di Microsoft SQL Server](https://www.microsoft.com/learning/sql-training.aspx)  
+* [Formazione e certificazione Microsoft SQL Server](https://www.microsoft.com/learning/sql-training.aspx)  
 * [Elenco degli esami di certificazione Microsoft](https://www.microsoft.com/learning/exam-list.aspx)  
-* [Blog "Born to Learn" di Microsoft (community di training e certificazione)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
+* [Blog di Microsoft Born to Learn (community di formazione e certificazione)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
   
   
   

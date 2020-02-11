@@ -1,5 +1,5 @@
 ---
-title: Funzione STDEV (MDX) | Microsoft Docs
+title: StDev (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036860"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
@@ -34,8 +34,8 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Il **Stdev** funzione utilizza il popolamento non distorto formula, mentre le [StdevP](../mdx/stdevp-mdx.md) funzione utilizza la formula della popolazione distorta.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **StDev** utilizza la formula della popolazione non distorta, mentre la funzione [StDevP](../mdx/stdevp-mdx.md) utilizza la formula della popolazione distorta.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la deviazione standard per Internet Order Quantity, valutata sui primi tre mesi dell'anno di calendario 2003 utilizzando la formula della popolazione non distorta.  
@@ -52,6 +52,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

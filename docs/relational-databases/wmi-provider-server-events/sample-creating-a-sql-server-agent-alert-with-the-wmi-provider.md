@@ -15,10 +15,10 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660525"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Esempio: Creazione di un avviso di SQL Server Agent con il provider WMI
@@ -35,7 +35,7 @@ ms.locfileid: "73660525"
  L'avviso esegue il processo ogni volta che viene registrato un evento di traccia Deadlock Graph. Per un avviso WMI, SQL Server Agent crea una query di notifica utilizzando lo spazio dei nomi e l'istruzione WQL specificati. Per questo avviso, SQL Server Agent esegue il monitoraggio dell'istanza predefinita nel computer locale. L'istruzione WQL richiede tutti gli eventi `DEADLOCK_GRAPH` nell'istanza predefinita. Per modificare l'istanza monitorata dall'avviso, sostituire il nome dell'istanza per `MSSQLSERVER` in `@wmi_namespace` per l'avviso.  
   
 > [!NOTE]  
->  Per SQL Server Agent la ricezione di eventi WMI, è necessario abilitare [!INCLUDE[ssSB](../../includes/sssb-md.md)] in **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Per SQL Server Agent la ricezione di eventi WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] , è necessario che sia abilitato [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]in **msdb** e.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Eseguire lo script seguente nella seconda scheda della query. Questo script produce un set di risultati e quindi si blocca, in attesa di acquisire un blocco su `Production.Product`.  
+ Eseguire lo script seguente nella seconda scheda della query. Questo script produce un set di risultati e quindi si blocca, in attesa di acquisire `Production.Product`un blocco su.  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Eseguire lo script seguente nella prima scheda della query. Questo script si blocca, in attesa di acquisire un blocco su `Production.Location`. Dopo un breve timeout, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglierà questo script o lo script nell'esempio come vittima del deadlock e terminerà la transazione.  
+ Eseguire lo script seguente nella prima scheda della query. Questo script si blocca, in attesa di acquisire un `Production.Location`blocco su. Dopo un breve timeout, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglierà questo script o lo script nell'esempio come vittima del deadlock e terminerà la transazione.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

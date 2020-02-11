@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130522"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Funzione LocalDBGetInstanceInfo
   Vengono restituite le informazioni per l'istanza del database locale di SQL Server Express specificata, se esistente, la versione del database locale utilizzata dall'istanza, se quest'ultima è in esecuzione e così via.  
   
- Vengono restituite le informazioni un `struct` denominate **LocalDBInstanceInfo**, che presenta la seguente definizione.  
+ Le informazioni vengono restituite in `struct` un oggetto denominato **dello structLocalDBInstanceInfo**, che presenta la definizione seguente.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **File di intestazione:** SQLNCLI. h  
+ **File di intestazione:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,7 +93,7 @@ HRESULT LocalDBGetInstanceInfo(
  [Output] Buffer per archiviare le informazioni sull'istanza del database locale.  
   
  *dwInstanceInfoSize*  
- [Input] Include le dimensioni dei *InstanceInfo* buffer.  
+ Input Include le dimensioni del buffer *InstanceInfo* .  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -124,14 +124,14 @@ HRESULT LocalDBGetInstanceInfo(
  Configurazione di un'istanza danneggiata.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
 ## <a name="details"></a>Dettagli  
- La logica alla base dell'introduzione del `struct` argomento delle dimensioni (*lpInstanceInfoSize*) consiste nell'abilitare l'API per versioni diverse di restituire il **LocalDBInstanceInfostruct**, in modo efficace abilitazione della compatibilità con le versioni precedenti e successive.  
+ La logica alla base dell'introduzione dell'argomento `struct` size (*lpInstanceInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **dello structLocalDBInstanceInfo**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
   
- Se il `struct` argomento delle dimensioni (*lpInstanceInfoSize*) corrisponde alle dimensioni di una versione nota del **LocalDBInstanceInfostruct**, che la versione del `struct` viene restituito. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
+ Se l' `struct` argomento size (*lpInstanceInfoSize*) corrisponde alle dimensioni di una versione nota di **dello structLocalDBInstanceInfo**, `struct` viene restituita tale versione di. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un esempio tipico **LocalDBGetInstanceInfo** utilizzo dell'API si presenta come segue:  
+ Un esempio tipico di utilizzo dell'API **LocalDBGetInstanceInfo** è simile al seguente:  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -139,9 +139,9 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
+ Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

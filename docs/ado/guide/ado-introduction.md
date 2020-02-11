@@ -1,5 +1,5 @@
 ---
-title: Introduzione ad ADO | Microsoft Docs
+title: Introduzione a ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,22 +13,22 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927131"
 ---
-# <a name="ado-overview-and-benefits"></a>Cenni preliminari su ADO e vantaggi
-Gli oggetti ADO (ActiveX Data) è un'interfaccia di alto livello, facile da usare per OLE DB. OLE DB è un'interfaccia di basso livello, ad alte prestazioni per un'ampia gamma di archivi dati. ADO e OLE DB può funzionare con relazionale (tabulare) e non relazionali (gerarchiche o nel flusso) dei dati.
+# <a name="ado-overview-and-benefits"></a>Panoramica e vantaggi di ADO
+ActiveX Data Objects (ADO) è un'interfaccia di alto livello e facile da usare per OLE DB. OLE DB è un'interfaccia di basso livello a prestazioni elevate per un'ampia gamma di archivi dati. Sia ADO che OLE DB possono funzionare con dati relazionali (tabulari) e non relazionali (gerarchici o di flusso).
 
- ADO fornisce un livello di astrazione tra l'applicazione client o di livello intermedio e le interfacce OLE DB a basso livello. ADO utilizza un piccolo set di oggetti di automazione per fornire un'interfaccia semplice ed efficiente per OLE DB. Questa interfaccia ADO effettua una scelta ottimale per gli sviluppatori in linguaggi di livello superiore, ad esempio Visual Basic e VBScript, che vogliono accedere ai dati senza la necessità di approfondire le proprie conoscenze di COM e OLE DB.
+ ADO fornisce un livello di astrazione tra l'applicazione client o di livello intermedio e le interfacce di OLE DB di basso livello. ADO usa un piccolo set di oggetti di automazione per fornire un'interfaccia semplice ed efficiente per OLE DB. Questa interfaccia rende ADO una scelta ottimale per gli sviluppatori in linguaggi di livello superiore, ad esempio Visual Basic e VBScript, che desiderano accedere ai dati senza dover apprendere le complessità di COM e OLE DB.
 
  In questa sezione vengono trattati gli argomenti seguenti.
 
 -   [Cronologia di ADO](../../ado/guide/ado-history.md)
 
--   [Prerequisiti per l'uso della documentazione ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Prerequisiti per l'uso della documentazione di ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
 -   [Riferimenti alle librerie ADO](../../ado/guide/referencing-the-ado-libraries.md)
 

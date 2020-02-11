@@ -1,5 +1,5 @@
 ---
-title: Uso di OLTP In memoria in un ambiente di macchina virtuale | Microsoft Docs
+title: Uso di OLTP in memoria in un ambiente di macchina virtuale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843062"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Uso di OLTP in memoria in un ambiente di VM
   La virtualizzazione del server può aiutare a ridurre i costi operativi e il capitale IT aumentandone l'efficienza grazie a provisioning di applicazioni, manutenzione, disponibilità e processi di backup/recupero migliorati. Grazie ai recenti progressi tecnologici, ora è possibile consolidare più rapidamente complessi carichi di lavoro del database utilizzando la virtualizzazione. Questo argomento illustra le procedure consigliate per l'uso di [!INCLUDE[hek_1](../includes/hek-1-md.md)] in un ambiente virtualizzato.  
   
-##  <a name="bkmk_memoryPreAllocation"></a> Preallocazione di memoria  
+##  <a name="bkmk_memoryPreAllocation"></a>Pre-allocazione della memoria  
  Per la memoria in un ambiente virtualizzato, prestazioni e supporto migliorati sono fattori molto importanti. È necessario essere in grado di allocare rapidamente la memoria alle macchine virtuali a seconda dei requisiti e dei carichi di lavoro nonché di fare in modo che non ci siano sprechi di memoria. La funzionalità di memoria dinamica di Hyper-V migliora la flessibilità nell'allocazione e gestione della memoria tra le macchine virtuali in esecuzione in un host.  
   
  Quando si esegue la virtualizzazione di un database con tabelle ottimizzate per la memoria è necessario modificare alcune procedure consigliate per la virtualizzazione e la gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Senza tabelle ottimizzate per la memoria, due delle procedure consigliate sono:  

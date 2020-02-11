@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2683cdc7762f1f500918edce436153e0130d04bd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758261"
 ---
 # <a name="data-source-objects-ole-db"></a>Oggetti origine dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client utilizza il termine origine dati per il set di interfacce OLE DB utilizzate per stabilire un collegamento a un archivio dati, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La creazione di un'istanza dell'oggetto origine dati del provider è la prima attività di un consumer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native client usa il termine origine dati per il set di interfacce di OLE DB utilizzate per stabilire un collegamento a un archivio dati, ad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esempio. La creazione di un'istanza dell'oggetto origine dati del provider è la prima attività di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer di Native Client.  
   
- Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è il CLSID_SQLNCLI10 CC++ /GUID (il simbolo SQLNCLI_CLSID verrà risolto nel ProgID corretto nel file sqlncli. h a cui si fa riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
+ Ogni provider OLE DB dichiara un identificatore di classe (CLSID) per se stesso. Il CLSID per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client è il GUID C/C++ CLSID_SQLNCLI10 (il simbolo SQLNCLI_CLSID verrà risolto nel ProgID corretto nel file sqlncli. h a cui si fa riferimento). Con il CLSID, il consumer usa la funzione OLE **CoCreateInstance** per produrre un'istanza dell'oggetto origine dati.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è un server in-process. Le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti provider OLE DB di Native client vengono create utilizzando la macro CLSCTX_INPROC_SERVER per indicare il contesto eseguibile.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client è un server in-process. Le istanze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native client OLE DB oggetti provider vengono creati utilizzando la macro CLSCTX_INPROC_SERVER per indicare il contesto eseguibile.  
   
- L'oggetto origine dati del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB espone le interfacce di inizializzazione OLE DB che consentono al consumer di connettersi ai database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti.  
+ L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto origine dati del provider OLE DB di Native Client espone le interfacce di inizializzazione OLE DB che consentono al consumer di connettersi ai database esistenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Ogni connessione eseguita tramite il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client imposta automaticamente queste opzioni:  
+ Ogni connessione effettuata tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client imposta automaticamente queste opzioni:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73758261"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- In questo esempio viene utilizzata la macro identificatore di classe per creare un oggetto origine dati del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB e ottenere un riferimento all'interfaccia **IDBInitialize** .  
+ Questo esempio usa la macro identificatore di classe per creare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un oggetto origine dati del provider OLE DB di Native client e ottenere un riferimento all'interfaccia **IDBInitialize** .  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,13 +72,13 @@ else
 }  
 ```  
   
- Con la corretta creazione di un'istanza di un oggetto origine dati del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, l'applicazione consumer può continuare inizializzando l'origine dati e creando sessioni. Le sessioni OLE DB presentano le interfacce che consentono l'accesso ai dati e la relativa modifica.  
+ Con la corretta creazione di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un oggetto origine dati del provider OLE DB di Native client, l'applicazione consumer può continuare inizializzando l'origine dati e creando sessioni. Le sessioni OLE DB presentano le interfacce che consentono l'accesso ai dati e la relativa modifica.  
   
- Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client effettua la prima connessione a un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte di un'inizializzazione dell'origine dati completata correttamente. La connessione viene mantenuta a condizione che venga mantenuto un riferimento in una delle interfacce di inizializzazione dell'origine dati o fino a quando non viene chiamato il metodo **IDBInitialize::Uninitialize**.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client effettua la prima connessione a un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata di come parte di un'inizializzazione dell'origine dati completata correttamente. La connessione viene mantenuta a condizione che venga mantenuto un riferimento in una delle interfacce di inizializzazione dell'origine dati o fino a quando non viene chiamato il metodo **IDBInitialize::Uninitialize**.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Proprietà delle origini dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [Proprietà dell'origine dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [Proprietà delle informazioni sulle origini dati](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -86,9 +86,9 @@ else
   
 -   [Sessioni](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
   
--   [Proprietà della sessione - Provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
+-   [Proprietà sessione - Provider OLE DB di SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   
--   [Oggetti di origine dati persistenti](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [Oggetti origine dati persistenti](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829499"
 ---
 # <a name="wmi-event-watcher-task"></a>Attività Monitoraggio eventi WMI
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definire la risposta dell'attività all'evento. È possibile configurare l'attività in modo da riuscire o non riuscire, a seconda dell'evento, oppure da riprendere semplicemente il monitoraggio dell'evento.  
   
--   Specificare l'operazione che deve essere eseguita dall'attività al timeout della query WQL. È possibile registrare il timeout e lo stato dopo il timeout oppure generare un evento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personalizzato che indica che si è verificato il timeout dell'evento WMI e registra il timeout e lo stato dopo il timeout.  
+-   Specificare l'azione eseguita dall'attività quando si verifica il timeout della query WMI. È possibile registrare il timeout e lo stato dopo il timeout oppure generare un evento personalizzato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , che indica che si è verificato il timeout dell'evento WMI e che è stato registrato il timeout e lo stato del timeout.  
   
--   Definire la risposta dell'attività al timeout. È possibile configurare l'attività in modo da riuscire o non riuscire oppure da riprendere semplicemente il monitoraggio dell'evento.  
+-   Consente di definire la modalità di risposta dell'attività al timeout. L'attività può essere configurata in modo da avere esito positivo o negativo oppure l'attività può semplicemente controllare l'evento.  
   
 -   Specificare il numero di volte per cui monitorare l'evento.  
   
@@ -91,7 +91,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Monitoraggio eventi WMI &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Monitoraggio eventi WMI &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Monitoraggio eventi WMI &#40;pagina Opzioni WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   

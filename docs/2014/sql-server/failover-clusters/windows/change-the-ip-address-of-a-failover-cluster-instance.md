@@ -16,26 +16,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049623"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Modifica dell'indirizzo IP di un'istanza del cluster di failover
   In questo argomento viene descritto come modificare la risorsa indirizzo IP nell'istanza del cluster di failover (FCI) di AlwaysOn tramite lo snap-in Gestione cluster di failover. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
--   **Prima di iniziare:**  [Sicurezza](#Security)  
+-   **Prima di iniziare:**  [sicurezza](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Prima di iniziare, esaminare le informazioni seguenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] argomento della documentazione Online: [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md).  
+ Prima di iniziare, esaminare il seguente argomento della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : [Operazioni preliminari all'installazione del clustering di failover](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire la manutenzione o l'aggiornamento di un'istanza FCI, è necessario essere un amministratore locale che dispone dell'account per accedere come servizio su tutti i nodi dell'istanza FCI.  
   
-##  <a name="WSFC"></a> Utilizzo dello snap-in Gestione cluster di failover  
+##  <a name="WSFC"></a>Utilizzo dello snap-in Gestione cluster di failover  
  **Per modificare la risorsa indirizzo IP per un'istanza FCI**  
   
 1.  Aprire lo snap-in Gestione cluster di failover.  

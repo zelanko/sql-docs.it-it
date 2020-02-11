@@ -15,14 +15,14 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921297"
 ---
 # <a name="addnew-method-example-jscript"></a>Esempio del metodo AddNew (JScript)
-Questo esempio Usa la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AddNewJS**.  
+In questo esempio viene usato il metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AddNewJS. asp**.  
   
 ```  
 <!-- BeginAddNewJS -->  

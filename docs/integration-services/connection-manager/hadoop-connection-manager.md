@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096127"
 ---
 # <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
@@ -62,7 +62,7 @@ ms.locfileid: "74096127"
   
 5.  Selezionare **Test connessione**. (verrà testata solo la connessione abilitata).  
   
-6.  Fare clic su **OK** per chiudere la finestra di dialogo.  
+6.  Selezionare **OK** per chiudere la finestra di dialogo.  
 
 ## <a name="connect-with-kerberos-authentication"></a>Connettersi con l'autenticazione Kerberos
 Esistono due opzioni per configurare l'ambiente locale per poter usare l'autenticazione Kerberos con Gestione connessione Hadoop. È possibile scegliere l'opzione che meglio si adatta alle circostanze.
@@ -90,7 +90,7 @@ Nel computer SSIS:
 
     Dopo aver eseguito questi comandi, riavviare il computer.
 
-2.  Verificare la configurazione con il comando **Ksetup**. L'output sarà simile a quello contenuto nell'esempio seguente:
+2.  Verificare la configurazione con il comando **Ksetup**. L'output dovrebbe avere un aspetto simile all'esempio seguente:
 
     ```
     C:> Ksetup

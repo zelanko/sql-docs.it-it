@@ -16,17 +16,17 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091214"
 ---
 # <a name="localdbgetversions-function"></a>Funzione LocalDBGetVersions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vengono restituite tutte le versioni del database locale di SQL Server Express disponibili nel computer.  
   
- **File di intestazione:** SQLNCLI. h  
+ **File di intestazione:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68091214"
   
 ## <a name="parameters"></a>Parametri  
  *pVersionNames*  
- [Output] Contiene i nomi di versioni del database locale sono disponibili nella workstation dell'utente.  
+ Output Contiene i nomi delle versioni del database locale disponibili nella workstation dell'utente.  
   
  *lpdwNumberOfVersions*  
- [Input/Output] Per l'input contiene il numero di slot per le versioni nel *pVersionNames* buffer.   
+ [Input/output] In input include il numero di slot per le versioni nel buffer di *pVersionNames* .   
 In fase di output, è contenuto il numero di versioni del database locale esistenti.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -56,12 +56,12 @@ In fase di output, è contenuto il numero di versioni del database locale esiste
  Buffer di input troppo corto. Troncamento non necessario.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Note  
- Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

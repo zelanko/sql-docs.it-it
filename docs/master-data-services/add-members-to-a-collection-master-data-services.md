@@ -13,10 +13,10 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729804"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Aggiungere membri a una raccolta (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73729804"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile aggiungere membri foglia e membri consolidati a una raccolta.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  

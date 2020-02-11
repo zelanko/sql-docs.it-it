@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578781"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drill-through, drill-down, sottoreport e aree dati nidificate
@@ -20,9 +20,9 @@ ms.locfileid: "65578781"
   
  ![rs_DrillThruDrilldownEtc](../../reporting-services/report-design/media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
- A. Report drill-through  
+ R. Report drill-through  
   
- B. sottoreport  
+ B. Sottoreport  
   
  C. Aree dati nidificate  
   
@@ -36,13 +36,13 @@ ms.locfileid: "65578781"
 ##  <a name="SummaryCharacteristics"></a> Riepilogo delle caratteristiche  
  Nella tabella seguente sono riepilogate le diverse caratteristiche. I dettagli sono descritti in apposite sezioni più avanti in questo argomento. Il drill-down non è incluso in questi confronti poiché la relativa azione per mostrare e nascondere può essere applicata a qualsiasi report.  
   
-|Caratteristica|Sottoreport|drill-through|annidata|  
+|Caratteristica|Sottoreport|Drill-through|annidata|  
 |-----------|---------------|------------------|------------|  
 |Utilizzo del set di dati del report principale|Uguale o diverso|Uguale o diverso|Uguale|  
 |Recupero di dati|I dati vengono recuperati contemporaneamente al report principale|I dati vengono recuperati un report drill-through alla volta|I dati vengono tutti recuperati contemporaneamente al report principale|  
 |Elaborazione ed esecuzione del rendering|Con il report principale|Quando si fa clic sul collegamento|Con il report principale|  
 |Modalità di esecuzione|Più lenta (ma recupera tutti i dati con il report principale)|Più veloce (ma non recupera tutti i dati con il report principale)|Più veloce (e recupera tutti i dati con il report principale)|  
-|Utilizzo di parametri|Sì|Sì|no|  
+|Utilizzo di parametri|Sì|Sì|No|  
 |Possibilità di riutilizzo|Come report o come sottoreport o report drill-through in altri report|Come report o come sottoreport o report drill-through in altri report|No|  
 |Posizione|Esterna al report principale, uguale o diversa dal server di report|Esterna al report principale, uguale al server di report|Interna al report principale|  
 |Visualizzazione|Nel report principale|In un report diverso|Nel report principale|  

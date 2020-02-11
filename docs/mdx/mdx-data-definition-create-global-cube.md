@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892155"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definizione dei dati MDX - CREATE GLOBAL CUBE
 
 
-  Crea e popola un cubo persistente in locale in base a un sottocubo da un cubo nel server. Non è necessaria una connessione al server per connettersi al cubo locale persistente. Per ulteriori informazioni sui cubi locali, vedere [local cubes &#40;Analysis Services-Multidimensional&#41;data](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
+  Crea e popola un cubo persistente in locale in base a un sottocubo da un cubo nel server. Non è necessaria una connessione al server per connettersi al cubo locale persistente. Per ulteriori informazioni sui cubi locali, vedere la pagina relativa ai [cubi locali &#40;Analysis Services-&#41;di dati multidimensionali ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -104,16 +104,16 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nome della dimensione nel cubo locale.  
   
- Dalla \<clausola Dim from >  
+ DALLA \<clausola dim from>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
  NOT_RELATED_TO_FACTS  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
- \<tipo di livello >  
+ \<tipo di livello>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un cubo locale è definito in termini di misure e definizioni che lo definiscono. Sono presenti due tipi di dimensioni:  
   
 -   Dimensioni di origine: si tratta delle dimensioni che fanno parti di uno o più cubi di origine.  
@@ -197,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [MDX-istruzioni &#40;per la definizione dei dati MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzione &#40;create Session Cube (MDX)&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Istruzione CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

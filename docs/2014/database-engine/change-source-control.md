@@ -1,5 +1,5 @@
 ---
-title: Modifica controllo del codice sorgente | Microsoft Docs
+title: Modificare il controllo del codice sorgente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812748"
 ---
 # <a name="change-source-control"></a>Modificare il controllo del codice sorgente
   Consente di creare e gestire le connessioni e le associazioni che collegano una soluzione o un progetto salvato localmente a una cartella del database del controllo del codice sorgente.  
   
 ## <a name="dialog-box-access"></a>Accesso alla finestra di dialogo  
- In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] selezionare un elemento in Esplora soluzioni. Nel **File** menu, fare clic su **controllo del codice sorgente**e quindi **Modifica controllo del codice sorgente**.  
+ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] selezionare un elemento in Esplora soluzioni. Scegliere **controllo del codice sorgente**dal menu **file** , quindi **modificare il controllo del codice sorgente**.  
   
 > [!NOTE]  
 >  Per accedere a questa finestra di dialogo, è inoltre possibile fare clic con il pulsante destro del mouse sull'elemento in Esplora soluzioni.  
   
 ## <a name="options"></a>Opzioni  
- **Eseguire l'associazione**  
+ **Associazione**  
  Consente di associare gli elementi selezionati a un determinato percorso del server del controllo del codice sorgente. È ad esempio possibile utilizzare questo pulsante per eseguire l'associazione all'ultima cartella e all'ultimo database noti del server del controllo del codice sorgente. Se non è possibile individuare una cartella o un database recente del server, verrà chiesto di specificarne un altro.  
   
  **Sfoglia**  
@@ -40,13 +40,13 @@ ms.locfileid: "62812748"
  **Colonne**  
  Consente di identificare le colonne da visualizzare e il relativo ordine di visualizzazione.  
   
- **Connect**  
+ **Connettere**  
  Consente di creare una connessione tra gli elementi selezionati e il server del controllo del codice sorgente.  
   
  **Connesso**  
  Consente di visualizzare lo stato di connessione di una soluzione o di un progetto selezionato.  
   
- **Disconnetti**  
+ **Disconnettere**  
  Consente di disconnettere la copia locale di una soluzione o di un progetto archiviata nel computer dalla corrispondente copia master memorizzata nel database. Utilizzare questo comando prima di disconnettere il computer dal server di controllo del codice sorgente, ad esempio durante una sessione di lavoro sul portatile in modalità offline.  
   
  **OK**  
@@ -64,24 +64,24 @@ ms.locfileid: "62812748"
  **Nome server**  
  Consente di visualizzare il nome del server del controllo del codice sorgente a cui è associato il progetto o la soluzione corrispondente.  
   
- **Soluzione/progetto**  
+ **Soluzione/Progetto**  
  Consente di visualizzare il nome di ogni soluzione e progetto presente nella selezione corrente.  
   
- **Sort**  
+ **Ordina**  
  Consente di eseguire l'ordinamento delle colonne visualizzate.  
   
- **Stato**  
+ **Status**  
  Consente di identificare lo stato di associazione e di connessione di un elemento. Le opzioni possibili sono:  
   
 |**Opzione**|**Descrizione**|  
 |----------------|---------------------|  
 |Valido|L'elemento è correttamente associato e connesso alla cartella del server di appartenenza.|  
-|Non validi|L'elemento è associato in modo non corretto o è disconnesso dalla cartella di appartenenza. Usare la **aggiungere al controllo del codice sorgente** comando anziché **associare** per questo elemento.|  
+|Non valido|L'elemento è associato in modo non corretto o è disconnesso dalla cartella di appartenenza. Usare il comando **Aggiungi al controllo del codice sorgente** anziché **associa** per questo elemento.|  
 |Unknown|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
 |Non incluso nel controllo del codice sorgente|L'elemento non è inserito nel controllo del codice sorgente.|  
   
- **Unbind**  
- Visualizzare il **controllo del codice sorgente** finestra di dialogo che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e disassociarli in modo permanente gli elementi dalle cartelle attuali.  
+ **Disassociazione**  
+ Consente di visualizzare la finestra di dialogo **controllo del codice sorgente** che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e di annullare in modo definitivo gli elementi delle cartelle presenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controllo del codice sorgente di Esplora soluzioni](../../2014/database-engine/solution-explorer-source-control.md)  

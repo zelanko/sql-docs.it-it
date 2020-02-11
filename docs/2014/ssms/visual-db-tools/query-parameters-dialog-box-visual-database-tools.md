@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61707b6ca955ee137cbbc93a6a108dc3930e1b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63010701"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>Finestra di dialogo Parametri query (Visual Database Tools)
   Questa finestra di dialogo consente di immettere valori per i parametri definiti nella query. Viene visualizzata quando si esegue una query contenente parametri che richiedono la presenza dell'utente finale in fase di esecuzione.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Elenca i parametri definiti per la query eseguita. Se la query contiene parametri denominati, i nomi vengono visualizzati nell'elenco. Se nella query sono contenuti parametri senza nome, per ogni parametro della query verranno elencati i nomi di parametro definiti dal sistema.  
   
  **Valore**  
@@ -40,6 +40,6 @@ WHERE   (LastName = @Param1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Esecuzione di query con parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

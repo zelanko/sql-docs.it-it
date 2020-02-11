@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154998"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
@@ -29,7 +29,7 @@ ms.locfileid: "70154998"
   
  Gli sviluppatori che intendono attivare la funzionalità di stampa sul lato client in barre degli strumenti di terze parti possono accedere al controllo ActiveX tramite l'oggetto COM **RSClientPrint**. La distribuzione del controllo è consentita e gratuita. Se si desidera utilizzare il controllo, leggere i consigli seguenti:  
   
--   Utilizzare il controllo per migliorare la stampa di report per il Web. È possibile specificare l'oggetto in qualsiasi script o linguaggio di programmazione compatibile con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Il controllo non è progettato per applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Form.  
+-   Utilizzare il controllo per migliorare la stampa di report per il Web. È possibile specificare l'oggetto in qualsiasi linguaggio di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]programmazione compatibile con o nello script. Il controllo non è progettato per applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Form.  
   
 -   Copiare il file con estensione cab dai file di programma di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e aggiungerlo alla base di codice dell'applicazione personalizzata.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "70154998"
 -   Leggere gli argomenti della documentazione online relativi al rendering in formato immagine (EMF) per comprendere le modalità di rendering delle pagine nell'anteprima e nell'output di stampa.  
   
 ## <a name="rsprintclient-overview"></a>Cenni preliminari su RSPrintClient  
- Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per stampare il report, il controllo ActiveX **RSPrintClient** usa l'estensione per il rendering delle immagini (EMF). Vengono utilizzate le informazioni sul dispositivo EMF seguenti: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
+ Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** Il controllo ActiveX usa l'estensione per il rendering delle immagini (EMF) per stampare il report. Vengono utilizzate le informazioni sul dispositivo EMF seguenti: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
   
-### <a name="language-support"></a>Supporto delle lingue  
+### <a name="language-support"></a>Supporto per le lingue  
  Il controllo include stringhe testo per l'interfaccia utente in diverse lingue e accetta valori di input in vari sistemi di misura. La lingua e il sistema di misura usati vengono determinati dalle proprietà **Culture** e **UICulture**. che accettano entrambe valori LCID. Se si specifica un identificatore LCID per una lingua che è una variante di una lingua supportata, verrà utilizzata la lingua più simile corrispondente. Se si specifica un LCID di una lingua non supportata e per la quale non esiste un LCID simile corrispondente, verrà utilizzato l'inglese (Stati Uniti).  
   
 ## <a name="using-rsclientprint-in-code"></a>Utilizzo di RSClientPrint nel codice  
@@ -57,25 +57,25 @@ ms.locfileid: "70154998"
   
  Per conoscere i valori usati per le dimensioni e i margini delle pagine, è possibile recuperare i valori predefiniti con il metodo **GetProperties**:  
   
--   **PageHeight** e **PageWidth** specificano l'altezza e la larghezza predefinite per la pagina. All'avvio del controllo di stampa, i valori di queste proprietà vengono utilizzati per selezionare le dimensioni del foglio più vicine a quelle del report per la stampante selezionata. Se **PageWidth** è maggiore di **PageHeight**, viene impostato l'orientamento orizzontale. In caso contrario, l'orientamento è verticale.  
+-   **PageHeight** e **PageWidth** specificano l'altezza e la larghezza della pagina predefinite. All'avvio del controllo di stampa, i valori di queste proprietà vengono utilizzati per selezionare le dimensioni del foglio più vicine a quelle del report per la stampante selezionata. Se **PageWidth** è maggiore di **PageHeight**, viene impostato l'orientamento orizzontale. In caso contrario, l'orientamento è verticale.  
   
--   L'impostazione predefinita per **LeftMargin**, **RightMargin**, **TopMargin** e **BottomMargin** è di 12,2 mm.  
+-   Per impostazione predefinita, **LeftMargin**, **RightMargin**, **supermargin**e **bottomMargin** sono tutti impostati su 12,2 millimetri.  
   
  Queste proprietà sono archiviate nell'insieme di proprietà **Item** nel server di report. I valori vengono sovrascritti ogni volta che la definizione di un report viene aggiornata.  
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Type|LS|Valore predefinito|Descrizione|  
+|Proprietà|Type|RW|Predefinito|Descrizione|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
-|MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
-|MarginTop|Double|LS|Impostazione del report|Recupera o imposta il margine superiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
-|MarginBottom|Double|LS|Impostazione del report|Recupera o imposta il margine inferiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
-|PageWidth|Double|LS|Impostazione del report|Recupera o imposta la larghezza della pagina. Il valore predefinito è di 215,9 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
-|PageHeight|Double|LS|Impostazione del report|Recupera o imposta l'altezza della pagina. Il valore predefinito è di 279,4 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
-|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Se, ad esempio, un utente digita `3`, il valore verrà misurato in millimetri se la lingua è francese o in pollici se la lingua è l'inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Per il testo della finestra di dialogo di stampa sono disponibili le lingue seguenti: cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|LS|False|Specifica se il controllo genera un comando GET per il server di report per avviare una sessione per la stampa fuori sessione.|  
+|MarginLeft|DOUBLE|RW|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
+|MarginRight|DOUBLE|RW|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
+|MarginTop|DOUBLE|RW|Impostazione del report|Recupera o imposta il margine superiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
+|MarginBottom|DOUBLE|RW|Impostazione del report|Recupera o imposta il margine inferiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
+|PageWidth|DOUBLE|RW|Impostazione del report|Recupera o imposta la larghezza della pagina. Il valore predefinito è di 215,9 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
+|PageHeight|DOUBLE|RW|Impostazione del report|Recupera o imposta l'altezza della pagina. Il valore predefinito è di 279,4 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
+|Impostazioni cultura|Int32|RW|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Se, ad esempio, un utente `3`digita, il valore verrà misurato in millimetri se la lingua è francese o in pollici se la lingua è l'inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|string|RW|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Per il testo della finestra di dialogo di stampa sono disponibili le lingue seguenti: cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Autentica|Boolean|RW|False|Specifica se il controllo genera un comando GET per il server di report per avviare una sessione per la stampa fuori sessione.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando impostare la proprietà Authenticate  
  Quando si stampa nell'ambito di una sessione del browser, l'impostazione della proprietà `Authenticate` non è necessaria. Nel contesto di una sessione attiva, tutte le richieste dal controllo di stampa al server di report vengono gestite tramite il browser. Il browser imposta le variabili di sessione necessarie per la comunicazione al server di report.  
@@ -104,9 +104,9 @@ ms.locfileid: "70154998"
   
 |Argomento|I/O|Type|Descrizione|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|Specifica la directory virtuale del server di report, ad esempio https://adventure-works/reportserver).|  
-|ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|In|String|Nome breve del report (nell'esempio precedente è Employee Sales Summary) che viene visualizzato nella finestra di dialogo di stampa e nella coda di stampa.|  
+|ServerPath|In|string|Specifica la directory virtuale del server di report, https://adventure-works/reportserver)ad esempio.|  
+|ReportPathParameters|In|string|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|In|string|Nome breve del report (nell'esempio precedente è Employee Sales Summary) che viene visualizzato nella finestra di dialogo di stampa e nella coda di stampa.|  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio HTML riportato di seguito viene illustrato come specificare il file con estensione cab, il metodo **Print** e le proprietà in JavaScript:  
@@ -143,7 +143,7 @@ ms.locfileid: "70154998"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stampare i report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Stampare report &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Stampa di report &#40;Generatore report e SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini](../../image-device-information-settings.md)  
   
   

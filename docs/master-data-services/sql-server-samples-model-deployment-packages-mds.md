@@ -9,15 +9,15 @@ ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - Master Data Services
-- campione
+- sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727874"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727874"
  Per istruzioni su come distribuire i pacchetti di modelli di esempio, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). I pacchetti di modelli di esempio vengono distribuiti con lo [strumento MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Aggiornamenti di esempio in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Aggiornamenti di esempio in[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  I pacchetti di esempio sono stati aggiornati per supportare le nuove funzionalità seguenti.  
 > 

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un modello usando il visualizzatore Microsoft Time Series | Microsoft Docs
+title: Visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085975"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series
-  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series è un algoritmo di regressione che consente di creare modelli di data mining per la stima di colonne continue, relative ad esempio alle vendite di un prodotto, in uno scenario di previsione. Questi modelli Time Series possono includere informazioni in base ad algoritmi diversi:  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Time Series in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining [!INCLUDE[msCoName](../../includes/msconame-md.md)] compilati con l'algoritmo Time Series. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series è un algoritmo di regressione che consente di creare modelli di data mining per la stima di colonne continue, relative ad esempio alle vendite di un prodotto, in uno scenario di previsione. Questi modelli Time Series possono includere informazioni in base ad algoritmi diversi:  
   
 -   Algoritmo ARTxp, ottimizzato per le stime a breve termine.  
   
@@ -39,17 +40,18 @@ ms.locfileid: "66085975"
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Schede del visualizzatore  
+##  <a name="BKMK_ViewerTabs"></a>Schede del Visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series include le schede seguenti:  
   
 -   [Modello](#BKMK_Tree)  
   
 -   [Grafici](#BKMK_Charts)  
   
- **Nota** Le informazioni visualizzate per il contenuto del modello e nella Legenda data mining variano a seconda dell'algoritmo usato dal modello. Tuttavia, le schede **Modello** e **Grafici** sono identiche indipendentemente dalla combinazione di algoritmi.  
+ **Nota** Le informazioni visualizzate per il contenuto del modello e nella legenda data mining dipendono dall'algoritmo utilizzato dal modello. Tuttavia, le schede **Modello** e **Grafici** sono identiche indipendentemente dalla combinazione di algoritmi.  
   
-###  <a name="BKMK_Tree"></a> Modello  
- Quando si compila un modello Time Series, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il modello completato viene presentato come un albero. Se i dati contengono più serie di case, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero distinto per ognuna di esse. Si supponga ad esempio di elaborare stime di vendita per le aree Pacifico, Nord America ed Europa. Le stime per ognuna di queste aree sono serie di casi. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compila un albero separato per ogni serie. Per visualizzare una determinata serie, selezionarla nell'elenco **Albero** .  
+###  <a name="BKMK_Tree"></a>Modello  
+ Quando si compila un modello Time Series, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il modello completato viene presentato come un albero. Se i dati contengono più serie di case, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero distinto per ognuna di esse. Si supponga ad esempio di elaborare stime di vendita per le aree Pacifico, Nord America ed Europa. Le stime per ognuna di queste aree sono serie di casi. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compila un albero separato per ogni serie. Per visualizzare una determinata serie, selezionarla nell'elenco **Albero** .  
   
  Per ogni albero, il modello Time Series contiene un nodo **Tutti** e quindi si divide in una serie di nodi che rappresentano le strutture periodiche individuate dall'algoritmo. È possibile fare clic su ogni nodo per visualizzare statistiche, ad esempio il numero di case e l'equazione.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "66085975"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a> Grafici  
+###  <a name="BKMK_Charts"></a>Grafici  
  Nella scheda **Grafici** viene visualizzato un grafico che indica il comportamento dell'attributo stimato nel corso del tempo, oltre a 5 valori futuri stimati. L'asse verticale del grafico rappresenta il valore della serie, mentre l'asse orizzontale rappresenta il tempo.  
   
 > [!NOTE]  
@@ -86,9 +88,9 @@ ms.locfileid: "66085975"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](time-series-model-query-examples.md)   
+ [Esempi di query sul modello Time Series](time-series-model-query-examples.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)  
   
   

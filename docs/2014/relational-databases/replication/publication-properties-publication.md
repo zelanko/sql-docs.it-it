@@ -1,5 +1,5 @@
 ---
-title: Proprietà di pubblicazione della replica di SQL Server - | Microsoft Docs
+title: Proprietà pubblicazione replica di SQL Server-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022459"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Proprietà di pubblicazione della replica di SQL Server 
-  In questa sezione vengono fornite informazioni su tutte le pagine del **proprietà pubblicazione** nella finestra di dialogo. 
+# <a name="sql-server-replication-publication-properties"></a>Proprietà pubblicazione replica di SQL Server 
+  In questa sezione vengono fornite informazioni su tutte le pagine della finestra di dialogo **Proprietà pubblicazione** . 
 
 ## <a name="general"></a>Generale
   La pagina **Generale** della finestra di dialogo **Proprietà pubblicazione** contiene informazioni di base sulla pubblicazione, tra cui il nome, la descrizione e i criteri di scadenza della sottoscrizione.  
   
 ### <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Nome del database della pubblicazione (informazione di sola lettura).  
   
  **Database**  
@@ -47,7 +47,7 @@ ms.locfileid: "63022459"
  Tipo di pubblicazione (informazione di sola lettura).  
   
  **Scadenza sottoscrizione**  
- Selezionare una delle opzioni per la scadenza della sottoscrizione: **Le sottoscrizioni non hanno scadenza** oppure **Le sottoscrizioni scadono**, con un periodo di tempo esplicito (**Intervallo**).  
+ Consente di selezionare una delle opzioni disponibili per la scadenza della sottoscrizione, ovvero **Le sottoscrizioni non hanno scadenza** oppure **Le sottoscrizioni scadono**, con un periodo di tempo esplicito (**Intervallo**).  
   
  Per le pubblicazioni snapshot e transazionali, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di accettare l'impostazione predefinita **Le sottoscrizioni non hanno scadenza**.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63022459"
  Per altre informazioni, vedere [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Livello di compatibilità**  
- Solo per[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Solo per le pubblicazioni di tipo merge. Consente di selezionare la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minima richiesta per i Sottoscrittori che eseguono la sincronizzazione con la pubblicazione. Il livello di compatibilità viene determinato da una serie di regole associate.  
+ Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Solo per le pubblicazioni di tipo merge. Consente di selezionare la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minima richiesta per i Sottoscrittori che eseguono la sincronizzazione con la pubblicazione. Il livello di compatibilità viene determinato da una serie di regole associate.  
 
-## <a name="filter-rows"></a>Filtrare le righe
+## <a name="filter-rows"></a>Filtra righe
 
   La pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione** consente di aggiungere, modificare o eliminare filtri progettati per eseguire le operazioni seguenti:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "63022459"
  **Tabelle filtrate**  
  Questo riquadro viene popolato di filtri mano a mano che vengono aggiunti agli articoli di tabella nella pubblicazione. Le tabelle con filtri di riga vengono visualizzate nel riquadro come nodi di livello principale. Per le pubblicazioni di tipo merge, le tabelle alle quali sono stati estesi i filtri tramite un filtro di join vengono visualizzate come nodi figlio.  
   
- **Aggiungi**  
- Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic su **Aggiungi** per una pubblicazione di tipo merge verranno visualizzate tre opzioni: **Aggiungi filtro**; **Aggiungi join per estendere il filtro selezionato**; **Genera filtri automaticamente**.  
+ **Aggiungere**  
+ Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic su **Aggiungi** per una pubblicazione di tipo merge verranno visualizzate tre opzioni: **Aggiungi filtro**, **Aggiungi join per estendere il filtro selezionato**e **Genera filtri automaticamente**.  
   
 -   Selezionare l'opzione **Aggiungi filtro** per visualizzare la finestra di dialogo **Aggiungi filtro** , che consente di applicare i filtri di riga a un articolo di tabella. Nella finestra di dialogo **Aggiungi filtro** è possibile, ad esempio, specificare che una tabella contenente dati sui clienti possa contenere solo dati sui clienti francesi quando viene replicata nei Sottoscrittori.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63022459"
  **Trova tabella**  
  Solo per le pubblicazioni di tipo merge. Fare clic su **Trova tabella** per trovare una tabella in un'albero di filtro complesso. In un database con relazioni complesse una tabella può essere unita in join a più tabelle e pertanto può apparire in più posizioni all'interno dell'albero di filtro.  
   
- La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<NomeTabella>** .  
+ La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<nometabella>** .  
   
  Selezionare un nodo collegamento nel riquadro e fare clic su **Trova tabella** . Il riquadro verrà espanso e la tabella verrà evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63022459"
   
 Questa pagina consente di:  
   
--   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per altre informazioni, vedere [trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md) documentazione di Windows per altre informazioni.  
+-   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [trasferire snapshot tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
   
     > [!NOTE]  
     >  Le modifiche apportate a qualsiasi impostazione relativa al protocollo FTP richiedono la generazione di un nuovo snapshot.  
@@ -141,7 +141,7 @@ Questa pagina consente di:
  Quando un Sottoscrittore si connette al server di pubblicazione o al server di distribuzione e richiede l'accesso alla pubblicazione, l'account di accesso del Sottoscrittore viene confrontato con le informazioni di autenticazione contenute nell'elenco di accesso alla pubblicazione. Ciò garantisce un maggior livello di sicurezza del server di pubblicazione, impedendo che gli account di accesso del server di pubblicazione e del server di distribuzione vengano utilizzati da uno strumento client per apportare modifiche direttamente nel server di pubblicazione. Per altre informazioni, vedere [Proteggere il server di pubblicazione](security/secure-the-publisher.md).  
   
 ### <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una nuova voce all'elenco. È possibile aggiungere solo gli account di accesso, gli account o i nomi dei gruppi già definiti sia nel server di pubblicazione sia nel server di distribuzione. Tali account di accesso, account e nomi di gruppi vengono definiti in entrambi i server nei casi in cui si utilizzino account di dominio o siano stati creati account locali in entrambi i server.  
   
  **Rimuovi**  
@@ -153,7 +153,7 @@ Questa pagina consente di:
 
   Questa pagina consente di:  
   
--   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per altre informazioni, vedere [trasferire snapshot tramite FTP](transfer-snapshots-through-ftp.md) documentazione di Windows per altre informazioni.  
+-   Impostare le proprietà per il recapito dello snapshot tramite FTP (File Transfer Protocol). Per ulteriori informazioni, vedere [trasferire snapshot tramite](transfer-snapshots-through-ftp.md) la documentazione di Windows FTP.  
   
     > [!NOTE]  
     >  Le modifiche apportate a qualsiasi impostazione relativa al protocollo FTP richiedono la generazione di un nuovo snapshot.  
@@ -186,7 +186,7 @@ Questa pagina consente di:
   La pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione** consente di definire le partizioni di dati per pubblicazioni di tipo merge che utilizzano filtri con parametri. Dopo aver definito le partizioni è possibile generare gli snapshot per queste partizioni, specificando set di dati iniziali diversi per Sottoscrittori diversi in base alle proprietà della connessione, ovvero nome dell'account di accesso e/o nome del computer, dei Sottoscrittori. È inoltre possibile consentire ai Sottoscrittori di richiedere il recapito e la generazione di snapshot nel caso in cui questi non dispongano di uno snapshot per la propria partizione al momento della prima sincronizzazione. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su **Aggiungi** per definire una partizione. Nella finestra di dialogo **Aggiungi partizione dati** specificare i valori per **HOST_NAME()** e/o **SUSER_SNAME()** e definire una pianificazione per l'aggiornamento degli snapshot.  
   
  **Modifica**  
@@ -221,7 +221,7 @@ Questa pagina consente di:
  **Percorso dei file di snapshot**  
  Consente di selezionare il percorso per l'archiviazione dei file di snapshot. Questi file possono essere archiviati nel percorso predefinito. È inoltre possibile archiviarli in un percorso alternativo in sostituzione o in aggiunta al percorso predefinito. I file archiviati in un percorso alternativo possono essere archiviati.  
   
--   Selezionare **Inserisci i file nella cartella predefinita** per utilizzare la cartella dello snapshot predefinita per il server di pubblicazione. Il percorso dello snapshot in questa finestra di dialogo è di sola lettura, poiché può essere modificato per il server di pubblicazione solo nella finestra di dialogo **Proprietà server di distribuzione** . Per altre informazioni, vedere [specificare la posizione predefinita degli Snapshot](snapshot-options.md#snapshot-folder-locations).   
+-   Selezionare **Inserisci i file nella cartella predefinita** per utilizzare la cartella dello snapshot predefinita per il server di pubblicazione. Il percorso dello snapshot in questa finestra di dialogo è di sola lettura, poiché può essere modificato per il server di pubblicazione solo nella finestra di dialogo **Proprietà server di distribuzione** . Per ulteriori informazioni, vedere [specificare la posizione predefinita degli snapshot](snapshot-options.md#snapshot-folder-locations).   
 -   Selezionare **Inserisci i file nella cartella seguente** per specificare un percorso alternativo in sostituzione o in aggiunta al percorso predefinito. Immettere un percorso nella casella di testo oppure fare clic su **Sfoglia** per selezionare un percorso. Selezionare **Comprimi i file di snapshot in questa cartella** per comprimere i file nel percorso dello snapshot alternativo. Il percorso alternativo può trovarsi in un altro server, in un'unità di rete oppure in un supporto rimovibile, ad esempio un CD-ROM o un disco rimovibile. Per ulteriori informazioni, vedere [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) e [Compressed Snapshots](compressed-snapshots.md).  
   
  **Script aggiuntivi**  
@@ -239,7 +239,7 @@ Questa pagina consente di:
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
  [Pubblicare dati e oggetti di database](publish/publish-data-and-database-objects.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Sicurezza della replica di SQL Server](security/view-and-modify-replication-security-settings.md)  
- [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Sicurezza replica di SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Inizializzazione di una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
   
   

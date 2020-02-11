@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727941"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Autorizzazioni utenti e gruppi sovrapposte (Master Data Services)
@@ -33,11 +33,11 @@ ms.locfileid: "73727941"
   
  Se un utente è un membro di più gruppi e questi gruppi dispongono dell'accesso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], si applicano le regole seguenti:  
   
--   **Deny** sostituisce tutte le altre autorizzazioni. Se l'autorizzazione per gli oggetti è **Deny** in un gruppo, l'autorizzazione effettiva è deny.  
+-   **Nega** esegue l'override di tutte le altre autorizzazioni. Se l'autorizzazione per gli oggetti è **Deny** in un gruppo, l'autorizzazione effettiva è deny.  
   
 -   L'autorizzazioni di accesso è un'unione di tutte le autorizzazioni valide per un gruppo. Se l'autorizzazione per gli oggetti è **Create** da un gruppo e **Update** da altro gruppo, l'autorizzazione valida è **Create** e **Update**.  
   
- Queste regole si applicano a entrambe le schede **Modelli** e **Membri gerarchia** . Le autorizzazioni vengono risolte per ogni scheda e quindi combinate. Per altre informazioni, vedere [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Queste regole si applicano a entrambe le schede **Modelli** e **Membri gerarchia** . Le autorizzazioni vengono risolte per ogni scheda e quindi combinate. Per altre informazioni, vedere [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Nell'interfaccia utente è possibile visualizzare la risoluzione delle autorizzazioni di utenti e gruppi sovrapposte. Nelle schede **Modelli** e **Membri gerarchia** è presente un elenco a discesa da cui è possibile scegliere **Valide** per visualizzare le autorizzazioni valide.  

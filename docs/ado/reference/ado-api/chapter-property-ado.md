@@ -18,14 +18,14 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920101"
 ---
 # <a name="chapter-property-ado"></a>Proprietà Chapter (ADO)
-Ottiene o imposta un DB OLE **capitolo** oggetto da/in un [interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) oggetto. Quando si usa **put_Chapter** per impostare le **capitolo** dell'oggetto, un subset di righe viene trasformato in un oggetto ADO [oggetto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Consente di impostare il capitolo corrente dei **set di righe**oggetto. Si tratta di una proprietà di lettura/scrittura.  
+Ottiene o imposta un oggetto OLE DB **capitolo** da/in un oggetto di [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) . Quando si utilizza **put_Chapter** per impostare l'oggetto **capitolo** , un subset di righe viene trasformato in un oggetto [oggetto recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Viene impostato il capitolo corrente dell'oggetto **set di righe**. Si tratta di una proprietà di lettura/scrittura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +36,13 @@ HRESULT put_Chapter([in] long lChapter);
   
 ## <a name="parameters"></a>Parametri  
  *plChapter*  
- Puntatore all'handle del capitolo.  
+ Puntatore all'handle di un capitolo.  
   
  *LChapter*  
- Handle del capitolo.  
+ Handle di un capitolo.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Metodo di questa proprietà restituisce i valori HRESULT standard, tra cui S_OK ed E_FAIL.  
+ Questo metodo di proprietà restituisce i valori HRESULT standard, inclusi S_OK e E_FAIL.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

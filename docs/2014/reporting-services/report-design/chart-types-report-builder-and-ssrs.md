@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106270"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipi di grafico (Generatore report e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106270"
   
  È possibile modificare il tipo di grafico dopo averlo creato. Per altre informazioni, vedere [Modificare un tipo di grafico &#40;Generatore report e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Molti esempi di questi tipi di grafici sono disponibili come report di esempio. Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Molti esempi di questi tipi di grafici sono disponibili come report di esempio. Per ulteriori informazioni sul download di report di esempio [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo di grafico|Visualizzazione di dati proporzionali|Visualizzazione di dati azionari|Visualizzazione di dati lineari|Visualizzazione di dati multivalore|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  

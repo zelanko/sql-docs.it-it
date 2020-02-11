@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891720"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB
@@ -34,7 +34,7 @@ ms.locfileid: "62891720"
   
 4.  Verificare che l'opzione **Usa autenticazione di Windows** sia selezionata nel gruppo **Accesso al server** .  
   
-5.  Nel **connessione al database** gruppo, il **selezionare o immettere un nome di database** digitare o selezionare `AdventureWorksDW2012`.  
+5.  Nella casella **selezionare o immettere un nome di database** nel gruppo `AdventureWorksDW2012` **Connetti a un database** Digitare o selezionare.  
   
 6.  Fare clic su **Test connessione** per verificare che le impostazioni di connessione specificate siano valida.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "62891720"
 10. Fare clic su **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

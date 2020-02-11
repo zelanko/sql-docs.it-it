@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400960"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorare i caricamenti in parallelo data warehouse
@@ -26,7 +26,7 @@ Monitorare i carichi di [dwloader](dwloader.md) attivi e recenti usando la conso
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Indipendentemente dal metodo utilizzato per monitorare un carico, è necessario che l'account di accesso disponga dell'autorizzazione per accedere alle origini dati sottostanti. 
 
 <!-- MISSING LINKS
@@ -47,13 +47,13 @@ Le sezioni seguenti descrivono come monitorare i carichi.
   
 Per informazioni sui metadati relativi al carico visualizzato nella console di amministrazione, vedere le viste di sistema seguenti:  
   
--   [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>Per monitorare i caricamenti utilizzando viste di sistema  
 Per monitorare i caricamenti attivi e recenti usando le visualizzazioni SQL Server PDW, seguire questa procedura. Per ogni vista di sistema utilizzata, vedere la documentazione relativa a tale vista per informazioni sulle colonne e i valori potenziali restituiti dalla vista.  

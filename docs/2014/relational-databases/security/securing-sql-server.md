@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891619"
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
@@ -49,7 +49,7 @@ ms.locfileid: "68891619"
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurare un Windows Firewall per l'accesso al servizio SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Apertura di porte specifiche su un firewall per consentire l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
@@ -108,7 +108,7 @@ GO
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Creazione di un certificato per l'uso con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
-|Utilizzo di un certificato con mirroring del database|[Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|Utilizzo di un certificato con mirroring del database|[Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## <a name="application-security"></a>Sicurezza dell'applicazione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le procedure consigliate per la sicurezza comprendono la scrittura di applicazioni client protette.  
@@ -141,6 +141,6 @@ GO
 ## <a name="related-content"></a>Contenuto correlato  
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138895"
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
@@ -67,7 +67,7 @@ ms.locfileid: "63138895"
  **Nuova cartella**  
  Visualizza la finestra di dialogo **Nuova cartella** . Questa opzione consente di creare una nuova cartella figlio sotto la cartella selezionata nell'elenco a discesa **Cerca in** .  
   
-## <a name="views"></a>Visualizzazioni  
+## <a name="views"></a>Viste  
  Include opzioni per la riorganizzazione e la visualizzazione del contenuto dell'elemento selezionato nell'elenco a discesa **Viste** .  
   
  **Anteprima**  

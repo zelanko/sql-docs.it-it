@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892466"
 ---
 # <a name="concatenation-operators"></a>Operatori di concatenazione
@@ -35,7 +35,7 @@ FROM [Adventure Works]
  Se le stringhe utilizzate in un'operazione di concatenazione hanno le stesse regole di confronto, le regole di confronto dell'input verranno utilizzate anche per la stringa risultante dalla concatenazione. Se invece le stringhe utilizzate in un'operazione di concatenazione hanno regole di confronto diverse, le regole di confronto della stringa risultante dalla concatenazione verranno determinate in base alla precedenza delle regole di confronto. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento &#40;agli operatori MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Sintassi &#40;MDX degli operatori&#41;](../mdx/operators-mdx-syntax.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

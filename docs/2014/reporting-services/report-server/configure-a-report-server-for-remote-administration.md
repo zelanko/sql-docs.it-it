@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104100"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
@@ -34,7 +34,7 @@ ms.locfileid: "66104100"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  A tale scopo, è necessario accedere al sistema localmente ed essere membri del gruppo Administrators locale. Non è possibile modificare le impostazioni di Windows Firewall di un computer remoto tramite una connessione remota.  
   
  Se si desidera abilitare l'amministrazione remota per un utente non amministratore, è necessario concedere all'account le autorizzazioni per l'attivazione remota DCOM (Distributed Component Object Model). In questo argomento vengono fornite le istruzioni per la configurazione del server per l'accesso da parte di utenti non amministratori.  
@@ -60,9 +60,9 @@ ms.locfileid: "66104100"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Per aprire porte in Windows Firewall  
   
-1.  [Configurare un Firewall di Windows per l'accesso al motore di Database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
+2.  [Configurare un firewall per l'accesso al server di report](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Per configurare connessioni remote al database del server di report  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66104100"
   
 1.  Nel menu Start, scegliere **Strumenti di amministrazione**e quindi **Servizi componenti**.  
   
-     Per Windows Vista, nel menu Start, scegliere **tutti i programmi**, fare clic su **eseguito**, quindi immettere `mmc comexp.msc`.  
+     Per Windows Vista, nel menu Start fare clic su **tutti i programmi**, **Esegui**, quindi immettere `mmc comexp.msc`.  
   
 2.  Aprire la cartella Component Services.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66104100"
   
 3.  Fare clic con il pulsante destro del mouse su **Controllo WMI**e scegliere **Proprietà**.  
   
-4.  Fare clic su **Sicurezza**.  
+4.  Fare clic su **Security**.  
   
 5.  Aprire la cartella Root.  
   

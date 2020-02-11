@@ -1,5 +1,5 @@
 ---
-title: Associazione di parametri ODBC | Microsoft Docs
+title: Parametri di binding ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107632"
 ---
 # <a name="binding-parameters-odbc"></a>Associazione di parametri ODBC
-Ogni parametro in un'istruzione SQL deve essere associato, oppure *associata,* a una variabile nell'applicazione prima che venga eseguita l'istruzione. Quando l'applicazione associa una variabile a un parametro, descrive la variabile indirizzo, tipo di dati C e così via - il driver. Descrive anche il parametro - tipo di dati SQL, precisione e così via. Il driver di queste informazioni vengono memorizzate nella struttura mantiene per l'istruzione e utilizza le informazioni per recuperare il valore dalla variabile quando viene eseguita l'istruzione.  
+Ogni parametro in un'istruzione SQL deve essere *associato o associato* a una variabile nell'applicazione prima che venga eseguita l'istruzione. Quando l'applicazione associa una variabile a un parametro, descrive il tipo di dati di indirizzo variabile, C e così via al driver. Descrive anche il parametro stesso: tipo di dati SQL, precisione e così via. Il driver archivia queste informazioni nella struttura che gestisce per tale istruzione e utilizza le informazioni per recuperare il valore dalla variabile quando viene eseguita l'istruzione.  
   
- I parametri possono essere associati o riassociati in qualunque momento prima che venga eseguita un'istruzione. Se un parametro è riassociato dopo che viene eseguita un'istruzione, fino a quando non viene eseguita nuovamente l'istruzione non si applica l'associazione. Per associare un parametro a una variabile diversa, un'applicazione riassocia semplicemente il parametro con la nuova variabile; l'associazione precedente viene rilasciata automaticamente.  
+ I parametri possono essere associati o riassociati in qualsiasi momento prima dell'esecuzione di un'istruzione. Se un parametro viene riassociato dopo l'esecuzione di un'istruzione, l'associazione non viene applicata fino a quando l'istruzione non viene eseguita di nuovo. Per associare un parametro a una variabile diversa, un'applicazione riassocia semplicemente il parametro alla nuova variabile. l'associazione precedente viene rilasciata automaticamente.  
   
- Una variabile rimane associata a un parametro fino a quando una variabile diversa è associata al parametro, fino a quando tutti i parametri sono non associati, chiamare **SQLFreeStmt** con l'opzione SQL_RESET_PARAMS o finché non viene rilasciato l'istruzione. Per questo motivo, l'applicazione deve essere certi che le variabili non vengono liberate fino a dopo che sono non associati. Per altre informazioni, vedere [allocazione e liberazione di buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Una variabile rimane associata a un parametro fino a quando non viene associata una variabile diversa al parametro, fino a quando tutti i parametri non sono associati chiamando **SQLFreeStmt** con l'opzione SQL_RESET_PARAMS o fino a quando l'istruzione non viene rilasciata. Per questo motivo, l'applicazione deve assicurarsi che le variabili non vengano liberate fino a quando non sono associate. Per altre informazioni, vedere [allocazione e liberazione dei buffer](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Poiché le associazioni di parametro sono solo le informazioni archiviate nella struttura gestita dal driver per l'istruzione, possono essere impostate in qualsiasi ordine. Sono anche indipendenti dell'istruzione SQL eseguita. Si supponga, ad esempio, un'applicazione associa tre parametri, quindi esegue l'istruzione SQL seguente:  
+ Poiché le associazioni di parametro sono solo le informazioni archiviate nella struttura gestita dal driver per l'istruzione, possono essere impostate in qualsiasi ordine. Sono inoltre indipendenti dall'istruzione SQL eseguita. Si supponga, ad esempio, che un'applicazione associ tre parametri e quindi esegua l'istruzione SQL seguente:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Se quindi l'applicazione esegue immediatamente l'istruzione SQL  
+ Se l'applicazione esegue immediatamente l'istruzione SQL  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- sullo stesso handle di istruzione, le associazioni di parametro per il **Inserisci** istruzione vengono utilizzati in quanto queste sono le associazioni archiviate nella struttura di istruzione. Nella maggior parte dei casi, questa è una pratica di programmazione scarsa e deve essere evitata. Al contrario, l'applicazione deve chiamare **SQLFreeStmt** con l'opzione SQL_RESET_PARAMS a disassocia tutti i parametri precedenti e quindi associare nuovi.  
+ nello stesso handle di istruzione vengono usate le associazioni di parametro per l'istruzione **Insert** , perché si tratta delle associazioni archiviate nella struttura dell'istruzione. Nella maggior parte dei casi, si tratta di una procedura di programmazione insufficiente e deve essere evitata. Al contrario, l'applicazione deve chiamare **SQLFreeStmt** con l'opzione SQL_RESET_PARAMS per annullare l'associazione di tutti i parametri obsoleti e quindi associare quelli nuovi.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

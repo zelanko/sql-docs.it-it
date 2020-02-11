@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148709"
 ---
 # <a name="setting-properties---smo"></a>Impostazione delle proprietà - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Le proprietà sono valori in cui sono archiviate informazioni descrittive sull'oggetto. Le opzioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] configurazione, ad esempio, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> rappresentate dalle proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
+  Le proprietà sono valori in cui sono archiviate informazioni descrittive sull'oggetto. Le opzioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurazione, ad esempio, sono <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> rappresentate dalle proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
   
  `objInstance.PropertyName`  
   
@@ -58,11 +58,11 @@ ms.locfileid: "70148709"
  Il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> imposta il comportamento di caricamento della proprietà per la parte restante dell'applicazione o fino a quando non viene reimpostato. È possibile salvare il comportamento originale utilizzando il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> e ripristinarlo come necessario.  
   
 ## <a name="examples"></a>Esempi  
-Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Ottenere e impostare una proprietà in Visual Basic  
- In questo esempio di codice viene illustrato come <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> ottenere la proprietà <xref:Microsoft.SqlServer.Management.Smo.Information> dell'oggetto e <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> come impostare la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> proprietà della proprietà sul membro **ExecuteSQL** del <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerato.  
+ In questo esempio di codice viene illustrato come <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> ottenere la proprietà <xref:Microsoft.SqlServer.Management.Smo.Information> dell'oggetto e come impostare la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> proprietà della <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> proprietà sul membro **ExecuteSQL** del tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerato.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Ottenere e impostare una proprietà in Visual C#  
- In questo esempio di codice viene illustrato come <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> ottenere la proprietà <xref:Microsoft.SqlServer.Management.Smo.Information> dell'oggetto e <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> come impostare la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> proprietà della proprietà sul membro **ExecuteSQL** del <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerato.  
+ In questo esempio di codice viene illustrato come <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> ottenere la proprietà <xref:Microsoft.SqlServer.Management.Smo.Information> dell'oggetto e come impostare la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> proprietà della <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> proprietà sul membro **ExecuteSQL** del tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerato.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Scorrimento di tutte le proprietà di un oggetto in Visual Basic  
- Questo esempio di codice scorre la raccolta **Properties** dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto e li [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Visualizza nella schermata di output.  
+ Questo esempio di codice scorre la raccolta **Properties** dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto e li Visualizza nella schermata di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] output.  
   
  Nell'esempio l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Property> è stato inserito tra parentesi quadre in quanto è anche una parola chiave di [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Scorrimento di tutte le proprietà di un oggetto in Visual C#  
- Questo esempio di codice scorre la raccolta **Properties** dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto e li [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Visualizza nella schermata di output.  
+ Questo esempio di codice scorre la raccolta **Properties** dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto e li Visualizza nella schermata di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] output.  
   
 ```csharp  
 {   
@@ -203,7 +203,8 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Impostazione dei campi di inizializzazione predefiniti in Visual Basic  
  In questo esempio di codice viene illustrato come ridurre il numero di proprietà dell'oggetto inizializzate in un programma SMO. È necessario includere l'istruzione `using System.Collections.Specialized` per utilizzare l'oggetto <xref:System.Collections.Specialized.StringCollection>.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] consente di confrontare il numero di istruzioni inviate all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con questa ottimizzazione.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] consente di confrontare il numero di istruzioni inviate all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con questa ottimizzazione.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -235,7 +236,8 @@ srv.SetDefaultInitFields(typ, sc)
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Impostazione dei campi di inizializzazione predefiniti in Visual C#  
  In questo esempio di codice viene illustrato come ridurre il numero di proprietà dell'oggetto inizializzate in un programma SMO. È necessario includere l'istruzione `using System.Collections.Specialized` per utilizzare l'oggetto <xref:System.Collections.Specialized.StringCollection>.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] consente di confrontare il numero di istruzioni inviate all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con questa ottimizzazione.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] consente di confrontare il numero di istruzioni inviate all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con questa ottimizzazione.  
   
 ```csharp  
 {   

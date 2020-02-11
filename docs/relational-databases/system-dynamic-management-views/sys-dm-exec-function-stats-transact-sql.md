@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_function_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -19,35 +19,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68742827"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Restituisce statistiche sulle prestazioni aggregate per le funzioni memorizzate nella cache. La vista restituisce una riga per ogni piano di funzioni memorizzato nella cache e la durata della riga è purché la funzione rimanga memorizzata nella cache. Quando una funzione viene rimossa dalla cache, la riga corrispondente viene eliminata da questa visualizzazione. A questo punto, viene generato un evento di traccia SQL di statistiche sulle prestazioni simile a **sys. dm _exec_query_stats**. Restituisce informazioni sulle funzioni scalari, incluse le funzioni in memoria e le funzioni scalari CLR. Non restituisce informazioni sulle funzioni con valori di tabella.  
+  Restituisce statistiche sulle prestazioni aggregate per le funzioni memorizzate nella cache. La vista restituisce una riga per ogni piano di funzioni memorizzato nella cache e la durata della riga è purché la funzione rimanga memorizzata nella cache. Quando una funzione viene rimossa dalla cache, la riga corrispondente viene eliminata da questa visualizzazione. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**. Restituisce informazioni sulle funzioni scalari, incluse le funzioni in memoria e le funzioni scalari CLR. Non restituisce informazioni sulle funzioni con valori di tabella.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]
-> I risultati di **sys. dm _exec_function_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso. 
+> I risultati di **sys. dm_exec_function_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso. 
 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui risiede la funzione.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto della funzione.|  
-|**type**|**char(2)**|Tipo dell'oggetto:   FN = funzioni a valori scalari|  
-|**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|Questo può essere usato per la correlazione con le query in **sys. dm _exec_query_stats** che sono state eseguite dall'interno di questa funzione.|  
-|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm _exec_cached_plans** .<br /><br /> Sarà sempre 0x000 quando una funzione compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**tipo**|**carattere (2)**|Tipo dell'oggetto: FN = funzioni a valori scalari|  
+|**type_desc**|**nvarchar (60)**|Descrizione del tipo di oggetto: SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary (64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno di questa funzione.|  
+|**plan_handle**|**varbinary (64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .<br /><br /> Sarà sempre 0x000 quando una funzione compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**cached_time**|**datetime**|Ora in cui la funzione è stata aggiunta alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione della funzione.|  
 |**execution_count**|**bigint**|Numero di esecuzioni della funzione a partire dall'ultima compilazione.|  
-|**total_worker_time**|**bigint**|Quantità totale di tempo di CPU, in microsecondi, utilizzato dalle esecuzioni di questa funzione a partire dalla relativa compilazione.<br /><br /> Per le funzioni compilate in modo nativo, **total_worker_time** potrebbe non essere accurato se molte esecuzioni hanno meno di un millisecondo.|  
+|**total_worker_time**|**bigint**|Quantità totale di tempo di CPU, in microsecondi, utilizzato dalle esecuzioni di questa funzione a partire dalla relativa compilazione.<br /><br /> Per le funzioni compilate in modo nativo, **total_worker_time** potrebbe non essere accurata se molte esecuzioni importano meno di un millisecondo.|  
 |**last_worker_time**|**bigint**|Tempo di CPU, in microsecondi, utilizzato durante l'ultima esecuzione della funzione. <sup>1</sup>|  
 |**min_worker_time**|**bigint**|Tempo minimo di CPU, in microsecondi, utilizzato da questa funzione durante una singola esecuzione. <sup>1</sup>|  
 |**max_worker_time**|**bigint**|Tempo massimo di CPU, in microsecondi, utilizzato da questa funzione durante una singola esecuzione. <sup>1</sup>|  
@@ -72,10 +72,10 @@ ms.locfileid: "68742827"
 |**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questa funzione durante una singola esecuzione.<br /><br /> **Si applica a:** Iperscalabilità del database SQL di Azure.|  
 |**max_page_server_reads**|**bigint**|Numero massimo di letture di pagine del server eseguite da questa funzione durante una singola esecuzione.<br /><br /> **Si applica a:** Iperscalabilità del database SQL di Azure.|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
-`VIEW DATABASE STATE` Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium, richiede l'autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sulle prime dieci funzioni identificate in base al tempo medio trascorso.  
@@ -90,11 +90,11 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni &#40;e viste a gestione dinamica relative all'esecuzione Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

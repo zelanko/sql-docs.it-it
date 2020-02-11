@@ -1,5 +1,5 @@
 ---
-title: La connessione con SQLConnect | Microsoft Docs
+title: Connessione con SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083118"
 ---
 # <a name="connecting-with-sqlconnect"></a>Connessione con SQLConnect
-**SQLConnect** è la più semplice funzione di connessione. Richiede un nome dell'origine dati e accetta un ID utente facoltativo e una password. Funziona anche per le applicazioni che livello di codice di un'origine dati nome e non richiedono un ID utente o password. Funziona anche per le applicazioni che vogliono controllano le proprie "aspetto" o che non dispongono di alcuna interfaccia utente. Tali applicazioni possono compilare un elenco di origini dati usando **SQLDataSources**chiedere all'utente per l'origine dati, l'ID utente e password e quindi chiamare **SQLConnect**.  
+**SQLConnect** è la funzione di connessione più semplice. Richiede un nome di origine dati e accetta un ID utente e una password facoltativi. Funziona bene per le applicazioni che codificano a livello di codice un nome di origine dati e non richiedono un ID utente o una password. Funziona anche per le applicazioni che desiderano controllare il proprio "aspetto" o che non hanno un'interfaccia utente. Tali applicazioni possono compilare un elenco di origini dati utilizzando **SQLDataSources**, richiedere all'utente l'origine dati, l'ID utente e la password, quindi chiamare **SQLConnect**.  
   
- Nell'esempio seguente si connette al database Northwind, mediante un DSN denominato Northwind e recupera tutti i campi nome e cognome da tutti i record nella tabella Employees.  
+ Nell'esempio seguente viene eseguita la connessione al database Northwind utilizzando un DSN denominato Northwind e vengono recuperati tutti i campi nome e cognome di tutti i record della tabella Employees.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8dc32ad3061f4991cc38a136e2346e5087a93d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913133"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62913133"
  Messaggio informativo inviato dal comando DBCC CHECKALLOC. Nel messaggio sono contenuti il nome e l'ID della tabella all'inizio di un elenco di informazioni sull'allocazione per tutte le unità di allocazione della tabella.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

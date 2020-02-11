@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727372"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configurazione del servizio Launchpad di SQL Server
@@ -65,8 +65,8 @@ Nella tabella seguente sono elencate le impostazioni avanzate per [!INCLUDE[ssCu
 
 |**Nome impostazione**|**Tipo**|**Descrizione**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Valore intero |Questa è un'impostazione esclusivamente interna, perciò questo valore non deve essere modificato. </br></br>Specifica se la cartella di lavoro temporanea creata per ciascuna sessione di runtime esterna deve essere ripulita dopo il completamento della sessione. L'impostazione è utile per il debug. </br></br>I valori supportati sono **0** (disabilitata) o **1** (abilitata). </br></br>Il valore predefinito è 1, che indica che i file di log vengono rimossi all'uscita.|
-|TRACE\_LEVEL|Valore intero |Configura il livello di dettaglio della traccia di MSSQLLAUNCHPAD per scopi di debug. Questa impostazione influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>I valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, che indica solo gli errori di output.|
+|JOB\_CLEANUP\_ON\_EXIT|Integer |Questa è un'impostazione esclusivamente interna, perciò questo valore non deve essere modificato. </br></br>Specifica se la cartella di lavoro temporanea creata per ciascuna sessione di runtime esterna deve essere ripulita dopo il completamento della sessione. L'impostazione è utile per il debug. </br></br>I valori supportati sono **0** (disabilitata) o **1** (abilitata). </br></br>Il valore predefinito è 1, che indica che i file di log vengono rimossi all'uscita.|
+|TRACE\_LEVEL|Integer |Configura il livello di dettaglio della traccia di MSSQLLAUNCHPAD per scopi di debug. Questa impostazione influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>I valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, che indica solo gli errori di output.|
 
 Tutte le impostazioni assumono la forma di coppie chiave-valore e ogni impostazione si trova su una riga diversa. Ad esempio, per modificare il livello di traccia, è necessario aggiungere la riga `Default: TRACE_LEVEL=4`.
 

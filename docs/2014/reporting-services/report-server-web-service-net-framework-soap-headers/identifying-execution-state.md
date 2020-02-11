@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020242"
 ---
 # <a name="identifying-execution-state"></a>Identificazione dello stato di esecuzione
@@ -27,7 +27,8 @@ ms.locfileid: "63020242"
   
  La gestione della sessione implica la correlazione di una richiesta HTTP con le altre richieste precedenti generate dalla stessa sessione. In assenza di gestione della sessione, queste richieste appaiono non correlate al servizio Web ReportServer a causa della natura senza connessione e senza stato del protocollo HTTP.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non espone un concetto olistico di stato della sessione simile a quello esposto da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Quando, tuttavia, si eseguono i report, il server di report gestisce lo stato tra chiamate ai metodi sotto forma di **esecuzione**. Un'esecuzione consente all'utente di interagire con il report in diversi modi, ad esempio caricando il report dal server di report, impostando le credenziali e i parametri per il report ed eseguendo il rendering del report.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non espone un concetto olistico di stato della sessione simile a quello esposto da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Quando, tuttavia, si eseguono i report, il server di report gestisce lo stato tra chiamate ai metodi sotto forma di **esecuzione**. Un'esecuzione consente all'utente di interagire con il report in diversi modi, ad esempio caricando il report dal server di report, impostando le credenziali e i parametri per il report ed eseguendo il rendering del report.  
   
  Mentre comunicano con un server di report, i client utilizzano l'esecuzione per gestire la visualizzazione dei report e la navigazione degli utenti ad altre pagine di un report, nonché per mostrare o nascondere le sezioni di un report. Per ogni report eseguito dall'applicazione client è disponibile un'unica esecuzione.  
   

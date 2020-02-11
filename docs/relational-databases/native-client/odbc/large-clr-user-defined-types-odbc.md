@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760586"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "73760586"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73760586"
   
 |Tipo di dati SQL|Layout in memoria|Tipo di dati C|Valore (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (\*char senza segno)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campi di descrizione per i parametri  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
@@ -136,7 +136,7 @@ ms.locfileid: "73760586"
 |SQL_C_BINARY|Supportato|  
 |SQL_C_CHAR|Supportato|  
   
- \* dati binari vengono convertiti in una stringa esadecimale.  
+ \*I dati binari vengono convertiti in una stringa esadecimale.  
   
  Di seguito sono riportate le conversioni supportate dai tipi di dati C ai tipi di dati SQL:  
   
@@ -146,7 +146,7 @@ ms.locfileid: "73760586"
 |SQL_C_BINARY|Supportato|  
 |SQL_C_CHAR|Supportato|  
   
- viene eseguita la conversione \* stringa esadecimale in dati binari.  
+ \*Viene eseguita la conversione da stringa esadecimale a dati binari.  
   
 ## <a name="sql_variant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
  I tipi definiti dall'utente non sono supportati nelle colonne SQL_VARIANT.  
@@ -213,7 +213,7 @@ ms.locfileid: "73760586"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|SubType|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760586"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|SubType|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

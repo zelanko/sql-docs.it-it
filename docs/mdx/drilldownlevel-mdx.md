@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049295"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
@@ -20,7 +20,7 @@ ms.locfileid: "68049295"
 
   Esegue il drill-down dei membri di un set al livello inferiore al livello più basso rappresentato nel set.  
   
- Che specifica il livello in corrispondenza del quale eseguire il drill-down è facoltativa, ma se si imposta il livello, è possibile usare un **espressione di livello** o nella **livello di indice**. Questi argomenti si escludono a vicenda. Infine, se i membri calcolati sono presenti nella query, è possibile specificare un argomento per includerli nel set di righe.  
+ La specifica del livello in cui eseguire il drill-down è facoltativa, ma se si imposta il livello è possibile utilizzare un' **espressione di livello** o un livello di **Indice**. Questi argomenti si escludono a vicenda. Infine, se i membri calcolati sono presenti nella query, è possibile specificare un argomento per includerli nel set di righe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,18 +33,18 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
  *Level_Expression*  
- (Facoltativo) Espressione MDX che identifica in modo esplicito il livello in cui eseguire il drill-down. Se si specifica un'espressione di livello, ignorare l'argomento index seguente.  
+ (Facoltativo). Espressione MDX che identifica in modo esplicito il livello in cui eseguire il drill-down. Se si specifica un'espressione di livello, ignorare l'argomento index seguente.  
   
- *Index*  
- (Facoltativo) Espressione numerica valida che specifica il numero della gerarchia in cui eseguire il drill-down all'interno di un set. È possibile usare il livello di indice anziché Level_Expression per identificare in modo esplicito il livello in cui eseguire il drill-down.  
+ *Indice*  
+ (Facoltativo). Espressione numerica valida che specifica il numero della gerarchia in cui eseguire il drill-down all'interno di un set. È possibile usare il livello di indice anziché Level_Expression per identificare in modo esplicito il livello in cui eseguire il drill-down.  
   
  *Include_Calc_Members*  
- (Facoltativo) Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
+ (Facoltativo). Flag che indica se includere i membri calcolati, se presenti, al livello di drill-down.  
   
-## <a name="remarks"></a>Note  
- Il **DrilldownLevel** funzione restituisce un set di figlio membri in ordine gerarchico, in base ai membri inclusi nel set specificato. L'ordine originale dei membri nel set specificato viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **DrilldownLevel** restituisce un set di membri figlio in ordine gerarchico in base ai membri inclusi nel set specificato. L'ordine originale dei membri nel set specificato viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente.  
   
- Con una struttura dati gerarchica multilivello è possibile scegliere in modo esplicito un livello in cui eseguire il drill-down. Per specificare il livello sono disponibili due modalità che si escludono a vicenda. Il primo approccio consiste nell'impostare il **level_expression** argomento utilizzando un'espressione MDX che restituisce il livello, un approccio alternativo consiste nello specificare il **indice** argomento, con un'espressione numerica che Specifica il livello di base al numero.  
+ Con una struttura dati gerarchica multilivello è possibile scegliere in modo esplicito un livello in cui eseguire il drill-down. Per specificare il livello sono disponibili due modalità che si escludono a vicenda. Il primo approccio consiste nell'impostare l'argomento **Level_Expression** usando un'espressione MDX che restituisce il livello, un approccio alternativo consiste nel specificare l'argomento **index** , usando un'espressione numerica che specifica il livello per numero.  
   
  Se si specifica un'espressione di livello, la funzione restituisce un set in ordine gerarchico recuperando solo i figli dei membri del livello specificato. Se si specifica un'espressione di livello ma nessun membro è presente in tale livello, l'espressione di livello viene ignorata.  
   
@@ -52,21 +52,21 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Se non si specifica un'espressione di livello né un valore di indice, la funzione restituisce un set in ordine gerarchico recuperando solo i figli dei membri del livello inferiore della prima dimensione indicata nel set specificato.  
   
- L'esecuzione di query la proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) per informazioni dettagliate.  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Esempi  
  È possibile provare gli esempi seguenti nella finestra Query MDX in SSMS, usando il cubo Adventure Works.  
   
  **Esempio 1: illustra la sintassi minima**  
   
- Il primo esempio illustra la sintassi minima per **DrilldownLevel**. L'unico argomento richiesto è un'espressione set. Si noti che quando si esegue questa query, si ottiene l'elemento padre [All Categories] e i membri del livello successivo verso il basso: [Accessories], [Bikes] e così via. Sebbene questo esempio sia semplice, illustra lo scopo fondamentale del **DrilldownLevel** funzione, che è eseguire il drill-down nel livello successivo inferiore.  
+ Nel primo esempio viene illustrata la sintassi minima per **DrilldownLevel**. L'unico argomento richiesto è un'espressione set. Si noti che quando si esegue questa query, si ottiene il padre [tutte le categorie] e i membri del livello successivo verso il basso: [Accessories], [Bikes] e così via. Sebbene questo esempio sia semplice, viene illustrato lo scopo di base della funzione **DrilldownLevel** , che consente di eseguire il drill-down fino al livello successivo.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
 FROM [Adventure Works]  
 ```  
   
- Esempio 2: sintassi alternativa con un livello di indice esplicito  
+ Esempio 2: sintassi alternativa usando un livello di indice esplicito  
   
  Questo esempio illustra la sintassi alternativa, in cui il livello di indice viene specificato tramite un'espressione numerica. In questo caso, il livello di indice è 0. Per un indice in base zero, si tratta del livello più basso.  
   
@@ -78,11 +78,11 @@ FROM [Adventure Works]
   
  Si noti che il set di risultati è identico alla query precedente. Come regola generale, non è necessario impostare il livello di indice a meno che non si voglia avviare il drill-down in un livello specifico. Rieseguire la query precedente, impostando il valore di indice su 1, quindi su 2. Con un valore di indice impostato su 1, il drill-down viene avviato nel secondo livello della gerarchica. Con un valore di indice impostato su 2, il drill-down viene avviato nel terzo livello, il livello più alto in questo esempio. Più elevato è il numero, più alto è il livello di indice.  
   
- **Esempio 3: viene illustrata un'espressione di livello**  
+ **Esempio 3: illustra un'espressione di livello**  
   
  L'esempio successivo mostra come usare un'espressione di livello. Con un set che rappresenta una struttura gerarchica, l'uso di un'espressione di livello consente di scegliere un livello nella gerarchia in cui avviare il drill-down.  
   
- In questo esempio, il livello di drill-down viene avviato [City], come il secondo argomento della **DrilldownLevel** (funzione). Quando si esegue questa query, il drill-down viene avviato nel livello [City], per gli stati Washington e Oregon. Per il **DrilldownLevel** funzione, anche set di risultati include i membri al livello successivo inferiore, [Postal codes].  
+ In questo esempio, il livello di drill-down inizia da [City] come secondo argomento della funzione **DrilldownLevel** . Quando si esegue questa query, il drill-down viene avviato nel livello [City], per gli stati Washington e Oregon. Per la funzione **DrilldownLevel** , il set di risultati include anche i membri al livello successivo, [Postal Cap].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -97,9 +97,9 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Esempio 4: inclusi i membri calcolati**  
+ **Esempio 4-inclusione di membri calcolati**  
   
- Nell'ultimo esempio viene illustrato un membro calcolato, viene visualizzato nella parte inferiore del risultato impostato quando si aggiunge il **include_calculated_members** flag. Si noti che il flag viene specificato come quarto parametro.  
+ Nell'ultimo esempio viene illustrato un membro calcolato, che viene visualizzato nella parte inferiore del set di risultati quando si aggiunge il flag di **include_calculated_members** . Si noti che il flag viene specificato come quarto parametro.  
   
  Questo esempio funziona perché il membro calcolato è allo stesso livello dei membri non calcolati. Il membro calcolato [West Coast] è composto dai membri di [United States], più tutti i membri del livello inferiore a [United States].  
   
@@ -117,6 +117,6 @@ FROM [Adventure Works]
  Se si rimuove solo il flag e si riesegue la query, si ottengono gli stessi risultati meno il membro calcolato [West Coast].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

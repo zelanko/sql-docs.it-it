@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289369"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
@@ -35,43 +35,44 @@ ms.locfileid: "72289369"
  Le colonne nel set di risultati sono divise in due gruppi principali: risorsa e richiesta. Nel gruppo relativo alle risorse viene descritta la risorsa per cui viene effettuata la richiesta, mentre nel gruppo relativo alle richieste viene descritta la richiesta di blocco.  
   
 > [!NOTE]  
-> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys. dm_pdw_nodes_tran_locks**.  
+> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_tran_locks**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|Rappresenta il tipo di risorsa. Può essere uno dei valori seguenti: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
-|**resource_subtype**|**nvarchar(60)**|Rappresenta un sottotipo di **resource_type**. È tecnicamente possibile acquisire un blocco di un sottotipo senza mantenere un blocco senza sottotipi del tipo padre. Sottotipi diversi non sono in conflitto reciproco o con il tipo padre senza sottotipi. Non tutti i tipi di risorse hanno sottotipi.|  
+|**resource_type**|**nvarchar (60)**|Rappresenta il tipo di risorsa. Può essere uno dei valori seguenti: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
+|**resource_subtype**|**nvarchar (60)**|Rappresenta un sottotipo di **resource_type**. È tecnicamente possibile acquisire un blocco di un sottotipo senza mantenere un blocco senza sottotipi del tipo padre. Sottotipi diversi non sono in conflitto reciproco o con il tipo padre senza sottotipi. Non tutti i tipi di risorse hanno sottotipi.|  
 |**resource_database_id**|**int**|ID del database in cui la risorsa è definita a livello di ambito. Tutte le risorse gestite da Gestione blocchi sono definite a livello di ambito dell'ID del database.|  
 |**resource_description**|**nvarchar(256)**|Descrizione della risorsa contenente solo le informazioni non disponibili in altre colonne delle risorse.|  
 |**resource_associated_entity_id**|**bigint**|ID dell'entità in un database a cui è associata una risorsa. Può essere un ID di oggetto, un ID di risorsa HoBT o un ID di unità di allocazione, in base al tipo di risorsa.|  
 |**resource_lock_partition**|**Int**|ID della partizione di blocco per una risorsa di blocco partizionata. Il valore per le risorse di blocco non partizionate è 0.|  
-|**request_mode**|**nvarchar(60)**|Modalità relativa alla richiesta. Per le richieste concesse, indica la modalità concessa. Per le richieste in attesa, indica la modalità richiesta.|  
-|**request_type**|**nvarchar(60)**|Tipo di richiesta. Il valore è LOCK.|  
-|**request_status**|**nvarchar(60)**|Stato corrente della richiesta. I valori possibili sono GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Per ulteriori informazioni sulle attese con priorità bassa e i blocchi di interruzione, vedere la sezione *low_priority_lock_wait* di [ALTER &#40;index Transact-&#41;SQL](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_mode**|**nvarchar (60)**|Modalità relativa alla richiesta. Per le richieste concesse, indica la modalità concessa. Per le richieste in attesa, indica la modalità richiesta.|  
+|**request_type**|**nvarchar (60)**|Tipo di richiesta. Il valore è LOCK.|  
+|**request_status**|**nvarchar (60)**|Stato corrente della richiesta. I valori possibili sono GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Per ulteriori informazioni sulle attese con priorità bassa e i blocchi di interruzione, vedere la sezione *low_priority_lock_wait* di [ALTER INDEX &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Restituisce un numero approssimativo di volte che lo stesso richiedente ha richiesto la risorsa.|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|ID di sessione attualmente proprietario della richiesta. L'ID di sessione proprietario può cambiare per le transazioni distribuite e associate. Il valore -2 indica che la richiesta appartiene a una transazione distribuita orfana. Il valore -3 indica che la richiesta appartiene a una transazione di recupero posticipata, ad esempio una transazione per cui durante il recupero un rollback è stato posticipato poiché non poteva essere completato correttamente.|  
 |**request_exec_context_id**|**int**|ID del contesto di esecuzione del processo attualmente proprietario della richiesta.|  
 |**request_request_id**|**int**|ID della richiesta (ID batch) del processo attualmente proprietario della richiesta. Questo valore verrà modificato ogni volta che viene modificata la connessione MARS (Multiple Active Result Set) attiva per una transazione.|  
-|**request_owner_type**|**nvarchar(60)**|Tipo di entità proprietaria della richiesta. Le richieste di Gestione blocchi possono appartenere a varie entità. I valori possibili sono:<br /><br /> TRANSACTION = La richiesta appartiene a una transazione.<br /><br /> CURSOR = La richiesta appartiene a un cursore.<br /><br /> SESSION = La richiesta appartiene a una sessione utente.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La richiesta appartiene alla parte condivisa dell'area di lavoro della transazione.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = la richiesta è di proprietà della parte esclusiva dell'area di lavoro della transazione.<br /><br /> NOTIFICATION_OBJECT = la richiesta è di proprietà di un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno. Questo componente ha richiesto a Gestione blocchi di inviare una notifica quando un altro componente è in attesa del blocco. La caratteristica FileTable è un componente che utilizza questo valore.<br /><br /> **Nota:** Gli spazi di lavoro vengono usati internamente per mantenere attivi i blocchi per le sessioni integrate.|  
-|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta, **request_owner_id** dispone di uno dei valori seguenti.<br /><br /> <br /><br /> -4: un blocco di database è stato applicato a una tabella FileTable.<br /><br /> -3: un blocco di tabella è stato applicato a una tabella FileTable.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [sys. &#40;dm_filestream_non_transacted_handles Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_type**|**nvarchar (60)**|Tipo di entità proprietaria della richiesta. Le richieste di Gestione blocchi possono appartenere a varie entità. Valori possibili:<br /><br /> TRANSACTION = La richiesta appartiene a una transazione.<br /><br /> CURSOR = La richiesta appartiene a un cursore.<br /><br /> SESSION = La richiesta appartiene a una sessione utente.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La richiesta appartiene alla parte condivisa dell'area di lavoro della transazione.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = la richiesta è di proprietà della parte esclusiva dell'area di lavoro della transazione.<br /><br /> NOTIFICATION_OBJECT = la richiesta è di proprietà di un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno. Questo componente ha richiesto a Gestione blocchi di inviare una notifica quando un altro componente è in attesa del blocco. La caratteristica FileTable è un componente che utilizza questo valore.<br /><br /> **Nota:** Gli spazi di lavoro vengono usati internamente per mantenere attivi i blocchi per le sessioni integrate.|  
+|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta, **request_owner_id** dispone di uno dei valori seguenti.<br /><br /> <br /><br /> -4: un blocco di database è stato applicato a una tabella FileTable.<br /><br /> -3: un blocco di tabella è stato applicato a una tabella FileTable.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del proprietario specifico della richiesta. Questo valore viene utilizzato soltanto da una transazione distribuita nei casi in cui corrisponde al GUID MS DTC della transazione.|  
-|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Questo valore rappresenta l'ID dello spazio di blocco del richiedente. L'ID dello spazio di blocco determina se due richiedenti sono reciprocamente compatibili e possono ottenere blocchi in modalità altrimenti in conflitto.|  
-|**lock_owner_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita in join con **resource_address** colonna in **sys. dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|**request_owner_lockspace_id**|**nvarchar (32)**|
+  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Questo valore rappresenta l'ID dello spazio di blocco del richiedente. L'ID dello spazio di blocco determina se due richiedenti sono reciprocamente compatibili e possono ottenere blocchi in modalità altrimenti in conflitto.|  
+|**lock_owner_address**|**varbinary (8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita in join con la colonna **resource_address** in **sys.dm_os_waiting_tasks**.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
-Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
  
 ## <a name="remarks"></a>Osservazioni  
- Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. I tipi di richiesta di attesa seguenti vengono restituiti dalla colonna **request_status** :  
+ Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. La colonna **request_status** restituisce i tipi di richieste in attesa seguenti:  
   
 -   Uno stato di richiesta di conversione indica che il richiedente ha già ottenuto una richiesta per la risorsa ed è attualmente in attesa di un aggiornamento alla richiesta iniziale.  
   
 -   Uno stato di richiesta in attesa indica che il richiedente non possiede una richiesta concessa per la risorsa.  
   
- Poiché **sys. dm_tran_locks** viene popolato dalle strutture di dati di gestione blocchi interna, la manutenzione di queste informazioni non comporta un sovraccarico aggiuntivo per l'elaborazione regolare. Per la materializzazione di questa vista è richiesto l'accesso alle strutture di dati interne di Gestione blocchi. Ciò può produrre effetti minimi sulla normale elaborazione nel server, che interesseranno solo le risorse con carichi elevati e non saranno altrimenti rilevati. Poiché i dati nella vista corrispondono allo stato di Gestione blocchi in tempo reale, tali dati sono soggetti a modifiche in qualsiasi momento e le righe vengono aggiunte e rimosse con l'acquisizione e il rilascio di blocchi. La vista non contiene informazioni cronologiche.  
+ Poiché **sys.dm_tran_locks** viene popolata da strutture di dati di Gestione blocchi interne, il mantenimento di queste informazioni non determina un overhead aggiuntivo rispetto alla normale elaborazione. Per la materializzazione di questa vista è richiesto l'accesso alle strutture di dati interne di Gestione blocchi. Ciò può produrre effetti minimi sulla normale elaborazione nel server, che interesseranno solo le risorse con carichi elevati e non saranno altrimenti rilevati. Poiché i dati nella vista corrispondono allo stato di Gestione blocchi in tempo reale, tali dati sono soggetti a modifiche in qualsiasi momento e le righe vengono aggiunte e rimosse con l'acquisizione e il rilascio di blocchi. La vista non contiene informazioni cronologiche.  
   
  Due richieste operano sulla stessa risorsa solo se tutte le colonne del gruppo relativo alle risorse sono uguali.  
   
@@ -79,35 +80,35 @@ Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'
   
 -   SET TRANSACTION ISOLATION LEVEL per specificare il livello di blocco per una sessione. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Hint di tabelle di blocco per specificare il livello di blocco per un riferimento individuale di una tabella in una clausola FROM. Per la sintassi e le restrizioni, vedere [hint &#40;di tabella&#41;Transact-SQL](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Hint di tabelle di blocco per specificare il livello di blocco per un riferimento individuale di una tabella in una clausola FROM. Per la sintassi e le restrizioni, vedere [hint di tabella &#40;&#41;Transact-SQL ](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Una risorsa in esecuzione in un ID di sessione può ottenere la concessione di più blocchi. Diverse entità in esecuzione in una sessione possono avere un blocco sulla stessa risorsa e le informazioni vengono visualizzate nel **request_owner_type** e **request_owner_id** colonne restituite da **sys. dm_tran_locks**. Se sono presenti più istanze dello stesso **request_owner_type** , per distinguere ogni istanza viene utilizzata la colonna **request_owner_id** . Per le transazioni distribuite, le colonne **request_owner_type** e **request_owner_guid** mostreranno le diverse informazioni sulle entità.  
+ Una risorsa in esecuzione in un ID di sessione può ottenere la concessione di più blocchi. Diverse entità in esecuzione in una sessione possono possedere ognuna un blocco sulla stessa risorsa. Le informazioni vengono visualizzate nelle colonne **request_owner_type** e **request_owner_id** restituite da **sys.dm_tran_locks**. Se esistono più istanze dello stesso **request_owner_type**, per distinguere ogni istanza viene utilizzata la colonna **request_owner_id**. Per le transazioni distribuite, nelle colonne **request_owner_type** e **request_owner_guid** verranno visualizzate le informazioni relative alle diverse entità.  
   
- Ad esempio, la sessione S1 è proprietaria di un blocco condiviso su **Tabella1**; e la transazione T1, che viene eseguita nella sessione S1, è anch ' essa proprietaria di un blocco condiviso in **Tabella1**. In questo caso, la colonna **resource_description** restituita da **sys. dm_tran_locks** mostrerà due istanze della stessa risorsa. Nella colonna **request_owner_type** sarà mostrata un'istanza come una sessione e l'altra come transazione. Inoltre, la colonna **resource_owner_id** avrà valori diversi.  
+ Ad esempio, la sessione S1 possiede un blocco condiviso sulla tabella **Table1** e la transazione T1, in esecuzione nella sessione S1, possiede ugualmente un blocco condiviso sulla tabella **Table1**. In questo caso, la colonna **resource_description** restituita da **sys.dm_tran_locks** conterrà due istanze della stessa risorsa. Nella colonna **request_owner_type** un'istanza verrà visualizzata come sessione e l'altra come transazione. La colonna **resource_owner_id** conterrà inoltre valori diversi.  
   
  Più cursori in esecuzione in una sessione non sono distinguibili e vengono considerati come un'unica entità.  
   
  Le transazioni distribuite non associate a un valore di ID di sessione sono transazioni orfane a cui viene assegnato il valore di ID di sessione -2. Per altre informazioni, vedere [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
 
-## <a name="locks"></a> Locks
+## <a name="locks"></a>Serrature
 I blocchi sulle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio sulle righe lette o modificate durante una transazione, impediscono che le risorse vengano utilizzate contemporaneamente da transazioni diverse. Ad esempio, se una transazione mantiene attivo un blocco esclusivo (X) su una riga all'interno di una tabella, nessun'altra transazione potrà modificare la riga fino a quando il blocco non viene rilasciato. La riduzione dei blocchi aumenta la concorrenza e, di conseguenza, potrebbe migliorare le prestazioni. 
 
 ## <a name="resource-details"></a>Informazioni dettagliate sulle risorse  
- Nella tabella seguente sono elencate le risorse rappresentate nella colonna **resource_associated_entity_id** .  
+ Nella tabella seguente sono elencate le risorse rappresentate nella colonna **resource_associated_entity_id**.  
   
 |Tipo di risorsa|Descrizione della risorsa|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|Rappresenta un database.|Non applicabile|  
 |FILE|Rappresenta un file di database. Può essere un file di dati o di log.|Non applicabile|  
-|OBJECT|Rappresenta un oggetto di database. Può essere una tabella di dati, una vista, una stored procedure, una stored procedure estesa o qualsiasi oggetto con ID di oggetto.|ID dell'oggetto.|  
-|PAGE|Rappresenta una pagina singola in un file di dati.|ID HoBT. Questo valore corrisponde a **sys. partitions. hobt_id**. L'ID di risorsa HoBT non è sempre disponibile per le risorse PAGE, poiché rappresenta informazioni aggiuntive che possono essere fornite solo da alcuni chiamanti.|  
-|KEY|Rappresenta una riga in un indice.|ID HoBT. Questo valore corrisponde a **sys. partitions. hobt_id**.|  
+|OBJECT|Rappresenta un oggetto di database. Può essere una tabella di dati, una vista, una stored procedure, una stored procedure estesa o qualsiasi oggetto con ID di oggetto.|ID oggetto|  
+|PAGE|Rappresenta una pagina singola in un file di dati.|ID HoBT. Questo valore corrisponde a **sys.partitions.hobt_id**. L'ID di risorsa HoBT non è sempre disponibile per le risorse PAGE, poiché rappresenta informazioni aggiuntive che possono essere fornite solo da alcuni chiamanti.|  
+|KEY|Rappresenta una riga in un indice.|ID HoBT. Questo valore corrisponde a **sys.partitions.hobt_id**.|  
 |EXTENT|Rappresenta un extent di file di dati, ovvero un gruppo di otto pagine contigue.|Non applicabile|  
-|RID|Rappresenta una riga fisica in un heap.|ID HoBT. Questo valore corrisponde a **sys. partitions. hobt_id**. L'ID di risorsa HoBT non è sempre disponibile per le risorse RID, poiché rappresenta informazioni aggiuntive che possono essere fornite solo da alcuni chiamanti.|  
+|RID|Rappresenta una riga fisica in un heap.|ID HoBT. Questo valore corrisponde a **sys.partitions.hobt_id**. L'ID di risorsa HoBT non è sempre disponibile per le risorse RID, poiché rappresenta informazioni aggiuntive che possono essere fornite solo da alcuni chiamanti.|  
 |APPLICATION|Rappresenta una risorsa specificata dall'applicazione.|Non applicabile|  
-|METADATA|Rappresenta informazioni sui metadati.|Non applicabile|  
-|HOBT|Rappresenta un heap o un albero B. Si tratta delle strutture del percorso di accesso di base.|ID HoBT. Questo valore corrisponde a **sys. partitions. hobt_id**.|  
-|ALLOCATION_UNIT|Rappresenta un set di pagine correlate, ad esempio una partizione dell'indice. Ogni unità di allocazione ricopre una singola catena della mappa di allocazione degli indici (IAM, Index Allocation Map).|ID unità di allocazione. Questo valore corrisponde a **sys. allocation_units. allocation_unit_id**.|  
+|METADATI|Rappresenta informazioni sui metadati.|Non applicabile|  
+|HOBT|Rappresenta un heap o un albero B. Si tratta delle strutture del percorso di accesso di base.|ID HoBT. Questo valore corrisponde a **sys.partitions.hobt_id**.|  
+|ALLOCATION_UNIT|Rappresenta un set di pagine correlate, ad esempio una partizione dell'indice. Ogni unità di allocazione ricopre una singola catena della mappa di allocazione degli indici (IAM, Index Allocation Map).|ID unità di allocazione. Questo valore corrisponde a **sys.allocation_units.allocation_unit_id**.|  
   
  Nella tabella seguente sono elencati i sottotipi associati a ogni tipo di risorsa.  
   
@@ -195,19 +196,19 @@ I blocchi sulle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 |METADATA.XML_COMPONENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Nella tabella seguente viene fornito il formato della colonna **resource_description** per ogni tipo di risorsa.  
+ Nella tabella seguente viene descritto il formato della colonna **resource_description** per ogni tipo di risorsa.  
   
-|Risorsa|Formato|Descrizione|  
+|Risorsa|Format|Descrizione|  
 |--------------|------------|-----------------|  
-|DATABASE|Non applicabile|L'ID del database è già disponibile nella colonna **resource_database_id** .|  
+|DATABASE|Non applicabile|L'ID del database è già disponibile nella colonna **resource_database_id**.|  
 |FILE|<file_id>|ID del file rappresentato dalla risorsa.|  
-|OBJECT|<object_id>|ID dell'oggetto rappresentato dalla risorsa. Questo oggetto può essere qualsiasi oggetto elencato in **sys. Objects**, non solo una tabella.|  
-|PAGE|< file_id >: < page_in_file >|Rappresenta l'ID di pagina e di file della pagina rappresentata dalla risorsa.|  
-|KEY|< hash_value >|Rappresenta un hash delle colonne chiave dalla riga rappresentata dalla risorsa.|  
-|EXTENT|< file_id >: < page_in_files >|Rappresenta l'ID di pagina e di file dell'extent rappresentato dalla risorsa. L'ID di extent corrisponde all'ID di pagina della prima pagina nell'extent.|  
-|RID|< file_id >: < page_in_file >: < row_on_page >|Rappresenta l'ID di pagina e l'ID di riga della riga rappresentata dalla risorsa. Se l'ID dell'oggetto associato è 99, la risorsa rappresenta uno degli otto slot di pagine miste nella prima pagina IAM di una catena IAM.|  
-|APPLICATION|\<DbPrincipalId >:\<fino a 32 caratteri >:(< hash_value >)|Rappresenta l'ID dell'entità di database utilizzata per definire l'ambito della risorsa di blocco dell'applicazione. È incluso anche un massimo di 32 caratteri della stringa della risorsa corrispondente alla risorsa di blocco dell'applicazione. In certi casi, è possibile visualizzare solo 2 caratteri perché la stringa completa non è più disponibile. Ciò si verifica solo in fase di recupero del database per i blocchi dell'applicazione che vengono riacquisiti nell'ambito del processo di recupero. Il valore hash rappresenta un hash della stringa di risorsa completa corrispondente a questa risorsa di blocco dell'applicazione.|  
-|HOBT|Non applicabile|L'ID HoBt è incluso come **resource_associated_entity_id**.|  
+|OBJECT|<object_id>|ID dell'oggetto rappresentato dalla risorsa. Può essere qualsiasi oggetto elencato in **sys.objects**, non solo una tabella.|  
+|PAGE|<file_id>:<page_in_file>|Rappresenta l'ID di pagina e di file della pagina rappresentata dalla risorsa.|  
+|KEY|<hash_value>|Rappresenta un hash delle colonne chiave dalla riga rappresentata dalla risorsa.|  
+|EXTENT|<file_id>:<page_in_files>|Rappresenta l'ID di pagina e di file dell'extent rappresentato dalla risorsa. L'ID di extent corrisponde all'ID di pagina della prima pagina nell'extent.|  
+|RID|<file_id>:<page_in_file>:<row_on_page>|Rappresenta l'ID di pagina e l'ID di riga della riga rappresentata dalla risorsa. Se l'ID dell'oggetto associato è 99, la risorsa rappresenta uno degli otto slot di pagine miste nella prima pagina IAM di una catena IAM.|  
+|APPLICATION|\<DbPrincipalId>:\<fino a 32 caratteri>:(<hash_value>)|Rappresenta l'ID dell'entità di database utilizzata per definire l'ambito della risorsa di blocco dell'applicazione. È incluso anche un massimo di 32 caratteri della stringa della risorsa corrispondente alla risorsa di blocco dell'applicazione. In certi casi, è possibile visualizzare solo 2 caratteri perché la stringa completa non è più disponibile. Ciò si verifica solo in fase di recupero del database per i blocchi dell'applicazione che vengono riacquisiti nell'ambito del processo di recupero. Il valore hash rappresenta un hash della stringa di risorsa completa corrispondente a questa risorsa di blocco dell'applicazione.|  
+|HOBT|Non applicabile|L'ID di risorsa HoBT è incluso come **resource_associated_entity_id**.|  
 |ALLOCATION_UNIT|Non applicabile|L'ID dell'unità di allocazione è incluso come **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -275,7 +276,7 @@ I blocchi sulle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- I seguenti XEvent sono correlati al **cambio** di partizione e alla ricompilazione dell'indice online. Per informazioni sulla sintassi, vedere [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [alter index &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ I seguenti XEvent sono correlati al **cambio** di partizione e alla ricompilazione dell'indice online. Per informazioni sulla sintassi, vedere [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [alter index &#40;transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -288,7 +289,7 @@ I blocchi sulle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>R. Utilizzo di sys.dm_tran_locks con altri strumenti  
- L'esempio seguente illustra uno scenario in cui un'operazione di aggiornamento è bloccata da un'altra transazione. Utilizzando **sys. dm_tran_locks** e altri strumenti, vengono fornite informazioni sulle risorse di blocco.  
+ L'esempio seguente illustra uno scenario in cui un'operazione di aggiornamento è bloccata da un'altra transazione. Utilizzando **sys.dm_tran_locks** e altri strumenti, vengono fornite informazioni sulle risorse di blocco.  
   
 ```sql  
 USE tempdb;  
@@ -326,7 +327,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- La query seguente visualizza informazioni sui blocchi. Il valore di `<dbid>` deve essere sostituito con l' **database_id** da **sys. databases**.  
+ La query seguente visualizza informazioni sui blocchi. Il valore di `<dbid>` deve essere sostituito con il valore **database_id** di **sys.databases**.  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -371,7 +372,7 @@ ROLLBACK;
 GO  
 ```  
   
-### <a name="b-linking-session-information-to-operating-system-threads"></a>b. Collegamento tra informazioni di sessione e thread del sistema operativo  
+### <a name="b-linking-session-information-to-operating-system-threads"></a>B. Collegamento tra informazioni di sessione e thread del sistema operativo  
  Nell'esempio seguente vengono restituite le informazioni che associato un ID di sessione a un ID di thread di Windows. È possibile utilizzare Performance Monitor di Windows per monitorare le prestazioni del thread. Questa query non restituisce gli ID di sessione attualmente sospesi.  
   
 ```sql  
@@ -385,7 +386,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+[sys. dm_tran_database_transactions &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
-[Funzioni &#40;e viste a gestione dinamica relative alle transazioni Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[Funzioni e viste a gestione dinamica relative alle transazioni &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
 [Oggetto Locks di SQL Server](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175422"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lezione 8. Ripristinare un database in Archiviazione di Azure
@@ -97,6 +97,6 @@ ms.locfileid: "70175422"
   
  **Lezione successiva:**  
   
- [Lezione 9: Ripristinare un database da archiviazione di Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lezione 9. Ripristinare un database da archiviazione di Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053345"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "68053345"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  Questa funzionalità è stata modificata rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Questa funzionalità è stata modificata rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar(32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
-|**rsc_bin**|**binary(16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti disponibili sul formato del blocco di risorse per la generazione di propri formattato risorsa di blocco e per l'esecuzione di self join su **syslockinfo**.|  
-|**rsc_valblk**|**binary(16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
+|**rsc_text**|**nchar (32)**|Descrizione in formato testo di una risorsa di blocco. Include una parte del nome della risorsa.|  
+|**rsc_bin**|**binario (16)**|Risorsa di blocco binaria. Include l'effettiva risorsa di blocco presente in Gestione blocchi. Questa colonna è inclusa per gli strumenti che conoscono il formato della risorsa di blocco per la generazione di una risorsa di blocco formattata e per l'esecuzione di self join in **syslockinfo**.|  
+|**rsc_valblk**|**binario (16)**|Gruppo di valori del blocco. Alcuni tipi di risorsa possono includere dati aggiuntivi nella risorsa di blocco per cui non viene eseguito l'hashing da parte di Gestione blocchi al fine di determinare la proprietà di una determinata risorsa di blocco. Ad esempio, i blocchi a livello di pagina non appartengono a un ID di oggetto particolare. Per fini di escalation dei blocchi o altri fini. tuttavia, è possibile inserire nel gruppo di valori del blocco l'ID di oggetto di un blocco a livello di pagina.|  
 |**rsc_dbid**|**smallint**|ID di database associato alla risorsa.|  
 |**rsc_indid**|**smallint**|ID di indice associato alla risorsa, se appropriato.|  
 |**rsc_objid**|**int**|ID di oggetto associato alla risorsa, se appropriato.|  
@@ -53,17 +53,17 @@ ms.locfileid: "68053345"
 |**req_refcnt**|**smallint**|Numero dei riferimenti di blocco. Ogni volta che una transazione richiede un blocco su una determinata risorsa, il numero dei riferimenti viene incrementato. Il blocco può essere rilasciato solo quando il numero dei riferimenti è uguale a 0.|  
 |**req_cryrefcnt**|**smallint**|Riservata per utilizzi futuri. È sempre impostata su 0.|  
 |**req_lifetime**|**int**|Mappa di bit del ciclo di vita dei blocchi. Durante determinati processi di elaborazione delle query, è necessario mantenere i blocchi sulle risorse fino a quando in Query Processor non è stata completata una particolare fase della query. La mappa di bit del ciclo di vita dei blocchi viene utilizzata da Query Processor e dallo strumento di gestione delle transazioni per indicare i gruppi di blocchi che è possibile rilasciare quando una determinata fase di una query viene completata. Alcuni bit della mappa vengono utilizzati per indicare i blocchi che vengono mantenuti attivi fino al termine di una transazione, anche se il relativo numero di riferimenti è uguale a 0.|  
-|**req_spid**|**int**|Interni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] elaborare l'ID della sessione che richiede il blocco.|  
+|**req_spid**|**int**|ID [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] processo interno della sessione che richiede il blocco.|  
 |**req_ecid**|**int**|ID del contesto di esecuzione (ECID). Viene utilizzato per indicare il thread di un'operazione parallela che è il proprietario di un determinato blocco.|  
 |**req_ownertype**|**smallint**|Tipo di oggetto associato al blocco:<br /><br /> 1 = Transazione<br /><br /> 2 = Cursore<br /><br /> 3 = Sessione<br /><br /> 4 = Sessione esclusiva<br /><br /> I tipi di oggetto 3 e 4 rappresentano versioni particolari di blocchi di sessione che consentono di tenere traccia rispettivamente di blocchi a livello di database e di filegroup.|  
-|**req_transactionID**|**bigint**|Transazione univoco ID usato nel **syslockinfo** e nell'evento di profiler|  
+|**req_transactionID**|**bigint**|ID di transazione univoco usato in **syslockinfo** e nell'evento del profiler|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifica l'ID di unità di lavoro (UOW, Unit Of Work) della transazione DTC. Per transazioni non MS DTC, l'unità UOW è impostata su 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

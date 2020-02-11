@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889840"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
@@ -35,7 +35,7 @@ ms.locfileid: "62889840"
 > [!NOTE]  
 >  I messaggi indicati nella tabella vengono registrati anche se non è stata abilitata la funzione di registrazione per il pacchetto.  
   
-|ID evento|Nome simbolico|Testo|Note|  
+|ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Esecuzione del pacchetto "" avviata|L'esecuzione del pacchetto è stata avviata.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Esecuzione del pacchetto "" completata.|Il pacchetto è stato eseguito correttamente e non è più in esecuzione.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62889840"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Messaggi relativi alle fasi di esecuzione del pacchetto  
   
-|ID evento|Nome simbolico|Testo|Note|  
+|ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Quando si configura la funzione di registrazione per il pacchetto nel registro eventi applicazioni, vari messaggi utilizzano questo formato generico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Il pacchetto è stato avviato.|  
@@ -66,9 +66,9 @@ ms.locfileid: "62889840"
 |12557|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|L'esecuzione del pacchetto è completata.|  
   
 ### <a name="messages-about-events-that-occur"></a>Messaggi relativi agli eventi  
- Nella tabella seguente sono elencati solo alcuni dei messaggi restituiti in seguito a eventi. Per un elenco più completo dei messaggi di errore, di avviso e informativi usati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md).  
+ Nella tabella seguente sono elencati solo alcuni dei messaggi restituiti in seguito a eventi. Per un elenco più completo dei messaggi di errore, di avviso e informativi usati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md).  
   
-|ID evento|Nome simbolico|Testo|Note|  
+|ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Impossibile eseguire l'attività.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nome evento: %1%r Messaggio: %9%r Operatore: %2%r Nome origine: %3%r ID origine: %4%r ID esecuzione: %5%r Ora inizio: %6%r Ora fine: %7%r Codice dati: %8|Questo messaggio segnala un errore.|  

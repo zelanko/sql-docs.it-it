@@ -1,5 +1,5 @@
 ---
-title: Crittografia (Driver Access) | Microsoft Docs
+title: Crittografia (driver di accesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e652432d0a1bfacde99998add361a9c8e38500a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68058780"
 ---
 # <a name="encryption-access-driver"></a>Crittografia (driver Access)
-(Questo controllo è disponibile solo quando la versione 4. *x* formato viene selezionato.)  
+Questo controllo è disponibile solo quando la versione 4. il formato *x* è selezionato.)  
   
- Con il rilascio della versione del motore di Database Microsoft Jet 4.0, la crittografia del database è consentita durante la creazione di database di Access. Vedere le *di riferimento per programmatori di Jet Database Engine* per altre informazioni.
+ Con il rilascio della versione 4,0 del motore di database Microsoft Jet, la crittografia del database è consentita durante la creazione di database di Access. Per ulteriori informazioni, vedere la Guida *di riferimento per programmatori motore di database Jet* .

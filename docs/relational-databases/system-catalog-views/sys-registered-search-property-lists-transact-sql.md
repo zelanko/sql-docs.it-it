@@ -1,5 +1,5 @@
 ---
-title: Sys. registered_search_property_lists (Transact-SQL) | Microsoft Docs
+title: sys. registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067849"
 ---
-# <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
+# <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni elenco delle proprietà di ricerca nel database corrente.  
@@ -36,15 +36,15 @@ ms.locfileid: "68067849"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|ID dell'elenco di proprietà.|  
-|**name**|**sysname**|Nome dell'elenco di proprietà.|  
+|**nome**|**sysname**|Nome dell'elenco di proprietà.|  
 |**create_date**|**datetime**|Data di creazione dell'elenco di proprietà.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata all'elenco di proprietà mediante un'istruzione ALTER.|  
 |**principal_id**|**int**|Proprietario dell'elenco di proprietà.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati negli elenchi delle proprietà di ricerca è limitata a quelle di proprietà dell'utente o per cui è stata concessa qualche autorizzazione REFERENCE.  
   
 > [!NOTE]  

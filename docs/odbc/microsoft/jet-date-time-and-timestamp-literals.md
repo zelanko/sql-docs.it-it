@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Date, Time e Timestamp valori letterali | Microsoft Docs'
+title: 'Jet: valori letterali data, ora e timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085487"
 ---
-# <a name="jet-date-time-and-timestamp-literals"></a>Jet: Valori letterali data, ora e timestamp
-Per garantire la massima interoperabilità, le applicazioni devono passare valori letterali di data nel formato canonico ODBC usando la sintassi della clausola di escape:  
+# <a name="jet-date-time-and-timestamp-literals"></a>Jet: valori letterali data, ora e timestamp
+Per garantire la massima interoperabilità, le applicazioni devono passare i valori letterali di data nel formato canonico ODBC utilizzando la sintassi della clausola di escape:  
   
--   Per i valori letterali data, {1!d»*valore*'}, dove *valor*e è nel formato "aaaa-mm-gg"  
+-   Per i valori letterali data, {d'*value*'}, dove *Valor*e è nel formato "aaaa-mm-gg"  
   
--   Per i valori letterali ora, {t '*valore*'}, dove *valor*e è nel formato "hh"  
+-   Per i valori letterali temporali, {t'*value*'}, dove *Valor*e è nel formato "HH: mm: SS"  
   
- Per i valori letterali timestamp {ts'*valore*'}, dove *valor*e è nel formato "aaaa-mm-gg hh.mm.ss [. f...]".
+ Per i valori letterali timestamp {TS '*value*'}, dove *Valor*e è nel formato "aaaa-mm-gg hh: mm: SS [. f...]".

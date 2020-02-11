@@ -1,5 +1,5 @@
 ---
-title: Riferimento alle funzioni di Data Mining Extensions (DMX) | Microsoft Docs
+title: Guida di riferimento alle funzioni DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070948"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Guida di riferimento alle funzioni DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
+  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta molte funzioni del linguaggio DMX (Data Mining Extensions). Le funzioni consentono di espandere i risultati di una query di stima in modo da includere informazioni che descrivono ulteriormente la stima. Tramite le funzioni è inoltre possibile ottenere un maggiore controllo sulla modalità con cui vengono restituiti i risultati della stima. Nella tabella seguente vengono forniti i collegamenti alle risorse che illustrano come utilizzare le funzioni in DMX.  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|Vengono elencate le funzioni che è possibile utilizzare con tutti i tipi di modelli e vengono forniti i collegamenti a ulteriori informazioni sull'esecuzione di query su tipi specifici di modelli di data mining.|  
-|[Struttura e uso di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Viene fornita una panoramica della costruzione di una query di stima mediante DMX.|  
+|[Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|Vengono elencate le funzioni che è possibile utilizzare con tutti i tipi di modelli e vengono forniti i collegamenti a ulteriori informazioni sull'esecuzione di query su tipi specifici di modelli di data mining.|  
+|[Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Viene fornita una panoramica della costruzione di una query di stima mediante DMX.|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Restituisce una tabella che contiene un numero specificato di righe a partire dall'ultima, in ordine di rango crescente in base a un'espressione di rango.|  
   
  Nella tabella seguente vengono elencate le funzioni supportate da DMX.  
@@ -33,15 +34,15 @@ ms.locfileid: "68070948"
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Restituisce una tabella che contiene le ultime righe di n elementi dell'espressione di tabella in ordine crescente in base all'espressione di rango.|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dall'ultima, che consente di ottenere la percentuale restituita da un'espressione specificata, in ordine di rango crescente in base a un'espressione di rango.|  
 |[BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dall'ultima, che consente di ottenere la somma restituita da un'espressione specificata, in ordine di rango crescente in base a un'espressione di rango.|  
-|[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
+|[&#40;&#41;DMX del cluster](../dmx/cluster-dmx.md)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Restituisce la probabilità che il case di input appartenga al cluster.|  
-|[È presente &#40;DMX&#41;](../dmx/exists-dmx.md)|Restituisce true se il set di risultati restituito dall'istruzione SELECT specificata contiene almeno una riga.|  
-|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica se il nodo corrente discende dal nodo specificato.|  
+|[Esistente &#40;DMX&#41;](../dmx/exists-dmx.md)|Restituisce true se il set di risultati restituito dall'istruzione SELECT specificata contiene almeno una riga.|  
+|[&#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica se il nodo corrente discende dal nodo specificato.|  
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case specificato.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica se un case appartiene al set di test case.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica se un case appartiene al set di case di training.|  
-|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data presente nei dati.|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
+|[Ritardo &#40;DMX&#41;](../dmx/lag-dmx.md)|Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data presente nei dati.|  
+|[Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)|Esegue una stima su una colonna specificata.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Restituisce la probabilità adattata della colonna stimabile specificata.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Consente di stimare l'appartenenza associativa in una colonna.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Restituisce la probabilità che un case di input risulti adatto al modello esistente. Questa funzione può essere utilizzata solo con i modelli di clustering.|  
@@ -57,16 +58,16 @@ ms.locfileid: "68070948"
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)|Restituisce il punto medio del bucket stimato individuato per una colonna discretizzata specificata.|  
 |[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|Restituisce il limite inferiore del bucket stimato individuato per una colonna discretizzata specificata.|  
 |[StructureColumn &#40;DMX&#41;](../dmx/structurecolumn-dmx.md)|Restituisce il valore della colonna della struttura di data mining della tabella specificata.|  
-|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|Restituisce una tabella che contiene un numero specificato di righe a partire dalla prima, in ordine di rango decrescente in base a un'espressione di rango.|  
-|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dalla prima, che consente di ottenere la percentuale restituita da un'espressione specificata, in ordine di rango decrescente in base a un'espressione di rango.|  
-|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dalla prima, che consente di ottenere la somma restituita da un'espressione specificata, in ordine di rango decrescente in base a un'espressione di rango.|  
+|[Conteggio &#40;DMX&#41;](../dmx/topcount-dmx.md)|Restituisce una tabella che contiene un numero specificato di righe a partire dalla prima, in ordine di rango decrescente in base a un'espressione di rango.|  
+|[Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dalla prima, che consente di ottenere la percentuale restituita da un'espressione specificata, in ordine di rango decrescente in base a un'espressione di rango.|  
+|[&#40;DMX&#41;](../dmx/topsum-dmx.md)|Restituisce una tabella che contiene il più piccolo numero di righe, a partire dalla prima, che consente di ottenere la somma restituita da un'espressione specificata, in ordine di rango decrescente in base a un'espressione di rango.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;le convenzioni della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

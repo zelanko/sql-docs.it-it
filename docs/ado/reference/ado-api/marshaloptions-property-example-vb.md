@@ -15,14 +15,14 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918247"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Esempio della proprietà MarshalOptions (VB)
-Questo esempio Usa la [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) proprietà per specificare quali righe vengono inviate al server - tutte le righe o solo le righe modificate.  
+In questo esempio viene usata la proprietà [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) per specificare quali righe vengono restituite al server, tutte le righe o solo le righe modificate.  
   
 ```  
 'BeginMarshalOptionsVB  

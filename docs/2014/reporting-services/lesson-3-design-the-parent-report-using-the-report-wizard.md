@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Progettare il Report padre tramite la creazione guidata rapporto | Microsoft Docs'
+title: 'Lesson 3: Design the Parent Report using the Report Wizard (Lezione 3: Progettare il report padre tramite la Creazione guidata report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108491"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lezione 3: Progettare il report padre tramite la Creazione guidata report
@@ -26,22 +26,22 @@ ms.locfileid: "66108491"
   
 2.  Fare clic con il pulsante destro del mouse sul sito Web e selezionare **Add New Item**(Aggiungi nuovo elemento).  
   
-3.  Nel **Aggiungi nuovo elemento** finestra di dialogo **Creazione guidata rapporto**, immettere un nome per il file di report e quindi fare clic su **Add**.  
+3.  Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **creazione guidata report**, immettere un nome per il file di report e quindi fare clic su **Aggiungi**.  
   
      Verrà avviata la Creazione guidata report.  
   
-4.  Nel **proprietà set di dati** nella pagina il **zdroj dat** , quindi selezionare il **DataSet1** creato in [lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  Nella pagina **Proprietà set di dati** , nella casella **Origine dati** selezionare il set di dati **DataSet1** creato nella [Lezione 2: definire una connessione dati e una tabella di dati per il report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     La casella **Available datasets** (Set di dati disponibili) viene aggiornata automaticamente con l'oggetto **DataTable** creato in precedenza.  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Disponi campi** eseguire le operazioni seguenti:  
   
     1.  Trascinare **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**, e **ReorderLevel** da **Campi disponibili** alla casella **Valori** .  
   
-    2.  Fare clic sulla freccia accanto a **SUM (ProductID)** , **SUM (safetystocklevel)** , **SUM (ReorderLevel)** e deselezionare il **somma** selezione.  
+    2.  Fare clic sulla freccia accanto a **Sum (ProductID)**, **Sum (SafetyStockLevel)**, **Sum (ReorderLevel)** e deselezionare la selezione **Sum** .  
   
-7.  Fare clic su **successivo** due volte, quindi fare clic su **Finish** per chiudere la **Creazione guidata Report**.  
+7.  Fare clic due volte su **Avanti** , quindi su **fine** per chiudere la **creazione guidata report**.  
   
      È stato creato il file con estensione rdlc. Il file viene aperto in Progettazione report. La Tablix che è stata progettata è ora visualizzata nell'area di progettazione.  
   

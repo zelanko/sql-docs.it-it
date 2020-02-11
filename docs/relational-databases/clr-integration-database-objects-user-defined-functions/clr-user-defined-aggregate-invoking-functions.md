@@ -1,5 +1,5 @@
 ---
-title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Microsoft Docs
+title: Richiamo di funzioni di aggregazione CLR definite dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028358"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione CLR definita dall'utente - Chiamata di funzioni
@@ -30,13 +30,13 @@ ms.locfileid: "68028358"
   
  Sono valide le regole aggiuntive seguenti:  
   
--   L'utente corrente deve disporre **EXECUTE** autorizzazioni nell'aggregazione definita dall'utente.  
+-   L'utente corrente deve disporre dell'autorizzazione **Execute** per l'aggregazione definita dall'utente.  
   
--   Aggregazioni definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *udagg_name*.  
+-   Le funzioni di aggregazione definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *schema_name. udagg_name*.  
   
--   Il tipo di argomento della funzione di aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito per il *input_type* della funzione di aggregazione, come definito nel **CREATE AGGREGATE** istruzione.  
+-   Il tipo di argomento dell'aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito nell' *INPUT_TYPE* dell'aggregazione, come definito nell'istruzione **create aggregate** .  
   
--   Il tipo restituito della funzione di aggregazione definita dall'utente deve corrispondere il *return_type* nel **CREATE AGGREGATE** istruzione.  
+-   Il tipo restituito dell'aggregazione definita dall'utente deve corrispondere all' *return_type* nell'istruzione **create aggregate** .  
   
 ## <a name="example-1"></a>Esempio 1  
  Di seguito è riportato un esempio di funzione di aggregazione definita dall'utente che concatena un set di valori di stringa di una colonna in una tabella:  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
+ Una volta compilato il codice in **MyAgg. dll**, è possibile registrare l'aggregazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in come segue:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +208,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  L'esecuzione degli oggetti di database Visual C++, ad esempio le funzioni a valori scalari, compilati con l'opzione /clr:pure non è supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Come con la maggior parte delle funzioni di aggregazione, la maggior parte della logica è il **Accumulate** (metodo). Questo caso, la stringa che viene passata come parametro per il **Accumulate** metodo viene aggiunto al **StringBuilder** oggetto inizializzato nel **Init** (metodo). Supponendo che non si tratta la prima volta che il **Accumulate** chiamata al metodo, una virgola viene anche aggiunto alle **StringBuilder** prima di aggiungere la stringa passata. Al termine delle attività di calcolo, il **Terminate** viene chiamato il metodo che restituisce il **StringBuilder** sotto forma di stringa.  
+ Come per la maggior parte delle aggregazioni, la maggior parte della logica si trova nel metodo **accumulate** . In questo caso, la stringa passata come parametro al metodo **accumulate** viene aggiunta all'oggetto **StringBuilder** che è stato inizializzato nel metodo **init** . Supponendo che non sia la prima volta che si chiama il metodo **accumulate** , viene aggiunta anche una virgola a **StringBuilder** prima di aggiungere la stringa passata. Al termine delle attività di calcolo, viene chiamato il metodo **Terminate** , che restituisce **StringBuilder** sotto forma di stringa.  
   
  Si consideri, ad esempio, una tabella con lo schema seguente:  
   
@@ -241,7 +241,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Esempio 2  
- L'esempio seguente illustra una funzione di aggregazione con due parametri per il **Accumulate** (metodo).  
+ Nell'esempio seguente viene illustrata un'aggregazione con due parametri nel metodo **accumulate** .  
   
  [C#]  
   

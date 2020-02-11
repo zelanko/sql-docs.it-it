@@ -1,5 +1,5 @@
 ---
-title: Formato stringa di connessione e gli attributi | Microsoft Docs
+title: Formato e attributi della stringa di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,50 +14,50 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082018"
 ---
 # <a name="connection-string-format-and-attributes"></a>Formato e attributi della stringa di connessione
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Invece di usare una finestra di dialogo, alcune applicazioni potrebbero richiedere una stringa di connessione che specifica le informazioni di connessione origine dati. La stringa di connessione è costituita da un numero di attributi che specificano il modo in cui un driver si connette a un'origine dati. Un attributo identifica un'informazione specifica che il driver deve sapere per poter effettuare la connessione all'origine dati appropriata. Ogni driver potrebbe essere un diverso set di attributi, ma il formato di stringa di connessione è sempre lo stesso. Una stringa di connessione ha il formato seguente:  
+ Anziché utilizzare una finestra di dialogo, è possibile che alcune applicazioni richiedano una stringa di connessione che specifichi le informazioni di connessione all'origine dati. La stringa di connessione è costituita da una serie di attributi che specificano il modo in cui un driver si connette a un'origine dati. Un attributo identifica una parte specifica di informazioni che il driver deve essere a conoscenza prima di poter eseguire la connessione all'origine dati appropriata. Ogni driver potrebbe avere un set di attributi diverso, ma il formato della stringa di connessione è sempre lo stesso. Una stringa di connessione ha il formato seguente:  
   
 ```  
 "DSN=data-source-name[;SERVER=value] [;PWD=value] [;UID=value] [;<Attribute>=<value>]"  
 ```  
   
 > [!NOTE]  
->  Il Driver ODBC di Microsoft per Oracle supporta il formato di stringa di connessione della prima versione del driver, che usati `CONNECTSTRING`= anziché `SERVER=`.  
+>  Microsoft ODBC driver for Oracle supporta il formato della stringa di connessione della prima versione del driver, che ha utilizzato `CONNECTSTRING`= anziché `SERVER=`.  
   
- Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare `Trusted_Connection=yes` anziché le informazioni utente di ID e la password nella stringa di connessione.  
+ Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
- È necessario specificare l'origine dati se non si specifica l'UID, PWD, SERVER o CONNECTSTRING, assegnare un nome e gli attributi DRIVER. Tuttavia, tutti gli altri attributi sono facoltativi. Se non si specifica un attributo, tale attributo predefinito a quello specificato nella relativa scheda DSN del **Amministrazione origine dati ODBC** nella finestra di dialogo. Il valore dell'attributo potrebbe essere distinzione maiuscole/minuscole.  
+ Se non si specificano gli attributi UID, PWD, SERVER (o CONNECTSTRING) e DRIVER, è necessario specificare il nome dell'origine dati. Tutti gli altri attributi, tuttavia, sono facoltativi. Se non si specifica un attributo, per impostazione predefinita l'attributo viene impostato su quello specificato nella scheda DSN pertinente della finestra di dialogo **Amministrazione origine dati ODBC** . Il valore dell'attributo può fare distinzione tra maiuscole e minuscole.  
   
  Gli attributi per la stringa di connessione sono i seguenti:  
   
-|attribute|Descrizione|Valore predefinito|  
+|Attributo|Descrizione|Valore predefinito|  
 |---------------|-----------------|-------------------|  
-|DSN|Nome dell'origine dati elencati nella scheda driver del **Amministrazione origine dati ODBC** nella finestra di dialogo.|""|  
-|PWD|La password per il Server Oracle che si desidera accedere. Il driver supporta le limitazioni che Oracle posiziona su password.|""|  
-|SERVER|La stringa di connessione per il Server Oracle che si desidera accedere.|""|  
-|UID|Nome utente del Server Oracle. A seconda del sistema, questo attributo non sia facoltativo, vale a dire, alcune tabelle e database potrebbero richiedere questo attributo per motivi di sicurezza.<br /><br /> Usare "/" per l'uso di Oracle operativo dell'autenticazione del sistema.|""|  
-|BUFFERSIZE|Le dimensioni del buffer ottimale utilizzata durante il recupero di colonne.<br /><br /> Il driver consente di ottimizzare il recupero in modo che un'operazione di recupero da Server Oracle restituisce un numero di righe sufficiente per riempire un buffer di queste dimensioni. I valori maggiori tendono ad aumentare le prestazioni se si recupera una grande quantità di dati.|65535|  
-|SYNONYMCOLUMNS|Quando questo valore è true (1), una chiamata di API () SQLColumn restituisce informazioni sulle colonne. In caso contrario, SQLColumn () restituisce solo le colonne per le tabelle e viste. Il Driver ODBC per Oracle fornisce un accesso più veloce quando questo valore non è impostato.|1|  
-|REMARKS|Quando questo valore è true (1), il driver restituisce le colonne di osservazioni per il [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) set di risultati. Il Driver ODBC per Oracle fornisce un accesso più veloce quando questo valore non è impostato.|0|  
-|StdDayOfWeek|Applica lo standard ODBC per la funzione scalare DAYOFWEEK. Per impostazione predefinita questo è attivato, ma gli utenti che necessitano della versione localizzata possono modificare il comportamento per usare qualsiasi restituisce Oracle.|1|  
-|GuessTheColDef|Specifica se il driver deve restituire un valore diverso da zero per il *cbColDef* argomenti del **SQLDescribeCol**. Si applica solo alle colonne in cui non sono presente alcuna scalabilità definito Oracle, ad esempio calcolata numeriche colonne e le colonne definite come numero senza una precisione o scala. Oggetto **SQLDescribeCol** chiamata restituisce 130 per la precisione quando Oracle non fornisce tali informazioni.|0|  
+|DSN|Nome dell'origine dati elencato nella scheda driver della finestra di dialogo **Amministrazione origine dati ODBC** .|""|  
+|PWD|Password per il server Oracle a cui si vuole accedere. Questo driver supporta le limitazioni che Oracle inserisce sulle password.|""|  
+|SERVER|Stringa di connessione per il server Oracle a cui si vuole accedere.|""|  
+|UID|Nome utente del server Oracle. A seconda del sistema, questo attributo potrebbe non essere facoltativo, ovvero alcuni database e tabelle potrebbero richiedere questo attributo per motivi di sicurezza.<br /><br /> Usare "/" per usare l'autenticazione del sistema operativo di Oracle.|""|  
+|BUFFERSIZE|Dimensione del buffer ottimale utilizzata durante il recupero delle colonne.<br /><br /> Il driver ottimizza il recupero in modo che un recupero dal server Oracle restituisca un numero di righe sufficiente per riempire un buffer di queste dimensioni. I valori più grandi tendono ad aumentare le prestazioni in caso di recupero di una grande quantità di dati.|65535|  
+|SYNONYMCOLUMNS|Quando questo valore è true (1), una chiamata API sqlcolumn () restituisce informazioni sulla colonna. In caso contrario, sqlcolumn () restituisce solo le colonne per le tabelle e le viste. Il driver ODBC per Oracle consente un accesso più rapido quando questo valore non è impostato.|1|  
+|OSSERVAZIONI|Quando questo valore è true (1), il driver restituisce le colonne di commento per il set di risultati [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Il driver ODBC per Oracle consente un accesso più rapido quando questo valore non è impostato.|0|  
+|StdDayOfWeek|Applica lo standard ODBC per lo scalare DAYOFWEEK. Per impostazione predefinita, questa opzione è attivata, ma gli utenti che necessitano della versione localizzata possono modificare il comportamento per usare qualsiasi valore restituito da Oracle.|1|  
+|GuessTheColDef|Specifica se il driver deve restituire un valore diverso da zero per l'argomento *cbColDef* di **SQLDescribeCol**. Si applica solo alle colonne in cui non esiste alcuna scala definita da Oracle, ad esempio colonne numeriche calcolate e colonne definite come numeri senza precisione o scala. Una chiamata **SQLDescribeCol** restituisce 130 per la precisione quando Oracle non fornisce tali informazioni.|0|  
   
- Ad esempio, potrebbe essere una stringa di connessione che si connette all'origine dati MyDataSource usando il MyOracleServerOracle Server e MyUserID l'utente Oracle:  
+ Ad esempio, una stringa di connessione che si connette all'origine dati DataSource utilizzando il server MyOracleServerOracle e l'utente Oracle ID utente sarà:  
   
 ```  
 "DSN={MyDataSource};UID={MyUserID};PWD={MyPassword};SERVER={MyOracleServer}"  
 ```  
   
- Una stringa di connessione che si connette all'origine dati MyOtherDataSource tramite l'autenticazione del sistema operativo e il MyOtherOracleServerOracle Server sarebbe:  
+ Una stringa di connessione che si connette all'origine dati MyOtherDataSource usando l'autenticazione del sistema operativo e il server MyOtherOracleServerOracle sarà:  
   
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  

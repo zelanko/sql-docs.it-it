@@ -14,21 +14,21 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065012"
 ---
 # <a name="sqlallocenv-mapping"></a>Mapping di SQLAllocEnv
-Quando un'applicazione chiama **SQLAllocEnv** tramite un database ODBC *3.x* driver, la chiamata al **SQLAllocEnv**(*phenv*) viene mappato a **SQLAllocHandle** come indicato di seguito:  
+Quando un'applicazione chiama **SQLAllocEnv** tramite un driver ODBC *3. x* , viene eseguito il mapping della chiamata a **SQLAllocEnv**(*phenv*) a **SQLAllocHandle** nel modo seguente:  
   
-1.  Gestione Driver alloca un handle di ambiente e lo restituisce all'applicazione. Le chiamate di gestione Driver **SQLSetEnvAttr** su cui impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION SQL_OV_ODBC2.  
+1.  Gestione driver alloca un handle di ambiente e lo restituisce all'applicazione. Gestione driver chiama **SQLSetEnvAttr** per impostare l'attributo dell'ambiente SQL_ATTR_ODBC_VERSION su SQL_OV_ODBC2.  
   
-2.  Quando l'applicazione stabilisce la prima connessione a un driver, viene chiamato gestione Driver  
+2.  Quando l'applicazione stabilisce la prima connessione a un driver, gestione driver chiama  
   
     ```  
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, OutputHandlePtr)  
     ```  
   
-     nel driver con *OutputHandlePtr* impostata su *phenv*.
+     nel driver con *OutputHandlePtr* impostato su *phenv*.

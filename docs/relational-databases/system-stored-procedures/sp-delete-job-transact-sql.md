@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72306276"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72306276"
 
   Elimina un processo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,38 +42,39 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` è il numero di identificazione del processo da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id`Numero di identificazione del processo da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` è il nome del processo da eliminare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'`Nome del processo da eliminare. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name*. non è possibile specificare entrambi.  
   
-`[ @originating_server = ] 'server'` per uso interno.  
+`[ @originating_server = ] 'server'`Per uso interno.  
   
-`[ @delete_history = ] delete_history` specifica se eliminare la cronologia per il processo. *delete_history* è di **bit**e il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia del processo viene eliminata. Quando *delete_history* è **0**, la cronologia del processo non viene eliminata.  
+`[ @delete_history = ] delete_history`Specifica se eliminare la cronologia per il processo. *delete_history* è di **bit**e il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia del processo viene eliminata. Quando *delete_history* è **0**, la cronologia del processo non viene eliminata.  
   
- Si noti che quando un processo viene eliminato e la cronologia non viene eliminata, le informazioni cronologiche per il processo non verranno visualizzate nella cronologia dei processi dell'interfaccia utente grafica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ma le informazioni rimarranno comunque nella tabella **sysjobhistory** del database **msdb** .  
+ Si noti che quando un processo viene eliminato e la cronologia non viene eliminata, le informazioni cronologiche per il processo non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno visualizzate nella cronologia processo dell'interfaccia utente grafica dell'agente, ma le informazioni rimarranno comunque nella tabella **sysjobhistory** del database **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` specifica se eliminare le pianificazioni associate a questo processo se non sono associate a un altro processo. *delete_unused_schedule* è di **bit**e il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, le pianificazioni associate a questo processo vengono eliminate se non vi sono altri processi che fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
+`[ @delete_unused_schedule = ] delete_unused_schedule`Specifica se eliminare le pianificazioni associate a questo processo se non sono associate a un altro processo. *delete_unused_schedule* è di **bit**e il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, le pianificazioni associate a questo processo vengono eliminate se non vi sono altri processi che fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- L'argomento **\@originating_server** è riservato per uso interno.  
+ L' ** \@argomento originating_server** è riservato per uso interno.  
   
- L'argomento **\@delete_unused_schedule** fornisce la compatibilità con le versioni precedenti di SQL Server rimuovendo automaticamente le pianificazioni non associate a un processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere pianificazioni non associate a un processo, è necessario specificare il valore **0** come argomento **\@delete_unused_schedule** .  
+ L'argomento ** \@delete_unused_schedule** garantisce la compatibilità con le versioni precedenti di SQL Server rimuovendo automaticamente le pianificazioni non associate a un processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere pianificazioni non associate a un processo, è necessario specificare il valore **0** come argomento ** \@delete_unused_schedule** .  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
  Questa stored procedure non può eliminare i piani di manutenzione né i processi facenti parti dei piani di manutenzione. Per eliminare i piani di manutenzione, utilizzare invece [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +99,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

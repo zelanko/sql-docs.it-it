@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074678"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
@@ -31,7 +31,7 @@ PredictNodeId(<scalar column reference>)
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione scalare >  
+ \<espressione scalare>  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita la probabilità che l'individuo specificato acquisti una bicicletta e il nodeID del nodo cui, più probabilmente, apparterranno.  
@@ -61,8 +61,8 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

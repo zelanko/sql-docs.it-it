@@ -1,5 +1,5 @@
 ---
-title: 'Attività 9: Configurazione di un servizio dati di riferimento | Microsoft Docs'
+title: 'Attività 9: configurazione di un servizio dati di riferimento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154936"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Attività 9: Configurazione di un servizio dati di riferimento
@@ -28,7 +28,7 @@ ms.locfileid: "70154936"
   
 4.  Digitare la **chiave dell'account di Azure Marketplace** per il campo **ID account DataMarket** .  
   
-     ![Account del servizio dati di riferimento di Azure Data Market](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Account del servizio dati di riferimento di Azure Data Market")  
+     ![Account di servizio dei dati di riferimento di Azure DataMarket](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Account di servizio dei dati di riferimento di Azure DataMarket")  
   
 5.  Fare clic sul pulsante **convalida** accanto alla casella di testo per convalidare l'ID account.  
   
@@ -37,6 +37,6 @@ ms.locfileid: "70154936"
 7.  Fare clic su **Chiudi** nella parte inferiore della pagina per passare alla pagina principale del client DQS.  
   
 ## <a name="next-task"></a>Attività successiva  
- [Attività 10: Configurazione del dominio composito per l'utilizzo del servizio dati di riferimento](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

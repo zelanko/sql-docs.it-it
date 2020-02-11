@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072378"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
-  L'agente di raccolta prestazioni transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP In memoria migliorerà le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
+  L'agente di raccolta delle [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] prestazioni delle transazioni in consente di valutare se OLTP in memoria può migliorare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
   
  In questo argomento viene illustrato come effettuare le seguenti operazioni:  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63072378"
     > [!IMPORTANT]  
     >  Le prestazioni di un sistema di database dipendono da molti fattori, non tutti osservabili e misurabili tramite l'agente di raccolta delle prestazioni delle transazioni. Pertanto, il report di analisi delle prestazioni delle transazioni non è in grado di garantire che i miglioramenti effettivi delle prestazioni corrisponderanno alle eventuali stime eseguite.  
   
- L'agente di raccolta prestazioni transazioni e la possibilità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **strumenti di gestione-Basic** oppure **strumenti di gestione-avanzati** Quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ L'agente di raccolta delle prestazioni delle transazioni e la capacità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **strumenti di gestione-** di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]base o **strumenti di gestione-avanzate** quando si installa.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Il flusso di lavoro consigliato è illustrato nel diagramma di flusso seguente. I nodi gialli rappresentano le procedure facoltative:  
   
- ![Flusso di lavoro AMR](../../database-engine/media/amr-1.gif "flusso di lavoro AMR")  
+ ![Flusso di lavoro AMR](../../database-engine/media/amr-1.gif "Flusso di lavoro AMR")  
   
  È possibile utilizzare qualsiasi metodo per definire dati di riferimento per le prestazioni, inclusi, a titolo esemplificativo, i log del contatore delle prestazioni o Monitoraggio attività di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Di seguito sono riportate le informazioni da utilizzare nei dati di riferimento per le prestazioni e nei confronti:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63072378"
   
  L'agente di raccolta delle prestazioni delle transazioni acquisisce dati ogni 15 minuti. Per ottenere risultati utili, eseguire l'agente di raccolta per almeno un'ora. Per ottenere i risultati migliori, eseguire l'agente di raccolta quanto basta ad acquisire i dati per gli scenari principali. Generare un report di analisi delle prestazioni delle transazioni solo dopo aver completato la raccolta dei dati.  
   
- Configurare l'agente di raccolta delle prestazioni delle transazioni affinché venga eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in produzione e raccolga i dati in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un ambiente di sviluppo (test) per garantire un overhead minimo. Per informazioni su come salvare dati in un database Data Warehouse di gestione su un server remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza, vedere [configurare la raccolta dati in un'istanza remota di SQL Server](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configurare l'agente di raccolta delle prestazioni delle transazioni affinché venga eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in produzione e raccolga i dati in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un ambiente di sviluppo (test) per garantire un overhead minimo. Per informazioni su come salvare i dati in un database di data warehouse di gestione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un'istanza remota, vedere [configurare la raccolta dati in un'istanza di SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impatto sulle prestazioni  
  L'agente di raccolta delle prestazioni delle transazioni è costituito da due set di raccolta dati:  
@@ -87,13 +87,13 @@ ms.locfileid: "63072378"
   
 1.  In Esplora oggetti espandere **Gestione**.  
   
-2.  Fare clic destro **raccolta di dati** e selezionare **attività** e quindi **Configura Data Warehouse di gestione**. Il **configurazione guidata di gestione Data Warehouse** inizia.  
+2.  Fare clic con il pulsante destro del mouse su **raccolta dati** e selezionare **attività** , quindi **configurare data warehouse di gestione**. Viene avviata la **Configurazione guidata data warehouse gestione** .  
   
-3.  Fare clic su **successivo** per selezionare il database che verrà utilizzato come Data Warehouse di gestione.  
+3.  Fare clic su **Avanti** per selezionare il database che fungerà da data warehouse di gestione.  
   
-4.  Fare clic su **New** per creare un nuovo database per contenere i dati del profilo. Al termine della creazione del database, fare clic su **successivo** nella procedura guidata.  
+4.  Fare clic su **nuovo** per creare un nuovo database in cui conservare i dati del profilo. Al termine della creazione del database, fare clic su **Avanti** nella procedura guidata.  
   
-5.  Il passaggio successivo consente di aggiungere utenti e account di accesso. È possibile eseguire il mapping degli account di accesso alle appartenenze ai ruoli dell'istanza del data warehouse di gestione. Questa operazione non è necessaria per raccogliere i dati dell'istanza locale. Se non si raccolgono dati dell'istanza locale, è possibile concedere l'appartenenza al ruolo del database `mdw_admin` all'account che eseguirà le transazioni sottoposte a profilatura. Al termine, fare clic su **successivo**.  
+5.  Il passaggio successivo consente di aggiungere utenti e account di accesso. È possibile eseguire il mapping degli account di accesso alle appartenenze ai ruoli dell'istanza del data warehouse di gestione. Questa operazione non è necessaria per raccogliere i dati dell'istanza locale. Se non si raccolgono dati dell'istanza locale, è possibile concedere l'appartenenza al ruolo del database `mdw_admin` all'account che eseguirà le transazioni sottoposte a profilatura. Al termine, fare clic su **Avanti**.  
   
 6.  Accertarsi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia in esecuzione.  
   
@@ -102,36 +102,36 @@ ms.locfileid: "63072378"
 ### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurare la raccolta dati in un'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato. È sufficiente configurare un agente di raccolta dati su un server.  
   
- È possibile configurare un agente di raccolta dati su un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione nella stessa istanza  
   
-1.  Nelle **Esplora oggetti**, espandere **gestione**.  
+1.  In **Esplora oggetti**espandere **gestione**.  
   
-2.  Fare clic destro **la raccolta dei dati**, selezionare **attività**e quindi **Configura raccolta dati**. Il **configurazione guidata raccolta dati** inizia.  
+2.  Fare clic con il pulsante destro del mouse su **raccolta dati**, selezionare **attività**, quindi **configurare raccolta dati**. Viene avviata la **Configurazione guidata raccolta dati** .  
   
-3.  Fare clic su **successivo** per selezionare il database che verrà raccolti i dati del profilo.  
+3.  Fare clic su **Avanti** per selezionare il database che raccoglierà i dati del profilo.  
   
 4.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] corrente e un database del data warehouse di gestione in tale istanza.  
   
-5.  Nella casella **selezionare i set di agenti di raccolta dati si desidera abilitare**, selezionare **i set di raccolta prestazioni transazioni**. Fare clic su **successivo** al termine.  
+5.  Nella casella **selezionare gli insiemi agenti di raccolta dati che si desidera abilitare**selezionare set di **raccolta prestazioni delle transazioni**. Al termine fare clic su **Avanti**.  
   
-6.  Verificare le selezioni. Fare clic su **nuovamente** per modificare le impostazioni. Fare clic su **Fine** al termine.  
+6.  Verificare le selezioni. Fare clic su **indietro** per modificare le impostazioni. Fare clic su **Fine** al termine.  
   
-###  <a name="xxx"></a> Configurare la raccolta dei dati in un server remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza  
+###  <a name="xxx"></a>Configurare la raccolta dati in un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza remota  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato nell'istanza che raccoglierà i dati.  
   
- È possibile configurare un agente di raccolta dati su un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
   
- Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Vedere [Procedura: Creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
+ Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Per informazioni su come creare le credenziali, vedere [procedura: creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione in un'istanza diversa  
   
-1.  Nell'istanza che contiene gli oggetti basati su disco che si desidera eseguire la migrazione a OLTP In memoria, espandere la **gestione** nodo in Esplora oggetti.  
+1.  Nell'istanza di che contiene gli oggetti basati su disco di cui si desidera eseguire la migrazione a OLTP in memoria, espandere il nodo **gestione** in Esplora oggetti.  
   
-2.  Fare clic destro **la raccolta dei dati** e selezionare **attività** e quindi **Configura raccolta dati**. Il **configurazione guidata raccolta dati** inizia.  
+2.  Fare clic con il pulsante destro del mouse su **raccolta dati** e selezionare **attività** , quindi **Configura raccolta dati**. Viene avviata la **Configurazione guidata raccolta dati** .  
   
-3.  Fare clic su **successivo** per selezionare il database che verrà raccolti i dati del profilo.  
+3.  Fare clic su **Avanti** per selezionare il database che raccoglierà i dati del profilo.  
   
 4.  Accertarsi che un database del data warehouse di gestione sia presente nell'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -139,34 +139,34 @@ ms.locfileid: "63072378"
   
      La versione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su cui verranno raccolti dati (profilo) deve essere la stessa o una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è configurato il data warehouse di gestione.  
   
-6.  Nella casella **selezionare i set di agenti di raccolta dati si desidera abilitare**, selezionare **i set di raccolta prestazioni transazioni**.  
+6.  Nella casella **selezionare gli insiemi agenti di raccolta dati che si desidera abilitare**selezionare set di **raccolta prestazioni delle transazioni**.  
   
-7.  Selezionare **Usa un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy dell'agente per i caricamenti remoti**.  
+7.  Selezionare **Usa un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy di Agent per i caricamenti remoti**.  
   
-8.  Fare clic su **successivo** al termine.  
+8.  Al termine fare clic su **Avanti**.  
   
 9. Selezionare il proxy.  
   
      Per creare un nuovo proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
   
-    1.  Fare clic su **New** per visualizzare i **nuovo Account Proxy** nella finestra di dialogo.  
+    1.  Fare clic su **nuovo** per visualizzare la finestra di dialogo **nuovo account proxy** .  
   
-    2.  Nel **nuovo Account Proxy** nella finestra di dialogo immettere il nome del proxy, selezionare le credenziali e immettere facoltativamente una descrizione. Fare quindi clic **entità**.  
+    2.  Nella finestra di dialogo **nuovo account proxy** immettere il nome del proxy, selezionare le credenziali e, facoltativamente, immettere una descrizione. Fare quindi clic su **entità**.  
   
-    3.  Fare clic su **Add** e selezionare **Msdb** ruolo.  
+    3.  Fare clic su **Aggiungi** e selezionare il ruolo **msdb** .  
   
-    4.  Selezionare `dc_proxy` e fare clic su **OK**. Quindi fare clic su **OK** nuovamente.  
+    4.  Selezionare `dc_proxy` e fare clic su **OK**. Fare quindi ancora clic su **OK**.  
   
-     Dopo aver selezionato il proxy corretto, fare clic su **successivo**.  
+     Dopo aver selezionato il proxy corretto, fare clic su **Avanti**.  
   
-10. Per configurare il set di raccolta di sistema, controllare **set di raccolta di sistema** e fare clic su **successivo**.  
+10. Per configurare i set di raccolta di sistema, controllare i **set di raccolta di sistema** e fare clic su **Avanti**.  
   
-11. Verificare le selezioni. Fare clic su **nuovamente** per modificare le impostazioni. Clicck **fine** al termine.  
+11. Verificare le selezioni. Fare clic su **indietro** per modificare le impostazioni. Clicck **al termine dell'** operazione.  
   
  A questo punto, i set di raccolta dati dovrebbero essere configurati e in esecuzione nell'istanza.  
   
 ### <a name="generate-reports"></a>Generare report  
- È possibile generare report di analisi delle prestazioni transazioni del database del Data Warehouse di gestione facendo clic destro e selezionando **Reports**, quindi **Data Warehouse di gestione**e quindi **Panoramica dell'analisi delle prestazioni transazioni**.  
+ È possibile generare report di analisi delle prestazioni delle transazioni facendo clic con il pulsante destro del mouse sul database del data warehouse di gestione e selezionando **report**, quindi **data warehouse di gestione**, quindi **Panoramica dell'analisi delle prestazioni delle transazioni**.  
   
  Il report raccoglie informazioni su tutti i database utente nel server del carico di lavoro. Se il database del data warehouse di gestione è nel computer locale, nel report verranno visualizzati i database del data warehouse di gestione.  
   
@@ -186,19 +186,19 @@ ms.locfileid: "63072378"
   
 -   Sezione relativa alle statistiche sulle contese  
   
-     In questa sezione è inclusa una tabella in cui viene mostrata la contesa nella tabella di database. Per altre informazioni sui database latch e blocchi, vedi [architettura di blocco](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Le colonne sono le seguenti:  
+     In questa sezione è inclusa una tabella in cui viene mostrata la contesa nella tabella di database. Per ulteriori informazioni sui latch e i blocchi del database, vedere l' [architettura di blocco](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Le colonne sono le seguenti:  
   
     -   Percentuale di attese totali. Percentuale di attese di blocchi e di latch in questa tabella di database rispetto all'attività del database. Più alta è questa percentuale, molto più frequente è l'utilizzo della tabella confrontata con altre tabelle del database.  
   
     -   Statistiche latch. In queste colonne viene registrato il numero di attese di latch per query che interessano questa tabella. Per informazioni sui latch, vedere [latch](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Più elevato è questo numero, maggiore è la contesa di latch nella tabella.  
   
-    -   Statistiche blocchi. In questo gruppo di colonne viene registrato il numero di acquisizioni e attese dei blocchi di pagina per query per la tabella. Per altre informazioni sui blocchi, vedere [informazioni sul blocco in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Più attese vi sono, maggiore è la contesa di blocchi nella tabella.  
+    -   Statistiche blocchi. In questo gruppo di colonne viene registrato il numero di acquisizioni e attese dei blocchi di pagina per query per la tabella. Per ulteriori informazioni sui blocchi, vedere [informazioni sul blocco in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Più attese vi sono, maggiore è la contesa di blocchi nella tabella.  
   
 -   Sezione relativa alle difficoltà nella migrazione  
   
-     In questa sezione è inclusa una tabella in cui vengono mostrate le difficoltà di conversione della tabella di database in una tabella ottimizzata per la memoria. Un grado di difficoltà più elevato indica una maggiore difficoltà di conversione della tabella. Per visualizzare i dettagli per convertire questa tabella di database, usare il [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md).  
+     In questa sezione è inclusa una tabella in cui vengono mostrate le difficoltà di conversione della tabella di database in una tabella ottimizzata per la memoria. Un grado di difficoltà più elevato indica una maggiore difficoltà di conversione della tabella. Per visualizzare i dettagli relativi alla conversione di questa tabella di database, utilizzare [Ottimizzazione guidata](memory-optimization-advisor.md)per la memoria.  
   
- Le statistiche di contese e sulle analisi nel report dettagli della tabella vengono raccolte e aggregate dal [DM db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
+ Le statistiche relative all'analisi e alla contesa nel report Dettagli tabella vengono raccolte e aggregate da [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
   
  Il report dettagli per una stored procedure è costituito da due sezioni:  
   
@@ -220,9 +220,9 @@ ms.locfileid: "63072378"
   
      In questa sezione è inclusa una tabella in cui vengono mostrate le tabelle a cui fa riferimento questa stored procedure. Prima di convertire la stored procedure in una stored procedure compilata a livello nativo, tutte queste tabelle devono essere convertite in tabelle ottimizzate per la memoria e devono rimanere nello stesso server e database.  
   
- Statistiche di esecuzione report dettagli della stored procedure vengono raccolte e aggregate dal [DM exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). I riferimenti sono ottenuti da [Sys. sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
+ Le statistiche di esecuzione del report dettagli stored procedure vengono raccolte e aggregate da [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). I riferimenti vengono ottenuti da [sys. sql_expression_dependencies &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
   
- Per visualizzare informazioni dettagliate su come convertire una stored procedure a una stored procedure compilata in modo nativo, usare il [Assistente compilazione nativa](native-compilation-advisor.md).  
+ Per visualizzare i dettagli su come convertire un stored procedure in un stored procedure compilato in modo nativo, usare l' [Assistente compilazione nativa](native-compilation-advisor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  

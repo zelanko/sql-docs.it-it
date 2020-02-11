@@ -1,5 +1,5 @@
 ---
-title: Limitazioni dell'ordinamento | Microsoft Docs
+title: Limitazioni di ordinamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e4851197dd8798641eaf400084694afe667dfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063390"
 ---
 # <a name="sorting-limitations"></a>Limitazioni dell'ordinamento
-La lunghezza massima di una chiave di ordinamento in una clausola GROUP BY, ORDER BY clausola, istruzione SELECT DISTINCT o outer join è lunga 255 byte; la lunghezza massima di tutte le chiavi di ordinamento in una riga di ordinamento è di tipo di 65.500 byte.
+La lunghezza massima di una chiave di ordinamento in una clausola GROUP BY, clausola ORDER BY, SELECT DISTINCT Statement o outer join è 255 byte; la lunghezza massima di tutte le chiavi di ordinamento in una riga di ordinamento è pari a 65.500 byte.

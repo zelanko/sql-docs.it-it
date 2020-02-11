@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494009"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio
@@ -37,7 +37,7 @@ ms.locfileid: "69494009"
   
 3.  Selezionare il membro **Ken J. Sánchez** .  
   
-     Si noti che il nome del livello di questo membro è **Livello 02**. Il nome del livello viene visualizzato dopo **Livello corrente:** immediatamente sopra il membro **All Employees**. Nell'attività successiva verranno definiti nomi più descrittivi per ogni livello.  
+     Si noti che il nome del livello di questo membro è **Livello 02**. Il nome del livello viene visualizzato dopo **Livello corrente:** immediatamente sopra il membro **All Employees** . Nell'attività successiva verranno definiti nomi più descrittivi per ogni livello.  
   
 4.  Espandere **Ken J. Sánchez** per visualizzare i nomi dei dipendenti che fanno riferimento a questo responsabile e selezionare **Brian S. Welcker** per visualizzare il nome di questo livello.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69494009"
   
      Nell'immagine seguente viene illustrata la gerarchia Employees espansa.  
   
-10. ![Tabella pivot che mostra la gerarchia Employees](../../2014/tutorials/media/l4-employee-1.gif "Tabella pivot che mostra la gerarchia Employees")  
+10. ![Gerarchia Employees visualizzata in una tabella pivot](../../2014/tutorials/media/l4-employee-1.gif "Gerarchia Employees visualizzata in una tabella pivot")  
   
      Si noti che le vendite di ogni responsabile nel Livello 03 vengono visualizzate anche nel Livello 04. dal momento che ogni responsabile è anche un dipendente di altri responsabili. Nell'attività successiva gli importi delle vendite verranno nascosti.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "69494009"
   
      Si noti l'icona particolare dell'attributo. Tale icona indica che l'attributo rappresenta la chiave del padre in una gerarchia padre-figlio. Si noti anche che nella finestra Proprietà la proprietà **Usage** è definita come **Padre**. Questa proprietà è stata impostata con la Creazione guidata dimensione durante la progettazione della dimensione. La procedura guidata ha rilevato automaticamente la relazione padre-figlio.  
   
-3.  Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione ( **...** ) nella cella della proprietà **NamingTemplate** .  
+3.  Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione (**...**) nella cella della proprietà **NamingTemplate** .  
   
      Nella finestra di dialogo **Modello denominazione livelli** viene definito il modello di denominazione dei livelli che consente di determinare i nomi dei livelli nella gerarchia padre-figlio visualizzati durante l'esplorazione dei cubi.  
   
-4.  Nella seconda riga, ovvero nella riga contenente **\*** , digitare **Employee Level \*** nella colonna **Nome** e fare clic sulla terza riga.  
+4.  Nella seconda riga, la **\*** riga digitare **Employee Level \* ** nella colonna **Name** , quindi fare clic sulla terza riga.  
   
      Si noti che alla voce **Risultato** ogni livello verrà denominato "Employee Level" seguito da un numero progressivo.  
   
      La figura seguente illustrale modifiche apportate nella finestra di dialogo **Modello denominazione livelli** .  
   
-     ![dialogo Modello denominazione livelli](../../2014/tutorials/media/l4-namingtemplate.gif "dialogo Modello denominazione livelli")  
+     ![Finestra di dialogo Modello denominazione livelli](../../2014/tutorials/media/l4-namingtemplate.gif "Finestra di dialogo Modello denominazione livelli")  
   
 5.  Fare clic su **OK**.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "69494009"
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>Visualizzazione della dimensione Employee con gli attributi modificati  
   
-1.  Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu **Compila** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 2.  Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti** sulla barra degli strumenti della scheda **Esplorazione** .  
   
-3.  Fare clic sull'icona Excel e selezionare **Abilita**.  
+3.  Fare clic sull'icona di Excel, quindi su **Abilita**.  
   
 4.  Trascinare **Reseller Sales-Sales Amount** nell'area Valori.  
   

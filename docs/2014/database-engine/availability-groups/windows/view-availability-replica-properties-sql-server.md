@@ -13,59 +13,59 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788007"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Visualizzazione delle proprietà della replica di disponibilità (SQL Server)
   In questo argomento viene illustrato come visualizzare le proprietà di una replica di disponibilità per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per visualizzare e modificare le proprietà di una replica di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
 2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
-3.  Espandere il gruppo di disponibilità al quale appartiene la replica di disponibilità ed espandere il nodo **Repliche di disponibilità**.  
+3.  Espandere il gruppo di disponibilità al quale appartiene la replica di disponibilità ed espandere il nodo **Repliche di disponibilità** .  
   
 4.  Fare clic con il pulsante destro del mouse sulla replica di disponibilità di cui si vuole visualizzare le proprietà e selezionare il comando **Proprietà** .  
   
-5.  Nella finestra di dialogo **Proprietà replica di disponibilità** usare la pagina **Generale** per visualizzare le proprietà della replica. Se si è connessi alla replica primaria, è possibile modificare le proprietà seguenti: modalità di disponibilità, modalità di failover, accesso alla connessione per il ruolo primario, accesso in lettura per il ruolo secondario (secondario leggibile) e valore del timeout di sessione. Per altre informazioni, vedere [proprietà Replica di disponibilità &#40;pagina Generale&#41;](availability-replica-properties-general-page.md).  
+5.  Nella finestra di dialogo **Proprietà replica di disponibilità** usare la pagina **Generale** per visualizzare le proprietà della replica. Se si è connessi alla replica primaria, è possibile modificare le proprietà seguenti: modalità di disponibilità, modalità di failover, accesso alla connessione per il ruolo primario, accesso in lettura per il ruolo secondario (secondario leggibile) e valore del timeout di sessione. Per altre informazioni, vedere [proprietà della replica di disponibilità &#40;&#41;della pagina generale ](availability-replica-properties-general-page.md).  
   
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
- **Per visualizzare le proprietà e gli stati delle repliche di disponibilità**  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+ **Per visualizzare le proprietà e gli Stati delle repliche di disponibilità**  
   
  Per visualizzare le proprietà e gli stati delle repliche di disponibilità, utilizzare la funzione di sistema e le viste seguenti:  
   
  [sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
  Restituisce una riga per ogni replica di disponibilità in ogni gruppo di disponibilità per il quale l'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ospita una replica di disponibilità.  
   
- **Nomi colonne:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
+ **Nomi delle colonne:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, ENDPOINT_URL, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, READ_ONLY_ROUTING_URL  
   
  [sys.availability_read_only_routing_lists](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
  Viene restituita una riga per l'elenco di routing di sola lettura di ogni replica di disponibilità in un gruppo di disponibilità AlwaysOn nel cluster di failover WSFC.  
   
- **Nomi colonne:** replica_id, routing_priority, read_only_replica_id  
+ **Nomi delle colonne:** replica_id, routing_priority, read_only_replica_id  
   
  [sys.dm_hadr_availability_replica_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
  Restituisce una riga per ogni replica di disponibilità, indipendentemente dallo stato di join, dei gruppi di disponibilità AlwaysOn nel cluster WSFC (Windows Server Failover Clustering).  
   
- **Nomi colonne:** group_name, replica_server_name, node_name  
+ **Nomi delle colonne:** group_name, replica_server_name, node_name  
   
  [sys.dm_hadr_availability_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
  Restituisce una riga per ogni replica, indipendentemente dallo stato del join, di tutti i gruppi di disponibilità AlwaysOn, indipendentemente dal percorso della replica, nel cluster WSFC (Windows Server Failover Clustering).  
   
- **Nomi colonne:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
+ **Nomi delle colonne:** replica_id, replica_server_name, group_id, join_state join_state_desc  
   
  [sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
  Restituisce una riga in cui viene mostrato lo stato di ogni replica di disponibilità locale e una riga per ogni replica di disponibilità remota nello stesso gruppo di disponibilità.  
   
- **Nomi colonne:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description e last_connect_error_timestamp  
+ **Nomi delle colonne:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description e last_connect_error_timestamp  
   
  [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
  Determina se la replica corrente è la replica di backup preferita. Restituisce 1 se il database nell'istanza server corrente è la replica preferita. In caso contrario, viene restituito 0.  
@@ -81,9 +81,9 @@ ms.locfileid: "62788007"
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62788007"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
- [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Amministrazione di un gruppo di disponibilità &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)  
   
   

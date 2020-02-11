@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892965"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Informazioni sui requisiti per un modello Time Series (Esercitazione intermedia sul data mining)
@@ -65,7 +65,7 @@ ms.locfileid: "68892965"
 -   Fare clic con il pulsante destro del mouse sulla scheda, **esplorare la tabella vTimeSeries**e selezionare **Chiudi**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di una struttura di previsione e &#40;di un'esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Creazione di una struttura e di un modello di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

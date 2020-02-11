@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035270"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Proprietà - Analysis Server (scheda Accesso)
@@ -30,7 +30,7 @@ ms.locfileid: "63035270"
  **Account seguente**  
  Specificare un account utente locale o di dominio che utilizza l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di utilizzare un account utente di dominio con diritti minimi. Per ulteriori informazioni sulla selezione di un account, cercare l'argomento "Impostazione di account di servizio Windows" nella documentazione online.  
   
- **Nome account**  
+ **Account Name** (Nome account)  
  Specificare il nome dell'account utente locale o di dominio.  
   
  **Password**  
@@ -39,10 +39,10 @@ ms.locfileid: "63035270"
  **Conferma password**  
  Digitare nuovamente la password dell'account.  
   
- **Start**  
+ **Inizia**  
  Avviare il servizio.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il servizio.  
   
  **Sospendi**  

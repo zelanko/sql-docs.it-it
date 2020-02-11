@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà processo: Nuovo processo (pagina notifiche) | Microsoft Docs'
+title: 'Proprietà processo: nuovo processo (pagina notifiche) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189238"
 ---
-# <a name="job-properties-new-job-notifications-page"></a>Proprietà processo: Nuovo processo (pagina Notifiche)
-  Usare questa pagina per impostare le azioni che devono essere eseguite da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent al completamento del processo.  
+# <a name="job-properties-new-job-notifications-page"></a>Proprietà processo- Nuovo processo (pagina Notifiche)
+  Utilizzare questa pagina per impostare le azioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che Agent deve eseguire al completamento del processo.  
   
 ## <a name="options"></a>Opzioni  
  **Posta elettronica**  
@@ -29,13 +29,13 @@ ms.locfileid: "68189238"
  **Page**  
  Selezionare questa opzione per inviare un messaggio di posta elettronica al cercapersone di un operatore al completamento del processo. Dopo aver selezionato questa opzione, specificare l'operatore a cui inviare la notifica e la condizione che attiverà tale notifica: **In caso di esito positivo processo**, **In caso di esito negativo processo**o **Al termine del processo**.  
   
- **Net Send**  
+ **NET SEND**  
  Selezionare questa opzione se al completamento del processo si desidera inviare la notifica all'operatore tramite Net Send. Dopo aver selezionato questa opzione, specificare l'operatore a cui inviare la notifica e la condizione che attiverà tale notifica: **In caso di esito positivo processo**, **In caso di esito negativo processo**o **Al termine del processo**.  
   
  **Scrivi nel registro eventi applicazioni di Windows**  
  Selezionare questa opzione per scrivere una voce nel registro degli eventi dell'applicazione al completamento del processo. Dopo aver selezionato questa opzione, specificare la condizione che causerà la scrittura della voce: **In caso di esito positivo processo**, **In caso di esito negativo processo**o **Al termine del processo**.  
   
- **Elimina il processo automaticamente**  
+ **Elimina automaticamente processo**  
  Selezionare questa opzione per eliminare il processo dopo il completamento. Dopo aver selezionato questa opzione, specificare la condizione che attiverà l'eliminazione del processo: **In caso di esito positivo processo**, **In caso di esito negativo processo**o **Al termine del processo**.  
   
 ## <a name="see-also"></a>Vedere anche  

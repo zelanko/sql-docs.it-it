@@ -1,5 +1,5 @@
 ---
-title: Convertire, caricare ed eseguire la migrazione (AccessToSQL) | Microsoft Docs
+title: Converti, carica ed Esegui migrazione (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,24 +14,24 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006642"
 ---
-# <a name="convert-load-and-migrate-accesstosql"></a>Convertire, caricare ed eseguire la migrazione (AccessToSQL)
-Il **convertire, caricare ed eseguire la migrazione** nella finestra di dialogo segnala lo stato di migrazione quando si usa il pulsante Convert, carico ed eseguire la migrazione o la migrazione guidata.  
+# <a name="convert-load-and-migrate-accesstosql"></a>Converti, carica ed Esegui migrazione (AccessToSQL)
+La finestra di dialogo **Converti, carica ed Esegui migrazione** riporta lo stato di migrazione quando si utilizza il pulsante Converti, carica ed Esegui migrazione o la migrazione guidata.  
   
-Al termine della migrazione, è possibile visualizzare informativo, avviso e messaggi di errore, selezionando il collegamento in ogni sezione. Il collegamento Mostra quanti messaggi di errore, avviso e informativi sono disponibili, ad esempio "0 errori, 4 avvisi".  
+Al termine della migrazione, è possibile visualizzare i messaggi informativi, di avviso e di errore facendo clic sul collegamento in ogni sezione. Il collegamento Mostra il numero di messaggi di errore, avviso e informativi disponibili, ad esempio "0 errori, 4 avvisi".  
   
-Il **la migrazione dei dati per gli oggetti selezionati** sezione della pagina contiene anche una **Report** pulsante. È possibile fare clic su questo pulsante per visualizzare un report di migrazione dei dati.  
+La sezione **migrare i dati per gli oggetti selezionati** della pagina contiene anche un pulsante del **report** . È possibile fare clic su questo pulsante per visualizzare un report di migrazione dei dati.  
   
 ## <a name="options"></a>Opzioni  
 **Report**  
-Mostra il report associato di conversione o la migrazione.  
+Mostra il report di conversione o migrazione associato.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Migrazione guidata](migration-wizard-accesstosql.md)  
   

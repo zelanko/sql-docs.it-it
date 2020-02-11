@@ -1,5 +1,5 @@
 ---
-title: Chiamata di una Stored Procedure come metodo in un oggetto Connection | Microsoft Docs
+title: Chiamata di una stored procedure come metodo in un oggetto Connection | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925890"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chiamata di una stored procedure come metodo in un oggetto Connection
-È possibile chiamare una stored procedure come se fosse un metodo nativo all'apertura associato **connessione** oggetto. È simile alla chiamata di un comando denominato nel **connessione** oggetto.  
+È possibile chiamare un stored procedure come se fosse un metodo nativo sull'oggetto **connessione** aperto associato. Questa operazione è simile alla chiamata di un comando denominato nell'oggetto **Connection** .  
   
- Esempio di codice Visual Basic seguente chiama una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, che è elencati di nuovo per comodità.  
+ Nell'esempio di codice Visual Basic riportato di seguito viene chiamato un stored procedure nel database di esempio Northwind, denominato CustOrdersOrders, riportato di seguito per praticità.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- Esempio di codice seguente viene illustrato come chiamare una stored procedure come se fosse un metodo nativo su un elemento aperto associato **connessione** oggetto.  
+ Nell'esempio di codice seguente viene illustrato come chiamare un stored procedure come se fosse un metodo nativo su un oggetto **Connection** aperto associato.  
   
 ```  
 Const DS = "MySQLServer"  

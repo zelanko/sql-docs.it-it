@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836112"
 ---
 # <a name="configure-dialog-box"></a>Finestra di dialogo Configura
@@ -56,7 +56,7 @@ ms.locfileid: "62836112"
  **Contenitore**  
  Viene elencato l'oggetto contenente il parametro.  
   
- **Name**  
+ **Nome**  
  Viene elencato il nome del parametro.  
   
  **Valore**  
@@ -67,7 +67,7 @@ ms.locfileid: "62836112"
  **Contenitore**  
  Viene elencato l'oggetto contenente la gestione connessione.  
   
- **Name**  
+ **Nome**  
  Viene elencato il nome della gestione connessione.  
   
  **Nome proprietà**  
@@ -81,16 +81,16 @@ ms.locfileid: "62836112"
   
  Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- **Ambiente**  
+ **Environment**  
  Elenca l'ambiente  
   
  **Cartella ambiente**  
  Elenca la cartella in cui è contenuto l'ambiente.  
   
- **Aprire**  
+ **Apri**  
  Fare clic per aprire la finestra di dialogo **Proprietà ambiente** .  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere un riferimento a un ambiente. Nella finestra di dialogo **Sfoglia ambienti** fare clic su un ambiente, quindi fare clic su **OK**.  
   
  È possibile selezionare un ambiente contenuto in qualsiasi cartella del progetto nel nodo **SSISDB** .  

@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843765"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Ripristino di database abilitati per Stretch (Stretch Database)
@@ -34,11 +34,11 @@ Dopo aver ripristinato il database di SQL Server, è necessario eseguire la stor
 ## <a name="restore-your-remote-azure-data"></a>Ripristinare i dati di Azure remoti
 
 ### <a name="recover-a-live-azure-database"></a>Ripristinare un database di Azure attivo
-Il servizio SQL Server Stretch Database in Azure crea snapshot di tutti i dati dinamici almeno ogni 8 ore usando snapshot di Archiviazione di Azure. Questi snapshot sono mantenuti per 7 giorni. Questo consente di ripristinare i dati in uno degli almeno 21 punti temporali negli ultimi 7 giorni fino all'ora di creazione dell'ultimo snapshot.
+Il servizio SQL Server Stretch Database su Azure esegue gli snapshot di tutti i dati dinamici almeno ogni 8 ore usando gli snapshot di Archiviazione di Azure. Questi snapshot sono mantenuti per 7 giorni. Questo consente di ripristinare i dati in uno degli almeno 21 punti temporali negli ultimi 7 giorni fino all'ora di creazione dell'ultimo snapshot.
 
 Per ripristinare un database di Azure attivo in un punto temporale precedente tramite il portale di Azure, effettuare le operazioni seguenti.
 
-1. Accedere al [portale di Azure][].
+1. Accedere al [Azure portal][].
 2. Sul lato sinistro della schermata selezionare **Sfoglia** e quindi selezionare **Database SQL**.
 3. Passare al database e selezionarlo.
 4. Nella parte superiore del pannello del database, fare clic su **Ripristina**.
@@ -46,11 +46,11 @@ Per ripristinare un database di Azure attivo in un punto temporale precedente tr
 6. Il processo di ripristino del database inizierà e potrà essere monitorato tramite **Notifiche**.
 
 ### <a name="recover-a-deleted-azure-database"></a>Ripristinare un database di Azure eliminato
-Il servizio SQL Server Stretch Database in Azure crea uno snapshot del database prima dell'eliminazione del database e lo conserva per 7 giorni. Dopo l'eliminazione, gli snapshot del database attivo non vengono più conservati. Ciò consente di ripristinare un database eliminato nel punto in cui è stato eliminato.
+Prima dell'eliminazione del database, il servizio SQL Server Stretch Database in Azure esegue uno snapshot del database e lo conserva per 7 giorni. Dopo l'eliminazione, gli snapshot del database attivo non vengono più conservati. Ciò consente di ripristinare un database eliminato nel punto in cui è stato eliminato.
 
 Per ripristinare un database di Azure eliminato nel punto in cui è stato eliminato tramite il portale di Azure, effettuare le operazioni seguenti.
 
-1. Accedere al [portale di Azure][].
+1. Accedere al [Azure portal][].
 2. Sul lato sinistro della schermata selezionare **Sfoglia** e quindi selezionare **SQL Server**.
 3. Passare al server e selezionarlo.
 4. Scorrere verso il basso fino a visualizzare Operazioni nel pannello del server, quindi fare clic sul riquadro **Database eliminati** .
@@ -78,11 +78,11 @@ Per ripristinare un database di Azure eliminato nel punto in cui è stato elimin
     ```  
     
   ## <a name="see-also"></a>Vedere anche  
- [Backup di database abilitati per l'estensione](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
+ [Eseguire il backup di database con estensione abilitata](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
  [Gestione e risoluzione dei problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [portale di Azure]: https://portal.azure.com/
+ [Azure portal]: https://portal.azure.com/
  

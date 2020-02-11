@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016830"
 ---
 # <a name="case-statement-mdx"></a>Istruzione CASE (MDX)
@@ -48,7 +48,7 @@ END
  Espressione MDX (Multidimensional Expression) che viene risolta in valore scalare.  
   
  *when_expression*  
- Valore scalare sulla quale specificato il *input_expression* viene valutato, che, quando valutata come true, restituisce il valore scalare delle *else_result_expression*.  
+ Valore scalare specificato rispetto al quale viene valutata la *input_expression* , che, quando viene valutata true, restituisce il valore scalare del *else_result_expression*.  
   
  *when_true_result_expression*  
  Valore scalare restituito quando la clausola WHEN restituisce true.  
@@ -59,13 +59,13 @@ END
  *Boolean_expression*  
  Espressione MDX che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non ci sono clausole ELSE e tutte le clausole WHEN restituiscono False, il risultato sarà una cella vuota.  
   
 ## <a name="simple-case-expression"></a>Espressione CASE semplice  
- MDX valuta un'espressione case semplice risolvendo i *input_expression* su un valore scalare. Questo valore scalare viene quindi confrontato con il valore scalare del *when_expression*. Se i due valori scalari corrispondono, l'istruzione CASE restituisce il valore della *when_true_expression*. Se i due valori scalari non corrispondono, viene valutata la clausola WHEN successiva. Se tutte le clausole WHEN restituiscono false, il valore di *else_result_expression* dalla clausola ELSE, se presente, viene restituita.  
+ MDX valuta una semplice espressione case risolvendo il *input_expression* in un valore scalare. Questo valore scalare viene quindi confrontato con il valore scalare del *when_expression*. Se i due valori scalari corrispondono, l'istruzione CASE restituisce il valore della *when_true_expression*. Se i due valori scalari non corrispondono, viene valutata la clausola WHEN successiva. Se tutte le clausole WHEN restituiscono false, viene restituito il valore di *else_result_expression* dalla clausola else.  
   
- Nell'esempio seguente, la misura Reseller Order Count viene valutata in base a diverse clausole WHEN e restituisce un risultato basato sul valore della misura Reseller Order Count per ogni anno. Per i valori di Reseller Order Count che non corrispondono a un valore scalare specificato in un *when_expression* in una clausola WHEN, il valore scalare delle *else_result_expression* viene restituito.  
+ Nell'esempio seguente, la misura Reseller Order Count viene valutata in base a diverse clausole WHEN e restituisce un risultato basato sul valore della misura Reseller Order Count per ogni anno. Per i valori dei conteggi degli ordini dei rivenditori che non corrispondono a un valore scalare specificato in un *when_expression* in una clausola When, viene restituito il valore scalare del *else_result_expression* .  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -88,7 +88,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>Espressione CASE avanzata  
  Per utilizzare l'espressione CASE per eseguire valutazioni più complesse, utilizzare l'espressione CASE avanzata. Questa variante dell'espressione di ricerca consente di valutare se un'espressione di input è compresa in un intervallo di valori. Nel linguaggio MDX le clausole WHEN vengono valutate nell'ordine in cui si presentano nell'istruzione CASE.  
   
- Nell'esempio seguente, la misura Reseller Order Count viene valutata rispetto al messaggio specificato *Boolean_expression* per ognuna delle diverse clausole WHEN. Viene restituito un risultato basato sul valore della misura Reseller Order Count per ogni anno. Poiché le clausole WHEN sono valutate nell'ordine in cui vengono visualizzate, è possibile assegnare a tutti i valori superiori a 6 il valore "VERY LARGE" senza dover specificare ogni valore in modo esplicito. Per i valori di Reseller Order Count che non sono specificati in una clausola WHEN, il valore scalare del *else_result_expression* viene restituito.  
+ Nell'esempio seguente, la misura Reseller Order Count viene valutata in base al *Boolean_expression* specificato per ognuna delle diverse clausole When. Viene restituito un risultato basato sul valore della misura Reseller Order Count per ogni anno. Poiché le clausole WHEN sono valutate nell'ordine in cui vengono visualizzate, è possibile assegnare a tutti i valori superiori a 6 il valore "VERY LARGE" senza dover specificare ogni valore in modo esplicito. Per i valori dei conteggi degli ordini dei rivenditori non specificati in una clausola WHEN, viene restituito il valore scalare del *else_result_expression* .  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -106,6 +106,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
   
   

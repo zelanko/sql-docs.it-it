@@ -1,5 +1,5 @@
 ---
-title: database_role_members (Transact-SQL) | Microsoft Docs
+title: sys. database_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -21,26 +21,26 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079472"
 ---
-# <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
+# <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce una riga per ogni membro di ogni ruolo del database.  Gli utenti del database, ruoli applicazione e altri ruoli del database possono essere membri di un ruolo del database. Per aggiungere membri a un ruolo, usare il [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) istruzione con il `ADD MEMBER` opzione. Creare un join con [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) per restituire i nomi del `principal_id` valori.
+  Restituisce una riga per ogni membro di ogni ruolo del database.  Gli utenti del database, i ruoli applicazione e altri ruoli del database possono essere membri di un ruolo del database. Per aggiungere membri a un ruolo, utilizzare l'istruzione [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) con l' `ADD MEMBER` opzione. Eseguire il join con [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) per restituire i nomi `principal_id` dei valori.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**int**|ID dell'entità del ruolo del database.|  
+|**role_principal_id**|**int**|ID dell'entità di database del ruolo.|  
 |**member_principal_id**|**int**|ID dell'entità di database del membro.|  
   
-## <a name="permissions"></a>Permissions  
- Qualsiasi utente può visualizzare la propria appartenenza al ruolo. Per visualizzare altri ruoli appartenenze richiede l'appartenenza al `db_securityadmin` ruolo predefinito del database o `VIEW DEFINITION` nel database.  
+## <a name="permissions"></a>Autorizzazioni  
+ Qualsiasi utente può visualizzare la propria appartenenza al ruolo. Per visualizzare altre appartenenze ai ruoli, è richiesta `db_securityadmin` l'appartenenza al ruolo `VIEW DEFINITION` predefinito del database o al database.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="example"></a>Esempio  
  La query seguente restituisce i membri dei ruoli del database.  
@@ -58,11 +58,11 @@ ORDER BY DP1.name;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-[RUOLO ALTER (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
-[Sys. server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[ALTER ROLE (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
+[sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
   
 
 

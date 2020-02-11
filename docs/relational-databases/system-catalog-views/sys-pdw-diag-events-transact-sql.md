@@ -1,5 +1,5 @@
 ---
-title: pdw_diag_events (Transact-SQL) | Microsoft Docs
+title: sys. pdw_diag_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4aa83c4931e1cce4b4b813baa489ae43798db594
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127556"
 ---
-# <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events (Transact-SQL)
+# <a name="syspdw_diag_events-transact-sql"></a>sys. pdw_diag_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene informazioni sugli eventi che possono essere inclusi in sessioni di diagnostica nel sistema.  
+  Contiene informazioni sugli eventi che possono essere inclusi nelle sessioni di diagnostica nel sistema.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|**name**|**nvarchar(255)**|Nome dell'evento di diagnostica specifico.||  
-|**origine**|**nvarchar(255)**|Origine dell'evento (motore generale, servizio migrazione del database, e così via.)||  
-|**is_enabled**|**bit**|Indica se la pubblicazione dell'evento in corso.||  
+|**nome**|**nvarchar(255)**|Nome dell'evento di diagnostica specifico.||  
+|**origine**|**nvarchar(255)**|Origine dell'evento (motore, generale, DMS e così via)||  
+|**is_enabled**|**bit**|Indica se l'evento è in corso di pubblicazione.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -16,18 +16,18 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762785"
 ---
-# <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
+# <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Consente di modificare le opzioni di un Sottoscrittore. Verranno aggiornate tutte le attività di distribuzione per i Sottoscrittori di questo server di pubblicazione. Questo stored procedure scrive nella tabella **MSsubscriber_info** del database di distribuzione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Tipo di Sottoscrittore. *Type* è di tipo **tinyint**e il valore predefinito è null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittore. **1** specifica un Sottoscrittore del server origine dati ODBC non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o altro.  
   
-`[ @login = ] 'login'`ID di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso per l'autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
+`[ @login = ] 'login'`ID di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso per l'autenticazione. *login* è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @password = ] 'password'`Password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione. *password* è di **%** **tipo sysname**e il valore predefinito è. **%** indica che non è stata apportata alcuna modifica alla proprietà della password.  
   
@@ -72,41 +72,41 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare l'attività di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Su richiesta|  
+|**1**|Singola occorrenza|  
+|**2**|On demand|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Periodica|  
+|**128**|Ricorrente|  
   
-`[ @frequency_interval = ] frequency_interval`Intervallo di *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_interval = ] frequency_interval`Intervallo per *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è null.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Data dell'attività di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Primo|  
-|**2**|Secondo|  
+|**1**|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Frequenza con cui l'attività di distribuzione deve ripetersi durante il *frequency_type*definito. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Frequenza con cui l'attività di distribuzione deve ripetersi durante la *frequency_type*definita. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Secondo|  
+|**1**|Una sola volta|  
+|**2**|Second|  
 |**4**|Minuto|  
 |**8**|Ora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequence_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequence_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta, formattata come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
   
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`Modalità di sicurezza implementata. *security_mode* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione|  
 |**1**|Autenticazione di Windows|  
@@ -130,21 +130,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 > [!NOTE]  
 >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server di pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_changesubscriber** viene utilizzato in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_addsubscriber &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

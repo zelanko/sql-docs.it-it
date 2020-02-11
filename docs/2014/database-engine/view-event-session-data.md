@@ -1,5 +1,5 @@
 ---
-title: Visualizzare i dati di sessione di eventi | Microsoft Docs
+title: Visualizzare i dati della sessione eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67131796"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
@@ -44,7 +44,7 @@ ms.locfileid: "67131796"
   
 -   Per una destinazione event_file, visualizzare i dati di destinazione del file (file XEL) utilizzando uno dei metodi seguenti:  
   
-    -   Utilizzare File -> Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Usare file > Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
     
     -   Trascinare e rilasciare il file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
     
@@ -54,16 +54,16 @@ ms.locfileid: "67131796"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Usare Powershell in lettura-SQLXevent nel [SQLServer.XEvent modulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Usare PowerShell Read-SQLXevent nel [modulo SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   A livello di programmazione utilizzare XEvents mediante il [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Utilizzare XEvent a livello di codice utilizzando [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   È possibile visualizzare più di uno. File XEL selezionando **Unisci file eventi estesi** dal File -> Apri menu.
+    -   È possibile visualizzarne più di uno. File XEL selezionando **Unisci file di eventi estesi** dal menu apri file >.
 
 ### <a name="watching-live-data"></a>Controllo dei dati dinamici  
  È possibile controllare i dati dinamici mentre vengono acquisiti.  
   
--   In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+-   In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
 
 -   Fare clic con il pulsante destro del mouse sul nome della sessione, quindi scegliere **Controlla i dati dinamici** per avviare la visualizzazione dei dati di traccia.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67131796"
   
      Gli eventi vengono in genere visualizzati in 30 secondi. Se si desidera modificare il periodo di latenza, è possibile modificare il valore di **Latenza di recapito massima** nella pagina **Avanzate** della finestra di dialogo **Nuova sessione** .  
      
--    Per poter trasmettere dati in tempo reale per il [modulo di SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    I dati dinamici possono essere trasmessi tramite il [modulo PowerShell SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
      
 ### <a name="to-refresh-target-data"></a>Per aggiornare i dati di destinazione  
  L'aggiornamento dei dati di destinazione non è supportato per le destinazioni event_file:  
@@ -121,7 +121,7 @@ ms.locfileid: "67131796"
 ### <a name="sort-results"></a>Ordinare i risultati  
  Per ordinare i risultati in ordine crescente o decrescente:  
   
-1.  Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** nella barra degli strumenti.  
+1.  Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna che si desidera ordinare e scegliere **Ordinamento crescente** oppure **Ordinamento decrescente**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131796"
   
  È possibile raggruppare i risultati per singola colonna o per più colonne.  
   
- Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** nella barra degli strumenti.  
+ Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
  Per raggruppare i risultati per singola colonna, fare clic con il pulsante destro del mouse sull'intestazione di colonna nella finestra dei risultati della traccia, quindi scegliere **Raggruppa per questa colonna**. Per annullare il raggruppamento, selezionare una delle righe e fare clic su **Rimuovi tutti i raggruppamenti**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67131796"
   
 -   sum  
   
--   min  
+-   Min  
   
 -   max  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131796"
   
  L'aggregazione viene eseguita in un gruppo, pertanto è necessario raggruppare i risultati prima di effettuare l'aggregazione. Per aggregare i risultati:  
   
-1.  Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla i dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** nella barra degli strumenti.  
+1.  Aprire un file XEL per visualizzare i risultati della traccia. È anche possibile fare clic con il pulsante destro del mouse sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sul pulsante **Arresta feed di dati** sulla barra degli strumenti.  
   
 2.  Nella barra degli strumenti **Eventi estesi** fare clic sul pulsante **Aggregazione** . Nella finestra di dialogo Aggregazione verranno visualizzate le colonne disponibili per l'aggregazione.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "67131796"
   
     -   Colonne della tabella. Utilizzare questa opzione per eseguire ricerche in tutte le colonne visibili nella finestra di traccia.  
   
-    -   Dettagli. Usare questa opzione per eseguire ricerche in tutte le colonne (promosse e non promosse) nella finestra di traccia selezionate prima di aprire la **trova in eventi estesi** nella finestra di dialogo.  
+    -   Dettagli. Utilizzare questa opzione per eseguire la ricerca in tutte le colonne (promosse e non promosse) della finestra di traccia selezionate prima di aprire la finestra **di dialogo trova in eventi estesi** .  
   
     -   *Event_column_name*. Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "67131796"
   
 -   File XEL  
   
--   table  
+-   tabella  
   
 -   File CSV  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131796"
   
  Per visualizzare l'evento Deadlock Graph:  
   
--   In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+-   In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
   
 -   Fare clic con il pulsante destro del mouse sulla sessione in cui è contenuto l'evento deadlock configurato che si desidera visualizzare e scegliere **Controlla i dati dinamici**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131796"
   
  Per visualizzare i grafici del piano di query:  
   
-1.  In Esplora oggetti espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+1.  In Esplora oggetti espandere i nodi **gestione**, **eventi estesi**, quindi **sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla sessione in cui è contenuto il grafico del piano di query che si desidera visualizzare, ad esempio query_post_compilation_showplan, quindi scegliere **Controlla i dati dinamici**.  
   

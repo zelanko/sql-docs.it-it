@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729250"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importare dati dalle tabelle (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73729250"
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
- **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Per aggiungere, aggiornare ed eliminare dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database**  
   
 1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73729250"
   
          Nella pagina **Batch di gestione temporanea** selezionare dall'elenco a discesa il modello al quale si aggiungeranno dati e quindi fare clic su **Avvia batch**. Lo stato dell'elaborazione batch è indicato nel campo **Stato** . Per altre informazioni sugli stati, vedere [Stati di importazione &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Pagina batch di gestione temporanea in Gestione dati master](../master-data-services/media/mds-stagingbatchespage.png "Pagina batch di gestione temporanea in Gestione dati master")  
+         ![Batch di gestione temporanea in Gestione dati master](../master-data-services/media/mds-stagingbatchespage.png "Batch di gestione temporanea in Gestione dati master")  
   
          Il processo di gestione temporanea viene avviato a intervalli determinati dall'impostazione **Intervallo batch di gestione temporanea** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

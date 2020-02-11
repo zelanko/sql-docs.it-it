@@ -1,5 +1,5 @@
 ---
-title: Scenari di utilizzo ed esempi per l'integrazione Common Language Runtime (CLR) | Microsoft Docs
+title: Scenari di utilizzo ed esempi per l'integrazione con CLR (Common Language Runtime) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780724"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scenari di utilizzo ed esempi per l'integrazione con CLR (Common Language Runtime)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi applicazioni e pacchetti di esempio nonché diversi esempi di codice che consentono di acquisire familiarità con le funzionalità di programmabilità dell'integrazione con Common Language Runtime (CLR).  
   
- Per progetti di Visual Studio completi implementati questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server Community Projects & Samples in CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
+ Per i progetti di Visual Studio completi che implementano questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server progetti della Community & esempi su CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Accesso al codice nativo da un funzione CLR definita dall'utente](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.|  
 |[Esempio Array Parameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Viene illustrato come creare, aggiornare o eliminare un set di righe in un database passando una matrice di informazioni da un client a una stored procedure per l'integrazione con CLR nel server. A tal scopo, viene utilizzato un tipo definito dall'utente (UDT).|  
-|[Esempio di tipo definito dall'utente con supporto del calendario data e ora](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|Vengono illustrati due tipi definiti dall'utente che consentono la gestione di data e ora con supporto del calendario.|  
+|[Esempio di data e ora in grado di riconoscere il calendario](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|Vengono illustrati due tipi definiti dall'utente che consentono la gestione di data e ora con supporto del calendario.|  
 |[Esempio CLR Transactions](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|Viene illustrato il controllo delle transazioni tramite le API gestite nello spazio dei nomi System.Transactions.|  
 |[Creazione di informazioni di contatto con CLR e XML](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|L'esempio Contact per SQL Server offre interessanti utilità che costituiscono un ulteriore livello di funzionalità disponibile per il database di esempio AdventureWorks2012 di base. La prima utilità consente di creare record con informazioni di contatto per i diversi tipi di persone presenti nel database AdventureWorks2012. Le informazioni di contatto vengono specificate tramite XML e vengono passate a una stored procedure basata su C# o VB per creare il codice XML e inserirlo nelle tabelle appropriate con il database.|  
 |[Tipo Currency e funzione di conversione](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|Viene definito un tipo di dati Currency definito dall'utente mediante C#.|  
@@ -48,6 +48,6 @@ ms.locfileid: "62780724"
 |[UDT Utilities](../../../2014/database-engine/dev-guide/udt-utilities.md)|Sono incluse diverse serie di funzioni di utilità per tipi di dati definiti dall'utente.|  
 |[Pulizia degli assembly inutilizzati](../../../2014/database-engine/dev-guide/unused-assembly-cleanup.md)|È inclusa una stored procedure .NET che consente di eliminare gli assembly inutilizzati nel database corrente tramite l'esecuzione di query sui cataloghi di metadati.|  
 |[Tipo definito dall'utente](../../../2014/database-engine/dev-guide/user-defined-type.md)|Vengono illustrati la creazione e l'utilizzo di un tipo definito dall'utente (UDT) semplice sia con [!INCLUDE[tsql](../../includes/tsql-md.md)] che con un'applicazione client tramite System.Data.SqlClient.|  
-|[UTF8 Tipo di dati definito dall'utente di stringhe &#40;tipo definito dall'utente&#41;](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|Viene illustrata l'implementazione di un tipo definito dall'utente (UDT) che consente di estendere il sistema di tipi del database per consentire l'archiviazione di valori con codifica UTF8.|  
+|[Tipo di dati definito dall'utente stringa UTF8 &#40;UDT&#41;](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|Viene illustrata l'implementazione di un tipo definito dall'utente (UDT) che consente di estendere il sistema di tipi del database per consentire l'archiviazione di valori con codifica UTF8.|  
   
   

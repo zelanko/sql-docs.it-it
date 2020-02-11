@@ -14,10 +14,10 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729229"
 ---
 # <a name="hierarchies-master-data-services"></a>Gerarchie (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "73729229"
   
 -   Gerarchie incomplete da una sola entità, chiamate gerarchie esplicite. Per altre informazioni, vedere [Gerarchie esplicite &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
--   Gerarchie basate su livelli provenienti da più entità, in base alle relazioni esistenti tra le entità e i relativi attributi, chiamate gerarchie derivate. Per altre informazioni, vedere [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+-   Gerarchie basate su livelli provenienti da più entità, in base alle relazioni esistenti tra le entità e i relativi attributi, chiamate gerarchie derivate. Per altre informazioni, vedere [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
 > [!NOTE]  
 >  Tutti i membri di una gerarchia devono trovarsi all'interno dello stesso modello.  
@@ -53,7 +53,7 @@ ms.locfileid: "73729229"
 ## <a name="hierarchy-example"></a>Esempio di gerarchia  
  Nell'esempio seguente, i membri del prodotto vengono raggruppati in base ai membri della sottocategoria.  
   
- ![Esempio di gerarchia raggruppata per sottocategoria](../master-data-services/media/mds-conc-hierarchy.gif "Esempio di gerarchia raggruppata per sottocategoria")  
+ ![Esempio di gerarchia raggruppata per sottocategorie](../master-data-services/media/mds-conc-hierarchy.gif "Esempio di gerarchia raggruppata per sottocategorie")  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73729229"
 |----------------------|-----------|  
 |Creare una gerarchia esplicita.|[Creare una gerarchia esplicita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Creare una gerarchia derivata.|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare livelli di una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Nascondere o eliminare i livelli in una gerarchia derivata esistente.|[Nascondere o eliminare livelli in una gerarchia derivata &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

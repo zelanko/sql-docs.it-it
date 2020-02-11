@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176014"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
-  Il servizio adattatore del cloud viene creato come parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning in una macchina virtuale di Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
+  Il servizio adattatore del cloud viene creato come parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning in una macchina virtuale di Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L’adattatore cloud crea inoltre una regola di Windows Firewall per consentire le connessioni TCP in entrata alla porta 11435 predefinita.  
   
  L'adattatore cloud è un servizio senza stato e sincrono tramite cui si ricevono i messaggi da un'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando il servizio adattatore cloud viene arrestato, l'adattatore cloud con accesso remoto viene arrestato, l'associazione del certificato SSL viene annullata e la regola di Windows Firewall viene disabilitata.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "70176014"
   
 -   **Parametri del file di configurazione** -  
   
-    -   \<configuration>  
+    -   \<> di configurazione  
   
         -   \<appSettings>  
   
-            -   \<add key="WebServicePort" value="" />  
+            -   \<Add Key = "WebServicePort" value = ""/>  
   
-            -   \<add key="WebServiceCertificate" value="GUID" />  
+            -   \<Add Key = "WebServiceCertificate" value = "GUID"/>  
   
-            -   \<add key="ExposeExceptionDetails" value="true" />  
+            -   \<Add Key = "ExposeExceptionDetails" value = "true"/>  
   
-        -   \</appSettings>  
+        -   \<>/appSettings  
   
     -   \<>/configurazione  
   
 -   **Dettagli del certificato** : il certificato presenta i valori seguenti:  
   
-    -   Subject-"CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter\<VMName>, dc = SQL Server, DC = Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "70176014"
   
 -   **Traccia, eventi** : tutti gli eventi vengono scritti nel registro eventi dell'applicazione.  
   
--   **Controllo, configurazione** : usare il file di configurazione che si trova in:  C:\Programmi\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Controllo, configurazione** : usare il file di configurazione che si trova in: C:\Programmi\Microsoft\\SQL Server\120\Tools\CloudAdapter.  
   
 |Errore|ID errore|Causa|Risoluzione|  
 |-----------|--------------|-----------|----------------|  

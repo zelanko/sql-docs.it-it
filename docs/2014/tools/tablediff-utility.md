@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185966"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
   
--   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e una tabella di destinazione in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che fungono da Sottoscrittori della replica.  
+-   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e la tabella di destinazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una o più istanze di che fungono da sottoscrittori della replica.  
   
 -   Esegue un confronto rapido mediante il confronto solo dei conteggi delle righe e degli schemi.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "68185966"
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
- **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- Nome del server di origine. Specificare _origine\_server\_name_ per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _origine\_server\_name_ **\\** _istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceServer** *source_server_name*[**\\**_instance_name_]  
+ Nome del server di origine. Specificare _il\_nome\_del server di origine_ per l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]istanza predefinita di. Specificare il nome dell'**\\**_istanza\__ del _nome del server\_\_di origine_per un'istanza denominata di. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-sourcedatabase** *source_database*  
  Nome del database di origine.  
@@ -85,7 +85,7 @@ ms.locfileid: "68185966"
  **-sourcetable** *source_table_name*  
  Nome della tabella di origine sottoposta al controllo.  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema:** *source_schema_name*  
  Proprietario dello schema della tabella di origine. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
  **-sourcepassword** *source_password*  
@@ -100,8 +100,8 @@ ms.locfileid: "68185966"
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[ **\\** _istanza\_nome_]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _destinazione\_server\_name_ **\\** _istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-DestinationServer** *destination_server_name*[**\\**_nome\_istanza_]  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il nome dell'**\\**_istanza\__ del _nome del server\_\_di destinazione_per un'istanza denominata di. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-destinationdatabase** *subscription_database*  
  Nome del database di destinazione.  
@@ -109,7 +109,7 @@ ms.locfileid: "68185966"
  **-destinationtable** *destination_table*  
  Nome della tabella di destinazione.  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema:** *destination_schema_name*  
  Proprietario dello schema della tabella di destinazione. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
  **-destinationpassword** *destination_password*  
@@ -118,14 +118,14 @@ ms.locfileid: "68185966"
 > [!IMPORTANT]  
 >  Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è consigliabile proteggere il file per evitare accessi non autorizzati.  
   
- **-destinationuser** *destination_login*  
+ **-utentedestinazione** *destination_login*  
  Account di accesso usato per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se non si specifica il parametro *destination_login* , durante la connessione al server viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  La tabella di destinazione viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Numero di byte per confrontare le colonne con tipo di dati LOB, ovvero `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
+ Numero di byte per confrontare le colonne con tipo di dati LOB, ovvero `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. *large_object_bytes* valore predefinito per le dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
   
  **-bf**  *number_of_statements*  
  Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f** . Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -133,7 +133,7 @@ ms.locfileid: "68185966"
  **-c**  
  Esegue il confronto per individuare eventuali differenze a livello di colonna.  
   
- **-dt**  
+ **-DT**  
  Elimina la tabella dei risultati specificata da *table_name*se la tabella esiste già.  
   
  **-et** *table_name*  
@@ -154,7 +154,7 @@ ms.locfileid: "68185966"
  **-ri**  *retry_interval*  
  Intervallo espresso in secondi tra i vari tentativi.  
   
- **-strict**  
+ **-Strict**  
  Gli schemi di origine e di destinazione vengono confrontati rigorosamente.  
   
  **-t** *connection_timeouts*  
@@ -162,14 +162,14 @@ ms.locfileid: "68185966"
   
 ## <a name="return-value"></a>Valore restituito  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Riuscito|  
+|**0**|Operazione completata|  
 |**1**|Errore critico|  
 |**2**|Differenze tra tabelle|  
   
-## <a name="remarks"></a>Note  
- L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+## <a name="remarks"></a>Osservazioni  
+ L'utilità **tablediff** non può essere usata con[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] server non.  
   
  Le tabelle contenenti colonne con il tipo di dati `sql_variant` non sono supportate.  
   
@@ -177,8 +177,9 @@ ms.locfileid: "68185966"
   
 |Tipo di dati di origine|Tipo di dati di destinazione|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int` o `bigint`|  
-|`smallint`|`int` o `bigint`|  
+|`tinyint`|
+  `smallint`, `int` o `bigint`|  
+|`smallint`|`int`o`bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -202,7 +203,7 @@ ms.locfileid: "68185966"
   
 -   `timestamp`  
   
--   **xml**  
+-   **XML**  
   
 -   `text`  
   
@@ -210,7 +211,7 @@ ms.locfileid: "68185966"
   
 -   `image`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per confrontare tabelle, è necessario disporre delle autorizzazioni SELECT ALL sugli oggetti tabella da confrontare.  
   
  Per usare l'opzione **-et** , è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione CREATE TABLE nel database di sottoscrizione e dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  
@@ -220,6 +221,6 @@ ms.locfileid: "68185966"
  Per usare l'opzione **-o** oppure **-f** , è necessario avere autorizzazioni di scrittura per il percorso della directory di file specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Confronto di tabelle replicate al fine di individuare le differenze &#40;programmazione della replica&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+ [Confrontare le tabelle replicate per le differenze &#40;la programmazione della replica&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

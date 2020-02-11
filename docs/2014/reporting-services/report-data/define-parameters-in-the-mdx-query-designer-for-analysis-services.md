@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892170"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "68892170"
   
 6.  Selezionare la casella di controllo nella colonna **Parametri** per creare un parametro del report.  
   
-7.  Fai clic su **Esegui**.  
+7.  Fare clic su **Esegui**.  
   
      Dopo avere eseguito la query, fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query e visualizzare la query MDX creata. Non modificare il testo della query in modalità query se si desidera continuare a sviluppare la query in modalità progettazione. Fare clic su **Progettazione** per passare di nuovo alla modalità progettazione.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68892170"
   
 2.  Fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query.  
   
-3.  Nella barra degli strumenti della progettazione query MDX, fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.  
+3.  Sulla barra degli strumenti di progettazione query MDX fare clic su **parametri query** (![icona per la finestra di dialogo parametri query](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.  
   
 4.  Nella colonna **Parametro** selezionare **\<Immetti parametro>** e digitare il nome di un parametro.  
   

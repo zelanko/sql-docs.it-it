@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028602"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Archivio query
@@ -22,12 +22,12 @@ ms.locfileid: "69028602"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Get it](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Si tratta attualmente di una funzionalità di anteprima. Per usare la funzionalità Archivio query è necessario dichiarare di essere a conoscenza e di accettare che l'implementazione della funzionalità è soggetta alle condizioni per l'anteprima indicate nel contratto di licenza, ad esempio il Contratto Enterprise, il Contratto di Microsoft Azure o il Contratto di Sottoscrizione Microsoft Online, oltre a eventuali [condizioni per l'utilizzo aggiuntive per le anteprime di Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  Questa è attualmente di una funzionalità disponibile in anteprima. Per usare la funzionalità Archivio query è necessario dichiarare di essere a conoscenza e di accettare che l'implementazione della funzionalità è soggetta alle condizioni per l'anteprima indicate nel contratto di licenza, ad esempio il Contratto Enterprise, il Contratto di Microsoft Azure o il Contratto di Sottoscrizione Microsoft Online, oltre a eventuali [condizioni per l'utilizzo aggiuntive per le anteprime di Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
-##  <a name="Enabling"></a> Abilitazione di Archivio query  
+##  <a name="Enabling"></a>Abilitazione della Query Store  
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.  
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Abilitazione nella pagina Archivio query in Management Studio  
@@ -46,14 +46,14 @@ ms.locfileid: "69028602"
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
-     Per altre opzioni della sintassi correlate all'archivio query, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+     Per altre opzioni di sintassi correlate all'archivio query, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Non è possibile abilitare l'archivio query per il database master.  
   
 
   
-##  <a name="About"></a> Informazioni presenti in Archivio query  
+##  <a name="About"></a>Informazioni nella Query Store  
  I piani di esecuzione per query specifiche in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in genere cambiano nel tempo per motivi diversi, quali modifiche delle statistiche, modifiche dello schema, creazione/eliminazione di indici e così via. Nella cache delle procedure, dove sono archiviati i piani di query memorizzati nella cache, viene archiviato solo il piano di esecuzione più recente. La rimozione dei piani dalla cache dei piani può dipendere anche da problemi di memoria. Di conseguenza, le regressioni delle prestazioni di esecuzione delle query causate da modifiche del piano di esecuzione possono essere rilevanti e richiedere tempo per la risoluzione.  
   
  Dal momento che nell'archivio query vengono mantenuti più piani di esecuzione per ogni query, è possibile applicare i criteri in modo che il processore di query usi un piano di esecuzione specifico per una query. Questo processo viene chiamato utilizzo forzato del piano. Per applicare l'utilizzo forzato del piano in Archivio query, viene usato un meccanismo simile all'hint per la query [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) , che però non richiede modifiche nelle applicazioni utente. Grazie all'utilizzo forzato del piano è possibile risolvere molto rapidamente una regressione delle prestazioni di esecuzione delle query causata da una modifica del piano.  
@@ -86,7 +86,7 @@ JOIN sys.query_store_query_text AS Txt
 
   
 ## <a name="using-the-regressed-queries-feature"></a>Uso della funzionalità Query regredite  
- Dopo aver abilitato Archivio query, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **Archivio query** .  
+ Dopo aver abilitato l'archivio query, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **query Store** .  
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
@@ -94,11 +94,11 @@ JOIN sys.query_store_query_text AS Txt
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
- Per forzare un piano, selezionare una query e un piano e quindi fare clic su **Forza piano** È possibile forzare solo piani che sono stati salvati dalla funzionalità del piano di query e che sono ancora presenti nella relativa cache.  
+ Per forzare un piano, selezionare una query e un piano, quindi fare clic su **forza piano.** È possibile forzare solo piani che sono stati salvati dalla funzionalità del piano di query e che sono ancora presenti nella relativa cache.  
   
 
   
-##  <a name="Options"></a> Opzioni di configurazione  
+##  <a name="Options"></a>Opzioni di configurazione  
  OPERATION_MODE  
  Può essere impostata su READ_WRITE o READ_ONLY.  
   
@@ -120,51 +120,51 @@ JOIN sys.query_store_query_text AS Txt
   
  
   
-##  <a name="Related"></a> Viste, funzioni e procedure correlate  
+##  <a name="Related"></a>Viste, funzioni e procedure correlate  
  È possibile visualizzare e gestire Archivio query con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oppure usando le viste e le procedure seguenti.  
   
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
+-   [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
 ### <a name="query-store-catalog-views"></a>Viste del catalogo di Archivio query  
  Le informazioni su Archivio query vengono presentate in sette viste del catalogo.  
   
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
+-   [sys. database_query_store_options &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
   
--   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
+-   [sys. query_context_settings &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
   
--   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
+-   [sys. query_store_plan &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
   
--   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
+-   [sys. query_store_query &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
   
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
+-   [sys. query_store_query_text &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
   
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
+-   [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
   
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
+-   [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
   
 ### <a name="query-store-stored-procedures"></a>Stored procedure di Archivio query  
  Per configurare Archivio query, vengono invece usate sei stored procedure.  
   
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
+-   [sp_query_store_flush_db &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
   
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
+-   [sp_query_store_reset_exec_stats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
   
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
+-   [sp_query_store_force_plan &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
   
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
+-   [sp_query_store_unforce_plan &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
   
 -   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)  
   
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
+-   [sp_query_store_remove_query &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
   
 
   
-##  <a name="Scenarios"></a> Principali scenari di utilizzo  
+##  <a name="Scenarios"></a>Scenari di utilizzo chiave  
   
-###  <a name="OptionMgmt"></a> Gestione delle opzioni  
+###  <a name="OptionMgmt"></a>Gestione delle opzioni  
  Questa sezione fornisce alcune linee guida per la gestione della funzionalità Archivio query.  
   
- **Come sapere se la funzionalità Archivio query è attualmente attiva**  
+ **Query Store attualmente attivo?**  
   
  I dati della funzionalità Query Store vengono archiviati nel database utente ed è quindi previsto un limite per le dimensioni, che viene configurato con `MAX_STORAGE_SIZE_MB`. Se i dati in Archivio query raggiungono tale limite, lo stato cambia automaticamente da lettura/scrittura a sola lettura e la raccolta di nuovi dati viene interrotta.  
   
@@ -184,7 +184,7 @@ ELSE SELECT ''Query Store is NOT active''' ;
 EXEC sp_executesql @query;  
 ```  
   
- **Ottenere le opzioni di Archivio query**  
+ **Opzioni Get Query Store**  
   
  Per informazioni dettagliate sullo stato di Archivio query, eseguire l'istruzione seguente in un database utente.  
   
@@ -192,7 +192,7 @@ EXEC sp_executesql @query;
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
- **Impostazione dell'intervallo di Archivio query**  
+ **Impostazione Query Store intervallo**  
   
  È possibile ignorare l'intervallo per l'aggregazione delle statistiche di runtime delle query (impostazione predefinita: 60 minuti).  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Si noti che non sono consentiti valori arbitrari. è necessario usare uno degli elementi seguenti: 1, 5, 10, 15, 30 e 60.  
+ Si noti che non sono consentiti valori arbitrari. È necessario usare uno dei valori seguenti: 1, 5, 10, 15, 30 e 60.  
   
  Il nuovo valore per l'intervallo viene esposto tramite la vista `sys.database_query_store_options`.  
   
@@ -216,7 +216,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
   
- **Impostare tutte le opzioni di Archivio query**  
+ **Imposta tutte le opzioni di Query Store**  
   
  È possibile impostare più opzioni di Archivio query contemporaneamente con un'unica istruzione ALTER DATABASE.  
   
@@ -242,7 +242,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  In alternativa, è possibile cancellare solo dati di query ad hoc perché sono meno rilevanti per le ottimizzazioni query e l'analisi del piano, ma occupano molto spazio.  
   
- **Eliminare query ad-hoc** È possibile eliminare le query che sono state eseguite solo una volta e che risalgono a più di 24 ore prima.  
+ **Elimina query ad hoc** Verranno eliminate le query che sono state eseguite solo una volta e che risale a più di 24 ore fa.  
   
 ```  
 DECLARE @id int  
@@ -283,7 +283,7 @@ DEALLOCATE adhoc_queries_cursor;
   
 
   
-###  <a name="Peformance"></a> Controllo delle prestazioni e risoluzione dei problemi  
+###  <a name="Peformance"></a>Controllo delle prestazioni e risoluzione dei problemi  
  Dal momento che Archivio query conserva la cronologia delle metriche relative a compilazione e runtime per tutte le esecuzioni delle query, è possibile rispondere facilmente a numerose domande relative al carico di lavoro.  
   
  **Ultime *n* query eseguite sul database.**  
@@ -498,12 +498,12 @@ OPTION (MERGE JOIN);
   
 
   
-###  <a name="Stability"></a> Misure per garantire la stabilità delle prestazioni di esecuzione delle query  
+###  <a name="Stability"></a>Gestione della stabilità delle prestazioni delle query  
  Per le query eseguite più volte è possibile notare che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono stati usati piani diversi che hanno comportato durate e utilizzi diversi delle risorse. Archivio query consente di rilevare facilmente il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.  
   
  È anche possibile identificare incoerenze nelle prestazioni di una query con parametri (impostati sia automaticamente che manualmente). Tra i diversi piani è possibile identificare quello più rapido e adatto per tutti o per la maggior parte dei valori di parametro e forzarne l'uso in modo da garantire prestazioni prevedibili per un ampio numero di scenari utente.  
   
- **Forzare un piano per una query (applicando criteri di utilizzo forzato).** Quando si forza un piano per una determinata query, la query viene sempre eseguita con il piano di cui è stato forzato l'utilizzo.  
+ **Forzare o pianificare una query (applicare i criteri di forzatura).** Quando si forza un piano per una determinata query, la query viene sempre eseguita con il piano di cui è stato forzato l'utilizzo.  
   
 ```  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
@@ -511,7 +511,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  Se si usa `sp_query_store_force_plan`, è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire Q1 mentre Archivio query era attivo.  
   
- **Rimuovere l'utilizzo forzato del piano per una query.** Per usare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per calcolare il piano di query ottimale, annullare l'utilizzo forzato del piano selezionato per la query con `sp_query_store_unforce_plan`.  
+ **Rimuovere l'utilizzo forzato del piano per una query.** Per basarsi nuovamente sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Query Optimizer per calcolare il piano di query ottimale, `sp_query_store_unforce_plan` utilizzare per disforzare il piano selezionato per la query.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

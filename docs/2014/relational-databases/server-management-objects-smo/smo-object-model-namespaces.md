@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130774"
 ---
 # <a name="smo-namespaces"></a>Spazi dei nomi SMO
@@ -34,7 +34,7 @@ ms.locfileid: "63130774"
   
 |Classe|Funzione|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contiene le classi di istanze, classi di utilità ed enumerazioni che consentono di modificare a livello di programmazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contiene classi di istanza, classi di utilità ed enumerazioni utilizzate per modificare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a livello di codice.|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contiene le classi comuni a RMO (Replication Management Objects) e SMO, ad esempio classi di connessione.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contiene classi che rappresentano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contiene classi che rappresentano il provider WMI.|  

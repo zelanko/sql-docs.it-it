@@ -1,5 +1,5 @@
 ---
-title: Cluster di esempio di proprietà (Visual Basic) | Microsoft Docs
+title: Esempio di proprietà Clustered (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966957"
 ---
 # <a name="clustered-property-example-vb"></a>Esempio della proprietà Clustered (VB)
-Questo esempio viene illustrato il [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) proprietà di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Si noti che i database Microsoft Jet non supportano gli indici cluster, in modo che in questo esempio restituirà **False** per il **Clustered** proprietà di tutti gli indici di **Northwind** database.  
+In questo esempio viene illustrata la proprietà [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) di un [Indice](../../../ado/reference/adox-api/index-object-adox.md). Si noti che i database Microsoft Jet non supportano gli indici cluster, pertanto questo esempio restituirà **false** per la proprietà **Clustered** di tutti gli indici nel database **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -75,5 +75,5 @@ End Sub
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Proprietà Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Oggetto index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

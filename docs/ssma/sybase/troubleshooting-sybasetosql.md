@@ -12,28 +12,28 @@ ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020886"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Risoluzione dei problemi (SybaseToSQL)
-Non è insolito per l'esecuzione in circa metà problemi di migrazione l'esecuzione di script di console o comandi.  
+Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  
   
-Errori risolvibili possono essere correlati a:  
+Gli errori di risolvibili possono essere correlati a:  
   
 1.  Funzione  
   
-2.  Routine  
+2.  Procedura  
   
-3.  visualizzazione  
+3.  Visualizza  
   
 4.  Trigger  
   
-5.  Modifica il tipo di dati  
+5.  Modifica del tipo di dati  
   
-6.  Modifica delle impostazioni di progetto  
+6.  Modifica delle impostazioni del progetto  
   
-I problemi possono essere risolti usando l'interfaccia utente SSMA aprendo il File di progetto creato tramite la console.  
+Per risolvere i problemi, è possibile usare l'interfaccia utente di SSMA aprendo il file di progetto creato tramite la console.  
   

@@ -16,21 +16,21 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771015"
 ---
-# <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
+# <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce i comandi per le transazioni contrassegnate per la replica. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!IMPORTANT]  
->  La stored procedure **sp_replcmds** deve essere eseguita solo per risolvere i problemi relativi alla replica.  
+>  È consigliabile eseguire la procedura **sp_replcmds** solo per risolvere i problemi relativi alla replica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,9 +48,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**ID articolo**|**int**|ID dell'articolo.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
-|**comando**|**varbinary(1024)**|Valore del comando.|  
-|**xactid**|**binary(10)**|ID della transazione.|  
-|**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
+|**comando**|**varbinary (1024)**|Valore del comando.|  
+|**xactid**|**binario (10)**|ID della transazione.|  
+|**xact_seqno**|**varbinary (16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
 |**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo di comando.|  
@@ -59,12 +59,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|Solo per uso interno.|  
 |**originator_publication_id**|**int**|ID della pubblicazione in cui ha origine la transazione.|  
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
-|**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
+|**originator_lsn**|**varbinary (16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_replcmds** viene utilizzato dal processo di lettura log nella replica transazionale.  
   
- La replica considera il primo client che esegue **sp_replcmds** all'interno di un database specificato come lettura log.  
+ La replica considera il primo client che esegue **sp_replcmds** all'interno di un determinato database come lettura log.  
   
  Questa procedura può generare comandi per tabelle qualificate con il nome del proprietario oppure non qualifica il nome della tabella (impostazione predefinita). L'aggiunta di nomi di tabella qualificati consente di replicare i dati di tabelle di proprietà di un utente specifico di un database in tabelle di proprietà dello stesso utente in un altro database.  
   
@@ -73,16 +73,16 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  I client che tentano di eseguire **sp_replcmds** nello stesso database ricevono l'errore 18752 fino a quando il primo client si disconnette. Quando il primo client si disconnette, un altro client può eseguire **sp_replcmds**e diventa la nuova lettura log.  
   
- Viene aggiunto un messaggio di avviso numero 18759 al log [!INCLUDE[msCoName](../../includes/msconame-md.md)] degli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errori di e [!INCLUDE[msCoName](../../includes/msconame-md.md)] al registro delle applicazioni di Windows se **sp_replcmds** non è in grado di replicare un comando di testo perché il puntatore di testo non è stato recuperato nello stesso transazione.  
+ Viene aggiunto un messaggio di avviso numero 18759 al log [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degli errori di e [!INCLUDE[msCoName](../../includes/msconame-md.md)] al registro delle applicazioni di Windows se **sp_replcmds** non è in grado di replicare un comando di testo perché il puntatore di testo non è stato recuperato nella stessa transazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_replcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo Seek e esempio di proprietà Index (VC + +) | Microsoft Docs
+title: Esempio di metodo Seek e proprietà index (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931072"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Esempio del metodo Seek e della proprietà Index (VC++)
-Questo esempio viene usato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [Seek](../../../ado/reference/ado-api/seek-method.md) metodo e [indice](../../../ado/reference/ado-api/index-property.md) proprietà in combinazione con un determinato ***ID dipendente***, per individuare il nome del dipendente nel ***dipendenti*** tabella del database Nwind.  
+In questo esempio vengono utilizzati il metodo [Seek](../../../ado/reference/ado-api/seek-method.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e la proprietà [index](../../../ado/reference/ado-api/index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,5 +227,5 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà index](../../../ado/reference/ado-api/index-property.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Seek](../../../ado/reference/ado-api/seek-method.md)

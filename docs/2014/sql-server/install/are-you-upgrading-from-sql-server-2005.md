@@ -10,17 +10,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d5e44dac2201953858f06d834b1831aa1a22fe3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247276"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656578"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Aggiornamento da SQL Server 2005
   La fine del supporto esteso per SQL Server 2005 è uno dei motivi per cui si consiglia di aggiornare subito il sistema a una nuova versione di SQL Server e al database SQL di Azure. L'aggiornamento consente di garantire sicurezza e conformità, di raggiungere eccellenti livelli di prestazioni e di ottimizzare l'infrastruttura della piattaforma di dati.  
   
- Per altre informazioni, indicazioni e strumenti per pianificare e automatizzare l'aggiornamento o la migrazione, vedere [SQL Server 2005 end of support](https://www.microsoft.com/server-cloud/products/sql-server-2005/)(Fine del supporto per SQL Server 2005).  
+ Per altre informazioni, indicazioni e strumenti per pianificare e automatizzare l'aggiornamento o la migrazione, vedere [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)(Fine del supporto per SQL Server 2005).  
   
 ## <a name="why-upgrade"></a>Ragioni dell'aggiornamento  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75247276"
   
     -   Per ottenere una guida tecnica all'aggiornamento più dettagliata in formato PDF, [fare clic qui](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   Per altre informazioni, indicazioni e strumenti per pianificare e automatizzare l'aggiornamento o la migrazione, vedere [SQL Server 2005 end of support](https://www.microsoft.com/server-cloud/products/sql-server-2005/)(Fine del supporto per SQL Server 2005).  
+-   Per altre informazioni, indicazioni e strumenti per pianificare e automatizzare l'aggiornamento o la migrazione, vedere [SQL Server 2005 end of support](https://www.microsoft.com/sql-server/sql-server-2005)(Fine del supporto per SQL Server 2005).  
   
 ## <a name="get-sql-server-2014"></a>Ottenere SQL Server 2014  
  Per scaricare una copia di valutazione di SQL Server 2014, [fare clic qui](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server 2014](https://www.microsoft.com/server-cloud/products/sql-server/default.aspx)   
- [Fine del supporto SQL Server 2005](https://www.microsoft.com/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
+ [Fine del supporto SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005)   
  [Aggiornare da SQL Server 2005 a SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys. PDW _nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys. pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305233"
 ---
-# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in un database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Tutte le tabelle e gli indici contengono almeno una partizione, indipendentemente dal fatto che siano partizionati in modo esplicito.  
+  Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. Tutte le tabelle e gli indici contengono almeno una partizione, indipendentemente dal fatto che siano partizionati in modo esplicito.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -33,21 +33,21 @@ ms.locfileid: "72305233"
 |hobt_id|**bigint**|ID del heap o albero B dati (HoBT) che contiene le righe per la partizione.|  
 |rows|**bigint**|Numero approssimativo di righe nella partizione. |  
 |data_compression|**int**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar(60)**|Indica lo stato di compressione per ogni partizione. I valori possibili sono NONE, ROW e PAGE.|  
-|pdw_node_id|**int**|Identificatore univoco di un nodo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
+|data_compression_desc|**nvarchar (60)**|Indica lo stato di compressione per ogni partizione. I valori possibili sono NONE, ROW e PAGE.|  
+|pdw_node_id|**int**|Identificatore univoco di un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `CONTROL SERVER`.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio A: Visualizzare le righe in ogni partizione all'interno di ogni distribuzione 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio A: visualizzare le righe in ogni partizione all'interno di ogni distribuzione 
 
-**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Per visualizzare il numero di righe in ogni partizione all'interno di ogni distribuzione, utilizzare [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio B: USA viste di sistema per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio B: usa le viste di sistema per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
 
 **Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

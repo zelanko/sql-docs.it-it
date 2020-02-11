@@ -1,5 +1,5 @@
 ---
-title: La connessione a una Data sorgente o il Driver | Microsoft Docs
+title: Connessione a un'origine dati o a un driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083137"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connessione a un'origine dati o driver
-Un'applicazione può essere connesse a qualsiasi numero di driver e origini dati. Può trattarsi di un'ampia gamma di driver e origini dati, lo stesso driver e un'ampia gamma di origini dati o anche più connessioni allo stesso driver e origine dati.  
+Un'applicazione può essere connessa a un numero qualsiasi di driver e origini dati. Può trattarsi di una varietà di driver e origini dati, lo stesso driver e una varietà di origini dati o persino più connessioni allo stesso driver e all'origine dati.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -38,4 +38,4 @@ Un'applicazione può essere connesse a qualsiasi numero di driver e origini dati
   
 -   [Disconnessione da un'origine dati o driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [Ruolo di gestione Driver nel processo di connessione](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [Ruolo di gestione driver nel processo di connessione](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107667"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Finestra di dialogo Sezione del report (Generatore report)
-  Quando si apre un report, Generatore report consente di verificare che nel report sia contenuto solo un elemento **\<sezione>** RDL (Report Definition Language). L'apertura di un report con più elementi **\<sezione>** non è supportata.  
+  Quando si apre un report, Generatore report verifica che il report contenga solo una sezione Report Definition Language (RDL) ** \<>** elemento. L'apertura di un report con più ** \<sezioni>** elementi non è supportata.  
   
  Anche se è possibile generare una definizione del report con più sezioni a livello di programmazione, la modifica del report in un ambiente di creazione del report non è supportata.  
   
  Per identificare il formato di definizione del report corrente per un report, per un server di report, per un progetto o per l'ambiente di creazione dei report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Per continuare scegliere **OK** .  
+ Fare clic su **OK** per continuare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: c2dafa2df09bb8141fca8c30a80c6471ffe1e060
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399456"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Visualizzare l'utilizzo della capacità nel sistema della piattaforma Analytics

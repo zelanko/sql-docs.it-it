@@ -1,5 +1,5 @@
 ---
-title: Estrarre automaticamente i file al momento della modifica | Microsoft Docs
+title: Estrai automaticamente i file al momento della modifica | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791741"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>Estrarre automaticamente i file al momento della modifica
@@ -27,12 +27,12 @@ ms.locfileid: "62791741"
   
 1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
-2.  Espandere la **controllo del codice sorgente** cartella e quindi fare clic su **ambiente**.  
+2.  Espandere la cartella **controllo del codice sorgente** , quindi fare clic su **ambiente**.  
   
-3.  Nel **modifica** , quindi selezionare **Estrai automaticamente**, quindi fare clic su **OK**.  
+3.  Nella casella di **modifica** selezionare **Estrai automaticamente**, quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estrarre i file](../../2014/database-engine/check-out-files.md)   
+ [Estrai file](../../2014/database-engine/check-out-files.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   
   

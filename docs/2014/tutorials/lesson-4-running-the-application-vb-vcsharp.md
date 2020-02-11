@@ -1,5 +1,5 @@
 ---
-title: "Lezione 4: Esecuzione dell'applicazione (Visual Basic -VC#) | Microsoft Docs"
+title: "Lezione 4: esecuzione dell'applicazione (VB-VC #) | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137469"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>Lezione 4: Esecuzione dell'applicazione (Visual Basic -VC#)
+# <a name="lesson-4-running-the-application-vb-vc"></a>Lezione 4: esecuzione dell'applicazione (VB-VC #)
   In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sono disponibili vari metodi per compilare ed eseguire un'applicazione console dall'IDE, ad esempio:  
   
 -   Avvia (con debug)  
@@ -28,7 +28,7 @@ ms.locfileid: "63137469"
   
 ### <a name="to-build-and-run-the-getpropertiessample"></a>Per compilare ed eseguire il progetto GetPropertiesSample  
   
-1.  Dal **Debug** menu, fare clic su **Avvia senza eseguire debug**. In questo modo la finestra della console rimarrà aperta al termine dell'esecuzione del programma.  
+1.  Scegliere **Avvia senza eseguire debug** dal menu **Debug**. In questo modo la finestra della console rimarrà aperta al termine dell'esecuzione del programma.  
   
      L'applicazione visualizzerà l'output seguente nella console:  
   
@@ -45,6 +45,6 @@ ms.locfileid: "63137469"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
- [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

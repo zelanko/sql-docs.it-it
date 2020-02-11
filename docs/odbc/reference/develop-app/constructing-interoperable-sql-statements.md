@@ -1,5 +1,5 @@
 ---
-title: Costruzione di istruzioni SQL interoperative | Microsoft Docs
+title: Creazione di istruzioni SQL interoperative | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,32 +14,32 @@ ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002247"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Creazione di istruzioni SQL interoperative
-Come indicato nelle sezioni precedenti, le applicazioni interoperative devono usare la grammatica SQL ODBC. Oltre usando i tohoto odkazu, tuttavia, un numero di altri problemi riscontrato dalle applicazioni interoperative. Ad esempio, che cosa fa un'applicazione? se desidera utilizzare una funzionalità, ad esempio gli outer join, che non è supportata da tutte le origini dati  
+Come indicato nelle sezioni precedenti, le applicazioni interoperative devono utilizzare la grammatica SQL ODBC. Oltre a usare questa grammatica, tuttavia, una serie di problemi aggiuntivi è rivolta alle applicazioni interoperative. Ad esempio, cosa fa un'applicazione se si vuole usare una funzionalità, ad esempio outer join, che non è supportata da tutte le origini dati?  
   
- A questo punto, il writer dell'applicazione deve prendere alcune decisioni sulle funzionalità del linguaggio sono necessari e facoltativi. Nella maggior parte dei casi, se un particolare dei driver non supporta una funzionalità richiesta dall'applicazione, l'applicazione Rifiuta semplicemente per l'esecuzione con tale driver. Tuttavia, se la funzionalità è facoltativa, l'applicazione può risolvere la funzionalità. Ad esempio, potrebbe disabilitare le parti dell'interfaccia che consentono all'utente di usare la funzionalità.  
+ A questo punto, il writer dell'applicazione deve prendere alcune decisioni relative alle funzionalità del linguaggio richieste e quali sono facoltative. Nella maggior parte dei casi, se un driver specifico non supporta una funzionalità richiesta dall'applicazione, l'applicazione non è più in grado di eseguire con tale driver. Tuttavia, se la funzionalità è facoltativa, l'applicazione può aggirare la funzionalità. Ad esempio, potrebbe disabilitare le parti dell'interfaccia che consentono all'utente di usare la funzionalità.  
   
- Per determinare quali funzionalità sono supportate, applicazioni vengono avviate chiamando **SQLGetInfo** con l'opzione SQL_SQL_CONFORMANCE. Il livello di conformità SQL fornisce all'applicazione una visione più ampia di cui è supportato SQL. Per perfezionare questa visualizzazione, l'applicazione chiama **SQLGetInfo** con una qualsiasi delle numerose altre opzioni. Per un elenco completo di queste opzioni, vedere la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione. Infine **SQLGetTypeInfo** restituisce informazioni sui tipi di dati supportati dall'origine dati. Le sezioni seguenti riportano un numero di fattori che è opportuno considerare attentamente le applicazioni gli durante la costruzione di istruzioni SQL interoperative.  
+ Per determinare quali funzionalità sono supportate, le applicazioni vengono avviate chiamando **SQLGetInfo** con l'opzione SQL_SQL_CONFORMANCE. Il livello di conformità SQL fornisce all'applicazione un'ampia visualizzazione del supporto di SQL. Per affinare questa visualizzazione, l'applicazione chiama **SQLGetInfo** con una qualsiasi di altre opzioni. Per un elenco completo di queste opzioni, vedere la descrizione della funzione [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Infine, **SQLGetTypeInfo** restituisce informazioni sui tipi di dati supportati dall'origine dati. Nelle sezioni seguenti sono elencati diversi fattori possibili che le applicazioni devono controllare per la creazione di istruzioni SQL interoperative.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Utilizzo del catalogo e dello schema](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   
--   [Posizione catalogo](../../../odbc/reference/develop-app/catalog-position.md)  
+-   [Posizione del catalogo](../../../odbc/reference/develop-app/catalog-position.md)  
   
 -   [Identificatori delimitati](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
--   [Maiuscole/minuscole identificatore](../../../odbc/reference/develop-app/identifier-case.md)  
+-   [Maiuscole/minuscole per gli identificatori](../../../odbc/reference/develop-app/identifier-case.md)  
   
 -   [Sequenza di escape](../../../odbc/reference/develop-app/escape-sequences.md)  
   
--   [Valore letterale prefissi e suffissi](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
+-   [Prefissi e suffissi per valori letterali](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
   
 -   [Marcatori di parametro nelle chiamate di procedura](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126598"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Riquadro Diagramma (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63126598"
  **Tabelle**  
  Elenca le tabelle che è possibile aggiungere al riquadro Diagramma. Per aggiungere una tabella, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più tabelle, selezionarle e fare clic su **Aggiungi**.  
   
- **Viste**  
+ **Visualizzazioni**  
  Elenca le viste che è possibile aggiungere al riquadro Diagramma. Per aggiungere una vista, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più viste, selezionarle e fare clic su **Aggiungi**.  
   
  **Funzioni**  
@@ -51,7 +51,7 @@ ms.locfileid: "63126598"
  **Sinonimi**  
  Elenca i sinonimi che è possibile aggiungere al riquadro Diagramma. Per aggiungere un sinonimo, selezionarlo e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più sinonimi, selezionarli e fare clic su **Aggiungi**.  
   
-|Icona|Tipo oggetto|  
+|Icona|Tipo di oggetto|  
 |----------|-----------------|  
 |![Icona di Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Icona di Visual Database Tools")|Tabella|  
 |![Icona di Visual Database Tools](../../database-engine/media//dv3wbi2.gif "Icona di Visual Database Tools")|Query o vista|  
@@ -96,7 +96,7 @@ ms.locfileid: "63126598"
 |![Icona di Visual Database Tools](../../database-engine/media//dv3wbio.gif "Icona di Visual Database Tools")|In Progettazione query e Progettazione viste non è possibile determinare il tipo di join|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Riquadro Criteri &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   

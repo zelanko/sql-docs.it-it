@@ -1,5 +1,5 @@
 ---
-title: Definire una finestra di dialogo parametri Query (Generatore Report) | Microsoft Docs
+title: Finestra di dialogo Definisci parametri query (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109354"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Finestra di dialogo Definisci parametri query (Generatore report)
@@ -30,6 +30,6 @@ ms.locfileid: "66109354"
  Digitare il valore che si desidera utilizzare per il parametro della query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+ [Progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

@@ -18,19 +18,19 @@ ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124656"
 ---
-# <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+# <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza un elenco delle autorizzazioni per i proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per accedere ai sottosistemi.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +43,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] proxy_id` Il numero di identificazione del proxy da elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_id = ] proxy_id`Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_name = ] 'proxy_name'`Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id` Il numero di identificazione del sottosistema per elenco di informazioni. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
+`[ @subsystem_id = ] subsystem_id`Numero di identificazione del sottosistema per cui elencare le informazioni. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema per elenco di informazioni. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
+`[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema per cui elencare le informazioni. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,17 +64,17 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Nome del proxy.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Note  
- Quando viene specificato alcun parametro, **sp_enum_proxy_for_subsystem** Elenca le informazioni su tutti i proxy nell'istanza di ogni sottosistema.  
+## <a name="remarks"></a>Osservazioni  
+ Se non vengono specificati parametri, **sp_enum_proxy_for_subsystem** elenca le informazioni su tutti i proxy nell'istanza di per ogni sottosistema.  
   
- Quando viene specificato il nome del proxy o un id del proxy, **sp_enum_proxy_for_subsystem** sottosistemi a cui il proxy ha accesso a. Quando viene fornito un id o un nome del sottosistema, **sp_enum_proxy_for_subsystem** proxy che hanno accesso al sottosistema.  
+ Quando viene fornito un nome proxy o un ID proxy, **sp_enum_proxy_for_subsystem** elenca i sottosistemi a cui il proxy ha accesso. Quando viene fornito un ID sottosistema o un nome di sottosistema, **sp_enum_proxy_for_subsystem** elenca i proxy che hanno accesso a tale sottosistema.  
   
  Quando vengono specificate sia le informazioni sul proxy che sul sottosistema, il set di risultati restituisce una riga se il proxy specificato può accedere al sottosistema specificato.  
   
- Questa stored procedure si trova nella **msdb**.  
+ Questo stored procedure si trova nel **database msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
   
@@ -103,6 +103,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

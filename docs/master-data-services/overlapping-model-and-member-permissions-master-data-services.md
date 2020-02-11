@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728977"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728977"
   
  Se un membro dispone di autorizzazione diversa da quella del relativo oggetto modello corrispondente, si applicano le regole seguenti:  
   
--   **Deny** sostituisce tutte le altre autorizzazioni.  
+-   **Nega** esegue l'override di tutte le altre autorizzazioni.  
   
--   L'autorizzazione di**amministratore** al livello del modello esegue l'override di tutte le altre autorizzazioni e viene modificata nell'autorizzazione di accesso All (CRUD) ai livelli secondari.  
+-   L'autorizzazione di **amministratore** per il livello del modello esegue l'override di tutte le altre autorizzazioni e viene modificata in tutte le autorizzazioni di accesso (CRUD) sui livelli secondari.  
   
 -   Un'autorizzazione di accesso valida interseca le autorizzazioni per membri e attributi.  
   

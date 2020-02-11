@@ -1,5 +1,5 @@
 ---
-title: HelpContext, HelpFile proprietà | Microsoft Docs
+title: HelpContext, proprietà di filelima | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,30 +22,30 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918475"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
-Indica il file della Guida e l'argomento associato a un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
+Indica il file della guida e l'argomento associato a un oggetto [Error](../../../ado/reference/ado-api/error-object.md) .  
   
 ## <a name="return-values"></a>Valori restituiti  
   
--   **ID argomento Guida** restituisce un ID di contesto, come un **lungo** valore, per un argomento in un file della Guida.  
+-   **HelpContextID** Restituisce un ID di contesto, come valore **Long** , per un argomento in un file della guida.  
   
--   **HelpFile** restituisce un **stringa** valore che restituisce un percorso completamente risolto in un file della Guida.  
+-   **** Fileguida Restituisce un valore **stringa** che restituisce un percorso completamente risolto a un file della guida.  
   
-## <a name="remarks"></a>Note  
- Se viene specificato un file della Guida nel **HelpFile** proprietà, il **HelpContext** proprietà viene utilizzata per visualizzare automaticamente l'argomento della Guida vengono identificati. Se nessun argomento rilevante è disponibile, il **HelpContext** proprietà restituisce zero e il **HelpFile** proprietà restituisce una stringa di lunghezza zero ("").  
+## <a name="remarks"></a>Osservazioni  
+ Se nella proprietà FileGuida viene specificato un **file della Guida** , la proprietà **HelpContext** viene utilizzata per visualizzare automaticamente l'argomento della Guida identificato. Se non è disponibile alcun argomento della Guida pertinente, la proprietà **HelpContext** restituisce zero **e la proprietà** fileguida restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState proprietà esempio (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, numero, origine e SQLState esempio di proprietà (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Proprietà Description](../../../ado/reference/ado-api/description-property.md)   
+ [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   
  [Proprietà Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Proprietà Source (Error - ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

@@ -1,5 +1,5 @@
 ---
-title: Creazione di istruzioni SQL per i cursori | Documenti di Microsoft
+title: Creazione di istruzioni SQL per i cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207085"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Costruzione di istruzioni SQL per i cursori
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza i cursori del server per implementare le funzionalità di cursore definita nella specifica ODBC. Un'applicazione ODBC controlla il comportamento del cursore tramite [la funzione SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi di istruzione diverso. Di seguito sono indicati gli attributi e le rispettive impostazioni predefinite.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client utilizza cursori server per implementare la funzionalità del cursore definita nella specifica ODBC. Un'applicazione ODBC controlla il comportamento del cursore utilizzando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) per impostare attributi di istruzione differenti. Di seguito sono indicati gli attributi e le rispettive impostazioni predefinite.  
   
-|attribute|Impostazione predefinita|  
+|Attributo|Predefinito|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -35,7 +35,7 @@ ms.locfileid: "68207085"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Quando queste opzioni vengono impostate sui valori predefiniti al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non utilizza un cursore del server per implementare il set di risultati, ma utilizza un set di risultati predefinito. Se una di queste opzioni vengono modificata le impostazioni predefinite al momento viene eseguita un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client tenta di utilizzare un cursore del server per implementare il set di risultati.  
+ Quando queste opzioni sono impostate sui valori predefiniti al momento dell'esecuzione di un'istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client non utilizza un cursore server per implementare il set di risultati. USA invece un set di risultati predefinito. Se una di queste opzioni viene modificata rispetto alle impostazioni predefinite nel momento in cui viene eseguita un'istruzione SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC di Native client tenta di utilizzare un cursore server per implementare il set di risultati.  
   
  I set di risultati predefiniti supportano tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non sono presenti restrizioni sui tipi di istruzioni SQL che è possibile eseguire quando si utilizza un set di risultati predefinito.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68207085"
   
      Istruzioni SQL contenenti le parole chiave FOR BROWSE o INTO.  
   
- Se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istruzione SQL che corrisponde a una di queste condizioni viene eseguita con un cursore server, il cursore server viene convertito implicitamente in un set di risultati predefinito. Dopo aver **SQLExecDirect** oppure **SQLExecute** restituisce SQL_SUCCESS_WITH_INFO, il cursore verranno reimpostati sui valori predefiniti degli attributi.  
+ Se in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istruzione SQL che corrisponde a una di queste condizioni viene eseguita con un cursore server, il cursore server viene convertito implicitamente in un set di risultati predefinito. Quando **SQLExecDirect** o **sqlexecute** restituisce SQL_SUCCESS_WITH_INFO, gli attributi del cursore verranno impostati nuovamente sulle impostazioni predefinite.  
   
  Le istruzioni SQL che non rientrano nelle categorie sopra riportate possono essere eseguite con qualsiasi impostazione degli attributi di istruzione. Il funzionamento è identico con un set di risultati predefinito o con un cursore server.  
   
@@ -73,7 +73,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Le applicazioni ODBC riceve questo messaggio possono chiamare [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) per determinare le impostazioni correnti del cursore.  
+ Le applicazioni ODBC che ricevono questo messaggio possono chiamare [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) per determinare le impostazioni correnti del cursore.  
   
  Un tentativo di eseguire una procedura con più istruzioni SELECT quando si utilizzano cursori server genera l'errore seguente:  
   
@@ -100,6 +100,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
  Nelle applicazioni ODBC che ricevono questi errori devono essere reimpostati tutti gli attributi di istruzione di cursore sui valori predefiniti prima di tentare di eseguire l'istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
+ [Esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

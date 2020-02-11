@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Formattazione di un report (Reporting Services) | Microsoft Docs'
+title: 'Lesson 5: Formatting a Report (Reporting Services) (Lezione 5: Formattazione di un report (Reporting Services)) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108427"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Dopo avere aggiunto un'area dati e alcuni campi al report Sales Orders, è possibile formattare i campi relativi a data e valuta e le intestazioni di colonna.  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
 -   [Formattare la data](#bkmk_format_date)  
   
 -   [Formattare la valuta](#bkmk_format_currency)  
   
--   [Modifica dello stile di testo e la larghezza delle colonne](#bkmk_change_textstyle)  
+-   [Modifica dello stile del testo e della larghezza delle colonne](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a> Formattare la data  
+##  <a name="bkmk_format_date"></a>Formattare la data  
  Nel campo Date vengono visualizzate la data e l'ora per impostazione predefinita. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
 #### <a name="to-format-a-date-field"></a>Per formattare un campo di tipo data  
@@ -37,7 +37,7 @@ ms.locfileid: "66108427"
   
 2.  Fare clic con il pulsante destro del mouse nella cella contenente l'espressione per il campo `[Date]` e scegliere **Proprietà casella di testo**.  
   
-3.  Fare clic su **numero**e quindi la **categoria** campo selezionare `Date`.  
+3.  Fare clic su **numero**, quindi selezionare **** `Date`nel campo categoria.  
   
 4.  Nella casella **Tipo** selezionare **31 Gennaio 2000**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66108427"
   
 6.  Visualizzare un'anteprima del report per vedere la modifica al campo `[Date]` , quindi tornare alla visualizzazione della struttura.  
   
-##  <a name="bkmk_format_currency"></a> Formattare la valuta  
+##  <a name="bkmk_format_currency"></a>Formattare la valuta  
  Nel campo LineTotal viene visualizzato un numero generico. È possibile formattare tale numero come valuta.  
   
 #### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
@@ -56,28 +56,28 @@ ms.locfileid: "66108427"
   
 3.  Se la lingua delle impostazioni locali è l'italiano, le impostazioni predefinite devono essere le seguenti:  
   
-    -   **Cifre decimali: 2**  
+    -   **Posizioni decimali: 2**  
   
-    -   **Numeri negativi: (€12345,00)**  
+    -   **Numeri negativi: ($12345,00)**  
   
-    -   **Simbolo: € italiano**  
+    -   **Simbolo: $ English (Stati Uniti)**  
   
-4.  Selezionare **Usa separatore delle migliaia (,)** .  
+4.  Selezionare **Usa separatore delle migliaia (,)**.  
   
-     Se il testo di esempio è: **$ 12.345,00**, le impostazioni sono corrette.  
+     Se il testo di esempio è:**$ 12.345,00**, le impostazioni sono corrette.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Visualizzare un'anteprima del report per vedere la modifica al campo `[LineTotal]` , quindi tornare alla visualizzazione della struttura.  
   
-##  <a name="bkmk_change_textstyle"></a> Modifica dello stile di testo e la larghezza delle colonne  
+##  <a name="bkmk_change_textstyle"></a>Modifica dello stile del testo e della larghezza delle colonne  
  È possibile modificare anche la formattazione della riga dell'intestazione per differenziarla dalle righe di dati nel report. Come ultima operazione, si potrà regolare la larghezza delle colonne.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Per formattare le righe di intestazione e le colonne di tabella  
   
 1.  Fare clic nella tabella in modo che vengano visualizzati gli handle di colonna e riga sopra e accanto alla tabella.  
   
-     ![Progettazione, tabella con riga di intestazione e riga di dettaglio](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "progettazione, tabella con riga di intestazione e riga di dettaglio")  
+     ![Progettazione, tabella con riga di intestazione e riga di dettaglio](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Progettazione, tabella con riga di intestazione e riga di dettaglio")  
   
      Le barre grigie lungo la parte superiore e laterale della tabella sono gli handle di riga e di colonna.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66108427"
   
 3.  Selezionare la riga che contiene le etichette dell'intestazione di colonna e scegliere **Carattere** dal menu **Formato** , quindi fare clic su **Grassetto**.  
   
-4.  Per visualizzare un'anteprima del report fare clic sulla scheda **Anteprima** . L'aspetto dell'anteprima dovrebbe essere simile al seguente:  
+4.  Per visualizzare l'anteprima del report, fare clic sulla scheda **Anteprima** . Il risultato dovrebbe essere simile al seguente:  
   
      ![Anteprima della tabella con intestazioni di colonna in grassetto](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Anteprima della tabella con intestazioni di colonna in grassetto")  
   

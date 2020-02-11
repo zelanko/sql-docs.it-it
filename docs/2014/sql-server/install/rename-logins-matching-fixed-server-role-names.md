@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278210"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Rinominare gli account di accesso con nomi uguali a quelli dei ruoli predefiniti del server
@@ -60,10 +60,10 @@ ms.locfileid: "72278210"
   
 2.  Eliminare gli account di accesso.  
   
-3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro **\@SID** per ogni account di accesso corrispondente.  
+3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro ** \@SID** per ogni account di accesso corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

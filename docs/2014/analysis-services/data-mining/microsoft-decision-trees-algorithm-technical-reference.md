@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637521"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees
@@ -66,7 +66,7 @@ ms.locfileid: "73637521"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
+|Decision Trees|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
 |Linear Regression|Punteggio di interesse|L'algoritmo Linear Regression può utilizzare solo il punteggio di interesse, perché supporta solo colonne continue.|  
   
 ### <a name="scalability-and-performance"></a>Scalabilità e prestazioni  
@@ -149,7 +149,7 @@ ms.locfileid: "73637521"
  *SCORE_METHOD*  
  Determina il metodo utilizzato per calcolare il punteggio di divisione. Sono disponibili le opzioni seguenti:  
   
-|id|Name|  
+|ID|Nome|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayes con probabilità a priori K2|  
@@ -162,11 +162,11 @@ ms.locfileid: "73637521"
  *SPLIT_METHOD*  
  Determina il metodo utilizzato per la divisione del nodo. Sono disponibili le opzioni seguenti:  
   
-|id|Name|  
+|ID|Nome|  
 |--------|----------|  
-|1|**Binary:** Indica che l'albero deve essere suddiviso in due rami indipendentemente dal numero effettivo dei valori presenti per l'attributo.|  
-|2|**Complete:** Indica che nell'albero possono essere create tante divisioni quanti sono i valori degli attributi.|  
-|3|**Both:** Specifica che Analysis Services consente di scegliere se utilizzare una divisione binaria o completa per ottenere i risultati migliori.|  
+|1|**File binario:** Indica che, indipendentemente dal numero effettivo di valori per l'attributo, l'albero deve essere suddiviso in due rami.|  
+|2|**Operazione completata:** Indica che l'albero può creare un numero di divisioni pari al numero di valori di attributo.|  
+|3|**Entrambi:** Specifica che Analysis Services possibile determinare se è necessario usare una divisione binaria o completa per produrre i risultati migliori.|  
   
  Il valore predefinito è 3.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "73637521"
  Un modello di albero delle decisioni deve contenere una colonna chiave, le colonne di input e almeno una colonna stimabile.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
 |------------|-------------------|  
@@ -203,7 +203,7 @@ ms.locfileid: "73637521"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
- [Esempi di query sul modello di alberi delle decisioni](decision-trees-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello Decision Trees](decision-trees-model-query-examples.md)   
+ [Contenuto del modello di data mining per i modelli di albero delle decisioni &#40;Analysis Services-Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

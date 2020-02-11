@@ -1,5 +1,5 @@
 ---
-title: Accesso alle righe in un Recordset gerarchico | Microsoft Docs
+title: Accesso alle righe in un recordset gerarchico | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926353"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accesso alle righe in un Recordset gerarchico (ad esempio)
-Nell'esempio seguente illustra i passaggi necessari per accedere alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accesso alle righe in un recordset gerarchico (esempio)
+Nell'esempio seguente vengono illustrati i passaggi necessari per accedere alle righe in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gerarchico:
 
-1.  **Recordset** oggetti dal **autori** e **titleauthor** tabelle correlate da ID autore.
+1.  Gli oggetti **Recordset** dalle tabelle **authors** e **titleauthor** sono correlati dall'ID autore.
 
-2.  Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione ogni autore.
+2.  Il ciclo esterno Visualizza il nome, lo stato e l'identificazione di ogni autore.
 
-3.  L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dalle [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnato al *rstTitleAuthor*.
+3.  Il **Recordset** aggiunto per ogni riga viene recuperato dalla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) e assegnato a *rstTitleAuthor*.
 
-4.  Il ciclo interno sono visualizzati quattro campi di ogni riga l'oggetto aggiunto **Recordset**.
+4.  Il ciclo interno Visualizza quattro campi da ogni riga del **Recordset**accodato.
 
- Il [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) è impostata su **false** ai fini dell'illustrazione, in modo che è possibile vedere il capitolo modificare in modo esplicito in ogni iterazione del ciclo esterno. Per rendere più efficiente l'esempio di codice, è possibile spostare l'assegnazione nel passaggio 3 prima della prima riga nel passaggio 2, in modo che l'assegnazione viene eseguita una sola volta. Impostare quindi le [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà **true**, in modo che *rstTitleAuthor* verrà modificato in modo implicito e automaticamente il capitolo corrispondente ogni volta che *rst* passa a una nuova riga.
+ La proprietà [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) è impostata su **false** a scopo illustrativo, in modo che sia possibile visualizzare la modifica del capitolo in modo esplicito in ogni iterazione del ciclo esterno. Per rendere più efficiente l'esempio di codice, è possibile spostare l'assegnazione nel passaggio 3 prima della prima riga nel passaggio 2, in modo che l'assegnazione venga eseguita una sola volta. Impostare quindi la proprietà [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) su **true**, in modo che *rstTitleAuthor* venga modificato in modo implicito e automatico nel capitolo corrispondente ogni volta che *RST* si sposta in una nuova riga.
 
 ## <a name="example"></a>Esempio
 
@@ -68,4 +68,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica del Data Shaping](../../../ado/guide/data/data-shaping-overview.md) [oggetto Field](../../../ado/reference/ado-api/field-object.md) [insieme (ADO) Fields](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service per OLE DB (Provider di servizi di ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [necessarie di provider per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md) [forma clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [comandi in forma Generali](../../../ado/guide/data/shape-commands-in-general.md) [clausola COMPUTE di Shape](../../../ado/guide/data/shape-compute-clause.md) [funzioni di applicazioni Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Cenni preliminari sulla data shaping (ADO) Cenni preliminari sulla](../../../ado/guide/data/data-shaping-overview.md) [](../../../ado/reference/ado-api/field-object.md) [](../../../ado/reference/ado-api/fields-collection-ado.md) [grammatica di forma formale](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service per OLE DB (provider di servizi ADO](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) ) [Recordset oggetti (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [provider necessari per i comandi di](../../../ado/guide/data/required-providers-for-data-shaping.md) forma della [clausola APPEND](../../../ado/guide/data/shape-append-clause.md) [della](../../../ado/guide/data/shape-commands-in-general.md) forma data shaping nella clausola di [calcolo di forma](../../../ado/guide/data/shape-compute-clause.md) generale [Visual Basic, Applications Edition funzioni](../../../ado/guide/data/visual-basic-for-applications-functions.md)

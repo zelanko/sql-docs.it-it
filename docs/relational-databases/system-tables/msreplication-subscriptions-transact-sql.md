@@ -18,16 +18,16 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079990"
 ---
-# <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
+# <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSreplication_subscriptions** tabella contiene una riga delle informazioni di replica per ogni agente di distribuzione per la manutenzione del database sottoscrittore locale. Questa tabella è archiviata nel database di sottoscrizione.  
+  La tabella **MSreplication_subscriptions** contiene una riga di informazioni di replica per ogni agente di distribuzione di manutenzione del database Sottoscrittore locale. Questa tabella è archiviata nel database di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -38,17 +38,17 @@ ms.locfileid: "68079990"
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = push<br /><br /> 1 = pull<br /><br /> 2 = anonima|  
 |**distribution_agent**|**sysname**|Nome dell'agente di distribuzione.|  
 |**Time**|**smalldatetime**|Ora dell'ultimo aggiornamento eseguito dall'agente di distribuzione.|  
-|**description**|**nvarchar(255)**|Descrizione della sottoscrizione.|  
-|**transaction_timestamp**|**varbinary(16)**|Solo per uso interno.|  
+|**Descrizione**|**nvarchar(255)**|Descrizione della sottoscrizione.|  
+|**transaction_timestamp**|**varbinary (16)**|Solo per uso interno.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento.|  
-|**agent_id**|**binary(16)**|ID dell'agente.|  
-|**subscription_guid**|**binary(16)**|Identificatore globale della versione della sottoscrizione associata alla pubblicazione.|  
-|**subid**|**binary(16)**|Identificatore globale di una sottoscrizione anonima.|  
+|**agent_id**|**binario (16)**|ID dell'agente.|  
+|**subscription_guid**|**binario (16)**|Identificatore globale della versione della sottoscrizione associata alla pubblicazione.|  
+|**subid**|**binario (16)**|Identificatore globale di una sottoscrizione anonima.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o aggiornati a ogni esecuzione dell'agente snapshot.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste della replica di &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

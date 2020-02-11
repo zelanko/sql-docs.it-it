@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017583"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   In questo argomento verrà descritto come apportare modifiche ai passaggi di un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -28,7 +28,7 @@ ms.locfileid: "63017583"
   
      [Sicurezza](#Security)  
   
--   **Per apportare modifiche ai passaggi di un processo master di SQL Server Agent tramite:**  
+-   **Per apportare modifiche ai passaggi di un processo SQL Server Agent master utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63017583"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Per apportare modifiche ai passaggi di un processo master di SQL Server Agent  
   
@@ -56,15 +56,15 @@ ms.locfileid: "63017583"
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si intende modificare passaggi e scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo -**_nome_processo_ selezionare **Passaggi** in **Selezione pagina**.  
+5.  Nella finestra di dialogo **Proprietà processo-**_Job_name_ , in **Selezione pagina**selezionare **passaggi**.  
   
-6.  Fare clic su **Edit** per aprire il **proprietà passaggio processo -**_nome_passaggio_processo_ nella finestra di dialogo. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [proprietà passaggio processo: Nuovo passaggio di processo &#40;General Page&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [proprietà passaggio processo: Nuovo passaggio di processo &#40;pagina avanzate&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Fare clic su **modifica** per aprire la finestra di dialogo **Proprietà passaggio processo-**_job_step_name_ . Per ulteriori informazioni sulle opzioni disponibili in questa finestra di dialogo, vedere [Proprietà passaggio processo: nuovo passaggio di processo &#40;pagina generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) e [Proprietà passaggio processo: nuovo passaggio di processo &#40;pagina avanzata&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
-8.  Nel **proprietà processo -**_job_name_ la finestra di dialogo, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Proprietà processo-**_job_name_ fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Per apportare modifiche ai passaggi di un processo master di SQL Server Agent  
   
@@ -87,6 +87,6 @@ ms.locfileid: "63017583"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_update_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_update_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql).  
   
   

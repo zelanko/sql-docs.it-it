@@ -18,19 +18,19 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107983"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Invia un messaggio di posta elettronica a un operatore tramite Posta elettronica database.  
   
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,32 +47,32 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_name = ] 'profilename'` Il nome del profilo di posta elettronica Database da usare per inviare il messaggio. *ProfileName* viene **nvarchar (128)** . Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
+`[ @profile_name = ] 'profilename'`Nome del profilo Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* è di **tipo nvarchar (128)**. Se *ProfileName* non è specificato, viene usato il profilo di posta elettronica database predefinito.  
   
-`[ @id = ] id` L'identificatore per l'operatore a cui inviare il messaggio. *ID* viene **int**, con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
+`[ @id = ] id`Identificatore dell'operatore a cui inviare il messaggio. *ID* è di **tipo int**e il valore predefinito è null. È necessario specificare un *ID* o un *nome* .  
   
-`[ @name = ] 'name'` Il nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)** , con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
+`[ @name = ] 'name'`Nome dell'operatore a cui inviare il messaggio. *Name* è di **tipo nvarchar (128)** e il valore predefinito è null. È necessario specificare un *ID* o un *nome* .  
   
-> **NOTA:** Indirizzo di posta elettronica debba essere definito per l'operatore possa ricevere messaggi.  
+> **Nota:** Per poter ricevere messaggi, è necessario definire un indirizzo di posta elettronica per l'operatore.  
   
-`[ @subject = ] 'subject'` Oggetto per il messaggio di posta elettronica. *Subject* viene **nvarchar(256)** non prevede alcun valore predefinito.  
+`[ @subject = ] 'subject'`Oggetto per il messaggio di posta elettronica. *Subject* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
-`[ @body = ] 'message'` Il corpo del messaggio di posta elettronica. *messaggio* viene **nvarchar (max)** non prevede alcun valore predefinito.  
+`[ @body = ] 'message'`Corpo del messaggio di posta elettronica. il *messaggio* è di **tipo nvarchar (max)** e non prevede alcun valore predefinito.  
   
-`[ @file_attachments = ] 'attachment'` Il nome di un file da allegare al messaggio di posta elettronica. *allegato* viene **nvarchar(512)** , non prevede alcun valore predefinito.  
+`[ @file_attachments = ] 'attachment'`Nome di un file da aggiungere al messaggio di posta elettronica. *Attachment* è di **tipo nvarchar (512)** e non prevede alcun valore predefinito.  
   
-`[ @mail_database = ] 'mail_host_database'` Specifica il nome del database host della posta elettronica. *mail_host_database* viene **nvarchar (128)** . Se nessun *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
+`[ @mail_database = ] 'mail_host_database'`Specifica il nome del database host della posta elettronica. *mail_host_database* è di **tipo nvarchar (128)**. Se non viene specificato alcun *mail_host_database* , per impostazione predefinita viene utilizzato il database **msdb** .  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Invia il messaggio specificato all'indirizzo di posta elettronica dell'operatore. Se non è stato configurato un indirizzo di posta elettronica per l'operatore, viene restituito un errore.  
   
  Per poter inviare una notifica a un operatore, è necessario innanzitutto configurare Posta elettronica database e un database host della posta elettronica.  
   
-## <a name="permissions"></a>Permissions  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+## <a name="permissions"></a>Autorizzazioni  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

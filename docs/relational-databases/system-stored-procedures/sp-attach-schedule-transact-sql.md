@@ -18,18 +18,18 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046159"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Imposta una pianificazione per un processo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,29 +42,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id`Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Il nome del processo a cui viene aggiunta la pianificazione. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
-  
-> [!NOTE]  
->  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
-  
-`[ @schedule_id = ] schedule_id` Il numero di identificazione della pianificazione della pianificazione da impostare per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
-  
-`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione da impostare per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'`Nome del processo a cui viene aggiunta la pianificazione. *job_name*è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-## <a name="remarks"></a>Note  
+`[ @schedule_id = ] schedule_id`Numero di identificazione della pianificazione da impostare per il processo. *schedule_id*è di **tipo int**e il valore predefinito è null.  
+  
+`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione da impostare per il processo. *schedule_name*è di **tipo sysname**e il valore predefinito è null.  
+  
+> [!NOTE]  
+>  È necessario specificare *schedule_id* o *schedule_name* , ma non è possibile specificarli entrambi.  
+  
+## <a name="remarks"></a>Osservazioni  
  La pianificazione e il processo devono avere lo stesso proprietario.  
   
  È possibile impostare una pianificazione per più di un processo. È possibile eseguire un processo su più di una pianificazione.  
   
- Questa stored procedure deve essere eseguita dal **msdb** database.  
+ Questo stored procedure deve essere eseguito dal database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+## <a name="permissions"></a>Autorizzazioni  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -76,7 +76,8 @@ sp_attach_schedule
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se l'utente è proprietario sia del processo che della pianificazione.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se l'utente è proprietario sia del processo che della pianificazione.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una pianificazione denominata `NightlyJobs`. I processi che utilizzano questa pianificazione vengono eseguiti ogni giorno quando l'ora indicata dal server è `01:00`. Nell'esempio la pianificazione viene collegata al processo `BackupDatabase` e al processo `RunReports`.  
@@ -107,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   
