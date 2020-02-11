@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211686"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
@@ -31,13 +31,13 @@ ms.locfileid: "68211686"
 > [!IMPORTANT]  
 >  Se si cambia il nome di un oggetto a cui viene fatto riferimento da una funzione, è necessario modificare la funzione in modo che per il relativo testo venga fatto riferimento al nuovo nome. Pertanto, prima di rinominare un oggetto, visualizzare le dipendenze dell'oggetto per determinare se la modifica proposta interessa eventuali funzioni.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Sicurezza](#Security)  
   
--   **Per acquisire informazioni su una funzione tramite:**  
+-   **Per ottenere informazioni su una funzione tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211686"
 ####  <a name="Permissions"></a> Autorizzazioni  
  L'uso di **sys.sql_expression_dependencies** per trovare tutte le dipendenze da una funzione richiede l'autorizzazione VIEW DEFINITION per il database e l'autorizzazione SELECT per **sys.sql_expression_dependencies** per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in OBJECT_DEFINITION sono visibili pubblicamente.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Per mostrare le proprietà di una funzione definita dall'utente  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68211686"
      **Esegui come**  
      Contesto di esecuzione per la funzione.  
   
-     **Name**  
+     **Nome**  
      Nome della funzione corrente.  
   
      **Schema**  
@@ -94,22 +94,22 @@ ms.locfileid: "68211686"
      **Oggetto di sistema**  
      Indica se la funzione è un oggetto di sistema. I valori sono True e False.  
   
-     **ANSI NULLs**  
+     **NULL ANSI**  
      Indica se l'oggetto è stato creato con l'opzione ANSI NULLs.  
   
-     **Crittografata**  
+     **Crittografato**  
      Indica se la funzione è crittografata. I valori sono True e False.  
   
      **Tipo di funzione**  
      Tipo della funzione definita dall'utente.  
   
-     **Identificatore delimitato**  
+     **Identificatore tra virgolette**  
      Indica se l'oggetto è stato creato con l'opzione quoted identifier.  
   
-     **Associata a schema**  
+     **Associato a schema**  
      Indica se la funzione è associata allo schema. I valori sono True e False. Per informazioni sulle funzioni associate a schema, vedere la sezione relativa a SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   

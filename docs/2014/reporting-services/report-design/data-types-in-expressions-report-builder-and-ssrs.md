@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891870"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "68891870"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
+|string|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Valore predefinito: Boolean|  
 |Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
+|Datetime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
 |Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
-|Binary|Valore predefinito: Byte[]|  
+|Binary|Valore predefinito: Byte []|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68891870"
   
 -   Creare un campo calcolato basato su un campo del set di dati del report esistente scrivendo un'espressione che converte tutti i dati di una colonna del set di risultati in una nuova colonna con un tipo di dati differente. L'espressione seguente, ad esempio, converte il campo Year da un valore di tipo Integer in un valore di tipo String: `=CStr(Fields!Year.Value)`. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query MDX, ad esempio, include una FORMATTED_VALUE proprietà estesa per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Informazioni sui tipi di dati dei parametri  
  I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
@@ -84,7 +84,7 @@ ms.locfileid: "68891870"
 |Da String a DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |Da String a DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Estrazione dell'anno|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 è True e 0 è False.|  
+|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 è True e 0 è False.|  
 |Da Boolean a Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 è True e 0 è False.|  
 |Solo la parte DateTime di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Solo la parte Offset di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
@@ -116,7 +116,7 @@ ms.locfileid: "68891870"
   
     -   Nell'espressione seguente la stringa viene convertita in un valore di data e ora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore `DateTime` seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 16.07).  
+         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore `DateTime` seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 4.07 PM).  
   
  Per ulteriori informazioni sulla conversione di stringhe `DateTime` in tipi di dati, vedere [analisi di stringhe di data e ora](https://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](https://go.microsoft.com/fwlink/?LinkId=89704)e [scelta tra DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) in MSDN.  
   

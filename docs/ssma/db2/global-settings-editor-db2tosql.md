@@ -10,20 +10,20 @@ ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 45c4f7b9d3c997db98e3a570136b5bf24b4d8e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989608"
 ---
 # <a name="global-settings-editor-db2tosql"></a>Impostazioni globali (Editor) (DB2ToSQL)
-Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  
+Utilizzare la pagina editor della finestra di dialogo **Impostazioni globali** per specificare le impostazioni per le finestre dell'editor di codice.  
   
-Per accedere a impostazioni dell'editor, scegliere il **degli strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro a sinistra e quindi selezionare **Editor**.  
+Per accedere alle impostazioni dell'editor, scegliere **Impostazioni globali**dal menu **strumenti** , fare clic su **GUI** nella parte inferiore del riquadro sinistro, quindi selezionare **Editor**.  
   
 ## <a name="options"></a>Opzioni  
-**Visualizzare i numeri di riga**  
-Per visualizzare i numeri di riga nelle finestre dell'editor di codice, selezionare **True**.  
+**Mostra numeri di riga**  
+Per visualizzare i numeri di riga nelle finestre dell'editor di codice, selezionare **true**.  
   
-Se è selezionata una finestra dell'editor di codice quando si modifica questa impostazione, si potrebbe essere necessario selezionare di nuovo l'oggetto corrente e aggiornare la visualizzazione.  
+Se si seleziona una finestra dell'editor di codice quando si modifica questa impostazione, potrebbe essere necessario selezionare nuovamente l'oggetto corrente per aggiornare la visualizzazione.  
   

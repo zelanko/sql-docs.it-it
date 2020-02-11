@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065482"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utilizzo di tabelle in diagrammi di database (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63065482"
 > [!NOTE]  
 >  Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
  [Aggiungere tabelle correlate a diagrammi &#40;Visual Database Tools&#41;](add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "63065482"
   
  [Creazione di relazioni riflessive &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Riferimento  
  [Finestra di dialogo Aggiungi tabella &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](add-table-dialog-box-database-designer-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  

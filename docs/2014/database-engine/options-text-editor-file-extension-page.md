@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - pagina estensione File) | Microsoft Docs
+title: Opzioni (editor di testo-pagina estensione file) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089943"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opzioni (Editor di testo - pagina Estensione file)
@@ -29,7 +29,7 @@ ms.locfileid: "66089943"
  **Editor**  
  Selezionare l'editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] che si vuole usare per aprire documenti con l'estensione di file immessa nella casella **Estensione**. Se si seleziona un'opzione il cui nome contiene il termine "con codifica", verrà visualizzata una finestra di dialogo ogni volta che si apre tale documento nella quale sarà possibile selezionare uno schema di codifica.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una voce che include i valori specificati per **Estensione** e **Strumento di modifica** in **Elenco estensioni**.  
   
  **Rimuovi**  
@@ -38,7 +38,7 @@ ms.locfileid: "66089943"
  **Estensione**  
  Consente di elencare tutte le estensioni per le quali è stato specificato un editor.  
   
- **Esperienza di modifica**  
+ **Strumento di modifica**  
  Consente di elencare gli editor selezionati per **Estensioni**.  
   
  **Associa file senza estensione a**  

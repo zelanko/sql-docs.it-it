@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX) | Microsoft Docs
+title: SELECT FROM &lt;Model&gt; prediction join (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928336"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; prediction join (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Utilizza un modello di data mining per stimare gli stati delle colonne in un'origine dati esterna. Il **PREDICTION JOIN** istruzione corrisponde a ogni case dalla query di origine per il modello.  
+  Utilizza un modello di data mining per stimare gli stati delle colonne in un'origine dati esterna. L'istruzione **PREDICTION JOIN** consente di associare ogni case della query di origine al modello.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,31 +33,31 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
- *elenco di espressioni SELECT*  
+ *Seleziona elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
   
  *model*  
  Identificatore del modello.  
   
- *Selezionare Sub*  
+ *Sub-Select*  
  Istruzione SELECT incorporata.  
   
- *query sull'origine dati*  
+ *query sui dati di origine*  
  Query di origine.  
   
- *elenco mapping dei join*  
- Facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
+ *elenco di mapping di join*  
+ Facoltativa. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
  *espressione della condizione*  
- facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ *espressione*  
+ Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Note  
- La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Colonne di \< *elenco mapping dei join*> sono correlate tramite un segno di uguale (=), come illustrato nell'esempio seguente:  
+## <a name="remarks"></a>Osservazioni  
+ La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le \<colonne nell' *elenco di mapping di join*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,9 +69,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La query di origine del PREDICTION JOIN può essere una query singleton o di tabella.  
   
- È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nel \< *elenco di espressioni select*> e il \< *espressione condizione*>.  
+ È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nell' \< *elenco di espressioni SELECT*> e \<l' *espressione della condizione*>.  
   
- **NATURAL PREDICTION JOIN** esegue automaticamente il mapping tra loro i nomi di colonna dalla query di origine corrispondano ai nomi di colonna nel modello. Se si usa **NATURAL PREDICTION**, è possibile omettere la clausola ON.  
+ **Natural prediction join** esegue automaticamente il mapping tra i nomi di colonna della query di origine che corrispondono ai nomi di colonna nel modello. Se si utilizza la **stima naturale**, è possibile omettere la clausola on.  
   
  La condizione WHERE può essere applicata solo a colonne stimabili o colonne correlate.  
   
@@ -88,7 +88,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Ha due figli  
   
- Usa il modello di data mining TM Decision Tree e le caratteristiche note sull'oggetto, la query restituisce un valore booleano che indica se la persona ha acquistato la bicicletta e un set di valori tabulari, restituiti dai [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) (funzione), che descrivono come è stata effettuata la stima.  
+ Utilizzando il modello di data mining TM Decision Tree e le caratteristiche note relative all'oggetto, la query restituisce un valore booleano che indica se l'utente ha acquistato la bicicletta e un set di valori tabulari, restituiti dalla funzione [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) , che descrivono il modo in cui è stata effettuata la stima.  
   
 ```  
 SELECT  
@@ -104,8 +104,8 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Esempio 2: Tramite la funzione OPENQUERY  
- Nell'esempio seguente viene illustrato come creare una query di stima batch utilizzando un elenco di clienti potenziali archiviato in un set di dati esterno. Poiché la tabella fa parte di una vista origine dati che è stata definita in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la query può usare [OPENQUERY](../dmx/source-data-query-openquery.md) per recuperare i dati. Poiché i nomi delle colonne nella tabella sono diversi da quelli nel modello di data mining, il **via** clausola deve essere utilizzata per le colonne nella tabella vengono mappati alle colonne nel modello.  
+## <a name="example-2-using-openquery"></a>Esempio 2: Utilizzo di OPENQUERY  
+ Nell'esempio seguente viene illustrato come creare una query di stima batch utilizzando un elenco di clienti potenziali archiviato in un set di dati esterno. Poiché la tabella fa parte di una vista origine dati definita in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la query può utilizzare [OPENQUERY](../dmx/source-data-query-openquery.md) per recuperare i dati. Poiché i nomi delle colonne della tabella sono diversi da quelli presenti nel modello di data mining, è necessario utilizzare la clausola **on** per eseguire il mapping delle colonne della tabella alle colonne del modello.  
   
  La query restituisce il nome e il cognome di ogni persona presente nella tabella, oltre a una colonna booleana che indica la probabilità che la persona acquisti una bicicletta, dove 0 indica "è improbabile che acquisti una bicicletta" e 1 indica "è probabile che acquisti una bicicletta". L'ultima colonna contiene la probabilità per il risultato stimato.  
   
@@ -162,7 +162,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Il [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) funzione è polimorfica e può essere utilizzata con tutti i tipi di modello. Viene utilizzato value3 come argomento della funzione per limitare il numero di articoli restituiti dalla query. Il **seleziona** elencate di seguito la clausola NATURAL PREDICTION JOIN fornisce i valori da utilizzare come input per la stima.  
+ La funzione [Predict &#40;DMX&#41;](../dmx/predict-dmx.md) è polimorfica e può essere utilizzata con tutti i tipi di modello. Viene utilizzato value3 come argomento della funzione per limitare il numero di articoli restituiti dalla query. L'elenco di **selezione** che segue la clausola NATURAL PREDICTION JOIN fornisce i valori da utilizzare come input per la stima.  
   
 ```  
 SELECT FLATTENED  
@@ -183,12 +183,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- Poiché la colonna che contiene l'attributo stimabile, `[v Assoc Seq Line Items]`, è una colonna della tabella, la query restituisce una singola colonna contenente una tabella nidificata. Per impostazione predefinita, la colonna della tabella nidificata viene denominata `Expression`. Se il provider non supporta set di righe gerarchici, è possibile usare la **FLATTENED** (parola chiave) come illustrato in questo esempio per rendere più semplice visualizzare i risultati.  
+ Poiché la colonna che contiene l'attributo stimabile, `[v Assoc Seq Line Items]`, è una colonna della tabella, la query restituisce una singola colonna contenente una tabella nidificata. Per impostazione predefinita, la colonna della tabella nidificata viene denominata `Expression`. Se il provider non supporta set di righe gerarchici, è possibile utilizzare la parola chiave **Flat** , come illustrato in questo esempio, per semplificare la visualizzazione dei risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

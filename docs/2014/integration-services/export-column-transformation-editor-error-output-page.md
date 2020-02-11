@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione Esportazione colonna (pagina Output degli errori) | Microsoft Docs
+title: Editor trasformazione Esportazione colonna (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058942"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Editor trasformazione Esportazione colonna (pagina Output degli errori)
@@ -33,7 +33,7 @@ ms.locfileid: "66058942"
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione che deve essere eseguita in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
   
  **Troncamento**  
@@ -50,6 +50,6 @@ ms.locfileid: "66058942"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Esportazione colonna &#40;pagina Colonne&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [Editor trasformazione Esportazione colonna &#40;pagina colonne&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

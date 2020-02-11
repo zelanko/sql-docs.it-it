@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211376"
 ---
 # <a name="job-activity-monitor"></a>Monitoraggio attività processi
@@ -25,12 +25,12 @@ ms.locfileid: "68211376"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Nome del processo  
+ Nome del processo.  
   
- **Abilitata**  
+ **Enabled**  
  Indica se il processo è abilitato (**sì**) o non abilitato (**no**).  
   
- **Lo stato** <sup>1</sup>  
+ **Stato** <sup>1</sup>  
  Stato corrente del processo.  
   
  **Risultati ultima esecuzione**  
@@ -42,16 +42,16 @@ ms.locfileid: "68211376"
  **Prossima esecuzione** <sup>1</sup>  
  Data e ora pianificate per la successiva esecuzione del processo utilizzando la data e l'ora locali del server.  
   
- **Category**  
+ **Categoria**  
  Categoria assegnata al processo.  
   
  **Eseguibile**  
- **Sì** se il processo può essere eseguito, **No** se il processo non può essere eseguito. Un processo non può essere eseguito se non è associato a passaggi o a un server di destinazione.  
+ **Sì** se il processo può essere eseguito; **No** se il processo non può essere eseguito. Un processo non può essere eseguito se non è associato a passaggi o a un server di destinazione.  
   
- **Pianificato**  
- **Sì** se il processo è assegnato a una programmazione processi, **No** se il processo non ha alcuna programmazione.  
+ **Pianificata**  
+ **Sì** se il processo è assegnato a una pianificazione del processo. **No** se il processo non ha alcuna pianificazione.  
   
- <sup>1</sup>solo i membri del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito sysadmin del ruolo del server e gli amministratori di server gruppo possa visualizzare i valori in questa colonna. Membri del ruolo SQLAgentOperatorRole non possono vedere i valori in questa colonna.  
+ <sup>1</sup> Solo i membri del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del server sysadmin e del gruppo Administrators del server possono visualizzare i valori in questa colonna. Membri del ruolo SQLAgentOperatorRole non possono vedere i valori in questa colonna.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Per aprire Monitoraggio attività processi  
   

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Distribuire un'estensione di elaborazione dei dati in Progettazione Report | Microsoft Docs"
+title: "Procedura: Distribuire un'estensione per l'elaborazione dati in Progettazione report | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164323"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procedura: Distribuire un'estensione per l'elaborazione dati in Progettazione report
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procedura: Distribuzione di un'estensione per l'elaborazione dati in Progettazione report
   In Progettazione report vengono utilizzate le estensioni per l'elaborazione dati per il recupero e l'elaborazione dei dati durante la progettazione dei report. È necessario distribuire l'assembly di estensioni per l'elaborazione dati in Progettazione report come assembly privato. È inoltre necessario immettere una voce nel file di configurazione di Progettazione report, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Per distribuire un assembly dell'estensione per l'elaborazione dati  
   
 1.  Copiare l'assembly dal percorso di gestione temporanea nella directory di Progettazione report. Il percorso predefinito della directory di Progettazione report è C:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Dopo aver copiato il file di assembly, aprire il file RSReportDesigner.config. Anche questo file si trova nella directory di Progettazione report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un semplice editor di testo, ad esempio Blocco note.  
+2.  Dopo aver copiato il file di assembly, aprire il file RSReportDesigner.config. Anche questo file si trova nella directory di Progettazione report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con o con un semplice editor di testo, ad esempio Blocco note.  
   
 3.  Individuare l'elemento **Data** nel file RSReportDesigner.config. È necessario immettere una voce per l'estensione per l'elaborazione dati appena creata nel percorso seguente:  
   
@@ -39,13 +39,13 @@ ms.locfileid: "63164323"
     </Extensions>  
     ```  
   
-4.  Aggiungere una voce per l'estensione per l'elaborazione dati che include un' **estensione** elemento con i valori per il `Name`, `Type`, e `Visible` attributi. La voce può essere simile alla seguente:  
+4.  Aggiungere una voce per l'estensione per l'elaborazione dati che includa un elemento **Extension** con `Name`i `Type`valori per `Visible` gli attributi, e. La voce può essere simile alla seguente:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Il valore per `Name` è il nome univoco dell'estensione per l'elaborazione dati. Il valore per `Type` è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa le interfacce <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Progettazione Report, aggiungere un `Visible` dell'attributo per il **estensione** elemento e impostarlo su `false`.  
+     Il valore per `Name` è il nome univoco dell'estensione per l'elaborazione dati. Il valore per `Type` è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa le interfacce <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Progettazione report, aggiungere un `Visible` attributo all'elemento **Extension** e impostarlo su `false`.  
   
 5.  Aggiungere infine un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione. A tale scopo, aggiungere il gruppo di codice al file rspreviewpolicy.config che, per impostazione predefinita, si trova in C:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
@@ -62,14 +62,14 @@ ms.locfileid: "63164323"
     </CodeGroup>  
     ```  
   
- L'appartenenza URL è solo una delle diverse condizioni di appartenenza selezionabili per l'estensione per l'elaborazione dati. Per altre informazioni sulla sicurezza dall'accesso di codice in [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)], vedere [Sviluppo sicuro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+ L'appartenenza URL è solo una delle diverse condizioni di appartenenza selezionabili per l'estensione per l'elaborazione dati. Per altre informazioni sulla sicurezza dall'accesso di [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)]codice in, vedere [sviluppo protetto &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="generic-query-designer"></a>Progettazione query standard  
  In Progettazione report è disponibile una finestra Progettazione query standard che è possibile utilizzare con le estensioni per l'elaborazione dati personalizzate. Questa finestra di progettazione è costituita da due riquadri, uno per le query e uno per i risultati. È possibile utilizzare la finestra Progettazione query standard per scrivere query non supportate dall'interfaccia grafica. Diversamente dalla finestra Progettazione query con interfaccia grafica, l'interfaccia standard di Progettazione query non controlla la sintassi della query né ristruttura la query.  
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Per abilitare la finestra Progettazione query standard per un'estensione personalizzata  
   
--   Aggiungere la voce seguente al file RSReportDesigner. config sotto il **Designer** elemento, sostituendo il `Name` attributo con il nome specificato nelle voci precedenti.  
+-   Aggiungere la voce seguente al file RSReportDesigner. config nell'elemento della **finestra di progettazione** , sostituendo l' `Name` attributo con il nome specificato nelle voci precedenti.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

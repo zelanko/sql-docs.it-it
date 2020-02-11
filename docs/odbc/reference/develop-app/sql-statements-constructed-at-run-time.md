@@ -15,14 +15,14 @@ ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107467"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Istruzioni SQL costruite in fase di esecuzione
-Le applicazioni che eseguono l'analisi ad hoc comunemente compilare istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire a un utente di selezionare le colonne da cui recuperare i dati:  
+Le applicazioni che eseguono l'analisi ad hoc compilano comunemente istruzioni SQL in fase di esecuzione. Un foglio di calcolo, ad esempio, può consentire a un utente di selezionare le colonne da cui recuperare i dati:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Un'altra classe di applicazioni che in genere crea istruzioni SQL in fase di esecuzione sono ambienti di sviluppo dell'applicazione. Tuttavia, le istruzioni che creano sono impostate come hardcoded nell'applicazione in corso di sviluppo, in cui possono in genere essere ottimizzati e testati.  
+ Un'altra classe di applicazioni che in genere costruisce istruzioni SQL in fase di esecuzione sono gli ambienti di sviluppo dell'applicazione. Tuttavia, le istruzioni che costruiscono sono hardcoded nell'applicazione in cui sono compilate, dove possono essere in genere ottimizzate e testate.  
   
- Le applicazioni che creare istruzioni SQL in fase di esecuzione possono fornire una notevole flessibilità per l'utente. Come si può notare nell'esempio precedente, che non supporta ancora le operazioni comuni come la **in cui** clausole **ORDER BY** clausole o join, costruzione di istruzioni SQL in fase di esecuzione è notevolmente più complessa rispetto alle istruzioni di impostare come hardcoded. Inoltre, test di tali applicazioni è problematico, perché è possibile costruire un numero arbitrario di istruzioni SQL.  
+ Le applicazioni che costruiscono istruzioni SQL in fase di esecuzione possono offrire un'enorme flessibilità all'utente. Come si può notare dall'esempio precedente, che non supportava anche operazioni comuni come clausole **where** , clausole **Order by** o join, la costruzione di istruzioni SQL in fase di esecuzione è molto più complessa rispetto alle istruzioni di codifica hardcoded. Inoltre, il test di tali applicazioni è problematico perché può costruire un numero arbitrario di istruzioni SQL.  
   
- Un potenziale svantaggio della costruzione di istruzioni SQL in fase di esecuzione è che richiede molto più tempo per costruire un'istruzione di usare un'istruzione a livello di codice. Fortunatamente, questo raramente rappresenta un problema. Tali applicazioni tendono a essere a elevato utilizzo di interfaccia utente e l'ora l'applicazione trascorre la costruzione di istruzioni SQL è generalmente di dimensioni ridotte rispetto all'ora l'utente impiega immettendo i criteri.
+ Un potenziale svantaggio della creazione di istruzioni SQL in fase di esecuzione è il fatto che richiede molto più tempo per costruire un'istruzione rispetto all'uso di un'istruzione hardcoded. Fortunatamente, questo è raramente un problema. Tali applicazioni tendono a essere a elevato utilizzo di interfaccia utente e il tempo impiegato dall'applicazione per la costruzione di istruzioni SQL è generalmente ridotto rispetto al tempo impiegato dall'utente per l'immissione dei criteri.

@@ -1,5 +1,5 @@
 ---
-title: Nome di elemento per il Database (DTA) | Microsoft Docs
+title: Elemento Name per database (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297512"
 ---
 # <a name="name-element-for-database-dta"></a>Elemento Name per Database (DTA)
@@ -37,8 +37,9 @@ ms.locfileid: "63297512"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una volta per ogni elemento di `Database`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -46,7 +47,7 @@ ms.locfileid: "63297512"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Database per Server &#40;DTA&#41;](database-element-for-server-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
