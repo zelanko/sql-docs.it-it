@@ -1,5 +1,5 @@
 ---
-title: Connessione (sintassi ADO per Visual C++) | Microsoft Docs
+title: Connection (sintassi ADO per Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919548"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (sintassi ADO per Visual C++)
@@ -62,7 +62,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  

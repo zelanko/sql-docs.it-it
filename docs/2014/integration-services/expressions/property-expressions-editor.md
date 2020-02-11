@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768787"
 ---
 # <a name="property-expressions-editor"></a>Editor espressioni di proprietà
@@ -45,6 +45,6 @@ ms.locfileid: "62768787"
  [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variabili di sistema](../system-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
- [Utilizzo delle espressioni di proprietà nei pacchetti](use-property-expressions-in-packages.md)  
+ [Uso delle espressioni di proprietà nei pacchetti](use-property-expressions-in-packages.md)  
   
   

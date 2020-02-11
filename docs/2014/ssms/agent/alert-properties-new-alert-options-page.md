@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà avviso: Nuovo avviso (pagina Opzioni) | Microsoft Docs'
+title: 'Proprietà avviso: nuovo avviso (pagina Opzioni) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061272"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>Proprietà avviso: Nuovo avviso (pagina Opzioni)
-  Usare questa pagina per visualizzare e modificare opzioni per gli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-options-page"></a>Proprietà avviso - Nuovo avviso (pagina Opzioni)
+  Utilizzare questa pagina per visualizzare e modificare le opzioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Posta elettronica**  
  Consente di includere l'eventuale testo dell'errore risultante dall'evento nelle notifiche inviate tramite posta elettronica.  
   
- **Cercapersone**  
+ **Pager**  
  Consente di includere l'eventuale testo dell'errore risultante dall'evento nelle notifiche inviate tramite cercapersone.  
   
- **Net Send**  
+ **NET SEND**  
  Consente di includere l'eventuale testo dell'errore risultante dall'evento nelle notifiche Net Send.  
   
  **Messaggio di notifica aggiuntivo da inviare**  
  Consente di digitare un testo aggiuntivo da includere nei messaggi di notifica.  
   
- **Intervallo tra le risposte**  
- Consente di specificare un ritardo per le occorrenze ripetute dell'evento. È possibile che alcuni eventi si verifichino frequentemente durante un breve periodo di tempo. In questo caso, è possibile che si desideri sapere che l'evento si è verificato ma che non si desideri ricevere una risposta per ogni evento. Utilizzare questa opzione per specificare un valore di timeout. Se si specifica un ritardo, dopo la risposta dell'avviso a un evento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent rimarrà in attesa per il periodo di tempo specificato prima di rispondere di nuovo, indipendentemente dal fatto che l'evento si verifichi o meno durante il ritardo.  
+ **Ritardo tra risposte**  
+ Consente di specificare un ritardo per le occorrenze ripetute dell'evento. È possibile che alcuni eventi si verifichino frequentemente durante un breve periodo di tempo. In questo caso, è possibile che si desideri sapere che l'evento si è verificato ma che non si desideri ricevere una risposta per ogni evento. Usare questa opzione per specificare un timeout. Con un ritardo, dopo la risposta dell'avviso a un evento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent attende il ritardo specificato prima di rispondere di nuovo, indipendentemente dal fatto che l'evento si verifichi durante il ritardo.  
   
- **Minutes**  
+ **Minuti**  
  Consente di specificare un ritardo in minuti. Per attivare una risposta ogni volta che si verifica l'evento, specificare 0 minuti e 0 secondi.  
   
  **Secondi**  

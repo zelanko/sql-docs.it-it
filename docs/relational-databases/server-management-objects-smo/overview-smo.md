@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148649"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli oggetti SMO (Management Objects) sono oggetti progettati per [!INCLUDE[msCoName](../../includes/msconame-md.md)]la gestione a livello di codice di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli oggetti SMO (Management Objects) sono oggetti progettati per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la gestione a livello di codice di. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
   
  È possibile, ad esempio, che sia necessario semplificare le applicazioni utente che controllano le attività di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per soddisfare le necessità di nuovi utenti e ridurre i costi di formazione. È possibile dovere creare database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzati o creare un'applicazione per la creazione e il controllo dell'efficienza degli indici. Un'applicazione SMO può anche essere utilizzata per includere perfettamente hardware o software di terze parti nell'applicazione per la gestione di database.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "70148649"
   
 -   Isolamento dello snapshot e controllo delle versioni a livello di riga per maggiore concorrenza. Per altre informazioni, vedere [Uso dell'isolamento dello snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per ulteriori informazioni, vedere [raccolte &#40;di XML schema&#41; SQL Server](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [utilizzo di XML Schema](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per ulteriori informazioni, vedere [raccolte di XML schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [utilizzo di XML Schema](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Database di snapshot per la creazione di copie di database in sola lettura.  
   
 -   Supporto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per la comunicazione basata su messaggi. Per ulteriori informazioni, vedere [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Supporto di sinonimi per più nomi di oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [ &#40;sinonimi&#41;motore di database](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Supporto di sinonimi per più nomi di oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [sinonimi &#40;motore di database&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   Gestione di Posta elettronica database consente di creare server, profili e account di posta elettronica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Posta elettronica database](../../relational-databases/database-mail/database-mail.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70148649"
   
 -   Trigger DDL per l'aggiunta di funzionalità quando si verificano eventi DDL. Per altre informazioni, vedere [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
- Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ciò significa che Common Language Runtime (CLR) da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installato prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in C:\Programmi\Microsoft SQL Server\130\SDK\Assemblies\. Per ulteriori informazioni, vedere la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione di.  
+ Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ciò significa che Common Language Runtime (CLR) da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installato prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in C:\Programmi\Microsoft SQL Server\130\SDK\Assemblies\. Per altre informazioni, vedere la documentazione di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="smo-classes"></a>Classi SMO  
  Le classi SMO includono due categorie: classi di istanze e classi di utilità.  
@@ -97,7 +97,7 @@ ms.locfileid: "70148649"
   
  Le classi di istanze, ovvero gli oggetti che rappresentano gli oggetti di database reali, possono avere tre livelli di creazione di un'istanza: livello minimo quando vengono lette in un solo blocco solo le proprietà necessarie minime, livello parziale quando vengono lette in un solo blocco tutte le proprietà che utilizzano un quantità di memoria relativamente grande e livello completo. Gli stati tradizionali della creazione di un'istanza sono lo stato completo e lo stato non istanziato. Lo stato parziale aumenta l'efficienza poiché la creazione di un'istanza parziale di un oggetto non contiene valori per il set completo delle proprietà dell'oggetto. Lo stato parziale è lo stato predefinito per un oggetto al quale non viene fatto direttamente riferimento. Quando viene fatto riferimento a una di queste proprietà, viene generato un errore in cui viene richiesta la creazione di un'istanza completa dell'oggetto.  
   
- **Acquisisci esecuzione**  
+ **Esecuzione dell'acquisizione**  
   
  L'esecuzione diretta è il metodo di esecuzione standard. Le istruzioni vengono inviate direttamente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appena vengono generate. L'esecuzione dell'acquisizione rappresenta il metodo alternativo.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "70148649"
   
  **Scripting**  
   
- In SMO la generazione di script è stata migliorata e spostata nella classe **dello scripter** . La classe **dello scripter** può individuare le dipendenze, comprendere le relazioni tra gli oggetti e abilitare la manipolazione della gerarchia di dipendenza. L'oggetto di scripting principale è l'oggetto Scripter. Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
+ In SMO la generazione di script è stata migliorata e spostata nella classe **dello scripter** . La classe **dello scripter** può individuare le dipendenze, comprendere le relazioni tra gli oggetti e abilitare la manipolazione della gerarchia di dipendenza. L'oggetto di scripting principale è l'oggetto **scripter** . Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
   
- L' oggetto Scripter supporta le seguenti opzioni di scripting avanzate:  
+ L'oggetto **scripter** supporta le seguenti opzioni di scripting avanzate:  
   
 -   Scripting semplice in una fase (crea lo script in un unico passaggio)  
   
@@ -133,14 +133,14 @@ ms.locfileid: "70148649"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter usa anche gli URN come parametri che passano i riferimenti a un oggetto al metodo dell'oggetto Scripter. È inoltre possibile specificare un URN per il metodo **GetSmoObject** dell'oggetto **Server** . utilizzato per creare un'istanza dell'oggetto SMO.  
+ L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter usa anche gli URN come parametri che passano i riferimenti a un oggetto al metodo dell'oggetto **scripter** . È inoltre possibile specificare un URN per il metodo **GetSmoObject** dell'oggetto **Server** . utilizzato per creare un'istanza dell'oggetto SMO.  
   
 ## <a name="sql-server-features-represented-in-smo"></a>Funzionalità di SQL Server rappresentate in SMO  
  **Partizionamento di tabelle e indici**  
   
  Il partizionamento di tabelle e indici consente di gestire la distribuzione di dati in tabelle e indici attraverso filegroup. Questa nuova funzionalità viene rappresentata mediante oggetti SMO.  
   
- **EndPoints**  
+ **Endpoint**  
   
  Le richieste di mirroring del database e SOAP vengono gestite dagli endpoint mediante l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "70148649"
   
  L'isolamento dello snapshot (controllo delle versioni a livello di riga) è rappresentato da nuove proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Spazio dei nomi XML Schema, indici XML e tipo di dati XML**  
+ **Spazio dei nomi di XML Schema, indici XML e tipo di dati XML**  
   
  Gli spazi dei nomi di XML Schema sono rappresentati in SMO da una raccolta di oggetti. Gli indici XML sono rappresentati in SMO da una proprietà dell'oggetto **index** .  
   
@@ -166,7 +166,8 @@ ms.locfileid: "70148649"
   
  **Service Broker**  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] e la relativa funzionalità sono rappresentati da un gruppo di oggetti  
+ 
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] e la relativa funzionalità sono rappresentati da un gruppo di oggetti  
   
  **Miglioramenti degli indici**  
   

@@ -11,10 +11,10 @@ ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728573"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Eseguire il commit o inviare un insieme di modifiche (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73728573"
 ## <a name="to-commit-a-local-changeset"></a>Per eseguire il commit di un insieme di modifiche locale  
  L'opzione di commit è disponibile solo per gli insiemi di modifiche locali per le entità in cui l'amministratore di entità non ha abilitato la richiesta di approvazione.  
   
-1.  Nella home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] selezionare il modello e la versione, quindi fare clic su **Visualizzatore**.  
+1.  Nella [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Home page selezionare il modello e la versione, quindi fare clic su **Esplora**.  
   
 2.  Scegliere un'entità nel menu **Entità** .  
   
@@ -45,20 +45,20 @@ ms.locfileid: "73728573"
 ## <a name="to-submit-a-changeset"></a>Per inviare un insieme di modifiche  
  L'opzione di invio è disponibile solo per gli insiemi di modifiche per le entità in cui l'amministratore di entità ha abilitato la richiesta di approvazione.  
   
-1.  Nella home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] selezionare il modello e la versione, quindi fare clic su **Visualizzatore**.  
+1.  Nella [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Home page selezionare il modello e la versione, quindi fare clic su **Esplora**.  
   
 2.  Scegliere un'entità nel menu **Entità** .  
   
 3.  Nel riquadro destro selezionare **Insiemi di modifiche** e fare doppio clic sull'insieme di modifiche da inviare.  
   
-4.  Fare clic su **Invia**.  
+4.  Fare clic su **Submit**.  
   
-## <a name="next-steps"></a>Next Steps  
- [Applicare e rifiutare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+## <a name="next-steps"></a>Passaggi successivi  
+ [Approva o rifiuta un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Applicare e aggiornare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
- [Applicare e rifiutare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+ [Approva o rifiuta un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

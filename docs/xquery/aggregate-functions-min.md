@@ -1,5 +1,5 @@
 ---
-title: Funzione Min (XQuery) | Microsoft Docs
+title: Funzione min (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985754"
 ---
 # <a name="aggregate-functions---min"></a>Funzioni di aggregazione - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Da una sequenza di valori atomici, restituisce *$arg*, l'unico elemento il cui valore è minore di quello di tutti gli altri.  
+  Restituisce da una sequenza di valori atomici, *$arg*, un elemento il cui valore è minore di quello di tutti gli altri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,15 +38,15 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenza di elementi da cui viene restituito il valore minimo.  
   
-## <a name="remarks"></a>Note  
- Tutti i tipi di valori atomizzati passati a **min ()** devono essere sottotipi dello stesso tipo di base. Tipi di base accettati sono i tipi che supportano il **gt** operazione. Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se c'è una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
+## <a name="remarks"></a>Osservazioni  
+ Tutti i tipi di valori atomizzati passati a **min ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tipi che supportano l'operazione **gt** . Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se è presente una combinazione di questi tipi o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
   
- Il risultato del **min ()** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
+ Il risultato di **min ()** riceve il tipo di base dei tipi passati, ad esempio xs: Double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
- Il **min ()** funzione restituisce un valore nella sequenza di dimensioni inferiori a quelle di qualsiasi altro nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
+ La funzione **min ()** restituisce un valore nella sequenza minore di qualsiasi altro oggetto nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>R. Utilizzo della funzione XQuery min() per l'individuazione del centro di lavorazione con il numero minimo di ore di manodopera  
  La query seguente recupera tutti i centri di lavorazione con il numero minimo di ore di manodopera inclusi nel processo di produzione del modello del prodotto (ProductModelID=7). In genere, come illustrato nell'esempio seguente, viene restituito un singolo centro. Nel caso in cui esistano più centri con lo stesso numero minimo di ore di manodopera, vengono restituiti tutti questi centri.  
@@ -68,13 +68,13 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **dello spazio dei nomi** parola chiave nel prologo della XQuery definisce un prefisso dello spazio dei nomi. In seguito, tale prefisso viene utilizzato nel corpo della query XQuery.  
+-   La parola chiave **namespace** nel prologo XQuery definisce un prefisso dello spazio dei nomi. In seguito, tale prefisso viene utilizzato nel corpo della query XQuery.  
   
- Corpo della query XQuery costruisce il codice XML con un \<percorso > elemento con WCID e **LaborHrs** attributi.  
+ Il corpo XQuery costruisce il codice XML con un \<percorso> elemento con gli attributi wcid e **LaborHrs** .  
   
 -   La query recupera inoltre i valori del modello del prodotto ProductModelID e dei nomi.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProductModelID   Name              Result  
@@ -85,9 +85,9 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **min ()** funzione esegue il mapping di tutti i valori interi a xs: decimal.  
+-   La funzione **min ()** esegue il mapping di tutti i numeri interi a xs: Decimal.  
   
--   Il **min ()** funzione con valori di tipo xs: Duration non è supportata.  
+-   La funzione **min ()** su valori di tipo xs: Duration non è supportata.  
   
 -   Non sono supportate le sequenze con combinazioni di tipi che non rispettano i limiti del tipo di base.  
   

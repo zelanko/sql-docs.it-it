@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890757"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Passaggio 1: Copia del pacchetto della lezione 5
@@ -38,7 +38,7 @@ ms.locfileid: "62890757"
   
 7.  Nella finestra Proprietà aggiornare la proprietà Name impostandola su Lesson 6.  
   
-8.  Fare clic sulla casella relativa alla proprietà ID, quindi fare clic sulla freccia a discesa e quindi fare clic su \<Genera nuovo ID >.  
+8.  Fare clic sulla casella relativa alla proprietà ID, fare clic sulla freccia a discesa e quindi \<fare clic su Genera nuovo ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Per aggiungere il pacchetto della lezione 5 completato  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62890757"
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Fare clic sulla scheda **DOWNLOADS** .  
+    2.  Fare clic sulla scheda **Downloads** .  
   
     3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890757"
      Dopo la copia del pacchetto della lezione 5, se si dispone dei pacchetti delle lezioni precedenti nella soluzione, fare clic con il pulsante destro del mouse su ogni pacchetto delle lezioni 1-5 e fare clic su Escludi dal progetto. Al termine sarà presente un solo pacchetto Lesson 6.dtsx nella soluzione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Conversione del progetto nel modello di distribuzione progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Passaggio 2: Conversione del progetto nel modello di distribuzione del progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Introduzione a Data Mining (componenti aggiuntivi Data Mining per Excel Data) | Microsoft Docs
+title: Introduzione con data mining (componenti aggiuntivi Data mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080941"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introduzione al data mining (componenti aggiuntivi Data mining per Excel)
   Il data mining è il processo di individuazione di modelli significativi nei dati. È un complemento naturale del processo di esplorazione e comprensione dei dati tramite gli strumenti tradizionali di Business Intelligence. Gli algoritmi automatici sono in grado di elaborare grandi quantità di dati e di individuare modelli e tendenze altrimenti non evidenti.  
   
- Per eseguire il data mining, si raccolgono i dati relativi a una domanda specifica, ad esempio "chi sono i clienti?" o "quali prodotti sono stati acquistati?" e quindi applicare un algoritmo per trovare le correlazioni statistiche nei dati. I modelli e le tendenze individuati tramite l'analisi vengono archiviati come modello di data mining. Il modello di data mining può quindi essere applicato ai nuovi dati in scenari aziendali come i seguenti:  
+ Per eseguire data mining, raccogliere i dati rilevanti per una domanda specifica, ad esempio "chi sono i miei clienti?" o "quali prodotti sono stati acquistati?" quindi applicare un algoritmo per trovare le correlazioni statistiche nei dati. I modelli e le tendenze individuati tramite l'analisi vengono archiviati come modello di data mining. Il modello di data mining può quindi essere applicato ai nuovi dati in scenari aziendali come i seguenti:  
   
 -   Si utilizzano tendenze precedenti per prevedere le vendite del successivo trimestre, i requisiti di inventario, la soddisfazione del cliente.  
   
@@ -38,32 +38,32 @@ ms.locfileid: "66080941"
   
 -   Analisi dei fattori con Bayes reti neurali  
   
--   Analisi delle serie temporali  
+-   Analisi di serie temporali  
   
 -   Analisi di associazione, indicazioni e analisi di tipo Market basket analysis  
   
 -   Valutazione di risultati binari  
   
--   Linear Regression  
+-   Linear regression  
   
  Inoltre, i componenti aggiuntivi semplificano la fase di preparazione dei dati: selezione, esplorazione e pulizia.  
   
 ## <a name="define-your-goal"></a>Definire l'obiettivo  
  Prima di iniziare, considerare la domanda a cui si desidera effettivamente trovare risposta. L'esplorazione è già esemplificativa di per sé, ma se i risultati devono essere applicati a nuovi dati, si deve essere in grado di indicare chiaramente quali siano le aspettative relative ai risultati del modello e in quale modo verrà valutato se il modello soddisfa gli obiettivi.  
   
- Ad esempio, anziché un obiettivo di "ricerca di nuovi clienti", definire l'obiettivo su qualcosa di più concreto, ad esempio "identificazione i dati demografici dei clienti aventi maggiori probabilità di acquistare il prodotto, con una probabilità pari ad almeno il 65%".  
+ Ad esempio, anziché l'obiettivo di "trovare nuovi clienti", chiarire l'obiettivo a qualcosa di più concreto, ad esempio "identificare i dati demografici dei clienti che probabilmente acquisteranno il prodotto, con una probabilità pari almeno al 65%".  
   
--   Il set di dati deve contenere almeno un attributo di "risultato" che è possibile usare per il training e stima. Se non è presente tale attributo, è possibile etichettare manualmente i dati di training oppure utilizzare altre colonne per creare un proxy per il risultato.  
+-   Il set di dati deve contenere almeno un attributo "result" che è possibile usare per il training e la stima. Se non è presente tale attributo, è possibile etichettare manualmente i dati di training oppure utilizzare altre colonne per creare un proxy per il risultato.  
   
-     Ad esempio, se si desidera stimare "i potenziali clienti migliori", è consigliabile applicare alcune regole business in anticipo per etichettare i clienti esistenti, in modo che il data mining può apprendere dagli esempi forniti.  
+     Se, ad esempio, si desidera stimare "i migliori Prospect", è necessario applicare una regola business in anticipo per etichettare i clienti esistenti, in modo che data mining possa apprendere dagli esempi forniti.  
   
 -   Se si utilizza un valore che cambia nel tempo e si desiderano stimare le tendenze future, è necessario determinare il livello di granularità dei risultati desiderati. Le stime devono essere mensili, giornaliere o su base annuale? I dati devono essere analizzati utilizzando le stesse unità che devono essere stimate.  
   
-     Con i modelli ciclici, se non si ottengono risultati soddisfacenti con i dati giornalieri, provare a intervalli di tempo diversi oppure provare a usare i giorni della settimana, mesi o persino le festività.  
+     Con i modelli ciclici, se non si ottengono risultati soddisfacenti con i dati giornalieri, provare diversi intervalli di tempo oppure provare a usare giorni della settimana, mesi o persino festivi.  
   
 -   Prima di avviare una procedura guidata per individuare le nuove correlazioni nei dati, esaminare ulteriormente i dati e considerare che specie di relazioni potrebbero essere presenti nel set di dati. Sono presenti variabili contraddittorie? Sono presenti duplicati o proxy?  
   
--   Quali sono le metriche di base alla quale verrà valutato il successo del modello? Come si fa a sapere che il modello è "abbastanza utile"?  
+-   Quali sono le metriche in base alle quali verrà valutato il successo del modello? Come si saprà che il modello è "abbastanza valido"?  
   
 -   Si desidera eseguire stime in base al modello di data mining o soltanto cercare modelli e associazioni interessanti?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66080941"
   
  È opportuno osservare la distribuzione dei valori e identificare i problemi potenziali, ad esempio valori o segnaposto mancanti.  
   
- Se si prevede di eseguire il data mining rispetto a un set di dati così ampio e complesso da rendere impossibile analizzarlo con altri metodi, prendere in considerazione il campionamento o la riduzione dei dati.  
+ Se si prevede di eseguire data mining in base a un set di dati di grandi dimensioni o complessi che non è stato possibile analizzare con altri metodi, prendere in considerazione il campionamento o la riduzione dei dati.  
   
 -   Come sono distribuiti i dati?  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66080941"
   
  Una volta completato il modello, esaminare i risultati e identificare le modalità per modificare i dati od ottenere risultati migliori. Veramente di rado il primo modello fornisce tutte le risposte. Il data mining è di norma un processo iterativo.  
   
- Quando si creano contenitori per i dati in modalità differenti o si aggiungono nuove colonne, ricordarsi di usare la **modello di documento** guidata consente di acquisire uno snapshot dei metadati e i risultati di ogni modello. La disponibilità di un record semplifica la traccia dello stato di avanzamento nell'esplorazione.  
+ Quando si prova a suddividere i dati in modi diversi o si aggiungono nuove colonne, ricordarsi di utilizzare la procedura guidata **modello di documento** per acquisire uno snapshot dei metadati e dei risultati di ogni modello. La disponibilità di un record semplifica la traccia dello stato di avanzamento nell'esplorazione.  
   
  [Esplorazione e pulizia dei dati](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Convalidare il modello  
- Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non trova modelli validi, si otterrà un messaggio di errore. Tuttavia, anche se è stato creato un modello, è opportuno testare il modello per vedere se le supposizioni vengono convalidate. È possibile usare strumenti come il [grafico di accuratezza &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oppure [convalida incrociata &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) per generare statistiche misure di qualità dei modelli.  
+ Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non riesce a trovare modelli validi, verrà ricevuto un messaggio di errore. Tuttavia, anche se un modello è stato creato correttamente, è opportuno testare il modello per verificare se i presupposti sono convalidati. È possibile utilizzare strumenti come il [grafico di accuratezza &#40;SQL Server componenti aggiuntivi Data mining&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) o la [convalida incrociata &#40;SQL Server componenti aggiuntivi Data mining&#41;](cross-validation-sql-server-data-mining-add-ins.md) per produrre misure statistiche della qualità del modello.  
   
  Una volta valutati i risultati del primo modello, è opportuno porsi le domande seguenti:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66080941"
   
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
- [Client di Data Mining per Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Client di data mining per Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
  [Scelta di un modello](choosing-a-model.md)  
   
@@ -122,12 +122,12 @@ ms.locfileid: "66080941"
   
  Un utilizzo importante dei modelli di data mining consiste nel generare stime e indicazioni. I componenti aggiuntivi Data Mining per Excel includono strumenti che semplificano la generazione di query di stime anche complesse, per la conversione delle informazioni essenziali in risultati effettivamente utilizzabili. Tutti questi strumenti sono pienamente integrati con Excel.  
   
- [Visualizzazione di modelli &#40;componenti aggiuntivi data mining per Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [Visualizzazione di modelli &#40;componenti aggiuntivi Data mining per Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Che cosa è incluso nei dati di componenti aggiuntivi Data Mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Riferimento tecnico per &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+ [Cosa è incluso nei componenti aggiuntivi Data mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Guida di riferimento tecnico &#40;componenti aggiuntivi Data mining per Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

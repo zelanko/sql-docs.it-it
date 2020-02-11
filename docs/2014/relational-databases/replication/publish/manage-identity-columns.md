@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cbfad718850df4c66572999735fbee58fb530424
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882296"
 ---
 # <a name="manage-identity-columns"></a>Gestione delle colonne Identity
@@ -42,7 +42,7 @@ ms.locfileid: "73882296"
   
 -   Se si selezionano altri tipi di pubblicazioni, è necessario impostare la gestione degli intervalli di valori Identity su manuale.  
   
- Modificare le soglie e gli intervalli di valori Identity nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo -\<Articolo>** , disponibile nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Modificare le soglie e gli intervalli di valori Identity nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo -\<Articolo>**, disponibile nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>Per specificare un'opzione per la gestione di colonne Identity  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73882296"
   
 3.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
-4.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>** , nella sezione **Gestione intervalli di valori Identity**, impostare la proprietà **Gestisci automaticamente gli intervalli di valori Identity** su **Automatico** o **Manuale** (per i server di pubblicazione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva) oppure su **True** o **False** (per i server di pubblicazione che eseguono una versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
+4.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>**, nella sezione **Gestione intervalli di valori Identity**, impostare la proprietà **Gestisci automaticamente gli intervalli di valori Identity** su **Automatico** o **Manuale** (per i server di pubblicazione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva) oppure su **True** o **False** (per i server di pubblicazione che eseguono una versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
 5.  Se nel passaggio 4 è stato selezionato **Automatico** o **True** , immettere i valori per le opzioni nella tabella che segue. Per altre informazioni su come usare queste impostazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882296"
     |**Percentuale soglia intervallo**|Valore intero percentuale per la soglia dell'intervallo, ad esempio 90 è equivalente a 90%.|Percentuale dei valori Identity totali utilizzati in corrispondenza di un nodo prima dell'assegnazione di un nuovo intervallo di valori Identity.<br /><br /> Nota: questo valore deve essere specificato, ma viene usato solo dai Sottoscrittori che usano sottoscrizioni ad aggiornamento in coda e dai Sottoscrittori per pubblicazioni di tipo merge che eseguono [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una versione precedente di altre edizioni di SQL Server. Per altre informazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
     |**Valore iniziale intervallo successivo**|Valore intero. Di sola lettura.|Il valore in corrispondenza del quale inizierà l'intervallo successivo. Ad esempio, se l'intervallo corrente è 5001-6000, questo valore sarà 6001.|  
     |**Valore Identity massimo**|Valore intero. Di sola lettura.|Il valore maggiore per la colonna Identity. Determinato dal tipo di dati di base della colonna.|  
-    |**Incremento valore Identity**|Valore intero. Di sola lettura.|La quantità in base alla quale il numero nella colonna Identity deve aumentare o diminuire per ciascun inserimento: in genere è impostata su 1.|  
+    |**Incremento**|Valore intero. Di sola lettura.|La quantità in base alla quale il numero nella colonna Identity deve aumentare o diminuire per ciascun inserimento: in genere è impostata su 1.|  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -73,11 +73,11 @@ ms.locfileid: "73882296"
   
 2.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
-3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articoli - \<Articolo>** , nella sezione **Gestione intervalli di valori Identity**, immettere i valori per una o più delle proprietà seguenti: **Dimensioni intervallo server di pubblicazione**, **Dimensioni intervallo Sottoscrittore** e **Percentuale soglia intervallo**.  
+3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articoli - \<Articolo>**, nella sezione **Gestione intervalli di valori Identity**, immettere i valori per una o più delle proprietà seguenti: **Dimensioni intervallo server di pubblicazione**, **Dimensioni intervallo Sottoscrittore** e **Percentuale soglia intervallo**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+5.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
 ##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile utilizzare stored procedure di replica per specificare le opzioni di gestione degli intervalli di valori Identity durante la creazione di un articolo.  
@@ -104,11 +104,11 @@ ms.locfileid: "73882296"
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Per disabilitare la gestione automatica degli intervalli di valori Identity durante la definizione di articoli per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare uno dei valori seguenti per **\@identityrangemanagementoption**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare uno dei valori seguenti per ** \@identityrangemanagementoption**:  
   
-    -   **manual** : per aggiornare i Sottoscrittori, gli intervalli di valori Identity devono essere assegnati manualmente.  
+    -   **manuale** : gli intervalli di valori Identity devono essere assegnati manualmente per l'aggiornamento dei sottoscrittori.  
   
-    -   **none** : le colonne Identity del server di pubblicazione non verranno definite come tali nel Sottoscrittore.  
+    -   **None** : le colonne Identity nel server di pubblicazione non verranno definite come colonne Identity nel Sottoscrittore.  
   
      Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](define-an-article.md).  
   
@@ -137,8 +137,8 @@ ms.locfileid: "73882296"
     -   Per disabilitare la gestione automatica degli intervalli di valori Identity, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **identityrangemanagementoption** per **\@property** e **manual** o **none** per **\@value**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replica transazionale peer-to-peer](../transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Replicare colonne Identity](replicate-identity-columns.md)  
+ [Replica colonne Identity](replicate-identity-columns.md)  
   
   

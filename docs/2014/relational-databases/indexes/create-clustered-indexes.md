@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155376"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
   È possibile creare indici cluster nelle tabelle di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](clustered-and-nonclustered-indexes-described.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63155376"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Per creare un indice cluster tramite Esplora oggetti  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63155376"
   
 4.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-5.  Nella finestra di dialogo **Seleziona colonne da**_nome_tabella_ selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
+5.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ Selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
   
 6.  Fare clic su **OK**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63155376"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Tabelle** e scegliere **Nuova tabella**.  
   
-3.  Creare una nuova tabella con il metodo tradizionale. Per altre informazioni, vedere [Creare tabelle &#40;motore di database&#41;](../tables/create-tables-database-engine.md).  
+3.  Creare una nuova tabella con il metodo tradizionale. Per altre informazioni, vedere [Creare tabelle &#40;Motore di database&#41;](../tables/create-tables-database-engine.md).  
   
 4.  Fare clic con il pulsante destro del mouse sulla nuova tabella creata e scegliere **Progetta**.  
   
@@ -106,15 +106,15 @@ ms.locfileid: "63155376"
   
 6.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-7.  Selezionare il nuovo indice nella casella di testo **Chiave o indice primario/univoco selezionato** .  
+7.  Selezionare il nuovo indice dalla casella di testo **Chiave o indice primario/univoco selezionato** .  
   
 8.  Nella griglia selezionare **Crea come CLUSTERED**, quindi selezionare **Sì** dall'elenco a discesa a destra della proprietà.  
   
-9. Scegliere **Chiudi**.  
+9. Fare clic su **Close**.  
   
-10. Nel menu **File** scegliere **Salva**_table_name_.  
+10. Scegliere **salva**_table_name_dal menu **file** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   
@@ -144,6 +144,6 @@ ms.locfileid: "63155376"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di chiavi primarie](../tables/create-primary-keys.md)   
- [Creare vincoli univoci](../tables/create-unique-constraints.md)  
+ [Creare vincoli UNIQUE](../tables/create-unique-constraints.md)  
   
   

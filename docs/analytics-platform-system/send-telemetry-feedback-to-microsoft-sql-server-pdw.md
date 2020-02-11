@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400367"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Invia il feedback di telemetria a Microsoft per il sistema di piattaforma di analisi
@@ -42,7 +42,7 @@ Per garantire la massima protezione della privacy, APS viene fornito senza abili
     > [!NOTE]  
     > Per importare è necessario usare due punti nel comando.  
   
-    **Esempio**  
+    **Esempio:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ La disabilitazione della telemetria arresterà tutte le operazioni che comunican
     > [!NOTE]  
     > Per importare è necessario usare due punti nel comando.  
   
-    **Esempio**  
+    **Esempio:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ La disabilitazione della telemetria arresterà tutte le operazioni che comunican
   
 4.  Richiamare il `Disable-RemoteMonitoring` comando senza parametri. Questo comando smetterà di inviare commenti e suggerimenti. Questa operazione non influirà sul monitoraggio locale. Tuttavia, il comando non disabilita il server di trasmissione DNS e/o Disabilita la connettività Internet. Questa operazione deve essere eseguita manualmente dopo aver disabilitato correttamente il feedback.  
   
-    **Esempio**  
+    **Esempio:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

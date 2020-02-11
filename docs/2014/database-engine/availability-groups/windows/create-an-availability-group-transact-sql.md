@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228786"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Creare un gruppo di disponibilità (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "75228786"
 > [!NOTE]  
 >  In alternativa all'utilizzo di [!INCLUDE[tsql](../../../includes/tsql-md.md)], è possibile utilizzare la procedura guidata Crea gruppo di disponibilità o i cmdlet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md), [Usare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md), o [Creare un gruppo di disponibilità &#40; SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima di iniziare a creare il primo gruppo di disponibilità, è consigliabile leggere questa sezione.  
   
 ###  <a name="PrerequisitesRestrictions"></a>Prerequisiti, restrizioni e raccomandazioni  
   
 -   Prima di creare un gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in un nodo del Clustering di failover di Windows Server (Windows Server Failover Clustering, WSFC) diverso all'interno dello stesso cluster di failover WSFC. Inoltre, verificare che ciascuna delle istanze del server soddisfi tutti gli altri prerequisiti [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per altre informazioni è consigliabile leggere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  
   
 ###  <a name="SummaryTsqlStatements"></a>Riepilogo delle attività e istruzioni Transact-SQL corrispondenti  
@@ -46,7 +46,7 @@ ms.locfileid: "75228786"
 |Attività|Istruzione/i Transact-SQL|Posizione in cui eseguire l'attività**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Creare un endpoint del mirroring del database (una volta per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[Crea](/sql/t-sql/statements/create-endpoint-transact-sql) *EndpointName..* . PER DATABASE_MIRRORING|Eseguire in ogni istanza del server in cui non è presente l'endpoint del mirroring del database.|  
-|Creare un gruppo di disponibilità|[CREA GRUPPO DI DISPONIBILITÀ](/sql/t-sql/statements/create-availability-group-transact-sql)|Eseguire nell'istanza del server che dovrà ospitare la replica primaria iniziale.|  
+|Creare un gruppo di disponibilità|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Eseguire nell'istanza del server che dovrà ospitare la replica primaria iniziale.|  
 |Creare un join della replica secondaria al gruppo di disponibilità|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* join|Eseguire in ogni istanza del server in cui è ospitata una replica secondaria.|  
 |Preparare il database secondario|[Backup](/sql/t-sql/statements/backup-transact-sql) e [ripristino](/sql/t-sql/statements/restore-statements-transact-sql).|Creare i backup nell'istanza del server in cui è ospitata la replica primaria.<br /><br /> Ripristinare i backup in ogni istanza del server che ospita una replica secondaria, utilizzando RESTORE WITH NORECOVERY.|  
 |Avviare la sincronizzazione dei dati creando un join di ogni database secondario al gruppo di disponibilità|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Eseguire in ogni istanza del server in cui è ospitata una replica secondaria.|  
@@ -116,15 +116,15 @@ ms.locfileid: "75228786"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a>Procedura di configurazione di esempio  
+###  <a name="SampleProcedure"></a> Procedura di configurazione di esempio  
  In questa configurazione di esempio sarà creata la replica di disponibilità in due istanze del server autonome i cui account del servizio vengono eseguiti in domini differenti, ma trusted,`DOMAIN1` e `DOMAIN2`.  
   
  Nella tabella seguente sono riepilogati i valori utilizzati in questa configurazione di esempio.  
   
-|Ruolo iniziale|System|Istanza host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Ruolo iniziale|Sistema|Istanza host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |------------------|------------|---------------------------------------------|  
-|Primario|`COMPUTER01`|`AgHostInstance`|  
-|Secondario|`COMPUTER02`|Istanza predefinita|  
+|Primaria|`COMPUTER01`|`AgHostInstance`|  
+|Secondari|`COMPUTER02`|Istanza predefinita|  
   
 1.  Creare un endpoint del mirroring del database denominato *dbm_endpoint* nell'istanza del server in cui si intende creare il gruppo di disponibilità. Si tratta di un'istanza denominata `AgHostInstance` in `COMPUTER01`. In questo endpoint si usa la porta 7022. Si noti che la replica primaria sarà ospitata nell'istanza del server in cui si crea il gruppo di disponibilità.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "75228786"
   
      Se gli account del servizio delle istanze del server vengono eseguiti con utenti di dominio diversi, in ogni istanza del server creare un account di accesso per l'altra istanza del server e concedere a questo account l'autorizzazione per l'accesso all'endpoint del mirroring del database locale.  
   
-     Nell'esempio di codice seguente vengono illustrate le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] per la creazione di un account di accesso e la concessione dell'autorizzazione in un endpoint. L'account di dominio dell'istanza del server remoto è rappresentato qui come *Domain_name*\\*user_name*.  
+     Nell'esempio di codice seguente vengono illustrate le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] per la creazione di un account di accesso e la concessione dell'autorizzazione in un endpoint. L'account di dominio dell'istanza del server remoto è rappresentato come *nome_dominio*\\*nome_utente*.  
   
     ```sql
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -282,14 +282,14 @@ ms.locfileid: "75228786"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a>Esempio di codice completo per la procedura di configurazione di esempio  
+###  <a name="CompleteCodeExample"></a> Esempio di codice completo per la procedura di configurazione di esempio  
  Nell'esempio seguente vengono uniti gli esempi di codice di tutti i passaggi della procedura di configurazione di esempio. Nella tabella seguente sono riepilogati i valori segnaposto utilizzati nell'esempio di codice. Per ulteriori informazioni sui passaggi di questo esempio di codice, vedere [Prerequisiti per l'utilizzo della procedura di configurazione di esempio](#PrerequisitesForExample) e [Procedura di configurazione di esempio](#SampleProcedure), precedentemente in questo argomento.  
   
-|Placeholder|Description|  
+|Segnaposto|Descrizione|  
 |-----------------|-----------------|  
-|\\\\**\\*SQLBACKUP* Fileserver|Condivisione di backup fittizia.|  
-|\\\\**\\*SQLbackups\MyDb1.bak* Fileserver|File di backup per MyDb1.|  
-|\\\\**\\*SQLbackups\MyDb2.bak* Fileserver|File di backup per MyDb2.|  
+|\\\\*FILESERVER*\\*SQLbackups*|Condivisione di backup fittizia.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|File di backup per MyDb1.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb2.bak*|File di backup per MyDb2.|  
 |*7022*|Numero di porta assegnato a ogni endpoint del mirroring del database.|  
 |*COMPUTER01\AgHostInstance*|Istanza del server che ospita la replica primaria iniziale.|  
 |*COMPUTER02*|Istanza del server in cui viene ospitata la replica secondaria iniziale. Si tratta dell'istanza del server predefinita in `COMPUTER02`.|  
@@ -297,7 +297,7 @@ ms.locfileid: "75228786"
 |*MyAG*|Nome del gruppo di disponibilità di esempio.|  
 |*MyDb1*|Nome del primo database di esempio.|  
 |*MyDb2*|Nome del secondo database di esempio.|  
-|*Dominio1\utente1*|Account del servizio dell'istanza del server che dovrà ospitare la replica primaria iniziale.|  
+|*DOMAIN1\user1*|Account del servizio dell'istanza del server che dovrà ospitare la replica primaria iniziale.|  
 |*DOMAIN2\user2*|Account del servizio dell'istanza del server in cui dovrà essere ospitata la replica secondaria iniziale.|  
 |TCP://*COMPUTER01.Adventure-Works.com*:*7022*|URL dell'endpoint dell'istanza AgHostInstance di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in COMPUTER01.|  
 |TCP://*COMPUTER02.Adventure-Works.com*:*5022*|URL dell'endpoint dell'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in COMPUTER02.|  
@@ -437,8 +437,8 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a>Attività correlate  
- **Per configurare le proprietà del gruppo di disponibilità e della replica**  
+##  <a name="RelatedTasks"></a> Attività correlate  
+ **Per configurare le proprietà della replica e del gruppo di disponibilità**  
   
 -   [Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
@@ -448,7 +448,7 @@ GO
   
 -   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico (Gruppi di disponibilità AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
--   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -460,35 +460,35 @@ GO
   
  **Per completare la configurazione del gruppo di disponibilità**  
   
--   [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Aggiungere un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **Modalità alternative di creazione di un gruppo di disponibilità**  
   
--   [Utilizzare la creazione guidata gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Utilizzare la finestra di dialogo nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Creare un gruppo di disponibilità &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Creare un gruppo di disponibilità &#40;PowerShell SQL Server&#41;](../../../powershell/sql-server-powershell.md)  
   
  **Per abilitare Gruppi di disponibilità AlwaysOn**  
   
--   [Abilitare e disabilitare Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **Per configurare un endpoint del mirroring del database**  
   
 -   [Creazione di un endpoint del mirroring del database per Gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Per risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn**  
   
@@ -496,31 +496,31 @@ GO
   
 -   [Risolvere i problemi relativi a un'operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>Contenuto correlato  
+##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   **Blog**  
+-   **Blog:**  
   
      [Pagina relativa alla serie di informazioni su HADRON riguardanti l'utilizzo del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blog sui tecnici SQL Server CSS](https://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Video**  
+-   **Video:**  
   
      [Pagina relativa alla prima parte riguardante l'introduzione della soluzione a disponibilità elevata di prossima generazione della serie AlwaysOn di Microsoft SQL Server nome in codice "Denali"](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Pagina relativa alla seconda parte riguardante la compilazione di una soluzione a disponibilità elevata critica tramite AlwasyOn della serie AlwaysOn di Microsoft SQL Server nome in codice "Denali"](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White paper**  
+-   **White paper:**  
   
      [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [White paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [White paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
+     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;SQL Server dell'endpoint del mirroring del database&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767033"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
@@ -59,24 +59,24 @@ ms.locfileid: "62767033"
 |CheckpointUsage|Specifica se i checkpoint vengono utilizzati.|  
 |SaveCheckpoints|Indica se il pacchetto salva i checkpoint. Questa proprietà deve essere impostata su True per consentire il riavvio di un pacchetto da un punto di errore.|  
   
- Inoltre, è necessario impostare la proprietà FailPackageOnFailure `true` per tutti i contenitori nel pacchetto che si desidera identificare come punti di riavvio.  
+ Inoltre, è necessario impostare la proprietà FailPackageOnFailure su `true` per tutti i contenitori del pacchetto che si desidera identificare come punti di riavvio.  
   
  La proprietà ForceExecutionResult consente di testare l'uso dei checkpoint in un pacchetto. Se si imposta la proprietà ForceExecutionResult di un'attività o di un contenitore su Failure, è possibile riprodurre l'errore in tempo reale. Quando si esegue di nuovo il pacchetto, l'attività e i contenitori che hanno avuto esito negativo vengono eseguiti nuovamente.  
   
 ### <a name="checkpoint-usage"></a>Utilizzo dei checkpoint  
  I possibili valori della proprietà ForceExecutionResult sono i seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |`Never`|Specifica che il file del checkpoint non viene utilizzato e che il pacchetto viene eseguito dall'inizio del flusso di lavoro.|  
 |`Always`|Specifica che il file del checkpoint viene sempre utilizzato e che il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. Se il file del checkpoint non viene individuato, il pacchetto ha esito negativo.|  
 |`IfExists`|Specifica che il file del checkpoint viene utilizzato, se disponibile. Se il file del checkpoint è disponibile, il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. In caso contrario, viene eseguito dall'inizio del flusso di lavoro.|  
   
 > [!NOTE]  
->  Il **/CheckPointing sul** opzione di dtexec equivale a impostare il `SaveCheckpoints` proprietà del pacchetto da `True`e il `CheckpointUsage` proprietà su Always. Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).  
+>  L'opzione **/CheckPointing on on** di dtexec equivale a impostare la `SaveCheckpoints` proprietà del pacchetto `True`su e la `CheckpointUsage` proprietà su Always. Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sicurezza dei file del checkpoint  
- Poiché la protezione a livello di pacchetto non include la protezione dei file del checkpoint, è necessario proteggere tali file separatamente. I dati di checkpoint possono essere archiviati esclusivamente nel file system ed è necessario utilizzare un elenco di controllo di accesso (ACL) del sistema operativo per proteggere il percorso o la cartella in cui è archiviato il file. È importante proteggere i file del checkpoint perché contengono informazioni sullo stato del pacchetto, inclusi i valori correnti delle variabili. Un variabile può ad esempio contenere un recordset con numerose righe di dati privati, quali numeri di telefono. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../access-to-files-used-by-packages.md).  
+ Poiché la protezione a livello di pacchetto non include la protezione dei file del checkpoint, è necessario proteggere tali file separatamente. I dati di checkpoint possono essere archiviati esclusivamente nel file system ed è necessario utilizzare un elenco di controllo di accesso (ACL) del sistema operativo per proteggere il percorso o la cartella in cui è archiviato il file. È importante proteggere i file del checkpoint perché contengono informazioni sullo stato del pacchetto, inclusi i valori correnti delle variabili. Un variabile può ad esempio contenere un recordset con numerose righe di dati privati, quali numeri di telefono. Per ulteriori informazioni, vedere [accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 ### <a name="to-configure-the-checkpoint-properties"></a>Per configurare le proprietà dei checkpoint  
   

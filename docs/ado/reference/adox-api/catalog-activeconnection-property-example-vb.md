@@ -1,5 +1,5 @@
 ---
-title: Catalogo di esempio di proprietà ActiveConnection (VB) | Microsoft Docs
+title: Esempio di proprietà ActiveConnection di Catalog (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967112"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Esempio della proprietà ActiveConnection di Catalog (VB)
-Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà a una connessione valida, aprire "aperta" nel catalogo. Da un catalogo aperto, è possibile accedere gli oggetti dello schema contenuti all'interno di tale catalogo.  
+Impostando la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su una connessione aperta valida, viene aperto il catalogo. Da un catalogo aperto, è possibile accedere agli oggetti dello schema contenuti nel catalogo.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,7 +59,7 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- Impostando il **ActiveConnection** proprietà in una stringa di connessione valida anche "aperta" nel catalogo.  
+ L'impostazione della proprietà **ActiveConnection** su una stringa di connessione valida consente inoltre di aprire il catalogo.  
   
 ```  
 Attribute VB_Name = "Catalog"  
@@ -69,5 +69,5 @@ Attribute VB_Name = "Catalog"
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Raccolta di tabelle (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Proprietà Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

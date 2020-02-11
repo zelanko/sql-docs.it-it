@@ -18,18 +18,18 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019944"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove l'accesso a un proxy per un'entità di sicurezza.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, ruolo del server o **msdb** ruolo del database per rimuovere l'accesso. *nome* viene **nvarchar(256)** non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, del ruolo del server o del ruolo del database **msdb** per il quale rimuovere l'accesso. il *nome* è di **tipo nvarchar (256)** e non prevede alcun valore predefinito.  
   
-`[ @proxy_id = ] id` L'id del proxy da rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *id* viene **int**, con un valore predefinito è NULL.  
+`[ @proxy_id = ] id`ID del proxy per il quale rimuovere l'accesso. È necessario specificare *ID* o *proxy_name* , ma non è possibile specificarli entrambi. *ID* è di **tipo int**e il valore predefinito è null.  
   
-`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
+`[ @proxy_name = ] 'proxy_name'`Nome del proxy per il quale rimuovere l'accesso. È necessario specificare *ID* o *proxy_name* , ma non è possibile specificarli entrambi. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'esecuzione dei processi di proprietà dell'account di accesso che fanno riferimento al proxy corrente avranno esito negativo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -71,8 +71,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

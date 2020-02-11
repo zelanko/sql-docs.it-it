@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892908"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
@@ -31,14 +31,14 @@ Member_Expression.DataMember
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione opera sui membri non foglia di una gerarchia e può essere utilizzata dal comando [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) per eseguire il writeback diretto dei dati a un membro non foglia, anziché ai discendenti del membro foglia.  
   
 > [!NOTE]  
 >  Restituisce il membro specificato se tale membro è un membro foglia o se al membro non foglia non è associato alcun membro dei dati.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la funzione DataMember in una misura calcolata per mostrare la quota di vendite per ogni singolo dipendente:  
+ Nell'esempio seguente viene utilizzata la funzione **DataMember** in una misura calcolata per mostrare la quota di vendite per ogni singolo dipendente:  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -50,7 +50,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
  [Concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

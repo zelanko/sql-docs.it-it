@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc7744d57ce2bdbad4f0000252999582a8dc37c2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785522"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -39,10 +39,10 @@ ms.locfileid: "73785522"
   
  Per ulteriori informazioni, vedere [metadati dei parametri con valori di tabella per le istruzioni preparate](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri &#40;con valori di&#41;tabella ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Supporto di SQLSetStmtAttr per colonne di tipo sparse  
- SQLSetStmtAttr può essere utilizzato per impostare SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [colonne di tipo &#40;sparse supportano ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ SQLSetStmtAttr può essere utilizzato per impostare SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto di colonne di tipo sparse &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="statement-attributes"></a>Attributi di istruzione  
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta anche gli attributi di istruzione seguenti specifici del driver.  
@@ -52,7 +52,7 @@ ms.locfileid: "73785522"
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Valore predefinito. Disabilita i cursori fast-only, di sola lettura e di recupero automatico, Abilita **SQLGetData** su cursori di sola lettura e di sola lettura. Quando SQL_SOPT_SS_CURSOR_OPTIONS è impostato su SQL_CO_OFF, il tipo di cursore non cambia. Ciò significa che il cursore fast forward-only resterà tale. Per modificare il tipo di cursore, l'applicazione deve ora impostare un tipo di cursore diverso utilizzando **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Default. Disabilita i cursori fast-only, di sola lettura e di recupero automatico, Abilita **SQLGetData** su cursori di sola lettura e di sola lettura. Quando SQL_SOPT_SS_CURSOR_OPTIONS è impostato su SQL_CO_OFF, il tipo di cursore non cambia. Ciò significa che il cursore fast forward-only resterà tale. Per modificare il tipo di cursore, l'applicazione deve ora impostare un tipo di cursore diverso utilizzando **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Consente cursori fast-only di sola lettura, Disabilita **SQLGetData** sui cursori di sola lettura di sola lettura.|  
 |SQL_CO_AF|Abilita l'opzione per il recupero automatico su qualsiasi tipo di cursore. Quando questa opzione è impostata per un handle di istruzione, **SQLExecute** o **SQLExecDirect** genererà un **SQLFetchScroll** implicito (SQL_FIRST). Il cursore è aperto e il primo batch di righe viene restituito in un solo round trip al server.|  
 |SQL_CO_FFO_AF|Abilita i cursori fast forward-only con l'opzione di recupero automatico. Produce gli stessi risultati della specifica contemporanea di SQL_CO_AF e SQL_CO_FFO.|  
@@ -66,7 +66,7 @@ ms.locfileid: "73785522"
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Valore predefinito. Dopo la chiamata della [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla chiamata di **SQLExecute** o all'esecuzione dell'operazione di metaproprietà (**SQLDescribeCol** o **SQLDescribeParam**).|  
+|SQL_DP_ON|Default. Dopo la chiamata della [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla chiamata di **SQLExecute** o all'esecuzione dell'operazione di metaproprietà (**SQLDescribeCol** o **SQLDescribeParam**).|  
 |SQL_DP_OFF|L'istruzione viene preparata non appena viene eseguito **SQLPrepare** .|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -76,7 +76,7 @@ ms.locfileid: "73785522"
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|Valore predefinito. Il driver non converte i dati di tipo data, ora e valuta in stringhe di caratteri mediante l'impostazione locale del client.|  
+|SQL_RE_OFF|Default. Il driver non converte i dati di tipo data, ora e valuta in stringhe di caratteri mediante l'impostazione locale del client.|  
 |SQL_RE_ON|Il driver utilizza l'impostazione locale del client durante la conversione dei dati di tipo data, ora e valuta in stringhe di caratteri.|  
   
  Ai dati di tipo valuta, numerico, data e ora vengono applicate le impostazioni di conversione internazionali. L'impostazione di conversione è applicabile solo alle conversioni di output quando i valori di valuta, data, ora o numerici vengono convertiti in stringhe di caratteri.  
@@ -92,14 +92,14 @@ ms.locfileid: "73785522"
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Disabilita la registrazione di operazioni eseguite su dati di **testo** e di **immagine** .|  
-|SQL_TL_ON|Valore predefinito. Abilita la registrazione delle operazioni eseguite sui dati di **testo** e di **immagine** .|  
+|SQL_TL_ON|Default. Abilita la registrazione delle operazioni eseguite sui dati di **testo** e di **immagine** .|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  L'attributo SQL_SOPT_SS_HIDDEN_COLUMNS espone nel set di risultati le colonne nascoste in un'istruzione SELECT FOR BROWSE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, il driver non espone queste colonne. Il valore *ValuePtr* è di tipo SQLLEN.  
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|Valore predefinito. Le colonne FOR BROWSE sono nascoste dal set di risultati.|  
+|SQL_HC_OFF|Default. Le colonne FOR BROWSE sono nascoste dal set di risultati.|  
 |SQL_HC_ON|Espone colonne FOR BROWSE.|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -133,7 +133,7 @@ ms.locfileid: "73785522"
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Valore predefinito.<br /><br /> In caso di utilizzo di parametri con valori di tabella, indica che è necessario che vengano restituiti i metadati per le tabelle effettive.<br /><br /> Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituirà solo le colonne che non sono membri del **column_set**di tipo sparse.|  
+|SQL_SS_NAME_SCOPE_TABLE|Default.<br /><br /> In caso di utilizzo di parametri con valori di tabella, indica che è necessario che vengano restituiti i metadati per le tabelle effettive.<br /><br /> Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituirà solo le colonne che non sono membri del **column_set**di tipo sparse.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica che l'applicazione richiede metadati per un tipo di tabella, anziché una tabella effettiva. Le funzioni di catalogo devono restituire metadati per i tipi di tabella. L'applicazione passa quindi il TYPE_NAME del parametro con valori di tabella come parametro *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituisce tutte le colonne, indipendentemente dall'appartenenza **column_set** .|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituisce solo le colonne che sono membri del **column_set**di tipo sparse.|  
@@ -148,7 +148,7 @@ ms.locfileid: "73785522"
  Se una funzione di catalogo, ovvero SQLTables, SQLColumns o SQLPrimaryKeys, viene chiamata quando SQL_SOPT_SS_NAME_SCOPE dispone di un valore diverso da SQL_SS_NAME_SCOPE_TABLE, viene restituito SQL_ERROR. Viene generato un record di diagnostica con SQLSTATE HY010 e il messaggio "Errore nella sequenza della funzione (SQL_SOPT_SS_NAME_SCOPE non è impostato su SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Vedere anche  
-   [funzione SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)  
- [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLGetStmtAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

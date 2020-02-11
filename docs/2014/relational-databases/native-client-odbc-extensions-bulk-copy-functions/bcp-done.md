@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689073"
 ---
-# <a name="bcpdone"></a>bcp_done
-  Termina una copia bulk dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita con [bcp_sendrow](bcp-sendrow.md).  
+# <a name="bcp_done"></a>bcp_done
+  Termina una copia bulk dalle variabili di programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a eseguite con [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +44,10 @@ hdbc
  Handle di connessione ODBC abilitato per la copia bulk.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- Il numero di righe salvato in modo permanente dopo l'ultima chiamata a [bcp_batch](bcp-batch.md) oppure -1 in caso di errore.  
+ Il numero di righe salvate in modo permanente dopo l'ultima chiamata a [bcp_batch](bcp-batch.md) o-1 in caso di errore.  
   
-## <a name="remarks"></a>Note  
- Chiamare **bcp_done** dopo l'ultima chiamata a [bcp_sendrow](bcp-sendrow.md) oppure [bcp_moretext](bcp-moretext.md). Errore durante la chiamata **bcp_done** dopo aver copiato tutti i dati degli errori.  
+## <a name="remarks"></a>Osservazioni  
+ Chiamare **bcp_done** dopo l'ultima chiamata a [bcp_sendrow](bcp-sendrow.md) o [bcp_moretext](bcp-moretext.md). La mancata chiamata di **bcp_done** dopo la copia di tutti i dati genera errori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  

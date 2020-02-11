@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893099"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
@@ -28,17 +28,17 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella >, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella>, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione di tabella >  
+ \<espressione di tabella>  
   
-## <a name="remarks"></a>Note  
- Il valore fornito dall'espressione di \<rango > argomento determina l'ordine di rango decrescente per le righe fornite \<nell'espressione di tabella > argomento e il numero di righe in primo piano specificato in \<viene restituito l'argomento Count >.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore fornito dall'espressione di \<rango> argomento determina l'ordine di rango decrescente per le righe fornite nell'espressione di \<tabella> argomento e viene restituito il numero di righe in primo piano specificate nell'argomento \<count>.  
   
  La funzione tocount è stata introdotta originariamente per consentire le stime associative e in generale produce gli stessi risultati di un'istruzione che include le clausole **Select Top** e **Order by** . È possibile ottenere prestazioni migliori per le stime associative se si utilizza la funzione **Predict (DMX)** , che supporta la specifica di un numero di stime da restituire.  
   
- Tuttavia, esistono situazioni in cui potrebbe essere ancora necessario utilizzare il conteggio dei conteggi. DMX, ad esempio, non supporta il qualificatore **Top** in un'istruzione sub-SELECT. La [funzione &#40;DMX&#41; PredictHistogram](../dmx/predicthistogram-dmx.md) non supporta inoltre l'aggiunta di **Top**.  
+ Tuttavia, esistono situazioni in cui potrebbe essere ancora necessario utilizzare il conteggio dei conteggi. DMX, ad esempio, non supporta il qualificatore **Top** in un'istruzione sub-SELECT. La funzione [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) non supporta inoltre l'aggiunta di **Top**.  
   
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti sono query di stima sul modello di associazione compilato mediante l' [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma nel primo esempio viene utilizzato il conteggio delle corrispondenze e il secondo esempio utilizza la funzione Predict.  
@@ -60,16 +60,16 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
 |Modello|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291283016|0.252695851|  
-|Water Bottle|2866|0.192620472|0.175205052|  
-|Patch kit|2113|0.142012232|0.132389356|  
-|Mountain Tire Tube|1992|0.133879965|0.125304948|  
-|Mountain-200|1755|0.117951475|0.111260823|  
-|Road Tire Tube|1588|0.106727603|0.101229538|  
-|Cycling Cap|1473|0.098998589|0.094256014|  
-|Fender Set - Mountain|1415|0.095100477|0.090718432|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|Sport-100|4334|0,291283016|0,252695851|  
+|Water Bottle|2866|0,192620472|0,175205052|  
+|Patch kit|2113|0,142012232|0,132389356|  
+|Mountain Tire Tube|1992|0,133879965|0,125304948|  
+|Mountain-200|1755|0,117951475|0,111260823|  
+|Road Tire Tube|1588|0,106727603|0,101229538|  
+|Cycling Cap|1473|0,098998589|0,094256014|  
+|Fender Set - Mountain|1415|0,095100477|0,090718432|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
   
  La funzione tocount accetta i risultati di questa query e restituisce il numero specificato di righe con valori più piccoli.  
   
@@ -108,13 +108,13 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- I risultati contengono le prime tre stime ordinate in base al valore di supporto. È possibile sostituire $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY per restituire stime classificate in base alla probabilità o alla probabilità adattata. Per ulteriori informazioni, vedere **Predict (DMX)** .  
+ I risultati contengono le prime tre stime ordinate in base al valore di supporto. È possibile sostituire $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY per restituire stime classificate in base alla probabilità o alla probabilità adattata. Per ulteriori informazioni, vedere **Predict (DMX)**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX &#40;BottomCount&#41;](../dmx/bottomcount-dmx.md)   
- [DMX percentuale &#40;&#41;](../dmx/toppercent-dmx.md)   
- [&#40;DMX Tops&#41;](../dmx/topsum-dmx.md)  
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74307993"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "74307993"
 
 Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sulle richieste, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
    
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID della sessione a cui la richiesta è correlata. Non ammette i valori Null.|  
 |request_id|**int**|ID della richiesta. Valore univoco nel contesto della sessione. Non ammette i valori Null.|  
-|start_time|**DateTime**|Timestamp relativo all'arrivo della richiesta. Non ammette i valori Null.|  
+|start_time|**datetime**|Timestamp relativo all'arrivo della richiesta. Non ammette i valori Null.|  
 |status|**nvarchar (30)**|Stato della richiesta. Può essere uno dei valori seguenti:<br /><br /> Background<br />In esecuzione<br />Eseguibile<br />Sospeso<br />Suspended<br /><br /> Non ammette i valori Null.|  
-|command|**nvarchar (32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />AGGIORNAMENTO<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
+|command|**nvarchar (32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Elimina<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
 |sql_handle|**varbinary (64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Ammette i valori Null.|  
 |statement_start_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
 |statement_end_offset|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzata in combinazione con la colonna sql_handle, la colonna statement_end_offset e la funzione a gestione dinamica sys.dm_exec_sql_text per recuperare l'istruzione in esecuzione per la richiesta. Ammette i valori Null.|  
@@ -66,17 +66,17 @@ Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersio
 |writes|**bigint**|Numero di scritture effettuate dalla richiesta. Non ammette i valori Null.|  
 |logical_reads|**bigint**|Numero di letture logiche effettuate dalla richiesta. Non ammette i valori Null.|  
 |text_size|**int**|Impostazione di TEXTSIZE per la richiesta. Non ammette i valori Null.|  
-|Linguaggio|**nvarchar (128)**|Impostazione di LANGUAGE per la richiesta. Ammette i valori Null.|  
+|Linguaggio|**nvarchar(128)**|Impostazione di LANGUAGE per la richiesta. Ammette i valori Null.|  
 |date_format|**nvarchar (3)**|Impostazione di DATEFORMAT per la richiesta. Ammette i valori Null.|  
 |date_first|**smallint**|Impostazione di DATEFIRST per la richiesta. Non ammette i valori Null.|  
-|quoted_identifier|**po'**|1 = QUOTED_IDENTIFIER è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|arithabort|**po'**|1 = ARITHABORT è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|ansi_null_dflt_on|**po'**|1 = ANSI_NULL_DFLT_ON è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|ansi_defaults|**po'**|1 = ANSI_DEFAULTS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|ansi_warnings|**po'**|1 = ANSI_WARNINGS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|ansi_padding|**po'**|1 = ANSI_PADDING è impostata su ON per la richiesta.<br /><br /> Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|ansi_nulls|**po'**|1 = ANSI_NULLS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
-|concat_null_yields_null|**po'**|1 = CONCAT_NULL_YIELDS_NULL è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|arithabort|**bit**|1 = ARITHABORT è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|ansi_null_dflt_on|**bit**|1 = ANSI_NULL_DFLT_ON è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|ansi_defaults|**bit**|1 = ANSI_DEFAULTS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|ansi_warnings|**bit**|1 = ANSI_WARNINGS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|ansi_padding|**bit**|1 = ANSI_PADDING è impostata su ON per la richiesta.<br /><br /> Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|ansi_nulls|**bit**|1 = ANSI_NULLS è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
+|concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL è impostata su ON per la richiesta. Negli altri casi è 0.<br /><br /> Non ammette i valori Null.|  
 |transaction_isolation_level|**smallint**|Livello di isolamento con cui è stata creata la transazione per questa richiesta. Non ammette i valori Null.<br /> 0 = Non specificato<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|Periodo di timeout del blocco, espresso in millisecondi, per la richiesta. Non ammette i valori Null.|  
 |deadlock_priority|**int**|Impostazione di DEADLOCK_PRIORITY per la richiesta. Non ammette i valori Null.|  
@@ -84,7 +84,7 @@ Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersio
 |prev_error|**int**|Ultimo errore che si è verificato durante l'esecuzione della richiesta. Non ammette i valori Null.|  
 |nest_level|**int**|Livello di nidificazione corrente del codice eseguito nella richiesta. Non ammette i valori Null.|  
 |granted_query_memory|**int**|Numero di pagine allocate all'esecuzione di una query nella richiesta. Non ammette i valori Null.|  
-|executing_managed_code|**po'**|Indica se una richiesta specifica sta eseguendo oggetti CLR (Common Language Runtime) quali routine, tipi e trigger. Il valore rimane impostato per l'intero periodo di permanenza di un oggetto CLR nello stack, anche durante l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] internamente a CLR. Non ammette i valori Null.|  
+|executing_managed_code|**bit**|Indica se una richiesta specifica sta eseguendo oggetti CLR (Common Language Runtime) quali routine, tipi e trigger. Il valore rimane impostato per l'intero periodo di permanenza di un oggetto CLR nello stack, anche durante l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] internamente a CLR. Non ammette i valori Null.|  
 |group_id|**int**|ID del gruppo del carico di lavoro a cui appartiene la query. Non ammette i valori Null.|  
 |query_hash|**binario (8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
 |query_plan_hash|**binario (8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.|  
@@ -93,7 +93,7 @@ Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersio
 |dop |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> Grado di parallelismo della query. |  
 |parallel_worker_count |**int** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> Numero di processi di lavoro paralleli riservati se si tratta di una query parallela.  |  
 |external_script_request_id |**uniqueidentifier** |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> ID della richiesta di script esterno associato alla richiesta corrente. |  
-|is_resumable |**po'** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e versioni successive.<br /><br /> Indica se la richiesta è un'operazione sugli indici ripristinabili. |  
+|is_resumable |**bit** |**Si applica a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e versioni successive.<br /><br /> Indica se la richiesta è un'operazione sugli indici ripristinabili. |  
 |page_resource |**binario (8)** |**Si applica a**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Rappresentazione esadecimale a 8 byte della risorsa della pagina se la `wait_resource` colonna contiene una pagina. Per ulteriori informazioni, vedere [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Si applica a**: iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalla richiesta. Non ammette i valori Null.|  
 | &nbsp; | &nbsp; | &nbsp; |
@@ -193,4 +193,4 @@ GO
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, oggetto Statistiche SQL](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Guida all'architettura di thread e attività](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)    

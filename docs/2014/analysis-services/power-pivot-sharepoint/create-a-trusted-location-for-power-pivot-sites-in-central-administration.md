@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684091"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale
@@ -22,7 +22,7 @@ ms.locfileid: "74684091"
   
   
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  È necessario essere un amministratore del servizio o della farm per definire un URL come percorso attendibile.  
   
  È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta PowerPivot o un'altra libreria che archivia le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la libreria, fare clic con il pulsante destro del mouse su **raccolta PowerPivot**, selezionare **Proprietà**, quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
@@ -64,6 +64,6 @@ ms.locfileid: "74684091"
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta PowerPivot](../../2014-toc/index.yml)  
  [Creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [USA raccolta PowerPivot](use-power-pivot-gallery.md)  
+ [Usare la raccolta PowerPivot](use-power-pivot-gallery.md)  
   
   

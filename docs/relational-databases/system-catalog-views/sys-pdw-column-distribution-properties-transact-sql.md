@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b71df1a25a9cd8480f23dc104792ad8f3e70f35
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401689"
 ---
 # <a name="syspdw_column_distribution_properties-transact-sql"></a>sys. pdw_column_distribution_properties (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "74401689"
 
   Include informazioni sulla distribuzione per le colonne.  
   
-|Nome colonna|Tipo di dati|Description|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene la colonna.||  
 |**column_id**|**int**|ID della colonna.||  

@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages | Microsoft Docs
+title: Regole di confronto e tabelle codici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786736"
 ---
 # <a name="collations-and-code-pages"></a>Tabelle codici e regole di confronto
@@ -82,7 +82,7 @@ GO
   
 -   In tutte espressioni e le operazioni di ordinamento nelle stored procedure compilate in modo nativo devono essere utilizzate le regole di confronto BIN2. L'implicazione è che tutti i confronti e le operazioni di ordinamento si basano sugli elementi di codice Unicode dei caratteri (rappresentazioni binarie). Ad esempio, in tutte le operazioni di ordinamento viene fatta distinzione tra maiuscole e minuscole (" Z" viene prima di "a "). Se necessario, utilizzare codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato per le operazioni di ordinamento e confronto senza distinzione tra maiuscole e minuscole.  
   
--   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che char n (var) (*n*) i valori non possono essere convertito nel tipo n (var) char (*ho*), se *ho* < *n*, se la le regole di confronto includano SC property. Ad esempio, il codice seguente non è supportato:  
+-   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che i valori n (VAR) char (*n*) non possono essere convertiti nel tipo n (VAR) char (*i*) *, se* < i*n*, se le regole di confronto hanno _SC proprietà. Ad esempio, il codice seguente non è supportato:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -96,7 +96,7 @@ GO
   
      Dichiarare le variabili utilizzando tipi sufficientemente grandi per evitare il troncamento.  
   
- Nell'esempio seguente vengono illustrate alcune implicazioni e soluzioni alternative per le limitazioni delle regole di confronto in OLTP in memoria. Nell'esempio viene utilizzata la tabella Employees specificata in precedenza. Questo esempio vengono elencati tutti i dipendenti. Si noti che per LastName, a causa delle regole di confronto binarie, i nomi in maiuscolo vengono ordinati prima di quelli in minuscolo. Di conseguenza "Thomas" precede "nolan" perché i caratteri maiuscoli presentano elementi di codice più bassi. Per FirstName vengono utilizzate regole di confronto senza distinzione tra maiuscole e minuscole. L'ordinamento viene quindi applicato per lettera dell'alfabeto, non in base all'elemento di codice dei caratteri.  
+ Nell'esempio seguente vengono illustrate alcune implicazioni e soluzioni alternative per le limitazioni delle regole di confronto in OLTP in memoria. Nell'esempio viene utilizzata la tabella Employees specificata in precedenza. Questo esempio elenca tutti i dipendenti. Si noti che per LastName, a causa delle regole di confronto binarie, i nomi in maiuscolo vengono ordinati prima di quelli in minuscolo. Di conseguenza "Thomas" precede "nolan" perché i caratteri maiuscoli presentano elementi di codice più bassi. Per FirstName vengono utilizzate regole di confronto senza distinzione tra maiuscole e minuscole. L'ordinamento viene quindi applicato per lettera dell'alfabeto, non in base all'elemento di codice dei caratteri.  
   
 ```sql  
 -- insert a number of values  

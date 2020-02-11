@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835407"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Esecuzione di un caricamento incrementale di più tabelle
-  Il diagramma incluso nell'argomento [Miglioramento dei caricamenti incrementali tramite Change Data Capture](change-data-capture-ssis.md) illustra un pacchetto di base che esegue un caricamento incrementale in un'unica tabella. Il caricamento di una tabella, tuttavia, non rappresenta un'operazione tanto comune quanto l'esecuzione di un caricamento incrementale di più tabelle.  
+  Il diagramma incluso nell'argomento [Miglioramento dei caricamenti incrementali tramite Change Data Capture](change-data-capture-ssis.md)illustra un pacchetto di base che esegue un caricamento incrementale in un'unica tabella. Il caricamento di una tabella, tuttavia, non rappresenta un'operazione tanto comune quanto l'esecuzione di un caricamento incrementale di più tabelle.  
   
  Quando si esegue un caricamento incrementale di più tabelle, alcuni passaggi devono essere eseguiti una volta per tutte le tabelle, mentre altri passaggi devono essere ripetuti per ogni tabella di origine. Per implementare tali passaggi in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sono disponibili più opzioni:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62835407"
   
 4.  Utilizzare più attività Esegui pacchetto per eseguire pacchetti figlio per ogni tabella da caricare. Passare gli endpoint calcolati nel pacchetto padre a ciascun pacchetto figlio utilizzando le configurazioni Variabile pacchetto padre.  
   
-     Per altre informazioni, vedere [Attività Esegui pacchetto](../control-flow/execute-package-task.md) e [Usare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Per altre informazioni, vedere [Attività Esegui pacchetto](../control-flow/execute-package-task.md) e [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 #### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Per creare pacchetti figlio per l'esecuzione dei passaggi necessari per ogni tabella di origine  
   

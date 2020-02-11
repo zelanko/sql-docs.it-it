@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253505"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lezione 1: creare un account e un contenitore di archiviazione di Azure
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lezione 1: Creare account e contenitore di Archiviazione di Azure
   Prima di poter iniziare a archiviare i file di dati SQL Server in archiviazione di Azure, è necessario creare prima un account di archiviazione di Azure e un contenitore BLOB e una firma di accesso condiviso. Nella lezione 1 vengono illustrati i passaggi per accedere al portale di gestione di Azure, creare un account di archiviazione, un contenitore BLOB e una firma di accesso condiviso.  
   
  Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere a BLOB, tabelle e code all'interno dell'account. Per accedere alle risorse utilizzando questa nuova funzionalità di SQL Server senza condividere la chiave di accesso dell'account di archiviazione, è necessario eseguire le seguenti operazioni:  

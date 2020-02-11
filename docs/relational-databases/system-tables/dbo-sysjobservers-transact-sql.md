@@ -20,10 +20,10 @@ ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026200"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
@@ -36,17 +36,17 @@ Archivia l'associazione o la relazione di un determinato processo con uno o più
 |job_id|**uniqueidentifier**|Numero di identificazione del processo.|  
 |server_id|**int**|Numero di identificazione del server.|  
 |last_run_outcome|**tinyint**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = esito negativo<br /><br /> **1** = esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = Annulla<br /><br /> **4** = in corso<br /><br /> **5** = sconosciuto (vedere la sezione Osservazioni seguente) |  
-|messaggio last_outcome_|**nvarchar(1024)**|Eventuale messaggio associato alla colonna last_run_outcome.|  
+|last_outcome_ message|**nvarchar(1024)**|Eventuale messaggio associato alla colonna last_run_outcome.|  
 |last_run_date|**int**|Data dell'ultima esecuzione del processo.|  
 |last_run_time|**int**|Ora dell'ultima esecuzione del processo.|  
 |last_run_duration|**int**|Durata di esecuzione del processo, in ore, minuti e secondi. Calcolato mediante la formula: (*ore*\*10000) + (*minuti*\*100) + *secondi*.|  
 
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un valore superiore a *4* indica che l'agente SQL non conosce lo stato del processo. *Last_run_outcome* viene inizialmente impostato su *5* quando viene creato un processo.
+Un valore superiore a *4* indica che l'agente SQL non conosce lo stato del processo. Il *last_run_outcome* viene inizialmente impostato su *5* quando viene creato un processo.
 
 
 ## <a name="see-also"></a>Vedere anche
 
-[SQL Server Agent tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[SQL Server Agent tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

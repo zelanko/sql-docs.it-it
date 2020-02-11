@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792807"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
@@ -43,7 +43,7 @@ ms.locfileid: "67792807"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Chiamata a membri di istanza da un file di definizione del report  
  Se l'assembly personalizzato contiene membri di istanza a cui è necessario accedere in una definizione del report, è necessario aggiungere al report un nome di istanza per la classe. È possibile aggiungere un nome di istanza per una classe usando la scheda **Codice** della finestra di dialogo **Proprietà report**. Per altre informazioni sull'aggiunta di istanze di classi a un report, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Per chiamare un membro statico, è necessario farvi riferimento come espressione nel formato = Code *. NomeIstanza*.  
+ Per chiamare un membro statico, è necessario farvi riferimento come espressione che assume il formato = codice *. Nomeistanza. Method*.  
   
 #### <a name="to-call-instance-members"></a>Per chiamare i membri dell'istanza  
   

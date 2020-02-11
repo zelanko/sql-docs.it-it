@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100335"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66100335"
   
 ### <a name="to-display-the-report-data-pane"></a>Per visualizzare il riquadro Dati report  
   
--   Nella visualizzazione della struttura nel **View** dal menu **i dati del Report**.  
+-   Nella visualizzazione della struttura scegliere **dati report**dal menu **Visualizza** .  
   
 ### <a name="to-dock-the-report-data-pane"></a>Per ancorare il riquadro Dati report  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66100335"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Per modificare il riquadro Dati report da una finestra ancorata in una finestra a schede  
   
--   Fare doppio clic la barra del titolo del riquadro dati Report e quindi fare clic su **documento a schede**.  
+-   Fare clic con il pulsante destro del mouse sulla barra del titolo del riquadro dati report, quindi scegliere **documento a schede**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Per modificare il riquadro Dati report da una finestra a schede in una finestra ancorata  
   
--   Fare clic sulla scheda dati Report e quindi fare clic su **finestra ancorata**.  
+-   Fare clic con il pulsante destro del mouse sulla scheda dati report, quindi scegliere **ancorabile**.  
   
      Per passare tra gli ultimi due stati visualizzati, fare doppio clic sulla barra del titolo del riquadro Dati report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riquadro Dati report](../report-data/report-data-pane.md)   
+ [Riquadro dei dati del report](../report-data/report-data-pane.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

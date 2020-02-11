@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056484"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Eseguire la migrazione di account di accesso SQL Server con Data Migration Assistant
@@ -34,7 +34,7 @@ Questo articolo fornisce una panoramica della migrazione degli account di access
 
 - Data Migration Assistant attualmente non supporta gli account di accesso associati a un certificato di sicurezza autonomo (account di accesso con mapping al certificato), una chiave asimmetrica autonoma (account di accesso di cui è stato eseguito il mapping a una chiave asimmetrica) e gli account di accesso con mapping a credenziali.
 
-- Data Migration Assistant non sposta i principi di accesso e del server **sa** con i nomi racchiusi tra virgolette doppie (\#\#), che sono solo per uso interno.
+- Data Migration Assistant non sposta i principi di accesso e del server **sa** con i nomi racchiusi tra\#\#doppi segni di cancelletto (), che sono solo per uso interno.
 
 - Per impostazione predefinita, Data Migration Assistant seleziona tutti gli account di accesso completi da migrare. Facoltativamente, è possibile selezionare account di accesso specifici per la migrazione. Quando Data Migration Assistant esegue la migrazione di tutti gli account di accesso qualificati, il mapping dell'utente di accesso rimane intatto nei database di cui viene eseguita la migrazione.
 

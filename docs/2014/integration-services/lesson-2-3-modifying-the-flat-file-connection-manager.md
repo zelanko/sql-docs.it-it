@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 3: Modifica della gestione connessione File Flat | Microsoft Docs'
+title: 'Passaggio 3: Modifica della gestione connessione file flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767433"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Passaggio 3: Modifica della gestione connessione file flat
@@ -26,21 +26,21 @@ ms.locfileid: "62767433"
   
 1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data**e scegliere **Proprietà**.  
   
-2.  Nella finestra Proprietà fare clic sulla cella vuota relativa a **Espressioni**e fare clic sul pulsante con i puntini di sospensione **(...)** .  
+2.  Nella finestra Proprietà fare clic sulla cella vuota relativa a **Espressioni**e fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
-3.  Nel **Editor espressioni di proprietà** nella finestra di dialogo il **proprietà** colonna, digitare o selezionare `ConnectionString`.  
+3.  Nella finestra di dialogo **Editor espressioni di proprietà** Digitare o **** selezionare `ConnectionString`nella colonna proprietà.  
   
 4.  Nella colonna **Espressione** fare clic sul pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni**.  
   
 5.  Nella finestra di dialogo **Generatore di espressioni** espandere il nodo **Variabili** .  
   
-6.  Trascinare la variabile **User::varFileName**sulla casella **Espressione** .  
+6.  Trascinare la variabile **User:: varFileName**nella casella **espressione** .  
   
 7.  Fare clic su **OK** per chiudere la finestra di dialogo **Generatore di espressioni** .  
   
 8.  Fare nuovamente clic su **OK** per chiudere la finestra di dialogo **Editor espressioni di proprietà** .  
   
 ## <a name="next-lesson-task"></a>Attività della lezione successiva  
- [Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

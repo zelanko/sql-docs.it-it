@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399759"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Disinstalla hotfix del sistema della piattaforma di analisi 
@@ -21,7 +21,7 @@ I passaggi seguenti descrivono come disinstallare un hotfix del sistema di piatt
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Per eseguire questi passaggi, sarà necessario:  
   
 -   Un account di accesso del sistema della piattaforma Analytics con le autorizzazioni per accedere alla console di amministrazione per monitorare l'appliance.  

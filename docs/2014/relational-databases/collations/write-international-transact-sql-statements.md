@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873518"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
@@ -36,15 +36,15 @@ ms.locfileid: "62873518"
   
     -   Le applicazioni ADO, OLE DB e ODBC devono utilizzare le clausole di escape seguenti relative a timestamp, data e ora:  
   
-         **{ts'** yyyy **-** _mm_ **-** _ddhh_ **:**  _mm_ **:** _ss_[ **.** _fff_] **'}** , ad esempio: **{ts'** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts '** aaaa**-**_mm_**-**_DDHH_**:**_mm_**:**_ss_[**.** _fff_] **'}** ad esempio: **{ts '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'** 1998 **-** 09 **-** 24 **'}**  
+         **{d'** _aaaa_ **-** _mm_ **-** _GG_ **'}** , ad esempio: **{d'****-** 1998**-** 09 24 **'}**  
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
+         **{t'** _HH_ **:** _mm_ **:** _SS_ **'}** ad esempio: **{t'** 10:02:20 **'}**  
   
     -   Nelle applicazioni che utilizzano altre API, oppure script, stored procedure e trigger di [!INCLUDE[tsql](../../includes/tsql-md.md)] , è necessario utilizzare le stringhe numeriche non separate, Ad esempio, *aaaammgg* come 19980924.  
   
-    -   Le applicazioni che utilizzano altre API, oppure [!INCLUDE[tsql](../../includes/tsql-md.md)] gli script, stored procedure e trigger deve utilizzare l'istruzione CONVERT con un parametro di stile esplicito per tutte le conversioni tra il `time`, `date`, `smalldate`, `datetime`, **datetime2**, e `datetimeoffset` tipi di dati e tipi di dati stringa di caratteri. L'istruzione seguente viene interpretata nello stesso modo indipendentemente dalle impostazioni di connessione della lingua o del formato della data:  
+    -   Per le applicazioni che utilizzano altre API [!INCLUDE[tsql](../../includes/tsql-md.md)] , o script, stored procedure e trigger, è necessario utilizzare l'istruzione CONVERT con un parametro di stile esplicito per tutte `time`le `date`conversioni `datetime`tra i tipi di `datetimeoffset` dati,, `smalldate`,, **datetime2**e e i tipi di dati stringa di caratteri. L'istruzione seguente viene interpretata nello stesso modo indipendentemente dalle impostazioni di connessione della lingua o del formato della data:  
   
         ```  
         SELECT *  

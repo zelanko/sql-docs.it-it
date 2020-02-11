@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759549"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il provider OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta inoltre la restituzione di informazioni sullo schema da un server collegato durante l'elaborazione di [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta inoltre la restituzione di informazioni sullo schema [!INCLUDE[tsql](../../../includes/tsql-md.md)] da un server collegato durante l'elaborazione di query distribuite.  
   
 > [!NOTE]  
 >  Benché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, non vengono restituiti metadati per i sinonimi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne di restrizione supportate dal provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB.  
+ Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di restrizione supportate dal provider OLE DB di Native Client.  
   
 |Set di righe dello schema|Colonne di restrizione|  
 |-------------------|-------------------------|  
@@ -52,13 +52,13 @@ ms.locfileid: "73759549"
 |DBSCHEMA_TABLES|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |DBSCHEMA_TABLES_INFO|Sono supportate tutte le restrizioni.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Supporto di query distribuite nei set di righe dello schema](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Uso dei tipi definiti dall'utente](../../../relational-databases/native-client/features/using-user-defined-types.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Utilizzo dei tipi definiti dall'utente (UDT)](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

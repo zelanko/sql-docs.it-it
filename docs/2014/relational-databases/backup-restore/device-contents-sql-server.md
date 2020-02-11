@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876048"
 ---
 # <a name="device-contents-sql-server"></a>Contenuto dispositivo (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "62876048"
  **Set di supporti**  
  Un set di supporti consiste in una raccolta ordinata di supporti di backup sui quali è stata eseguita la scrittura di una o più operazioni di backup utilizzando un numero costante di dispositivi di backup.  
   
- **Name**  
+ **Nome**  
  Visualizza il nome del set di supporti.  
   
  **Descrizione**  
@@ -55,9 +55,9 @@ ms.locfileid: "62876048"
   
 |Intestazione|Valori|  
 |------------|------------|  
-|**Name**|Nome del set di backup.|  
-|**Tipo**|Il tipo di backup eseguito: Completo, differenziale o Log delle transazioni.|  
-|**Componente**|Il componente di backup: Database, File, oppure  *\<vuoto >* (per i log delle transazioni).|  
+|**Nome**|Nome del set di backup.|  
+|**Tipo**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
+|**Componente**|Componente incluso nel backup, ovvero Database, File o *\<vuoto>* (nel caso dei log delle transazioni).|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

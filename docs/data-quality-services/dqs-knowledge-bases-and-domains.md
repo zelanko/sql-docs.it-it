@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251646"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
@@ -148,7 +148,7 @@ ms.locfileid: "75251646"
   
 |||  
 |-|-|  
-|Creare e aprire una Knowledge Base, aggiungervi informazioni ed eseguire l'attività di individuazione|[Compilazione di una Knowledge base](../data-quality-services/building-a-knowledge-base.md)|  
+|Creare e aprire una Knowledge Base, aggiungervi informazioni ed eseguire l'attività di individuazione|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Eseguire operazioni di importazione ed esportazione su domini e Knowledge Base|[Importazione ed esportazione delle informazioni](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creare un dominio singolo, una regola di dominio e relazioni basate su termini, nonché modificare valori di dominio|[Gestione di un dominio](../data-quality-services/managing-a-domain.md)|  
 |Creare un dominio composito, creare una regola tra domini e utilizzare relazioni tra valori|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  

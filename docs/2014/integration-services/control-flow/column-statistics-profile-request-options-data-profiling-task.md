@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832762"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Statistiche di colonna (Attività Profiling dati)
@@ -43,7 +43,7 @@ ms.locfileid: "62832762"
   
  Per ulteriori informazioni, vedere la sezione "Opzioni TableorView" in questo argomento.  
   
- **Column**  
+ **Colonna**  
  Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per analizzare tutte le colonne.  
   
  Per ulteriori informazioni, vedere la sezione "Opzioni Column" in questo argomento.  
@@ -57,7 +57,7 @@ ms.locfileid: "62832762"
   
 #### <a name="column-options"></a>Opzioni relative alle colonne  
  **IsWildCard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
  Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  

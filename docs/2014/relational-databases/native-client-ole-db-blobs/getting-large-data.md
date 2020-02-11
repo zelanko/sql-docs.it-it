@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195230"
 ---
 # <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
-  In generale, i consumer devono isolare il codice che crea una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto di archiviazione del provider OLE DB Native Client da altro codice che gestisce i dati non viene fatto riferimento tramite un **ISequentialStream** puntatore a interfaccia.  
+  In generale, i consumer devono isolare il codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che crea un oggetto di archiviazione del provider OLE DB di Native Client da altro codice che gestisce i dati a cui non viene fatto riferimento tramite un puntatore a interfaccia **ISequentialStream** .  
   
  In questo argomento vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63195230"
   
 -   ICommand::Execute  
   
- Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al **GetNextRows**  metodo perché i dati BLOB non viene memorizzato nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
+ Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà del set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al metodo **GetNextRows** perché i dati BLOB non vengono memorizzati nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non recupera dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene richiesto di farlo dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non recupera dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grandi dimensioni da fino a quando non viene richiesto dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperato un valore di dati di grandi dimensioni da una singola colonna:  
@@ -147,6 +147,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti BLOB e OLE](blobs-and-ole-objects.md)   
- [Uso di tipi valore di grandi dimensioni](../native-client/features/using-large-value-types.md)  
+ [Utilizzo di tipi di dati per valori di grandi dimensioni](../native-client/features/using-large-value-types.md)  
   
   

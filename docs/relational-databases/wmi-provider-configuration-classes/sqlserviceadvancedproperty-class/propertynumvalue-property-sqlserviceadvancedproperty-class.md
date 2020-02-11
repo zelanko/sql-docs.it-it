@@ -18,10 +18,10 @@ ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 724d5b531f15d94a686c91f71e8cfee5ef83e239
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659530"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Proprietà PropertyNumValue (classe SqlServiceAdvancedProperty)

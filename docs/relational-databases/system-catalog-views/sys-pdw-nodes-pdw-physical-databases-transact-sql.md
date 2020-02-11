@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399913"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "74399913"
 
   Contiene una riga per ogni database fisico in un nodo di calcolo. Aggregare le informazioni fisiche del database per ottenere informazioni dettagliate sui database. Per combinare le informazioni, unire `sys.pdw_nodes_pdw_physical_databases` le alle `sys.pdw_database_mappings` tabelle `sys.databases` e.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID oggetto per il database. Si noti che questo valore non corrisponde a un database_id nella vista [&#41;Transact-SQL &#40;sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
 |physical_name|**sysname**|Nome fisico del database nei nodi della shell/calcolo. Questo valore è uguale a un valore nella colonna physical_name della vista [&#41;Transact-SQL sys. pdw_database_mappings &#40;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
@@ -87,7 +87,7 @@ SELECT TOP 1 encryption_state
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. pdw_database_mappings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

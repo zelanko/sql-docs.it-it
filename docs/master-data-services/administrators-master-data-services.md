@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729798"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729798"
   
  Ogni modello può avere più amministratori. Ogni utente può essere un amministratore di uno, alcuni o tutti i modelli della distribuzione [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Amministratori di entità  
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente che dispone delle autorizzazioni di amministratore assegnate all'oggetto entità nella scheda oggetti modello. Quando un utente dispone di autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per oggetti e membri modello) sono sostituite dalle autorizzazioni di amministratore e vengono ignorate.  
@@ -66,7 +66,7 @@ ms.locfileid: "73729798"
   
 |Tipo di amministratore|Descrizione|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
 |Amministratore di modelli|Può essere un amministratore di modelli in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nel modello specifico.|  
 |Amministratore di entità|Può essere un amministratore di entità in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nell'entità specifica.<br /><br /> Può approvare gli insiemi di modifiche in sospeso se le modifiche all'entità richiedono l'approvazione.|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73729798"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Creare un database Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Creazione di un database di Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

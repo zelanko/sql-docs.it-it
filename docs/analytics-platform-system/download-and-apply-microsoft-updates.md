@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401197"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare Microsoft Updates for Analytics Platform System
@@ -26,7 +26,7 @@ In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalo
 >   
 > Non applicare gli aggiornamenti Microsoft mentre l'appliance è in uso. L'applicazione di aggiornamenti può causare il riavvio del nodo Appliance. Gli aggiornamenti devono essere applicati durante una finestra di manutenzione quando l'appliance non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Prima di eseguire questi passaggi, è necessario:  
   
 -   Configurare WSUS nell'appliance seguendo le istruzioni riportate in [configure Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  

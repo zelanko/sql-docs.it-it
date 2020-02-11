@@ -16,10 +16,10 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056228"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
@@ -41,32 +41,32 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` è il nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @rowcount_only = ] 'rowcount_only'` indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* è di **smallint** . i possibili valori sono i seguenti.  
+`[ @rowcount_only = ] 'rowcount_only'`Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* è di **smallint** . i possibili valori sono i seguenti.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: quando un articolo viene filtrato orizzontalmente, viene eseguita un'operazione di conteggio delle righe anziché un'operazione di checksum.|  
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
-|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: per i sottoscrittori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0, viene eseguita solo una convalida con conteggio delle righe.|  
+|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i sottoscrittori della versione 7,0, viene eseguita solo una convalida tramite conteggio delle righe.|  
   
-`[ @full_or_fast = ] 'full_or_fast'` è il metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint** . i possibili valori sono i seguenti.  
+`[ @full_or_fast = ] 'full_or_fast'`Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint** . i possibili valori sono i seguenti.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più rapido rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) viene aggiornato in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
-|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
+|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è null e il stored procedure viene usato per ottenere il valore, viene sempre usato un conteggio completo (*).|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'` indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
+`[ @shutdown_agent = ] 'shutdown_agent'`Indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
   
-`[ @publisher = ] 'publisher'` specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta la convalida in un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convalida in un server di pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -80,9 +80,9 @@ sp_publication_validation [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati nel Sottoscrittore](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [Convalida dei dati nel Sottoscrittore](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [sp_article_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

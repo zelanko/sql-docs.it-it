@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813252"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Visualizzazione delle Proprietà dei gruppi di disponibilità (SQL Server)
@@ -24,22 +24,22 @@ ms.locfileid: "62813252"
   
 
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per visualizzare e modificare le proprietà di un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
 2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
-3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui si desidera visualizzare le proprietà e selezionare il comando **Proprietà** .  
+3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui visualizzare le proprietà e scegliere il comando **Proprietà** .  
   
-4.  Nella finestra di dialogo **Proprietà gruppo di disponibilità** , utilizzare le pagine **Generale** e **Preferenze di backup** per visualizzare e, talvolta, modificare le proprietà del gruppo di disponibilità selezionato. Per altre informazioni, vedere [proprietà gruppo di disponibilità e nuovo gruppo di disponibilità &#40;pagina Generale&#41; ](availability-group-properties-new-availability-group-general-page.md) e [le proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità &#40;pagina delle preferenze di Backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  Nella finestra di dialogo **Proprietà gruppo di disponibilità** , utilizzare le pagine **Generale** e **Preferenze di backup** per visualizzare e, talvolta, modificare le proprietà del gruppo di disponibilità selezionato. Per altre informazioni, vedere [Proprietà dei gruppi di disponibilità/Nuovo gruppo di disponibilità &#40;pagina Generale&#41;](availability-group-properties-new-availability-group-general-page.md) e [Proprietà dei gruppi di disponibilità/Nuovo gruppo di disponibilità &#40;pagina Preferenze di backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Utilizzare la pagina **Autorizzazioni** per visualizzare gli account di accesso, i ruoli e le autorizzazioni esplicite correnti associati al gruppo di disponibilità. Per ulteriori informazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per visualizzare le proprietà e lo stato di un gruppo di disponibilità**  
   
  Per eseguire una query sulle proprietà e sugli stati dei gruppi di disponibilità per cui l'istanza del server ospita una replica di disponibilità, utilizzare le viste seguenti:  
@@ -64,13 +64,13 @@ ms.locfileid: "62813252"
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per visualizzare le informazioni sui gruppi di disponibilità**  
   
--   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -101,6 +101,6 @@ ms.locfileid: "62813252"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [monitorare gruppi di disponibilità &#40;Transact-SQL&#41; ](monitor-availability-groups-transact-sql.md) [criteri AlwaysOn per problemi operativi con AlwaysOn I gruppi di disponibilità &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [monitorare i gruppi di disponibilità &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md) [criteri AlwaysOn per problemi operativi con](always-on-policies-for-operational-issues-always-on-availability.md) gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; 
   
   

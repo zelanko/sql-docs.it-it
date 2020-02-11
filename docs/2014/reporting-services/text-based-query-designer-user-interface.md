@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891323"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interfaccia utente di Progettazione query basata su testo
@@ -30,16 +30,16 @@ ms.locfileid: "68891323"
   
 -   **Query** di Consente di visualizzare il testo della query, il nome della tabella o il nome della stored procedure.  
   
--   **Risultato** Consente di visualizzare i risultati della query eseguita in fase di progettazione.  
+-   **Risultato** Mostra i risultati dell'esecuzione della query in fase di progettazione.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query basata su testo  
  La finestra Progettazione query basata su testo include una sola barra degli strumenti per tutti i tipi di comandi. Nella tabella seguente sono elencati tutti i pulsanti contenuti nella barra degli strumenti con la rispettiva funzione.  
   
-|Button|Descrizione|  
+|Pulsante|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
+|![Eseguire la query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
 |**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati. Si noti che se un stored procedure restituisce più di un set di risultati, per popolare il set di dati viene utilizzato solo il primo set di risultati.<br /><br /> Il supporto per il tipo di comando varia in base al tipo di origine dati. Ad esempio, solo OLE DB e ODBC supportano **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Tipo di comando Text  
@@ -55,13 +55,13 @@ ms.locfileid: "68891323"
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|  
   
 #### <a name="example"></a>Esempio  
- La query seguente restituisce l'elenco dei cognomi dalla tabella `Contact` del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
+ La query seguente restituisce l'elenco dei cognomi dalla tabella [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] del database `Contact`:  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- È possibile utilizzare qualsiasi istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] per tipo di comando Text, comprese le istruzioni `EXEC`. La query seguente chiama la stored procedure `uspGetEmployeeManagers` di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] e restituisce la struttura gerarchica per il dipendente con numero di identificazione 1.  
+ È possibile utilizzare qualsiasi istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] per tipo di comando Text, comprese le istruzioni `EXEC`. La query seguente chiama la stored procedure [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] di `uspGetEmployeeManagers` e restituisce la struttura gerarchica per il dipendente con numero di identificazione 1.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -73,7 +73,7 @@ EXEC uspGetEmployeeManagers 1;
  Quando si seleziona **Tipo di comando StoredProcedure**, la finestra Progettazione query basata su testo mostra due riquadri, il riquadro Query e il riquadro Risultati. Immettere il nome della stored procedure nel riquadro Query e fare clic su **Esegui** sulla barra degli strumenti. Verrà visualizzata la finestra di dialogo Definisci parametri query. Immettere i valori dei parametri per la stored procedure. Per ogni parametro della stored procedure viene creato un parametro di report.  
   
 #### <a name="example"></a>Esempio  
- La query seguente chiama la stored procedure `uspGetEmployeeManagers` di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del dipendente.  
+ La query seguente chiama la stored procedure [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] di `uspGetEmployeeManagers`. Quando si esegue la query, è necessario immettere un valore per il parametro del numero di identificazione del dipendente.  
   
 ```  
 uspGetEmployeeManagers;  
@@ -90,12 +90,12 @@ uspGetEmployeeManagers;
  Quando si immette il nome della tabella Sales. Customer, è l'equivalente della creazione dell' [!INCLUDE[tsql](../includes/tsql-md.md)] istruzione `SELECT * FROM Sales.Customer;`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di progettazione query in Progettazione report &#40;SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Strumenti di progettazione query in Progettazione report SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tipo di connessione OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Tipo &#40;di connessione ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Tipo di connessione ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [File di configurazione RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner - file di configurazione](report-server/rsreportdesigner-configuration-file.md)  
   
   

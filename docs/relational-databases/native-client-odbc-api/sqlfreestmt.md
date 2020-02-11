@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b985db3cb58a7029a3b5ec489d2e23b0c1292919
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786736"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
@@ -30,7 +30,7 @@ ms.locfileid: "73786736"
  In generale, è più efficiente riutilizzare le istruzioni anziché eliminarle e allocarne di nuove. Tuttavia, in alcune situazioni, come il riutilizzo delle istruzioni, è ancora necessario usare SQLFreeStmt.  
   
 ## <a name="see-also"></a>Vedere anche  
-   [funzione SQLFreeStmt](https://go.microsoft.com/fwlink/?LinkId=59346)  
- [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLFreeStmt (funzione)](https://go.microsoft.com/fwlink/?LinkId=59346)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

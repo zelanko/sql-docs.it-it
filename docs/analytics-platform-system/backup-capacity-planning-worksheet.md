@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401339"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Foglio di data warehouse della pianificazione della capacità del server di backup-parallelo
@@ -33,7 +33,7 @@ Questo foglio di esecuzione è un supplemento alle istruzioni in [acquisire e co
   
 Stampare questo foglio di lavoro e compilarlo con i propri requisiti.  
   
-|Componente|Requisito|Compilare questo articolo con i propri requisiti|Raccomandazioni|  
+|Componente|Requisito|Compilare questo articolo con i propri requisiti|Consigli|  
 |-------------|---------------|--------------------------------------------------|-------------------|  
 |Archiviazione|Numero massimo di byte che si prevede di archiviare nel server di backup in un determinato periodo di tempo.|![Icona a forma di matita](media/pencil-icon.png "Icona a forma di matita")|Per determinare i requisiti di archiviazione, determinare la quantità di dati che si prevede di archiviare nel server di backup in un determinato periodo di tempo.<br /><br />I dati di backup vengono archiviati nel server di backup in formato compresso. I tassi di compressione dei dati dipendono dalle caratteristiche dei dati.<br /><br />Ad esempio, come stima approssimativa, è consigliabile stimare un rapporto di compressione 7:1 rispetto alla dimensione dei dati non compressi. Si presuppone che almeno il 80% dei dati sia archiviato negli indici columnstore cluster. Se, ad esempio, si dispone di 700 GB di dati non compressi in un database ed è archiviato in indici columnstore cluster, è possibile stimare che il backup del database necessiti di circa 100 GB.<br /><br />Se si prevede di avere più copie dei backup del database nel server di backup, è necessario tenerne conto.<br /><br />Ad esempio, se si prevede di eseguire il backup di 10 database contenenti ogni 5 TB di dati non compressi, i database avranno dimensioni combinate di 50 TB. Se si prevede di eseguire il backup di questi 10 database ogni giorno per 5 giorni in una riga, le dimensioni totali non compresse sono 250 TB. Factoring in un rapporto di compressione 7:1, sarà necessario 250/7 = 35,7 TB di spazio di archiviazione nel server di backup. È consigliabile essere prudenti e ottenere circa il 30% di capacità aggiuntiva per tenere conto delle variazioni e aumentare.  In questo esempio, 46,6 TB sarebbe migliore.|  
 |Rete|Tipo di connessione di rete.|![Icona a forma di matita](media/pencil-icon.png "Icona a forma di matita")|Determinare il tipo di connessione di rete migliore che può soddisfare i requisiti della velocità di caricamento.<br /><br />Ad esempio, InfiniBand o 10 Gbit Ethernet fornirà le tariffe di caricamento ottimali. 1Gbit Ethernet limiterà le tariffe di carico a 360 GB all'ora o meno.|  

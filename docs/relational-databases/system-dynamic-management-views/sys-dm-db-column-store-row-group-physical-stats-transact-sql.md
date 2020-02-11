@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c676f82f3bf424638fcb6a2705853a5ff482921c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254468"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
@@ -35,14 +35,14 @@ Fornisce informazioni aggiornate a livello di rowgroup su tutti gli indici colum
 
 Viene estesa la vista del catalogo [sys. column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella sottostante.|  
 |**index_id**|**int**|ID dell'indice columnstore in *object_id* tabella.|  
 |**partition_number**|**int**|ID della partizione della tabella che include *row_group_id*. È possibile utilizzare il partition_number per creare un join di questa DMV a sys.partitions.|  
 |**row_group_id**|**int**|ID di questo gruppo di righe. Per le tabelle partizionate, il valore è univoco all'interno della partizione.<br /><br /> -1 per una coda in memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id per un gruppo di righe nell'archivio Delta.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio Delta.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
-|**stato**|**tinyint**|Numero ID associato *state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = RIMOZIONE DEFINITIVA<br /><br /> COMPRESSO è l'unico stato che si applica alle tabelle in memoria.|  
+|**state**|**tinyint**|Numero ID associato *state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = RIMOZIONE DEFINITIVA<br /><br /> COMPRESSO è l'unico stato che si applica alle tabelle in memoria.|  
 |**state_desc**|**nvarchar (60)**|Descrizione dello stato del gruppo di righe:<br /><br /> INVISIBILE: gruppo di righe in fase di compilazione. Ad esempio: <br />Un gruppo di righe nel columnstore è invisibile mentre i dati vengono compressi. Al termine della compressione, un'opzione di metadati modifica lo stato del gruppo di righe columnstore da invisibile a compresso e lo stato del gruppo di righe deltastore da chiuso a contrassegnato per la rimozione definitiva.<br /><br /> OPEN: gruppo di righe deltastore che accetta nuove righe. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: gruppo di righe nell'archivio Delta che contiene il numero massimo di righe ed è in attesa del processo del motore di Tuple per comprimerlo nel columnstore.<br /><br /> COMPRESSO: gruppo di righe compresso con la compressione columnstore e archiviato nel columnstore.<br /><br /> TOMBSTONE: gruppo di righe precedentemente presente in deltastore e non più utilizzato.|  
 |**total_rows**|**bigint**|Numero di righe archiviate fisicamente nel gruppo di righe. Per gruppi di righe compressi. Include le righe contrassegnate come eliminate.|  
 |**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente in un gruppo di righe compresso contrassegnate per l'eliminazione.<br /><br /> 0 per i gruppi di righe presenti nell'archivio differenziale.|  
@@ -87,7 +87,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Architettura degli indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

@@ -11,10 +11,10 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729327"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
@@ -28,7 +28,8 @@ ms.locfileid: "73729327"
   
 1.  Utilizzare [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per convalidare un'entità che avvia un flusso di lavoro.  
   
-2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] invia i membri che soddisfano le condizioni delle regole business a una coda di Service Broker nel database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  
+  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] invia i membri che soddisfano le condizioni delle regole business a una coda di Service Broker nel database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  A intervalli regolari SQL Server MDS Workflow Integration Service chiama una stored procedure nel database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -90,7 +91,9 @@ ms.locfileid: "73729327"
     </setting>  
     ```  
   
-     Il testo interno del tag \<value> è nel formato \<tag del flusso di lavoro>=\<nome di tipo del flusso di lavoro qualificato dall'assembly>. \<tag del flusso di lavoro> è il nome usato per identificare l'assembly del gestore del flusso di lavoro quando si crea una regola business in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nome di tipo del flusso di lavoro qualificato dall'assembly> è il nome qualificato con lo spazio dei nomi della classe del flusso di lavoro, seguito da una virgola e dal nome visualizzato dell'assembly. Se il nome dell'assembly è sicuro, è necessario includere anche le informazioni sulla versione e l'oggetto PublicKeyToken. È possibile includere più tag \<setting> se sono stati creati più gestori del flusso di lavoro per diversi tipi di flussi di lavoro.  
+     Il testo interno del tag \<value> è nel formato \<tag del flusso di lavoro>=\<nome di tipo del flusso di lavoro qualificato dall'assembly>. 
+  \<tag del flusso di lavoro> è il nome usato per identificare l'assembly del gestore del flusso di lavoro quando si crea una regola business in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. 
+  \<nome di tipo del flusso di lavoro qualificato dall'assembly> è il nome qualificato con lo spazio dei nomi della classe del flusso di lavoro, seguito da una virgola e dal nome visualizzato dell'assembly. Se il nome dell'assembly è sicuro, è necessario includere anche le informazioni sulla versione e l'oggetto PublicKeyToken. È possibile includere più tag \<setting> se sono stati creati più gestori del flusso di lavoro per diversi tipi di flussi di lavoro.  
   
 > [!NOTE]  
 >  A seconda della configurazione del server, è possibile che venga visualizzato l'errore "Accesso negato" quando si tenta di salvare il file Microsoft.MasterDataServices.Workflow.exe.config. In tal caso, disabilitare temporaneamente la funzionalità Controllo dell'account utente nel server. A tale scopo, aprire il Pannello di controllo e fare clic su **Sistema e sicurezza**. In **Centro notifiche** fare clic su **Modifica impostazioni di Controllo dell'account utente**. Nella finestra di dialogo **Impostazioni di Controllo account utente** far scorrere la barra verso il basso in modo da non ricevere alcuna notifica. Riavviare il computer e ripetere i passaggi precedenti per modificare il file di configurazione. Dopo avere salvato il file, reimpostare le impostazioni del Controllo dell'account utente sul livello predefinito.  

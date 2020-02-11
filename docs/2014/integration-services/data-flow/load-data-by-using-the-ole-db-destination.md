@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902433"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Caricamento dei dati tramite la destinazione OLE DB
@@ -42,7 +42,7 @@ ms.locfileid: "62902433"
   
     -   **Tabella o vista** Selezionare una tabella o una vista nel database che contiene i dati.  
   
-    -   **Tabella o vista - Caricamento rapido** Selezionare una tabella o vista nel database che contiene i dati e quindi impostare le opzioni di caricamento rapido: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Vincolo Check**, **Righe per batch** o **Dimensioni massime commit inserimento**.  
+    -   **Tabella o vista - Caricamento rapido** Selezionare una tabella o una vista nel database che contiene i dati e quindi impostare le opzioni relative al caricamento rapido: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Verifica vincoli**, **Righe per batch**o **Dimensioni massime commit inserimento**.  
   
     -   **Variabile nome vista o nome tabella** Selezionare una variabile definita dall'utente contenente il nome di una tabella o vista del database.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62902433"
     > [!NOTE]  
     >  La destinazione OLE DB esegue automaticamente il mapping delle colonne con lo stesso nome.  
   
-9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Configurare un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md).  
   
 10. Fare clic su **OK**.  
   

@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579350"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Report drill-through (Generatore report e SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65579350"
 > [!NOTE]  
 >  Quando si utilizza Generatore report, per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
- Per iniziare rapidamente a usare report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Per una rapida introduzione ai report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parametri nei report drill-through  
  In un report drill-through sono contenuti in genere i parametri passati a tale report dal report di riepilogo. Nel report di riepilogo di esempio relativo alle vendite è contenuto il campo [OrderNumber] in una casella di testo di una cella della tabella. Nel report drill-through è contenuto un parametro che accetta il numero di ordine come valore. Quando si imposta il collegamento al report drill-through nella casella di testo per [OrderNumber], è necessario impostare il parametro per il report di destinazione su [OrderNumber]. Quando l'utente fa clic sul numero di ordine nel report di riepilogo, verrà aperto un report dettagliato di destinazione in cui vengono visualizzate le informazioni relative al numero di ordine. Per visualizzare istruzioni sulla personalizzazione di report drill-through basati sui valori dei parametri, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Funzione InScope &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

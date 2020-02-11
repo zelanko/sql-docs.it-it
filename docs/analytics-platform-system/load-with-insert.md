@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401025"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con INSERT in Parallel data warehouse
@@ -124,8 +124,8 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
   
 |Tipo di valore letterale|Format|Regole di conversione|  
 |------------|------|----------------|
-|Valore letterale stringa in formato **Integer**|'nnnnnnnnnnnnnn'<br /><br />Esempio:' 321312313123'| Nessuno |  
-|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno|  
+|Valore letterale stringa in formato **Integer**|'nnnnnnnnnnnnnn'<br /><br />Esempio:' 321312313123'| nessuno |  
+|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| nessuno|  
 |Valore letterale decimale|nnnnnn. nnnnn<br /><br />Esempio: 123344,34455|I valori a destra del separatore decimale vengono troncati.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipi di dati Money e smallmoney  
@@ -148,17 +148,17 @@ Nella tabella seguente vengono definiti i formati e le regole accettati per l'in
   
 |Tipo di valore letterale|Format|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa|Formato:' stringa di caratteri '<br /><br />Esempio:' ABC '| Nessuno|  
-|Valore letterale stringa Unicode|Formato: N'character String '<br /><br />Esempio: N'ABC '|  Nessuno |  
-|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno |  
-|Valore letterale decimale|Formato: nnnnnn. nnnnnnn<br /><br />Esempio: 12344,34455| Nessuno |  
+|Valore letterale stringa|Formato:' stringa di caratteri '<br /><br />Esempio:' ABC '| nessuno|  
+|Valore letterale stringa Unicode|Formato: N'character String '<br /><br />Esempio: N'ABC '|  nessuno |  
+|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| nessuno |  
+|Valore letterale decimale|Formato: nnnnnn. nnnnnnn<br /><br />Esempio: 12344,34455| nessuno |  
 |Valore letterale money|Formato: $nnnnnn. nnnnn<br /><br />Esempio: $123456,99|Il simbolo di valuta non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Questo corrisponde al formato dello strumento **dwloader** , che considera ogni valore letterale come valore letterale stringa.<br /><br />Virgole non consentite.<br /><br />Se il numero di cifre dopo il separatore decimale è maggiore di 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123,946789 viene inserito come 123,95.<br /><br />Quando si usa la funzione CONVERT per inserire valori letterali Money, è consentito solo lo stile predefinito 0 (nessuna virgola e 2 cifre dopo il separatore decimale).|  
 
   
 ## <a name="see-also"></a>Vedere anche  
  
 [Dati distribuiti](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERIRE](../t-sql/statements/insert-transact-sql.md)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

@@ -18,18 +18,18 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933861"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un messaggio di errore definito dall'utente specificato da un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Messaggi definiti dall'utente possono essere visualizzati utilizzando il **Sys. Messages** vista del catalogo.  
+  Elimina un messaggio di errore definito dall'utente specificato da un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. I messaggi definiti dall'utente possono essere visualizzati utilizzando la vista del catalogo **sys. messages** .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,26 +40,26 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @msgnum = ] message_number` È il numero di messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente che ha un numero maggiore di 50000. *message_number* viene **int**, con un valore predefinito è NULL.  
+`[ @msgnum = ] message_number`Numero del messaggio da eliminare. *message_number* deve essere un messaggio definito dall'utente con un numero di messaggio maggiore di 50000. *message_number* è di **tipo int**e il valore predefinito è null.  
   
-`[ @lang = ] 'language'` È la lingua del messaggio da eliminare. Se **tutte** è specificato, tutte le versioni localizzate dei *message_number* vengono eliminati. *linguaggio* viene **sysname**, con un valore predefinito è NULL.  
+`[ @lang = ] 'language'`Lingua del messaggio da eliminare. Se si specifica **All** , vengono eliminate tutte le versioni in lingua *message_number* . *Language* è di **tipo sysname**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
  No.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** e **serveradmin** ruoli predefiniti del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-## <a name="remarks"></a>Note  
- A meno che non **tutti i** è specificato per *language*, localizzate tutte le versioni di un messaggio devono essere eliminate prima degli Stati Uniti È possibile eliminare la versione inglese del messaggio.  
+## <a name="remarks"></a>Osservazioni  
+ A meno che non sia specificato **All** per *Language*, è necessario eliminare tutte le versioni localizzate di un messaggio prima che sia possibile eliminare la versione inglese (Stati Uniti) del messaggio.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-a-user-defined-message"></a>R. Eliminazione di un messaggio definito dall'utente  
- Nell'esempio seguente viene eliminato un messaggio definito dall'utente, numero `50001`, dalla **Sys. Messages**.  
+ Nell'esempio seguente viene eliminato un messaggio definito dall'utente, `50001`Number, da **sys. messages**.  
   
 ```  
 USE master;  
@@ -132,9 +132,9 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [sp_addmessage &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_altermessage &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;&#41;Transact-SQL](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

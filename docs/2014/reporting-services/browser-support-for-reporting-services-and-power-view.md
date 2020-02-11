@@ -9,19 +9,19 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241197"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925789"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Pianificazione per il supporto browser per Reporting Services e Power View (Reporting Services 2014)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] viene usato un Web browser per visualizzare i report ed eseguire Gestione report. Solo alcuni browser supportano tutte le funzionalità report. In questo argomento viene descritto il supporto e i requisiti per le funzionalità di gestione di Gestione report, per la visualizzazione dei report e i comandi del visualizzatore di report in Visual Studio. Viene inoltre riepilogata la disponibilità delle funzionalità per i browser supportati, i requisiti di autenticazione e i requisiti di script.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modalità SharePoint | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modalità nativa  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 - [Scenari del browser per Power View](#bkmk_powerview)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75241197"
   
 - Per ulteriori informazioni sul supporto browser per SharePoint 2010, vedere [pianificare il supporto browser (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|  
@@ -74,7 +74,7 @@ ms.locfileid: "75241197"
   
 -   Per ulteriori informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in sharepoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|  
@@ -101,7 +101,7 @@ ms.locfileid: "75241197"
 
  Di seguito è riportato l'elenco corrente delle funzionalità e dei browser supportati con il visualizzatore di report. Il visualizzatore di report supporta la visualizzazione dei report da Gestione report e dalle raccolte di SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|**Browser**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6-7 per iPad**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6-7 per iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|Non supportate|Non supportate|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportate|Non supportate|Non supportate|Non supportate|  
@@ -158,7 +158,7 @@ ms.locfileid: "75241197"
 
  Il controllo server Web ReportViewer è utilizzato per incorporare la funzionalità del report in un'applicazione Web ASP.NET. I controlli sono inclusi con Visual Studio e supportano browser diversi e versioni di browser differenti rispetto agli altri componenti descritti in questo argomento. Il tipo di browser utilizzato per visualizzare l'applicazione determina il tipo di funzionalità di ReportViewer che è possibile fornire nell'applicazione. Utilizzare la tabella fornita in questo argomento per determinare quali browser supportati sono soggetti a restrizioni di funzionalità e quali piattaforme sono supportate.  
   
- A causa delle differenze nei motori di rendering dei browser supportati, è possibile che alcune funzionalità avanzate del report siano visualizzate in modo diverso nei vari browser.  Ad esempio, la rotazione del testo.  
+ A causa delle differenze nei motori di rendering dei browser supportati, è possibile che alcune funzionalità avanzate del report siano visualizzate in modo diverso in browser diversi.  Ad esempio, la rotazione del testo.  
   
 ### <a name="scripting-requirements"></a>Requisiti di script
 

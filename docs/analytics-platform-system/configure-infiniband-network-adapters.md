@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401297"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per il sistema di piattaforma Analytics
 Viene descritto come configurare le schede di rete InfiniBand in un server client non Appliance per la connessione al nodo di controllo in Parallel data warehouse (PDW). Usare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, il backup e altri processi si connettano automaticamente alla rete InfiniBand attiva.  
   
-## <a name="Basics"></a>Description  
+## <a name="Basics"></a>Descrizione  
 Queste istruzioni illustrano come trovare e quindi impostare gli indirizzi IP InfiniBand e le subnet mask corretti sul server connesso a InfiniBand. Spiegano inoltre come impostare il server per l'uso del DNS del dispositivo APS, in modo che la connessione venga risolta nella rete InfiniBand attiva.  
   
 Per la disponibilità elevata, gli APS hanno due reti InfiniBand, una attiva e una passiva. Ogni rete InfiniBand ha un indirizzo IP diverso per il nodo di controllo. Se la rete InfiniBand attiva si interrompe, la rete InfiniBand passiva diventa la rete attiva. Quando si verifica questo errore, uno script o un processo si connette automaticamente alla rete InfiniBand attiva senza modificare i parametri dello script.  
@@ -53,7 +53,7 @@ Ad esempio, se il nome dell'area PDW è MyPDW e il nome del dispositivo è MyAPS
   
 È necessario disporre di un account di Windows nel server client che disponga dell'autorizzazione per configurare le schede di rete.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Queste istruzioni presuppongono che il server client sia già stato rack e cablato alla rete InfiniBand dell'appliance. Per istruzioni su rack e cablaggio, vedere [acquisire e configurare un server di caricamento](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Osservazioni generali  

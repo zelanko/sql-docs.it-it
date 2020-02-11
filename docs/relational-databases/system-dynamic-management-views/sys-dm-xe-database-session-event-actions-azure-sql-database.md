@@ -1,5 +1,5 @@
 ---
-title: sys. dm_xe_database_session_event_actions
+title: sys.dm_xe_database_session_event_actions
 titleSuffix: Azure SQL Database
 ms.custom: seo-lt-2019
 ms.date: 06/10/2016
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 322a54a4f3bbd5f4880df6f52a085f5d7141d335
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844447"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (database SQL di Azure)
@@ -25,14 +25,14 @@ ms.locfileid: "73844447"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e tutte le versioni future.|  
+|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e a qualsiasi versione futura.|  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
-|action_name|**nvarchar(60)**|Nome dell'azione. Non ammette i valori Null.|  
+|action_name|**nvarchar (60)**|Nome dell'azione. Non ammette i valori Null.|  
 |action_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'azione. Non ammette i valori Null.|  
-|event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
+|event_name|**nvarchar (60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
 |event_package_guid|**uniqueidentifier**|GUID per il pacchetto che contiene l'evento. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -40,7 +40,7 @@ ms.locfileid: "73844447"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|Relazione|  
+|Da|A|Relazione|  
 |----------|--------|------------------|  
 |sys. dm_xe_database_session_event_actions. event_session_address|sys. dm_xe_database_sessions. Address|Molti-a-uno|  
 |sys. dm_xe_database_session_event_actions. action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys. dm_xe_database_session_events. event_package_guid|Molti-a-uno|  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f57167c975635be7c72c8a80cd9ddff9fe244ad4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f01656c93d6699403657e970034076200255d0f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965573"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928015"
 ---
 # <a name="parentcatalog-property-example-vc"></a>Esempio della proprietà ParentCatalog (VC++)
-Il codice seguente illustra come usare il [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) proprietà per accedere a una proprietà specifica del provider prima di aggiungere una tabella a un catalogo. La proprietà è **AutoIncrement**, che consente di creare un campo incremento automatico in un database Microsoft Jet.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) per accedere a una proprietà specifica del provider prima di aggiungere una tabella a un catalogo. La proprietà è **AutoIncrement**, che consente di creare un campo di incremento automatico in un database Microsoft Jet.  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  
@@ -94,7 +94,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateAutoIncrColumnX...."<< endl;  
+      cout << "Error occurred in CreateAutoIncrColumnX...."<< endl;  
    }  
   
    m_pCatalog = NULL;  

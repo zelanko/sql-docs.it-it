@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400876"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in parallelo data warehouse
@@ -22,7 +22,7 @@ Questo articolo descrive i requisiti e le opzioni per la gestione delle autorizz
 ## <a name="BackupRestoreBasics"></a>Nozioni di base sulle autorizzazioni motore di database  
 Motore di database autorizzazioni per SQL Server PDW vengono gestite a livello di server tramite gli account di accesso e a livello di database tramite gli utenti del database e i ruoli del database definiti dall'utente.  
   
-**Account**  
+**Logins**  
 Gli account di accesso sono account utente singoli per accedere al SQL Server PDW. SQL Server PDW supporta gli account di accesso che utilizzano l'autenticazione di Windows e l'autenticazione SQL Server.  Gli account di accesso con autenticazione di Windows possono essere utenti di Windows o gruppi di Windows di qualsiasi dominio ritenuto attendibile da SQL Server PDW. Gli account di accesso con autenticazione SQL Server vengono definiti e autenticati da SQL Server PDW e devono essere creati specificando una password.  
   
 I membri del ruolo predefinito del server **sysadmin** , ad esempio l'account di accesso **sa** , possono connettersi a un database senza che sia stato eseguito il mapping a un utente del database. Viene eseguito il mapping all'utente **dbo** . Anche il proprietario del database viene mappato come utente **dbo** .  
@@ -210,7 +210,7 @@ Il sistema dei ruoli predefiniti del server e dei ruoli predefiniti del database
   
 ![Ruoli predefiniti del database per la sicurezza APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
-### <a name="related-content"></a>Contenuti correlati  
+### <a name="related-content"></a>Contenuto correlato  
   
 -   Per creare ruoli definiti dall'utente, vedere [creare un ruolo](../t-sql/statements/create-role-transact-sql.md).  
   

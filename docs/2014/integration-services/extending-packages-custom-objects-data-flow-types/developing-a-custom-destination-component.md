@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768977"
 ---
 # <a name="developing-a-custom-destination-component"></a>Sviluppo di un componente di destinazione personalizzato
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di destinazione personalizzati in grado di connettersi a un'origine dati personalizzata e archiviarvi i dati. I componenti di destinazione personalizzati risultano utili quando è necessario connettersi a origini dati che non sono accessibili tramite uno dei componenti di destinazione disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre agli sviluppatori la possibilità di scrivere componenti di destinazione personalizzati in grado di connettersi ai dati e archiviarli in qualsiasi origine dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personalizzata. I componenti di destinazione personalizzati risultano utili quando è necessario connettersi a origini dati che non sono accessibili tramite uno dei componenti di destinazione disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  I componenti di destinazione includono uno o più input e nessun output. In fase di progettazione creano e configurano connessioni e leggono metadati di colonne dall'origine dati esterna. Durante l'esecuzione si connettono all'origine dati esterna e vi aggiungono le righe ricevute dai componenti a monte nel flusso di dati. Se l'origine dati esterna esiste prima dell'esecuzione del componente, il componente di destinazione deve anche assicurarsi che i tipi di dati delle colonne ricevute corrispondano ai tipi di dati delle colonne presenti nell'origine dati esterna.  
   
@@ -481,7 +481,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un componente di origine personalizzato](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   

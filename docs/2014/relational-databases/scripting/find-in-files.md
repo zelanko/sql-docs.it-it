@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245170"
 ---
 # <a name="find-in-files"></a>Cerca nei file
-  La scheda **Cerca nei file** della finestra Trova e Sostituisci consente di cercare una stringa o un'espressione nel codice di un set di file specificato. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  
+  La scheda **Cerca nei file** della finestra Trova e sostituisci consente di cercare una stringa o un'espressione nel codice di un set di file specificato. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  
   
  Per visualizzare la finestra di dialogo **Cerca e sostituisci** , sono inoltre disponibili i pulsanti della barra degli strumenti e i tasti di scelta rapida.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75245170"
 > [!NOTE]  
 >  Se l'opzione selezionata in **Cerca in** interessa un file estratto dal controllo del codice sorgente, la ricerca verrà eseguita solo nella versione del file scaricata sul computer locale.  
   
- **Cerca in**  
+ **Look in**  
  Selezionare un ambito di ricerca predefinito dall'elenco oppure usare la finestra di dialogo **Seleziona cartelle di ricerca** per specificare un set di directory personalizzato.  
   
  **Documento corrente**  
@@ -72,7 +72,7 @@ ms.locfileid: "75245170"
  È possibile espandere o comprimere la sezione **Opzioni di ricerca** . Le opzioni seguenti possono essere selezionate o deselezionate.  
   
  **Maiuscole/minuscole**  
- Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono per il contenuto e per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **MioOggetto** con la casella **Maiuscole/minuscole** selezionata restituirà "MioOggetto" ma non "miooggetto" o "MIOOGGETTO".  
+ Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono sia per il contenuto che per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **MioOggetto** con la casella **Maiuscole/minuscole** selezionata restituirà "MioOggetto" ma non "miooggetto" o "MIOOGGETTO".  
   
  **Parola intera**  
  Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono alle parole complete. La ricerca di **MioOggetto** restituirà quindi "MioOggetto", ma non "CMioOggetto" o "MioOggettoC."  
@@ -80,13 +80,13 @@ ms.locfileid: "75245170"
  **Uso**  
  Indica come interpretare i caratteri speciali immessi nella casella di testo **Trova** o **Sostituisci con** . Sono disponibili le opzioni **Caratteri jolly** ed **Espressioni regolari**.  
   
- **Espressioni regolari**  
+ **Regular Expressions**  
  È possibile definire i modelli del testo di cui si desidera ottenere le corrispondenze utilizzando notazioni speciali. Per un elenco, vedere [Trova con espressioni regolari](search-text-with-regular-expressions.md).  
   
- **I caratteri jolly**  
+ **Caratteri jolly**  
  I caratteri speciali, quali asterischi (`*`) e punti interrogativi(`?`), rappresentano uno o più caratteri. Per un elenco, vedere [Trova con caratteri jolly](search-text-with-wildcards.md).  
   
- **Esaminare questi tipi di file**  
+ **Cerca i seguenti tipi di file**  
  In questo elenco vengono indicati i tipi di file da cercare nelle directory specificate in **Cerca in**. Se il campo viene lasciato vuoto, la ricerca verrà eseguita in tutti i file contenuti nella directory specificata in **Cerca in** .  
   
 ```  
@@ -110,10 +110,10 @@ ms.locfileid: "75245170"
  **Finestra Risultati ricerca 2**  
  Se questa casella di controllo è selezionata, i risultati della ricerca corrente verranno aggiunti al contenuto della finestra Risultati ricerca 2. Questa finestra viene aperta automaticamente per visualizzare i risultati della ricerca. Per aprirla manualmente, scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic su **Risultati ricerca 2**.  
   
- **Visualizza solo nomi file**  
+ **Mostra solo nomi file**  
  Consente di visualizzare una voce per ogni file contenente una corrispondenza con la stringa anziché una voce per ogni corrispondenza della stringa nella finestra Risultati ricerca 1 o Risultati ricerca 2. Questa opzione non è disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Mantieni i file modificati aperti dopo replace all**  
+ **Non chiudere i file modificati con Sostituisci tutto**  
  Se questa casella di controllo è selezionata, i file in cui sono state eseguite sostituzioni rimangono aperti, in modo che sia possibile annullare o salvare le modifiche. È possibile che la quantità di memoria disponibile limiti il numero di file che possono rimanere aperti dopo un'operazione di sostituzione.  
   
 > [!CAUTION]  
@@ -122,14 +122,14 @@ ms.locfileid: "75245170"
 ## <a name="find-and-replace-views"></a>Menu Visualizza di Trova e sostituisci  
  Fra le schede nella parte superiore della finestra Trova e Sostituisci sono disponibili i menu **Visualizza** , che consentono di scegliere un set di campi da visualizzare nel riquadro attivo. È possibile ancorare la finestra Trova e sostituisci in una posizione appropriata e quindi spostarsi tra le varie schede e viste per eseguire qualsiasi tipo di operazione di ricerca o sostituzione.  
   
- **Passa a ricerca veloce**  
+ **Passa a Ricerca veloce**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Ricerca veloce** .  
   
  **Passa a Cerca nei file**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Cerca nei file** .  
   
- **Passa a trova simboli**  
+ **Passa a Trova simbolo**  
  Questa opzione della barra degli strumenti consente di passare dalla finestra di dialogo corrente alla finestra di dialogo **Trova simbolo** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

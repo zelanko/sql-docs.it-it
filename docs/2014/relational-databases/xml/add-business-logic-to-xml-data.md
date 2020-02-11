@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211562"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Aggiunta di una logica di business ai dati XML
@@ -30,8 +30,8 @@ ms.locfileid: "68211562"
   
 -   È possibile creare funzioni e stored procedure Transact-SQL che avviano l'elaborazione della colonna XML in base alle esigenze aziendali.  
   
-## <a name="example-applying-xsl-transformation"></a>Esempio: Applicazione della trasformazione XSL  
- Prendere in considerazione una funzione CLR **TransformXML ()** che accetta un `xml` dati digitare l'istanza e una trasformazione XSL archiviata in un file, applica la trasformazione ai dati XML e quindi restituisce il valore XML trasformato come risultato. Di seguito è riportato lo scheletro della funzione scritta in C#:  
+## <a name="example-applying-xsl-transformation"></a>Esempio: applicazione della trasformazione XSL  
+ Si consideri una funzione CLR **TransformXML ()** che accetta un' `xml` istanza del tipo di dati e una trasformazione XSL archiviata in un file, applica la trasformazione ai dati XML e quindi restituisce il codice XML trasformato nel risultato. Di seguito è riportato lo scheletro della funzione scritta in C#:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

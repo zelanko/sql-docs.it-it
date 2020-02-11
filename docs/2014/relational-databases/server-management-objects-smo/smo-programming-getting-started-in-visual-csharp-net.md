@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva a Visual c# .NET | Microsoft Docs
+title: Introduzione in Visual C# .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130728"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Guida introduttiva a Visual C# .NET
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET è uno dei linguaggi di programmazione gestiti supportati da common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Per ulteriori informazioni sul linguaggio c#, vedere il [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentazione di .NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET è uno dei linguaggi di programmazione gestiti supportati dal Common Language Runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Molti per ulteriori informazioni sul linguaggio C#, vedere la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentazione di .NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
   
 ## <a name="references-and-imports"></a>Riferimenti e importazioni  
  Dopo avere avviato il progetto [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], è necessario aggiungere riferimenti agli assembly SMO. È quindi possibile importare gli spazi dei nomi necessari in modo che il programma possa riconoscere i tipi SMO.  
@@ -28,6 +28,6 @@ ms.locfileid: "63130728"
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gli assembly SMO si trovano nella cartella [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un Visual C&#35; progetto SMO per Visual Studio .NET](how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+ [Creare un progetto Visual C&#35; SMO in Visual Studio .NET](how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

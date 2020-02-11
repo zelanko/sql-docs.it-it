@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196718"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
@@ -27,7 +27,7 @@ ms.locfileid: "68196718"
   
 -   Se non è stata impostata l'opzione che consente l'immissione di valori Null, la colonna resterà vuota, ma non sarà possibile salvare la riga senza avere fornito un valore per la colonna.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68196718"
   
      [Sicurezza](#Security)  
   
--   **Per specificare un valore predefinito personalizzato:**  
+-   **Per specificare un valore predefinito utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68196718"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196718"
     > [!NOTE]  
     >  Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.  
   
-4.  Nel menu **File** scegliere **Salva**_table name_.  
+4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196718"
   
     ```  
   
- Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+ Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

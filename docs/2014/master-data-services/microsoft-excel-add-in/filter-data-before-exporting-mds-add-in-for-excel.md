@@ -1,5 +1,5 @@
 ---
-title: Filtrare i dati prima del caricamento (aggiuntivo MDS per Excel) | Microsoft Docs
+title: Filtrare i dati prima del caricamento (Componente aggiuntivo MDS per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478912"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtrare i dati prima del caricamento (componente aggiuntivo MDS per Excel)
-  Nelle [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtrare i dati quando si desidera limitare la dimensione o l'ambito dei dati che si siano caricando in Excel.  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]filtrare i dati quando si desidera limitare la dimensione o l'ambito dei dati da caricare in Excel.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
 ### <a name="to-filter-data-before-loading"></a>Per filtrare i dati prima del caricamento  
   
-1.  Aprire Excel e nella scheda **Dati master** connettersi a un repository MDS. Per altre informazioni, vedere [Connettersi a un repository MDS &#40;componente aggiuntivo MDS per Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md).  
+1.  Aprire Excel e nella scheda **Dati master** , connettersi a un repository MDS. Per altre informazioni, vedere [Connettersi a un repository MDS &#40;componente aggiuntivo MDS per Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md).  
   
 2.  Nel riquadro **Esplora dati master** selezionare un modello e una versione. L'elenco di entità viene popolato.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "65478912"
   
     > [!NOTE]  
     >  -   Solo il primo milione di membri viene caricato in Excel.  
-    > -   Nelle colonne che sono elenchi vincolati (attributi basati su dominio), vengono caricati solo i primi 1000 valori.  
+    > -   Nelle colonne che sono elenchi vincolati (attributi basati su dominio) vengono caricati solo i primi 1000 valori.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Pubblicare dati da Excel a MDS &#40;componente aggiuntivo MDS per Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Pubblicare dati da Excel a MDS &#40;Componente aggiuntivo MDS per Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il caricamento dei dati &#40;componente aggiuntivo MDS per Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Finestra di dialogo Filtro &#40;componente aggiuntivo MDS per Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [Riordinare le colonne &#40;componente aggiuntivo MDS per Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [Caricamento dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Finestra di dialogo filtro &#40;Componente aggiuntivo MDS per Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
+ [Riordina le colonne &#40;Componente aggiuntivo MDS per Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

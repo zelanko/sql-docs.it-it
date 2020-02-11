@@ -1,5 +1,5 @@
 ---
-title: Proprietà gruppo di disponibilità e nuovo gruppo di disponibilità (pagina generale) | Microsoft Docs
+title: Proprietà del gruppo di disponibilità e nuovo gruppo di disponibilità (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815654"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Proprietà gruppo di disponibilità e Nuovo gruppo di disponibilità (pagina Generale)
-  Questo argomento si applica alla scheda **Generale** della finestra di dialogo **Nuovo gruppo di disponibilità** e della finestra di dialogo **Proprietà gruppo di disponibilità**.  Nella finestra di dialogo **Nuovo gruppo di disponibilità** è possibile creare un nuovo gruppo di disponibilità senza usare la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Nella finestra di dialogo **Proprietà gruppo di disponibilità** è possibile visualizzare e modificare la configurazione di un gruppo di disponibilità esistente.  
+  Questo argomento si applica alla scheda **generale** della finestra di dialogo **nuovo gruppo di disponibilità** e della finestra di dialogo **Proprietà gruppo di disponibilità** .  Nella finestra di dialogo **Nuovo gruppo di disponibilità** è possibile creare un nuovo gruppo di disponibilità senza usare la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Nella finestra di dialogo **Proprietà gruppo di disponibilità** è possibile visualizzare e modificare la configurazione di un gruppo di disponibilità esistente.  
   
  **Per visualizzare le proprietà del gruppo di disponibilità**  
   
 -   [Visualizzazione delle Proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome del gruppo di disponibilità**  
+ **Nome gruppo di disponibilità**  
  Nome del gruppo di disponibilità. Si tratta di un nome specificato dall'utente che deve essere univoco all'interno del cluster di failover di Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Database di disponibilità  
- **Database Name**  
+ **Nome database**  
  Nome di un database aggiunto al gruppo di disponibilità.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere un database al gruppo di disponibilità.  
   
  **Rimuovi**  
@@ -47,7 +47,7 @@ ms.locfileid: "62815654"
  Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.  
   
  **Ruolo**  
- **Primaria**  
+ **Server/istanza primaria**  
  Attualmente la replica primaria.  
   
  **Secondari**  
@@ -65,7 +65,7 @@ ms.locfileid: "62815654"
  **Commit sincrono**  
  La replica primaria attende che la replica secondaria salvi la transazione su disco prima di eseguirne il commit.  
   
- Per altre informazioni, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Per ulteriori informazioni, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  **Modalità di failover**  
  Modalità di failover della replica. I valori possibili sono:  
@@ -103,13 +103,13 @@ ms.locfileid: "62815654"
  **URL endpoint**  
  URL dell'endpoint. Per informazioni sul formato di questi URL, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic per aggiungere una replica secondaria al gruppo di disponibilità.  
   
  **Rimuovi**  
  Fare clic per rimuovere una replica secondaria specificata dal gruppo di disponibilità.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

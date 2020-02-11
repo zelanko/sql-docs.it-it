@@ -14,17 +14,17 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728957"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Gerarchie ricorsive (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] una gerarchia ricorsiva è una gerarchia derivata in cui è inclusa una relazione ricorsiva. Una relazione ricorsiva si verifica quando un'entità dispone di un attributo basato su dominio che si fonda sull'entità stessa.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una gerarchia ricorsiva è una gerarchia derivata in cui è inclusa una relazione ricorsiva. Una relazione ricorsiva si verifica quando un'entità dispone di un attributo basato su dominio che si fonda sull'entità stessa.  
   
 ## <a name="recursive-hierarchy-example"></a>Esempio di gerarchia ricorsiva  
  Un esempio tipico di gerarchia ricorsiva è una struttura organizzativa. In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]questa operazione viene effettuata creando un'entità Employee con un attributo basato su dominio chiamato Manager. L'attributo Manager viene popolato dall'elenco dei dipendenti. Nell'organizzazione di esempio, tutti i dipendenti possono essere responsabili (Manager).  

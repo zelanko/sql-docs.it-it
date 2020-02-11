@@ -1,5 +1,5 @@
 ---
-title: L'aggiornamento e salvataggio di dati | Microsoft Docs
+title: Aggiornamento e salvataggio permanente dei dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,22 +15,22 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923729"
 ---
 # <a name="updating-and-persisting-data"></a>Aggiornamento e persistenza dei dati
-Nei capitoli precedenti hanno illustrato come utilizzare ADO per recuperare i dati in un'origine dati, come spostarsi all'interno dei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario conoscere le modalità salvare le modifiche. È ovvero possibile rendere persistenti la **Recordset** viene modificato in un file usando la **salvare** (metodo), oppure è possibile restituire le modifiche all'origine dati per l'uso di archiviazione il **Update** o  **Metodo UpdateBatch** metodi.  
+I capitoli precedenti hanno illustrato come usare ADO per ottenere i dati in un'origine dati, come spostarsi nei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario comprendere come salvare le modifiche. È possibile salvare in modo permanente le modifiche del **Recordset** in un file usando il metodo **Save** oppure è possibile inviare di nuovo le modifiche all'origine dati per l'archiviazione usando i metodi **Update** o **UpdateBatch** .  
   
- Nei capitoli precedenti, è stato modificato i dati in più righe del **Recordset**. ADO supporta due approcci di base in riguardanti l'aggiunta, eliminazione e la modifica di righe di dati.  
+ Nei capitoli precedenti, i dati sono stati modificati in più righe del **Recordset**. ADO supporta due nozioni di base relative all'aggiunta, all'eliminazione e alla modifica delle righe di dati.  
   
- La nozione prima è che le modifiche non vengono apportate immediatamente per il **Recordset**; in alternativa, sono state apportate a interna *buffer di copia*. Se si decide di non creare le modifiche, le modifiche nel buffer di copia vengono rimosse. Se si decide di mantenere le modifiche, le modifiche nel buffer di copia vengono applicate per il **Recordset**.  
+ Il primo concetto è che le modifiche non vengono apportate immediatamente al **Recordset**; vengono invece eseguiti in un *buffer di copia*interno. Se si decide di non voler apportare le modifiche, le modifiche nel buffer di copia vengono scartate. Se si decide di salvare le modifiche, le modifiche apportate al buffer di copia vengono applicate al **Recordset**.  
   
- Nel secondo approccio è che le modifiche vengono propagate sia all'origine dati, non appena si dichiara il lavoro in una riga completa (vale a dire *immediata* modalità), o tutte le modifiche apportate a un set di righe vengono raccolti fino a quando non si dichiara il lavoro per il set completa (vale a dire *batch* modalità). Il **LockType** proprietà determina quando vengono apportate le modifiche all'origine dati sottostante. **adLockOptimistic** oppure **adLockPessimistic** specifica la modalità immediata, mentre **adLockBatchOptimistic** specifica la modalità batch. Il **CursorLocation** proprietà può influire sulla quale **LockType** impostazioni sono disponibili. Ad esempio, il **adLockPessimistic** impostazione non è supportata se il **CursorLocation** viene impostata su **adUseClient**.  
+ Il secondo concetto è che le modifiche vengono propagate all'origine dati non appena si dichiara il lavoro su una riga completa (ovvero la modalità *immediata* ) o tutte le modifiche apportate a un set di righe vengono raccolte fino a quando non si dichiara il lavoro per il set completato (ovvero la modalità *batch* ). La proprietà **LockType** determina quando vengono apportate modifiche all'origine dati sottostante. **adLockOptimistic** o **adLockPessimistic** specifica la modalità immediata, mentre **adLockBatchOptimistic** specifica la modalità batch. La proprietà **CursorLocation** può influire sulle impostazioni **LockType** disponibili. Ad esempio, l'impostazione **adLockPessimistic** non è supportata se la proprietà **CursorLocation** è impostata su **adUseClient**.  
   
- In modalità immediata, ogni chiamata di **Update** metodo propaga le modifiche apportate all'origine dati. In modalità batch, ogni chiamata di **Update** o lo spostamento della posizione della riga corrente Salva le modifiche apportate al buffer di copia, ma solo le **UpdateBatch** metodo propaga le modifiche apportate all'origine dati.  
+ In modalità immediata, ogni chiamata del metodo **Update** propaga le modifiche apportate all'origine dati. In modalità batch ogni chiamata di **aggiornamento** o spostamento della posizione della riga corrente Salva le modifiche apportate al buffer di copia, ma solo il metodo **UpdateBatch** propaga le modifiche nell'origine dati.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -15,13 +15,13 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056653"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutazione di un'azienda e consolidamento dei report di valutazione con DMA
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
 Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migration Assistant per eseguire una valutazione con scalabilità corretta per l'aggiornamento SQL Server locale o SQL Server in esecuzione in macchine virtuali di Azure o per la migrazione al database SQL di Azure.
 
@@ -71,7 +71,7 @@ Prima di eseguire lo script di PowerShell per valutare i server SQL, è necessar
 Questo inventario può trovarsi in uno dei due formati seguenti:
 
 - File CSV di Excel
-- Tabella SQL Server
+- Tabella di SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
 
@@ -92,7 +92,7 @@ Quando si usa un file CSV per importare i dati, verificare che siano presenti so
 
 Creare un database denominato **EstateInventory** e una tabella denominata **DatabaseInventory**. La tabella che contiene i dati di inventario può includere un numero qualsiasi di colonne, purché siano presenti quattro colonne seguenti:
 
-- ssSqlProfiler
+- ServerName
 - InstanceName
 - DatabaseName
 - AssessmentFlag
@@ -117,7 +117,7 @@ I parametri associati alla funzione dmaDataCollector sono descritti nella tabell
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**.<br/>Per altre informazioni, vedere [creare un inventario di SQL Server](#create-inventory). |
 |**csvPath** | Percorso del file di inventario CSV.  Utilizzato solo quando **getServerListFrom** è impostato su **CSV**. |
-|**serverName** | Nome dell'istanza di SQL Server dell'inventario quando si utilizza **SqlServer** nel parametro **getServerListFrom** . |
+|**Nomeserver** | Nome dell'istanza di SQL Server dell'inventario quando si utilizza **SqlServer** nel parametro **getServerListFrom** . |
 |**databaseName** | Database che ospita la tabella di inventario. |
 |**AssessmentName** | Nome della valutazione DMA. |
 |**TargetPlatform** | Tipo di destinazione della valutazione che si desidera eseguire.  I valori possibili sono **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**e **ManagedSqlServer**. |
@@ -139,11 +139,11 @@ I parametri associati alla funzione dmaProcessor sono descritti nella tabella se
 |Parametro  |Descrizione |
 |---------|---------|
 |**processTo** | Percorso in cui verrà elaborato il file JSON. I valori possibili sono **SqlServer** e **AzureSQLDatabase**. |
-|**serverName** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |
+|**Nomeserver** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |
 |**CreateDMAReporting** | Database di gestione temporanea da creare per l'elaborazione del file JSON.  Se il database specificato esiste già e si imposta questo parametro su uno, gli oggetti non vengono creati.  Questo parametro è utile per ricreare un singolo oggetto che è stato eliminato. |
 |**CreateDataWarehouse** | Crea la data warehouse che verrà utilizzata dal report Power BI. |
 |**databaseName** | Nome del database DMAReporting. |
-|**warehouseName** | Nome del database data warehouse. |
+|**data warehouse** | Nome del database data warehouse. |
 |**jsonDirectory** | Directory che contiene il file di valutazione JSON.  Se nella directory sono presenti più file JSON, questi vengono elaborati uno alla volta. |
 
 La funzione dmaProcessor deve richiedere solo alcuni secondi per elaborare un singolo file.
@@ -187,9 +187,9 @@ Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è cons
 Per lavorare con i report DMA, usare i segnalibri e i filtri dei dati per filtrare in base a:
 
 - Tipi di valutazione (database SQL di Azure, Azure SQL MI, SQL locale) 
-- Nome istanza
+- Nome dell'istanza
 - Nome database
-- Nome del team
+- Nome team
 
 Per accedere al pannello segnalibri e filtri, selezionare il segnalibro Filters (filtri) nella pagina principale del report:
 
@@ -263,7 +263,7 @@ Questa sezione è la parte principale del report, che mostra la conformità di u
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Titolo
 - ObjectType
 - ImpactedObjectName
 

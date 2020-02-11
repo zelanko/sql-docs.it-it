@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790487"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Supporto del flusso per parametri di output BLOB
@@ -29,7 +29,7 @@ ms.locfileid: "73790487"
   
 ## <a name="example"></a>Esempio  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // blob_out_param.cpp  
@@ -511,6 +511,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+ [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

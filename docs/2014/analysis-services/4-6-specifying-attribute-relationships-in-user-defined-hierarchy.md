@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493857"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente
@@ -22,7 +22,7 @@ ms.locfileid: "69493857"
   
  Nel caso di una gerarchia naturale, se vengono definite relazioni tra gli attributi che costituiscono i livelli, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di utilizzare un'aggregazione di un attributo per ottenere i risultati di un attributo correlato. Se non esistono relazioni definite tra gli attributi, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutti gli attributi non chiave verranno aggregati dall'attributo chiave. Pertanto, se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli attributi. La definizione di relazioni tra attributi consente di migliorare le prestazioni di elaborazione di dimensioni, partizioni e query. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md) e [Relazioni tra attributi](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
- Quando si definisce una relazione tra attributi, è possibile specificare se tale reazione è flessibile o rigida. Se viene definita una relazione rigida, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di mantenere le aggregazioni quando la dimensione viene aggiornata. Quando una relazione rigida viene modificata, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene generato un errore durante l'elaborazione se la dimensione non viene elaborata completamente. L'impostazione corretta delle relazioni e delle rispettive proprietà determina un miglioramento delle prestazioni durante l'esecuzione di query e i processi di elaborazione. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md) e [Proprietà delle gerarchie definite dall'utente](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Quando si definisce una relazione tra attributi, è possibile specificare se tale reazione è flessibile o rigida. Se viene definita una relazione rigida, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di mantenere le aggregazioni quando la dimensione viene aggiornata. Quando una relazione rigida viene modificata, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene generato un errore durante l'elaborazione se la dimensione non viene elaborata completamente. L'impostazione corretta delle relazioni e delle rispettive proprietà determina un miglioramento delle prestazioni durante l'esecuzione di query e i processi di elaborazione. Per altre informazioni, vedere [definire le relazioni tra attributi](multidimensional-models/attribute-relationships-define.md)e [proprietà della gerarchia utente](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  Nelle attività di questo argomento verranno illustrate le procedure per definire le relazioni tra gli attributi contenuti nelle gerarchie utente naturali del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Tali gerarchie includono la gerarchia **Customer Geography** della dimensione **Customer**, la gerarchia **Sales Territory** della dimensione **Sales Territory** , la gerarchia **Product Model Lines** della dimensione **Product** e le gerarchie **Fiscal Date** e **Calendar Date** della dimensione **Date** . Queste gerarchie utente sono tutte gerarchie naturali.  
   
@@ -32,21 +32,21 @@ ms.locfileid: "69493857"
   
      Nel riquadro **Gerarchie** si notino i livelli della gerarchia **Customer Geography** definita dall'utente. Questa gerarchia corrisponde attualmente solo a un percorso di drill-down per gli utenti, in quanto non è stata definita alcuna relazione tra livelli o attributi.  
   
-2.  Fare clic sulla scheda **Relazioni tra attributi**.  
+2.  Fare clic sulla scheda **Relazioni tra attributi** .  
   
      Si notino le quattro relazioni tra attributi che collegano gli attributi non chiave nella tabella **Geography** all'attributo chiave nella tabella **Geography** . L'attributo **Geography** è correlato all'attributo **Full Name** . L'attributo **Postal Code** è indirettamente collegato all'attributo **Full Name** tramite l'attributo **Geography** , in quanto **Postal Code** è collegato a **Geography** e **Geography** è collegato a **Full Name** . A questo punto le relazioni tra attributi verranno modificate in modo da non usare l'attributo **Geography** .  
   
 3.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Full Name** e scegliere **Nuova relazione tra attributi**.  
   
-4.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Full Name**. Impostare **Attributo correlato** su **Postal Code**. Nell'elenco **Tipo di relazione** lasciare il tipo di relazione impostato su **Flessibile** perché le relazioni tra i membri possono cambiare nel corso del tempo.  
+4.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Full Name**. Impostare **Attributo correlato** su **Postal Code**. Nell'elenco **Tipo di relazione** lasciare il tipo di relazione impostato su **Flessibile** perché le relazioni tra i membri potrebbero cambiare nel corso del tempo.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Nel diagramma viene visualizzata un'icona di avviso perché la relazione è ridondante. La relazione **Full Name** -> **Geography**-> **Postal Code** esisteva già ed è appena stata creata la relazione **Full Name** -> **Postal Code**. La relazione **Geography**-> **Postal Code** è ora ridondante, quindi verrà rimossa.  
+     Nel diagramma viene visualizzata un'icona di avviso perché la relazione è ridondante. La relazione **Full Name** -> **geography**-> **Postal Code** esisteva già ed è appena stata creata la relazione **Full Name** -> **Postal Code**. La relazione **geography**-> **Postal Code** è ora ridondante, quindi verrà rimossa.  
   
 6.  Nel riquadro **Relazioni tra attributi** fare clic con il pulsante destro del mouse su **Geography**-> **Postal Code** e selezionare **Elimina**.  
   
-7.  Quando viene visualizzata la finestra di dialogo **Elimina oggetti**, fare clic su **OK**.  
+7.  Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   
 8.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Postal Code** e scegliere **Nuova relazione tra attributi**.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69493857"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     La relazione **Geography**-> **City** è ora ridondante, quindi verrà eliminata.  
+     La relazione **geography**-> **City** è ora ridondante, quindi verrà eliminata.  
   
-11. Nel riquadro Relazioni tra attributi fare clic con il pulsante destro del mouse su **Geography**-> **City** e scegliere **Elimina**.  
+11. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography**-> **City** , quindi scegliere **Elimina**.  
   
 12. Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "69493857"
   
 17. Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   
-18. Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **State-Province** e scegliere **Nuova relazione tra attributi**.  
+18. Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **State-Province** e quindi scegliere **Nuova relazione tra attributi**.  
   
 19. Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **State-Province**. Impostare **Attributo correlato** su **Country-Region**. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida** perché la relazione tra uno stato-provincia e un paese-regione non cambia nel corso del tempo.  
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. Nel riquadro Relazioni tra attributi fare clic con il pulsante destro del mouse su **Geography**-> **Country-Region** e scegliere **Elimina**.  
+21. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography**-> **Country-Region** e scegliere **Elimina**.  
   
 22. Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493857"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L'attributo**Sales Territory Group** è ora collegato a **Sales Territory Country**e **Sales Territory Country** è ora collegato a **Sales Territory Region**. La proprietà **RelationshipType** per ognuna di queste relazioni è impostata su **Flessibile** dal momento che i raggruppamenti delle regioni all'interno di un paese e i raggruppamenti stessi dei paesi possono cambiare nel corso del tempo.  
+     **Sales Territory Group** è ora collegato a **Sales Territory Country**e **Sales Territory Country** è ora collegato a **Sales Territory Region**. La proprietà **RelationshipType** per ognuna di queste relazioni è impostata su **Flessibile** dal momento che i raggruppamenti delle regioni all'interno di un paese e i raggruppamenti stessi dei paesi possono cambiare nel corso del tempo.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>Definizione delle relazioni tra gli attributi della gerarchia Product Model Lines  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69493857"
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-fiscal-date-hierarchy"></a>Definizione delle relazioni tra attributi nella gerarchia Fiscal Date  
   
-1.  Passare a Progettazione dimensioni per la dimensione **Date** e fare clic sulla scheda **Relazioni tra attributi** .  
+1.  Passare a Progettazione dimensioni per la dimensione **Date** e quindi fare clic sulla scheda **Relazioni tra attributi** .  
   
 2.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** , quindi scegliere **Nuova relazione tra attributi**.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "69493857"
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-calendar-date-hierarchy"></a>Definizione delle relazioni tra attributi nella gerarchia Calendar Date  
   
-1.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** e scegliere **Nuova relazione tra attributi**.  
+1.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Month Name** , quindi scegliere **Nuova relazione tra attributi**.  
   
 2.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Month Name**. Impostare **Attributo correlato** su **Calendar Quarter**. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Calendar Quarter** e scegliere **Nuova relazione tra attributi**.  
+4.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **Calendar Quarter** , quindi scegliere **Nuova relazione tra attributi**.  
   
 5.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Calendar Quarter**. Impostare **Attributo correlato** su **Calendar Semester**. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "69493857"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-8.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **State-Province** e scegliere **Nuova relazione tra attributi**.  
+8.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **State-Province** e quindi scegliere **Nuova relazione tra attributi**.  
   
 9. Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **State-Province**. Impostare **Attributo correlato** su **Country-Region**. Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
@@ -176,9 +176,9 @@ ms.locfileid: "69493857"
   
 12. Impostare la proprietà **AttributeHierarchyOptimizedState** su **NotOptimized**, la proprietà **AttributeHierarchyOrdered** su **False**e la proprietà **AttributeHierarchyVisible** su **False**.  
   
-13. Nel menu **File** fare clic su **Salva tutto**.  
+13. Scegliere **Salva tutti** dal menu **File**.  
   
-14. Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
+14. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione delle proprietà UnknownMember e NullProcessing](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

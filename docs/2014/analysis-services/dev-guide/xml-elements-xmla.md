@@ -15,27 +15,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731986"
 ---
 # <a name="xml-elements-xmla"></a>Elementi XML (XMLA)
-  Gli argomenti seguenti descrivono il codice XML per le categorie di elementi Analysis (XMLA) supportati da vari [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Negli argomenti seguenti vengono descritte le diverse categorie di elementi XML for Analysis (XMLA) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]supportate da.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|[Le intestazioni &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|Descrive gli elementi inviati nell'intestazione SOAP di una busta SOAP da un'applicazione o da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire caratteristiche a livello di protocollo.|  
-|[I metodi &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|Descrive gli elementi superiori inviati da un'applicazione in una busta SOAP a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per recuperare dati o metadati o per eseguire azioni nell'istanza.|  
-|[I comandi &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|Descrive gli elementi inviati all'interno di un metodo XMLA per eseguire un'azione specifica.|  
-|[Gli oggetti &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|Descrive gli elementi superiori ricevuti da un'applicazione in una busta SOAP da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in risposta a un metodo XMLA.|  
-|[Proprietà &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|Descrive gli elementi figlio per intestazioni, metodi, oggetti o comandi XMLA.|  
+|[Intestazioni &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|Descrive gli elementi inviati nell'intestazione SOAP di una busta SOAP da un'applicazione o da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire caratteristiche a livello di protocollo.|  
+|[Metodi &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|Descrive gli elementi superiori inviati da un'applicazione in una busta SOAP a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per recuperare dati o metadati o per eseguire azioni nell'istanza.|  
+|[Comandi &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|Descrive gli elementi inviati all'interno di un metodo XMLA per eseguire un'azione specifica.|  
+|[Oggetti &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|Descrive gli elementi superiori ricevuti da un'applicazione in una busta SOAP da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in risposta a un metodo XMLA.|  
+|[Proprietà &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|Descrive gli elementi figlio per intestazioni, metodi, oggetti o comandi XMLA.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di dati XML &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Tipi di dati XML &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
+ [Sviluppo con Analysis Services linguaggio di scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

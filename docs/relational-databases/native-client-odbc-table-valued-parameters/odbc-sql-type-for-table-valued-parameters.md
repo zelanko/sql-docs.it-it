@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: beafe79839842f530d4864339da53a7781123447
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73776406"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Tipo SQL ODBC per parametri con valori di tabella
@@ -28,7 +28,7 @@ ms.locfileid: "73776406"
 ## <a name="remarks"></a>Osservazioni  
  SQL_SS_TABLE non può essere convertito in un altro tipo di dati ODBC o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se SQL_SS_TABLE viene usato come tipo di dati C nel parametro *ValueType* di SQLBindParameter o viene effettuato un tentativo di impostare SQL_DESC_TYPE in un record del descrittore del parametro dell'applicazione (APD) per SQL_SS_TABLE, viene restituito SQL_ERROR e un record di diagnostica è generato con SQLSTATE = HY003, "tipo di buffer dell'applicazione non valido".  
+ Se SQL_SS_TABLE viene usato come tipo di dati C nel parametro *ValueType* di SQLBindParameter o viene effettuato un tentativo di impostare SQL_DESC_TYPE in un record del descrittore del parametro dell'applicazione (APD) per SQL_SS_TABLE, SQL_ERROR viene restituito e viene generato un record di diagnostica con SQLSTATE = HY003, "tipo di buffer dell'applicazione non valido".  
   
  Se SQL_DESC_TYPE è impostato su SQL_SS_TABLE in un record IPD e il record del descrittore del parametro dell'applicazione corrispondente non è SQL_C_DEFAULT, viene restituito SQL_ERROR e viene generato un record di diagnostica con SQLSTATE=HY003, "Tipo di buffer dall'applicazione non valido". Questa situazione può verificarsi con *ParameterType* di un SQLSetDescField, SQLSetDescRec o SQLBindParameter.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "73776406"
  Le colonne di parametri con valori di tabella non possono utilizzare SQL_DEFAULT_PARAM in *StrLen_or_IndPtr*perché i valori predefiniti per riga non sono supportati con i parametri con valori di tabella. È invece possibile impostare l'attributo della colonna SQL_CA_SS_COL_HAS_DEFAULT_VALUE su 1. Ciò significa che per tutte le righe della colonna saranno disponibili valori predefiniti. Se *StrLen_or_IndPtr* è impostato su SQL_DEFAULT_PARAM, SQLExecute o SQLExecDirect restituirà SQL_ERROR e verrà aggiunto un record di diagnostica all'istruzione con SQLSTATE = HY090 e il messaggio "lunghezza di stringa o di buffer non valida".  
   
 ## <a name="see-also"></a>Vedere anche  
- [ODBC Parameters &#40;con valori di tabella&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parametri con valori di tabella &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

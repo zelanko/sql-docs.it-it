@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728686"
 ---
 # <a name="business-rules-master-data-services"></a>Regole business (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "73728686"
   
 4.  **Azione esterna**  
   
-5.  **Script dell'azione definito dall'utente**  
+5.  **Script azione definito dall'utente**  
   
  In questi gruppi, le azioni vengono applicate con ordine di priorità crescente, dalla più bassa alla più elevata. Di conseguenza, ad esempio, quattro regole separate potrebbero avere le azioni **Valore predefinito** . L'azione **Valore predefinito** che viene eseguita per prima dipende dall'ordine di priorità specificato nell'interfaccia utente Web.  
   
@@ -76,20 +76,20 @@ ms.locfileid: "73728686"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare e pubblicare una nuova regola business.|[Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola di business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Creare una regola business affinché gli attributi dispongano di valori.|[Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Inizializzare azioni basate su modifiche dei valori di attributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Creare una regola business per eseguire uno script definito dall'utente come condizione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Creare una regola business per eseguire uno script definito dall'utente come azione|[Estensione delle regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Modificare il nome di una regola business esistente.|[Modificare il nome di una regola di business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurare [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per inviare notifiche quando vengono applicate le regole business.|[Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Aggiungere più condizioni a una regola business.|[Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Creare una regola business affinché gli attributi dispongano di valori.|[Richiedi valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Creare una regola business per eseguire un'azione basata su modifiche dei valori di attributo.|[Avviare azioni in base alle modifiche del valore dell'attributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Creare una regola business per eseguire uno script definito dall'utente come condizione|[&#40;Master Data Services estensione delle regole business&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Creare una regola business per eseguire uno script definito dall'utente come azione|[&#40;Master Data Services estensione delle regole business&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Modificare il nome di una regola business esistente.|[Modificare il nome di una regola business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Configurare [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per inviare notifiche quando vengono applicate le regole business.|[Configurare regole business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Applicare le regole business a membri specifici.|[Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Escludere una regola business in modo che non venga utilizzata.|[Escludere una regola di business &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Eliminare una regola business esistente.|[Eliminare una regola di business &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Escludere una regola business in modo che non venga utilizzata.|[Escludere una regola business &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Eliminare una regola business esistente.|[Eliminare una regola business &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

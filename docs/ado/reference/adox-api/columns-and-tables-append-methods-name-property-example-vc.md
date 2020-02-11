@@ -1,5 +1,5 @@
 ---
-title: Tabelle e colonne metodi Append oggetti esempio della proprietà Name (VC + +) | Microsoft Docs
+title: Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6f6a51569d83e1ac0c8e6be6d756b70ac85ece51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d0807dc58b9e51b593a3ac9ea1375c47b585fce
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966851"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910519"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Esempio dei metodi Append di Columns e Tables e della proprietà Name (VC++)
-Il codice seguente viene illustrato come creare una nuova tabella.  
+Nel codice seguente viene illustrato come creare una nuova tabella.  
   
 ```  
 // BeginCreateTableCpp.cpp  
@@ -74,7 +74,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  
@@ -82,6 +82,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

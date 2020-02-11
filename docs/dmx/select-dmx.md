@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928422"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Il **seleziona** istruzione nel Data Mining Extensions (DMX) viene utilizzata per le attività seguenti nel data mining:  
+  L'istruzione **Select** in DMX (Data Mining Extensions) viene utilizzata per le seguenti attività in data mining:  
   
 -   Visualizzazione del contenuto di un modello di data mining esistente  
   
@@ -40,17 +40,17 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  Alcuni client di data mining non possono accettare set di risultati in formato gerarchico da un provider di data mining. Il client potrebbe non essere in grado di gestire una gerarchia o potrebbe essere necessario archiviare i risultati in una singola tabella denormalizzata. Per convertire i dati da tabelle nidificate in tabelle in formato flat, è necessario richiedere che i risultati della query siano convertiti in formato flat.  
   
- Per rendere flat i risultati della query, usare il **selezionate** sintassi con il **FLATTENED** opzione, come illustrato nell'esempio seguente:  
+ Per rendere flat i risultati della query, usare la sintassi **Select** con l'opzione **Flat** , come illustrato nell'esempio seguente:  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>INIZIO \<n > e ORDER BY  
- È possibile ordinare i risultati di una query utilizzando un'espressione e quindi restituire un subset dei risultati usando una combinazione dei **ORDER BY** e **TOP** clausole. Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una destinazione di query di stima di indirizzi per la probabilità di stima e quindi restituisce solo le prime \<n > risultati.  
+## <a name="top-n-and-order-by"></a>PRIMI \<n> e order by  
+ È possibile ordinare i risultati di una query utilizzando un'espressione e può restituire un subset dei risultati utilizzando una combinazione delle clausole **Order by** e **Top** . Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una query di stima mailing di destinazione in base alla probabilità di stima, quindi restituire solo \<i primi n> risultati.  
   
 ## <a name="select-list"></a>Elenco di selezione  
- Il  *\<elenco di selezione >* può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
+ L' * \<elenco di selezione>* può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
   
 -   È in corso l'esecuzione di una query su una struttura di data mining o su un modello di data mining  
   
@@ -76,60 +76,60 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- È possibile limitare i case che vengono restituiti dalla query utilizzando un **in cui** clausola. Il **in cui** clausola che specifica la colonna fa riferimento nel **in cui** espressione deve avere la stessa semantica di riferimenti a colonne il  *\<l'elenco di selezione >* del **selezionare** istruzione e possono restituire solo un'espressione booleana. La sintassi per la **in cui** clausola è come indicato di seguito  
+ È possibile limitare i case restituiti dalla query utilizzando una clausola **where** . La clausola **where** specifica che i riferimenti di colonna nell'espressione **where** devono avere la stessa semantica dei riferimenti di colonna nell'elenco di * \<selezione>* dell'istruzione **Select** e possono restituire solo un'espressione booleana. La sintassi per la clausola **where** è la seguente:  
   
 ```  
 WHERE < condition expression >  
 ```  
   
- Elenco di selezione e **in cui** clausola di un **seleziona** istruzione deve rispettare le regole seguenti:  
+ L'elenco di selezione e la clausola **where** di un'istruzione **SELECT** devono rispettare le regole seguenti:  
   
 -   L'elenco di selezione deve contenere un'espressione che non restituisce un risultato booleano. L'espressione può essere modificata, ma deve comunque restituire risultati non booleani.  
   
--   Il **in cui** clausola deve contenere un'espressione che restituisce un risultato booleano. La clausola può essere modificata, ma deve comunque restituire un risultato booleano.  
+-   La clausola **where** deve contenere un'espressione che restituisce un risultato booleano. La clausola può essere modificata, ma deve comunque restituire un risultato booleano.  
   
 ## <a name="predictions"></a>Stime  
  Esistono due tipi di sintassi che è possibile utilizzare per la creazione di stime:  
   
--   [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;Model&#62; PREDICtion JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+-   [Selezionare da &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  Il primo tipo consente di creare stime complesse in tempo reale o in batch.  
   
  Il secondo consente di creare un prediction join vuoto su una colonna stimabile in un modello di data mining e restituisce lo stato più probabile della colonna. I risultati di questa query sono completamente basati sul contenuto del modello di data mining.  
   
- È possibile inserire un'istruzione select nella query di origine di un'istruzione SELECT FROM PREDICTION JOIN usando la sintassi seguente.  
+ È possibile inserire un'istruzione SELECT nella query di origine di un'istruzione SELECT FROM PREDICtion JOIN utilizzando la sintassi seguente.  
   
 ```  
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- Per altre informazioni sulla creazione di query di stima, vedere [struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md).  
+ Per ulteriori informazioni sulla creazione di query di stima, vedere [struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md).  
   
 ## <a name="clause-syntax"></a>Sintassi delle clausole  
- A causa della complessità della visualizzazione tramite il **seleziona** istruzione, gli elementi della sintassi dettagliata e gli argomenti vengono descritti dalla clausola. Per ulteriori informazioni su ciascuna clausola, fare clic su un argomento indicato nell'elenco seguente:  
+ A causa della complessità dell'esplorazione con l'istruzione **Select** , gli elementi della sintassi e gli argomenti dettagliati sono descritti in base alla clausola. Per ulteriori informazioni su ciascuna clausola, fare clic su un argomento indicato nell'elenco seguente:  
   
- [SELECT DISTINCT FROM &#60;modello &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [Selezionare DISTINCT FROM &#60;Model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
+ [Selezionare da &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
+ [Selezionare da &#60;modello&#62;. CASI &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [Selezionare da &#60;modello&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [Selezionare da &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;Model&#62; PREDICtion JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+ [Selezionare da &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60;struttura&#62;. CASE](../dmx/select-from-structure-cases.md)  
+ [Selezionare una&#62; struttura &#60;. CASI](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)  
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)  
   
   

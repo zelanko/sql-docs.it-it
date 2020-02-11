@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893038"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella >, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella>, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione di tabella >  
+ \<espressione di tabella>  
   
-## <a name="remarks"></a>Note  
- La funzione TopSum restituisce le righe più in alto in ordine di rango decrescente in base al valore valutato dell'espressione \<di rango > argomento per ogni riga, in modo che \<la somma dei valori dell'espressione di rango > sia almeno quella specificata totale specificato dall' \<argomento Sum >. **TopSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **TopSum** restituisce le righe più in alto in ordine di rango decrescente in base al valore valutato dell'espressione \<di rango> argomento per ogni riga, in modo che la somma dell' \<espressione di rango> valori sia almeno il totale specificato dall'argomento \<Sum>. **TopSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -56,18 +56,18 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
 |Modello|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291283016|0.252695851|  
-|Water Bottle|2866|0.192620472|0.175205052|  
-|Patch kit|2113|0.142012232|0.132389356|  
-|Mountain Tire Tube|1992|0.133879965|0.125304948|  
-|Mountain-200|1755|0.117951475|0.111260823|  
-|Road Tire Tube|1588|0.106727603|0.101229538|  
-|Cycling Cap|1473|0.098998589|0.094256014|  
-|Fender Set - Mountain|1415|0.095100477|0.090718432|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|Sport-100|4334|0,291283016|0,252695851|  
+|Water Bottle|2866|0,192620472|0,175205052|  
+|Patch kit|2113|0,142012232|0,132389356|  
+|Mountain Tire Tube|1992|0,133879965|0,125304948|  
+|Mountain-200|1755|0,117951475|0,111260823|  
+|Road Tire Tube|1588|0,106727603|0,101229538|  
+|Cycling Cap|1473|0,098998589|0,094256014|  
+|Fender Set - Mountain|1415|0,095100477|0,090718432|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
   
- La funzione TopSum accetta i risultati di questa query e restituisce le righe con i valori massimi che sommano al conteggio specificato.  
+ La funzione **TopSum** accetta i risultati di questa query e restituisce le righe con i valori massimi che sommano al conteggio specificato.  
   
 ```  
 SELECT   
@@ -100,7 +100,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX percentuale &#40;&#41;](../dmx/toppercent-dmx.md)  
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

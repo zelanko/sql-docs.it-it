@@ -1,5 +1,5 @@
 ---
-title: Sezione UserList del File di personalizzazione | Microsoft Docs
+title: Sezione utenti del file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,38 +14,38 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922769"
 ---
 # <a name="customization-file-userlist-section"></a>Sezione UserList del file di personalizzazione
-Il **userlist** sezione riguarda le **connettersi** sezione con la stessa sezione *identificatore* parametro.  
+La sezione relativa all' **utente** è relativa alla sezione **Connect** con lo stesso parametro dell' *identificatore* di sezione.  
   
- In questa sezione può contenere un *voce di accesso utente*, che specifica l'accesso i diritti per l'utente specificato ed esegue l'override di *predefinita* *voce di accesso* nel corrispondenti**connettere** sezione.  
+ Questa sezione può contenere una *voce di accesso utente*che specifica i diritti di accesso per l'utente specificato ed esegue l'override della *voce di accesso* *predefinita* nella sezione **connessione** corrispondente.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
- Una voce di accesso utente è nel formato:  
+ Una voce di accesso utente è nel formato seguente:  
   
- _userName_ **=**    
+ _nome utente_**=**   
  **_accessRights_**  
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|*userName*|Il *nome utente* della persona che utilizza la connessione. I nomi utente validi vengono stabiliti con IIS **Service Manager** finestra di dialogo.|  
-|**_accessRights_**|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** -utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **Lettura/scrittura** -utente può leggere o scrivere nell'origine dati.|  
+|*Nome utente*|*Nome utente* della persona che utilizza la connessione. I nomi utente validi vengono stabiliti con la finestra di dialogo **Service Manager** di IIS.|  
+|**_accessRights_**|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** : l'utente non può accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **ReadWrite** -l'utente può leggere o scrivere nell'origine dati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sezione sulla connessione del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sezione Log File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sezione SQL del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Informazioni sul file di personalizzazione.](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Sezione connessione file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Sezione log file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Sezione SQL del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Impostazioni client obbligatorie](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Informazioni sul file di personalizzazione](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

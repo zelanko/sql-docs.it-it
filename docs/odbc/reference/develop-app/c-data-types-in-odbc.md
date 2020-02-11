@@ -15,40 +15,40 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 748347b0a5b20f22cf7191213c59d2879df67522
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118723"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipi di dati C in ODBC
-ODBC definisce i tipi di dati C utilizzate da variabili di applicazione e i relativi identificatori di tipo corrispondente. Questi vengono usati dai buffer che sono associate a colonne del set di risultati e parametri dell'istruzione. Si supponga, ad esempio, che un'applicazione deve recuperare i dati da una colonna del set di risultati in formato carattere. Dichiara una variabile con i dati SQLCHAR * tipo di dati e si associa questa variabile per la colonna del set di risultati con un identificatore del tipo di SQL_C_CHAR. Per un elenco completo dei tipi di dati C e gli identificatori di tipo, vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ODBC definisce i tipi di dati C utilizzati dalle variabili dell'applicazione e i relativi identificatori di tipo corrispondenti. Tali valori vengono utilizzati dai buffer associati alle colonne del set di risultati e ai parametri di istruzione. Si supponga, ad esempio, che un'applicazione desideri recuperare i dati da una colonna del set di risultati in formato carattere. Dichiara una variabile con il tipo di dati SQLCHAR * e associa questa variabile alla colonna del set di risultati con un identificatore di tipo SQL_C_CHAR. Per un elenco completo dei tipi di dati C e degli identificatori di tipo, vedere [Appendice D: tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
- Anche ODBC definisce già un mapping predefinito da ogni tipo di dati SQL a un tipo di dati C. Ad esempio, un integer a 2 byte nell'origine dati viene eseguito il mapping a un integer a 2 byte nell'applicazione. Per usare il mapping predefinito, un'applicazione specifica l'identificatore di tipo SQL_C_DEFAULT. Tuttavia, l'uso di questo identificatore è sconsigliato per motivi di interoperabilità.  
+ ODBC definisce inoltre un mapping predefinito da ogni tipo di dati SQL a un tipo di dati C. Ad esempio, un numero intero a 2 byte nell'origine dati viene mappato a un numero intero a 2 byte nell'applicazione. Per utilizzare il mapping predefinito, un'applicazione specifica l'identificatore del tipo di SQL_C_DEFAULT. Tuttavia, l'utilizzo di questo identificatore è sconsigliato per motivi di interoperabilità.  
   
- Tutti i tipi di dati integer C definiti in ODBC *1.x* ha eseguito l'accesso. In ODBC 2.0 sono stati aggiunti tipi di dati C non firmati e i relativi identificatori di tipo corrispondente. Per questo motivo, le applicazioni e i driver devono prestare particolarmente attenzione quando si lavora con *1.x* versioni.  
+ Tutti i tipi di dati C Integer definiti in ODBC *1. x* sono stati firmati. I tipi di dati C senza segno e i relativi identificatori di tipo corrispondenti sono stati aggiunti in ODBC 2,0. Per questo motivo, è necessario prestare particolare attenzione alle applicazioni e ai driver quando si gestiscono le versioni *1. x* .  
   
-## <a name="c-data-type-extensibility"></a>Estendibilità del tipo di dati C  
- In ODBC 3.8, è possibile specificare tipi di dati C specifici del driver. In questo modo è possibile associare un tipo SQL come tipo nelle applicazioni ODBC C specifici del driver quando si chiama [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), o [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Ciò può rivelarsi utile per il supporto di nuovi tipi di server, poiché i tipi di dati C esistenti potrebbero non rappresentare in modo corretto i nuovi tipi di dati di server. Utilizzo di tipi C specifiche del driver, è possibile aumentare il numero di conversioni che possono eseguire i driver.  
+## <a name="c-data-type-extensibility"></a>Estensibilità del tipo di dati C  
+ In ODBC 3,8 è possibile specificare tipi di dati C specifici del driver. Ciò consente di associare un tipo SQL come tipo C specifico del driver nelle applicazioni ODBC quando si chiama [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)o [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Questa operazione può essere utile per supportare nuovi tipi di server, perché i tipi di dati C esistenti potrebbero non rappresentare correttamente i nuovi tipi di dati del server. L'utilizzo di tipi C specifici del driver può aumentare il numero di conversioni che possono essere eseguite dai driver.  
   
- Ad esempio, si supponga che un sistema di gestione di database (DBMS) introdotto un nuovo tipo SQL, **DATETIMEOFFSET**, per rappresentare la data e ora con informazioni sul fuso orario. Non vi sarà alcun tipo specifico di C in ODBC che corrispondessero alla **DATETIMEOFFSET**. Un'applicazione dovrà associare **DATETIMEOFFSET** come SQL_C_BINARY ed eseguire il cast a una data definito dall'utente digitare. Partire con estendibilità del tipo di dati C ODBC 3.8, un driver può definire un nuovo tipo di C corrispondente. Ad esempio, per il nuovo SQL tipo DATETIMEOFFSET, il driver può definire un nuovo tipo C corrispondente, ad esempio SQL_C_DATETIMEOFFSET. Quindi, un'applicazione può associare il nuovo tipo di SQL come tipo C specifiche del driver.  
+ Si supponga, ad esempio, che un sistema di gestione di database (DBMS) abbia introdotto un nuovo tipo SQL, **DateTimeOffset**, per rappresentare la data e l'ora con le informazioni sul fuso orario. Non è presente alcun tipo C specifico in ODBC corrispondente a **DateTimeOffset**. Un'applicazione deve associare **DateTimeOffset** come SQL_C_BINARY ed eseguirne il cast a un tipo di dati definito dall'utente. A partire da ODBC 3,8 con estensibilità del tipo di dati C, un driver può definire un nuovo tipo C corrispondente. Per il nuovo tipo SQL DATETIMEOFFSET, ad esempio, il driver può definire un nuovo tipo C corrispondente, ad esempio SQL_C_DATETIMEOFFSET. Quindi, un'applicazione può associare il nuovo tipo SQL come tipo C specifico del driver.  
   
- Viene definito un tipo di dati C nel driver come indicato di seguito:  
+ Un tipo di dati C viene definito nel driver come indicato di seguito:  
   
--   Il livello di conformità di ODBC per un'applicazione, il driver ODBC e Driver Manager è 3,8 (o versione successiva).  
+-   Il livello di conformità ODBC per un'applicazione, un driver ODBC e gestione driver è 3,8 (o versione successiva).  
   
--   L'intervallo di dati di tipo C specifiche del driver è tra 0x4000 e 0x7FFF.  
+-   L'intervallo di dati di un tipo C specifico del driver è compreso tra 0x4000 e 0x7FFF.  
   
--   Il driver definisce la struttura dei dati corrispondenti al tipo C.  Questa operazione può essere eseguita nel SDK specifici del driver.  
+-   Il driver definisce la struttura dei dati corrispondenti al tipo C.  Questa operazione può essere eseguita nell'SDK specifico del driver.  
   
- Gestione driver non verrà convalidato un tipo C definito nell'intervallo di 0x4000 e 0x7FFF; il driver esegue la convalida e qualsiasi conversione di tipi di dati. Ma se l'intervallo di dati di tipo C passato al gestore del driver è compreso tra 0x0000 e 0x3FFF o tra 0x8000 e 0xFFFF, Gestione driver convaliderà il tipo di dati C.  
+ Gestione driver non convaliderà un tipo C definito nell'intervallo tra 0x4000 e 0x7FFF; il driver eseguirà la convalida e qualsiasi conversione del tipo di dati. Tuttavia, se l'intervallo di dati di un tipo C passato a gestione driver è compreso tra 0x0000 e 0x3FFF o tra 0x8000 e 0xFFFF, il tipo di dati C verrà convalidato da Gestione driver.  
   
 > [!NOTE]  
->  Tipi di dati C specifici del driver devono essere descritti nella documentazione del driver.  
+>  I tipi di dati C specifici del driver devono essere descritti nella documentazione del driver.  
   
- Per specificare un livello di conformità ODBC di 3.8, un'applicazione chiama [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) con il SQL_ATTR_ODBC_VERSION attributo impostato su **SQL_OV_ODBC3_80**. Per determinare la versione del driver, un'applicazione chiama **SQLGetInfo** con SQL_DRIVER_ODBC_VER.  
+ Per specificare un livello di conformità ODBC 3,8, un'applicazione chiama [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) con l'attributo SQL_ATTR_ODBC_VERSION impostato su **SQL_OV_ODBC3_80**. Per determinare la versione del driver, un'applicazione chiama **SQLGetInfo** con SQL_DRIVER_ODBC_VER.  
   
- Per altre informazioni su ODBC 3.8, vedere [What ' s New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
+ Per ulteriori informazioni su ODBC 3,8, vedere Novità di [odbc 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md)

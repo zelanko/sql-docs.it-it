@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687317"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687317"
 
   Genera una shell dei comandi di Windows e passa una stringa per l'esecuzione. L'eventuale output viene restituito in forma di righe di testo.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74687317"
 xp_cmdshell { 'command_string' } [ , no_output ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  **'** *command_string* **'**  
  Stringa che contiene un comando da passare al sistema operativo. *command_string* è di tipo **varchar (8000)** o **nvarchar (4000)** e non prevede alcun valore predefinito. *command_string* non può contenere più di un set di virgolette doppie. È necessaria una sola coppia di virgolette se sono presenti spazi nei percorsi di file o nei nomi di programma a cui viene fatto riferimento in *command_string*. In caso di problemi nell'utilizzo di spazi incorporati nelle stringhe, valutare l'utilizzo di nomi di file in formato FAT 8.3 come soluzione alternativa.  
   

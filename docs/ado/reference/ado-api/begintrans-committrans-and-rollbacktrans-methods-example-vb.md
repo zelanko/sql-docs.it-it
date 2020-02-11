@@ -1,5 +1,5 @@
 ---
-title: BeginTrans, CommitTrans e RollbackTrans (esempio di metodi (VB) | Microsoft Docs
+title: Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cfb65adeab6f97faca44dc917396bc02fab2fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920458"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans, CommitTrans e RollbackTrans (esempio di metodi (VB)
-Questo esempio viene modificato il tipo di libro di tutti i libri di psicologia nella ***titoli*** tabella del database. Dopo il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo avvia una transazione che consente di isolare tutte le modifiche apportate al ***titoli*** tabella, il [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo salva le modifiche apportate. È possibile usare la [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo per annullare le modifiche salvate tramite il [Update](../../../ado/reference/ado-api/update-method.md) (metodo).  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Esempio di metodi BeginTrans, CommitTrans e RollbackTrans (VB)
+Questo esempio Mostra come modificare il tipo di libro di tutti i libri di psicologia nella tabella ***titles*** del database. Dopo che il metodo [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) ha avviato una transazione che isola tutte le modifiche apportate alla tabella ***titles*** , il metodo [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Salva le modifiche. È possibile utilizzare il metodo [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) per annullare le modifiche salvate tramite il metodo [Update](../../../ado/reference/ado-api/update-method.md) .  
   
 ```  
 'BeginBeginTransVB  
@@ -132,5 +132,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

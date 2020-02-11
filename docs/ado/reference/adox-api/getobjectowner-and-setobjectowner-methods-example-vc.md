@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner e SetObjectOwner metodi (VC + +) | Microsoft Docs
+title: Esempio di metodi GetObjectOwner e SetObjectOwner (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966368"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76934642"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Esempio dei metodi GetObjectOwner e SetObjectOwner (VC++)
-Questo esempio viene illustrato il [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) metodi. Questo codice presuppone l'esistenza del gruppo Contabilità (vedere la [i gruppi e utenti di aggiunta, esempio di metodi ChangePassword (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) per informazioni su come aggiungere il gruppo al sistema). Il proprietario della tabella delle categorie è impostato su Accounting.  
+Questo esempio illustra i metodi [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Questo codice presuppone l'esistenza dell'accounting del gruppo (vedere l'esempio relativo ai [gruppi e agli utenti Append, ChangePassword Methods (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) per vedere come aggiungere questo gruppo al sistema). Il proprietario della tabella Categories è impostato su Accounting.  
   
 ```  
 // BeginOwnersCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

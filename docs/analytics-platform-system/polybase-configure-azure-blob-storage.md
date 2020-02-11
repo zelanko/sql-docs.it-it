@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400720"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare la polibase per accedere ai dati esterni nell'archivio BLOB di Azure
@@ -23,7 +23,7 @@ Questo articolo illustra come usare la polibase su un'istanza di SQL Server per 
 > [!NOTE]
 > APS supporta attualmente solo l'archiviazione BLOB di Azure con ridondanza locale (con ridondanza locale) standard per utilizzo generico.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
  - Archiviazione BLOB di Azure nella sottoscrizione.
  - Un contenitore creato nell'archivio BLOB di Azure.
@@ -66,7 +66,7 @@ Per eseguire query sui dati nell'archivio BLOB di Azure, è necessario definire 
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Creare un'origine dati esterna con [Crea origine dati esterna](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -153,7 +153,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione dei dati  
+### <a name="exporting-data"></a>Esportazione di dati  
 
 La query seguente consente di esportare i dati dagli APS nell'archivio BLOB di Azure. Può essere usato per archiviare dati relazionali nell'archivio BLOB di Azure, pur continuando a eseguire query.
 

@@ -1,5 +1,5 @@
 ---
-title: Didascalia della proprietà (ADO MD) | Microsoft Docs
+title: Proprietà Caption (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,17 +18,17 @@ ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930489"
 ---
 # <a name="caption-property-ado-md"></a>Proprietà Caption (ADO MD)
-Indica la didascalia di testo da utilizzare quando si visualizza un' [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oppure [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetto.  
+Indica la didascalia di testo da utilizzare per la visualizzazione di un oggetto [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **stringa** ed è di sola lettura.  
+ Restituisce una **stringa** ed è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -37,5 +37,5 @@ Indica la didascalia di testo da utilizzare quando si visualizza un' [livello](.
 |[Oggetto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Esempio di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Proprietà Description (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

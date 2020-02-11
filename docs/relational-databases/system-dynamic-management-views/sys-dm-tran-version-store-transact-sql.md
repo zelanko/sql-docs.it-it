@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262597"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce una tabella virtuale in cui vengono visualizzati tutti i record di versione nell'archivio delle versioni. **DM tran_version_store** è poco efficiente per l'esecuzione perché viene eseguita una query all'intero archivio versioni e l'archivio delle versioni può essere molto grande.  
+  Restituisce una tabella virtuale in cui vengono visualizzati tutti i record di versione nell'archivio delle versioni. **sys. dm_tran_version_store** è inefficiente da eseguire perché esegue una query sull'intero archivio delle versioni e l'archivio versione può avere dimensioni molto elevate.  
   
  Ogni record con versione viene archiviato come dato binario con alcune informazioni di rilevamento o stato. Analogamente ai record nelle tabelle di database, i record inclusi nell'archivio delle versioni vengono archiviati in pagine da 8192 byte. In caso di dimensioni superiori a 8192 byte, il record verrà suddiviso in due record distinti.  
   
- Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Uso **DM tran_version_store** per trovare le versioni precedenti delle righe in rappresentazione binaria in cui si trovano nell'archivio delle versioni.  
+ Poiché il record con versione viene archiviato come dato binario, non si verificheranno problemi in presenza di diverse regole di confronto di database diversi. Utilizzare **sys. dm_tran_version_store** per trovare le versioni precedenti delle righe nella rappresentazione binaria come sono presenti nell'archivio delle versioni.  
   
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,17 +51,17 @@ sys.dm_tran_version_store
 |**version_sequence_num**|**bigint**|Numero di sequenza del record con versione. Questo valore è univoco all'interno della transazione di generazione della versione.|  
 |**database_id**|**int**|ID di database del record con versione.|  
 |**rowset_id**|**bigint**|ID del set di righe del record.|  
-|**status**|**tinyint**|Indica se un record con versione è stato suddiviso in due record. Se il valore è 0, il record è archiviato in una pagina. Se è 1, il record è suddiviso in due record archiviati in due pagine diverse.|  
+|**stato**|**tinyint**|Indica se un record con versione è stato suddiviso in due record. Se il valore è 0, il record è archiviato in una pagina. Se è 1, il record è suddiviso in due record archiviati in due pagine diverse.|  
 |**min_length_in_bytes**|**smallint**|Lunghezza minima del record in byte.|  
 |**record_length_first_part_in_bytes**|**smallint**|Lunghezza della prima parte del record con versione, espressa in byte.|  
-|**record_image_first_part**|**varbinary(8000)**|Immagine binaria della prima parte del record con versione.|  
+|**record_image_first_part**|**varbinary (8000)**|Immagine binaria della prima parte del record con versione.|  
 |**record_length_second_part_in_bytes**|**smallint**|Lunghezza della seconda parte del record con versione, espressa in byte.|  
-|**record_image_second_part**|**varbinary(8000)**|Immagine binaria della seconda parte del record con versione.|  
+|**record_image_second_part**|**varbinary (8000)**|Immagine binaria della seconda parte del record con versione.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato uno scenario di test in cui quattro transazioni simultanee, ognuna identificata da un numero di sequenza della transazione (XSN), vengono eseguite in un database con le opzioni ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT impostate su ON. Vengono eseguite le transazioni seguenti:  

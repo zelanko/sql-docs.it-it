@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781463"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>Opzione di configurazione del server remote admin connections
@@ -30,7 +30,7 @@ ms.locfileid: "62781463"
   
  Nella tabella seguente sono elencati i valori possibili per l'opzione remote admin connections.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Indica che l'utilizzo della connessione DAC è consentito solo alle connessioni locali.|  
 |1|Indica che l'utilizzo della connessione DAC è consentito alle connessioni remote.|  

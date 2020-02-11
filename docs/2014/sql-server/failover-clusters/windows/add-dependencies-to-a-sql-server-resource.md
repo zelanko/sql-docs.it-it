@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a29577d6027c43fd35a8b27db8b402123c89a4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035664"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Aggiunta di dipendenze a una risorsa di SQL Server
   In questo argomento viene descritto come aggiungere dipendenze a una risorsa istanza del cluster di failover (FCI) di AlwaysOn tramite lo snap-in Gestione cluster di failover. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [prerequisiti](#Prerequisites)  
+-   **Prima di iniziare:**  [limitazioni e restrizioni](#Restrictions), [prerequisiti](#Prerequisites)  
   
--   **Per aggiungere dipendenze a una risorsa di SQL Server, utilizzando:** [Gestione Cluster di Failover Windows](#WinClusManager)  
+-   **Per aggiungere una dipendenza a una risorsa SQL Server utilizzando:** [Windows Gestione cluster di failover](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -44,21 +44,23 @@ ms.locfileid: "63035664"
   
  Si tenga presente che possono verificarsi anche i problemi seguenti:  
   
--   FTP con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replica: Per le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che utilizzano FTP con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replica, il servizio FTP deve usare uno dei dischi fisici come l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che è configurato per usare il servizio FTP.  
+-   FTP con replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Nel caso di istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che utilizzano FTP con la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario che il servizio FTP utilizzi uno dei dischi fisici utilizzati dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata per l'utilizzo del servizio FTP.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dipendenze delle risorse: Se si aggiunge una risorsa a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gruppo ed è attiva una dipendenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorse per assicurarsi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è disponibile, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di aggiungere una dipendenza sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa dell'agente. Non aggiungere alcuna dipendenza dalla risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per garantire che la disponibilità del computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rimanga elevata, configurare la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent in modo che non influisca sul gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in caso di errore della risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se si aggiunge una risorsa a un gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è attiva una dipendenza dalla risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per garantire la disponibilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di aggiungere una dipendenza dalla risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Non aggiungere alcuna dipendenza dalla risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per garantire che la disponibilità del computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rimanga elevata, configurare la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent in modo che non influisca sul gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in caso di errore della risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
   
--   Condivisioni di file e le risorse di stampa: Quando si installa le risorse di condivisione File o le risorse del cluster di stampa, e non devono essere inseriti nelle stesse risorse di disco fisico del computer che esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. perché potrebbero verificarsi cali delle prestazioni e perdita di servizio nel computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Condivisioni di file e risorse di stampa. Quando si installano risorse di tipo condivisione file o cluster di stampa, è consigliabile non salvarle nelle stesse risorse di disco fisico del computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], perché potrebbero verificarsi cali delle prestazioni e perdita di servizio nel computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Considerazioni relative a MS DTC: Dopo avere installato il sistema operativo e configurare l'infrastruttura di classificazione file, è necessario configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) per lavorare in un cluster usando lo snap-in Gestione Cluster di Failover. Se non si configura MS DTC per il clustering, l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà bloccata, tuttavia una configurazione non corretta di MS DTC può influire sulla funzionalità dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Considerazioni relative a MS DTC: dopo l'installazione del sistema operativo e la configurazione dell'istanza del cluster di failover, è necessario configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) per il funzionamento in un cluster utilizzando lo snap-in Gestione cluster di failover. Se non si configura MS DTC per il clustering, l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà bloccata, tuttavia una configurazione non corretta di MS DTC può influire sulla funzionalità dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-     Se si installa MS DTC nel gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono disponibili altre risorse dipendenti da MS DTC, quest'ultimo non sarà disponibile se tale gruppo è offline o si verifica un failover. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di inserire MS DTC nel proprio gruppo con la propria risorsa disco fisica, se possibile.  
+     Se si installa MS DTC nel gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono disponibili altre risorse dipendenti da MS DTC, quest'ultimo non sarà disponibile se tale gruppo è offline o si verifica un failover. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di inserire MS DTC nel proprio gruppo con la propria risorsa disco fisica, se possibile.  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Se si installa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un gruppo di risorse WSFC con più unità disco e si sceglie di salvare i dati in una delle unità, la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verrà impostata in modo da essere dipendente solo da tale unità. Per salvare dati o i log in un altro disco, è necessario prima aggiungere una dipendenza alla risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il disco aggiuntivo.  
   
-##  <a name="WinClusManager"></a> Utilizzo dello snap-in Gestione cluster di failover  
- **Per aggiungere dipendenze a una risorsa di SQL Server**  
+##  <a name="WinClusManager"></a>Utilizzo dello snap-in Gestione cluster di failover  
+ **Per aggiungere una dipendenza a una risorsa SQL Server**  
   
 -   Aprire lo snap-in Gestione cluster di failover.  
   

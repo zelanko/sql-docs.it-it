@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763203"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: BCPSetBulkMode fornisce un'alternativa a [IBCPSession:: BCPColFmt &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession:: BCPColFmt, che imposta singoli attributi di formato di colonna, IBCPSession2:: BCPSetBulkMode imposta tutti gli attributi.  
+  IBCPSession2:: BCPSetBulkMode fornisce un'alternativa a [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession:: BCPColFmt, che imposta singoli attributi di formato di colonna, IBCPSession2:: BCPSetBulkMode imposta tutti gli attributi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *property*  
+ *Proprietà*  
  Costante di tipo BYTE. Per un elenco di costanti, vedere la tabella nella sezione Osservazioni.  
   
  *pField*  
@@ -362,6 +362,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB &#40;IBCPSession2&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251673"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Scollegamento e collegamento di database DQS
@@ -22,20 +22,20 @@ ms.locfileid: "75251673"
 
   In questo argomento viene descritto come scollegare e collegare i database DQS.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Limitations"></a>Limitazioni e restrizioni  
+###  <a name="Limitations"></a> Limitazioni e restrizioni  
  Per un elenco delle limitazioni e restrizioni, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   Assicurarsi che non vi siano attività o processi in esecuzione in DQS. È possibile verificare utilizzando la schermata **Monitoraggio attività** . Per informazioni dettagliate su funzionamento di questa schermata, vedere [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Assicurarsi che non vi siano utenti connessi al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
   
 -   È necessario che l'account utente di Windows sia membro del ruolo predefinito del server db_owner nell'istanza di SQL Server per scollegare i database DQS.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251673"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (...).  
+5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( ... ).  
   
 6.  Fare clic su **OK** per collegare il database DQS_MAIN.  
   
@@ -102,6 +102,6 @@ ms.locfileid: "75251673"
  È inoltre possibile collegare i database DQS utilizzando le istruzioni Transact-SQL. Per ulteriori informazioni sul collegamento di database tramite istruzioni Transact-SQL, vedere [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i database DQS](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

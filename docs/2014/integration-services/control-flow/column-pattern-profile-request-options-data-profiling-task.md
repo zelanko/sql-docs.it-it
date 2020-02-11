@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832608"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
@@ -25,14 +25,14 @@ ms.locfileid: "62832608"
 > [!NOTE]  
 >  Le opzioni descritte in questo argomento vengono visualizzate nella pagina **Richieste profilo** in **Editor attività Profiling dati**. Per altre informazioni su questa pagina dell'editor, vedere [Editor attività Profiling dati &#40;pagina Richieste profilo&#41;](data-profiling-task-editor-profile-requests-page.md).  
   
- Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](data-profiling-task.md). Per altre informazioni su come usare il Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](data-profile-viewer.md).  
+ Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](data-profile-viewer.md).  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>Informazioni sull'utilizzo di delimitatori e simboli  
  Prima di calcolare i criteri di ricerca per una **Richiesta profilo Criteri di ricerca colonna**, l'attività Profiling dati suddivide in token i dati, ovvero separa i valori stringa in unità minori note come token. L'attività separa le stringhe in token in base ai delimitatori e i simboli specificati per le proprietà **Delimiters** e **Symbols** :  
   
 -   **Delimiters** Per impostazione predefinita, l'elenco dei delimitatori contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
--   **I simboli** per impostazione predefinita, l'elenco dei **simboli** contiene i seguenti caratteri: `,.;:-"'`~ = & / @!? [] <> (){}| #* ^ %`. For example, if the symbols are "`()-'", il valore"(425) 123-4567"viene suddiviso in token come ["(","425",")","123","-","4567",") "].  
+-   **Simboli** Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-' ", il valore" (425) 123-4567 "viene suddiviso in token come [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Un carattere non può essere simultaneamente un delimitatore e un simbolo.  
   
@@ -43,20 +43,20 @@ ms.locfileid: "62832608"
   
  È possibile, ad esempio, raggruppare i valori "East", "West", "North" e "South" eventualmente visualizzati negli indirizzi stradali statunitensi utilizzando il singolo tag "Direction". La tabella seguente rappresenta un esempio di tale tabella dei tag.  
   
-|Tag|Nome|  
+|Tag|Termine|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|Direzione|East|  
+|Direzione|West|  
+|Direzione|North|  
+|Direzione|South|  
   
  È possibile utilizzare un altro tag per raggruppare le parole diverse che esprimono la nozione di strada negli indirizzi stradali:  
   
-|Tag|Nome|  
+|Tag|Termine|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
-|Street|Place|  
+|Street|Posizione|  
 |Street|Way|  
   
  In base a questa combinazione di tag, il criterio di ricerca risultante per un indirizzo stradale potrebbe essere simile al seguente:  
@@ -71,7 +71,7 @@ ms.locfileid: "62832608"
 ## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
  Nel riquadro **Proprietà richiesta**per **Richiesta profilo Criteri di ricerca colonna** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati**che include le opzioni **TableOrView** e **Column**  
+-   **Dati**, che includono le opzioni **TableOrView** e **Column**  
   
 -   **Generale**  
   
@@ -86,8 +86,8 @@ ms.locfileid: "62832608"
   
  Per ulteriori informazioni, vedere la sezione "Opzioni TableorView" in questo argomento.  
   
- **Column**  
- Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per analizzare tutte le colonne.  
+ **Colonna**  
+ Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per profilare tutte le colonne.  
   
  Per ulteriori informazioni, vedere la sezione "Opzioni Column" in questo argomento.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62832608"
  Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
- Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  
+ Visualizza il nome della colonna selezionata. Questa opzione è vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  
   
  **StringCompareOptions**  
  Questa opzione non si applica al profilo Criteri di ricerca colonna.  
@@ -122,13 +122,13 @@ ms.locfileid: "62832608"
  **CaseSensitive**  
  Indica se i criteri di ricerca devono applicare la distinzione tra maiuscole e minuscole. Il valore predefinito di questa opzione è **False**.  
   
- **Delimiters**  
+ **Delimitatori**  
  Elenco dei caratteri che devono essere considerati spazi tra parole quando il testo viene suddiviso in token. Per impostazione predefinita, l'elenco **Delimiters** contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
- **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e " @ " per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco delle **simboli** contiene i seguenti caratteri: `,.;:-"'`~ = & / @!? [] <> (){}| #* ^ %'.  
+ **Simboli**  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%'.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62832608"
  Per ulteriori informazioni, tornare alla sezione "Utilizzo della tabella dei tag" di questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor attività Profiling dati &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)   
- [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor attività Profiling dati &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Modulo Profilo rapido singola tabella &#40;attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

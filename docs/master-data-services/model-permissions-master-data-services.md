@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728971"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorizzazioni per i modelli (Master Data Services)
@@ -27,14 +27,14 @@ ms.locfileid: "73728971"
   Le autorizzazioni per i modelli si applicano a tutte le entità, alle gerarchie derivate, alle gerarchie esplicite e alle raccolte esistenti all'interno del modello. È possibile eseguire l'override delle autorizzazioni assegnate al modello per qualsiasi singolo oggetto.  
   
 > [!NOTE]  
->  Se un utente è un amministratore di modelli, il modello viene visualizzato in tutte le aree funzionali dell'interfaccia utente. In caso contrario, il modello viene visualizzato solo nell'area funzionale **Visualizzatore**. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+>  Se un utente è un amministratore di modelli, il modello viene visualizzato in tutte le aree funzionali dell'interfaccia utente. In caso contrario, il modello viene visualizzato solo nell'area funzionale **Visualizzatore** . Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Create**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
-|**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Delete**|L'utente può eliminare i membri|  
+|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Aggiornamento**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
+|**Elimina**|L'utente può eliminare i membri|  
 |**Nega**|Negare l'accesso al modello|  
 |**Amministrativi**|Autorizzazione dell'amministratore per il modello. L'autorizzazione di amministratore è disponibile solo al livello del modello.|  
   
@@ -44,6 +44,6 @@ ms.locfileid: "73728971"
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Autorizzazioni per le entità &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
- [Autorizzazioni per raccolte &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
+ [Autorizzazioni raccolta &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
   
   

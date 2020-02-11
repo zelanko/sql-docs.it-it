@@ -22,26 +22,27 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981770"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando i Word breaker sono registrati per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative (parole non significative) e file del thesaurus, diventano disponibili per le operazioni di indicizzazione e query full-text. Il valore di **Name** o **LCID** può essere specificato nelle istruzioni per le query full-text e l'indice full-text [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando i Word breaker sono registrati per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative (parole non significative) e file del thesaurus, diventano disponibili per le operazioni di indicizzazione e query full-text. È possibile specificare il valore di **Name** o **LCID** nelle istruzioni per le query full-text e per gli [!INCLUDE[tsql](../../includes/tsql-md.md)] indici full-text.  
    
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
-|**name**|**sysname**|Valore dell'alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
+|**LCID**|**int**|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
+|**nome**|**sysname**|Valore dell'alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valori restituiti per le lingue predefinite  
  Nella tabella seguente sono mostrati i valori per le lingue i cui word breaker sono registrati per impostazione predefinita.  
   
-|Lingua|LCID|  
+|Linguaggio|LCID|  
 |--------------|----------|  
 |Arabo|1025|  
 |Bengalese (India)|1093|  
@@ -55,7 +56,7 @@ ms.locfileid: "73981770"
 |Ceco|1029|  
 |Danese|1030|  
 |Olandese|1043|  
-|Inglese|1033|  
+|Inglese|1040|  
 |Francese|1036|  
 |Tedesco|1031|  
 |**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Greco|1032|  
@@ -73,7 +74,7 @@ ms.locfileid: "73981770"
 |Malese (Malesia)|1086|  
 |Malayalam|1100|  
 |Marathi|1102|  
-|Lingua neutra|0|  
+|Neutralità|0|  
 |Norvegese (Bokmål)|1044|  
 |**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Polacco|1045|  
 |Portoghese (Brasile)|1046|  
@@ -104,11 +105,11 @@ ms.locfileid: "73981770"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
- [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurare e gestire i file del thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
+ [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

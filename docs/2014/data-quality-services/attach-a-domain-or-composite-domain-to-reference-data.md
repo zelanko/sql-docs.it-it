@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154507"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Associare un dominio o un dominio composito a dati di riferimento
@@ -40,9 +40,9 @@ ms.locfileid: "70154507"
 #### <a name="permissions"></a>Autorizzazioni  
  Per eseguire il mapping dei domini ai dati di riferimento, è necessario disporre del ruolo dqs_kb_editor nel database DQS_MAIN.  
   
-##  <a name="Map"></a> Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
+##  <a name="Map"></a>Eseguire il mapping dei domini ai dati di riferimento da Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] in **Gestione Knowledge Base**fare clic su **Nuova Knowledge Base**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70154507"
   
 4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato**e **CAP**.  
   
-5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Scegliere **OK**.  
+5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Fare clic su **OK**.  
   
 6.  Nel riquadro **Dominio** sul lato sinistro selezionare il dominio composito facendo clic su **Verifica indirizzo**, quindi fare clic sulla scheda **Dati di riferimento** sul lato destro.  
   
@@ -71,21 +71,21 @@ ms.locfileid: "70154507"
   
 9. Si tornerà alla scheda **dati di riferimento** . Nell'area **Impostazioni provider** modificare i valori nelle caselle seguenti, se necessario:  
   
-    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno effettuate automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
+    -   **Soglia di correzione automatica**: le correzioni del servizio dati di riferimento con livello di confidenza al di sopra di questi valori soglia verranno eseguite automaticamente. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,9 per 90%.  
   
-    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare nel servizio dati di riferimento.  
+    -   **Candidati suggeriti**: numero di candidati suggeriti da visualizzare dal servizio dati di riferimento.  
   
-    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza al di sotto di questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
+    -   **Confidenza min**: i suggerimenti del servizio dati di riferimento con livello di confidenza inferiore a questo valore verranno ignorati. Immettere un valore nella notazione decimale del valore percentuale corrispondente. Ad esempio, digitare 0,6 per 60%.  
   
 10. Fare clic su **Fine** per pubblicare la Knowledge Base. Al termine della pubblicazione della Knowledge Base verrà visualizzato un messaggio di conferma.  
   
  È ora possibile usare questa Knowledge base per l'attività di pulizia in un progetto Data Quality per standardizzare e pulire gli indirizzi US nei dati di origine in base alle informazioni fornite da Melissa Data tramite Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'esecuzione del mapping di un dominio ai dati di riferimento  
+##  <a name="FollowUp"></a>Completamento: dopo il mapping di un dominio ai dati di riferimento  
  Creare un progetto Data Quality ed eseguire l'attività di pulizia sui dati di origine che contengono gli indirizzi US confrontandolo con la Knowledge Base creata in questo argomento. Vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizi dati di riferimento in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
- [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
   
   

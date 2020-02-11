@@ -13,16 +13,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844405"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Consente di archiviare le credenziali di rete in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e di associarle a un server. Usare, ad esempio, questo stored procedure per concedere [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] autorizzazioni di lettura/scrittura appropriate per eseguire operazioni di backup e ripristino del database in un server di destinazione o per creare una copia di backup di un certificato usato per Transparent Data Encryption.  
+  In questo modo vengono archiviate le credenziali di rete in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e associate a un server. Usare, ad esempio, questo stored procedure per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] concedere le autorizzazioni di lettura/scrittura appropriate per eseguire operazioni di backup e ripristino del database in un server di destinazione o per creare una copia di backup di un certificato usato per Transparent Data Encryption.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -36,7 +36,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>Argomenti  
  '*target_server_name*'  
- Specifica il nome host o l'indirizzo IP del server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] accederà a questo server utilizzando le credenziali di nome utente e password passate a questo stored procedure.  
+ Specifica il nome host o l'indirizzo IP del server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]consente di accedere a questo server utilizzando le credenziali di nome utente e password passate a questo stored procedure.  
   
  Per connettersi tramite la rete InfiniBand, utilizzare l'indirizzo IP InfiniBand del server di destinazione.  
   
@@ -50,8 +50,8 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  '*password*ꞌ  
  Specifica la password per *user_name*.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **ALTER server state** .  
@@ -60,12 +60,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  Si verifica un errore se l'aggiunta di credenziali non riesce nel nodo di controllo e in tutti i nodi di calcolo.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Questo stored procedure aggiunge le credenziali di rete all'account NetworkService per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. L'account NetworkService esegue ogni istanza di SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul nodo di controllo e sui nodi di calcolo. Quando si esegue un'operazione di backup, ad esempio, il nodo di controllo e ogni nodo di calcolo utilizzeranno le credenziali dell'account NetworkService per ottenere le autorizzazioni di lettura e scrittura per il server di destinazione.  
+ Questa stored procedure aggiunge le credenziali di rete per l'account [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService. L'account NetworkService esegue ogni istanza di SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul nodo di controllo e sui nodi di calcolo. Quando si esegue un'operazione di backup, ad esempio, il nodo di controllo e ogni nodo di calcolo utilizzeranno le credenziali dell'account NetworkService per ottenere le autorizzazioni di lettura e scrittura per il server di destinazione.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Aggiungere le credenziali per l'esecuzione di un backup del database  
- Nell'esempio seguente vengono associate le credenziali nome utente e password per l'utente di dominio seattle\david con un server di destinazione con un indirizzo IP 10.172.63.255. L'utente seattle\david dispone delle autorizzazioni di lettura/scrittura per il server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] archivia tali credenziali e le utilizza per la lettura e la scrittura da e verso il server di destinazione, in base alle esigenze per le operazioni di backup e ripristino.  
+### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Aggiungere le credenziali per l'esecuzione di un backup del database  
+ Nell'esempio seguente vengono associate le credenziali nome utente e password per l'utente di dominio seattle\david con un server di destinazione con un indirizzo IP 10.172.63.255. L'utente seattle\david dispone delle autorizzazioni di lettura/scrittura per il server di destinazione. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]le credenziali vengono archiviate e utilizzate per la lettura e la scrittura da e verso il server di destinazione, in base alle esigenze per le operazioni di backup e ripristino.  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
@@ -77,7 +77,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  Per eseguire il backup del database su InfiniBand, assicurarsi di usare l'indirizzo IP InfiniBand del server di backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_pdw_remove_network_credentials &#40;SQL data warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

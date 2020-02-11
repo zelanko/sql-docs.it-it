@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056791"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -37,27 +37,27 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui appartiene il processo. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non a cui appartiene il processo. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Numero di processo Oracle.|  
-|**lastdate**|**varchar(22)**|Data dell'ultima esecuzione del processo.|  
-|**thisdate**|**varchar(22)**|Ora della modifica|  
-|**nextdate**|**varchar(22)**|Data della successiva esecuzione del processo.|  
+|**LASTDATE**|**varchar (22)**|Data dell'ultima esecuzione del processo.|  
+|**thisdate**|**varchar (22)**|Ora della modifica|  
+|**nextdate**|**varchar (22)**|Data della successiva esecuzione del processo.|  
 |**broken**|**varchar(1)**|Flag che indica se il processo è interrotto.|  
-|**interval**|**varchar(200)**|Intervallo del processo.|  
+|**intervallo**|**varchar (200)**|Intervallo del processo.|  
 |**fallimenti**|**int**|Numero di errori per il processo.|  
-|**xactsetjobwhat**|**varchar(200)**|Nome della procedura eseguita dal processo.|  
+|**xactsetjobwhat**|**varchar (200)**|Nome della procedura eseguita dal processo.|  
 |**xactsetjob**|**varchar(1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** : il processo è disabilitato.|  
 |**xactsetlonginterval**|**int**|Intervallo lungo per il processo.|  
 |**xactsetlongthreshold**|**int**|valore soglia lungo per il processo.|  
 |**xactsetshortinterval**|**int**|Intervallo breve per il processo.|  
 |**xactsetshortthreshold**|**int**|valore soglia breve per il processo.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -69,7 +69,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  È possibile eseguire **sp_helpxactsetjob**solo un membro del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare il processo del set di transazioni per un server di pubblicazione Oracle &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [Configurare il processo del set di transazioni per un server di pubblicazione Oracle &#40;la programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [sp_publisherproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

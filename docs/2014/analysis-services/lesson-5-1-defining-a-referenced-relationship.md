@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493929"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definizione di una relazione di tipo Riferimento
@@ -30,7 +30,7 @@ ms.locfileid: "69493929"
   
      Si noti che la misura **Reseller Sales-Sales Amount** non viene dimensionata correttamente dai membri dell'attributo **Country-Region** della gerarchia **Regions** . Il valore per **Reseller Sales-Sales Amount** viene ripetuto per ogni membro dell'attributo **Country-Region** .  
   
-     ![Misura Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Misura Reseller Sales-Sales Amount")  
+     ![Misura dimensionata Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Misura dimensionata Reseller Sales-Sales Amount")  
   
 4.  Aprire Progettazione vista origine dati per la vista origine dati **Adventure Works DW 2012** .  
   
@@ -46,17 +46,17 @@ ms.locfileid: "69493929"
   
      Si noti che la dimensione **Geography** del cubo non ha attualmente alcuna relazione né con il gruppo di misure **Internet Sales** né con il gruppo di misure **Reseller Sales** .  
   
-8.  Fare clic sul pulsante con i puntini di sospensione ( **...** ) nella cella **nome completo** all'intersezione tra la dimensione **Customer** e il gruppo di misure **Internet Sales** .  
+8.  Fare clic sul pulsante con i puntini di sospensione (**...**) nella cella **nome completo** all'intersezione tra la dimensione **Customer** e il gruppo di misure **Internet Sales** .  
   
      Nella finestra di dialogo **Definisci relazione** si noti che viene definita una relazione di tipo **Regolare** tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** in base alla colonna **CustomerKey** di ognuna di queste tabelle. Tutte le relazioni che sono state definite fino a questo momento nell'esercitazione sono di tipo Regolare.  
   
      Nella figura seguente viene illustrata la finestra di dialogo **Define Relationship** con una relazione di tipo Regolare tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** .  
   
-     Finestra di ![dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-4.gif "dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Finestra di dialogo Definisci relazione")  
   
 9. Fare clic su **Annulla**.  
   
-10. Fare clic sul pulsante con i puntini di sospensione ( **...** ) nella cella senza nome nel punto di intersezione tra la dimensione **geography** e il gruppo di misure **Reseller Sales** .  
+10. Fare clic sul pulsante con i puntini di sospensione (**...**) nella cella senza nome nel punto di intersezione tra la dimensione **geography** e il gruppo di misure **Reseller Sales** .  
   
      Nella finestra di dialogo **Definisci relazione** si noti che non è attualmente definita alcuna relazione tra la dimensione Geography del cubo e il gruppo di misure Reseller Sales. Non è possibile definire una relazione di tipo Regolare poiché non vi è una relazione diretta tra la tabella delle dimensioni per la dimensione Geography e la tabella dei fatti per il gruppo di misure Reseller Sales.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69493929"
   
      L'attributo Geography Key nella dimensione Reseller verrà utilizzato soltanto per collegare la dimensione Geography alla tabella dei fatti Reseller Sales. Dal momento che non verrà utilizzato per la visualizzazione, non c'è motivo per definire questa gerarchia dell'attributo come visibile. Ordinare e ottimizzare la gerarchia dell'attributo può soltanto produrre effetti negativi sulle prestazioni di elaborazione. È necessario, tuttavia, che l'attributo sia abilitato per essere utilizzato come collegamento tra le due dimensioni.  
   
-4.  Passare a Progettazione cubi per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial, fare clic sulla scheda **Utilizzo dimensioni** , quindi fare clic sul pulsante con i puntini di sospensione ( **...** ) all'intersezione tra il gruppo di misure **Reseller Sales** e la dimensione **geography** Cube.  
+4.  Passare a Progettazione cubi per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial, fare clic sulla scheda **Utilizzo dimensioni** , quindi fare clic sul pulsante con i puntini di sospensione (**...**) all'intersezione tra il gruppo di misure **Reseller Sales** e la dimensione **geography** Cube.  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "69493929"
   
 2.  Una volta completata la distribuzione, selezionare la scheda **Esplorazione** in Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti** .  
   
-3.  Nel riquadro Metadati espandere `Reseller Geography`, fare clic con il pulsante destro del mouse su Geographies e quindi scegliere **Aggiungi all'area riga**.  
+3.  Nel riquadro Metadati espandere `Reseller Geography`, fare clic con il pulsante destro del mouse su **Geographies**e quindi scegliere **Aggiungi all'area riga**.  
   
      Si noti che la misura **Reseller Sales-Sales Amount** è ora dimensionata correttamente dall'attributo **Country-Region** della gerarchia definita dall'utente **Geographies** , come illustrato nella figura seguente.  
   

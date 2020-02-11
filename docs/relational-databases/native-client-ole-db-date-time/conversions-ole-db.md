@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095354"
 ---
 # <a name="conversions-ole-db"></a>Conversioni (OLE DB)
@@ -31,15 +31,15 @@ ms.locfileid: "74095354"
   
 -   Il formato delle stringhe **DateTime** e **DateTimeOffset** è il seguente:  
   
-     *aaaa*-*mm*-*gg*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
+     *aaaa*-** mm-*GG*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
   
 -   Il formato delle stringe **time** è:  
   
-     *hh*:*mm*:*ss*[.*9999999*]  
+     *HH*:*mm*:*SS*[.* 9999999*]  
   
 -   Il formato delle stringhe di **Data** è:  
   
-     *aaaa*-*mm*-*gg*  
+     *aaaa*-** mm-*GG*  
   
 > [!NOTE]  
 >  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Di conseguenza, alcune conversioni eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versioni successive differiscono dalla specifica OLE DB.  
@@ -64,7 +64,7 @@ ms.locfileid: "74095354"
   
 -   Se si verifica un troncamento di secondi o di secondi frazionari durante la conversione dal server al client, viene impostato lo stato DBSTATUS_S_TRUNCATED.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Conversioni eseguite da client a server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
  Vengono descritte le conversioni di data/ora eseguite tra un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva).  
   
@@ -72,6 +72,6 @@ ms.locfileid: "74095354"
  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti di data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

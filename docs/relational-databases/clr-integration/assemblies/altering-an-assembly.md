@@ -1,5 +1,5 @@
 ---
-title: Modifica di un Assembly | Microsoft Docs
+title: Modifica di un assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 80ef9d283f90c50406477a7a651fb418694ae445
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027956"
 ---
 # <a name="altering-an-assembly"></a>Modifica di un assembly
@@ -30,17 +30,17 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY non interrompe i processi in esecuzione che utilizzano l'assembly. L'esecuzione di tali processi continua con l'assembly non modificato. Non è possibile utilizzare ALTER ASSEMBLY per modificare le firme di funzioni, funzioni di aggregazione, stored procedure e trigger di CLR (Common Language Runtime). Nuovi metodi pubblici possono essere aggiunti all'assembly, i metodi privati possono essere modificati nel modo desiderato e i metodi pubblici possono essere modificati a condizione di non modificare le firme o gli attributi. Non è possibile modificare tramite ALTER ASSEMBLY i campi contenuti in un tipo definito dall'utente con serializzazione nativa, inclusi i membri dei dati o le classi base. Tutte le altre modifiche non sono supportate. Per altre informazioni, vedere [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md).  
+ ALTER ASSEMBLY non interrompe i processi in esecuzione che utilizzano l'assembly. L'esecuzione di tali processi continua con l'assembly non modificato. Non è possibile utilizzare ALTER ASSEMBLY per modificare le firme di funzioni, funzioni di aggregazione, stored procedure e trigger di CLR (Common Language Runtime). Nuovi metodi pubblici possono essere aggiunti all'assembly, i metodi privati possono essere modificati nel modo desiderato e i metodi pubblici possono essere modificati a condizione di non modificare le firme o gli attributi. Non è possibile modificare tramite ALTER ASSEMBLY i campi contenuti in un tipo definito dall'utente con serializzazione nativa, inclusi i membri dei dati o le classi base. Tutte le altre modifiche non sono supportate. Per ulteriori informazioni, vedere [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>Modifica del set di autorizzazioni di un assembly  
- Il set di autorizzazioni di un assembly può essere anch'esso modificato utilizzando l'istruzione ALTER ASSEMBLY. L'istruzione seguente modifica il set di autorizzazioni dell'assembly SQLCLRTest **EXTERNAL_ACCESS**.  
+ Il set di autorizzazioni di un assembly può essere anch'esso modificato utilizzando l'istruzione ALTER ASSEMBLY. L'istruzione seguente modifica il set di autorizzazioni dell'assembly SQLCLRTest in **EXTERNAL_ACCESS**.  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- Se il set di autorizzazioni di un assembly viene modificato da **sicura** al **EXTERNAL_ACCESS** oppure **UNSAFE**, una chiave asimmetrica e un account di accesso corrispondente con  **EXTERNAL ACCESS ASSEMBLY** autorizzazione oppure **UNSAFE ASSEMBLY** è necessario creare l'autorizzazione per l'assembly. Per altre informazioni, vedere [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+ Se il set di autorizzazioni di un assembly viene modificato da **Safe** a **EXTERNAL_ACCESS** o **unsafe**, è necessario innanzitutto creare una chiave asimmetrica e un account di accesso corrispondente con l'autorizzazione **External Access assembly** o **UNSAFE assembly** per l'assembly. Per altre informazioni, vedere [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>Aggiunta del codice sorgente di un assembly.  
  La clausola ADD FILE nella sintassi ALTER ASSEMBLY non è presente in CREATE ASSEMBLY. È possibile utilizzarla per aggiungere codice sorgente o altri file associati a un assembly. I file vengono copiati dai percorsi originali e vengono archiviati nelle tabelle di sistema del database. In questo modo il codice sorgente o gli altri file saranno sempre disponibili nel caso in cui sia necessario ricreare o documentare la versione corrente del tipo definito dall'utente (UDT).  
@@ -52,9 +52,9 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
 ## <a name="see-also"></a>Vedere anche  
- [La gestione degli assembly dell'integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Creazione di un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [Eliminazione di un Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Gestione degli assembly di integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Creazione di un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
+ [Eliminazione di un assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

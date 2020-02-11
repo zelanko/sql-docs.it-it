@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401043"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Caricamento dei dati in parallelo data warehouse
@@ -41,9 +41,9 @@ Dopo l'elaborazione delle righe, DMS usa uno spostamento casuale per trasferire 
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |--------|---------------|  
 |Creare il database di gestione temporanea.|[Creare il database di gestione temporanea](staging-database.md)|  
 |Caricare con Integration Services.|[Caricare con Integration Services](load-with-ssis.md)|  

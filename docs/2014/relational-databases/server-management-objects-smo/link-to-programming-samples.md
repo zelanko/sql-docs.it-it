@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244522"
 ---
 # <a name="link-to-programming-samples"></a>Collegamento agli esempi di programmazione
@@ -26,7 +26,7 @@ ms.locfileid: "75244522"
   
  Per ulteriori informazioni su come installare gli esempi, vedere [AdventureWorks per SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Titolo|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |BackRest|Illustra come eseguire il backup e il ripristino di un database.|  
 |ChangeTableOwner|Illustra come modificare la proprietà di tutte le tabelle che non sono dbo to dbo.|  
