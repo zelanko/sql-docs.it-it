@@ -1,5 +1,5 @@
 ---
-title: Oggetto (ADO MD) Cell | Microsoft Docs
+title: Oggetto Cell (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,47 +16,47 @@ ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947741"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
-Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'asse contenuti in un set di celle.  
+Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un oggetto Cell.  
   
-## <a name="remarks"></a>Note  
- Oggetto **cella** viene restituito dalle [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà di un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Un oggetto **cella** viene restituito dalla proprietà [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) di un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
   
- Con le raccolte e le proprietà di un **cella** dell'oggetto, è possibile eseguire le operazioni seguenti:  
+ Con le raccolte e le proprietà di un oggetto **cella** , è possibile eseguire le operazioni seguenti:  
   
--   Restituire i dati nel **cella** con il [valore](../../../ado/reference/ado-md-api/value-property-ado-md.md) proprietà.  
+-   Restituire i dati nella **cella** con la proprietà [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) .  
   
--   Restituire la stringa che rappresenta la visualizzazione formattata delle **valore** proprietà con il [FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) proprietà.  
+-   Restituisce la stringa che rappresenta la visualizzazione formattata della proprietà **value** con la proprietà [formattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) .  
   
--   Restituire il valore ordinale del **cella** all'interno di **set di celle** con il [ordinale](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) proprietà.  
+-   Restituisce il valore ordinale della **cella** all'interno del **cella con la** proprietà [ordinale](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) .  
   
--   Determinano la posizione del **cella** all'interno di [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) con il [posizioni](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) raccolta.  
+-   Determinare la posizione della **cella** all'interno di [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) con la raccolta [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
--   Recuperare altre informazioni sui **cella** con l'oggetto ADO standard [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
+-   Recuperare altre informazioni sulla **cella** con la raccolta delle [Proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) ADO standard.  
   
- Il **proprietà** raccolta contiene le proprietà specifiche del provider. La tabella seguente elenca le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione per il provider per un elenco completo delle proprietà disponibili.  
+ La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|ColoreSfondo|Colore di sfondo utilizzato durante la visualizzazione della cella.|  
-|FontFlags|Maschera di bit che riporta in dettaglio gli effetti sul tipo di carattere.|  
-|TipoCarattere|Tipo di carattere utilizzato per visualizzare il valore della cella.|  
-|FontSize|Dimensioni del carattere utilizzata per visualizzare il valore della cella.|  
-|ColorePrimoPiano|Colore di primo piano usato durante la visualizzazione della cella.|  
+|ColoreSfondo|Colore di sfondo utilizzato per la visualizzazione della cella.|  
+|FontFlags|Maschera di maschera che illustra in dettaglio gli effetti sul tipo di carattere.|  
+|FontName|Tipo di carattere utilizzato per visualizzare il valore della cella.|  
+|FontSize|Dimensioni del carattere utilizzate per visualizzare il valore della cella.|  
+|ColorePrimoPiano|Colore di primo piano utilizzato per la visualizzazione della cella.|  
 |FormatString|Valore in una stringa formattata.|  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
+ [Esempio di asse (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Oggetto cellt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Raccolta Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -19,18 +19,18 @@ ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032672"
 ---
-# <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
+# <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un elemento della raccolta in un set di raccolta definito dall'utente. Un elemento della raccolta definisce i dati da raccogliere e la frequenza di raccolta.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,40 +47,40 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>Argomenti  
  [ @collection_set_id = ] *collection_set_id*  
- Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int**.  
+ Identificatore univoco locale del set di raccolta. *collection_set_id* è di **tipo int**.  
   
  [ @collector_type_uid = ] '*collector_type_uid*'  
- GUID che identifica il tipo di agente di raccolta dati da utilizzare per questo elemento *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito... Per un elenco di tipi di agenti di raccolta, eseguire una query sulla vista di sistema syscollector_collector_types.  
+ GUID che identifica il tipo di agente di raccolta da utilizzare per questo elemento *collector_type_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito. Per un elenco di tipi di agenti di raccolta, eseguire una query sulla vista di sistema syscollector_collector_types.  
   
- [ @name =] '*nome*'  
- Nome dell'elemento della raccolta. *nome* viene **sysname** e non può essere una stringa vuota o NULL.  
+ [ @name = ] '*Name*'  
+ Nome dell'elemento della raccolta. *Name* è di **tipo sysname** e non può essere una stringa vuota o null.  
   
- *nome* devono essere univoci. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
+ il *nome* deve essere univoco. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
   
- [ @frequency =] *frequenza*  
- Utilizzato per specificare la frequenza di raccolta dei dati da parte di questo elemento della raccolta, espressa in secondi. *frequenza* viene **int**, con un valore predefinito è 5. Il valore minimo che è possibile specificare è 5 secondi.  
+ [ @frequency = ] *frequenza* di  
+ Utilizzato per specificare la frequenza di raccolta dei dati da parte di questo elemento della raccolta, espressa in secondi. *Frequency* è di **tipo int**e il valore predefinito è 5. Il valore minimo che è possibile specificare è 5 secondi.  
   
- Se il set di raccolta è impostato sulla modalità non in cache, la frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare la modalità di raccolta del set di raccolta, eseguire una query di [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vista di sistema.  
+ Se il set di raccolta è impostato sulla modalità non in cache, la frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare la modalità di raccolta del set di raccolta, eseguire una query sulla vista di sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters =] '*parametri*'  
- Parametri di input per il tipo agente di raccolta. *i parametri* viene **xml** con valore predefinito è NULL. Il *parametri* dello schema deve corrispondere allo schema di parametri del tipo di agente di raccolta.  
+ [ @parameters = ] '*Parameters*'  
+ Parametri di input per il tipo agente di raccolta. *Parameters* è di **XML** e il valore predefinito è null. Lo schema dei *parametri* deve corrispondere allo schema dei parametri del tipo di agente di raccolta.  
   
- [ @collection_item_id =] *collection_item_id*  
- Identificatore univoco che identifica l'elemento del set di raccolta. *collection_item_id* viene **int** e ha OUTPUT.  
+ [ @collection_item_id = ] *collection_item_id*  
+ Identificatore univoco che identifica l'elemento del set di raccolta. *collection_item_id* è di **tipo int** e ha output.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_create_collection_item nel contesto del database di sistema msdb.  
   
  Il set di raccolta al quale viene aggiunto l'elemento deve essere arrestato prima della creazione dell'elemento della raccolta. Non è possibile aggiungere elementi della raccolta ai set di raccolta di sistema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare la raccolta specificata impostata, eseguire l'esempio B nel [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare il set di raccolta specificato, eseguire l'esempio B in [sp_syscollector_create_collection_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  
@@ -118,10 +118,10 @@ EXEC sp_syscollector_create_collection_item
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [sp_syscollector_update_collection_item &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [sp_syscollector_delete_collection_item &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [syscollector_collector_types &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [sp_syscollector_create_collection_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [syscollector_collection_items &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   
