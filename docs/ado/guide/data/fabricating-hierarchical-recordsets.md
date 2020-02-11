@@ -1,5 +1,5 @@
 ---
-title: Creazione di recordset gerarchici | Microsoft Docs
+title: Fabbricazione di recordset gerarchici | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925328"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Creazione di recordset gerarchici
-Nell'esempio seguente viene illustrato come creare un oggetto Recordset gerarchico senza un'origine dati sottostante utilizzando i dati di data shaping grammatica per definire le colonne per l'elemento padre, figlio e nipote **recordset**.  
+Nell'esempio seguente viene illustrato come costruire un recordset gerarchico senza un'origine dati sottostante utilizzando la grammatica di data shaping per definire le colonne per i **Recordset**padre, figlio e nipote.  
   
- Per creare un modello gerarchico **Recordset**, è necessario specificare il [Microsoft Data shaping per OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), ed è possibile specificare un valore NONE in Provider di dati di parametro di stringa di connessione del [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo per il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Per altre informazioni, vedere [provider obbligatori per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Per costruire un **Recordset**gerarchico, è necessario specificare il [servizio di Data Shaping Microsoft per OLE DB (provider di servizi ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) ed è possibile specificare un valore provider di dati None nel parametro della stringa di connessione del metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Per ulteriori informazioni, vedere [provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Non appena il **Recordset** è stato creato, può essere popolato, modificato o salvarla in un file.  
+ Non appena il **Recordset** è stato fabbricato, può essere popolato, modificato o reso permanente in un file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provider necessari per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND per Shape](../../../ado/guide/data/shape-append-clause.md)   
+ [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Clausola APPEND della forma](../../../ado/guide/data/shape-append-clause.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
