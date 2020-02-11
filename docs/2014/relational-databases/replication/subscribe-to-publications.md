@@ -25,16 +25,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629688"
 ---
 # <a name="subscribe-to-publications"></a>Subscribe to Publications
   Una sottoscrizione è la richiesta di una copia di dati o di oggetti di database in una pubblicazione. Una sottoscrizione definisce quale pubblicazione verrà ricevuta, insieme alla posizione e al momento in cui verrà ricevuta. Quando si pianificano le sottoscrizioni, è necessario decidere dove si desidera eseguire l'elaborazione dell'agente. La posizione di esecuzione dell'agente varia in base al tipo di sottoscrizione selezionato. In una sottoscrizione push, l'agente di merge o l'agente di distribuzione viene eseguito nel server di distribuzione, mentre in una sottoscrizione pull gli agenti vengono eseguiti nei Sottoscrittori. Dopo la creazione di una sottoscrizione non è più possibile modificarne il tipo.  
   
-|Sottoscrizione|Caratteristiche|Situazioni in cui utilizzarla|  
+|Subscription|Caratteristiche|Situazioni in cui utilizzarla|  
 |------------------|---------------------|--------------|  
 |Sottoscrizione push|Nelle sottoscrizioni push il server di pubblicazione propaga le modifiche a un Sottoscrittore senza che il Sottoscrittore ne faccia richiesta. È possibile inviare le modifiche ai Sottoscrittori su richiesta, in modo continuato o in base a una pianificazione definita. L'agente di distribuzione o l'agente di merge viene eseguito nel server di distribuzione.|I dati vengono sincronizzati in modo continuato o in modo ricorrente in base a una pianificazione specifica.<br /><br /> Le pubblicazioni richiedono lo spostamento dei dati quasi in tempo reale.<br /><br /> In un server di distribuzione l'aumento dell'overhead del processore non compromette le prestazioni.<br /><br /> Generalmente utilizzato con la replica snapshot e transazionale.|  
 |Sottoscrizione pull|Tramite le sottoscrizioni pull il Sottoscrittore richiede le modifiche eseguite nel server di pubblicazione. Le sottoscrizioni pull consentono al Sottoscrittore di stabilire quando sincronizzare le modifiche apportate ai dati. L'agente di distribuzione o l'agente di merge viene eseguito nel Sottoscrittore.|I dati vengono sincronizzati su richiesta o in base a una pianificazione anziché in modo continuo.<br /><br /> Alla pubblicazione è associato un numero elevato di Sottoscrittori e/o l'esecuzione di tutti gli agenti nel server di distribuzione richiederebbe un numero di risorse eccessivo.<br /><br /> I Sottoscrittori sono autonomi, scollegati e/o mobili. I Sottoscrittori determinano quando eseguire la connessione e quando sincronizzare le modifiche.<br /><br /> Generalmente utilizzato con la replica di tipo merge.|  
@@ -64,7 +64,7 @@ ms.locfileid: "62629688"
   
  **Per creare una sottoscrizione push**  
   
- [Create a Push Subscription](create-a-push-subscription.md)  
+ [Creare una sottoscrizione push](create-a-push-subscription.md)  
   
  **Per visualizzare o modificare le proprietà di sottoscrizione push**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62629688"
   
  **Per creare una sottoscrizione pull**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Creare una sottoscrizione pull](create-a-pull-subscription.md)  
   
  **Per visualizzare o modificare le proprietà di sottoscrizione pull**  
   

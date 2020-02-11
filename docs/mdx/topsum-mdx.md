@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097394"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
@@ -37,11 +37,11 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) che restituisce una misura.  
   
-## <a name="remarks"></a>Note  
- Il **TopSum** funzione calcola la somma di una misura specificata valutata su un set specificato, disponendo il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti il cui totale per l'espressione numerica specificata corrisponde almeno al valore specificato. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno al valore specificato. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **TopSum** calcola la somma di una misura specificata valutata su un set specificato, ordinando il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti il cui totale per l'espressione numerica specificata corrisponde almeno al valore specificato. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno al valore specificato. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!IMPORTANT]  
->  Ad esempio la [BottomSum](../mdx/bottomsum-mdx.md) funzione, il **TopSum** funzione rispetta mai la gerarchia.  
+>  Analogamente alla funzione [BottomSum](../mdx/bottomsum-mdx.md) , la funzione **TopSum** interrompe sempre la gerarchia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito per la categoria Bike il set più piccolo di membri del livello City nella gerarchia Geography della dimensione Geography il cui totale cumulativo calcolato utilizzando la misura Reseller Sales Amount corrisponde almeno alla somma di 6.000.000 (a partire dai membri di questo set con il numero di vendite più elevato).  
@@ -58,6 +58,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

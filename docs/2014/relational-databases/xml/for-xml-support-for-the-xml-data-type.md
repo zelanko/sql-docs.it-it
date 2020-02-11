@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205007"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Supporto del tipo di dati xml in FOR XML
   Se nella clausola SELECT di una query FOR XML è specificata una colonna di tipo `xml`, viene eseguito il mapping dei valori della colonna come elementi nel codice XML risultante, indipendentemente dal fatto che sia stata specificata o meno la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo `xml` non sono serializzate.  
   
- Ad esempio, la query seguente recupera le informazioni di contatto cliente, ad esempio il `BusinessEntityID`, `FirstName`, e `LastName` le colonne e i numeri di telefono dal `AdditionalContactInfo` colonna di `xml` tipo.  
+ Ad esempio, la query seguente recupera le informazioni di contatto del cliente `BusinessEntityID`, `FirstName`ad esempio `LastName` le colonne, e, e i numeri `AdditionalContactInfo` di telefono `xml` della colonna di tipo.  
   
 ```  
 USE AdventureWorks2012;  

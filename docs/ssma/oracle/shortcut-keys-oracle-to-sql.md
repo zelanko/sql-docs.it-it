@@ -1,5 +1,5 @@
 ---
-title: Tasti di scelta rapida (Oracletosql) | Microsoft Docs
+title: Tasti di scelta rapida (da Oracle a SQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266468"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Tasti di scelta rapida (OracleToSQL)
-È possibile utilizzare i tasti di scelta rapida per spostarsi all'interno dell'applicazione SSMA. Per ulteriori informazioni, vedere gli argomenti seguenti.  
+È possibile usare i tasti di scelta rapida per spostarsi all'interno dell'applicazione SSMA. Per ulteriori informazioni, vedere gli argomenti seguenti.  
   
--   [Comandi di menu e tasti di scelta rapida&#40;Oracle a SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
+-   [Comandi di menu e altri tasti di scelta rapida&#40;Oracle a SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Introduzione a SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[Introduzione con SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

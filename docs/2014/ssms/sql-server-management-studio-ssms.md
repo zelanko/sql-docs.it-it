@@ -11,17 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155003"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di SQL Server. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] vengono forniti gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server. Vengono inoltre forniti gli strumenti per distribuire, monitorare e aggiornare i componenti livello dati, ad esempio i database e i data warehouse utilizzati dalle applicazioni, e per compilare query e script.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>Vantaggi di SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un'utilità completa per la gestione di oggetti SQL Server che abbina un'interfaccia grafica di facile utilizzo con funzionalità di scripting avanzate. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere utilizzato per gestire il [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è un'utilità completa per la gestione di oggetti SQL Server che abbina un'interfaccia grafica di facile utilizzo con funzionalità di scripting avanzate. 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere utilizzato per gestire il [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="sql-server-management-studio-components"></a>Componenti di SQL Server Management Studio  
   
