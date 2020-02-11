@@ -1,5 +1,5 @@
 ---
-title: Uso di dati della tabella nidificata come Input per un grafico di accuratezza | Microsoft Docs
+title: Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082724"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza
@@ -41,9 +41,9 @@ ms.locfileid: "66082724"
   
 2.  Selezionare la scheda **Grafico di accuratezza modello di data mining** , quindi selezionare la scheda **Selezione input** .  
   
-3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **Specifica un set di dati diverso**.  
+3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante **(...)**  per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
+4.  Fare clic sul pulsante Sfoglia **(...)** per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
   
 5.  Fare clic su **Seleziona tabella del case**. Nella finestra di dialogo **Seleziona tabella** scegliere una tabella dalla vista origine dati che contiene i dati del case e quindi fare clic su **OK**.  
   

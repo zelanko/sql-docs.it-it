@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232466"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach
@@ -89,9 +89,9 @@ ms.locfileid: "75232466"
 -   Trascinare l'attività **Estrai** dati di valuta di esempio flusso di dati nel contenitore ciclo foreach ora `Foreach File in Folder`rinominata.  
   
 ## <a name="next-lesson-task"></a>Attività della lezione successiva  
- [Passaggio 3: modifica della gestione connessione file flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Passaggio 3: Modifica della gestione connessione file flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un contenitore ciclo foreach](control-flow/foreach-loop-container.md)   
- [Usare variabili nei pacchetti](use-variables-in-packages.md)  
+ [Uso di variabili nei pacchetti](use-variables-in-packages.md)  
   

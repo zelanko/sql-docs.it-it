@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297860"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle a query (Visual Database Tools)
@@ -57,10 +57,10 @@ ms.locfileid: "63297860"
 7.  Sempre nel **riquadro SQL**aggiungere un alias dopo la parentesi destra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare alias di tabella &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Creazione di alias di tabella &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Rimuovere tabelle da query &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
  [Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Riepilogare i risultati delle query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

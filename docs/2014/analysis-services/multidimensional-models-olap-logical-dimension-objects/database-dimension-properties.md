@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728501"
 ---
 # <a name="database-dimension-properties"></a>Proprietà delle dimensioni del database
-  Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le caratteristiche di una dimensione sono definite dai metadati per la dimensione, in base alle impostazioni di diverse proprietà della dimensione e gli attributi o le gerarchie contenute nella dimensione. Nella tabella seguente vengono descritte le proprietà delle dimensioni in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]le caratteristiche di una dimensione sono definite dai metadati per la dimensione, in base alle impostazioni di varie proprietà della dimensione e agli attributi o alle gerarchie contenute nella dimensione. Nella tabella seguente vengono descritte le proprietà delle dimensioni in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
@@ -49,12 +49,12 @@ ms.locfileid: "62728501"
 |`WriteEnabled`|Indica se i writeback della dimensione sono disponibili, in base alle autorizzazioni di sicurezza.|  
   
 > [!NOTE]  
->  Per altre informazioni sull'impostazione di valori per le proprietà ErrorConfiguration e UnknownMember quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Per ulteriori informazioni sull'impostazione dei valori per le proprietà ErrorConfiguration e UnknownMember in caso di utilizzo di valori null e di altri problemi di integrità dei dati, vedere [gestione di problemi di integrità dei dati in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
- [Gerarchie definite dall'utente](user-hierarchies.md)   
+ [Gerarchie utente](user-hierarchies.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

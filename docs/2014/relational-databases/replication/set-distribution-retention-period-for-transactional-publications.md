@@ -1,5 +1,5 @@
 ---
-title: Impostare il periodo di conservazione di distribuzione per le pubblicazioni transazionali (SQL Server Management Studio) | Microsoft Docs
+title: Impostazione del periodo di memorizzazione per la distribuzione per le pubblicazioni transazionali (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c272cef68f1fc392aed05a3d8d45ab665674e39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676630"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>Impostazione del periodo di memorizzazione per la distribuzione per le pubblicazioni transazionali (SQL Server Management Studio)

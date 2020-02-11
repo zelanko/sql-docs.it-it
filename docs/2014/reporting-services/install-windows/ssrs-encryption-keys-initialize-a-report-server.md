@@ -18,18 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108743"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Inizializzare un server di report (Gestione configurazione SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Le chiavi di crittografia sono basate in parte sulle informazioni sul profilo del servizio del server di report. Se si modifica l'identità utente utilizzata per l'esecuzione del servizio del server di report, è necessario aggiornare le chiavi di conseguenza. Se si utilizza lo strumento di configurazione di Reporting Services per modificare l'identità utente, questa operazione viene eseguita automaticamente.  
   
- Se per un qualche motivo l'inizializzazione ha esito negativo, il server di report restituisce un errore `RSReportServerNotActivated` in risposta alle richieste dell'utente e di servizio. In questo caso, potrebbe essere necessario risolvere i problemi di configurazione del sistema o del server. Per altre informazioni, vedere [SSRS: Risoluzione dei problemi e gli errori con Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) nel Wiki di Technet.  
+ Se per un qualche motivo l'inizializzazione ha esito negativo, il server di report restituisce un errore `RSReportServerNotActivated` in risposta alle richieste dell'utente e di servizio. In questo caso, potrebbe essere necessario risolvere i problemi di configurazione del sistema o del server. Per altre informazioni, vedere [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: risoluzione di problemi ed errori di Reporting Services) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Wiki di TechNet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Panoramica del processo di inizializzazione  
  Il processo di inizializzazione crea e archivia una chiave simmetrica utilizzata per la crittografia. La chiave simmetrica viene creata dai servizi di crittografia di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e quindi utilizzata dal servizio del server di report per crittografare e decrittografare i dati. La chiave simmetrica è anch'essa crittografata con una chiave asimmetrica.  
@@ -71,6 +71,6 @@ ms.locfileid: "66108743"
  Per confermare l'inizializzazione di un server di report, eseguire il ping del servizio Web ReportServer digitando **http://\<nomeserver>/reportserver** nella finestra di comando. Se si verifica l'errore `RSReportServerNotActivated`, l'inizializzazione non è riuscita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871059"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Visualizzare o modificare il livello di compatibilità di un database
   In questo argomento si illustra come visualizzare o modificare il livello di compatibilità di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Prima di modificare il livello di compatibilità di un database, è importante comprendere quale impatto avrà la modifica sulle applicazioni. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62871059"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>Per visualizzare o modificare il livello di compatibilità di un database  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62871059"
   
      Il livello di compatibilità corrente viene visualizzato nella casella di riepilogo **Livello di compatibilità** .  
   
-5.  Per modificare il livello di compatibilità, selezionare un'opzione diversa dall'elenco. Scegliere tra **SQL Server 2008 (100)** , **SQL Server 2012 (110)** o **SQL Server 2014 (120)** .  
+5.  Per modificare il livello di compatibilità, selezionare un'opzione diversa dall'elenco. Scegliere tra **SQL Server 2008 (100)**, **SQL Server 2012 (110)** o **SQL Server 2014 (120)**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>Per visualizzare il livello di compatibilità di un database  
   
@@ -86,7 +86,7 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio viene modificato il livello di compatibilità di [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)].  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene modificato il livello di [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]compatibilità di.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

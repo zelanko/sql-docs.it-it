@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762423"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62762423"
  Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento.  
   
 > [!IMPORTANT]  
->  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database in un server non di produzione ed esaminare inoltre il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
+>  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="DetachDb"></a> Scollegamento di un database  
  Lo scollegamento di un database determina la rimozione del database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mentre i file di dati e i file del log delle transazioni inclusi nel database non vengono modificati. È quindi possibile utilizzare questi file per collegare il database a qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso il server dal quale è stato scollegato il database.  
@@ -66,7 +66,7 @@ ms.locfileid: "62762423"
   
 -   È in corso il mirroring del database in una sessione di mirroring.  
   
-     Non è possibile scollegare il database fino al termine della sessione. Per altre informazioni, vedere [Rimozione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+     Non è possibile scollegare il database fino al termine della sessione. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 -   Il database è sospetto. Non è possibile scollegare un database sospetto. Per poter eseguire lo scollegamento, è prima necessario attivare la modalità di emergenza. Per ulteriori informazioni sull'attivazione della modalità di emergenza per un database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
@@ -85,14 +85,14 @@ ms.locfileid: "62762423"
 3.  Scollegare di nuovo il database.  
   
 ##  <a name="AttachDb"></a> Collegamento di un database  
- È possibile collegare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiato o scollegato. Quando si collega un [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] istanza del server, i file vengono collegati dal percorso precedente insieme agli altri file del database, uguali a quelle di catalogo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../search/upgrade-full-text-search.md).  
+ È possibile collegare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiato o scollegato. Quando si collega un' [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] istanza del server, i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../search/upgrade-full-text-search.md).  
   
  Durante il collegamento di un database è necessario che siano disponibili tutti i file di dati (file MDF e NDF). Se un file di dati si trova in un percorso diverso rispetto al momento della creazione o dell'ultimo collegamento del database, è necessario specificare il percorso corrente.  
   
 > [!NOTE]  
 >  Se il file di dati primario in corso di collegamento è di sola lettura, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si considera il database di sola lettura.  
   
- Quando un database crittografato prima di tutto è collegato a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il proprietario del database è necessario aprire la chiave master del database eseguendo l'istruzione seguente: DECRITTOGRAFIA OPEN MASTER KEY TRAMITE PASSWORD = **» *`password`* '** . È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando un database crittografato viene collegato per la prima volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a un'istanza di, è necessario che il proprietario del database apra la chiave master del database eseguendo l'istruzione Open Master Key decryption by password = **'*`password`*'**. È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  I requisiti necessari per il collegamento dei file di log dipendono in parte dallo stato di lettura/scrittura o di sola lettura del database, come illustrato di seguito:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62762423"
   
      Se un database di lettura/scrittura include un singolo file di log e non se ne specifica una nuova posizione, durante l'operazione di collegamento il file viene cercato nella vecchia posizione. Se viene trovato, viene utilizzato il vecchio file di log, indipendentemente dal fatto che il database sia stato o meno chiuso correttamente. Se il vecchio file di log non viene trovato, il database è stato chiuso correttamente e non è presente una catena di log attiva, con l'operazione di collegamento si tenta di compilare un nuovo file di log per il database.  
   
--   Se il file di dati primario che viene connesso è di sola lettura, la [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] non è possibile aggiornare il percorso del log archiviato nel file primario.  
+-   Se il file di dati primario associato è di sola lettura, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] non è in grado di aggiornare il percorso del log archiviato nel file primario.  
   
   
   

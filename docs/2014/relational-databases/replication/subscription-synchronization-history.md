@@ -1,5 +1,5 @@
 ---
-title: Sottoscrizione, cronologia sincronizzazione (sottoscrizione di tipo Merge, SQL Server 2005 e versioni successive) | Microsoft Docs
+title: Sottoscrizione, Cronologia sincronizzazione (sottoscrizione di tipo merge, SQL Server 2005 e versioni successive) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629706"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Sottoscrizione, Cronologia sincronizzazione (Sottoscrizione di tipo merge, SQL Server 2005 e versioni successive)
@@ -29,12 +29,12 @@ ms.locfileid: "62629706"
  **Visualizza**  
  Consente di selezionare l'agente di merge da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di merge al termine della sessione. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Operazione completata  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62629706"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente di merge in una sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale se l'agente è stato eseguito in precedenza.  
   
  **Comandi caricati**  
@@ -74,7 +74,7 @@ ms.locfileid: "62629706"
  **% del totale**  
  Percentuale del tempo di elaborazione totale riferita a ogni fase della sessione selezionata.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo utilizzata per ogni fase di elaborazione. Il valore di durata rappresenta il tempo trascorso se l'agente di merge è attualmente in esecuzione per la sessione e la durata totale se l'agente di merge è stato eseguito in precedenza.  
   
  **Inserts**  

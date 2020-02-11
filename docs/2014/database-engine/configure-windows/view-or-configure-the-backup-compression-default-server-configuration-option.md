@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808749"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Visualizzare o configurare l'opzione di configurazione del server backup compression default
   Questo argomento illustra come visualizzare o configurare l'opzione di configurazione del server **Valore predefinito di compressione backup** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **backup compression default** è possibile determinare se nell'istanza del server vengono creati backup compressi per impostazione predefinita. Quando è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'opzione **Valore predefinito di compressione backup** è disattivata.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62808749"
   
      Se si è un membro del ruolo predefinito del server **sysadmin** o **serveradmin** , è anche possibile modificare l'impostazione predefinita facendo clic sulla casella **Comprimi backup** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-backup-compression-default-option"></a>Per visualizzare l'opzione backup compression default  
   

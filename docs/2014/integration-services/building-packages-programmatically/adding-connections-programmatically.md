@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772224"
 ---
 # <a name="adding-connections-programmatically"></a>Aggiunta di connessioni a livello di programmazione
@@ -45,7 +45,7 @@ ms.locfileid: "62772224"
   
  Nella tabella seguente sono elencate le gestioni connessioni incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. e la stringa utilizzata nell'istruzione `package.Connections.Add("xxx")` Per un elenco di tutte le gestioni connessioni, vedere [Connessioni di Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md).  
   
-|String|Gestione connessione|  
+|string|Gestione connessione|  
 |------------|------------------------|  
 |"OLEDB"|Gestione connessione per le connessioni OLE DB.|  
 |"ODBC"|Gestione connessione per le connessioni ODBC.|  
@@ -209,10 +209,10 @@ End Class
 ## <a name="external-resources"></a>Risorse esterne  
  Articolo tecnico [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743) (stringhe di connessione) su carlprothman.net.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessioni in Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md)   
- [Creare gestioni connessioni](../create-connection-managers.md)  
+ [Integration Services &#40;connessioni SSIS&#41;](../connection-manager/integration-services-ssis-connections.md)   
+ [Creazione di gestioni connessioni](../create-connection-managers.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93a39c50ea81be98e723101d1d1dc076d5569171
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797724"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939599"
 ---
 # <a name="sql-server-data-files-in-azure"></a>File di dati di SQL Server in Azure
   SQL Server file di dati in Azure consente il supporto nativo per i file di database SQL Server archiviati come BLOB di Azure. Consente di creare un database in SQL Server in esecuzione in locale o in una macchina virtuale in Azure con un percorso di archiviazione dedicato per i dati nell'archivio BLOB di Azure. Questo miglioramento semplifica in particolar modo lo spostamento di database tra computer mediante le operazioni di collegamento e scollegamento. Inoltre, fornisce un percorso di archiviazione alternativo per i file di backup del database consentendo di eseguire il ripristino da o in archiviazione di Azure. Pertanto, rende possibile l'utilizzo di diverse soluzioni ibride offrendo numerosi vantaggi per la virtualizzazione dei dati, lo spostamento dei dati, la sicurezza e la disponibilità nonché costi moderatamente bassi e manutenzione per una disponibilità elevata e una scalabilità elastica.  
@@ -30,20 +30,20 @@ ms.locfileid: "72797724"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-azure"></a>Vantaggi dell'uso di SQL Server file di dati in Azure  
   
--   **Vantaggi di una migrazione rapida e semplice:** questa funzionalità semplifica il processo di migrazione spostando un database alla volta tra computer locali nonché tra l'ambiente locale e l'ambiente cloud senza alcuna modifica alle applicazioni. Pertanto, supporta una migrazione incrementale senza influire sull'infrastruttura locale esistente. Inoltre, l'accesso a un'archiviazione dati centralizzata semplifica la logica dell'applicazione quando un'applicazione deve essere eseguita in più posizioni in un ambiente locale. In alcuni casi, potrebbe essere necessario installare rapidamente centri di calcolo in località geografiche diverse per la raccolta di dati da molte origini diverse. Grazie a questa nuova funzionalità avanzata, anziché trasferire i dati da una posizione all'altra, è possibile archiviare molti database come BLOB di Azure e quindi eseguire script Transact-SQL per creare database in computer locali o macchine virtuali.  
+-   **Vantaggi della migrazione semplice e veloce:** Questa funzionalità semplifica il processo di migrazione spostando un database alla volta tra i computer locali e tra ambienti locali e cloud senza apportare modifiche alle applicazioni. Pertanto, supporta una migrazione incrementale senza influire sull'infrastruttura locale esistente. Inoltre, l'accesso a un'archiviazione dati centralizzata semplifica la logica dell'applicazione quando un'applicazione deve essere eseguita in più posizioni in un ambiente locale. In alcuni casi, potrebbe essere necessario installare rapidamente centri di calcolo in località geografiche diverse per la raccolta di dati da molte origini diverse. Grazie a questa nuova funzionalità avanzata, anziché trasferire i dati da una posizione all'altra, è possibile archiviare molti database come BLOB di Azure e quindi eseguire script Transact-SQL per creare database in computer locali o macchine virtuali.  
   
 -   **Vantaggi di archiviazione senza limiti e senza costi:** Questa funzionalità consente di avere un'archiviazione fuori sede illimitata in Azure, sfruttando al contempo le risorse di calcolo locali. Quando si usa Azure come posizione di archiviazione, è possibile concentrarsi sulla logica dell'applicazione senza l'overhead della gestione dell'hardware. Se si perde un nodo di calcolo locale, è possibile configurarne uno nuovo senza alcuno spostamento dei dati.  
   
 -   **Vantaggi della disponibilità elevata e del ripristino di emergenza:** L'uso di SQL Server file di dati in Azure può semplificare le soluzioni per la disponibilità elevata e il ripristino di emergenza. Se ad esempio una macchina virtuale in Azure o un'istanza di SQL Server si arresta in modo anomalo, è possibile ricreare i database in una nuova macchina semplicemente ristabilendo i collegamenti ai BLOB di Azure.  
   
--   **Vantaggi di sicurezza:** il nuovo miglioramento consente di separare un'istanza di calcolo da un'istanza di archiviazione. È possibile disporre di un database completamente crittografato da decrittografare solo in un'istanza di calcolo e non in un'istanza di archiviazione. In altri termini, usando questa nuova funzionalità avanzata è possibile crittografare tutti i dati in un cloud pubblico tramite i certificati TDE (Transparent Data Encryption) che sono separati fisicamente dai dati. Le chiavi TDE possono essere archiviate nel database master, che viene archiviato in locale nel computer fisicamente protetto in locale e di cui viene eseguito il backup in locale. È possibile usare queste chiavi locali per crittografare i dati che si trovano in archiviazione di Azure. Se le credenziali dell'account di archiviazione del cloud vengono rubate, i dati rimangono protetti perché i certificati TDE risiedono sempre in locale.  
+-   **Vantaggi di sicurezza:** Questa nuova funzionalità avanzata consente di separare un'istanza di calcolo da un'istanza di archiviazione. È possibile disporre di un database completamente crittografato da decrittografare solo in un'istanza di calcolo e non in un'istanza di archiviazione. In altri termini, usando questa nuova funzionalità avanzata è possibile crittografare tutti i dati in un cloud pubblico tramite i certificati TDE (Transparent Data Encryption) che sono separati fisicamente dai dati. Le chiavi TDE possono essere archiviate nel database master, che viene archiviato in locale nel computer fisicamente protetto in locale e di cui viene eseguito il backup in locale. È possibile usare queste chiavi locali per crittografare i dati che si trovano in archiviazione di Azure. Se le credenziali dell'account di archiviazione del cloud vengono rubate, i dati rimangono protetti perché i certificati TDE risiedono sempre in locale.  
   
 ## <a name="concepts-and-requirements"></a>Concetti e requisiti  
   
 ### <a name="azure-storage-concepts"></a>Concetti relativi ad Archiviazione di Azure  
  Quando si usa la funzionalità relativa ai file di dati SQL Server in Azure, è necessario creare un account di archiviazione e un contenitore in Azure. Quindi, è necessario creare credenziali di SQL Server in cui includere le informazioni sui criteri del contenitore nonché una firma di accesso condiviso, necessaria per accedere al contenitore.  
   
- In Azure, un account di archiviazione rappresenta il livello più elevato dello spazio dei nomi per l'accesso ai BLOB. Un account di archiviazione può contenere un numero illimitato di contenitori, purché la dimensione totale sia minore di 500 TB. Per le informazioni più recenti sui limiti di archiviazione, vedere [Sottoscrizione di Azure e limiti, quote e vincoli dei servizi](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Un contenitore fornisce un raggruppamento di un set di oggetti BLOB. Tutti gli oggetti BLOB devono essere inclusi in un contenitore. Un account può contenere un numero illimitato di contenitori. Analogamente, in un contenitore è possibile archiviare un numero illimitato di oggetti BLOB. Esistono due tipi di oggetti BLOB che è possibile archiviare in Archiviazione di Azure: BLOB in blocchi e BLOB di pagine. Questa nuova funzionalità usano i BLOB di pagine, che possono essere avere una dimensione massima di 1 TB, e sono più efficienti quando gli intervalli di byte in un file vengono modificati spesso. È possibile accedere agli oggetti BLOB utilizzando il seguente formato di URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ In Azure, un account di archiviazione rappresenta il livello più elevato dello spazio dei nomi per l'accesso ai BLOB. Un account di archiviazione può contenere un numero illimitato di contenitori, purché la dimensione totale sia minore di 500 TB. Per le informazioni più recenti sui limiti di archiviazione, vedere [Sottoscrizione di Azure e limiti, quote e vincoli dei servizi](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Un contenitore fornisce un raggruppamento di un set di oggetti BLOB. Tutti gli oggetti BLOB devono essere inclusi in un contenitore. In un account può esistere un numero illimitato di contenitori. Analogamente, in un contenitore è possibile archiviare un numero illimitato di oggetti BLOB. Vi sono due tipi di BLOB che possono essere archiviati in Archiviazione di Azure: BLOB di pagine e BLOB in blocchi. Questa nuova funzionalità usano i BLOB di pagine, che possono essere avere una dimensione massima di 1 TB, e sono più efficienti quando gli intervalli di byte in un file vengono modificati spesso. È possibile accedere agli oggetti BLOB utilizzando il seguente formato di URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Considerazioni sulla fatturazione in Azure  
  La stima dei costi associati all'uso dei servizi Azure è un aspetto importante del processo decisionale e di pianificazione. Quando si archiviano file di dati di SQL Server in Archiviazione di Azure, è necessario pagare i costi associati all'archiviazione e alle transazioni. Inoltre, l'implementazione della funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure richiede il rinnovo del lease di un oggetto BLOB ogni 45-60 secondi in modo implicito. Questa operazione comporta dei costi di transazione per ogni file di database, ad esempio per i file con estensione MDF o LDF. Secondo alcune stime il costo di rinnovamento dei lease per due file di database (con estensione MDF e LDF) è di circa 2 centesimi al mese in base al modello di determinazione prezzi corrente. È consigliabile usare le informazioni disponibili nella pagina [Prezzi di Azure](https://azure.microsoft.com/pricing/) per calcolare i costi mensili associati all'uso di Archiviazione e Macchine virtuali di Azure.  
@@ -90,15 +90,15 @@ ON
 ### <a name="installation-prerequisites"></a>Prerequisiti di installazione  
  Di seguito sono riportati i prerequisiti di installazione per l'archiviazione di file di dati di SQL Server in Azure.  
   
--   **Istanza locale di SQL Server:** questa funzionalità è inclusa in SQL Server 2014. Per informazioni sul download di SQL Server 2014, vedere [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server locale:** SQL Server versione 2014 include questa funzionalità. Per informazioni sul download di SQL Server 2014, vedere [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 -   SQL Server in esecuzione in una macchina virtuale di Azure: se si installa SQL Server in una macchina virtuale di Azure, installare SQL Server 2014 oppure aggiornare l'istanza esistente. Analogamente, è anche possibile creare una nuova macchina virtuale in Azure usando SQL Server immagine della piattaforma 2014. Per informazioni sul download di SQL Server 2014, vedere [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
-###  <a name="bkmk_Limitations"></a> Limitazioni  
+###  <a name="bkmk_Limitations"></a>Limitazioni  
   
--   Nella versione corrente di questa funzionalità, l'archiviazione dei dati `FileStream` in archiviazione di Azure non è supportata. È possibile archiviare i dati `Filestream` in un database locale integrato di archiviazione di Azure, ma non è possibile spostare i dati FILESTREAM tra computer con archiviazione di Azure. Per i dati `FileStream`, è consigliabile continuare a usare le tecniche tradizionali per spostare i file (con estensione MDF, LDF) associati a FILESTREAM tra computer diversi.  
+-   Nella versione corrente di questa funzionalità, l'archiviazione `FileStream` dei dati in archiviazione di Azure non è supportata. È possibile archiviare `Filestream` i dati in un database locale integrato di archiviazione di Azure, ma non è possibile spostare i dati FILESTREAM tra computer con archiviazione di Azure. Per i dati `FileStream`, è consigliabile continuare a usare le tecniche tradizionali per spostare i file (con estensione MDF, LDF) associati a FILESTREAM tra computer diversi.  
   
--   attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e dispone anche di un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database con il codice di errore **5120 Impossibile aprire il file fisico "%.\*ls ". Errore del sistema operativo% d: "% ls"** .  
+-   attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e contiene anche un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database con il codice di errore **5120 Impossibile aprire il file fisico "%\* . ls ". Errore del sistema operativo% d: "% ls"**.  
   
 -   Solo i file con estensione mdf, ldf e ndf possono essere archiviati in Archiviazione di Azure con la funzionalità relativa ai file di dati di SQL Server in Azure.  
   
@@ -106,9 +106,9 @@ ON
   
 -   Ogni oggetto BLOB può avere una dimensione massima di 1 TB, creando un limite massimo per i singoli file di dati e file di log del database che possono essere archiviati in Archiviazione di Azure.  
   
--   Non è possibile archiviare i dati di OLTP in memoria in BLOB di Azure usando la funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure. Questo perché OLTP in memoria presenta una dipendenza da `FileStream` e, nella versione corrente di questa funzionalità, l'archiviazione dei dati `FileStream` in archiviazione di Azure non è supportata.  
+-   Non è possibile archiviare i dati di OLTP in memoria in BLOB di Azure usando la funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure. Questo perché OLTP in memoria presenta una dipendenza da `FileStream` e, nella versione corrente di questa funzionalità, l'archiviazione `FileStream` dei dati in archiviazione di Azure non è supportata.  
   
--   Quando si usa SQL Server file di dati in Azure, SQL Server esegue tutti i confronti di URL o percorsi di file usando le regole di confronto impostate nel database `master`.  
+-   Quando si usa la funzionalità file di dati SQL Server in Azure, SQL Server esegue tutti i confronti di URL o percorsi di file `master` usando le regole di confronto impostate nel database.  
   
 -   I `AlwaysOn Availability Groups` sono supportati solo se non si aggiungono nuovi file di database al database primario. Se un'operazione sul database richiede la creazione di un nuovo file nel database primario, disabilitare prima i gruppi di disponibilità AlwaysOn nel nodo secondario. Eseguire quindi l'operazione sul database primario ed eseguire il backup del database nel nodo primario. Successivamente, ripristinare il database nel nodo secondario e abilitare i gruppi di disponibilità AlwaysOn nel nodo secondario. Si noti che le istanze del cluster di failover AlwaysOn non sono supportate quando si usa la funzionalità file di dati di SQL Server in Azure.  
   
@@ -141,16 +141,16 @@ ON
   
  **Errori di autenticazione**  
   
--   *Impossibile eliminare le credenziali '%.\*ls' perché usate da un file di database attivo.*    
+-   *Non è possibile eliminare la credenziale '%. \*ls ' perché è utilizzato da un file di database attivo.*   
     Risoluzione: questo errore può essere visualizzato quando si tenta di eliminare le credenziali ancora usate da un file di database attivo in Archiviazione di Azure. Per eliminare le credenziali, è innanzitutto necessario eliminare l'oggetto BLOB associato a questo file di database. Per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
--   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*    
+-   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*   
      Risoluzione: assicurarsi di avere creato correttamente una firma di accesso condiviso nel contenitore. Esaminare le istruzioni della lezione 2 in [esercitazione: SQL Server di file di dati nel servizio di archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *Le credenziali di SQL Server non sono state create correttamente.*    
+-   *SQL Server credenziali non sono state create correttamente.*   
     Risoluzione: assicurarsi di avere usato una firma di accesso condiviso per il campo **Identity** e di aver creato correttamente un segreto. Esaminare le istruzioni della lezione 3 in [esercitazione: SQL Server di file di dati nel servizio di archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
- **Errori di lease di oggetti BLOB:**  
+ **Errori BLOB di lease:**  
   
 -   Errore quando si tenta di avviare SQL Server dopo che un'altra istanza che usava gli stessi file BLOB si è arrestata in modo anomalo. Risoluzione: durante il normale funzionamento, in SQL Server vengono utilizzati lease temporanei per riservare gli oggetti BLOB per l'archiviazione con un rinnovo del lease di ciascun oggetto BLOB ogni 45-60 secondi. Se un server viene arrestato in modo anomalo e viene avviata un'altra istanza di SQL Server configurata per usare gli stessi oggetti BLOB, la nuova istanza dovrà attendere fino a 60 secondi per la scadenza del lease esistente nell'oggetto BLOB. Se si desidera collegare il database a un'altra istanza e non è possibile attendere i 60 secondi per la scadenza del lease, è possibile interrompere in modo esplicito il lease nell'oggetto BLOB per evitare eventuali errori nelle operazioni di collegamento.  
   
@@ -159,13 +159,13 @@ ON
 1.  *Errori durante la creazione di un database*   
     Risoluzione: rivedere le istruzioni della lezione 4 in [esercitazione: SQL Server di file di dati nel servizio di archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-2.  *Errori durante l'esecuzione dell'istruzione Alter*   
+2.  *Errori durante l'esecuzione dell'istruzione ALTER*   
     Risoluzione: accertarsi di eseguire l'istruzione Alter Database quando il database è online. Quando si copiano i file di dati in Archiviazione di Azure, creare sempre un BLOB di pagine e non un BLOB in blocchi. In caso contrario, l'istruzione ALTER Database avrà esito negativo. Esaminare le istruzioni della lezione 7 in [esercitazione: SQL Server di file di dati nel servizio di archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*    
-    Risoluzione: attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e dispone anche di un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database con il *codice di errore 5120 Impossibile aprire il file fisico "%.\*ls ". Errore del sistema operativo% d: "% ls"* .  
+3.  *Codice di errore 5120 Impossibile aprire il file fisico "%. \*ls ". Errore del sistema operativo% d: "% ls"*   
+    Risoluzione: attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e contiene anche un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database con il *codice di errore 5120 Impossibile aprire il file fisico "%\* . ls ". Errore del sistema operativo% d: "% ls"*.  
   
-     Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database in Archiviazione di Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database in Archiviazione di Azure. A tale scopo, eseguire le operazioni seguenti:  
+     Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database in Archiviazione di Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database in Archiviazione di Azure. A questo scopo, seguire questa procedura:  
   
     1.  Impostare il percorso di file di ServerA su una cartella locale tramite l'istruzione ALTER Database.  
   
@@ -176,4 +176,4 @@ ON
     4.  Impostare il database come online.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione: SQL Server di file di dati nel servizio di archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Esercitazione: File di dati di SQL Server nel servizio Archiviazione di Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

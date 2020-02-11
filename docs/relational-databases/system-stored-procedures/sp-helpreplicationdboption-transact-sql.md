@@ -16,18 +16,18 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771528"
 ---
-# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
+# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Indica se i database nel server di pubblicazione sono abilitati per la replica. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione. *Non supportato per i Publisher Oracle.*  
+  Indica se i database nel server di pubblicazione sono abilitati per la replica. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione. *Questa proprietà non è supportata per server di pubblicazione Oracle.*  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,15 +39,15 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'`Nome del database. *dbname* è di **%** **tipo sysname**e il valore predefinito è. Se **%** , il set di risultati contiene tutti i database nel server di pubblicazione; in caso contrario, vengono restituite solo le informazioni sul database specificato. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
+`[ @dbname = ] 'dbname'`Nome del database. *dbname* è di **%** **tipo sysname**e il valore predefinito è. Se **%**, il set di risultati contiene tutti i database nel server di pubblicazione; in caso contrario, vengono restituite solo le informazioni sul database specificato. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
   
 `[ @type = ] 'type'`Limita il set di risultati in modo che contenga solo i database in cui è stato abilitato il valore del *tipo* di opzione di replica specificato. *Type* è di tipo **sysname**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**publish**|È consentita la replica transazionale.|  
+|**pubblicare**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
-|**replica** consentita predefinita|È consentita la replica transazionale o la replica di tipo merge.|  
+|**replica consentita** (impostazione predefinita)|È consentita la replica transazionale o la replica di tipo merge.|  
   
 `[ @reserved = ] reserved`Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservato* è di **bit**e il valore predefinito è 0. Se è **1**, il set di risultati include informazioni sulla presenza o meno di pubblicazioni o sottoscrizioni esistenti nel database specificato.  
   
@@ -55,26 +55,26 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nome del database.|  
-|**id**|**int**|Identificatore del database.|  
+|**nome**|**sysname**|Nome del database.|  
+|**ID**|**int**|Identificatore del database.|  
 |**transpublish**|**bit**|Se il database è stato abilitato per la pubblicazione snapshot o transazionale; dove il valore **1** indica che la pubblicazione snapshot o transazionale è abilitata.|  
 |**mergepublish**|**bit**|Se il database è stato abilitato per la pubblicazione di tipo merge; dove il valore **1** indica che la pubblicazione di tipo merge è abilitata.|  
 |**dbowner**|**bit**|Se l'utente è un membro del ruolo predefinito del database **db_owner** ; dove il valore **1** indica che l'utente è un membro di questo ruolo.|  
 |**dbreadonly**|**bit**|Indica se il database è contrassegnato come di sola lettura. dove il valore **1** indica che il database è di sola lettura.|  
-|**HasPublications**|**bit**|Indica se nel database sono presenti pubblicazioni esistenti. dove il valore **1** indica che sono presenti pubblicazioni esistenti.|  
-|**HasPullSubscriptions**|**bit**|Indica se nel database sono presenti sottoscrizioni pull esistenti. dove il valore **1** indica che sono presenti sottoscrizioni pull esistenti.|  
+|**haspublications**|**bit**|Indica se nel database sono presenti pubblicazioni esistenti. dove il valore **1** indica che sono presenti pubblicazioni esistenti.|  
+|**haspullsubscriptions**|**bit**|Indica se nel database sono presenti sottoscrizioni pull esistenti. dove il valore **1** indica che sono presenti sottoscrizioni pull esistenti.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpreplicationdboption** viene utilizzata per la replica snapshot, transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_helpreplicationdboption** per qualsiasi database. I membri del ruolo predefinito del database **db_owner** possono eseguire **sp_helpreplicationdboption** per quel database.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

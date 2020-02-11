@@ -11,21 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637725"
 ---
 # <a name="udt-utilities"></a>UDT Utilities
   L'esempio UDT Utilities include una serie di funzioni di utilità, quali funzioni per l'esposizione dei metadati dell'assembly a Transact-SQL, funzioni di flusso di esempio con valori di tabella per la restituzione dei tipi di un assembly sotto forma di tabella e funzioni per la restituzione di campi, metodi e proprietà di un tipo di dati definito dall'utente. Le tecnologie illustrate comprendono funzioni di flusso con valori di tabella, API di reflection .NET Framework e il richiamo di funzioni con valori di tabella da Transact-SQL.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
--   Il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] disponibile nel [sito Web](https://go.microsoft.com/fwlink/?linkid=62796) CodePlex  
+-   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database disponibile nel [sito Web](https://go.microsoft.com/fwlink/?linkid=62796) CodePlex  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   
@@ -1597,6 +1599,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scenari di utilizzo ed esempi per Common Language Runtime &#40;l'integrazione con&#41; CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

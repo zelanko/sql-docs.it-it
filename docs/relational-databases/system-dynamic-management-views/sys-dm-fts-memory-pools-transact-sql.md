@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
+title: sys. dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d45436070618e446921c610a9e82b0cc35271c8d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265911"
 ---
-# <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
+# <a name="sysdm_fts_memory_pools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sui pool di memoria condivisi disponibili per il componente gatherer full-text per una ricerca o un intervallo di ricerche per indicizzazione full-text.  
@@ -40,17 +40,17 @@ ms.locfileid: "68265911"
 |**max_buffer_limit**|**int**|Numero massimo di buffer consentiti nel pool di memoria.|  
 |**buffer_count**|**int**|Numero corrente di buffer di memoria condivisa nel pool di memoria.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
  
 ## <a name="physical-joins"></a>Join fisici  
- ![Join significativi di questa vista a gestione dinamica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "join significativi di questa vista a gestione dinamica")  
+ ![Join significativi di questa DMV](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "Join significativi di questa DMV")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|Relazione|  
+|Da|A|Relazione|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Molti-a-uno|  
   
@@ -63,6 +63,6 @@ SELECT SUM(buffer_size * buffer_count) AS "total memory"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica la ricerca semantica e ricerca full-Text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

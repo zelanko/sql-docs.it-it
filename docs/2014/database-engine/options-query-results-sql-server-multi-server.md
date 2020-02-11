@@ -1,5 +1,5 @@
 ---
-title: Opzioni (risultati SQL Server-Multi-Server di Query) | Microsoft Docs
+title: Opzioni (risultati query-SQL Server-multiserver) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089971"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opzioni (Risultati query/SQL Server/Multiserver)
@@ -36,7 +36,7 @@ ms.locfileid: "66089971"
  Selezionare questa casella di controllo per includere una colonna aggiuntiva contenente il nome di accesso utilizzato per connettersi al server che ha generato ogni riga.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un Server di gestione centrale e un gruppo di Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+ [Creare un server di gestione centrale e un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Eseguire istruzioni su più server contemporaneamente &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

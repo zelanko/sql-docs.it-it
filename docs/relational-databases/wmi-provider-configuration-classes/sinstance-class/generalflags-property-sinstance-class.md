@@ -18,10 +18,10 @@ ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3bc06575240777cbacccb675b5bec8a917558cfe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659729"
 ---
 # <a name="generalflags-property-sinstance-class"></a>Proprietà GeneralFlags (classe SInstance)
@@ -36,7 +36,7 @@ object.GeneralFlags [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) che rappresenta un'istanza del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

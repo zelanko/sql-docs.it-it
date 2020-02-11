@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807663"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
@@ -27,7 +27,7 @@ ms.locfileid: "62807663"
   
  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="TermsAndDefinitions"></a>Termini e definizioni  
  In questa sezione vengono introdotti alcuni termini fondamentali ai fini della comprensione dell'argomento.  
   
  Modalità a prestazioni elevate  
@@ -42,11 +42,11 @@ ms.locfileid: "62807663"
  Controllo  
  Per l'utilizzo nella sola modalità a sicurezza elevata. Istanza facoltativa di SQL Server che consente al server mirror di stabilire se avviare un failover automatico. A differenza dei due partner di failover, il server di controllo del mirroring non rende disponibile il database. Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
   
-##  <a name="VisualElement"></a> (Modalità a prestazioni elevate) di Mirroring asincrono del Database  
+##  <a name="VisualElement"></a>Mirroring asincrono del database (modalità a prestazioni elevate)  
  In questa sezione vengono descritti il funzionamento del mirroring del database asincrono, i casi in cui è consigliabile utilizzare la modalità a elevate prestazioni e le operazioni da effettuare in caso di errore del server principale.  
   
 > [!NOTE]  
->  La maggior parte delle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "Disponibilità elevata (AlwaysOn)" nella [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  La maggior parte delle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta solo il mirroring del database sincrono ("solo sicurezza FULL"). Per informazioni sulle edizioni che supportano completamente il mirroring del database, vedere "disponibilità elevata (AlwaysOn)" in [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Quando il livello di protezione delle transazioni viene impostato su OFF, la sessione di mirroring del database opera in modo asincrono. Le operazioni asincrone supportano solo una modalità operativa, ovvero la modalità a prestazioni elevate. Questa modalità migliora le prestazioni, ma comporta una riduzione della disponibilità. La modalità a prestazioni elevate utilizza solo il server principale e il server mirror. I problemi relativi al server mirror non hanno mai alcun impatto sul server principale. In caso di perdita del server principale, il database mirror viene contrassegnato come DISCONNECTED, ma rimane disponibile come standby a caldo (warm standby).  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62807663"
   
  
   
-###  <a name="WhenUseHighPerf"></a> Casi in cui la modalità a prestazioni elevate rappresenta la soluzione più appropriata  
+###  <a name="WhenUseHighPerf"></a>Quando la modalità a prestazioni elevate è appropriata?  
  La modalità a prestazioni elevate può essere utile in uno scenario di ripristino di emergenza in cui i server principale e mirror sono separati da una distanza significativa e in cui non si desidera che piccoli errori abbiano un impatto sul server principale.  
   
 > [!NOTE]  
 >  Il log shipping può fungere da integrazione al mirroring del database e offre un'alternativa utile al mirroring asincrono. Per informazioni sui vantaggi del log shipping, vedere [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Per informazioni sull'uso del log shipping con il mirroring del database, vedere [Mirroring del database e log shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md).  
   
-###  <a name="WitnessImpactOnHighPerf"></a> Impatto di un server di controllo del mirroring in modalità a prestazioni elevate  
+###  <a name="WitnessImpactOnHighPerf"></a>L'effetto di un server di controllo del mirroring sulla modalità a prestazioni elevate  
  Se si utilizza Transact-SQL per configurare la modalità a prestazioni elevate, quando la proprietà SAFETY è impostata su OFF è consigliabile impostare su OFF anche la proprietà WITNESS. Un server di controllo del mirroring può coesistere con la modalità a prestazioni elevate, ma non offre vantaggi e introduce un rischio.  
   
  Se il server di controllo del mirroring viene disconnesso dalla sessione quando uno dei partner si arresta, il database non sarà più disponibile. Questo funzionamento dipende dal fatto che, sebbene per la modalità a prestazioni elevate non sia necessario un server di controllo del mirroring, per la sessione è necessario un quorum costituito da due o più istanze del server. Se la sessione perde il quorum, non può rendere disponibile il database.  
@@ -82,7 +82,7 @@ ms.locfileid: "62807663"
 > [!NOTE]  
 >  Per informazioni sui tipi di quorum, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-###  <a name="WhenPrincipalFails"></a> Risposta agli errori del server principale  
+###  <a name="WhenPrincipalFails"></a>Risposta agli errori del server principale  
  Quando si verifica un errore nel server principale, il proprietario del database può scegliere tra le operazioni seguenti:  
   
 -   Rendere il database non disponibile fino a quando il server principale non torna a essere nuovamente disponibile.  
@@ -102,7 +102,7 @@ ms.locfileid: "62807663"
   
      Forzando il servizio si consente al server mirror di assumere il ruolo di server principale e di rendere disponibile la propria copia del database ai client. Quando il servizio viene forzato, tutti i log delle transazioni non ancora inviati dal server principale al server mirror vengono perduti. È pertanto consigliabile limitare il servizio forzato alle situazioni in cui la perdita dei dati rappresenta un'opzione accettabile e la disponibilità immediata del database è un fattore critico. Per informazioni sul funzionamento del servizio forzato e sulle procedure di utilizzo consigliate, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-##  <a name="Sync"></a> Mirroring sincrono del database (modalità a sicurezza elevata)  
+##  <a name="Sync"></a>Mirroring sincrono del database (modalità a sicurezza elevata)  
  In questa sezione vengono descritti il funzionamento del mirroring del database sincrono e le modalità a protezione elevata alternative (con o senza failover automatico), incluse alcune informazioni sul ruolo del server di controllo del mirroring nel failover automatico.  
   
  Quando il livello di sicurezza delle transazioni viene impostato su FULL, la sessione di mirroring del database viene eseguita in modalità a sicurezza elevata ed opera in modo sincrono dopo una fase di sincronizzazione iniziale. In questa sezione vengono fornite informazioni dettagliate sulle sessioni di mirroring del database configurate per il funzionamento sincrono.  
@@ -132,21 +132,21 @@ ms.locfileid: "62807663"
   
 
   
-###  <a name="HighSafetyWithOutAutoFailover"></a> Modalità a sicurezza elevata senza failover automatico  
+###  <a name="HighSafetyWithOutAutoFailover"></a>Modalità a sicurezza elevata senza failover automatico  
  Nella figura seguente viene illustrata la configurazione della modalità a sicurezza elevata senza failover automatico. La configurazione è composta solo dai due partner.  
   
  ![Comunicazioni tra i partner senza un server di controllo del mirroring](../media/dbm-high-protection-mode.gif "Comunicazioni tra i partner senza un server di controllo del mirroring")  
   
  Se i partner sono connessi e il database è già sincronizzato, è supportato il failover manuale. Se l'istanza del server mirror si arresta, l'istanza del server principale non ne risentirà e verrà eseguita esposta, ovvero senza mirroring dei dati. Se il server principale viene perso, il mirroring viene sospeso, ma è possibile forzare manualmente il servizio nel server mirror, con possibile perdita di dati. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).  
   
-###  <a name="HighSafetyWithAutoFailover"></a> Modalità a sicurezza elevata con failover automatico  
+###  <a name="HighSafetyWithAutoFailover"></a>Modalità a sicurezza elevata con failover automatico  
  Il failover automatico garantisce disponibilità elevata assicurando il servizio al database anche nel caso di perdita di un server. Per il failover automatico è necessario che la sessione disponga di una terza istanza del server, il *server di controllo del mirroring*, che idealmente dovrebbe trovarsi in un terzo computer. Nella figura seguente viene illustrata la configurazione di una sessione in modalità a sicurezza elevata che supporta il failover automatico.  
   
  ![Server di controllo del mirroring e due partner di una sessione](../media/dbm-high-availability-mode.gif "Server di controllo del mirroring e due partner di una sessione")  
   
  A differenza dei due partner, il server di controllo del mirroring non serve il database, ma supporta semplicemente il failover automatico mediante la verifica dell'efficienza del server principale. Il server mirror avvia il failover automatico solo se il server mirror e il server di controllo del mirroring rimangono connessi tra loro dopo la disconnessione di entrambi dal server principale.  
   
- Quando viene impostato un server di controllo del mirroring, la sessione richiede il *quorum*, una relazione tra un minimo di due istanze del server che consente di rendere disponibile il database. Per altre informazioni, vedere [server di controllo del mirroring del Database](database-mirroring-witness.md) e [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Quando viene impostato un server di controllo del mirroring, la sessione richiede una relazione *quorum*-a tra almeno due istanze del server che consente di rendere disponibile il database. Per altre informazioni, vedere [Server di controllo del mirroring del database](database-mirroring-witness.md) e [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Per l'esecuzione del failover automatico è necessario che si verifichino le condizioni seguenti:  
   
@@ -158,7 +158,7 @@ ms.locfileid: "62807663"
   
 -   Se il server principale non è più disponibile in base alle condizioni precedenti, si verifica il failover automatico. Il server mirror assume il ruolo di server principale e il relativo database diventa il database principale.  
   
--   Se il server principale diventa non disponibile quando queste condizioni non sono soddisfatte, si potrebbe riuscire a forzare il servizio, con una possibile perdita di dati. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   Se il server principale diventa non disponibile quando queste condizioni non sono soddisfatte, si potrebbe riuscire a forzare il servizio, con una possibile perdita di dati. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).  
   
 -   Se solo il server mirror non è più disponibile, le attività nel server principale e nel server di controllo del mirroring continueranno.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "62807663"
 > [!NOTE]  
 >  Se si prevede che il server di controllo del mirroring resterà disconnesso per un periodo di tempo prolungato, è consigliabile rimuoverlo dalla sessione finché non diventa disponibile.  
   
-##  <a name="TsqlSettingsAndOpModes"></a> Impostazioni di Transact-SQL e modalità operative del mirroring del database  
+##  <a name="TsqlSettingsAndOpModes"></a>Impostazioni Transact-SQL e modalità operative del mirroring del database  
  In questa sezione viene descritta una sessione di mirroring del database in termini di impostazioni ALTER DATABASE e degli stati del database con mirroring e del server di controllo del mirroring, se presente. Le informazioni di questa sezione sono rivolte agli utenti che gestiscono il mirroring del database utilizzando principalmente o esclusivamente [!INCLUDE[tsql](../../includes/tsql-md.md)]anziché [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
@@ -175,12 +175,12 @@ ms.locfileid: "62807663"
   
 
   
-###  <a name="TxnSafetyAndWitness"></a> Effetti della sicurezza delle transazioni e dello stato del server di controllo del mirroring sulla modalità operativa  
+###  <a name="TxnSafetyAndWitness"></a>Effetti della sicurezza delle transazioni e dello stato del server di controllo sulla modalità operativa  
  La modalità operativa di una sessione è determinata dalla combinazione dell'impostazione del livello di protezione delle transazioni e dello stato del server di controllo del mirroring. In qualsiasi momento, il proprietario del database può modificare il livello di sicurezza delle transazioni e aggiungere o rimuovere il server di controllo del mirroring.  
   
 
   
-####  <a name="TxnSafety"></a> Transaction Safety  
+####  <a name="TxnSafety"></a>Sicurezza delle transazioni  
  Il livello di sicurezza delle transazioni è una proprietà del database specifica del mirroring che determina l'esecuzione della sessione di mirroring del database in modalità sincrona o asincrona. Esistono due livelli di protezione: FULL e OFF.  
   
 -   SAFETY FULL  
@@ -199,7 +199,7 @@ ms.locfileid: "62807663"
   
  Il proprietario del database può modificare il livello di sicurezza delle transazioni in qualsiasi momento.  
   
-####  <a name="WitnessState"></a> Stato del server di controllo del mirroring  
+####  <a name="WitnessState"></a>Stato del server di controllo del mirroring  
  Se è stato impostato un server di controllo del mirroring, il quorum è necessario e pertanto lo stato di tale server è sempre significativo.  
   
  Se è disponibile, il server di controllo del mirroring dispone di due stati:  
@@ -216,15 +216,15 @@ ms.locfileid: "62807663"
   
 |Modalità operativa|Livello di sicurezza delle transazioni|Stato del server di controllo del mirroring|  
 |--------------------|------------------------|-------------------|  
-|Modalità a prestazioni elevate|OFF|NULL (senza controllo)<sup>2</sup>|  
+|Modalità a prestazioni elevate|OFF|NULL (nessun server di controllo del mirroring)<sup>2</sup>|  
 |Modalità a sicurezza elevata senza failover automatico|FULL|NULL (nessun server di controllo del mirroring)|  
 |Modalità a sicurezza elevata con failover automatico<sup>1</sup>|FULL|CONNECTED|  
   
- <sup>1</sup> se il controllo del mirroring viene disconnesso, è consigliabile impostare WITNESS OFF finché l'istanza del server di controllo non è disponibile.  
+ <sup>1</sup> se il server di controllo del mirroring viene disconnesso, è consigliabile impostare Witness off finché l'istanza del server di controllo del mirroring non sarà disponibile.  
   
- <sup>2</sup> se un controllo del mirroring è presente in modalità a prestazioni elevate, il controllo del mirroring non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> se un server di controllo del mirroring è presente in modalità a prestazioni elevate, il server di controllo del mirroring non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-###  <a name="ViewWitness"></a> Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
+###  <a name="ViewWitness"></a>Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
  Per visualizzare l'impostazione di sicurezza e lo stato del server di controllo del mirroring per un database, usare la vista del catalogo **sys.database_mirroring** . Le colonne rilevanti sono le seguenti:  
   
 |Fattore|Colonne|Descrizione|  
@@ -241,7 +241,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
  Per altre informazioni su questa vista del catalogo, vedere [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
-###  <a name="FactorsOnLossOfPrincipal"></a> Fattori che influiscono sul funzionamento della sessione in caso di perdita del server principale  
+###  <a name="FactorsOnLossOfPrincipal"></a>Fattori che influiscono sul comportamento sulla perdita del server principale  
  Nella tabella seguente sono riepilogati gli effetti combinati dell'impostazione del livello di protezione delle transazioni, dello stato del database e dello stato del server di controllo del mirroring sul funzionamento di una sessione di mirroring in caso di perdita del server principale.  
   
 |Livello di sicurezza delle transazioni|Stato di mirroring del database mirror|Stato del server di controllo del mirroring|Funzionamento in caso di perdita del server principale|  
@@ -257,11 +257,11 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Aggiungere un server di controllo del mirroring del database utilizzando l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [Rimuovere il server di controllo del mirroring da una sessione di mirroring del database &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [Modificare la sicurezza delle transazioni in una sessione di mirroring del database &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   

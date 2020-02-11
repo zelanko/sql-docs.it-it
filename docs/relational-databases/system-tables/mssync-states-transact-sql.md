@@ -18,16 +18,16 @@ ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016516"
 ---
-# <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
+# <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSsync_states** tabella tiene traccia delle pubblicazioni per cui è ancora in modalità snapshot simultaneo. Questa tabella è archiviata nel database di distribuzione.  
+  Nella tabella **MSsync_states** viene tracciata la pubblicazione che è ancora in modalità snapshot simultanea. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -37,8 +37,8 @@ ms.locfileid: "68016516"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Tabelle Integration Services &#40;Transact-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
- [Eseguire il backup e ripristino di tabelle &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Integration Services tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
+ [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [Tabelle di log shipping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   
   

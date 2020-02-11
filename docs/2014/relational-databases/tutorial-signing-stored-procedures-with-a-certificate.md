@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Stored procedure con un certificato di firma | Microsoft Docs'
+title: 'Esercitazione: Firma di stored procedure con un certificato | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524094"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Esercitazione: Firma di stored procedure con un certificato
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Esercitazione: Firma di stored procedure tramite un certificato
   In questa esercitazione viene illustrata la firma di stored procedure tramite un certificato generato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524094"
  Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
- Per impostare il contesto iniziale dell'esempio, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire una nuova query ed eseguire il codice seguente per aprire il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Con questo codice, il contesto di database viene modificato in `AdventureWorks2012` e viene creato un nuovo account di accesso al server e utente del database (`TestCreditRatingUser`) con una password.  
+ Per impostare il contesto iniziale dell'esempio, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire una nuova query ed eseguire il codice seguente per aprire il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Con questo codice, il contesto di database viene modificato in `AdventureWorks2012` e viene creato un nuovo account di accesso al server e utente del database (`TestCreditRatingUser`) con una password.  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Creazione e firma di una stored procedure utilizzando il certificato  
- Utilizzare il codice seguente per creare una stored procedure che selezioni i dati dalla tabella `Vendor` nello schema di database `Purchasing`, limitando l'accesso alle sole aziende con posizione creditizia 1. Si noti che nella prima sezione della stored procedure viene visualizzato il contesto dell'account utente che esegue la stored procedure, al solo scopo di dimostrare i concetti. Non è necessario per soddisfare i requisiti.  
+ Utilizzare il codice seguente per creare una stored procedure che selezioni i dati dalla tabella `Vendor` nello schema di database `Purchasing` , limitando l'accesso alle sole aziende con posizione creditizia 1. Si noti che nella prima sezione della stored procedure viene visualizzato il contesto dell'account utente che esegue la stored procedure, al solo scopo di dimostrare i concetti. Non è necessario per soddisfare i requisiti.  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -142,7 +142,7 @@ GO
  Per altre informazioni sulla concessione di autorizzazioni per gli oggetti, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 ## <a name="6-display-the-access-context"></a>6. Visualizzazione del contesto di accesso  
- Per visualizzare i diritti associati all'accesso alla stored procedure, eseguire il codice seguente per concedere i diritti per l'esecuzione della stored procedure all'utente `TestCreditRatingUser`.  
+ Per visualizzare i diritti associati all'accesso alla stored procedure, eseguire il codice seguente per concedere i diritti per l'esecuzione della stored procedure all'utente `TestCreditRatingUser` .  
   
 ```  
 GRANT EXECUTE   
@@ -192,7 +192,7 @@ GO
   
  Per altre informazioni sull'istruzione REVERT, vedere [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a> Esempio completo  
+##  <a name="CompleteExample"></a>Esempio completo  
  In questa sezione è riportato il codice completo dell'esempio.  
   
 ```  
@@ -289,6 +289,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

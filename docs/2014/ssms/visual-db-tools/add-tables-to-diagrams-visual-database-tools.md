@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297902"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Aggiunta di tabelle a diagrammi (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63297902"
   
      Per creare una tabella nel diagramma corrente, fare clic sul pulsante **Nuova tabella** sulla barra degli strumenti.  
   
-     oppure  
+     -oppure-  
   
      Fare clic con il pulsante destro del mouse nel diagramma e scegliere **Nuova tabella**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63297902"
 >  Verranno aggiunte al diagramma sia le tabelle a cui fa riferimento un vincolo di chiave esterna dalle tabelle selezionate, sia quelle che fanno riferimento alle tabelle selezionate con un vincolo di chiave esterna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Utilizzo di tabelle in diagrammi di database &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

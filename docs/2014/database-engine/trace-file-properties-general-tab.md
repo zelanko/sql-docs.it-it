@@ -1,5 +1,5 @@
 ---
-title: File proprietà traccia (scheda Generale) | Microsoft Docs
+title: Proprietà file di traccia (scheda generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089613"
 ---
 # <a name="trace-file-properties-general-tab"></a>Proprietà file di traccia (scheda Generale)
@@ -33,19 +33,19 @@ ms.locfileid: "66089613"
  **Nome provider di traccia**  
  Visualizza il nome dell'istanza tracciata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Tipo provider di traccia**  
+ **Tipo di provider di traccia**  
  Visualizza il tipo di server che ha fornito la traccia.  
   
- **version**  
+ **Versione**  
  Visualizza la versione del server che ha fornito la traccia.  
   
  **Dimensioni file (KB)**  
  Dimensioni in kilobyte (KB) del file di traccia.  
   
- **Data creazione**  
+ **Creato**  
  Data e ora di creazione del file di traccia.  
   
- **Ultima modifica**  
+ **Data modifica**  
  Data e ora di modifica del file di traccia.  
   
 ## <a name="see-also"></a>Vedere anche  

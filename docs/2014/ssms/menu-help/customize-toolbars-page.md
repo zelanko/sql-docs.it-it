@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470008"
 ---
 # <a name="customize-toolbars-page"></a>Personalizza (pagina Barre degli strumenti)
@@ -29,16 +29,16 @@ ms.locfileid: "62470008"
 > [!NOTE]  
 >  La barra dei menu non può essere nascosta, ma solo reimpostata.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di visualizzare la finestra di dialogo **Nuova barra degli strumenti** , in cui è possibile creare una barra degli strumenti personalizzata e assegnarle un nome.  
   
- **Rename**  
+ **Rinominare**  
  Consente di visualizzare la finestra di dialogo **Rinomina barra degli strumenti** , in cui è possibile modificare il nome di una barra degli strumenti personalizzata.  
   
  **Elimina**  
  Consente di eliminare la barra degli strumenti personalizzata selezionata nell'elenco **Barre degli strumenti** .  
   
- **Reimposta**  
+ **Reimpostazione**  
  Consente di eliminare le modifiche apportate alla barra degli strumenti predefinita selezionata nell'elenco **Barre degli strumenti** e di ripristinarne lo stato originale. Questo pulsante è disponibile solo se si seleziona una barra degli strumenti predefinita.  
   
  **Icone grandi**  

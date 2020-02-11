@@ -1,5 +1,5 @@
 ---
-title: Le informazioni nelle interfacce di errore | Microsoft Docs
+title: Informazioni nelle interfacce di errore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60b6b0387aea5475d74c314a10e4fa437fadc005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657661"
 ---
 # <a name="information-in-error-interfaces"></a>Informazioni nelle interfacce di errore
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client segnala alcune informazioni di errore e di stato nelle interfacce di errore definite da OLE DB **IErrorInfo**, **IErrorRecords**, e **ISQLErrorInfo** .  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client segnala alcune informazioni sugli errori e sullo stato nelle interfacce di errore definite dall'OLE DB **IErrorInfo**, **IErrorRecords**e **ISQLErrorInfo**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta **IErrorInfo** membro funziona nel modo seguente.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta le funzioni membro **IErrorInfo** come indicato di seguito.  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
@@ -37,24 +37,24 @@ ms.locfileid: "62657661"
 |**GetHelpFile**|Non supportato. Viene restituito sempre NULL.|  
 |**GetSource**|Stringa "Microsoft SQL Server Native Client".|  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta disponibili per il consumer **IErrorRecords** membro funziona nel modo seguente.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta le funzioni membro **IErrorRecords** disponibili per il consumer come indicato di seguito.  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Inserisce in una struttura ERRORINFO le informazioni di base su un errore. Una struttura ERRORINFO contiene membri che identificano il valore restituito HRESULT per l'errore nonché il provider e l'interfaccia alle quali si applica l'errore.|  
 |**GetCustomErrorObject**|Restituisce un riferimento nelle interfacce **ISQLErrorInfo** e [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).|  
 |**GetErrorInfo**|Restituisce un riferimento in un'interfaccia **IErrorInfo**.|  
-|**GetErrorParameters**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non restituisce parametri al consumer attraverso **GetErrorParameters**.|  
+|**GetErrorParameters**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non restituisce parametri al consumer tramite **GetErrorParameters**.|  
 |**GetRecordCount**|Conteggio dei record di errore disponibili.|  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta **ISQLErrorInfo:: Getsqlinfo** parametri come indicato di seguito.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta i parametri **ISQLErrorInfo:: GetSQLInfo** come indicato di seguito.  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|*pbstrSQLState*|Restituisce un valore SQLSTATE per l'errore. I valori SQLSTATE vengono definiti nelle specifiche API, SQL-92, ODBC e ISO SQL. Né [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] né il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client definiti valori SQLSTATE specifici dell'implementazione.|  
-|*plNativeError*|Restituisce il numero di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **master.dbo.sysmessages**, quando disponibile. Gli errori nativi sono disponibili dopo un tentativo riuscito di inizializzare una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati del provider OLE DB Native Client. Prima del tentativo, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client restituisce sempre zero.|  
+|*pbstrSQLState*|Restituisce un valore SQLSTATE per l'errore. I valori SQLSTATE vengono definiti nelle specifiche API, SQL-92, ODBC e ISO SQL. Né [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] né Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client OLE DB provider definiscono valori SQLSTATE specifici dell'implementazione.|  
+|*plNativeError*|Restituisce il numero di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **master.dbo.sysmessages**, quando disponibile. Gli errori nativi sono disponibili dopo un tentativo riuscito di inizializzare un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati del provider OLE DB di Native Client. Prima del tentativo, il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di OLE DB di Native Client restituisce sempre zero.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [errori](errors.md)  
+ [Errors](errors.md)  
   
   

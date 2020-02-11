@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736201"
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
   È possibile creare un vincolo CHECK in una tabella per specificare i valori di dati accettabili in una o più colonne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62736201"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62736201"
     |Applicare il vincolo quando si verifica un'operazione di replica su questa tabella|**Applicare per replica**|  
     |Applicare il vincolo ogni qualvolta una riga di questa tabella viene inserita o viene aggiornata|**Attiva per istruzioni INSERTs e UPDATEs**|  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   

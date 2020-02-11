@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210776"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
@@ -78,7 +78,7 @@ ms.locfileid: "68210776"
   
  La replica supporta il ripristino dei database replicati nello stesso server e nello stesso database da cui è stato creato il backup. Se si ripristina un backup di un database replicato in un altro server o database, le impostazioni di replica non potranno essere mantenute. In questo caso, è necessario ricreare tutte le pubblicazioni e le sottoscrizioni dopo il ripristino dei backup.  
   
-### <a name="publisher"></a>Server di pubblicazione  
+### <a name="publisher"></a>Editore  
  Sono disponibili procedure di ripristino per i tipi di replica seguenti:  
   
 -   Replica snapshot  
@@ -117,7 +117,7 @@ ms.locfileid: "68210776"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Per ulteriori informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Rimuovere la configurazione della replica dal server di pubblicazione, dal database di distribuzione e dai Sottoscrittori, quindi ricreare la configurazione. Quando si ricreano le sottoscrizioni, specificare che i dati sono già disponibili nel Sottoscrittore. Il ripristino viene completato.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210776"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Per ulteriori informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilizzare l' [utilità tablediff](../../../tools/tablediff-utility.md) o un altro strumento per sincronizzare manualmente il server di pubblicazione con il Sottoscrittore. Questa operazione consente di recuperare i dati del database di sottoscrizione non inclusi nel backup del database di pubblicazione. Andare al passaggio c.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210776"
   
      Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-     Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Per ulteriori informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se si usano sottoscrizioni ad aggiornamento in coda, connettersi a ogni Sottoscrittore ed eliminare tutte le righe dalla tabella [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) nel database di sottoscrizione. Andare al passaggio 4.  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210776"
   
     1.  Ricreare la pubblicazione nel database **B**. Andare al passaggio b.  
   
-    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **A**, specificando che è necessario inizializzare la sottoscrizione con un backup, ovvero impostando il valore **initialize with backup** per il parametro **@sync_type** di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Andare al passaggio c.  
+    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **a**, specificando che la sottoscrizione deve essere inizializzata con un backup (il valore **Initialize with backup** per il **@sync_type** parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio c.  
   
-    3.  Ricreare la sottoscrizione nel database **A** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già disponibili i dati, ovvero impostando il valore **replication support only** per il parametro **@sync_type** di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Andare al passaggio 8.  
+    3.  Ricreare la sottoscrizione **nel database a** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già presenti i dati (il valore **Replication support only** per **@sync_type** il parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio 8.  
   
 8.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **B**. In presenza di eventuali colonne Identity nelle tabelle pubblicate, andare al passaggio 9. In caso contrario, andare al passaggio 10.  
   
 9. In seguito al ripristino, l'intervallo di valori Identity assegnato a ogni tabella nel database **A** verrà usato anche nel database **B**. Assicurarsi che il database **B** ripristinato abbia ricevuto tutte le modifiche del database **B** bloccato propagate nel database **A** e nel database **C** e quindi reinizializzare l'intervallo di valori Identity per ogni tabella.  
   
-    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio b.  
+    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro **@request_id**di output. Andare al passaggio b.  
   
     2.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Per altre informazioni, vedere [Concetti di base relativi ai file eseguibili dell’agente di replica](../concepts/replication-agent-executables-concepts.md) o [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Andare al passaggio c.  
   
-    3.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando il valore **@request_id** recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
+    3.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando **@request_id** il valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
   
     4.  Utilizzare [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) per reinizializzare ciascuna tabella nel database **B** , in modo da garantire l'utilizzo di un intervallo appropriato. Andare al passaggio 10.  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210776"
   
     1.  Arrestare qualsiasi attività sulle tabelle pubblicate nella topologia peer-to-peer. Andare al passaggio b.  
   
-    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio c.  
+    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro **@request_id**di output. Andare al passaggio c.  
   
     3.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Andare al passaggio d.  
   
-    4.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando il valore **@request_id** recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
+    4.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando **@request_id** il valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
   
     5.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che nel Sottoscrittore i dati sono già disponibili. Andare al passaggio b.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210776"
   
     1.  Nel database **B**eseguire una query sulla tabella [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) per recuperare il numero di sequenza del file di log (LSN) della transazione più recente che il database **B** ha ricevuto dal database **C**.  
   
-    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che è necessario inizializzare la sottoscrizione in base al numero LSN, ovvero impostando il valore **initialize from lsn** per il parametro **@sync_type** di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Andare al passaggio b.  
+    2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che la sottoscrizione deve essere inizializzata in base al numero LSN (valore **Initialize from lsn** per il **@sync_type** parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio b.  
   
     3.  Ricreare la sottoscrizione nel database **C** della pubblicazione nel database **B**, specificando che nel Sottoscrittore i dati sono già disponibili. Andare al passaggio 13.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "68210776"
  [Backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md)   
  [Configura distribuzione](../configure-distribution.md)   
  [Pubblicare dati e oggetti di database](../publish/publish-data-and-database-objects.md)   
- [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Inizializzare una sottoscrizione](../initialize-a-subscription.md)   
  [Sincronizzare i dati](../synchronize-data.md)  
   

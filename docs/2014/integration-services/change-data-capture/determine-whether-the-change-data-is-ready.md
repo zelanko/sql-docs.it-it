@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771427"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
@@ -98,9 +98,9 @@ ms.locfileid: "62771427"
   
 1.  Aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For.  
   
-2.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "62771427"
   
     4.  Selezionare **AND logico. Se questa opzione non è già selezionata, tutti i vincoli devono restituire il valore True**.  
   
-4.  Nella pagina**Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds**.  
+4.  Nella pagina **Script**di **Editor attività Script** per **ReadOnlyVariables**selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds** .  
   
-5.  Nella pagina **Script**di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+5.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 6.  Nella routine Main immettere una delle righe di codice seguenti:  
   
@@ -217,21 +217,21 @@ ms.locfileid: "62771427"
   
          Il valore **Esito positivo** del vincolo si riferisce al risultato dell'attività Esegui SQL precedente.  
   
-    3.  Per **Espressione** immettere `@DataReady == 0`.  
+    3.  Per **Espressione**, immettere `@DataReady == 0`.  
   
     4.  Selezionare **AND logico. Se questa opzione non è già selezionata, tutti i vincoli devono restituire il valore True**.  
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-4.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+4.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
     3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement**, immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
   
         ```  
         WAITFOR DELAY ?  
@@ -331,7 +331,7 @@ ms.locfileid: "62771427"
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere determinato che i dati delle modifiche sono pronti, il passaggio successivo consiste nel prepararsi a eseguire una query per tali dati delle modifiche.  
   
  **Argomento successivo:** [Preparare l'esecuzione di una query per i dati delle modifiche](prepare-to-query-for-the-change-data.md)  

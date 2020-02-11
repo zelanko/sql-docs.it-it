@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633010"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -39,13 +39,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` è il nome del server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @schema = ] 'schema'` è il nome dello schema. *schema* è di **tipo sysname**e il valore predefinito è null.  
+`[ @schema = ] 'schema'`Nome dello schema. *schema* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @operation = ] 'operation'` è l'azione da intraprendere per questo schema. *Operation* è di **tipo nvarchar (4)** . i possibili valori sono i seguenti.  
+`[ @operation = ] 'operation'`Azione da intraprendere per questo schema. *Operation* è di **tipo nvarchar (4)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**aggiungere**|Aggiunge lo schema specificato all'elenco di schemi non idonei per la pubblicazione.|  
 |**goccia**|Elimina lo schema specificato dall'elenco di schemi non idonei per la pubblicazione.|  
@@ -57,7 +57,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|Nome dello schema non idoneo per la pubblicazione.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  

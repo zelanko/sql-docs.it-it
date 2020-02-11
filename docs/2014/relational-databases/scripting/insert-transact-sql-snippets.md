@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242084"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserimento di frammenti di Transact-SQL
@@ -27,8 +27,7 @@ ms.locfileid: "75242084"
 ## <a name="inserting-snippets"></a>Inserimento di frammenti  
  È possibile usare il menu **Inserisci frammento** per aprire un elenco di frammenti suddiviso per categorie in cui scegliere.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] I frammenti contengono punti di sostituzione, ovvero un testo che suggerisce la sintassi pertinente per il punto specifico. Il frammento CREATE TABLE, ad esempio, include punti di sostituzione per elementi quali nome di tabella, nomi di colonna e tipi di dati di colonna. Dopo aver inserito il frammento, è necessario modificare il testo di sostituzione per formare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida. Per altre informazioni, vedere [Completare frammenti di Transact-SQL](complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Inserimento di un frammento tramite il menu Inserisci frammento  
   

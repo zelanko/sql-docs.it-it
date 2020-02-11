@@ -1,5 +1,5 @@
 ---
-title: 'Recuperare colonne usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: 'Recuperare colonne tramite IRow:: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468497"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
@@ -26,10 +26,10 @@ ms.locfileid: "62468497"
   
 -   Come recuperare un gruppo di colonne (in sequenza).  
   
--   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è uguale a 0, la chiamata a `IRow` - `>GetColumns()` restituisce solo la lunghezza di colonna effettivi. In questo caso, è possibile chiamare nuovamente `IRow->GetColumns()` nella stessa colonna per recuperare i dati effettivi.  
+-   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è null e **cbMaxLen** è 0, la chiamata a `IRow` - `>GetColumns()` restituisce solo la lunghezza effettiva della colonna. In questo caso, è possibile chiamare nuovamente `IRow->GetColumns()` nella stessa colonna per recuperare i dati effettivi.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Per recuperare colonne tramite IRow::GetColumns  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468497"
   
 -   Come accedere a una colonna due volte. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi.  
   
- Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, la chiamata a IRow -> GetColumns viene restituita solo la lunghezza di colonna effettivi. In questo caso IRow -> GetColumns può essere chiamato nuovamente sulla stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
+ Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la lunghezza effettiva della colonna. In questo caso è possibile chiamare nuovamente IRow->GetColumns sulla stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a OLE DB](ole-db-how-to-topics.md)  
+ [Procedure per l'utilizzo di OLE DB](ole-db-how-to-topics.md)  
   
   

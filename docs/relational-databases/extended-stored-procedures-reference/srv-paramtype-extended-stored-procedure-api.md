@@ -20,10 +20,10 @@ ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f81904fd930e22857bfa51584c2eefda813e7e7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253539"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API delle stored procedure estese)
@@ -48,14 +48,14 @@ n
 );  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. In questo caso, l'handle che ha ricevuto la chiamata alla stored procedure remota. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
  *n*  
  Indica il numero del parametro. Il primo parametro è 1.  
   
-## <a name="returns"></a>Restituisce  
+## <a name="returns"></a>Valori di codice restituiti  
  Un valore di token per il tipo di dati del parametro. Per informazioni sui tipi di dati, vedere [Tipi di dati &#40;API Stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md). Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
  Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] di dati.  

@@ -11,28 +11,28 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266459"
 ---
 # <a name="troubleshooting-oracletosql"></a>Risoluzione dei problemi (OracleToSQL)
-Non è insolito per l'esecuzione in circa metà problemi di migrazione l'esecuzione di script di console o comandi.  
+Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  
   
-Errori risolvibili possono essere correlati a:  
+Gli errori di risolvibili possono essere correlati a:  
   
 1.  Funzione  
   
-2.  Routine  
+2.  Procedura  
   
-3.  visualizzazione  
+3.  Visualizza  
   
 4.  Trigger  
   
-5.  Modifica il tipo di dati  
+5.  Modifica del tipo di dati  
   
-6.  Modifica delle impostazioni di progetto  
+6.  Modifica delle impostazioni del progetto  
   
-I problemi possono essere risolti usando l'interfaccia utente SSMA aprendo il File di progetto creato tramite la console.  
+Per risolvere i problemi, è possibile usare l'interfaccia utente di SSMA aprendo il file di progetto creato tramite la console.  
   

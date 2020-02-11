@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812298"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
@@ -40,7 +40,7 @@ ms.locfileid: "62812298"
   
  In alternativa alla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per attivare l'attesa su una porta fissa e aprire la porta, è possibile elencare l'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Sqlservr.exe) come un'eccezione ai programmi bloccati. Utilizzare questo metodo quando si desidera continuare a utilizzare le porte dinamiche. In questo modo, è possibile accedere a una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62812298"
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Porta**, quindi fare clic su **Avanti**.  
   
-4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **porte locali specifiche**, quindi digitare il numero di porta dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], ad esempio `1433` per l'istanza predefinita. Scegliere **Avanti**.  
+4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **porte locali specifiche**e quindi digitare il numero di porta dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], ad esempio `1433` per l'istanza predefinita. Fare clic su **Avanti**.  
   
 5.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62812298"
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.  
   
-4.  Nella finestra di dialogo **Programma** selezionare **Percorso programma**. Fare clic su **Sfoglia**, spostarsi sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera accedere attraverso il firewall, quindi fare clic su **Apri**. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si trova in **C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Scegliere **Avanti**.  
+4.  Nella finestra di dialogo **Programma** selezionare **Percorso programma**. Fare clic su **Sfoglia**, spostarsi sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera accedere attraverso il firewall, quindi fare clic su **Apri**. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si trova in **C:\Programmi\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Fare clic su **Avanti**.  
   
 5.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   

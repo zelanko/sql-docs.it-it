@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811285"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
@@ -48,7 +48,7 @@ ms.locfileid: "62811285"
  L'associazione di canale stabilisce un canale sicuro (Schannel) tra un client e un'istanza del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il servizio verifica l'autenticità del client confrontando il token CBT (Channel Binding Token) del client specifico di tale canale con il proprio CBT. L'associazione di canale neutralizza sia gli attacchi luring che di spoofing. Comporta tuttavia costi di runtime maggiori in quanto richiede la crittografia TLS (Transport Layer Security) di tutto il traffico della sessione. Si verifica l'associazione di canale quando un'applicazione client utilizza la crittografia per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indipendentemente dal fatto che la crittografia venga imposta dal client o dal server.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 e SSL 3.0. Se si applica un protocollo diverso, ad esempio TLS 1.1 o TLS 1.2, apportando modifiche nel livello SChannel del sistema operativo, le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero non riuscire.  
+>  I provider di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano TLS 1.0 e SSL 3.0. Se si applica un protocollo diverso, ad esempio TLS 1.1 o TLS 1.2, apportando modifiche nel livello SChannel del sistema operativo, le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero non riuscire.  
   
 ### <a name="operating-system-support"></a>Supporto nei sistemi operativi  
  Nei collegamenti seguenti vengono fornite ulteriori informazioni sul supporto della **protezione estesa**in Windows:  
@@ -81,11 +81,11 @@ ms.locfileid: "62811285"
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Abilitazione della protezione estesa per il motore di database  
  Per utilizzare la **protezione estesa**, è necessario disporre sia sul server che sul client di un sistema operativo che supporti **questa caratteristica**. È inoltre necessario che la **protezione estesa** sia abilitata nel sistema operativo. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere [Protezione estesa per l'autenticazione](https://support.microsoft.com/kb/968389).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa** per alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà resa disponibile negli aggiornamenti futuri. Per ulteriori informazioni sull'abilitazione della **protezione estesa** per il sistema operativo in uso, vedere **Protezione estesa per l'autenticazione**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa** per alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà resa disponibile negli aggiornamenti futuri. Dopo aver abilitato la **protezione estesa** nel server, effettuare i passaggi seguenti per abilitarla **protezione estesa**:  
   
 1.  Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** , quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<* NomeIstanza *>* e scegliere **Proprietà**.  
+2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<* NomeIstanza*>* e scegliere **Proprietà**.  
   
 3.  Sia per l'associazione di canale che per l'associazione al servizio, nella scheda **Avanzate** configurare l'impostazione adatta per **Protezione estesa** .  
   

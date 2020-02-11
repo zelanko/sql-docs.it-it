@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806752"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Impostazione del mirroring del database tramite certificati (Transact-SQL)
   In questo esempio vengono illustrati tutti i passaggi necessari per la creazione di una sessione di mirroring del database tramite l'autenticazione basata sui certificati. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
   
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
   
-##  <a name="ExampleH2"></a> Esempio  
+##  <a name="ExampleH2"></a>Esempio  
  Nell'esempio seguente vengono descritte le operazioni necessarie in un partner che risiede in HOST_A. Nell'esempio i due partner sono le istanze predefinite del server in tre sistemi. Le due istanze server vengono eseguite in domini Windows non trusted, quindi è necessaria l'autenticazione basata sui certificati.  
   
  Il ruolo principale viene inizialmente assunto da HOST_A e il ruolo di server mirror da HOST_B.  
@@ -58,9 +58,9 @@ ms.locfileid: "62806752"
   
      Per informazioni su come creare un database mirror, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-4.  [Configurazione dei partner del mirroring](#ConfigureMirroringPartners)  
+4.  [Configurazione dei partner per il mirroring](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Configurazione delle connessioni in uscita  
+###  <a name="ConfiguringOutboundConnections"></a>Configurazione delle connessioni in uscita  
  **Per configurare Host_A per le connessioni in uscita**  
   
 1.  Nel database master creare la chiave master del database, se necessaria.  
@@ -152,7 +152,7 @@ ms.locfileid: "62806752"
   
  Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-###  <a name="ConfigureInboundConnections"></a> Configurazione delle connessioni in ingresso  
+###  <a name="ConfigureInboundConnections"></a>Configurazione delle connessioni in ingresso  
  **Per configurare Host_A per le connessioni in ingresso**  
   
 1.  In HOST_A creare un account di accesso per HOST_B.  
@@ -222,12 +222,12 @@ ms.locfileid: "62806752"
 > [!IMPORTANT]  
 >  Se si prevede di utilizzare la modalità a sicurezza elevata con failover automatico, è necessario ripetere gli stessi passaggi di impostazione per configurare il server di controllo del mirroring per connessioni in uscita e in ingresso. Per configurare le connessioni in ingresso per un server di controllo del mirroring è necessario impostare account di accesso e utenti per il server di controllo del mirroring in entrambi i partner e per entrambi i partner nel server di controllo del mirroring.  
   
- Per altre informazioni, vedere [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+ Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
 ### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
  Per informazioni su come creare un database mirror, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Configurazione dei partner del mirroring  
+###  <a name="ConfigureMirroringPartners"></a>Configurazione dei partner per il mirroring  
   
 1.  Nell'istanza del server mirror in HOST_B, impostare l'istanza del server in HOST_A come partner (rendendola l'istanza iniziale del server principale). Specificare un indirizzo di rete valido per `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
@@ -257,7 +257,7 @@ ms.locfileid: "62806752"
     ```  
   
     > [!NOTE]  
-    >  Se si prevede di eseguire in modalità a sicurezza elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su FULL (impostazione predefinita) e aggiungere il controllo appena possibile dopo l'esecuzione il secondo SET PARTNER **» *`partner_server`* '** istruzione. Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
+    >  Se si prevede di eseguire in modalità a protezione elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su Full (impostazione predefinita) e aggiungere il server di controllo del mirroring non appena possibile dopo l'esecuzione della seconda istruzione set partner **'*`partner_server`*'** . Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -269,16 +269,16 @@ ms.locfileid: "62806752"
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
+-   [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Specificare un indirizzo di rete del server &#40;il mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
+ [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812299"
 ---
 # <a name="change-server-authentication-mode"></a>Modifica della modalità di autenticazione del server
@@ -27,7 +27,7 @@ ms.locfileid: "62812299"
   
  Se si seleziona **Modalità di autenticazione di Windows** durante l'installazione, l'account di accesso sa viene disabilitato e il programma di installazione assegna una password. Se in seguito si modifica la modalità di autenticazione in **Autenticazione di SQL Server e di Windows**, l'account di accesso sa resterà disabilitato. Per usare l'account di accesso sa, usare l'istruzione ALTER LOGIN per abilitare l'account sa e assegnare una nuova password. È possibile connettersi al server tramite l'account sa solo se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62812299"
 ###  <a name="Security"></a> Sicurezza  
  L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. Non abilitare l'account sa a meno che l'applicazione non lo richieda. È estremamente importante utilizzare una password complessa per l'accesso all'account sa.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>Per modificare la modalità di autenticazione di sicurezza  
   
@@ -58,13 +58,13 @@ ms.locfileid: "62812299"
   
 #### <a name="to-enable-the-sa-login"></a>Per abilitare l'account di accesso sa  
   
-1.  In Esplora oggetti, espandere **sicurezza**, espandere l'account di accesso, fare doppio clic su `sa`, quindi fare clic su **proprietà**.  
+1.  In Esplora oggetti espandere **sicurezza**, espandere account di accesso, fare clic con `sa`il pulsante destro del mouse su, quindi scegliere **proprietà**.  
   
 2.  Nella pagina **Generale** potrebbe essere necessario creare e confermare una password per l'account di accesso.  
   
 3.  Nella pagina **Stato** fare clic su **Abilitato** nella sezione **Account di accesso**, quindi scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per abilitare l'account di accesso sa**  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

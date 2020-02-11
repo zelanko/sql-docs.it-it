@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771437"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
@@ -76,7 +76,7 @@ ms.locfileid: "62771437"
 > [!NOTE]  
 >  Per altre informazioni sulla sintassi di questa stored procedure e sui relativi parametri, vedere [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql).  
   
- La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se durante la creazione dell'istanza di acquisizione è stato impostato il parametro *@supports_net_changes* , la stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
+ La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se il *@supports_net_changes* parametro è stato impostato al momento della creazione dell'istanza di acquisizione, il stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
   
  La stored procedure restituisce un set di risultati con due colonne:  
   
@@ -108,7 +108,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Informazioni sulle funzioni create dalla stored procedure e relativo utilizzo  
- Per ripercorrere sistematicamente la cronologia dei dati modificati acquisiti, le funzioni wrapper generate richiedono che il parametro *@end_time* di un intervallo sia il parametro *@start_time* dell'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
+ Per esaminare sistematicamente la sequenza temporale dei dati modificati acquisiti, le funzioni wrapper generate si *@end_time* aspettano che il parametro per un *@start_time* intervallo sia il parametro per l'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
   
 -   Eseguire il mapping dei valori di data e ora ai valori LSN utilizzati internamente.  
   
@@ -126,7 +126,7 @@ deallocate #hfunctions
   
 -   Il valore data/ora di inizio e il valore data/ora di fine per l'intervallo. Mentre le funzioni wrapper utilizzano i valori di data e ora come endpoint per l'intervallo di query, le funzioni Change Data Capture utilizzano due valori LSN come endpoint.  
   
--   Il filtro di riga. Il parametro *@row_filter_option* è uguale sia per le funzioni wrapper che per le funzioni di Change Data Capture. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   Il filtro di riga. Sia per le funzioni wrapper che per le funzioni di Change Data Capture *@row_filter_option* , il parametro è lo stesso. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  Il set di risultati restituito dalle funzioni wrapper include i dati seguenti:  
   
@@ -134,7 +134,7 @@ deallocate #hfunctions
   
 -   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono i seguenti: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
   
--   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list* . Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
+-   Aggiornare i flag, quando vengono richiesti, che vengono visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel *@update_flag_list* parametro. Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
   
  Se il pacchetto chiama una funzione wrapper che esegue una query su tutte le modifiche, la funzione wrapper restituisce anche le colonne __CDC_STARTLSN e \__CDC_SEQVAL. Queste due colonne diventano rispettivamente la prima e la seconda colonna del set di risultati. La funzione wrapper ordina inoltre il set di risultati in base a queste due colonne.  
   
@@ -209,16 +209,16 @@ go
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
-|**__$seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|**__$operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
-|**__$update_mask**|`varbinary(128)`|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
+|**_ _ $ seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
+|**_ _ $ operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
+|**_ _ $ update_mask**|`varbinary(128)`|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
 |**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
  Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
- **Argomento successivo:** [Recuperare e interpretare i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
+ **Argomento successivo:** [recuperare e comprendere i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
   
   

@@ -16,18 +16,18 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769066"
 ---
-# <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
+# <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un agente di lettura coda per un server di distribuzione specificato. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione o nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,24 +51,24 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
 `[ @frompublisher = ] frompublisher`Specifica se la stored procedure viene eseguita nel server di pubblicazione. *frompublisher* è di bit e il valore predefinito è **0**. Il valore **1** indica che la stored procedure viene eseguita dal server di pubblicazione nel database di pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_addqreader_agent** viene utilizzato nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addqreader_agent** viene utilizzata nella replica transazionale.  
   
  **sp_addqreader_agent** deve essere eseguito almeno una volta in un server di distribuzione che supporta l'aggiornamento in coda dopo [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) ma prima di [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
  Il processo di agente di lettura coda viene rimosso quando si esegue [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_addqreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
- [Aggiornare gli script di replica &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
+ [Aggiornare gli script di replica &#40;la programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_changeqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
- [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
+ [sp_changeqreader_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
+ [sp_helpqreader_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   
   

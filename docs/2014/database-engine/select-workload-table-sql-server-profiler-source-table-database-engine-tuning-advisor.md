@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - origine tabella-Ottimizzazione guidata motore Database - Seleziona tabella carico di lavoro | Microsoft Docs
+title: Tabella di origine SQL Server Profiler-Ottimizzazione guidata motore di database-selezionare la tabella del carico di lavoro | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088875"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabella di SQL Server Profiler - origine tabella-Ottimizzazione guidata motore Database - selezionare il carico di lavoro
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabella di origine SQL Server Profiler-Ottimizzazione guidata motore di database-selezionare la tabella del carico di lavoro
   Questa finestra di dialogo viene usata in Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] e in Ottimizzazione guidata [!INCLUDE[ssDE](../includes/ssde-md.md)] per selezionare tabelle.  
   
  In [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], usare la finestra di dialogo **Tabella di origine** per specificare una tabella di origine per una tabella di traccia. Si tratta di una tabella dalla quale viene caricata una traccia e il cui contenuto viene visualizzato o utilizzato per riprodurre la traccia.  

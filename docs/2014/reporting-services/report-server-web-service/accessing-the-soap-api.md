@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012253"
 ---
 # <a name="accessing-the-soap-api"></a>Accesso all'API SOAP
@@ -41,7 +41,7 @@ ms.locfileid: "63012253"
   
 -   L'endpoint <xref:ReportExecution2005> consente agli sviluppatori di elaborare a livello di programmazione i report e di eseguirne il rendering in un server di report. È possibile accedere al linguaggio WSDL per questo endpoint tramite `ReportExecution2005.asmx?wsdl`.  
   
- WSDL può essere usato dai kit di sviluppo che supportano SOAP e i servizi Web, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ WSDL può essere utilizzato dai kit di sviluppo che supportano SOAP e i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] servizi Web, ad esempio SDK.  
   
  Nell'esempio seguente viene illustrato il formato dell'URL del file WSDL di gestione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -53,9 +53,9 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |Elemento URL|Descrizione|  
 |-----------------|-----------------|  
-|*server*|Nome del server in cui viene distribuito il server di report.|  
-|*reportserver*|Nome della cartella contenente il servizio Web XML. Questo nome viene configurato durante l'installazione.|  
-|*\<nome endpoint>.asmx*|Nome dell'endpoint del servizio Web.|  
+|*Server*|Nome del server in cui viene distribuito il server di report.|  
+|*ReportServer*|Nome della cartella contenente il servizio Web XML. Questo nome viene configurato durante l'installazione.|  
+|*\<nome dell'endpoint>. asmx*|Nome dell'endpoint del servizio Web.|  
   
  Per altre informazioni sul formato WSDL, vedere la specifica WSDL nel sito Web World Wide Web Consortium (W3C) all'indirizzo http://www.w3.org/TR/wsdl.  
   

@@ -1,5 +1,5 @@
 ---
-title: Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria | Microsoft Docs
+title: Implementazione di colonne LOB in una tabella ottimizzata per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778922"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria
-  Le tabelle ottimizzate per la memoria non dispongono di archiviazione di oggetti all'esterno di righe o grandi dimensioni (LOB) (questa limitazione è stato rimosso in SQL Server 2016 e versioni successive, vedere [tipi di dati supportati per OLTP In memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), e il limite è impostato su 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  
+  Le tabelle con ottimizzazione per la memoria non dispongono di archiviazione all'esterno di righe o LOB (Large Object) (questa limitazione è stata rimossa in SQL Server 2016 e versioni successive. vedere [tipi di dati supportati per OLTP in memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)) e il limite delle dimensioni delle righe è 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  
   
 -   Suddividere i valori LOB in più righe.  
   

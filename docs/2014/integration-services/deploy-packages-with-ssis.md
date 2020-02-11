@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232686"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Esercitazione SSIS: Distribuzione di pacchetti
@@ -77,13 +77,13 @@ ms.locfileid: "75232686"
  **Tempo stimato per il completamento dell'esercitazione:** 2 ore  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
- [Lezione 1: preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  In questa lezione verrà preparata la distribuzione di una soluzione ETL creando un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aggiungendovi i pacchetti e gli altri file necessari.  
   
- [Lezione 2: creazione del pacchetto di distribuzione](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lezione 2: Creazione del pacchetto di distribuzione](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  In questa lezione verrà compilata un'utilità di distribuzione e verrà verificato che il pacchetto di distribuzione includa i file necessari.  
   
- [Lezione 3: installazione dei pacchetti](../integration-services/lesson-3-install-ssis-package.md)  
+ [Lezione 3: Installazione dei pacchetti](../integration-services/lesson-3-install-ssis-package.md)  
  In questa lezione si procederà alla copia del pacchetto di distribuzione nel computer di destinazione, all'installazione e quindi all'esecuzione dei pacchetti.  
   
 ![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  

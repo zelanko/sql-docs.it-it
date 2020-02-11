@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà passaggio processo: Nuovo passaggio di processo (pagina avanzata) | Microsoft Docs'
+title: 'Proprietà passaggio processo: nuovo passaggio di processo (pagina Avanzate) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62937197"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Avanzate)
-  Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Avanzate)
+  Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
- **Azione in caso di esito positivo**  
+ **Operazione riuscita**  
  Consente di impostare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire in caso di esito positivo del passaggio di processo.  
   
- **Numero tentativi**  
+ **Tentativi**  
  Consente di impostare il numero di tentativi eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per ripetere un passaggio di processo non riuscito.  
   
  **Intervallo tra i tentativi (minuti)**  
  Consente di impostare l'intervallo di attesa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tra l'esecuzione di un tentativo e l'altro.  
   
- **Azione in caso di esito negativo**  
+ **Azione in caso di errore**  
  Consente di impostare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire in caso di esito negativo del passaggio di processo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opzioni per i passaggi del processo Transact-SQL  
@@ -43,7 +43,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione di file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accodare l'output al contenuto già esistente nel file. Diversamente, il precedente contenuto del file viene sovrascritto ogni volta che il passaggio di processo viene eseguito.  
@@ -71,7 +71,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione di file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accordare l'output del passaggio di processo al precedente contenuto del file ogni volta che il passaggio di processo viene eseguito.  
@@ -96,7 +96,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione di file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accordare l'output del passaggio di processo al precedente contenuto del file ogni volta che il passaggio di processo viene eseguito.  

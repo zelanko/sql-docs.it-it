@@ -1,5 +1,5 @@
 ---
-title: Esempio di OriginalValue e UnderlyingValue (esempio di proprietà (VB) | Microsoft Docs
+title: Esempio di proprietà OriginalValue e UnderlyingValue (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917806"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Esempio di OriginalValue e UnderlyingValue (esempio di proprietà (VB)
-Questo esempio viene illustrato il [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) proprietà visualizzando un messaggio se i dati sottostanti di un record è stata modificata durante un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornamento batch.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Esempio di proprietà OriginalValue e UnderlyingValue (VB)
+In questo esempio vengono illustrate le proprietà [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) visualizzando un messaggio se i dati sottostanti di un record sono stati modificati durante un aggiornamento batch del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,5 +121,5 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

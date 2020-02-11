@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484149"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Gestione di un progetto Data Quality (apertura, sblocco, ridenominazione ed eliminazione)
@@ -47,11 +47,11 @@ ms.locfileid: "65484149"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per gestire un progetto Data Quality è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
-##  <a name="Open"></a> Apertura di un progetto Data Quality  
+##  <a name="Open"></a>Aprire un progetto Data Quality  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella pagina iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
+2.  Nella schermata [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] iniziale fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
   
      Alternativamente, è possibile aprire direttamente un progetto Data Quality elencato nell'area **Progetto Data Quality recente** facendo clic su di esso.  
   
@@ -59,37 +59,37 @@ ms.locfileid: "65484149"
   
 4.  Il progetto Data Quality viene aperto nello stesso stato in cui era stata chiusa l'ultima volta l'attività. Un progetto Data Quality può presentare gli stati seguenti:  
   
-    -   Per l'attività **Pulizia**, un progetto Data Quality può presentare gli stati seguenti: **Pulizia - Mappa**, **Pulizia - Pulisci**, **Pulizia - Gestisci e visualizza risultati** e **Pulizia - Esportazione**.  
+    -   Per l'attività **Pulizia**, un progetto Data Quality può presentare gli stati seguenti: **Pulizia - Mappa**, **Pulizia - Pulisci**, **Pulizia - Gestisci e visualizza risultati**e **Pulizia - Esportazione**.  
   
-    -   Per l'attività **Corrispondenza**, un progetto Data Quality può presentare gli stati seguenti: **Corrispondenza - Mappa**, **Corrispondenza - Corrispondenza**, **Corrispondenza - Sopravvivenza** e **Corrispondenza - Esportazione**.  
+    -   Per l'attività **Corrispondenza**, un progetto Data Quality può presentare gli stati seguenti: **Corrispondenza - Mappa**, **Corrispondenza - Corrispondenza**, **Corrispondenza - Sopravvivenza**e **Corrispondenza - Esportazione**.  
   
-##  <a name="Unlock"></a> Sblocco di un progetto Data Quality  
+##  <a name="Unlock"></a>Sbloccare un progetto Data Quality  
  Quando viene creato, un progetto Data Quality è impostato in uno stato bloccato per impedire l'utilizzo o la modifica da parte di altri utenti. Se si desidera che altri utenti possano lavorare sul progetto Data Quality, una volta completate le proprie attività è necessario sbloccare il progetto. Per i progetti bloccati, viene visualizzato un simbolo a forma di lucchetto.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella pagina iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
+2.  Nella schermata [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] iniziale fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
   
 3.  Nella schermata **Apri progetto** , fare clic con il pulsante destro del mouse su un progetto Data Quality bloccato che sia stato creato dall'utente corrente, quindi scegliere **Sblocca** dal menu di scelta rapida. Viene visualizzato un segno di spunta verde che indica che il progetto è ora sbloccato.  
   
-##  <a name="Rename"></a> Ridenominazione di un progetto Data Quality  
+##  <a name="Rename"></a>Rinominare un progetto Data Quality  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella pagina iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
+2.  Nella schermata [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] iniziale fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
   
 3.  Nella schermata **Apri progetto** , fare clic con il pulsante destro del mouse su un progetto Data Quality bloccato che sia stato creato dall'utente corrente, quindi scegliere **Rinomina** dal menu di scelta rapida.  
   
 4.  Il nome del progetto Data Quality diventa modificabile nella colonna **Nome** . Digitare un nuovo nome e premere INVIO.  
   
-##  <a name="Delete"></a> Eliminazione di un progetto Data Quality  
+##  <a name="Delete"></a>Eliminare un progetto Data Quality  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Nella pagina iniziale di [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
+2.  Nella schermata [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] iniziale fare clic su **Apri progetto Data Quality**. Verrà visualizzata la finestra di dialogo **Apri progetto** .  
   
 3.  Nella schermata **Apri progetto** , fare clic con il pulsante destro del mouse su un progetto Data Quality sbloccato che sia stato creato dall'utente corrente, quindi scegliere **Elimina** dal menu di scelta rapida.  
   
-4.  Verrà visualizzato un messaggio di conferma. Scegliere **Sì**.  
+4.  Viene visualizzato un messaggio di conferma. Fare clic su **Sì**.  
   
   

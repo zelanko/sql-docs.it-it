@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189826"
 ---
 # <a name="alert-properties-history-page"></a>Proprietà avviso (pagina Cronologia)
-  Usare questa pagina per visualizzare e modificare la cronologia degli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa pagina per visualizzare e modificare la cronologia degli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Data ultimo avviso**  
@@ -32,7 +32,7 @@ ms.locfileid: "68189826"
  **Numero di occorrenze**  
  Numero totale delle occorrenze dell'evento a partire dalla creazione dell'avviso o dall'ultima reimpostazione del conteggio.  
   
- **Reimposta contatore**  
+ **Reimposta conteggio**  
  Consente di reimpostare le informazioni contenute in questa pagina.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - tutti i linguaggi-tabulazioni) | Microsoft Docs
+title: Opzioni (editor di testo-tutti i linguaggi-pagina schede) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089910"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Schede)
@@ -29,23 +29,23 @@ ms.locfileid: "66089910"
  Se si selezionano impostazioni diverse per editor particolari, viene visualizzato il messaggio "Le impostazioni dei rientri (o delle tabulazioni) per singoli formati di testo sono in conflitto". Ad esempio, questo promemoria viene visualizzato se è stata selezionata l'opzione **Blocco** per **Testo normale** e l'opzione **Nessuno** per **XML**.  
   
 ## <a name="indenting"></a>Stili rientri  
- **None**  
+ **Nessuno**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO non viene rientrata. Il cursore viene posizionato in corrispondenza della prima colonna della nuova riga.  
   
  **Blocco**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito al pressione di INVIO viene automaticamente rientrata utilizzando la stessa distanza con cui è stata rientrata la riga precedente.  
   
- **Smart**  
+ **Intelligenti**  
  Quando questa opzione è selezionata, la nuova riga creata in seguito alla pressione di INVIO viene posizionata in base al contesto.  
   
 ## <a name="tabs"></a>Tabulazioni  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   
- **Dimensione del rientro**  
+ **Dimensione rientro**  
  Consente di impostare la dimensione in spazi di un rientro automatico. Il valore predefinito è quattro spazi. Per riempire la dimensione specificata verranno inseriti caratteri di tabulazione, caratteri spazio o entrambi i caratteri.  
   
- **Inserisci gli spazi**  
+ **Inserisci spazi**  
  Quando questa opzione è selezionata, durante le operazioni di rientro vengono inseriti solo caratteri spazio, non caratteri di tabulazione. Se, ad esempio, l'opzione **Dimensione rientro** è impostata su 5, vengono inseriti cinque caratteri spazio ogni volta che si preme il tasto TAB o si fa clic sul pulsante **Aumenta rientro** sulla barra degli strumenti della finestra principale di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  **Mantieni tabulazioni**  

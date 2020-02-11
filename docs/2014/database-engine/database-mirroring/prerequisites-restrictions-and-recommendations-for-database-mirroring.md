@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754605"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Prerequisiti restrizioni e indicazioni per il mirroring del database
@@ -37,7 +37,7 @@ ms.locfileid: "62754605"
   
 
   
-##  <a name="DbmSupport"></a> Supporto per il mirroring del database  
+##  <a name="DbmSupport"></a>Supporto per il mirroring del database  
  Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Si noti che il mirroring del database funziona con qualsiasi livello di compatibilità del database supportato. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità di ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -51,7 +51,7 @@ ms.locfileid: "62754605"
 -   I due partner, cioè il server principale e il server mirror, devono essere in esecuzione nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il server di controllo, se presente, può essere eseguito in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta il mirroring del database.  
   
     > [!NOTE]  
-    >  È possibile aggiornare istanze del server che operano come partner in una sessione di mirroring a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server](upgrading-mirrored-instances.md).  
+    >  È possibile aggiornare istanze del server che operano come partner in una sessione di mirroring a una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 -   Il database deve utilizzare il modello di recupero con registrazione completa. I modelli di recupero con registrazione minima e con registrazione minima delle operazioni bulk non supportano il mirroring del database. Di conseguenza, le operazioni bulk vengono sempre registrate completamente per un database con mirroring. Per informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62754605"
   
 
   
-##  <a name="Restrictions"></a> Restrizioni  
+##  <a name="Restrictions"></a>Restrizioni  
   
 -   Il mirroring può essere eseguito solo dei database utente. Non è possibile eseguire il mirroring dei database **master**, **msdb**, **tempdb**o **model** .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62754605"
   
 
   
-##  <a name="RecommendationsForPartners"></a> Indicazioni per la configurazione dei server partner  
+##  <a name="RecommendationsForPartners"></a>Suggerimenti per la configurazione dei server partner  
   
 -   È consigliabile che i partner siano eseguiti in sistemi simili, in grado di gestire carichi di lavoro identici.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62754605"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> Indicazioni per la distribuzione del mirroring del database  
+##  <a name="RecommendationsForDeploying"></a>Suggerimenti per la distribuzione del mirroring del database  
  L'operazione asincrona consente di ottenere prestazioni ottimali per il mirroring del database. Le prestazioni di una sessione di mirroring che utilizza l'operazione asincrona possono essere rallentate quando il relativo carico di lavoro genera notevoli quantità di dati del log delle transazioni.  
   
  Negli ambienti di prova è consigliabile analizzare tutte le modalità operative per valutare le prestazioni del mirroring del database. Tuttavia, prima di distribuire il mirroring in un ambiente di produzione, accertarsi di aver compreso il funzionamento della rete in condizioni normali nel mondo reale.  
@@ -125,7 +125,7 @@ ms.locfileid: "62754605"
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

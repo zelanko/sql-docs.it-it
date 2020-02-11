@@ -13,24 +13,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154768"
 ---
-# <a name="connect-to-azure-storage-restore"></a>Connettersi ad archiviazione di Azure (ripristino)
-  La finestra di dialogo consente di specificare la connessione alle informazioni sull'account di archiviazione di Azure per recuperare l'archiviazione di file nell'account di archiviazione di Azure. Dopo aver specificato le informazioni necessarie, fare clic su **Connetti** per stabilire la connessione ad archiviazione di Azure.  
+# <a name="connect-to-azure-storage-restore"></a>Connettersi ad Archiviazione di Azure (ripristino)
+  La finestra di dialogo consente di specificare la connessione alle informazioni sull'account di archiviazione di Azure per recuperare l'archivio di file nell'account di archiviazione di Azure. Dopo avere specificato le informazioni necessarie, fare clic su **Connetti** per stabilire la connessione all'archiviazione di Azure.  
   
-## <a name="azure-storage-account"></a>Account di archiviazione di Microsoft Azure  
+## <a name="azure-storage-account"></a>Account di archiviazione di Azure  
  **Account di archiviazione**  
- Selezionare, digitare o incollare il nome dell'account di archiviazione di Azure che si vuole usare. Nella casella di riepilogo sono elencati gli account utilizzati in precedenza.  
+ Selezionare, digitare o incollare il nome dell'account di archiviazione di Azure da usare. Nella casella di riepilogo sono elencati gli account utilizzati in precedenza.  
   
  **Chiave dell'account**  
  Specificare la chiave di accesso dell'account di archiviazione di Azure.  
   
  Casella di controllo**Usa endpoint sicuri (HTTPS)**  
- Selezionare questa opzione per creare una connessione sicura ad archiviazione di Azure, consigliata.  
+ Selezionare questa opzione per stabilire una connessione sicura all'archiviazione di Azure (scelta consigliata).  
   
  Casella di controllo**Salva chiave account**  
  Selezionare questa casella di controllo se si desidera memorizzare in SQL Server la chiave di accesso per l'account di archiviazione.  

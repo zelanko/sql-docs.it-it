@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e457601eafcdd8e363d931d53dfea673254b29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896968"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (espressione SSIS)
@@ -37,7 +37,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, SQUARE restituirà Null.  
   
  Prima del calcolo del quadrato viene eseguito il cast dell'argomento al tipo di dati DT_R8.  

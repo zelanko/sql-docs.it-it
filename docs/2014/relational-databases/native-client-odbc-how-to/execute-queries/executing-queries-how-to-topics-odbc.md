@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di query procedure (ODBC) | Microsoft Docs
+title: Procedure per l'esecuzione di query (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200383"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Procedure per l'esecuzione di query (ODBC)
   L'esecuzione di un'istruzione SQL in un'applicazione ODBC richiede l'allocazione di un handle di istruzione, l'impostazione degli attributi dell'istruzione, nonché la preparazione e l'esecuzione di quest'ultima.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Usare un'istruzione &#40;ODBC&#41;](use-a-statement-odbc.md)  
+-   [Utilizzare un'istruzione &#40;ODBC&#41;](use-a-statement-odbc.md)  
   
--   [Impostare le opzioni di cursore &#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [Impostare le opzioni del cursore &#40;&#41;ODBC](set-cursor-options-odbc.md)  
   
--   [Eseguire direttamente un'istruzione &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [Eseguire un'istruzione direttamente &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
   
 -   [Preparare ed eseguire un'istruzione &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative a ODBC](../odbc-how-to-topics.md)  
+ [Procedure per l'utilizzo di ODBC](../odbc-how-to-topics.md)  
   
   

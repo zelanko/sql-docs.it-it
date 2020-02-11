@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775631"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
@@ -42,7 +42,7 @@ ms.locfileid: "62775631"
   
     2.  Fare clic su **Installazione**nel riquadro sinistro.  
   
-    3.  Nel riquadro di destra, fare clic su **esegue l'aggiornamento da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
+    3.  Nel riquadro di destra fare clic su **Aggiorna da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
   
     4.  Completare l'Installazione guidata.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62775631"
     5.  Se l'aggiornamento dello schema dei database DQS viene terminato correttamente, viene visualizzato un messaggio di completamento.  
   
 ##  <a name="Verify"></a> Verifica dell'aggiornamento dello schema dei database DQS  
- Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo:  
+ Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo, procedere come indicato di seguito:  
   
 1.  Avviare SQL Server Management Studio e connettersi all'istanza di SQL Server contenente lo schema dei database DQS aggiornato.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62775631"
   
 3.  Nell'output verrà visualizzata una voce per ogni aggiornamento, insieme alla data di aggiornamento. Il valore massimo di VERSION_ID e ASSEMBLY_VERSION nella data più recente è la versione corrente. Un valore pari a 2 nella colonna STATUS indica l'esito positivo. Se si è verificato un errore, questo verrà visualizzato nella colonna ERROR. Esempio di output:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATO|ERRORE|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  
@@ -91,6 +91,6 @@ ms.locfileid: "62775631"
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Rimuovere oggetti server Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
   

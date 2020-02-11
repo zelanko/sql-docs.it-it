@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065529"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Operazione su checkpoint per le tabelle con ottimizzazione per la memoria
@@ -28,9 +28,9 @@ ms.locfileid: "63065529"
   
  Per le tabelle basate su disco, viene acquisito un checkpoint automatico in base all'opzione di configurazione dell'intervallo di recupero. Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md)).  
   
- Per le tabelle ottimizzate per la memoria, viene acquisito un checkpoint automatico quando il file di log delle transazioni è maggiore di 512 MB dall'ultimo checkpoint. 512 MB include record del log delle transazioni per le tabelle basate su disco sia ottimizzato per la memoria.  
+ Per le tabelle ottimizzate per la memoria, viene effettuato un checkpoint automatico quando il file di log delle transazioni diventa più grande di 512 MB dall'ultimo checkpoint. 512 MB include i record del log delle transazioni sia per le tabelle basate su disco che per quelle ottimizzate per la memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

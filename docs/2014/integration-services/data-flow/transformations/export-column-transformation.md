@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900157"
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
@@ -32,16 +32,16 @@ ms.locfileid: "62900157"
 ## <a name="append-and-truncate-options"></a>Opzioni Accoda e tronca  
  Nella tabella seguente vengono descritti gli effetti delle impostazioni delle opzioni relative all'accodamento e al troncamento sui risultati.  
   
-|Accoda|Troncamento|File esistente|Risultati|  
+|Accoda|Truncate|File esistente|Risultati|  
 |------------|--------------|-----------------|-------------|  
 |False|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |True|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |False|True|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
 |True|True|No|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su `true` entrambe le proprietà.|  
-|False|False|Yes|Viene generato un errore di run-time. Il file esiste ma la trasformazione non è in grado di scrivervi.|  
-|False|True|Yes|La trasformazione elimina e ricrea il file e vi scrive i dati.|  
-|True|False|Yes|La trasformazione apre il file e scrive i dati alla fine.|  
-|True|True|Yes|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su `true` entrambe le proprietà.|  
+|False|False|Sì|Viene generato un errore di run-time. Il file esiste ma la trasformazione non è in grado di scrivervi.|  
+|False|True|Sì|La trasformazione elimina e ricrea il file e vi scrive i dati.|  
+|True|False|Sì|La trasformazione apre il file e scrive i dati alla fine.|  
+|True|True|Sì|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su `true` entrambe le proprietà.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Configurazione della trasformazione Esporta colonna  
  Per configurare la trasformazione Esporta colonna, procedere nel modo seguente:  
@@ -55,7 +55,7 @@ ms.locfileid: "62900157"
     > [!NOTE]  
     >  L'indicatore dell'ordine dei byte viene scritto solo se i dati non vengono accodati a un file esistente e hanno tipo di dati DT_NTEXT.  
   
- La trasformazione usa coppie di colonne di input: una colonna contiene un nome di file e l'altra colonna contiene i dati. Ogni riga nel set di dati può specificare un file diverso. A mano a mano che la trasformazione elabora una riga, i dati vengono inseriti nel file specificato. In fase di esecuzione la trasformazione crea i file, se non esistono ancora, e quindi vi scrive i dati. I dati da scrivere devono avere tipo di dati DT_TEXT, DT_NTEXT o DT_IMAGE. Per altre informazioni, vedere [Tipi di dati di Integration Services](../integration-services-data-types.md).  
+ La trasformazione utilizza coppie di colonne di input: una contenente un nome di file e una contenente i dati. Ogni riga nel set di dati può specificare un file diverso. A mano a mano che la trasformazione elabora una riga, i dati vengono inseriti nel file specificato. In fase di esecuzione la trasformazione crea i file, se non esistono ancora, e quindi vi scrive i dati. I dati da scrivere devono avere tipo di dati DT_TEXT, DT_NTEXT o DT_IMAGE. Per altre informazioni, vedere [Tipi di dati di Integration Services](../integration-services-data-types.md).  
   
  Questa trasformazione include un input, un output e un output degli errori.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "62900157"
   
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830582"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach
@@ -32,7 +32,7 @@ ms.locfileid: "62830582"
   
      Se non si utilizza una variabile per l'argomento Proprietà estese, è necessario aggiungerla manualmente all'espressione contenente la stringa di connessione.  
   
-3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](foreach-loop-container.md).  
+3.  Aggiungere un contenitore ciclo foreach alla scheda **flusso di controllo** . Per informazioni su come configurare il contenitore ciclo foreach, vedere [configurare un contenitore ciclo foreach](foreach-loop-container.md).  
   
 4.  Nella pagina **Raccolta** dell' **Editor ciclo Foreach**selezionare l'enumeratore Foreach File, quindi specificare la directory in cui si trovano le cartelle di lavoro di Excel e il filtro file (in genere, con estensione \*.xls).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830582"
   
 8.  Selezionare la nuova gestione connessione Excel, fare clic sulla proprietà **Espressioni** nella finestra Proprietà e quindi fare clic sul pulsante con i puntini di sospensione (...).  
   
-9. Nel **Editor espressioni di proprietà**, selezionare il `ConnectionString` proprietà, quindi fare clic sui puntini di sospensione.  
+9. Nell' **Editor espressioni di proprietà**selezionare la `ConnectionString` proprietà, quindi fare clic sui puntini di sospensione.  
   
 10. In Generatore di espressioni immettere l'espressione seguente:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62830582"
   
 2.  Creare una variabile stringa che riceverà il nome della tabella corrente a ogni iterazione del ciclo.  
   
-3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](foreach-loop-container.md).  
+3.  Aggiungere un contenitore ciclo foreach alla scheda **flusso di controllo** . Per informazioni su come configurare il contenitore ciclo foreach, vedere [configurare un contenitore ciclo foreach](foreach-loop-container.md).  
   
 4.  Nella pagina **Raccolta** dell' **Editor ciclo Foreach**selezionare Enumeratore Foreach ADO.NET set di righe dello schema.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "62830582"
 9. Creare attività nel contenitore Ciclo Foreach che utilizzano la gestione connessione Excel per eseguire le stesse operazioni in ogni tabella di Excel inclusa nella cartella di lavoro specificata. Se per esaminare il nome della tabella enumerata o per lavorare con ogni tabella si usa un'attività Script, ricordarsi di aggiungere la variabile stringa alla proprietà ReadOnlyVariables dell'attività Script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importare dati da Excel o esportare dati in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurare un contenitore ciclo Foreach](foreach-loop-container.md)   
+ [Importare dati da Excel o esportare dati in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurare un contenitore ciclo foreach](foreach-loop-container.md)   
  [Aggiungere o modificare un'espressione di proprietà](../expressions/add-or-change-a-property-expression.md)   
  [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)   
  [Origine Excel](../data-flow/excel-source.md)   
  [Destinazione Excel](../data-flow/excel-destination.md)   
- [Uso di file di Excel con l'attività Script](script-task.md)  
+ [Utilizzo di file di Excel con l'attività Script](script-task.md)  
   
   

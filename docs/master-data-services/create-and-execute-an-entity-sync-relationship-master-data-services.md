@@ -11,10 +11,10 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729528"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services)
@@ -23,10 +23,10 @@ ms.locfileid: "73729528"
 
   La sincronizzazione delle entità è una sincronizzazione unidirezionale e ripetibile tra le versioni dell'entità. Consente di condividere i dati delle entità tra i vari modelli.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prerequisiti per creare una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73729528"
   
  Prerequisiti per eseguire una relazione di sincronizzazione delle entità:  
   
--   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per ulteriori informazioni, vedere [autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   È necessario essere un amministratore del modello per il modello di destinazione. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -90,14 +90,14 @@ ms.locfileid: "73729528"
   
 3.  Nella pagina di **gestione della sincronizzazione delle entità** selezionare una relazione di sincronizzazione nella griglia.  
   
-4.  Fare clic su **Esegui**.  
+4.  Fare clic su **Execute**.  
   
 ## <a name="sync-relationship-information"></a>Informazioni sulle relazioni di sincronizzazione  
  Per ogni relazione di sincronizzazione creata, viene aggiunta alla griglia una riga con dieci colonne. La tabella seguente descrive le colonne.  
   
 |Colonna|Descrizione|  
 |------------|-----------------|  
-|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando si fa clic su **Salva** o si esegue una relazione di sincronizzazione, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icon per lo stato di aggiornamento ") che indica che la relazione di sincronizzazione è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione, la modifica o l'esecuzione di una relazione di sincronizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icon per lo stato di errore ") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icon lo stato OK ") .|  
+|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando si fa clic su **Salva** o si esegue una relazione di sincronizzazione, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento") che indica che la relazione di sincronizzazione è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione, la modifica o l'esecuzione di una relazione di sincronizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK") .|  
 |Modello di origine|Nome del modello di origine.|  
 |Versione di origine|Nome della versione di origine.|  
 |Entità di origine|Nome dell'entità di origine.|  
@@ -110,15 +110,15 @@ ms.locfileid: "73729528"
   
  Quando si fa clic su un indice, vengono visualizzate le informazioni seguenti.  
   
--   **Errore ultimo tentativo**: informazioni sugli errori dell'ultimo tentativo di sincronizzazione.  
+-   **Errore ultimo tentativo**: Mostra le informazioni sull'errore relative all'ultimo tentativo di sincronizzazione.  
   
--   **Creata da**: nome dell'utente che ha creato la sincronizzazione.  
+-   **Creato da**: nome dell'utente che ha creato la sincronizzazione.  
   
--   **Il**: la data e l'ora di creazione della sincronizzazione.  
+-   Il **: data e ora di creazione**della sincronizzazione.  
   
--   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la sincronizzazione.  
+-   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato la sincronizzazione.  
   
--   **Il**: la data e l'ora dell'ultimo aggiornamento della sincronizzazione.  
+-   **Il: data**e ora dell'ultimo aggiornamento della sincronizzazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

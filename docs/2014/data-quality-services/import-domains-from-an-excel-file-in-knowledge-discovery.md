@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480538"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
-  In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per altre informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md). L'esportazione in un file di Excel non è supportata.  
+  In questo argomento viene descritto come importare uno o più domini da un file di Excel nell'attività di individuazione delle informazioni di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il processo di importazione semplifica il processo di generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile creare una Knowledge Base con i dati presenti in un file di Excel o in un file di testo. Per ulteriori informazioni sull'importazione di valori in un dominio di una Knowledge Base esistente, vedere [importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) . L'esportazione in un file di Excel non è supportata.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -30,9 +30,9 @@ ms.locfileid: "65480538"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per importare i domini da un file di Excel, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Import"></a> Importare i domini da un file di Excel in una Knowledge Base  
+##  <a name="Import"></a>Importare i domini da un file di Excel in una Knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] effettuare una delle operazioni seguenti:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65480538"
   
 8.  Selezionare una colonna, quindi eseguire il mapping di un dominio esistente alla colonna o creare un nuovo dominio facendo clic sull'icona **Crea un dominio** , creando un dominio nella finestra di dialogo **Crea un dominio** e quindi eseguendo il mapping del dominio alla colonna. Il tipo di dati del dominio deve corrispondere al tipo di dati della colonna. Ripetere l'operazione per tutte le colonne del foglio di calcolo.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 10. Nella pagina **Individua** fare clic su **Avvia** per analizzare i dati nel foglio di calcolo di Excel.  
   
@@ -67,10 +67,10 @@ ms.locfileid: "65480538"
   
 14. Verificare che la Knowledge Base sia stata pubblicata, quindi fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'importazione di domini da un file di Excel  
+##  <a name="FollowUp"></a>Completamento: fasi successive all'importazione di domini da un file di Excel  
  Dopo avere importato i domini da un file di Excel, è possibile aggiungere informazioni ai domini o utilizzare i domini per un progetto di pulizia o un progetto corrispondente, a seconda del contenuto dei domini. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../../2014/data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> Come funziona l'importazione  
+##  <a name="How"></a>Funzionamento dell'importazione  
  Nell'operazione di importazione di DQS un file di Excel viene interpretato come segue:  
   
 -   Una colonna rappresenta un dominio.  

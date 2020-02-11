@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022252"
 ---
 # <a name="oracle-publishing-overview"></a>Panoramica della pubblicazione Oracle
-  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]è possibile includere server di pubblicazione Oracle nella topologia di replica, a partire da Oracle versione 9i. I server di pubblicazione possono essere distribuiti su qualsiasi hardware e sistema operativo supportato da Oracle. La funzionalità è compilata sulla base del consolidato meccanismo della replica snapshot e della replica transazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è in grado di offrire prestazioni e facilità d'uso analoghe.  
+  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è possibile includere server di pubblicazione Oracle nella topologia di replica, a partire da Oracle versione 9i. I server di pubblicazione possono essere distribuiti su qualsiasi hardware e sistema operativo supportato da Oracle. La funzionalità è compilata sulla base del consolidato meccanismo della replica snapshot e della replica transazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è in grado di offrire prestazioni e facilità d'uso analoghe.  
   
  La pubblicazione Oracle è deprecata. La replica eterogenea a Sottoscrittori non SQL Server è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148751"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connessione a un'istanza di SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "70148751"
   
  È possibile creare un'istanza dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> e stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tre modi diversi. Il primo metodo consiste nell'utilizzare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> per fornire le informazioni di connessione. Il secondo consiste nel fornire le informazioni di connessione impostando in modo esplicito le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Il terzo consiste infine nel passare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
- **Uso di un oggetto ServerConnection**  
+ **Utilizzo di un oggetto ServerConnection**  
   
  Il vantaggio dell'utilizzo della variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> è costituito dal fatto che consente di riutilizzare le informazioni di connessione. Dichiarare una variabile oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Dichiarare quindi un oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> e impostare proprietà con le informazioni di connessione, quali il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la modalità di autenticazione. Passare quindi la variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> come parametro al costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Non è consigliabile condividere connessioni tra diversi oggetti server contemporaneamente. Utilizzare il metodo <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> per ottenere una copia delle impostazioni di connessione esistenti.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70148751"
   
  In alternativa, è possibile dichiarare la variabile oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> e chiamare il costruttore predefinito. In questo modo, l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> tenta di connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con tutte le impostazioni di connessione predefinite.  
   
- **Fornire il nome dell'istanza di SQL Server nel costruttore dell'oggetto server**  
+ **Definizione del nome dell'istanza di SQL Server nel costruttore dell'oggetto server**  
   
  Dichiarare la variabile oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> e passare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come parametro di stringa nel costruttore. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> stabilisce una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con le impostazioni di connessione predefinite.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "70148751"
 -   Il metodo <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> deve essere chiamato prima di passare la connessione a qualsiasi oggetto di programmazione RMO.  
   
 ## <a name="examples"></a>Esempi  
-Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connessione all'istanza locale di SQL Server tramite l'autenticazione di Windows in Visual Basic  
  La connessione all'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non richiede molto codice, ma si basa al contrario sulle impostazioni predefinite per il metodo di autenticazione e per il server. La prima operazione che richiede il recupero di dati comporterà la creazione di una connessione.  
@@ -179,7 +179,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Connessione a un'istanza di SQL Server tramite l'autenticazione di SQL Server in Visual C#  
  Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario specificare il tipo di autenticazione. In questo esempio viene illustrato il metodo alternativo per dichiarare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> che consente il riutilizzo delle informazioni di connessione.  
   
- L'esempio è codice C# Visual .NET che illustra come connettersi a remote e *mentre oggetto vPassword* contengono l'accesso e la password.  
+ L'esempio è il codice Visual C# .NET che illustra come connettersi a remote e *mentre oggetto vPassword* contengono l'accesso e la password.  
   
 ```csharp  
 // compile with:   

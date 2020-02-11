@@ -1,5 +1,5 @@
 ---
-title: Destinazione Buffer circolare | Microsoft Docs
+title: Destinazione buffer circolare | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088962"
 ---
 # <a name="ring-buffer-target"></a>Destinazione del buffer circolare
@@ -25,15 +25,15 @@ ms.locfileid: "66088962"
   
 -   La prima è una modalità di tipo puramente FIFO, in base alla quale l'evento meno recente viene eliminato una volta utilizzata tutta la memoria allocata alla destinazione. In questa modalità, che rappresenta quella predefinita, il valore dell'opzione occurrence_number è impostato su 0.  
   
--   La seconda è una modalità FIFO basata sul tipo di evento, che prevede di mantenere in memoria un numero specificato di eventi di ciascun tipo. In questa modalità, gli eventi meno recenti di ogni tipo sono eliminati una volta utilizzata tutta la memoria allocata alla destinazione. È possibile configurare occurrence_number per specificare il numero di eventi di ciascun tipo da mantenere.  
+-   La seconda è una modalità FIFO basata sul tipo di evento, che prevede di mantenere in memoria un numero specificato di eventi di ciascun tipo. In questa modalità, gli eventi meno recenti di ogni tipo vengono eliminati quando viene utilizzata tutta la memoria allocata alla destinazione. È possibile configurare occurrence_number per specificare il numero di eventi di ciascun tipo da mantenere.  
   
  Nella tabella seguente vengono descritte le opzioni disponibili per la configurazione della destinazione del buffer circolare.  
   
 |Opzione|Valori consentiti|Descrizione|  
 |------------|--------------------|-----------------|  
-|max_memory|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Quantità massima di memoria che può essere utilizzata in kilobyte (KB). Gli eventi esistenti vengono eliminati sulla base del limite che viene raggiunto per primo: max_event_limit o max_memory. Il valore massimo è 4194303 KB. È necessario prestare un'attenzione prima di impostare le dimensioni del buffer circolare per i limiti dell'intervallo di GB come influire negativamente su altri consumer di memoria in SQL Server|  
-|max_event_limit|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Il numero massimo di eventi tenuto in ring_buffer. Gli eventi esistenti vengono eliminati sulla base del limite che viene raggiunto per primo: max_event_limit o max_memory. Valore predefinito = 1000.|  
-|occurrence_number|I valori validi sono:<br /><br /> 0 (valore predefinito) = l'evento meno recente viene eliminato una volta utilizzata tutta la memoria allocata alla destinazione.<br /><br /> Qualsiasi integer a 32 bit = il numero di eventi di ciascun tipo da mantenere prima di essere eliminato in una modalità FIFO per evento.<br /><br /> <br /><br /> Questo valore è facoltativo.|Modalità FIFO da utilizzare e, se il valore impostato è maggiore di 0, numero desiderato di eventi di ciascun tipo da mantenere nel buffer.|
+|max_memory|Qualsiasi intero a 32 bit. Questo valore è facoltativo.|Quantità massima di memoria che può essere utilizzata in kilobyte (KB). Gli eventi esistenti vengono eliminati sulla base del limite che viene raggiunto per primo: max_event_limit o max_memory. Il valore massimo è 4194303 KB. Prima di impostare le dimensioni del buffer circolare su limiti nell'intervallo di GB, è necessario prendere in considerazione una particolare attenzione, in quanto può influito su altri consumer di memoria in SQL Server|  
+|max_event_limit|Qualsiasi intero a 32 bit. Questo valore è facoltativo.|Il numero massimo di eventi tenuto in ring_buffer. Gli eventi esistenti vengono eliminati sulla base del limite che viene raggiunto per primo: max_event_limit o max_memory. Valore predefinito = 1000.|  
+|occurrence_number|Uno dei valori seguenti:<br /><br /> 0 (valore predefinito) = l'evento meno recente viene eliminato una volta utilizzata tutta la memoria allocata alla destinazione.<br /><br /> Qualsiasi Integer a 32 bit = il numero di eventi di ogni tipo da contenere prima di essere scartati per ogni singolo evento.<br /><br /> <br /><br /> Questo valore è facoltativo.|Modalità FIFO da utilizzare e, se il valore impostato è maggiore di 0, numero desiderato di eventi di ciascun tipo da mantenere nel buffer.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  

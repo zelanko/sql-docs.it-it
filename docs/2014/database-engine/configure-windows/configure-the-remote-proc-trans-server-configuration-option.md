@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811335"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote proc trans
@@ -28,7 +28,7 @@ ms.locfileid: "62811335"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62811335"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la configurazione dell'opzione remote proc trans](#FollowUp)  
+-   **Completamento:**  [dopo la configurazione dell'opzione remote proc trans](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -52,16 +52,16 @@ ms.locfileid: "62811335"
   
 -   È necessario consentire le connessioni a server remoti prima di impostare questo valore.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
--   Questa opzione garantisce la compatibilità con le versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le applicazioni in cui vengono utilizzate stored procedure remote. Anziché eseguire chiamate a stored procedure remote, utilizzare query distribuite che fanno riferimento a server collegati definiti tramite [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
+-   Questa opzione viene fornita per la compatibilità con le versioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti di per le applicazioni che utilizzano stored procedure remote. Anziché eseguire chiamate a stored procedure remote, utilizzare query distribuite che fanno riferimento a server collegati definiti tramite [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>Per configurare l'opzione remote proc trans  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62811335"
   
 3.  In **Connessioni remote**selezionare la casella di controllo **Richiedi transazioni distribuite per le comunicazioni tra server** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>Per configurare l'opzione remote proc trans  
   
@@ -93,7 +93,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione remote proc trans  
+##  <a name="FollowUp"></a>Completamento: dopo la configurazione dell'opzione remote proc trans  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

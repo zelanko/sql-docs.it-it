@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016907"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
@@ -37,11 +37,11 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Il **BottomPercent** funzione calcola la somma dell'espressione numerica specificata valutata su un set specificato, disponendo il set in ordine crescente. La funzione restituisce quindi gli elementi con i valori più bassi la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **BottomPercent** calcola la somma dell'espressione numerica specificata valutata su un set specificato, ordinando il set in ordine crescente. La funzione restituisce quindi gli elementi con i valori più bassi la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!IMPORTANT]  
->  Il **BottomPercent** funzione, come le [TopPercent](../mdx/toppercent-mdx.md) function, rispetta mai la gerarchia. Per ulteriori informazioni, vedere la funzione Order.  
+>  La funzione **BottomPercent** , come la funzione di [percentuale](../mdx/toppercent-mdx.md) , interrompe sempre la gerarchia. Per ulteriori informazioni, vedere la funzione Order.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito per la categoria Bike il set più piccolo di membri del livello City nella gerarchia Geography della dimensione Geography per l'anno fiscale 2003 il cui totale cumulativo utilizzando la misura Reseller Sales Amount corrisponde almeno al 15% del totale cumulativo (a partire dai membri di questo set con il numero di vendite più basso).  
@@ -59,6 +59,6 @@ WHERE ([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

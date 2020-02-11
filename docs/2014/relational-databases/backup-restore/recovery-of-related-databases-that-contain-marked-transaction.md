@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875714"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
  Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Usare la clausola WITH STOPATMARK = **» *`<mark_name>`* '** clausola per specificare che la transazione contrassegnata è il punto di ripristino.  
+-   Utilizzare la clausola WITH STOPATMARK **=*`<mark_name>`*''** per specificare che la transazione contrassegnata è il punto di ripristino.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Usare la clausola WITH STOPBEFOREMARK = **» *`<mark_name>`* '** clausola per specificare che il record del log viene immediatamente precedente al contrassegno il punto di ripristino.  
+-   Utilizzare la clausola WITH STOPBEFOREMARK **=*`<mark_name>`*''** per specificare che il punto di recupero corrisponde al record di log immediatamente precedente al contrassegno.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   
@@ -78,7 +78,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  **Per ripristinare una transazione contrassegnata**  
   
- [Ripristino di un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+ [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
@@ -116,7 +116,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Pianificare ed eseguire sequenze di ripristino &#40;modello di recupero con registrazione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

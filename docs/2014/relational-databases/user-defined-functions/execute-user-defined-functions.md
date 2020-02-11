@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196437"
 ---
 # <a name="execute-user-defined-functions"></a>Eseguire funzioni definite dall'utente
   È possibile eseguire una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68196437"
   
      [Sicurezza](#Security)  
   
--   **Per eseguire definito dall'utente funziona, utilizzando:**  
+-   **Per eseguire una funzione definita dall'utente tramite:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68196437"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per eseguire l'istruzione EXECUTE, non è necessario disporre di autorizzazioni specifiche. Sono tuttavia richieste autorizzazioni per le entità a protezione diretta a cui viene fatto riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione INSERT, il chiamante dell'istruzione EXECUTE deve disporre dell'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
+ Per eseguire l'istruzione EXECUTE, non è necessario disporre di autorizzazioni specifiche. Sono tuttavia richieste autorizzazioni per le entità a protezione diretta a cui viene fatto riferimento all'interno della stringa EXECUTE. Se, ad esempio, la stringa include un'istruzione INSERT, il chiamante dell'istruzione EXECUTE deve disporre dell'autorizzazione INSERT per la tabella di destinazione. Le autorizzazioni vengono verificate non appena viene rilevata l'istruzione EXECUTE, anche se l'istruzione è inclusa in un modulo. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-execute-a-user-defined-function"></a>Per eseguire una funzione definita dall'utente  
   

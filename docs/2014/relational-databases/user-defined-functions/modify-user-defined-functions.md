@@ -11,16 +11,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196453"
 ---
 # <a name="modify-user-defined-functions"></a>Modificare funzioni definite dall'utente
   È possibile modificare le funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modifica delle funzioni definite dall'utente come descritto di seguito non comporta la modifica delle autorizzazioni delle funzioni, né influisce su funzioni dipendenti, stored procedure o trigger.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68196453"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la funzione o lo schema. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per tale tipo.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>Per modificare una funzione definita dall'utente  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68196453"
   
 6.  Dal menu **File** scegliere **Salva**_nome_funzione_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Per modificare una funzione definita dall'utente  
   

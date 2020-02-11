@@ -16,13 +16,13 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769158"
 ---
-# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo processo dell'agente utilizzato per la pianificazione della sincronizzazione di una sottoscrizione push in una replica di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -30,7 +30,7 @@ ms.locfileid: "68769158"
 > [!IMPORTANT]  
 >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,16 +97,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di merge. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Su richiesta|  
+|**1**|Singola occorrenza|  
+|**2**|On demand|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Periodica|  
+|**128**|Ricorrente|  
 |NULL (predefinito)||  
   
 > [!NOTE]  
@@ -114,44 +114,44 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Giorni in cui viene eseguita la agente di merge. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Domenica|  
-|**2**|Lunedì|  
-|**3**|Martedì|  
-|**4**|Mercoledì|  
-|**5**|Giovedì|  
-|**6**|Venerdì|  
+|**1**|Sunday|  
+|**2**|Monday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
+|**6**|Friday|  
 |**7**|Sabato|  
-|**8**|Day|  
-|**9**|Giorni feriali|  
+|**8**|Giorno|  
+|**9**|Giorni della settimana|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di merge. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Primo|  
-|**2**|Secondo|  
+|**1**|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
 |NULL (predefinito)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Secondo|  
+|**1**|Una sola volta|  
+|**2**|Second|  
 |**4**|Minuto|  
 |**8**|Ora|  
 |NULL (predefinito)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui il agente di merge viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
   
@@ -163,24 +163,24 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Specifica se la sottoscrizione può essere sincronizzata tramite Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]avviare.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_addmergepushsubscription_agent** viene utilizzato nella replica di tipo merge e utilizza funzionalità simili a [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addmergepushsubscription_agent** viene utilizzata nella replica di tipo merge e utilizza funzionalità simili a [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergepushsubscription_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

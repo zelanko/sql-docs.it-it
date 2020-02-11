@@ -18,10 +18,10 @@ ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 414ff1ab9c5b9ba717af4010520dadcacc50fdd8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660644"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Proprietà InstanceName (classe ServerNetworkProtocolIPAddress)
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4487ddce931be24816378bf809307ca5f72478c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915406"
 ---
-# <a name="mssqlserver17067"></a>MSSQLSERVER_17067
+# <a name="mssqlserver_17067"></a>MSSQLSERVER_17067
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62915406"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|SQLASSERT_MESG|  
-|Testo del messaggio|Asserzione SQL Server: File: \<%s >, riga %%d %s. L'errore può essere correlato agli intervalli di tempo. Se dopo aver rieseguito l'istruzione l'errore persiste, utilizzare DBCC CHECKDB per verificare l'integrità strutturale del database oppure riavviare il server per verificare che le strutture di dati in memoria non siano danneggiate.|  
+|Testo del messaggio|Asserzione SQL Server: file: \<%s>, line = %d %s. L'errore può essere correlato agli intervalli di tempo. Se dopo aver rieseguito l'istruzione l'errore persiste, utilizzare DBCC CHECKDB per verificare l'integrità strutturale del database oppure riavviare il server per verificare che le strutture di dati in memoria non siano danneggiate.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo errore può essere causato da errori temporanei, correlati agli intervalli di tempo o da un danno dei dati in memoria o su disco.  

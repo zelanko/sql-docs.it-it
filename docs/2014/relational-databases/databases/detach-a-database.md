@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871956"
 ---
 # <a name="detach-a-database"></a>Scollegare un database
   In questo argomento viene descritto come scollegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG. È possibile spostare e quindi collegare tali file in un altro server.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62871956"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>Per scollegare un database  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62871956"
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  
   
-     **Database Name**  
+     **Nome database**  
      Consente di visualizzare il nome del database da scollegare.  
   
      **Interrompi connessioni**  
@@ -77,24 +77,24 @@ ms.locfileid: "62871956"
      **Mantieni cataloghi full-text**  
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-     **Stato**  
-     Viene visualizzato uno dei seguenti stati: **Pronto** o **Non pronto**.  
+     **Status**  
+     Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
   
-     **Message**  
+     **Messaggio**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_ **Connessioni attive:** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando per un database esistono una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _Connessioni attive:_ **<numero_di_connessioni_attive>** , ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
 4.  Quando si è pronti per scollegare il database, fare clic su **OK**.  
   
 > [!NOTE]  
->  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. È possibile aggiornare la vista in qualsiasi momento: Fare clic sul riquadro Esplora oggetti, dalla barra dei menu scegliere **View** e quindi **aggiornare**.  
+>  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. Per aggiornare la vista in qualsiasi momento, fare clic sul riquadro Esplora oggetti, scegliere **Vista** dalla barra dei menu e quindi **Aggiorna**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Per scollegare un database  
   

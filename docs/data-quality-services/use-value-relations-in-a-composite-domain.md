@@ -12,10 +12,10 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257758"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utilizzare le relazioni di valori in un dominio composito
@@ -24,14 +24,14 @@ ms.locfileid: "75257758"
 
   In questo argomento viene descritto come visualizzare le combinazioni di valori presenti nel dominio composito durante il processo di individuazione delle informazioni in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). In questa pagina viene illustrato il numero di occorrenze delle combinazioni di valori. La gestione dei valori non è supportata per i domini compositi, pertanto non è possibile eseguire alcuna operazione su questi valori.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per visualizzare le relazioni di valori, è necessario avere creato e aperto un dominio composito.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per visualizzare le relazioni di valori in un dominio composito, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Use"></a>Visualizza relazioni tra valori  

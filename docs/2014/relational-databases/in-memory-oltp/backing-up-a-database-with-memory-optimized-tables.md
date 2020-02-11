@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468327"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Backup di un database con tabelle con ottimizzazione per la memoria
@@ -32,14 +32,14 @@ ms.locfileid: "62468327"
 |--------------------------------|------------|  
 |PRECREATED|Solo metadati del file|  
 |UNDER CONSTRUCTION|Solo metadati del file|  
-|Attiva|Metadati del file più i byte utilizzati|  
+|Attivo|Metadati del file più i byte utilizzati|  
 |MERGE SOURCE|Metadati del file più i byte utilizzati|  
 |MERGE TARGET|Solo metadati del file|  
 |REQUIRED FOR BACKUP/HA|Metadati del file più i byte utilizzati|  
 |IN TRANSITION TO TOMBSTONE|Solo metadati del file|  
 |TOMBSTONE|Solo metadati del file|  
   
- Le dimensioni dei backup del database con una o più tabelle ottimizzate per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le dimensioni aggiuntive dipendono dal numero di righe eliminate e dal numero di coppie di file di checkpoint negli stati MERGE SOURCE e REQUIRED FOR BACKUP/HA che dipendono indirettamente dal carico di lavoro. Per descrizioni degli stati delle coppie di file di checkpoint, vedere [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Le dimensioni dei backup del database con una o più tabelle ottimizzate per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le dimensioni aggiuntive dipendono dal numero di righe eliminate e dal numero di coppie di file di checkpoint negli stati MERGE SOURCE e REQUIRED FOR BACKUP/HA che dipendono indirettamente dal carico di lavoro. Per le descrizioni degli Stati delle coppie di file di checkpoint, vedere [sys. dm_db_xtp_checkpoint_files &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Stima delle dimensioni di un backup completo del database  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468327"
   
  Il primo scenario di carico di lavoro è relativo (principalmente) all'operazione di inserimento. In questo scenario, la maggior parte dei file di dati si trova nello stato Attivo, è completamente caricata e con pochissime righe eliminate. Le dimensioni del backup del database si avvicineranno a quelle dei dati in memoria.  
   
- Il secondo scenario di carico di lavoro è per operazioni update, delete e insert frequenti: Nel peggiore dei casi, tutte le coppie di file del checkpoint sono caricate al 50% dopo aver tenuto conto delle righe eliminate. Pertanto, le dimensioni del backup del database saranno di almeno 2 volte quelle dei dati in memoria. Inoltre, saranno poche le coppie di file di checkpoint negli stati MERGE SOURCE e Required for backup/high availability che verranno aggiunte alle dimensioni del backup del database.  
+ Il secondo scenario di carico di lavoro è relativo a operazioni di inserimento, eliminazione e aggiornamento frequenti: nel peggiore dei casi, il carico di ognuna delle coppie di file di checkpoint è pari al 50%, dopo aver considerato le righe eliminate. Pertanto, le dimensioni del backup del database saranno di almeno 2 volte quelle dei dati in memoria. Inoltre, saranno poche le coppie di file di checkpoint negli stati MERGE SOURCE e Required for backup/high availability che verranno aggiunte alle dimensioni del backup del database.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
  Lo spazio di archiviazione per le tabelle ottimizzate per la memoria è costituito da file di dati e differenziali come descritto in [Durabilità per tabelle ottimizzate per la memoria](memory-optimized-tables.md). Il backup differenziale di un database con tabelle ottimizzate per la memoria contiene i dati seguenti:  

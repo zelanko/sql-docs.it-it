@@ -23,25 +23,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812339"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il supporto nativo per le applicazioni di messaggistica e accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Questa caratteristica semplifica il lavoro degli sviluppatori per creare applicazioni complesse che utilizzano i componenti di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per comunicare tra database diversi. Gli sviluppatori possono utilizzare [!INCLUDE[ssSB](../../includes/sssb-md.md)] per compilare con facilità applicazioni distribuite e affidabili.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] fornisce supporto nativo per le applicazioni di messaggistica e Accodamento [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]in. Questa caratteristica semplifica il lavoro degli sviluppatori per creare applicazioni complesse che utilizzano i componenti di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per comunicare tra database diversi. Gli sviluppatori possono utilizzare [!INCLUDE[ssSB](../../includes/sssb-md.md)] per compilare con facilità applicazioni distribuite e affidabili.  
   
- Gli sviluppatori di applicazioni che utilizzano [!INCLUDE[ssSB](../../includes/sssb-md.md)] possono distribuire il carico di lavoro su più database senza programmare interni di comunicazione e messaggistica complessi. In questo modo, è possibile ottenere una riduzione delle attività di sviluppo e test, in quanto [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestisce i percorsi di comunicazione nel contesto di una conversazione, con conseguente miglioramento delle prestazioni. Ad esempio, i database front-end che supportano i siti Web possono registrare le informazioni e mettere in coda le attività con molti processi nei database back-end. [!INCLUDE[ssSB](../../includes/sssb-md.md)] si assicura che tutte le attività vengano gestite nel contesto delle transazioni per garantire affidabilità e coerenza tecnica.  
+ Gli sviluppatori di applicazioni che utilizzano [!INCLUDE[ssSB](../../includes/sssb-md.md)] possono distribuire il carico di lavoro su più database senza programmare interni di comunicazione e messaggistica complessi. In questo modo, è possibile ottenere una riduzione delle attività di sviluppo e test, in quanto [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestisce i percorsi di comunicazione nel contesto di una conversazione, con conseguente miglioramento delle prestazioni. Ad esempio, i database front-end che supportano i siti Web possono registrare le informazioni e mettere in coda le attività con molti processi nei database back-end. 
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] si assicura che tutte le attività vengano gestite nel contesto delle transazioni per garantire affidabilità e coerenza tecnica.  
   
 ## <a name="where-is-the-documentation-for-service-broker"></a>Dove si trova la documentazione per Service Broker?  
  La documentazione di riferimento per [!INCLUDE[ssSB](../../includes/sssb-md.md)] è inclusa nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella documentazione di riferimento sono incluse le sezioni seguenti:  
   
--   [Istruzioni Data Definition Language &#40;DDL&#41; &#40;Transact-SQL&#41;](/sql/odbc/reference/develop-app/ddl-statements) per istruzioni CREATE, ALTER e DROP  
+-   Il [linguaggio di definizione dei dati &#40;istruzioni DDL&#41; &#40;&#41;Transact-SQL](/sql/odbc/reference/develop-app/ddl-statements) per le istruzioni create, ALTER e drop  
   
--   [Viste del catalogo di Service Broker &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql)  
+-   [Viste del catalogo di Service Broker &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql)  
   
--   [Viste a gestione dinamica relative a Service Broker &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql)  
+-   [Viste a gestione dinamica correlate Service Broker &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql)  
   
 -   [Utilità ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   

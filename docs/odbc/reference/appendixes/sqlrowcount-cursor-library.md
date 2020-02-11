@@ -13,20 +13,20 @@ ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be902866cfcf98a10af2c3741926de8b7541bb79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125604"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- In questo argomento viene illustrato l'utilizzo dei **SQLRowCount** funzione nella libreria di cursori. Per informazioni generali sul **SQLRowCount**, vedere [funzione SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md).  
+ In questo argomento viene illustrato l'utilizzo della funzione **SQLRowCount** nella libreria di cursori. Per informazioni generali su **SQLRowCount**, vedere [funzione SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md).  
   
- Quando un'applicazione chiama **SQLRowCount** con l'istruzione associato al cursore, la libreria di cursori restituisce il numero di righe di dati che sono recuperati dal driver.  
+ Quando un'applicazione chiama **SQLRowCount** con l'istruzione associata al cursore, la libreria di cursori restituisce il numero di righe di dati recuperate dal driver.  
   
- Quando un'applicazione chiama **SQLRowCount** con l'istruzione associata a un'istruzione delete o un aggiornamento posizionato, la libreria di cursori restituisce il numero di righe interessate dall'istruzione.  
+ Quando un'applicazione chiama **SQLRowCount** con l'istruzione associata a un'istruzione Update o DELETE posizionata, la libreria di cursori restituisce il numero di righe interessate dall'istruzione.  
   
- Quando un'applicazione chiama **SQLRowCount** dopo un **seleziona** istruzione, la libreria di cursori restituisce -1.
+ Quando un'applicazione chiama **SQLRowCount** dopo un'istruzione **SELECT** , la libreria di cursori restituisce-1.

@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206574"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificare uno schema di partizione
   È possibile modificare uno schema di partizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] designando un filegroup in cui sia inclusa la partizione successiva aggiunta a una tabella partizionata utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A tale scopo, è necessario assegnare la proprietà NEXT USED a un filegroup. È possibile assegnare la proprietà NEXT USED a un filegroup vuoto o a uno che contiene già una partizione. In altri termini, in un filegroup possono essere incluse più partizioni.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -44,16 +44,16 @@ ms.locfileid: "68206574"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER PARTITION SCHEME, è possibile utilizzare le autorizzazioni seguenti:  
   
--   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti dei database **db_owner** e **db_ddladmin** .  
+-   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
   
 -   Autorizzazione CONTROL o ALTER per il database nel quale viene creato lo schema di partizione.  
   
 -   Autorizzazione CONTROL SERVER o ALTER ANY DATABASE per il server del database nel quale è stato creato lo schema di partizione.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per modificare uno schema di partizione:**  
   
- Non è possibile eseguire questa azione specifica tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per modificare uno schema di partizione, è innanzitutto necessario eliminare lo schema e crearne quindi uno nuovo con le proprietà desiderate tramite la Creazione guidata partizione. Per altre informazioni, vedere [Create Partitioned Tables e gli indici tramite SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sotto **creare tabelle e indici partizionati**.  
+ Non è possibile eseguire questa azione specifica tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per modificare uno schema di partizione, è innanzitutto necessario eliminare lo schema e crearne quindi uno nuovo con le proprietà desiderate tramite la Creazione guidata partizione. Per altre informazioni, vedere [creare tabelle e indici partizionati usando SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) in **creare tabelle e indici partizionati**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Per eliminare uno schema di partizione  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68206574"
   
 5.  Nella finestra di dialogo **Elimina oggetto** verificare che sia selezionato lo schema di partizione corretto, quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>Per modificare uno schema di partizione  
   

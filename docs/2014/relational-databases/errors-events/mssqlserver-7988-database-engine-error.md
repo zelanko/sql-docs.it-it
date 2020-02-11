@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7912da245a04f2f62086e9ef08f0077aaac0196f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762863"
 ---
-# <a name="mssqlserver7988"></a>MSSQLSERVER_7988
+# <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762863"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Testo del messaggio|Controlli preliminari su tabella di sistema: ID oggetto O_ID. Rilevato ciclo nella catena di dati in P_ID. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
+|Testo del messaggio|Controlli preliminari su tabella di sistema: ID di oggetto O_ID. Rilevato ciclo nella catena di dati in P_ID. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
   
 ## <a name="explanation"></a>Spiegazione  
  La prima fase dell'esecuzione di un comando DBCC CHECKDB consiste nell'eseguire controlli primitivi nelle pagine dei dati delle tabelle di sistema critiche. Non è possibile correggere eventuali errori rilevati. DBCC CHECKDB verrà pertanto terminato immediatamente. Viene rilevato un ciclo di collegamento delle pagine nella pagina *P_ID*. Tale ciclo si verifica quando i puntatori di pagina successiva di una pagina tornano infine alla pagina specificata.  

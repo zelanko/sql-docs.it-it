@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210706"
 ---
 # <a name="parameterized-row-filters"></a>Filtri di riga con parametri
@@ -37,7 +37,7 @@ ms.locfileid: "68210706"
  Per definire o modificare un filtro di riga con parametri, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Modalità di funzionamento dei filtri con parametri  
- Un filtro di riga con parametri utilizza una clausola WHERE per selezionare i dati appropriati da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, specificare una o entrambe le funzioni di sistema seguenti: SUSER_SNAME() e HOST_NAME(). È anche possibile utilizzare funzioni definite dall'utente, ma è necessario che le funzioni di sistema SUSER_SNAME() o HOST_NAME() siano incluse nel corpo della funzione oppure vengano valutate, ad esempio `MyUDF(SUSER_SNAME()`. Se una funzione definita dall'utente include SUSER_SNAME() o HOST_NAME() nel corpo della funzione, non è possibile passare parametri alla funzione.  
+ Un filtro di riga con parametri utilizza una clausola WHERE per selezionare i dati appropriati da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, si specificano una o entrambe le funzioni di sistema seguenti: SUSER_SNAME() e HOST_NAME(). È anche possibile utilizzare funzioni definite dall'utente, ma è necessario che le funzioni di sistema SUSER_SNAME() o HOST_NAME() siano incluse nel corpo della funzione oppure vengano valutate, ad esempio `MyUDF(SUSER_SNAME()`. Se una funzione definita dall'utente include SUSER_SNAME() o HOST_NAME() nel corpo della funzione, non è possibile passare parametri alla funzione.  
   
  Le funzioni di sistema SUSER_SNAME() e HOST_NAME() non sono specifiche della replica di tipo merge, ma vengono utilizzate da questo tipo di replica per il filtro con parametri:  
   
@@ -47,12 +47,12 @@ ms.locfileid: "68210706"
   
      È inoltre possibile sostituire questa funzione con un valore diverso dal nome del Sottoscrittore o del server di distribuzione. In genere il valore di questa funzione viene sostituito con valori più significativi, ad esempio il nome o l'ID del venditore. Per ulteriori informazioni, vedere la sezione relativa alla sostituzione del valore di HOST_NAME() in questo argomento.  
   
- Il valore restituito dalla funzione di sistema viene confrontato con una colonna specificata nella tabella in cui viene applicato il filtro e i dati appropriati vengono scaricati nel Sottoscrittore. Il confronto viene effettuato quando la sottoscrizione è inizializzata, in modo che solo i dati appropriati siano contenuti nello snapshot iniziale, e ogni volta che la sottoscrizione viene sincronizzata. Per impostazione predefinita, se una modifica nel server di pubblicazione ha come conseguenza la rimozione di una riga da una partizione, la riga viene eliminata nel Sottoscrittore. Questo comportamento viene controllato tramite il parametro **@allow_partition_realignment** di [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+ Il valore restituito dalla funzione di sistema viene confrontato con una colonna specificata nella tabella in cui viene applicato il filtro e i dati appropriati vengono scaricati nel Sottoscrittore. Il confronto viene effettuato quando la sottoscrizione è inizializzata, in modo che solo i dati appropriati siano contenuti nello snapshot iniziale, e ogni volta che la sottoscrizione viene sincronizzata. Per impostazione predefinita, se una modifica nel server di pubblicazione comporta lo spostamento di una riga all'esterno di una partizione, la riga viene eliminata nel Sottoscrittore. questo **@allow_partition_realignment** comportamento viene controllato utilizzando il parametro di [Sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
 > [!NOTE]  
 >  Quando i confronti vengono effettuati per i filtri con parametri, vengono sempre utilizzate le regole di confronto del database. Se, ad esempio, nelle regole di confronto del database non viene fatta distinzione tra maiuscole e minuscole, mentre in quelle della colonna o della tabella sì, durante il confronto non viene fatta tale distinzione.  
   
-### <a name="filtering-with-susersname"></a>Applicazione del filtro con SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Applicazione del filtro con SUSER_SNAME()  
  Si consideri la tabella **Employee Table** nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . In questa tabella è inclusa la colonna **LoginID**, contenente l'account di accesso per ogni dipendente nel formato*dominio\account accesso*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
@@ -61,7 +61,7 @@ LoginID = SUSER_SNAME()
   
  Il valore per uno dei dipendenti è, ad esempio, "adventure-works\john5". Quando l'agente di merge si connette al server di pubblicazione, utilizza l'account di accesso specificato durante la creazione della sottoscrizione, in questo caso "adventure-works\john5". L'agente di merge confronta quindi il valore restituito da SUSER_SNAME() con i valori nella tabella e scarica solo la riga che contiene un valore di "adventure-works\john5" nella colonna **LoginID** .  
   
-### <a name="filtering-with-hostname"></a>Applicazione del filtro con HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Applicazione del filtro con HOST_NAME()  
  Si consideri la tabella **HumanResources.Employee** . Si supponga che in questa tabella sia inclusa una colonna **ComputerName** con il nome del computer di ogni dipendente nel formato*nome_tipo di computer*. Per filtrare questa tabella in modo che i dipendenti ricevano solo i dati pertinenti, specificare una clausola di filtro:  
   
 ```  
@@ -81,7 +81,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  Poiché è possibile sostituire il valore della funzione HOST_NAME(), per controllare l'accesso a partizioni di dati non è possibile utilizzare filtri che includano HOST_NAME(). Per controllare l'accesso a partizioni di dati, utilizzare SUSER_SNAME(), SUSER_SNAME() in combinazione con HOST_NAME() oppure filtri di riga statici.  
   
-#### <a name="overriding-the-hostname-value"></a>Sostituzione del valore di HOST_NAME()  
+#### <a name="overriding-the-host_name-value"></a>Sostituzione del valore di HOST_NAME()  
  Come già evidenziato, per impostazione predefinita HOST_NAME() restituisce il nome del computer che sta effettuando la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando vengono utilizzati filtri con parametri, è normale sostituire questo valore fornendo un valore durante la creazione di una sottoscrizione. La funzione HOST_NAME() restituisce quindi il valore specificato anziché il nome del computer.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Alla dipendente Pamela Ansman-Wolfe, ad esempio, è stato associato l'ID 280. Specificare il valore dell'ID del dipendente (280 nell'esempio) come valore di HOST_NAME() durante la creazione di una sottoscrizione per questo dipendente. Quando l'agente di merge si connette al server di pubblicazione, confronta il valore restituito da HOST_NAME() con i valori nella tabella e scarica solo la riga che contiene un valore di 280 nella colonna **EmployeeID** .  
   
 > [!IMPORTANT]
->  La funzione HOST_NAME() restituisce un valore `nchar`. Se la colonna nella clausola di filtro è di un tipo di dati numerico, come nell'esempio sopra riportato, è pertanto necessario utilizzare CONVERT. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere utilizzata per la **@subset_filterclause** parametro [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), ma in genere non può essere usato nella creazione guidata nuova pubblicazione (la procedura guidata esegue la clausola di filtro per convalidarlo, che ha esito negativo perché il nome del computer non può essere convertito in un `int`). Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
+>  La funzione HOST_NAME() restituisce un valore `nchar`. Se la colonna nella clausola di filtro è di un tipo di dati numerico, come nell'esempio sopra riportato, è pertanto necessario utilizzare CONVERT. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere utilizzata per il **@subset_filterclause** parametro di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), ma in genere non può essere utilizzata nella creazione guidata nuova pubblicazione (la procedura guidata esegue la clausola di filtro per convalidarla, operazione che non riesce perché il nome del `int`computer non può essere convertito in). Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
   
  **Per sostituire il valore di HOST_NAME()**  
   
@@ -102,7 +102,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specificare un valore nella pagina **Valori HOST\_NAME\(\)** della Creazione guidata nuova sottoscrizione. Per altre informazioni sulla creazione di sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md).  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: specificare un valore per il parametro **@hostname** di [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) (per le sottoscrizioni push) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (per le sottoscrizioni pull).  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: specificare un valore per **@hostname** il parametro di [SP_ADDMERGESUBSCRIPTION &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) (per le sottoscrizioni push) o [sp_addmergepullsubscription_agent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (per le sottoscrizioni pull).  
   
 -   Agente di merge: specificare un valore per il parametro **-Hostname** nella riga di comando o tramite un profilo agente. Per ulteriori informazioni sull'agente di merge, vedere [Replication Merge Agent](../agents/replication-merge-agent.md). Per ulteriori informazioni sui profili agenti, vedere [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
@@ -119,7 +119,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Per impostare le opzioni di filtro, vedere [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Impostazione di "use partition groups" e "keep partition changes"  
- Entrambe le opzioni **use partition groups** e **keep partition changes** consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. L'opzione **use partition groups** offre prestazioni superiori tramite l'utilizzo della funzionalità delle partizioni pre-calcolate. Questa opzione viene impostata su `true` per impostazione predefinita, se gli articoli nella pubblicazione sono conformi a un set di requisiti. Per altre informazioni su questi requisiti, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](parameterized-filters-optimize-for-precomputed-partitions.md). Se gli articoli non soddisfano i requisiti per l'utilizzo delle partizioni pre-calcolate, il **mantenere le modifiche alle partizioni** opzione è impostata su `true`.  
+ Entrambe le opzioni **use partition groups** e **keep partition changes** consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. L'opzione **use partition groups** offre prestazioni superiori tramite l'utilizzo della funzionalità delle partizioni pre-calcolate. Questa opzione viene impostata su `true` per impostazione predefinita, se gli articoli nella pubblicazione sono conformi a un set di requisiti. Per altre informazioni su questi requisiti, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](parameterized-filters-optimize-for-precomputed-partitions.md). Se gli articoli non soddisfano i requisiti per l'utilizzo di partizioni pre-calcolate, l'opzione **Mantieni partizioni cambia** su `true`è impostata su.  
   
 ### <a name="setting-partition-options"></a>Impostazione di "partition options"  
  Durante la creazione di un articolo, si specifica un valore per la proprietà **partition options** in base al modo in cui i dati nella tabella filtrata verranno condivisi dai Sottoscrittori. È possibile impostare la proprietà su uno di quattro valori utilizzando [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)e la finestra di dialogo **Proprietà articolo** . La proprietà può essere impostata su uno dei due valori utilizzando la finestra di dialogo **Aggiungi filtro** o **Modifica filtro** , disponibile nella Creazione guidata nuova pubblicazione, e nella finestra di dialogo **Proprietà pubblicazione** . Nella tabella seguente vengono descritti i valori disponibili.  
@@ -129,11 +129,11 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|**Una riga di questa tabella verrà inviata a più sottoscrizioni**|**Sovrapposte**|**0**|  
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore non può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|N/D<sup>1</sup>|**Sovrapposte, non ammesse modifiche dei dati fuori partizione**|**1**|  
 |I dati nelle partizioni non sono sovrapposti e vengono condivisi dalle sottoscrizioni. Il Sottoscrittore non può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|N/D<sup>1</sup>|**Non sovrapposte, condivise dalle sottoscrizioni**|**2**|  
-|I dati nelle partizioni non sono sovrapposti ed esiste un'unica sottoscrizione per partizione. Il sottoscrittore non è possibile aggiornare le colonne a cui fa riferimento un filtro con parametri. <sup>2</sup>|**Una riga di questa tabella verrà inviata a una sola sottoscrizione**|**Non sovrapposte, sottoscrizione unica**|**3**|  
+|I dati nelle partizioni non sono sovrapposti ed esiste un'unica sottoscrizione per partizione. Il Sottoscrittore non può aggiornare le colonne a cui fa riferimento un filtro con parametri. <sup>2</sup>|**Una riga di questa tabella verrà inviata a una sola sottoscrizione**|**Non sovrapposte, sottoscrizione unica**|**3**|  
   
- <sup>1</sup> se l'opzione di filtro sottostante è impostata su **0**, o **1**, oppure **2**, la **Aggiungi filtro** e **modifica Filtro** verranno visualizzate finestre di dialogo **una riga di questa tabella verrà inviata a più sottoscrizioni**.  
+ <sup>1</sup> se l'opzione di filtro sottostante è impostata **su 0**o **1**o **2**, nelle finestre di dialogo **Aggiungi filtro** e **Modifica filtro** verrà visualizzata **una riga di questa tabella che verrà inviata a più sottoscrizioni**.  
   
- <sup>2</sup> se si specifica questa opzione, può esistere solo una singola sottoscrizione per ogni partizione di dati dell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.  
+ <sup>2</sup> se si specifica questa opzione, può essere presente una sola sottoscrizione per ogni partizione di dati nell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.  
   
 > [!IMPORTANT]  
 >  È necessario che il valore di **partition options** venga impostato in base alla modalità con cui i dati vengono condivisi dai Sottoscrittori. Se, ad esempio, si specifica che una partizione non sia sovrapposta, con una sola sottoscrizione per partizione, ma successivamente i dati vengono aggiornati in un altro Sottoscrittore, è possibile che si verifichi un errore nell'agente di merge durante la sincronizzazione e che quindi i dati non siano convergenti.  

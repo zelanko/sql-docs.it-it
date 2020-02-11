@@ -1,5 +1,5 @@
 ---
-title: Creazione di Test case (OracleToSQL) | Microsoft Docs
+title: Creazione di test case (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,26 +13,26 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266129"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Creazione di test case (OracleToSQL)
-Usare la procedura guidata di Test Case per creare un test. Questa procedura guidata consente di creare test case scegliendo testato e verificato gli oggetti e specificando i parametri di test.  
+Utilizzare la procedura guidata test case per creare un test. Questa procedura guidata consente di creare test case scegliendo oggetti testati e verificati e specificando i parametri di test.  
   
-## <a name="starting-the-test-case-wizard"></a>Avvio della procedura guidata di Test Case  
-Per avviare Creazione guidata Test Case **nuovo Test Case...**  dal **Tester** menu.  
+## <a name="starting-the-test-case-wizard"></a>Avvio della procedura guidata test case  
+Per avviare la procedura guidata test case, fare clic su **nuovo test case...** dal menu **tester** .  
   
-All'avvio, la procedura guidata cerca schema SSMATESTER_ORACLE sul server Oracle di origine. È lo schema di estensione Tester usato per l'archiviazione di oggetti ausiliari. Se il Test Case mpossibile trovare SSMATESTER_ORACLE, visualizza una finestra di dialogo che si propone di creare lo schema. (Questa situazione si verifica in genere durante la prima esecuzione di SSMA Tester)  
+Quando viene avviata, la procedura guidata cerca SSMATESTER_ORACLE dello schema nel server Oracle di origine. Si tratta dello schema di estensione del tester utilizzato per archiviare gli oggetti ausiliari. Se la procedura guidata test case non riesce a trovare SSMATESTER_ORACLE, viene visualizzata una finestra di dialogo che propone di creare lo schema. Questa situazione si verifica in genere durante la prima esecuzione di SSMA tester.  
   
-Se si ottiene la finestra di dialogo, fare clic su **Sì** creare SSMATESTER_ORACLE schema nel server di origine. Si noti che è necessario disporre dei privilegi di Oracle per creare un nuovo utente e creare oggetti nello schema di questo utente.  
+Se si ottiene la finestra di dialogo, fare clic su **Sì** per creare SSMATESTER_ORACLE schema nel server di origine. Si noti che è necessario disporre dei privilegi Oracle per creare un nuovo utente e creare oggetti nello schema di questo utente.  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Panoramica della creazione di Test case usando la procedura guidata  
-Il processo di creazione di un test case è costituito da cinque passaggi:  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Panoramica della creazione di test case tramite la procedura guidata  
+Il processo di creazione di un test case prevede cinque passaggi:  
   
-1.  [Inizializzazione di Test case &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [Inizializzazione di test case &#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
 2.  [Selezione e configurazione degli oggetti da testare &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
@@ -40,8 +40,8 @@ Il processo di creazione di un test case è costituito da cinque passaggi:
   
 4.  [Personalizzazione dell'ordine delle chiamate &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [Completamento della preparazione del Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [Completamento della preparazione del test case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Test di oggetti di database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

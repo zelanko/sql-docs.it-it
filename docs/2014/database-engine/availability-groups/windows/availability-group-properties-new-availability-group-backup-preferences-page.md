@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di Backup) | Microsoft Docs'
+title: 'Proprietà del gruppo di disponibilità: nuovo gruppo di disponibilità (pagina Preferenze di backup) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62790220"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Proprietà del gruppo di disponibilità: Nuovo gruppo di disponibilità (pagina Preferenze di backup)
@@ -28,23 +28,23 @@ ms.locfileid: "62790220"
   
 -   [Visualizzazione delle Proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>Destinazione dei backup  
  **Preferisco secondario**  
- Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Si tratta dell'opzione predefinita.  
+ Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Questa è l'opzione predefinita.  
   
  **Solo secondaria**  
  Specifica che i backup non devono mai essere eseguiti sulla replica primaria. Se la replica primaria è l'unica replica online, il backup non viene eseguito.  
   
- **Primaria**  
+ **Server/istanza primaria**  
  Specifica che i backup devono essere sempre eseguiti sulla replica primaria. Questa opzione è utile se sono necessarie funzionalità di backup, ad esempio la creazione di backup differenziali, che non sono supportate quando il backup viene eseguito su una replica secondaria.  
   
  **Qualsiasi replica**  
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
->  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per ulteriori informazioni, vedere [repliche secondarie attive: backup in repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ## <a name="replica-backup-priorities"></a>Priorità backup repliche  
  In questa griglia è indicata la priorità di backup corrente di ogni istanza del server che ospita una replica per il gruppo di disponibilità. Utilizzare questa griglia per modificare la priorità di backup di una o più repliche di disponibilità.  
@@ -59,7 +59,7 @@ ms.locfileid: "62790220"
  Selezionare questa opzione se si desidera che questa replica di disponibilità non venga mai scelta per l'esecuzione dei backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [Repliche secondarie attive: backup in repliche secondarie (Gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   
   

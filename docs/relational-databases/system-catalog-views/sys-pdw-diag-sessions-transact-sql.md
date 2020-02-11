@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_sessions (Transact-SQL) | Microsoft Docs
+title: sys. pdw_diag_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127694"
 ---
-# <a name="syspdwdiagsessions-transact-sql"></a>sys.pdw_diag_sessions (Transact-SQL)
+# <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene informazioni riguardanti le diverse sessioni di diagnostica che sono stati creati nel sistema.  
+  Contiene informazioni relative alle varie sessioni di diagnostica create nel sistema.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|**name**|**nvarchar(255)**|Nome della sessione di diagnostica.<br /><br /> Chiave per questa visualizzazione.||  
+|**nome**|**nvarchar(255)**|Nome della sessione di diagnostica.<br /><br /> Chiave per questa visualizzazione.||  
 |**xml_data**|**nvarchar(4000)**|Payload XML che descrive la sessione.||  
 |**is_active**|**bit**|Flag che indica se il flag è attivo.||  
-|**host_address**|**nvarchar(255)**|Indirizzo del computer che ospita la definizione della sessione (nodo di controllo).||  
+|**host_address**|**nvarchar(255)**|Indirizzo del computer che ospita la definizione di sessione (nodo di controllo).||  
 |**principal_id**|**int**|ID dell'utente che ha creato la sessione a livello di database.||  
-|**database_id**|**int**|ID del database che è l'ambito della sessione di diagnostica.|  
+|**database_id**|**int**|ID del database che rappresenta l'ambito della sessione di diagnostica.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

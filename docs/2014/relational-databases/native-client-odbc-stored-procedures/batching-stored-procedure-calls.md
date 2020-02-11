@@ -1,5 +1,5 @@
 ---
-title: L'invio in batch chiamate alle Stored Procedure | Microsoft Docs
+title: Invio in batch di chiamate a stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b50350006abba5085b11010f26aa88a89b07393f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205499"
 ---
 # <a name="batching-stored-procedure-calls"></a>Invio in batch di chiamate a stored procedure
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client invia automaticamente in batch chiamate a stored procedure nel server quando appropriato. Il driver effettua questa operazione solo quando viene utilizzata la sequenza di escape e non per l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE. L'invio in batch di chiamate a stored procedure può ridurre il numero di round trip al server e migliorare significativamente le prestazioni.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client esegue automaticamente il batch stored procedure le chiamate al server quando appropriato. Il driver effettua questa operazione solo quando viene utilizzata la sequenza di escape e non per l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE. L'invio in batch di chiamate a stored procedure può ridurre il numero di round trip al server e migliorare significativamente le prestazioni.  
   
- Il driver invia in batch al server le chiamate alle procedure quando si esegue un batch che contiene più sequenze di escape ODBC CALL. Invia inoltre in batch chiamate alle procedure quando si utilizzano matrici di parametri associati con una sequenza di escape ODBC CALL. Ad esempio, se si usa l'associazione di parametri per riga o per associare una matrice con cinque elementi ai parametri di un'istruzione SQL ODBC CALL, quando **SQLExecute** oppure **SQLExecDirect** viene chiamato, il driver invia un singolo batch con cinque chiamate di procedura al server.  
+ Il driver invia in batch al server le chiamate alle procedure quando si esegue un batch che contiene più sequenze di escape ODBC CALL. Invia inoltre in batch chiamate alle procedure quando si utilizzano matrici di parametri associati con una sequenza di escape ODBC CALL. Se, ad esempio, si utilizza l'associazione di parametri a livello di riga o di colonna per associare una matrice con cinque elementi ai parametri di un'istruzione SQL ODBC CALL, quando viene chiamato **SQLExecute** o **SQLExecDirect** , il driver invia un singolo batch con cinque chiamate di procedura al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione delle stored procedure](running-stored-procedures.md)  

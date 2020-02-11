@@ -18,16 +18,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698733"
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
   In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "62698733"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su **sys.sql_expression_dependencies** per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database **db_owner** . Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62698733"
   
 6.  Per chiudere la finestra **Dipendenze oggetto** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   

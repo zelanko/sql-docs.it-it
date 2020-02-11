@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205959"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Attività Notifica operatori (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Notifica operatori** per aggiungere una notifica automatica al piano di manutenzione corrente. Per usare questa attività l'applicazione Posta elettronica database deve essere abilitata e configurata correttamente con MSDB come host della posta elettronica ed è necessario disporre di un operatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con un indirizzo di posta elettronica valido.  
+  Utilizzare la finestra di dialogo **attività Notifica operatori** per aggiungere una notifica automatica a questo piano di manutenzione. Per utilizzare questa attività, è necessario disporre di posta elettronica database abilitata e configurata correttamente con msdb come database host della [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] posta elettronica e disporre di un operatore Agent con un indirizzo di posta elettronica valido.  
   
  Questa attività utilizza la stored procedure sp_notify_operator.  
   
@@ -30,19 +30,19 @@ ms.locfileid: "68205959"
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Operatori da notificare**  
  Consente di specificare il destinatario del messaggio di posta elettronica.  
   
- **Oggetto messaggio di notifica**  
+ **Oggetto del messaggio di notifica**  
  Consente di specificare il testo da includere nella riga dell'oggetto del messaggio di notifica.  
   
- **Corpo messaggio di notifica**  
+ **Corpo del messaggio di notifica**  
  Consente di specificare il testo da includere nel corpo del messaggio di notifica.  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.locfileid: "68205959"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -61,11 +61,11 @@ ms.locfileid: "68205959"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ **Usa la sicurezza integrata di Windows**  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -75,6 +75,6 @@ ms.locfileid: "68205959"
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../database-mail/database-mail.md)   
- [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

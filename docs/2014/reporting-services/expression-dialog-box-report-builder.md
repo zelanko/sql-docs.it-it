@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo espressione (Generatore Report) | Microsoft Docs
+title: Finestra di dialogo espressione (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109152"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Finestra di dialogo Espressione (Generatore report)
-  Usare la **espressione** finestra di dialogo per scrivere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] le proprietà degli elementi delle espressioni di report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
+  Utilizzare la finestra di dialogo **espressione** per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] scrivere espressioni per le proprietà degli elementi del report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
   
- La finestra di dialogo **Espressione** include una finestra del codice, un albero delle categorie, gli elementi delle categorie, un riquadro di descrizione e un riquadro di esempio. Il **espressione** nella finestra di dialogo è sensibile al contesto, le descrizioni e gli elementi delle categorie variano in risposta alla categoria di espressione si sta lavorando. Per altre informazioni, vedere [esempi di espressioni &#40;Generatore Report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [espressioni &#40;Generatore Report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ La finestra di dialogo **Espressione** include una finestra del codice, un albero delle categorie, gli elementi delle categorie, un riquadro di descrizione e un riquadro di esempio. La finestra di dialogo **espressione** è sensibile al contesto; gli elementi e le descrizioni delle categorie cambiano in risposta alla categoria di espressioni che si sta utilizzando. Per ulteriori informazioni, vedere [esempi di espressioni &#40;Generatore report e ssrs&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>Costrutti di espressione  
- Le espressioni iniziano con un segno di uguale (=) e possono includere costanti, valori letterali, operatori e riferimenti a campi predefiniti, raccolte predefinite, funzioni predefinite, funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classi Common Language Runtime di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funzioni personalizzate. Nell'elenco seguente vengono descritti le categorie e i valori che è possibile aggiungere in un'espressione.  
+ Le espressioni iniziano con un segno di uguale (=) e possono includere costanti, valori letterali, operatori e riferimenti a campi predefiniti, raccolte predefinite, funzioni predefinite, funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , classi Common Language Runtime di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funzioni personalizzate. Nell'elenco seguente vengono descritti le categorie e i valori che è possibile aggiungere in un'espressione.  
   
- **Imposta espressione per:**  _\<PropertyName >_  
+ **Imposta espressione per:**  _\<PropertyName>_  
  Nome della proprietà per cui si definisce un'espressione. È anche possibile impostare questa proprietà, per nome, nel riquadro Proprietà.  
   
  **Costanti**  
@@ -40,10 +40,10 @@ ms.locfileid: "66109152"
  **Campi predefiniti**  
  Consente di visualizzare un elenco degli elementi della raccolta globale che possono essere utilizzati in un'espressione. Alcune raccolte sono supportate solo dopo la pubblicazione del report nel server. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Parametri**  
+ **Parameters**  
  Consente di visualizzare un elenco di parametri del report.  
   
- **Campi (**  _\<set di dati selezionato >_ **)**  
+ **Campi (** _ \<set di dati selezionato>_ **)**  
  Consente di visualizzare l'elenco di campi per il set di dati selezionato nella categoria Set di dati. Fare doppio clic su un campo per copiarlo nella casella **Espressione** .  
   
  **Set di dati**  
@@ -58,7 +58,7 @@ ms.locfileid: "66109152"
  **Funzioni comuni**  
  Consente di visualizzare funzioni comuni, raggruppate per tipo. Quando si seleziona una funzione nel riquadro Elemento, verranno visualizzati una descrizione e un esempio.  
   
- Le funzioni comuni includono le funzioni predefinite di report e aggregazione, le funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e le classi Common Language Runtime (CLR) di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] negli spazi dei nomi <xref:System.Math> e <xref:System.Convert>. È anche possibile aggiungere riferimenti a classi CLR e assembly esterni non riportati nell'elenco di categorie. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Le funzioni comuni includono le funzioni predefinite di report e aggregazione, le funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e le classi Common Language Runtime (CLR) di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] negli spazi dei nomi <xref:System.Math> e <xref:System.Convert>. È anche possibile aggiungere riferimenti a classi CLR e assembly esterni non riportati nell'elenco di categorie. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)sottostante.  
   
 ## <a name="options"></a>Opzioni  
  Finestra del codice  
@@ -71,7 +71,7 @@ ms.locfileid: "66109152"
  Quando si digita il nome di una funzione seguito da una parentesi aperta, verrà visualizzata una descrizione comando con informazioni sui parametri e sui valori restituiti della funzione.  
   
  **Categoria**  
- Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Ad esempio, per un'espressione per il valore di una casella di testo, espandere funzioni comuni e selezionare le funzioni di aggregazione da visualizzare `Avg`, `Count`e altre funzioni il **elemento** riquadro.  
+ Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Per un'espressione per un valore di casella di testo, ad esempio, espandere funzioni comuni e selezionare funzioni di `Avg`aggregazione per visualizzare, `Count`e altre funzioni nel riquadro **elemento** .  
   
  **Elemento**  
  Consente di visualizzare l'elenco di valori validi per la categoria selezionata. Fare doppio clic su un elemento per aggiungere il testo dell'espressione per l'elemento specifico in corrispondenza del punto di inserimento nella finestra del codice.  
@@ -86,9 +86,9 @@ ms.locfileid: "66109152"
  [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta campi del set di dati &#40;Report e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
+ [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
  [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Selezionare la finestra di dialogo colore &#40;Report e SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
+ [Finestra di dialogo Seleziona colore &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   
   

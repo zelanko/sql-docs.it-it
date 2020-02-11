@@ -14,24 +14,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80856721092becb85d6ff6fb2652013e975c6157
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887966"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Architettura degli oggetti server in ADOMD.NET
-  Gli oggetti del server ADOMD.NET sono oggetti helper che possono essere utilizzati per creare funzioni definite dall'utente o stored procedure in [!INCLUDE[msCoName](../../includes/msconame-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
+  Gli oggetti del server ADOMD.NET sono oggetti helper che possono essere utilizzati per creare funzioni definite dall'utente o stored procedure in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  Per utilizzare lo spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` e tali oggetti, è necessario aggiungere un riferimento a msmgdsrv.dll nel progetto di una funzione definita dall'utente o di una stored procedure.  
   
- ![Mostra le relazioni tra oggetti nel Server ADOMD.NET](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Mostra le relazioni tra oggetti nel Server ADOMD.NET")  
+ ![Relazioni tra gli oggetti nel componente server di ADOMD.NET](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Relazioni tra gli oggetti nel componente server di ADOMD.NET")  
 Modello a oggetti ADOMD.NET  
   
  L'interazione con la gerarchia di oggetti ADOMD.NET viene avviata in genere con uno o più oggetti del livello più alto della gerarchia, come descritto nella tabella seguente.  
   
-|Per|Oggetto da utilizzare|  
+|A|Oggetto da utilizzare|  
 |--------|---------------------|  
 |Espressioni MDX (Multidimensional Expression)|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.Expression> fornisce una modalità per eseguire un'espressione MDX e valutare tale espressione in base a una tupla specificata.|  
 |Supporto per l'esecuzione di funzioni MDX senza creare l'istruzione MDX completa|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.MDX> è conveniente per la chiamata a funzioni MDX predefinite senza utilizzare l'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.Expression>. Funzioni aggiuntive per l'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.MDX> dovrebbero essere disponibili nelle versioni successive.|  

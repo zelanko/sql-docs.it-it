@@ -1,5 +1,5 @@
 ---
-title: Abilitazione dell'integrazione CLR | Microsoft Docs
+title: Abilitazione dell'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874091"
 ---
 # <a name="enabling-clr-integration"></a>Abilitazione dell'integrazione con CLR
-  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, usare il **clr abilitato** opzione delle **sp_configure** stored procedure:  
+  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare l'opzione **clr enabled** della stored procedure **sp_configure** :  
   
 ```  
   
@@ -35,13 +35,13 @@ RECONFIGURE;
 GO  
 ```  
   
- È possibile disabilitare l'integrazione CLR impostando il **clr abilitato** opzione su 0. Quando si disabilita l'integrazione con CLR, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene arrestata l'esecuzione di tutte le routine CLR e vengono scaricati tutti i domini dell'applicazione.  
+ È possibile disabilitare l'integrazione CLR impostando l'opzione **clr enabled** su 0. Quando si disabilita l'integrazione con CLR, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene arrestata l'esecuzione di tutte le routine CLR e vengono scaricati tutti i domini dell'applicazione.  
   
 > [!NOTE]  
->  Per abilitare l'integrazione con CLR, è necessario disporre di autorizzazione a livello server, modificare le impostazioni che è assegnata implicitamente ai membri del **sysadmin** e **serveradmin** ruoli predefiniti del server.  
+>  Per abilitare l'integrazione con CLR, è necessario disporre dell'autorizzazione ALTER SETTINGS a livello di server, che viene utilizzata in modo implicito dai membri dei ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 > [!NOTE]  
->  I computer configurati con grandi quantità di memoria e con un gran numero di processori potrebbero non riuscire a caricare la funzionalità di integrazione con CLR di SQL Server all'avvio del server. Per risolvere questo problema, avviare il server usando il **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opzione di avvio del servizio e specificare un valore di memoria sufficiente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+>  I computer configurati con grandi quantità di memoria e con un gran numero di processori potrebbero non riuscire a caricare la funzionalità di integrazione con CLR di SQL Server all'avvio del server. Per risolvere questo problema, avviare il server utilizzando l'opzione di avvio del servizio **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e specificare un valore di memoria sufficientemente grande. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 > [!NOTE]  
 >  L'esecuzione di CLR (Common Language Runtime) non è supportata nell'ambito dell'opzione lightweight pooling. Prima di abilitare l'integrazione con CLR, è necessario disabilitare il lightweight pooling. Per altre informazioni, vedere [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
@@ -50,7 +50,7 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [CONCEDERE &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
  [Ruoli a livello di server](../security/authentication-access/server-level-roles.md)  
   
   

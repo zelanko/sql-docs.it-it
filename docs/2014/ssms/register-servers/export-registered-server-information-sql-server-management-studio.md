@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244601"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Esportare informazioni relative a server registrati (SQL Server Management Studio)
@@ -47,8 +47,8 @@ ms.locfileid: "75244601"
   
      Il gruppo di server visualizza solo i gruppi di server dell'albero di server registrati corrente.  
   
-     **Esporta file**  
-     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia (**...**) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
+     **File di esportazione**  
+     Digitare il nome del file da esportare nella casella di testo oppure usare il pulsante Sfoglia ( **...** ) per trovare il file di esportazione nel computer client. Se si seleziona un file esistente, le informazioni relative ai server registrati verranno aggiunte al file. Verrà utilizzata l'estensione regsrvr. Per rendere le informazioni relative ai server registrati disponibili ad altri utenti o a un altro computer, è possibile salvare il file sulla rete. Gli altri utenti possono accedere al file e importare le informazioni relative ai server registrati, anche parzialmente. Se si seleziona un file esistente come file di esportazione, il contenuto del file viene sovrascritto con le informazioni relative alla registrazione dei server.  
   
      **Non includere nomi utente e password nel file di esportazione**  
      Consente di escludere i nomi utente durante l'esportazione del file.  

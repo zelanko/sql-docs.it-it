@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889042"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -29,12 +29,12 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argomenti  
  *subquery*  
- Un'istruzione SELECT nel formato Select * from \<Column Name > [WHERE \<Predicate list >].  
+ Un'istruzione SELECT nel formato SELECT * FROM \<column name> [WHERE \<predicate list>].  
   
 ## <a name="result-type"></a>Tipo di risultato  
  Restituisce **true** se il set di risultati restituito dalla sottoquery contiene almeno una riga. in caso contrario, restituisce **false**.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la parola chiave NOT prima di EXISTS: ad esempio, `WHERE NOT EXISTS (<subquery>)`.  
   
  L'elenco di colonne aggiunte all'argomento della sottoquery di EXISTS è irrilevante. Viene solo verificata l'esistenza di una riga che soddisfa la condizione.  
@@ -57,6 +57,6 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Sintassi del filtro del modello &#40;ed esempi Analysis Services-Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+ [Sintassi del filtro del modello ed esempi &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

@@ -19,20 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e7dba8ee18697f2c8940eab2ea6489e6eec687c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231247"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Utilizzare la modalità PATH con FOR XML
-  Come descritto nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](for-xml-sql-server.md), la modalità PATH consente di combinare in modo più semplice elementi e attributi. e di introdurre nidificazione aggiuntiva per la rappresentazione di proprietà complesse. È possibile utilizzare query in modalità FOR XML EXPLICIT per la costruzione di questo tipo di strutture XML da un set di righe, ma la modalità PATH costituisce un'alternativa più semplice alla formulazione di query in modalità EXPLICIT, che può essere un'operazione complessa. La modalità PATH, insieme alla possibilità di scrivere query FOR XML annidate e alla direttiva TYPE per restituire istanze di tipo **xml** , consente di formulare più facilmente le query.  
+  Come descritto nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](for-xml-sql-server.md), la modalità PATH consente di combinare in modo più semplice elementi e attributi. e di introdurre nidificazione aggiuntiva per la rappresentazione di proprietà complesse. È possibile utilizzare query in modalità FOR XML EXPLICIT per la costruzione di questo tipo di strutture XML da un set di righe, ma la modalità PATH costituisce un'alternativa più semplice alla formulazione di query in modalità EXPLICIT, che può essere un'operazione complessa. La modalità PATH, insieme alla possibilità di scrivere query FOR XML nidificate e alla direttiva TYPE per restituire istanze di tipo **xml** , consente di formulare più facilmente le query.  
   
  In modalità PATH i nomi e gli alias di colonna vengono gestiti come espressioni XPath. Queste espressioni indicano il modo in cui viene eseguito il mapping tra i valori e il codice XML. Ogni espressione XPath è un XPath relativo che specifica il tipo dell'elemento, ad esempio attributo, elemento e valore scalare, nonché il nome e la gerarchia del nodo che verrà generato in relazione all'elemento riga.  
   
  In questa sezione viene descritto il mapping delle colonne in un set di righe in varie condizioni e vengono forniti alcuni esempi.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Colonne senza nome](columns-without-a-name.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63231247"
   
 -   [Supporto dello spazio dei nomi in modalità di PATH](namespace-support-in-path-mode.md)  
   
--   [Esempi: Utilizzo della modalità PATH](examples-using-path-mode.md)  
+-   [Esempi d'uso della modalità PATH](examples-using-path-mode.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

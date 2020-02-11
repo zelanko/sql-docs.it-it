@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769348"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (espressione SSIS)
@@ -38,13 +38,13 @@ DATEADD(datepart, number, date)
  *number*  
  Valore usato per incrementare il valore *datepart*. Deve essere un valore integer noto al momento dell'analisi dell'espressione.  
   
- *data*  
+ *date*  
  Espressione che restituisce una data valida o una stringa con formato di data.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencate le parti della data e le abbreviazioni riconosciute dall'analizzatore di espressioni. Per i nomi delle parti della data non viene fatta distinzione tra maiuscole e minuscole.  
   
 |parte di una data|Abbreviazioni|  
@@ -53,12 +53,12 @@ DATEADD(datepart, number, date)
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Giorno|dd, d|  
 |Week|wk, ww|  
-|Giorno feriale|dw, w|  
+|Giorno della settimana|dw, w|  
 |Ora|Hh|  
 |Minuto|mi, n|  
-|Secondo|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  L'argomento *number* deve essere disponibile al momento dell'analisi dell'espressione. Può essere una costante o una variabile. Non è possibile utilizzare valori di colonna, perché tali valori non sono noti al momento dell'analisi dell'espressione.  

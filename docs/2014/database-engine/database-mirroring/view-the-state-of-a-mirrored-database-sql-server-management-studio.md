@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5e61bd8ef63baa9a087bcae912b04f653f63b54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753883"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>Visualizzazione dello stato di un database con mirroring (SQL Server Management Studio)

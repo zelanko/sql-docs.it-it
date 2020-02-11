@@ -16,18 +16,18 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762535"
 ---
-# <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
+# <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Contrassegna la sottoscrizione per la reinizializzazione. Questa stored procedure viene eseguita nel server di pubblicazione per sottoscrizioni push.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,21 +63,21 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @invalidate_snapshot = ] invalidate_snapshot`Invalida lo snapshot della pubblicazione esistente. *invalidate_snapshot* è di **bit**e il valore predefinito è 0. Se è **1**, viene generato un nuovo snapshot per la pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_reinitsubscription** viene utilizzato nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_reinitsubscription** viene utilizzata nella replica transazionale.  
   
  **sp_reinitsubscription** non è supportato per la replica transazionale peer-to-peer.  
   
  Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione non consente sottoscrizioni aggiornabili, l'agente snapshot deve essere eseguito al termine di questa stored procedure in modo che vengano preparati i file dello schema e del programma per la copia bulk e gli agenti di distribuzione siano quindi in grado di risincronizzare le sottoscrizioni.  
   
- Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione consente sottoscrizioni aggiornabili, l'agente di distribuzione risincronizza la sottoscrizione utilizzando i file dello schema e del programma per la copia bulk più recenti creati in precedenza dall'agente snapshot. Il agente di distribuzione risincronizza la sottoscrizione immediatamente dopo che l'utente esegue **sp_reinitsubscription**, se il agente di distribuzione non è occupato. in caso contrario, la sincronizzazione può essere eseguita dopo l'intervallo di messaggi (specificato da agente di distribuzione parametro del prompt dei comandi: **MessageInterval**).  
+ Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione consente sottoscrizioni aggiornabili, l'agente di distribuzione risincronizza la sottoscrizione utilizzando i file dello schema e del programma per la copia bulk più recenti creati in precedenza dall'agente snapshot. Il agente di distribuzione risincronizza la sottoscrizione immediatamente dopo l'esecuzione dell'utente **sp_reinitsubscription**, se il agente di distribuzione non è occupato. in caso contrario, la sincronizzazione può essere eseguita dopo l'intervallo di messaggi (specificato da agente di distribuzione parametro del prompt dei comandi: **MessageInterval**).  
   
- **sp_reinitsubscription** non ha alcun effetto sulle sottoscrizioni in cui lo snapshot iniziale viene applicato manualmente.  
+ **sp_reinitsubscription** non ha effetto sulle sottoscrizioni in cui lo snapshot iniziale viene applicato manualmente.  
   
- Per risincronizzare le sottoscrizioni anonime di una pubblicazione, passare **All** o null come Sottoscrittore.  
+ Per risincronizzare le sottoscrizioni anonime di una pubblicazione, passare **All** o null come *Sottoscrittore*.  
   
  La replica transazionale supporta la reinizializzazione della sottoscrizione a livello di articolo. Lo snapshot dell'articolo viene riapplicato nel Sottoscrittore durante la successiva sincronizzazione dopo che l'articolo è stato contrassegnato per la reinizializzazione. Se esistono articoli dipendenti sottoscritti dallo stesso Sottoscrittore, tuttavia, la riapplicazione dello snapshot nell'articolo potrebbe avere esito negativo, a meno che anche gli articoli dipendenti della pubblicazione non vengano reinizializzati automaticamente in particolari circostanze:  
   
@@ -88,11 +88,11 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** , i membri del ruolo predefinito del database **db_owner** o l'autore della sottoscrizione possono eseguire **sp_reinitsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   
+ [Reinizializza una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

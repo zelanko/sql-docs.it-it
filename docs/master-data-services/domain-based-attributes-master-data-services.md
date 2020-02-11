@@ -15,10 +15,10 @@ ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728264"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributi basati su dominio [Master Data Services]
@@ -38,7 +38,7 @@ ms.locfileid: "73728264"
  È possibile utilizzare la stessa entità come un attributo basato su dominio di più entità. Ad esempio, è possibile creare un'entità denominata YesNoIndicator con i membri Yes, No e Maybe. È possibile creare un attributo basato su dominio denominato InStock e utilizzare l'entità YesNoIndicator come origine. Inoltre è possibile creare un altro attributo basato su dominio denominato Approved e utilizzare l'entità YesNoIndicator come origine. Ogni volta che si desidera che gli utenti scelgano da un elenco di membri dell'entità YesNoIndicator, è possibile utilizzare l'entità come attributo basato su dominio.  
   
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>Gerarchie derivate del form degli attributi basati su dominio dedotto gerarchie  
- Le relazioni tra attributi basati su dominio costituiscono la base delle gerarchie derivate. Per altre informazioni, vedere [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Le relazioni tra attributi basati su dominio costituiscono la base delle gerarchie derivate. Per altre informazioni, vedere [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

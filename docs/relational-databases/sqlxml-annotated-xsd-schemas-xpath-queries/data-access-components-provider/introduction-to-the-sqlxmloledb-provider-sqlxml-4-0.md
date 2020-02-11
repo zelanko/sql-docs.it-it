@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246681"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
@@ -39,13 +39,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Proprietà specifiche del provider SQLXMLOLEDB  
  Il provider SQLXMLOLEDB espone le proprietà di connessione specifiche riportate di seguito.  
   
-|Connessione<br /><br /> proprietà|Default<br /><br /> (se disponibile)|Description|  
+|Connessione<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Descrizione|  
 |-----------------------------|----------------------------|-----------------|  
 |Provider di dati||Specifica il PROGID del provider OLE DB tramite il quale SQLXMLOLEDB esegue i comandi. A partire da SQLXML 4.0 e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], questo provider è contenuto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Il valore di questa proprietà è pertanto limitato a "SQLNCLI11". Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Il provider SQLXMLOLEDB espone le proprietà dei comandi specifiche riportate di seguito.  
   
-|Command<br /><br /> proprietà|Default<br /><br /> (se disponibile)|Description|  
+|Comando<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Descrizione|  
 |--------------------------|----------------------------|-----------------|  
 |Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso del file di base viene utilizzato anche per risolvere i percorsi relativi dei file di schema XSL o di mapping specificati nelle proprietà dello schema XSL o mapping.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query XPath &#40;provider SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query sql &#40;provider SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [esecuzione di modelli che contengono query SQL &#40;&#41;del provider SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -58,7 +58,7 @@ oTestCommand.Execute , , adExecuteStream
   
  La tabella seguente contiene le descrizioni dei valori delle proprietà dei flag di flusso SS.  
   
-|Valore proprietà|Description|  
+|Valore proprietà|Descrizione|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|Gli URL non sono consentiti per gli schemi di mapping o XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Un percorso specificato per uno schema di mapping o per XSL deve essere relativo al percorso di base del modello stesso.|  

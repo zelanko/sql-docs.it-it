@@ -16,18 +16,18 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771392"
 ---
-# <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
+# <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Configura un server di pubblicazione per l'utilizzo del database di distribuzione specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione. Si noti che le stored [procedure &#40;sp_adddistributor Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) e [sp_adddistributiondb &#40;Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) devono essere state eseguite prima di usare questo stored procedure.  
+  Configura un server di pubblicazione per l'utilizzo del database di distribuzione specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione. Si noti che è necessario eseguire le stored procedure [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) e [sp_adddistributiondb &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) prima di utilizzare questa stored procedure.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,12 +53,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`Modalità di sicurezza implementata. Questo parametro viene utilizzato solo dagli agenti di replica per connettersi al server di pubblicazione per le sottoscrizioni ad aggiornamento in coda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con un server di pubblicazione non. *security_mode* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (impostazione predefinita)|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di Windows.|  
   
-`[ @login = ] 'login'`Account di accesso. Questo parametro è obbligatorio se *security_mode* è **0**. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
+`[ @login = ] 'login'`Account di accesso. Questo parametro è obbligatorio se *security_mode* è **0**. *login* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
 `[ @password = ] 'password']`Password. *password* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
@@ -69,7 +69,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  Per il database SQL di Azure `\\<storage_account>.file.core.windows.net\<share>`, usare.
 
-`[ @storage_connection_string = ] 'storage_connection_string'`È obbligatorio per il database SQL. Usare la chiave di accesso dal portale di Azure in Impostazioni > di archiviazione.
+`[ @storage_connection_string = ] 'storage_connection_string'`È obbligatorio per il database SQL. Usare la chiave di accesso dal portale di Azure in impostazioni > di archiviazione.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
@@ -79,38 +79,38 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @thirdparty_flag = ] thirdparty_flag`È quando il server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pubblicazione è. *thirdparty_flag* è di **bit**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0** (predefinito)|Database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**0** (impostazione predefinita)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database.|  
 |**1**|Database non di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 `[ @publisher_type = ] 'publisher_type'`Specifica il tipo di server di pubblicazione quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]server di pubblicazione non lo è. *publisher_type* è di tipo sysname. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (predefinito)|Specifica un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Specifica un server di pubblicazione Oracle standard.|  
-|**GATEWAY ORACLE**|Specifica un server di pubblicazione Oracle Gateway.|  
+|**ORACLE GATEWAY**|Specifica un server di pubblicazione Oracle Gateway.|  
   
  Per ulteriori informazioni sulle differenze tra un server di pubblicazione Oracle e un server di pubblicazione Oracle Gateway, vedere [configurare un server di pubblicazione Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_adddistpublisher** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)  
   

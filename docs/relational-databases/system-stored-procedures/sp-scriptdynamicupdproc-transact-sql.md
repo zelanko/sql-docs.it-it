@@ -16,18 +16,18 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126386"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Genera l'istruzione CREATE PROCEDURE, che crea una stored procedure ad aggiornamento dinamico. L'istruzione UPDATE all'interno della stored procedure personalizzata viene compilata in modo dinamico in base alla sintassi MCALL che indica le colonne da modificare. Utilizzare questa stored procedure se il numero di indici nella tabella di sottoscrizione è in aumento e il numero di colonne in fase di modifica è ridotto. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @artid = ] artid` ID dell'articolo. *artid* viene **int**, non prevede alcun valore predefinito.  
+`[ @artid = ] artid`ID dell'articolo. *artid* è di **tipo int**e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
- Restituisce un set di risultati è costituito da un unico **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
+ Restituisce un set di risultati costituito da una singola colonna **nvarchar (4000)** . Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_scriptdynamicupdproc** viene utilizzata nella replica transazionale. La logica di scripting MCALL predefinita prevede l'inserimento di tutte le colonne all'interno dell'istruzione UPDATE e l'utilizzo di una mappa di bit per determinare le colonne modificate. Se una colonna non è stata modificata, viene eseguita un'operazione di reimpostazione del valore originale della colonna. Questa operazione in genere non causa problemi. Se la colonna è indicizzata, sono necessari altri processi di elaborazione. L'approccio dinamico prevede l'inserimento delle sole colonne modificate e consente pertanto di creare una stringa UPDATE ottimale. Per la compilazione dell'istruzione UPDATE dinamica in fase di esecuzione sono tuttavia necessari processi di elaborazione aggiuntivi. È consigliabile verificare gli approcci dinamico e statico e quindi scegliere la soluzione ottimale.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_scriptdynamicupdproc**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio viene creato un articolo (con *artid* impostata su **1**) nella **autori** nella tabella il **pubs** del database e specifica che l'aggiornamento istruzione è la procedura personalizzata da eseguire:  
+ In questo esempio viene creato un articolo (con *artid* impostato su **1**) nella tabella **authors** nel database **pubs** e viene specificato che l'istruzione Update è la procedura personalizzata da eseguire:  
   
 ```  
 'MCALL sp_mupd_authors'  

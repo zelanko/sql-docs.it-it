@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638106"
 ---
 # <a name="drop-xml-indexes"></a>Eliminazione di indici XML
@@ -26,7 +26,7 @@ ms.locfileid: "62638106"
   
  La sintassi di DROP con *TableName.IndexName* è obsoleta e non è supportata per gli indici XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Esempio: Creazione ed eliminazione di un indice XML primario  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Esempio: creazione ed eliminazione di un indice XML primario  
  Nell'esempio seguente viene creato un indice XML in una colonna di tipo `xml`.  
   
 ```  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Esempio: Creazione di un indice XML tramite l'opzione DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Esempio: creazione di un indice XML tramite l'opzione DROP_EXISTING  
  Nell'esempio seguente un indice XML viene creato in una colonna (`XmlColx`). Successivamente, viene creato un altro indice XML con lo stesso nome in una colonna diversa, (`XmlColy`). Poiché viene specificata l'opzione `DROP_EXISTING` , viene eliminato l'indice XML esistente in (`XmlColx)` ) e creato un nuovo indice XML in (`XmlColy`).  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e3dabb640d17d7d9b81273ce37382799a7d84389
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660574"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Proprietà IpAddressName (classe ServerNetworkProtocolIPAddress)
@@ -36,8 +36,8 @@ object.IpAddressName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
- Oggetto della [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) che rappresenta un indirizzo IP per il protocollo di rete nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *oggetto*  
+ A [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) che rappresenta un indirizzo IP del protocollo di rete nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'indirizzo IP.  

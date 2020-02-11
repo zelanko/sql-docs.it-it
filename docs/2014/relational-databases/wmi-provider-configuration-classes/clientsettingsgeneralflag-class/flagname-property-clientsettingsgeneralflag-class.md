@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242967"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Proprietà FlagName (classe ClientSettingsGeneralFlag)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) che rappresenta un flag generale per le impostazioni del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome del flag.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  

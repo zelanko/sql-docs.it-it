@@ -1,5 +1,5 @@
 ---
-title: Avviso di proprietà-nuovo avviso (pagina generale) | Microsoft Docs
+title: Proprietà avviso-nuovo avviso (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,39 +13,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062149"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Avviso proprietà-nuovo avviso (pagina generale)
-  Usare questa pagina per visualizzare e modificare le proprietà generali degli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-general-page"></a>Proprietà avviso-nuovo avviso (pagina generale)
+  Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di modificare il nome dell'avviso.  
   
- **Abilita**  
+ **Abilitare**  
  Consente di abilitare l'avviso. Se l'avviso non è abilitato, le azioni specificate nell'avviso non verranno eseguite.  
   
  **Tipo**  
  Consente di selezionare il tipo di avviso:  
   
--   **Avviso per evento di SQL Server** risponde ai messaggi nel registro degli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+-   **SQL Server avviso di evento** risponde ai messaggi nel registro [!INCLUDE[msCoName](../../includes/msconame-md.md)] eventi di Windows.  
   
--   **Avviso relativo alle prestazioni di SQL Server** risponde a una specifica condizione in un contatore delle prestazioni.  
+-   **SQL Server avviso della condizione delle prestazioni** risponde a una condizione specifica in un contatore delle prestazioni.  
   
--   **Avviso per evento WMI** risponde a un evento del servizio Strumentazione gestione Windows (WMI, Windows Management Instrumentation).  
+-   L' **avviso di evento WMI** risponde a un evento Strumentazione gestione Windows (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Opzioni di Avviso per evento di SQL Server  
  **Nome database**  
  Consente di specificare un database per l'evento o **tutti i database** per rispondere a un messaggio indipendentemente dal database in cui si verifica l'evento.  
   
- **Numero di errore**  
+ **Numero errore**  
  Consente di specificare che l'evento risponde a un errore e di indicare il numero dell'errore.  
   
- **Severity**  
+ **Gravità**  
  Consente di specificare che l'evento risponde a tutti messaggi con uno specifico livello di gravità e di indicare tale livello.  
   
  **Genera avviso quando il messaggio contiene**  
@@ -55,7 +55,7 @@ ms.locfileid: "63062149"
  Consente di specificare la stringa da utilizzare come filtro per gli eventi.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Opzioni di Avviso relativo alle prestazioni di SQL Server  
- **Oggetto**  
+ **Object**  
  Consente di specificare l'oggetto prestazioni da monitorare.  
   
  **Contatore**  
@@ -64,7 +64,7 @@ ms.locfileid: "63062149"
  **Istanza**  
  Consente di specificare l'istanza del contatore da monitorare.  
   
- **Avvisa se il contatore**  
+ **Avviso se contatore**  
  Consente di specificare il comportamento del contatore a cui risponde l'evento. È ad esempio possibile impostare questa opzione in modo che l'avviso risponda a una condizione in cui il valore del contatore **Spazio disponibile in tempdb (KB)** scende al di sotto di un determinata soglia o il valore di **Compilazioni SQL/sec** supera un determinato livello.  
   
  **Valore**  
@@ -79,8 +79,8 @@ ms.locfileid: "63062149"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)   
- [Utilizzo di WQL con il Provider WMI per eventi del Server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
- [Creare un avviso utilizzando un numero di errore](create-an-alert-using-an-error-number.md)   
- [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
+ [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
+ [Creare un avviso usando un numero di errore](create-an-alert-using-an-error-number.md)   
+ [Creazione di un avviso utilizzando i livelli di gravità](create-an-alert-using-severity-level.md)  
   
   

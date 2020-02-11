@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247154"
 ---
 # <a name="manage-a-knowledge-base"></a>Gestire una Knowledge Base
@@ -22,14 +22,14 @@ ms.locfileid: "75247154"
 
   In questo argomento viene descritto come eseguire le funzioni di gestione su una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile eliminare una Knowledge Base, sbloccarla, annullare le modifiche apportatevi, rinominarla e visualizzarne le proprietà.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per gestire una Knowledge Base, è necessario che questa sia già stata creata e pubblicata (se creata da un altro utente) o chiusa (se creata dallo stesso utente).  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Manage"></a>Gestire una Knowledge base  
@@ -54,7 +54,7 @@ ms.locfileid: "75247154"
   
     6.  **Proprietà**: fare clic per visualizzare le proprietà del database in una visualizzazione di sola lettura.  
   
-        1.  **Knowledge base origine**: la Knowledge base su cui si basava il database. Questa operazione è facoltativa.  
+        1.  **Knowledge base origine**: la Knowledge base su cui si basava il database. Operazione facoltativa.  
   
         2.  **Stato**: indica se la Knowledge base è **in lavorazione** e se si trova in un'attività di gestione delle informazioni specifica, come stabilito al momento dell'ultima chiusura. Lo stato può essere **In lavorazione**in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni, ma non in un'attività specifica, o **In lavorazione** con un'attività di gestione delle informazioni in cui la Knowledge Base viene aperta in una sessione di gestione delle informazioni e in un'attività specifica.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sovrapposizione maschera di corretto Affinity Mask e Affinity Input e Output | Microsoft Docs
+title: Correggi la maschera di affinità e la maschera di output di input affinità | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856704"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Corretto Affinity Mask e Affinity sovrapposizione maschera di Input e Output
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Correzione della sovrapposizione della maschera di affinità e della maschera di output di input affinità
   Questa regola consente di controllare se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di uno o più processori a cui sono assegnate sia l'opzione affinity mask sia l'opzione affinity I/O mask. In un computer con più di un processore, le opzioni affinity mask e affinity I/O mask vengono utilizzate per designare le CPU utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'abilitazione di una CPU con entrambe le opzioni può ridurre le prestazioni forzando un utilizzo eccessivo del processore.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

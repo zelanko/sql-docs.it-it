@@ -1,5 +1,5 @@
 ---
-title: Sys. parameter_type_usages (Transact-SQL) | Microsoft Docs
+title: sys. parameter_type_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00372789f6e197e2fe9f2c4905cb58c32df3729e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125366"
 ---
-# <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
+# <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni parametro del tipo definito dall'utente.  
@@ -38,13 +38,13 @@ ms.locfileid: "68125366"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
 |**parameter_id**|**int**|ID del parametro. Valore univoco all'interno dell'oggetto.|  
-|**user_type_id**|**int**|ID del tipo definito dall'utente.<br /><br /> Per restituire il nome del tipo, aggiungere il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) su questa colonna vista del catalogo.|  
+|**user_type_id**|**int**|ID del tipo definito dall'utente.<br /><br /> Per restituire il nome del tipo, eseguire il join alla vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) in questa colonna.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di tipi scalari &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [Viste del catalogo di tipi scalari &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

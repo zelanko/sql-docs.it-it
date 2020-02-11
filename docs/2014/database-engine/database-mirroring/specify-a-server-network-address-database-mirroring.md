@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755064"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
@@ -32,7 +32,7 @@ ms.locfileid: "62755064"
 ##  <a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
- TCP<strong>://</strong> *\<indirizzo_sistema>* <strong>:<strong> *\<porta>* 
+ TCP<strong>://</strong>*\<System-Address>* <strong>:<strong>*\<porta>* 
   
  dove  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62755064"
   
 ### <a name="examples"></a>Esempi  
   
-#### <a name="a-using-a-system-name"></a>A. Utilizzo di un nome di sistema  
+#### <a name="a-using-a-system-name"></a>R. Utilizzo di un nome di sistema  
  L'indirizzo di rete del server seguente specifica un nome di sistema, `SYSTEM46`, e la porta `7022`.  
   
 ```  

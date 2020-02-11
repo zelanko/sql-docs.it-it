@@ -1,5 +1,5 @@
 ---
-title: Usare il Database di aggiunta per la creazione guidata gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs
+title: Utilizzare la procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815726"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)
@@ -36,12 +36,12 @@ ms.locfileid: "62815726"
   
      [Sicurezza](#Security)  
   
--   **Per aggiungere un database, utilizzando:**  [Aggiungere Database a Creazione guidata gruppo di disponibilità (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Per aggiungere un database utilizzando:**  [procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Se è mai stato aggiunto un database a un gruppo di disponibilità, vedere la sezione "Database di disponibilità" in [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Se non è mai stato aggiunto un database a un gruppo di disponibilità, vedere la sezione "database di disponibilità" in [prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
+###  <a name="Prerequisites"></a>Prerequisiti, restrizioni e raccomandazioni  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62815726"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)  
+##  <a name="SSMSProcedure"></a>Utilizzo della procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)  
  **Per utilizzare la procedura guidata Aggiungi database a gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del gruppo di disponibilità ed espandere l'albero del server.  
@@ -83,11 +83,11 @@ ms.locfileid: "62815726"
   
 3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità a cui si aggiunge un database e selezionare il comando **Aggiungi database** . Verrà avviata la procedura guidata Aggiungi database a gruppo di disponibilità.  
   
-4.  Nella pagina **Seleziona database** selezionare uno o più database. Per altre informazioni, vedere [pagina database selezionare &#40;disponibilità Aggiunta guidata Database di creazione guidata nuovo gruppo&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  Nella pagina **Seleziona database** selezionare uno o più database. Per ulteriori informazioni, vedere [pagina Selezione database &#40;creazione guidata gruppo di disponibilità-aggiunta guidata Database&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Selezionare una delle opzioni seguenti:  
+5.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Scegliere una delle opzioni seguenti:  
   
-    -   **Full**  
+    -   **Completo**  
   
          Selezionare questa opzione se l'ambiente soddisfa i requisiti per l'avvio automatico della sincronizzazione dei dati iniziale. Per altre informazioni, vedere [Prerequisiti, restrizioni e raccomandazioni](#Prerequisites), più indietro in questo argomento.  
   
@@ -102,29 +102,29 @@ ms.locfileid: "62815726"
   
          Se sono stati preparati manualmente database secondari sulle istanze del server che ospiteranno le repliche secondarie, è possibile selezionare questa opzione. I database secondari esistenti verranno uniti al gruppo di disponibilità tramite la procedura guidata.  
   
-    -   **Ignora sincronizzazione dei dati iniziale**  
+    -   **Ignora sincronizzazione dati iniziale**  
   
          Selezionare questa opzione se si desidera usare i backup dei database e del log dei database primari. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-     Per altre informazioni, vedere [pagina di sincronizzazione dati iniziale selezionare &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
+     Per ulteriori informazioni, vedere [pagina Seleziona sincronizzazione dati iniziale &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  Nella pagina **Connetti a repliche secondarie esistenti** , se le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano le repliche di disponibilità per questo gruppo di disponibilità vengono tutte eseguite come un servizio nello stesso account utente, scegliere **Connetti tutto**. Se alcune delle istanze del server vengono eseguite come un servizio con account diversi, fare clic sul pulsante **Connetti** singolo a destra di ogni nome di istanza del server.  
   
-     Per altre informazioni, vedere [Connetti alla pagina di repliche secondarie esistenti &#40;procedura guidata Aggiungi Replica e procedura guidata Aggiungi database&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Per ulteriori informazioni, vedere la [pagina connessione a repliche secondarie esistenti &#40;aggiunta guidata replica e aggiunta guidata database&#41;](connect-to-existing-secondary-replicas-page.md).  
   
-7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, è possibile fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida** , quindi fare clic su **Ripeti convalida**.  
+7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, è possibile fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida**, quindi fare clic su **Ripeti convalida**.  
   
-     Per altre informazioni, vedere [pagina di convalida &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](validation-page-always-on-availability-group-wizards.md).  
+     Per ulteriori informazioni, vedere la [pagina convalida &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](validation-page-always-on-availability-group-wizards.md).  
   
 8.  Nella pagina **Riepilogo** rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una modifica, fare clic su **Indietro** per tornare alla pagina pertinente. Dopo avere apportato la modifica, fare clic su **Avanti** per tornare alla pagina **Riepilogo** .  
   
-     Per altre informazioni, vedere [pagina di riepilogo &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md).  
+     Per ulteriori informazioni, vedere la [pagina riepilogo &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md).  
   
      Se si è soddisfatti delle selezioni, è possibile fare clic su Script per creare uno script dei passaggi eseguiti dalla procedura guidata. Per creare e configurare il nuovo gruppo di disponibilità, fare quindi clic su **Fine**.  
   
-9. Nella pagina **Stato** viene visualizzato lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
+9. La pagina **Stato** visualizza lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
   
-     Per altre informazioni, vedere [lo stato di avanzamento pagina &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md).  
+     Per ulteriori informazioni, vedere [pagina stato &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md).  
   
 10. Al termine di questi passaggi, nella pagina **Risultati** vengono visualizzati i relativi risultati. Se tutti questi passaggi sono stati eseguiti correttamente, il nuovo gruppo di disponibilità è completamente configurato. Se si verifica un errore durante uno dei passaggi, potrebbe essere necessario completare manualmente la configurazione. Per informazioni sulla causa di un determinato errore, fare clic sul collegamento "Errore" nella colonna **Risultato** .  
   
@@ -141,10 +141,10 @@ ms.locfileid: "62815726"
 -   [Creare un join di un database secondario a un gruppo di disponibilità &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](availability-group-add-a-database.md)   
- [Avviare lo spostamento dati su un Database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
+ [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
   
