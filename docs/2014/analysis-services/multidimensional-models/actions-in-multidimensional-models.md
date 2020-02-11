@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077497"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
@@ -27,7 +27,7 @@ ms.locfileid: "66077497"
   
  Usare la scheda **Azioni** di Progettazione cubi per compilare azioni per un cubo. Specificare le opzioni seguenti:  
   
- **Name**  
+ **Nome**  
  Selezionare un nome che identifichi l'azione.  
   
  **Destinazione azione**  
@@ -62,7 +62,7 @@ ms.locfileid: "66077497"
 |Set di dati|Consente di recuperare un set di dati.|  
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
 |Set di righe|Consente di recuperare un set di righe.|  
-|Istruzione|Esegue un comando OLE DB.|  
+|.|Esegue un comando OLE DB.|  
 |URL|Visualizza una pagina variabile in un browser Internet.|  
   
  In **Espressione azione**specificare i parametri passati durante l'esecuzione dell'azione. Il risultato della valutazione della sintassi deve essere una stringa ed è necessario includere un'espressione MDX. Ad esempio, l'espressione MDX può indicare una parte del cubo inclusa nella sintassi. Le espressioni MDX vengono valutate prima del passaggio dei parametri. È inoltre disponibile Generatore MDX, che consente di compilare espressioni MDX in modo semplificato.  
@@ -72,10 +72,10 @@ ms.locfileid: "66077497"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattiva<br /><br /> Su apertura|  
+|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattività<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
 |**Descrizione**|Descrive l'azione.|  
-|**Caption**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, specificare `True` per **didascalia è MDX**.|  
+|**Sottotitolo**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, `True` specificare per la **Didascalia MDX**.|  
 |**Didascalia MDX**|Specificare `True` se la didascalia è MDX, in caso contrario specificare `False`.|  
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ ms.locfileid: "66077497"
 |**Percorso server**|Percorso esposto dal server di report.|  
 |**Formato report**|HTML5, HTML3, Excel o PDF.|  
   
- **Parametri (facoltativi)**  
+ **Parametri (facoltativo)**  
  I parametri vengono inviati al server come parte della stringa dell'URL quando viene creata l'azione. Includono **Nome parametro** e **Valore parametro**, che è un'espressione MDX.  
   
  L'URL del server di report viene creato nel modo seguente:  
@@ -111,7 +111,7 @@ parametervalue1
 & ...  
 ```  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

@@ -1,5 +1,5 @@
 ---
-title: Azioni (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Azioni (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077584"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
@@ -32,7 +32,7 @@ ms.locfileid: "66077584"
   
 -   Azioni standard, le quali restituiscono l'elemento dell'azione (URL, HTML, DataSet, RowSet e altri elementi) associato alla sezione selezionata del cubo in cui si verifica l'azione.  
   
- Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni, vedere [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
+ Un QI (Query Interface), ad esempio ADOMD.NET, viene utilizzato dall'applicazione client per recuperare le azioni ed esporle all'utente finale. Per altre informazioni vedere [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Action> semplice è composto da informazioni di base, dalla destinazione in cui deve verificarsi l'azione, da una condizione per limitare l'ambito dell'azione e dal tipo. Le informazioni di base includono il nome dell'azione, la descrizione dell'azione, la didascalia consigliata per l'azione e altro.  
   
@@ -40,9 +40,10 @@ ms.locfileid: "66077584"
   
  La condizione è un'espressione MDX `Boolean` valutata nell'evento relativo all'azione. Se la condizione restituisce `true`, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
   
- Il tipo rappresenta il tipo di azione da eseguire. <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
+ Il tipo rappresenta il tipo di azione da eseguire. 
+  <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'azione è un'istruzione MDX archiviata che può essere presentata e utilizzata da applicazioni client. In altre parole, un'azione è un comando client definito e archiviato nel server. Un'azione contiene inoltre informazioni che specificano quando e come l'istruzione MDX dovrà essere visualizzata e gestita dall'applicazione client. L'operazione specificata dall'azione consente di avviare un'applicazione, utilizzando le informazioni dell'azione come parametro, o di recuperare informazioni basate sui criteri indicati dall'azione.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'azione è un'istruzione MDX archiviata che può essere presentata e utilizzata dalle applicazioni client. In altre parole, un'azione è un comando client definito e archiviato nel server. Un'azione contiene inoltre informazioni che specificano quando e come l'istruzione MDX dovrà essere visualizzata e gestita dall'applicazione client. L'operazione specificata dall'azione consente di avviare un'applicazione, utilizzando le informazioni dell'azione come parametro, o di recuperare informazioni basate sui criteri indicati dall'azione.  
   
  Le azioni consentono agli utenti aziendali di eseguire operazioni sui risultati delle analisi svolte. Salvando e riutilizzando le azioni, gli utenti finali possono eseguire operazioni aggiuntive rispetto all'analisi tradizionale, che termina in genere con la presentazione dei dati, e avviare soluzioni a problemi o carenze individuate, estendendo in questo modo gli effetti dell'applicazione di Business Intelligence al di fuori del cubo. Le azioni possono trasformare l'applicazione client da un sofisticato strumento di rendering dei dati in una parte integrante del sistema operativo aziendale. Invece di occuparsi dell'invio di tali dati come input ad applicazioni operative, gli utenti finali possono chiudere il ciclo del processo decisionale. Questa possibilità di trasformare i dati analitici in decisioni riveste un'importanza fondamentale per un'efficace applicazione di Business Intelligence.  
   

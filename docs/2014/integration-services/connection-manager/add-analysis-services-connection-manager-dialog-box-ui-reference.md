@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833754"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services
@@ -27,19 +27,19 @@ ms.locfileid: "62833754"
  Per ulteriori informazioni sulla gestione connessione Analysis Services, vedere [Analysis Services Connection Manager](analysis-services-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Crea una connessione a un computer in cui è in esecuzione Analysis Services**  
+ **Creare una connessione a un computer che esegue Analysis Services**  
  Consente di usare la connessione predefinita a un server che esegue un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure di creare una nuova connessione facendo clic su **Modifica**.  
   
  **Modifica**  
  Consente di usare la finestra di dialogo **Gestione connessione** per creare una connessione a un server che esegue un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e per modificare le proprietà della connessione.  
   
- **Crea una connessione a un progetto di Analysis Services in questa soluzione**  
+ **Crea una connessione a un progetto Analysis Services in questa soluzione**  
  Consente di specificare che la connessione userà un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nella soluzione aperta.  
   
 > [!NOTE]  
 >  I progetti di modello tabulare di Analysis Services non sono supportati per questo scenario.  
   
- **Progetto di Analysis Services**  
+ **Progetto Analysis Services**  
  Consente di selezionare un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  

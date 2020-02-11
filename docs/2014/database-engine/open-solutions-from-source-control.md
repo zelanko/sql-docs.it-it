@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844765"
 ---
 # <a name="open-solutions-from-source-control"></a>Aprire Soluzioni dal controllo del codice sorgente
@@ -30,15 +30,15 @@ ms.locfileid: "62844765"
   
 ### <a name="to-open-a-solution-from-source-control"></a>Per aprire una soluzione dal controllo del codice sorgente  
   
-1.  Nel **File** dal menu **controllo del codice sorgente**, fare clic su **Apri dal controllo del codice sorgente**.  
+1.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **Apri dal controllo del codice sorgente**.  
   
 2.  Se richiesto, accedere a [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
-3.  Nel **Crea progetto locale da SourceSafe** finestra di dialogo, selezionare la cartella che contiene la soluzione che si desidera aprire e fare clic su **OK**.  
+3.  Nella finestra di dialogo **Crea progetto locale da SourceSafe** selezionare la cartella che contiene la soluzione che si desidera aprire e fare clic su **OK**.  
   
-4.  Se esiste già una cartella di lavoro per la soluzione nell'unità disco locale, il **creare un nuovo progetto nella cartella** casella Cambia per identificare la directory locale. Se non esiste una cartella di lavoro per la soluzione, è possibile digitare o cercare la directory locale nella quale dovrebbe essere aperta la soluzione.  
+4.  Se una cartella di lavoro per la soluzione esiste già nell'unità disco locale, la casella **Crea un nuovo progetto nella cartella** cambia per identificare la directory locale. Se non esiste una cartella di lavoro per la soluzione, è possibile digitare o cercare la directory locale nella quale dovrebbe essere aperta la soluzione.  
   
-5.  Nel **soluzione aperta** finestra di dialogo, selezionare il file della soluzione e fare clic su **OK**.  
+5.  Nella finestra di dialogo **Apri soluzione** selezionare il file della soluzione e fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Apertura di progetti dal controllo del codice sorgente](../../2014/database-engine/open-projects-from-source-control.md)  

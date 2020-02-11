@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (pagina Editor di testo: Scheda Editor e barra di stato pagina) | Microsoft Docs'
+title: 'Opzioni (editor di testo: pagina scheda Editor e barra di stato) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089235"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (pagina Editor di testo: Scheda editor e barra di stato)
-  Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (Editor di testo: pagina Scheda editor e barra di stato)
+  Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
   
 ## <a name="option-settings-by-editor"></a>Impostazioni delle opzioni in base all'editor  
  La scheda dell'editor e la barra di stato sono disponibili in tutti gli editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ma offrono livelli di funzionalità diversi.  
@@ -34,13 +34,13 @@ ms.locfileid: "66089235"
  **Visualizza tempo di esecuzione**  
  Consente di indicare il tempo di esecuzione degli script. Sono disponibili le impostazioni seguenti:  
   
- **None**  
+ **Nessuno**  
  Sulla barra di stato non viene visualizzata alcuna informazione relativa alla durata dell'esecuzione.  
   
- **End**  
+ **Fine**  
  Sulla barra di stato viene visualizzata l'ora corrente del giorno in cui è in corso l'esecuzione dello script. Quando lo script viene completato, viene visualizzata l'ora corrente del giorno del completamento dello script.  
   
- **Elapsed**  
+ **Trascorso**  
  Sulla barra di stato viene visualizzata la quantità di tempo trascorso da quando lo script è stato eseguito. Quando lo script viene completato, viene visualizzata la quantità di tempo utilizzata per l'esecuzione dello script.  
   
  **Includi nome database**  
@@ -61,16 +61,16 @@ ms.locfileid: "66089235"
  **Connessioni di gruppo**  
  Consente di impostare il colore della barra di stato quando l'editor di query dispone di più di una connessione.  
   
- **Connessioni a server singolo**  
+ **Connessioni a un unico server**  
  Consente di impostare il colore della barra di stato quando l'editor di query dispone di un'unica connessione.  
   
  **Posizione della barra di stato**  
  Consente di specificare la posizione della barra di stato. Sono disponibili le impostazioni seguenti:  
   
- **Top**  
+ **In alto**  
  La barra di stato viene visualizzata nella parte superiore della finestra dell'editor di query.  
   
- **nella parte inferiore**  
+ **In basso**  
  La barra di stato viene visualizzata nella parte inferiore della finestra dell'editor di query.  
   
 ## <a name="tab-text"></a>Testo scheda  
@@ -92,7 +92,7 @@ ms.locfileid: "66089235"
  Consente di includere il nome del server. Per le connessioni locali, si tratta del nome dell'istanza. Per le connessioni remote, si tratta del nome del computer remoto e del nome dell'istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le opzioni &#40;ambiente: Tipi di carattere e colori&#41&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Opzioni &#40;ambiente: pagina tipi di carattere e colori&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codifica con colori negli editor di query](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

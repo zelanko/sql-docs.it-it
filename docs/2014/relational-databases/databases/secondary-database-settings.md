@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871219"
 ---
 # <a name="secondary-database-settings"></a>Impostazioni database secondario
@@ -31,11 +31,11 @@ ms.locfileid: "62871219"
  **Database secondario**  
  Visualizza il nome del database secondario nella configurazione per il log shipping. Quando si aggiunge un nuovo database secondario a una configurazione per il log shipping, è possibile scegliere un database nell'elenco o digitare il nome di un nuovo database nella casella. Se si specifica direttamente il nome di un nuovo database, è necessario selezionare un'opzione nella scheda **Inizializzazione** per ripristinare un backup completo del database primario in quello secondario. Il nuovo database viene creato durante l'operazione di ripristino.  
   
- **Connect**  
+ **Connettere**  
  Consente di eseguire la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare come server secondario nella configurazione per il log shipping. È necessario che l'account utilizzato per la connessione sia membro del ruolo predefinito del server sysadmin nell'istanza del server secondario.  
   
  **Scheda Inizializzazione**  
- Sono disponibili le opzioni seguenti:  
+ descritte di seguito:  
   
  **Sì, genera un backup completo del database primario e ripristinalo nel database secondario**  
  Se si seleziona questa opzione, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configura il database secondario eseguendo il backup del database primario e ripristinandolo nel server secondario. Se nella casella **Database secondario** è stato specificato il nome di un nuovo database, quest'ultimo verrà creato durante l'operazione di ripristino.  
@@ -62,7 +62,7 @@ ms.locfileid: "62871219"
  Consente di specificare che il database secondario è già inizializzato e pronto ad accettare backup dei log delle transazioni del database primario. Questa opzione non è disponibile se è stato digitato il nome di un database nuovo nella casella **Database secondario** .  
   
  **Scheda Copia file**  
- Sono disponibili le opzioni seguenti:  
+ descritte di seguito:  
   
  **Cartella di destinazione per i file copiati**  
  Consente di specificare il percorso in cui devono essere copiati i backup dei log delle transazioni per il ripristino nel database secondario. Si tratta in genere di un percorso locale che fa riferimento a una cartella nel server secondario. Se la cartella si trova in un altro server, è comunque necessario specificarne il percorso UNC. L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'istanza del server secondario deve disporre delle autorizzazioni di lettura per tale cartella. È inoltre necessario concedere le autorizzazioni di lettura e scrittura per la condivisione di rete agli account proxy con cui verranno eseguiti i processi di copia e ripristino nelle istanze del server secondario. Per impostazione predefinita, si tratta dell'account del servizio SQL Server Agent dell'istanza del server secondario. I membri del ruolo sysadmin possono tuttavia scegliere altri account proxy per l'esecuzione dei processi.  
@@ -73,7 +73,7 @@ ms.locfileid: "62871219"
  **Nome processo**  
  Visualizza il nome del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizzato per copiare i file di backup dei log delle transazioni dal server primario al server secondario. Al momento della prima creazione di tale processo è possibile modificarne il nome nell'apposita casella.  
   
- **Pianificazione**  
+ **Pianificare**  
  Visualizza la pianificazione corrente del processo di SQL Server Agent utilizzato per copiare i file di backup dei log delle transazioni dal server primario a quello secondario. Fare clic su **Pianificazione**per apportarvi modifiche.  
   
  **Pianificazione**  
@@ -83,7 +83,7 @@ ms.locfileid: "62871219"
  Consente di sospendere il processo di SQL Server Agent utilizzato per la copia.  
   
  **Scheda Ripristina log delle transazioni**  
- Sono disponibili le opzioni seguenti:  
+ descritte di seguito:  
   
  **Disconnetti utenti dal database per il ripristino dei backup**  
  Consente di disconnettere automaticamente gli utenti dal database secondario durante le operazioni di ripristino dei backup dei log delle transazioni.  
@@ -106,7 +106,7 @@ ms.locfileid: "62871219"
  **Nome processo**  
  Visualizza il nome del processo di SQL Server Agent utilizzato per ripristinare i backup dei log delle transazioni nel database secondario. Al momento della prima creazione di tale processo è possibile modificarne il nome nell'apposita casella.  
   
- **Pianificazione**  
+ **Pianificare**  
  Visualizza la pianificazione corrente del processo di SQL Server Agent utilizzato per ripristinare i backup dei log delle transazioni nel database secondario. Fare clic su **Pianificazione**per apportarvi modifiche.  
   
  **Pianificazione**  

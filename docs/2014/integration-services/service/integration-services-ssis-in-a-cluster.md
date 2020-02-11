@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889304"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in un cluster
@@ -29,7 +29,7 @@ ms.locfileid: "62889304"
 ## <a name="understanding-the-disadvantages-of-configuring-integration-services-as-a-cluster-resource"></a>Informazioni sugli svantaggi della configurazione di Integration Services come risorsa cluster  
  Tra i potenziali svantaggi della configurazione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] come risorsa cluster sono inclusi i seguenti:  
   
--   In caso failover, i pacchetti in esecuzione non si riavviano. È possibile risolvere gli errori relativi ai pacchetti riavviando i pacchetti dai checkpoint. È possibile eseguire il riavvio dai checkpoint senza configurare il servizio come risorsa cluster. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](../packages/restart-packages-by-using-checkpoints.md).  
+-   In caso failover, i pacchetti in esecuzione non si riavviano. È possibile risolvere gli errori relativi ai pacchetti riavviando i pacchetti dai checkpoint. È possibile eseguire il riavvio dai checkpoint senza configurare il servizio come risorsa cluster. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 -   Quando si configura il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un gruppo di risorse diverso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è possibile utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dai computer client per gestire i pacchetti archiviati nel database msdb. Tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non possono essere delegate le credenziali in questo scenario a doppio hop.  
   

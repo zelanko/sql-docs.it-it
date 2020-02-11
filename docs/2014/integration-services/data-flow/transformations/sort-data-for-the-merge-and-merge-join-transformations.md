@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900333"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
@@ -38,7 +38,7 @@ ms.locfileid: "62900333"
   
      La trasformazione Ordinamento utilizza le regole di confronto di Windows per ordinare i valori stringa.  
   
-     oppure  
+     -oppure-  
   
 -   Utilizzare l'operatore CAST Transact-SQL per eseguire innanzitutto il cast dei valori `varchar` in valori `nvarchar`, quindi utilizzare la clausola ORDER BY Transact-SQL per ordinare i dati.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62900333"
   
 #### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>Per impostare manualmente gli attributi di ordinamento in un componente dell'origine o della trasformazione  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62900333"
   
 5.  Fare clic sulla scheda **Proprietà input e output** .  
   
-6.  Fare clic su  **\<nome componente > Output**e impostare il `IsSorted` proprietà `True`.  
+6.  Fare clic su ** \<nome componente> output**e impostare `IsSorted` la proprietà `True`su.  
   
     > [!NOTE]  
     >  Se si imposta manualmente la proprietà `IsSorted` dell'output su `True` e se i dati non sono ordinati, alcuni dati potrebbero essere mancanti o danneggiati nella trasformazione Unione o Merge Join quando si esegue il pacchetto.  

@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee37bfd2c2ba17377589f8a3e744cc018b9d5775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870788"
 ---
-# <a name="mssqlserver10060"></a>MSSQLSERVER_10060
+# <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
     
 ## <a name="details"></a>Dettagli  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62870788"
 -   Utilizzare lo strumento Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per consentire l'accettazione di connessioni remote in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un Firewall di Windows per l'accesso al motore di Database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
- [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
+ [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

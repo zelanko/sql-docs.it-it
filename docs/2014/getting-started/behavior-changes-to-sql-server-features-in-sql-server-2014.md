@@ -1,5 +1,5 @@
 ---
-title: Modifiche del comportamento di SQL Server Features in SQL Server 2014 | Microsoft Docs
+title: Modifiche del comportamento delle funzionalità di SQL Server in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69918a47cf32a389355d76b7ca3b0f781c2e3536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089506"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di SQL Server in SQL Server 2014

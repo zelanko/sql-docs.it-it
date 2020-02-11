@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867595"
 ---
-# <a name="mssqlserver5515"></a>MSSQLSERVER_5515
+# <a name="mssqlserver_5515"></a>MSSQLSERVER_5515
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62867595"
  La directory contenitore del file FILESTREAM specificata non può essere aperta.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Per la causa dell'errore, vedere il codice di stato di Windows specifico. Per altre informazioni, vedere la [centro di supporto di messaggi di errori ed eventi](https://support.microsoft.com/search?query=events%20and%20errors).  
+ Per la causa dell'errore, vedere il codice di stato di Windows specifico. Per ulteriori informazioni, vedere il [centro di supporto per gli eventi e gli errori](https://support.microsoft.com/search?query=events%20and%20errors).  
   
   

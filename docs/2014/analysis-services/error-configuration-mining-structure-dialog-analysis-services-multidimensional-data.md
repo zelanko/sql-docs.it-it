@@ -1,5 +1,5 @@
 ---
-title: Configurazione errori (finestra di dialogo struttura di Data Mining) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Configurazione errori (finestra di dialogo struttura di data mining) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081364"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configurazione errori (finestra di dialogo Struttura di data mining) (Analysis Services - Dati multidimensionali)
@@ -26,35 +26,35 @@ ms.locfileid: "66081364"
  **Usa configurazione errori predefinita**  
  Selezionare questa opzione per utilizzare la configurazione errori predefinita per gli oggetti nell'operazione di elaborazione.  
   
- **Azione per errore chiave**  
+ **Azione errore chiave**  
  Consente di scegliere una delle azioni seguenti da eseguire quando viene rilevata una nuova chiave che non può essere ricercata durante l'elaborazione:  
   
 -   **Converti in sconosciuta** aggrega le informazioni relative al record nel membro sconosciuto.  
   
--   **Scarta record** esclude le informazioni relative al record dall'elaborazione dell'oggetto.  
+-   **Scarto record** esclude le informazioni per l'elaborazione del record con l'oggetto.  
   
  **Ignora conteggio errori**  
  Fare clic su questa opzione per ignorare qualsiasi eventuale errore che si verifichi durante l'elaborazione.  
   
- **Arresta in caso di errore**  
+ **Arresta in un errore**  
  Fare clic su questa opzione per arrestare l'elaborazione in caso di errori. Questa opzione implica l'attivazione delle impostazioni **Numero di errori** e **Azione in caso di errore** .  
   
  **Numero di errori**  
  Consente di immettere il numero di errori che verranno ignorati prima di arrestare l'elaborazione.  
   
- **Azione in caso di errore**  
+ **Azione in errore**  
  Consente di scegliere una delle azioni seguenti da eseguire se il numero di errori supera il valore impostato in **Numero di errori**:  
   
--   **Arresta elaborazione** termina l'operazione di elaborazione.  
+-   **Interrompi elaborazione** termina l'operazione di elaborazione.  
   
--   **Arresta registrazione** arresta la registrazione degli errori senza però interrompere l'elaborazione.  
+-   **Arresta registrazione** arresta la registrazione degli errori, ma continua l'operazione di elaborazione.  
   
  **Chiave non trovata**  
  Specificare una delle azioni seguenti da eseguire quando non viene trovata una chiave durante l'elaborazione di un oggetto:  
   
 -   **Ignora errore** ignora l'errore  
   
--   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione.  
+-   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione  
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66081364"
   
 -   **Ignora errore** ignora l'errore  
   
--   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione.  
+-   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione  
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
@@ -72,16 +72,16 @@ ms.locfileid: "66081364"
   
 -   **Ignora errore** ignora l'errore  
   
--   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione.  
+-   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione  
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
- **Chiave Null non consentita**  
+ **Chiave null non consentita**  
  Consente di specificare una delle azioni seguenti da eseguire quando viene trovata una chiave Null non consentita durante l'elaborazione di un oggetto.  
   
 -   **Ignora errore** ignora l'errore  
   
--   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione.  
+-   **Segnala e continua** segnala l'errore e continua l'operazione di elaborazione  
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66081364"
  Consente di digitare il percorso completo e il nome del file di log degli errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà struttura di data mining &#40;Analysis Services - Data Mining&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [Generale &#40;finestra di dialogo struttura di Data Mining&#41; &#40;Analysis Services - Data Mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+ [Finestra di dialogo Proprietà struttura di data mining &#40;Analysis Services-&#41;di data mining](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [&#40;finestra di dialogo struttura di data mining generale&#41; &#40;Analysis Services di data mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

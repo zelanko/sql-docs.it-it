@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897475"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (espressione SSIS)
@@ -46,7 +46,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La lunghezza di *searchstring* deve essere diversa da zero.  
   
  La lunghezza di *replacementstring* può essere zero.  

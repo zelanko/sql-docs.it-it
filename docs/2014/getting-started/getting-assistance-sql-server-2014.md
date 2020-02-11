@@ -1,5 +1,5 @@
 ---
-title: Informazioni sull'assistenza (SQL Server 2014) | Microsoft Docs
+title: Ottenere assistenza (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837691"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Richiesta di assistenza (SQL Server 2014)
@@ -29,7 +29,7 @@ ms.locfileid: "62837691"
   
  Se non si trovano le informazioni desiderate, è possibile inserire domande nei forum e nei newsgroup della community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Assistenza su SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Sono contenuti collegamenti alle fonti principali di informazioni su [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Nell'argomento sono presenti anche collegamenti a siti di supporto.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62837691"
  Viene descritto come fornire suggerimenti e report sui bug relativi alle funzionalità del prodotto e all'interfaccia utente, inviare commenti e suggerimenti sulla documentazione e scegliere di inviare automaticamente segnalazioni di errori e dati di utilizzo a [!INCLUDE[msCoName](../includes/msconame-md.md)] per l'analisi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Installazione di SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
+ [Novità di SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+ [Installazione per SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856137"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Aggiungere colonne a una tabella (Motore di database)
   In questo argomento viene descritto come aggiungere nuove colonne a una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62856137"
   
      [Sicurezza](#Security)  
   
--   **Per inserire le colonne, utilizzando:**  
+-   **Per inserire le colonne:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62856137"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Per inserire colonne in una tabella con Progettazione tabelle  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62856137"
 4.  Premere TAB per posizionarsi sulla cella **Tipo di dati** e selezionare un tipo di dati dall'elenco a discesa. Anche questo è un valore obbligatorio. Se non viene specificato, verrà assegnato un valore predefinito.  
   
     > [!NOTE]  
-    >  Il valore predefinito può essere modificato nella finestra di dialogo **Opzioni** in **Strumenti di database**.  
+    >  È possibile modificare il valore predefinito nella finestra di dialogo **Opzioni** in **strumenti di database**.  
   
 5.  Proseguire con la definizione delle altre proprietà della colonna nella scheda **Proprietà colonne** .  
   
     > [!NOTE]  
-    >  Quando si crea una nuova colonna, le vengono assegnati i valori predefiniti per le diverse proprietà. Tali valori possono comunque essere modificati nella scheda **Proprietà colonne** .  
+    >  I valori predefiniti per le proprietà della colonna vengono aggiunti quando si crea una nuova colonna, ma è possibile modificarli nella scheda **Proprietà colonne** .  
   
-6.  Dopo avere completato l'aggiunta delle colonne, scegliere **Salva** nome tabella **dal menu**_File_.  
+6.  Dopo avere completato l'aggiunta delle colonne, scegliere **Salva****nome tabella ** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-insert-columns-into-a-table"></a>Per inserire le colonne in una tabella  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62856137"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Negli esempi seguenti vengono aggiunte due colonne alla tabella `dbo.doc_exa`. Copiare e incollare l'esempio seguente nella finestra Query e quindi fare clic su **Esegui**.  
+3.  Negli esempi seguenti vengono aggiunte due colonne alla tabella `dbo.doc_exa`. Copiare e incollare l'esempio seguente nella finestra query, quindi fare clic su **Esegui** .  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="FollowUp"></a>Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

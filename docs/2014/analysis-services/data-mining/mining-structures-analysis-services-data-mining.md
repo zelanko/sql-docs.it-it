@@ -1,5 +1,5 @@
 ---
-title: Strutture di data mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Strutture di data mining (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083383"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
   La struttura di data mining definisce i dati in base ai quali vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e il tipo di colonne e una partizione facoltativa in set di training e di testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
   
- ![L'elaborazione dei dati: origine-struttura al modello](../media/dmcon-modelarch.gif "l'elaborazione dei dati: origine-struttura al modello")  
+ ![Elaborazione dei dati: origine-struttura-modello](../media/dmcon-modelarch.gif "Elaborazione dei dati: origine-struttura-modello")  
   
  La struttura di data mining nel diagramma è basata su un'origine dati che contiene più tabelle o viste, unite in join nel campo CustomerID. Una tabella contiene informazioni sui clienti, ad esempio l'area geografica, l'età, il reddito e il sesso, mentre la tabella nidificata correlata contiene più righe di informazioni aggiuntive su ogni cliente, ad esempio i prodotti che il cliente ha acquistato. Nel diagramma viene evidenziato che è possibile compilare più modelli in una struttura di data mining e che i modelli possono utilizzare colonne diverse della struttura.  
   
- **Modello 1** Vengono utilizzati CustomerID, Income, Age, Region e filtrati i dati in base a Region.  
+ **Modello 1** Utilizza CustomerID, Income, Age, Region e filtra i dati nell'area.  
   
- **Modello 2** Vengono utilizzati CustomerID, Income, Age, Region e filtrati i dati in base ad Age.  
+ **Modello 2** Utilizza CustomerID, Income, Age, Region e filtra i dati in età.  
   
- **Modello 3** Vengono utilizzati CustomerID, Age, Gender e la tabella nidificata, senza filtro.  
+ **Modello 3** USA CustomerID, Age, Gender e la tabella nidificata, senza filtro.  
   
  Poiché i modelli utilizzano colonne diverse per l'input e poiché due dei modelli limitano ulteriormente i dati utilizzati nel modello applicando un filtro, i modelli potrebbero produrre risultati molto diversi anche se basati sugli stessi dati. Si noti che la colonna CustomerID è obbligatoria in tutti i modelli poiché è l'unica colonna disponibile che può essere utilizzata come chiave del case.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083383"
   
 -   Elaborare la struttura.  
   
- Questi passaggi vengono descritti in modo più dettagliato nelle sezioni seguenti.  
+ Questi passaggi vengono descritti più dettagliatamente nelle sezioni seguenti.  
   
 ### <a name="data-sources-for-mining-structures"></a>Origini dati per le strutture di data mining  
  Quando si definisce una struttura di data mining, si utilizzano colonne disponibili in una vista origine dati esistente. Una vista origine dati è un oggetto condiviso che consente di combinare più origini dati e di utilizzarle come un'unica origine. Le origini dati originali non sono visibili nelle applicazioni client; inoltre è possibile utilizzare le proprietà della vista origine dati per modificare i tipi di dati, creare le aggregazioni o le colonne alias.  
@@ -107,7 +107,7 @@ ms.locfileid: "66083383"
 ## <a name="using-data-mining-models-with-mining-structures"></a>Utilizzo dei modelli di data mining con le strutture di data mining  
  Un modello di data mining applica un algoritmo specifico ai dati rappresentati da una struttura di data mining. Un modello di data mining è un oggetto che appartiene a una determinata struttura di data mining ed eredita tutti i valori delle proprietà definite dalla struttura. Nel modello possono essere utilizzate tutte le colonne contenute nella struttura di data mining o un subset delle colonne. È possibile aggiungere più copie di una colonna della struttura a una struttura. È anche possibile aggiungere più copie di una colonna della struttura a un modello e quindi assegnare nomi o *alias*diversi a ogni colonna della struttura nel modello. Per altre informazioni sulle colonne della struttura di alias, vedere [Creare un alias per una colonna di un modello](create-an-alias-for-a-model-column.md) e [Proprietà dei modelli di data mining](mining-model-properties.md).  
   
- Per altre informazioni sull'architettura dei modelli di data mining, vedere [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
+ Per altre informazioni sull'architettura dei modelli di data mining, vedere [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i collegamenti forniti di seguito per ottenere ulteriori informazioni sulla definizione, sulla gestione e sull'utilizzo delle strutture di data mining.  
@@ -118,10 +118,10 @@ ms.locfileid: "66083383"
 |Utilizzare le strutture di data mining basate su cubi OLAP|[Creare una nuova struttura di data mining OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrare il cubo di origine per una struttura di data mining](../filter-the-source-cube-for-a-mining-structure.md)|  
 |Utilizzare le colonne in una struttura di data mining|[Aggiungere colonne a una struttura di data mining](add-columns-to-a-mining-structure.md)<br /><br /> [Rimuovere colonne da una struttura di data mining](remove-columns-from-a-mining-structure.md)|  
 |Eseguire una query sulle proprietà e sui dati della struttura di data mining o modificarli|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
-|Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati usata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  
+|Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati utilizzata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Oggetti di database &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
   
   

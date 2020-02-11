@@ -1,5 +1,5 @@
 ---
-title: Backup e ripristino di database di Analysis Services | Microsoft Docs
+title: Backup e ripristino di database Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
@@ -22,13 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077025"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
   
  I comandi di backup e ripristino vengono eseguiti su un database di Analysis Services distribuito. Per progetti e soluzioni disponibili in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è necessario utilizzare il controllo del codice sorgente per assicurarsi di poter recuperare versioni specifiche dei file di origine e quindi creare un piano di recupero dati per il repository del sistema di controllo del codice sorgente che si utilizza.  
@@ -37,9 +38,9 @@ ms.locfileid: "66077025"
   
  Un vantaggio ovvio dell'automazione del backup consiste nel fatto che lo snapshot dei dati verrà sempre aggiornato in base alla frequenza corrispondente specificata. L'esecuzione dei backup è garantita dalle utilità di pianificazione automatizzate. È inoltre possibile automatizzare il ripristino di un database, ottenendo in tal modo una strategia valida per la replica dei dati, ma è necessario verificare che sia stato eseguito il backup del file della chiave di crittografia nell'istanza in cui si esegue la replica. La funzionalità di sincronizzazione è riservata alla replica dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ma solo per i dati non aggiornati. È possibile implementare tutte le caratteristiche sopra indicate tramite l'interfaccia utente, mediante comandi XML/A o l'esecuzione a livello di programmazione nella libreria AMO.  
   
- In questo argomento sono contenute le sezioni seguenti:  
+ Questo argomento include le sezioni seguenti:  
   
--   [Preparazione del backup](#bkmk_prep)  
+-   [Preparazione per il backup](#bkmk_prep)  
   
 -   [Backup di un database multidimensionale o tabulare](#bkmk_cube)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "66077025"
   
  Il percorso di ripristino deve essere lo stesso tipo di server. È possibile ripristinare database tabulari solo in Analysis Services in esecuzione in modalità tabulare. Per i database multidimensionali è richiesta un'istanza in esecuzione in modalità multidimensionale.  
   
-##  <a name="bkmk_prep"></a> Preparazione del backup  
+##  <a name="bkmk_prep"></a>Preparazione per il backup  
  Per la preparazione del backup utilizzare il seguente elenco di controllo:  
   
 -   Controllare il percorso in cui verrà archiviato il file di backup. Se si utilizza un percorso remoto, è necessario specificarlo come cartella UNC. Verificare che sia possibile accedere al percorso UNC.  
@@ -63,11 +64,12 @@ ms.locfileid: "66077025"
   
 -   Verificare la presenza di file con lo stesso nome. Se esiste già un file con lo stesso nome, il backup non riuscirà a meno che non si specificano le opzioni per sovrascrivere il file.  
   
-##  <a name="bkmk_cube"></a> Backup di un database multidimensionale o tabulare  
+##  <a name="bkmk_cube"></a>Backup di un database multidimensionale o tabulare  
  Gli amministratori possono eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un singolo file di backup (con estensione abf) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dalle dimensioni del database. Per istruzioni dettagliate, vedere [come eseguire il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizzare il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizzato per il caricamento e l'esecuzione di query sui modelli di dati PowerPivot in un ambiente SharePoint, carica i relativi modelli dai database del contenuto di SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati PowerPivot. Se si dispone di un piano di recupero in atto per il contenuto di SharePoint, tale piano include i modelli di dati PowerPivot archiviati nei database di contenuto.  
+>  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizzato per il caricamento e l'esecuzione di query sui modelli di dati PowerPivot in un ambiente SharePoint, carica i relativi modelli dai database del contenuto di SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati PowerPivot. Se si dispone di un piano di recupero in atto per il contenuto di SharePoint, tale piano include i modelli di dati PowerPivot archiviati nei database di contenuto.  
   
  **Partizioni remote**  
   
@@ -99,7 +101,7 @@ ms.locfileid: "66077025"
   
  Per altre informazioni sul backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Opzioni di backup](backup-options.md).  
   
-##  <a name="bkmk_restore"></a> Ripristino di un database di Analysis Services  
+##  <a name="bkmk_restore"></a>Ripristino di un database di Analysis Services  
  Gli amministratori possono ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a partire da uno o più file di backup.  
   
 > [!NOTE]  
@@ -125,6 +127,6 @@ ms.locfileid: "66077025"
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [Analysis Services PowerShell](../analysis-services-powershell.md)  
+ [PowerShell per Analysis Services](../analysis-services-powershell.md)  
   
   

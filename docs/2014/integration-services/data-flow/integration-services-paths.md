@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901795"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
@@ -41,9 +41,9 @@ ms.locfileid: "62901795"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor percorso flusso di dati**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor percorso flusso di dati &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor percorso flusso di dati &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor percorso flusso di dati &#40;pagina dei metadati&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Editor percorso flusso di dati &#40;pagina metadati&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62901795"
   
 -   [Visualizzazione dei metadati dei percorsi nell'Editor percorso flusso di dati](../view-path-metadata-in-the-data-flow-path-editor.md)  
   
--   [Connettere componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
+-   [Connessione di componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow.md)  

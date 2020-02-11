@@ -1,5 +1,5 @@
 ---
-title: Query di stima (Data Mining) | Microsoft Docs
+title: Query di stima (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083123"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
@@ -30,7 +30,7 @@ ms.locfileid: "66083123"
   
  Nelle sezioni seguenti viene descritta la sintassi generale delle query di stima, i relativi tipi differenti nonché come utilizzare i risultati di tali query.  
   
- [Progetto di query di stima di base](#bkmk_PredQuery)  
+ [Progettazione delle query di stima di base](#bkmk_PredQuery)  
   
 -   [Aggiunta di funzioni di stima](#bkmk_PredFunc)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66083123"
   
  [Utilizzo dei risultati delle query](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a> Progetto di query di stima di base  
+##  <a name="bkmk_PredQuery"></a>Progettazione delle query di stima di base  
  Quando si crea una stima, si forniscono in genere alcuni nuovi dati e si chiede al modello di generare una stima in base ai nuovi dati.  
   
 -   In una query di stima in batch viene eseguito il mapping del modello a un'origine esterna di dati utilizzando un *PREDICTION JOIN*.  
@@ -55,22 +55,22 @@ ms.locfileid: "66083123"
   
  Per i modelli Time Series, i dati di input non sono sempre richiesti; è possibile eseguire stime utilizzando semplicemente i dati già presenti nel modello. Tuttavia, se si specificano nuovi dati di input, è necessario decidere se si utilizzeranno i nuovi dati per aggiornare ed estendere il modello o per sostituire la serie originale di dati utilizzata nel modello.  Per altre informazioni su queste opzioni, vedere [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
-###  <a name="bkmk_PredFunc"></a> Aggiunta di funzioni di stima  
+###  <a name="bkmk_PredFunc"></a>Aggiunta di funzioni di stima  
  Oltre a stimare un valore, è possibile personalizzare una query di stima per restituire vari tipi di informazioni correlate alla stima. Ad esempio, se tramite la stima viene creato un elenco di prodotti da consigliare a un cliente, è necessario restituire anche la probabilità per ogni stima, in modo che sia possibile classificarli e presentare all'utente solo i prodotti consigliati.  
   
- A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco di funzioni di stima supportate nei diversi tipi di query, vedere l'argomento di riferimento DMX:  [Funzioni di stima generale &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco delle funzioni di stima supportate nei diversi tipi di query, vedere l'argomento sulla guida di riferimento a DMX: [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
-###  <a name="bkmk_SingletonQuery"></a> Creazione di query di stima singleton  
+###  <a name="bkmk_SingletonQuery"></a>Creazione di query di stima singleton  
  Una query di stima singleton risulta utile se si desidera creare stime rapide in tempo reale. Uno scenario comune potrebbe essere l'acquisizione di informazioni da un cliente tramite, ad esempio, un form in un sito Web, e il successivo invio di tali dati come input a una query di stima singleton. Ad esempio, quando un cliente sceglie un prodotto da un elenco, è possibile utilizzare tale selezione come input per una query che consente di stimare i migliori prodotti da consigliare.  
   
  Per le query di stima singleton non è necessaria una tabella separata contenente l'input. Al contrario, vengono fornite una o più righe di valori come input del modello e le stime vengono restituite in tempo reale.  
   
 > [!WARNING]  
->  Nonostante il nome, le query di stima singleton non solo stime singole-è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
+>  Nonostante il nome, le query di stima singleton non eseguono solo stime singole. è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
   
  Quando si crea una query di stima singleton, è necessario fornire i nuovi dati al modello sotto forma di PREDICTION JOIN. Questo significa che anche se non si esegue il mapping a una tabella effettiva, è necessario assicurarsi che i nuovi dati corrispondano alle colonne esistenti nel modello di data mining. Se le nuove colonne di dati e i nuovi dati corrispondono in modo esatto, il mapping delle colonne verrà eseguito automaticamente in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questa funzione è denominata *NATURAL PREDICTION JOIN*. Se tuttavia le colonne non corrispondono o se nei nuovi dati non è contenuto lo stesso tipo e la stessa quantità di dati presenti nel modello, è necessario specificare di quali colonne del modello eseguire il mapping ai nuovi dati oppure specificare i valori mancanti.  
   
-###  <a name="bkmk_BatchQuery"></a> Query di stima in batch  
+###  <a name="bkmk_BatchQuery"></a>Query di stima in batch  
  Una query di stima in batch è utile quando si dispone di dati esterni che si desidera utilizzare per l'esecuzione di stime. Ad esempio, è probabile che sia stato compilato un modello che consente di suddividere in categorie i clienti in base all'attività online e alla cronologia di acquisto. È possibile applicare tale modello a un elenco di potenziali clienti appena acquisiti per creare proiezioni per le vendite o identificare destinazioni per le campagne proposte.  
   
  Quando si esegue un PREDICTION JOIN, è necessario eseguire il mapping delle colonne del modello alle colonne nella nuova origine dati. Pertanto, nell'origine dati scelta per un input devono essere presenti dati simili ai dati del modello. Le nuove informazioni non devono corrispondere esattamente e possono essere incomplete. Si supponga ad esempio che il training del modello sia stato eseguito utilizzando le informazioni sul reddito e sull'età, ma che nell'elenco clienti utilizzato per le stime siano disponibili le informazioni sull'età, ma non sul reddito. In questo scenario è ancora possibile eseguire il mapping dei nuovi dati al modello e creare una stima per ogni cliente. Tuttavia, se il reddito fosse un fattore di stima importante per il modello, la mancanza di informazioni complete influirebbe sulla qualità delle stime.  
@@ -84,14 +84,14 @@ ms.locfileid: "66083123"
   
  Se si utilizza DMX per creare un prediction join, è possibile specificare l'origine dati esterna utilizzando il comando OPENQUERY, OPENROWSET o SHAPE. Il metodo predefinito di accesso ai dati nei modelli DMX è OPENQUERY. Per informazioni su questi metodi, vedere [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
-###  <a name="bkmk_TSQuery"></a> Stime nei modelli di data mining Time Series  
+###  <a name="bkmk_TSQuery"></a>Stime nei modelli di data mining Time Series  
  I modelli Time Series sono diversi dagli altri tipi di modelli. È possibile utilizzare il modello originale per creare stime oppure fornire nuovi dati al modello per aggiornarlo e creare stime basate sulle tendenze recenti. Se si aggiungono nuovi dati, è possibile specificare la modalità di utilizzo dei nuovi dati.  
   
--   L'*estensione dei case del modello* prevede l'aggiunta di nuovi dati nella serie esistente di dati nel modello Time Series. Da questo momento in poi, le stime sono basate sulla nuova serie combinata. Questa opzione è utile se si desidera aggiungere semplicemente alcuni punti dati a un modello esistente.  
+-   *L'estensione dei case del modello* consente di aggiungere i nuovi dati alla serie di dati esistente nel modello Time Series. Da questo momento in poi, le stime sono basate sulla nuova serie combinata. Questa opzione è utile se si desidera aggiungere semplicemente alcuni punti dati a un modello esistente.  
   
      Si supponga ad esempio che un modello Time Series esistente sia stato sottoposto a training sui dati delle vendite relativi all'anno precedente. Dopo aver raccolto diversi mesi di nuovi dati delle vendite, si decide di aggiornare le previsioni di vendita per l'anno corrente. È possibile creare un PREDICTION JOIN che consente di aggiornare il modello aggiungendo nuovi dati e di estendere il modello per creare nuove stime.  
   
--   La*sostituzione dei case del modello* consente di mantenere il modello sottoposto a training, ma i case sottostanti vengono sostituiti con un nuovo set di dati del case. Questa opzione è utile se si desidera mantenere la tendenza nel modello applicandola però a un set di dati diverso.  
+-   La *sostituzione dei case del modello* implica la conservazione del modello sottoposto a training, ma la sostituzione dei case sottostanti con un nuovo set di dati del case. Questa opzione è utile se si desidera mantenere la tendenza nel modello applicandola però a un set di dati diverso.  
   
      Ad esempio, è possibile che sia stato eseguito il training del modello originale in un set di dati con volumi di vendite molto elevati. Quando si sostituiscono i dati sottostanti con una nuova serie, ad esempio di un archivio con volume di vendite inferiore, si mantiene la tendenza, ma le stime iniziano dai valori della serie di sostituzione.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66083123"
   
  Per altre informazioni sulla creazione di prediction join sui modelli Time Series, vedere [Time Series Model Query Examples](time-series-model-query-examples.md) o [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-##  <a name="bkmk_WorkResults"></a> Utilizzo dei risultati di una query di stima  
+##  <a name="bkmk_WorkResults"></a>Utilizzo dei risultati di una query di stima  
  Le opzioni per salvare i risultati di una query di stima di data mining sono diverse a seconda della modalità di creazione della query.  
   
 -   Quando si compila una query utilizzando il generatore delle query di stima in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile salvare i risultati di una query di stima in un'origine dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente. Per altre informazioni, vedere [Visualizzare e salvare i risultati di una query di stima](view-and-save-the-results-of-a-prediction-query.md).  
@@ -135,18 +135,18 @@ FROM
   
  **PredictedQty**  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |201101|77|  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |201102|260|  
   
  Se il provider non è in grado di gestire i set di righe gerarchici, è possibile fare in modo che i risultati vengano restituiti in formato flat utilizzando la parola chiave FLATTEN nella query di stima. Per altre informazioni, inclusi esempi di set di righe bidimensionali, vedere [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query sul contenuto &#40;Data mining&#41;](content-queries-data-mining.md)   
- [Query di definizione dei dati &#40;Data mining&#41;](data-definition-queries-data-mining.md)  
+ [Query sul contenuto &#40;&#41;di data mining](content-queries-data-mining.md)   
+ [Query di definizione dei dati &#40;&#41;di data mining](data-definition-queries-data-mining.md)  
   
   

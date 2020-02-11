@@ -1,5 +1,5 @@
 ---
-title: Esempi e sintassi del filtro del modello (Analysis Services - Data Mining) | Microsoft Docs
+title: Sintassi ed esempi di filtri dei modelli (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083371"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintassi ed esempi di filtri dei modelli (Analysis Services – Data mining)
@@ -27,7 +27,7 @@ ms.locfileid: "66083371"
   
  
   
-##  <a name="bkmk_Syntax"></a> Filter Syntax  
+##  <a name="bkmk_Syntax"></a>Sintassi del filtro  
  Le espressioni di filtro in genere sono equivalenti al contenuto di una clausola WHERE. È possibile connettere più condizioni utilizzando gli operatori logici `AND`, `OR` e `NOT`.  
   
  Nelle tabelle nidificate è anche possibile utilizzare gli operatori `EXISTS` e `NOT EXISTS` Una condizione `EXISTS` restituisce `true` se la sottoquery restituisce almeno una riga. Ciò risulta utile nei case in cui si desidera limitare il modello ai case che contengono un determinato valore nella tabella nidificata: ad esempio, i clienti che hanno acquistato almeno una volta un articolo.  
@@ -47,7 +47,7 @@ ms.locfileid: "66083371"
 <subquery>::=SELECT * FROM <columnName>[ WHERE  <predicate list> ]  
 ```  
   
- *filter*  
+ *filtro*  
  Contiene uno o più predicati, connessi da operatori logici.  
   
  *elenco predicati*  
@@ -64,22 +64,22 @@ ms.locfileid: "66083371"
   
  Un'espressione che utilizza alcuni degli operatori seguenti può essere applicata solo a una colonna continua. :  
   
--   **\<** (minore di)  
+-   **\<**(minore di)  
   
--   **>** (maggiore di)  
+-   **>**(maggiore di)  
   
--   **>=** (maggiore o uguale a)  
+-   **>=**(maggiore o uguale a)  
   
--   **\<=** (minore o uguale a)  
+-   **\<=**(minore o uguale a)  
   
 > [!NOTE]  
 >  Indipendentemente dal tipo di dati, questi operatori non possono essere applicati a una colonna di tipo `Discrete`, `Discretized` o `Key`.  
   
  Un'espressione che utilizza alcuni degli operatori seguenti può essere applicata a una colonna continua, discreta, discretizzata o chiave:  
   
--   **=** (uguale a)  
+-   **=** è uguale a  
   
--   **!=** (diverso da)  
+-   **! =** (diverso da)  
   
 -   **È NULL**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66083371"
 ## <a name="examples-of-filters"></a>Esempi di filtri  
  Negli esempi seguenti viene illustrato l'utilizzo di filtri applicati a un modello di data mining. Se si crea l'espressione di filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nella finestra **Proprietà** e nel riquadro **Espressione** della finestra di dialogo del filtro viene visualizzata solo la stringa presente dopo le parole chiave WITH FILTER. La definizione della struttura di data mining viene inclusa per semplificare e comprendere il tipo di colonna e l'utilizzo.  
   
-###  <a name="bkmk_Ex1"></a> Esempio 1: Applicazione di filtri a livello del Case tipico  
+###  <a name="bkmk_Ex1"></a>Esempio 1: applicazione di filtri tipica a livello di case  
  In questo esempio viene mostrato un semplice filtro che limita i case utilizzati nel modello ai clienti la cui occupazione è architetto e la cui età è superiore a 30 anni.  
   
 ```  
@@ -127,7 +127,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a> Esempio 2: Applicazione di filtri a livello del case utilizzando gli attributi delle tabelle nidificate  
+###  <a name="bkmk_Ex2"></a>Esempio 2: applicazione di filtri a livello di case mediante attributi di tabella nidificata  
  Se la struttura di data mining contiene tabelle nidificate, è possibile filtrare in base all'esistenza di un valore in una tabella nidificata o in base alle righe della tabella nidificata che contengono un valore specifico. In questo esempio i case utilizzati per il modello vengono limitati ai clienti di età superiore ai 30 anni che hanno effettuato almeno un acquisto che include latte.  
   
  Come mostrato nell'esempio, non è necessario che il filtro utilizzi solo colonne incluse nel modello. La tabella annidata **Prodotti** fa parte della struttura di data mining, ma non è inclusa nel modello di data mining. Tuttavia, è ancora possibile filtrare in base a valori e attributi nella tabella nidificata. Per visualizzare i dettagli di questi case, è necessario attivare il drill-through.  
@@ -147,7 +147,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
   
  
   
-###  <a name="bkmk_Ex3"></a> Esempio 3: Applicazione di filtri a livello del case su più attributi della tabella nidificata  
+###  <a name="bkmk_Ex3"></a>Esempio 3: applicazione di filtri a livello del case su più attributi della tabella nidificata  
  In questo esempio viene mostrato un filtro in tre parti: una condizione viene applicata alla tabella del case, un'altra a un attributo nella tabella nidificata e un'altra a un valore specifico in una delle colonne della tabella nidificata.  
   
  La prima condizione nel filtro, `Age > 30`, si applica a una colonna nella tabella del case. Le altre condizioni vengono applicate alla tabella nidificata.  
@@ -173,7 +173,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
   
 
   
-###  <a name="bkmk_Ex4"></a> Esempio 4: Applicazione di filtri a livello del case in assenza di attributi della tabella nidificata  
+###  <a name="bkmk_Ex4"></a>Esempio 4: applicazione di filtri a livello di case in assenza di attributi della tabella nidificata  
  In questo esempio viene illustrata la limitazione dei case ai clienti che non ha acquistato un articolo specifico, filtrando in base all'assenza di un attributo nella tabella nidificata. In questo esempio, viene eseguito il training del modello utilizzando i clienti di età superiore ai 30 anni che non hanno mai comprato latte.  
   
 ```  
@@ -193,7 +193,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
   
 
   
-###  <a name="bkmk_Ex5"></a> Esempio 5: Applicazione di filtri su più valori di tabella nidificata  
+###  <a name="bkmk_Ex5"></a>Esempio 5: applicazione di filtri a più valori di tabella nidificata  
  Lo scopo dell'esempio è mostrare l'applicazione del filtro sulla tabella nidificata. Il filtro della tabella nidificata viene applicato dopo il filtro del case e si limita solo alle righe della tabella nidificata.  
   
  Questo modello può contenere più case con tabelle nidificate vuote perché EXISTS non è specificato.  
@@ -216,7 +216,7 @@ WITH DRILLTHROUGH
   
 
   
-###  <a name="bkmk_Ex6"></a> Esempio 6: Applicazione di filtri su attributi delle tabelle nidificate e alla clausola EXISTS  
+###  <a name="bkmk_Ex6"></a>Esempio 6: applicazione di filtri agli attributi della tabella nidificata esistente  
  In questo esempio, il filtro nella tabella nidificata limita le righe a quelle che contengono latte o acqua imbottigliata. Quindi, i case nel modello vengono limitati utilizzando un'istruzione `EXISTS`. Ciò assicura che la tabella nidificata non è vuota.  
   
 ```  
@@ -237,10 +237,10 @@ FILTER (EXISTS (Products))
   
 
   
-###  <a name="bkmk_Ex7"></a> Esempio 7: Combinazioni di filtri complessi  
- Lo scenario per questo modello è simile a quello dell'esempio 4, ma è molto più complesso. La tabella nidificata **ProductsOnSale**, ha la condizione di filtro `(OnSale)` vale a dire che il valore di **OnSale** deve essere `true` per il prodotto elencato in **ProductName**. In questo caso, **OnSale** è una colonna della struttura.  
+###  <a name="bkmk_Ex7"></a>Esempio 7: combinazioni di filtri complessi  
+ Lo scenario per questo modello è simile a quello dell'esempio 4, ma è molto più complesso. La tabella nidificata, **ProductsOnSale**, ha la condizione `(OnSale)` di filtro che indica che il valore di **OnSale** deve essere `true` per il prodotto elencato in **ProductName**. In questo caso, **OnSale** è una colonna della struttura.  
   
- La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma Filtra sui prodotti per cui il valore di **OnSale** è `not true``(!OnSale)`.  
+ La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma filtra i prodotti per i quali il valore di **OnSale** è `not true``(!OnSale)`.  
   
  Infine, le condizioni vengono combinate e viene aggiunta un'ulteriore restrizione alla tabella del case. Il risultato è la stima degli acquisti di prodotti nell'elenco **ProductsNotOnSale** , in base ai case inclusi nell'elenco **ProductsOnSale** , per tutti i clienti di età superiore ai 25 anni.  
   
@@ -280,7 +280,7 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a> Esempio 8: Filtri sulle date  
+###  <a name="bkmk_Ex8"></a>Esempio 8: applicazione di filtri alle date  
  È possibile filtrare le colonne di input in base alle date, come per qualsiasi altro tipo di dati. Le date contenute in una colonna di tipo data/ora sono valori continui; è quindi possibile specificare un intervallo di date utilizzando operatori quali maggiore di (>) o minore di (<). Se l'origine dati non rappresenta le date come tipo di dati Continuous, ma come valori discreti o di testo, non sarà possibile filtrare in base a un intervallo di date, ma sarà necessario specificare singoli valori discreti.  
   
  Tuttavia, non è possibile creare un filtro sulla colonna delle date in un modello Time Series se la colonna delle date utilizzata per il filtro è anche la colonna chiave per il modello. Ciò accade perché nei modelli Time Series e Sequence Clustering la colonna delle date potrebbe essere gestita come tipo `KeyTime` o `KeySequence`.  
@@ -304,7 +304,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
+ [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078974"
 ---
 # <a name="browsing-the-cube"></a>Esplorazione del cubo
@@ -30,18 +30,18 @@ ms.locfileid: "66078974"
   
 1.  Passare a **Progettazione dimensioni** per la dimensione Product in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sulla dimensione **Product** nel nodo **Dimensioni** di Esplora soluzioni.  
   
-2.  Fare clic sul **Browser** scheda per visualizzare i **tutti i** membro del `Product Key` gerarchia dell'attributo. Nella lezione 3 verrà definita una gerarchia utente per la dimensione Product che consentirà di esplorare la dimensione.  
+2.  Fare clic sulla scheda **esplorazione** per visualizzare il membro **totale** della `Product Key` gerarchia dell'attributo. Nella lezione 3 verrà definita una gerarchia utente per la dimensione Product che consentirà di esplorare la dimensione.  
   
-3.  Passare a **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sul cubo **Analysis Services Tutorial** nel nodo **Cubi** di Esplora soluzioni.  
+3.  Passare a **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sul cubo **Analysis Services Tutorial** nel nodo **cubi** di Esplora soluzioni.  
   
 4.  Selezionare la scheda **Esplorazione** e fare clic sull'icona **Riconnetti** sulla barra degli strumenti della finestra di progettazione.  
   
      Nel riquadro sinistro della finestra di progettazione vengono visualizzati gli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. A destra della scheda **Esplorazione** sono disponibili due riquadri: quello superiore è il riquadro **Filtro** , mentre quello inferiore è il riquadro **Dati** . In una lezione successiva si utilizzerà il visualizzatore cubi per eseguire analisi.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: Modifica le misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [Editor di query MDX &#40;Analysis Services Dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

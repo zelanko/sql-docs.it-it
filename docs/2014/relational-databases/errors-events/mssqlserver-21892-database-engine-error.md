@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18916e8287841015727c37ed8833fbc29b1e6ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869148"
 ---
-# <a name="mssqlserver21892"></a>MSSQLSERVER_21892
+# <a name="mssqlserver_21892"></a>MSSQLSERVER_21892
     
 ## <a name="details"></a>Dettagli  
   
@@ -35,7 +35,8 @@ ms.locfileid: "62869148"
 ## <a name="explanation"></a>Spiegazione  
  In `sp_validate_replica_hosts_as_publishers` viene eseguita una query sul database primario corrente del gruppo di disponibilità associato al server di pubblicazione reindirizzato, per determinare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano le repliche del membro.  In caso di errore di questa query, viene restituito l'errore 21892.  
   
- `sp_validate_replica_hosts_as_publishers` è presente in genere al primo utilizzo del server collegato temporaneo, pertanto, se ci sono problemi di connettività, è probabile che si presentino prima con `sp_validate_replica_hosts_as_publishers`. A differenza di `sp_validate_redirected_publisher`, il server collegato utilizzato da `sp_validate_replica_hosts_as_publishers` utilizza sempre le credenziali del chiamante in caso di connessione a uno dei host di replica del gruppo di disponibilità.  
+ 
+  `sp_validate_replica_hosts_as_publishers` è presente in genere al primo utilizzo del server collegato temporaneo, pertanto, se ci sono problemi di connettività, è probabile che si presentino prima con `sp_validate_replica_hosts_as_publishers`. A differenza di `sp_validate_redirected_publisher`, il server collegato utilizzato da `sp_validate_replica_hosts_as_publishers` utilizza sempre le credenziali del chiamante in caso di connessione a uno dei host di replica del gruppo di disponibilità.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  In caso di esecuzione di questa stored procedure, assicurarsi che sia in esecuzione da un accesso valido su tutte le repliche. L'accesso richiede autorizzazioni sufficienti per eseguire una query sulle tabelle di metadati del gruppo di disponibilità nonché eseguire una query sulle tabelle di metadati delle sottoscrizioni nella replica del database del server di pubblicazione.  

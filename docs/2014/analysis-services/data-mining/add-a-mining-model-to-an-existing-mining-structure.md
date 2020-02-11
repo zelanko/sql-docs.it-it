@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un modello di Data Mining a una struttura di Data Mining esistente | Microsoft Docs
+title: Aggiungere un modello di data mining a una struttura di data mining esistente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086375"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Aggiungere un modello di data mining a una struttura di data mining esistente
@@ -36,7 +36,7 @@ ms.locfileid: "66086375"
   
 4.  Fare clic su **OK**.  
   
- Nella scheda **Modelli di data mining** verrà visualizzato un nuovo modello di data mining. Nel modello verranno utilizzate le colonne predefinite presenti nella struttura. Per informazioni sull'impostazione delle proprietà di un modello di data mining, vedere [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md).  
+ Viene visualizzato un nuovo modello di data mining nella scheda **modelli di data mining** . Il modello utilizza le colonne predefinite presenti nella struttura. Per informazioni sull'impostazione delle proprietà di un modello di data mining, vedere [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  

@@ -1,5 +1,5 @@
 ---
-title: Completamento procedura guidata (Creazione guidata dimensione) | Microsoft Docs
+title: Completamento procedura guidata (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087601"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Completamento procedura guidata (Creazione guidata dimensione)
@@ -28,12 +28,12 @@ ms.locfileid: "66087601"
   
 -   Se necessario, generare lo schema appropriato per supportare la dimensione.  
   
- **Per aprire la creazione guidata dimensione**  
+ **Per aprire la Creazione guidata dimensione.**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome per la nuova dimensione.  
   
  **Anteprima**  
@@ -43,11 +43,11 @@ ms.locfileid: "66087601"
  Selezionare questa opzione per generare lo schema appropriato per il supporto della dimensione. Se si seleziona questa opzione, si aprirà la Generazione guidata schema.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è stato selezionato **Genera una tabella dei tempi nell'origine dati** oppure **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** nella pagina **Seleziona metodo di creazione** . Per altre informazioni, vedere [Seleziona metodo di creazione &#40;Creazione guidata dimensione&#41;](select-creation-method-dimension-wizard.md).  
+>  Questa opzione viene visualizzata solo se è stato selezionato **Genera una tabella dei tempi nell'origine dati** oppure **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** nella pagina **Seleziona metodo di creazione **. Per altre informazioni, vedere [Seleziona metodo di creazione &#40;Creazione guidata dimensione&#41;](select-creation-method-dimension-wizard.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

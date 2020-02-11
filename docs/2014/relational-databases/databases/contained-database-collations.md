@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872055"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna sono dipendenti dal database in cui viene creata la tabella, i problemi insorgono se l'utilizzo di tabelle temporanee vengono archiviate in `tempdb`. Le regole di confronto di `tempdb` corrisponde in genere le regole di confronto per l'istanza, che non deve necessariamente corrispondere le regole di confronto del database.  
+ Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna dipendono dal database in cui viene creata la tabella, si verificano problemi con l'utilizzo di tabelle temporanee archiviate in `tempdb`. Le regole di confronto `tempdb` di in genere corrispondono alle regole di confronto per l'istanza di, che non devono corrispondere alle regole di confronto del database.  
   
 ### <a name="example-2"></a>Esempio 2  
  Si consideri, ad esempio, il database precedente (cinese) usato in un'istanza con regole di confronto **Latin1_General** :  
@@ -111,14 +111,14 @@ AS BEGIN
 END;  
 ```  
   
- Si tratta di una funzione piuttosto particolare. Nelle regole di confronto tra maiuscole e minuscole, il @i nella clausola return non può eseguire l'associazione a una delle due @I o @??. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Ma nelle regole di confronto Turkish senza maiuscole/minuscole, @i viene associato a @??, e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
+ Si tratta di una funzione piuttosto particolare. Nelle regole di confronto con distinzione tra maiuscole @i e minuscole, nella clausola return non @I è possibile eseguire l'associazione a o @??. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Tuttavia, nelle regole di confronto turche senza distinzione tra maiuscole e minuscole, @i viene associato a @??, e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
   
 ## <a name="contained-databases"></a>Database indipendenti  
  Poiché uno degli obiettivi di progettazione dei database indipendenti è di renderli autosufficienti, è necessario eliminare la dipendenza dalle regole di confronto di istanza e `tempdb`. A questo scopo, nei database indipendenti viene introdotto il concetto di regole di confronto del catalogo. Tali regole vengono utilizzate per metadati di sistema e oggetti temporanei. Di seguito vengono illustrati i dettagli.  
   
  In un database indipendente vengono usate le regole di confronto del catalogo **Latin1_General_100_CI_AS_WS_KS_SC**. Si tratta delle stesse regole di confronto per tutti i database indipendenti in tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è possibile modificarle.  
   
- Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto del database sono uguali alle regole di confronto del database modello, ma può essere modificato dall'utente tramite un `CREATE` o `ALTER DATABASE` comando con i database non indipendente.  
+ Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto del database sono uguali a quelle del database modello, ma possono essere modificate dall'utente tramite `CREATE` un `ALTER DATABASE` comando o come con i database non indipendenti.  
   
  Nella clausola `CATALOG_DEFAULT` è disponibile la nuova parola chiave `COLLATE`, che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire che, in un database non indipendente, la parola chiave `CATALOG_DEFAULT` restituirà le regole di confronto del database correnti, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
   
@@ -131,7 +131,7 @@ END;
 |Dati temporanei (impostazione predefinita)|Regole di confronto TempDB|DATABASE_DEFAULT|  
 |Metadati|DATABASE_DEFAULT/CATALOG_DEFAULT|COLLATE|  
 |Metadati temporanei|Regole di confronto TempDB|COLLATE|  
-|Variabili|Regole di confronto di istanza|COLLATE|  
+|variables|Regole di confronto di istanza|COLLATE|  
 |Etichette Goto|Regole di confronto di istanza|COLLATE|  
 |Nomi di cursori|Regole di confronto di istanza|COLLATE|  
   
@@ -235,7 +235,7 @@ GO
  Il nome di oggetto '#A' non è valido.  
   
 ### <a name="example-3"></a>Esempio 3  
- Nell'esempio seguente viene illustrato il caso in cui il riferimento trova più corrispondenze originariamente distinte. Si inizierà innanzitutto `tempdb` (che ha le stesse regole di confronto della distinzione maiuscole/minuscole istanza) ed eseguire le istruzioni seguenti.  
+ Nell'esempio seguente viene illustrato il caso in cui il riferimento trova più corrispondenze originariamente distinte. Innanzitutto, si inizia in `tempdb` (che ha le stesse regole di confronto con distinzione tra maiuscole e minuscole dell'istanza) e si eseguono le istruzioni seguenti.  
   
 ```  
 USE tempdb;  
@@ -275,7 +275,7 @@ GO
   
  Il riferimento al nome della tabella temporanea '#a' è ambiguo e non può essere risolto. I possibili candidati sono '#a' e '#A'.  
   
-## <a name="conclusion"></a>Conclusione  
+## <a name="conclusion"></a>Conclusioni  
  Il comportamento delle regole di confronto dei database indipendenti è leggermente diverso da quello nei database non indipendenti. Questo comportamento è generalmente utile, in quanto consente l'indipendenza dell'istanza e favorisce la semplicità. È possibile che alcuni utenti riscontrino problemi, specialmente quando una sessione accede a database indipendenti e non indipendenti.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat | Microsoft Docs'
+title: 'Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891792"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
@@ -24,11 +24,11 @@ ms.locfileid: "62891792"
   
  Per questa esercitazione si configureranno le seguenti proprietà nella gestione connessione file flat:  
   
--   **Nomi di colonna:** Perché il file flat non presenta nomi di colonna, la gestione connessione File Flat crea automaticamente i nomi di colonna predefinito. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
+-   **Nomi delle colonne:** Poiché il file flat non ha nomi di colonna, la gestione connessione file flat crea nomi di colonna predefiniti. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
   
--   **Mapping dei dati:** I mapping dei tipi di dati specificato per la gestione connessione File Flat verranno utilizzati da tutti i componenti di origine dati file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
+-   **Mapping dei dati:** I mapping dei tipi di dati specificati per la gestione connessione file flat verranno utilizzati da tutti i componenti dell'origine dati file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
   
- Gestione connessione file flat fornisce informazioni sulle impostazioni locali per il file di dati. Se il computer non è configurato per l'uso dell'opzione Inglese (Stati Uniti), è necessario impostare proprietà aggiuntive nella finestra di dialogo **Editor gestione connessione file flat** .  
+ Gestione connessione file flat fornisce informazioni sulle impostazioni locali per il file di dati. Se il computer non è configurato per l'utilizzo dell'opzione Regional (lingua inglese) (Stati Uniti), è necessario impostare proprietà aggiuntive nella finestra di dialogo **Editor gestione connessione file flat** .  
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>Per aggiungere una gestione connessione file flat al pacchetto SSIS.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62891792"
   
     1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Fare clic sulla scheda **DOWNLOADS** .  
+    2.  Fare clic sulla scheda **Downloads** .  
   
     3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62891792"
   
 1.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Generale**.  
   
-2.  Impostare **Impostazioni locali** su Inglese (Stati Uniti) e **Tabella codici** su 1252.  
+2.  Impostare **impostazioni locali** su inglese (Stati Uniti) e **tabella codici** su 1252.  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>Per rinominare le colonne nella gestione connessione file flat  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62891792"
   
 2.  Nel riquadro delle proprietà apportare le seguenti modifiche:  
   
-    -   Modifica il **colonna 0** assegnare un nome proprietà `AverageRate`.  
+    -   Modificare la proprietà nome **colonna 0** in `AverageRate`.  
   
-    -   Modifica il **Column 1** assegnare un nome proprietà `CurrencyID`.  
+    -   Modificare la proprietà nome **colonna 1** in `CurrencyID`.  
   
-    -   Modifica il **Column 2** assegnare un nome proprietà `CurrencyDate`.  
+    -   Modificare la proprietà nome **colonna 2** in `CurrencyDate`.  
   
-    -   Modifica il **Column 3** assegnare un nome proprietà `EndOfDayRate`.  
+    -   Modificare la proprietà nome **colonna 3** in `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Per impostazione predefinita, le quattro colonne sono inizialmente impostate su un tipo di dati stringa [DT_STR] con un valore `OutputColumnWidth` di 50.  
@@ -77,7 +77,8 @@ ms.locfileid: "62891792"
   
 1.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Suggerisci tipi**.  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] indica automaticamente i tipi di dati più appropriati in base alle prime 200 righe di dati. È inoltre possibile modificare le opzioni suggerite in modo da campionare più o meno dati, specificare il tipo di dati predefinito per numeri interi o dati booleani oppure aggiungere spazi come spaziatura interna nelle colonne stringa.  
+     
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] indica automaticamente i tipi di dati più appropriati in base alle prime 200 righe di dati. È inoltre possibile modificare le opzioni suggerite in modo da campionare più o meno dati, specificare il tipo di dati predefinito per numeri interi o dati booleani oppure aggiungere spazi come spaziatura interna nelle colonne stringa.  
   
      Per il momento non apportare modifiche alle opzioni nella finestra di dialogo **Suggerisci tipi di colonne** e fare clic su **OK** in modo che [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggerisca i tipi di dati per le colonne. In questo modo verrà nuovamente visualizzato il riquadro **Avanzate** della finestra di dialogo **Editor gestione connessione file flat** in cui è possibile visualizzare i tipi di dati delle colonne suggeriti da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se si fa clic su **Annulla**non verranno indicati suggerimenti relativi ai metadati delle colonne e verrà usato il tipo di dati string predefinito, ovvero DT_STR.  
   
@@ -85,16 +86,16 @@ ms.locfileid: "62891792"
   
     |Colonna file flat|Tipo suggerito|Colonna di destinazione|Tipo destinazione|  
     |----------------------|--------------------|------------------------|----------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-     Il tipo di dati suggerito per il `CurrencyID` colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati `DimCurrency.CurrencyAlternateKey` è nchar (3), `CurrencyID` deve essere modificato da stringa [DT_STR] in stringa [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` è definito come un tipo di dati date; pertanto, `CurrencyDate` deve essere modificato da date [DT_Date] a database date [DT_DBDATE].  
+     Il tipo di dati suggerito per `CurrencyID` la colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati `DimCurrency.CurrencyAlternateKey` di è nchar (3) `CurrencyID` , deve essere modificato da String [DT_STR] a String [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` viene definito come tipo di dati Data; Pertanto, `CurrencyDate` deve essere modificato da date [DT_DATE] a data del database [DT_DBDATE].  
   
-2.  Nell'elenco, selezionare la colonna CurrencyID e nel riquadro Proprietà modificare il tipo di dati della colonna `CurrencyID` da stringa [DT_STR] in Unicode string [DT_WSTR].  
+2.  Nell'elenco selezionare la colonna CurrencyID e nel riquadro delle proprietà modificare il tipo di dati della colonna `CurrencyID` da string [DT_STR] alla stringa Unicode [DT_WSTR].  
   
-3.  Nel riquadro Proprietà modificare il tipo di dati della colonna `CurrencyDate` da date [DT_DATE] a database date [DT_DBDATE].  
+3.  Nel riquadro delle proprietà modificare il tipo di dati della colonna `CurrencyDate` da date [DT_DATE] a database date [DT_DBDATE].  
   
 4.  Fare clic su **OK**.  
   
@@ -102,7 +103,7 @@ ms.locfileid: "62891792"
  [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione connessione File flat](connection-manager/file-connection-manager.md)   
+ [Gestione connessione file flat](connection-manager/file-connection-manager.md)   
  [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md)  
   
   

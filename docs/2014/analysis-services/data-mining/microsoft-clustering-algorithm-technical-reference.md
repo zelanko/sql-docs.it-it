@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Microsoft Docs
+title: Riferimento tecnico per l'algoritmo Microsoft Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084025"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
@@ -35,7 +35,7 @@ ms.locfileid: "66084025"
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto del modello di data mining per i modelli di clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Esempi di query sul modello di clustering](clustering-model-query-examples.md)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66084025"
   
 |Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se presentasse due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
+|MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se disponesse di due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
 |NOT NULL|La colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -170,7 +170,7 @@ ms.locfileid: "66084025"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -181,6 +181,6 @@ ms.locfileid: "66084025"
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Esempi di query sul modello di clustering](clustering-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di clustering &#40;Analysis Services-Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modificare la finestra di dialogo Impostazioni (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo Cambia impostazioni (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088245"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cambia impostazioni (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Cambia impostazioni** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per cambiare le impostazioni mediante le quali viene controllata l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** . Per visualizzare la finestra di dialogo **Cambia impostazioni** , è possibile fare clic su **Cambia impostazioni** nella finestra di dialogo **Elabora** .  
   
 > [!NOTE]  
->  Le impostazioni specificate in questa finestra di dialogo sostituiscono le impostazioni predefinite ereditate dal database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] relative agli oggetti elencati nella finestra di dialogo **Elabora** .  
+>  Le impostazioni specificate in questa finestra di dialogo sostituiscono le impostazioni [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] predefinite ereditate dal database per gli oggetti elencati nella finestra di dialogo **elabora** .  
   
 ## <a name="options"></a>Opzioni  
  **Opzioni di elaborazione**  
@@ -35,27 +35,27 @@ ms.locfileid: "66088245"
  **Numero massimo attività parallele**  
  Consente di selezionare il numero massimo di attività eseguite in parallelo nell'ambito dell'operazione di elaborazione o di scegliere **Dipendente dal server** per consentire a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di selezionare il numero ottimale di attività parallele.  
   
- **Sequential**  
+ **Sequenziale**  
  Fare clic su questa opzione per elaborare gli oggetti in modo sequenziale.  
   
  **Modalità transazione**  
  Consente di scegliere la modalità di transazione utilizzata quando gli oggetti vengono elaborati in ordine sequenziale.  
   
--   **Una sola transazione** elabora tutti gli oggetti nella medesima transazione.  
+-   **Una transazione** elabora tutti gli oggetti nella stessa transazione.  
   
 -   **Transazioni separate** elabora tutti gli oggetti, inclusi quelli dipendenti, in transazioni separate.  
   
 > [!NOTE]  
->  Questa opzione è attivata solo se si seleziona **Sequenziale** .  
+>  Questa opzione è abilitata solo se si seleziona **sequenziale** .  
   
  **Opzione tabella writeback**  
  Selezionare l'opzione utilizzata per gestire una tabella writeback:  
   
--   **Crea** determina la creazione di una tabella writeback nel caso questa non esista Se esiste già una tabella writeback, si verifica un errore.  
+-   **Create** crea una tabella writeback se non esiste. Se esiste già una tabella writeback, si verifica un errore.  
   
--   **Crea sempre** crea una tabella writeback nel caso questa non esista oppure sovrascrive quella esistente.  
+-   **Create crea sempre** una tabella writeback se non esiste o sovrascrive la tabella writeback esistente, se esiste.  
   
--   **Usa tabella esistente** utilizza la tabella writeback esistente. Se non esiste alcuna tabella writeback, si verifica un errore.  
+-   **Usa esistente** utilizza la tabella writeback esistente, se esistente. Se non esiste alcuna tabella writeback, si verifica un errore.  
   
  **Elabora oggetti interessati**  
  Selezionare questa opzione per includere ed elaborare gli oggetti dipendenti da oggetti inclusi nell'operazione di elaborazione.  
@@ -69,28 +69,28 @@ ms.locfileid: "66088245"
  **Usa configurazione errori personalizzata**  
  Selezionare questa opzione per definire la configurazione degli errori relativa agli oggetti inclusi nell'operazione di elaborazione.  
   
- **Azione per errore chiave**  
+ **Azione errore chiave**  
  Consente di scegliere una delle azioni seguenti da eseguire quando viene rilevata una nuova chiave che non può essere ricercata durante l'elaborazione:  
   
 -   **Converti in sconosciuta** aggrega le informazioni relative al record nel membro sconosciuto.  
   
--   **Scarta record** esclude le informazioni relative al record dall'elaborazione dell'oggetto.  
+-   **Scarto record** esclude le informazioni per l'elaborazione del record con l'oggetto.  
   
  **Ignora conteggio errori**  
  Fare clic su questa opzione per ignorare qualsiasi eventuale errore che si verifichi durante l'elaborazione.  
   
- **Arresta in caso di errore**  
+ **Arresta in un errore**  
  Fare clic su questa opzione per arrestare l'elaborazione in caso di errori. Questa opzione implica l'attivazione delle impostazioni **Numero di errori** e **Azione in caso di errore** .  
   
  **Numero di errori**  
  Consente di immettere il numero di errori che verranno ignorati prima di arrestare l'elaborazione.  
   
- **Azione in caso di errore**  
+ **Azione in errore**  
  Consente di scegliere una delle azioni seguenti da eseguire se il numero di errori supera il valore impostato in **Numero di errori**:  
   
--   **Arresta elaborazione** termina l'operazione di elaborazione.  
+-   **Interrompi elaborazione** termina l'operazione di elaborazione.  
   
--   **Arresta registrazione** arresta la registrazione degli errori senza però interrompere l'elaborazione.  
+-   **Arresta registrazione** arresta la registrazione degli errori, ma continua l'operazione di elaborazione.  
   
  **Chiave non trovata**  
  Specificare una delle azioni seguenti da eseguire quando non viene trovata una chiave durante l'elaborazione di un oggetto:  
@@ -119,7 +119,7 @@ ms.locfileid: "66088245"
   
 -   **Segnala e arresta** segnala l'errore e arresta l'operazione di elaborazione.  
   
- **Chiave Null non consentita**  
+ **Chiave null non consentita**  
  Consente di specificare una delle azioni seguenti da eseguire se viene individuata una chiave Null non consentita durante l'elaborazione di un oggetto:  
   
 -   **Ignora errore** ignora l'errore.  
@@ -138,7 +138,7 @@ ms.locfileid: "66088245"
  Fare clic su questa opzione per elaborare gli oggetti dipendenti da altri oggetti selezionati nella finestra di dialogo **Elabora** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Elaborare la finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Finestra di dialogo elabora &#40;Analysis Services-Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

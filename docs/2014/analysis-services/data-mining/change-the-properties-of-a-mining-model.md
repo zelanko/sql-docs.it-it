@@ -1,5 +1,5 @@
 ---
-title: Modificare le proprietà di un modello di Data Mining | Microsoft Docs
+title: Modificare le proprietà di un modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085875"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modificare le proprietà di un modello di data mining
@@ -25,9 +25,9 @@ ms.locfileid: "66085875"
   
  Le proprietà del modello seguenti sono associate a editor avanzati che è possibile utilizzare per creare espressioni o configurare proprietà più complesse. Di seguito sono elencate queste proprietà.  
   
--   `Filter` Proprietà: Apre la [filtro dei Set di dati o finestra di dialogo Filtro modello](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter`Proprietà: apre la finestra di [dialogo filtro del set di dati o filtro modello](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Proprietà: Apre la [finestra di dialogo parametri algoritmo &#40;visualizzazione di modelli di Data Mining&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters`Proprietà: apre la finestra di [dialogo parametri algoritmo &#40;&#41;visualizzazione modelli di data mining ](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Per informazioni su come impostare le proprietà in un modello di data mining, vedere [Colonne del modello di data mining](mining-model-columns.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66085875"
 2.  Nella finestra **Proprietà** a destra dello schermo evidenziare il valore corrispondente alla proprietà da modificare e quindi immettere il nuovo valore.  
   
     > [!NOTE]  
-    >  Se l'utilizzo della colonna è impostata su `Ignore`, il **proprietà** finestra per la colonna è vuota.  
+    >  Se l'utilizzo della colonna è impostato `Ignore`su, la finestra **Proprietà** per la colonna è vuota.  
   
      Il nuovo valore diventerà effettivo quando si seleziona un elemento diverso nella finestra di progettazione.  
   

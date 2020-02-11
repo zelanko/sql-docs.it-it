@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081265"
 ---
 # <a name="exploring-and-cleaning-data"></a>Esplorazione e pulizia dei dati
@@ -32,13 +32,13 @@ ms.locfileid: "66081265"
   
 -   Conversione dei tipi di dati o categorizzazione dei valori se necessario per l'analisi.  
   
- Se si ha familiarità con la modellazione dei dati, è consigliabile leggere l'argomento correlato [elenco di controllo di preparazione per il Data Mining](checklist-of-preparation-for-data-mining.md).  
+ Se non si ha familiarità con la modellazione dei dati, è consigliabile leggere l'argomento correlato [elenco di controllo della preparazione per il data mining](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Strumenti di preparazione dei dati  
  I componenti aggiuntivi Data mining per Office includono i seguenti strumenti per la pulizia e la preparazione dei dati:  
   
 ### <a name="explore-data"></a>Esplorazione dati  
- Usare la **Esplora dati** procedura guidata per le attività di preparazione dei dati:  
+ Utilizzare la procedura guidata **Esplora dati** per le attività di preparazione dei dati seguenti:  
   
 -   Visualizzare un'anteprima dei dati per identificare gli errori che devono essere corretti prima dell'analisi.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66081265"
   
 -   Identificare le colonne utili per l'analisi e pianificare la fase di modellazione dei dati.  
   
- [Esplorare i dati &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md).  
+ [Esplorare i dati &#40;SQL Server componenti aggiuntivi Data Mining&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Rilevamento e gestione degli outlier  
- Il **Outlier** guidata grafici la distribuzione dei valori nei dati e consente di rimuovere i valori estremi. Usare la **Outlier** dello strumento per le attività di preparazione dei dati seguenti:  
+ La procedura guidata **outlier** esegue il grafico della distribuzione dei valori nei dati e consente di rimuovere i valori estremi. Utilizzare lo strumento **outlier** per le seguenti attività di preparazione dei dati:  
   
 -   Determinare se i singoli valori siano affidabili, in base ai modelli individuati nei dati.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "66081265"
   
 -   Definire l'ambito di un modello in un intervallo di valori specifico. Se, ad esempio, si hanno outlier per un negozio specifico, è possibile eliminare tale valore e ottenere un modello in grado di eseguire una migliore stima degli altri negozi.  
   
- [Outlier &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](outliers-sql-server-data-mining-add-ins.md).  
+ [Outlier &#40;SQL Server i componenti aggiuntivi Data Mining&#41;](outliers-sql-server-data-mining-add-ins.md).  
   
 ### <a name="relabel-and-bin-data"></a>Modifica etichette e categorizzazione dati  
- Il **Rietichettare** guidata Raggruppa i dati per i valori in modo che sia possibile modificare le etichette dei dati. Utilizzare lo strumento Modifica etichette per le attività di preparazione dei dati seguenti:  
+ La procedura guidata modifica **etichette** consente di raggruppare i dati in base ai valori in modo che sia possibile modificare le etichette nei dati. Utilizzare lo strumento Modifica etichette per le attività di preparazione dei dati seguenti:  
   
 -   Modificare i codici numerici utilizzati nei risultati di un sondaggio con una descrizione del significato dei codici.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "66081265"
   
 -   Suddividere i dati creando gruppi per rappresentare intervalli di numeri.  
   
-     Potrebbe ad esempio, si desidera sostituire, ad esempio una colonna Income dei numeri con etichette **reddito - moderato** e **reddito - alto**.  
+     È possibile, ad esempio, sostituire una colonna Income dei numeri con etichette quali **reddito-moderato** e **reddito-alto**.  
   
 -   Comprimere i valori discreti in categorie.  
   
      Se ad esempio si possiedono troppi prodotti singoli per poter individuare un modello di acquisto, è possibile provare ad assegnare i prodotti a categorie più ampie.  
   
- [Modifica delle etichette &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Modifica etichette &#40;SQL Server i componenti aggiuntivi Data mining&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
 ### <a name="cleanse-data"></a>Pulizia dei dati  
  La pulizia dei dati include un'ampia gamma di attività, la maggior parte delle quali sono supportate da componenti aggiuntivi  
@@ -83,24 +83,24 @@ ms.locfileid: "66081265"
   
 -   Individuare i valori mancanti, quindi rimuoverli o assegnare loro un valore appropriato come medio, Null o un altro valore.  
   
- [Esplorare i dati &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+ [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
- [Modifica delle etichette &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Modifica etichette &#40;SQL Server i componenti aggiuntivi Data mining&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
  [Estendi da esempio](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ### <a name="sample-data"></a>Dati di esempio  
  La procedura guidata Dati di esempio consente di creare set di dati equilibrati per il training e il testing dei modelli in due modi.  
   
--   **Campionamento casuale.** Utilizzare questa opzione per estrarre un set di dati rappresentativo da un più ampio set di dati, da utilizzare come training o test. Usano i componenti aggiuntivi Data Mining *campionamento stratificato* per garantire che viene ottenuto un set di valori equilibrato per ciascuna variabile campionata.  
+-   **Campionamento casuale.** Utilizzare questa opzione per estrarre un set di dati rappresentativo da un più ampio set di dati, da utilizzare come training o test. I componenti aggiuntivi Data mining utilizzano il *campionamento stratificato* per assicurare che venga ottenuto un set di valori bilanciato per ogni variabile campionata.  
   
 -   **Sovracampionamento.** Utilizzare questa opzione quando la quantità di dati a disposizione è inferiore a quella che si vorrebbe per un risultato di destinazione e occorre ponderare i dati con più precisione. Le frodi possono essere relativamente rare, ma è possibile sovracampionare i casi di frode per ottenere dati adeguati per la creazione di un modello.  
   
- [Dati di esempio &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md).  
+ [&#40;di dati di esempio SQL Server&#41;componenti aggiuntivi Data mining ](sample-data-sql-server-data-mining-add-ins.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un modello di Data Mining](creating-a-data-mining-model.md)   
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Distribuzione e scalabilità di modelli di Data Mining &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
+ [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

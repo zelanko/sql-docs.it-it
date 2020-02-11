@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Utilizzo di parametri con il modello di distribuzione | Microsoft Docs'
+title: 'Lezione 6: utilizzo di parametri con il modello di distribuzione del progetto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890546"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lezione 6: Uso di parametri con il modello di distribuzione del progetto
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto
   In SQL Server 2012 è disponibile un nuovo modello di distribuzione in cui è possibile distribuire i progetti nel server Integration Services. Il server Integration Services consente di gestire ed eseguire pacchetti e di configurare i valori di runtime per i pacchetti.  
   
- In questa lezione si modificherà il pacchetto creato nella [lezione 5: Aggiunta delle configurazioni di pacchetto per il modello di distribuzione pacchetto](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) per utilizzare il modello di distribuzione. Sostituire il valore di configurazione con un parametro per specificare la posizione dei dati di esempio. È inoltre possibile copiare il pacchetto della lezione 5 completato incluso nell'esercitazione.  
+ In questa lezione verrà modificato il pacchetto creato nella [lezione 5: aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto per l'](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) utilizzo del modello di distribuzione del progetto. Sostituire il valore di configurazione con un parametro per specificare la posizione dei dati di esempio. È inoltre possibile copiare il pacchetto della lezione 5 completato incluso nell'esercitazione.  
   
  Mediante la configurazione guidata progetti di Integration Services convertire il progetto nel modello di distribuzione del progetto e utilizzare un parametro anziché un valore di configurazione per impostare la proprietà Directory. In questa lezione vengono illustrati solo alcuni dei passaggi per convertire i pacchetti esistenti SSIS nel nuovo modello di distribuzione del progetto.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62890546"
   
 1.  [Passaggio 1: Copia del pacchetto della lezione 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Passaggio 2: Conversione del progetto nel modello di distribuzione progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Passaggio 2: Conversione del progetto nel modello di distribuzione del progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
 3.  [Passaggio 3: Test del pacchetto della lezione 6](lesson-6-3-testing-the-lesson-6-package.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati SQL Server in .NET Framework | Microsoft Docs
+title: SQL Server tipi di dati nel .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874533"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipi di dati di SQL Server in .NET Framework
@@ -37,7 +37,7 @@ ms.locfileid: "62874533"
  [Regole di confronto e tipi di dati di integrazione CLR](collation-and-clr-integration-data-types.md)  
  Viene descritta la gestione delle regole di confronto con l'integrazione CLR.  
   
- [Gestione degli oggetti di grandi dimensioni &#40;LOB&#41; parametri in CLR](handling-large-object-lob-parameters-in-the-clr.md)  
+ [Gestione di Large Object &#40;i parametri LOB&#41; in CLR](handling-large-object-lob-parameters-in-the-clr.md)  
  Viene descritto come passare tipi LOB tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR.  
   
  [Mapping dei dati dei parametri CLR](mapping-clr-parameter-data.md)  

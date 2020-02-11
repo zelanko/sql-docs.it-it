@@ -1,5 +1,5 @@
 ---
-title: Nome di elemento per Index (DTA) | Microsoft Docs
+title: Elemento Name per index (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62866216"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento Name per Index (DTA)
@@ -37,8 +37,9 @@ ms.locfileid: "62866216"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -46,7 +47,7 @@ ms.locfileid: "62866216"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Index &#40;DTA&#41;](index-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

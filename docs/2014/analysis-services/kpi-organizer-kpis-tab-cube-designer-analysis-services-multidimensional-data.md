@@ -1,5 +1,5 @@
 ---
-title: Libreria KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Libreria KPI (scheda KPI, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079398"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -37,16 +37,16 @@ ms.locfileid: "66079398"
 |Opzione|Definizione|  
 |------------|----------------|  
 |**Nuovo indicatore KPI**|Selezionare questa opzione per visualizzare l' **Editor form KPI** e creare un nuovo indicatore KPI. Per altre informazioni sull' **Editor form KPI**, vedere [Editor form KPI &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Sposta su**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** superiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: Questa opzione è disabilitata se l'indicatore KPI selezionato non può essere ulteriormente spostato.|  
-|**Sposta giù**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** inferiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: Questa opzione è disabilitata se l'indicatore KPI selezionato non può essere ulteriormente spostato.|  
+|**Sposta su**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** superiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: se non è possibile spostare ulteriormente l'indicatore KPI, questa opzione è disabilitata.|  
+|**Sposta giù**|Scegliere questa opzione per spostare l'indicatore KPI selezionato in una posizione del riquadro **Libreria KPI** inferiore e determinare l'ordine di visualizzazione degli indicatori KPI in **Visualizzatore KPI**.<br /><br /> Nota: se non è possibile spostare ulteriormente l'indicatore KPI, questa opzione è disabilitata.|  
 |**Elimina**|Selezionare questa opzione per eliminare l'indicatore KPI specificato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Gli indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Strumenti di calcolo &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor Form KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Visualizzatore KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Strumenti di calcolo &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor form KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Visualizzatore KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

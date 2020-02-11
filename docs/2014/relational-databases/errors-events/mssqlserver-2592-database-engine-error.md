@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e8c6d2cc2803a222e831a32a3f3e803a0433068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914348"
 ---
-# <a name="mssqlserver2592"></a>MSSQLSERVER_2592
+# <a name="mssqlserver_2592"></a>MSSQLSERVER_2592
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62914348"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_REPAIR_INDEX_REBUILT|  
-|Testo del messaggio|Correzione: L'indice INDEX_TYPE è stato ricompilato per l'oggetto nel database 'DATABASE'.|  
+|Testo del messaggio|Correzione: l'indice INDEX_TYPE è stato ricompilato per l'oggetto 'OBJECT' del database 'DATABASE'.|  
   
 ## <a name="explanation"></a>Spiegazione  
  REPAIR indica che un indice è stato ricompilato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

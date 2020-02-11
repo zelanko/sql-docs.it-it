@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18db8cfd54a9df36564d64c0cd94407bfefb21f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914795"
 ---
-# <a name="mssqlserver3151"></a>MSSQLSERVER_3151
+# <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62914795"
  Si tratta di un messaggio di errore generale che indica vari problemi relativi al database **master**.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Per ulteriori informazioni esaminare i log degli errori. Per creare un database **master** utilizzabile, eseguire Setup.exe con l'opzione REBUILDDATABASE. Per altre informazioni vedere "procedura: Installare SQL Server dal Prompt dei comandi"nella documentazione Online di SQL Server.  
+ Per ulteriori informazioni esaminare i log degli errori. Per creare un database **master** utilizzabile, eseguire Setup.exe con l'opzione REBUILDDATABASE. Per ulteriori informazioni, vedere "Procedura: Installazione di SQL Server dal prompt dei comandi" nella documentazione online di SQL Server.  
   
   

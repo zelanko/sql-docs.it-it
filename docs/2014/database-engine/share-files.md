@@ -1,5 +1,5 @@
 ---
-title: Condivisione di file | Microsoft Docs
+title: Condividi file | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843557"
 ---
 # <a name="share-files"></a>Condivisione di file
@@ -34,11 +34,11 @@ ms.locfileid: "62843557"
   
 1.  In Esplora soluzioni selezionare la cartella o il progetto in cui si desidera posizionare i file condivisi.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente**, quindi fare clic su **condivisione**.  
+2.  Scegliere **controllo del codice sorgente**dal menu **file** , quindi fare clic su **Condividi**.  
   
-3.  Nel **condividere con** nella finestra di dialogo Sfoglia l'elenco di directory per l'elemento che si desidera condividere e fare clic su tale elemento.  
+3.  Nella finestra di dialogo **Condividi con** individuare l'elemento che si desidera condividere nell'elenco di directory, quindi fare clic su tale elemento.  
   
-4.  Fare clic su **condivisione**.  
+4.  Fare clic su **Condividi**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)  

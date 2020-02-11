@@ -19,16 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875084"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
-  In questo argomento viene illustrato come visualizzare o modificare il modello di recupero di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario (e possibile) eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento. Il database **modello** imposta il modello di recupero predefinito dei nuovi database.  
+  In questo argomento viene illustrato come visualizzare o modificare il modello di recupero di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario e possibile eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento. Il database **modello** imposta il modello di recupero predefinito dei nuovi database.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,19 +36,19 @@ ms.locfileid: "62875084"
   
      [Sicurezza](#Security)  
   
--   **Per visualizzare o modificare il modello di recupero di un database, utilizzando:**  
+-   **Per visualizzare o modificare il modello di recupero di un database utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Indicazioni sul completamento:**  [Dopo la modifica del modello di recupero](#FollowUp)  
+-   **Suggerimenti per il completamento:**  [dopo la modifica del modello di recupero](#FollowUp)  
   
 -   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Prima di passare dal modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, eseguire il backup del log delle transazioni.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62875084"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Per visualizzare o modificare il modello di recupero  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62875084"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Per visualizzare il modello di recupero  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Indicazioni sul completamento: Dopo la modifica del modello di recupero  
+##  <a name="FollowUp"></a>Suggerimenti per il completamento: dopo la modifica del modello di recupero  
   
--   **Dopo il passaggio tra i modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk**  
+-   **Dopo il cambio tra i modelli di recupero con registrazione minima delle operazioni bulk e con registrazione completa**  
   
     -   Dopo il completamento delle operazioni bulk, tornare immediatamente alla modalità di recupero con registrazione completa.  
   
@@ -128,7 +128,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!NOTE]  
         >  La strategia di backup rimane invariata, cioè continua l'esecuzione di backup del database, del log e differenziali periodici.  
   
--   **Dopo il passaggio dal modello di recupero con registrazione minima**  
+-   **Dopo il cambio dal modello di recupero con registrazione minima**  
   
     -   Immediatamente dopo il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, eseguire un backup di database completo o differenziale per avviare la catena di log.  
   
@@ -140,7 +140,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!IMPORTANT]  
         >  Se non si esegue il backup del log con la necessaria frequenza, il log delle transazioni può espandersi fino a esaurire lo spazio su disco.  
   
--   **Dopo il passaggio al modello di recupero con registrazione minima**  
+-   **Dopo il trasferimento al modello di recupero con registrazione minima**  
   
     -   Interrompere tutti i processi pianificati per l'esecuzione del backup del log delle transazioni.  
   
@@ -154,11 +154,11 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
--   [Abilitare o disabilitare un processo](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) nella documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [Piani di manutenzione](../maintenance-plans/maintenance-plans.md) del database [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (nella documentazione online di)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli di recupero &#40;SQL Server&#41;](recovery-models-sql-server.md)   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873062"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Visualizzare un report sui set di raccolta (SQL Server Management Studio)
@@ -48,15 +48,15 @@ ms.locfileid: "62873062"
  **Data inizio**  
  Immettere una data iniziale per i dati del report o selezionarne una dal calendario.  
   
- **Ora inizio**  
+ **Ora di inizio**  
  Immettere un'ora iniziale per i dati del report o fare clic sulle frecce per specificarne una.  
   
- **Durata**  
+ **Duration**  
  Specificare l'intervallo di tempo da includere nel report. Il valore predefinito è 240 minuti. I valori che è possibile selezionare sono 15 minuti, 60 minuti, 240 minuti (4 ore), 720 minuti (12 ore) e 1440 minuti (24 ore).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](data-collection.md)   
  [Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
- [Configurare il data warehouse di gestione &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
+ [Configurazione del data warehouse di gestione &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

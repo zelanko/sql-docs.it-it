@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913750"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62913750"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE), pagina PG_ID, riga R_ID. DBCC ha rilevato una pulizia incompleta causata da un'operazione di compilazione di un indice online. Valore della colonna di elenco degli elementi da eliminare VALUE.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE), pagina PG_ID, riga ROW_ID. DBCC ha rilevato una pulizia incompleta causata da un'operazione di compilazione di un indice online. Valore della colonna di elenco degli elementi da eliminare VALUE.|  
   
 ## <a name="explanation"></a>Spiegazione  
  È stata rilevata una build di un indice online incompleta per l'oggetto *O_ID*, indice *I_ID* e partizione *PN_ID*. Tale evento è dimostrato dalla presenza di una colonna di elenco degli elementi da eliminare nella riga *R_ID*. Questa colonna viene utilizzata durante la riconciliazione di record di più origini per la compilazione di un indice online. Nel messaggio di errore viene inoltre indicato il valore della colonna di elenco degli elementi da eliminare.  

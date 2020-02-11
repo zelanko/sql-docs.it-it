@@ -1,5 +1,5 @@
 ---
-title: Visualizzare la Formula per una serie temporale (Data Mining) modello | Microsoft Docs
+title: Visualizzazione della formula per un modello Time Series (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,30 +18,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082602"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Visualizzare la formula per un modello Time Series (Data Mining)
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData Visualizzatore Time Series progettazione Data Mining fornisce il modo più semplice per visualizzare i dettagli dell'equazione di regressione utilizzata in un modello time series.  
+  Nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] finestra di progettazione di data mining Visualizzatore Time Series è disponibile il modo più semplice per visualizzare i dettagli dell'equazione di regressione utilizzata in un modello Time Series.  
   
- È possibile estrarre la formula di regressione per un modello Time Series eseguendo una query sul contenuto del modello. Tuttavia, per visualizzare la formula ARTXP o ARIMA completa, è consigliabile usare la **legenda Data Mining** del [visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), che consente di elencare tutte le costanti in un formato leggibile.  
+ È possibile estrarre la formula di regressione per un modello Time Series eseguendo una query sul contenuto del modello. Tuttavia, per visualizzare la formula ARTXP o ARIMA completa, è consigliabile utilizzare **Legenda data mining** del [Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), che presenta tutte le costanti in un formato leggibile.  
   
  Se si crea un modello misto, le analisi ARIMA e ARTXP vengono create in alberi separati e unite in join al nodo radice che rappresenta il modello. Le strutture degli alberi ARIMA e ARTXP sono molto diverse. Ad esempio, l'albero ARTXP è di fatto un albero, come un albero delle decisioni, mentre l'albero ARIMA rappresenta una serie di medie mobili. Pertanto, anche se le due rappresentazioni vengono presentate per praticità in un solo modello, devono essere considerate come due modelli indipendenti. Anche le equazioni sono completamente diverse e non possono essere combinate né confrontate.  
   
- È anche possibile visualizzare i modelli time series utilizzando la [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). Per altre informazioni sul contenuto di un modello time series, vedere [contenuto del modello di Data Mining per i modelli Time Series &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ È inoltre possibile visualizzare i modelli Time Series utilizzando [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). Per ulteriori informazioni sul contenuto di un modello Time Series, vedere il contenuto dei modelli di [data mining per i modelli Time series &#40;Analysis Services-Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Per visualizzare la formula di regressione ARTXP per un modello Time Series  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]selezionare il modello Time Series da visualizzare e fare clic su **Sfoglia**.  
   
-     -oppure-  
+     -- o --  
   
      In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]selezionare il modello Time Series e fare clic sulla scheda **Visualizzatore modello di data mining** .  
   
-2.  Fare clic sulla scheda **Modello** .  
+2.  Fare clic sulla scheda **Model** (Modello).  
   
 3.  Se il modello contiene più alberi, selezionare un solo albero nell'elenco a discesa **Albero** .  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66082602"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]selezionare il modello Time Series da visualizzare e fare clic su **Sfoglia**.  
   
-     -oppure-  
+     -- o --  
   
      In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]selezionare il modello Time Series e fare clic sulla scheda **Visualizzatore modello di data mining** .  
   
-2.  Fare clic sulla scheda **Modello** .  
+2.  Fare clic sulla scheda **Model** (Modello).  
   
 3.  Se il modello contiene più alberi, selezionare un solo albero nell'elenco a discesa **Albero** .  
   
@@ -78,8 +78,8 @@ ms.locfileid: "66082602"
 5.  Se **Legenda data mining** non è disponibile, fare clic con il pulsante destro del mouse sul nodo e scegliere **Mostra legenda**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Esempi di query sui modelli Time Series](time-series-model-query-examples.md)  
+ [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Time Series Model Query Examples](time-series-model-query-examples.md)  
   
   

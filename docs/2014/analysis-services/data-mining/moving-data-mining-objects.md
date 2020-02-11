@@ -1,5 +1,5 @@
 ---
-title: Lo spostamento di oggetti di Data Mining | Microsoft Docs
+title: Trasferimento di oggetti di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083303"
 ---
 # <a name="moving-data-mining-objects"></a>Spostamento di oggetti di data mining
@@ -47,11 +47,12 @@ ms.locfileid: "66083303"
  Per altre informazioni sulla distribuzione di Analysis Services, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Scripting  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi linguaggi che è possibile usare per generare script di oggetti.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi linguaggi che è possibile usare per generare script di oggetti.  
   
--   **XMLA**: È possibile generare uno script di oggetti usando XMLA facendo clic con gli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire lo script, aprirlo in una finestra **Query XMLA** nel server di destinazione.  
+-   **XMLA**: è possibile generare script per oggetti utilizzando XMLA facendo clic con il [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]pulsante destro del mouse su oggetti in. Per eseguire lo script, aprirlo in una finestra **Query XMLA** nel server di destinazione.  
   
--   **DMX**: È possibile creare script tramite modelli o uno dei generatori di query forniti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   **DMX**: è possibile creare script tramite modelli o uno dei generatori di query forniti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
  Si noti, tuttavia, che sono presenti differenze nelle attività che è possibile eseguire con ogni linguaggio di scripting:  
   
@@ -63,19 +64,20 @@ ms.locfileid: "66083303"
   
 -   Solo DMX supporta il training di un modello con i dati dell'applicazione. Inoltre, l'istruzione DMX INSERT INTO supporta il training di un modello senza fornire valori per una colonna chiave.  
   
- Per altre informazioni, vedere [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ Per ulteriori informazioni, vedere [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Backup e ripristino  
- Le operazioni di backup e ripristino di un intero database di Analysis Services sono il metodo ottimale se la soluzione di data mining si basa su oggetti OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuove funzionalità di backup e ripristino che rendono più veloci e facili le operazioni di backup del database.  
+ Le operazioni di backup e ripristino di un intero database di Analysis Services sono il metodo ottimale se la soluzione di data mining si basa su oggetti OLAP. 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre nuove funzionalità di backup e ripristino che rendono più veloci e facili le operazioni di backup del database.  
   
  Per altre informazioni, vedere [Backup e ripristino di database di Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Esportazione e importazione  
  Le operazioni di esportazione e reimportazione di modelli e strutture di data mining mediante le istruzioni DMX costituiscono il modo più semplice per spostare o eseguire il backup di singoli oggetti di data mining relazionali. Per ulteriori informazioni sulla sintassi DMX per queste operazioni, vedere i seguenti argomenti:  
   
--   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
+-   [ESPORTA &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
+-   [IMPORTA &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  Se si specifica l'opzione INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esporterà anche la definizione di eventuali viste origine dati obbligatorie e, durante l'importazione del modello o della struttura, verrà ricreata la vista origine dati nel server di destinazione. Al termine dell'importazione del modello, assicurarsi di impostare le autorizzazioni di data mining necessarie per l'oggetto.  
   

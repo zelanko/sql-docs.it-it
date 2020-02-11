@@ -1,5 +1,5 @@
 ---
-title: Impostare la proprietà Usage | Microsoft Docs
+title: Imposta proprietà utilizzo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077173"
 ---
 # <a name="set-usage-property"></a>Impostare la proprietà Usage
   È possibile impostare l'utilizzo di un attributo mediante la visualizzazione **Struttura dimensione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando si imposta l'utilizzo di un attributo, le modifiche apportate non hanno effetto fino a quando non viene elaborata la dimensione. Per altre informazioni, vedere [elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+ Quando si imposta l'utilizzo di un attributo, le modifiche apportate non hanno effetto fino a quando non viene elaborata la dimensione. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-set-usage-for-an-attribute"></a>Per impostare l'utilizzo di un attributo  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66077173"
   
 2.  In **Attributi**fare clic con il pulsante destro del mouse sull'attributo di cui si desidera impostare l'utilizzo, scegliere **Imposta utilizzo attributi**e quindi selezionare una delle opzioni seguenti:  
   
-    -   **Regular**  
+    -   **Regolare**  
   
-    -   **Key**  
+    -   **Chiave**  
   
     -   **Parent**  
   

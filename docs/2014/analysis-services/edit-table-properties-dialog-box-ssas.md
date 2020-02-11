@@ -1,5 +1,5 @@
 ---
-title: Modifica finestra di dialogo Proprietà tabella (SSAS) | Microsoft Docs
+title: Finestra di dialogo Modifica proprietà tabella (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081439"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Finestra di dialogo Modifica proprietà tabella (SSAS)
@@ -43,7 +43,7 @@ ms.locfileid: "66081439"
 > [!NOTE]  
 >  Quando si modifica l'origine dati di una tabella, essenzialmente si sostituisce il contenuto della tabella corrente con il contenuto della nuova tabella di origine.  
   
- **Nomi delle colonne**  
+ **Nomi colonne da**  
  |||  
 |-|-|  
 |**Origine**|Selezionare questa opzione per sostituire i nomi delle colonne correnti con i nomi delle colonne della tabella di origine selezionata.|  
@@ -52,7 +52,7 @@ ms.locfileid: "66081439"
  **Aggiorna anteprima**  
  Fare clic per visualizzare le colonne di dati nella tabella di origine attualmente selezionata.  
   
- **Passare a**  
+ **Passa a**  
  |||  
 |-|-|  
 |**Anteprima tabella**|Selezionare questa opzione per visualizzare l'anteprima della tabella selezionata e un numero limitato di righe di dati.|  
@@ -80,7 +80,7 @@ ms.locfileid: "66081439"
  **Nome connessione**  
  Visualizza il nome della connessione attualmente in uso.  
   
- **Passare a**  
+ **Passa a**  
  |||  
 |-|-|  
 |**Anteprima tabella**|Selezionare questa opzione per visualizzare l'anteprima della tabella selezionata e alcune righe di dati.|  
@@ -89,10 +89,10 @@ ms.locfileid: "66081439"
  **Istruzione SQL**  
  Visualizza l'istruzione SQL eseguita sull'origine dati corrente per recuperare le righe. Per impostazione predefinita, vengono recuperate tutte le righe, tuttavia è possibile anche recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
   
- **Validate**  
+ **Convalida**  
  Fare clic per verificare che l'istruzione sia sintatticamente corretta per l'origine dati e il provider selezionati.  
   
- **Progetta**  
+ **Progettazione**  
  Fare clic per aprire una finestra Progettazione query visiva e compilare un'istruzione per la query. Per informazioni sull'utilizzo della finestra di progettazione, premere F1 dalla finestra di progettazione.  
   
  **OK**  

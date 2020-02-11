@@ -1,5 +1,5 @@
 ---
-title: Attivare e disattivare la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo abilitazione-disabilitazione writeback (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081291"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Attivare e disattivare la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Abilita-Disabilita writeback (Analysis Services-Dati multidimensionali)
   La finestra di dialogo **Enable/Disable Writeback** (Abilita/Disabilita writeback) attiva o disabilita il writeback per un gruppo di misure in un cubo. L'attivazione del writeback su un gruppo di misure definisce una partizione writeback e crea una tabella writeback per tale gruppo di misure. La disabilitazione del writeback su un gruppo di misure elimina la partizione writeback ma non la tabella writeback, per evitare una perdita imprevista di dati. La finestra di dialogo **Enable/Disable Writeback** (Abilita/Disabilita writeback) può essere visualizzata nei modi seguenti:  
   
 -   Facendo clic su **Impostazioni writeback** nel riquadro **Gruppi di misure** della scheda **Partizioni** in Progettazione cubi.  
@@ -39,7 +39,7 @@ ms.locfileid: "66081291"
 > [!NOTE]  
 >  Se il writeback non è abilitato questa opzione non è disponibile.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per visualizzare la finestra di dialogo **Gestione connessione** e definire una nuova origine dei dati che deve contenere la tabella writeback.  
   
 > [!NOTE]  

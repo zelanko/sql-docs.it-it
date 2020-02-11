@@ -1,5 +1,5 @@
 ---
-title: Evidenzia eccezioni (strumenti di analisi tabelle per Excel) | Microsoft Docs
+title: Evidenziare le eccezioni (strumenti di analisi tabelle per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,34 +14,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080760"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Evidenzia eccezioni (Strumenti di analisi tabelle per Excel)
-  ![Pulsante Evidenzia eccezioni sulla barra multifunzione](media/tat-highlightex.gif "pulsante Evidenzia eccezioni sulla barra multifunzione")  
+  ![Pulsante Evidenzia eccezioni sulla barra multifunzione](media/tat-highlightex.gif "Pulsante Evidenzia eccezioni sulla barra multifunzione")  
   
- Talvolta i dati potrebbero contenere valori particolari. Potrebbe, ad esempio, essere indicata un'età di 5 anni per un proprietario di un immobile. Questi valori, spesso chiamati *outlier*, potrebbero essere errati a causa di un errore di input dei dati o potrebbero indicare tendenze anomale. In entrambi i casi, le eccezioni possono influire negativamente sulla qualità dell'analisi. Il **evidenzia eccezioni** strumento consente di trovare questi valori e controllarle per un'ulteriore azione.  
+ Talvolta i dati potrebbero contenere valori particolari. Potrebbe, ad esempio, essere indicata un'età di 5 anni per un proprietario di un immobile. Questi valori, spesso denominati *outlier*, potrebbero essere errati a causa di un errore di input dei dati o potrebbero indicare tendenze insolite. In entrambi i casi, le eccezioni possono influire negativamente sulla qualità dell'analisi. Lo strumento **Evidenzia eccezioni** consente di trovare questi valori ed esaminarli per ulteriori azioni.  
   
- Il **evidenzia eccezioni** possibile utilizzare lo strumento con l'intero intervallo di dati in una tabella di dati di Excel, oppure è possibile selezionare solo alcune colonne. È inoltre possibile modificare il valore di soglia che determina l'intervallo di variabilità dei dati, in modo da individuare un numero maggiore o minore di eccezioni.  
+ Lo strumento **Evidenzia eccezioni** può funzionare con l'intero intervallo di dati in una tabella dati di Excel oppure è possibile selezionare solo alcune colonne. È inoltre possibile modificare il valore di soglia che determina l'intervallo di variabilità dei dati, in modo da individuare un numero maggiore o minore di eccezioni.  
   
- Al termine dell'analisi da parte dello strumento, viene creato un nuovo foglio di lavoro contenente un report di riepilogo del numero di outlier individuati in ogni colonna analizzata. Lo strumento evidenzia inoltre le eccezioni nella tabella dati originale. Poiché lo strumento analizza le tendenze generali, potrebbe considerare normale la maggior parte dei valori in una riga ed evidenziare una sola cella in tale riga. Nell'esempio proprietario di immobile citato sopra, solo il **età** colonna potrebbe essere evidenziata.  
+ Al termine dell'analisi da parte dello strumento, viene creato un nuovo foglio di lavoro contenente un report di riepilogo del numero di outlier individuati in ogni colonna analizzata. Lo strumento evidenzia inoltre le eccezioni nella tabella dati originale. Poiché lo strumento analizza le tendenze generali, potrebbe considerare normale la maggior parte dei valori in una riga ed evidenziare una sola cella in tale riga. Nell'esempio di proprietario di abitazione precedente è possibile evidenziare solo la colonna **Age** .  
   
- È inoltre possibile modificare il **soglia di eccezione** valore nel **Report di riepilogo**. Questo valore indica la probabilità che una determinata cella contenga un valore anomalo. Pertanto, se si aumenta il valore, verrà evidenziato un minor numero di valori come outlier. Viceversa, con la diminuzione del valore verrà evidenziato un numero maggiore di celle.  
+ È inoltre possibile modificare il valore **soglia eccezione** nel **report di riepilogo**. Questo valore indica la probabilità che una determinata cella contenga un valore anomalo. Pertanto, se si aumenta il valore, verrà evidenziato un minor numero di valori come outlier. Viceversa, con la diminuzione del valore verrà evidenziato un numero maggiore di celle.  
   
 ## <a name="using-the-highlight-exceptions-tool"></a>Utilizzo dello strumento Evidenzia eccezioni  
   
-1.  Aprire una tabella di Excel e fare clic su **evidenzia eccezioni**.  
+1.  Aprire una tabella di Excel e fare clic su **Evidenzia eccezioni**.  
   
 2.  Specificare le colonne da analizzare.  
   
 3.  Fare clic su **Esegui**.  
   
-4.  Aprire il foglio di lavoro denominato \<nome tabella > Outlier per visualizzare un riepilogo degli outlier che sono stati trovati.  
+4.  Aprire il foglio di> \<nome tabella outlier per visualizzare un riepilogo degli outlier trovati.  
   
-5.  Per modificare il numero di celle evidenziate, fare clic sulla freccia e freccia in giù nella **soglia di eccezione** riga della **Report eccezioni evidenziate**.  
+5.  Per modificare il numero di evidenziazioni, fare clic sulle frecce verso l'alto e verso il basso nella riga **soglia eccezione** del **report evidenzia eccezioni**.  
   
 ### <a name="requirements"></a>Requisiti  
  È possibile includere colonne che non contengono valori errati, se tali valori contengono informazioni potenzialmente utili per la stima di altre righe. È tuttavia necessario deselezionare le colonne che contengono numerosi valori mancanti o zero.  
@@ -59,7 +59,7 @@ ms.locfileid: "66080760"
 -   Colonne che probabilmente non sono utili per la creazione di un modello. Una colonna con lo stesso valore in ogni riga non fornisce ad esempio informazioni utili per la creazione di modelli.  
   
 ## <a name="understanding-the-highlight-exceptions-report"></a>Informazioni sul report dello strumento Evidenzia eccezioni  
- Quando fa clic su **eseguire**, lo strumento esegue tre operazioni:  
+ Quando si fa clic su **Esegui**, lo strumento esegue tre operazioni:  
   
 -   Creazione di una struttura di data mining in base ai dati correnti nella tabella.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "66080760"
   
  Il valore di soglia iniziale per le eccezioni è sempre 75 e indica che l'algoritmo ha calcolato una probabilità del 75% che i dati evidenziati siano errati. Questo valore di soglia viene impostato automaticamente per il passaggio di analisi iniziale, ma è possibile modificare il valore nel report.  
   
- Il **evidenzia eccezioni** strumento Evidenzia le celle della tabella dati originale sospetti. Un'evidenziazione scura indica che la riga richiede attenzione. Un'evidenziazione chiara indica che il valore nella cella specifica è stato identificato come sospetto. Se si modifica il valore di soglia per le eccezioni, i valori evidenziati cambiano di conseguenza.  
+ Lo strumento **Evidenzia eccezioni** evidenzia le celle nella tabella dati originale sospette. Un'evidenziazione scura indica che la riga richiede attenzione. Un'evidenziazione chiara indica che il valore nella cella specifica è stato identificato come sospetto. Se si modifica il valore di soglia per le eccezioni, i valori evidenziati cambiano di conseguenza.  
   
  Nel grafico di riepilogo viene indicato il numero di celle in ogni colonna con valori superiori alla soglia specificata.  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- Durante le operazioni di pulizia o verifica dei dati in preparazione dei processi di data mining, è inoltre possibile provare le funzionalità di esplorazione dei dati disponibili nel client di data mining per Excel. Questo componente aggiuntivo include ulteriori strumenti avanzati per la ricerca di outlier, la modifica delle etichette dei dati o la visualizzazione della distribuzione dei dati. Per altre informazioni sugli strumenti di esplorazione dei dati nel Client di Data Mining per Excel, vedere [esplorazione e pulizia dei dati](exploring-and-cleaning-data.md).  
+ Durante le operazioni di pulizia o verifica dei dati in preparazione dei processi di data mining, è inoltre possibile provare le funzionalità di esplorazione dei dati disponibili nel client di data mining per Excel. Questo componente aggiuntivo include ulteriori strumenti avanzati per la ricerca di outlier, la modifica delle etichette dei dati o la visualizzazione della distribuzione dei dati. Per ulteriori informazioni sugli strumenti di esplorazione dei dati nel client di data mining per Excel, vedere [esplorazione e pulizia dei dati](exploring-and-cleaning-data.md).  
   
- Il **evidenzia eccezioni** dello strumento viene utilizzato il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering. Un modello di clustering consente di rilevare gruppi di righe che condividono caratteristiche simili. Il Client di Data Mining per Excel offre una **esplorare** finestra in cui vengono utilizzati grafici e profili delle caratteristiche per consentire l'esplorazione di modelli di data mining creati con l'algoritmo clustering. Per informazioni su come selezionare il modello di clustering creato per il **evidenzia eccezioni** dello strumento, vedere [Esplora modello (Client Data Mining per Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ Lo strumento **Evidenzia eccezioni** utilizza l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering. Un modello di clustering consente di rilevare gruppi di righe che condividono caratteristiche simili. Il client di data mining per Excel fornisce una finestra **Esplora** che utilizza i grafici e i profili caratteristici per consentire di esplorare data mining modelli creati dal clustering. Per informazioni sull'esplorazione del modello di clustering creato dallo strumento **Evidenzia eccezioni** , vedere [Browse Models (client di data mining per Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Per ulteriori informazioni sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering, vedere l'argomento "Algoritmo Microsoft Clustering" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Usare SQL Server Profiler per creare un Set di raccolta traccia SQL (SQL Server Management Studio) | Microsoft Docs
+title: Utilizzare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873338"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "62873338"
   
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
   
-3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A tale scopo, effettuare le operazioni seguenti:  
+3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A questo scopo, seguire questa procedura:  
   
     1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873338"
   
     1.  Nell'elenco di filtri fare clic su **Durata**.  
   
-    2.  Nella finestra di operatori booleani espandere il **maggiore o uguale** nodo, digitare `80` come valore e quindi fare clic su **OK**.  
+    2.  Nella finestra operatore booleano espandere il nodo **maggiore o uguale** a, digitare `80` come valore, quindi fare clic su **OK**.  
   
 9. Fare clic su **Esegui** per avviare la traccia.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62873338"
   
 4.  Fare clic su **Esegui** per eseguire la query e creare il set di raccolta.  
   
-5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A tale scopo, effettuare le operazioni seguenti:  
+5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A questo scopo, seguire questa procedura:  
   
     1.  Fare clic con il pulsante destro del mouse su **Gestione**, quindi scegliere **Aggiorna**.  
   
     2.  Espandere **Gestione**, quindi **Raccolta dati**.  
   
-     Il `SPROC_CollectionSet` set di raccolta viene visualizzata allo stesso livello di **set di raccolta dati di sistema** nodo. Per impostazione predefinita, il set di raccolta è disabilitato.  
+     Il `SPROC_CollectionSet` set di raccolta viene visualizzato allo stesso livello del nodo **set di raccolta dati di sistema** . Per impostazione predefinita, il set di raccolta è disabilitato.  
   
 6.  Utilizzare Esplora oggetti per modificare le proprietà di SPROC_CollectionSet, ad esempio la modalità di raccolta e la pianificazione di caricamento. Seguire le stesse procedure utilizzate per i set di raccolta dati di sistema forniti con l'agente di raccolta dati.  
   

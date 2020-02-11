@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871946"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
@@ -30,7 +30,7 @@ ms.locfileid: "62871946"
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 ## <a name="options"></a>Opzioni  
- **Configura sicurezza**  
+ **Configurare la sicurezza**  
  Fare clic sul pulsante per avviare la **Configurazione guidata sicurezza mirroring del database**  
   
  Se la procedura guidata viene completata, l'azione eseguita dipende dallo stato del mirroring come illustrato di seguito:  
@@ -41,19 +41,19 @@ ms.locfileid: "62871946"
 |Se il mirroring è stato avviato.|Se il server di controllo del mirroring è stato cambiato nella procedura guidata, viene impostato di conseguenza.|  
   
  **Indirizzi di rete del server**  
- Esiste un'opzione equivalente per ognuna delle istanze del server: **Server principale**, **Server mirror** e **Server di controllo del mirroring**.  
+ Esiste un'opzione equivalente per ognuna delle istanze del server, ovvero **Server principale**, **Server mirror**e **Server di controllo del mirroring**.  
   
  Gli indirizzi di rete del server delle istanze del server sono specificati automaticamente al completamento della Configurazione guidata sicurezza mirroring del database. Dopo aver completato la procedura guidata, è possibile modificare gli indirizzi di rete manualmente, se necessario.  
   
  L'indirizzo di rete del server segue la sintassi di base illustrata di seguito:  
   
- TCP **://** _fully_qualified_domain_name_ **:** _port_  
+ TCP **://**_fully_qualified_domain_name_**:**_porta_  
   
  dove  
   
--   *fully_qualified_domain_name* è il server sul quale si trova l'istanza del server.  
+-   *fully_qualified_domain_name* è il server in cui è presente l'istanza del server.  
   
--   *port* è la porta assegnata all'endpoint di mirroring del database dell'istanza del server.  
+-   *Port* è la porta assegnata all'endpoint del mirroring del database dell'istanza del server.  
   
      Per la partecipazione di un server al mirroring del database è necessario un endpoint di mirroring del database. Quando si utilizza la Configurazione guidata sicurezza mirroring del database per stabilire la prima sessione di mirroring per un'istanza del server, la procedura guidata crea automaticamente l'endpoint e lo configura per utilizzare l'autenticazione di Windows. Per altre informazioni sull'uso della procedura guidata con l'autenticazione basata su certificati, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
@@ -78,7 +78,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
      Prima di avviare il mirroring è necessario creare il database mirror ripristinando un backup completo recente con WITH NORECOVERY e ripristinando eventualmente i backup del log del database principale sul server mirror. Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
--   Gli indirizzi TCP delle istanze dei server principale e mirror sono già specificati nella sezione **Indirizzi di rete del server**.  
+-   Gli indirizzi TCP delle istanze dei server principale e mirror sono già specificati nella sezione **Indirizzi di rete del server** .  
   
 -   Se la modalità operativa è impostata su protezione elevata con failover automatico (sincrona), viene specificato inoltre l'indirizzo TCP dell'istanza del server mirror.  
   
@@ -104,19 +104,19 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Fare clic per eseguire manualmente il failover del database principale sul database mirror.  
   
 > [!NOTE]  
->  Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)** . Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
+>  Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)**. Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
   
  Verrà richiesta una conferma. Se si fa clic su **Sì**, verrà tentato il failover. Il server principale prova a connettersi al server mirror utilizzando l'autenticazione di Windows. Se l'autenticazione di Windows non funziona, sul server principale viene visualizzata la finestra di dialogo **Connetti al server** . Se il server mirror usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server** nella casella **Autenticazione** . Nella casella di testo **Account di accesso** specificare l'account di accesso con cui connettersi al server mirror e nella casella di testo **Password** specificare la password per tale account.  
   
- Se il failover riesce, la finestra di dialogo **Proprietà database** verrà chiusa. I ruoli del server principale e mirror vengono scambiati. Il database mirror precedente diventa il database principale e viceversa. Si noti che la finestra di dialogo **Proprietà database** diventa immediatamente non disponibile nel precedente database principale perché quest'ultimo è diventato il database mirror. La finestra di dialogo risulterà disponibile nel nuovo database principale dopo il failover.  
+ Se il failover ha esito positivo, la finestra di dialogo **Proprietà database** viene chiusa. I ruoli del server principale e mirror vengono scambiati. Il database mirror precedente diventa il database principale e viceversa. Si noti che la finestra di dialogo **Proprietà database** diventa immediatamente non disponibile nel precedente database principale perché quest'ultimo è diventato il database mirror. La finestra di dialogo risulterà disponibile nel nuovo database principale dopo il failover.  
   
  Se il failover non riesce, viene visualizzato un messaggio di errore e la finestra di dialogo rimane aperta.  
   
 > [!IMPORTANT]  
->  Se si fa clic su **Failover** dopo avere modificato alcune proprietà nella finestra di dialogo **Proprietà database**, le modifiche apportate verranno perse. Per salvare le modifiche correnti fare clic su **No** alla richiesta di conferma e quindi fare clic su **OK** per salvare le modifiche. Riaprire quindi la finestra di dialogo relativa alle proprietà del database e fare clic su **Failover**.  
+>  Se si fa clic su **Failover** dopo avere modificato alcune proprietà nella finestra di dialogo **Proprietà database** , le modifiche apportate verranno perse. Per salvare le modifiche correnti fare clic su **No** alla richiesta di conferma e quindi fare clic su **OK** per salvare le modifiche. Riaprire quindi la finestra di dialogo relativa alle proprietà del database e fare clic su **Failover**.  
   
  **Modalità operativa**  
- Facoltativamente, è possibile cambiare modalità operativa. La disponibilità di determinate modalità operative dipende dal fatto che sia stato specificato un indirizzo TCP per un server di controllo del mirroring. Sono disponibili le opzioni seguenti:  
+ Facoltativamente, è possibile cambiare modalità operativa. La disponibilità di determinate modalità operative dipende dal fatto che sia stato specificato un indirizzo TCP per un server di controllo del mirroring. descritte di seguito:  
   
 |Opzione|Server di controllo del mirroring?|Spiegazione|  
 |------------|--------------|-----------------|  
@@ -128,24 +128,24 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- **Stato**  
+ **Status**  
  Dopo l'inizio del mirroring, il pannello **Stato** visualizza lo stato della sessione di mirroring del database al momento della selezione della pagina **Mirroring** . Per aggiornare il pannello **Stato** fare clic sul pulsante **Aggiorna** . Gli stati possibili sono indicati di seguito:  
   
 |Stati|Spiegazione|  
 |------------|-----------------|  
 |**Il database non è stato configurato per il mirroring**|Non esiste alcuna sessione di mirroring del database e non ci sono attività da segnalare nella pagina **Mirroring** .|  
-|**In sospeso**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
+|**Paused**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
 |**Nessuna connessione**|L'istanza del server principale non può connettersi al proprio partner.|  
-|**Sincronizzazione in corso**|La posizione del contenuto del database mirror precede quella del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
+|**Sincronizzazione in corso**|Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
 |**Failover**|Sull'istanza del server principale, è stato avviato un failover manuale (cambio di ruolo) e il server è attualmente in fase di transizione al ruolo mirror. In questo stato, le connessioni utente al database principale vengono terminate rapidamente e il database assume il ruolo di mirror subito dopo.|  
-|**Sincronizzato**|Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale continua a inviare modifiche al server mirror e quest'ultimo continua ad applicare le modifiche al database mirror.<br /><br /> Per la modalità a protezione elevata il failover è possibile, senza perdita di dati.<br /><br /> In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato**.|  
+|**Sincronizzati**|Quando il server mirror è sufficientemente aggiornato rispetto al server principale, lo stato del database diventa **Sincronizzato**. Il database resta in questo stato fino a quando il server principale continua a inviare modifiche al server mirror e quest'ultimo continua ad applicare le modifiche al database mirror.<br /><br /> Per la modalità a protezione elevata il failover è possibile, senza perdita di dati.<br /><br /> In modalità a prestazioni elevate è possibile che si verifichi la perdita di dati anche nello stato **Sincronizzato** .|  
   
  Per altre informazioni, vedere [Stati di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
  **Aggiorna**  
  Fare clic su questo pulsante per aggiornare la casella **Stato** .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non si ha familiarità con il mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Aggiunta di un server di controllo del mirroring a una sessione esistente  
@@ -153,9 +153,9 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Dopo aver configurato un nuovo server di controllo del mirroring, è necessario fare clic su **OK** per aggiungerlo alla sessione di mirroring.  
   
- **Per aggiungere un server di controllo del mirroring utilizzando autenticazione di Windows**  
+ **Per aggiungere un server di controllo del mirroring con l'autenticazione di Windows**  
   
- [Aggiungere o sostituire un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+ [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ### <a name="removing-a-witness"></a>Rimozione di un server di controllo del mirroring  
  Per rimuovere un server di controllo del mirroring, eliminare il relativo indirizzo di rete dal campo **Server di controllo del mirroring** . Se si passa dalla modalità a protezione elevata con failover automatico alla modalità a prestazioni elevate, il contenuto del campo **Server di controllo del mirroring** viene automaticamente cancellato.  
@@ -179,10 +179,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

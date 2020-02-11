@@ -1,5 +1,5 @@
 ---
-title: Usare SQL Server (XEvent) di eventi estesi per monitorare Analysis Services | Microsoft Docs
+title: Usare SQL Server eventi estesi (XEvent) per monitorare Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079738"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Utilizzare eventi estesi di SQL Server (XEvent) per il monitoraggio di Analysis Services
-  Analysis Services fornisce funzionalità di traccia tramite l'utilizzo delle [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services fornisce funzionalità di traccia tramite l'utilizzo degli [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
  Eventi estesi è un'infrastruttura evento estremamente scalabile e configurabile per i sistemi server. Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni.  
   
- Tutti i servizi di analisi eventi possono essere acquisiti e indirizzare a consumer specifici, come definito in [eventi estesi](../../relational-databases/extended-events/extended-events.md), tramite XEvents.  
+ Tutti gli eventi di Analysis Services possono essere acquisiti e indirizzati a consumer specifici, come definito negli [eventi estesi](../../relational-databases/extended-events/extended-events.md), tramite XEvent.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Avvio di eventi estesi in Analysis Services  
  La traccia di eventi estesi viene abilitata utilizzando una specifica XMLA simile per creare un comando script dell'oggetto come illustrato di seguito:  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876192"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
@@ -59,12 +59,12 @@ ms.locfileid: "62876192"
     > [!NOTE]  
     >  In alternativa, è possibile attivare manualmente la modalità offline per il file prima di eseguire la sequenza di ripristino. Per ulteriori informazioni, vedere "Attivazione della modalità offline per un database o un file" di seguito in questo argomento.  
   
-##  <a name="taking_db_or_file_offline"></a> Attivazione della modalità offline per un database o un file  
+##  <a name="taking_db_or_file_offline"></a>Esecuzione offline di un database o un file  
  Se non si desidera utilizzare il ripristino online, è possibile attivare la modalità offline per il database prima di avviare la sequenza di ripristino utilizzando una delle modalità seguenti:  
   
 -   Con qualsiasi modello di recupero è possibile attivare la modalità offline per il database utilizzando l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) seguente:  
   
-     ALTER DATABASE *nome_database* SET OFFLINE  
+     ALTER DATABASE *database_name* set offline  
   
 -   In alternativa, se si utilizza il modello di recupero con registrazione completa, è possibile forzare un ripristino di file o pagina offline utilizzando l'istruzione [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) seguente per attivare lo stato di ripristino per il database:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62876192"
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -89,15 +89,15 @@ ms.locfileid: "62876192"
   
 -   [Esempio: Ripristino online di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
 -   [Ripristino di file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
--   [Ripristinare pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)  
+-   [Ripristino di pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)  
   
--   [Gestire la tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
+-   [Gestione della tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
   
 -   [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62876192"
 ## <a name="see-also"></a>Vedere anche  
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md)   
- [Ripristinare pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [Ripristino di pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

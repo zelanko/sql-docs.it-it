@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889634"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
@@ -36,7 +36,7 @@ ms.locfileid: "62889634"
   
 -   [Usare un servizio Web o un componente remoto per eseguire il pacchetto remoto a livello di programmazione](#service)  
   
- Quasi tutti i metodi utilizzati in questo argomento per caricare e salvare pacchetti richiedono un riferimento all'assembly `Microsoft.SqlServer.ManagedDTS`. L'eccezione è l'approccio ADO.NET illustrato in questo argomento per l'esecuzione di **sp_start_job** stored procedure, che richiede solo un riferimento a `System.Data`. Dopo aver aggiunto il riferimento all'assembly `Microsoft.SqlServer.ManagedDTS` in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione `using` o `Imports`.  
+ Quasi tutti i metodi utilizzati in questo argomento per caricare e salvare pacchetti richiedono un riferimento all'assembly `Microsoft.SqlServer.ManagedDTS`. L'eccezione è l'approccio ADO.NET illustrato in questo argomento per l'esecuzione della **sp_start_job** stored procedure, che richiede solo un riferimento a `System.Data`. Dopo aver aggiunto il riferimento all'assembly `Microsoft.SqlServer.ManagedDTS` in un nuovo progetto, importare lo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> con un'istruzione `using` o `Imports`.  
   
 ###  <a name="agent"></a> Uso di SQL Server Agent per eseguire un pacchetto remoto a livello di programmazione nel server  
  Nell'esempio di codice seguente è illustrato come utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a livello di programmazione per eseguire un pacchetto remoto nel server. Il codice di esempio chiama la stored procedure di sistema **sp_start_job**, che avvia un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il processo avviato dalla stored procedure è denominato `RunSSISPackage` e si trova nel computer remoto. Il processo `RunSSISPackage` esegue quindi il pacchetto nel computer remoto.  
@@ -164,7 +164,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Aprire Visual Studio e creare un progetto di servizio Web nel linguaggio di programmazione preferito. Nel codice di esempio viene utilizzato il nome LaunchSSISPackageService per il progetto.  
   
-2.  Aggiungere un riferimento a `Microsoft.SqlServer.ManagedDTS` e aggiungere un' `Imports` oppure `using` istruzione per il file di codice per il **SQLServer** dello spazio dei nomi.  
+2.  Aggiungere un riferimento a `Microsoft.SqlServer.ManagedDTS` e aggiungere un' `Imports` istruzione `using` o al file di codice per lo spazio dei nomi **Microsoft. SqlServer. Dts. Runtime** .  
   
 3.  Incollare il codice di esempio per il metodo LaunchPackage del servizio Web nella classe. In questo esempio viene visualizzato l'intero contenuto della finestra del codice.  
   
@@ -420,9 +420,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) nel sito technet.microsoft.com  
+-   Video relativo alla [procedura sull'automazione dell'esecuzione di un pacchetto SSIS usando SQL Server Agent (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) nel sito technet.microsoft.com  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

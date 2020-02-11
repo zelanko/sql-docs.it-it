@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899944"
 ---
 # <a name="xml-source"></a>Origine XML
@@ -69,7 +69,7 @@ ms.locfileid: "62899944"
   
  L'origine XML supporta più output regolari e più output degli errori.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include la finestra di dialogo **Editor origine XML**per la configurazione dell'origine XML. Questa finestra di dialogo è disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include la finestra di dialogo **Editor origine XML**per la configurazione dell'origine XML. Questa finestra di dialogo è disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "62899944"
   
 -   [Editor origine XML &#40;pagina Gestione connessione&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [Editor origine XML &#40;pagina Colonne&#41;](../xml-source-editor-columns-page.md)  
+-   [Editor origine XML &#40;pagina colonne&#41;](../xml-source-editor-columns-page.md)  
   
--   [Editor origine XML &#40;pagina Output degli errori&#41;](../xml-source-editor-error-output-page.md)  
+-   [Editor origine XML &#40;pagina output degli errori&#41;](../xml-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -89,12 +89,12 @@ ms.locfileid: "62899944"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Estrarre i dati tramite l'origine XML](xml-source.md)  
+ [Estrazione dei dati tramite l'origine XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo [utilizzando un file XML per configurare un pacchetto SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
+ Articolo tecnico relativo all' [uso di un file XML per la configurazione di un pacchetto SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

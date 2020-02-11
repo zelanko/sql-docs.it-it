@@ -1,5 +1,5 @@
 ---
-title: Modellazione multidimensionale (esercitazione Adventure) | Microsoft Docs
+title: Modellazione multidimensionale (esercitazione di Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077576"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
@@ -34,10 +34,10 @@ ms.locfileid: "66077576"
   
 -   Come definire calcoli, indicatori di prestazioni chiave (KPI), azioni, prospettive, traduzioni e ruoli di sicurezza in un cubo.  
   
- Con questa esercitazione viene fornita una descrizione dello scenario in modo da comprendere meglio il contesto di queste lezioni. Per ulteriori informazioni, vedere [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md).  
+ Con questa esercitazione viene fornita una descrizione dello scenario in modo da comprendere meglio il contesto di queste lezioni. Per ulteriori informazioni, vedere [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](install-sample-data-and-projects.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Per completare tutte le lezioni di questa esercitazione sono necessari dati di esempio, file di progetto di esempio e software specifici. Per istruzioni su come trovare e installare i prerequisiti per questa esercitazione, vedere [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md).  
   
  Per completare questa esercitazione sono inoltre necessarie le autorizzazioni seguenti:  
   
@@ -48,23 +48,23 @@ ms.locfileid: "66077576"
 ## <a name="lessons"></a>Lezioni  
  L'esercitazione include le lezioni seguenti.  
   
-|Lezione|Tempo stimato per il completamento|  
+|Lezione|Tempo previsto per il completamento|  
 |------------|--------------------------------|  
-|[Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
+|[Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
 |[Lezione 2: Definizione e distribuzione di un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minuti|  
-|[Lezione 3: Modifica le misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minuti|  
-|[Lezione 4: La definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
+|[Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minuti|  
+|[Lezione 4: Definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
 |[Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minuti|  
 |[Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)|45 minuti|  
-|[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
-|[Lezione 8: Definizione delle azioni](lesson-8-defining-actions.md)|30 minuti|  
+|[Lezione 7: definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
+|[Lezione 8: Definizione di azioni](lesson-8-defining-actions.md)|30 minuti|  
 |[Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)|30 minuti|  
 |[Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)|15 minuti|  
   
 > [!NOTE]  
 >  Il database del cubo che verrà creato in questa esercitazione è una versione semplificata del progetto di modello multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa parte dei database di esempio di Adventure Works disponibile per il download sul sito codeplex. La versione per l'esercitazione del database multidimensionale Adventure Works è semplificata per focalizzare maggiormente l'attenzione sulle specifiche competenze con cui si desidera subito familiarizzare. Dopo avere completato l'esercitazione, esplorare il progetto di modello multidimensionale per proprio conto per accrescere la comprensione della modellazione multidimensionale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="next-step"></a>Passaggio successivo  
- Per iniziare l'esercitazione, passare alla prima lezione: [Lezione 1: Definizione di una vista origine dati all'interno di un'analisi progetto Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+## <a name="next-step"></a>passaggio successivo  
+ Per iniziare questa esercitazione, passare alla prima lezione: [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

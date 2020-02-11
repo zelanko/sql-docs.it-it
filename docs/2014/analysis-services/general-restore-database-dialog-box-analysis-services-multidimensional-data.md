@@ -1,5 +1,5 @@
 ---
-title: Generale (finestra di dialogo Ripristina Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Generale (finestra di dialogo Ripristina database) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080950"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Generale (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Generale** della finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il file di backup e le impostazioni generali da utilizzare per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Per ogni file di backup, l'utente che esegue il comando di ripristino deve disporre delle autorizzazioni per leggere dal percorso di backup specificato per ogni file. Per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non installato nel server, l'utente deve inoltre essere un membro del ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] specifica. Per sovrascrivere un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l'utente deve avere uno dei ruoli seguenti: deve essere un membro del ruolo del server per l'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) per il database da ripristinare.  
+>  Per ogni file di backup, l'utente che esegue il comando di ripristino deve disporre delle autorizzazioni per leggere dal percorso di backup specificato per ogni file. Per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non installato nel server, l'utente deve inoltre essere un membro del ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] specifica. Per sovrascrivere un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l'utente deve avere uno dei ruoli seguenti: deve essere un membro del ruolo del server per l'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) sul database da ripristinare.  
   
 > [!NOTE]  
 >  Dopo avere ripristinato un database esistente, l'utente che ha effettuato l'operazione potrebbe perdere l'accesso al database ripristinato. Può verificarsi questa perdita di accesso se, al momento dell’esecuzione del backup, l'utente non era un membro del ruolo del server o non era un membro del ruolo del database con autorizzazioni Controllo completo (amministratore).  
@@ -48,14 +48,14 @@ ms.locfileid: "66080950"
   
 -   A un processo.  
   
- **RESTORE DATABASE**  
+ **Ripristina database**  
  Consente di selezionare il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da ripristinare.  
   
  **Da file di backup**  
  Consente di selezionare il file di backup dal quale ripristinare il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selezionato.  
   
  **Sfoglia**  
- Fare clic su questo pulsante per visualizzare la finestra di dialogo **Trova file di database** e selezionare il percorso e il nome del file di backup da usare. Per altre informazioni sulla finestra di dialogo **Trova file di database**, vedere [Finestra di dialogo Individua file di database &#40;Analysis Services - Dati multidimensionali&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
+ Fare clic su questo pulsante per visualizzare la finestra di dialogo **Trova file di database** e selezionare il percorso e il nome del file di backup da usare. Per altre informazioni sulla finestra di dialogo **Individua file di database**, vedere [Finestra di dialogo Individua file di database &#40;Analysis Services - Dati multidimensionali&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consenti sostituzione database**  
  Selezionare questa opzione per consentire a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di ripristinare il contenuto del file di backup selezionato sostituendolo a qualsiasi oggetto esistente nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selezionato.  
@@ -68,14 +68,14 @@ ms.locfileid: "66080950"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**Copia tutto**|Ripristina i ruoli del database inclusi nel file di backup, nonché agli account utente associati ai ruoli.|  
-|**Ignora appartenenze**|Ripristina i ruoli del database inclusi nel file di backup, ma non ripristina gli account utente associati ai ruoli.|  
+|**Ignora appartenenza**|Ripristina i ruoli del database inclusi nel file di backup, ma non ripristina gli account utente associati ai ruoli.|  
   
  **Password**  
  Se il file di backup è crittografato, digitare la password utilizzata per crittografare il file di backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Ripristina Database &#40;Analysis Services - Dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partizioni &#40;dialogo Ripristina Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Finestra di dialogo Ripristina database &#40;Analysis Services-Dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

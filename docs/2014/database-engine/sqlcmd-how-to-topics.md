@@ -1,5 +1,5 @@
 ---
-title: Procedure per SQLCMD | Microsoft Docs
+title: procedure per sqlcmd | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089594"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Procedure correlate a sqlcmd
-  L'utilità [sqlcmd](../tools/sqlcmd-utility.md) consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], procedure di sistema e file script al prompt dei comandi, nell'editor di query in modalità SQLCMD, in un file script Windows o in un passaggio di processo del sistema operativo (Cmd.exe) in un processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
+  L' [utilità sqlcmd](../tools/sqlcmd-utility.md) consente di immettere [!INCLUDE[tsql](../includes/tsql-md.md)] istruzioni, procedure di sistema e file script al prompt dei comandi, nell'editor di query in modalità sqlcmd, in un file di script Windows o in un passaggio di processo del sistema operativo (cmd. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exe) di un processo di Agent.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Negli argomenti seguenti è illustrato come utilizzare [sqlcmd Utility](../tools/sqlcmd-utility.md).  

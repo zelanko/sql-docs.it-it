@@ -1,5 +1,5 @@
 ---
-title: Algoritmi di Data Mining (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Algoritmi di data mining (SQL Server componenti aggiuntivi Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086504"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmi di data mining (componenti aggiuntivi Data mining di SQL Server)
@@ -49,16 +49,16 @@ ms.locfileid: "66086504"
 ## <a name="advanced-options"></a>Opzioni avanzate  
  Quando si utilizza il client di data mining per Excel, è possibile scegliere di creare le strutture e i modelli di data mining oppure di ottimizzare i parametri degli algoritmi.  
   
- [I parametri dell'algoritmo &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Parametri dell'algoritmo &#40;SQL Server i componenti aggiuntivi Data mining&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  Per personalizzare i modelli utilizzando queste opzioni avanzate, è possibile procedere in due modi:  
   
--   Usare la **Query di Data Mining** procedura guidata per creare il modello.  
+-   Utilizzare la procedura guidata **query di data mining** per creare il modello.  
   
--   Nel **Client di Data Mining**, dopo avere avviato la procedura guidata, fare clic su **parametri**.  
+-   Nel **client di data mining**, dopo l'avvio della procedura guidata, fare clic su **parametri**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](query-sql-server-data-mining-add-ins.md)   
- [Modellazione avanzata &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [&#40;di query SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md)   
+ [Modellazione avanzata &#40;componenti aggiuntivi Data mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

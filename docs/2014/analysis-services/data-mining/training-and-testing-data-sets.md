@@ -1,5 +1,5 @@
 ---
-title: Set di training e set di dati di test | Microsoft Docs
+title: Set di dati di training e di testing | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082741"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
-  La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
+  La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
   
  Dopo aver elaborato il modello tramite il set di training, il modello viene testato eseguendo stime sul set di test. Poiché nei dati nel set di testing sono contenuti già valori noti per l'attributo di cui si desidera eseguire la stima, la correttezza delle ipotesi del modello può essere determinata facilmente.  
   
@@ -62,11 +63,11 @@ ms.locfileid: "66082741"
 ### <a name="specifying-holdout-programmatically"></a>Specifica a livello di codice dei dati di controllo  
  È possibile definire training set e set di dati di testing in una struttura di data mining tramite istruzioni DMX, AMO o XML DDL. L'istruzione ALTER MINING STRUCTURE non supporta l'utilizzo di parametri di controllo.  
   
--   **DMX** Nel linguaggio DMX, l'istruzione CREATE MINING STRUCTURE è stata estesa per includere una clausola WITH HOLDOUT.  
+-   **DMX** nel linguaggio DMX (Data Mining Extensions), l'istruzione CREATE MINING STRUCTURE è stata estesa per includere una clausola with di dati di attesa.  
   
--   **ASSL** È possibile creare una nuova struttura di data mining o aggiungere un set di dati di testing a una struttura di data mining esistente usando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL).  
+-   **ASSL** È possibile creare una nuova struttura di data mining o aggiungere un set di dati di testing a una struttura di data mining [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente utilizzando il linguaggio ASSL (Scripting Language).  
   
--   **AMO** È anche possibile visualizzare e modificare set di dati di controllo tramite AMO.  
+-   **Amo** È anche possibile visualizzare e modificare i set di dati di dati di dati di dati di dati di dati di Data Analysis  
   
  È possibile visualizzare informazioni sul set di dati di controllo in una struttura di data mining esistente eseguendo query sul set di righe dello schema di data mining. A tale scopo, effettuare una chiamata a DISCOVER ROWSET o utilizzare una query DMX.  
   
@@ -91,7 +92,8 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Non è possibile rimuovere dati da un modello Time Series; pertanto, non è possibile separare i dati di origine in set di training e di testing. Se si comincia a creare una struttura di data mining e un modello e si sceglie l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series, l'opzione per creare un set di dati di controllo viene disabilitata. Viene inoltre disabilitato l'utilizzo dei dati di controllo se nella struttura di data mining è contenuta una colonna KEY TIME al livello del case o della tabella nidificata.  
   
--   È possibile configurare inavvertitamente il set di dati di controllo in modo che venga utilizzato l'intero set di dati per il testing senza lasciare alcun dato per il training. Tuttavia, in tal caso, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà generato un errore in modo che sia possibile correggere il problema. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Inoltre, viene generato un avviso quando la struttura viene elaborata se più del 50% dei dati viene controllato per il testing.  
+-   È possibile configurare inavvertitamente il set di dati di controllo in modo che venga utilizzato l'intero set di dati per il testing senza lasciare alcun dato per il training. Tuttavia, in tal caso, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verrà generato un errore in modo che sia possibile correggere il problema. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Inoltre, viene generato un avviso quando la struttura viene elaborata se più del 50% dei dati viene controllato per il testing.  
   
 -   Nella maggior parte dei casi, il valore di controllo predefinito di 30 fornisce un buon bilanciamento tra dati di training e dati di testing. Non esiste un modo semplice per determinare le dimensioni del set di dati al fine di garantire un training sufficiente o il livello di supporto del tipo sparse da parte del set di training per evitare l'overfitting. Dopo aver compilato un modello, è tuttavia possibile utilizzare la convalida incrociata per stimare il set di dati rispetto a un determinato modello.  
   
@@ -99,18 +101,18 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="related-content"></a>Contenuto correlato  
   
-|Argomento|Collegamenti|  
+|Argomenti|Collegamenti|  
 |------------|-----------|  
-|Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)|  
-|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [L'esecuzione di query di Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)|  
+|Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[Convalida incrociata &#40;Analysis Services-&#41;di data mining](cross-validation-analysis-services-data-mining.md)|  
+|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;&#41;ASSL](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREA STRUTTURA DI DATA MINING &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Esecuzione di query sui set di righe dello schema di data mining &#40;Analysis Services-Data mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining-tools.md)   
- [Concetti di data mining](data-mining-concepts.md)   
+ [Concetti relativi al data mining](data-mining-concepts.md)   
  [Soluzioni di data mining](data-mining-solutions.md)   
- [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
   
   

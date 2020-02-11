@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077274"
 ---
 # <a name="define-custom-member-formulas"></a>Definire formule personalizzate membro
@@ -29,7 +29,7 @@ ms.locfileid: "66077274"
   
  La proprietà `CustomRollupColumn` di un attributo specifica la colonna che include le formule personalizzate membro per i membri dell'attributo. Se una riga della colonna è vuota, il valore della cella per il membro viene restituito normalmente. Se la formula nella colonna non è valida, si verifica un errore di run-time ogni volta che viene recuperato il valore di una cella che utilizza il membro.  
   
- Prima di poter specificare formule personalizzate membro per un attributo, verificare che nella tabella della dimensione contenente l'attributo o in una tabella direttamente correlata sia disponibile una colonna stringa per l'archiviazione delle formule personalizzate membro. In questo caso, è possibile impostare il `CustomRollupColumn` proprietà su un attributo manualmente oppure utilizzare la funzionalità avanzata imposta Formula personalizzata membro della procedura guidata Business Intelligence per abilitare una formula personalizzata membro per un attributo. Per altre informazioni su come usare questa funzionalità avanzata, vedere [Impostare formule personalizzate membro per gli attributi in una dimensione](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Prima di poter specificare formule personalizzate membro per un attributo, verificare che nella tabella della dimensione contenente l'attributo o in una tabella direttamente correlata sia disponibile una colonna stringa per l'archiviazione delle formule personalizzate membro. In tal caso, è possibile impostare manualmente la `CustomRollupColumn` proprietà su un attributo o utilizzare l'impostazione avanzata formule personalizzate membro della configurazione guidata funzionalità di Business Intelligence per abilitare una formula personalizzata membro su un attributo. Per altre informazioni su come usare questa funzionalità avanzata, vedere [Impostare formule personalizzate membro per gli attributi in una dimensione](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Valutazione delle formule personalizzate membro  
  Le formule personalizzate membro si differenziano dai membri calcolati per vari aspetti. Vengono applicate ai membri esistenti nelle tabelle delle dimensioni e determinano solo il valore del membro. I membri calcolati, viceversa, non vengono archiviati nelle tabelle delle dimensioni e le relative espressioni definiscono sia i dati che i metadati dei membri aggiuntivi inclusi in una dimensione o una gerarchia.  
@@ -38,23 +38,23 @@ ms.locfileid: "66077274"
   
 -   2003: 2100  
   
-    -   Trimestre 1: 700  
+    -   Quarter 1: 700  
   
-    -   Trimestre 2: 500  
+    -   Quarter 2: 500  
   
     -   Quarter 3: 100  
   
-    -   Trimestre 4: 800  
+    -   Quarter 4: 800  
   
 -   2004: 1500  
   
-    -   Trimestre 1: 600  
+    -   Quarter 1: 600  
   
-    -   Trimestre 2: 200  
+    -   Quarter 2: 200  
   
     -   Quarter 3: 300  
   
-    -   Trimestre 4: 400  
+    -   Quarter 4: 400  
   
  Se si utilizza una formula personalizzata membro, il valore del membro è invece specificato dalla formula personalizzata di rollup. Ad esempio, la formula personalizzata membro seguente può essere utilizzata per determinare il valore 450 per il membro figlio Quarter 4 del membro 2004 nella dimensione Time.  
   

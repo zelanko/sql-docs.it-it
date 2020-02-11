@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914947"
 ---
-# <a name="mssqlserver21893"></a>MSSQLSERVER_21893
+# <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
     
 ## <a name="details"></a>Dettagli  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62914947"
 |Testo del messaggio|I sottoscrittori (%s) del server di pubblicazione originale '%s' non sembrano server remoti per il server di pubblicazione reindirizzato '%s.' Eseguire `sp_addlinkedserver` nel server di pubblicazione reindirizzato per aggiungere questi sottoscrittori come server remoti.|  
   
 ## <a name="explanation"></a>Spiegazione  
- `sp_validate_redirected_publisher` Usa le tabelle di metadati di sottoscrizione del database di pubblicazione sul server remoto per identificare i sottoscrittori associati e verifica che vi siano voci associate in sysservers per i sottoscrittori. Questo errore viene restituito se uno dei sottoscrittori identificato non è presente.  
+ `sp_validate_redirected_publisher`Nel  vengono utilizzate le tabelle di metadati della sottoscrizione del database del server di pubblicazione sul server remoto per identificare i sottoscrittori associati e viene verificato che vi siano voci associate in master.dbo.sysservers per i sottoscrittori. Questo errore viene restituito se uno dei sottoscrittori identificato non è presente.  
   
  Questo errore non è considerato un errore irreversibile. Gli agenti che rilevano questo errore lo registreranno come messaggio di errore informativo ma non termineranno, poiché un errore, per avere voci del sottoscrittore appropriate sul nuovo server di pubblicazione, ha un impatto limitato sulla replica. Senza una voce adatta per un Sottoscrittore in sysservers, è possibile che alcune attività di gestione delle sottoscrizioni non riescano se vengono eseguite tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tuttavia, è possibile eseguire queste stesse attività correttamente eseguendo in modo esplicito le stored procedure di gestione.  
   

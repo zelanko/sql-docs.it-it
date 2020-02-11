@@ -1,5 +1,5 @@
 ---
-title: "Passaggio 4: Test del pacchetto dell'esercitazione della lezione 5 | Microsoft Docs"
+title: "Passaggio 4: Test del pacchetto creato nella lezione 5 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890943"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nell'esercitazione della lezione 5
@@ -37,9 +37,9 @@ ms.locfileid: "62890943"
   
 1.  Scegliere **Avvia debug** dal menu **Debug**.  
   
-2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
+2.  Al termine dell'esecuzione del pacchetto, scegliere **Interrompi debug**dal menu **debug** .  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: Utilizzo di parametri con il modello di distribuzione](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

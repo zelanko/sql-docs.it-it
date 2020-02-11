@@ -1,5 +1,5 @@
 ---
-title: Modifica delle misure | Microsoft Docs
+title: Modifica di misure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078894"
 ---
 # <a name="modifying-measures"></a>Modifica delle misure
@@ -36,17 +36,17 @@ ms.locfileid: "66078894"
   
 5.  Selezionare le misure seguenti. Per selezionare più misure, fare clic su ognuna di esse tenendo premuto CTRL:  
   
-    -   **Unit Price**  
+    -   **Prezzo unitario**  
   
-    -   **Extended Amount**  
+    -   **Importo esteso**  
   
-    -   **Discount Amount**  
+    -   **Importo dello sconto**  
   
-    -   **Product Standard Cost**  
+    -   **Costo standard prodotto**  
   
-    -   **Total Product Cost**  
+    -   **Costo totale prodotto**  
   
-    -   **Sales Amount**  
+    -   **Importo vendite**  
   
     -   **Tax Amt**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66078894"
   
 7.  Nell'elenco a discesa nella parte superiore della finestra Proprietà sotto la barra del titolo selezionare la misura **Unit Price Discount Pct**, quindi selezionare **Percent** nell'elenco **FormatString** .  
   
-8.  Nella finestra Proprietà modificare il **Name** proprietà per il **Unit Price Discount Pct** misura `Unit Price Discount Percentage`.  
+8.  Nella Finestra Proprietà modificare la proprietà **Name** per la misura **Unit Price Discount Pct** in `Unit Price Discount Percentage`.  
   
-9. Nel **misure** riquadro, fare clic su **Tax Amt** e modificare il nome della misura in `Tax Amount`.  
+9. Nel riquadro **misure** fare clic su **Tax Amt** e modificare il nome della misura in `Tax Amount`.  
   
 10. Nella finestra Proprietà fare clic sull'icona **Nascondi automaticamente** per nascondere la finestra Proprietà, quindi fare clic su **Mostra albero delle misure** sulla barra degli strumenti della scheda **Struttura cubo** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66078894"
  [Modifica della dimensione Customer](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire le dimensioni del Database](multidimensional-models/define-database-dimensions.md)   
+ [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md)   
  [Configurare le proprietà delle misure](multidimensional-models/configure-measure-properties.md)  
   
   

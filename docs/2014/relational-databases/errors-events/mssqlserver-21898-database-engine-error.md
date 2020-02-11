@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868962"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
 ## <a name="details"></a>Dettagli  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62868962"
 |Testo del messaggio|Il server di pubblicazione '%s' utilizza il database di distribuzione '%s' e non '%s' che è richiesto per ospitare il database di pubblicazione '%s.' Eseguire `sp_changedistpublisher` sul database di distribuzione '%s' per modificare il database di distribuzione utilizzato dal server di pubblicazione in '%s'.|  
   
 ## <a name="explanation"></a>Spiegazione  
- `sp_validate_redirected_publisher` esegue una query msdb.dbo.MSdistpublishers nel server di distribuzione locale per verificare che il database di distribuzione usato dal nuovo server di pubblicazione sia lo stesso come il database di distribuzione utilizzato dal server di pubblicazione originale. Questo errore viene restituito quando questi database sono diversi, rendendo il server di pubblicazione un host non adatto al database del server di pubblicazione.  
+ `sp_validate_redirected_publisher`In  viene eseguita una query su msdb.dbo.MSdistpublishers sul database di distribuzione locale per verificare che il database di distribuzione utilizzato dal nuovo server di pubblicazione sia uguale a quello utilizzato dal server di pubblicazione originale. Questo errore viene restituito quando questi database sono diversi, rendendo il server di pubblicazione un host non adatto al database del server di pubblicazione.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Eseguire la stored procedure `sp_changedistpublisher` per modificare il database di distribuzione per il nuovo server di pubblicazione utilizzato dal server di pubblicazione originale.  

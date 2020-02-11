@@ -1,5 +1,5 @@
 ---
-title: Creazione di un modello Sequence Clustering correlato (esercitazione intermedia di Data Mining) | Microsoft Docs
+title: Creazione di un modello Sequence Clustering correlato (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855874"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Creazione di un modello Sequence Clustering correlato (Esercitazione intermedia sul data mining)
@@ -26,11 +26,11 @@ ms.locfileid: "62855874"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>Per creare una copia del modello Sequence Clustering  
   
-1.  Nelle [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Data Mining Designer, fare clic sui **modelli di Data Mining** scheda.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Progettazione modelli di data mining di fare clic sulla scheda **modelli di data mining** .  
   
-2.  Fare doppio clic il modello si desidera copiare e scegliere **nuovo modello di Data Mining**.  
+2.  Fare clic con il pulsante destro del mouse sul modello che si desidera copiare e scegliere **nuovo modello di data mining**.  
   
-3.  Nel **nuovo modello di Data Mining** della finestra di dialogo digitare un nome di modello e selezionare Microsoft `Sequence Clustering`.  
+3.  Nella finestra di dialogo **nuovo modello di data mining** Digitare un nome di modello e selezionare `Sequence Clustering`Microsoft.  
   
      Per questa esercitazione, digitare il nome `Sequence Clustering`.  
   
@@ -38,36 +38,36 @@ ms.locfileid: "62855874"
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>Per rimuovere le colonne dal modello di data mining  
   
-1.  Nel **modello di Data Mining** scheda, nella colonna per il nuovo modello con nome Sequence Clustering, fare clic sulla riga per il **Income Group** attributo, quindi selezionare **ignora**.  
+1.  Nella scheda **modello di data mining** , nella colonna relativa al nuovo modello denominato Sequence Clustering, fare clic sulla riga dell'attributo **Income Group** e selezionare **Ignora**.  
   
-2.  Ripetere questo passaggio per l'attributo **regione**.  
+2.  Ripetere questo passaggio per l' **area**dell'attributo.  
   
-3.  Fare clic sul segno più accanto al nome di tabella **v Assoc Seq Line Items**per espandere la tabella e visualizzare le colonne della tabella nidificata.  
+3.  Fare clic sul segno più accanto al nome della tabella, **v Assoc Seq Line Items**, per espandere la tabella e visualizzare le colonne della tabella nidificata.  
   
      Il nuovo modello dovrebbe ora contenere solo le colonne seguenti:  
   
-     **Ordine NumberKey**  
+     **NumberKey ordine**  
   
-     **Chiave di numeri di riga**  
+     **Chiave numero di riga**  
   
-     **Modello di stima**  
+     **Stima modello**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>Per elaborare il nuovo modello Sequence Clustering  
   
-1.  Nel **modello di Data Mining** scheda, fare doppio clic su nuovo modello con nome `Sequence Clustering`e selezionare **Elabora modello**.  
+1.  Nella scheda **modello di data mining** fare clic con il pulsante destro del `Sequence Clustering`mouse sul nuovo modello denominato e scegliere **Elabora modello**.  
   
      Poiché il nuovo il modello di data mining semplificato è basato su una struttura che è già stata elaborata, non è necessario rielaborare la struttura. È sufficiente elaborare il nuovo modello di data mining.  
   
-2.  Fare clic su **Sì** per distribuire il progetto di data mining i dati aggiornati nel server.  
+2.  Fare clic su **Sì** per distribuire il progetto data mining aggiornato al server.  
   
-3.  Nel **modello di processo di Data Mining** finestra di dialogo, fare clic su **eseguire**.  
+3.  Nella finestra di dialogo **Elabora modello di data mining** fare clic su **Esegui**.  
   
-4.  Fare clic su **chiudere** per chiudere la **stato elaborazione** la finestra di dialogo e quindi fare clic su **chiudere** nuovamente nel **Elabora modello di Data Mining** nella finestra di dialogo.  
+4.  Fare clic su **Chiudi** per chiudere la finestra di dialogo **Stato elaborazione** , quindi fare di nuovo clic su **Chiudi** nella finestra di dialogo **Elabora modello di data mining** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di stime su un modello Sequence Clustering &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+ [Creazione di stime in un modello Sequence Clustering &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

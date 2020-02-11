@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2445b0c62347d84beb4690541871bfdec8d1ca3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869566"
 ---
-# <a name="mssqlserver18264"></a>MSSQLSERVER_18264
+# <a name="mssqlserver_18264"></a>MSSQLSERVER_18264
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62869566"
  Per impostazione predefinita, per ogni backup eseguito in modo corretto viene aggiunto questo messaggio informativo al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log delle transazioni viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di grandi dimensioni e rendendo difficile l'individuazione di altri messaggi.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- È possibile eliminare queste voci di log mediante il flag di traccia **3226** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'abilitazione di questo flag di traccia risulta utile se si eseguono backup del log frequenti e se nessuno degli script dipende da tali voci.  
+ È possibile eliminare queste voci di log mediante il flag di traccia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]3226**di**. L'abilitazione di questo flag di traccia risulta utile se si eseguono backup del log frequenti e se nessuno degli script dipende da tali voci.  
   
  Per informazioni sull'utilizzo dei flag di traccia, vedere la documentazione online di SQL Server.  
   

@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870903"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
 
-In questa sezione sono selezionati i messaggi di errore del motore di Database che necessitano di ulteriore spiegazione.
+Questa sezione contiene i messaggi di errore motore di database che richiedono un'ulteriore spiegazione.
   
-## <a name="in-this-section"></a>In questa sezione  
- [Errori ed eventi del motore di database](database-engine-events-and-errors.md) descrive il formato di [!INCLUDE[ssDE](../../includes/ssde-md.md)] messaggi di errore e viene illustrato come visualizzare i messaggi di errore e restituiscono i messaggi di errore per le applicazioni.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Eventi ed errori di motore di database](database-engine-events-and-errors.md) Viene descritto il formato [!INCLUDE[ssDE](../../includes/ssde-md.md)] dei messaggi di errore e viene illustrato come visualizzare i messaggi di errore e restituire messaggi di errore alle applicazioni.  
   
  Contiene le spiegazioni dei messaggi di errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le possibili cause e le azioni che è possibile eseguire per risolvere il problema.  
   
@@ -35,10 +35,10 @@ In questa sezione sono selezionati i messaggi di errore del motore di Database c
   
  Nella tabella seguente sono elencati i collegamenti a tali risorse insieme a una descrizione delle principali caratteristiche.  
   
-|Resource|Descrizione|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Community di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Questo sito contiene collegamenti a newsgroup e forum monitorati dalla community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elenca inoltre le fonti di informazione della community, quali Blog e siti Web. La community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto utile per ottenere la risposta a eventuali domande. Non è tuttavia garantita una risposta.|  
-|[Community del centro per sviluppatori di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Supporto Tecnico Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|È possibile utilizzare questo sito Web per richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|[Community di SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Guida e supporto tecnico Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|È possibile utilizzare questo sito Web per richiedere assistenza al supporto tecnico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

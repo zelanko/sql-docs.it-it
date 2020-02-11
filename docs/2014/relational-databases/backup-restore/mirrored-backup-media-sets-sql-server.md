@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876094"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Set di supporti di backup con mirroring (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "62876094"
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Panoramica dei set di supporti con mirroring  
+##  <a name="OverviewofMirroredMediaSets"></a>Panoramica dei set di supporti con mirroring  
  Il mirroring dei supporti è una proprietà del set di supporti. Un *set di supporti con mirroring* è costituito da più copie (*mirror*) del set di supporti. Un set di supporti contiene uno o più set di supporti, ognuno dei quali corrisponde a un dispositivo di backup. Ad esempio, se la clausola TO di un'istruzione BACKUP DATABASE include tre dispositivi, BACKUP distribuisce i dati tra tre gruppi di supporti, uno per dispositivo. Il numero di gruppi di supporti e di mirror è definito quando viene creato il set di supporti (tramite un'istruzione BACKUP DATABASE che specifica WITH FORMAT).  
   
  Un set di supporti con mirroring include da due a quattro mirror. Ogni mirror include tutti i gruppi di supporti del set di supporti. Per i mirror è necessario lo stesso numero di dispositivi, uno per gruppo di supporti. Per ogni mirror è necessario un dispositivo di backup separato per ogni gruppo di supporti. Ad esempio, per un set di supporti con mirroring costituito da quattro gruppi di supporti con tre mirror sono necessari dodici dispositivi di backup. È necessario che tutti questi dispositivi siano equivalenti, ad esempio unità nastro dello stesso produttore e con lo stesso numero di modello.  
@@ -54,14 +54,15 @@ ms.locfileid: "62876094"
   
  I volumi corrispondenti sui mirror hanno contenuti identici. Questo li rende intercambiabili al momento del ripristino. Ad esempio, nella figura precedente il terzo volume di nastro2 è intercambiabile con il terzo volume di nastro0.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assicura che il contenuto dei supporti con mirroring sia identico tramite la sincronizzazione delle scritture nei dispositivi. Quando uno dei mirror si riempie, viene eseguito lo spanning di tutti i mirror contemporaneamente.  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assicura che il contenuto dei supporti con mirroring sia identico tramite la sincronizzazione delle scritture nei dispositivi. Quando uno dei mirror si riempie, viene eseguito lo spanning di tutti i mirror contemporaneamente.  
   
 > [!IMPORTANT]  
 >  Non è possibile spezzare implicitamente, ovvero dividere, un set di supporti con mirroring tramite la rimozione di un mirror. Se un nastro o un disco in un mirror viene danneggiato o riformattato, non sarà più possibile utilizzare tale mirror per ulteriori backup. Se rimane intatto almeno un mirror completo, sarà possibile leggere il set di supporti. Se ogni mirror perde un determinato gruppo di supporti, il set di supporti risulterà inutile.  
   
  I requisiti relativi alla presenza di tutti i mirror sono diversi in caso di operazioni di backup e di ripristino. Per la scrittura, ovvero la creazione o estensione, di un set di supporti con mirroring da parte di un'operazione di backup, è necessario che siano presenti tutti i mirror. Quando al contrario si esegue il ripristino di un backup da un set di supporti con mirroring, è possibile specificare un solo mirror per ogni gruppo di supporti. È possibile eseguire il ripristino da un numero di dispositivi inferiore a quello dei gruppi, ma ogni gruppo di supporti viene elaborato solo una volta. In presenza di errori, tuttavia, la disponibilità degli altri mirror può consentire una risoluzione rapida di alcuni problemi di ripristino. È possibile sostituire un volume di un supporto danneggiato con il volume corrispondente da un altro mirror. RESTORE e RESTORE VERIFYONLY supportano infatti la sostituzione di supporti danneggiati con il volume di supporti di backup corrispondente disponibile in un altro mirror.  
   
-##  <a name="HardwareReqs"></a> Requisiti hardware per i mirror di backup  
+##  <a name="HardwareReqs"></a>Requisiti hardware per i mirror di backup  
  È possibile eseguire il mirroring sia su disco che su nastro. I dischi tuttavia non supportano i nastri di continuità. Tutti i dispositivi di backup per una singola operazione di backup o di ripristino devono essere dello stesso tipo, vale a dire disco o nastro.  
   
  È inoltre necessario utilizzare dispositivi simili, con le stesse proprietà. Se i dispositivi non sono sufficientemente simili, verrà generato un messaggio di errore (3212). Per evitare il rischio di mancata corrispondenza di un dispositivo, utilizzare dispositivi equivalenti, ad esempio unità dello stesso produttore e con lo stesso numero di modello.  
@@ -69,7 +70,7 @@ ms.locfileid: "62876094"
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per eseguire il backup su dispositivi di backup con mirroring**  
   
--   [Backup in un set di supporti con mirroring &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
+-   [Eseguire il backup in un set di supporti con mirroring &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   

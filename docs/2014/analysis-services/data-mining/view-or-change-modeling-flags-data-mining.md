@@ -1,5 +1,5 @@
 ---
-title: Visualizzare o modificare flag di modellazione (Data Mining) | Microsoft Docs
+title: Visualizzare o modificare i flag di modellazione (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082676"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Visualizzare o modificare flag di modellazione (Data mining)
@@ -28,7 +28,7 @@ ms.locfileid: "66082676"
   
 1.  In SQL Server Design Studio aprire Esplora soluzioni, quindi fare doppio clic sulla struttura di data mining.  
   
-2.  Per impostare il flag di modellazione NOT NULL, fare clic sulla scheda **Struttura di data mining** . Per impostare i flag REGRESSOR o MODEL_EXISTENCE_ONLY, fare clic sulla scheda **Modello di data mining** .  
+2.  Per impostare il flag di modellazione NOT NULL, fare clic sulla scheda **struttura di data mining** . Per impostare il REGRESSOre o i flag di MODEL_EXISTENCE_ONLY, fare clic sulla scheda **modello di data mining** .  
   
 3.  Fare clic con il pulsante destro del mouse sulla colonna da visualizzare o modificare, quindi scegliere **Proprietà**.  
   

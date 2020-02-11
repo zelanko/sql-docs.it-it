@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081555"
 ---
 # <a name="dmx-templates"></a>Modelli DMX
@@ -22,15 +22,15 @@ ms.locfileid: "66081555"
   
 ## <a name="using-the-templates"></a>Utilizzo dei modelli  
   
-1.  Nel Client di Data Mining per Excel, fare clic su **Query**.  
+1.  Nel client di data mining per Excel fare clic su **query**.  
   
-2.  Nella procedura guidata **avviare** pagina, fare clic su **successivo**.  
+2.  Nella pagina **iniziale** della procedura guidata fare clic su **Avanti**.  
   
-3.  Nella pagina **Seleziona modello**, fare clic su **avanzate**.  
+3.  Nella pagina **selezionare modello**, fare clic su **Avanzate**.  
   
-     **Suggerimento:** Se si intende creare una query di stima su un modello, è possibile selezionare prima il modello e quindi fare clic su **avanzate**per prepopolare il modello con il nome del modello.  
+     **Suggerimento:** Se si intende creare una query di stima su un modello, è possibile selezionare prima il modello, quindi fare clic su **Avanzate**per popolare il modello con il nome del modello.  
   
-4.  Nel **Advanced Query Editor di Data Mining**, fare clic su **modelli DMX**e selezionare un modello.  
+4.  Nell' **Editor avanzato query di data mining**fare clic su **modelli DMX**e selezionare un modello.  
   
 5.  Premere INVIO per caricare il modello nel riquadro Query DMX.  
   
@@ -38,16 +38,16 @@ ms.locfileid: "66081555"
   
      Per le query di stima, scegliere il set di dati di input e successivamente eseguire il mapping delle colonne.  
   
-7.  Fare clic su **modifica Query** per passare alla visualizzazione dell'editor di testo e modificare manualmente la query.  
+7.  Fare clic su **modifica query** per passare alla visualizzazione dell'editor di testo e modificare manualmente la query.  
   
      Si noti tuttavia che se si passa a una nuova vista durante l'utilizzo dell'editor di query, le informazioni presenti nella vista precedente verranno cancellate. Prima di cambiare vista, salvare il lavoro svolto copiando e incollando le istruzioni DMX in un file separato.  
   
-8.  Scegliere **Fine**. Nel **Scegli destinazione** finestra di dialogo, specificare dove si desidera salvare i risultati. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Fare clic su **Fine**. Nella finestra di dialogo **Scegli destinazione** specificare il percorso in cui si desidera salvare il risultato. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  Se un'istruzione viene eseguita correttamente, l'istruzione DMX che è stato inviato al server verrà inoltre registrata il **traccia** finestra. Per altre informazioni su come usare la funzionalità di traccia, vedere [Trace &#40;Client di Data Mining per Excel&#41;](trace-data-mining-client-for-excel.md).  
+>  Se un'istruzione è stata eseguita correttamente, l'istruzione DMX inviata al server viene registrata anche nella finestra di **traccia** . Per ulteriori informazioni sull'utilizzo della funzionalità Trace, vedere [trace &#40;client di data mining per&#41;Excel ](trace-data-mining-client-for-excel.md).  
   
- Per altre informazioni su come usare il Data Mining avanzato Editor di Query, vedere [Query &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](query-sql-server-data-mining-add-ins.md) e [avanzato Editor Query di Data Mining](advanced-data-mining-query-editor.md).  
+ Per ulteriori informazioni su come utilizzare l'editor avanzato query di data mining, vedere [Query &#40;SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md) e [Editor avanzato query di data mining](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Elenco dei modelli DMX  
  I seguenti modelli DMX sono inclusi nel client di data mining per Excel.  
@@ -74,7 +74,7 @@ ms.locfileid: "66081555"
   
  **Creare**  
   
- Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile utilizzare qualsiasi algoritmo di data mining supportato dall'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che è connessi, inclusi gli algoritmi plug-in.  
+ Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile usare qualsiasi algoritmo data mining supportato dall'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi, inclusi gli algoritmi plug-in.  
   
 -   Modello di data mining  
   

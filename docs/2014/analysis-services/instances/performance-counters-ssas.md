@@ -1,5 +1,5 @@
 ---
-title: I contatori delle prestazioni (SSAS) | Microsoft Docs
+title: Contatori delle prestazioni (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079705"
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
@@ -30,23 +30,23 @@ ms.locfileid: "66079705"
   
 ## <a name="counters-by-groups"></a>Contatori per gruppi  
   
-|Raggruppa|Descrizione|  
+|Group|Descrizione|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiche correlate alla cache delle aggregazioni di Analysis Services.|  
 |[Connessione](#bkmk_Connection)|Statistiche correlate alle connessioni di Microsoft Analysis Services.|  
-|[Stima data mining](#bkmk_DataMiningPrediction)|Statistiche correlate all'elaborazione del modello di data mining.|  
-|[Elaborazione modello di data mining](#bkmk_DataMiningModelProcessing)|Statistiche correlate alla creazione di stime dai modelli di data mining.|  
+|[Stima di data mining](#bkmk_DataMiningPrediction)|Statistiche correlate all'elaborazione del modello di data mining.|  
+|[Elaborazione del modello di data mining](#bkmk_DataMiningModelProcessing)|Statistiche correlate alla creazione di stime dai modelli di data mining.|  
 |[Locks](#bkmk_Locks)|Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.|  
 |[MDX](#bkmk_MDX)|Statistiche correlate ai calcoli MDX di Microsoft Analysis Services.|  
 |[Memoria](#bkmk_Memory)|Statistiche correlate alla memoria interna del server di Microsoft Analysis Services.|  
 |[Memorizzazione nella cache attiva](#bkmk_ProactiveCaching)|Statistiche correlate al caching attivo di Microsoft Analysis Services.|  
 |[Elaborazione di aggregazioni](#bkmk_ProcAggregations)|Statistiche correlate all'elaborazione di aggregazioni nei file di dati MOLAP.|  
-|[Elaborazione di indici](#bkmk_ProcIndexes)|Statistiche correlate all'elaborazione degli indici per i file di dati MOLAP.|  
+|[Elaborazione degli indici](#bkmk_ProcIndexes)|Statistiche correlate all'elaborazione degli indici per i file di dati MOLAP.|  
 |[Elaborazione](#bkmk_Processing)|Statistiche correlate all'elaborazione dei dati.|  
-|[Query motore di archiviazione](#bkmk_StorageEngineQuery)|Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.|  
+|[Query del motore di archiviazione](#bkmk_StorageEngineQuery)|Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.|  
 |[Thread](#bkmk_Threads)|Statistiche correlate ai thread di Microsoft Analysis Services.|  
   
-###  <a name="bkmk_Cache"></a> Cache  
+###  <a name="bkmk_Cache"></a>Cache  
  Statistiche correlate alla cache delle aggregazioni di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -68,12 +68,12 @@ ms.locfileid: "66079705"
 |Totale riscontri relativi a iteratore nella cache filtrata|Numero totale di riscontri nella cache che hanno restituito un iteratore indicizzato sui risultati filtrati.|  
 |Totale mancati riscontri nella cache filtrata dell'iteratore|Numero totale di riscontri nella cache per cui non è stato possibile compilare un iteratore indicizzato sui risultati filtrati ed è stato necessario compilare una nuova cache con i risultati filtrati.|  
   
-###  <a name="bkmk_Connection"></a> Connessione  
+###  <a name="bkmk_Connection"></a>Connessione  
  Statistiche correlate alle connessioni di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
 |-------------|-----------------|  
-|Connessioni correnti|Numero corrente delle connessioni client stabilite.|  
+|connessioni correnti|Numero corrente delle connessioni client stabilite.|  
 |Richieste/sec|Frequenza delle richieste di connessione  in arrivo.|  
 |Totale richieste|Numero totale delle richieste di connessione  in arrivo.|  
 |Richieste con esito positivo/sec|Numero delle connessioni completate correttamente al secondo.|  
@@ -82,7 +82,7 @@ ms.locfileid: "66079705"
 |Totale errori|Numero totale dei tentativi di connessione non riusciti.|  
 |Sessioni utente correnti|Numero corrente di sessioni utente attive.|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a> Elaborazione modello di data mining  
+###  <a name="bkmk_DataMiningModelProcessing"></a>Elaborazione del modello di data mining  
  Statistiche correlate all'elaborazione del modello di data mining di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079705"
 |Case/sec|Frequenza di elaborazione dei case.|  
 |Modelli elaborati correnti|Numero corrente dei modelli in fase di elaborazione.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a> Stima data mining  
+###  <a name="bkmk_DataMiningPrediction"></a>Stima di data mining  
  Statistiche correlate alle stime basate sui modelli di data mining di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079705"
 |Righe del totale|Numero totale delle righe restituite dalle query di data mining.|  
 |Totale stime|Numero totale delle query di stima basate sul modello di data mining ricevute dal server.|  
   
-###  <a name="bkmk_Locks"></a> Locks  
+###  <a name="bkmk_Locks"></a>Serrature  
  Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079705"
 |Richieste di sblocco/sec|Numero delle richieste di sblocco al secondo.|  
 |Totale deadlock rilevati|Numero totale di deadlock rilevati.|  
   
-###  <a name="bkmk_MDX"></a> MDX  
+###  <a name="bkmk_MDX"></a>MDX  
  Statistiche correlate ai calcoli MDX di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079705"
 |Totale Auto Exist|Numero totale di esecuzioni di Autoexist.|  
 |Totale EXISTING|Numero totale di esecuzioni dell'operatore sui set EXISTING.|  
   
-###  <a name="bkmk_Memory"></a> Memoria  
+###  <a name="bkmk_Memory"></a>Memoria  
  Statistiche correlate alla memoria interna del server di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -163,24 +163,24 @@ ms.locfileid: "66079705"
 |KB riserva di paging in elenco lookaside da 8 KB|Memoria corrente (in KB) nell'elenco lookaside da 8 KB.  Si riferisce alle pagine di memoria pronte all'uso.|  
 |Riserva di paging da 1 KB allocata|Memory presa in prestito dal pool di pagine da 64 KB, in KB.  Tale memoria viene allocata ad altre aree del server.|  
 |KB riserva di paging in elenco lookaside da 1 KB|Memoria corrente (in KB) nell'elenco lookaside da 8 KB.  Si riferisce alle pagine di memoria pronte all'uso.|  
-|prezzo corrente pulitura memoria|Prezzo corrente della memoria, $/byte/tempo, moltiplicato per 1000.|  
+|prezzo corrente pulitura memoria|Prezzo corrente della memoria, in €/byte/tempo, moltiplicato per 1000.|  
 |Pulitura memoria - bilanciamento/sec|Frequenza delle operazioni di bilanciamento e compattazione.|  
 |Pulitura memoria - KB/sec memoria completata|Frequenza di compattazione, in KB al secondo.|  
 |Pulitura memoria - KB memoria compattabile|Quantità di memoria, in KB, soggetta a ripulitura da parte del servizio di pulitura in background.|  
 |Pulitura memoria - KB memoria non compattabile|Quantità di memoria, in KB, non soggetta a ripulitura da parte del servizio di pulitura in background.|  
 |Pulitura memoria - KB memoria|Quantità di memoria, in KB, nota al servizio di pulitura della memoria in background,  ottenuta sommando la memoria compattabile e quella non compattabile.|  
-|KB memoria utilizzata|Utilizzo della memoria del processo server utilizzato per il calcolo del prezzo di una memoria più pulita.  Equivale al contatore Process\PrivateBytes più i dati con mapping in memoria, ignorando la memoria con mapping o allocazione eseguita dal motore di analisi in memoria xVelocity (VertiPaq) in eccesso rispetto al limite di memoria motore xVelocity.|  
+|KB memoria utilizzata|Utilizzo della memoria del processo server utilizzato per il calcolo del prezzo di una memoria più pulita.  Equivale al contatore Process\PrivateBytes più le dimensioni dei dati con mapping in memoria, ignorando la memoria con mapping o allocazione eseguita dal motore di analisi in memoria xVelocity (VertiPaq) in eccesso rispetto al limite di memoria del motore xVelocity.|  
 |KB limite inferiore memoria|Limite inferiore della memoria, dal file di configurazione.|  
 |KB limite superiore memoria|Limite superiore della memoria, dal file di configurazione.|  
 |AggCacheKB|Memoria attualmente allocata alla cache delle aggregazioni, in KB.|  
 |KB quota|Quota di memoria corrente, in KB.  Le quote di memoria sono note anche come concessioni di memoria o prenotazioni di memoria.|  
-|Richieste di quota bloccate|Numero corrente di richieste di quota che rimarranno bloccate finché non saranno disponibili altre quote di memoria.|  
+|quota bloccata|Numero corrente di richieste di quota bloccate fino a quando non vengono liberate altre quote di memoria.|  
 |KB cache dei file|Memoria attualmente allocata alla cache dei file, in KB.|  
 |Cache dei file - errori di pagina/sec|Frequenza degli errori di pagina nella cache dei file.|  
 |Cache dei file - letture/sec|Numero delle operazioni di lettura eseguite nella cache dei file al secondo.|  
 |Cache dei file - letture in KB/sec|Frequenza delle operazioni di lettura eseguite nella cache dei file, in KB al secondo.|  
-|Cache dei file - scritture/sec|Cache dei file pagine scritte/sec.  Le operazioni di scrittura sono asincrone.|  
-|Cache dei file - scritture in KB/sec|KB cache dei file scritti/sec.  Le operazioni di scrittura sono asincrone.|  
+|Cache dei file - scritture/sec|Pagine FileStore scritte/sec.  Le Scritture sono asincrone.|  
+|Cache dei file - scritture in KB/sec|KB FileStore scritti/sec.  Le Scritture sono asincrone.|  
 |Cache dei file - errori di I/O/sec|Frequenza degli errori di I/O nella cache dei file.|  
 |Cache dei file - errori di I/O|Totale degli errori di I/O nella cache dei file.|  
 |Cache dei file - pagine clock esaminate/sec|Frequenza con cui il servizio di pulitura della memoria in background esamina le pagine per determinare quelle da eliminare.|  
@@ -226,10 +226,10 @@ ms.locfileid: "66079705"
 |KB di paging VertiPaq|Kilobyte di memoria di paging in uso per i dati in memoria.|  
 |KB non di paging VertiPaq|Kilobyte di memoria bloccata nel working set per l'utilizzo dal motore in memoria.|  
 |KB di mapping in memoria VertiPaq|Kilobyte di memoria paginabile in uso per i dati in memoria.|  
-|KB limite superiore memoria|Limite superiore della memoria, dal file di configurazione.|  
-|KB limite memoria VertiPaq|Limite in memoria, dal file di configurazione.|  
+|KB limite superiore memoria|Limite assoluto della memoria, dal file di configurazione.|  
+|KB limite memoria VertiPaq|Limite in memoria dal file di configurazione.|  
   
-###  <a name="bkmk_ProactiveCaching"></a> Memorizzazione nella cache attiva  
+###  <a name="bkmk_ProactiveCaching"></a>Memorizzazione nella cache attiva  
  Statistiche correlate al caching attivo di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079705"
 |Inizio caching attivo/sec|Frequenza delle operazioni di caching attivo iniziate.|  
 |Completamento del caching attivo/sec|Frequenza delle operazioni di caching attivo completate.|  
   
-###  <a name="bkmk_ProcAggregations"></a> Elaborazione di aggregazioni  
+###  <a name="bkmk_ProcAggregations"></a>Elaborazione di aggregazioni  
  Statistiche correlate all'elaborazione di aggregazioni di Microsoft Analysis Services nei file di dati MOLAP.  
   
 |Contatore|Descrizione|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079705"
 |Righe scritte in file temporanei/sec|Velocità di scrittura in un file temporaneo.  La scrittura nei file temporanei avviene quando le aggregazioni superano i limiti di memoria.|  
 |Byte scritti in file temporanei/sec|Velocità di scrittura in un file temporaneo.  La scrittura nei file temporanei avviene quando le aggregazioni superano i limiti di memoria.|  
   
-###  <a name="bkmk_ProcIndexes"></a> Elaborazione di indici  
+###  <a name="bkmk_ProcIndexes"></a>Elaborazione degli indici  
  Statistiche correlate all'elaborazione di Microsoft Analysis Services degli indici per i file di dati MOLAP.  
   
 |Contatore|Descrizione|  
@@ -263,7 +263,7 @@ ms.locfileid: "66079705"
 |Righe/sec|Numero delle righe di file MOLAP utilizzate al secondo per la creazione degli indici.|  
 |Righe del totale|Totale delle righe di file MOLAP utilizzate per la creazione degli indici.|  
   
-###  <a name="bkmk_Processing"></a> Elaborazione  
+###  <a name="bkmk_Processing"></a>Elaborazione  
  Statistiche correlate all'elaborazione dei dati di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -275,7 +275,7 @@ ms.locfileid: "66079705"
 |Righe scritte/sec|Velocità di scrittura delle righe durante l'elaborazione.|  
 |Totale righe scritte|Numero totale delle righe scritte durante l'elaborazione.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a> Query motore di archiviazione  
+###  <a name="bkmk_StorageEngineQuery"></a>Query del motore di archiviazione  
  Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
@@ -318,30 +318,30 @@ ms.locfileid: "66079705"
 |Ricerche di aggregazione/sec|Frequenza delle ricerche di aggregazione.|  
 |Riscontri di aggregazione/sec|Frequenza di riscontri di aggregazione.|  
   
-###  <a name="bkmk_Threads"></a> Thread  
+###  <a name="bkmk_Threads"></a>Thread  
  Statistiche correlate ai thread di Microsoft Analysis Services.  
   
 |Contatore|Descrizione|  
 |-------------|-----------------|  
-|Thread inattivi per analisi dei thread brevi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread brevi.|  
-|Thread occupati per analisi dei thread brevi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread brevi.|  
-|Lunghezza coda processi di analisi dei thread brevi|Numero dei processi nella coda del pool dei thread per l'analisi dei thread brevi.|  
+|thread inattivi per analisi dei thread brevi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread brevi.|  
+|thread occupati per analisi dei thread brevi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread brevi.|  
+|lunghezza coda processi di analisi dei thread brevi|Numero dei processi nella coda del pool dei thread per l'analisi dei thread brevi.|  
 |Frequenza processi di analisi dei thread brevi|Frequenza dei processi nel pool dei thread per l'analisi dei thread brevi.|  
-|Thread inattivi per analisi dei thread lunghi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread lunghi.|  
-|Thread occupati per analisi dei thread lunghi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread lunghi.|  
-|Lunghezza coda processi di analisi dei thread lunghi|Numero dei processi nella coda del pool dei thread per l'analisi dei thread lunghi.|  
+|thread inattivi per analisi dei thread lunghi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread lunghi.|  
+|thread occupati per analisi dei thread lunghi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread lunghi.|  
+|lunghezza coda processi di analisi dei thread lunghi|Numero dei processi nella coda del pool dei thread per l'analisi dei thread lunghi.|  
 |Frequenza processi di analisi dei thread lunghi|Frequenza dei processi nel pool dei thread per l'analisi dei thread lunghi.|  
-|Thread inattivi pool di query|Numero dei thread inattivi nel pool dei thread di query.|  
+|thread inattivi nel pool di query|Numero dei thread inattivi nel pool dei thread di query.|  
 |Thread occupati pool di query|Numero dei thread occupati nel pool dei thread di query.|  
-|Lunghezza coda processi nel pool di query|Numero dei processi nella coda del pool dei thread di query.|  
+|lunghezza coda processi nel pool di query|Numero dei processi nella coda del pool dei thread di query.|  
 |Frequenza processi pool di query|Frequenza dei processi nel pool dei thread di query.|  
-|Thread non di I/O inattivi nel pool di elaborazione|Numero di thread inattivi nel pool dei thread di elaborazione dedicato a processi non di I/O.|  
-|Thread non di I/O occupati nel pool di elaborazione|Numero dei thread che eseguono processi non di I/O nel pool dei thread di elaborazione.|  
+|thread non di I/O inattivi nel pool di elaborazione|Numero di thread inattivi nel pool dei thread di elaborazione dedicato a processi non di I/O.|  
+|thread non di I/O occupati nel pool di elaborazione|Numero dei thread che eseguono processi non di I/O nel pool dei thread di elaborazione.|  
 |Lunghezza coda processi nel pool di elaborazione|Numero dei processi non di I/O nella coda del pool dei thread di elaborazione.|  
 |Frequenza processi pool di elaborazione|Frequenza dei processi non di I/O nel pool dei thread di elaborazione.|  
-|Thread di processi di I/O inattivi nel pool di elaborazione|Numero di thread inattivi per i processi di I/O nel pool dei thread di elaborazione.|  
-|Thread di processi di I/O occupati nel pool di elaborazione|Numero di thread che eseguono processi di I/O nel pool dei thread di elaborazione.|  
-|Lunghezza della coda dei processi di I/O nel pool di elaborazione|Numero di processi di I/O nella coda del pool dei thread di elaborazione.|  
+|thread di processi di I/O inattivi nel pool di elaborazione|Numero di thread inattivi per i processi di I/O nel pool dei thread di elaborazione.|  
+|thread di processi di I/O occupati nel pool di elaborazione|Numero di thread che eseguono processi di I/O nel pool dei thread di elaborazione.|  
+|lunghezza coda processi di I/O nel pool di elaborazione|Numero di processi di I/O nella coda del pool dei thread di elaborazione.|  
 |Percentuale di completamento dei processi di I/O nel pool di elaborazione|Percentuale dei processi di I/O nel pool dei thread di elaborazione.|  
   
   

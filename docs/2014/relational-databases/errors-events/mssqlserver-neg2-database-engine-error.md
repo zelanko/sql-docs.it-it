@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a451792e9732bf00e7bf68ce93b42c99b06fa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912417"
 ---
-# <a name="mssqlserver-2"></a>MSSQLSERVER_-2
+# <a name="mssqlserver_-2"></a>MSSQLSERVER_-2
     
 ## <a name="details"></a>Dettagli  
   
@@ -41,11 +41,11 @@ ms.locfileid: "62912417"
  Verificare che il firewall dell'istanza del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia configurato per l'accettazione delle connessioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare il Firewall di Windows per consentire l'accesso SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)   
- [Configurare un Firewall di Windows per l'accesso al motore di Database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
- [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
+ [Configurare la Windows Firewall per consentire l'accesso SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)   
+ [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

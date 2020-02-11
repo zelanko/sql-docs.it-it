@@ -1,5 +1,5 @@
 ---
-title: Creare una Query Singleton in Progettazione modelli di Data Mining | Microsoft Docs
+title: Creazione di una query singleton in Progettazione modelli di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085313"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Creare una query singleton in Progettazione modelli di data mining
@@ -57,9 +57,9 @@ AS [t]
   
 4.  Nella tabella **Input query singleton** selezionare nella colonna **Valore** i valori adatti a descrivere il caso per creare una stima.  
   
-     Ad esempio, selezionare **2** per **Number Children At Home**, quindi digitare `45` per **Age**.  
+     Ad esempio, selezionare **2** per **Number Children at Home**e quindi digitare `45` per **Age**.  
   
-5.  Trascinare una colonna stimabile dalla tabella **Modello di data mining** alla colonna **Origine** nella parte inferiore della scheda. Facoltativamente, è possibile digitare un alias per la colonna.  
+5.  Trascinare una colonna stimabile dalla tabella **modello di data mining** alla colonna **origine** nella parte inferiore della scheda. Facoltativamente, è possibile digitare un alias per la colonna.  
   
      Ad esempio, trascinare **Bike Buyer** nella colonna **Origine** .  
   
@@ -69,17 +69,17 @@ AS [t]
   
 7.  Fare clic su **Criteri/Argomento** nella riga **PredictProbability** e digitare il nome della colonna da stimare e facoltativamente un valore specifico da stimare.  
   
-     Digitare, ad esempio, `[Bike Buyer], 1`.  
+     Ad esempio, immettere `[Bike Buyer], 1`.  
   
 8.  Fare clic sulla casella **Alias** nella riga **PredictProbability** e digitare un nome per fare riferimento alla nuova colonna.  
   
-     Digitare, ad esempio, `ProbableBuyer`.  
+     Ad esempio, immettere `ProbableBuyer`.  
   
 9. Fare clic su **Passa alla visualizzazione dei risultati della query** sulla barra degli strumenti della scheda **Stima modello di data mining** .  
   
      Verrà visualizzata una nuova schermata con il risultato della query. Per visualizzare l'istruzione DMX appena creata, fare clic su **SQL**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
+ [Query di stima &#40;&#41;di data mining](prediction-queries-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modificare la vista origine dati usata per una struttura di Data Mining | Microsoft Docs
+title: Modificare la vista origine dati utilizzata per una struttura di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084522"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modificare la vista origine dati utilizzata per una struttura di data mining

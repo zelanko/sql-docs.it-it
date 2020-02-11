@@ -1,5 +1,5 @@
 ---
-title: Definizione di un tipo di dati della vista origine | Microsoft Docs
+title: Definizione di una vista origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079278"
 ---
 # <a name="defining-a-data-source-view"></a>Definizione di una vista origine dati
-  Dopo aver definito le origini dati che si utilizzeranno in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il passaggio successivo consiste in genere nella definizione di una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Dopo aver definito le origini dati che si utilizzeranno in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , il passaggio successivo consiste in genere nella definizione di una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Nell'attività che segue si definirà una vista origine dati che include cinque tabelle dell'origine dati **AdventureWorksDW2012** .  
   
@@ -26,9 +26,9 @@ ms.locfileid: "66079278"
   
 1.  In Esplora soluzioni (a destra della finestra di Microsoft Visual Studio) fare clic con il pulsante destro del mouse su **Viste origine dati**, quindi scegliere **Nuova vista origine dati**.  
   
-2.  Nella pagina iniziale di **Creazione guidata vista origine dati** fare clic su **Avanti**. Viene visualizzata la pagina **Selezione origine dati** .  
+2.  Nella pagina **Creazione guidata vista origine dati** fare clic su **Avanti**. Viene visualizzata la pagina **Selezione origine dati** .  
   
-3.  In **Origine dati relazionali**è selezionata l'origine dati **Adventure Works DW 2012** . Scegliere **Avanti**.  
+3.  In **Origine dati relazionali**è selezionata l'origine dati **Adventure Works DW 2012** . Fare clic su **Avanti**.  
   
     > [!NOTE]  
     >  Per creare una vista origine dati basata su più origini dati, definire innanzitutto una vista origine dati basata su una singola origine dati che viene chiamata origine dati primaria. Successivamente, è possibile aggiungere tabelle e viste di un'origine dati secondaria. Quando si progettano dimensioni contenenti attributi basati su tabelle correlate in più origini dati, potrebbe essere necessario definire un'origine dati di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come origine dati primaria allo scopo di usare le funzionalità del motore delle query distribuite.  
@@ -50,9 +50,9 @@ ms.locfileid: "66079278"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Fare clic su **>** per aggiungere le tabelle selezionate all'elenco **Oggetti inclusi** .  
+5.  Fare **>** clic su questo pulsante per aggiungere le tabelle selezionate all'elenco **oggetti inclusi** .  
   
-6.  Scegliere **Avanti.**  
+6.  Fare clic su **Avanti**.  
   
 7.  Nel campo Nome assicurarsi che sia visualizzato **Adventure Works DW 2012** , quindi fare clic su **Fine**.  
   

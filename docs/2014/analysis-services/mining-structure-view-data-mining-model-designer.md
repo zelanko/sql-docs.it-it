@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di struttura (Progettazione modelli di Data Mining) di data mining | Microsoft Docs
+title: Visualizzazione struttura di data mining (Progettazione modelli di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077672"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Visualizzazione Struttura di data mining (Progettazione modelli di data mining)
@@ -24,16 +24,16 @@ ms.locfileid: "66077672"
   
  La visualizzazione **Struttura di data mining** dispone degli strumenti e delle finestre di dialogo seguenti:  
   
--   [Nuova finestra di dialogo del modello di Data Mining &#40;visualizzazione di struttura di Data Mining&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   [Finestra di dialogo nuovo modello di data mining &#40;visualizzazione struttura di data mining&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
--   [Selezionare una colonna di finestra di dialogo &#40;visualizzazione di struttura di Data Mining&#41;](select-a-column-dialog-box-mining-structure-view.md)  
+-   [Finestra di dialogo Seleziona colonna &#40;visualizzazione struttura di data mining&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [Selezionare una finestra di dialogo colonna chiave tabella nidificata &#40;visualizzazione di struttura di Data Mining&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [Selezionare una finestra di dialogo colonna chiave tabella nidificata &#40;visualizzazione struttura di data mining&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di modelli di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Visualizzazione modelli di data mining &#40;Progettazione modelli di data mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
   
   

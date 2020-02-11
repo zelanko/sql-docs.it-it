@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc4d894dc03a53892b69f33dbf153cdd15fcf340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914519"
 ---
-# <a name="mssqlserver3313"></a>MSSQLSERVER_3313
+# <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
     
 ## <a name="details"></a>Dettagli  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62914519"
 ## <a name="user-action"></a>Azione dell'utente  
  Questo errore può essere causato da una condizione temporanea già presente nel sistema durante un determinato tentativo di avvio dell'istanza del server o di recupero di un database. Può inoltre essere causato da un errore permanente che si verifica ogni volta che si tenta di avviare il database. Per informazioni sulla causa, esaminare il registro eventi di Windows per cercare un errore precedente che indichi l'errore specifico.  
   
- Quando viene rilevata questa condizione di errore, generalmente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono generati tre file nella cartella **LOG** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nel file SQLDump*nnnn*.txt sono contenute informazioni diagnostiche avanzate relative agli errori, inclusi i dettagli sulla transazione e la pagina in cui si è verificato il problema. In genere, tali informazioni vengono utilizzate dal team del Servizio Supporto Tecnico Clienti per analizzare il motivo dell'errore.  
+ Quando viene rilevata questa condizione di errore, generalmente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono generati tre file nella cartella LOG[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** di **. Nel file SQLDump*nnnn*.txt sono contenute informazioni diagnostiche avanzate relative agli errori, inclusi i dettagli sulla transazione e la pagina in cui si è verificato il problema. In genere, tali informazioni vengono utilizzate dal team del Servizio Supporto Tecnico Clienti per analizzare il motivo dell'errore.  
   
  Per informazioni sulla causa di questa occorrenza dell'errore 3313, esaminare il registro eventi di Windows per cercare un errore precedente che indichi l'errore specifico. L'azione appropriata dell'utente varia a seconda che le informazioni nel registro eventi di Windows indichino che l'errore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato causato da una condizione temporanea o da un errore permanente. Per informazioni sulle azioni eseguibili dall'utente per risolvere l'errore 3313, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

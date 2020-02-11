@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 3: Aggiunta del reindirizzamento del flusso di errore | Microsoft Docs'
+title: 'Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891403"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori
@@ -24,13 +24,13 @@ ms.locfileid: "62891403"
   
  In questa attività si configurerà la trasformazione Lookup Currency Key in modo che le righe con esito negativo vengano reindirizzate all'output degli errori. Nel ramo del flusso di dati relativo agli errori, queste righe verranno scritte in un file.  
   
- Per impostazione predefinita, le due colonne supplementari in un output degli errori di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ovvero **ErrorCode** e **ErrorColumn**, contengono solo codici numerici che rappresentano un numero di errore e l'ID della colonna in cui si è verificato l'errore. Questi valori numerici possono avere un'utilità limitata senza la descrizione dell'errore corrispondente.  
+ Per impostazione predefinita, le due colonne supplementari [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un output degli errori, **ErrorCode** e **ErrorColumn**, contengono solo codici numerici che rappresentano un numero di errore e l'ID della colonna in cui si è verificato l'errore. Questi valori numerici possono avere un'utilità limitata senza la descrizione dell'errore corrispondente.  
   
  Per aumentare l'utilità dell'output degli errori, prima che il pacchetto scriva le righe con esito negativo nel file è possibile utilizzare un componente script per accedere all'API di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ottenere una descrizione dell'errore.  
   
 ### <a name="to-configure-an-error-output"></a>Per configurare un output degli errori  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Comune**e trascinare **Componente script** sull'area di progettazione della scheda **Flusso di dati** . Posizionare **Script** a destra della trasformazione **Lookup Currency Key** .  
+1.  Nella **casella degli strumenti SSIS**espandere **comune**, quindi trascinare **componente script** sull'area di progettazione della scheda **flusso di dati** . Inserire **lo script** a destra della trasformazione **Lookup Currency Key** .  
   
 2.  Nella finestra di dialogo **Seleziona tipo componente script** fare clic su **Trasformazione**e quindi su **OK**.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62891403"
   
 8.  Nella pagina **Input e output** espandere **Output 0**, fare clic su **Colonne di output**e fare clic su **Aggiungi colonna**.  
   
-9. Nel `Name` proprietà, digitare **ErrorDescription** e impostare il `DataType` proprietà **stringa Unicode [DT_WSTR]** .  
+9. Nella `Name` proprietà digitare **ErrorDescription** e impostare la `DataType` proprietà su **stringa Unicode [DT_WSTR]**.  
   
-10. Nel **Script** verificare che il `LocaleID` è impostata su **inglese (Stati Uniti.**  
+10. Nella pagina **script** verificare che la `LocaleID` proprietà sia impostata su **inglese (Stati Uniti.**  
   
 11. Fare clic su **Modifica script** per aprire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). Nel metodo `Input0_ProcessInputRow` digitare o incollare il codice seguente.  
   
@@ -96,6 +96,6 @@ ms.locfileid: "62891403"
 13. Scegliere **OK** per chiudere la finestra di dialogo **Editor trasformazione Script** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 4: Aggiunta di una destinazione File Flat] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Passaggio 4: aggiunta di una destinazione file flat] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

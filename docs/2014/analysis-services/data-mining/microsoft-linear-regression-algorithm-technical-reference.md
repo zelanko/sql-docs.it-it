@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico l'algoritmo Microsoft Linear Regression | Microsoft Docs
+title: Riferimento tecnico per l'algoritmo Microsoft Linear regressione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084055"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
@@ -36,8 +36,8 @@ ms.locfileid: "66084055"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Linear Regression|Punteggio di interesse|Valore predefinito.<br /><br /> Gli altri metodi relativi alla caratteristica di selezione degli attributi disponibili con l'algoritmo Decision Trees si applicano solo alle variabili discrete e non sono pertanto validi per i modelli di regressione lineare.|  
-|Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
+|Linear Regression|Punteggio di interesse|Default.<br /><br /> Gli altri metodi relativi alla caratteristica di selezione degli attributi disponibili con l'algoritmo Decision Trees si applicano solo alle variabili discrete e non sono pertanto validi per i modelli di regressione lineare.|  
+|Decision Trees|Punteggio di interesse<br /><br /> entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo predefinito o specificato.|  
   
  I parametri dell'algoritmo che controllano la caratteristica di selezione degli attributi per un modello di albero delle decisioni sono MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "66084055"
 |Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
 |NOT NULL|Indica che la colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alle colonne della struttura di data mining.|  
-|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi.<br /><br /> Nota: Quando si contrassegna una colonna come regressore non garantisce che la colonna verrà utilizzata come regressore nel modello finale.<br /><br /> Si applica alle colonne del modello di data mining.|  
+|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi.<br /><br /> Nota: l'applicazione di un flag REGRESSOR a una colonna non ne garantisce l'uso come regressore nel modello finale.<br /><br /> Si applica alle colonne del modello di data mining.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressori nei modelli di regressione lineare  
- I modelli di regressione lineare sono basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Tuttavia, anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o i nodi che rappresentano una regressione su un attributo continuo.  
+ I modelli di regressione lineare si basano sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Tuttavia, anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o i nodi che rappresentano una regressione su un attributo continuo.  
   
- Non è necessario specificare che una colonna continua rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees suddividerà il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna. La differenza è che quando si imposta il flag di modellazione, l'algoritmo tenterà di trovare equazioni di regressione nel formato un * C1 + b\*C2 +... per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
+ Non è necessario specificare che una colonna continua rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees suddividerà il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna. La differenza è che quando si imposta il flag di modellazione, l'algoritmo tenterà di trovare equazioni di regressione nel formato a * C1 + b\*C2 +... per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
   
  Ad esempio, se si stima il comportamento di acquisto dei clienti usando **Reddito** come attributo e si imposta il flag di modellazione REGRESSOR nella colonna, per prima cosa l'algoritmo tenterà di adattare i valori **Reddito** usando una formula di regressione standard. Se la deviazione è eccessiva, la formula di regressione viene abbandonata e l'albero viene diviso in base a un altro attributo. L'algoritmo Decision Trees tenta quindi di adattare un regressore per il reddito in ognuno dei rami dopo la divisione.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66084055"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Key, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical e Ordered|  
@@ -85,8 +85,8 @@ ms.locfileid: "66084055"
 >  I tipi di contenuto `Cyclical` e `Ordered` sono supportati, ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
+ [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

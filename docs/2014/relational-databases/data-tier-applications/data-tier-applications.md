@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873102"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
@@ -98,7 +98,7 @@ ms.locfileid: "62873102"
 ## <a name="backup-package-bacpac"></a>Pacchetto di backup (estensione .bacpac)  
  Un BACPAC è un elemento che incapsula lo schema del database e i dati archiviati nel database. Un BACPAC è un file di Windows con l'estensione .bacpac. Analogamente a DACPAC, BACPAC è un formato di file aperto. Il contenuto dello schema del BACPAC è identico a quello del pacchetto di applicazione livello dati. I dati sono archiviati nel formato JSON.  
   
- I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. L'uso primario di un file DACPAC consiste nel distribuire uno schema strettamente definito per lo sviluppo, test e quindi gli ambienti di produzione e viceversa: acquisizione dello schema di produzione e l'applicazione torna a test e ambienti di sviluppo.  
+ I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. Il caso d'uso principale di un DACPAC consiste nel distribuire uno schema strettamente definito per gli ambienti di sviluppo, test e produzione e il contrario: l'acquisizione dello schema di produzione e la relativa applicazione a ambienti di test e sviluppo.  
   
  Un BACPAC invece esegue l'acquisizione dello schema e dei dati. Un BACPAC è l'equivalente logico di un backup di database e non può essere utilizzato per aggiornare i database esistenti. L'utilizzo primario di un BACPAC consiste nello spostamento di un database da un server a un altro, o da un server locale al cloud, e l'archiviazione di un database esistente in un formato aperto.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62873102"
   
 -   **IMPORT**: l'utente può importare lo schema e i dati in un nuovo database nel server host.  
   
- Entrambe queste funzionalità sono supportate dagli strumenti di gestione database: Server Management Studio, il portale di gestione per SQL Azure e API DACFx.  
+ Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database Server Management Studio, il Portale di gestione per SQL Azure e l'API DACFx.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `CREATE DATABASE` per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `DROP DATABASE` per eliminare un database.  
   
 ## <a name="data-tier-application-tasks"></a>Attività dell'applicazione livello dati  
@@ -121,11 +121,11 @@ ms.locfileid: "62873102"
 |Viene descritto come utilizzare un nuovo file del pacchetto di applicazione livello dati per aggiornare un'istanza alla nuova versione dell'applicazione livello dati.|[Aggiornare un'applicazione livello dati](upgrade-a-data-tier-application.md)|  
 |Viene descritto come eliminare un'istanza di applicazione livello dati. È inoltre possibile scollegare o eliminare il database associato o lasciarlo intatto.|[Eliminare un'applicazione livello dati](delete-a-data-tier-application.md)|  
 |Viene descritto come visualizzare l'integrità dell'applicazione livello dati correntemente distribuita tramite Utilità SQL Server.|[Monitorare le applicazioni livello dati](data-tier-applications.md)|  
-|Viene descritto come creare un file .bacpac che contiene un archivio dei dati e dei metadati in un'applicazione livello dati.|[Esportare un'applicazione livello dati](export-a-data-tier-application.md)|  
+|Viene descritto come creare un file .bacpac che contiene un archivio dei dati e dei metadati in un'applicazione livello dati.|[Esportazione di un'applicazione livello dati](export-a-data-tier-application.md)|  
 |Viene descritto come utilizzare un file di archivio dell'applicazione livello dati (estensione .bacpac) per eseguire un ripristino logico di un'applicazione livello dati o la migrazione dell'applicazione livello dati a un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importare un file BACPAC per creare un nuovo database utente](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Viene descritto come importare un file BACPAC per creare un nuovo database utente all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Estrarre un'applicazione livello dati da un database](extract-a-dac-from-a-database.md)|  
 |Viene descritto come promuovere un database esistente trasformandolo in un'istanza di applicazione livello dati. Una definizione dell'applicazione livello dati viene compilata e archiviata nei database di sistema.|[Registrare un database come applicazione livello dati](register-a-database-as-a-dac.md)|  
-|Viene descritto come rivedere il contenuto di un pacchetto di applicazione livello dati e le azioni che un aggiornamento dell'applicazione livello dati eseguirà prima di utilizzare il pacchetto in un sistema di produzione.|[Convalidare un pacchetto di applicazione livello dati](validate-a-dac-package.md)|  
+|Viene descritto come rivedere il contenuto di un pacchetto di applicazione livello dati e le azioni che un aggiornamento dell'applicazione livello dati eseguirà prima di utilizzare il pacchetto in un sistema di produzione.|[Convalidare un pacchetto di applicazioni livello dati](validate-a-dac-package.md)|  
 |Viene descritto come posizionare il contenuto di un pacchetto di applicazione livello dati in una cartella dove un amministratore di database può rivedere quello che l'applicazione livello dati fa prima di distribuirlo a un server di produzione.|[Decomprimere un pacchetto di applicazione livello dati](unpack-a-dac-package.md)|  
 |Viene descritto come utilizzare una procedura guidata per distribuire un database esistente. Nella procedura guidata vengono utilizzate applicazioni livello dati per effettuare la distribuzione.|[Distribuire un database tramite un'applicazione livello dati](deploy-a-database-by-using-a-dac.md)|  
   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876114"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62876114"
   
  Se un'operazione BACKUP continua dopo aver rilevato errori, l'operazione esegue i passaggi indicati di seguito:  
   
-1.  Contrassegna il set di backup sul supporto come contenente errori e tiene traccia della pagina nella tabella **suspect_pages** del database **msdb**. Per altre informazioni, vedere [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
+1.  Contrassegna il set di backup sul supporto come contenente errori e tiene traccia della pagina nella tabella **suspect_pages** del database **msdb** . Per altre informazioni, vedere [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
   
 2.  Registra l'errore nel log degli errori di SQL Server.  
   

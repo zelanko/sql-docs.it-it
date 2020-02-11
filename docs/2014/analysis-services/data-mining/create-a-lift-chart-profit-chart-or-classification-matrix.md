@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085409"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
@@ -69,7 +69,7 @@ ms.locfileid: "66085409"
   
     -   Selezionare l'opzione **Usa test case della struttura di data mining**per usare il set completo di test case definiti come parte del set di dati di controllo delle strutture di data mining.  
   
-    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic su Sfoglia ( **...** ) pulsante per scegliere le tabelle di dati da utilizzare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
+    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic sul pulsante Sfoglia (**..**.) per scegliere le tabelle di dati da utilizzare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
   
          Se si utilizza un set di dati esterno, è possibile scegliere di filtrare il set di dati di input. Per altre informazioni, vedere [Applicare filtri ai dati di test del modello](apply-filters-to-model-testing-data.md).  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66085409"
   
 1.  Nella scheda **Grafico accuratezza modello di data mining** fare clic sulla scheda relativa al grafico da creare.  
   
-2.  Per un **grafico di accuratezza**, fare clic sulla scheda **Grafico di accuratezza** . Il grafico viene generato automaticamente in base al modello, agli attributi stimabili e ai dati di input selezionati.  
+2.  Per un **grafico di accuratezza**, fare clic sulla scheda **grafico di accuratezza** . Il grafico viene generato automaticamente in base al modello, agli attributi stimabili e ai dati di input appena selezionati.  
   
-3.  Per una **matrice di classificazione**, fare clic sulla scheda **Matrice di classificazione** . Non sono necessarie ulteriori impostazioni. Il grafico viene generato automaticamente in base al modello e ai dati di input selezionati.  
+3.  Per una **matrice di classificazione**, fare clic sulla scheda **matrice di classificazione** . Non sono necessarie altre impostazioni. il grafico viene generato automaticamente in base ai dati di input e al modello selezionati.  
   
-4.  Per un **grafico dei profitti**, fare clic sulla scheda **Grafico di accuratezza** . Selezionare **Grafico profitti** nell'elenco a discesa **Tipo di grafico**.  
+4.  Per un **grafico dei profitti**, fare prima clic sulla scheda **grafico di accuratezza** . Quindi selezionare **grafico profitti**nell'elenco a discesa **tipo di grafico** .  
   
      Immettere le impostazioni seguenti nella finestra di dialogo **Impostazioni grafico profitti** .  
   
@@ -95,23 +95,23 @@ ms.locfileid: "66085409"
   
      Ciò è dovuto al fatto che quando il modello viene utilizzato per generare un mailing o creare una campagna, verrà utilizzata la probabilità di stima associata a ogni case per individuare solo i clienti la cui risposta sarà positiva in base alla probabilità più alta.  
   
-     **Costi fissi**  
+     **Costo fisso**  
      Costi fissi associati al problema aziendale.  
   
      Nel caso di una soluzione di mailing diretto, i costi fissi potrebbero essere correlati alla configurazione di una stampante per la copertura dei costi iniziali necessari per la preparazione del mailing promozionale.  
   
      Tali costi si applicano una volta all'intera popolazione di destinazione.  
   
-     **Costi singolo contatto**  
+     **Costo individuale**  
      Costi extra in aggiunta ai costi fissi che possono essere associati al contatto di ogni cliente, È possibile, ad esempio, immettere i costi di affrancatura per un mailing promozionale o per l'esecuzione di telefonate.  
   
      Tali costi devono essere identici per l'intera popolazione di destinazione. Ogni valore viene moltiplicato per il numero di case di destinazione.  
   
-     **Ricavi per singolo contatto**  
+     **Ricavi per singolo utente**  
      Importo dei ricavi associati a ogni vendita effettuata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](lift-chart-analysis-services-data-mining.md)   
+ [Matrice di classificazione &#40;Analysis Services-&#41;di data mining](classification-matrix-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Pianificare attività amministrative SSAS con SQL Server Agent | Microsoft Docs
+title: Pianificare le attività amministrative di SSAS con SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079679"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
@@ -24,10 +24,10 @@ ms.locfileid: "66079679"
   
  In questo argomento è disponibile una procedura dettagliata che illustra due modalità di utilizzo di SQL Server Agent per eseguire script XMLA. Nel primo esempio viene dimostrato come pianificare l'elaborazione di una singola dimensione. Nel secondo esempio viene illustrato come combinare attività di elaborazione in uno singolo script eseguito in una pianificazione. Per completare la procedura dettagliata, è necessario soddisfare i requisiti riportati di seguito.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  È necessario che il servizio SQL Server Agent sia installato.  
   
- Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. Nelle [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'account predefinito per SQL Server Agent è NT Service\SQLAgent$\<NomeIstanza >. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per altre informazioni, vedere [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]l'account predefinito per SQL Server Agent è NT Service\SQLAgent $\<NomeIstanza>. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per ulteriori informazioni, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../install-sample-data-and-projects.md).  
   
@@ -36,11 +36,11 @@ ms.locfileid: "66079679"
   
  Un'attività pianificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è uno script XMLA incorporato in un processo di SQL Server Agent. L'esecuzione di questo processo è pianificata per l'esecuzione negli orari e con la frequenza desiderati. Poiché SQL Server Agent è un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per la creazione e la pianificazione di un'attività amministrativa verranno utilizzati sia il Motore di database che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="bkmk_CreateScript"></a> Creare uno script per l'elaborazione di una dimensione in un processo di SQL Server Agent  
+###  <a name="bkmk_CreateScript"></a>Creare uno script per l'elaborazione di una dimensione in un processo di SQL Server Agent  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Aprire una cartella di database e individuare una dimensione. Fare clic con il pulsante destro del mouse sulla dimensione e scegliere **Elabora**.  
   
-2.  Nella finestra di dialogo **Elaborazione dimensione** , nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull'opzione e quindi selezionare **Elaborazione completa** nell'elenco a discesa.  
+2.  Nella finestra di dialogo **** di elaborazione, in **Elenco oggetti** verificare che l’opzione per la colonna **Opzioni elaborazione**sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull'opzione e quindi selezionare **Elaborazione completa** nell'elenco a discesa.  
   
 3.  Fare clic su **Script**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079679"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a> Creare e pianificare il processo di elaborazione della dimensione  
+###  <a name="bkmk_ProcessJob"></a>Creare e pianificare il processo di elaborazione della dimensione  
   
 1.  Connettersi a un'istanza del motore di database e quindi aprire Esplora oggetti.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66079679"
   
 7.  In **Server** digitare **localhost** per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\**\<*nome istanza*> per un'istanza denominata.  
   
-     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Usare il formato \< *nome server*> per un'istanza predefinita, e \< *nome del server*>\\<*istanza nome*> per un'istanza denominata.  
+     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Utilizzare il formato \< *nome server*> \<per un'istanza predefinita e nome *Server*>\\<nome*istanza*> per un'istanza denominata.  
   
 8.  In **Tipo**selezionare **Comando di SQL Server Analysis Services**.  
   
@@ -105,10 +105,10 @@ ms.locfileid: "66079679"
   
 15. Al termine del processo fare clic su **Chiudi**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Una dimensione e una partizione in un'attività pianificata per l'elaborazione batch  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Elaborazione batch di una dimensione e una partizione in un'attività pianificata  
  Le procedure in questo esempio dimostrano come creare e pianificare un processo per l'elaborazione batch di una dimensione database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e contemporaneamente per l'elaborazione di una partizione del cubo che dipende dalla dimensione per l'aggregazione. Per altre informazioni sull'elaborazione batch di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Elaborazione batch &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a> Creare uno script per l'elaborazione batch di una dimensione e una partizione in un processo di SQL Server Agent  
+###  <a name="bkmk_BatchProcess"></a>Creare uno script per l'elaborazione batch di una dimensione e una partizione in un processo di SQL Server Agent  
   
 1.  Usando lo stesso database, espandere **Dimensioni**, fare clic con il pulsante destro del mouse sulla dimensione **Customer** e scegliere **Elabora**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079679"
   
 12. In questo passaggio lo script XMLA viene copiato negli Appunti di Windows. È possibile lasciare lo script XMLA negli Appunti, salvarlo su un file o incollarlo nel Blocco note o un altro editor di testo.  
   
-###  <a name="bkmk_Scheduling"></a> Creare e pianificare il processo di elaborazione batch  
+###  <a name="bkmk_Scheduling"></a>Creare e pianificare il processo di elaborazione batch  
   
 1.  Connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi aprire Esplora oggetti.  
   
@@ -223,6 +223,6 @@ ms.locfileid: "66079679"
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Creazione di script per attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

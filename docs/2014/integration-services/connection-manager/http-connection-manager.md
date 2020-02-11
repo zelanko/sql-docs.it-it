@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833757"
 ---
 # <a name="http-connection-manager"></a>gestione connessione HTTP
-  Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. L'attività Servizio Web inclusa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa questa gestione connessione.  
+  Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. L'attività [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servizio Web inclusa in utilizza questa gestione connessione.  
   
  Quando si aggiunge una gestione connessione HTTP a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione HTTP, imposta le proprietà della gestione connessione e quindi la aggiunge alla raccolta `Connections` del pacchetto.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "62833757"
   
 -   [Editor gestione connessione HTTP &#40;pagina Server&#41;](../http-connection-manager-editor-server-page.md)  
   
--   [Editor gestione connessione HTTP &#40;pagina Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Editor gestione connessione HTTP &#40;pagina proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività Servizio Web](../control-flow/web-service-task.md)   
+ [Attività servizio Web](../control-flow/web-service-task.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

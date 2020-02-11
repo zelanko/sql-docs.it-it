@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni di pacchetto | Microsoft Docs'
+title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891057"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
@@ -26,24 +26,24 @@ ms.locfileid: "62891057"
   
 2.  Scegliere [!INCLUDE[ssIS](../includes/ssis-md.md)] Variabili **dal menu**.  
   
-3.  Nella finestra **Variabili** fare clic sull'icona Aggiungi variabile.  
+3.  Nella finestra **Variabili** fare clic sull'icona Aggiungi variabile .  
   
 4.  Nella casella **Nome** digitare **varFolderName**.  
   
     > [!IMPORTANT]  
     >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
-5.  Verificare che in **Ambito** sia visualizzato il nome del pacchetto, Lesson 5.  
+5.  Verificare che nella casella **ambito** sia visualizzato il nome del pacchetto, Lesson 5.  
   
 6.  Impostare su **String** il valore della casella `varFolderName` Tipo di dati **della variabile**.  
   
 7.  Tornare alla scheda **Flusso di controllo** e fare doppio clic sul contenitore **Foreach File in Folder** .  
   
-8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** fare clic su **Espressioni** e quindi sul pulsante con i puntini di sospensione **(...)** .  
+8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** fare clic su **Espressioni** e quindi sul pulsante con i puntini di sospensione **(...)**.  
   
-9. Nel **Editor espressioni di proprietà**, fare clic nella **proprietà** elencare e selezionare `Directory`.  
+9. Nell' **Editor espressioni di proprietà**fare clic nell'elenco **Proprietà** e selezionare `Directory`.  
   
-10. Nel **espressione** fare clic sui puntini di sospensione **(...)** .  
+10. Nella casella **espressione** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 11. In **Generatore di espressioni**espandere la cartella Variabili e trascinare la variabile **User::varFolderName** nella casella **Espressione** .  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62891057"
   
 ### <a name="to-enable-package-configurations"></a>Per abilitare le configurazioni dei pacchetti  
   
-1.  Scegliere **Converti nel modello di distribuzione del pacchetto**dal menu **Progetto**.  
+1.  Scegliere **Converti nel modello di distribuzione del pacchetto**dal **menu progetto**.  
   
 2.  Fare clic su **OK** nella richiesta di avviso e, una volta completata la conversione, scegliere **OK** nella finestra di dialogo **Converti nel modello di distribuzione del pacchetto** .  
   
-3.  Fare clic sullo sfondo della scheda **Flusso di controllo** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+3.  Fare clic sullo sfondo della scheda **Flusso di controllo** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 4.  Scegliere **Configurazioni pacchetto** dal menu **SSIS**.  
   
@@ -75,36 +75,36 @@ ms.locfileid: "62891057"
   
 10. Nella finestra di dialogo **Selezionare il percorso del file di configurazione** digitare **SSISTutorial** nel campo **Nome file**e quindi fare clic su **Salva**.  
   
-11. Nella pagina **Selezione tipo di configurazione** fare clic su **Avanti**.  
+11. Nella pagina **Selezione tipo di configurazione** fare clic su **Avanti.**  
   
-12. Nel riquadro **Oggetti** della pagina **Selezione proprietà da esportare** espandere **Variabili**, **varFolderName**, **Properties**e quindi selezionare **Value**.  
+12. Nel riquadro **oggetti** della pagina **Selezione proprietà da esportare** espandere **variabili**, espandere **VarFolderName**, espandere **Proprietà**, quindi selezionare **valore**.  
   
 13. Nella pagina **Selezione proprietà da esportare** fare clic su **Avanti**.  
   
 14. Nella pagina **Completamento procedura guidata** digitare un nome per la configurazione, ad esempio **SSIS Tutorial Directory configuration**. Si tratta del nome della configurazione visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-15. Scegliere **Fine**.  
+15. Fare clic su **Fine**.  
   
-16. Scegliere **Chiudi**.  
+16. Fare clic su **Close**.  
   
-17. La procedura guidata crea un file di configurazione denominato ssistutorial. dtsconfig contenente le impostazioni di configurazione per il `value` della variabile che a sua volta imposta le `Directory` proprietà dell'enumeratore.  
+17. La procedura guidata crea un file di configurazione denominato SSISTutorial. dtsConfig che contiene le impostazioni `value` di configurazione per della variabile che a sua volta imposta `Directory` la proprietà dell'enumeratore.  
   
     > [!NOTE]  
     >  In un file di configurazione in genere sono incluse informazioni complesse sulle proprietà del pacchetto; tuttavia per questa esercitazione le uniche informazioni di configurazione saranno  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    > Path = "\Pacchetto.variabili [user:: varFolderName]. Properties [valore] "ValueType =" stringa "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \</Configuration>.  
+    > \<>/configurazione.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Per creare e popolare una nuova cartella di dati di esempio  
   
-1.  In Windows Explorer, a livello di radice dell'unità (ad esempio, c\\), creare una nuova cartella denominata `New Sample Data`.  
+1.  In Esplora risorse, al livello radice dell'unità (ad esempio, C:\\), creare una nuova cartella denominata. `New Sample Data`  
   
 2.  Individuare i file di esempio nel computer e copiare tre dei file nella cartella.  
   
-3.  Nel `New Sample Data` cartella, incollare i file copiati.  
+3.  Incollare i `New Sample Data` file copiati nella cartella.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 3: Modifica del valore di configurazione proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Passaggio 3: Modifica del valore di configurazione della proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

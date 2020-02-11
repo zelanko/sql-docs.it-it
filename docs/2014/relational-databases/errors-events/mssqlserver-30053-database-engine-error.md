@@ -11,13 +11,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914358"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>Dettagli  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62914358"
 ## <a name="user-action"></a>Azione dell'utente  
  Selezionare l'azione dell'utente adatta alla probabile causa del timeout, come segue:  
   
-|Causa probabile|Azione utente|  
+|Possibile causa|Azione utente|  
 |--------------------|-----------------|  
 |Il word breaker per il linguaggio di query non è configurato correttamente.|Se si utilizza un word breaker di terze parti, è possibile che non sia stato registrato correttamente nel sistema operativo. In questo caso, registrare nuovamente il word breaker. Per altre informazioni, vedere [Ripristinare i word breaker usati dalla ricerca alla versione precedente](../search/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Il malfunzionamento del word breaker è dovuto a una stringa di query specifica.|Se il word breaker è supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contattare il Servizio Supporto Tecnico Clienti Microsoft.|  
@@ -59,8 +59,8 @@ ms.locfileid: "62914358"
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Ricerca full-text](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Configurazione e gestione di word breaker e stemmer per la ricerca](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [sp_help_fulltext_system_components &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [Configurare e gestire Word breaker e stemmer per la ricerca](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire filtri per la ricerca](../search/configure-and-manage-filters-for-search.md)  
   
   

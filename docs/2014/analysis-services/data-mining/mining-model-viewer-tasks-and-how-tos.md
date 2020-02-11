@@ -1,5 +1,5 @@
 ---
-title: Attività del Visualizzatore modelli e procedure dettagliate di data mining | Microsoft Docs
+title: Attività e procedure relative al Visualizzatore modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083475"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Attività e procedure relative al visualizzatore modello di data mining
   Progettazione modelli di data mining di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] include diversi strumenti che è possibile usare per esplorare i modelli di data mining. Gli argomenti seguenti contengono istruzioni dettagliate su come completare le attività correlate all'uso della scheda **Visualizzatore modello di data mining** nella finestra di progettazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Selezionare un modello di data mining e un visualizzatore data mining](select-a-mining-model-and-a-data-mining-viewer.md)  
   
@@ -41,12 +41,12 @@ ms.locfileid: "66083475"
   
 -   [Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Visualizzare la formula per un modello Time Series &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Visualizzazione della formula per un modello Time Series &#40;data mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Modificare i colori utilizzati nel visualizzatore data mining](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)   
- [Visualizzatori modello di Data Mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

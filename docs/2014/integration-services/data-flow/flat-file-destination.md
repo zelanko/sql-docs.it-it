@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902446"
 ---
 # <a name="flat-file-destination"></a>file flat - destinazione
@@ -46,7 +46,7 @@ ms.locfileid: "62902446"
   
 -   [Editor destinazione file flat &#40;pagina Gestione connessione&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione file flat &#40;pagina Mapping&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Editor destinazione file flat &#40;pagina mapping&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   

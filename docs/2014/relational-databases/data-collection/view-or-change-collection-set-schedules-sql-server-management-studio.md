@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873488"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "62873488"
   
 2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità cache, ad esempio **Statistiche query**e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet) .  
   
-3.  Per modificare la frequenza di raccolta, utilizzare la pagina **Generale** . A tale scopo, effettuare le operazioni seguenti:  
+3.  Per modificare la frequenza di raccolta, utilizzare la pagina **Generale** . A questo scopo, seguire questa procedura:  
   
     1.  Nel riquadro dei dettagli fare doppio clic sul numero visualizzato per la colonna **Frequenza di raccolta (sec)** nella tabella **Elementi della raccolta** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62873488"
   
  Utilizzare questa pagina per configurare la modalità di raccolta e caricamento dei dati, le pianificazioni e i periodi di memorizzazione dei dati nel data warehouse di gestione. Questa pagina inoltre fornisce informazioni sui set di raccolte, quali le frequenze di raccolta e i tipi di agente di raccolta, nonché i parametri di input utilizzati per un set di raccolta.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome del set di raccolta al quale fa riferimento questa pagina.  
   
  **Raccolta e caricamento dati**  
@@ -112,13 +112,13 @@ ms.locfileid: "62873488"
   
 |||  
 |-|-|  
-|**Non-memorizzato nella cache - Raccogli e carica dati in base alla stessa pianificazione.**|Se viene selezionata questa opzione, specificare uno dei valori seguenti:<br /><br /> **Su richiesta**. I dati sono raccolti e caricati su richiesta.<br /><br /> **Pianifica** I dati sono raccolti e caricati in base a una pianificazione. Fare clic su **Seleziona** per selezionare da un elenco predefinito di pianificazioni oppure su **Nuovo** per creare una pianificazione nuova.|  
+|**Non-memorizzato nella cache - Raccogli e carica dati in base alla stessa pianificazione.**|Se viene selezionata questa opzione, specificare uno dei valori seguenti:<br /><br /> **Su richiesta**. I dati sono raccolti e caricati su richiesta.<br /><br /> **Pianificazione**. I dati sono raccolti e caricati in base a una pianificazione. Fare clic su **Seleziona** per selezionare da un elenco predefinito di pianificazioni oppure su **Nuovo** per creare una pianificazione nuova.|  
 |**Memorizzato nella cache - Raccogli e memorizza nella cache i dati in base a un set di frequenze di raccolta. Carica dati memorizzati nella cache in base a una pianificazione separata.**|I dati sono raccolti e memorizzati nella cache in base alla frequenza di raccolta specificata. I dati raccolti sono caricati in base a una pianificazione separata.|  
   
  **Elementi della raccolta**  
  Consente di visualizzare gli elementi del set di raccolta. Per ogni elemento della raccolta sono disponibili le seguenti informazioni:  
   
--   **Name**  
+-   **Nome**  
   
 -   **Tipo agente di raccolta**  
   

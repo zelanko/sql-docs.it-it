@@ -1,5 +1,5 @@
 ---
-title: Configurare i tipi di attributo | Microsoft Docs
+title: Configurare i tipi di attributi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,36 +18,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077407"
 ---
 # <a name="configure-attribute-types"></a>Configurare tipi di attributi
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i tipi di attributi consentono di classificare un attributo in termini di funzionalità aziendali. Sono disponibili numerosi tipi di attributi, la maggior parte dei quali viene utilizzata dalle applicazioni client per visualizzare o supportare un attributo. Alcuni tipi di attributi, tuttavia, hanno un significato specifico in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Alcuni tipi identificano ad esempio attributi che rappresentano periodi di tempo in calendari diversi per le dimensioni temporali.  
   
-##  <a name="setting_attibute_types"></a> Impostazione dei tipi di attributi  
+##  <a name="setting_attibute_types"></a>Impostazione di tipi di attributo  
  Il valore della proprietà `Type` per un attributo determina il tipo dell'attributo stesso. Diverse procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono di impostare i tipi di attributi durante la definizione di dimensioni o attributi. Tali procedure guidate di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consentono inoltre di impostare i tipi di attributi durante l'aggiunta di funzionalità alle dimensioni. Tramite la Configurazione guidata funzionalità di Business Intelligence, ad esempio, vengono applicati numerosi tipi di attributi agli attributi in una dimensione durante l'aggiunta di funzionalità di Business Intelligence per la contabilità, per identificare attributi contenenti nomi, codici, numeri e struttura dei conti nella dimensione. Nella Configurazione guidata funzionalità di Business Intelligence vengono inoltre utilizzati i tipi di attributi, ad esempio per la conversione di valuta. Per altre informazioni, vedere [Creare una dimensione di tipo Valuta](database-dimensions-create-a-currency-type-dimension.md).  
   
  Nelle tabelle seguenti sono inclusi i tipi di attributi disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nelle tabelle i tipi di attributi sono organizzati nelle categorie seguenti:  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |[Tipi di attributi generali](#general_attribute_types)|Questi valori sono disponibili per tutti gli attributi e hanno l'unico scopo di consentire la classificazione degli attributi ai fini delle applicazioni client.|  
-|[Tipi di attributi delle dimensioni di tipo Conto](#account_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione di tipo Conto. Per altre informazioni sulle dimensioni di tipo Conto, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](database-dimensions-finance-account-of-parent-child-type.md).|  
-|[Tipi di attributi delle dimensioni di tipo Valuta](#currency_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione di tipo Valuta. Per altre informazioni sulle dimensioni di tipo Valuta, vedere [Creare una dimensione di tipo Valuta](database-dimensions-create-a-currency-type-dimension.md).|  
-|[Tipi di attributi delle dimensioni a modifica lenta](#slowly_changing_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione a modifica lenta.|  
-|[Tipi di attributi delle dimensioni temporali](#time_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione temporale. Per altre informazioni sulle dimensioni temporali, vedere [Creare una dimensione di tipo Date](database-dimensions-create-a-date-type-dimension.md).|  
+|[Tipi di attributo della dimensione dell'account](#account_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione di tipo Conto. Per altre informazioni sulle dimensioni di tipo Conto, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](database-dimensions-finance-account-of-parent-child-type.md).|  
+|[Tipo di attributo della dimensione di tipo valuta](#currency_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione di tipo Valuta. Per altre informazioni sulle dimensioni di tipo Valuta, vedere [Creare una dimensione di tipo Valuta](database-dimensions-create-a-currency-type-dimension.md).|  
+|[Attributi delle dimensioni a modifica lenta](#slowly_changing_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione a modifica lenta.|  
+|[Attributi della dimensione temporale](#time_dimension_attribute_types)|Questi valori identificano un attributo appartenente a una dimensione temporale. Per altre informazioni sulle dimensioni temporali, vedere [Creare una dimensione di tipo Date](database-dimensions-create-a-date-type-dimension.md).|  
   
-###  <a name="general_attribute_types"></a> General Attribute Types  
+###  <a name="general_attribute_types"></a>Tipi di attributi generali  
   
 |Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
 |`Address`|Rappresenta un indirizzo.|  
 |`AddressBuilding`|Rappresenta l'identificatore di edificio per un indirizzo.|  
 |`AddressCity`|Rappresenta la città per un indirizzo.|  
-|`AddressCountry`|Rappresenta il paese/area geografica per un indirizzo.|  
+|`AddressCountry`|Rappresenta il paese/regione per un indirizzo.|  
 |`AddressFax`|Rappresenta un numero di fax.|  
 |`AddressFloor`|Rappresenta l'identificatore di piano per un indirizzo.|  
 |`AddressHouse`|Rappresenta il numero civico per un indirizzo.|  
@@ -65,7 +65,7 @@ ms.locfileid: "66077407"
 |`City`|Rappresenta una città.|  
 |`Company`|Rappresenta una società.|  
 |`Continent`|Rappresenta un continente.|  
-|`Country`|Rappresenta un paese/area geografica.|  
+|`Country`|Rappresenta un paese/regione.|  
 |`County`|Rappresenta una regione.|  
 |`CustomerGroup`|Rappresenta un gruppo di clienti.|  
 |`CustomerHousehold`|Rappresenta l'unità familiare dei clienti.|  
@@ -152,7 +152,7 @@ ms.locfileid: "66077407"
 |`WebUrl`|Rappresenta un indirizzo URL.|  
 |`WebXmlOrXsl`|Rappresenta contenuto XML o XSL.|  
   
-###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
+###  <a name="account_dimension_attribute_types"></a>Tipi di attributo della dimensione dell'account  
   
 |Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "66077407"
 |`AccountNumber`|Rappresenta il numero di un conto.|  
 |`AccountType`|Rappresenta il tipo di un conto. Questo tipo di attributo identifica la funzione di aggregazione di un membro di conto in una dimensione di tipo Conti nel database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-###  <a name="currency_dimension_attribute_types"></a> Tipi di attributi delle dimensioni di tipo Valuta  
+###  <a name="currency_dimension_attribute_types"></a>Tipi di attributi della dimensione di tipo valuta  
   
 |Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
@@ -170,7 +170,7 @@ ms.locfileid: "66077407"
 |`CurrencyName`|Rappresenta il nome di una valuta. Per altre informazioni sulla conversione di valuta, vedere [conversioni di valuta &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencySource`|Rappresenta la valuta di origine di un cambio di valuta. Questo attributo viene in genere applicato all'attributo chiave di una dimensione di tipo Valuta per l'utilizzo in una conversione di valuta. Per altre informazioni sulla conversione di valuta, vedere [conversioni di valuta &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a> Tipi di attributi delle dimensioni a modifica lenta  
+###  <a name="slowly_changing_dimension_attribute_types"></a>Tipi di attributi delle dimensioni a modifica lenta  
   
 |Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
@@ -179,7 +179,7 @@ ms.locfileid: "66077407"
 |**ScdStartDate**|Rappresenta la data di inizio effettiva per un membro in una dimensione a modifica lenta.|  
 |`ScdStatus`|Rappresenta lo stato effettivo di un membro in una dimensione a modifica lenta.|  
   
-###  <a name="time_dimension_attribute_types"></a> Tipi di attributi delle dimensioni temporali  
+###  <a name="time_dimension_attribute_types"></a>Tipi di attributo della dimensione temporale  
   
 |Valore del tipo di attributo|Descrizione|  
 |--------------------------|-----------------|  
@@ -307,6 +307,6 @@ ms.locfileid: "66077407"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
   
   

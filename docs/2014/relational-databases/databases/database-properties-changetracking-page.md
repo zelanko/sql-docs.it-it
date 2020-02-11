@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871854"
 ---
 # <a name="database-properties-changetracking-page"></a>Proprietà database (pagina ChangeTracking)
@@ -32,7 +32,7 @@ ms.locfileid: "62871854"
   
  È anche possibile configurare il rilevamento delle modifiche usando [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
- **Periodo di memorizzazione**  
+ **Periodo di conservazione**  
  Specifica il periodo minimo di conservazione delle informazioni sul rilevamento delle modifiche nel database. I dati vengono rimossi solo se il valore **Pulizia automatica**è impostato su **True**.  
   
  Il valore predefinito è 2.  

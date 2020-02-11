@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d1e10db6b9bb123bf82c0790cbc8be10388dddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915218"
 ---
-# <a name="mssqlserver2"></a>MSSQLSERVER_2
+# <a name="mssqlserver_2"></a>MSSQLSERVER_2
     
 ## <a name="details"></a>Dettagli  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62915218"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico||  
-|Testo del messaggio|Si è verificato un errore durante il tentativo di stabilire una connessione al server.  Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (provider: Provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server) (.Net SqlClient Data Provider)|  
+|Testo del messaggio|Si è verificato un errore durante il tentativo di stabilire una connessione al server.  Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (provider: provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server) (.Net SqlClient Data Provider)|  
   
 ## <a name="explanation"></a>Spiegazione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non ha risposto alla richiesta del client probabilmente perché il server non è stato avviato.  
@@ -41,11 +41,11 @@ ms.locfileid: "62915218"
  Verificare che il server sia stato avviato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire il servizio Motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
- [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
+ [Gestire i servizi di motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

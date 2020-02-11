@@ -1,5 +1,5 @@
 ---
-title: Definire l'ordinamento di una dimensione | Microsoft Docs
+title: Definire l'ordinamento per una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076855"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definire l'ordinamento di una dimensione
@@ -35,7 +35,7 @@ ms.locfileid: "66076855"
 ## <a name="specifying-ordering"></a>Impostazione dell'ordinamento  
  Nella seconda pagina **Impostazione ordinamento attributi** della procedura guidata specificare la modalità di ordinamento di tutti gli attributi nella dimensione.  
   
- Nella colonna **Attributo di ordinamento** è possibile modificare l'attributo usato per l'ordinamento. Se l'attributo che si desidera utilizzare per ordinare i membri non è presente nell'elenco, scorrere verso il basso nell'elenco e quindi selezionare  **\<nuovo attributo... >** per aprire la **seleziona una colonna** della finestra di dialogo in cui è possibile Selezionare una colonna nella tabella della dimensione. La selezione di una colonna tramite la finestra di dialogo **Seleziona colonna** consente di creare un attributo aggiuntivo in base al quale ordinare i membri di un attributo.  
+ Nella colonna **Attributo di ordinamento** è possibile modificare l'attributo usato per l'ordinamento. Se l'attributo che si desidera utilizzare per ordinare i membri non è presente nell'elenco, scorrere l'elenco verso il basso, quindi selezionare ** \<nuovo attributo... >** per aprire la finestra di dialogo **Seleziona colonna** , in cui è possibile selezionare una colonna in una tabella delle dimensioni. La selezione di una colonna tramite la finestra di dialogo **Seleziona colonna** consente di creare un attributo aggiuntivo in base al quale ordinare i membri di un attributo.  
   
  Nella colonna **Criteri** è quindi possibile selezionare se ordinare i membri dell'attributo in base alla **chiave** oppure al **nome**.  
   

@@ -1,5 +1,5 @@
 ---
-title: I dati di esempio la finestra di dialogo Visualizzatore (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo Visualizzatore dati di esempio (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082614"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Visualizzatore dati di esempio (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66082614"
  Consente di visualizzare le righe e le colonne relative alle prime 1000 righe della tabella dei fatti contenente la colonna di origine selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Selezionare le misure &#40;Creazione guidata cubo&#41;](select-measures-cube-wizard.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Seleziona misure &#40;creazione guidata cubo&#41;](select-measures-cube-wizard.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare Set di Testing (Creazione guidata di Data Mining dati) | Microsoft Docs
+title: Creazione set di testing (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086786"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
@@ -26,18 +26,18 @@ ms.locfileid: "66086786"
   
  Per impostazione predefinita, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera un valore di inizializzazione numerico che viene utilizzato per avviare il partizionamento. Questo valore di inizializzazione è basato sul nome della struttura di data mining. Per assicurarsi che la partizione non venga modificata se viene modificato il nome della struttura di data mining, è possibile specificare un valore per il valore di inizializzazione, configurando la proprietà HoldoutSeed della struttura di data mining. Se si modifica il valore di inizializzazione di controllo, è necessario rielaborare la struttura.  
   
- Se in un secondo momento si desidera modificare la quantità di dati di training o test, è possibile modificare il `HoldoutMaxCases` e `HoldoutMaxPercent` delle proprietà nella struttura di data mining utilizzando il **proprietà** finestra. Tuttavia, dopo avere apportato la modifica è necessario rielaborare la struttura di data mining e tutti i modelli di data mining associati. Vengono applicate anche le seguenti limitazioni:  
+ Se in seguito si vuole modificare la quantità di dati di testing o di training, è `HoldoutMaxCases` possibile `HoldoutMaxPercent` modificare le proprietà e nella struttura data mining usando la finestra **proprietà** . Tuttavia, dopo avere apportato la modifica è necessario rielaborare la struttura di data mining e tutti i modelli di data mining associati. Vengono applicate anche le seguenti limitazioni:  
   
--   Il partizionamento di una struttura di data mining è supportato solo quando la struttura di data mining è archiviata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non supportano la memorizzazione nella cache delle informazioni sulle partizioni per le strutture di data mining.  
+-   Il partizionamento di una struttura di data mining è supportato solo quando la struttura di data mining è archiviata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Le versioni precedenti [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di non supportano la memorizzazione nella cache delle informazioni sulle partizioni per le strutture di data mining.  
   
 -   Non è possibile partizionare una struttura di data mining se contiene una colonna Key Time, necessaria per i modelli di data mining della serie temporale.  
   
 -   Non è possibile partizionare i dati se si sta tentando di stimare un valore archiviato in una tabella nidificata.  
   
- **Per altre informazioni:** [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md), [esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Per ulteriori informazioni:** [test e convalida &#40;&#41;di data mining ](data-mining/testing-and-validation-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opzioni  
- **Percentuale di dati per i test**  
+ **Percentuale di dati per il testing**  
  Fare clic sulle frecce verso l'alto e verso il basso per aumentare o ridurre la percentuale di dati da utilizzare come set di training oppure digitare un valore compreso tra 0 e 100 nella casella di testo.  
   
  **Numero massimo di case nel set di dati**  
@@ -48,9 +48,9 @@ ms.locfileid: "66086786"
  Il valore predefinito è NULL. Ciò significa che non sono presenti limiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggerisci colonne correlate &#40;Creazione guidata di Data Mining&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)   
- [Specificare il contenuto e il tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   
+ [Specificare il tipo di dati e il contenuto della colonna &#40;creazione guidata modello di data mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

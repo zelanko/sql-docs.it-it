@@ -1,5 +1,5 @@
 ---
-title: Scheda (visualizzatori modello di Data Mining) del modello | Microsoft Docs
+title: Scheda modello (Visualizzatori modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077614"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Scheda Modello (Visualizzatori modello di data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "66077614"
   
  Utilizzare questa vista di un modello Time Series per estrarre informazioni utili sull'analisi della serie temporale, inclusi l'equazione per il grafico e i termini e i coefficienti ARIMA.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)  
+ **Per ulteriori informazioni:** [algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -36,10 +36,10 @@ ms.locfileid: "66077614"
  **Visualizzatore**  
  Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. È possibile usare il visualizzatore personalizzato per questo tipo di modello o **Microsoft Generic Content Tree Viewer** . Se disponibili, è anche possibile utilizzare i visualizzatori plug-in.  
   
- **Eseguire lo zoom avanti**  
+ **Zoom avanti**  
  Consente di eseguire lo zoom avanti del diagramma.  
   
- **Eseguire lo zoom indietro**  
+ **Zoom indietro**  
  Consente di eseguire lo zoom indietro del diagramma.  
   
  **Copia parte visibile del grafico**  
@@ -48,10 +48,10 @@ ms.locfileid: "66077614"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scalabilità adatta il diagramma alla finestra**  
+ **Ridimensiona e adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero diagramma non si adatta alla schermata.  
   
- **Struttura ad albero**  
+ **Albero**  
  Consente di selezionare un albero nell'elenco a discesa da mostrare nel visualizzatore  
   
  Se nel modello Time Series sono incluse più serie, ognuna di esse viene rappresentata come albero separato. Ad esempio, se nel tempo sono state create stime sia per [Quantity] sia per [Sales Amount], viene creata una serie separata per ogni attributo stimabile.  
@@ -70,7 +70,7 @@ ms.locfileid: "66077614"
  Consente di modificare il numero di livelli visualizzati nell'albero.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

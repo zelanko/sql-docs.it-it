@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899934"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
@@ -44,7 +44,7 @@ ms.locfileid: "62899934"
   
  Per ogni termine estratto la trasformazione Estrazione termini genera un punteggio, costituito da un valore TFIDF o dalla frequenza della riga, che indica il numero di corrispondenze con il termine normalizzato presenti nell'input. In entrambi i casi, il punteggio viene rappresentato da un numero reale che è maggiore di 0. Ad esempio, il punteggio TFIDF potrebbe avere il valore 0,5 e la frequenza sarebbe un valore come 1,0 o 2,0.  
   
- L'output della trasformazione Estrazione termini include solo due colonne, una con i termini estratti e l'altra con il punteggio. I nomi predefiniti delle colonne sono **termine** e `Score`. Poiché la colonna di testo nell'input può contenere più termini, l'output della trasformazione Estrazione termini include in genere un numero di righe maggiore rispetto all'input.  
+ L'output della trasformazione Estrazione termini include solo due colonne, una con i termini estratti e l'altra con il punteggio. I nomi predefiniti delle colonne sono **termini** e `Score`. Poiché la colonna di testo nell'input può contenere più termini, l'output della trasformazione Estrazione termini include in genere un numero di righe maggiore rispetto all'input.  
   
  Se i termini estratti vengono scritti in una tabella, potranno essere utilizzati da altre trasformazioni di ricerca, ad esempio le trasformazioni Ricerca termini, Ricerca fuzzy e Ricerca.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "62899934"
   
 -   [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
 -   [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
@@ -185,6 +185,6 @@ ms.locfileid: "62899934"
   
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
   

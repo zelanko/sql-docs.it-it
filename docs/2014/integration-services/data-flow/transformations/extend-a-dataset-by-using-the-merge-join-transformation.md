@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900303"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estensione di un set di dati tramite la trasformazione Merge join
   È possibile aggiungere e configurare una trasformazione Merge join solo se il pacchetto include già almeno un'attività Flusso di dati e due componenti flusso di dati che forniscono input alla trasformazione Merge join.  
   
- La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](sort-data-for-the-merge-and-merge-join-transformations.md).  
+ La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="to-extend-a-dataset"></a>Per estendere un set di dati  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62900303"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Merge Join Transformation](merge-join-transformation.md)   
+ [Trasformazione Merge join](merge-join-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   
  [Attività Flusso di dati](../../control-flow/data-flow-task.md)  

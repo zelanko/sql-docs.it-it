@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca | Microsoft Docs'
+title: 'Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891549"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca
   Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  
   
 > [!NOTE]  
->  È anche possibile configurare la trasformazione Ricerca per collegarsi a una cache che contiene il set di dati di riferimento. Per altre informazioni, vedere [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md).  
+>  È anche possibile configurare la trasformazione Ricerca per collegarsi a una cache che contiene il set di dati di riferimento. Per altre informazioni, vedere [trasformazione Ricerca](data-flow/transformations/lookup-transformation.md).  
   
  In questa esercitazione verranno aggiunti al pacchetto e configurati i due componenti di trasformazione Ricerca seguenti:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62891549"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Per aggiungere e configurare la trasformazione Lookup Currency Key  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare Ricerca proprio sotto l'origine **Extract Sample Currency Data** .  
+1.  Nella **casella degli strumenti SSIS**espandere **comune**, quindi trascinare **ricerca** sull'area di progettazione della scheda **flusso di dati** . Posizionare la ricerca direttamente sotto l'origine **dati Estrai valuta di esempio** .  
   
 2.  Fare clic sull'origine del file flat **Extract Sample Currency Data** e trascinare la freccia verde sulla trasformazione **Ricerca** appena aggiunta per collegare i due componenti.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62891549"
   
 9. Fare clic con il pulsante destro del mouse sulla trasformazione Lookup Currency Key e scegliere **Proprietà**.  
   
-10. Nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)** e il **DefaultCodePage** è impostata su **1252**.  
+10. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Per aggiungere e configurare la trasformazione Lookup DateKey  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62891549"
   
     1.  Nella finestra di dialogo **Gestione connessione OLE DB** assicurarsi che sia visualizzato **localhost.AdventureWorksDW2012** .  
   
-    2.  Nella casella **Usa una tabella o una vista** digitare o selezionare **[dbo].[DimDate]** .  
+    2.  Nella casella **Usa una tabella o una vista** digitare o selezionare **[dbo].[DimDate]**.  
   
 8.  Nella pagina **Colonne** effettuare le selezioni seguenti:  
   
@@ -124,11 +124,11 @@ ms.locfileid: "62891549"
   
 9. Nella pagina **Avanzate** rivedere le opzioni di memorizzazione nella cache.  
   
-10. Fare clic su **OK** per tornare all'area di progettazione **Flusso di dati**.  
+10. Fare clic su **OK** per tornare all'area di progettazione **Flusso di dati** .  
   
 11. Fare clic con il pulsante destro del mouse sulla trasformazione Lookup Date Key e scegliere **Proprietà.**  
   
-12. Nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)** e il **DefaultCodePage** è impostata su **1252**.  
+12. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

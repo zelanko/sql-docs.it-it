@@ -1,5 +1,5 @@
 ---
-title: Concessione di autorizzazioni di Database di processo | Microsoft Docs
+title: Concessione delle autorizzazioni per il database di elaborazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079153"
 ---
 # <a name="granting-process-database-permissions"></a>Concessione di autorizzazioni per l'elaborazione di database
@@ -30,9 +30,9 @@ ms.locfileid: "66079153"
   
 2.  Selezionare la casella di controllo **Elaborazione database** .  
   
-3.  Nella finestra Proprietà modificare il **Name** proprietà del nuovo ruolo a `Process Database Objects Role`.  
+3.  Nella Finestra Proprietà modificare la proprietà **Name** del nuovo ruolo in `Process Database Objects Role`.  
   
-     ![Role Designer](../../2014/tutorials/media/l10-security-1.png "Role Designer")  
+     ![Progettazione ruoli](../../2014/tutorials/media/l10-security-1.png "Progettazione ruoli")  
   
 4.  Passare alla scheda **Appartenenze** di Progettazione ruoli e fare clic su **Aggiungi**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66079153"
   
      Si noti che i membri di questo ruolo dispongono delle autorizzazioni per elaborare questo database, ma non per accedere ai dati nel cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial né dispongono dell'accesso locale al cubo/drill-through, come illustrato nella figura seguente.  
   
-     ![Scheda cubi di progettazione ruoli](../../2014/tutorials/media/l10-security-2.png "scheda cubi di progettazione ruoli")  
+     ![Scheda Cubi di Progettazione ruoli](../../2014/tutorials/media/l10-security-2.png "Scheda Cubi di Progettazione ruoli")  
   
 7.  Passare alla scheda **Dimensioni** di Progettazione ruoli.  
   

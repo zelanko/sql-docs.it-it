@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo aggiornamento incrementale (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo aggiornamento incrementale (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080491"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiornamento incrementale (Analysis Services - Dati multidimensionali)
@@ -24,19 +24,19 @@ ms.locfileid: "66080491"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Gruppo di misure**|Selezionare il gruppo di misure da aggiornare in modo incrementale.<br /><br /> Nota: Questa opzione è abilitata solo se si sta aggiornando in modo incrementale un cubo. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
-|**Partizione**|Selezionare la partizione da aggiornare.<br /><br /> Nota: Questa opzione è abilitata solo se si sta aggiornando in modo incrementale un cubo. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
+|**Gruppo di misure**|Selezionare il gruppo di misure da aggiornare in modo incrementale.<br /><br /> Nota: questa opzione è abilitata solo se si sta aggiornando un cubo in modo incrementale. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
+|**Partizione**|Selezionare la partizione da aggiornare.<br /><br /> Nota: questa opzione è abilitata solo se si sta aggiornando un cubo in modo incrementale. Se si aggiorna in modo incrementale un gruppo di misure o una partizione, questa opzione è disabilitata.|  
 |**Tabella**|Fare clic su questa opzione per aggiornare l'oggetto da una tabella.|  
-|**Origine dati o una vista**|Consente di selezionare l'origine dei dati o la vista origine dati contenente la tabella di origine.<br /><br /> Nota: Questa opzione è abilitata solo se **tabella** sia selezionata.|  
-|**Nome e lo schema di tabella**|Consente di selezionare la tabella di origine utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: Questa opzione è abilitata solo se **tabella** sia selezionata.|  
+|**Origine dati o vista origine dati**|Consente di selezionare l'origine dei dati o la vista origine dati contenente la tabella di origine.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Tabella** .|  
+|**Schema e nome tabella**|Consente di selezionare la tabella di origine utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Tabella** .|  
 |**Query**|Fare clic su questa opzione per aggiornare l'oggetto da una query.|  
-|**Data Source**|Consente di selezionare l'origine dei dati contenente le tabelle in cui eseguire la query.<br /><br /> Nota: Questa opzione è abilitata solo se **Query** sia selezionata.|  
-|**Testo della query**|Consente di digitare il testo della query utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: Questa opzione è abilitata solo se **Query** sia selezionata.|  
+|**Origine dati**|Consente di selezionare l'origine dei dati contenente le tabelle in cui eseguire la query.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Query** .|  
+|**Testo della query**|Consente di digitare il testo della query utilizzata per recuperare i dati per l'aggiornamento incrementale del cubo, del gruppo di misure o della partizione.<br /><br /> Nota: questa opzione è abilitata solo se si seleziona **Query** .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Elaborare la finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Finestra di dialogo elabora &#40;Analysis Services-Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

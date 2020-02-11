@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894735"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Riferimenti ad altri assembly nelle soluzioni di scripting
-  La libreria di classi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce allo sviluppatore di script un potente set di strumenti per l'implementazione di funzionalità personalizzate nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività Script e il componente script possono anche utilizzare assembly gestiti personalizzati.  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] libreria di classi fornisce allo sviluppatore di script un potente set di strumenti per l'implementazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] funzionalità personalizzate nei pacchetti di. L'attività Script e il componente script possono anche utilizzare assembly gestiti personalizzati.  
   
 > [!NOTE]  
->  Per consentire ai pacchetti di usare gli oggetti e i metodi di un servizio Web, usare il comando **Aggiungi riferimento Web** disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Nelle versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è necessario generare una classe proxy per utilizzare un servizio Web.  
+>  Per consentire ai pacchetti di usare gli oggetti e i metodi di un servizio Web, usare il comando **Aggiungi riferimento Web** disponibile [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] in Tools for Applications (VSTA). Nelle versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è necessario generare una classe proxy per utilizzare un servizio Web.  
   
 ## <a name="using-a-managed-assembly"></a>Utilizzo di un assembly gestito  
  Affinché [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] trovi un assembly gestito in fase di progettazione, è necessario effettuare i passaggi seguenti:  
@@ -62,27 +62,27 @@ ms.locfileid: "62894735"
   
  In questo elenco vengono descritte alcune delle classi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzate più di frequente:  
   
--   `System.Data` Contiene l'architettura ADO.NET.  
+-   `System.Data`Contiene l'architettura ADO.NET.  
   
--   `System.IO` Fornisce un'interfaccia per il file system e i flussi.  
+-   `System.IO`Fornisce un'interfaccia per la file system e i flussi.  
   
--   `System.Windows.Forms` Fornisce la creazione di form.  
+-   `System.Windows.Forms`Consente la creazione di form.  
   
--   `System.Text.RegularExpressions` Fornisce classi per l'utilizzo di espressioni regolari.  
+-   `System.Text.RegularExpressions`Fornisce classi per l'utilizzo di espressioni regolari.  
   
--   `System.Environment` Restituisce informazioni sul computer locale, l'utente corrente e le impostazioni utente e computer.  
+-   `System.Environment`Restituisce informazioni sul computer locale, l'utente corrente e le impostazioni del computer e dell'utente.  
   
--   `System.Net` Fornisce comunicazioni di rete.  
+-   `System.Net`Fornisce le comunicazioni di rete.  
   
--   `System.DirectoryServices` Espone Active Directory.  
+-   `System.DirectoryServices`Espone Active Directory.  
   
--   `System.Drawing` Fornisce librerie complete immagini manipolazione.  
+-   `System.Drawing`Fornisce librerie di manipolazione delle immagini estese.  
   
--   `System.Threading` Consente la programmazione multithreading.  
+-   `System.Threading`Consente la programmazione multithreading.  
   
  Per ulteriori informazioni su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultare MSDN Library.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensione di pacchetti tramite scripting](extending-packages-with-scripting.md)  
