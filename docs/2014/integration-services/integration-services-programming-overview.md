@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683628"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
@@ -61,14 +61,14 @@ ms.locfileid: "74683628"
 >  Le API di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non sono compatibili con linguaggi di scripting basati su COM come VBScript.  
   
 ## <a name="locating-assemblies"></a>Individuazione di assembly  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. Esiste un global assembly cache separato per .NET 4, disponibile in * \<unità>*: \Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>* :\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
   
  Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i file [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dll di estendibilità principali si trovano anche nell' * \<unità>*: \Programmi\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assembly di uso comune  
  Nella tabella seguente sono elencati gli assembly utilizzati di frequente quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizzando [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Assembly|Description|  
+|Assembly|Descrizione|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Contiene il motore di runtime gestito.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contiene l'assembly di interoperabilità primario, o wrapper, per il motore di runtime nativo.|  
