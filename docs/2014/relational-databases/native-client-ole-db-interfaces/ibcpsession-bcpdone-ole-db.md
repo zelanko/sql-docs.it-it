@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743197"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -33,10 +33,10 @@ ms.locfileid: "62743197"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Note  
- Dopo aver chiamato il metodo [BCPDone](ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
+## <a name="remarks"></a>Osservazioni  
+ Dopo aver chiamato il metodo [BCPDone](ibcpsession-ole-db.md) non è possibile chiamare altre operazioni sull'interfaccia **IBCPSession**. L'unica possibilità consiste nel chiamare il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) per avviare una nuova operazione di copia bulk. Questa operazione è simile alla chiamata al metodo [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  S_OK  
  Il metodo è riuscito.  
   
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  È possibile utilizzare BCP per aggiungere questi dati di nuovo alla tabella tramite il comando seguente:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **Master bcp.. fltest in outfile. dat-n-T-S** *Server*  
   
  È necessario specificare sqlncli11.lib per la compilazione di questo esempio.  
   

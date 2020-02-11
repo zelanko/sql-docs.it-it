@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037948"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
@@ -31,14 +31,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una tupla.  
   
-## <a name="remarks"></a>Note  
- Il **ValidMeasure** funzione restituisce il valore di una tupla, ignorando gli attributi che non hanno alcuna relazione con il gruppo di misure della misura il cui valore restituisce la tupla. Un attributo può non essere correlato a una misura per i due motivi riportati di seguito:  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **ValidMeasure** restituisce il valore di una tupla, ignorando gli attributi che non hanno alcuna relazione con il gruppo di misure della misura di cui la tupla restituisce il valore. Un attributo può non essere correlato a una misura per i due motivi riportati di seguito:  
   
 -   La dimensione dell'attributo non ha alcuna relazione con il gruppo di misure della misura nella tupla.  
   
 -   La dimensione dell'attributo non ha alcuna relazione con il gruppo di misure della misura, ma l'attributo di granularità non è l'attributo chiave e l'attributo di granularità non ha alcuna relazione diretta con l'attributo nella tupla.  
   
- Il comportamento specificato da questa funzione è il comportamento lato server predefinito ed è controllato dal **IgnoreUnrelatedDimensions** proprietà sull'oggetto gruppo di misure.  
+ Il comportamento specificato da questa funzione è il comportamento predefinito sul lato server ed è controllato dalla proprietà **IgnoreUnrelatedDimensions** sull'oggetto gruppo di misure.  
   
  Per ogni attributo nella tupla specificata con granularità, ovvero in una tupla in cui il membro non corrisponde a quello Totale), la coordinata corrente viene spostata nel modo seguente:  
   
@@ -69,6 +69,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

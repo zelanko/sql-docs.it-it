@@ -1,5 +1,5 @@
 ---
-title: Caricamento per ordinale | Microsoft Docs
+title: Caricamento in base al numero ordinale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041606"
 ---
 # <a name="loading-by-ordinal"></a>Caricamento per ordinale
-In ODBC *2.x*, è possibile eseguire il caricamento per ordinale per migliorare le prestazioni del processo di connessione. Un database ODBC *2.x* driver Esporta una funzione fittizia con l'ordinale 199; quando Gestione Driver lo rileva, risolve gli indirizzi delle funzioni ODBC dall'ordinale, non dal nome. Questa funzionalità è ancora supportata per ODBC *2.x* i driver, ma non è supportata per ODBC *3.x* driver.
+In ODBC *2. x*è possibile eseguire il caricamento in base al numero ordinale per migliorare le prestazioni del processo di connessione. Un driver ODBC *2. x* esporta una funzione fittizia con l'ordinale 199; Quando la gestione driver la rileva, risolve gli indirizzi delle funzioni ODBC in base al numero ordinale, non in base al nome. Questa funzionalità è ancora supportata per i driver ODBC *2. x* , ma non è supportata per i driver ODBC *3. x* .

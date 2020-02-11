@@ -1,5 +1,5 @@
 ---
-title: Colonne di Annullare l'associazione di colonne Text e Image | Microsoft Docs
+title: Colonne di testo e di immagine non associato e associato | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,19 +21,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626584"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Colonne di tipo text e image associate e non associate
-  Quando si utilizzano i cursori server, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client è ottimizzato per non trasmettere i dati per annullare l'associazione **testo**, **ntext**, o **immagine** colonne di tempo **SQLFetch** viene eseguita. Il **testo**, **ntext**, o **immagine** dati non vengono effettivamente recuperati dal server finché i problemi dell'applicazione [SQLGetData](../native-client-odbc-api/sqlgetdata.md) per il colonna.  
+  Quando si utilizzano i cursori server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il driver ODBC di Native Client è ottimizzato per non trasmettere i dati per le colonne di tipo **Text**, **ntext**o **Image** non associato al momento dell'esecuzione di **SQLFetch** . I dati di tipo **Text**, **ntext**o **Image** non vengono effettivamente recuperati dal server fino a quando l'applicazione non rilascia [SQLGetData](../native-client-odbc-api/sqlgetdata.md) per la colonna.  
   
- Molte applicazioni possono essere scritti in modo che nessun **testo**, **ntext**, o **immagine** dati vengono visualizzati anche se un utente viene semplicemente effettuato uno scorrimento verticale in un cursore. Quando un utente seleziona una riga per ottenere altri dettagli, l'applicazione può quindi chiamare **SQLGetData** per recuperare le **testo**, **ntext**, oppure **immagine** dati. Sarà in grado di trasmettere il **testo**, **ntext**, o **immagine** dati per tutte le righe, l'utente non seleziona e può pertanto impediscono la trasmissione di dimensioni molto grandi quantità di dati.  
+ Molte applicazioni possono essere scritte in modo che non vengano visualizzati dati di tipo **Text**, **ntext**o **Image** quando un utente scorre verso l'alto e verso il basso un cursore. Quando un utente seleziona una riga per ottenere maggiori dettagli, l'applicazione può quindi chiamare **SQLGetData** per recuperare i dati di tipo **Text**, **ntext**o **Image** . In questo modo si impedisce la trasmissione dei dati di tipo **Text**, **ntext**o **Image** per le righe non selezionate dall'utente e pertanto è possibile impedire la trasmissione di grandi quantità di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La gestione di colonne Text e Image](managing-text-and-image-columns.md)   
- [Comportamenti del cursore](../native-client-odbc-cursors/cursor-behaviors.md)  
+ [Gestione delle colonne di testo e immagini](managing-text-and-image-columns.md)   
+ [Comportamenti dei cursori](../native-client-odbc-cursors/cursor-behaviors.md)  
   
   

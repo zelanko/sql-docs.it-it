@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008137"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -37,8 +37,8 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce TRUE se uno o entrambi gli argomenti restituiscono TRUE, FALSE in caso contrario.  
   
-## <a name="remarks"></a>Note  
- Per consentire all'operatore di eseguire la disgiunzione logica, entrambi gli argomenti vengono gestiti come valori booleani, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se uno o entrambi gli argomenti restituiscono TRUE, l'operatore restituirà TRUE. Se *Expression1* restituisce TRUE e *Expression2* restituisce FALSE, l'operatore restituisce TRUE.  
+## <a name="remarks"></a>Osservazioni  
+ Per consentire all'operatore di eseguire la disgiunzione logica, entrambi gli argomenti vengono gestiti come valori booleani, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se uno o entrambi gli argomenti restituiscono TRUE, l'operatore restituirà TRUE. Se *expression1* restituisce true e *expression2* restituisce false, l'operatore restituisce true.  
   
  La tabella seguente illustra come viene eseguita la disgiunzione logica.  
   
@@ -50,8 +50,8 @@ Expression1 OR Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Gli operatori logici &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatori logici &#40;&#41;DMX](../dmx/operators-logical.md)   
+ [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

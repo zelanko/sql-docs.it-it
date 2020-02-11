@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037932"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 
 
-  Restituisce la varianza del campione di un'espressione numerica valutata su un set, utilizzando la formula della popolazione non distorta (dividendo *n*).  
+  Restituisce la varianza di esempio di un'espressione numerica valutata su un set, utilizzando la formula della popolazione non distorta (dividendo per *n*).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,12 +34,12 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Il **Var** funzione restituisce la varianza non distorta di un'espressione numerica specificata valutata su un set specificato.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **var** restituisce la varianza non distorta di un'espressione numerica specificata valutata su un set specificato.  
   
- Il **Var** funzione utilizza la formula della popolazione non distorta e il [VarP](../mdx/varp-mdx.md) funzione utilizza la formula della popolazione distorta.  
+ La funzione **var** utilizza la formula della popolazione non distorta, mentre la funzione [VarP](../mdx/varp-mdx.md) utilizza la formula della popolazione distorta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
+title: sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017987"
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - DM cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni sessione di analisi dei log nel database corrente. L'ultima riga restituita rappresenta la sessione corrente. È possibile utilizzare questa vista per restituire le informazioni sullo stato relative alla sessione di analisi dei log corrente o informazioni aggregate relative a tutte le sessioni dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,32 +34,32 @@ ms.locfileid: "68017987"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID della sessione.<br /><br /> 0 = i dati restituiti in questa riga costituiscono un'aggregazione di tutte le sessioni dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**start_time**|**datetime**|Ora di inizio della sessione.<br /><br /> Quando **session_id** = 0, l'ora di inizio raccolta dei dati aggregati.|  
+|**start_time**|**datetime**|Ora di inizio della sessione.<br /><br /> Quando **session_id** = 0, inizia la raccolta di dati aggregati dell'ora.|  
 |**end_time**|**datetime**|Ora di fine della sessione.<br /><br /> NULL = la sessione è attiva.<br /><br /> Quando **session_id** = 0, l'ora di fine dell'ultima sessione.|  
-|**duration**|**bigint**|Durata della sessione espressa in secondi.<br /><br /> 0 = la sessione non contiene transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, la somma della durata (in secondi) di tutte le sessioni con transazioni di acquisizione dati delle modifiche.|  
-|**scan_phase**|**nvarchar(200)**|La fase corrente della sessione. Di seguito sono i valori possibili e le relative descrizioni:<br /><br /> 1: Lettura della configurazione<br />2: Prima analisi, compilazione tabella hash<br />3: Seconda analisi<br />4: Seconda analisi<br />5: Seconda analisi<br />6: Controllo delle versioni dello schema<br />7: Ultima analisi<br />8: Fine<br /><br /> Quando **session_id** = 0, questo valore è sempre "Aggregato".|  
+|**durata**|**bigint**|Durata della sessione espressa in secondi.<br /><br /> 0 = la sessione non contiene transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, somma della durata (in secondi) di tutte le sessioni con Change Data Capture transazioni.|  
+|**scan_phase**|**nvarchar(200)**|La fase corrente della sessione. Di seguito sono riportati i valori possibili e le relative descrizioni:<br /><br /> 1: lettura della configurazione<br />2: prima analisi, compilazione della tabella hash<br />3: seconda analisi<br />4: seconda analisi<br />5: seconda analisi<br />6: controllo delle versioni dello schema<br />7: ultima analisi<br />8: operazione eseguita<br /><br /> Quando **session_id** = 0, questo valore è sempre "aggregate".|  
 |**error_count**|**int**|Numero di errori.<br /><br /> Quando **session_id** = 0, il numero totale di errori in tutte le sessioni.|  
-|**start_lsn**|**nvarchar(23)**|Avvio di LSN per la sessione.<br /><br /> Quando **session_id** = 0, il numero LSN iniziale per l'ultima sessione.|  
-|**current_lsn**|**nvarchar(23)**|LSN corrente in corso di analisi.<br /><br /> Quando **session_id** = 0, il valore LSN corrente è uguale a 0.|  
-|**end_lsn**|**nvarchar(23)**|Numero LSN finale per la sessione.<br /><br /> NULL = la sessione è attiva.<br /><br /> Quando **session_id** = 0, il numero LSN finale per l'ultima sessione.|  
-|**tran_count**|**bigint**|Numero di transazioni di acquisizione dei dati delle modifiche elaborate. Questo contatore viene popolato durante la fase 2.<br /><br /> Quando **session_id** = 0, il numero di transazioni elaborate in tutte le sessioni.|  
-|**last_commit_lsn**|**nvarchar(23)**|LSN dell'ultimo record di log del commit elaborato.<br /><br /> Quando **session_id** = 0, l'ultimo log LSN del record commit per qualsiasi sessione.|  
-|**last_commit_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit.<br /><br /> Quando **session_id** = 0, l'ora ultimo commit record del log per qualsiasi sessione.|  
+|**start_lsn**|**nvarchar (23)**|Avvio di LSN per la sessione.<br /><br /> Quando **session_id** = 0, il numero LSN iniziale per l'ultima sessione.|  
+|**current_lsn**|**nvarchar (23)**|LSN corrente in corso di analisi.<br /><br /> Quando **session_id** = 0, l'LSN corrente è 0.|  
+|**end_lsn**|**nvarchar (23)**|Numero LSN finale per la sessione.<br /><br /> NULL = la sessione è attiva.<br /><br /> Quando **session_id** = 0, il numero LSN finale per l'ultima sessione.|  
+|**tran_count**|**bigint**|Numero di transazioni di acquisizione dei dati delle modifiche elaborate. Questo contatore viene popolato nella fase 2.<br /><br /> Quando **session_id** = 0, il numero di transazioni elaborate in tutte le sessioni.|  
+|**last_commit_lsn**|**nvarchar (23)**|LSN dell'ultimo record di log del commit elaborato.<br /><br /> Quando **session_id** = 0, l'ultimo LSN del record di log del commit per qualsiasi sessione.|  
+|**last_commit_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit.<br /><br /> Quando **session_id** = 0, l'ora dell'ultimo record di log del commit per qualsiasi sessione.|  
 |**log_record_count**|**bigint**|Numero dei record di log analizzati.<br /><br /> Quando **session_id** = 0, numero di record analizzati per tutte le sessioni.|  
 |**schema_change_count**|**int**|Numero di operazioni DDL (Data Definition Language) rilevate. Questo contatore viene popolato durante la fase 6.<br /><br /> Quando **session_id** = 0, il numero di operazioni DDL elaborate in tutte le sessioni.|  
 |**command_count**|**bigint**|Numero di comandi elaborati.<br /><br /> Quando **session_id** = 0, il numero di comandi elaborati in tutte le sessioni.|  
-|**first_begin_cdc_lsn**|**nvarchar(23)**|Primo numero LSN contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, il primo numero LSN contenente transazioni di acquisizione dei dati di modifica.|  
-|**last_commit_cdc_lsn**|**nvarchar(23)**|Numero LSN dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ultimo record del log commit LSN per qualsiasi sessione contenente transazioni di acquisizione dati delle modifiche|  
-|**last_commit_cdc_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, il tempo di record nell'ultimo log di commit per qualsiasi sessione contenente transazioni di acquisizione dati delle modifiche.|  
-|**latency**|**int**|La differenza in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
+|**first_begin_cdc_lsn**|**nvarchar (23)**|Primo numero LSN contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, il primo LSN che conteneva Change Data Capture transazioni.|  
+|**last_commit_cdc_lsn**|**nvarchar (23)**|Numero LSN dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ultimo LSN del record di log del commit per qualsiasi sessione che conteneva transazioni Change Data Capture|  
+|**last_commit_cdc_time**|**datetime**|Ora di elaborazione dell'ultimo record di log del commit contenente transazioni di acquisizione dei dati delle modifiche.<br /><br /> Quando **session_id** = 0, l'ora dell'ultimo record di log del commit per qualsiasi sessione che conteneva transazioni Change Data Capture.|  
+|**latenza**|**int**|Differenza, in secondi, tra **end_time** e **last_commit_cdc_time** nella sessione. Questo contatore viene popolato al termine della fase 7.<br /><br /> Quando **session_id** = 0, l'ultimo valore di latenza diverso da zero registrato da una sessione.|  
 |**empty_scan_count**|**int**|Numero di sessioni consecutive che non contengono transazioni di acquisizione dei dati delle modifiche.|  
 |**failed_sessions_count**|**int**|Numero di sessioni non riuscite.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I valori in questa vista a gestione dinamica vengono reimpostati ogni volta che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviata.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query di **DM cdc_log_scan_sessions** vista a gestione dinamica. Per altre informazioni sulle autorizzazioni sulle viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire una query sulla vista a gestione dinamica **sys. dm_cdc_log_scan_sessions** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative alla sessione più recente.  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys. dm_cdc_errors &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

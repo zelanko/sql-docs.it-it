@@ -16,18 +16,18 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770731"
 ---
-# <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
+# <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica la pianificazione dell'agente di distribuzione o di merge per un Sottoscrittore. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @frequency_subday = ] frequency_subday`Frequenza, in minuti, di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**e il valore predefinito è **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui l'attività di distribuzione viene pianificata per la prima volta. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
   
@@ -72,22 +72,22 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @active_end_date = ] active_end_date`Data in cui viene arrestata la pianificazione dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è **99991231**, ovvero il 31 dicembre 9999.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server di pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_changesubscriber_schedule** viene utilizzato in tutti i tipi di replica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [sp_addsubscriber_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

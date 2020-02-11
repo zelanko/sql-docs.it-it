@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524377"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
@@ -49,7 +49,8 @@ ms.locfileid: "62524377"
 > [!NOTE]  
 >  Se le azioni dei trigger dipendono dal numero di righe interessate dalle modifiche apportate ai dati, usare le verifiche (ad esempio un esame di @@ROWCOUNT) nel caso di modifiche apportate ai dati di più righe (un'istruzione INSERT, DELETE o UPDATE basata su un'istruzione SELECT) ed eseguire le azioni appropriate.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non è possibile utilizzare i riferimenti di colonna di tipo `text`, `ntext` o `image` nelle tabelle inserted e deleted per i trigger AFTER. Questi tipi di dati sono tuttavia disponibili per garantire la compatibilità con le versioni precedenti. La modalità di archiviazione ottimale per dati di grandi dimensioni consiste nell'utilizzare i tipi di dati `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. I trigger AFTER e INSTEAD OF supportano entrambi dati di tipo `varchar(max)`, `nvarchar(max)` e `varbinary(max)` nelle tabelle inserted e deleted. Per altre informazioni, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non è possibile utilizzare i riferimenti di colonna di tipo `text`, `ntext` o `image` nelle tabelle inserted e deleted per i trigger AFTER. Questi tipi di dati sono tuttavia disponibili per garantire la compatibilità con le versioni precedenti. La modalità di archiviazione ottimale per dati di grandi dimensioni consiste nell'utilizzare i tipi di dati `varchar(max)`, `nvarchar(max)` e `varbinary(max)`. I trigger AFTER e INSTEAD OF supportano entrambi dati di tipo `varchar(max)`, `nvarchar(max)` e `varbinary(max)` nelle tabelle inserted e deleted. Per altre informazioni, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
  **Esempio di utilizzo della tabella inserted in un trigger per l'applicazione delle regole business**  
   

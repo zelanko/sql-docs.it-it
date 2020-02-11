@@ -21,18 +21,18 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036205"
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
+ Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
- **SQLBrowseConnect** supporta un metodo iterativo di individuazione e l'enumerazione di attributi e valori di attributo necessari per connettersi a un'origine dati. Ogni chiamata a **SQLBrowseConnect** restituisce livelli successivi di attributi e valori di attributo. Quando sono stati enumerati tutti i livelli, una connessione all'origine dati è stata completata e viene restituita una stringa di connessione completa da **SQLBrowseConnect**. Un codice restituito di SQL_SUCCESS_WITH_INFO o SQL_SUCCESS indica che sono state specificate tutte le informazioni di connessione e l'applicazione è ora connesso all'origine dati.  
+ **Summary**  
+ **SQLBrowseConnect** supporta un metodo iterativo per l'individuazione e l'enumerazione degli attributi e dei valori di attributo necessari per la connessione a un'origine dati. Ogni chiamata a **SQLBrowseConnect** restituisce i livelli successivi di attributi e valori di attributo. Quando tutti i livelli sono stati enumerati, viene completata una connessione all'origine dati e una stringa di connessione completa viene restituita da **SQLBrowseConnect**. Un codice restituito di SQL_SUCCESS o SQL_SUCCESS_WITH_INFO indica che sono state specificate tutte le informazioni di connessione e che l'applicazione è ora connessa all'origine dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,175 +52,175 @@ SQLRETURN SQLBrowseConnect(
  [Input] Handle di connessione.  
   
  *InConnectionString*  
- [Input] Passare la stringa di connessione richiesta (vedere "*InConnectionString* argomento" in "Commenti").  
+ Input Sfoglia stringa di connessione richiesta (vedere "argomento*InConnectionString* " in "Commenti").  
   
  *StringLength1*  
- [Input] Lunghezza di **InConnectionString* in caratteri.  
+ Input Lunghezza di **InConnectionString* in caratteri.  
   
  *OutConnectionString*  
- [Output] Puntatore a un buffer di caratteri in cui restituire la stringa di connessione del risultato esplorazione (vedere "*OutConnectionString* argomento" in "Commenti").  
+ Output Puntatore a un buffer di caratteri in cui restituire la stringa di connessione del risultato della ricerca (vedere "argomento*OutConnectionString* " in "comments").  
   
- Se *OutConnectionString* sia impostato su NULL *StringLength2Ptr* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui punta *OutConnectionString*.  
+ Se *OutConnectionString* è null, *StringLength2Ptr* restituirà comunque il numero totale di caratteri, escluso il carattere di terminazione null per i dati di tipo carattere, disponibile per restituire nel buffer a cui punta *OutConnectionString*.  
   
  *BufferLength*  
- [Input] Lunghezza, espressa in caratteri, del **OutConnectionString* buffer.  
+ Input Lunghezza, in caratteri, del buffer **OutConnectionString* .  
   
  *StringLength2Ptr*  
- [Output] Il numero totale di caratteri (ad eccezione di terminazione null) disponibili per restituire \* *OutConnectionString*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *BufferLength*, la stringa di connessione in \* *OutConnectionString* viene troncato a  *BufferLength* meno la lunghezza di un carattere di terminazione null.  
+ Output Numero totale di caratteri (esclusa la terminazione null) disponibili per restituire in \* *OutConnectionString*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *bufferLength*, la stringa di connessione in \* *OutConnectionString* viene troncata a *bufferLength* meno la lunghezza di un carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLBrowseConnect** restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO o SQL_NEED_DATA, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e una *Handle di ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLBrowseConnect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLBrowseConnect** restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO o SQL_NEED_DATA, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con *HandleType* di SQL_HANDLE_STMT e un *handle di connectionHandle*. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLBrowseConnect** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|01004|Stringa troncati di dati a destra|Il buffer \* *OutConnectionString* non sia abbastanza grande per restituire la stringa di connessione del risultato intero Sfoglia, pertanto la stringa è stata troncata. Il buffer **StringLength2Ptr* contiene la lunghezza della stringa di connessione di risultato non troncato Sfoglia. (Funzione restituisce SQL_NEED_DATA).|  
-|01S00|Attributo della stringa di connessione non è valido|È stata specificata una parola chiave di attributo non valido nella stringa di connessione richiesta Sfoglia (*InConnectionString*). (Funzione restituisce SQL_NEED_DATA).<br /><br /> Una parola chiave di attributo è stata specificata nella stringa di connessione richiesta Sfoglia (*InConnectionString*) che non si applica a livello di connessione corrente. (Funzione restituisce SQL_NEED_DATA).|  
-|01S02|Valore modificato|Il driver non supportava il valore specificato per il *ValuePtr* argomento nella **SQLSetConnectAttr** e sostituito un valore simile. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|08001|Impossibile stabilire la connessione client|Il driver non è riuscito a stabilire una connessione con l'origine dati.|  
-|08002|Nome della connessione in uso|(DM) la connessione specificata è già stata utilizzata per stabilire una connessione a un'origine dati e la connessione era aperta.|  
-|08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione di una connessione per i motivi definiti dall'implementazione.|  
-|08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato effettuato un tentativo di connessione il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
-|28000|Specifica di autorizzazione non valido|L'identificatore utente o la stringa di autorizzazione o entrambe, come specificato nella finestra Sfoglia richiesta stringa di connessione (*InConnectionString*), violati restrizioni definite dall'origine dati.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|(DM) The Driver Manager: Impossibile allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.<br /><br /> Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operazione annullata|È stata annullata un'operazione asincrona chiamando [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Quindi, la funzione originale è stata chiamata nuovamente nel *ConnectionHandle*.<br /><br /> Un'operazione è stata annullata chiamando **SQLCancelHandle** nel *ConnectionHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione, non è presente uno, il *ConnectionHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.|  
-|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o buffer non valido|(DM) il valore specificato per l'argomento *StringLength1* era minore di 0 e non è uguale a SQL_NTS.<br /><br /> (DM) il valore specificato per l'argomento *BufferLength* era minore di 0.|  
-|HY114|Driver non supporta l'esecuzione di funzione asincrona a livello di connessione|(DM) l'applicazione è abilitata l'operazione asincrona nell'handle di connessione prima di effettuare la connessione. Tuttavia, il driver non supporta operazione asincrona su handle di connessione.|  
-|HYT00|Timeout|Il periodo di timeout di accesso è scaduto prima della connessione all'origine dati completata. Il periodo di timeout viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver non supporta questa funzione|(DM) il driver corrispondente al nome dell'origine dati specificata non supporta la funzione.|  
-|IM002|Origine dati non trovato e un driver predefinito non specificato|Nome specificato nella stringa di connessione richiesta di esplorazione dell'origine dati (DM) (*InConnectionString*) non è stato trovato nelle informazioni di sistema, né era presente una specifica del driver predefinite.<br /><br /> (DM) ODBC data source e l'impostazione predefinita le informazioni sul driver non è stati trovati nelle informazioni di sistema.|  
-|IM003|Non è stato possibile caricare il driver specificato|(DM) il driver elencate nella specifica dell'origine dati le informazioni di sistema o specificato per il **DRIVER** parola chiave non è stato trovato o non può essere caricato per altri motivi.|  
-|IM004|Patente **SQLAllocHandle** sul valore di SQL_HANDLE _ENV non è riuscita|(DM) durante **SQLBrowseConnect**, gestione Driver denominato il driver **SQLAllocHandle** utilizzabile con un *HandleType* SQL_HANDLE_ENV e il driver ha restituito un errore.|  
-|IM005|Patente **SQLAllocHandle** su SQL_HANDLE_DBC non è riuscita|(DM) durante **SQLBrowseConnect**, gestione Driver denominato il driver **SQLAllocHandle** utilizzabile con un *HandleType* SQL_HANDLE_DBC e il driver ha restituito un errore.|  
-|IM006|Patente **SQLSetConnectAttr** non è riuscita|(DM) durante **SQLBrowseConnect**, gestione Driver denominato il driver **SQLSetConnectAttr** (funzione) e il driver ha restituito un errore.|  
-|IM009|Impossibile caricare la DLL di conversione|Il driver non è riuscito a caricare la DLL che è stata specificata per l'origine dati o per la connessione di conversione.|  
-|IM010|Nome dell'origine dati troppo lungo|(DM) il valore dell'attributo per la parola chiave DSN è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
-|IM011|Nome del driver troppo lungo|(DM) il valore dell'attributo per la parola chiave DRIVER era più di 255 caratteri.|  
-|IM012|Errore di sintassi della parola chiave DRIVER|(DM) la coppia parola chiave / valore per la parola chiave DRIVER contenuti di un errore di sintassi.|  
-|IM014|Il DSN specificato contiene una mancata corrispondenza architettura tra Driver e applicazioni|Applicazione a 32 bit (DM) usa un DSN che ci si connette a un driver a 64 bit; o viceversa.|  
-|IM017|Polling è disabilitato in modalità di notifica asincrona|Ogni volta che viene usato il modello di notifica, viene disabilitato il polling.|  
-|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente in questo handle.|Se la chiamata di funzione precedente dell'handle di restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato su handle per eseguire operazioni di post-elaborazione e completare l'operazione.|  
-|S1118|Driver non supporta la notifica asincrona|Quando il driver non supporta la notifica asincrona, è possibile impostare SQL_ATTR_ASYNC_DBC_EVENT o SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dati stringa, troncati a destra|L' \* *OutConnectionString* del buffer non era sufficientemente grande da restituire l'intera stringa di connessione del risultato browse, quindi la stringa è stata troncata. Il buffer **StringLength2Ptr* contiene la lunghezza della stringa di connessione per i risultati di ricerca non troncata. (La funzione restituisce SQL_NEED_DATA.)|  
+|01S00|Attributo della stringa di connessione non valido|È stata specificata una parola chiave di attributo non valida nella stringa di connessione della richiesta Browse (*InConnectionString*). (La funzione restituisce SQL_NEED_DATA.)<br /><br /> È stata specificata una parola chiave attribute nella stringa di connessione della richiesta Browse (*InConnectionString*) che non si applica al livello di connessione corrente. (La funzione restituisce SQL_NEED_DATA.)|  
+|01S02|Valore modificato|Il driver non supporta il valore specificato dell'argomento *ValuePtr* in **SQLSetConnectAttr** e sostituisce un valore simile. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|08001|Il client non è in grado di stabilire la connessione|Il driver non è stato in grado di stabilire una connessione con l'origine dati.|  
+|08002|Nome della connessione in uso|(DM) la connessione specificata è già stata utilizzata per stabilire una connessione con un'origine dati e la connessione è stata aperta.|  
+|08004|Il server ha rifiutato la connessione|L'origine dati ha rifiutato la creazione della connessione per motivi definiti dall'implementazione.|  
+|08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato effettuato il tentativo di connessione del driver non è riuscito prima dell'elaborazione della funzione.|  
+|28000|Specifica di autorizzazione non valida|L'identificatore utente o la stringa di autorizzazione o entrambi, come specificato nella stringa di connessione della richiesta Browse (*InConnectionString*), hanno violato le restrizioni definite dall'origine dati.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|(DM) Gestione driver non è in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.<br /><br /> Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY008|Operation canceled|Un'operazione asincrona è stata annullata chiamando la [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Quindi, la funzione originale è stata chiamata nuovamente in *connectionHandle*.<br /><br /> Un'operazione è stata annullata chiamando **SQLCancelHandle** su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore specificato per l'argomento *StringLength1* è minore di 0 e non è uguale a SQL_NTS.<br /><br /> (DM) il valore specificato per l'argomento *bufferLength* è minore di 0.|  
+|HY114|Il driver non supporta l'esecuzione di funzioni asincrone a livello di connessione|(DM) l'applicazione ha abilitato l'operazione asincrona sull'handle di connessione prima di effettuare la connessione. Tuttavia, il driver non supporta l'operazione asincrona sull'handle di connessione.|  
+|HYT00|Timeout|Il periodo di timeout di accesso è scaduto prima del completamento della connessione all'origine dati. Il periodo di timeout viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver corrispondente al nome dell'origine dati specificato non supporta la funzione.|  
+|IM002|Origine dati non trovata e non è stato specificato alcun driver predefinito|(DM) il nome dell'origine dati specificato nella stringa di connessione della richiesta Browse (*InConnectionString*) non è stato trovato nelle informazioni di sistema, né esiste una specifica del driver predefinita.<br /><br /> (DM) non è stato possibile trovare le informazioni relative all'origine dati ODBC e al driver predefinito nelle informazioni di sistema.|  
+|IM003|Non è stato possibile caricare il driver specificato|(DM) il driver elencato nella specifica dell'origine dati nelle informazioni di sistema o specificato dalla parola chiave del **driver** non è stato trovato o non è stato possibile caricarlo per altri motivi.|  
+|IM004|**SQLAllocHandle** del Driver SQL_HANDLE _ENV non riuscita|(DM) durante **SQLBrowseConnect**, gestione driver ha chiamato la funzione **SQLAllocHandle** del driver con una *HandleType* di SQL_HANDLE_ENV e il driver ha restituito un errore.|  
+|IM005|**SQLAllocHandle** del Driver su SQL_HANDLE_DBC non riuscito|(DM) durante **SQLBrowseConnect**, gestione driver ha chiamato la funzione **SQLAllocHandle** del driver con una *HandleType* di SQL_HANDLE_DBC e il driver ha restituito un errore.|  
+|IM006|Errore di **SQLSetConnectAttr** del driver|(DM) durante **SQLBrowseConnect**, gestione driver ha chiamato la funzione **SQLSetConnectAttr** del driver e il driver ha restituito un errore.|  
+|IM009|Impossibile caricare la DLL di traduzione|Il driver non è stato in grado di caricare la DLL di conversione specificata per l'origine dati o per la connessione.|  
+|IM010|Nome origine dati troppo lungo|(DM) il valore dell'attributo per la parola chiave DSN è più lungo di SQL_MAX_DSN_LENGTH caratteri.|  
+|IM011|Nome driver troppo lungo|(DM) il valore dell'attributo per la parola chiave DRIVER è più lungo di 255 caratteri.|  
+|IM012|Errore di sintassi della parola chiave DRIVER|(DM) la coppia parola chiave-valore per la parola chiave DRIVER contiene un errore di sintassi.|  
+|IM014|Il DSN specificato contiene una mancata corrispondenza dell'architettura tra il driver e l'applicazione|(DM) l'applicazione a 32 bit utilizza un DSN che si connette a un driver a 64 bit. o viceversa.|  
+|IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
+|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
+|S1118|Il driver non supporta la notifica asincrona|Quando il driver non supporta la notifica asincrona, non è possibile impostare SQL_ATTR_ASYNC_DBC_EVENT o SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
   
 ## <a name="inconnectionstring-argument"></a>Argomento InConnectionString  
- Una stringa di connessione richiesta Sfoglia presenta la sintassi seguente:  
+ Una stringa di connessione per la richiesta browse presenta la sintassi seguente:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
- *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
- *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
- *valore dell'attributo* :: = *stringhe di caratteri*<br>
- *definito dall'attributo-parola chiave driver* :: = *identificatore*<br>
+ *Connection-String* :: = *attribute*[`;`] &#124; ** `;` *stringa di connessione*dell'attributo;<br>
+ *attribute::* = *attribute-keyword*`=`*-valore* &#124; `DRIVER=`[`{`]*attributo-valore*[]`}`<br>
+ *attribute-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; il *driver-defined-attribute-keyword*<br>
+ *attribute-value* :: = *stringa di caratteri*<br>
+ *driver-defined-attribute-keyword* :: = *Identifier*<br>
   
- in cui *stringhe di caratteri* contiene zero o più caratteri; *identificatore* ha uno o più caratteri; *parola chiave di attributo* non distinzione maiuscole/minuscole; *-valore dell'attributo* potrebbe essere distinzione maiuscole/minuscole; e il valore della **DSN** parola chiave composto unicamente da spazi vuoti. A causa di connessione valori stringa e l'inizializzazione file grammatica, parole chiave e attributi che contengono i caratteri **[]{}(),? \*=! @** deve essere evitata. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Per un database ODBC 2. *x* driver, è necessario racchiudere il valore dell'attributo per la parola chiave DRIVER tra parentesi graffe.  
+ dove la *stringa di caratteri* contiene zero o più caratteri; l' *identificatore* contiene uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. *attribute-value* può fare distinzione tra maiuscole e minuscole; il valore della parola chiave **DSN** , quindi, non è costituito solo da spazi vuoti. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave e valori di attributo contenenti i caratteri **[]{}(),;? = \*! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non\\possono contenere il carattere barra rovesciata (). Per ODBC 2. driver *x* , le parentesi graffe sono necessarie intorno al valore dell'attributo per la parola chiave del driver.  
   
- Se tutte le parole chiave vengono ripetute nella stringa di connessione richiesta Sfoglia, il driver Usa il valore associato alla prima occorrenza della parola chiave. Se il **DSN** e **DRIVER** parole chiave sono inclusi nella stessa stringa di connessione richiesta Sfoglia, il gestore dei Driver e il driver Usa la parola chiave che viene visualizzata per prima.  
+ Se vengono ripetute parole chiave nella stringa di connessione della richiesta browse, il driver utilizzerà il valore associato alla prima occorrenza della parola chiave. Se le parole chiave **DSN** e **driver** sono incluse nella stessa stringa di connessione della richiesta browse, il driver e la gestione driver utilizzeranno prima di tutto la parola chiave.  
   
- Per informazioni sulla modalità con cui un'applicazione sceglie un'origine dati o driver, vedere [scelta di un'origine dati o Driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Per informazioni sul modo in cui un'applicazione sceglie un'origine dati o un driver, vedere [scelta di un'origine dati o](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)di un driver.  
   
 ## <a name="outconnectionstring-argument"></a>Argomento OutConnectionString  
- La stringa di connessione Sfoglia risultato è un elenco di attributi di connessione. Un attributo di connessione è costituita da una parola chiave di attributo e un valore di attributo corrispondente. La stringa di connessione del risultato esplorazione presenta la sintassi seguente:  
+ La stringa di connessione per il risultato della ricerca è un elenco di attributi di connessione. Un attributo Connection è costituito da una parola chiave Attribute e da un valore di attributo corrispondente. La stringa di connessione del risultato browse presenta la sintassi seguente:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
- *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
- *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
- *Parola chiave di attributo ODBC* = {`UID` &#124; `PWD`} [`:`*localizzato dall'identificatore*] *-definito dall'attributo-parola chiave driver* :: = *identifier*[`:`*localizzato dall'identificatore*] *attributo-valore* :: = `{` *attributo-valore dall'elenco* `}` &#124; `?` (Le parentesi graffe sono valori letterali, vengono restituiti dal driver).<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *Connection-String* :: = *attribute*[`;`] &#124; ** `;` *stringa di connessione* dell'attributo<br>
+ *attribute::* = [`*`]*attributo-parola chiave*`=`*-valore*<br>
+ *attribute-keyword* :: = *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *ODBC-attribute-keyword* = {`UID` &#124; `PWD`} [`:`*identificatore localizzato*] *driver-defined-attribute-keyword* :: = *Identifier*[`:`*localizzated-Identifier*] *attribute-value* :: `{` = *Attribute-Value-List* `}` &#124; `?` (le parentesi graffe sono valore letterale, vengono restituite dal driver).<br>
+ *Attribute-Value-List* :: = *character-string* [`:`*stringa di caratteri localizzati*] *&#124; stringa di caratteri* [`:`*localizzato-* stringa `,` di caratteri] *attributo-valore-elenco*<br>
   
- in cui *stringhe di caratteri* e *stringa di caratteri localizzati* avere zero o più caratteri; *identifier* e *localizzato dall'identificatore* hanno uno o più caratteri; *parola chiave di attributo* non distinzione maiuscole/minuscole; e *attributo-valore* potrebbe essere distinzione maiuscole/minuscole. A causa di connessione stringa di inizializzazione file grammatica, parole chiave, identificatori localizzati e i valori che contengono i caratteri dell'attributo **[]{}(),? \*=! @** deve essere evitata. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
+ dove la *stringa di caratteri* e la *stringa di caratteri localizzati* hanno zero o più caratteri; l' *identificatore* e l' *identificatore localizzato* contengono uno o più caratteri; *attribute-keyword* non distingue tra maiuscole e minuscole. e *attribute-value* può fare distinzione tra maiuscole e minuscole. A causa della sintassi della stringa di connessione e del file di inizializzazione, parole chiave, identificatori localizzati e valori di attributo contenenti i caratteri **[]{}(),;? = \*! @** deve essere evitato. A causa della grammatica nelle informazioni di sistema, le parole chiave e i nomi delle origini dati non\\possono contenere il carattere barra rovesciata ().  
   
- Viene utilizzata la sintassi della stringa di connessione risultato Sfoglia secondo le regole semantiche seguenti:  
+ La sintassi della stringa di connessione result Browse viene utilizzata in base alle regole semantiche seguenti:  
   
--   Se un asterisco (\*) precede un' *parola chiave di attributo*, il *attributo* è facoltativo e può essere omesso nella chiamata successiva al **SQLBrowseConnect**.  
+-   Se un asterisco (\*) precede una *parola chiave attribute*, l' *attributo* è facoltativo e può essere omesso nella chiamata successiva a **SQLBrowseConnect**.  
   
--   Le parole chiave di attributo **UID** e **PWD** hanno lo stesso significato come definito nella **SQLDriverConnect**.  
+-   Le parole chiave degli attributi **UID** e **pwd** hanno lo stesso significato definito in **SQLDriverConnect**.  
   
--   Oggetto *-definito dall'attributo-parola chiave driver* denomina il tipo di attributo per cui può essere fornito un valore di attributo. Ad esempio, potrebbe essere **SERVER**, **DATABASE**, **HOST**, oppure **DBMS**.  
+-   Una *parola chiave attribute-defined definisce* il tipo di attributo per il quale è possibile fornire un valore di attributo. Ad esempio, potrebbe essere **Server**, **database**, **host**o **DBMS**.  
   
--   *Parole chiave di attributo ODBC* e *driver--attributo-parole chiave definite* includono una versione localizzata o intuitiva della parola chiave. Ciò potrebbe essere utilizzato da applicazioni come un'etichetta in una finestra di dialogo. Tuttavia **UID**, **PWD**, o la *identificatore* da solo quando è necessario utilizzare passando una stringa di richiesta di esplorazione al driver.  
+-   *ODBC-attribute-Keywords* e *driver-defined-attribute-* Keywords includono una versione localizzata o intuitiva della parola chiave. Questa operazione può essere utilizzata dalle applicazioni come etichetta in una finestra di dialogo. Tuttavia, quando si passa una stringa della richiesta browse al driver, è necessario usare **UID**, **pwd**o l' *identificatore* da solo.  
   
--   La {*attributo-valore-list*} è un'enumerazione dei valori effettivi valido per il corrispondente *parola chiave di attributo*. Si noti che le parentesi graffe ({}) non indicano un elenco di scelte; tali elementi vengono restituiti dal driver. Ad esempio, potrebbe essere un elenco di nomi di server o un elenco di nomi di database.  
+-   {*Attribute-Value-List*} è un'enumerazione di valori effettivi validi per la *parola chiave attribute*corrispondente. Si noti che le parentesi graffe{}() non indicano un elenco di opzioni. vengono restituiti dal driver. Ad esempio, potrebbe trattarsi di un elenco di nomi di server o di un elenco di nomi di database.  
   
--   Se il *attributo-valore* è un singolo punto interrogativo (?), un singolo valore corrispondente per il *parola chiave di attributo*. Ad esempio, UID = JohnS; PWD = Sesame.  
+-   Se il *valore dell'attributo* è un punto interrogativo singolo (?), un singolo valore corrisponde alla *parola chiave attribute*. Ad esempio, UID = JohnS; PWD = sesamo.  
   
--   Ogni chiamata a **SQLBrowseConnect** restituisce solo le informazioni necessarie per soddisfare il livello successivo del processo di connessione. Il driver associa le informazioni sullo stato con l'handle di connessione in modo che il contesto può sempre determinato per ogni chiamata.  
+-   Ogni chiamata a **SQLBrowseConnect** restituisce solo le informazioni necessarie per soddisfare il livello successivo del processo di connessione. Il driver associa le informazioni di stato con l'handle di connessione in modo che il contesto possa essere sempre determinato a ogni chiamata.  
   
-## <a name="using-sqlbrowseconnect"></a>Con SQLBrowseConnect  
- **SQLBrowseConnect** richiede una connessione allocata. Gestione Driver viene caricato il driver in cui è stato specificato o che corrisponde al nome origine dati specificato nella stringa di connessione richiesta iniziale Sfoglia; Per informazioni su quando ciò si verifica, vedere la sezione "Commenti" nella [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md). Il driver può stabilire una connessione con l'origine dati durante il processo di esplorazione. Se **SQLBrowseConnect** restituisce SQL_ERROR, in attesa di connessioni vengono terminate e viene restituita la connessione a uno stato non connesso.  
+## <a name="using-sqlbrowseconnect"></a>Uso di SQLBrowseConnect  
+ **SQLBrowseConnect** richiede una connessione allocata. Gestione driver carica il driver specificato in o che corrisponde al nome dell'origine dati specificato nella stringa di connessione per la richiesta di visualizzazione iniziale. per informazioni su quando si verifica questa situazione, vedere la sezione "Commenti" nella [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md). Il driver può stabilire una connessione con l'origine dati durante il processo di esplorazione. Se **SQLBrowseConnect** restituisce SQL_ERROR, le connessioni in attesa vengono interrotte e la connessione viene restituita a uno stato non connesso.  
   
 > [!NOTE]  
->  **SQLBrowseConnect** non supporta il pool di connessioni. Se **SQLBrowseConnect** viene chiamato mentre il pool di connessioni è abilitato, SQLSTATE HY000 verrà restituito (errore generale).  
+>  **SQLBrowseConnect** non supporta il pool di connessioni. Se viene chiamato **SQLBrowseConnect** mentre il pool di connessioni è abilitato, viene restituito SQLSTATE HY000 (errore generale).  
   
- Quando **SQLBrowseConnect** viene chiamato per la prima volta in una connessione, la stringa di connessione richiesta di ricerca deve contenere il **DSN** parola chiave o il **DRIVER** (parola chiave). Se la stringa di connessione richiesta Sfoglia contiene il **DSN** (parola chiave), gestione Driver individua una specifica origine dati corrispondente nelle informazioni di sistema:  
+ Quando **SQLBrowseConnect** viene chiamato per la prima volta in una connessione, la stringa di connessione della richiesta browse deve contenere la parola chiave **DSN** o la parola chiave **driver** . Se la stringa di connessione della richiesta browse contiene la parola chiave **DSN** , gestione driver individua una specifica dell'origine dati corrispondente nelle informazioni di sistema:  
   
--   Se Gestione Driver rileva specifica dell'origine dati corrispondente, viene caricato il driver associato DLL; il driver può recuperare informazioni sull'origine dati dalle informazioni di sistema.  
+-   Se Gestione driver trova la specifica dell'origine dati corrispondente, carica la DLL del driver associata; il driver può recuperare le informazioni sull'origine dati dalle informazioni di sistema.  
   
--   Se Gestione Driver non è possibile trovare la specifica origine dati corrispondente, viene individuato specifica dell'origine dati predefinito e carica il driver associato DLL. il driver può recuperare informazioni sull'origine dati predefinita dalle informazioni di sistema. "DEFAULT" viene passato al driver per il DSN.  
+-   Se Gestione driver non è in grado di trovare la specifica dell'origine dati corrispondente, individua la specifica dell'origine dati predefinita e carica la DLL del driver associato. il driver può recuperare le informazioni sull'origine dati predefinita dalle informazioni di sistema. "DEFAULT" viene passato al driver per il DSN.  
   
--   Se Gestione Driver non è possibile trovare una specifica origine dati corrispondente e non esiste alcuna specifica di origine dati predefinita, viene restituito SQL_ERROR con SQLSTATE IM002 (origine dati non trovata e driver predefinito non specificato).  
+-   Se Gestione driver non è in grado di trovare la specifica dell'origine dati corrispondente e non esiste alcuna specifica dell'origine dati predefinita, restituisce SQL_ERROR con SQLSTATE IM002 (origine dati non trovata e nessun driver predefinito specificato).  
   
- Se la stringa di connessione richiesta Sfoglia contiene il **DRIVER** (parola chiave), gestione Driver viene caricato il driver specificato; non tenta di individuare un'origine dati le informazioni di sistema. Poiché il **DRIVER** parola chiave non utilizza informazioni dalle informazioni di sistema, il driver deve definire sufficiente parole chiave in modo che un driver può connettersi a un'origine dati usando solo le informazioni nelle stringhe di connessione richiesta Sfoglia.  
+ Se la stringa di connessione della richiesta browse contiene la parola chiave **driver** , il driver specificato viene caricato da Gestione driver. non tenta di individuare un'origine dati nelle informazioni di sistema. Poiché la parola chiave **driver** non utilizza informazioni delle informazioni di sistema, il driver deve definire parole chiave sufficienti in modo che un driver possa connettersi a un'origine dati utilizzando solo le informazioni contenute nelle stringhe di connessione per la richiesta di ricerca.  
   
- In ogni chiamata a **SQLBrowseConnect**, l'applicazione specifica i valori di attributo di connessione nella stringa di connessione richiesta Sfoglia. Il driver restituisce livelli successivi degli attributi e valori degli attributi nella stringa di connessione risultato Sfoglia; restituisce SQL_NEED_DATA, purché siano presenti gli attributi di connessione che non sono ancora stati enumerati nella stringa di connessione richiesta Sfoglia. L'applicazione usa il contenuto della stringa di connessione risultati esplorazione per compilare la stringa di connessione richiesta Sfoglia per la chiamata successiva a **SQLBrowseConnect**. Tutti gli attributi obbligatori (quelle non preceduto da un asterisco nel *OutConnectionString* argomento) devono essere inclusi nella chiamata successiva a **SQLBrowseConnect**. Si noti che l'applicazione non è possibile usare il contenuto delle stringhe di connessione risultato ricerca precedente quando si compila la stringa di connessione richiesta Sfoglia corrente; vale a dire non deve specificare valori diversi per gli attributi impostati nei livelli precedenti.  
+ Per ogni chiamata a **SQLBrowseConnect**, l'applicazione specifica i valori degli attributi di connessione nella stringa di connessione della richiesta browse. Il driver restituisce i livelli successivi di attributi e valori di attributo nella stringa di connessione del risultato browse. restituisce SQL_NEED_DATA finché sono presenti attributi di connessione non ancora enumerati nella stringa di connessione della richiesta browse. L'applicazione usa il contenuto della stringa di connessione result Browse per compilare la stringa di connessione per la richiesta Browse per la chiamata successiva a **SQLBrowseConnect**. Tutti gli attributi obbligatori (quelli non preceduti da un asterisco nell'argomento *OutConnectionString* ) devono essere inclusi nella chiamata successiva a **SQLBrowseConnect**. Si noti che l'applicazione non può usare il contenuto delle stringhe di connessione del risultato della ricerca precedente durante la compilazione della stringa di connessione della richiesta di visualizzazione corrente. ovvero non può specificare valori diversi per gli attributi impostati nei livelli precedenti.  
   
- Quando tutti i livelli di connessione e i relativi attributi associati sono stati enumerati, il driver restituisce SQL_SUCCESS, la connessione all'origine dati è stata completata e viene restituita una stringa di connessione completa per l'applicazione. La stringa di connessione è adatta da usare, in combinazione con **SQLDriverConnect**, con l'opzione SQL_DRIVER_NOPROMPT per stabilire un'altra connessione. La stringa di connessione completa non può essere utilizzata in un'altra chiamata a **SQLBrowseConnect**, tuttavia, se **SQLBrowseConnect** venisse chiamata nuovamente, l'intera sequenza di chiamate dovrà essere ripetuta.  
+ Quando tutti i livelli di connessione e gli attributi associati sono stati enumerati, il driver restituisce SQL_SUCCESS, la connessione all'origine dati è completata e viene restituita una stringa di connessione completa all'applicazione. La stringa di connessione è adatta per l'utilizzo di, insieme a **SQLDriverConnect**, con l'opzione SQL_DRIVER_NOPROMPT per stabilire un'altra connessione. Tuttavia, non è possibile usare la stringa di connessione completa in un'altra chiamata a **SQLBrowseConnect**. Se **SQLBrowseConnect** è stato chiamato nuovamente, è necessario ripetere l'intera sequenza di chiamate.  
   
- **SQLBrowseConnect** anche viene restituito SQL_NEED_DATA se sono presenti errori non irreversibili, reversibili durante il processo di esplorazione; ad esempio, una password non valida o una parola chiave di attributo fornita dall'applicazione. Quando viene restituito SQL_NEED_DATA e la stringa di connessione del risultato Sfoglia viene modificata, si è verificato un errore e l'applicazione può chiamare **SQLGetDiagRec** per restituire il valore SQLSTATE errori della fase di esplorazione. Ciò consente all'applicazione per correggere l'attributo e continuare l'esplorazione.  
+ **SQLBrowseConnect** restituisce inoltre SQL_NEED_DATA se sono presenti errori reversibili e non irreversibili durante il processo di visualizzazione. ad esempio, una password non valida o una parola chiave dell'attributo fornita dall'applicazione. Quando viene restituito SQL_NEED_DATA e la stringa di connessione del risultato della ricerca non viene modificata, si è verificato un errore e l'applicazione può chiamare **SQLGetDiagRec** per restituire il valore SQLSTATE per gli errori in fase di visualizzazione. Ciò consente all'applicazione di correggere l'attributo e continuare l'esplorazione.  
   
- Un'applicazione può terminare il processo di ricerca in qualsiasi momento chiamando **SQLDisconnect**. Il driver terminerà tutte le connessioni in sospeso e restituire la connessione a uno stato non connesso.  
+ Un'applicazione può terminare il processo di esplorazione in qualsiasi momento chiamando **Disconnect**. Il driver terminerà tutte le connessioni in attesa e restituirà la connessione a uno stato non connesso.  
   
- Se nell'handle di connessione, sono abilitate le operazioni asincrone **SQLBrowseConnect** potrebbe restituire anche SQL_STILL_EXECUTING. Quando viene restituito SQL_NEED_DATA, un'applicazione deve utilizzare **SQLDisconnect** per annullare il processo di esplorazione. Se **SQLBrowseConnect** restituisce SQL_STILL_EXECUTING, un'applicazione devono usare **SQLCancelHandle** per annullare l'operazione in corso. La chiamata **SQLCancelHandle** dopo la funzione restituisce SQL_NEED_DATA non ha alcun effetto.  
+ Se le operazioni asincrone sono abilitate nell'handle di connessione, **SQLBrowseConnect** potrebbe restituire anche SQL_STILL_EXECUTING. Quando restituisce SQL_NEED_DATA, un'applicazione deve usare **SQLConnect** per annullare il processo di esplorazione. Se **SQLBrowseConnect** restituisce SQL_STILL_EXECUTING, un'applicazione deve usare **SQLCancelHandle** per annullare l'operazione in corso. La chiamata di **SQLCancelHandle** dopo che la funzione restituisce SQL_NEED_DATA non ha alcun effetto.  
   
- Per altre informazioni, vedere [connessione con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md).  
+ Per ulteriori informazioni, vedere [connessione con SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md).  
   
- Se un driver supporta **SQLBrowseConnect**, la sezione di parola chiave driver nelle informazioni di sistema per il driver deve contenere il **ConnectFunctions** parola chiave with il terzo carattere è impostato su "Y".  
+ Se un driver supporta **SQLBrowseConnect**, la sezione relativa alla parola chiave driver nelle informazioni di sistema per il driver deve contenere la parola chiave **ConnectFunctions** con il terzo carattere impostato su "Y".  
   
 ## <a name="code-example"></a>Esempio di codice  
   
 > [!NOTE]  
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare `Trusted_Connection=yes` anziché le informazioni utente di ID e la password nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
- Nell'esempio seguente, un'applicazione chiama **SQLBrowseConnect** ripetutamente. Ogni volta che **SQLBrowseConnect** restituisce SQL_NEED_DATA, passa nuovamente le informazioni sui dati di cui ha bisogno in \* *OutConnectionString*. L'applicazione passa *OutConnectionString* alla relativa routine **GetUserInput** (non illustrato). **GetUserInput** analizza le informazioni, compila e visualizza una finestra di dialogo e restituisce le informazioni immesse dall'utente nella \* *InConnectionString*. L'applicazione passa le informazioni dell'utente per il driver nella chiamata successiva al **SQLBrowseConnect**. Dopo l'applicazione ha fornito tutte le informazioni necessarie per connettersi all'origine dati, il driver **SQLBrowseConnect** restituisce SQL_SUCCESS e l'applicazione procede.  
+ Nell'esempio seguente un'applicazione chiama **SQLBrowseConnect** ripetutamente. Ogni volta che **SQLBrowseConnect** restituisce SQL_NEED_DATA, vengono restituite informazioni sui dati necessari in \* *OutConnectionString*. L'applicazione passa la proprietà *OutConnectionString* alla routine **GetUserInput** (non mostrata). **GetUserInput** analizza le informazioni, compila e visualizza una finestra di dialogo e restituisce le informazioni immesse dall'utente in \* *InConnectionString*. L'applicazione passa le informazioni dell'utente al driver nella chiamata successiva a **SQLBrowseConnect**. Dopo che l'applicazione ha fornito tutte le informazioni necessarie per il driver per la connessione all'origine dati, **SQLBrowseConnect** restituisce SQL_SUCCESS e l'applicazione continua.  
   
- Per un esempio più dettagliato di connessione a un driver di SQL Server tramite la chiamata **SQLBrowseConnect**, vedere [esempio di esplorazione di SQL Server](../../../odbc/reference/develop-app/sql-server-browsing-example.md).  
+ Per un esempio più dettagliato di connessione a un driver di SQL Server chiamando **SQLBrowseConnect**, vedere [SQL Server esempio di esplorazione](../../../odbc/reference/develop-app/sql-server-browsing-example.md).  
   
- Ad esempio, per connettersi ai dati di origine cliente, potrebbero verificarsi le azioni seguenti. In primo luogo, l'applicazione passa la stringa seguente per **SQLBrowseConnect**:  
+ Per connettersi all'origine dati Sales, ad esempio, è possibile che si verifichino le azioni seguenti. In primo luogo, l'applicazione passa la stringa seguente a **SQLBrowseConnect**:  
   
 ```  
 "DSN=Sales"  
 ```  
   
- Gestione Driver viene caricato il driver associato all'origine dati vendite. Chiama quindi il driver **SQLBrowseConnect** canonica con gli stessi argomenti ricevuto dall'applicazione. Il driver restituisce la stringa seguente in **OutConnectionString*:  
+ Gestione driver carica il driver associato alle vendite dell'origine dati. Chiama quindi la funzione **SQLBrowseConnect** del driver con gli stessi argomenti ricevuti dall'applicazione. Il driver restituisce la stringa seguente in **OutConnectionString*:  
   
 ```  
 "HOST:Server={red,blue,green};UID:ID=?;PWD:Password=?"  
 ```  
   
- L'applicazione passa questa stringa al relativo **GetUserInput** routine, che crea una finestra di dialogo che chiede all'utente di selezionare il server di colore rosso, blu o verde e immettere un ID utente e password. La routine passa le informazioni specificate dall'utente seguente nuovamente \* *InConnectionString*, che l'applicazione passa al **SQLBrowseConnect**:  
+ L'applicazione passa questa stringa alla routine **GetUserInput** , che compila una finestra di dialogo in cui viene chiesto all'utente di selezionare il server rosso, blu o verde e di immettere un ID utente e una password. La routine passa nuovamente le seguenti informazioni specificate dall'utente in \* *InConnectionString*, che l'applicazione passa a **SQLBrowseConnect**:  
   
 ```  
 "HOST=red;UID=Smith;PWD=Sesame"  
 ```  
   
- **SQLBrowseConnect** Usa queste informazioni per connettersi al server di colore rosso come Smith con la password Sesame e quindi restituisce la stringa seguente nella **OutConnectionString*:  
+ **SQLBrowseConnect** usa queste informazioni per connettersi al server Red come Smith con la password sesamo, quindi restituisce la stringa seguente in **OutConnectionString*:  
   
 ```  
 "*DATABASE:Database={SalesEmployees,SalesGoals,SalesOrders}"  
 ```  
   
- L'applicazione passa questa stringa al relativo **GetUserInput** routine, che crea una finestra di dialogo che chiede all'utente di selezionare un database. Il empdata Seleziona utente e l'applicazione chiama **SQLBrowseConnect** un'ultima volta con questa stringa:  
+ L'applicazione passa questa stringa alla routine **GetUserInput** , che compila una finestra di dialogo in cui viene chiesto all'utente di selezionare un database. L'utente seleziona empdata e l'applicazione chiama **SQLBrowseConnect** all'ora finale con la stringa seguente:  
   
 ```  
 "DATABASE=SalesOrders"  
 ```  
   
- Questo è l'ultima informazione che il driver deve connettersi all'origine dati; **SQLBrowseConnect** restituisce SQL_SUCCESS, e **OutConnectionString* contiene la stringa di connessione completata:  
+ Questo è l'ultimo elemento di informazioni che il driver deve connettere all'origine dati. **SQLBrowseConnect** restituisce SQL_SUCCESS e **OutConnectionString* contiene la stringa di connessione completata:  
   
 ```cpp  
 // SQLBrowseConnect_Function.cpp  
@@ -286,13 +286,13 @@ int main() {
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Allocare un handle di connessione|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Allocazione di un handle di connessione|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Connessione a un'origine dati|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Disconnessione da un'origine dati|[Funzione SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|La connessione a un'origine dati tramite una finestra di dialogo o stringa di connessione|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Restituzione di attributi e le descrizioni di driver|[Funzione SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
-|Rilascio di un handle di connessione|[Funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Restituzione di attributi e descrizioni dei driver|[Funzione SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Liberazione di un handle di connessione|[SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

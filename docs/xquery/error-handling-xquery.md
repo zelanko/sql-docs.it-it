@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038959"
 ---
 # <a name="error-handling-xquery"></a>Gestione degli errori (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "68038959"
  Per evitare gli errori statici è possibile eseguire il cast esplicito al tipo corretto, tuttavia gli errori di cast che si verificano in fase di esecuzione vengono convertiti in sequenze vuote.  
   
 ## <a name="static-errors"></a>Errori statici  
- Gli errori statici vengono restituiti utilizzando il meccanismo di gestione degli errori [!INCLUDE[tsql](../includes/tsql-md.md)]. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], gli errori di tipo XQuery vengono restituiti in modo statico. Per altre informazioni, vedere [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md).  
+ Gli errori statici vengono restituiti utilizzando il meccanismo di gestione degli errori [!INCLUDE[tsql](../includes/tsql-md.md)]. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], gli errori di tipo XQuery vengono restituiti in modo statico. Per ulteriori informazioni, vedere [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Errori dinamici  
- In XQuery, nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"), Tuttavia, queste sono le due eccezioni: Condizioni di overflow nelle funzioni di aggregazione XQuery ed errori di convalida XML DML. Si noti che nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"). In caso contrario, l'esecuzione della query che utilizza gli indici XML può generare errori imprevisti. Pertanto, per garantire un'esecuzione efficiente senza la generazione di errori imprevisti, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] esegue il mapping degli errori dinamici a ().  
+ In XQuery, nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"), con due eccezioni: condizioni di overflow nelle funzioni di aggregazione XQuery ed errori di convalida XML DML. Si noti che nella maggior parte dei casi sugli errori dinamici viene eseguito il mapping a una sequenza vuota ("()"). In caso contrario, l'esecuzione della query che utilizza gli indici XML può generare errori imprevisti. Pertanto, per garantire un'esecuzione efficiente senza la generazione di errori imprevisti, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] esegue il mapping degli errori dinamici a ().  
   
  Nei casi in cui l'errore dinamico verrebbe generato all'interno di un predicato, spesso non generare l'errore non modifica la semantica, poiché () viene eseguito il mapping a False. In alcuni casi tuttavia, la restituzione di () invece di un errore dinamico può causare risultati imprevisti, come illustrato negli esempi seguenti.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Esempio: Utilizzo della funzione AVG () con una stringa  
- Nell'esempio seguente, il [AVG-funzione](../xquery/aggregate-functions-avg.md) viene chiamato per calcolare la media dei tre valori. Uno dei valori è una stringa. Poiché l'istanza XML in questo caso è non tipizzata, tutti i dati al suo interno sono di tipo atomico non tipizzato. Il **AVG ()** funzione prima di tutto viene eseguito il cast questi valori per **xs: double** prima di calcolare la Media. Tuttavia, il valore `"Hello"`, non è possibile eseguire il cast **xs: double** e crea un errore dinamico. In questo caso, invece di restituire un errore dinamico, il cast di `"Hello"` al **xs: double** genera una sequenza vuota. Il **AVG ()** funzione ignora questo valore, calcola la media degli altri due valori e restituisce 150.  
+### <a name="example-using-the-avg-function-with-a-string"></a>Esempio: utilizzo della funzione avg () con una stringa  
+ Nell'esempio seguente viene chiamata la [funzione AVG](../xquery/aggregate-functions-avg.md) per calcolare la media dei tre valori. Uno dei valori è una stringa. Poiché l'istanza XML in questo caso è non tipizzata, tutti i dati al suo interno sono di tipo atomico non tipizzato. La funzione **AVG ()** esegue prima il cast di questi valori in **xs: Double** prima di calcolare la media. Non è tuttavia possibile eseguire `"Hello"`il cast del valore,, a **xs: Double** e viene creato un errore dinamico. In questo caso, anziché restituire un errore dinamico, il cast di `"Hello"` a **xs: Double** causa una sequenza vuota. La funzione **AVG ()** ignora questo valore, calcola la media degli altri due valori e restituisce 150.  
   
 ```  
 DECLARE @x xml  
@@ -57,10 +57,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Esempio: Utilizzando not (funzione)  
- Quando si usa la [non funzionerà](../xquery/functions-on-boolean-values-not-function.md) in un predicato, ad esempio, `/SomeNode[not(Expression)]`, e l'espressione genera un errore dinamico, è verrà restituita una sequenza vuota anziché un errore. Applicando **NOT ()** alla sequenza vuota restituisce True, anziché un errore.  
+### <a name="example-using-the-not-function"></a>Esempio: utilizzo della funzione not  
+ Quando si usa la [funzione not](../xquery/functions-on-boolean-values-not-function.md) in un predicato, ad `/SomeNode[not(Expression)]`esempio, e l'espressione genera un errore dinamico, invece di un errore viene restituita una sequenza vuota. Se si applica **Not ()** alla sequenza vuota, invece di un errore viene restituito true.  
   
-### <a name="example-casting-a-string"></a>Esempio: Cast di una stringa  
+### <a name="example-casting-a-string"></a>Esempio: esecuzione del cast di una stringa  
  Nell'esempio seguente viene eseguito il cast della stringa letterale "NaN" a xs:string, quindi a xs:double. Il risultato è un set di righe vuoto. Anche se non è possibile eseguire correttamente il cast della stringa "NaN" a xs:double, questo fatto non può essere determinato fino al momento dell'esecuzione, perché prima viene eseguito il cast della stringa a xs:string.  
   
 ```  
@@ -80,7 +80,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>Limitazioni di implementazione  
- Il **fn:error()** funzione non è supportata.  
+ La funzione **FN: Error ()** non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   

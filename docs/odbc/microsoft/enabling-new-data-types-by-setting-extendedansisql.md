@@ -1,5 +1,5 @@
 ---
-title: L'abilitazione di nuovi tipi di dati tramite l'impostazione di ExtendedAnsiSQL | Microsoft Docs
+title: Abilitazione di nuovi tipi di dati tramite l'impostazione di ExtendedAnsiSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68031125"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>Abilitazione di nuovi tipi di dati tramite l'impostazione di ExtendedAnsiSQL
-Due nuovi tipi di dati sono disponibili nei database Jet 4.0 quando il flag ExtendedAnsiSQL è attivato: SQL_DECIMAL e SQL_NUMERIC. La precisione predefinita e la scala sono 18 e 0 rispettivamente. Dati accessibili tramite ODBC tipizzata come SQL_DECIMAL o SQL_NUMERIC verranno mappati per Microsoft Jet decimale invece di valuta.  
+Nei database Jet 4,0 sono disponibili due nuovi tipi di dati quando il flag ExtendedAnsiSQL è attivato: SQL_DECIMAL e SQL_NUMERIC. La precisione e la scala predefinite sono rispettivamente 18 e 0. I dati a cui si accede tramite ODBC tipizzati come SQL_DECIMAL o SQL_NUMERIC verranno mappati a Microsoft Jet Decimal anziché alla valuta.  
   
- Quando il flag ExtendedAnsiSQL è disattivato, non è possibile creare tabelle con tipi di dati decimali o numerici e questi tipi non compariranno nella SQLGetTypeInfo(). Tuttavia, se la tabella contiene i nuovi tipi di dati, possono essere utilizzati con i tipi di dati corretto.
+ Quando il flag ExtendedAnsiSQL è disattivato, non è possibile creare tabelle con tipi decimali o numerici e questi tipi non verranno visualizzati in SQLGetTypeInfo (). Tuttavia, se la tabella contiene i nuovi tipi di dati, è possibile utilizzarli con i tipi di dati corretti.

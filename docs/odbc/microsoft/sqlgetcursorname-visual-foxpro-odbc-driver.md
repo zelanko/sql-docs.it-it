@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLGetCursorName (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1eec75ec935e8b60fadb540c9bab05fbe2a05fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003393"
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: A livello centrale  
+ Conformità API ODBC: livello principale  
   
- Restituisce il nome del cursore associato con il determinato *hstmt*. **SQLGetCursorName** è inclusa nell'API di Visual FoxPro ODBC Driver perché fa parte della funzionalità dell'API di livello principale; non può essere utilizzato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
+ Restituisce il nome del cursore associato al *HSTMT*specificato. **SQLGetCursorName** è incluso nell'API del driver ODBC di Visual FoxPro perché fa parte della funzionalità API del livello di base. non può essere usato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
   
- Per altre informazioni, vedere [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) in *ODBC Programmer ' s Reference*.

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione del progetto di Client del servizio Web | Microsoft Docs'
+title: 'Lezione 1: creazione del progetto client del servizio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676059"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Lezione 1: Creazione del progetto client per il servizio Web
@@ -22,22 +22,22 @@ ms.locfileid: "62676059"
   
 ### <a name="to-create-a-console-application"></a>Per creare un'applicazione console  
   
-1.  Nel **File** dal menu **New**e quindi fare clic su **progetto** per aprire la **nuovo progetto** nella finestra di dialogo.  
+1.  Scegliere **nuovo**dal menu **file** , quindi fare clic su **progetto** per aprire la finestra di dialogo **nuovo progetto** .  
   
-2.  Nel riquadro sinistro, sotto **modelli installati**, fare clic su **Visual Basic** o nella **Visual c#** nodo e selezionare una categoria di progetto tipi dall'elenco espanso.  
+2.  Nel riquadro sinistro, in **modelli installati**, fare clic su **Visual Basic** o sul nodo **Visual C#** e selezionare una categoria di tipi di progetto dall'elenco espanso.  
   
-3.  Scegliere il **applicazione Console** tipo di progetto.  
+3.  Scegliere il tipo di progetto **applicazione console** .  
   
-4.  Nel **nome** immettere un nome per il progetto. Digitare il nome `GetPropertiesSample`.  
+4.  Nella casella **nome** immettere un nome per il progetto. Digitare il nome `GetPropertiesSample`.  
   
-5.  Nel **ubicazione** immettere il percorso in cui si desidera salvare il progetto oppure fare clic su **Sfoglia** per passare alla cartella.  
+5.  Nella casella **percorso** immettere il percorso in cui si desidera salvare il progetto oppure fare clic su **Sfoglia** per passare alla cartella.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Verrà visualizzata una vista compressa del progetto in Esplora soluzioni.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]Una visualizzazione compressa del progetto viene visualizzata in Esplora soluzioni.  
   
-     Espandere il nodo del progetto in Esplora soluzioni. Un file con il nome predefinito Program.cs (Module1.vb per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) è stato aggiunto al progetto.  
+     Espandere il nodo del progetto in Esplora soluzioni. Al progetto è stato aggiunto un file con il nome predefinito Program.cs ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Module1. vb per).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lezione 2: Aggiunge un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
- [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Lezione 2: aggiunta di un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

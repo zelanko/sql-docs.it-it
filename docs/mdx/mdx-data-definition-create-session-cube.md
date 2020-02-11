@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038366"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definizione dei dati MDX - CREATE SESSION CUBE
@@ -101,16 +101,16 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nome della dimensione nel cubo di sessione.  
   
- DA \<dim dalla clausola >  
+ DALLA \<clausola dim from>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
  NOT_RELATED_TO_FACTS  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
- \<il livello di tipo >  
+ \<tipo di livello>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  A differenza dei cubi locali e presenti sul server, un cubo di sessione non viene mantenuto oltre la sessione che l'ha creato. Viene definito in termini di misure e definizioni che lo definiscono. Sono presenti due tipi di dimensioni:  
   
 -   Dimensioni di origine: si tratta delle dimensioni che fanno parti di uno o più cubi di origine.  
@@ -199,7 +199,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzione CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Istruzione CREATE GLOBAL CUBE &#40;&#41;MDX](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

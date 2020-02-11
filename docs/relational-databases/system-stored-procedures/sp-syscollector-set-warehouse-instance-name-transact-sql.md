@@ -19,18 +19,18 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010595"
 ---
-# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+# <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Specifica il nome dell'istanza per la stringa di connessione utilizzata per connettersi al data warehouse di gestione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +40,20 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @instance_name =] '*nome_istanza*'  
- Nome dell'istanza. *instance_name* viene **sysname** e i valori predefiniti per l'istanza locale se NULL.  
+ [ @instance_name = ] '*instance_name*'  
+ Nome dell'istanza. *instance_name* è di **tipo sysname** e il valore predefinito è l'istanza locale se null.  
   
-> **Nota:** _nome_istanza_ deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *instanceName*.  
+> **Nota:**  _instance_name_ deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario disabilitare l'agente di raccolta dati prima di modificarne la configurazione. La procedura non ha esito positivo se l'agente di raccolta dati è abilitato.  
   
- Per visualizzare il nome dell'istanza corrente, eseguire una query di [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) vista di sistema.  
+ Per visualizzare il nome dell'istanza corrente, eseguire una query sulla vista di sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="examples"></a>Esempi  
@@ -68,6 +68,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
+ [syscollector_config_store &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   
   

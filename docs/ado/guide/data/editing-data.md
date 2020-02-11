@@ -1,5 +1,5 @@
 ---
-title: Modifica dei dati | Microsoft Docs
+title: Modifica di dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925497"
 ---
 # <a name="editing-data"></a>Modifica dei dati
-Abbiamo illustrato come utilizzare ADO per connettersi a un'origine dati, eseguire un comando, ottenere i risultati un **Recordset** dell'oggetto e spostarsi all'interno di **Recordset**. Questa sezione è incentrata sull'operazione di ADO fondamentale: modifica dei dati.  
+È stato illustrato come usare ADO per connettersi a un'origine dati, eseguire un comando, ottenere i risultati in un oggetto **Recordset** e spostarsi all'interno del **Recordset**. Questa sezione è incentrata sulla successiva operazione ADO fondamentale: modifica dei dati.  
   
- In questa sezione continua a usare il codice di esempio **Recordset** introdotte in [analisi dei dati](../../../ado/guide/data/examining-data.md), con una modifica significativa. Il codice seguente viene utilizzato per aprire la **Recordset**:  
+ Questa sezione continua a usare il **Recordset** di esempio introdotto nell' [esame dei dati](../../../ado/guide/data/examining-data.md), con una modifica importante. Per aprire il **Recordset**, viene usato il codice seguente:  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +43,13 @@ Abbiamo illustrato come utilizzare ADO per connettersi a un'origine dati, esegui
 'EndEditIntro  
 ```  
   
- La modifica significativa al codice comporta l'impostazione di **CursorLocation** proprietà delle **connessione** uguale all'oggetto **adUseClient** nel  *GetNewConnection* funzione (illustrato nell'esempio successivo), che indica l'utilizzo di un cursore client. Per altre informazioni sulle differenze tra i cursori sul lato client e lato server, vedere [informazioni su cursori e blocchi](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ La modifica importante del codice comporta l'impostazione della proprietà **CursorLocation** dell'oggetto **Connection** uguale a **adUseClient** nella funzione *GetNewConnection* (mostrata nell'esempio seguente), che indica l'utilizzo di un cursore client. Per ulteriori informazioni sulle differenze tra i cursori lato client e lato server, vedere informazioni sui [blocchi e sui cursori](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
- Il **CursorLocation** della proprietà **adUseClient** impostazione consente di spostare la posizione del cursore dall'origine dati (il Server SQL, in questo caso) per il percorso del codice client (workstation desktop). Questa impostazione forza ADO per richiamare il motore del cursore Client per OLE DB sul client per creare e gestire il cursore.  
+ L'impostazione **adUseClient** della proprietà **CursorLocation** sposta la posizione del cursore dall'origine dati (la SQL Server, in questo caso) al percorso del codice client (la workstation desktop). Questa impostazione impone a ADO di richiamare il motore del cursore client per OLE DB sul client per creare e gestire il cursore.  
   
- Si può notare inoltre che il **LockType** parametro delle **Open** metodo modificato in **adLockBatchOptimistic**. Verrà aperto il cursore in modalità batch. (Provider memorizza nella cache più modifiche e li scrive all'origine dati sottostante solo quando si chiama il **UpdateBatch** (metodo).) Che sono stati modificati per la **Recordset** non verrà aggiornato nel database fino al **UpdateBatch** viene chiamato il metodo.  
+ È anche possibile notare che il parametro **LockType** del metodo **Open** è stato modificato in **adLockBatchOptimistic**. Verrà aperto il cursore in modalità batch. Il provider memorizza nella cache più modifiche e le scrive nell'origine dati sottostante solo quando si chiama il metodo **UpdateBatch** . Le modifiche apportate al **Recordset** non verranno aggiornate nel database fino a quando non viene chiamato il metodo **UpdateBatch** .  
   
- Infine, il codice in questa sezione Usa una versione modificata della funzione GetNewConnection. Questa versione della funzione ora restituisce un cursore lato client. La funzione è simile alla seguente:  
+ Infine, il codice in questa sezione usa una versione modificata della funzione GetNewConnection. Questa versione della funzione restituisce ora un cursore sul lato client. La funzione ha un aspetto simile al seguente:  
   
 ```  
 'BeginNewConnection  
@@ -89,6 +89,6 @@ End Function
   
 -   [Determinazione delle funzionalità supportate](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [Eliminazione di record mediante il metodo Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Eliminazione di record con il metodo Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternative: Utilizzo di istruzioni SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternative: uso di istruzioni SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

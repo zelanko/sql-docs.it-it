@@ -1,5 +1,5 @@
 ---
-title: Deprecate degli strumenti di gestione in SQL Server 2014 | Microsoft Docs
+title: Funzionalità degli strumenti di gestione deprecate in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753953"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione deprecate in SQL Server 2014
@@ -22,14 +22,14 @@ ms.locfileid: "62753953"
   
 |Funzionalità|Fase di deprecazione|  
 |-------------|-----------------------|  
-|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] API Server registrati|Annuncio|  
+|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]API server registrato|Annuncio|  
 |sqlps.exe|Avviso|  
 |osql.exe|Avviso|  
 |SQLMail|Avviso|  
-|Classe SMO: Classe di Microsoft|Annuncio|  
-|Classe SMO: Classe di Microsoft|Annuncio|  
-|Classe SMO: Classe. DatabaseOptions|Annuncio|  
-|Classe SMO: Proprietà. databaseddltrigger. notforreplication|Annuncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Information|Annuncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.Settings|Annuncio|  
+|Classe SMO: classe Microsoft.SQLServer.Management.Smo.DatabaseOptions|Annuncio|  
+|Classe SMO: proprietà Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Annuncio|  
 |Sistema del progetto di database, inclusa l'integrazione del controllo del codice sorgente, in SSMS|Annuncio|  
 |Notifiche net send ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  
 |Notifiche con cercapersone ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent)|Annuncio|  

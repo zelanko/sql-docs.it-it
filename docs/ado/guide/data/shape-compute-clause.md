@@ -1,5 +1,5 @@
 ---
-title: Forma clausola COMPUTE | Microsoft Docs
+title: Clausola COMPUTE di Shape | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924148"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE di Shape
-Una clausola COMPUTE di shape genera un elemento padre **Recordset**, le cui colonne sono costituiti da un riferimento all'elemento figlio **Recordset**; facoltativo colonne il cui contenuto è capitolo, nuovo, o le colonne calcolate, o risultato dell'esecuzione di funzioni di aggregazione sull'elemento figlio **Recordset** o una forma precedentemente **Recordset**; e tutte le colonne dall'elemento figlio **Recordset** elencati in facoltativo nella clausola.  
+Una clausola COMPUTE di forma genera un **Recordset**padre, le cui colonne sono costituite da un riferimento al **Recordset**figlio. colonne facoltative il cui contenuto è il capitolo, il nuovo o le colonne calcolate oppure il risultato dell'esecuzione di funzioni di aggregazione sul **Recordset** figlio o su un **Recordset**precedentemente definito. e tutte le colonne del **Recordset** figlio elencate nella clausola facoltativa by.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,33 +33,33 @@ SHAPE child-command [AS] child-alias
 ```  
   
 ## <a name="description"></a>Descrizione  
- Come indicato di seguito sono riportate le parti di questa clausola:  
+ Le parti di questa clausola sono le seguenti:  
   
- *child-command*  
- È costituita da uno dei seguenti:  
+ *comando figlio*  
+ È costituito da uno dei seguenti elementi:  
   
--   Un comando di query all'interno di parentesi graffe ("{}") che restituisce un elemento figlio **Recordset** oggetto. Viene eseguito il comando per il provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratterà in genere il linguaggio SQL, anche se ADO non richiede alcun linguaggio di query specifico.  
+-   Comando di query racchiuso tra parentesi graffe ({}"") che restituisce un oggetto **Recordset** figlio. Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
   
--   Il nome di un oggetto esistente data shaping **Recordset**.  
+-   Nome di un **Recordset**con forma esistente.  
   
--   Un altro comando shape.  
+-   Un altro comando Shape.  
   
--   La parola chiave nella tabella, seguita dal nome di una tabella nel provider di dati.  
+-   Parola chiave TABLE, seguita dal nome di una tabella nel provider di dati.  
   
- *child-alias*  
- Un alias utilizzato per fare riferimento il **Recordset** restituiti dal *comando figlio.* Il *figlio-alias* è obbligatorio nell'elenco delle colonne nella clausola COMPUTE e definisce la relazione tra padre e figlio **Recordset** oggetti.  
+ *alias figlio*  
+ Alias usato per fare riferimento al **Recordset** restituito dal *comando figlio.* L' *alias figlio* è obbligatorio nell'elenco di colonne nella clausola COMPUTE e definisce la relazione tra gli oggetti **Recordset** padre e figlio.  
   
- *appended-column-list*  
- Un elenco in cui ogni elemento definisce una colonna nell'elemento padre generato. Ogni elemento contiene una colonna a capitoli, una nuova colonna, una colonna calcolata oppure un valore risultante da una funzione di aggregazione sull'elemento figlio **Recordset**.  
+ *accodato-elenco colonne*  
+ Elenco in cui ogni elemento definisce una colonna nell'elemento padre generato. Ogni elemento contiene una colonna del capitolo, una nuova colonna, una colonna calcolata o un valore risultante da una funzione di aggregazione nel **Recordset**figlio.  
   
- *grp-field-list*  
- Un elenco di colonne padre e figlio **Recordset** gli oggetti che specifica la modalità di raggruppamento delle righe nell'elemento figlio.  
+ *GRP-Field-List*  
+ Elenco di colonne negli oggetti **Recordset** padre e figlio che specifica la modalità di raggruppamento delle righe nell'elemento figlio.  
   
- Per ogni colonna di *grp-dall'elenco di campi* è una colonna corrispondente nel padre e figlio **Recordset** oggetti. Per ogni riga nell'elemento padre **Recordset**, il *elenco di campi grp* le colonne hanno valori univoci e l'elemento figlio **Recordset** fa riferimento l'elemento padre riga è costituito esclusivamente da figlio righe la cui proprietà *elenco di campi grp* colonne hanno gli stessi valori di riga padre.  
+ Per ogni colonna nell' *elenco GRP-Field-List* è presente una colonna corrispondente negli oggetti **Recordset** figlio e padre. Per ogni riga del **Recordset**padre, le colonne *GRP-Field-List* hanno valori univoci e il **Recordset** figlio a cui fa riferimento la riga padre è costituito esclusivamente da righe figlio le cui colonne *GRP-Field-List* hanno gli stessi valori della riga padre.  
   
- Se la clausola BY viene inclusa, l'elemento figlio **Recordset**di righe verranno raggruppate in base alle colonne nella clausola COMPUTE. L'elemento padre **Recordset** conterranno una riga per ogni gruppo di righe nell'elemento figlio **Recordset**.  
+ Se la clausola BY è inclusa, le righe del **Recordset**figlio verranno raggruppate in base alle colonne nella clausola COMPUTE. Il **Recordset** padre conterrà una riga per ogni gruppo di righe nel **Recordset**figlio.  
   
- Se la clausola BY viene omessa, l'intero figlio **Recordset** viene considerato come un singolo gruppo e l'elemento padre **Recordset** conterranno esattamente una riga. Tale riga fa riferimento l'intero figlio **Recordset**. Omettere la clausola BY consente di calcolare le aggregazioni "totale complessivo" sull'intero figlio **Recordset**.  
+ Se la clausola BY viene omessa, l'intero **Recordset** figlio viene considerato come un singolo gruppo e il **Recordset** padre conterrà esattamente una riga. Tale riga fa riferimento all'intero **Recordset**figlio. Se si omette la clausola BY, è possibile calcolare le aggregazioni "totale complessivo" sull'intero **Recordset**figlio.  
   
  Ad esempio:  
   
@@ -67,26 +67,26 @@ SHAPE child-command [AS] child-alias
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Indipendentemente dalla modalità padre **Recordset** viene formata (utilizzano calcolo o l'accodamento), conterrà una colonna a capitoli che viene utilizzata per metterlo a un elemento figlio **Recordset**. Se si desidera, l'elemento padre **Recordset** può anche contenere le colonne che contengono funzioni di aggregazione (SUM, MIN, MAX e così via) nelle righe figlio. Sia l'elemento padre e figlio **Recordset** possono contenere colonne che contengono un'espressione nella riga nel **Recordset**, nonché le colonne che sono elencate le nuove e inizialmente vuota.  
+ Indipendentemente dal modo in cui viene formato il **Recordset** padre (utilizzando il calcolo o l'utilizzo di Append), contiene una colonna del capitolo utilizzata per correlarla a un **Recordset**figlio. Se si desidera, è possibile che il **Recordset** padre includa anche colonne che contengono aggregazioni (Sum, min, Max e così via) sulle righe figlio. Sia l'elemento padre che il **Recordset** figlio possono contenere colonne che contengono un'espressione nella riga del **Recordset**, oltre a colonne nuove e inizialmente vuote.  
   
 ## <a name="operation"></a>Operazione  
- Il *figlio-command* è stato rilasciato il provider, che restituisce un figlio **Recordset**.  
+ Il *comando figlio* viene emesso al provider, che restituisce un **Recordset**figlio.  
   
- La clausola COMPUTE specifica le colonne dell'elemento padre **Recordset**, che può essere un riferimento all'elemento figlio **Recordset**, una o più aggregazioni, un'espressione calcolata o le nuove colonne. Se è presente una clausola BY, le colonne definisce inoltre vengono aggiunti all'elemento padre **Recordset**. Specifica la clausola BY come le righe dell'elemento figlio **Recordset** sono raggruppati.  
+ La clausola COMPUTE specifica le colonne del **Recordset**padre, che può essere un riferimento al **Recordset**figlio, una o più aggregazioni, un'espressione calcolata o nuove colonne. Se è presente una clausola BY, le colonne definite vengono aggiunte anche al **Recordset**padre. La clausola BY specifica il modo in cui vengono raggruppate le righe del **Recordset** figlio.  
   
- Si supponga, ad esempio, che si dispone di una tabella, denominata dati demografici, che è costituito da campi di stato, città e popolazione. (Figure popolamento della tabella vengono fornite esclusivamente come esempio).  
+ Si supponga, ad esempio, di disporre di una tabella, denominata demografia, costituita da campi stato, città e popolazione. (Le figure della popolazione nella tabella sono fornite esclusivamente come esempio).  
   
-|Stato|City|Popolazione|  
+|State|city|Popolazione|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|Oppure|Medford|200,000|  
-|Oppure|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
-|WA|Tacoma|500,000|  
-|Oppure|Corvallis|300,000|  
+|WA|Seattle|700.000|  
+|o|Medford|200.000|  
+|o|Portland|400.000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
+|WA|Tacoma|500.000|  
+|o|Corvallis|300.000|  
   
- A questo punto, eseguire questo comando shape:  
+ A questo punto, eseguire il comando Shape:  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Questo comando apre una data shaping **Recordset** con due livelli. Livello padre è un oggetto generato **Recordset** con una colonna aggregata (`SUM(rs.population)`), una colonna che fa riferimento l'elemento figlio **Recordset** (`rs`) e una colonna per il raggruppamento figlio **Recordset** (`state`). Il livello figlio è il **Recordset** restituito dal comando di query (`select * from demographics`).  
+ Questo comando apre un **Recordset** con forma a due livelli. Il livello padre è un **Recordset** generato con una colonna di aggregazione`SUM(rs.population)`(), una colonna che fa riferimento al **Recordset** figlio`rs`() e una colonna per il raggruppamento del`state` **Recordset** figlio (). Il livello figlio è il **Recordset** restituito dal comando di query (`select * from demographics`).  
   
- L'elemento figlio **Recordset** righe di dettaglio saranno raggruppati per stato, ma in caso contrario, in nessun ordine particolare. Vale a dire, i gruppi non sarà in ordine alfabetico o numerico. Se si desidera che l'elemento padre **Recordset** per essere ordinati, è possibile utilizzare il **Recordset ordinamento** metodo per ordinare l'elemento padre **Recordset**.  
+ Le righe di dettaglio del **Recordset** figlio verranno raggruppate in base allo stato, ma in caso contrario in nessun ordine particolare. Ovvero, i gruppi non saranno in ordine alfabetico o numerico. Se si desidera che il **Recordset** padre venga ordinato, è possibile utilizzare il metodo di **ordinamento del recordset** per ordinare il **Recordset**padre.  
   
- È ora possibile passare l'elemento padre aperto **Recordset** e accedere ai dettagli figlio **Recordset** oggetti. Per altre informazioni, vedere [accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ È ora possibile esplorare il **Recordset** padre aperto e accedere agli oggetti **Recordset** di dettaglio figlio. Per ulteriori informazioni, vedere [accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>Padre risultante e Recordset di dettagli figlio  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>Recordset di dettagli padre e figlio risultanti  
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs. Basata sulla popolazione)|rs|Stato|  
+|SUM (RS. Popolazione|rs|State|  
 |---------------------------|--------|-----------|  
-|1,300,000|Riferimento a proprietà child1|CA|  
-|1,200,000|Riferimento a child2|WA|  
-|1,100,000|Riferimento a child3|Oppure|  
+|1,3 milioni|Riferimento a child1|CA|  
+|1,2 milioni|Riferimento a child2|WA|  
+|1,1 milioni|Riferimento a child3|o|  
   
 ## <a name="child1"></a>Child1  
   
-|Stato|City|Popolazione|  
+|State|city|Popolazione|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|Stato|City|Popolazione|  
+|State|city|Popolazione|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|WA|Tacoma|500,000|  
+|WA|Seattle|700.000|  
+|WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|Stato|City|Popolazione|  
+|State|city|Popolazione|  
 |-----------|----------|----------------|  
-|Oppure|Medford|200,000|  
-|Oppure|Portland|400,000|  
-|Oppure|Corvallis|300,000|  
+|o|Medford|200.000|  
+|o|Portland|400.000|  
+|o|Corvallis|300.000|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Panoramica del Data Shaping](../../../ado/guide/data/data-shaping-overview.md)   
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Provider necessari per il Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clausola APPEND per Shape](../../../ado/guide/data/shape-append-clause.md)   
- [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Cenni preliminari sulla data shaping](../../../ado/guide/data/data-shaping-overview.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Provider richiesti per la definizione dei dati](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Clausola APPEND della forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Comandi per la forma in generale](../../../ado/guide/data/shape-commands-in-general.md)   
  [Proprietà Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Funzioni di Visual Basic, Applications Edition](../../../ado/guide/data/visual-basic-for-applications-functions.md)

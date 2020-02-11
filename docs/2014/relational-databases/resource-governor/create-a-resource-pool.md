@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211998"
 ---
 # <a name="create-a-resource-pool"></a>Creare un pool di risorse
   È possibile creare un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
   
 -   **Per creare un pool di risorse usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
@@ -37,8 +37,8 @@ ms.locfileid: "68211998"
 ###  <a name="Permissions"></a> Autorizzazioni  
  Per creare un pool di risorse è necessaria l'autorizzazione CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Creare un pool di risorse utilizzando SQL Server Management Studio  
- **Per creare un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>Creare un pool di risorse usando SQL Server Management Studio  
+ **Per creare un pool di risorse utilizzando[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**incluso.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211998"
   
 6.  Per salvare le modifiche, fare clic su **OK**.  
   
-##  <a name="CreRPTSQL"></a> Creare un pool di risorse utilizzando Transact-SQL  
- **Per creare un pool di risorse utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>Creare un pool di risorse usando Transact-SQL  
+ **Per creare un pool di risorse utilizzando[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Eseguire l'istruzione `CREATE RESOURCE POOL` specificando i valori di proprietà da impostare.  
   
@@ -72,14 +72,14 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Abilitare Resource Governor](enable-resource-governor.md)   
- [Pool di risorse di Resource Governor](resource-governor-resource-pool.md)   
+ [Abilita Resource Governor](enable-resource-governor.md)   
+ [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   
  [Modificare le impostazioni del pool di risorse](change-resource-pool-settings.md)   
  [Eliminare un pool di risorse](delete-a-resource-pool.md)   
- [Configurare Resource Governor utilizzando un modello](configure-resource-governor-using-a-template.md)   
- [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
- [Funzione di classificazione di Resource Governor](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)   
+ [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Funzione di classificazione Resource Governor](resource-governor-classifier-function.md)   
+ [CREARE un POOL di risorse &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

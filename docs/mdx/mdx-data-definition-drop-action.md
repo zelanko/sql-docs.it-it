@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 56884d76ff6b322b0ecc55e29fb2193183811fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038249"
 ---
 # <a name="mdx-data-definition---drop-action"></a>Definizione dei dati MDX - DROP ACTION
@@ -37,6 +37,6 @@ DROP ACTION CURRENTCUBE | Cube_Name
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

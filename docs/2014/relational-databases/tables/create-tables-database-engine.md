@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761599"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
@@ -25,13 +25,13 @@ ms.locfileid: "62761599"
 > [!NOTE]  
 >  Se si è connessi a un database di SQL Azure, l'opzione Nuova tabella avvierà uno script modello per la creazione della tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Sicurezza](#Security)  
   
--   **Per creare una tabella, utilizzando:**  
+-   **Per creare una tabella:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62761599"
   
  Se a una colonna nell'istruzione CREATE TABLE è associata una raccolta di XML Schema, è necessario che l'utente sia il proprietario della raccolta di XML Schema o disponga dell'autorizzazione REFERENCES.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-table-with-table-designer"></a>Per creare una tabella con Progettazione tabelle  
   
@@ -78,13 +78,13 @@ ms.locfileid: "62761599"
   
      Per ulteriori informazioni sugli schemi, vedere [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   
-9. Dal menu **File** scegliere **Salva** *nome tabella*.  
+9. Scegliere **Salva** *nome tabella*dal menu **file** .  
   
 10. Nella finestra di dialogo **Scegli nome** digitare un nome per la tabella, quindi fare clic su **OK**.  
   
 11. Per visualizzare la nuova tabella, in **Esplora oggetti**espandere il nodo **Tabelle** e premere **F5** per aggiornare l'elenco di oggetti. La nuova tabella viene visualizzata nell'elenco di tabelle.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>Per creare una tabella nell'editor di query  
   

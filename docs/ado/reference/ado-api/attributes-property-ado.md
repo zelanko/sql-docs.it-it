@@ -1,5 +1,5 @@
 ---
-title: Attributi proprietà (ADO) | Microsoft Docs
+title: Proprietà Attributes (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,33 +18,33 @@ ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b40b71dee32608756721d84a2e13f5f54f7bcbfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920549"
 ---
 # <a name="attributes-property-ado"></a>Proprietà Attributes (ADO)
 Indica una o più caratteristiche di un oggetto.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un **lungo** valore.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore **Long** .  
   
- Per un [Connection](../../../ado/reference/ado-api/connection-object-ado.md) oggetto, il **attributi** è di lettura/scrittura e il relativo valore può essere la somma di uno o più [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) valori. Il valore predefinito è zero (0).  
+ Per un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) . Il valore predefinito è zero (0).  
   
- Per un [parametri](../../../ado/reference/ado-api/parameter-object.md) oggetto, il **attributi** è di lettura/scrittura e il relativo valore può essere la somma di uno o più [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) valori. Il valore predefinito è **adParamSigned**.  
+ Per un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) , la proprietà **Attributes** è di lettura/scrittura e il relativo valore può essere la somma di uno o più valori [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) . Il valore predefinito è **adParamSigned**.  
   
- Per un [campo](../../../ado/reference/ado-api/field-object.md) oggetti, il **attributi** proprietà può essere la somma di uno o più [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) valori. È in genere di sola lettura. Tuttavia, per il nuovo **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md), **attributi** è solo di lettura/scrittura Dopo che il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà per il **campo** è stato specificato e il nuovo **campo** è stata aggiunta correttamente dal provider di dati chiamando il [ Update](../../../ado/reference/ado-api/update-method.md) metodo per il **campi** raccolta.  
+ Per un oggetto [campo](../../../ado/reference/ado-api/field-object.md) , la proprietà **Attributes** può essere la somma di uno o più valori [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) . In genere è di sola lettura. Tuttavia, per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un [record](../../../ado/reference/ado-api/record-object-ado.md), **gli attributi** sono di lettura/scrittura solo dopo che è stata specificata la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) per il **campo** e il nuovo **campo** è stato aggiunto correttamente dal provider di dati chiamando il metodo [Update](../../../ado/reference/ado-api/update-method.md) della raccolta **Fields** .  
   
- Per un [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetti, il **attributi** proprietà è di sola lettura e il relativo valore può essere la somma di uno o più [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) valori.  
+ Per un oggetto [Proprietà](../../../ado/reference/ado-api/property-object-ado.md) , la proprietà **Attributes** è di sola lettura e il relativo valore può essere la somma di uno o più valori [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Note  
- Usare il **attributi** proprietà per impostare o restituire le caratteristiche dei **connessione** oggetti, **parametro** oggetti, **campo** oggetti, o **Proprietà** oggetti.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **Attributes** per impostare o restituire le caratteristiche di oggetti **connessione** , oggetti **parametro** , oggetti **campo** o oggetti **Property** .  
   
- Quando si impostano più attributi, è possibile sommare le costanti appropriate. Se si imposta il valore della proprietà su una somma, incluse le costanti non compatibile, si verifica un errore.  
+ Quando si impostano più attributi, è possibile sommare le costanti appropriate. Se si imposta il valore della proprietà su una somma, incluse le costanti incompatibili, si verificherà un errore.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoto** questa proprietà non è disponibile in un client-side **connessione** oggetto.  
+>  **Utilizzo servizio dati remoto** Questa proprietà non è disponibile in un oggetto **connessione** sul lato client.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -54,8 +54,8 @@ Indica una o più caratteristiche di un oggetto.
 |[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Name (VB) e attributi](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Esempio di proprietà Name (VC + +) e attributi](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Esempio di proprietà Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Esempio di proprietà Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
  [Metodo AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Metodi BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Metodo GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

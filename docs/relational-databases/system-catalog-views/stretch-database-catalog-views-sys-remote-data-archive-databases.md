@@ -1,5 +1,5 @@
 ---
-title: Sys. remote_data_archive_databases (Transact-SQL) | Microsoft Docs
+title: sys. remote_data_archive_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018204"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database - viste del catalogo sys. remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Viste del catalogo Stretch Database-sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni database remoto che archivia i dati da un database locale abilitato per l'estensione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|L'identificatore di locale generato automaticamente del database remoto.|  
-|**remote_database_name**|**sysname**|Il nome del database remoto.|  
-|**data_source_id**|**int**|L'origine dati usata per connettersi al server remoto|  
+|**remote_database_id**|**int**|Identificatore locale generato automaticamente del database remoto.|  
+|**remote_database_name**|**sysname**|Nome del database remoto.|  
+|**data_source_id**|**int**|Origine dati utilizzata per la connessione al server remoto|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

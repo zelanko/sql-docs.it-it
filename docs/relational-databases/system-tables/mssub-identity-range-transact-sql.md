@@ -18,26 +18,26 @@ ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ec1f915e7cc70cb2d8ed0f09a9b0394dc7e09aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68221958"
 ---
-# <a name="mssubidentityrange-transact-sql"></a>MSsub_identity_range (Transact-SQL)
+# <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSsub_identity_range** tabella fornisce il supporto di gestione di identità intervalli per le sottoscrizioni. Questa tabella è archiviata nel database di sottoscrizione.  
+  La tabella **MSsub_identity_range** fornisce supporto per la gestione degli intervalli di valori Identity per le sottoscrizioni. Questa tabella è archiviata nel database di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**objid**|**int**|ID della tabella la cui colonna Identity è gestita dalla replica.|  
-|**Intervallo**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella sottoscrizione durante un intervento di regolazione.|  
+|**ObjID**|**int**|ID della tabella la cui colonna Identity è gestita dalla replica.|  
+|**intervallo**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella sottoscrizione durante un intervento di regolazione.|  
 |**last_seed**|**bigint**|Limite inferiore dell'intervallo corrente.|  
-|**threshold**|**int**|Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Quando la percentuale di valori specificato in *soglia* viene usato, l'agente di distribuzione crea un nuovo intervallo di valori identity.|  
+|**soglia**|**int**|Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in *Threshold* , il agente di distribuzione crea un nuovo intervallo di valori Identity.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -14,86 +14,86 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262975"
 ---
 # <a name="managing-backups-oracletosql"></a>Gestione dei backup (OracleToSQL)
-Gestione dei Backup Oracle consente di backup e ripristino dei dati di tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con finestra di dialogo Gestisci contenuto di Backup.  
+Oracle Backup Management consente di eseguire il backup e il ripristino dei dati della tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con la finestra di dialogo Gestisci contenuto di backup.  
   
-## <a name="oracle-backup-management"></a>Gestione di Backup di Oracle  
-  
-### <a name="backup"></a>Backup  
-Per aprire la finestra di dialogo backup, il Tester scegliere dal menu Gestione di Backup di Oracle, quindi fare clic su copia di Backup... Nella finestra di dialogo backup si troverà l'albero di metadati Oracle la visualizzazione di tutte le tabelle dello schema Oracle caricata. Selezionare uno o più tabelle per eseguire un backup.  
-  
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
-  
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
-  
--   Scegliere il **Backup** pulsante per eseguire il backup nella tabella di dati.  
-  
--   Scegliere il **annullare** per chiudere la finestra di dialogo.  
-  
-### <a name="restore"></a>Ripristina  
-Per aprire la finestra di dialogo di ripristino, scegliere il menu di Tester per la gestione del Backup di Oracle, quindi fare clic su Ripristina... Qui troverai una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
-  
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
-  
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
-  
--   Scegliere il **ripristinare** pulsante per ripristinare i dati di backup nella tabella.  
-  
--   Scegliere il **annullare** per chiudere la finestra di dialogo.  
-  
-### <a name="managing-backup-contents"></a>Gestione dei contenuti di Backup  
-Per aprire la gestione contenuto di Backup, nel menu Tester per la gestione del Backup di Oracle, quindi il Backup del contenuto... Qui troverai una struttura ad albero contenente le tabelle nel backup.  
-  
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
-  
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
-  
--   Scegliere il **rimuovere** pulsante per rimuovere la tabella dal backup.  
-  
--   Scegliere il **chiudere** per chiudere la finestra di dialogo.  
-  
-## <a name="sql-server-backup-management"></a>Gestione di Backup di SQL Server  
-Gestione di Backup di SQL Server consente di backup e ripristino dei dati di tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con finestra di dialogo Gestisci contenuto di Backup.  
+## <a name="oracle-backup-management"></a>Gestione backup Oracle  
   
 ### <a name="backup"></a>Backup  
-Per aprire la finestra di dialogo backup, il Tester scegliere dal menu Gestione Backup di SQL Server, quindi fare clic su copia di Backup... Nella finestra di dialogo backup si troverà l'albero di Metadata di SQL Server la visualizzazione di tutte le tabelle dei database di SQL Server caricati. Selezionare uno o più tabelle per eseguire un backup.  
+Per aprire la finestra di dialogo backup, scegliere Oracle Backup Management dal menu tester, quindi fare clic su backup. Nella finestra di dialogo backup si troverà l'albero dei metadati Oracle che Visualizza tutte le tabelle dello schema Oracle caricato. Selezionare una o più tabelle per eseguire un backup.  
   
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
   
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
   
--   Scegliere il **Backup** pulsante per eseguire il backup dei dati della tabella.  
+-   Fare clic sul pulsante **backup** per eseguire il backup dei dati della tabella.  
   
--   Scegliere il **annullare** per chiudere la finestra di dialogo.  
+-   Fare clic sul pulsante **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
-Per aprire la finestra di dialogo di ripristino, nel menu Tester scegliere per la gestione del Backup di SQL Server, il ripristino fare clic su... Qui troverai una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
+### <a name="restore"></a>Restore  
+Per aprire la finestra di dialogo Ripristina, scegliere Oracle Backup Management dal menu tester, quindi fare clic su Ripristina. Qui sarà presente un albero contenente le tabelle disponibili in backup. Selezionare una o più tabelle per ripristinare i dati.  
   
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
   
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
   
--   Scegliere il **ripristinare** pulsante per ripristinare i dati di backup nella tabella.  
+-   Fare clic sul pulsante **Ripristina** per ripristinare i dati di backup nella tabella.  
   
--   Scegliere il **annullare** per chiudere la finestra di dialogo.  
+-   Fare clic sul pulsante **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="managing-backup-contents"></a>Gestione dei contenuti di Backup  
-Per aprire la gestione contenuto di Backup, dal menu di Tester punto di gestione di Backup di SQL Server, quindi fare clic sul contenuto di Backup... Qui troverai una struttura ad albero contenente le tabelle nel backup.  
+### <a name="managing-backup-contents"></a>Gestione del contenuto di backup  
+Per aprire Gestione del contenuto del backup, nel menu tester scegliere Gestione backup Oracle, quindi fare clic su contenuto di backup. Qui sarà disponibile un albero contenente le tabelle nel backup.  
   
-I pulsanti seguenti sono disponibili nella finestra di dialogo:  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
   
--   Scegliere il **controllo dello stato** pulsante per controllare lo stato del backup della tabella.  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
   
--   Scegliere il **rimuovere** pulsante per rimuovere la tabella dal backup.  
+-   Fare clic sul pulsante **Rimuovi** per rimuovere la tabella dal backup.  
   
--   Scegliere il **chiudere** per chiudere la finestra di dialogo.  
+-   Fare clic sul pulsante **Chiudi** per chiudere la finestra di dialogo.  
+  
+## <a name="sql-server-backup-management"></a>Gestione backup SQL Server  
+SQL Server gestione dei backup consente di eseguire il backup e il ripristino dei dati della tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con la finestra di dialogo Gestisci contenuto di backup.  
+  
+### <a name="backup"></a>Backup  
+Per aprire la finestra di dialogo backup, nel menu tester scegliere SQL Server Gestione backup, quindi fare clic su backup. Nella finestra di dialogo backup è possibile trovare la SQL Server albero dei metadati che Visualizza tutte le tabelle dei database SQL Server caricati. Selezionare una o più tabelle per eseguire un backup.  
+  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
+  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
+  
+-   Fare clic sul pulsante **backup** per eseguire il backup dei dati della tabella.  
+  
+-   Fare clic sul pulsante **Annulla** per chiudere la finestra di dialogo.  
+  
+### <a name="restore"></a>Restore  
+Per aprire la finestra di dialogo Ripristina, nel menu tester scegliere SQL Server Gestione backup, quindi fare clic su Ripristina. Qui sarà presente un albero contenente le tabelle disponibili in backup. Selezionare una o più tabelle per ripristinare i dati.  
+  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
+  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
+  
+-   Fare clic sul pulsante **Ripristina** per ripristinare i dati di backup nella tabella.  
+  
+-   Fare clic sul pulsante **Annulla** per chiudere la finestra di dialogo.  
+  
+### <a name="managing-backup-contents"></a>Gestione del contenuto di backup  
+Per aprire Gestione del contenuto del backup, nel menu tester scegliere SQL Server Gestione backup, quindi fare clic su contenuto di backup. Qui sarà disponibile un albero contenente le tabelle nel backup.  
+  
+Nella finestra di dialogo sono disponibili i pulsanti seguenti:  
+  
+-   Fare clic sul pulsante **Controlla stato** per controllare lo stato di backup della tabella.  
+  
+-   Fare clic sul pulsante **Rimuovi** per rimuovere la tabella dal backup.  
+  
+-   Fare clic sul pulsante **Chiudi** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di oggetti di Database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Test di oggetti di database migrati &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

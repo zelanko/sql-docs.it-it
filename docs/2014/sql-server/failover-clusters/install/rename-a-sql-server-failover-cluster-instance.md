@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126013"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
@@ -29,7 +29,8 @@ ms.locfileid: "63126013"
   
  Prima di iniziare il processo di ridenominazione, tenere presenti le considerazioni seguenti.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la ridenominazione di server coinvolti nella replica, eccetto nel caso in cui venga utilizzata il log shipping con la replica. È possibile rinominare il server secondario nel log shipping in caso di perdita definitiva del server primario. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la ridenominazione di server coinvolti nella replica, eccetto nel caso in cui venga utilizzata il log shipping con la replica. È possibile rinominare il server secondario nel log shipping in caso di perdita definitiva del server primario. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Se si rinomina un server virtuale configurato per l'utilizzo del mirroring del database, è necessario disabilitare il mirroring del database prima di eseguire la ridenominazione e quindi riabilitarlo con il nome del nuovo server virtuale. I metadati per il mirroring del database non verranno aggiornati automaticamente in modo da riflettere il nome del nuovo server virtuale.  
   
@@ -63,19 +64,19 @@ ms.locfileid: "63126013"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Ulteriori considerazioni dopo la ridenominazione dell'operazione  
  Dopo la ridenominazione del nome di rete del cluster di failover, è necessario verificare e applicare le istruzioni riportate di seguito per abilitare tutti gli scenari in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Dopo aver modificato il nome di rete di un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] istanza utilizzando lo strumento Amministrazione Cluster di Windows, l'aggiornamento futuro del cluster di failover o operazione di disinstallazione potrebbe non riuscire. Per risolvere questo problema, aggiornare il **NomeCluster** seguendo le istruzioni nella sezione sulla risoluzione di voce di registro di sistema [ciò](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Dopo aver modificato il nome di rete di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] un'istanza del cluster di failover utilizzando lo strumento Amministrazione cluster di Windows, l'operazione di aggiornamento o disinstallazione futura potrebbe non riuscire. Per risolvere questo problema, aggiornare la voce del registro di sistema **clustername** seguendo le istruzioni nella [](https://go.microsoft.com/fwlink/?LinkId=244002) sezione relativahttps://go.microsoft.com/fwlink/?LinkId=244002)alla risoluzione di questo (.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio agente:** Verificare e applicare le seguenti azioni aggiuntive per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio agente:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** Verificare ed eseguire le azioni aggiuntive seguenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il servizio Agent:  
   
 -   Correggere le impostazioni del Registro di sistema se SQL Agent è configurato per l'inoltro eventi. Per altre informazioni, vedere [Designazione di un server di inoltro eventi &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Correggere i nomi delle istanze del server master (MSX) e dei server di destinazione (TSX) quando si ridenominano computer o nomi di rete cluster. Per altre informazioni, vedere i seguenti argomenti:  
+-   Correggere i nomi delle istanze del server master (MSX) e dei server di destinazione (TSX) quando si ridenominano computer o nomi di rete cluster. Per altre informazioni, vedere gli argomenti seguenti:  
   
     -   [Escludere più server di destinazione da un server master](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Creazione di un ambiente multiserver](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Riconfigurare il log shipping in modo da utilizzare il nome aggiornato del server nei log di backup e ripristino. Per altre informazioni, vedere i seguenti argomenti:  
+-   Riconfigurare il log shipping in modo da utilizzare il nome aggiornato del server nei log di backup e ripristino. Per altre informazioni, vedere gli argomenti seguenti:  
   
     -   [Configurare il log shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

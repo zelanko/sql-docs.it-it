@@ -1,5 +1,5 @@
 ---
-title: Modificare proprietà SQL Server Service avanzate utilizzando VBScript | Microsoft Docs
+title: Modificare le proprietà avanzate del servizio SQL Server tramite VBScript | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705062"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Modificare le proprietà avanzate del servizio SQL Server utilizzando VBScript
-  In questa sezione viene descritto come creare un programma VBScript che elenca la versione delle istanze installate di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer.  
+  In questa sezione viene descritto come creare un programma VBScript che elenca la versione delle istanze installate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di in esecuzione in un computer.  
   
  Nell'esempio di codice vengono elencate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nel computer e la relativa versione.  
   

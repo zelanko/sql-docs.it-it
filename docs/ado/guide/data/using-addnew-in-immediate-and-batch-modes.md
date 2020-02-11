@@ -1,5 +1,5 @@
 ---
-title: Uso dei metodi AddNew nell'immediato e modalità Batch | Microsoft Docs
+title: Uso di AddNew in modalità immediate e batch | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923620"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>Uso di AddNew in modalità batch e immediata
-Il comportamento dei **AddNew** metodo dipende dalla modalità di aggiornamento del **Recordset** oggetto e se si passa il *FieldList* e *valori*argomenti.  
+Il comportamento del metodo **AddNew** dipende dalla modalità di aggiornamento dell'oggetto **Recordset** e dal fatto che vengano passati gli argomenti *FieldName* e *values* .  
   
- In modalità di aggiornamento immediato (in cui il provider scrive le modifiche all'origine dati sottostante non appena viene chiamato il **aggiornare** metodo), la chiamata il **AddNew** metodo senza argomenti imposta il  **Proprietà EditMode** proprietà **adEditAdd.** Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo invia il nuovo record nel database e reimposta il **EditMode** proprietà **adEditNone.** Se si passa il *FieldList* e *valori* argomenti, ADO genera immediatamente il nuovo record nel database (nessun **Update** è necessario chiamare); il **EditMode**  non modifica il valore di proprietà (**adEditNone**).  
+ In modalità di aggiornamento immediato, in cui il provider scrive le modifiche nell'origine dati sottostante una volta chiamato il metodo **Update** , la chiamata al metodo **AddNew** senza argomenti imposta la proprietà **EditMode** su **adEditAdd.** Il provider memorizza nella cache le modifiche del valore del campo in locale. Se si chiama il metodo di **aggiornamento** , il nuovo record viene inserito nel database e viene reimpostata la proprietà **EditMode** su **adEditNone.** Se si passano gli argomenti *FieldName* e *values* , ADO inserisce immediatamente il nuovo record nel database (non è necessaria alcuna chiamata di **aggiornamento** ); il valore della proprietà **EditMode** non cambia (**adEditNone**).  
   
- In modalità di aggiornamento batch, chiama il **AddNew** metodo senza argomenti imposta il **EditMode** proprietà **adEditAdd**. Il provider di memorizza nella cache qualsiasi valore di campo modificato in locale. Chiama il **Update** metodo aggiunge il nuovo record corrente **Recordset** e reimposta il **EditMode** proprietà **adEditNone**, ma il provider invia le modifiche al database sottostante fino a quando non si chiama il **UpdateBatch** (metodo). Se si passa il *FieldList* e *valori* argomenti, ADO invia il nuovo record per il provider per l'archiviazione in una cache, è necessario chiamare il **UpdateBatch** per registrare il nuovo metodo registrare il database sottostante. Per altre informazioni sulle **Update** e **UpdateBatch**, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).
+ In modalità di aggiornamento batch, la chiamata al metodo **AddNew** senza argomenti imposta la proprietà **EditMode** su **adEditAdd**. Il provider memorizza nella cache le modifiche del valore del campo in locale. La chiamata al metodo **Update** aggiunge il nuovo record al **Recordset** corrente e reimposta la proprietà **EditMode** su **adEditNone**, ma il provider non invia le modifiche al database sottostante fino a quando non viene chiamato il metodo **UpdateBatch** . Se si passano gli argomenti *FieldName* e *values* , ADO invia il nuovo record al provider per l'archiviazione in una cache. è necessario chiamare il metodo **UpdateBatch** per inserire il nuovo record nel database sottostante. Per ulteriori informazioni su **Update** e **UpdateBatch**, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).

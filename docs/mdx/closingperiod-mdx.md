@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016788"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
@@ -34,21 +34,21 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione è principalmente finalizzata all'utilizzo con una dimensione di tipo temporale, ma può essere utilizzata con qualsiasi dimensione.  
   
--   Se viene specificata un'espressione di livello, il **ClosingPeriod** funzione utilizza la dimensione che contiene il livello specificato e restituisce l'ultimo elemento di pari livello tra i discendenti del membro predefinito al livello specificato.  
+-   Se viene specificata un'espressione di livello, la funzione **ClosingPeriod** utilizza la dimensione che contiene il livello specificato e restituisce l'ultimo elemento di pari livello tra i discendenti del membro predefinito al livello specificato.  
   
--   Se vengono specificate sia un'espressione di livello che un'espressione di membro, il **ClosingPeriod** funzione restituisce l'ultimo elemento di pari livello tra i discendenti del membro specificato al livello specificato.  
+-   Se vengono specificate sia un'espressione di livello che un'espressione di membro, la funzione **ClosingPeriod** restituisce l'ultimo elemento di pari livello tra i discendenti del membro specificato al livello specificato.  
   
--   Se viene specificata né un'espressione di livello né un'espressione di membro, il **ClosingPeriod** funzione Usa il livello predefinito e un membro della dimensione (se presente) del cubo con un tipo temporale.  
+-   Se non viene specificata né un'espressione di livello né un'espressione di membro, la funzione **ClosingPeriod** utilizza il livello predefinito e il membro della dimensione, se presente, nel cubo con un tipo di tempo.  
   
- Il **ClosingPeriod** funzione è equivalente all'istruzione MDX seguente:  
+ La funzione **ClosingPeriod** è equivalente all'istruzione MDX seguente:  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)` (Indici per tabelle con ottimizzazione per la memoria).  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`.  
   
 > [!NOTE]  
->  Il [OpeningPeriod](../mdx/openingperiod-mdx.md) funzione è simile al **ClosingPeriod** funzionare, tranne il fatto che il **OpeningPeriod** funzione restituisce il primo elemento di pari livello anziché l'ultimo elemento di pari livello.  
+>  La funzione [OpeningPeriod](../mdx/openingperiod-mdx.md) è simile alla funzione **ClosingPeriod** , ad eccezione del fatto che la funzione **OpeningPeriod** restituisce il primo elemento di pari livello anziché l'ultimo elemento di pari livello.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il valore predefinito della misura relativa al membro FY2007 della dimensione Date (il cui tipo semantico è temporale). Viene restituito questo membro poiché il livello Fiscal Year è il primo discendente del livello [Totale], la gerarchia Fiscal è la gerarchia predefinita poiché costituisce la prima gerarchia definita dall'utente nella raccolta di gerarchie e il membro FY 2007 è l'ultimo elemento di pari livello nella gerarchia a questo livello.  
@@ -58,7 +58,7 @@ SELECT ClosingPeriod() ON 0
 FROM [Adventure Works]  
 ```  
   
- L'esempio seguente restituisce il valore predefinito della misura per il 30 novembre 2006 membro al livello di gerarchia dell'attributo date. Tale membro costituisce l'ultimo elemento di pari livello del discendente del livello [Totale] nella gerarchia dell'attributo Date.Date.  
+ Nell'esempio seguente viene restituito il valore per la misura predefinita per il 30 novembre 2006 membro al livello Date. date. date per la gerarchia dell'attributo date. date. Tale membro costituisce l'ultimo elemento di pari livello del discendente del livello [Totale] nella gerarchia dell'attributo Date.Date.  
   
 ```  
 SELECT ClosingPeriod ([Date].[Date].[Date]) ON 0  
@@ -80,8 +80,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
+ [OpeningPeriod &#40;&#41;MDX](../mdx/openingperiod-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;&#41;MDX](../mdx/lastsibling-mdx.md)  
   
   

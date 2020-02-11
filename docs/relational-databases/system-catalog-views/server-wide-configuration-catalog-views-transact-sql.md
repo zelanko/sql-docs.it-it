@@ -1,5 +1,5 @@
 ---
-title: Viste del catalogo a livello di Server Configuration (Transact-SQL) | Microsoft Docs
+title: Viste del catalogo di configurazione a livello di server (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9f9c089e1e0c0c9b8788922ad566a1ee6bcd9c6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018278"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>Viste del catalogo di configurazione valide per l'intero server (Transact-SQL)
@@ -36,6 +36,6 @@ ms.locfileid: "68018278"
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637731"
 ---
 # <a name="example-querying-xmltype-columns"></a>Esempio: esecuzione di query sulle colonne di tipo XML
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -114,6 +114,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

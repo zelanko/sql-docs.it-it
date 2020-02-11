@@ -1,5 +1,5 @@
 ---
-title: "Lezione 3: L'elaborazione della struttura di Data Mining Market Basket | Microsoft Docs"
+title: 'Lezione 3: elaborazione della struttura di data mining Market basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653863"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lezione 3: Elaborazione della struttura di data mining Market Basket
-  In questa lezione si userà il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione e viste vAssocSeqLineItems e vAssocSeqOrders del [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelli di database di esempio per elaborare le strutture di data mining e data mining che si creato in [lezione 1: Creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  In questa lezione verrà utilizzata l'istruzione [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) e VAssocSeqLineItems e vAssocSeqOrders dal database di [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] esempio per elaborare le strutture e i modelli di data mining creati nella [lezione 1: creazione della struttura di data mining Market basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lezione 2: aggiunta di modelli di data mining alla struttura di data mining Market basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. Quando si elabora un modello di data mining, i dati definiti dalla struttura di data mining vengono elaborati tramite l'algoritmo di data mining selezionato. L'algoritmo ricerca tendenze e schemi e quindi archivia queste informazioni nel modello di data mining. Il modello di data mining non contiene pertanto i dati di origine effettivi, bensì le informazioni individuate dall'algoritmo. Per altre informazioni sull'elaborazione dei modelli di data mining, vedere [considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. Quando si elabora un modello di data mining, i dati definiti dalla struttura di data mining vengono elaborati tramite l'algoritmo di data mining selezionato. L'algoritmo ricerca tendenze e schemi e quindi archivia queste informazioni nel modello di data mining. Il modello di data mining non contiene pertanto i dati di origine effettivi, bensì le informazioni individuate dall'algoritmo. Per ulteriori informazioni sull'elaborazione dei modelli di data mining, vedere [requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Una struttura di data mining deve essere rielaborata solo se si modifica una colonna della struttura o i dati di origine. Se si aggiunge un modello di data mining a una struttura di data mining già elaborata, è possibile utilizzare l'istruzione `INSERT INTO MINING MODEL` per eseguire il training del nuovo modello di data mining sui dati esistenti.  
   
  Dato che la struttura di data mining per l'analisi degli acquisti contiene una tabella nidificata, sarà necessario definire le colonne di data mining di cui eseguire il training utilizzando la struttura di tabelle nidificate e utilizzare il comando `SHAPE` per definire le query che eseguono il pull dei dati di training dalle tabelle di origine.  
   
 ## <a name="insert-into-statement"></a>Istruzione INSERT INTO  
- Per eseguire il training della struttura di data mining Market Basket e relativi modelli di data mining associati, usare il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti.  
+ Per eseguire il training della struttura di data mining Market basket e dei modelli di data mining associati, utilizzare l'istruzione [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti.  
   
 -   Identificazione della struttura di data mining  
   
@@ -60,7 +60,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Le successive righe del codice specificano le colonne definite dalla struttura di data mining. È necessario che siano elencate tutte le colonne nella struttura di data mining e ogni colonna deve essere associata a una colonna nei dati della query di origine. È possibile utilizzare `SKIP` per ignorare le colonne presenti nei dati di origine, ma non nella struttura di data mining. Per altre informazioni su come usare `SKIP`, vedere [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
+ Le successive righe del codice specificano le colonne definite dalla struttura di data mining. È necessario che siano elencate tutte le colonne nella struttura di data mining e ogni colonna deve essere associata a una colonna nei dati della query di origine. È possibile utilizzare `SKIP` per ignorare le colonne presenti nei dati di origine, ma non nella struttura di data mining. Per ulteriori informazioni sull'utilizzo `SKIP`di, vedere [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
   
 ```  
 (  
@@ -83,7 +83,7 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- In questa lezione si utilizzerà `OPENQUERY` per definire i dati di origine. Per informazioni sugli altri metodi di definizione di una query sui dati di origine, vedere [ &#60;query sull'origine dati&#62;](/sql/dmx/source-data-query).  
+ In questa lezione si utilizzerà `OPENQUERY` per definire i dati di origine. Per informazioni su altri metodi di definizione di una query sui dati di origine, vedere [&#60;query sui dati di origine&#62;](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione verrà eseguita l'attività seguente:  
@@ -94,7 +94,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Per elaborare la struttura di data mining mediante INSERT INTO  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -128,7 +128,8 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     Nell'istruzione, `Products` si riferisce alla tabella Products definita dall'istruzione SHAPE. `SKIP` viene utilizzato per ignorare la colonna Model che esiste nei dati di origine come chiave ma non viene utilizzata dalla struttura di data mining.  
+     Nell'istruzione, `Products` si riferisce alla tabella Products definita dall'istruzione SHAPE. 
+  `SKIP` viene utilizzato per ignorare la colonna Model che esiste nei dati di origine come chiave ma non viene utilizzata dalla struttura di data mining.  
   
 5.  Sostituire quanto segue:  
   
@@ -158,7 +159,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     La query di origine fa riferimento il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] origine dati definita nel [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] progetto di esempio. Utilizza questa origine dei dati per accedere alle viste vAssocSeqLineItems e vAssocSeqOrders contenenti i dati origine che verranno utilizzati per il training del modello di data mining. Se non è stato creato il progetto o queste viste, vedere [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+     La query di origine fa [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] riferimento all'origine dati definita [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] nel progetto di esempio. Utilizza questa origine dei dati per accedere alle viste vAssocSeqLineItems e vAssocSeqOrders contenenti i dati origine che verranno utilizzati per il training del modello di data mining. Se il progetto non è stato creato o queste visualizzazioni, vedere [esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
      All'interno del comando `SHAPE` si utilizzerà `OPENQUERY` per definire due query. Nella prima query viene definita la tabella padre, mentre nella seconda viene definita la tabella nidificata. Le due tabelle vengono correlate mediante la colonna OrderNumber presente in entrambe.  
   
@@ -181,17 +182,17 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-6.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+6.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-7.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Process Market Basket.dmx`.  
+7.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Process Market Basket.dmx`il nome.  
   
-8.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+8.  Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
- Una volta terminata l'esecuzione della query, è possibile visualizzare i modelli e i set di elementi trovati, visualizzare le associazioni o filtrare per set di elementi, probabilità o importanza. Per visualizzare queste informazioni, nella [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], fare doppio clic il nome del modello di dati e quindi fare clic su **Sfoglia**.  
+ Una volta terminata l'esecuzione della query, è possibile visualizzare i modelli e i set di elementi trovati, visualizzare le associazioni o filtrare per set di elementi, probabilità o importanza. Per visualizzare queste informazioni, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]fare clic con il pulsante destro del mouse sul nome del modello di dati, quindi scegliere **Sfoglia**.  
   
  Nella lezione successiva verranno create diverse stime basate sui modelli di data mining aggiunti alla struttura Market Basket.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: L'esecuzione di stime di mercato sugli acquisti](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lezione 4: Esecuzione delle stime relative a Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

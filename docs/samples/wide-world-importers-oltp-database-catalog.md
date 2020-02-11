@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811527"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo di database WideWorldImporters
@@ -28,10 +28,10 @@ WideWorldImporters utilizza schemi per scopi diversi, ad esempio l'archiviazione
 
 Questi schemi contengono i dati. Per tutti gli altri schemi sono necessarie diverse tabelle e si trovano nello schema dell'applicazione.
 
-|schema|Descrizione|
+|SCHEMA|Descrizione|
 |-----------------------------|---------------------|
 |Applicazione|Utenti, contatti e parametri a livello di applicazione. Contiene anche tabelle di riferimento con dati utilizzati da più schemi|
-|Purchasing|Acquisti di articoli azionari da fornitori e informazioni dettagliate sui fornitori.|  
+|Acquisto|Acquisti di articoli azionari da fornitori e informazioni dettagliate sui fornitori.|  
 |Sales|Vendite di articoli azionari ai clienti finali e informazioni dettagliate sui clienti e sui venditori. |  
 |Warehouse|Inventario e transazioni di articoli azionari.|  
 
@@ -39,9 +39,9 @@ Questi schemi contengono i dati. Per tutti gli altri schemi sono necessarie dive
 
 Questi schemi vengono utilizzati per le applicazioni esterne che non possono accedere direttamente alle tabelle di dati. Contengono viste e stored procedure utilizzate da applicazioni esterne.
 
-|schema|Descrizione|
+|SCHEMA|Descrizione|
 |-----------------------------|---------------------|
-|Sito Web|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
+|Website|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
 |Report|Tutti gli accessi al database da Reporting Services report si riferiscono a questo schema.|
 |PowerBI|Tutti gli accessi al database dal dashboard Power BI tramite il gateway aziendale sono tramite questo schema.|
 
@@ -51,7 +51,7 @@ Si noti che i report e gli schemi Power BI non vengono utilizzati nella versione
 
 Schemi per scopi specifici
 
-|schema|Descrizione|
+|SCHEMA|Descrizione|
 |-----------------------------|---------------------|
 |Integrazione|Oggetti e procedure necessari per l'integrazione di data warehouse, ad esempio la migrazione dei dati al database WideWorldImportersDW.|
 |Sequenze|Include le sequenze utilizzate da tutte le tabelle nell'applicazione.|
@@ -94,12 +94,12 @@ Dettagli relativi a clienti, venditori e vendite di articoli azionari.
 
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
-|Customers|Principali tabelle di entità per i clienti (organizzazioni o individui)|
+|Clienti|Principali tabelle di entità per i clienti (organizzazioni o individui)|
 |CustomerCategories|Categorie per i clienti (ad esempio, negozi di novità, supermercati e così via)|
 |BuyingGroups|Le organizzazioni del cliente possono far parte di gruppi che impiegano una maggiore potenza di acquisto|
 |CustomerTransactions|Tutte le transazioni finanziarie correlate ai clienti (fatture, pagamenti)|
 |SpecialDeals|Prezzo speciale. Questo può includere prezzi fissi, sconto in dollari o percentuale di sconto.|
-|Orders|Dettagli degli ordini dei clienti|
+|Ordini|Dettagli degli ordini dei clienti|
 |OrderLines|Righe di dettaglio dagli ordini dei clienti|
 |Fatture|Dettagli delle fatture dei clienti|
 |InvoiceLines|Righe di dettaglio dalle fatture dei clienti|
@@ -133,7 +133,7 @@ Laddove possibile, il database colloca le tabelle normalmente sottoposte a query
 
 Lo schema del database è stato generato dal codice in base a una serie di tabelle di metadati in un altro database WWI_Preparation. Ciò offre a WideWorldImporters un livello molto elevato di coerenza della progettazione, coerenza dei nomi e completezza. Per informazioni dettagliate sul modo in cui lo schema è stato generato, vedere il codice sorgente: [Wide-World-Importers/overstate-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
-### <a name="table-design"></a>Progettazione tabella
+### <a name="table-design"></a>Progettazione della tabella
 
 - Tutte le tabelle includono chiavi primarie a colonna singola per la semplicità di join.
 - Tutti gli schemi, le tabelle, le colonne, gli indici e i vincoli check hanno una proprietà estesa Description che può essere utilizzata per identificare lo scopo dell'oggetto o della colonna. Le tabelle con ottimizzazione per la memoria rappresentano un'eccezione a questo dato che attualmente non supportano le proprietà estese.
@@ -160,13 +160,13 @@ Gli `Reports` schemi `PowerBI` e sono destinati a Reporting Services e a scopi P
 
 Queste sono le procedure usate da un'applicazione client, ad esempio un front-end Web.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Consente a una persona ( `Application.People`da) di accedere al sito Web.|
 |ChangePassword|Modifica la password di un utente (per gli utenti che non usano meccanismi di autenticazione esterni).|
 |InsertCustomerOrders|Consente l'inserimento di uno o più ordini cliente (incluse le righe di ordine).|
 |InvoiceCustomerOrders|Accetta un elenco di ordini per la fatturazione ed elabora le fatture.|
-|RecordColdRoomTemperatures|Accetta un elenco di dati del sensore come parametro con valori di tabella (TVP) e applica i dati alla `Warehouse.ColdRoomTemperatures` tabella temporale.|
+|RecordColdRoomTemperatures|Accetta un elenco di dati del sensore come parametro con valori di tabella (TVP) e applica i dati alla tabella `Warehouse.ColdRoomTemperatures` temporale.|
 |RecordVehicleTemperature|Accetta una matrice JSON e la usa per aggiornare `Warehouse.VehicleTemperatures`.|
 |SearchForCustomers|Cerca i clienti in base al nome o a una parte del nome, ovvero il nome della società o il nome della persona.|
 |SearchForPeople|Cerca persone per nome o parte del nome.|
@@ -182,7 +182,7 @@ Le stored procedure in questo schema vengono utilizzate dal processo ETL. Otteng
 
 Simula un carico di lavoro che inserisce vendite e acquisti. Il stored procedure principale è `PopulateDataToCurrentDate`, utilizzato per inserire i dati di esempio fino alla data corrente.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Ricrea le procedure necessarie per la simulazione del caricamento dei dati. Questa operazione è necessaria per portare i dati alla data corrente.|
 |Configuration_RemoveDataLoadSimulationProcedures|In questo modo, le procedure vengono rimosse al termine della simulazione.|
@@ -195,16 +195,16 @@ Simula un carico di lavoro che inserisce vendite e acquisti. Il stored procedure
 
 Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità di Enterprise Edition alla versione Standard Edition dell'esempio e per aggiungere il controllo e l'indicizzazione full-text.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Aggiunge un membro a un ruolo se il membro non è già incluso nel ruolo|
 |Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo del server viene applicato per i database Standard Edition; per Enterprise Edition è stato aggiunto il controllo aggiuntivo del database.|
 |Configuration_ApplyColumnstoreIndexing|Applica l'indicizzazione `Sales.OrderLines` columnstore a e `Sales.InvoiceLines` e reindicizzare in modo appropriato.|
-|Configuration_ApplyFullTextIndexing|Applica indici full `Application.People`- `Sales.Customers`Text `Purchasing.Suppliers`a, `Warehouse.StockItems`, e. Sostituisce `Website.SearchForPeople` ,`Website.SearchForSuppliers`, ,`Website.SearchForStockItems`, con`Website.SearchForStockItemsByTags` procedure di sostituzione che utilizzano l'indicizzazione full-text. `Website.SearchForCustomers`|
+|Configuration_ApplyFullTextIndexing|Applica indici full `Application.People`- `Sales.Customers`Text `Purchasing.Suppliers`a, `Warehouse.StockItems`, e. Sostituisce `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` con procedure di sostituzione che utilizzano l'indicizzazione full-text.|
 |Configuration_ApplyPartitioning|Applica il partizionamento delle `Sales.CustomerTransactions` tabelle `Purchasing.SupplierTransactions`a e e riorganizza gli indici da adattare.|
 |Configuration_ApplyRowLevelSecurity|Applica la sicurezza a livello di riga per filtrare i clienti in base ai ruoli correlati al territorio di vendita.|
 |Configuration_ConfigureForEnterpriseEdition|Applica indicizzazione columnstore, full-text, in memoria, polibase e partizionamento.|
-|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure) `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` sostituisce con gli equivalenti in memoria ed esegue la migrazione dei dati, ricrea i `Website.OrderIDList`tipi di `Website.OrderList`tabella `Website.OrderLineList`, `Website.SensorDataList` ,, con equivalenti con ottimizzazione per la memoria, Elimina e ricrea le routine `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`e `Website.RecordColdRoomTemperatures` che utilizzano questi tipi di tabella.|
+|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure) `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` sostituisce con gli equivalenti in memoria ed esegue la migrazione dei dati, `Website.OrderIDList`ricrea i tipi di `Website.OrderList` `Website.OrderLineList` `Website.SensorDataList` tabella,, e con equivalenti ottimizzati per la memoria, Elimina e ricrea le routine `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`e `Website.RecordColdRoomTemperatures` che utilizzano questi tipi di tabella.|
 |Configuration_RemoveAuditing|Rimuove la configurazione di controllo.|
 |Configuration_RemoveRowLevelSecurity|Rimuove la configurazione di sicurezza a livello di riga, necessaria per le modifiche alle tabelle associate.|
 |CreateRoleIfNonExistant|Crea un ruolo del database, se non esiste già.|
@@ -214,7 +214,7 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzat
 
 Procedure per la configurazione delle sequenze nel database.
 
-|Routine|Scopo|
+|Procedura|Scopo|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chiama la stored procedure ReseedSequenceBeyondTableValue per tutte le sequenze.|
 |ReseedSequenceBeyondTableValue|Utilizzato per riposizionare il successivo valore di sequenza oltre il valore in una tabella che utilizza la stessa sequenza. (Ad esempio, un DBCC CHECKIDENT per le colonne Identity equivalenti per le sequenze, ma in più tabelle potenzialmente diverse).|

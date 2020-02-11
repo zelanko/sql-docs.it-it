@@ -18,15 +18,15 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657630"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - Metodo SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Imposta tutti i valori predefiniti per l'istanza del client di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  
+  Imposta tutti i valori predefiniti per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client con l'opzione per sovrascrivere i dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +36,17 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto **ClientSettings** che rappresenta un'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|*OverwriteAll*|Un valore booleano che specifica se sovrascrivere valori esistenti sull'istanza del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** per sovrascrivere dati esistenti; **false** se non devono essere sovrascritti dati esistenti.|  
+|*OverwriteAll*|Un valore booleano che specifica se sovrascrivere valori esistenti sull'istanza del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** per sovrascrivere i dati esistenti; **false** se i dati esistenti non devono essere sovrascritti.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore **UInt32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
   

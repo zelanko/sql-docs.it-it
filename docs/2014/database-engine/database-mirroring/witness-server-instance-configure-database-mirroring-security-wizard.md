@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db00b9deeb5faad62731aa666c54fa385be765b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753973"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
@@ -37,7 +37,7 @@ ms.locfileid: "62753973"
   
  In caso contrario, nella casella di riepilogo viene visualizzato il nome del server corrente. Si noti che l'istanza del server di controllo del mirroring non può essere uguale all'istanza del server principale o del server mirror.  
   
- **Connect**  
+ **Connettere**  
  Se non è stata specificata un'istanza del server di controllo, fare clic su **Connetti**. Verrà visualizzata la finestra di dialogo **Connetti al server** tramite la quale è possibile specificare l'istanza del server e stabilire una connessione.  
   
  Se è stata specificata l'istanza, ma non è disponibile una connessione con autorizzazioni sufficienti per il controllo dell'esistenza dell'endpoint, fare clic su **Connetti**. Verrà visualizzata la finestra di dialogo **Connetti al server** in cui l'istanza del server risulterà selezionata automaticamente e non sarà possibile modificarla. Specificare un account di dominio dotato di autorizzazioni sufficienti e connettersi all'istanza del server.  
@@ -45,7 +45,7 @@ ms.locfileid: "62753973"
 > [!NOTE]  
 >  Quando viene stabilita la connessione all'istanza del server, la Configurazione guidata sicurezza mirroring del database usa le credenziali della finestra di dialogo **Connetti al server** . Queste credenziali sono diverse da quelle di una sessione di mirroring, che utilizza le credenziali dell'account di avvio con il quale l'istanza del server è in esecuzione come servizio.  
   
- **Porta di attesa**  
+ **Porta del listener**  
  Il funzionamento di questa opzione dipende dalla presenza dell'endpoint di mirroring per l'istanza del server corrente, come illustrato di seguito:  
   
 -   Se non esiste una porta di attesa per l'istanza del server, nella casella di testo **Porta** verrà visualizzato il numero di porta 5022. È possibile immettere qualsiasi numero di porta disponibile, ad esempio 7022.  
@@ -66,8 +66,8 @@ ms.locfileid: "62753973"
 ## <a name="see-also"></a>Vedere anche  
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Proprietà del database &#40;Pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  
   

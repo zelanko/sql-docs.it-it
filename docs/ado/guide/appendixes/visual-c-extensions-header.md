@@ -1,5 +1,5 @@
 ---
-title: Intestazione delle estensioni di Visual C++ | Microsoft Docs
+title: Intestazione Visual C++ Extensions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926382"
 ---
 # <a name="visual-c-extensions-header"></a>Intestazione delle estensioni di Visual C++
-L'intestazione seguente **icrsint**, illustra in dettaglio l'interfaccia che consente ai client di recuperare i campi da un **Recordset** nelle variabili definite in una classe derivata da **CADORecordBinding**. È necessario specificare una macro di associazione di ADO per ogni campo che si desidera accedere.  
+La seguente intestazione, **icrsint. h**, descrive in dettaglio l'interfaccia che consente ai client di recuperare i campi da un **Recordset** in variabili definite in una classe derivata da **CADORecordBinding**. È necessario specificare una macro di associazione ADO per ogni campo a cui si intende accedere.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -208,5 +208,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Esempio di estensioni Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Uso delle estensioni di Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)

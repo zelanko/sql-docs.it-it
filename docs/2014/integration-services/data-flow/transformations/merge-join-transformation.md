@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900167"
 ---
 # <a name="merge-join-transformation"></a>Merge join - trasformazione
@@ -55,11 +55,11 @@ ms.locfileid: "62900167"
   
  Per informazioni sull'impostazione delle proprietà di questa trasformazione, fare clic su uno degli argomenti seguenti:  
   
--   [Estensione di un set di dati tramite la trasformazione Merge join](merge-join-transformation.md)  
+-   [Estendere un set di dati tramite la trasformazione Merge join](merge-join-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor trasformazione Merge join](../../merge-join-transformation-editor.md)   

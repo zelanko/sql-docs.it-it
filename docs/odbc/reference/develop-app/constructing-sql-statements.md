@@ -1,5 +1,5 @@
 ---
-title: Costruzione di istruzioni SQL | Microsoft Docs
+title: Creazione di istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33aa08b86767b855b3c5cfc70ceaef785c419aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002206"
 ---
 # <a name="constructing-sql-statements"></a>Costruzione di istruzioni SQL
-È possono costruire istruzioni SQL in uno dei tre modi: a livello di codice durante lo sviluppo, costruito in fase di esecuzione, o immesse direttamente dall'utente.  
+È possibile costruire istruzioni SQL in uno dei tre modi seguenti: hardcoded durante lo sviluppo, costruito in fase di esecuzione o immesso direttamente dall'utente.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

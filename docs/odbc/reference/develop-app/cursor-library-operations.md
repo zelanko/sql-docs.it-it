@@ -18,14 +18,14 @@ ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad141939a548aa008ef7109d0adaec5b3a8c6c3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001992"
 ---
 # <a name="cursor-library-operations"></a>Operazioni della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Se un'applicazione che utilizza un database ODBC *2.x* driver effettua chiamate a ODBC *3.x* libreria di cursori, l'applicazione potrebbe essere in grado di utilizzare ODBC *3.x* funzionalità che non sono supportato da ODBC *2.x* driver. Un writer dell'applicazione necessario prestare attenzione a come vengono utilizzate queste funzionalità, tuttavia. Utilizzo di ODBC *3.x* libreria di cursori non rende un ODBC *2.x* driver in un database ODBC *3.x* driver.
+ Se un'applicazione che utilizza un driver ODBC *2. x* effettua chiamate alla libreria di cursori ODBC *3. x* , l'applicazione potrebbe essere in grado di utilizzare le funzionalità ODBC *3. x* che non sono supportate dal driver ODBC *2. x* . Tuttavia, un writer di applicazioni deve prestare particolare attenzione alla modalità di utilizzo di queste funzionalità. L'utilizzo della libreria di cursori ODBC *3. x* non rende un driver ODBC *2. x* in un driver ODBC *3. x* .

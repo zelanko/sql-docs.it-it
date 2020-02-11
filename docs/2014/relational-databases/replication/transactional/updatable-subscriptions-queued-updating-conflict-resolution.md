@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655337"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -56,7 +56,7 @@ ms.locfileid: "62655337"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Programmazione Transact-SQL della replica: [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programmazione Transact-SQL della replica: [Abilitazione delle sottoscrizioni aggiornabili per le pubblicazioni transazionali](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Per visualizzare i conflitti di dati**  
   

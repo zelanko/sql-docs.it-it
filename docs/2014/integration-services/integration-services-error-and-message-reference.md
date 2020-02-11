@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892659"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892659"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Il valore %1!d! specificato per il parametro della scala della funzione NULL con tipo di dati %2 non è compreso nell'intervallo valido. La scala deve essere compresa nell'intervallo da %3!d! a %4!d!. Il valore della scala non deve essere superiore a quello della precisione e non può essere negativo.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Il valore %1!d! specificato per il parametro della lunghezza della funzione "NULL" con tipo di dati %2 è negativo e non è valido. La lunghezza deve essere un valore positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Impossibile assegnare un valore negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossibile impostare la proprietà personalizzata "%1" per "%2" su true.  Il tipo di dati di colonna deve essere uno dei seguenti:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, or DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossibile impostare la proprietà personalizzata "%1" per "%2" su true.  Il tipo di dati di colonna deve essere uno dei seguenti:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 o DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Impossibile ricollegare "%1". Eliminare il percorso, aggiungerne uno nuovo e quindi collegarlo.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|La funzione "%1" richiede %2!d! parametri e non %3!d! parametri. Il nome della funzione è stato riconosciuto ma il numero di parametri non è valido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|La funzione "%1" richiede %2!d! parametro e non %3!d! parametri. Il nome della funzione è stato riconosciuto ma il numero di parametri non è valido.|  
@@ -1459,7 +1459,7 @@ ms.locfileid: "62892659"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|Impossibile impostare la proprietà ComparisonFlags su un valore diverso da zero per "%1" perché "%2" non è un output di origine. La proprietà ComparisonFlags della colonna di output "nomecolonna" (ID) non può essere impostata su un valore diverso da zero perché l'output corrispondente "nomeoutput" (ID) non è un output di origine.|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|I flag di confronto per "%1" devono essere zero perché il tipo non è string. La proprietà ComparisonFlags può essere impostata solo su valori diversi da zero per le colonne di tipo string.|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|Impossibile impostare la proprietà ComparisonFlags per "%1" su un valore diverso da zero perché la relativa proprietà SortKeyPosition è impostata su zero. La proprietà ComparisonFlags di una colonna di output può essere impostata solo su valori diversi da zero se anche la proprietà SortKeyPosition è diversa da zero.|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|La proprietà è di sola lettura.|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|la proprietà è di sola lettura.|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|Per %1 è stato impostato un valore di tipo di dati non valido (%2!ld!).|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|Per "%1" è necessario impostare una tabella codici ma è stato passato il valore zero.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|La lunghezza di "%1" non è valida. Deve essere compresa tra %2!ld! e %3!ld!.|  
@@ -2268,7 +2268,7 @@ ms.locfileid: "62892659"
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Funzione non corretta.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Impossibile trovare il file specificato.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Non è possibile trovare il file specificato.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|È in corso l'avvio del servizio Microsoft SSIS.<br /><br /> Versione server %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Servizio Microsoft SSIS avviato.<br /><br /> Versione server %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|Tempo di attesa scaduto.|  

@@ -1,5 +1,5 @@
 ---
-title: Catalogo dei metadati | Documenti di Microsoft
+title: Metadati del catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511525"
 ---
 # <a name="catalog-metadata"></a>Metadati del catalogo
   In questo argomento vengono descritti i metadati delle colonne restituiti da `SQLColumns` e `SQLProcedureColumns` e i metadati dei tipi di dati restituiti da `SQLGetTypeInfo`.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I valori di colonna seguenti vengono restituiti per i tipi di data/ora da `SQLColumns` e `SQLProcedureColumns`.  
   
-|Tipo di parametro|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di parametro|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -40,9 +40,9 @@ ms.locfileid: "62511525"
   
  I valori di colonna seguenti vengono restituiti per i tipi di data/ora da `SQLGetTypeInfo`.  
   
-|Tipo di parametro|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di parametro|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -54,7 +54,7 @@ ms.locfileid: "62511525"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|0|0|0|3|0|0|  
 |MAXIMUM_SCALE|0|7|0|3|7|7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
@@ -64,6 +64,6 @@ ms.locfileid: "62511525"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metadati &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
+ [Metadati &#40;&#41;ODBC](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

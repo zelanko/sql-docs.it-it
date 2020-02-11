@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b05013b888978d268d30a31dc6375b0f70d625d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762102"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762102"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Testo del messaggio|Errore di database: La directory FileStream F_ID ID per una partizione rilevata due volte.|  
+|Testo del messaggio|Errore di database: ID di directory FileStream F_ID rilevato due volte.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Nei metadati è stato rilevato due volte lo stesso ID di partizione per una directory FileStream.  

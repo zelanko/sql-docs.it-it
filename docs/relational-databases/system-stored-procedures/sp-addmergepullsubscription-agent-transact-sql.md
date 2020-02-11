@@ -16,19 +16,19 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8073fcb4c92861ffb09da8739c7c9f8064d9d70
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769155"
 ---
-# <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo processo agente utilizzato per pianificare la sincronizzazione di una sottoscrizione pull con una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -108,7 +108,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 `[ @publisher_password = ] 'publisher_password'`Password utilizzata per la connessione al server di pubblicazione. *publisher_password* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Quando possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
 `[ @publisher_encrypted_password = ]publisher_encrypted_password`L'impostazione di *publisher_encrypted_password* non è più supportata. Se si tenta di impostare questo parametro di **bit** su **1** , verrà generato un errore.  
   
@@ -143,22 +143,22 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 `[ @distributor_password = ] 'distributor_password'`Password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostato su **0**. *distributor_password* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Quando possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
 `[ @encrypted_password = ] encrypted_password`L'impostazione di *encrypted_password* non è più supportata. Se si tenta di impostare questo parametro di **bit** su **1** , verrà generato un errore.  
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di merge. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Su richiesta|  
+|**1**|Singola occorrenza|  
+|**2**|On demand|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Periodica|  
+|**128**|Ricorrente|  
 |NULL (predefinito)||  
   
 > [!NOTE]  
@@ -166,44 +166,44 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`Giorno o giorni in cui viene eseguita la agente di merge. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Domenica|  
-|**2**|Lunedì|  
-|**3**|Martedì|  
-|**4**|Mercoledì|  
-|**5**|Giovedì|  
-|**6**|Venerdì|  
+|**1**|Sunday|  
+|**2**|Monday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
+|**6**|Friday|  
 |**7**|Sabato|  
-|**8**|Day|  
-|**9**|Giorni feriali|  
+|**8**|Giorno|  
+|**9**|Giorni della settimana|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di merge. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Primo|  
-|**2**|Secondo|  
+|**1**|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
 |NULL (predefinito)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Secondo|  
+|**1**|Una sola volta|  
+|**2**|Second|  
 |**4**|Minuto|  
 |**8**|Ora|  
 |NULL (predefinito)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui il agente di merge viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è null.  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Metodo di autenticazione utilizzato dal agente di merge durante la connessione al server Web durante la sincronizzazione Web tramite HTTPS. *internet_security_mode* è di **tipo int** . i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Viene utilizzata l'autenticazione di base.|  
 |**1** (impostazione predefinita)|Viene utilizzata l'autenticazione integrata di Windows.|  
@@ -285,27 +285,27 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  Non archiviare informazioni di autenticazione in file script. Per una sicurezza ottimale, i nomi e le password degli account di accesso dovrebbero essere passati in fase di esecuzione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_addmergepullsubscription_agent** viene utilizzato nella replica di tipo merge e utilizza funzionalità simili a [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addmergepullsubscription_agent** viene utilizzata nella replica di tipo merge e utilizza funzionalità simili a [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Per un esempio di come specificare correttamente le impostazioni di sicurezza quando si esegue **sp_addmergepullsubscription_agent**, vedere [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Per un esempio di come specificare correttamente le impostazioni di sicurezza durante l'esecuzione di **sp_addmergepullsubscription_agent**, vedere [creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_addmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

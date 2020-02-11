@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890558"
 ---
 # <a name="partition-processing-destination"></a>Destinazione elaborazione partizione
-  La destinazione Elaborazione partizione consente di caricare ed elaborare una partizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle partizioni, vedere [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  La destinazione elaborazione partizione carica ed elabora una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] partizione. Per altre informazioni sulle partizioni, vedere [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  La destinazione elaborazione partizione include le funzionalità seguenti:  
   
@@ -50,9 +50,9 @@ ms.locfileid: "68890558"
   
 -   [Editor destinazione elaborazione partizione &#40;pagina Gestione connessione&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione elaborazione partizione &#40;pagina Mapping&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [Editor destinazione elaborazione partizione &#40;pagina mapping&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Editor destinazione elaborazione partizione &#40;pagina avanzate&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   

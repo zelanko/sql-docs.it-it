@@ -1,5 +1,5 @@
 ---
-title: Viste a gestione basata su criteri (Transact-SQL) | Microsoft Docs
+title: Viste della gestione basata su criteri (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018446"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Viste di Gestione basata su criteri (Transact-SQL)

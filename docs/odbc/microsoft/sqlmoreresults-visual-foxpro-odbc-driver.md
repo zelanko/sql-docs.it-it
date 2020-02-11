@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLMoreResults (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002257"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: Livello 2  
+ Conformità API ODBC: livello 2  
   
- Determina se i risultati di ulteriori sono in sospeso su un handle di istruzione *hstmt*, che contiene istruzioni SELECT, UPDATE, INSERT o DELETE e in questo caso, inizializza l'elaborazione per i risultati ottenuti.  
+ Determina se più risultati sono in sospeso in un handle di istruzione, *HSTMT*, che contiene istruzioni SELECT, Update, INSERT o DELETE e, in caso affermativo, Inizializza l'elaborazione per tali risultati.  
   
- Per altre informazioni, vedere [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) in *ODBC Programmer ' s Reference*.

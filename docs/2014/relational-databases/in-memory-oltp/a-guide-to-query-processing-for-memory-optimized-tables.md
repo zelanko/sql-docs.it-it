@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811075"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
@@ -77,7 +77,7 @@ Piano di query per il join di tabelle basate su disco.
   
 -   Le righe della tabella Customer vengono recuperate dall'indice cluster, che è la struttura dei dati primaria e contiene i dati completi della tabella.  
   
--   I dati della tabella Order vengono recuperati utilizzando l'indice non cluster della colonna CustomerID. L'indice contiene sia la colonna CustomerID, utilizzata per il join, sia la colonna chiave primaria OrderID, che viene restituita all'utente. La restituzione di colonne aggiuntive dalla tabella Order richiederebbe ricerche nell'indice cluster della tabella stessa.  
+-   I dati della tabella Order vengono recuperati usando l'indice non cluster della colonna CustomerID. L'indice contiene sia la colonna CustomerID, utilizzata per il join, sia la colonna chiave primaria OrderID, che viene restituita all'utente. La restituzione di colonne aggiuntive dalla tabella Order richiederebbe ricerche nell'indice cluster della tabella stessa.  
   
 -   L'operatore logico `Inner Join` viene implementato dall'operatore fisico `Merge Join`. Gli altri tipi di join fisico sono `Nested Loops` e `Hash Join`. L'operatore `Merge Join` consente di sfruttare il fatto che entrambi gli indici sono ordinati in base alla colonna di join CustomerID.  
   
@@ -89,7 +89,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Il piano stimato per la query è il seguente:  
   
- ![Piano di query per il join di tabelle basate su disco.](../../database-engine/media/hekaton-query-plan-2.gif "Piano di query per il join di tabelle basate su disco.")  
+ ![Piano di query per un hash join di tabelle basate su disco.](../../database-engine/media/hekaton-query-plan-2.gif "Piano di query per un hash join di tabelle basate su disco.")  
 Piano di query per un hash join di tabelle basate su disco.  
   
  In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. L'operatore fisico `Hash Match` viene ora utilizzato per l'`Inner Join`. L'indice cluster di Order non è ordinato in base a CustomerID, pertanto per un `Merge Join` sarebbe necessario un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore `Hash Match` (75%) rispetto al costo dell'operatore `Merge Join` nell'esempio precedente (46%). In Query Optimizer l'operatore `Hash Match` è stato preso in considerazione anche nell'esempio precedente, con la conclusione, tuttavia, che l'operatore `Merge Join` avrebbe offerto prestazioni migliori.  
@@ -114,14 +114,14 @@ Pipeline di elaborazione delle query di SQL Server.
   
 6.  Access Methods recupera le righe dalle pagine dell'indice e dei dati nel pool di buffer e carica le pagine dal disco nel pool di buffer in base alle esigenze.  
   
- Per la prima query di esempio, il motore di esecuzione richiede le righe dell'indice cluster sul cliente e l'indice non cluster in base all'ordine dai metodi di accesso. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
+ Per la prima query di esempio, il motore di esecuzione richiede ad Access Methods le righe dell'indice cluster di Customer e dell'indice non cluster di Order. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ai batch ad hoc e alle stored procedure si fa riferimento anche con l'espressione " [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretato". L'interpretazione si riferisce al fatto che ogni operatore nel piano di query viene interpretato dal motore di esecuzione delle query. Il motore di esecuzione legge l'operatore e i relativi parametri ed esegue l'operazione.  
   
  Il codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato può essere utilizzato per accedere sia a tabelle ottimizzate per la memoria che a tabelle basate su disco. Nella figura seguente viene illustrata l'elaborazione delle query per l'accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria:  
   
- ![Pipeline di elaborazione delle query per tsql interpretato.](../../database-engine/media/hekaton-query-plan-4.gif "Pipeline di elaborazione delle query per tsql interpretato.")  
+ ![Pipeline di elaborazione query per tsql interpretato.](../../database-engine/media/hekaton-query-plan-4.gif "Pipeline di elaborazione delle query per tsql interpretato.")  
 Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL interpretato alle tabelle ottimizzate per la memoria.  
   
  Come illustrato nella figura, la pipeline di elaborazione delle query rimane per lo più invariata:  
@@ -159,7 +159,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Il piano stimato è il seguente:  
   
- ![Piano di query per il join di tabelle ottimizzate per la memoria.](../../database-engine/media/hekaton-query-plan-5.gif "Piano di query per il join di tabelle ottimizzate per la memoria.")  
+ ![Piano di query per il join di tabelle con ottimizzazione per la memoria.](../../database-engine/media/hekaton-query-plan-5.gif "Piano di query per il join di tabelle ottimizzate per la memoria.")  
 Piano di query per il join di tabelle ottimizzate per la memoria.  
   
  Osservare le seguenti differenze del piano per la stessa query su tabelle basate su disco (figura 1):  
@@ -195,12 +195,12 @@ END
 |-|-----------------------|-----------------|  
 |Compilazione iniziale|Al momento della creazione.|Alla prima esecuzione.|  
 |Ricompilazione automatica|Alla prima esecuzione della procedura dopo il riavvio del database o del server.|Al riavvio del server. In alternativa, eliminazione dalla cache dei piani, in genere in base alle modifiche di schema o di statistiche o a utilizzo elevato di memoria.|  
-|Ricompilazione manuale|Non supportati. La soluzione alternativa consiste nell'eliminare e ricreare la stored procedure.|Usare `sp_recompile`. È possibile eliminare manualmente il piano dalla cache, ad esempio tramite DBCC FREEPROCCACHE. È inoltre possibile creare la stored procedure specificando WITH RECOMPILE affinché venga ricompilata a ogni esecuzione.|  
+|Ricompilazione manuale|Non supportato. La soluzione alternativa consiste nell'eliminare e ricreare la stored procedure.|Usare `sp_recompile`. È possibile eliminare manualmente il piano dalla cache, ad esempio tramite DBCC FREEPROCCACHE. È inoltre possibile creare la stored procedure specificando WITH RECOMPILE affinché venga ricompilata a ogni esecuzione.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilazione ed elaborazione delle query  
  Nel diagramma seguente viene illustrato il processo di compilazione per le stored procedure compilate in modo nativo:  
   
- ![Compilazione nativa delle stored procedure.](../../database-engine/media/hekaton-query-plan-6.gif "Compilazione nativa delle stored procedure.")  
+ ![Compilazione nativa di stored procedure.](../../database-engine/media/hekaton-query-plan-6.gif "Compilazione nativa delle stored procedure.")  
 Compilazione nativa delle stored procedure.  
   
  Il processo è il seguente:  
@@ -217,7 +217,7 @@ Compilazione nativa delle stored procedure.
   
  La chiamata di una stored procedure compilata in modo nativo viene convertita in chiamata a una funzione nella DLL.  
   
- ![Esecuzione di stored procedure compilate in modo nativo.](../../database-engine/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Esecuzione di stored procedure compilate in modo nativo.](../../database-engine/media/hekaton-query-plan-7.gif "Esecuzione di stored procedure compilate in modo nativo.")  
 Esecuzione di stored procedure compilate in modo nativo.  
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  
@@ -255,12 +255,12 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operatori di query nelle stored procedure compilate in modo nativo  
  Nella tabella seguente vengono riepilogati gli operatori di query supportati nelle stored procedure compilate in modo nativo:  
   
-|Operator|Query di esempio|  
+|Operatore|Query di esempio|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|Elimina|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Questo operatore viene utilizzato sia per le funzioni intrinseche che per le conversioni dei tipi. Non tutte le funzioni e conversioni dei tipi sono supportate nelle stored procedure compilate in modo nativo.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Join a cicli annidati|Nested Loops è l'unico operatore di join supportato nelle stored procedure compilate in modo nativo. In tutti i piani che contengono join viene utilizzato l'operatore Nested Loops, anche se il piano per la stessa query eseguita come codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato contiene un hash join o un merge join.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Ordina|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono mantenute statistiche a livello di colonna per le tabelle ottimizzate per la memoria. Inoltre, viene mantenuto il conteggio effettivo delle righe della tabella. Tuttavia, diversamente dalle tabelle basate su disco, le statistiche per le tabelle ottimizzate per la memoria non vengono aggiornate automaticamente. Pertanto, le statistiche devono essere aggiornate manualmente dopo aver effettuato modifiche significative nelle tabelle. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
   
   

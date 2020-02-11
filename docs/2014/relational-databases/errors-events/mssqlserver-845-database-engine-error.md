@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761920"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
     
 ## <a name="details"></a>Dettagli  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62761920"
 |Testo del messaggio|Timeout durante l'attesa di un latch del buffer di tipo %d per la pagina %S_PGID, ID di database %d.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Un processo in attesa di acquisire un latch non è stato in grado di acquisirne uno prima della scadenza del limite di tempo. Ciò può verificarsi se il completamento di un'operazione di I/O richiede una quantità di tempo eccessiva, in genere a causa di un blocco dei processi di sistema determinato da altre attività. In alcuni casi, tuttavia, può essere dovuto a un errore hardware.  
+ Un processo era in attesa di acquisire un latch, ma ha attesto fino al tempo limite e non ha potuto acquisirne uno. Ciò può verificarsi se il completamento di un'operazione di I/O richiede una quantità di tempo eccessiva, in genere a causa di un blocco dei processi di sistema determinato da altre attività. In alcuni casi, tuttavia, può essere dovuto a un errore hardware.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  È possibile impedire che si verifichi questo errore eseguendo le attività seguenti:  

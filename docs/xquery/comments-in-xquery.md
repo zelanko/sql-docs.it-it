@@ -1,5 +1,5 @@
 ---
-title: Commenti in query XQuery | Microsoft Docs
+title: Commenti in XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039025"
 ---
 # <a name="comments-in-xquery"></a>Commenti in query XQuery
@@ -36,7 +36,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Seguito è riportato un altro esempio in cui una query viene eseguita su una colonna Instructions del **xml** tipo:  
+ Di seguito è riportato un altro esempio in cui viene specificata una query su una colonna di istruzioni del tipo **XML** :  
   
 ```  
 SELECT Instructions.query('  

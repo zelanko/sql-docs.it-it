@@ -13,16 +13,16 @@ ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18a0bc111f6b4e8d82d0ed353837b499f920479e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023364"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (libreria di cursori)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- In questo argomento viene illustrato l'utilizzo dei **SQLSetScrollOptions** funzione nella libreria di cursori. Per informazioni generali sul **SQLSetScrollOptions**, vedere [funzione SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
+ In questo argomento viene illustrato l'utilizzo della funzione **SQLSetScrollOptions** nella libreria di cursori. Per informazioni generali su **SQLSetScrollOptions**, vedere [funzione SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md).  
   
- Supporta la libreria di cursori **SQLSetScrollOptions** solo per compatibilità con le versioni precedenti; le applicazioni devono usare invece gli attributi di istruzione SQL_ATTR_CURSOR_TYPE, SQL_ATTR_CONCURRENCY e SQL_ATTR_ROW_ARRAY_SIZE.
+ La libreria di cursori supporta **SQLSetScrollOptions** solo per compatibilità con le versioni precedenti. le applicazioni devono invece usare gli attributi di istruzione SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE e SQL_ATTR_ROW_ARRAY_SIZE.

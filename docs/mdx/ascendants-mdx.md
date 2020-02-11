@@ -1,5 +1,5 @@
 ---
-title: I predecessori (MDX) | Microsoft Docs
+title: Predecessori (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017065"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
@@ -31,11 +31,11 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
- Il **predecessori** funzione restituisce tutti i predecessori di un membro del membro verso l'alto della gerarchia del membro; in particolare, esegue un attraversamento post-ordine della gerarchia per il membro specificato e quindi Restituisce che tutti i predecessori correlati al membro, incluso se stesso, in un set. È in contrasto con la [predecessore](../mdx/ancestor-mdx.md) funzione, che restituisce un membro specifico predecessori o predecessore, a un livello specifico.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **predecessores** restituisce tutti i predecessori di un membro dal membro stesso fino all'inizio della gerarchia del membro. in particolare, esegue un attraversamento post-ordine della gerarchia per il membro specificato, quindi restituisce tutti i membri predecessori correlati al membro, incluso se stesso, in un set. Si differenzia dalla funzione [predecessore](../mdx/ancestor-mdx.md) , che restituisce un membro predecessore specifico, o predecessore, a un livello specifico.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce il numero di ordini dei rivenditori per il `[Sales Territory].[Northwest]` membro e tutti i predecessori di tale membro dal **Adventure Works** cubo. Il **predecessori** funzione costruisce il set che include il `[Sales Territory].[Northwest]` membro e i relativi predecessori per l'asse ROWS.  
+ Nell'esempio seguente viene restituito il numero di ordini rivenditore per il `[Sales Territory].[Northwest]` membro e tutti i predecessori di tale membro dal cubo **Adventure Works** . La funzione **predecessori** costruisce il set che include il `[Sales Territory].[Northwest]` membro e i relativi predecessori per l'asse delle righe.  
   
 ```  
 SELECT  
@@ -51,6 +51,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,22 +14,22 @@ ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925541"
 ---
 # <a name="determining-edit-mode"></a>Determinazione della modalità di modifica
-ADO mantiene un buffer di modifica associato al record corrente. Il **EditMode** proprietà indica se sono state apportate modifiche a questo buffer oppure se è stato creato un nuovo record. Uso **EditMode** per determinare lo stato di modifica del record corrente. È possibile verificare le modifiche in sospeso se un processo di modifica è stata interrotta e determinare se è necessario usare il **Update** oppure **CancelUpdate** (metodo).  
+ADO gestisce un buffer di modifica associato al record corrente. La proprietà **EditMode** indica se sono state apportate modifiche a questo buffer o se è stato creato un nuovo record. Usare **EditMode** per determinare lo stato di modifica del record corrente. È possibile verificare la presenza di modifiche in sospeso se un processo di modifica è stato interrotto e determinare se è necessario utilizzare il metodo **Update** o **CancelUpdate** .  
   
- **Proprietà EditMode** restituisce uno dei **EditModeEnum** costanti, sono elencate nella tabella seguente.  
+ **EditMode** restituisce una delle costanti **EditModeEnum** , elencate nella tabella seguente.  
   
 |Costante|Descrizione|  
 |--------------|-----------------|  
-|**adEditNone**|Indica che nessuna operazione di modifica è in corso.|  
-|**adEditInProgress**|Indica che i dati presenti nel record corrente sono stati modificati ma non salvati.|  
-|**adEditAdd**|Indica che il **AddNew** chiamata al metodo e il record corrente nel buffer di copia è un nuovo record che non è stato salvato nel database.|  
+|**adEditNone**|Indica che non è in corso alcuna operazione di modifica.|  
+|**adEditInProgress**|Indica che i dati nel record corrente sono stati modificati, ma non salvati.|  
+|**adEditAdd**|Indica che il metodo **AddNew** è stato chiamato e che il record corrente nel buffer di copia è un nuovo record che non è stato salvato nel database.|  
 |**adEditDelete**|Indica che il record corrente è stato eliminato.|  
   
- **Proprietà EditMode** può restituire un valore valido solo se viene rilevato un record corrente. **Proprietà EditMode** restituirà un errore se **BOF** oppure **EOF** viene **True** o se il record corrente è stato eliminato.
+ **EditMode** può restituire un valore valido solo se è presente un record corrente. **EditMode** restituirà un errore se **BOF** o **EOF** è **true** o se il record corrente è stato eliminato.

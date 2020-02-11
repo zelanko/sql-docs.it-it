@@ -15,29 +15,29 @@ ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925430"
 ---
 # <a name="error-handling"></a>Gestione degli errori
-ADO utilizza diversi metodi per notificare a un'applicazione di errori che si verificano. In questa sezione vengono descritti i tipi di errori che possono verificarsi quando si utilizza ADO e le modalità di notifica all'applicazione. Conclude l'articolo con i suggerimenti su come gestire tali errori.  
+ADO utilizza diversi metodi per notificare a un'applicazione gli errori che si verificano. In questa sezione vengono illustrati i tipi di errori che possono verificarsi quando si utilizza ADO e il modo in cui l'applicazione riceve una notifica. Concludendo con suggerimenti su come gestire tali errori.  
   
-## <a name="how-does-ado-report-errors"></a>Come segnala errori ADO?  
- ADO si invia una notifica sugli errori in diversi modi:  
+## <a name="how-does-ado-report-errors"></a>In che modo ADO segnala gli errori?  
+ ADO invia notifiche sugli errori in diversi modi:  
   
--   Errori ADO generano un errore di run-time. Gestire un errore ADO farebbe qualsiasi altro errore di run-time, ad esempio usando un **in caso di errore** istruzione in Visual Basic.  
+-   Gli errori ADO generano un errore in fase di esecuzione. Gestire un errore ADO allo stesso modo di qualsiasi altro errore di run-time, ad esempio l'utilizzo di un'istruzione **On Error** in Visual Basic.  
   
--   Il programma può ricevere errori da OLE DB. Un errore OLE DB genera anche un errore in fase di esecuzione.  
+-   Il programma può ricevere errori dal OLE DB. Un errore di OLE DB genera anche un errore in fase di esecuzione.  
   
--   Se l'errore è specifico per il provider di dati, uno o più **errore** gli oggetti vengono inseriti nel **errori** raccolta del **connessione** oggetto che è stato usato per accedere ai dati archivio cui si è verificato l'errore.  
+-   Se l'errore è specifico del provider di dati, uno o più oggetti **Error** vengono inseriti nella raccolta **Errors** dell'oggetto **Connection** utilizzato per accedere all'archivio dati quando si è verificato l'errore.  
   
--   Se il processo che ha generato un evento ha anche generato un errore, le informazioni sull'errore viene inseriti un **errore** dell'oggetto e passato come parametro per l'evento. Visualizzare [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md) per altre informazioni sugli eventi.  
+-   Se anche il processo che ha generato un evento ha generato un errore, le informazioni sull'errore vengono inserite in un oggetto **Error** e passate come parametro all'evento. Per ulteriori informazioni sugli eventi, vedere [gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md) .  
   
--   I problemi che si verificano durante l'elaborazione batch di aggiornamenti o altre operazioni bulk che includono un **Recordset** possono essere indicati dal **stato** proprietà del **Recordset**. Ad esempio, le violazioni di vincolo dello schema o autorizzazioni insufficienti possono essere specificate da **RecordStatusEnum** valori.  
+-   I problemi che si verificano durante l'elaborazione degli aggiornamenti batch o di altre operazioni bulk che coinvolgono un **Recordset** possono essere indicati dalla proprietà **status** del **Recordset**. Ad esempio, le violazioni dei vincoli dello schema o le autorizzazioni insufficienti possono essere specificate dai valori **RecordStatusEnum** .  
   
--   Problemi che si verificano che interessano un determinato **campo** presenti nel record corrente vengono inoltre indicati tramite il **stato** proprietà di ogni **campo** nel **campi**  raccolta del **Record** oppure **Recordset**. Ad esempio, gli aggiornamenti che non è stato possibile completare o tipi di dati incompatibili possono essere specificati da **FieldStatusEnum** valori.  
+-   I problemi che si verificano che coinvolgono un particolare **campo** del record corrente sono indicati anche dalla proprietà **status** di ogni **campo** nella raccolta **Fields** del **record** o del **Recordset**. Ad esempio, gli aggiornamenti che non possono essere completati o tipi di dati incompatibili possono essere specificati dai valori **FieldStatusEnum** .  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -45,9 +45,9 @@ ADO utilizza diversi metodi per notificare a un'applicazione di errori che si ve
   
 -   [Errori del provider](../../../ado/guide/data/provider-errors.md)  
   
--   [Informazioni sugli errori associati ai campi](../../../ado/guide/data/field-related-error-information.md)  
+-   [Informazioni sugli errori correlati ai campi](../../../ado/guide/data/field-related-error-information.md)  
   
--   [Informazioni sugli errori associati ai recordset](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [Informazioni sugli errori correlati ai recordset](../../../ado/guide/data/recordset-related-error-information.md)  
   
 -   [Gestione degli errori in altri linguaggi](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   

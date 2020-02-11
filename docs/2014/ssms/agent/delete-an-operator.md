@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524387"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  In questo argomento viene illustrato come rimuovere un operatoe, in modo che non riceva più notifiche di avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come rimuovere un operatore in modo che non [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceva più notifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avviso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)]in tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62524387"
 ####  <a name="Permissions"></a> Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** possono eliminare gli operatori.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62524387"
   
 5.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionato l'operatore corretto, quindi fare clic su **OK**. Per fare in modo che gli avvisi e i processi inviati all'operatore eliminato vengano ricevuti da un altro operatore, selezionare l'opzione **Riassegna a** e scegliere un operatore nell'elenco.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62524387"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_delete_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_delete_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
   
   

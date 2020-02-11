@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470018"
 ---
 # <a name="customize-commands-page"></a>Personalizza (pagina Comandi)
   Questa finestra di dialogo consente di aggiungere e rimuovere i comandi sulle barre degli strumenti e nei menu, nonché di modificare le immagini utilizzate per i pulsanti della barra degli strumenti o per i comandi di menu. Per accedere alla pagina **Comandi** , scegliere **Personalizza** dal menu **Strumenti** e quindi fare clic su **Comandi**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Categorie**  
+ **Categories** (Categorie)  
  Consente di specificare il set di comandi visualizzati nella casella di riepilogo **Comandi** . Le categorie dei comandi si basano sui titoli di menu assegnati dagli strumenti e dalle finestre di progettazione attualmente supportati nell'ambiente. Poiché questo elenco di titoli è dinamico, è possibile che l'ordine delle categorie e dei titoli di menu cambi in base agli strumenti e alla finestra di progettazione, nonché alle personalizzazioni apportate a questi elementi. È pertanto possibile che due menu associati a due finestre di progettazione diverse abbiano lo stesso nome e che quindi lo stesso titolo venga visualizzato due volte, anche se corrisponde a due set di comandi diversi.  
   
  **Comandi**  

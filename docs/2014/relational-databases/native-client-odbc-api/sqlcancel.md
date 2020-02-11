@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067838"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  Il [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) argomento afferma che in ODBC 2.x, se un'applicazione chiama `SQLCancel` quando non si è fatta alcuna elaborazione nell'istruzione `SQLCancel` ha lo stesso effetto `SQLFreeStmt` con le `SQL_CLOSE` opzione; questo comportamento viene definito solo per motivi di completezza e le applicazioni devono chiamare `SQLFreeStmt` o `SQLCloseCursor` per chiudere i cursori. Tuttavia, anche se l'applicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente di impostare la versione dell'API ODBC 3.5.x o successiva, nella funzione `SQLCancel` verrà utilizzato il comportamento ODBC 2.x.  
+  Nell'argomento [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) si afferma che in ODBC 2. x, se un'applicazione `SQLCancel` chiama quando non viene eseguita alcuna elaborazione sull'istruzione, `SQLCancel` ha lo stesso effetto di `SQLFreeStmt` quello con `SQL_CLOSE` l'opzione. Questo comportamento viene definito solo per completezza e le applicazioni devono `SQLFreeStmt` chiamare `SQLCloseCursor` o per chiudere i cursori. Tuttavia, anche se l'applicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente di impostare la versione dell'API ODBC 3.5.x o successiva, nella funzione `SQLCancel` verrà utilizzato il comportamento ODBC 2.x.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -14,22 +14,22 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd9bbb74d77a0b56b6b1f1aa5d8f1a6b5e97f5aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915469"
 ---
 # <a name="driver-architecture"></a>Architettura dei driver
-Architettura del driver rientra nelle due categorie, a seconda di quali processi software istruzioni SQL seguenti:  
+L'architettura del driver rientra in due categorie, a seconda del software che elabora istruzioni SQL:  
   
--   **Driver basati su file** il driver accede direttamente i dati fisici. In questo caso, il driver è funge da origine dati; e del driver vale a dire, lo elabora chiamate ODBC e istruzioni SQL. Ad esempio, i driver dBASE sono driver basati su file perché dBASE non fornisce che un motore di database autonomo, il driver può utilizzare. È importante notare che gli sviluppatori di driver basati su file necessario scrivere i propri motori di database.  
+-   **Driver basati su file** Il driver accede direttamente ai dati fisici. In questo caso, il driver funge da driver e origine dati. ovvero elabora le chiamate ODBC e le istruzioni SQL. I driver dBASE, ad esempio, sono driver basati su file perché dBASE non fornisce un motore di database autonomo che può essere utilizzato dal driver. È importante notare che gli sviluppatori di driver basati su file devono scrivere i propri motori di database.  
   
--   **Driver basati su DBMS** il driver accede ai dati fisici tramite un motore di database separato. In questo caso il driver elabora solo le chiamate ODBC. passa istruzioni SQL per motore di database per l'elaborazione. Ad esempio, i driver di Oracle sono driver basati su DBMS perché Oracle dispone di un motore di database autonomo che viene utilizzato il driver. In cui risiede il motore di database non ha importanza. Può risiedere nella stessa macchina del driver o un altro computer della rete. è possibile anche accedervi tramite un gateway.  
+-   **Driver basati su DBMS** Il driver accede ai dati fisici tramite un motore di database separato. In questo caso il driver elabora solo le chiamate ODBC; passa istruzioni SQL al motore di database per l'elaborazione. I driver Oracle, ad esempio, sono driver basati su DBMS perché Oracle dispone di un motore di database autonomo utilizzato dal driver. La posizione in cui risiede il motore di database è irrilevante. Può risiedere nello stesso computer del driver o di un altro computer nella rete; è anche possibile accedervi tramite un gateway.  
   
- Architettura del driver è in genere interessante solo per gli sviluppatori di driver; vale a dire, architettura del driver in genere non è rilevante per l'applicazione. Tuttavia, l'architettura può influire sulle se un'applicazione può usare SQL specifici del DBMS. Ad esempio, Microsoft Access offre un motore di database autonomo. Se un driver Microsoft Access è basato su DBMS, accede ai dati tramite questo motore - l'applicazione può passare le istruzioni SQL di Microsoft Access al motore per l'elaborazione.  
+ L'architettura del driver è in genere interessante solo per i writer di driver; l'architettura dei driver, in genere, non fa alcuna differenza per l'applicazione. Tuttavia, l'architettura può influire sul fatto che un'applicazione possa usare SQL specifico di DBMS. Ad esempio, Microsoft Access fornisce un motore di database autonomo. Se un driver Microsoft Access è basato su DBMS, accede ai dati tramite questo motore. l'applicazione può passare le istruzioni Microsoft Access-SQL al motore per l'elaborazione.  
   
- Tuttavia, se il driver è basata su file, vale a dire, contiene un motore proprietario che accede direttamente - il file con estensione mdb di Microsoft® Access qualsiasi tentativo di passare le istruzioni SQL specifiche di Microsoft Access al motore di probabile comportare errori di sintassi. Il motivo è che il motore proprietario è probabile che implementare solo ODBC SQL.  
+ Tuttavia, se il driver è basato su file, ovvero contiene un motore proprietario che accede direttamente al file con estensione mdb di Microsoft® Access, qualsiasi tentativo di passare istruzioni SQL specifiche di Microsoft Access al motore causa probabilmente errori di sintassi. Il motivo è che il motore proprietario può implementare solo ODBC SQL.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

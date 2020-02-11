@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: SQL Server Management Studio | Microsoft Docs'
+title: Esercitazione su SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753455"
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Esercitazione: SQL Server Management Studio
-  Nell'esercitazione di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene illustrato l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, consente di distribuire, monitorare e aggiornare i componenti livello dati utilizzati dalle applicazioni, ad esempio i database e i data warehouse. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
+# <a name="tutorial-sql-server-management-studio"></a>Esercitazione su SQL Server Management Studio
+  Nell'esercitazione di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene illustrato l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, consente di distribuire, monitorare e aggiornare i componenti livello dati utilizzati dalle applicazioni, ad esempio i database e i data warehouse. 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  In questa esercitazione sono incluse nozioni utili relative alla presentazione delle informazioni in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e al modo in cui è possibile utilizzare al meglio le funzionalità. Si noti che l'esercitazione fa riferimento all'installazione completa di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] inclusa in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Le funzionalità per le installazioni di base di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e per le installazioni di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornite con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sono leggermente diverse rispetto a quelle descritte nell'esercitazione.  
@@ -45,7 +47,7 @@ ms.locfileid: "62753455"
  [Lezione 2: Scrittura di codice Transact-SQL](lesson-2-writing-transact-sql.md)  
  In questa lezione viene illustrato come avviare l'editor di query, gestire il codice e utilizzare le altre nuove funzionalità dell'editor di query.  
   
- [Lezione 3: Utilizzo di modelli, soluzioni e progetti Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lezione 3: Utilizzo di modelli, soluzioni e progetti script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  In questa lezione viene illustrato come utilizzare i modelli e organizzare gli script nelle soluzioni e nei progetti.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -53,7 +55,8 @@ ms.locfileid: "62753455"
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versione successiva con i database di esempio di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere [Installazione degli esempi e dei database di esempio di SQL Server](http://sqlserversamples.codeplex.com).  
+-   
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versione successiva con i database di esempio di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](http://sqlserversamples.codeplex.com).  
   
 -   Internet Explorer 9.0 o versione successiva.  
   

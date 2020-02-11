@@ -1,5 +1,5 @@
 ---
-title: Assembly (motore di Database) | Microsoft Docs
+title: Assembly (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed494e55967bb02680f0397d3b651a59fd2d3bbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028046"
 ---
 # <a name="assemblies-database-engine"></a>Assembly (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gli argomenti di questa sezione includono informazioni utili per comprendere, progettare e implementare assembly.  
   
- Gli assembly sono file DLL utilizzati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distribuire funzioni, stored procedure, trigger, aggregazioni definite dall'utente e tipi definiti dall'utente che vengono scritti in uno dei linguaggi di codice gestito ospitati dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common language runtime (CLR), anziché in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Gli assembly sono file dll utilizzati in un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di per distribuire funzioni, stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente scritti in uno dei linguaggi di codice gestito ospitati dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), anziché in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Un assembly di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto che fa riferimento a un modulo di applicazione gestito (file con estensione dll) creato nel linguaggio CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Un assembly contiene i metadati della classe e codice gestito. Il caricamento di un assembly in un'istanza di SQL Server è il primo passaggio da eseguire per creare uno degli oggetti di database seguenti:  
   
--   Funzioni CLR. Per altre informazioni, vedere [creare le funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
+-   Funzioni CLR. Per altre informazioni, vedere [create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Stored procedure CLR. Per altre informazioni, vedere [Stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   Stored procedure CLR. Per ulteriori informazioni, vedere [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
--   Trigger CLR. Per altre informazioni, vedere [creare trigger CLR](../../relational-databases/triggers/create-clr-triggers.md).  
+-   Trigger CLR. Per altre informazioni, vedere [create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [aggregazioni definite dall'utente Create](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [creare funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Tipi definiti dall'utente. Per altre informazioni, vedere [Uso dei tipi definiti dall'utente](../../relational-databases/native-client/features/using-user-defined-types.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68028046"
   
 -   Includono i metadati relativi alle dipendenze da altri assembly a cui viene fatto riferimento nell'assembly.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

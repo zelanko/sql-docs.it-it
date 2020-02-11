@@ -1,5 +1,5 @@
 ---
-title: 'Appendice D: Tipi di dati | Microsoft Docs'
+title: 'Appendice D: tipi di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +16,25 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996206"
 ---
 # <a name="appendix-d-data-types"></a>Appendice D: Tipi di dati
-ODBC definisce due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi di dati SQL indicano il tipo di dati dei dati archiviati nell'origine dati. Tipi di dati C indicano il tipo di dati dei dati archiviati nel buffer dell'applicazione.  
+ODBC definisce due set di tipi di dati: tipi di dati SQL e tipi di dati C. I tipi di dati SQL indicano il tipo di dati archiviati nell'origine dati. I tipi di dati C indicano il tipo di dati archiviati nei buffer dell'applicazione.  
   
- Per ogni sistema DBMS conforme allo standard SQL-92 sono definiti tipi di dati SQL. Per ogni tipo di dati SQL specificata nello standard SQL-92, ODBC definisce un identificatore di tipo, ovvero un **#define** valore che viene passato come argomento nelle funzioni ODBC o restituito nei metadati di un set di risultati. SQL-92 solo i tipi di dati non supportati da ODBC sono BIT (il tipo ODBC SQL_BIT ha caratteristiche diverse), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. I driver sono responsabili del mapping di tipi di dati SQL specifiche dell'origine dati per gli identificatori di tipo di dati SQL ODBC e identificatori dei tipi dati specifici del driver SQL. Il tipo di dati SQL viene specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore di implementazione.  
+ I tipi di dati SQL sono definiti da ogni sistema DBMS in base allo standard SQL-92. Per ogni tipo di dati SQL specificato nello standard SQL-92, ODBC definisce un identificatore di tipo, ovvero un valore **#define** che viene passato come argomento nelle funzioni ODBC o restituito nei metadati di un set di risultati. Gli unici tipi di dati SQL-92 non supportati da ODBC sono BIT (il tipo ODBC SQL_BIT presenta caratteristiche diverse), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. I driver sono responsabili del mapping dei tipi di dati SQL specifici dell'origine dati agli identificatori del tipo di dati SQL ODBC e agli identificatori del tipo di dati SQL specifici del driver. Il tipo di dati SQL viene specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore di implementazione.  
   
- ODBC definisce i tipi di dati C e i relativi identificatori di tipo ODBC corrispondenti. Un'applicazione specifica il tipo di dati C del buffer che riceverà i dati dei set di risultati, passando l'identificatore di tipo C appropriato nel *TargetType* argomento nella chiamata a **SQLBindCol** o  **SQLGetData**. Specifica il tipo C del buffer che contiene un parametro dell'istruzione passando l'identificatore di tipo C appropriato nel *ValueType* argomento nella chiamata a **SQLBindParameter**. Il tipo di dati C è specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore applicazione.  
+ ODBC definisce i tipi di dati C e i corrispondenti identificatori di tipo ODBC. Un'applicazione specifica il tipo di dati C del buffer che riceverà i dati del set di risultati passando l'identificatore di tipo C appropriato nell'argomento *targetType* in una chiamata a **SQLBindCol** o **SQLGetData**. Specifica il tipo C del buffer contenente un parametro di istruzione passando l'identificatore di tipo C appropriato nell'argomento *ValueType* in una chiamata a **SQLBindParameter**. Il tipo di dati C viene specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore di applicazione.  
   
 > [!NOTE]  
 >  Non sono disponibili tipi di dati C specifici del driver.  
   
- Ogni tipo di dati SQL corrisponde a un tipo di dati C ODBC. Prima di restituire dati dall'origine dati, il driver converte nel tipo di dati C specificato. Prima di inviare dati all'origine dati, il driver converte dal tipo di dati C specificato.  
+ Ogni tipo di dati SQL corrisponde a un tipo di dati C ODBC. Prima di restituire dati dall'origine dati, il driver lo converte nel tipo di dati C specificato. Prima di inviare i dati all'origine dati, il driver li converte dal tipo di dati C specificato.  
   
- In questa appendice contiene gli argomenti seguenti.  
+ Questa appendice contiene gli argomenti seguenti.  
   
 -   [Uso degli identificatori dei tipi di dati](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
@@ -48,7 +48,7 @@ ODBC definisce due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi 
   
 -   [Trasferimento dei dati in forma binaria](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
--   [Linee guida per i tipi di dati intervallo e numerici](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
+-   [Indicazioni per i tipi di dati intervallo e numerici](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
 -   [Vincoli del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   
@@ -58,4 +58,4 @@ ODBC definisce due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi 
   
 -   [Conversione di dati da C ai tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- Per una spiegazione dei tipi di dati ODBC, vedere [tipi di dati in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.
+ Per una spiegazione dei tipi di dati ODBC, vedere [tipi di dati in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.

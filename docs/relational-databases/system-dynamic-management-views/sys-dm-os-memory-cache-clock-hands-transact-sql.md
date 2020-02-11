@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265787"
 ---
-# <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
+# <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce lo stato di ogni indicatore per un orologio della cache.  
   
 > [!NOTE]  
->  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_memory_cache_clock_hands**.  
+>  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_os_memory_cache_clock_hands**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary(8)**|Indirizzo della cache associata all'orologio. Non ammette i valori Null.|  
-|**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
-|**type**|**nvarchar(60)**|Tipo di archivio di cache. Possono essere presenti diverse cache dello stesso tipo. Non ammette i valori Null.|  
-|**clock_hand**|**nvarchar(60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> Altre informazioni<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
-|**clock_status**|**nvarchar(60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Suspended<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
+|**cache_address**|**varbinary (8)**|Indirizzo della cache associata all'orologio. Non ammette i valori Null.|  
+|**nome**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
+|**tipo**|**nvarchar (60)**|Tipo di archivio di cache. Possono essere presenti diverse cache dello stesso tipo. Non ammette i valori Null.|  
+|**clock_hand**|**nvarchar (60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> Esterno<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
+|**clock_status**|**nvarchar (60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Suspended<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
 |**rounds_count**|**bigint**|Numero di operazioni eseguite nella cache per rimuovere le voci. Non ammette i valori Null.|  
 |**removed_all_rounds_count**|**bigint**|Numero di voci rimosse da tutte le operazioni. Non ammette i valori Null.|  
 |**updated_last_round_count**|**bigint**|Numero di voci aggiornate durante l'ultima operazione. Non ammette i valori Null.|  
@@ -47,18 +47,18 @@ ms.locfileid: "68265787"
 |**last_tick_time**|**bigint**|Ora, espressa in millisecondi, in cui l'indicatore dell'orologio si è spostata per l'ultima volta. Non ammette i valori Null.|  
 |**round_start_time**|**bigint**|Ora, espressa in millisecondi, dell'operazione precedente. Non ammette i valori Null.|  
 |**last_round_start_time**|**bigint**|Tempo totale, espresso in millisecondi, impiegato dall'orologio per completare il ciclo precedente. Non ammette i valori Null.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni vengono archiviate in memoria in una struttura denominata cache in memoria. Le informazioni archiviate nella cache possono essere dati, voci di indice, piani di procedure compilati e un'ampia gamma di altri tipi di informazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per evitare la nuova creazione delle informazioni, queste vengono mantenute nella cache in memoria per il maggior tempo possibile e vengono in genere rimosse quando risultano obsolete oppure quando è necessario spazio di memoria per nuove informazioni. Il processo di rimozione delle informazioni meno recenti è denominato operazione della memoria. L'operazione della memoria è un'attività frequente, ma non continua. Un algoritmo di orologio controlla l'operazione nella cache in memoria. Ogni orologio può controllare diverse operazioni della memoria tramite indicatori. L'indicatore dell'orologio della cache in memoria rappresenta la posizione corrente di uno degli indicatori di un'operazione della memoria.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
- [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+ [sys. dm_os_memory_cache_counters &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
 

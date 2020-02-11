@@ -18,10 +18,10 @@ ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e60de9d569a9a471941e1b798b7147e968ede479
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657390"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>Metodo RemoveCertificate (classe ServerSettings)
@@ -36,11 +36,11 @@ object.RemoveCertificate()
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe ServerSettings](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) che rappresenta le impostazioni del server in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore u**int32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore u**Int32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
   

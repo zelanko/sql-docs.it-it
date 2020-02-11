@@ -18,10 +18,10 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659081"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Metodo SetDefaults (classe SInstance)
@@ -36,17 +36,17 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) che rappresenta un'istanza del server.  
   
 #### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|*OverwriteAll*|Valore booleano che specifica se sovrascrivere il valore esistente nell'istanza del client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true** se i dati esistenti vengono sovrascritti oppure **false** se i dati esistenti non vengono sovrascritti.|  
+|*OverwriteAll*|Valore booleano che specifica se sovrascrivere il valore esistente nell'istanza del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client: **true** se i dati esistenti vengono sovrascritti oppure **false** se i dati esistenti non vengono sovrascritti.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
+ Valore **UInt32** , che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
 ## <a name="remarks"></a>Osservazioni  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037987"
 ---
 # <a name="using-string-functions"></a>Utilizzo di funzioni stringa
@@ -20,7 +20,7 @@ ms.locfileid: "68037987"
 
   Nel linguaggio MDX (Multidimensional Expressions) è possibile utilizzare funzioni stringa su quasi tutti gli oggetti. Nelle stored procedure le funzioni stringa vengono utilizzate principalmente per convertire un oggetto in una rappresentazione stringa. Le funzioni stringa possono essere inoltre utilizzate per valutare un'espressione stringa su un oggetto per restituire un valore.  
   
- Le funzioni di stringa più diffuse sono **Name** e **Uniquename**. Queste funzioni restituiscono rispettivamente il nome e il nome univoco di un oggetto. Sono utilizzate soprattutto durante i calcoli di debug per individuare quale membro viene restituito da una funzione.  
+ Le funzioni di stringa più diffuse sono **Name** e **UniqueName**. Queste funzioni restituiscono rispettivamente il nome e il nome univoco di un oggetto. Sono utilizzate soprattutto durante i calcoli di debug per individuare quale membro viene restituito da una funzione.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi di query seguenti viene illustrato l'utilizzo di queste funzioni:  
@@ -47,7 +47,7 @@ ms.locfileid: "68037987"
   
  `FROM [Adventure Works]`  
   
- Il **genera** funzione può essere utilizzata per eseguire una funzione stringa su ogni membro di un set e concatenare i risultati. Può essere utile anche durante il debug di calcoli in quanto consente di visualizzare il contenuto di un set. Nell'esempio seguente viene illustrato questo tipo di utilizzo:  
+ La funzione **generate** può essere utilizzata per eseguire una funzione stringa su ogni membro di un set e per concatenare i risultati. Può essere utile anche durante il debug di calcoli in quanto consente di visualizzare il contenuto di un set. Nell'esempio seguente viene illustrato questo tipo di utilizzo:  
   
  `WITH`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037987"
   
  `FROM [Adventure Works]`  
   
- Un altro gruppo di funzioni per i valori stringa molto diffuso è costituito dalle funzioni che consentono di eseguire il cast di una stringa che contiene il nome univoco di un oggetto o un'espressione che viene risolta nell'oggetto all'interno dell'oggetto stesso. La query di esempio seguente viene illustrato come la **StrToMember** e **StrToSet** funzioni eseguire questa operazione:  
+ Un altro gruppo di funzioni per i valori stringa molto diffuso è costituito dalle funzioni che consentono di eseguire il cast di una stringa che contiene il nome univoco di un oggetto o un'espressione che viene risolta nell'oggetto all'interno dell'oggetto stesso. La query di esempio seguente illustra il modo in cui le funzioni **StrToMember** e **StrToSet** eseguono questa operazione:  
   
  `SELECT`  
   
@@ -98,15 +98,15 @@ ms.locfileid: "68037987"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  Il **StrToMember** e **StrToSet** funzioni devono essere utilizzate con cautela. in quanto, se utilizzate all'interno di definizioni di calcoli, possono ridurre drasticamente le prestazioni delle query.  
+>  Le funzioni **StrToMember** e **StrToSet** devono essere usate con cautela. in quanto, se utilizzate all'interno di definizioni di calcoli, possono ridurre drasticamente le prestazioni delle query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generare &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Genera &#40;&#41;MDX](../mdx/generate-mdx.md)   
+ [Nome &#40;&#41;MDX](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Utilizzo delle Stored procedure &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
+ [Funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Utilizzo di stored procedure &#40;&#41;MDX](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;&#41;MDX](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;&#41;MDX](../mdx/strtoset-mdx.md)  
   
   

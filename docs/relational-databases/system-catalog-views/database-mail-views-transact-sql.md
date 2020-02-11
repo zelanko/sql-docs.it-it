@@ -1,5 +1,5 @@
 ---
-title: Database di viste di posta elettronica (Transact-SQL) | Microsoft Docs
+title: Viste Posta elettronica database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033109"
 ---
 # <a name="database-mail-views-transact-sql"></a>Database Mail Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Di seguito vengono elencate le viste disponibili in Posta elettronica database che consentono di visualizzare il contenuto dei messaggi di posta elettronica, lo stato dei messaggi di posta elettronica e tutti i messaggi ricevuti, ad esempio gli errori registrati da Posta elettronica database. Queste viste sono archiviate nel **msdb** database.  
+  Di seguito vengono elencate le viste disponibili in Posta elettronica database che consentono di visualizzare il contenuto dei messaggi di posta elettronica, lo stato dei messaggi di posta elettronica e tutti i messaggi ricevuti, ad esempio gli errori registrati da Posta elettronica database. Queste viste si trovano nel database **msdb** .  
   
 |||  
 |-|-|  
@@ -39,7 +39,7 @@ ms.locfileid: "68033109"
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Oggetti di configurazione di posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

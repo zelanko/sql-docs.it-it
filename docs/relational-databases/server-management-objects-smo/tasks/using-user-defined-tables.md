@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911211"
 ---
 # <a name="using-user-defined-tables"></a>Utilizzo di tabelle definite dall'utente
@@ -29,12 +29,13 @@ ms.locfileid: "70911211"
   
  Quando si definisce una nuova tabella definita dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, è necessario fornire colonne e una chiave primaria basata su una delle colonne.  
   
- Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
+ Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> consente di specificare il tipo di dati associato a colonne e parametri. Utilizzare questo tipo per specificare il tipo di tabella definita dall'utente come parametro per stored procedure e funzioni definite dall'utente.  
   
 ## <a name="examples"></a>Esempi  
-Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Creazione di una tabella definita dall'utente in Visual Basic  

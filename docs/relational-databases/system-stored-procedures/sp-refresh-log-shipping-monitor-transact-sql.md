@@ -18,18 +18,18 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002502"
 ---
-# <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
+# <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Questa stored procedure aggiorna le tabelle di monitoraggio remote in base alle informazioni più recenti recuperate da un server primario o secondario specificato per l'agente di log shipping specificato. La procedura viene richiamata dal server primario o secondario.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,9 +43,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_id = ] 'agent_id'` ID primario per il backup o all'ID secondario per la copia o ripristino. *agent_id* viene **uniqueidentifier** e non può essere NULL.  
+`[ @agent_id = ] 'agent_id'`ID primario per il backup o ID secondario per la copia o il ripristino. *agent_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @agent_type = ] 'agent_type'` Tipo di processo per il log shipping.  
+`[ @agent_type = ] 'agent_type'`Tipo di log shipping processo.  
   
  0 = backup.  
   
@@ -53,29 +53,29 @@ sp_refresh_log_shipping_monitor
   
  2 = ripristino.  
   
- *agent_type* viene **tinyint** e non può essere NULL.  
+ *agent_type* è di **tinyint** e non può essere null.  
   
-`[ @database = ] 'database'` Il database primario o secondario utilizzato dalla registrazione dagli agenti di backup o ripristino.  
+`[ @database = ] 'database'`Database primario o secondario usato dalla registrazione dagli agenti di backup o ripristino.  
   
-`[ @mode ] n` Specifica se aggiornare i dati di monitoraggio oppure eliminarli. Il tipo di dati *m* è tinyint e i valori supportati sono:  
+`[ @mode ] n`Specifica se aggiornare o pulire i dati di monitoraggio. Il tipo di dati di *m* è tinyint e i valori supportati sono:  
   
  1 = aggiornamento (valore predefinito)  
   
- 2 = delete  
+ 2 = elimina  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
  No.  
   
-## <a name="remarks"></a>Note  
- **sp_refresh_log_shipping_monitor** consente di aggiornare il **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , e **log_shipping_monitor_error_detail** tabelle con le informazioni sulla sessione che non è già stata trasferita. Ciò consente di sincronizzare il server di monitoraggio con il server primario o secondario nel caso in cui il server di monitoraggio non sia più in sincronia. Consente inoltre di eliminare le informazioni di monitoraggio nel server di monitoraggio, se necessario.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_refresh_log_shipping_monitor** aggiorna le tabelle **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**e **log_shipping_monitor_error_detail** con le informazioni di sessione che non sono già state trasferite. Ciò consente di sincronizzare il server di monitoraggio con il server primario o secondario nel caso in cui il server di monitoraggio non sia più in sincronia. Consente inoltre di eliminare le informazioni di monitoraggio nel server di monitoraggio, se necessario.  
   
- **sp_refresh_log_shipping_monitor** deve essere eseguita la **master** database nel server primario o secondario.  
+ **sp_refresh_log_shipping_monitor** deve essere eseguito dal database **Master** nel server primario o secondario.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType ed esempio di proprietà EditMode (VB) | Microsoft Docs
+title: Esempio di proprietà CursorType, LockType e EditMode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919276"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType ed esempio di proprietà EditMode (VB)
-In questo esempio viene illustrato come impostare il [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) proprietà prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Indica inoltre il valore della [EditMode](../../../ado/reference/ado-api/editmode-property.md) proprietà in varie condizioni. La funzione EditModeOutput è necessaria per eseguire questa procedura.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Esempio di proprietà CursorType, LockType e EditMode (VB)
+In questo esempio viene illustrata l'impostazione delle proprietà [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Mostra anche il valore della proprietà [EditMode](../../../ado/reference/ado-api/editmode-property.md) in varie condizioni. Per eseguire questa procedura, è necessaria la funzione EditModeOutput.  
   
 ```  
 'BeginEditModeVB  

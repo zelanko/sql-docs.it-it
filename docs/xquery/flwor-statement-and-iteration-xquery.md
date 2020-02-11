@@ -1,5 +1,5 @@
 ---
-title: Istruzione FLWOR e iterazione (XQuery) | Microsoft Docs
+title: Istruzione e iterazione FLWOR (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038897"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Istruzione e iterazione FLWOR (XQuery)
@@ -49,9 +49,9 @@ ms.locfileid: "68038897"
   
 -   Una clausola `order by` facoltativa.  
   
--   Espressione `return`. L'espressione nella clausola `return` costruisce il risultato dell'istruzione FLWOR.  
+-   Un'espressione `return`. L'espressione nella clausola `return` costruisce il risultato dell'istruzione FLWOR.  
   
- Ad esempio, la query seguente esegue l'iterazione nel <`Step`> elementi in corrispondenza della prima posizione di produzione e restituisce il valore di stringa del <`Step`> nodi:  
+ Ad esempio, la query seguente esegue l'iterazione sul `Step` <> gli elementi nel primo percorso di produzione e restituisce il valore stringa dei `Step` nodi> <:  
   
 ```sql
 declare @x xml  
@@ -73,13 +73,13 @@ SELECT @x.query('
 ')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- La query seguente è analoga alla precedente, tranne per il fatto che viene eseguita sulla colonna XML tipizzata Instructions della tabella ProductModel. La query esegue l'iterazione in tutte le fasi di produzione, <`step`> elementi, nel primo centro di lavorazione per un prodotto specifico.  
+ La query seguente è analoga alla precedente, tranne per il fatto che viene eseguita sulla colonna XML tipizzata Instructions della tabella ProductModel. La query esegue l'iterazione di tutti i passaggi di `step` produzione, <> elementi, nel primo centro di lavorazione per un prodotto specifico.  
   
 ```sql
 SELECT Instructions.query('  
@@ -94,15 +94,16 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   `$Step` è la variabile iteratore.  
+-   
+  `$Step` è la variabile iteratore.  
   
--   Il [espressione di percorso](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, genera la sequenza di input. Questa è la sequenza di <`step`> elemento figlio del primo nodo <`Location`> nodo elemento.  
+-   L' [espressione](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`di percorso genera la sequenza di input. Questa sequenza è la sequenza degli elementi figlio `step` <> nodo elemento del primo <`Location` nodo elemento>.  
   
 -   Non viene utilizzata la clausola del predicato facoltativa `where`.  
   
--   Il `return` espressione restituisce un valore stringa dal <`step`> elemento.  
+-   L' `return` espressione restituisce un valore stringa dall'elemento <`step`>.  
   
- Il [funzione string (XQuery)](../xquery/data-accessor-functions-string-xquery.md) viene usato per recuperare il valore della stringa di <`step`> nodo.  
+ La [funzione String (XQuery)](../xquery/data-accessor-functions-string-xquery.md) viene utilizzata per recuperare il valore stringa del nodo <`step`>.  
   
  Risultato parziale:  
   
@@ -141,9 +142,9 @@ SELECT @x.query('
   
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], non sono consentite sequenze eterogenee. In particolare, non sono consentite le sequenze che contengono una combinazione di valori atomici e nodi.  
   
- Iterazione viene spesso usata in combinazione con il [costruzione di strutture XML](../xquery/xml-construction-xquery.md) formati di sintassi nella trasformazione di dati XML, come illustrato nella query successiva.  
+ L'iterazione viene spesso utilizzata insieme alla sintassi di [costruzione XML](../xquery/xml-construction-xquery.md) nella trasformazione dei formati XML, come illustrato nella query successiva.  
   
- Nel database di esempio AdventureWorks, le istruzioni di produzione archiviato nel **istruzioni** della colonna della **Production. ProductModel** tabella hanno il formato seguente:  
+ Nel database di esempio AdventureWorks, le istruzioni di produzione archiviate nella colonna **instructions** della tabella **Production. ProductModel** hanno il formato seguente:  
   
 ```xml
 <Location LocationID="10" LaborHours="1.2"   
@@ -155,7 +156,7 @@ SELECT @x.query('
 ...  
 ```  
   
- La query seguente costruisce codice XML nuovo con il <`Location`> elementi di lavoro center attributi restituiti come elementi figlio:  
+ La query seguente crea un nuovo codice XML che include gli `Location` elementi <> con gli attributi di posizione del centro di lavorazione restituiti come elementi figlio:  
   
 ```xml
 <Location>  
@@ -187,9 +188,9 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   L'istruzione FLWOR viene recuperata una sequenza di <`Location`> elementi di un prodotto specifico.  
+-   L'istruzione FLWOR recupera una sequenza di <`Location`> elementi per un prodotto specifico.  
   
--   Il [funzione data (XQuery)](../xquery/data-accessor-functions-data-xquery.md) viene utilizzato per estrarre il valore di ogni attributo in modo che verranno aggiunti alla struttura XML risultante come nodi di testo anziché come attributi.  
+-   La [funzione dati (XQuery)](../xquery/data-accessor-functions-data-xquery.md) viene utilizzata per estrarre il valore di ogni attributo in modo che venga aggiunto al codice XML risultante come nodi di testo anziché come attributi.  
   
 -   L'espressione nella clausola RETURN costruisce la struttura XML desiderata.  
   
@@ -226,9 +227,9 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Utilizzo della clausola where  
- È possibile usare il `where` clausola per filtrare i risultati di un'iterazione. Questa operazione viene illustrata nell'esempio seguente.  
+ È possibile utilizzare la `where` clausola per filtrare i risultati di un'iterazione. Questa operazione viene illustrata nell'esempio seguente.  
   
- Il processo di produzione di una bicicletta passa attraverso una serie di centri di lavorazione, ognuno dei quali definisce una sequenza di fasi di produzione. La query seguente recupera solo i centri di lavorazione che producono un modello di bicicletta e prevedono un numero di fasi di produzione inferiore a tre, Vale a dire includono meno di tre <`step`> elementi.  
+ Il processo di produzione di una bicicletta passa attraverso una serie di centri di lavorazione, ognuno dei quali definisce una sequenza di fasi di produzione. La query seguente recupera solo i centri di lavorazione che producono un modello di bicicletta e prevedono un numero di fasi di produzione inferiore a tre, Ovvero hanno meno di tre elementi <`step`>.  
   
 ```sql
 SELECT Instructions.query('  
@@ -246,11 +247,11 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il `where` parola chiave viene utilizzata la **Count ()** che consente di contare il numero di <`step`> gli elementi figlio in ogni centro di lavorazione.  
+-   La `where` parola chiave usa la funzione **Count ()** per contare il numero di `step` <> elementi figlio in ogni area di lavoro.  
   
 -   L'espressione `return` costruisce la struttura XML desiderata a partire dai risultati dell'iterazione.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Location LocationID="30"/>   
@@ -267,7 +268,7 @@ where ProductModelID=7
 4.  In caso contrario, viene restituito un errore statico.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Associazione di più variabili in FLWOR  
- È possibile disporre di una singola espressione FLWOR che associa più variabili alle sequenze di input. Nell'esempio seguente, la query viene specificata su una variabile XML non tipizzata. L'espressione flowr viene restituito il primo <`Step`> elemento figlio in ogni <`Location`> elemento.  
+ È possibile disporre di una singola espressione FLWOR che associa più variabili alle sequenze di input. Nell'esempio seguente, la query viene specificata su una variabile XML non tipizzata. L'espressione FLOWr restituisce il primo <`Step` elemento figlio> in ogni elemento `Location` <>.  
   
 ```sql
 declare @x xml  
@@ -293,22 +294,23 @@ SELECT @x.query('
   
  Dalla query precedente si noti quanto segue:  
   
--   Il `for` espressione definisce `$Loc` e $`FirstStep` variabili.  
+-   L' `for` espressione definisce `$Loc` e $`FirstStep` Variables.  
   
--   Il `two` espressioni `/ManuInstructions/Location` e `$FirstStep in $Loc/Step[1]`, sono correlate in quanto i valori di `$FirstStep` dipendono dai valori di `$Loc`.  
+-   Le `two` espressioni, `/ManuInstructions/Location` e `$FirstStep in $Loc/Step[1]`, sono correlate in quanto i valori di `$FirstStep` dipendono dai valori di. `$Loc`  
   
--   L'espressione associata `$Loc` genera una sequenza di <`Location`> elementi. Per ogni <`Location`> elemento `$FirstStep` genera una sequenza di uno <`Step`> elemento, ovvero un singleton.  
+-   L'espressione associata a `$Loc` genera una sequenza di <`Location`> elementi. Per ogni elemento `Location` <>, `$FirstStep` genera una sequenza di un elemento `Step` <>, un singleton.  
   
--   `$Loc` viene specificata nell'espressione associata alla variabile `$FirstStep`.  
+-   
+  `$Loc` viene specificata nell'espressione associata alla variabile `$FirstStep`.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 Manu step 1 at Loc 1   
 Manu step 1 at Loc 2  
 ```  
   
- La query seguente è simile, ad eccezione del fatto che viene specificata sulla colonna Instructions, tipizzata **xml** colonna, delle **ProductModel** tabella. [Costruzione di strutture XML (XQuery)](../xquery/xml-construction-xquery.md) viene usato per generare il codice XML desiderato.  
+ La query seguente è simile, ad eccezione del fatto che viene specificata nella colonna Instructions, colonna **XML** tipizzata, della tabella **ProductModel** . La [costruzione XML (XQuery)](../xquery/xml-construction-xquery.md) viene utilizzata per generare il codice XML desiderato.  
   
 ```sql
 SELECT Instructions.query('  
@@ -328,9 +330,9 @@ WHERE ProductModelID=7
   
 -   La clausola `for` definisce due variabili, `$WC` e `$S`. L'espressione associata a `$WC` genera una sequenza di centri di lavorazione per la produzione di un modello di bicicletta. L'espressione di percorso assegnata alla variabile `$S` genera una sequenza di fasi per ogni sequenza di centri di lavorazione nella variabile `$WC`.  
   
--   L'istruzione return costruisce codice XML con una <`Step`> elemento che contiene la fase di produzione e il **LocationID** come attributo.  
+-   L'istruzione return crea codice XML con un <`Step` elemento> che contiene la fase di produzione e **LocationID** come attributo.  
   
--   Il **dichiarare spazio dei nomi predefinito** viene usato nel prologo della XQuery in modo che tutte le dichiarazioni dello spazio dei nomi nel codice XML risultante vengano visualizzate in corrispondenza dell'elemento di primo livello. rendendo in tal modo più leggibile il risultato. Per altre informazioni sugli spazi dei nomi predefinito, vedere [la gestione degli spazi dei nomi in XQuery](../xquery/handling-namespaces-in-xquery.md).  
+-   Lo **spazio dei nomi declare default element** viene utilizzato nel prologo XQuery, in modo che tutte le dichiarazioni dello spazio dei nomi nel codice XML risultante siano visualizzate nell'elemento di livello principale. rendendo in tal modo più leggibile il risultato. Per ulteriori informazioni sugli spazi dei nomi predefiniti, vedere [gestione degli spazi dei nomi in XQuery](../xquery/handling-namespaces-in-xquery.md).  
   
  Risultato parziale:  
   
@@ -352,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Utilizzo della clausola order by  
- In XQuery, l'ordinamento viene eseguito utilizzando la clausola `order by` nell'espressione FLWOR. Le espressioni di ordinamento passate per il `order by` clausola deve restituire valori i cui tipi sono valide per il **gt** operatore. Ogni espressione di ordinamento deve restituire un singleton, ovvero una sequenza costituita da un singolo elemento. Per impostazione predefinita, l'ordinamento viene eseguito in ordine crescente. Facoltativamente, è possibile specificare un ordine crescente o decrescente per ogni espressione di ordinamento.  
+ In XQuery, l'ordinamento viene eseguito utilizzando la clausola `order by` nell'espressione FLWOR. Le espressioni di ordinamento passate alla `order by` clausola devono restituire valori i cui tipi sono validi per l'operatore **gt** . Ogni espressione di ordinamento deve restituire un singleton, ovvero una sequenza costituita da un singolo elemento. Per impostazione predefinita, l'ordinamento viene eseguito in ordine crescente. Facoltativamente, è possibile specificare un ordine crescente o decrescente per ogni espressione di ordinamento.  
   
 > [!NOTE]  
 >  Per i confronti di ordinamento sui valori stringa eseguiti dall'implementazione di XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzate sempre le regole di confronto binarie dei punti di codice Unicode.  
@@ -373,13 +375,13 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Si noti che il [atomizzazione (XQuery)](../xquery/atomization-xquery.md) processo recupera il valore atomico del <`number`> elementi prima di passarlo a `order by`. È possibile scrivere l'espressione utilizzando il **data ()** (funzione), ma che non è necessario.  
+ Si noti che il processo di [atomizzazione (XQuery)](../xquery/atomization-xquery.md) Recupera il valore atomico del `number` <> elementi prima di passarlo a `order by`. È possibile scrivere l'espressione usando la funzione **Data ()** , ma ciò non è obbligatorio.  
   
 ```  
 order by data($a/act:number[1]) descending  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -406,7 +408,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- È inoltre possibile eseguire l'ordinamento in base al valore di attributo. Ad esempio, la query seguente recupera l'oggetto appena creato <`Location`> gli elementi che hanno gli attributi LocationID e LaborHours ordinati in base all'attributo LaborHours in ordine decrescente. Di conseguenza, vengono restituiti per primi i centri di lavorazione con il numero massimo di ore di manodopera.  
+ È inoltre possibile eseguire l'ordinamento in base al valore di attributo. Ad esempio, la query seguente recupera gli elementi <`Location`> appena creati che dispongono degli attributi LocationID e LaborHours ordinati in ordine decrescente in base all'attributo LaborHours. Di conseguenza, vengono restituiti per primi i centri di lavorazione con il numero massimo di ore di manodopera.  
   
 ```sql
 SELECT Instructions.query('  
@@ -423,7 +425,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -434,7 +436,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- Nella query seguente, i risultati vengono ordinati in base al nome dell'elemento. La query recupera le specifiche di un determinato prodotto dal catalogo prodotti. Le specifiche sono elementi figlio del <`Specifications`> elemento.  
+ Nella query seguente, i risultati vengono ordinati in base al nome dell'elemento. La query recupera le specifiche di un determinato prodotto dal catalogo prodotti. Le specifiche sono gli elementi figlio dell'elemento `Specifications` <>.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -450,11 +452,11 @@ where ProductModelID=19;
   
  Dalla query precedente si noti quanto segue:  
   
--   Il `/p1:ProductDescription/p1:Specifications/*` espressione restituisce gli elementi figlio di <`Specifications`>.  
+-   L' `/p1:ProductDescription/p1:Specifications/*` espressione restituisce gli elementi figlio di `Specifications` <>.  
   
 -   L'espressione `order by (local-name($a))` ordina la sequenza in base alla parte locale del nome dell'elemento.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <Color>Available in most colors</Color>  
@@ -481,7 +483,7 @@ select @x.query('
 ')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <Person />  
@@ -489,7 +491,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- È possibile specificare più criteri di ordinamento, come illustrato nell'esempio seguente Consente di ordinare la query in questo esempio <`Employee`> i valori di attributo elementi prima di tutto dal titolo e quindi dall'amministratore.  
+ È possibile specificare più criteri di ordinamento, come illustrato nell'esempio seguente La query in questo esempio ordina <`Employee` elementi> prima in base al titolo e quindi ai valori dell'attributo Administrator.  
   
 ```sql
 declare @x xml  
@@ -510,7 +512,7 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  

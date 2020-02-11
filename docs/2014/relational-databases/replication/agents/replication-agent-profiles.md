@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721753"
 ---
 # <a name="replication-agent-profiles"></a>Profili degli agenti di replica
@@ -44,7 +44,7 @@ ms.locfileid: "62721753"
 ## <a name="snapshot-agent-profiles"></a>Profili degli agenti snapshot  
  Nella tabella seguente vengono illustrati i parametri definiti nel profilo predefinito per l'agente snapshot. Per ulteriori informazioni su questi parametri, vedere [Replication Snapshot Agent](replication-snapshot-agent.md).  
   
-||predefiniti|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -54,7 +54,7 @@ ms.locfileid: "62721753"
 ## <a name="log-reader-agent-profiles"></a>Profili dell'agente di lettura log  
  Nella tabella seguente vengono illustrati i parametri definiti nei profili per l'agente di lettura log. Ogni colonna della tabella rappresenta un profilo denominato. Per ulteriori informazioni su questi parametri, vedere [Replication Log Reader Agent](replication-log-reader-agent.md).  
   
-||predefiniti|cronologia dettagliata|  
+||default|cronologia dettagliata|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -66,7 +66,7 @@ ms.locfileid: "62721753"
 ## <a name="distribution-agent-profiles"></a>Profili dell'agente di distribuzione  
  Nella tabella seguente vengono illustrati i parametri definiti nei profili per l'agente di distribuzione. Ogni colonna della tabella rappresenta un profilo denominato. Per ulteriori informazioni su questi parametri, vedere [Replication Distribution Agent](replication-distribution-agent.md).  
   
-||predefiniti|cronologia dettagliata|Gestione sincronizzazione Microsoft Windows|Continua in caso di errori di consistenza dei dati|Profilo di distribuzione per flussi OLEDB|  
+||default|cronologia dettagliata|Gestione sincronizzazione Microsoft Windows|Continua in caso di errori di consistenza dei dati|Profilo di distribuzione per flussi OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -87,7 +87,7 @@ ms.locfileid: "62721753"
 ## <a name="merge-agent-profiles"></a>Profili dell'agente di merge  
  Nella tabella seguente vengono illustrati i parametri definiti nei profili per l'agente di merge. Ogni colonna della tabella rappresenta un profilo denominato. Per ulteriori informazioni su questi parametri, vedere [Replication Merge Agent](replication-merge-agent.md).  
   
-||predefiniti|cronologia dettagliata|Gestione sincronizzazione Microsoft Windows|convalida mediante conteggio delle righe|convalida eseguita mediante conteggio delle righe e checksum|collegamento lento|server-server per volumi elevati|  
+||default|cronologia dettagliata|Gestione sincronizzazione Microsoft Windows|convalida mediante conteggio delle righe|convalida eseguita mediante conteggio delle righe e checksum|collegamento lento|server-server per volumi elevati|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -118,7 +118,7 @@ ms.locfileid: "62721753"
 ## <a name="queue-reader-agent-profiles"></a>Profili dell'agente di lettura coda  
  Nella tabella seguente vengono illustrati i parametri definiti nel profilo predefinito per l'agente di lettura coda. Per ulteriori informazioni su questi parametri, vedere [Replication Queue Reader Agent](replication-queue-reader-agent.md).  
   
-||predefiniti|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
