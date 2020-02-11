@@ -1,5 +1,5 @@
 ---
-title: Tabelle nidificate (Analysis Services - Data Mining) | Microsoft Docs
+title: Tabelle nidificate (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083252"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In *è disponibile un metodo univoco per la gestione di questi casi,* tramite tabelle annidate. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come una serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornisce un metodo univoco per la gestione di questi casi, tramite *tabelle nidificate*. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
   
- ![Due tabelle combinate tramite una tabella nidificata](../media/nested-tables.gif "due tabelle combinate tramite una tabella nidificata")  
+ ![Due tabelle combinate tramite una tabella nidificata](../media/nested-tables.gif "Due tabelle combinate tramite una tabella nidificata")  
   
  Nella figura la prima tabella, che corrisponde alla tabella padre, contiene informazioni sui clienti e associa un identificatore univoco a ogni cliente. La seconda tabella, ovvero la tabella figlio, contiene gli acquisti di ciascun cliente. Tali acquisti sono correlati alla tabella padre tramite un identificatore univoco riportato nella colonna **CustomerKey** . La terza tabella della figura illustra la combinazione delle prime due tabelle.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66083252"
  È possibile creare tabelle nidificate a livello di programmazione tramite DMX (Data Mining Extensions) o AMO (Analysis Management Objects) oppure tramite la Creazione guidata modello di data mining e Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>Utilizzo di colonne di tabelle nidificate in un modello di data mining  
- Nella tabella del case la chiave è spesso un ID cliente, un nome di prodotto o una data in una serie, ovvero dati che identificano in modo univoco una riga della tabella. tramite tabelle annidate. Nelle tabelle nidificate, tuttavia, la chiave non è in genere la chiave relazionale (o chiave esterna) ma piuttosto la colonna che rappresenta l'attributo da modellare.  
+ Nella tabella del case la chiave è spesso un ID cliente, un nome di prodotto o una data in una serie, ovvero dati che identificano in modo univoco una riga della tabella. . Nelle tabelle nidificate, tuttavia, la chiave non è in genere la chiave relazionale (o chiave esterna) ma piuttosto la colonna che rappresenta l'attributo da modellare.  
   
  Ad esempio, se la tabella del case contiene ordini e la tabella nidificata contiene gli elementi di tali ordini, non è in genere necessario modellare la relazione tra gli elementi archiviati nella tabella nidificata tra più ordini, che sono archiviati nella tabella del case. Pertanto, anche se la tabella annidata **Items** è unita in join alla tabella del case **Orders** tramite la chiave relazionale **OrderID**, non è necessario usare **OrderID** come chiave della tabella relazionale. Al contrario, è possibile selezionare la colonna **Items** come chiave della tabella annidata, poiché tale colonna contiene i dati che si desidera modellare. Nella maggior parte dei casi, è possibile ignorare in modo sicuro **OrderID** nel modello di data mining, poiché la relazione tra la tabella del case e la tabella annidata è già stata stabilita dalla definizione della vista origine dati.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66083252"
  Per altre informazioni su come creare e usare i filtri dei modelli, vedere [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)  
   
   

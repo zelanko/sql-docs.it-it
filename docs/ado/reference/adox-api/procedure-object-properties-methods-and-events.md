@@ -1,5 +1,5 @@
 ---
-title: Le proprietà dell'oggetto procedure, metodi ed eventi | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto procedura | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965466"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Procedure
@@ -27,12 +27,12 @@ ms.locfileid: "67965466"
   
  [Proprietà DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
- [Nome proprietà](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Tipo di esempio di proprietà (campo) (VB) | Microsoft Docs
+title: Esempio di proprietà Type (Field) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936687"
 ---
 # <a name="type-property-example-field-vb"></a>Esempio della proprietà Type (Field) (VB)
-Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà di tutti i i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  
+In questo esempio viene illustrata la proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) di tutti gli oggetti [Field](../../../ado/reference/ado-api/field-object.md) della tabella ***Employees*** . Per eseguire questa procedura, è necessaria la funzione FieldType.  
   
 ```  
 'BeginTypeFieldVB  
@@ -106,5 +106,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Campo (sintassi ADO per Visual C++) | Microsoft Docs
+title: Field (sintassi ADO per Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2d5b70e1c00b34c4f1a32822b7896b088d62376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932777"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (sintassi ADO per Visual C++)

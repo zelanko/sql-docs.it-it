@@ -1,5 +1,5 @@
 ---
-title: Cursore di Stored procedure (Transact-SQL) | Microsoft Docs
+title: Stored procedure per cursori (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942433"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>Stored procedure relative ai cursori (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguenti stored procedure di sistema che implementano funzionalità delle variabili di cursore.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le stored procedure di sistema seguenti che implementano la funzionalità delle variabili di cursore.  
   
 |||  
 |-|-|  

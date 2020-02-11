@@ -1,5 +1,5 @@
 ---
-title: Servizi Desktop remoto esempi di codice in VBScript | Microsoft Docs
+title: Esempi di codice RDS in VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,20 +16,20 @@ ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963791"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Esempi di codice di Servizi Desktop remoto in VBScript
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Usare gli esempi di codice seguente per informazioni su come usare l'oggetti, metodi e proprietà di servizi desktop remoto durante la scrittura in Microsoft Visual Basic, Scripting Edition (VBScript).  
+ Usare gli esempi di codice seguenti per apprendere come usare gli oggetti, i metodi e le proprietà Servizi Desktop remoto durante la scrittura in Microsoft Visual Basic Scripting Edition (VBScript).  
   
 > [!NOTE]
->  Incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguito correttamente se vengono usati esempi parziali o se la formattazione del paragrafo va persa.  
   
 ## <a name="objects"></a>Oggetti  
   
@@ -43,11 +43,11 @@ ms.locfileid: "67963791"
   
 -   [Esempio di metodo Cancel](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
   
--   [Metodo CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [Esempio di metodo CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
   
 -   [Esempio di metodo ConvertToString](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
   
--   [CreateObject (metodo)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [Metodo CreateObject](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
   
 -   [Esempio di metodo CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
   
@@ -63,13 +63,13 @@ ms.locfileid: "67963791"
   
 -   [Esempio di proprietà Connect](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
   
--   [Proprietà ExecuteOptions e FetchOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [Esempio di proprietà ExecuteOptions e FetchOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn FilterCriterion, valore FilterValue, SortColumn e SortDirection Properties Example](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Esempio di proprietà FilterColumn offrono, FilterCriterion, FilterValue, SortColumn e SortDirection](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
 -   [Esempio di proprietà ReadyState](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
   
--   [Esempio Recordset e SourceRecordset proprietà](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Esempio di proprietà Recordset e SourceRecordset](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
 -   [Esempio di proprietà server](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
   

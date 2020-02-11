@@ -1,5 +1,5 @@
 ---
-title: Stringa di ricerca in XQuery | Microsoft Docs
+title: Ricerca di stringhe in XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946253"
 ---
 # <a name="string-search-in-xquery"></a>Ricerca di stringhe in XQuery
@@ -44,9 +44,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Nella query precedente, il `where` nella FLOWR espressione filtra il risultato del `for` espressione e restituisce solo gli elementi che soddisfano il **Contains ()** condizione.  
+ Nella query precedente, `where` nell'espressione FLOWR filtra il risultato dell' `for` espressione e restituisce solo gli elementi che soddisfano la condizione **Contains ()** .  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <p1:Maintenance     

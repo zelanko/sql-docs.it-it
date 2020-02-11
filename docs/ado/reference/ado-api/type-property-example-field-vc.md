@@ -1,5 +1,5 @@
 ---
-title: Tipo di esempio di proprietà (campo) (VC + +) | Microsoft Docs
+title: Esempio di proprietà Type (Field) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936650"
 ---
 # <a name="type-property-example-field-vc"></a>Esempio della proprietà Type (Field) (VC++)
-Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà il **tipo** proprietà di tutti i i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  
+In questo esempio viene illustrata la proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) visualizzando il nome della costante che corrisponde al valore della proprietà **Type** di tutti gli oggetti [Field](../../../ado/reference/ado-api/field-object.md) della tabella ***Employees*** . Per eseguire questa procedura, è necessaria la funzione FieldType.  
   
 ## <a name="example"></a>Esempio  
   
@@ -153,23 +153,23 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Campi nella tabella dei dipendenti:**  
+ **Campi nella tabella Employee:**  
  **Nome: emp_id**  
- **Tipo: famiglia**  
+ **Tipo: adChar**  
  **Nome: fname**  
  **Tipo: adVarChar**  
- **Nome: minit**  
- **Tipo: famiglia**  
+ **Nome: Minit**  
+ **Tipo: adChar**  
  **Nome: lname**  
  **Tipo: adVarChar**  
- **Nome: valore job_id**  
+ **Nome: job_id**  
  **Tipo: adSmallInt**  
  **Nome: job_lvl**  
- **Type: adUnsignedTinyInt**  
+ **Tipo: adUnsignedTinyInt**  
  **Nome: pub_id**  
- **Tipo: famiglia**  
+ **Tipo: adChar**  
  **Nome: hire_date**  
  **Tipo: adDBTimeStamp**   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

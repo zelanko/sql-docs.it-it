@@ -1,5 +1,5 @@
 ---
-title: Scrivi metodo | Microsoft Docs
+title: Metodo Write | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945901"
 ---
 # <a name="write-method"></a>Metodo Write
-Scrive dati binari in una [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Scrive dati binari in un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,17 +35,17 @@ Stream.Write Buffer
   
 #### <a name="parameters"></a>Parametri  
  *Buffer*  
- Oggetto **Variant** che contiene una matrice di byte da scrivere.  
+ **Variant** che contiene una matrice di byte da scrivere.  
   
-## <a name="remarks"></a>Note  
- Byte specificati vengono scritti per il **Stream** oggetto senza spazi intermedi ogni byte.  
+## <a name="remarks"></a>Osservazioni  
+ I byte specificati vengono scritti nell'oggetto **flusso** senza spazi intermedi tra i byte.  
   
- L'oggetto corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) è impostato sul byte successivo i dati scritti. Il **scrivere** metodo non tronca il resto dei dati in un flusso. Se si desidera troncare i byte, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [posizione](../../../ado/reference/ado-api/position-property-ado.md) corrente è impostata sul byte che segue i dati scritti. Il metodo **Write** non tronca il resto dei dati in un flusso. Se si desidera troncare questi byte, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- Se si scrivono corrente [EOS](../../../ado/reference/ado-api/eos-property.md) posizione, la [Size](../../../ado/reference/ado-api/size-property-ado-stream.md) del **Stream** aumenterà per includere eventuali nuovi byte, e **EOS** sposterà per il nuovo ultimo byte i **Stream**.  
+ Se si scrive oltre la posizione [EOS](../../../ado/reference/ado-api/eos-property.md) corrente, le [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) del **flusso** verranno aumentate in modo da contenere nuovi byte e **EOS** passerà al nuovo ultimo byte nel **flusso**.  
   
 > [!NOTE]
->  Il **scrivere** metodo viene utilizzato con flussi binari ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) viene **adTypeBinary**). Per i flussi di testo (**tipo** viene **adTypeText**), utilizzare [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  Il metodo **Write** viene usato con i flussi binari (il[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeBinary**). Per i flussi di testo (**tipo** è **adTypeText**), usare [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

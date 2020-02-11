@@ -1,5 +1,5 @@
 ---
-title: core.sp_update_data_source (Transact-SQL) | Microsoft Docs
+title: Core. sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942461"
 ---
-# <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
+# <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aggiorna una riga esistente o inserisce una nuova riga nella tabella core.source_info_internal del data warehouse di gestione. Questa routine viene chiamata dal componente di runtime dell'agente di raccolta dati tutte le volte che un pacchetto di caricamento avvia il caricamento dei dati nel data warehouse di gestione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,36 +46,36 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid =] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ GUID per il set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
- [ @machine_name =] '*nome_computer*'  
- Nome del server in cui risiede l'insieme di raccolta. *machine_name* viene **sysname** non prevede alcun valore predefinito.  
+ [ @machine_name = ] '*machine_name*'  
+ Nome del server in cui risiede l'insieme di raccolta. *machine_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
- [ @named_instance =] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, non prevede alcun valore predefinito.  
+ [ @named_instance = ] '*named_instance*'  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
->  *named_instance* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*.  
+>  *named_instance* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*.  
   
- [ @days_until_expiration =] *days_until_expiration*  
- Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* viene **smallint**.  
+ [ @days_until_expiration = ] *days_until_expiration*  
+ Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* è **smallint**.  
   
- [ @source_id =] *source_id*  
- Identificatore univoco per l'origine dell'aggiornamento. *Source_ID* viene **int** e viene restituito come OUTPUT.  
+ [ @source_id = ] *source_id*  
+ Identificatore univoco per l'origine dell'aggiornamento. *source_id* è di **tipo int** e viene restituito come output.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente di runtime dell'agente di raccolta dati chiama core.sp_update_data_source. La tabella core.source_info_internal viene aggiornata se dopo l'ultimo caricamento si è verificata una delle modifiche seguenti:  
   
 -   È stato aggiunto un nuovo set di raccolta.  
   
 -   È stato modificato il valore di days_until_expiration.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiornata l'origine dati (in questo caso il set di raccolta Utilizzo disco), viene impostato il numero di giorni che mancano alla scadenza e viene restituito l'identificatore per l'origine. In questo esempio viene utilizzata l'istanza predefinita.  
@@ -95,6 +95,6 @@ EXEC core.sp_update_data_source
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

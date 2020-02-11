@@ -18,36 +18,36 @@ ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949438"
 ---
 # <a name="members-collection-ado-md"></a>Raccolta Members (ADO MD)
-Contiene il [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetti da un livello o una posizione lungo un asse.  
+Contiene gli oggetti [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) di un livello o di una posizione lungo un asse.  
   
-## <a name="remarks"></a>Note  
- Oggetto **membri** raccolta viene usata per contenere i seguenti tipi di membri:  
+## <a name="remarks"></a>Osservazioni  
+ Una raccolta **Members** viene utilizzata per contenere i seguenti tipi di membri:  
   
--   I membri che costituiscono un livello in un cubo. Sono contenute nel **membri** raccolta di un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Ad esempio, usando l'esempio dal [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), i quattro membri del livello paesi sono negli Stati Uniti, il Canada, Regno Unito e Germania.  
+-   Membri che costituiscono un livello in un cubo. Questi sono contenuti nella raccolta **Members** di un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Ad esempio, usando l'esempio da [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), i quattro membri del livello paesi sono Canada, USA, Regno Unito e Germania.  
   
--   I membri che sono figli di un membro specifico all'interno di una gerarchia. Questi membri vengono restituiti per il [figli](../../../ado/reference/ado-md-api/children-property-ado-md.md) proprietà dell'elemento padre **membro** oggetto. Ad esempio, Canada orientale e Canada-occidentale utilizzando nuovamente lo stesso esempio, sono due figli del membro Canada.  
+-   Membri figlio di un membro specifico all'interno di una gerarchia. Questi membri vengono restituiti dalla proprietà [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) dell'oggetto **membro** padre. Ad esempio, usando di nuovo lo stesso esempio, i due figli del membro Canada sono Canada-Est e Canada-West.  
   
--   I membri che definiscono una specifica posizione lungo un asse di una [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Usando il set di celle da [utilizzo dei dati multidimensionali](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) ad esempio, i due membri della prima posizione sull'asse x sono San Valentino e Seattle. Questi membri sono inclusi i **membri** raccolta di un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  
+-   Membri che definiscono una posizione specifica lungo un asse di un insieme di [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Se si usa un insieme di celle [con dati multidimensionali](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) come esempio, i due membri della prima posizione sull'asse x sono Valentine e Seattle. Questi membri sono contenuti nella raccolta **Members** di un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
- **I membri** è un insieme standard di ADO. Con le proprietà e metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
+ **Members** è una raccolta ADO standard. Con le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
--   Ottenere il numero di oggetti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Restituisce un oggetto dalla raccolta con il valore predefinito [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Restituisce un oggetto dalla raccolta con la proprietà dell' [elemento](../../../ado/reference/ado-api/item-property-ado.md) predefinito.  
   
--   Aggiornare gli oggetti nella raccolta dal provider con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
+-   Aggiornare gli oggetti della raccolta dal provider con il metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+ [Esempio di members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

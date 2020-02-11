@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType ed EditMode esempio di proprietà (VC + +) | Microsoft Docs
+title: Esempio di proprietà CursorType, LockType e EditMode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933251"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType ed EditMode esempio di proprietà (VC + +)
-In questo esempio viene illustrato come impostare il [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) proprietà prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Indica inoltre il valore della [EditMode](../../../ado/reference/ado-api/editmode-property.md) proprietà in varie condizioni. La funzione EditModeOutput è necessaria per eseguire questa procedura.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Esempio di proprietà CursorType, LockType e EditMode (VC + +)
+In questo esempio viene illustrata l'impostazione delle proprietà [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Mostra anche il valore della proprietà [EditMode](../../../ado/reference/ado-api/editmode-property.md) in varie condizioni. Per eseguire questa procedura, è necessaria la funzione EditModeOutput.  
   
 ## <a name="example"></a>Esempio  
   
@@ -155,11 +155,11 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **Dopo aver AddNew:**    
- **Proprietà EditMode = adEditAdd**  
-**Dopo l'aggiornamento:**    
- **Proprietà EditMode = adEditNone**  
-**Dopo la modifica:**    
+  **Dopo AddNew:**   
+ **EditMode = adEditAdd**  
+**Dopo l'aggiornamento:**   
+ **EditMode = adEditNone**  
+**Dopo la modifica:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   

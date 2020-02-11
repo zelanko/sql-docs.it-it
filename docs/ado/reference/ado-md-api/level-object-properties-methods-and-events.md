@@ -1,5 +1,5 @@
 ---
-title: Le proprietà degli oggetti, metodi ed eventi di livello | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto Level | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949610"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Level
-## <a name="propertiescollections"></a>Le proprietà e le raccolte  
+## <a name="propertiescollections"></a>Proprietà/raccolte  
  [Proprietà Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
   
  [Proprietà Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)  
   
  [Proprietà Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [Raccolta di membri](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Raccolta members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
   
- [Nome proprietà](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Proprietà Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName (proprietà)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

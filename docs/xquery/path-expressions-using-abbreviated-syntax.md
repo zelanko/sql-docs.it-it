@@ -1,5 +1,5 @@
 ---
-title: Uso di sintassi in un'espressione di percorso abbreviata | Microsoft Docs
+title: Uso della sintassi abbreviata in un'espressione di percorso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946410"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Espressioni di percorso - Uso di sintassi abbreviata
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Tutti gli esempi [espressioni di percorso in XQuery](../xquery/path-expressions-xquery.md) utilizzata la sintassi abbreviata per le espressioni di percorso. La sintassi non abbreviata per un passo dell'asse in un'espressione di percorso include il nome dell'asse e il test di nodo, separati da una coppia di due punti e seguiti da zero o più qualificatori di passo.  
+  Tutti gli esempi di [informazioni sulle espressioni di percorso in XQuery utilizzano la](../xquery/path-expressions-xquery.md) sintassi non abbreviata per le espressioni di percorso. La sintassi non abbreviata per un passo dell'asse in un'espressione di percorso include il nome dell'asse e il test di nodo, separati da una coppia di due punti e seguiti da zero o più qualificatori di passo.  
   
  Ad esempio:  
   
@@ -35,13 +35,13 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  Nelle espressioni di percorso, XQuery supporta le abbreviazioni seguenti:  
   
--   Il **figlio** asse è l'asse predefinito. Pertanto, il **figlio::** asse può essere omesso da un passaggio in un'espressione. Ad esempio, è possibile scrivere `/child::ProductDescription/child::Summary` nel formato `/ProductDescription/Summary`.  
+-   L'asse **figlio** è l'asse predefinito. Pertanto, l'asse **child::** può essere omesso da un passaggio in un'espressione. Ad esempio, è possibile scrivere `/child::ProductDescription/child::Summary` nel formato `/ProductDescription/Summary`.  
   
--   Un' **attributo** asse può essere abbreviato in @. Ad esempio, è possibile scrivere `/child::ProductDescription[attribute::ProductModelID=10]` nel formato `/ProudctDescription[@ProductModelID=10]`.  
+-   Un asse dell' **attributo** può essere abbreviato come @. Ad esempio, è possibile scrivere `/child::ProductDescription[attribute::ProductModelID=10]` nel formato `/ProudctDescription[@ProductModelID=10]`.  
   
--   Oggetto **descendant-or-self::node()/** può essere abbreviato in / /. Ad esempio, è possibile scrivere `/descendant-or-self::node()/child::act:telephoneNumber` nel formato `//act:telephoneNumber`.  
+-   Un **/descendant-or-self:: node ()/** può essere abbreviato come//. Ad esempio, è possibile scrivere `/descendant-or-self::node()/child::act:telephoneNumber` nel formato `//act:telephoneNumber`.  
   
-     La query precedente recupera tutti i numeri di telefono archiviati nella colonna AdditionalContactInfo della tabella Contact. Lo schema per la colonna AdditionalContactInfo viene definito in modo che un \<telephoneNumber > elemento può essere visualizzato in qualsiasi punto del documento. Per recuperare tutti i numeri di telefono, pertanto, è necessario eseguire la ricerca in ogni nodo del documento. La ricerca inizia alla radice del documento e continua in tutti i nodi discendenti.  
+     La query precedente recupera tutti i numeri di telefono archiviati nella colonna AdditionalContactInfo della tabella Contact. Lo schema per AdditionalContactInfo viene definito in modo che un \<elemento> telephoneNumber possa essere visualizzato in qualsiasi punto del documento. Per recuperare tutti i numeri di telefono, pertanto, è necessario eseguire la ricerca in ogni nodo del documento. La ricerca inizia alla radice del documento e continua in tutti i nodi discendenti.  
   
      La query seguente recupera tutti i numeri di telefono relativi a un contatto di un cliente specifico:  
   
@@ -58,7 +58,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      Se si sostituisce l'espressione di percorso con la sintassi abbreviata `//act:telephoneNumber`, si ottengono gli stessi risultati.  
   
--   Il **self:: node ()** in un passaggio può essere abbreviato utilizzando un punto singolo (.). Tuttavia, il punto non è equivalente o interscambiabile con il **self:: node ()** .  
+-   **Self:: node ()** in un passaggio può essere abbreviato in un singolo punto (.). Tuttavia, il punto non è equivalente o interscambiabile con l'operatore **self:: node ()**.  
   
      Ad esempio, nella query seguente, l'utilizzo di un punto rappresenta un valore e non un nodo:  
   
@@ -66,6 +66,6 @@ child::ProductDescription[attribute::ProductModelID=19]
     ("abc", "cde")[. > "b"]  
     ```  
   
--   Il **padre:: node ()** in un passaggio può essere abbreviato utilizzando un doppio punto (.).  
+-   L' **elemento padre:: node ()** in un passaggio può essere abbreviato in un punto doppio (..).  
   
   

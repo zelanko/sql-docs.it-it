@@ -1,5 +1,5 @@
 ---
-title: Aggiornare dal Database (OracleToSQL) | Microsoft Docs
+title: Aggiornare dal database (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266536"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Eseguire l'aggiornamento dal database (OracleToSQL)
-Il **aggiornare dal Database** nella finestra di dialogo consente di selezionare gli oggetti da aggiornare dal database Oracle. Le righe nella finestra di dialogo sono contraddistinte dal colore basato sullo stato dei metadati:  
+La finestra di dialogo **Aggiorna da database** consente di selezionare gli oggetti da aggiornare dal database Oracle. Le righe nella finestra di dialogo sono codificate a colori in base allo stato dei metadati:  
   
--   Se i metadati dell'oggetto sono stato modificato in locale e nel database Oracle, la riga è blu.  
+-   Se i metadati dell'oggetto sono stati modificati localmente e nel database Oracle, la riga è blu.  
   
--   Se i metadati dell'oggetto sono stato modificato nel database Oracle ma non in SSMA, la riga è gialla.  
+-   Se i metadati dell'oggetto sono stati modificati nel database Oracle, ma non in SSMA, la riga è gialla.  
   
--   Se i metadati dell'oggetto sono stato modificato in locale, ma non nel database Oracle, la riga è verde.  
+-   Se i metadati dell'oggetto sono stati modificati in locale, ma non nel database Oracle, la riga è verde.  
   
--   Se l'oggetto è nuovo nel database Oracle, la riga è di colore rosa.  
+-   Se l'oggetto è nuovo nel database Oracle, la riga è rosa.  
   
-È possibile specificare le impostazioni di aggiornamento di oggetti predefiniti in di **impostazioni del progetto** nella finestra di dialogo. Per altre informazioni, vedere [impostazioni del progetto&#40;sincronizzazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+È possibile specificare le impostazioni di aggiornamento oggetti predefinite nella finestra di dialogo **Impostazioni progetto** . Per altre informazioni, vedere [Impostazioni progetto&#40;sincronizzazione&#41; &#40;&#41;OracleToSQL ](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-Per l'accesso di **aggiornare dal Database** della finestra di dialogo scelta di un oggetto nel Visualizzatore metadati Oracle e fare clic su **aggiornare dal Database**.  
+Per accedere alla finestra di dialogo **Aggiorna da database** , fare clic con il pulsante destro del mouse su un oggetto in Oracle Metadata Explorer e scegliere **Aggiorna da database**.  
   
 ## <a name="options"></a>Opzioni  
 **Comprimi (-)**  
-Comprimi tutti i gruppi di oggetti per nascondere i singoli oggetti.  
+Comprime tutti i gruppi di oggetti per nascondere i singoli oggetti.  
   
-**Espansione (+)**  
-Espandere tutti i gruppi di oggetti per mostrare i singoli oggetti.  
+**Espandi (+)**  
+Espandere tutti i gruppi di oggetti per visualizzare i singoli oggetti.  
   
-**Mostra/Nascondi oggetti uguali**  
-Gli oggetti nell'elenco viene nascosto se i metadati degli oggetti sono lo stesso nel database Oracle e in SSMA.  
+**Nascondi/Mostra oggetti uguali**  
+Nasconde gli oggetti dall'elenco se i metadati dell'oggetto sono gli stessi nel database Oracle e in SSMA.  
   
-**Aggiornare dal Database (freccia)**  
-Utilizzare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornato in SSMA.  
+**Aggiorna da database (pulsante freccia)**  
+Usare il pulsante freccia per specificare che i metadati per gli oggetti selezionati devono essere aggiornati in SSMA.  
   
-**Eseguire l'operazione non aggiornato dal Database (pulsante) X**  
-Utilizzare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.  
+**Non aggiornare dal database (pulsante X)**  
+Usare il pulsante X per specificare che i metadati per gli oggetti selezionati non devono essere aggiornati in SSMA.  
   
 **Legenda**  
-Consente di visualizzare una **legenda** nella finestra di dialogo. La legenda contiene il mapping tra i colori di riga e gli stati dei metadati.  
+Consente di visualizzare una finestra di dialogo **Legenda** . La legenda contiene il mapping tra i colori delle righe e gli Stati dei metadati.  
   
-Per mantenere il **legenda** nella parte superiore della finestra di dialogo il **aggiornare dal Database** della finestra di dialogo Seleziona il **visualizzare nella parte superiore** casella di controllo.  
+Per lasciare la finestra di dialogo **Legenda** nella parte superiore della finestra di dialogo **Aggiorna da database** , selezionare la casella di controllo **Mostra in primo piano** .  
   

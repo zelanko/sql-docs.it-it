@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (Transact-SQL) | Microsoft Docs
+title: sp_dropextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67934017"
 ---
-# <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
+# <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina una proprietà estesa esistente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,41 +50,41 @@ sp_dropextendedproperty
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @name=] {'*property_name*'}  
- Nome della proprietà che si desidera eliminare. *property_name* viene **sysname** e non può essere NULL.  
+ [ @name= ] {'*property_name*'}  
+ Nome della proprietà che si desidera eliminare. *property_name* è di **tipo sysname** e non può essere null.  
   
- [ @level0type=] {'*level0_object_type*'}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_type* viene **varchar(128)** , con un valore predefinito è NULL.  
+ [ @level0type= ] {'*level0_object_type*'}  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_type* è di tipo **varchar (128)** e il valore predefinito è null.  
   
  I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
- [ @level0name=] {'*level0_object_name*'}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con valore predefinito è NULL.  
+ [ @level0name= ] {'*level0_object_name*'}  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* è di **tipo sysname** e il valore predefinito è null.  
   
- [ @level1type=] {'*level1_object_type*'}  
- Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ [ @level1type= ] {'*level1_object_type*'}  
+ Tipo di oggetto di livello 1. *level1_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
- [ @level1name=] {'*level1_object_name*'}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con valore predefinito è NULL.  
+ [ @level1name= ] {'*level1_object_name*'}  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* è di **tipo sysname** e il valore predefinito è null.  
   
- [ @level2type=] {'*level2_object_type*'}  
- Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con valore predefinito è NULL. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ [ @level2type= ] {'*level2_object_type*'}  
+ Tipo di oggetto di livello 2. *level2_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
- [ @level2name=] {'*level2_object_name*'}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con valore predefinito è NULL.  
+ [ @level2name= ] {'*level2_object_name*'}  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è di **tipo sysname** e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- Ai fini della definizione delle proprietà estese, gli oggetti in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database vengono classificati in tre livelli: 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello. I riferimenti a un oggetto presente in un livello devono essere qualificati con i tipi e i nomi di tutti gli oggetti di livello superiore.  
+## <a name="remarks"></a>Osservazioni  
+ Ai fini della definizione delle proprietà estese, gli oggetti inclusi in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono classificati in base a tre livelli, ovvero 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello. I riferimenti a un oggetto presente in un livello devono essere qualificati con i tipi e i nomi di tutti gli oggetti di livello superiore.  
   
- Un valore valido *property_name*, se tutti i tipi di oggetto e i nomi sono null e una proprietà esiste nel database corrente, tale proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
+ Dato un *property_name*valido, se tutti i tipi e i nomi di oggetto sono null e una proprietà esiste nel database corrente, la proprietà viene eliminata. Vedere l'esempio B più avanti in questo argomento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono eliminare le proprietà estese di qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
   
  Gli utenti possono eliminare le proprietà estese degli oggetti di cui sono proprietari oppure per i quali dispongono delle autorizzazioni ALTER o CONTROL.  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-dropping-an-extended-property-on-a-database"></a>B. Eliminazione di una proprietà estesa in un database  
- L'esempio seguente rimuove la proprietà denominata `MS_Description` dal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database di esempio. Poiché la proprietà si trova nel database stesso, non viene specificato alcun tipo e nome di oggetto.  
+ Nell'esempio seguente la proprietà denominata `MS_Description` viene rimossa [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dal database di esempio. Poiché la proprietà si trova nel database stesso, non viene specificato alcun tipo e nome di oggetto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -132,10 +132,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys. extended_properties &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

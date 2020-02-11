@@ -15,20 +15,20 @@ ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947415"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Esempi di codice ADO MD in Visual Basic, Scripting Edition
-Nell'esempio seguente richiedono Microsoft Active Server Pages (ASP) per Microsoft Internet Information Server 4.0.  
+Gli esempi seguenti richiedono Microsoft Active Server Pages (ASP) per Microsoft Internet Information Server 4,0.  
   
 > [!NOTE]
->  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'intero esempio di codice, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguito correttamente se vengono usati esempi parziali o se la formattazione del paragrafo va persa.  
   
--   [Esempio di Axis](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
+-   [Esempio di asse](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
   
--   [Esempio di Members](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
+-   [Esempio di membri](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
   
 -   [Esempio di CubeDef](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)

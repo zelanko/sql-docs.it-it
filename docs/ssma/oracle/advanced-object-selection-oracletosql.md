@@ -11,42 +11,42 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264536"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Selezione avanzata di oggetti (OracleToSQL)
-Il **Advanced sezione oggetto** nella finestra di dialogo consente di filtrare gli oggetti di database usando le stringhe e le sottostringhe nel nome dell'oggetto e quindi selezionare o deselezionare gli oggetti. SSMA esegue operazioni di conversione e la migrazione per oggetti selezionati.  
+La finestra di dialogo **sezione oggetti avanzati** consente di filtrare gli oggetti di database usando stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare tali oggetti. SSMA esegue operazioni di conversione e migrazione sugli oggetti selezionati.  
   
-Per accedere a questa finestra di dialogo, fare doppio clic in una finestra di esplorazione di metadati e quindi selezionare **Selezione oggetto avanzata**.  
+Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse in Esplora metadati, quindi scegliere **selezione avanzata oggetti**.  
   
-Quando si apre la finestra di dialogo, fare clic su **Mostra gli elementi di sottocategorie** per visualizzare tutti gli oggetti con metadati caricato nel progetto. È quindi possibile immettere stringhe per filtrare gli elementi. Ad esempio, immettere la stringa "company" per visualizzare tutti gli elementi con nomi che includono tale stringa.  
+Quando si apre per la prima volta la finestra di dialogo, fare clic su **Mostra elementi sottocategorie** per visualizzare tutti gli oggetti i cui metadati sono stati caricati nel progetto. È quindi possibile immettere stringhe per filtrare gli elementi. Ad esempio, immettere la stringa "Company" per visualizzare tutti gli elementi con nomi che includono tale stringa.  
   
-Prima di usare questa finestra di dialogo, è possibile forzare SSMA per caricare tutti i metadati dal salvataggio del progetto o la conversione di schemi.  
+Prima di utilizzare questa finestra di dialogo, potrebbe essere necessario forzare SSMA a caricare tutti i metadati convertendo gli schemi o salvando il progetto.  
   
 ## <a name="options"></a>Opzioni  
 **Seleziona tutti gli elementi**  
-Aggiunge un segno di spunta accanto a tutti gli elementi. Verranno selezionati immediatamente questi elementi nel Visualizzatore metadati.  
+Aggiunge un segno di spunta accanto a tutti gli elementi. Questi elementi saranno selezionati immediatamente in Esplora metadati.  
   
 **Deseleziona tutti gli elementi**  
-Rimuove il segno di spunta accanto a tutti gli elementi. Questi elementi verranno cancellati immediatamente nella finestra di esplorazione di metadati.  
+Rimuove il segno di spunta accanto a tutti gli elementi. Questi elementi verranno immediatamente cancellati in Esplora metadati.  
   
-**Modalità di visualizzazione elenco**  
-Consente di visualizzare gli elementi in un elenco filtrati.  
+**Modalità visualizzazione elenco**  
+Visualizza gli elementi filtrati in un elenco.  
   
 **Modalità di visualizzazione tabella**  
-Consente di visualizzare gli elementi in una tabella filtrati.  
+Visualizza gli elementi filtrati in una tabella.  
   
-**Caricare solo gli elementi visualizzati**  
-Attiva o disattiva la visualizzazione delle categorie o elementi. Quando si seleziona questo pulsante, SSMA Mostra tutti gli elementi che corrispondono ai criteri di filtro e quelli che sono stati caricati in precedenza. Quando questo pulsante non è selezionato, tramite SSMA vengono illustrate le cartelle di categoria.  
+**Elementi caricati solo visualizzati**  
+Consente di abilitare o disabilitare la visualizzazione delle categorie o degli elementi. Quando si seleziona questo pulsante, SSMA Mostra tutti gli elementi che corrispondono ai criteri di filtro e quelli caricati in precedenza. Quando questo pulsante non è selezionato, SSMA Visualizza le cartelle Category.  
   
 **Filter**  
-Immettere la stringa da usare per filtrare gli elementi. Ad esempio, per trovare tutti disponibili elementi che contengono la stringa "ID" nel nome dell'elemento, immettere la stringa "ID" nel **filtro** casella.  
+Immettere la stringa che si desidera utilizzare per filtrare gli elementi. Per trovare, ad esempio, tutti gli elementi disponibili che contengono la stringa "ID" nel nome dell'elemento, immettere la stringa "ID" nella casella **filtro** .  
   
-Se gli elementi corrispondono ai criteri di filtro, le categorie o elementi verranno visualizzato mentre si digita la stringa. Per visualizzare gli elementi corrispondenti, si consiglia di scegliere la **visualizzati solo gli elementi caricati** pulsante.  
+Se gli elementi corrispondono ai criteri di filtro, le categorie o gli elementi verranno visualizzati durante la digitazione della stringa. Per visualizzare gli elementi corrispondenti, è consigliabile fare clic sul pulsante **solo elementi caricati** .  
   
 **Cancella filtro**  
-Cancella il **filtro** casella.  
+Cancella la casella del **filtro** .  
   

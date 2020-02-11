@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946602"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Moduli e prologhi - Prologo XQuery
@@ -29,7 +29,7 @@ ms.locfileid: "67946602"
 
   Una query XQuery è composta da un prologo e da un corpo. Il prologo include una serie di dichiarazioni e di definizioni che contribuiscono a creare l'ambiente necessario per l'elaborazione della query. In SQL Server, il prologo della query XQuery può contenere dichiarazioni dello spazio dei nomi. Il corpo della query XQuery è composto da una sequenza di espressioni che specificano il risultato della query desiderato.  
   
- Ad esempio, la query XQuery seguente viene specificata sulla colonna Instructions della **xml** tipo che sono archiviate le istruzioni di fabbricazione in formato XML. La query recupera le istruzioni di produzione per il centro di lavorazione `10`. Il `query()` metodo per il **xml** tipo di dati viene usato per specificare la query XQuery.  
+ Ad esempio, l'espressione XQuery seguente viene specificata sulla colonna Instructions di tipo **XML** in cui vengono archiviate le istruzioni di produzione come XML. La query recupera le istruzioni di produzione per il centro di lavorazione `10`. Il `query()` metodo del tipo di dati **XML** viene utilizzato per specificare l'espressione XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,14 +41,15 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Prologo XQuery include una dichiarazione di prefisso (AWMI) dello spazio dei nomi, `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Il prologo XQuery include una dichiarazione di prefisso dello spazio dei `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`nomi (AWMI),.  
   
 -   La parola chiave `declare namespace` definisce un prefisso dello spazio dei nomi che viene utilizzato successivamente nel corpo della query.  
   
--   `/AWMI:root/AWMI:Location[@LocationID="10"]` è il corpo della query.  
+-   
+  `/AWMI:root/AWMI:Location[@LocationID="10"]` è il corpo della query.  
   
 ## <a name="namespace-declarations"></a>Dichiarazioni dello spazio dei nomi  
- Una dichiarazione dello spazio dei nomi definisce un prefisso e lo associa a un URI (Uniform Resource Identifier) dello spazio dei nomi, come illustrato nella query seguente. Nella query `CatalogDescription` è un **xml** colonna di tipo.  
+ Una dichiarazione dello spazio dei nomi definisce un prefisso e lo associa a un URI (Uniform Resource Identifier) dello spazio dei nomi, come illustrato nella query seguente. Nella query, `CatalogDescription` è una colonna di tipo **XML** .  
   
  Quando si esegue la query XQuery sulla colonna, il prologo della query specifica la dichiarazione `declare namespace` tramite la quale il prefisso `PD`, ovvero la descrizione del prodotto, viene associato all'URI dello spazio dei nomi. Questo prefisso viene quindi utilizzato nel corpo della query in sostituzione dell'URI dello spazio dei nomi. I nodi del codice XML risultante sono nello spazio dei nomi associato all'URI dello spazio dei nomi.  
   
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Per altre informazioni, vedere, [aggiungere gli spazi dei nomi alle query con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Per altre informazioni, vedere [aggiungere spazi dei nomi alle query con with XMLnamespaces](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Dichiarazione dello spazio dei nomi predefinito  
  Anziché dichiarare un prefisso dello spazio dei nomi utilizzando la dichiarazione `declare namespace`, è possibile utilizzare la dichiarazione `declare default element namespace` per associare uno spazio dei nomi predefinito ai nomi degli elementi. In questo caso, non è necessario specificare un prefisso.  

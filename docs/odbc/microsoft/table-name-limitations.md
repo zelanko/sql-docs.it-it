@@ -1,5 +1,5 @@
 ---
-title: Limitazioni per i nomi di tabella | Microsoft Docs
+title: Limitazioni del nome della tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939780"
 ---
 # <a name="table-name-limitations"></a>Limitazioni dei nomi di tabella
-I nomi di tabella possono contenere qualsiasi carattere validi (ad esempio, spazi). Se i nomi delle tabelle contengono i caratteri tranne lettere, numeri e caratteri di sottolineatura, il nome deve essere delimitato racchiudendolo tra virgolette back (').  
+I nomi delle tabelle possono contenere qualsiasi carattere valido, ad esempio spazi. Se i nomi di tabella contengono caratteri eccetto lettere, numeri e caratteri di sottolineatura, il nome deve essere racchiuso tra virgolette (').  
   
- Quando viene usato il driver di Microsoft Excel e un nome di tabella non è qualificato dal riferimento a un database, il database predefinito è implicito. Se un nome in Microsoft Excel include il "!" character, verrà automaticamente tradotto al carattere "$" invece.  
+ Quando si utilizza il driver Microsoft Excel e il nome di una tabella non è qualificato da un riferimento al database, il database predefinito è implicito. Se un nome in Microsoft Excel include il carattere "!", verrà convertito automaticamente nel carattere "$".  
   
- Il nome della tabella che fa riferimento a Microsoft Excel \<nomefile > è supportato per Microsoft Excel 3.0 e 4.0 file. Il nome della tabella che fa riferimento a Microsoft Excel \<della cartella di lavoro-name > è supportato per i file di Microsoft Excel 97, versione 7.0 o 5.0.  
+ Il nome della tabella di Microsoft Excel \<che fa riferimento a filename> è supportato per i file di microsoft Excel 3,0 e 4,0. Il nome della tabella di Microsoft Excel \<che fa riferimento a nome cartella di lavoro> è supportato per i file di microsoft Excel 5,0, 7,0 o 97.  
   
- Quando viene usato il driver dBASE, con un valore ASCII maggiore di 127 caratteri vengono convertiti in caratteri di sottolineatura.  
+ Quando si usa il driver dBASE, i caratteri con un valore ASCII maggiore di 127 vengono convertiti in caratteri di sottolineatura.  
   
- Quando viene usato il driver Microsoft Access, il nome della tabella è limitato a 64 caratteri.  
+ Quando si utilizza il driver Microsoft Access, il nome della tabella è limitato a 64 caratteri.  
   
- Quando viene usato il driver di Microsoft Excel versione 3.0 o 4.0, Paradox, o testo, dBASE, parole chiave CON, AUX, LPT1 e LPT2 di speciali MS-DOS non usare come nomi di tabella.
+ Quando viene usato il driver dBASE, Microsoft Excel 3,0 o 4,0, Paradox o text, le parole chiave MS-DOS speciali CON, AUX, LPT1 e LPT2 non devono essere usate come nomi di tabella.

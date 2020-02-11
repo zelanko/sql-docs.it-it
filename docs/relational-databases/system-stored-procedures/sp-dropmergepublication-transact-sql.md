@@ -16,18 +16,18 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b675b07466464f706b6503f3d017acd34822b2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933909"
 ---
-# <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
+# <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina una pubblicazione di tipo merge e l'agente snapshot associato. Prima di eliminare una pubblicazione di tipo merge, è necessario eliminare tutte le sottoscrizioni. Gli articoli della pubblicazione vengono eliminati automaticamente. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,35 +40,35 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse, nonché il processo dell'agente Snapshot associato. Se si specifica un valore specifico per *publication*, vengono eliminati solo tale pubblicazione e il processo dell'agente Snapshot associato.  
+`[ @publication = ] 'publication'`Nome della pubblicazione da eliminare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse e il agente di snapshot processo associato. Se si specifica un valore specifico per la *pubblicazione*, vengono eliminate solo la pubblicazione e il processo agente di snapshot associato.  
   
-`[ @ignore_distributor = ] ignore_distributor` Consente di eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor`Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
   
-`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
+`[ @reserved = ] reserved`È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`Solo per uso interno.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropmergepublication** viene utilizzata nella replica di tipo merge.  
   
- **sp_dropmergepublication** in modo ricorsivo Elimina tutti gli articoli che sono associati a una pubblicazione e quindi elimina la pubblicazione stessa. Non è possibile rimuovere una pubblicazione per cui esistono una o più sottoscrizioni. Per informazioni su come rimuovere le sottoscrizioni, vedere [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) e [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_dropmergepublication** Elimina in modo ricorsivo tutti gli articoli associati a una pubblicazione e quindi Elimina la pubblicazione stessa. Non è possibile rimuovere una pubblicazione per cui esistono una o più sottoscrizioni. Per informazioni su come rimuovere le sottoscrizioni, vedere [eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md) ed [eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- L'esecuzione **sp_dropmergepublication** per eliminare una pubblicazione non rimuove gli oggetti pubblicati dal database di pubblicazione né degli oggetti corrispondenti dal database di sottoscrizione. Utilizzare DROP \<oggetto > per rimuovere questi oggetti manualmente se necessario.  
+ L'esecuzione di **sp_dropmergepublication** per eliminare una pubblicazione non comporta la rimozione degli oggetti pubblicati dal database di pubblicazione o degli oggetti corrispondenti dal database di sottoscrizione. Utilizzare DROP \<Object> per rimuovere questi oggetti manualmente, se necessario.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergepublication**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropmergepublication**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eliminazione di una pubblicazione](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [Eliminare una pubblicazione](../../relational-databases/replication/publish/delete-a-publication.md)   
+ [sp_addmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

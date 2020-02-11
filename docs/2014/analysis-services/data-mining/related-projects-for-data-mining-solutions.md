@@ -1,5 +1,5 @@
 ---
-title: Progetti correlati per soluzioni di Data Mining | Microsoft Docs
+title: Progetti correlati per soluzioni di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082993"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
@@ -34,14 +34,15 @@ ms.locfileid: "66082993"
   
  [Reporting Services](#bkmk_SSRS)  
   
- [Data Quality Services](#bkmk_DQSetc)  
+ [Servizio Data Quality](#bkmk_DQSetc)  
   
  [Ricerca full-text](#bkmk_FTSetc)  
   
  [Indicizzazione semantica](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono forniti componenti e funzionalità richiesti per le fasi di preparazione dei dati e di training di un progetto di data mining. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
+##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono forniti componenti e funzionalità richiesti per le fasi di preparazione dei dati e di training di un progetto di data mining. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
   
 -   Rappresenta le attività come parte di un flusso di lavoro che può essere ripetuto, automatizzato, ramificato ed esteso.  
   
@@ -59,11 +60,11 @@ ms.locfileid: "66082993"
   
 -   [Attività Esegui DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Attività Elaborazione Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Elaborazione Analysis Services - attività](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Pulizia dei dati](../../data-quality-services/data-cleansing.md)  
+-   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
 -   [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -73,23 +74,23 @@ ms.locfileid: "66082993"
   
 -   [Componenti di flusso CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [Trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
+-   [Suddivisione condizionale - trasformazione](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Trasformazione Conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Conversione dati - trasformazione](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destinazione Training modello di data mining](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Training modello di data mining - destinazione](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Trasformazione Query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Query di data mining - trasformazione](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Trasformazione Campionamento percentuale](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Campionamento percentuale - trasformazione](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione Estrazione termini](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Estrazione termini - trasformazione](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Trasformazione Ricerca termini](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+-   [Ricerca termini - trasformazione](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
+##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
  Benché [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non sia in genere considerato un componente critico delle soluzioni di data mining, fornisce le seguenti funzionalità utili per la presentazione di soluzioni di data mining.  
   
 -   Integrazione di dati da più origini in report complessi. Creazione di query rispetto al contenuto del modello per gli analisti e di report che mostrano stime e tendenze per gli utenti finali.  
@@ -102,22 +103,22 @@ ms.locfileid: "66082993"
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services con query DMX come origine dati, vedere i collegamenti seguenti:  
   
- [Recuperare i dati da un modello di data mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recupero di dati da un modello di data mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaccia utente di Progettazione query DMX in Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo di connessione Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Tuttavia, non è necessario utilizzare DMX come origine dati. I componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il data mining supportano inoltre il salvataggio dei risultati di una query di stima in un database relazionale. Se si dispone di un flusso di lavoro stabilito per l'aggiornamento di modelli tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'impostazione della persistenza di stime e altri risultati di query di data mining in SQL Server consente di utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] per la creazione di report, nonché altri strumenti non interfacciati con DMX.  
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services come livello di presentazione per le origini dati, vedere [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a> Data Quality Services  
+##  <a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) è una novità in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Poiché i problemi relativi ai dati possono impedire il data mining, è probabile che i data miner che eseguono analisi ripetute o lavorano in organizzazioni di grandi dimensioni con origini dati complesse ritengano che un progetto di dati ben pianificato basato su DQS sia una soluzione di data mining più affidabile rispetto alla pulizia ad hoc dei dati tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] o altri script.  
   
  È opportuno considerare le funzionalità seguenti di DQS per la preparazione e l'integrità dei dati in una soluzione di data mining.  
   
- **Processo di pulizia dei dati assistito da computer tramite cui vengono analizzati i dati di origine e proposte modifiche.**  
+ **Processo di pulizia dei dati assistito da computer che analizza i dati di origine e propone modifiche.**  
  Con DQS è possibile confrontare i dati di origine con dati di riferimento basati su cloud gestiti e garantiti da provider di qualità dei dati.  
   
  In DQS è inoltre possibile analizzare dati di origine non elaborati e creare una Knowledge Base dai dati dell'utente. I dati elaborati sono suddivisi in categorie, quindi visualizzati all'utente per ulteriore elaborazione. Il processo di pulizia è interattivo, pertanto l'amministratore dei dati può approvare, rifiutare o modificare i dati proposti dal processo di pulizia assistito da computer.  
@@ -126,18 +127,18 @@ ms.locfileid: "66082993"
   
  Per altre informazioni, vedere [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
- **Processo di individuazione delle corrispondenze assistito da computer tramite cui vengono analizzati i dati di origine e proposte modifiche.**  
+ **Processo di corrispondenza computerizzato che analizza i dati di origine e propone le modifiche.**  
  Per evitare la duplicazione dei dati, è possibile eseguire pulizie aggiuntive dell'origine dati per identificare corrispondenze esatte e approssimative. Questi componenti consentono di specificare le regole di corrispondenza e le soglie di applicazione.  
   
  L'individuazione delle corrispondenze di dati consente di rimuovere duplicati che possono costituire un problema per il data mining. La deduplicazione dei dati non è automatica; l'amministratore dei dati o un professionista IT deve verificare sia le informazioni della Knowledge Base sia le modifiche da apportare ai dati.  
   
  Dopo avere creato il progetto DQS iniziale, è possibile automatizzare molte attività tramite i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Per altre informazioni, vedere [Data Matching](../../data-quality-services/data-matching.md).  
+ Per altre informazioni, vedere [Corrispondenza di dati](../../data-quality-services/data-matching.md).  
   
  Durante l'esecuzione delle attività di pulizia e corrispondenza in un progetto di qualità dei dati, è possibile ottenere statistiche e informazioni in tempo reale sui dati elaborati da DQS. Il profiling dati consente di valutare a che livello la qualità dei dati è stata migliorata grazie alla pulizia o all'individuazione di corrispondenze dei dati e comprendere le modifiche apportate. Per ulteriori informazioni sul profiling dati e le notifiche, vedere [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- **Una Knowledge Base che rappresenta tre tipi di conoscenza: conoscenza pronta all'uso, conoscenza generata dal server DQS e conoscenza generata dall'utente.**  
+ **Una Knowledge base che rappresenta tre tipi di informazioni: informazioni predefinite, informazioni generate dal server DQS e informazioni generate dall'utente.**  
  Una volta creata una Knowledge Base, è possibile utilizzarla in modo iterativo per pulire e verificare altri dati.  
   
  È possibile importare nuovi dati nella Knowledge Base da più origini, sia dati puliti da provider di riferimento o dati non elaborati corrispondenti ai dati esistenti nella Knowledge Base.  
@@ -148,7 +149,7 @@ ms.locfileid: "66082993"
   
  Per altre informazioni, vedere [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a> Ricerca full-text  
+##  <a name="bkmk_FTSetc"></a>Ricerca full-text  
  In SQL Server la ricerca full-text consente ad applicazioni e utenti di eseguire query full-text su dati di tipo carattere in tabelle di SQL Server. Quando la ricerca full-text è abilitata, è possibile eseguire ricerche rispetto a dati di testo migliorati dalle regole specifiche della lingua relative alle diverse forme di una parola o di una frase. È inoltre possibile configurare condizioni di ricerca, ad esempio la distanza tra più termini, e utilizzare funzioni per vincolare i risultati restituiti in ordine di probabilità.  
   
  Poiché le query full-text sono una funzionalità fornita dal motore di SQL Server, è possibile creare query con parametri, generare set di dati personalizzati o vettori di termini tramite funzionalità di ricerca full-text in un'origine dati di testo e utilizzare tale origine nel data mining.  
@@ -161,7 +162,7 @@ ms.locfileid: "66082993"
   
  Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato può essere "Esegui", il motore di query vengono cercati anche i termini "acquario", "ran" e "runner", perché questi sono variazioni morfologiche derivate regolarmente della parola radice "Esegui".  
+ La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato potrebbe essere "Run", il motore di query Cerca anche i termini "Running", "Ran" e "Runner", perché si tratta di varianti morfologiche derivate regolarmente dalla parola radice "Run".  
   
  È inoltre possibile creare e compilare un thesaurus dell'utente per archiviare sinonimi e migliorare i risultati della ricerca o la categorizzazione dei termini. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -175,7 +176,7 @@ ms.locfileid: "66082993"
   
 -   L'indicizzazione full-text è supportata solo nelle colonne con i tipi di dati char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary e varbinary(max). Se la colonna è di tipo varbinary, varbinary(max), image o xml, è necessario specificare l'estensione di file del documento indicizzabile (doc, pdf, xls e così via) in una colonna di tipo separata.  
   
-##  <a name="bkmk_SemSearch"></a> Indicizzazione semantica  
+##  <a name="bkmk_SemSearch"></a>Indicizzazione semantica  
  La ricerca semantica è basata sulle funzionalità complete della ricerca full-text esistenti in SQL Server, ma utilizza funzionalità e statistiche aggiuntive per consentire scenari quali l'estrazione automatica di parole chiave e l'individuazione di documenti correlati. Ad esempio, è possibile utilizzare la ricerca semantica per compilare una tassonomia di base per un'organizzazione o per classificare una raccolta di documenti. Inoltre, è possibile utilizzare la combinazione di termini estratti e punteggi di somiglianza dei documenti nei modelli di clustering o albero delle decisioni.  
   
  Dopo avere abilitato correttamente la ricerca semantica e indicizzato le colonne di dati, è possibile utilizzare le funzioni fornite a livello nativo con l'indicizzazione semantica per eseguire le operazioni seguenti:  

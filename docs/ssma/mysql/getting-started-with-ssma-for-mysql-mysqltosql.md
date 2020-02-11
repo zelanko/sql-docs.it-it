@@ -1,5 +1,5 @@
 ---
-title: Introduzione a SSMA per MySQL (MySQLToSQL) | Microsoft Docs
+title: Introduzione con SSMA per MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,26 +14,26 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984542"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
-SQL Server Migration Assistant (SSMA) per MySQL consente di convertire gli schemi di database MySQL in schemi di SQL Server o database SQL di Azure, caricare gli schemi risultanti in SQL Server o database SQL di Azure e la migrazione dei dati da MySQL a SQL Server o database SQL di Azure.  
+SQL Server Migration Assistant (SSMA) per MySQL consente di convertire rapidamente gli schemi di database MySQL in SQL Server o negli schemi del database SQL di Azure, caricare gli schemi risultanti in SQL Server o nel database SQL di Azure ed eseguire la migrazione dei dati da MySQL a SQL Server o al database SQL di Azure.  
   
-Questo argomento illustra il processo di installazione e quindi consente di acquisire familiarità con l'interfaccia utente SSMA.  
+In questo argomento viene illustrato il processo di installazione e quindi viene illustrato come acquisire familiarità con l'interfaccia utente di SSMA.  
   
 ## <a name="installing-ssma"></a>Installazione di SSMA  
-Per usare SSMA, è necessario installare il programma client SSMA su un computer in cui è possibile accedere al database MySQL di origine e l'istanza di destinazione di SQL Server o database SQL di Azure. Quindi, installare i provider di MySQL (Driver ODBC MySQL 5.1 (attendibili)) nel computer che esegue il programma Client di SSMA. Per istruzioni sull'installazione, vedere [installazione di SSMA per MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
+Per usare SSMA, è prima necessario installare il programma client di SSMA in un computer in grado di accedere sia al database MySQL di origine sia all'istanza di destinazione di SQL Server o al database SQL di Azure. Installare quindi i provider MySQL (MySQL ODBC 5,1 driver (Trusted)) nel computer che esegue il programma client SSMA. Per le istruzioni di installazione, vedere [installazione di SSMA per MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
   
-Per avviare SSMA, fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **SQL Server Migration Assistant per MySQL**, quindi fare clic su **migrazione a SQL Server Assistant per MySQL**.  
+Per avviare SSMA, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, **SQL Server Migration Assistant per MySQL**e quindi fare clic su **SQL Server Migration Assistant per MySQL**.  
   
 ## <a name="ssma-for-mysql-user-interface"></a>SSMA per l'interfaccia utente di MySQL  
-Dopo aver SSMA viene installato e concesso in licenza, è possibile utilizzare SSMA per la migrazione di database MySQL a SQL Server o database SQL di Azure. Consente di acquisire familiarità con l'interfaccia utente SSMA prima di iniziare. Il diagramma seguente mostra l'interfaccia utente per SSMA, tra cui le finestre di esplorazione di metadati, metadati, le barre degli strumenti, riquadro di output e riquadro elenco errori:  
+Dopo aver installato e concesso in licenza SSMA, è possibile usare SSMA per eseguire la migrazione di database MySQL a SQL Server o al database SQL di Azure. Consente di acquisire familiarità con l'interfaccia utente di SSMA prima di iniziare. Il diagramma seguente illustra l'interfaccia utente per SSMA, tra cui Esplora metadati, metadati, barre degli strumenti, riquadro di output e riquadro elenco errori:  
   
-![SSMA per l'interfaccia utente grafica MySql](../../ssma/mysql/media/ssmaformysqlgui.gif "SSMA per l'interfaccia utente grafica MySql")  
+![SSMA per l'interfaccia utente grafica di MySQL](../../ssma/mysql/media/ssmaformysqlgui.gif "SSMA per l'interfaccia utente grafica di MySQL")  
   
 Per avviare una migrazione, è necessario:  
   
@@ -41,87 +41,87 @@ Per avviare una migrazione, è necessario:
   
 2.  Connettersi a un database MySQL.  
   
-3.  Dopo la connessione ha esito positivo, gli schemi di MySQL verranno visualizzato nel Visualizzatore metadati MySQL. Oggetti pulsante destro del mouse nel Visualizzatore metadati di MySQL per eseguire attività quali la creano di report che valutano le conversioni in SQL Server/Azure SQL DB.  
+3.  Una volta completata la connessione, gli schemi MySQL verranno visualizzati in MySQL Metadata Explorer. Fare clic con il pulsante destro del mouse su oggetti in MySQL Metadata Explorer per eseguire attività quali la creazione di report che valutano le conversioni in SQL Server/database SQL di Azure.  
   
 È anche possibile eseguire queste attività usando le barre degli strumenti e i menu.  
   
-È anche necessario connettersi a un'istanza di SQL Server. Dopo la connessione ha esito positivo, verrà visualizzata una gerarchia di database di SQL Server in Esplora i metadati di SQL Server. Dopo la conversione degli schemi di MySQL in schemi di SQL Server, selezionare tali schemi convertiti nel Visualizzatore metadati di SQL Server e quindi sincronizzare gli schemi con SQL Server.  
+È inoltre necessario connettersi a un'istanza di SQL Server. Una volta stabilita la connessione, viene visualizzata una gerarchia di database SQL Server in SQL Server Esplora metadati. Dopo la conversione degli schemi di MySQL in SQL Server schemi, selezionare gli schemi convertiti in SQL Server Esplora metadati, quindi sincronizzare gli schemi con SQL Server.  
   
-Se si è scelto un database SQL di Azure dalla migrazione di elenco a discesa nella finestra di dialogo Nuovo progetto, è necessario connettersi al database SQL di Azure. Dopo la connessione ha esito positivo, verrà visualizzata una gerarchia di database di Azure SQL DB in Azure SQL DB metadati Explorer. Dopo la conversione degli schemi di MySQL in schemi di database SQL di Azure, selezionare tali schemi convertiti nel Visualizzatore metadati di Azure SQL DB e quindi sincronizzare gli schemi con database SQL di Azure.  
+È necessario connettersi al database SQL di Azure se è stato selezionato il database SQL di Azure dalla finestra di dialogo Esegui migrazione a elenco a discesa in nuovo progetto. Una volta completata la connessione, viene visualizzata una gerarchia di database SQL di Azure in Esplora metadati del database SQL di Azure. Dopo la conversione degli schemi MySQL negli schemi del database SQL di Azure, selezionare gli schemi convertiti in Esplora metadati del database SQL di Azure e quindi sincronizzare gli schemi con il database SQL di Azure.  
   
-Dopo aver sincronizzato gli schemi convertiti con SQL Server o database SQL di Azure, è possibile tornare a Visualizzatore metadati MySQL e migrare i dati da schemi di MySQL in database di SQL Server o database SQL di Azure.  
+Dopo aver sincronizzato gli schemi convertiti con SQL Server o il database SQL di Azure, è possibile tornare a MySQL Metadata Explorer ed eseguire la migrazione dei dati da schemi MySQL in SQL Server o database SQL di Azure.  
   
-Per altre informazioni su queste attività e su come eseguirle, vedere [migrazione di database MySQL a SQL Server - database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md).  
+Per altre informazioni su queste attività e su come eseguirle, vedere [migrazione di database MySQL a SQL Server-Azure SQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md).  
   
 Le sezioni seguenti descrivono le funzionalità dell'interfaccia utente di SSMA.  
   
-### <a name="metadata-explorers"></a>Strumenti di esplorazione di metadati  
-SSMA contiene due finestre di esplorazione di metadati per individuare ed eseguire azioni sul database MySQL e SQL Server.  
+### <a name="metadata-explorers"></a>Esplora metadati  
+SSMA contiene due Esplora metadati per esplorare ed eseguire azioni sui database MySQL e SQL Server.  
   
-### <a name="mysql-metadata-explorer"></a>Visualizzatore metadati MySQL  
-Visualizzatore metadati MySQL Mostra informazioni sugli schemi di MySQL. Tramite Visualizzatore metadati MySQL, è possibile eseguire le attività seguenti:  
+### <a name="mysql-metadata-explorer"></a>Esplora metadati MySQL  
+MySQL Metadata Explorer Mostra informazioni sugli schemi MySQL. Con MySQL Metadata Explorer è possibile eseguire le attività seguenti:  
   
 -   Esplorare gli oggetti in ogni schema.  
   
--   Selezionare gli oggetti per la conversione e quindi convertire gli oggetti di sintassi di SQL Server. Per altre informazioni, vedere [conversione di database MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Selezionare oggetti per la conversione, quindi convertire gli oggetti in SQL Server sintassi. Per altre informazioni, vedere [conversione di database MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
--   Selezionare le tabelle per la migrazione dei dati e quindi migrare i dati da tali tabelle in SQL Server. Per altre informazioni, vedere [eseguire la migrazione di dati di MySQL in SQL Server - database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+-   Selezionare tabelle per la migrazione dei dati, quindi eseguire la migrazione dei dati da tali tabelle a SQL Server. Per altre informazioni, vedere [migrazione di dati MySQL in SQL Server-database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>Visualizzatore metadati di database SQL di Azure o SQL Server  
-SQL Server o Azure SQL DB metadati Explorer mostra le informazioni relative a un'istanza di SQL Server o database SQL di Azure. Quando ci si connette a un'istanza di SQL Server o database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e la archivia nel file di progetto.  
+### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server o Esplora metadati del database SQL di Azure  
+In SQL Server o in Esplora metadati del database SQL di Azure vengono visualizzate informazioni su un'istanza di SQL Server o sul database SQL di Azure. Quando ci si connette a un'istanza di SQL Server o al database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e li archivia nel file di progetto.  
   
-È possibile utilizzare questa finestra di esplorazione di metadati per selezionare gli oggetti di database convertiti MySQL e quindi sincronizzare gli oggetti con l'istanza di SQL Server o database SQL di Azure.  
+È possibile usare questa finestra di esplorazione dei metadati per selezionare gli oggetti di database MySQL convertiti e quindi sincronizzare tali oggetti con l'istanza di SQL Server o il database SQL di Azure.  
   
-Per altre informazioni, vedere [sincronizzazione (MySQL a SQL Server / database SQL di Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Per altre informazioni, vedere [sincronizzazione (MySQL per SQL Server/database SQL di Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
-### <a name="metadata"></a>Metadata  
-A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati MySQL, verranno visualizzate nove schede: **Nella tabella**, **SQL**, **Mapping dei tipi**, **dati**, **impostazioni**, **Mapping di set di caratteri**, **Modalità SQL**, **delle proprietà**, e **Report**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in Esplora i metadati di SQL Server, verranno visualizzate tre schede: **Nella tabella**, **SQL** e **dati**.  
+### <a name="metadata"></a>Metadati  
+A destra di ogni Esplora metadati sono presenti schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in MySQL Metadata Explorer, verranno visualizzate nove schede: **Table**, **SQL**, **Type mapping**, **Data**, **Settings**, **CharSet mapping**, **SQL modes**, **Properties**e **report**. La scheda **report** contiene informazioni solo dopo la creazione di un report che contiene l'oggetto selezionato. Se si seleziona una tabella in SQL Server Esplora metadati, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  
   
-La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
+La maggior parte delle impostazioni dei metadati è di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
--   Nel Visualizzatore metadati di MySQL, è possibile modificare i mapping dei tipi, Mapping di set di caratteri, le modalità di SQL. Per convertire il mapping dei tipi modificata o il Mapping di set di caratteri o modalità SQL, apportare modifiche prima di convertire gli schemi.  
+-   In MySQL Metadata Explorer è possibile modificare i mapping dei tipi, il mapping del set di caratteri e le modalità SQL. Per convertire i mapping dei tipi modificati o il mapping del set di caratteri o le modalità SQL, apportare modifiche prima di convertire gli schemi.  
   
--   In Esplora i metadati di SQL Server, è possibile modificare le proprietà di tabella e indice nella scheda della tabella. Per visualizzare queste modifiche in SQL Server, apportare queste modifiche prima di caricare gli schemi in SQL Server.  
+-   In SQL Server Metadata Explorer è possibile modificare le proprietà della tabella e dell'indice nella scheda tabella. Per visualizzare queste modifiche in SQL Server, apportare queste modifiche prima di caricare gli schemi in SQL Server.  
   
-Le modifiche apportate in una finestra di esplorazione di metadati vengono riflesse nei metadati del progetto, non nel database di origine o destinazione.  
+Le modifiche apportate in Esplora metadati vengono riflesse nei metadati del progetto, non nei database di origine o di destinazione.  
   
 ### <a name="toolbars"></a>Barre degli strumenti  
-SSMA è due barre degli strumenti: una barra di progetto e una barra degli strumenti di migrazione.  
+SSMA dispone di due barre degli strumenti: una barra degli strumenti del progetto e una barra degli strumenti di migrazione.  
   
-### <a name="the-project-toolbar"></a>La barra degli strumenti di progetto  
-La barra degli strumenti di progetto contiene pulsanti per l'uso dei progetti, la connessione a MySQL e ci si connette a SQL Server o database SQL di Azure. Questi pulsanti sono simili a quelli nel **File** menu.  
+### <a name="the-project-toolbar"></a>Barra degli strumenti del progetto  
+La barra degli strumenti del progetto contiene i pulsanti per l'uso di progetti, la connessione a MySQL e la connessione a SQL Server o al database SQL di Azure. Questi pulsanti sono simili ai comandi del menu **file** .  
   
-### <a name="migration-toolbar"></a>Sulla barra degli strumenti di migrazione  
-La tabella seguente illustra la migrazione i comandi della barra degli strumenti:  
+### <a name="migration-toolbar"></a>Barra degli strumenti migrazione  
+La tabella seguente illustra i comandi della barra degli strumenti di migrazione:  
   
 |||  
 |-|-|  
 |**Pulsante**|**Funzione**|  
-|**Creazione di Report**|Converte gli oggetti selezionati di MySQL per gli oggetti di SQL Server o database SQL di Azure e quindi crea un report che mostra la conversione ha come esito positivo.<br /><br />Questo comando è disabilitato, a meno che gli oggetti selezionati in Visualizzatore metadati MySQL.|  
-|**Converti Schema**|Converte gli oggetti selezionati di MySQL in oggetti di SQL Server o database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti selezionati in Visualizzatore metadati MySQL.|  
-|**La migrazione dei dati**|Esegue la migrazione di dati dal database MySQL a SQL Server o database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi di MySQL in schemi di SQL Server o database SQL di Azure e quindi caricare gli oggetti in SQL Server o database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti selezionati in Visualizzatore metadati MySQL.|  
-|**Arresta**|Arresta il processo corrente.|  
+|**Creazione di report**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti database SQL di Azure, quindi crea un report che mostra la riuscita della conversione.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
+|**Converti schema**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti del database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
+|**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database MySQL a SQL Server o al database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi MySQL in SQL Server o negli schemi del database SQL di Azure e quindi caricare gli oggetti in SQL Server o nel database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
+|**Stop**|Arresta il processo corrente.|  
   
 ### <a name="menus"></a>Menu  
-La tabella seguente mostra i menu SSMA.  
+La tabella seguente illustra i menu SSMA.  
   
 |||  
 |-|-|  
 |**Menu**|**Descrizione**|  
-|**File**|Contiene i comandi per l'utilizzo con i progetti, la connessione a MySQL e ci si connette a SQL Server o database SQL di Azure.|  
-|**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli. Per aprire **gestire i segnalibri** finestra di dialogo, dal menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo verrà visualizzato un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
-|**Visualizza**|Contiene il **strumenti di esplorazione di sincronizzare i metadati** comando. Che consente di sincronizzare gli oggetti tra Visualizzatore metadati MySQL e SQL Server o Azure SQL DB metadati Explorer. Contiene anche i comandi per mostrare e nascondere il **Output** e **elenco errori** riquadri e un'opzione **layout** per gestire il layout.|  
-|**Strumenti**|Contiene i comandi per creare report, convertire lo schema, aggiornare dal database, eseguire la migrazione di oggetti e dati e salvare come Script. Fornisce inoltre l'accesso per il **impostazioni globali, le impostazioni di progetto predefinito** e **le impostazioni del progetto** finestre di dialogo.|  
-|**?**|Fornisce l'accesso per SSMA e di ottenere il **sulle** nella finestra di dialogo.|  
+|**File**|Contiene i comandi per l'uso di progetti, la connessione a MySQL e la connessione a SQL Server o al database SQL di Azure.|  
+|**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli. Per aprire la finestra di dialogo **Gestisci segnalibri** , nel menu Modifica fare clic su Gestisci segnalibri. Nella finestra di dialogo viene visualizzato un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
+|**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Che sincronizza gli oggetti tra Esplora metadati MySQL e SQL Server o Esplora metadati del database SQL di Azure. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni da gestire con i layout.|  
+|**Strumenti**|Contiene i comandi per la creazione di report, la conversione dello schema, l'aggiornamento dal database, la migrazione di oggetti e dati e il salvataggio come script. Consente inoltre di accedere alle impostazioni **globali,** alle impostazioni predefinite del progetto e alle finestre di dialogo **delle impostazioni del progetto** .|  
+|**Guida**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  
   
-### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e il riquadro elenco errori  
-Il **vista** menu sono disponibili comandi per attivare o disattivare la visibilità del riquadro di Output e il riquadro elenco errori:  
+### <a name="output-pane-and-error-list-pane"></a>Riquadro di output e riquadro Elenco errori  
+Il menu **Visualizza** include i comandi per abilitare o disabilitare la visibilità del riquadro di output e del riquadro elenco errori:  
   
--   Il riquadro di Output Mostra i messaggi di stato da SSMA durante la conversione degli oggetti di sincronizzazione dell'oggetto e migrazione dei dati.  
+-   Il riquadro output Mostra i messaggi di stato di SSMA durante la conversione dell'oggetto, la sincronizzazione degli oggetti e la migrazione dei dati.  
   
--   Nel riquadro elenco errori Mostra messaggi di errore, avviso e informativi in un elenco ordinabile.  
+-   Il riquadro Elenco errori Mostra messaggi di errore, di avviso e informativi in un elenco ordinabile.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento all'interfaccia utente &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-[La migrazione dei dati di MySQL in - database SQL di Azure SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+[Informazioni di riferimento sull'interfaccia utente &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[Migrazione dei dati MySQL in SQL Server-database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   

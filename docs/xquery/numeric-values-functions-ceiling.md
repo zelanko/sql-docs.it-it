@@ -1,5 +1,5 @@
 ---
-title: Funzione CEILING (XQuery) | Microsoft Docs
+title: Funzione ceiling (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946571"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funzioni per valori numerici - ceiling 
@@ -38,20 +38,20 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Note  
- Se il tipo della *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: double**, oppure **xs: decimal**, il tipo restituito è identico il *$arg* tipo.  
+## <a name="remarks"></a>Osservazioni  
+ Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* .  
   
- Se il tipo della *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo di base numerico.  
+ Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
   
- Se l'input per le funzioni: floor, fn: Ceiling o Fn **xdt: untypedAtomic**, viene eseguito in modo implicito il cast **xs: double**.  
+ Se l'input per le funzioni FN: floor, FN: Ceiling o FN: round è **xdt: untypedAtomic**, viene eseguito il cast implicito a **xs: Double**.  
   
  Qualsiasi altro tipo di dati genera un errore statico.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilizzo della funzione booleana XQuery ceiling()  
- Per il modello di prodotto 7, la query restituisce un elenco dei centri di lavorazione coinvolti nel processo di produzione del modello. Per ogni centro di lavorazione, la query restituisce l'ID, le ore di manodopera e la dimensione del lotto, se documentati. La query Usa la **ceiling** funzione per restituire le ore di manodopera come valori di tipo **decimale**.  
+ Per il modello di prodotto 7, la query restituisce un elenco dei centri di lavorazione coinvolti nel processo di produzione del modello. Per ogni centro di lavorazione, la query restituisce l'ID, le ore di manodopera e la dimensione del lotto, se documentati. La query usa la funzione **Ceiling** per restituire le ore lavorative come valori di tipo **Decimal**.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,15 +73,15 @@ WHERE ProductModelID=7
   
 -   Il prefisso AWMI è l'acronimo di Adventure Works Manufacturing Instructions e fa riferimento allo stesso spazio dei nomi utilizzato nel documento sul quale viene eseguita la query.  
   
--   **Le istruzioni** è un **xml** colonna di tipo. Pertanto, il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) consente di specificare una query XQuery. L'istruzione XQuery viene specificata come argomento per il metodo di query.  
+-   **Le istruzioni** sono una colonna di tipo **XML** . Per specificare XQuery, viene pertanto utilizzato il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) . L'istruzione XQuery viene specificata come argomento per il metodo di query.  
   
--   **per... restituire** è un costrutto di ciclo. Nella query, il **per** ciclo identifica un elenco di \<Location > elementi. Per ogni centro di lavorazione, la **restituire** istruzione il **per** ciclo descrive il codice XML generato:  
+-   **per... Return** è un costrutto di ciclo. Nella query il ciclo **for** identifica un elenco di \<percorsi> elementi. Per ogni centro di lavorazione, l'istruzione **return** nel ciclo **for** descrive il codice XML da generare:  
   
-    -   Oggetto \<Location > elemento che ha gli attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
+    -   Un \<percorso> elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
   
-    -   La {$i/@LotSize } espressione recupera l'attributo LotSize dal documento, se presente.  
+    -   L'espressione {i/@LotSize $} recupera l'attributo LotSize dal documento, se presente.  
   
-    -   Questo è il risultato:  
+    -   Risultato:  
   
 ```  
 ProductModelID Result    
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **Ceiling ()** funzione esegue il mapping di tutti i valori interi a xs: decimal.  
+-   La funzione **Ceiling ()** esegue il mapping di tutti i valori interi a xs: Decimal.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [Funzione Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
+ [Funzione round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà RecordCount (VC + +) e filtro | Microsoft Docs
+title: Esempio di proprietà Filter e RecordCount (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932661"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà RecordCount (VC + +) e filtro
-Questo esempio Usa la [filtro](../../../ado/reference/ado-api/filter-property.md) per aprire una nuova [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato su una determinata condizione applicata a un oggetto esistente **Recordset**. Usa il [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) proprietà per visualizzare il numero di record in due **recordset**. La funzione FilterField è necessaria per eseguire questa procedura.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà Filter e RecordCount (VC + +)
+In questo esempio viene utilizzata la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per aprire un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset**esistente. Usa la proprietà [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  
   
 ## <a name="example"></a>Esempio  
   
@@ -280,13 +280,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Esempio di Input  
+## <a name="sample-input"></a>Input di esempio  
   
 ```  
 USA  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 Orders in original recordset:  
@@ -303,6 +303,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà filtro](../../../ado/reference/ado-api/filter-property.md)   
+ [Filter (proprietà)](../../../ado/reference/ado-api/filter-property.md)   
  [Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

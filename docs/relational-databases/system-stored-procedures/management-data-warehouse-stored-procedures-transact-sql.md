@@ -1,5 +1,5 @@
 ---
-title: Data Warehouse di gestione le Stored procedure (Transact-SQL) | Microsoft Docs
+title: Stored procedure di data warehouse di gestione (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 14ec2b0e98b2d6934233adb7a5b0b4159ed37333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941996"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>Stored procedure del data warehouse di gestione (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "67941996"
   
 |||  
 |-|-|  
-|[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|  
-|[core.sp_add_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|  
-|[core.sp_purge_data &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md)||  
+|[Core. sp_create_snapshot &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|[Core. sp_update_data_source &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|  
+|[Core. sp_add_collector_type &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|[Core. sp_remove_collector_type &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|  
+|[Core. sp_purge_data &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  

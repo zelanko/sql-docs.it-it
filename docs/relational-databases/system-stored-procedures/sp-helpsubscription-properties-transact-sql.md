@@ -16,18 +16,18 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771558"
 ---
-# <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
+# <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Recupera le informazioni sulla sicurezza dalla tabella [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) . Questa stored procedure viene eseguita nel Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 `[ @publication_type = ] publication_type`Tipo di pubblicazione. *publication_type* è di **tipo int**e il valore predefinito è null. Se specificato, *publication_type* deve essere uno dei valori seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale|  
 |**1**|Pubblicazione snapshot|  
@@ -63,21 +63,21 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot<br /><br /> **2** = Unione|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publisher_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di pubblicazione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|Account di accesso per il server di distribuzione.|  
-|**distributor_password**|**nvarchar(524)**|Password (crittografata) per il server di distribuzione.|  
+|**distributor_password**|**nvarchar (524)**|Password (crittografata) per il server di distribuzione.|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di distribuzione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti. Indirizzo di rete del servizio FTP (File Transfer Protocol) per il server di distribuzione.|  
 |**ftp_port**|**int**|Disponibile solo per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
-|**ftp_password**|**nvarchar(524)**|Disponibile solo per compatibilità con le versioni precedenti. Password utente utilizzata per la connessione al servizio FTP.|  
+|**ftp_password**|**nvarchar (524)**|Disponibile solo per compatibilità con le versioni precedenti. Password utente utilizzata per la connessione al servizio FTP.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Specifica la posizione della cartella alternativa per lo snapshot.|  
 |**working_directory**|**nvarchar(255)**|Nome della directory di lavoro utilizzata per archiviare i file dei dati e di schema.|  
 |**use_ftp**|**bit**|Specifica l'utilizzo di FTP anziché del protocollo normale per il recupero di snapshot. Se è **1**, viene utilizzato il protocollo FTP.|  
 |**dts_package_name**|**sysame**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
-|**dts_package_password**|**nvarchar(524)**|Password del pacchetto, se è disponibile.|  
+|**dts_package_password**|**nvarchar (524)**|Password del pacchetto, se è disponibile.|  
 |**dts_package_location**|**int**|Posizione di archiviazione del pacchetto DTS.<br /><br /> **0** = il percorso del pacchetto si trova nel database di distribuzione.<br /><br /> **1** = il percorso del pacchetto si trova nel Sottoscrittore.|  
 |**offload_agent**|**bit**|Specifica se l'agente può essere attivato in remoto. Se è **0**, l'agente non può essere attivato in remoto.|  
 |**offload_server**|**sysname**|Nome di rete del server utilizzato per l'attivazione remota.|  
@@ -85,18 +85,18 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**use_web_sync**|**bit**|Specifica se la sottoscrizione può essere sincronizzata tramite HTTPS, dove il valore **1** indica che questa funzionalità è abilitata.|  
 |**internet_url**|**nvarchar(260)**|URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**internet_login**|**nvarchar(128)**|Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
-|**internet_password**|**nvarchar(524)**|Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
+|**internet_password**|**nvarchar (524)**|Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_security_mode**|**int**|Modalità di autenticazione utilizzata per la connessione al server Web che ospita la sincronizzazione Web, dove il valore **1** indica l'autenticazione di Windows e il valore **0** indica l'autenticazione di base.|  
 |**internet_timeout**|**int**|Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
-|**hostname**|**nvarchar(128)**|Specifica il valore di HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
+|**nome host**|**nvarchar(128)**|Specifica il valore di HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpsubscription_properties** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_helpsubscription_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  

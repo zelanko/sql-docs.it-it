@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxylogin (Transact-SQL) | Microsoft Docs
+title: dbo. sysproxylogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984874"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra quali account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono associati ad ogni account proxy di SQL Server Agent. Questa tabella è archiviata nel **msdb** database.  
+  Registra quali account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono associati ad ogni account proxy di SQL Server Agent. Questa tabella è archiviata nel database **msdb** .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|ID dell'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo valore corrisponde al **proxy_id** colonna il **sysproxies** tabella.|  
-|**sid**|**varbinary(85)**|Microsoft Windows *identificatore di protezione* per l'account di accesso di SQL Server.|  
+|**proxy_id**|**int**|ID dell'account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo valore corrisponde alla colonna **proxy_id** nella tabella **sysproxies** .|  
+|**SID**|**varbinary(85)**|*Security_identifier* Microsoft Windows per l'account di accesso SQL Server.|  
 |**principal_id**|**int**|ID dell'utente o del gruppo che dispone dell'autorizzazione per utilizzare l'account proxy per un processo del sottosistema specificato.|  
-|**flags**|**int**|Tipo di account di accesso:<br /><br /> **0** = utente di Windows o un gruppo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del sistema<br /><br /> **2** = **msdb** ruolo predefinito del database|  
+|**Bandiere**|**int**|Tipo di account di accesso:<br /><br /> **0** = utente o gruppo di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del sistema<br /><br /> **2** = ruolo del database**msdb**|  
   
-## <a name="remarks"></a>Note  
- Solo i membri del **sysadmin** ruolo predefinito del server può accedere a questa tabella.  
+## <a name="remarks"></a>Osservazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono accedere a questa tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo. sysproxies &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

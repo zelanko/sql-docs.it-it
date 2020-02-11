@@ -17,16 +17,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211718"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
   In questo argomento viene descritto come creare una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211718"
   
 -   Tramite le funzioni definite dall'utente non possono essere restituiti più set di risultati. Utilizzare una stored procedure se è necessario restituire più set di risultati.  
   
--   In una funzione definita dall'utente la gestione degli errori è limitata. Una funzione definita dall'utente non supporta TRY... RILEVARE, @ERROR o RAISERROR.  
+-   In una funzione definita dall'utente la gestione degli errori è limitata. Una funzione definita dall'utente non supporta TRY... CATCH, @ERROR o RAISERROR.  
   
 -   Tramite le funzioni definite dall'utente non è possibile chiamare una stored procedure normale, bensì una estesa.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211718"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per tale tipo.  
   
-##  <a name="Scalar"></a> Funzioni scalari  
+##  <a name="Scalar"></a>Funzioni scalari  
  Negli esempi seguenti viene creata una funzione scalare a più istruzioni nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . La funzione accetta un valore di input, un valore `ProductID`e restituisce un singolo valore di dati, la quantità aggregata del prodotto specificato nelle scorte.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> Funzioni con valori di tabella  
+##  <a name="TVF"></a>Funzioni con valori di tabella  
  Nell'esempio seguente viene creata una funzione inline con valori di tabella nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . La funzione accetta un parametro di input, un ID (punto vendita) cliente e restituisce le colonne `ProductID`, `Name`e l'aggregazione delle vendite per l'anno in corso come valore `YTD Total` per ogni prodotto venduto al punto vendita.  
   
 ```  

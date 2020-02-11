@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database Microsoft Access (SSAS) | Microsoft Docs
+title: Connettersi a un database di Microsoft Access (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087302"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Connessione a un database di Microsoft Access (SSAS)
-  Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft Access. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft Access. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un database di Microsoft Access, è necessario che nel computer sia installato il provider ACE appropriato. Per altre informazioni, vedere [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
@@ -44,10 +44,10 @@ ms.locfileid: "66087302"
  Specificare una password per la connessione al database.  
   
  **Salva password**  
- Specificare se la password immessa nella casella **Password** è stata archiviata.  
+ Specificare se archiviare la password immessa nella casella **Password** .  
   
- **Advanced**  
- Impostare ulteriori proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
+ **Funzionalità avanzate**  
+ Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** .  
   
  **Test connessione**  
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  

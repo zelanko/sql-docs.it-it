@@ -16,35 +16,35 @@ ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933216"
 ---
 # <a name="definedsize-property"></a>Proprietà DefinedSize
-Indica la capacità dei dati di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
+Indica la capacità dei dati di un oggetto [campo](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **lungo** valore che corrisponde alle dimensioni definite per un campo, che dipende dal tipo dell'oggetto campo dati, vedere [tipo](../../../ado/reference/ado-api/type-property-ado.md) per altre informazioni. Per un campo che utilizza un tipo di dati a lunghezza fissa, il valore restituito è la dimensione del tipo di dati in byte. Per un campo che utilizza un tipo di dati a lunghezza variabile, questa è una delle operazioni seguenti:  
+ Restituisce un valore **Long** che riflette la dimensione definita di un campo, che dipende dal tipo di dati dell'oggetto campo. Per ulteriori informazioni, vedere il [tipo](../../../ado/reference/ado-api/type-property-ado.md) . Per un campo che utilizza un tipo di dati a lunghezza fissa, il valore restituito corrisponde alla dimensione del tipo di dati in byte. Per un campo che utilizza un tipo di dati a lunghezza variabile, questo è uno dei seguenti:  
   
-1.  La lunghezza massima del campo nei caratteri (per **adVarChar** e **adVarWChar**) o in byte (per **adVarBinary**, e **adVarNumeric**) se il campo ha una lunghezza definita. Ad esempio, **adVarChar(5)** campo ha una lunghezza massima pari a 5.  
+1.  Lunghezza massima del campo in caratteri (per **adVarChar** e **adVarWChar**) o in byte (per **adVarBinary**e **adVarNumeric**) se il campo ha una lunghezza definita. Ad esempio, il campo **adVarChar (5)** ha una lunghezza massima di 5.  
   
-2.  La lunghezza massima del tipo di dati in caratteri (per **famiglia** e **adWChar**) o in byte (per **adBinary** e **adNumeric**) se la campo non è una lunghezza definita.  
+2.  Lunghezza massima del tipo di dati in caratteri (per **adChar** e **adWChar**) o in byte (per **adBinary** e **adNumeric**) se il campo non dispone di una lunghezza definita.  
   
-3.  ~ 0 (OR bit per bit, il valore non è 0; tutti i bit sono impostati su 1) se il campo né il tipo di dati ha una lunghezza massima definita.  
+3.  ~ 0 (bit per bit, il valore è diverso da 0; tutti i bit sono impostati su 1) se né il campo né il tipo di dati hanno una lunghezza massima definita.  
   
-4.  Per i tipi di dati che non hanno una lunghezza, è impostato su ~ 0 (OR bit per bit, il valore non è 0; tutti i bit sono impostati su 1).  
+4.  Per i tipi di dati che non hanno una lunghezza, questo valore è impostato su ~ 0 (bit per bit, il valore è diverso da 0; tutti i bit sono impostati su 1).  
   
-## <a name="remarks"></a>Note  
- Usare la **DefinedSize** proprietà per determinare la capacità di dati di un **campo** oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **DefinedSize** per determinare la capacità dei dati di un oggetto **campo** .  
   
- Il **DefinedSize** e [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) le proprietà sono diverse. Si consideri, ad esempio, un **campo** oggetto con un tipo dichiarato del **adVarChar** e un **DefinedSize** valore della proprietà di 50, che contiene un singolo carattere. Il **ActualSize** valore restituito della proprietà è la lunghezza in byte del carattere singolo.  
+ Le proprietà **DefinedSize** e [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) sono diverse. Si consideri, ad esempio, un oggetto **campo** con un tipo dichiarato di **adVarChar** e un valore della proprietà **DefinedSize** di 50, contenente un singolo carattere. Il valore della proprietà **ActualSize** restituito è la lunghezza in byte del singolo carattere.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di ActualSize e DefinedSize (esempio di proprietà (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [Esempio di ActualSize e l'esempio di proprietà DefinedSize (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+ [Esempio di proprietà ActualSize e DefinedSize (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [Esempio di proprietà ActualSize e DefinedSize (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Proprietà ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

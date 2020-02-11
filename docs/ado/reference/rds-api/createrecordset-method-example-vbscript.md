@@ -15,17 +15,17 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964525"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Esempio del metodo CreateRecordset (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio di codice crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sul lato server. Ha due colonne con quattro righe ciascuno. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **CreateRecordsetVBS.asp**.  
+ In questo esempio di codice viene creato un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sul lato server. Sono presenti due colonne con quattro righe ciascuna. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **CreateRecordsetVBS. asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -168,7 +168,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di metodo CreateRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+ [Metodo CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

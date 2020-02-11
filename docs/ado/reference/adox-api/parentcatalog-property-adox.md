@@ -41,22 +41,22 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965581"
 ---
 # <a name="parentcatalog-property-adox"></a>Proprietà ParentCatalog (ADOX)
-Specifica il catalogo padre di un oggetto tabella, un utente o colonna per fornire l'accesso a proprietà specifiche del provider.  
+Specifica il catalogo padre di una tabella, di un utente o di un oggetto colonna per fornire l'accesso alle proprietà specifiche del provider.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) oggetto. L'impostazione **ParentCatalog** a un elemento aperto **catalogo** consente l'accesso a proprietà specifiche del provider prima di aggiungere una tabella o colonna di una **catalogo** raccolta.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un oggetto [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) . L'impostazione di **ParentCatalog** su un **Catalogo** aperto consente l'accesso alle proprietà specifiche del provider prima di accodare una tabella o una colonna a una raccolta di **cataloghi** .  
   
-## <a name="remarks"></a>Note  
- Alcuni provider di dati i valori delle proprietà specifiche del provider deve essere scritto solo al momento della creazione: vale a dire, quando una tabella o colonna viene aggiunto al relativo **catalogo** raccolta. Accedere a queste proprietà prima di aggiungere questi oggetti a un **Catalog**, specificare il **catalogo** nel **ParentCatalog** proprietà prima.  
+## <a name="remarks"></a>Osservazioni  
+ Alcuni provider di dati consentono la scrittura di valori di proprietà specifici del provider solo in fase di creazione, ovvero quando una tabella o una colonna viene aggiunta alla relativa raccolta di **cataloghi** . Per accedere a queste proprietà prima di accodare questi oggetti a un **Catalogo**, specificare prima il **Catalogo** nella proprietà **ParentCatalog** .  
   
- Si verifica un errore quando la tabella o la colonna viene aggiunta a un diverso **Catalog** rispetto al **ParentCatalog**.  
+ Si verifica un errore quando la tabella o la colonna viene aggiunta a un **Catalogo** diverso da quello di **ParentCatalog**.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -66,4 +66,4 @@ Specifica il catalogo padre di un oggetto tabella, un utente o colonna per forni
 |[Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Esempio della proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

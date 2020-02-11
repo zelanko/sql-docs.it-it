@@ -1,6 +1,6 @@
 ---
-title: sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
-description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica su un Database SQL
+title: sys. database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
+description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica in un database SQL
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -23,33 +23,33 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940228"
 ---
-# <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_automatic\_tuning_options (Transact-SQL)
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>tuning_options automatico\_sys\_. database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le opzioni di ottimizzazione automatica per questo database.  
+  Restituisce le opzioni di ottimizzazione automatica per il database.  
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Il nome dell'opzione ottimizzazione automatica. Fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) per le opzioni disponibili.|  
-|**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione ottimizzazione automatica, impostata in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
-|**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata dell'opzione ottimizzazione automatica.<br />OFF<br />ON|  
-|**actual_state**|**smallint**|Indica la modalità di funzionamento dell'opzione ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
-|**actual_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa effettiva dell'opzione ottimizzazione automatica.<br />OFF<br />ON|  
-|**reason**|**smallint**|Indica il motivo per cui gli stati desiderati ed effettivi sono diversi.<br />2 = DISABLED<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|Descrizione testuale del motivo perché sono diversi stati effettivi e desiderati.<br />DISABILITATO = opzione viene disabilitata dal sistema<br />QUERY_STORE_OFF = Query Store è stata disattivata<br />QUERY_STORE_READ_ONLY = Query Store è in modalità di sola lettura<br />NOT_SUPPORTED = disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
+|**nome**|**nvarchar(128)**|Nome dell'opzione di ottimizzazione automatica. Per le opzioni disponibili, fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md) .|  
+|**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione di ottimizzazione automatica, impostata in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
+|**desired_state_desc**|**nvarchar (60)**|Descrizione testuale della modalità operativa desiderata dell'opzione di ottimizzazione automatica.<br />OFF<br />ATTIVA|  
+|**actual_state**|**smallint**|Indica la modalità operativa dell'opzione di ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
+|**actual_state_desc**|**nvarchar (60)**|Descrizione testuale della modalità operativa effettiva dell'opzione di ottimizzazione automatica.<br />OFF<br />ATTIVA|  
+|**motivo**|**smallint**|Indica perché gli Stati effettivi e desiderati sono diversi.<br />2 = DISABILITATO<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
+|**reason_desc**|**nvarchar (60)**|Descrizione testuale del motivo per cui gli Stati effettivi e desiderati sono diversi.<br />DISABLEd = l'opzione è disabilitata dal sistema<br />QUERY_STORE_OFF = Query Store è disattivato<br />QUERY_STORE_READ_ONLY = Query Store è in modalità di sola lettura<br />NOT_SUPPORTED = disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition| 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+ [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. dm_db_tuning_recommendations &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

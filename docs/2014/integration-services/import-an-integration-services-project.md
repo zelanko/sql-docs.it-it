@@ -1,5 +1,5 @@
 ---
-title: Importare un progetto di Integration Services | Microsoft Docs
+title: Importare un progetto Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058168"
 ---
 # <a name="import-an-integration-services-project"></a>Importare un progetto di Integration Services
-  Utilizzare l'**Importazione guidata progetto** di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per creare un progetto da un file di distribuzione esistente (ispac) o da un progetto distribuito nel catalogo di Integration Services. Questa caratteristica è utile soprattutto quando non si dispone della copia originale del progetto, ma si desidera crearne uno da un file ispac o dal catalogo di SSISDB.  
+  Utilizzare l'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Importazione guidata progetto** di ** per creare un progetto da un file di distribuzione esistente (ispac) o da un progetto distribuito nel catalogo di Integration Services. Questa caratteristica è utile soprattutto quando non si dispone della copia originale del progetto, ma si desidera crearne uno da un file ispac o dal catalogo di SSISDB.  
   
 ### <a name="to-import-a-project"></a>Per importare un progetto  
   
-1.  In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]scegliere **Nuovo** > **progetto** dal menu **File** .  
+1.  In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]scegliere **nuovo** > **progetto** dal menu **file** .  
   
 2.  Nell'area **Modelli installati** della finestra **Nuovo progetto** espandere **Business Intelligence**, quindi scegliere **Integration Services**.  
   

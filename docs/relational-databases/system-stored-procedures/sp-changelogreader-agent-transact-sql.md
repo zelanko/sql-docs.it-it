@@ -16,13 +16,13 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768877"
 ---
-# <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
+# <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica le proprietà di sicurezza di un agente di lettura log. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_login = ] 'job_login'`Account di accesso per l'account con cui viene eseguito l'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. In Istanza gestita di database SQL di Azure usare un account di SQL Server. *Questa operazione non può essere modificata per un* [!INCLUDE[msCoName](../../includes/msconame-md.md)] *server di pubblicazione non.* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+`[ @job_login = ] 'job_login'`Account di accesso per l'account con cui viene eseguito l'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. In Istanza gestita di database SQL di Azure usare un account di SQL Server. *Questa operazione non può essere modificata per un* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione non.*  
   
 `[ @job_password = ] 'job_password'`Password per l'account con cui viene eseguito l'agente. *job_password* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -55,7 +55,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* è di **tipo sysname**e il valore predefinito è null. *publisher_login* deve essere specificato quando *publisher_security_mode* è **0**. Se *publisher_login* è null e *publisher_security_mode* è **1**, per la connessione al server di pubblicazione viene utilizzato l'account di Windows specificato in *job_login* .  
+`[ @publisher_login = ] 'publisher_login'`Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* è di **tipo sysname**e il valore predefinito è null. Quando *publisher_security_mode* è **0**, è necessario specificare *publisher_login* . Se *publisher_login* è NULL e *publisher_security_mode* è **1**, per la connessione al server di pubblicazione viene utilizzato l'account di Windows specificato in *job_login* .  
   
 `[ @publisher_password = ] 'publisher_password'`Password utilizzata per la connessione al server di pubblicazione. *publisher_password* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -64,22 +64,22 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 `[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Questo parametro è supportato solo per i server di pubblicazione non SQL Server.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_changelogreader_agent** viene utilizzato nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_changelogreader_agent** viene utilizzata nella replica transazionale.  
   
- **sp_changelogreader_agent** consente di modificare l'account di Windows utilizzato per l'esecuzione di un agente di lettura log. È possibile cambiare la password di un account di accesso di Windows esistente oppure specificare un nuovo account di accesso di Windows e la password.  
+ **sp_changelogreader_agent** viene utilizzata per modificare l'account di Windows utilizzato per l'esecuzione di un agente di lettura log. È possibile cambiare la password di un account di accesso di Windows esistente oppure specificare un nuovo account di accesso di Windows e la password.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changelogreader_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
+ [sp_helplogreader_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà server (Servizi Desktop remoto) | Microsoft Docs
+title: Proprietà Server (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,24 +16,24 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963479"
 ---
 # <a name="server-property-rds"></a>Proprietà Server (Servizi Desktop remoto)
-Indica il protocollo di nome e la comunicazione Internet Information Services (IIS).  
+Indica il nome del Internet Information Services (IIS) e il protocollo di comunicazione.  
   
- È possibile impostare il **Server** in fase di progettazione nei tag dell'oggetto di proprietà di[Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto, o in fase di esecuzione nel codice di script.  
+ È possibile impostare la proprietà **Server** in fase di progettazione nei tag Object di[RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) o in fase di esecuzione nel codice di scripting.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
  **HTTP**  
   
- Sintassi in fase di progettazione  
+ Sintassi della fase di progettazione  
   
 ```  
   
@@ -43,7 +43,7 @@ Indica il protocollo di nome e la comunicazione Internet Information Services (I
   
 ```  
   
- Sintassi in fase di esecuzione  
+ Sintassi della fase di esecuzione  
   
 ```  
   
@@ -56,14 +56,14 @@ awebsrvr:port
   
  **HTTPS**  
   
- Sintassi in fase di progettazione  
+ Sintassi della fase di progettazione  
   
 ```  
   
 <PARAM NAME="Server" VALUE="https://awebsrvr:port">  
 ```  
   
- Sintassi in fase di esecuzione  
+ Sintassi della fase di esecuzione  
   
 ```  
   
@@ -72,7 +72,7 @@ DataControl.Server="https://awebsrvr:port"
   
  **DCOM**  
   
- Sintassi in fase di progettazione  
+ Sintassi della fase di progettazione  
   
 ```  
   
@@ -82,7 +82,7 @@ computername
   
 ```  
   
- Sintassi in fase di esecuzione  
+ Sintassi della fase di esecuzione  
   
 ```  
   
@@ -91,7 +91,7 @@ DataControl.Server="computername"
   
  **In-process**  
   
- Sintassi in fase di progettazione  
+ Sintassi della fase di progettazione  
   
 ```  
   
@@ -99,7 +99,7 @@ DataControl.Server="computername"
   
 ```  
   
- Sintassi in fase di esecuzione  
+ Sintassi della fase di esecuzione  
   
 ```  
   
@@ -107,17 +107,17 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Parametri  
- *awebsrvr*o *computername*  
- Oggetto **stringa** valore che contiene un Internet o intranet percorso o nome del computer, se il server è in un computer remoto; oppure, una stringa vuota se il server nel computer locale.  
+ *awebsrvr*o *nomecomputer*  
+ Valore **stringa** che contiene un percorso Internet o Intranet oppure un nome computer se il server si trova in un computer remoto; oppure una stringa vuota se il server si trova nel computer locale.  
   
- *port*  
- facoltativo. Una porta che viene usata per connettersi a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer (nelle **visualizzazione** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
+ *porta*  
+ Facoltativa. Porta utilizzata per la connessione a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer. scegliere **Opzioni**dal menu **Visualizza** , quindi selezionare la scheda **connessione** oppure in IIS.  
   
  *DataControl*  
- Una variabile oggetto che rappresenta un **Servizi Desktop remoto. DataControl** oggetto.  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto **. Oggetto DataControl** .  
   
-## <a name="remarks"></a>Note  
- Il server è la posizione in cui il **Servizi Desktop remoto. DataControl** elaborazione richiesta (vale a dire, una query o aggiornamento). Per impostazione predefinita, tutte le richieste vengono elaborate le [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto [MSDFMAP. Gestore](../../../ado/guide/remote-data-service/datafactory-customization.md) componente, e [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) file nel server specificato. Tenere presente che quando si modificano i server per risolvere le impostazioni nel vecchio e nuovo **MSDFMAP. INI** file. Incompatibilità possono causare richieste con esito positivo su un server a non riuscire in un altro. Se la proprietà del Server è impostata su una stringa vuota "", questi oggetti verranno utilizzati nel computer locale.  
+## <a name="remarks"></a>Osservazioni  
+ Il server è il percorso in cui **RDS. **Viene elaborata la richiesta DataControl, ovvero una query o un aggiornamento. Per impostazione predefinita, tutte le richieste vengono elaborate dall'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [MSDFMAP. ](../../../ado/guide/remote-data-service/datafactory-customization.md)Componente del gestore e [MSDFMAP. File INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) nel server specificato. Tenere presente che quando si modificano i server per riconciliare le impostazioni nel vecchio e nel nuovo **MSDFMAP. File INI** . Le incompatibilità possono causare errori delle richieste che hanno esito positivo su un server in un altro. Se la proprietà server è impostata sulla stringa vuota "", questi oggetti verranno utilizzati nel computer locale.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

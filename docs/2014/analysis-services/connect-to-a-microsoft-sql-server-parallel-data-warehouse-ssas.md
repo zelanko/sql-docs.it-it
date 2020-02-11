@@ -1,5 +1,5 @@
 ---
-title: Connettersi a Microsoft SQL Server Parallel Data Warehouse (SSAS) | Microsoft Docs
+title: Connettersi a un Microsoft SQL Server Parallel Data Warehouse (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ab10518ff976562665317a75574ee2070be0d8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087195"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Connettersi a Microsoft SQL Server Parallel Data Warehouse (SSAS)
-  Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a Microsoft SQL Server Parallel Data Warehouse (PDW). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **Importazione guidata tabella** consente di specificare le impostazioni per connettersi a Microsoft SQL Server Parallel Data Warehouse (PDW). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  SQL Server PDW è uno strumento estremamente scalabile che offre prestazioni a basso costo tramite un sistema di elaborazione parallela massiva. Per altre informazioni su SQL Server PDW, vedere il sito Web [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895). È possibile connettersi al data warehouse tramite l'autenticazione SQL Server. Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66087195"
  Specificare una password per la connessione al database.  
   
  **Salva password**  
- Specificare se la password immessa nella casella **Password** è stata archiviata.  
+ Specificare se archiviare la password immessa nella casella **Password** .  
   
  **Nome database**  
  Selezionare un database dall'elenco di database.  
   
- **Advanced**  
- Impostare ulteriori proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
+ **Funzionalità avanzate**  
+ Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test connessione**  
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  

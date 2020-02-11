@@ -1,5 +1,5 @@
 ---
-title: Sys.database_audit_specifications (Transact-SQL) | Microsoft Docs
+title: sys. database_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940202"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
+# <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -37,14 +37,14 @@ ms.locfileid: "67940202"
 |database_specification_id|**int**|ID della specifica del database.|  
 |create_date|**datetime**|Data di creazione della specifica del controllo.|  
 |modified_date|**datetime**|Data dell'ultima modifica della specifica del controllo.|  
-|is_state_enabled|**bit**|Stato della specifica del controllo:<br /><br /> 0 - DISABILITATO<br /><br /> 1 - ABILITATA|  
+|is_state_enabled|**bit**|Stato della specifica del controllo:<br /><br /> 0-DISABILITATO<br /><br /> 1: ABILITATO|  
 |audit_GUID|**uniqueidentifer**|GUID del controllo che contiene questa specifica. Viene utilizzato durante l'enumerazione delle specifiche del controllo del database membro durante l'avvio o il collegamento del database.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se un database è in modalità di sola lettura, la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit non può aggiungere specifiche del controllo del database.  
   
-## <a name="permissions"></a>Permissions  
- Le entità con la **ALTER ANY DATABASE AUDIT** oppure **VIEW DEFINITION** autorizzazioni, il ruolo dbo e i membri del ruolo predefinito del database db_owners hanno accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW DEFINITION** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le entità con autorizzazioni **ALTER ANY database audit** o **View definition** , il ruolo dbo e i membri del ruolo predefinito del database db_owners possono accedere a questa vista del catalogo. Inoltre, all'entità non deve essere negata l'autorizzazione **View definition** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

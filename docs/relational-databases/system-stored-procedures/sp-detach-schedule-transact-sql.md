@@ -18,18 +18,18 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936749"
 ---
-# <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
+# <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un'associazione tra una pianificazione e un processo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,30 +42,30 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Numero di identificazione del processo da cui eliminare la pianificazione. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id`Numero di identificazione del processo da cui rimuovere la pianificazione. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'` Il nome del processo da cui eliminare la pianificazione. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
-  
-> [!NOTE]  
->  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
-  
-`[ @schedule_id = ] schedule_id` Il numero di identificazione della pianificazione della pianificazione da eliminare dal processo. *schedule_id* viene **int**, con un valore predefinito è NULL.  
-  
-`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione da eliminare dal processo. *schedule_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'`Nome del processo da cui rimuovere la pianificazione. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+>  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Specifica se eliminare le pianificazioni dei processi. *delete_unused_schedule* viene **bit**, il valore predefinito è **0**, a indicare che verranno mantenute tutte le pianificazioni, anche se vi fa riferimento alcun processo. Se impostato su **1**, pianificazioni di processi non utilizzate vengono eliminate se vi fa riferimento alcun processo.  
+`[ @schedule_id = ] schedule_id`Numero di identificazione della pianificazione da rimuovere dal processo. *schedule_id* è di **tipo int**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione da rimuovere dal processo. *schedule_name* è di **tipo sysname**e il valore predefinito è null.  
+  
+> [!NOTE]  
+>  È necessario specificare *schedule_id* o *schedule_name* , ma non è possibile specificarli entrambi.  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule`Specifica se eliminare le pianificazioni di processi non utilizzate. *delete_unused_schedule* è di **bit**e il valore predefinito è **0**, che indica che verranno mantenute tutte le pianificazioni, anche se non vi sono processi che vi fanno riferimento. Se impostato su **1**, le pianificazioni dei processi non utilizzate vengono eliminate se non vi sono processi che vi fanno riferimento.  
+  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="permissions"></a>Permissions  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+## <a name="permissions"></a>Autorizzazioni  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -77,7 +77,7 @@ sp_detach_schedule
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguite verifiche per determinare se l'utente è proprietario della pianificazione. Solo i membri del **sysadmin** ruolo predefinito del server possono scollegare le pianificazioni da processi di proprietà da un altro utente.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguite verifiche per determinare se l'utente è proprietario della pianificazione. Solo i membri del ruolo predefinito del server **sysadmin** possono scollegare le pianificazioni dai processi di proprietà di un altro utente.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimossa un'associazione tra una pianificazione `'NightlyJobs'` e un processo `'BackupDatabase'`.  
@@ -93,8 +93,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

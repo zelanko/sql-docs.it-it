@@ -21,22 +21,22 @@ ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938570"
 ---
 # <a name="description-property-ado-md"></a>Proprietà Description (ADO MD)
 Restituisce una spiegazione del testo dell'oggetto corrente.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **stringa** ed è di sola lettura.  
+ Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Note  
- Per la [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetti **descrizione** si applica solo ai membri di misure e formule. **Descrizione** restituisce una stringa vuota ("") per tutti gli altri tipi di membri. Per altre informazioni sui vari tipi di membri, vedere la [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) proprietà.  
+## <a name="remarks"></a>Osservazioni  
+ Per gli oggetti [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) , la **Descrizione** si applica solo ai membri delle formule e delle misure. **Description** restituisce una stringa vuota ("") per tutti gli altri tipi di membri. Per ulteriori informazioni sui vari tipi di membri, vedere la proprietà [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) .  
   
- Questa proprietà è supportata solo nei **membro** oggetti appartenenti a un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) oggetto. Si verifica un errore quando questa proprietà viene fatto riferimento dal **membro** oggetti appartenenti a un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetto.  
+ Questa proprietà è supportata solo su oggetti **membro** che appartengono a un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Si verifica un errore quando si fa riferimento a questa proprietà dagli oggetti **membro** che appartengono a un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Si applica a  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262698"
 ---
-# <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
+# <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa vista a gestione dinamica restituisce una tabella virtuale per tutte le transazioni attive che generano versioni di riga o che potrebbero accedervi. Le transazioni vengono incluse in una o più delle situazioni seguenti:  
@@ -47,7 +47,7 @@ ms.locfileid: "68262698"
  Questa vista a gestione dinamica non include transazioni di sistema.  
   
 > [!NOTE]  
->  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,17 +67,17 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|ID della sessione che ha avviato la transazione.|  
 |**first_snapshot_sequence_num**|**bigint**|Numero di sequenza più basso delle transazioni attive nel momento in cui è stato eseguito uno snapshot. Al momento dell'esecuzione, una transazione snapshot esegue uno snapshot di tutte le transazioni attive in quel momento. Per le transazioni non snapshot, il valore di questa colonna è 0.|  
 |**max_version_chain_traversed**|**int**|Lunghezza massima della catena delle versioni attraversata per trovare la versione consistente dal punto di vista transazionale.|  
-|**average_version_chain_traversed**|**real**|Numero medio di versioni di riga nelle catene delle versioni attraversate.|  
+|**average_version_chain_traversed**|**reale**|Numero medio di versioni di riga nelle catene delle versioni attraversate.|  
 |**elapsed_time_seconds**|**bigint**|Tempo trascorso dal momento in cui la transazione ha acquisito il relativo numero di sequenza.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="remarks"></a>Note  
- **DM tran_active_snapshot_database_transactions** segnala le transazioni che vengono assegnate un numero di sequenza della transazione (XSN). Il numero XSN viene assegnato quando la transazione accede per la prima volta all'archivio delle versioni. Negli esempi viene illustrato cosa accade quando si assegna un numero XSN a una transazione in un database abilitato per l'isolamento dello snapshot o l'isolamento Read-committed che utilizza il controllo delle versioni delle righe:  
+## <a name="remarks"></a>Osservazioni  
+ **sys. dm_tran_active_snapshot_database_transactions** segnala le transazioni a cui viene assegnato un numero di sequenza della transazione (xsn). Il numero XSN viene assegnato quando la transazione accede per la prima volta all'archivio delle versioni. Negli esempi viene illustrato cosa accade quando si assegna un numero XSN a una transazione in un database abilitato per l'isolamento dello snapshot o l'isolamento Read-committed che utilizza il controllo delle versioni delle righe:  
   
 -   Se una transazione viene eseguita nel livello di isolamento serializzabile, il numero XSN viene assegnato quando la transazione esegue per la prima volta un'istruzione, ad esempio un'operazione UPDATE, che provoca la creazione di una versione di riga.  
   
@@ -143,15 +143,16 @@ elapsed_time_seconds
 333  
 ```  
   
- Le informazioni seguenti valutano i risultati di **DM tran_active_snapshot_database_transactions**:  
+ Le informazioni seguenti valutano i risultati di **sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: Poiché questa transazione non è in esecuzione nell'isolamento dello snapshot, il `is_snapshot` valore e `first_snapshot_sequence_num` sono `0`. `transaction_sequence_num` indica che alla transazione è stato assegnato un numero di sequenza della transazione, poiché una o entrambe le opzioni di database ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT sono impostate su ON.  
+-   XSN-57: poiché questa transazione non viene eseguita con l'isolamento dello snapshot `is_snapshot` , il `first_snapshot_sequence_num` valore `0`e sono. 
+  `transaction_sequence_num` indica che alla transazione è stato assegnato un numero di sequenza della transazione, poiché una o entrambe le opzioni di database ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT sono impostate su ON.  
   
--   XSN-58: Questa transazione non è in esecuzione nell'isolamento dello snapshot e applicano le stesse informazioni di XSN-57.  
+-   XSN-58: questa transazione non viene eseguita nel livello di isolamento dello snapshot e si applicano le stesse informazioni di XSN-57.  
   
--   XSN-59: Si tratta della prima transazione attiva che viene eseguita nell'isolamento dello snapshot. Questa transazione legge i dati di cui è stato eseguito il commit prima di XSN-57, come indicato da `first_snapshot_sequence_num`. L'output di questa transazione mostra inoltre che la catena massima delle versioni attraversata per una riga è pari a `1` e che è stata attraversata in media `1` versione per ogni riga a cui è stato eseguito l'accesso. Ciò significa che le transazioni XSN-57, XSN-58 e XSN-60 non hanno modificato righe e non ne hanno eseguito il commit.  
+-   XSN-59: si tratta della prima transazione attiva in esecuzione nel livello di isolamento dello snapshot. Questa transazione legge i dati di cui è stato eseguito il commit prima di XSN-57, come indicato da `first_snapshot_sequence_num`. L'output di questa transazione mostra inoltre che la catena massima delle versioni attraversata per una riga è pari a `1` e che è stata attraversata in media `1` versione per ogni riga a cui è stato eseguito l'accesso. Ciò significa che le transazioni XSN-57, XSN-58 e XSN-60 non hanno modificato righe e non ne hanno eseguito il commit.  
   
--   XSN-60: Si tratta della seconda transazione eseguita con isolamento dello snapshot. L'output restituisce le stesse informazioni di XSN-59.  
+-   XSN-60: si tratta della seconda transazione eseguita nel livello di isolamento dello snapshot. L'output restituisce le stesse informazioni di XSN-59.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

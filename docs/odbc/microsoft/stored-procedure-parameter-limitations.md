@@ -1,5 +1,5 @@
 ---
-title: Stored Procedure Limitations parametro | Microsoft Docs
+title: Limitazioni del parametro della stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948820"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>Limitazioni dei parametri delle stored procedure
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Quando si esegue Oracle stored procedure che utilizzano 10 o più parametri di output, la chiamata alla stored procedure non riuscirà, generando un errore di violazione di accesso o gli oggetti ADO (ActiveX Data). Ciò può verificarsi quando si usa il Driver Microsoft ODBC per Oracle con le versioni 8.0.4.0.0 e 8.0.4.0.4 del software client Oracle.  
+ Quando si eseguono stored procedure Oracle che utilizzano 10 o più parametri di output, la chiamata stored procedure avrà esito negativo, causando un errore di violazione di accesso o di ActiveX Data Objects (ADO). Questo problema può verificarsi quando si utilizza Microsoft ODBC driver for Oracle con le versioni 8.0.4.0.0 e 8.0.4.0.4 del software client Oracle.  
   
- Per correggere il problema, il software client Oracle deve essere aggiornato alla versione 8.0.4.2.0 o versione successiva. Contattare Oracle Corporation per altre informazioni sul [patch](../../odbc/microsoft/oracle-software-patches.md).  
+ Per risolvere il problema, è necessario aggiornare il software client Oracle alla versione 8.0.4.2.0 o successiva. Per ulteriori informazioni sulle [patch](../../odbc/microsoft/oracle-software-patches.md), contattare Oracle Corporation.  
   
 > [!NOTE]  
->  Questo problema non viene eseguito con la versione preliminare del software client Oracle versione 8.0.3.0.0.
+>  Questo problema non si verifica con la versione iniziale della versione del software client Oracle 8.0.3.0.0.

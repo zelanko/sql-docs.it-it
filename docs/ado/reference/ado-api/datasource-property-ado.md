@@ -16,21 +16,21 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933241"
 ---
 # <a name="datasource-property-ado"></a>Proprietà DataSource (ADO)
-Indica un oggetto che contiene i dati per essere rappresentato come un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+Indica un oggetto che contiene i dati che devono essere rappresentati come oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-## <a name="remarks"></a>Note  
- Questa proprietà viene utilizzata per creare controlli associati a dati con l'ambiente dei dati. Gestisce l'ambiente dei dati raccolte di dati (origini dati) che contiene oggetti denominati (membri dati) che verranno rappresentati come una **Recordset** oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Questa proprietà viene utilizzata per creare controlli con associazione a dati con l'ambiente di dati. L'ambiente dati mantiene raccolte di dati (origini dati) che contengono oggetti denominati (membri dati) che verranno rappresentati come un oggetto **Recordset** .  
   
- Il [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** proprietà devono essere usate in combinazione.  
+ Le proprietà [DataMember](../../../ado/reference/ado-api/datamember-property.md) e **DataSource** devono essere utilizzate insieme.  
   
- L'oggetto di riferimento deve implementare il **IDataSource** l'interfaccia e deve contenere un' **IRowset** interfaccia.  
+ L'oggetto a cui si fa riferimento deve implementare l'interfaccia **IDataSource** e deve contenere un'interfaccia **IRowset** .  
   
 ## <a name="usage"></a>Uso  
   

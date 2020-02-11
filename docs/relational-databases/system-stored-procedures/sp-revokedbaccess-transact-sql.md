@@ -18,21 +18,21 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941711"
 ---
-# <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
+# <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un utente di database dal database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [drop user](../../t-sql/statements/drop-user-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name_in_db = ] 'name'` È il nome dell'utente del database da rimuovere. *nome* è un **sysname** non prevede alcun valore predefinito. *nome* può essere il nome di un account di accesso del server, un account di accesso di Windows o un gruppo di Windows e deve esistere nel database corrente. Se si specifica un account di accesso o un gruppo di Windows, specificare il nome con cui è noto nel database.  
+`[ @name_in_db = ] 'name'`Nome dell'utente del database da rimuovere. *Name* è di **tipo sysname** e non prevede alcun valore predefinito. *Name* può essere il nome di un account di accesso del server, di un account di accesso di Windows o di un gruppo di Windows e deve esistere nel database corrente. Se si specifica un account di accesso o un gruppo di Windows, specificare il nome con cui è noto nel database.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Quando si rimuove l'utente di database, vengono rimossi anche le autorizzazioni e gli alias che dipendono dall'utente.  
   
- **sp_revokedbaccess** può rimuovere solo gli utenti del database dal database corrente. Prima di rimuovere un utente di database proprietario di oggetti nel database corrente è necessario trasferire la proprietà degli oggetti o rimuoverli dal database. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess** possibile rimuovere solo gli utenti del database dal database corrente. Prima di rimuovere un utente di database proprietario di oggetti nel database corrente è necessario trasferire la proprietà degli oggetti o rimuoverli dal database. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- **sp_revokedbaccess** non può essere eseguita all'interno di una transazione definita dall'utente.  
+ Impossibile eseguire **sp_revokedbaccess** in una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY USER per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  

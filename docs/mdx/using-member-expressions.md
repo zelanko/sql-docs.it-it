@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893508"
 ---
 # <a name="using-member-expressions"></a>Utilizzo delle espressioni di membro
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- Sono molte le funzioni MDX che restituiscono membri. Per un elenco completo, vedere [MDX &#40;&#41; per riferimento alle funzioni MDX](../mdx/mdx-function-reference-mdx.md)  
+ Sono molte le funzioni MDX che restituiscono membri. Per un elenco completo, vedere Guida di [riferimento alle funzioni mdx &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Per ulteriori informazioni sui nomi dei membri e sulle chiavi dei membri, vedere [utilizzo di membri, Tuple &#40;e&#41;set MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+>  Per ulteriori informazioni sui nomi dei membri e sulle chiavi dei membri, vedere [utilizzo di membri, Tuple e set &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  

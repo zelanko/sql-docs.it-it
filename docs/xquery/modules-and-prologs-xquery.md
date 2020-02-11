@@ -1,5 +1,5 @@
 ---
-title: Moduli e prologhi (XQuery) | Microsoft Docs
+title: Moduli e proregistri (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946580"
 ---
 # <a name="modules-and-prologs-xquery"></a>Moduli e prologhi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [Prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) è una serie di dichiarazioni dello spazio dei nomi. Se si dichiara lo spazio dei nomi nel prologo, è possibile specificare l'associazione di un prefisso a uno spazio dei nomi e utilizzare il prefisso nel corpo della query.  
+  Il [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) è una serie di dichiarazioni dello spazio dei nomi. Se si dichiara lo spazio dei nomi nel prologo, è possibile specificare l'associazione di un prefisso a uno spazio dei nomi e utilizzare il prefisso nel corpo della query.  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Le specifiche di XQuery seguenti non sono supportate in questa implementazione:  
@@ -52,8 +52,8 @@ ms.locfileid: "67946580"
   
 -   Dichiarazione di funzione (`declare function`)  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Prologo di una query XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
  Descrive il prologo di una query XQuery.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Tipo di proprietà (ADO) | Microsoft Docs
+title: Proprietà Type (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,22 +17,22 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937861"
 ---
 # <a name="type-property-ado"></a>Proprietà Type (ADO)
-Indica il tipo di dati o di tipo operativo di una [parametri](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetto.  
+Indica il tipo operativo o il tipo di dati di un [parametro](../../../ado/reference/ado-api/parameter-object.md), un [campo](../../../ado/reference/ado-api/field-object.md)o un oggetto [proprietà](../../../ado/reference/ado-api/property-object-ado.md) .  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) .  
   
-## <a name="remarks"></a>Note  
- Per la **parametri** oggetti, il **tipo** è di lettura/scrittura. Per ottenere nuove **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md), **tipo** è lettura/scrittura solo dopo il [ Valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà per il **campo** è stato specificato e il provider di dati è stato aggiunto il nuovo **campo** chiamando il [aggiornare](../../../ado/reference/ado-api/update-method.md)metodo per la **campi** raccolta.  
+## <a name="remarks"></a>Osservazioni  
+ Per gli oggetti **Parameter** , la proprietà **Type** è di lettura/scrittura. Per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un [record](../../../ado/reference/ado-api/record-object-ado.md), il **tipo** è in lettura/scrittura solo dopo che è stata specificata la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) per il **campo** e il provider di dati ha aggiunto correttamente il nuovo **campo** chiamando il metodo [Update](../../../ado/reference/ado-api/update-method.md) della raccolta **Fields** .  
   
- Per tutti gli altri oggetti, il **tipo** proprietà è di sola lettura.  
+ Per tutti gli altri oggetti, la proprietà **Type** è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -41,7 +41,7 @@ Indica il tipo di dati o di tipo operativo di una [parametri](../../../ado/refer
 |[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà Type (campo) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Esempio di proprietà Type (proprietà) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Esempio di proprietà Type (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Esempio di proprietà Type (Property) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Proprietà RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Proprietà Type (Stream - ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -1,5 +1,5 @@
 ---
-title: Agente di raccolta dati di Stored procedure (Transact-SQL) | Microsoft Docs
+title: Stored procedure dell'agente di raccolta dati (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942406"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Stored procedure dell'agente di raccolta dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server supporta le seguenti stored procedure di sistema che consentono di lavorare con l'agente di raccolta dati e i componenti seguenti: set di raccolta, gli elementi della raccolta e i tipi di raccolta.  
+  SQL Server supporta le seguenti stored procedure di sistema utilizzate per lavorare con l'agente di raccolta dati e i componenti seguenti: set di raccolta, elementi della raccolta e tipi di raccolta.  
   
 > [!IMPORTANT]  
 >  A differenza delle normali stored procedure, i parametri per le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  

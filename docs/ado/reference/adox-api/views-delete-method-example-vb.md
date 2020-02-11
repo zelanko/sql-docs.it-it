@@ -1,5 +1,5 @@
 ---
-title: Viste di esempio del metodo Delete (VB) | Microsoft Docs
+title: Esempio di metodo Delete views (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8077e22b2bdbd9fe55cca1ea7306443ee9d61ce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964746"
 ---
 # <a name="views-delete-method-example-vb"></a>Esempio del metodo Delete di Views (VB)
-Il codice seguente viene illustrato come utilizzare il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo per eliminare una vista dal catalogo.  
+Nel codice seguente viene illustrato come utilizzare il metodo [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) per eliminare una vista dal catalogo.  
   
 ```  
 ' BeginDeleteViewVB  
@@ -54,5 +54,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elimina metodo (raccolte ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Metodo Delete (raccolte ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo legenda (Visualizzatore modello di Data Mining) di data mining | Microsoft Docs
+title: Finestra di dialogo Legenda data mining (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077771"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Finestra di dialogo Legenda data mining (Visualizzatore modello di data mining)
@@ -36,24 +36,24 @@ ms.locfileid: "66077771"
   
 ## <a name="options"></a>Opzioni  
  Modelli di albero delle decisioni  
- [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
  Modelli Naive Bayes  
- [Visualizzare un modello usando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
  Modelli di clustering  
- [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
  [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
  Modelli Time Series  
- [Visualizzare un modello usando il Visualizzatore Microsoft Times Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
  Modelli di regressione lineare  
- [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

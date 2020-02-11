@@ -1,5 +1,5 @@
 ---
-title: Procedure di esempio del metodo Refresh (VB) | Microsoft Docs
+title: Esempio di metodo Refresh di Procedures (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965373"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Esempio del metodo Refresh di Procedures (VB)
-Il codice seguente viene illustrato come aggiornare il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima [routine](../../../ado/reference/adox-api/procedure-object-adox.md) oggetti dalle **catalogo** sono accessibili.  
+Nel codice seguente viene illustrato come aggiornare la raccolta [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima che sia possibile accedere agli oggetti [procedure](../../../ado/reference/adox-api/procedure-object-adox.md) del **Catalogo** .  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -56,5 +56,5 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Raccolta di oggetti procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

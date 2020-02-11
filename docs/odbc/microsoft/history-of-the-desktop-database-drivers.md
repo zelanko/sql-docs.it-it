@@ -1,5 +1,5 @@
 ---
-title: Cronologia dei driver di Database Desktop | Microsoft Docs
+title: Cronologia dei driver del database desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d225bac273558b928e3e8fd2f41bd121a723f6ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952374"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Cronologia dei driver di database desktop
-Nella tabella seguente mostra la cronologia delle versioni di driver di Database Desktop.  
+La tabella seguente illustra la cronologia delle versioni dei driver di database desktop.  
   
-|Version|Data di rilascio|Descrizione|  
+|Versione|Data di rilascio|Descrizione|  
 |-------------|------------------|-----------------|  
-|1.0|1993 agosto|Hanno usato il processore di query SIMBA prodotto da PageAhead Software. Amministratore o SIMBA ricevuto chiamate ODBC e istruzioni SQL, li elaborati in chiamate ISAM installabile Microsoft Jet e quindi chiamata il livello di invio Microsoft Jet ISAM per caricare e chiamare il driver ISAM installabile appropriato.|  
-|2.0|1994 dicembre|Usata con ODBC 2.0, che esteso in modo significativo la funzionalità ODBC. La modifica principale nella versione 2.0 è che il motore di database Microsoft Jet sostituiti in query processor SIMBA. Con il motore di database Microsoft Jet, i driver di Database Desktop molto più strettamente integrato con la tecnologia di Microsoft Access e i driver ISAM installabili Microsoft Jet. Miglioramenti significativi sono stati:<br /><br /> -Supporto nativo per i cursori scorrevoli.<br />-Supporto nativo per gli outer join, join aggiornabile ed eterogenei e transazioni.<br />-le versioni a 32 bit dei driver per Microsoft Windows NT.|  
-|3.0|Ottobre 1995|Fornisce supporto per Windows 95 e Windows NT Workstation o Server nt3.51. Solo driver a 32 bit sono stati inclusi in questa versione. il driver a 16 bit per Windows versione 3.1 sono state rimosse.|  
-|3.5|Ottobre 1996|Questi driver sono stati double byte character set (DBCS)-abilitata, sono stati più adatti per l'uso con applicazioni Internet rispetto alle versioni precedenti e inserire l'uso di nomi delle origini dati di File (DSN). Il driver Microsoft Access è stato rilasciato in una versione RISC per l'utilizzo in piattaforme alfa per Windows 95 o 98 e Windows NT 3.51 e sistemi operativi successivi.|  
-|4.0|Ritardo 1998|Fornisce il supporto per il formato Unicode motore Jet di Microsoft e compatibilità per le versioni precedenti il formato ANSI.|  
+|1.0|1993 agosto|Utilizzato il processore di query SIMBA prodotto da PageAhead Software. SIMBA ha ricevuto chiamate ODBC e istruzioni SQL, le ha elaborate in chiamate ISAM installabili da Microsoft Jet e quindi ha chiamato il livello di invio ISAM di Microsoft Jet per caricare e chiamare il driver ISAM installabile appropriato.|  
+|2.0|1994 dicembre|Utilizzato con ODBC 2,0, che ha espanso significativamente la funzionalità ODBC. Il cambiamento principale della versione 2,0 è che il motore di database di Microsoft Jet ha sostituito SIMBA query processor. Con il motore di database di Microsoft Jet, i driver di database desktop si integrano molto più strettamente con i driver ISAM installabili di Microsoft Jet e la tecnologia Microsoft Access. Sono stati apportati miglioramenti significativi:<br /><br /> -Supporto nativo per i cursori scorrevoli.<br />-Supporto nativo per outer join, join aggiornabili ed eterogenei e transazioni.<br />-versioni a 32 bit dei driver per Microsoft Windows NT.|  
+|3.0|1995 ottobre|Fornito supporto per la workstation Windows 95 e Windows NT o NT Server 3,51. In questa versione sono stati inclusi solo driver a 32 bit. i driver a 16 bit per Windows versione 3,1 sono stati rimossi.|  
+|3.5|1996 ottobre|Questi driver erano abilitati per il set di caratteri DBCS (Double-byte character set), erano più adatti per l'uso con applicazioni Internet rispetto alle versioni precedenti e contenevano l'uso di DSN (Data Source Name). Il driver Microsoft Access è stato rilasciato in una versione RISC per l'uso su piattaforme Alpha per Windows 95/98 e Windows NT 3,51 e sistemi operativi successivi.|  
+|4.0|Tardi 1998|Fornisce supporto per il formato Unicode del motore Jet Microsoft insieme alla compatibilità per il formato ANSI delle versioni precedenti.|  
   
 > [!NOTE]  
->  I driver version3.5 sono stati progettati per funzionare con ODBC2. *x*. Anche se funzionano anche con ODBC 3.0, non supportano tutte le funzionalità di ODBC 3.0. Per altre informazioni sul funzionano di questi driver con ODBC 3.0, vedere [garantire la compatibilità e conformità agli standard](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+>  I driver della versione 3.5 sono stati progettati per funzionare con ODBC2. *x*. Sebbene funzionino anche con ODBC 3,0, non supportano tutte le funzionalità ODBC 3,0. Per ulteriori informazioni sul funzionamento di questi driver con ODBC 3,0, vedere [compatibilità con le versioni precedenti e conformità agli standard](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211830"
 ---
 # <a name="modify-columns-database-engine"></a>Modificare colonne (motore di database)
@@ -27,7 +27,7 @@ ms.locfileid: "68211830"
 > [!WARNING]  
 >  La modifica del tipo di dati di una colonna in cui sono già contenuti dati può comportare la perdita definitiva di tali dati al momento della conversione. È possibile inoltre che si verifichino errori nel codice e nelle applicazioni che dipendono dalla colonna modificata, incluse query, viste, stored procedure, funzioni definite dall'utente e applicazioni client. Tali errori inoltre tendono a propagarsi a cascata. Possono ad esempio verificarsi errori in una stored procedure che chiama una funzione definita dall'utente che dipende dalla colonna modificata. È pertanto opportuno valutare seriamente ogni eventuale modifica da apportare a una colonna prima di procedere.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68211830"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68211830"
   
 3.  Nella scheda **Proprietà colonne** fare clic sulla cella della griglia relativa alla proprietà **Tipo di dati** , quindi selezionare un nuovo tipo di dati dall'elenco a discesa.  
   
-4.  Nel menu **File** scegliere **Salva**_table name_.  
+4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
 > [!NOTE]  
 >  Quando si modifica il tipo di dati di una colonna, in Progettazione tabelle verrà applicata la lunghezza predefinita del tipo di dati selezionato, anche se ne è stata già specificata un'altra. È pertanto opportuno impostare sempre la lunghezza del tipo di dati per il valore desiderato dopo avere specificato il tipo di dati.  
@@ -64,7 +64,7 @@ ms.locfileid: "68211830"
 > [!WARNING]  
 >  Se si tenta di modificare il tipo di dati di una colonna correlata alle altre tabelle, Progettazione tabelle chiede all'utente di confermare anche la modifica da apportare alle colonne nelle altre tabelle.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   

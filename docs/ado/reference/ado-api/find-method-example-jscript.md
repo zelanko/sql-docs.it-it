@@ -1,5 +1,5 @@
 ---
-title: Esempio del metodo Find (JScript) | Microsoft Docs
+title: Esempio di metodo Find (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932638"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
-Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e visualizzare le società il ***Northwind*** database il cui nome inizia con la lettera G. le operazioni Taglia e Incolla i seguente codice nel blocco note o un altro editor di testo e salvarlo come **FindJS**.  
+In questo esempio viene utilizzato il metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare e visualizzare le società del database ***Northwind*** il cui nome inizia con la lettera G. tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **FindJS. asp**.  
   
 ```  
 <!-- BeginFindJS -->  

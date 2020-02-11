@@ -14,13 +14,13 @@ ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952396"
 ---
 # <a name="identifiers-limitations"></a>Limitazioni degli identificatori
-Se un identificatore contiene uno spazio o un simbolo speciale, l'identificatore deve essere racchiuso tra virgolette back. Un nome valido è una stringa non più di 64 caratteri, di cui il primo carattere non deve essere uno spazio. I nomi validi non possono contenere caratteri di controllo o i caratteri speciali seguenti: ' &#124; # *? [ ] . ! $ .  
+Se un identificatore contiene uno spazio o un simbolo speciale, l'identificatore deve essere racchiuso tra virgolette. Un nome valido è una stringa di non più di 64 caratteri, di cui il primo carattere non deve essere uno spazio. I nomi validi non possono contenere caratteri di controllo o i caratteri speciali seguenti:' &#124; # *? [ ] . ! $ .  
   
- Non utilizzare parole riservate elencate nella grammatica SQL nell'appendice C del *riferimento per programmatori ODBC* (o la forma abbreviata delle parole riservate) come identificatori (vale a dire, tabella o colonna di nomi), a meno che non si racchiudono la parola di backup virgolette singole (').
+ Non utilizzare le parole riservate elencate nella grammatica SQL nell'Appendice C del riferimento per *programmatori ODBC* (o il formato abbreviato di queste parole riservate) come identificatori (ovvero nomi di tabella o di colonna), a meno che non si circondi la parola tra virgolette (').

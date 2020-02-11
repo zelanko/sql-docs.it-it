@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni INSERT, DELETE e UPDATE | Microsoft Docs
+title: Istruzioni UPDATE, DELETE e INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,37 +17,37 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942832"
 ---
 # <a name="update-delete-and-insert-statements"></a>Istruzioni UPDATE, DELETE e INSERT
-Applicazioni basate su SQL apportano modifiche alle tabelle mediante l'esecuzione di **UPDATE**, **eliminare**, e **Inserisci** istruzioni. Queste istruzioni fanno parte del livello di conformità grammatica SQL minima e devono essere supportate da tutti i driver e origini dati.  
+Le applicazioni basate su SQL consentono di apportare modifiche alle tabelle eseguendo le istruzioni **Update**, **Delete**e **Insert** . Queste istruzioni fanno parte del livello di conformità della grammatica SQL minimo e devono essere supportate da tutti i driver e dalle origini dati.  
   
- La sintassi di tali istruzioni è:  
+ La sintassi di queste istruzioni è la seguente:  
   
- **UPDATE** _-nome della tabella_  
+ **Aggiorna** _nome tabella_  
   
- **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
+ **Set** _column-identifier_ **=** {*Expression* &#124; **null**}  
   
- [ **,** _colonna identificatore_ **=** {*espressione* &#124; **NULL**}]...  
+ **=** [**,** _identificatore di colonna_ {*Expression* &#124; **null**}]...  
   
- [**In cui** _condizione di ricerca_]  
+ [**Dove** _ricerca-condizione_]  
   
- **DELETE FROM** _nome tabella_[**in cui** _condizioni di ricerca_]  
+ **Elimina da** _nome-tabella_[**where** _Search-Condition_]  
   
- **INSERT INTO** _nome tabella_[ **(** _colonna identificatore_ [ **,** _-identificatoredellacolonna_]... **)** ]  
+ **Insert into** _Table-Name_[**(** _column-identifier_ [**,** _column-identifier_]... **)**]  
   
- {*query-specification* &#124; **valori (** _insert-value_ [ **,** _insert-valore_]... **)** }  
+ {*query-Specification* &#124; **valori (** _Insert-value_ [**,** _Insert-value_]... **)**}  
   
- Si noti che il *query-specification* elemento è valido solo nelle grammatiche di Core e SQL estesa e che le *expression* e *condizione di ricerca* elementi diventano più complesse nelle grammatiche di Core e SQL estesa.  
+ Si noti che l'elemento *query-Specification* è valido solo nelle grammatiche core e SQL estese e che l' *espressione* e gli elementi della *condizione di ricerca* diventano più complessi nelle grammatiche di base e SQL estese.  
   
- Come le altre istruzioni SQL, **UPDATE**, **eliminare**, e **Inserisci** istruzioni sono spesso più efficiente quando si usano i parametri. Ad esempio, l'istruzione seguente può essere preparata ed eseguita ripetutamente per inserire più righe nella tabella Orders:  
+ Analogamente ad altre istruzioni SQL, le istruzioni **Update**, **Delete**e **Insert** sono spesso più efficienti quando utilizzano parametri. L'istruzione seguente, ad esempio, può essere preparata e ripetutamente eseguita per inserire più righe nella tabella Orders:  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Questa efficienza può essere aumentata mediante il passaggio di matrici di valori di parametro. Per altre informazioni sui parametri delle istruzioni e le matrici di valori dei parametri, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md).
+ Questa efficienza può essere aumentata passando matrici di valori di parametro. Per ulteriori informazioni sui parametri di istruzione e sulle matrici di valori di parametro, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md).

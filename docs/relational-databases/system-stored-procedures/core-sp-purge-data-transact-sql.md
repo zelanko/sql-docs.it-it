@@ -1,5 +1,5 @@
 ---
-title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
+title: Core. sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942499"
 ---
-# <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
+# <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove i dati dal data warehouse di gestione in base ai criteri di memorizzazione. Questa procedura viene eseguita ogni giorno dal processo mdw_purge_data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sul data warehouse di gestione associato all'istanza specificata. È possibile utilizzare questa procedura per eseguire una rimozione su richiesta dei dati dal data warehouse di gestione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,35 +47,35 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>Argomenti  
  [@retention_days =] *retention_days*  
- Numero di giorni per cui conservare i dati nelle tabelle del data warehouse di gestione. I dati con un timestamp meno recente *retention_days* viene rimosso. *retention_days* viene **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere positivo. Quando è NULL, il valore nella colonna valid_through della vista core.snapshots determina le righe da rimuovere.  
+ Numero di giorni per cui conservare i dati nelle tabelle del data warehouse di gestione. I dati con un timestamp più vecchio di *retention_days* vengono rimossi. *retention_days* è di **smallint**e il valore predefinito è null. Se specificato, il valore deve essere positivo. Quando è NULL, il valore nella colonna valid_through della vista core.snapshots determina le righe da rimuovere.  
   
- [@instance_name =] '*nome_istanza*'  
- Nome dell'istanza per l'insieme di raccolta. *instance_name* viene **sysname**, con un valore predefinito è NULL.  
+ [@instance_name = ] '*instance_name*'  
+ Nome dell'istanza per l'insieme di raccolta. *instance_name* è di **tipo sysname**e il valore predefinito è null.  
   
- *instance_name* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
+ *instance_name* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
   
  [@collection_set_uid = ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier**, con un valore predefinito è NULL. Quando è NULL, vengono rimosse le righe risultanti da tutti i set di raccolta. Per ottenere questo valore, eseguire una query sulla vista del catalogo syscollector_collection_sets.  
+ GUID per il set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier**e il valore predefinito è null. Quando è NULL, vengono rimosse le righe risultanti da tutti i set di raccolta. Per ottenere questo valore, eseguire una query sulla vista del catalogo syscollector_collection_sets.  
   
- [@duration =] *durata*  
- Numero massimo di minuti per l'esecuzione dell'operazione di eliminazione. *durata* viene **smallint**, con un valore predefinito è NULL. Se specificato, il valore deve essere zero o un numero intero positivo. Quando è NULL, l'operazione viene eseguita finché non vengono rimosse tutte le righe restituite o l'operazione non viene arrestata manualmente.  
+ [@duration = ] *durata*  
+ Numero massimo di minuti per l'esecuzione dell'operazione di eliminazione. *Duration* è di **smallint**e il valore predefinito è null. Se specificato, il valore deve essere zero o un numero intero positivo. Quando è NULL, l'operazione viene eseguita finché non vengono rimosse tutte le righe restituite o l'operazione non viene arrestata manualmente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa procedura seleziona le righe della vista core.snapshots risultanti per la rimozione in base a un periodo di memorizzazione. Tutte le righe risultanti per la rimozione vengono eliminate dalla tabella core.snapshots_internal. L'eliminazione delle righe precedenti genera un'azione di eliminazione a catena in tutte le tabelle del data warehouse di gestione. Questa operazione viene eseguita utilizzando la clausola ON DELETE CASCADE definita per tutte le tabelle in cui vengono archiviati i dati raccolti.  
   
- Ogni snapshot e i dati associati vengono eliminati all'interno di una transazione esplicita, dopodiché viene eseguito il commit. Pertanto, se l'operazione di eliminazione viene arrestata manualmente oppure il valore specificato per @duration viene superato, rimangono solo i dati non sottoposte a commit. Questi dati possono essere rimossi alla successiva esecuzione del processo.  
+ Ogni snapshot e i dati associati vengono eliminati all'interno di una transazione esplicita, dopodiché viene eseguito il commit. Pertanto, se l'operazione di ripulitura viene arrestata manualmente o il valore @duration specificato per viene superato, rimangono solo i dati di cui non è stato eseguito il commit. Questi dati possono essere rimossi alla successiva esecuzione del processo.  
   
  La procedura deve essere eseguita nel contesto del database del data warehouse di gestione.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **mdw_admin** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del database di **mdw_admin** (con autorizzazione Execute).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-running-sppurgedata-with-no-parameters"></a>R. Esecuzione di sp_purge_data senza parametri  
+### <a name="a-running-sp_purge_data-with-no-parameters"></a>R. Esecuzione di sp_purge_data senza parametri  
  Nell'esempio seguente viene eseguito core.sp_purge_data senza specificare alcun parametro. Il valore predefinito NULL viene pertanto utilizzato per tutti i parametri, con il comportamento associato.  
   
 ```  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. Specifica dei valori di memorizzazione e durata  
- Nell'esempio seguente vengono rimossi dal data warehouse di gestione i dati più vecchi di 7 giorni. Inoltre, il @duration parametro viene specificato in modo che l'esecuzione dell'operazione non duri più di 5 minuti.  
+ Nell'esempio seguente vengono rimossi dal data warehouse di gestione i dati più vecchi di 7 giorni. Viene inoltre specificato il @duration parametro in modo che l'operazione venga eseguita non più di 5 minuti.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Specifica del nome di un'istanza e di un set di raccolta  
- Nell'esempio seguente vengono rimossi i dati dal data warehouse di gestione per un set di raccolta specifico nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché @retention_days non è specificato, il valore nella colonna valid_through della vista viene utilizzato per determinare le righe del set di raccolta che sono idonee per la rimozione.  
+ Nell'esempio seguente vengono rimossi i dati dal data warehouse di gestione per un set di raccolta specifico nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché @retention_days non è specificato, il valore nella colonna valid_through della vista core. Snapshots viene utilizzato per determinare le righe per il set di raccolta idonee per la rimozione.  
   
 ```  
 USE <management_data_warehouse>;  

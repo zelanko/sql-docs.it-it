@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938749"
 ---
 # <a name="version-property-example-vb"></a>Esempio della proprietà Version (VB)
-Questo esempio Usa la [versione](../../../ado/reference/ado-api/version-property-ado.md) proprietà di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per visualizzare la versione corrente di ADO. Utilizza anche diverse proprietà dinamica da visualizzare:  
+In questo esempio viene utilizzata la proprietà [Version](../../../ado/reference/ado-api/version-property-ado.md) di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) per visualizzare la versione ADO corrente. USA inoltre diverse proprietà dinamiche per mostrare:  
   
--   il nome del DBMS corrente e la versione.  
+-   il nome e la versione del DBMS corrente.  
   
--   Versione OLE DB.  
+-   OLE DB versione.  
   
--   nome del provider e la versione.  
+-   nome e versione del provider.  
   
 -   Versione ODBC.  
   
--   Nome del driver ODBC e la versione.  
+-   Nome e versione del driver ODBC.  
   
 ```  
 'BeginVersionVB  

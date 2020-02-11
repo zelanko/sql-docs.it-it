@@ -14,18 +14,18 @@ ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939782"
 ---
 # <a name="table-names"></a>Nomi di tabella
-Quando si dBASE, Microsoft Excel, Paradox, o testo driver viene utilizzato, i nomi di tabella che si verificano nella clausola FROM di SELECT o DELETE, dopo la clausola INTO in istruzioni INSERT e dopo l'aggiornamento, CREATE TABLE e DROP TABLE può contenere un percorso valido, nome primario e file nome estensione .  
+Quando si usa il driver dBASE, Microsoft Excel, Paradox o text, i nomi di tabella che si verificano nella clausola FROM di SELECT o DELETE, dopo la clausola INTO in INSERT e After UPDATE, CREATE TABLE e DROP TABLE possono contenere un percorso valido, un nome primario e un'estensione di file .  
   
- Utilizzo di un nome di tabella in un' posizione in un'istruzione SQL non supporta l'uso dei percorsi o le estensioni, ma verrà accettate solo il nome principale (ad esempio, EMP da C:\ABC\EMP).  
+ L'uso di un nome di tabella in un'altra posizione in un'istruzione SQL non supporta l'uso di percorsi o estensioni, ma accetta solo il nome primario (ad esempio, EMP da C:\ABC\EMP).  
   
- I nomi di correlazione (alias) possono essere utilizzati. Ad esempio:  
+ È possibile utilizzare i nomi di correlazione (alias). Ad esempio:  
   
 ```  
 SELECT *    

@@ -16,18 +16,18 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771447"
 ---
-# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
+# <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Elimina una sottoscrizione nel database corrente del Sottoscrittore. Questa stored procedure viene eseguita nel database di sottoscrizione pull del Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,25 +48,25 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_droppullsubscription** viene utilizzato nella replica snapshot e nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_droppullsubscription** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
- **sp_droppullsubscription** Elimina la riga corrispondente nella tabella [Transact &#40;-SQL&#41; MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;Transact&#41;-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
+ **sp_droppullsubscription** Elimina la riga corrispondente nel [MSreplication_subscriptions &#40;tabella&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) e l'agente di distribuzione corrispondente nel Sottoscrittore. Se non viene lasciata alcuna riga in [MSreplication_subscriptions &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), la tabella viene eliminata.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o dell'utente che ha creato la sottoscrizione pull possono eseguire **sp_droppullsubscription**. Il ruolo predefinito del database **db_owner** è in grado di eseguire **sp_droppullsubscription** solo se l'utente che ha creato la sottoscrizione pull appartiene a questo ruolo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addpullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_helppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Append (metodo) (oggetti Group ADOX) | Microsoft Docs
+title: Metodo Append (gruppi ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967312"
 ---
 # <a name="append-method-adox-groups"></a>Metodo Append (raccolta Groups ADOX)
-Aggiunge un nuovo [gruppo](../../../ado/reference/adox-api/group-object-adox.md) dell'oggetto per il [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) raccolta.  
+Aggiunge un nuovo oggetto [gruppo](../../../ado/reference/adox-api/group-object-adox.md) alla raccolta di [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,25 +35,25 @@ Groups.Append Group
   
 #### <a name="parameters"></a>Parametri  
  *Gruppo*  
- Il **gruppo** il nome del gruppo per creare e aggiungere o oggetto da accodare.  
+ Oggetto **gruppo** da accodare o il nome del gruppo da creare e accodare.  
   
-## <a name="remarks"></a>Note  
- Il **gruppi** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. Il **gruppi** raccolta per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
+## <a name="remarks"></a>Osservazioni  
+ La raccolta di **gruppi** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. La raccolta **gruppi** per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
  Se il provider non supporta la creazione di gruppi, si verificherà un errore.  
   
 > [!NOTE]
->  Prima di accodare un **gruppo** dell'oggetto per il **gruppi** raccolta di un **utente** oggetto, un **gruppo** oggetto con lo stesso [ Nome](../../../ado/reference/adox-api/name-property-adox.md) dell'oggetto da aggiungere deve già esistere nel **gruppi** insieme del **catalogo**.  
+>  Prima di aggiungere un **oggetto gruppo** alla raccolta **di gruppi** di un oggetto **utente** , un oggetto **gruppo** con lo stesso [nome](../../../ado/reference/adox-api/name-property-adox.md) di quello da accodare deve esistere già nella raccolta di **gruppi** del **Catalogo**.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Raccolta di Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere utenti e gruppi, esempio di metodi ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (metodo) (oggetti Key ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append (metodo) (oggetti Table ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (metodo) (User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Accodamento di gruppi e utenti, esempio di Metodi ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (indici ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Metodo Append (chiavi ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Metodo Append (tabelle ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Metodo Append (utenti ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Metodo Append (raccolta Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

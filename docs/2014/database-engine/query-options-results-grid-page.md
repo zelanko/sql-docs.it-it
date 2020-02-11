@@ -1,5 +1,5 @@
 ---
-title: Opzioni query-risultati (pagina della griglia) | Microsoft Docs
+title: Risultati opzioni query (pagina griglia) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089011"
 ---
 # <a name="query-options-results-grid-page"></a>Risultati di Opzioni query (pagina Griglia)
@@ -26,7 +26,7 @@ ms.locfileid: "66089011"
  **Includi la query nel set di risultati**  
  Restituisce il testo della query come parte del set di risultati.  
   
- **Includi intestazioni di colonna nelle operazioni di copia o salvataggio dei risultati**  
+ **Includi intestazioni di colonna durante la copia o il salvataggio dei risultati**  
  Consente di includere le intestazioni di colonna (titoli) durante la copia dei risultati negli Appunti o il salvataggio in un file. Deselezionare questa casella di controllo se si desidera che i risultati salvati o copiati contengano solo i dati senza le intestazioni di colonna.  
   
  **Elimina risultati dopo l'esecuzione**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089011"
  **Visualizza risultati in una scheda separata**  
  Consente di visualizzare il set dei risultati in una nuova finestra del documento anziché nella parte inferiore della finestra del documento della query.  
   
- **Passa alla scheda dei risultati al termine della query**  
+ **Passa alla scheda risultati dopo l'esecuzione della query**  
  Consente di impostare automaticamente lo stato attivo dello schermo sul set dei risultati.  
   
- **Dimensioni massime caratteri recuperati**  
+ **Numero massimo di caratteri recuperati**  
  **Dati non XML**:  
   
  Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella.  
@@ -48,9 +48,9 @@ ms.locfileid: "66089011"
   
  **Dati XML**:  
   
- Consente di selezionare i valori **1 MB**, **2 MB**o **5 MB**. Selezionare **Illimitate** per recuperare tutti i caratteri.  
+ Selezionare **1 MB**, **2 MB**o **5 MB**. Selezionare **illimitato** per recuperare tutti i caratteri.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

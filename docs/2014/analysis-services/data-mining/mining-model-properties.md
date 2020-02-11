@@ -1,5 +1,5 @@
 ---
-title: Le proprietà del modello di data mining | Microsoft Docs
+title: Proprietà modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083508"
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
@@ -44,7 +44,7 @@ ms.locfileid: "66083508"
 |**Algoritmo**|Imposta il tipo di algoritmo per il modello di data mining.|  
 |**AlgorithmParameters**|Imposta i valori dei parametri di algoritmo disponibili per ogni tipo di algoritmo.|  
 |**Filter**|Imposta un filtro che viene applicato ai dati utilizzati per il training e il test del modello di data mining. La definizione del filtro è archiviata con il modello e può essere utilizzata facoltativamente quando si creano query di stima oppure per testare l'accuratezza del modello.<br /><br /> Il filtro del modello non è facoltativo quando si esegue il training del modello.|  
-|**Name**|Imposta il nome del modello di data mining.|  
+|**Nome**|Imposta il nome del modello di data mining.|  
 |**AllowDrillThrough**|Specifica se nel modello di data mining è consentito il drill-through.|  
   
 ## <a name="properties-of-model-columns"></a>Proprietà delle colonne del modello  
@@ -53,14 +53,14 @@ ms.locfileid: "66083508"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Descrizione**|Viene descritto lo scopo della colonna di data mining.|  
-|**Name**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
+|**Nome**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
 |**ModelingFlags**|Imposta i flag specifici dell'algoritmo per la colonna.|  
 |**SourceColumnID**|Indica il nome della colonna della struttura di data mining su cui si basa la colonna del modello.<br /><br /> Questa proprietà è di sola lettura.|  
-|**Usage**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
+|**Utilizzo**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Colonne del modello di data mining](mining-model-columns.md)   
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)   
  [Strumenti di data mining](data-mining-tools.md)   

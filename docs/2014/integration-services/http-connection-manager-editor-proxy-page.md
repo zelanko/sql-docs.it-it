@@ -1,5 +1,5 @@
 ---
-title: Editor gestione connessione HTTP (pagina Proxy) | Microsoft Docs
+title: Editor gestione connessione HTTP (pagina proxy) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058256"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor gestione connessione HTTP (pagina Proxy)
@@ -48,10 +48,10 @@ ms.locfileid: "66058256"
  **Dominio**  
  Se per la gestione connessione HTTP è stato impostato l'utilizzo di credenziali, è necessario specificare nome utente, password e dominio.  
   
- **Elenco proxy da ignorare**  
+ **Elenco proxy bypass**  
  Elenco degli indirizzi per i quali si desidera ignorare il server proxy.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di digitare un indirizzo per il quale si desidera ignorare il server proxy.  
   
  **Rimuovi**  

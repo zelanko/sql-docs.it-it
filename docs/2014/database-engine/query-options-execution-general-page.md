@@ -1,5 +1,5 @@
 ---
-title: Opzioni di query esecuzione (pagina generale) | Microsoft Docs
+title: Esecuzione di opzioni query (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089037"
 ---
 # <a name="query-options-execution-general-page"></a>Opzioni query - Esecuzione (pagina Generale)
-  Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse su una finestra dell'editor di query e quindi scegliere **Opzioni query**.  
+  Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse su una finestra dell'editor di query e quindi scegliere **Opzioni query**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **SET ROWCOUNT**  
  Il valore predefinito 0 indica che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rimarrà in attesa di risultati fino a quando non verranno ricevuti tutti i risultati. Specificare un valore maggiore di 0 se si desidera che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] interrompa la query dopo aver ottenuto il numero di righe specificato. Per disabilitare questa opzione in modo che vengano restituite tutte le righe, specificare SET ROWCOUNT 0.  
   
- **SET TEXTSIZE**  
+ **IMPOSTA TEXTSIZE**  
  Il valore predefinito di 2.147.483.647 byte indica che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornirà un campo dati completo fino al limite dei campi dati `text`, `ntext`, `nvarchar(max)` e `varchar(max)`. Ciò non ha alcun effetto sul tipo di dati XML. Specificare un numero più piccolo per limitare i risultati in caso di valori elevati. Le colonne le cui dimensioni sono maggiori del numero specificato verranno troncate.  
   
  **Timeout esecuzione**  
  Consente di indicare il numero di secondi di attesa prima dell'annullamento della query. Il valore 0 indica un'attesa infinita, ovvero nessun timeout.  
   
- **Separatore di batch**  
+ **Separatore batch**  
  Consente di digitare una parola che verrà utilizzata per separare le istruzioni Transact-SQL in batch. Il valore predefinito è GO.  
   
- **Per impostazione predefinita, apri le nuove query in modalità SQLCMD**  
- Selezionare questa casella di controllo per aprire le nuove query in modalità SQLCMD. Questa casella di controllo è disponibile solo se la finestra di dialogo è stata aperta tramite il menu **Strumenti** .  
+ **Per impostazione predefinita, aprire le nuove query in modalità SQLCMD**  
+ Selezionare questa casella di controllo per aprire le nuove query in modalità SQLCMD. Questa casella di controllo è visibile solo quando la finestra di dialogo viene aperta tramite il menu **strumenti** .  
   
  Quando si seleziona questa opzione, tenere presente le limitazioni seguenti:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66089037"
   
 -   Poiché l'editor di query non può rispondere ai prompt del sistema operativo, è necessario prestare attenzione a non eseguire istruzioni interattive.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

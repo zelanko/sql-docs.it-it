@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Linear Regression | Microsoft Docs
+title: Algoritmo Microsoft Linear regressione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084035"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Microsoft Linear Regression
@@ -27,7 +27,7 @@ ms.locfileid: "66084035"
   
  La relazione assume la forma di un'equazione relativa alla linea che rappresenta meglio una serie di dati. Ad esempio, la linea contenuta nel diagramma seguente è la migliore rappresentazione lineare possibile dei dati.  
   
- ![Retta di modellazione di un set di dati](../media/linear-regression.gif "retta di modellazione di un set di dati")  
+ ![Retta di modellazione di un set di dati](../media/linear-regression.gif "Retta di modellazione di un set di dati")  
   
  A ogni punto dati del diagramma corrisponde un errore associato alla relativa distanza dalla retta di regressione. I coefficienti a e b dell'equazione di regressione regolano l'angolo e la posizione della retta di regressione. È possibile ottenere l'equazione di regressione modificando i coefficienti a e b fino a quando la somma degli errori associati a tutti i punti raggiunge il minimo.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66084035"
 ## <a name="data-required-for-linear-regression-models"></a>Dati necessari per i modelli di regressione lineare  
  Per preparare i dati da utilizzare in un modello di regressione lineare è necessario comprendere i requisiti dell'algoritmo, tra cui la quantità di dati necessaria e la modalità di utilizzo dei dati. I requisiti di questo tipo di modello sono i seguenti:  
   
--   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.  
+-   **Una singola colonna chiave** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.  
   
 -   **Una colonna stimabile** Richiede almeno una colonna stimabile. È possibile includere più attributi stimabili in un modello, ma tali attributi devono essere tipi di dati numerici continui. Non è possibile utilizzare un tipo di dati datetime come attributo stimabile anche se l'archiviazione nativa dei dati è numerica.  
   
--   **Colonne di input** Le colonne di input devono contenere dati numerici continui ed essere associate al tipo di dati appropriato.  
+-   **Colonne di input** Le colonne di input devono contenere dati numerici continui a cui viene assegnato il tipo di dati appropriato.  
   
  Per altre informazioni, vedere la sezione Requisiti in [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66084035"
   
  Per ulteriori dettagli sull'equazione, è anche possibile visualizzare i coefficienti e altri dettagli tramite [Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
- Per un modello di regressione lineare, il contenuto del modello include metadati, la formula di regressione e statistiche sulla distribuzione dei valori di input. Per altre informazioni, vedere [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ Per un modello di regressione lineare, il contenuto del modello include metadati, la formula di regressione e statistiche sulla distribuzione dei valori di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  Dopo l'elaborazione del modello, i risultati vengono archiviati come set di statistiche con la formula di regressione lineare che è possibile utilizzare per calcolare tendenze future. Per esempi di query da usare con un modello di regressione lineare, vedere [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "66084035"
   
  Selezionando l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, se l'attributo stimabile è un tipo di dati numerico continuo, oltre a creare un modello di regressione lineare, è possibile creare un modello di albero delle decisioni che contenga regressioni. In questo caso, l'algoritmo suddividerà i dati quando rileverà punti di separazione appropriati, ma per alcune aree di dati creerà una formula di regressione. Per altre informazioni sugli alberi di regressione con un modello di albero delle decisioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66084035"
 -   Supporta l'utilizzo di modelli di data mining OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

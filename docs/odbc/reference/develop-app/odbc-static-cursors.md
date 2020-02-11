@@ -1,5 +1,5 @@
 ---
-title: I cursori statici ODBC | Microsoft Docs
+title: Cursori statici ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987833"
 ---
 # <a name="odbc-static-cursors"></a>Cursori statici ODBC
-Un cursore statico è uno in cui il set di risultati viene visualizzata come statico. Non è in genere rilevare le modifiche apportate per l'appartenenza, ordine o i valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore statico recupera una riga e un'altra applicazione, quindi aggiorna tale riga. Se un cursore statico recupera nuovamente la riga, i valori rilevati sono identiche, nonostante le modifiche apportate da altre applicazioni.  
+Un cursore statico è quello in cui il set di risultati sembra essere statico. Non rileva in genere le modifiche apportate all'appartenenza, all'ordine o ai valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, che un cursore statico recuperi una riga e un'altra applicazione aggiorni la riga. Se il cursore statico recupera la riga, i valori che visualizza sono invariati, nonostante le modifiche apportate dall'altra applicazione.  
   
- I cursori statici possono rilevare i propri aggiornamenti, eliminazioni e inserimenti, anche se essi non sono necessari per eseguire questa operazione. Indica se un cursore statico particolare rileva queste modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY **SQLGetInfo**. I cursori statici rilevano mai altri aggiornamenti, eliminazione e inserimento.  
+ I cursori statici possono rilevare gli aggiornamenti, le eliminazioni e gli inserimenti, sebbene non siano necessari per eseguire questa operazione. Il fatto che un determinato cursore statico rilevi queste modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY in **SQLGetInfo**. I cursori statici non rilevano mai altri aggiornamenti, eliminazioni e inserimenti.  
   
- La matrice di stato di riga specificata dall'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR può contenere SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO o SQL_ROW_ERROR ogni riga. Restituisce SQL_ROW_UPDATED, SQL_ROW_DELETED o SQL_ROW_ADDED per le righe aggiornate, eliminate o inserite dal cursore, presupponendo che il cursore è possibile rilevare tali modifiche.  
+ La matrice di stato della riga specificata dall'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR può contenere SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO o SQL_ROW_ERROR per qualsiasi riga. Viene restituito SQL_ROW_UPDATED, SQL_ROW_DELETED o SQL_ROW_ADDED per le righe aggiornate, eliminate o inserite dal cursore, supponendo che il cursore possa rilevare tali modifiche.  
   
- I cursori statici vengono in genere implementati dal blocco di righe nel set di risultati o eseguendo una copia dello snapshot, del risultato impostare. Anche se il blocco di righe è relativamente facile, ha lo svantaggio di ridurre significativamente la concorrenza. Creazione di una copia consente maggiore concorrenza e consente il cursore tenere traccia dei propri aggiornamenti, eliminazioni e inserisce modificando la copia. Tuttavia, una copia è più costosa da apportare e può far divergere dai dati sottostanti come tali dati viene modificati da altri utenti.
+ I cursori statici vengono in genere implementati bloccando le righe nel set di risultati oppure creando una copia, o snapshot, del set di risultati. Sebbene il blocco delle righe sia relativamente semplice, presenta lo svantaggio della riduzione significativa della concorrenza. La creazione di una copia consente una maggiore concorrenza e consente al cursore di tenere traccia dei propri aggiornamenti, eliminazioni e inserimenti modificando la copia. Tuttavia, una copia è più costosa da creare e può divergere dai dati sottostanti poiché i dati vengono modificati da altri.

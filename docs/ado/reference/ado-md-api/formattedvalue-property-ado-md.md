@@ -17,24 +17,24 @@ ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938420"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Proprietà FormattedValue (ADO MD)
-Indica la visualizzazione formattata di un [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valore.  
+Indica la visualizzazione formattata di un valore di [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **stringa** ed è di sola lettura.  
+ Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Note  
- Usare la **FormattedValue** per ottenere il valore di visualizzazione formattata della proprietà di [valore](../../../ado/reference/ado-md-api/value-property-ado-md.md) proprietà di un [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) oggetto. Ad esempio, se questo valore rappresenta un importo in dollari, e il valore di una cella 1056,87 **FormattedValue** restituisce 1.056,87 $.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **formattedValue** per ottenere il valore di visualizzazione formattato della proprietà [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) di un oggetto [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) . Se ad esempio il valore di una cella è 1056,87 e questo valore rappresenta un importo in dollari, **formattedValue** sarà $1.056,87.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Esempio di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Proprietà Value (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

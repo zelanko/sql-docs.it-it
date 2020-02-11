@@ -1,5 +1,5 @@
 ---
-title: Introduzione agli schemi XSD con annotazioni (SQLXML 4.0) | Documenti di Microsoft
+title: Introduzione agli schemi XSD con annotazioni (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014462"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introduzione agli schemi XSD con annotazioni (SQLXML 4.0)
@@ -33,9 +33,9 @@ ms.locfileid: "66014462"
   
  Un elemento XML Schema descrive la struttura di un documento XML e i vari vincoli presenti sui dati del documento. Quando si specificano query XPath nello schema, la struttura del documento XML restituita è determinata dallo schema nel quale viene eseguita la query XPath.  
   
- In uno schema XSD, il  **\<xsd: schema >** elemento racchiude l'intero schema, ovvero tutte le dichiarazioni di elemento devono essere contenute all'interno di  **\<xsd: schema >** elemento. È possibile descrivere attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà del  **\<xsd: schema >** elemento.  
+ In uno schema XSD l' ** \<elemento xsd: schema>** racchiude l'intero schema. tutte le dichiarazioni di elemento devono essere contenute all'interno dell' ** \<elemento xsd: schema>** . È possibile descrivere gli attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà dell'elemento ** \<xsd: schema>** .  
   
- Uno schema XSD valido deve contenere il  **\<xsd: schema >** elemento definito come segue:  
+ Uno schema XSD valido deve contenere l' ** \<elemento xsd: schema>** definito come segue:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -44,7 +44,7 @@ ms.locfileid: "66014462"
 </xsd:schema>  
 ```  
   
- Il  **\<xsd: schema >** elemento deriva dalla specifica dello spazio dei nomi XML Schema al http://www.w3.org/2001/XMLSchema.  
+ L' ** \<elemento xsd: schema>** deriva dalla specifica dello spazio dei nomi XML schema http://www.w3.org/2001/XMLSchemain.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Annotazioni dello schema XSD  
  È possibile utilizzare uno schema XSD con annotazioni che descrivono il mapping a un database, eseguire query nel database e restituire i risultati nel formato di un documento XML. Le annotazioni vengono fornite per eseguire il mapping di uno schema XSD a colonne e tabelle di database. È possibile specificare le query XPath nella vista XML creata dallo schema XSD per eseguire query nel database e ottenere risultati in formato XML.  
@@ -52,10 +52,10 @@ ms.locfileid: "66014462"
 > [!NOTE]  
 >  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 il linguaggio dello schema XSD supporta le annotazioni introdotte con il linguaggio dello schema XDR (XML-Data Reduced) con annotazioni in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]. Lo schema XDR con annotazioni è deprecato in SQLXML 4.0.  
   
- Nel contesto del database relazionale risulta utile per eseguire il mapping dello schema XSD arbitrario a un archivio relazionale. Un modo per ottenere questo risultato è annotare lo schema XSD. Uno schema XSD con annotazioni viene definito un *schema di mapping*, fornisce informazioni relative al modo in cui i dati XML sono eseguire il mapping all'archivio relazionale. Uno schema di mapping è, di fatto, una vista XML dei dati relazionali. I mapping possono essere utilizzati per recuperare dati relazionali come documento XML.  
+ Nel contesto del database relazionale risulta utile per eseguire il mapping dello schema XSD arbitrario a un archivio relazionale. Un modo per ottenere questo risultato è annotare lo schema XSD. Uno schema XSD con annotazioni viene definito *schema di mapping*, che fornisce informazioni relative alla modalità di mapping dei dati XML all'archivio relazionale. Uno schema di mapping è, di fatto, una vista XML dei dati relazionali. I mapping possono essere utilizzati per recuperare dati relazionali come documento XML.  
   
 ## <a name="namespace-for-annotations"></a>Spazio dei nomi per le annotazioni  
- In uno schema XSD le annotazioni vengono specificate con lo spazio dei nomi **urn: schemas-microsoft-com-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi viene possibile specificarlo nel  **\<xsd: schema >** tag.  
+ In uno schema XSD le annotazioni vengono specificate tramite lo spazio dei nomi **urn: schemas-microsoft-com: mapping-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi consiste nel specificarlo nel tag ** \<xsd: schema>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -64,10 +64,10 @@ ms.locfileid: "66014462"
 </xsd:schema>  
 ```  
   
- Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione, il **sql** prefisso viene utilizzato per indicare lo spazio dei nomi dell'annotazione e per distinguere le annotazioni di questo spazio dei nomi da quelle di altri spazi dei nomi.  
+ Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione viene usato il prefisso **SQL** per indicare lo spazio dei nomi di annotazione e per distinguere le annotazioni in questo spazio dei nomi da quelle di altri spazi dei nomi.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Esempio di schema XSD con annotazioni  
- Nell'esempio seguente, lo schema XSD è costituito un  **\<Person. Contact >** elemento. Il  **\<Employee >** elemento dispone di una **ContactID** attributo e  **\<FirstName >** e  **\< LastName >** gli elementi figlio:  
+ Nell'esempio seguente lo schema XSD è costituito da un ** \<elemento Person. Contact>** . L' ** \<elemento Employee>** ha un attributo **ContactID** e ** \<FirstName>** e ** \<LastName>** elementi figlio:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -108,28 +108,28 @@ ms.locfileid: "66014462"
 </xsd:schema>  
 ```  
   
- Nello schema di mapping, il  **\<contatto >** elemento viene mappato alla tabella Person. Contact nel database AdventureWorks di esempio usando il `sql:relation` annotazione. Viene eseguito il mapping degli attributi ConID, il FName e LName alle colonne ContactID, FirstName e LastName nella tabella Person.Contact mediante le annotazioni `sql:field`.  
+ Nello schema di mapping, l' ** \<elemento Contact>** viene mappato alla tabella Person. Contact nel database AdventureWorks di esempio tramite l' `sql:relation` annotazione. Viene eseguito il mapping degli attributi ConID, il FName e LName alle colonne ContactID, FirstName e LastName nella tabella Person.Contact mediante le annotazioni `sql:field`.  
   
  Questo schema XSD con annotazioni fornisce la vista XML dei dati relazionali. In questa vista XML possono essere eseguite query mediante il linguaggio XPath. Una query XPath restituisce come risultato un documento XML anziché il set di righe restituito dalle query SQL.  
   
 > [!NOTE]  
 >  Nello schema di mapping la distinzione tra maiuscole e minuscole per i valori relazionali specificati (ad esempio il nome di tabella e il nome di colonna) dipende dall'eventuale utilizzo delle impostazioni delle regole di confronto con distinzione tra maiuscole e minuscole da parte di SQL Server. Per altre informazioni, vedere [Collation and Unicode Support](../../collations/collation-and-unicode-support.md).  
   
-## <a name="other-resources"></a>Altre risorse  
+## <a name="other-resources"></a>Risorse aggiuntive  
  Ulteriori informazioni sul linguaggio di definizione di XML Schema (XSD), sul linguaggio XML Path (XPath) e su Extensible Stylesheet Language Transformations (XSLT) sono disponibili nei siti Web seguenti:  
   
--   XML Schema Part 0: Nozioni di base, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: primer, raccomandazione W3C (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Strutture, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures, raccomandazione W3C (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: Datatypes, raccomandazione W3C (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XPath (XML Path Language) (http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   Trasformazioni XSL (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza di Schema annotato &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Schemi XDR con annotazioni &#40;deprecate in SQLXML 4.0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza dello schema con annotazioni &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Schemi XDR con annotazioni &#40;deprecati in SQLXML 4,0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

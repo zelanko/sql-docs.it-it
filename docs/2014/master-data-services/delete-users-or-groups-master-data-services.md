@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479905"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Eliminare utenti o gruppi (Master Data Services)
@@ -33,12 +33,12 @@ ms.locfileid: "65479905"
   
 -   Le modifiche alla sicurezza non vengono propagate a MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per 20 minuti.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-users-or-groups"></a>Per eliminare utenti o gruppi  
   
@@ -53,6 +53,6 @@ ms.locfileid: "65479905"
 5.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [&#40;di sicurezza Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

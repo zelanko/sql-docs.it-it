@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Utilizzo del tipo di dati hierarchyid | Microsoft Docs'
+title: 'Esercitazione: Uso del tipo di dati hierarchyid | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211778"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Uso del tipo di dati hierarchyid
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Utilizzo del tipo di dati hierarchyid
   Questa esercitazione è destinata agli utenti che hanno esperienza nell'utilizzo di [!INCLUDE[tsql](../../includes/tsql-md.md)], ma che sono nuovi al tipo di dati `hierarchyid`.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
@@ -29,7 +29,7 @@ ms.locfileid: "68211778"
  [Lezione 1: Conversione di una tabella in una struttura gerarchica](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
  In questa lezione, si prende in considerazione una tabella del dipendente esistente strutturata come una gerarchia padre/figlio e si spostano i dati nella nuova tabella che rappresenta la gerarchia utilizzando il tipo di dati `hierarchyid`. Questa lezione richiede il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
- [Lezione 2: Creazione e la gestione dei dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Lezione 2: Creazione e gestione di dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
  In questa lezione, viene creata una tabella utilizzando il tipo di dati `hierarchyid` per rappresentare la struttura della gerarchia. Pertanto, si modificano i dati della tabella utilizzando i metodi gerarchici.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -42,10 +42,10 @@ ms.locfileid: "68211778"
 -   Internet Explorer 6 o versioni successive.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Guida introduttiva con il motore di Database](../tutorial-getting-started-with-the-database-engine.md)   
- [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)   
- [Guida di riferimento ai metodi per il tipo di dati hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [I dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+ [Esercitazione: Introduzione con l'motore di database](../tutorial-getting-started-with-the-database-engine.md)   
+ [Esercitazione: scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)   
+ [Riferimento al metodo con tipo di dati hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
+ [Dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

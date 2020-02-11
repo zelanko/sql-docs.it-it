@@ -16,22 +16,22 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936724"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
-Specifica il tipo di dati archiviati in un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
+Specifica il tipo di dati archiviati in un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Indica i dati binari.|  
-|**adTypeText**|2|Valore predefinito. Indica i dati di testo, ovvero in set di caratteri specificato da [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
+|**adTypeText**|2|Default. Indica i dati di testo, che si trova nel set di caratteri specificato da [CharSet](../../../ado/reference/ado-api/charset-property-ado.md).|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Queste costanti non dispongono di equivalenti di ADO o WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Proprietà Type (Stream - ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

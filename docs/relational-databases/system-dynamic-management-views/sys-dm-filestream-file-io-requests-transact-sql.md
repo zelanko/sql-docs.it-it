@@ -1,5 +1,5 @@
 ---
-title: sys.dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
+title: sys. dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,35 +19,35 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67951030"
 ---
-# <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
+# <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Viene visualizzato un elenco di richieste di I/O elaborate dal proprietario dello spazio dei nomi (NSO, Namespace Owner) in quel preciso momento.  
   
-|Colonna|type|Descrizione|  
+|Colonna|Type|Descrizione|  
 |------------|----------|-----------------|  
-|**request_context_address**|**varbinary(8)**|Viene visualizzato l'indirizzo interno del blocco di memoria NSO in cui è contenuta la richiesta di I/O del driver. Non ammette i valori Null.|  
-|**current_spid**|**smallint**|Mostra l'id di processo di sistema (SPID) per la connessione del Server SQL corrente. Non ammette i valori Null.|  
-|**request_type**|**nvarchar(60)**|Viene mostrato il tipo di pacchetto di richiesta di I/O (IRP). I possibili tipi di richiesta sono REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY e REQ_SET_SECURITY. Non ammette i valori Null|  
-|**request_state**|**nvarchar(60)**|Viene mostrato lo stato della richiesta di I/O in NSO. I valori possibili sono REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING e REQ_STATE_COMPLETED. Non ammette i valori Null.|  
+|**request_context_address**|**varbinary (8)**|Viene visualizzato l'indirizzo interno del blocco di memoria NSO in cui è contenuta la richiesta di I/O del driver. Non ammette i valori Null.|  
+|**current_spid**|**smallint**|Mostra l'ID del processo di sistema (SPID) per la connessione del SQL Server corrente. Non ammette i valori Null.|  
+|**request_type**|**nvarchar (60)**|Viene mostrato il tipo di pacchetto di richiesta di I/O (IRP). I possibili tipi di richiesta sono REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY e REQ_SET_SECURITY. Non ammette i valori Null|  
+|**request_state**|**nvarchar (60)**|Viene mostrato lo stato della richiesta di I/O in NSO. I valori possibili sono REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING e REQ_STATE_COMPLETED. Non ammette i valori Null.|  
 |**request_id**|**int**|Viene mostrato l'ID univoco della richiesta assegnato dal driver a questa richiesta. Non ammette i valori Null.|  
 |**irp_id**|**int**|Viene mostrato l'ID IRP univoco. È utile per identificare tutte le richieste di I/O correlate all'IRP specificato. Non ammette i valori Null.|  
 |**handle_id**|**int**|Viene indicato l'ID handle dello spazio dei nomi. Si tratta dell'identificatore specifico dell'NSO ed è univoco in tutta l'istanza. Non ammette i valori Null.|  
-|**client_thread_id**|**varbinary(8)**|Mostra ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> **\*\* Avviso \* \***  è utile solo se l'applicazione client è in esecuzione nello stesso computer di SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** viene mostrato l'ID di thread di alcuni processi di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
-|**client_process_id**|**varbinary(8)**|Viene mostrato l'ID processo dell'applicazione client se quest'ultima è in esecuzione nello stesso computer in cui è installato SQL Server. Per un client remoto, viene mostrato l'ID processo di sistema in funzione a nome dell'applicazione client. Ammette i valori Null.|  
-|**handle_context_address**|**varbinary(8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
-|**filestream_transaction_id**|**varbinary(128)**|Vengono mostrati l'ID della transazione associata all'handle specifico e tutte le richieste associate a questo handle. È il valore restituito per il **get_filestream_transaction_context** (funzione). Ammette i valori Null.|  
+|**client_thread_id**|**varbinary (8)**|Mostra l'ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> ** \* Avviso di \* \* ** Questa operazione è significativa solo se l'applicazione client è in esecuzione nello stesso computer del SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** Mostra l'ID del thread di un processo di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
+|**client_process_id**|**varbinary (8)**|Viene mostrato l'ID processo dell'applicazione client se quest'ultima è in esecuzione nello stesso computer in cui è installato SQL Server. Per un client remoto, viene mostrato l'ID processo di sistema in funzione a nome dell'applicazione client. Ammette i valori Null.|  
+|**handle_context_address**|**varbinary (8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
+|**filestream_transaction_id**|**varbinary (128)**|Vengono mostrati l'ID della transazione associata all'handle specifico e tutte le richieste associate a questo handle. Si tratta del valore restituito dalla funzione **GET_FILESTREAM_TRANSACTION_CONTEXT** . Ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [FileStream e FileTable DMV &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica FILESTREAM e FileTable &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

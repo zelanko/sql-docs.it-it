@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva ELEMENT | Microsoft Docs'
+title: 'Esempio: specifica della direttiva ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287160"
 ---
-# <a name="example-specifying-the-element-directive"></a>Esempio: Specifica della direttiva ELEMENT
+# <a name="example-specifying-the-element-directive"></a>Esempio: specifica della direttiva ELEMENT
   In questo modo vengono recuperate le informazioni sul personale e viene generato un valore XML incentrato sugli attributi, come mostrato negli elementi seguenti:  
   
 ```  
@@ -84,6 +84,6 @@ FOR XML EXPLICIT;
  `...`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

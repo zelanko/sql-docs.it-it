@@ -20,23 +20,23 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965004"
 ---
 # <a name="updaterule-property-adox"></a>Proprietà UpdateRule (ADOX)
-Indica l'azione eseguita quando una replica primaria [chiave](../../../ado/reference/adox-api/key-object-adox.md) viene aggiornato.  
+Indica l'azione eseguita quando viene aggiornata una [chiave](../../../ado/reference/adox-api/key-object-adox.md) primaria.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **lungo** valore che può essere uno delle [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) costanti. Il valore predefinito è **adRINone**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Note  
- Questa proprietà è di sola lettura sul [chiave](../../../ado/reference/adox-api/key-object-adox.md) già aggiunti alla raccolta di oggetti.  
+## <a name="remarks"></a>Osservazioni  
+ Questa proprietà è di sola lettura sugli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) già accodati alla raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Append oggetti Key, esempio di proprietà Key Type, RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Esempio del metodo Append di Keys, di Type di Key e delle proprietà RelatedColumn, RelatedTable e UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

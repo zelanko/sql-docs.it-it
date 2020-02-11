@@ -16,27 +16,27 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933440"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Specifica se il [aperto](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto deve restituire una volta stabilita la connessione (in modo sincrono) o è precedente (in modo asincrono).  
+Specifica se il metodo [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) deve essere restituito dopo che la connessione è stata stabilita (in modalità sincrona) o prima (in modo asincrono).  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|Apre la connessione in modo asincrono. Il [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) evento può essere utilizzato per determinare quando è disponibile la connessione.|  
-|**adConnectUnspecified**|-1|Valore predefinito. Apre la connessione in modo sincrono.|  
+|**adAsyncConnect**|16|Apre la connessione in modo asincrono. L'evento [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) può essere utilizzato per determinare quando la connessione è disponibile.|  
+|**adConnectUnspecified**|-1|Default. Apre la connessione in modo sincrono.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.ConnectOption.ASYNCCONNECT|  
-|AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
+|AdoEnums. ConnectOption. ASYNCCONNECT|  
+|AdoEnums. ConnectOption. CONNECTUNSPECIFIED|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Metodo Open (Connection - ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)

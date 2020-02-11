@@ -1,5 +1,5 @@
 ---
-title: Eseguire, rieseguire una query ed eliminare i metodi esempio (VB) | Microsoft Docs
+title: Esempio di metodi Execute, Requery e Clear (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932881"
 ---
-# <a name="execute-requery-and-clear-methods-example-vb"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VB)
-Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. (Il **errori** raccolta è accessibile tramite il **connessione** oggetto del [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Le procedure ExecuteCommand e PrintOutput sono necessari per eseguire questa procedura.  
+# <a name="execute-requery-and-clear-methods-example-vb"></a>Esempio di metodi Execute, Requery e Clear (VB)
+Questo esempio illustra il metodo **Execute** quando viene eseguito da un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e da un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . USA anche il metodo [Requery](../../../ado/reference/ado-api/requery-method.md) per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il metodo [Clear](../../../ado/reference/ado-api/clear-method-ado.md) per cancellare il contenuto della raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . La raccolta **Errors** è accessibile tramite l'oggetto **Connection** della proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Per eseguire questa procedura, sono necessarie le procedure ExecuteCommand e PrintOutput.  
   
 ```  
 'BeginExecuteVB  
@@ -171,8 +171,8 @@ End Sub
  [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Oggetto Error](../../../ado/reference/ado-api/error-object.md)   
- [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Eseguire il metodo (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)   
+ [Metodo Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Metodo Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)
