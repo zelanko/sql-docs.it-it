@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265054"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procedura: Eseguire il debug di assembly personalizzati
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre diversi strumenti di debug che consentono di analizzare il codice assembly personalizzato e individuare eventuali errori. Per ogni attività specifica è disponibile uno strumento appropriato. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
+# <a name="how-to-debug-custom-assemblies"></a>Procedura: Debug di assembly personalizzati
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono disponibili diversi strumenti di debug che consentono di analizzare il codice assembly personalizzato e di individuare gli errori. Per ogni attività specifica è disponibile uno strumento appropriato. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  Il modo migliore per progettare, sviluppare e testare assembly personalizzati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nel creare una soluzione che contiene sia i report di test che l'assembly personalizzato.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63265054"
   
 9. Fare clic sulla scheda **Compilazione** se il progetto attivo è un progetto C# o sulla scheda **Compila** se il progetto è un progetto [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-10. Nella pagina **Compilazione**/**Compila** immettere il percorso della cartella di Progettazione report. Per impostazione predefinita, il percorso è C:\Programmi\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) nella casella di testo **Percorso output**. In tal modo verrà compilata e distribuita una versione aggiornata dell'assembly personalizzato direttamente in Progettazione report prima che il report venga eseguito.  
+10. Nella pagina**Compila** compilazione immettere il percorso della cartella Progettazione report. ****/ Per impostazione predefinita, il percorso è C:\Programmi\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) nella casella di testo **Percorso output**. In tal modo verrà compilata e distribuita una versione aggiornata dell'assembly personalizzato direttamente in Progettazione report prima che il report venga eseguito.  
   
 11. Dopo avere progettato il report e sviluppato l'assembly personalizzato, impostare i punti di interruzione nel codice assembly personalizzato.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63265054"
   
 5.  Con il progetto assembly personalizzato nella finestra attiva fare clic su **Connetti a processo** dal menu **Debug**.  
   
-     Viene visualizzata la finestra di dialogo **Connetti a processo**.  
+     Verrà visualizzata la finestra di dialogo **Connetti a processo**.  
   
 6.  Nell'elenco di processi selezionare il processo devenv.exe che corrisponde al progetto report e fare clic su **Connetti**.  
   

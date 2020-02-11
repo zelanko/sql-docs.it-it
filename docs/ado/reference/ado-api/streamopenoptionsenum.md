@@ -16,23 +16,23 @@ ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928681"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-Specifica le opzioni per aprire una [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto. I valori possono essere combinati con un'operazione OR.  
+Specifica le opzioni per l'apertura di un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) . I valori possono essere combinati con un'operazione OR.  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|1|Apre la **Stream** oggetto in modalità asincrona.|  
-|**adOpenStreamFromRecord**|4|Identifica il contenuto del *origine* parametro sia una è già aperta [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto. Il comportamento predefinito consiste nel considerare *origine* sotto forma di URL che punta direttamente a un nodo in una struttura ad albero. Viene aperto il flusso predefinito associato a tale nodo.|  
-|**adOpenStreamUnspecified**|-1|Valore predefinito. Specifica l'apertura il **Stream** oggetto con le opzioni predefinite.|  
+|**adOpenStreamAsync**|1|Apre l'oggetto **flusso** in modalità asincrona.|  
+|**adOpenStreamFromRecord**|4|Identifica il contenuto del parametro di *origine* come oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) già aperto. Il comportamento predefinito consiste nel considerare *source* come un URL che punta direttamente a un nodo in una struttura ad albero. Viene aperto il flusso predefinito associato al nodo.|  
+|**adOpenStreamUnspecified**|-1|Default. Specifica l'apertura dell'oggetto **flusso** con le opzioni predefinite.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Queste costanti non dispongono di equivalenti di ADO o WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Queste costanti non dispongono di equivalenti ADO/WFC.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)
+ [Metodo Open (Stream - ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)
