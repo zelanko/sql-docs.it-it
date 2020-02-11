@@ -1,5 +1,5 @@
 ---
-title: Ordinare l'esempio di proprietà (Visual Basic) | Microsoft Docs
+title: Esempio di proprietà Sort (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931026"
 ---
 # <a name="sort-property-example-vb"></a>Esempio della proprietà Sort (VB)
-Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di una **Recordset** derivato dal ***autori*** tabella di il ***Pubs*** database. Una routine di utilità secondario consente di stampare ogni riga.  
+In questo esempio viene utilizzata la proprietà di [ordinamento](../../../ado/reference/ado-api/sort-property.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per riordinare le righe di un **Recordset** derivato dalla tabella ***authors*** del database ***pubs*** . Una routine di utilità secondaria stampa ogni riga.  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Questa è la routine di utilità secondario che visualizza il titolo specificato e il contenuto dell'oggetto specificato **Recordset**.  
+ Si tratta della routine di utilità secondaria che stampa il titolo specificato e il contenuto del **Recordset**specificato.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Sort](../../../ado/reference/ado-api/sort-property.md)

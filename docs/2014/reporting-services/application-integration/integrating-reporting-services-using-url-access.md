@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126130"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrazione di Reporting Services tramite l'accesso con URL
@@ -28,15 +28,15 @@ ms.locfileid: "63126130"
 > [!NOTE]  
 >  Negli argomenti di questa sezione vengono fornite alcune informazioni di base per l'integrazione. È possibile utilizzare le informazioni per iniziare a progettare e sviluppare scenari di integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Uso dell'accesso con URL in un'applicazione Web](integrating-reporting-services-using-url-access-web-application.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Utilizzo dell'accesso con URL in un'applicazione Web](integrating-reporting-services-using-url-access-web-application.md)  
  Viene descritto come utilizzare l'accesso con URL per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un ambiente Web.  
   
- [Uso dell'accesso con URL in un'applicazione Windows](integrating-reporting-services-using-url-access-windows-application.md)  
+ [Utilizzo dell'accesso con URL in un'applicazione Windows](integrating-reporting-services-using-url-access-windows-application.md)  
  Viene descritto come utilizzare l'accesso con URL per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integrazione di Reporting Services nelle applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
  [Accesso con URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

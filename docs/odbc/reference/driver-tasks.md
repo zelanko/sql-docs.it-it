@@ -1,5 +1,5 @@
 ---
-title: Attività dei driver | Microsoft Docs
+title: Attività del driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915466"
 ---
 # <a name="driver-tasks"></a>Attività dei driver
-Attività specifiche eseguite da tutti i driver includono:  
+Le attività specifiche eseguite dai driver includono:  
   
--   Alla connessione e disconnessione dall'origine dati.  
+-   Connessione e disconnessione dall'origine dati.  
   
--   Il controllo degli errori di funzione non controllati da Gestione Driver.  
+-   Verifica degli errori di funzione non controllati da Gestione driver.  
   
--   Avviare le transazioni. Ciò è trasparente per l'applicazione.  
+-   Avvio delle transazioni; Questa operazione è trasparente per l'applicazione.  
   
--   Invio di istruzioni SQL per l'origine dati per l'esecuzione. Il driver necessario modificare SQL ODBC per SQL specifici del DBMS. Questo è spesso limitato a sostituendo le clausole di escape definite da ODBC SQL specifici del DBMS.  
+-   Invio di istruzioni SQL all'origine dati per l'esecuzione. Il driver deve modificare SQL ODBC in SQL specifico di DBMS; Questa operazione è spesso limitata alla sostituzione delle clausole Escape definite da ODBC con SQL specifico di DBMS.  
   
--   L'invio dei dati e il recupero dei dati dall'origine dati, tra cui la conversione dei tipi di dati come specificato dall'applicazione.  
+-   Invio e recupero di dati dall'origine dati, inclusa la conversione di tipi di dati in base a quanto specificato dall'applicazione.  
   
--   Errori specifici del DBMS di mapping di SQLSTATE ODBC.
+-   Mapping di errori specifici di DBMS a sqlstates ODBC.

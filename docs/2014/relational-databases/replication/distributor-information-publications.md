@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo "Informazioni di database di distribuzione" replica di SQL Server | Microsoft Docs
+title: Replica di SQL Server finestra di dialogo "informazioni sul server di distribuzione" | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721363"
 ---
-# <a name="distributor-information-dialog-box"></a>Finestra di dialogo informazioni sul server di distribuzione 
-In questo argomento vengono fornite informazioni sul **server di distribuzione** nella finestra di dialogo 
+# <a name="distributor-information-dialog-box"></a>Finestra di dialogo informazioni server di distribuzione 
+In questo argomento vengono fornite informazioni sulla finestra di dialogo **server di distribuzione** 
 
 ## <a name="publications"></a>Pubblicazioni
 
@@ -55,7 +55,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per l'agente del server di distribuzione e per quello di merge.  
   
 ### <a name="distributor-agent"></a>Agente del server di distribuzione  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -64,7 +64,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Server di pubblicazione**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
@@ -79,7 +79,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -88,7 +88,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit dei comandi di inizializzazione nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **Latenza**  
+ **Latency**  
  Tempo, espresso in secondi, trascorso tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
  **N. transazioni**  
@@ -101,7 +101,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="merge-agent"></a>Agente di merge  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -110,7 +110,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Server di pubblicazione**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
@@ -125,7 +125,7 @@ In questo argomento vengono fornite informazioni sul **server di distribuzione**
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  

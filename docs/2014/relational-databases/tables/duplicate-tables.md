@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62760761"
 ---
 # <a name="duplicate-tables"></a>Duplicare le tabelle
@@ -28,7 +28,7 @@ ms.locfileid: "62760761"
 > [!IMPORTANT]  
 >  Questa operazione consente di duplicare solo la struttura di una tabella, non le righe della tabella.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62760761"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-duplicate-a-table"></a>Per duplicare una tabella  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62760761"
   
 8.  Nella finestra di dialogo **Scegli nome** digitare un nome per la nuova tabella e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>Per duplicare una tabella in Editor di query  
   
@@ -79,6 +79,6 @@ ms.locfileid: "62760761"
   
 4.  Rimuovere qualsiasi colonna non necessaria nella nuova tabella.  
   
-5.  Fare clic su **Esegui**.  
+5.  Fare clic su **Execute**.  
   
   

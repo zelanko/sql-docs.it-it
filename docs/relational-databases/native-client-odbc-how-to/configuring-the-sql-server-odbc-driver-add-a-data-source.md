@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 784c08ea9a251587d156de9f2d209308c6fda5e7
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781694"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configurazione del driver ODBC di SQL Server - Aggiungere un'origine dati
@@ -29,7 +29,7 @@ ms.locfileid: "73781694"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Per aggiungere un'origine dati tramite Amministratore ODBC.  
   
-1.  Dal **Pannello di controllo**, accedere a **strumenti di amministrazione** e quindi alle origini dati **ODBC (64 bit)** o alle **origini dati ODBC (32-bit)** . In alternativa, è possibile richiamare odbcad32.exe.  
+1.  Dal **Pannello di controllo**, accedere a **strumenti di amministrazione** e quindi alle origini dati **ODBC (64 bit)** o alle **origini dati ODBC (32-bit)**. In alternativa, è possibile richiamare odbcad32.exe.  
   
 2.  Fare clic sulla scheda **DSN utente**, **DSN di sistema**o **DSN su file** e quindi fare clic su **Aggiungi**.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73781694"
 1.  Chiamare [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) con un parametro SAVEFILE = file_name nella stringa di connessione. Se la connessione viene eseguita correttamente, il driver ODBC crea un'origine dati file con i parametri di connessione nel percorso a cui punta il parametro SAVEFILE.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eliminare un'origine &#40;dati ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
+[Eliminare un'origine dati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

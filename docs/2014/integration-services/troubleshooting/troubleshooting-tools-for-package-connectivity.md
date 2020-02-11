@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi di connettività dei pacchetti degli strumenti | Microsoft Docs
+title: Strumenti per la risoluzione dei problemi di connettività dei pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766164"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti
@@ -70,6 +70,6 @@ ms.locfileid: "62766164"
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)   
- [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)  
+ [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting-tools-for-package-execution.md)  
   
   

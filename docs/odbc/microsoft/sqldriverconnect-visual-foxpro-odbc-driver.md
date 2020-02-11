@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLDriverConnect (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,39 +13,39 @@ ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053895"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: Livello 1  
+ Conformità API ODBC: livello 1  
   
- Si connette a un'origine dati esistente, che può essere un' [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md). Vengono ignorate le parole chiave attributo ODBC UID e PWD. La tabella seguente elenca le parole chiave di attributo supportati aggiuntivo.  
+ Consente di connettersi a un'origine dati esistente, che può essere un [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [tabelle gratuite](../../odbc/microsoft/visual-foxpro-terminology.md). Le parole chiave degli attributi ODBC UID e PWD vengono ignorate. Nella tabella seguente sono elencate le parole chiave aggiuntive per gli attributi supportati.  
   
-|Parola chiave di attributo ODBC|Valore di attributo|  
+|Parola chiave dell'attributo ODBC|Valore attributo|  
 |----------------------------|---------------------|  
 |DSN||  
-|UID|Ignorato dal Driver ODBC Visual FoxPro, ma non genera un errore.|  
-|PWD|Ignorato dal Driver ODBC Visual FoxPro, ma non genera un errore.|  
-|Driver|Il nome e il percorso del Driver ODBC Visual FoxPro; implementata da Gestione Driver.|  
+|UID|Ignorato dal driver ODBC Visual FoxPro ma non genera un errore.|  
+|PWD|Ignorato dal driver ODBC Visual FoxPro ma non genera un errore.|  
+|Driver|Nome e percorso del driver ODBC Visual FoxPro. implementato da Gestione driver.|  
   
-|Parola chiave di attributo Visual FoxPro ODBC Driver|Valore di attributo|  
+|Parola chiave dell'attributo del driver ODBC Visual FoxPro|Valore attributo|  
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Sì" o "No"|  
-|Fascicola|"Macchina" o altre sequenze di collazione. Per un elenco di sequenze di collazione supportati, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).|  
+|Fascicola|"Machine" o un'altra sequenza di ordinamento. Per un elenco delle sequenze di confronto supportate, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).|  
 |Descrizione||  
-|Exclusive|"Sì" o "No"|  
-|SourceDB|Il percorso completo alla directory contenente zero o più [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md), o il nome di file e percorso assoluto per un [database](../../odbc/microsoft/visual-foxpro-terminology.md).|  
+|Esclusivo|"Sì" o "No"|  
+|SourceDB|Percorso completo di una directory contenente zero o più [tabelle gratuite](../../odbc/microsoft/visual-foxpro-terminology.md)oppure il percorso assoluto e il nome file per un [database](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |SourceType|"DBC" o "DBF"|  
-|Version||  
+|Versione||  
   
- Se non viene specificato il nome dell'origine dati, gestione Driver richiede all'utente le informazioni (a seconda dell'impostazione delle *fDriverCompletion* argomento) e quindi prosegue. Se sono necessarie ulteriori informazioni, il Driver ODBC Visual FoxPro consente di visualizzare la finestra di dialogo dei messaggi di richiesta.  
+ Se il nome dell'origine dati non è specificato, gestione driver richiede all'utente le informazioni (a seconda dell'impostazione dell'argomento *fDriverCompletion* ) e continua. Se sono necessarie ulteriori informazioni, il driver ODBC Visual FoxPro Visualizza la finestra di dialogo di richiesta.  
   
- Per altre informazioni, vedere [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) in *ODBC Programmer ' s Reference*.

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721198"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
@@ -42,7 +42,7 @@ ms.locfileid: "62721198"
   
  Il gestore della logica di business specificato viene eseguito per ogni riga sincronizzata. La complessità della logica e le chiamate ad altre applicazioni o servizi di rete possono ridurre le prestazioni. Per altre informazioni sui gestori della logica di business, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](merge/execute-business-logic-during-merge-synchronization.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Per implementare un gestore della logica di business per un articolo di merge, utilizzando:**  
   
@@ -99,18 +99,18 @@ ms.locfileid: "62721198"
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-2.  Nel server di distribuzione, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver** , un valore di `true`per la **@is_dotnet_assembly** , il nome dell'assembly per **@dotnet_assembly_name** e il nome completo della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per  **@dotnet_class_name** .  
+2.  Nel server di distribuzione eseguire [sp_registercustomresolver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore **@article_resolver**della logica di business `true` per **@is_dotnet_assembly**, il valore per, il nome **@dotnet_assembly_name**dell'assembly per e il nome completo della classe che esegue l' <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> override **@dotnet_class_name**di per.  
   
     > [!NOTE]  
-    >  Se l'assembly non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name** . Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
+    >  Se l'assembly non viene distribuito nella stessa directory del agente di merge eseguibile, nella stessa directory dell'applicazione che avvia in modo sincrono il agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name**. Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
   
-1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) per definire l'articolo, specificando il nome descrittivo del gestore della logica di business per **@article_resolver** . Per altre informazioni, vedere [definire un articolo](publish/define-an-article.md).  
+1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) per definire l'articolo, specificando il nome descrittivo del gestore della logica di business per **@article_resolver**. Per altre informazioni, vedere [definire un articolo](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
   
-1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando **@publication** , **@article** , il valore **article_resolver** per **@property** e il nome descrittivo del gestore della logica di business per **@value** .  
+1.  Eseguire [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), **@publication**specificando **@article**,, il valore **article_resolver** per **@property**e il nome descrittivo del gestore della logica di **@value**business per.  
   
 ###  <a name="TsqlExample"></a> Esempi (programmazione della replica)  
  In questo esempio è illustrato un gestore della logica di business che crea un log di controllo.  
@@ -170,11 +170,11 @@ ms.locfileid: "62721198"
   
 1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.  
   
 3.  Chiamare <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> e controllare l'oggetto <xref:System.Collections.ArrayList> restituito per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Specificare le proprietà seguenti:  
+4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Specificare le proprietà seguenti:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> : nome dell'assembly .NET. Se l'assembly non viene distribuito nella stessa directory del file eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella GAC (Global Assembly Cache), è necessario includere il percorso completo con il nome dell'assembly. È necessario includere il percorso completo con il nome dell'assembly quando si utilizza un gestore della logica di business con la sincronizzazione tramite il Web.  
   
@@ -182,7 +182,8 @@ ms.locfileid: "62721198"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> : nome descrittivo utilizzato per l'accesso al gestore della logica di business.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A>: valore `true`.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A>: valore `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Per distribuire un gestore della logica di business  
   
@@ -192,7 +193,7 @@ ms.locfileid: "62721198"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle> . Impostare le proprietà seguenti:  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle>. Impostare le proprietà seguenti:  
   
     -   Nome dell'articolo per <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -208,7 +209,7 @@ ms.locfileid: "62721198"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679502"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Impostazione di metaproprietà in OPENXML
@@ -58,7 +58,7 @@ ms.locfileid: "62679502"
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo di OPENXML per visualizzare i set di righe in modi diversi.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>R. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
  In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. In particolare, viene illustrato come eseguire il mapping di più attributi delle metaproprietà alle colonne del set di righe in un'istruzione OPENXML usando il parametro *ColPattern* .  
   
  Nell'istruzione OPENXML si noti quanto segue:  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    

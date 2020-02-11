@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer | Microsoft Docs'
+title: 'Lezione 2: aggiunta di modelli di data mining alla struttura di data mining Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131737"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Bike Buyer
-  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Bike Buyer creata [lezione 1: Creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Uno di questi modelli consentirà di esplorare i dati e l'altro di creare stime.  
+  In questa lezione vengono aggiunti due modelli di data mining alla struttura di data mining Bike Buyer creata nella [lezione 1: creazione della struttura di data mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Uno di questi modelli consentirà di esplorare i dati e l'altro di creare stime.  
   
- Per esplorare la modalità di potenziali clienti possono essere suddivise base alle rispettive caratteristiche, si creerà un modello di data mining basato sul [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). In una lezione successiva verrà esaminato il modo in cui questo algoritmo individua cluster di clienti che condividono caratteristiche simili. È possibile riscontrare, ad esempio, che determinati clienti tendono a vivere nelle stesse aree, a usare la bicicletta per recarsi al lavoro e ad avere una formazione scolastica analoga. Questi cluster possono essere utilizzati per comprendere più a fondo la correlazione tra vari clienti e queste informazioni possono essere utilizzate come base per una strategia di marketing rivolta a un particolare segmento di clientela.  
+ Per esplorare il modo in cui i clienti potenziali possono essere classificati in base alle relative caratteristiche, verrà creato un modello di data mining basato sull' [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). In una lezione successiva verrà esaminato il modo in cui questo algoritmo individua cluster di clienti che condividono caratteristiche simili. È possibile riscontrare, ad esempio, che determinati clienti tendono a vivere nelle stesse aree, a usare la bicicletta per recarsi al lavoro e ad avere una formazione scolastica analoga. Questi cluster possono essere utilizzati per comprendere più a fondo la correlazione tra vari clienti e queste informazioni possono essere utilizzate come base per una strategia di marketing rivolta a un particolare segmento di clientela.  
   
- Per stimare se un cliente potenziale è con maggiore probabilità acquisteranno una bicicletta, si creerà un modello di data mining basato sul [algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Questo algoritmo esamina le informazioni associate a ogni potenziale cliente e individua le caratteristiche utili per stimare se acquisterà una bicicletta, quindi confronta i valori delle caratteristiche dei precedenti acquirenti di biciclette con quelli dei nuovi potenziali clienti per stabilire se è probabile che questi ultimi acquistino una bicicletta.  
+ Per prevedere se è probabile che un potenziale cliente acquisti una bicicletta, si creerà un modello di data mining basato sull' [algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Questo algoritmo esamina le informazioni associate a ogni potenziale cliente e individua le caratteristiche utili per stimare se acquisterà una bicicletta, quindi confronta i valori delle caratteristiche dei precedenti acquirenti di biciclette con quelli dei nuovi potenziali clienti per stabilire se è probabile che questi ultimi acquistino una bicicletta.  
   
 ## <a name="alter-mining-structure-statement"></a>Istruzione ALTER MINING STRUCTURE  
- Per aggiungere un modello di data mining alla struttura di data mining, viene utilizzata la [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per aggiungere un modello di data mining alla struttura di data mining, è possibile utilizzare l'istruzione [ALTER mining structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Identificazione della struttura di data mining  
   
@@ -61,7 +61,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  Le successive righe del codice definiscono le colonne della struttura di data mining che verranno utilizzate dal modello di data mining:  
   
@@ -78,7 +78,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- Per altre informazioni sui parametri dell'algoritmo che è possibile modificare, vedere [algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) e [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md).  
+ Per ulteriori informazioni sui parametri dell'algoritmo che è possibile modificare, vedere algoritmo [Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) e [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md).  
   
  Per specificare che una colonna nel modello di data mining deve essere utilizzata per la stima, è possibile utilizzare la sintassi seguente:  
   
@@ -86,7 +86,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- L'ultima riga del codice, che è facoltativa, definisce un filtro che viene applicato durante il training e il test del modello. Per altre informazioni su come applicare filtri ai modelli di data mining, vedere [filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ L'ultima riga del codice, che è facoltativa, definisce un filtro che viene applicato durante il training e il test del modello. Per ulteriori informazioni sull'applicazione di filtri ai modelli di data mining, vedere [filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining ](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione verranno eseguite le attività seguenti:  
@@ -102,7 +102,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>Per aggiungere un modello di data mining dell'albero delle decisioni  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX** per aprire l'Editor di Query e una nuova query vuota.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX** per aprire l'editor di query e una nuova query vuota.  
   
 2.  Copiare l'esempio generico dell'istruzione ALTER MINING STRUCTURE nella query vuota.  
   
@@ -197,18 +197,18 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+7.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `DT_Model.dmx`.  
+8.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `DT_Model.dmx`il nome.  
   
-9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+9. Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
 ## <a name="adding-a-clustering-mining-model-to-the-structure"></a>Aggiunta di un modello di data mining di clustering alla struttura  
  A questo punto è possibile aggiungere un modello di data mining alla struttura Bike Buyer mediante l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering. Dato che il modello di data mining di clustering utilizzerà tutte le colonne definite nella struttura di data mining, è possibile utilizzare una procedura abbreviata per aggiungere il modello alla struttura omettendo la definizione delle colonne di data mining.  
   
 #### <a name="to-add-a-clustering-mining-model"></a>Per aggiungere un modello di data mining di clustering  
   
-1.  In **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX** per aprire l'editor di Query e una nuova query vuota.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX** per aprire l'editor di query e una nuova query vuota.  
   
 2.  Copiare l'esempio generico dell'istruzione ALTER MINING STRUCTURE nella query vuota.  
   
@@ -265,15 +265,15 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+7.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Clustering_Model.dmx`.  
+8.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Clustering_Model.dmx`il nome.  
   
-9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+9. Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
  Nella lezione successiva verranno elaborati i modelli e la struttura di data mining.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lezione 3: Elaborazione della struttura di data mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688910"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
@@ -30,7 +30,7 @@ ms.locfileid: "62688910"
 -   Database di sottoscrizione in ogni Sottoscrittore.    
 -   Database di sistema **master** e **msdb** nel server di pubblicazione, nel database di distribuzione e in tutti i Sottoscrittori. È necessario che il backup di questi database venga eseguito contemporaneamente e che venga inoltre eseguito nello stesso momento di quello del relativo database di replica. Eseguire, ad esempio, il backup dei database **master** e **msdb** nel server di pubblicazione nello stesso momento in cui si esegue il backup del database di pubblicazione. Se il database di pubblicazione viene ripristinato, verificare che i database **master** e **msdb** siano consistenti con il database di pubblicazione in termini di impostazioni e di configurazione della replica.  
   
- Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, è necessario eseguire un backup ogni volta che viene modificata un'impostazione relativa alla replica. Per altre informazioni, vedere [Operazioni comuni che richiedono il backup del database](common-actions-requiring-an-updated-backup.md).  
+ Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, è necessario eseguire un backup ogni volta che viene modificata un'impostazione relativa alla replica. Per altre informazioni, vedere [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
  Scegliere una delle modalità descritte di seguito per eseguire il backup e il ripristino del database di pubblicazione e quindi attenersi alle indicazioni elencate per il database di distribuzione e i database di sottoscrizione.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62688910"
 > [!IMPORTANT]  
 >  Il ripristino delle tabelle pubblicate in seguito alla sincronizzazione di un database di pubblicazione con un database di sottoscrizione può avvenire in un momento più recente rispetto ad altre tabelle non pubblicate di cui è stato ripristinato il backup.  
   
- Se si esegue la sincronizzazione con un Sottoscrittore in cui è in esecuzione una versione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la sottoscrizione non potrà essere anonima, ma dovrà trattarsi di una sottoscrizione client o server. Tali sottoscrizioni nelle versioni precedenti sono definite sottoscrizione locale e sottoscrizione globale.  
+ Se si esegue la sincronizzazione con un Sottoscrittore che esegue una versione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la sottoscrizione non può essere anonima. Deve essere una sottoscrizione client o una sottoscrizione server (dette anche sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti).  
   
  Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62688910"
   
  Se si sceglie questa opzione, generare un nuovo snapshot per il recapito ai Sottoscrittori reinizializzati subito dopo aver ripristinato il database di pubblicazione.  
   
- Per reinizializzare una sottoscrizione, vedere [Reinizializzare una sottoscrizione](../reinitialize-a-subscription.md).  
+ Per reinizializzare una sottoscrizione, vedere [Reinitialize a Subscription](../reinitialize-a-subscription.md).  
   
- Per creare e applicare uno snapshot, vedere [Creazione e applicazione dello snapshot iniziale](../create-and-apply-the-initial-snapshot.md) e [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Per creare e applicare uno snapshot, vedere [Create e Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Backup e ripristino del database di distribuzione  
  Con la replica di tipo merge, è necessario eseguire backup periodici del database di distribuzione, che può essere ripristinato senza particolari attenzioni a condizione che il backup utilizzato non sia precedente al periodo di memorizzazione più breve di tutte le pubblicazioni in cui viene utilizzato il server di distribuzione. Se, ad esempio, vi sono tre pubblicazioni il cui periodo di memorizzazione è pari a 10, 20 e 30 giorni rispettivamente, la copia di backup utilizzata per il ripristino del database non deve avere più di 10 giorni. Il database di distribuzione svolge un ruolo limitato nella replica di tipo merge: non viene utilizzato per archiviare dati utilizzati nel rilevamento delle modifiche e non consente l'archiviazione temporanea delle modifiche della replica di tipo merge per il successivo inoltro ai database di sottoscrizione, come invece avviene nella replica transazionale.  
@@ -83,7 +83,7 @@ ms.locfileid: "62688910"
   
  Per impostare il periodo di memorizzazione della pubblicazione, vedere [Impostare il periodo di scadenza per le sottoscrizioni](../publish/set-the-expiration-period-for-subscriptions.md).  
   
- Per sincronizzare una sottoscrizione, vedere [Sincronizzazione di una sottoscrizione push](../synchronize-a-push-subscription.md) e [Sincronizzazione di una sottoscrizione pull](../synchronize-a-pull-subscription.md).  
+ Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Backup e ripristino di un database di ripubblicazione  
  Un database che sottoscrive i dati di un server di pubblicazione e a sua volta li pubblica in altri database di sottoscrizione viene definito database di ripubblicazione. Per ripristinare un database di ripubblicazione, seguire le indicazioni disponibili nelle sezioni "Backup e ripristino del database di pubblicazione" e "Backup e ripristino di un database di sottoscrizione" in questo argomento.  

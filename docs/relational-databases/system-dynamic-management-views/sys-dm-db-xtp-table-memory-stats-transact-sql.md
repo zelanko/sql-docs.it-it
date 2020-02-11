@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097939"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Restituisce le statistiche di utilizzo della memoria per ogni tabella di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (utente e di sistema) nel database corrente. Le tabelle di sistema dispongono di ID oggetto negativi e vengono utilizzate per archiviare le informazioni di runtime per il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Diversamente dagli oggetti utente, le tabelle di sistema sono interne e presenti solo in memoria e pertanto non sono visibili tramite le viste del catalogo. Le tabelle di sistema vengono utilizzate per archiviare informazioni quali i metadati di tutti i file di dati/differenziali in memoria, le richieste di tipo merge, filigrane per file differenziali per filtrare le righe, le tabelle eliminate e le informazioni rilevanti per il recupero e i backup. Poiché il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] può avere fino a un massimo di 8.192 coppie di dati e file differenziali, la memoria utilizzata dalle tabelle di sistema può essere costituita da pochi megabyte per i database in memoria di grandi dimensioni.  
@@ -43,7 +43,7 @@ ms.locfileid: "68097939"
 |memory_allocated_for_indexes_kb|**bigint**|Memoria allocata per gli indici della tabella.|  
 |memory_used_by_indexes_kb|**bigint**|Memoria utilizzata per gli indici della tabella.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Vengono restituite tutte le righe se si dispone dell'autorizzazione VIEW DATABASE STATE per il database corrente. In caso contrario, viene restituito un set di righe vuoto.  
   
  Se non si dispone dell'autorizzazione VIEW DATABASE, verranno restituite tutte le colonne per le righe nelle tabelle per cui si dispone dell'autorizzazione SELECT.  
@@ -213,6 +213,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

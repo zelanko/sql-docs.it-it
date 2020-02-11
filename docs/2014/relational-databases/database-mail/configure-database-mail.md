@@ -40,10 +40,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68418878"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
@@ -60,7 +60,7 @@ ms.locfileid: "68418878"
 ###  <a name="Security"></a> Sicurezza  
  Per configurare Posta elettronica database, è necessario essere un membro del ruolo predefinito del server **sysadmin** . Per inviare Posta elettronica database, è necessario essere un membro del ruolo del database **DatabaseMailUserRole** nel database **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della Configurazione guidata Posta elettronica database  
+##  <a name="SSMSProcedure"></a>Uso della configurazione guidata di Posta elettronica database  
  **Per configurare Posta elettronica database tramite una procedura guidata**  
   
 1.  In Esplora oggetti espandere il nodo dell'istanza in cui si desidera configurare Posta elettronica database.  
@@ -75,38 +75,38 @@ ms.locfileid: "68418878"
   
   
   
-###  <a name="Welcome"></a> Pagina introduttiva  
+###  <a name="Welcome"></a>Pagina iniziale  
  In questa pagina vengono illustrati i passaggi necessari per configurare Posta elettronica database.  
   
- **Non visualizzare più questa pagina**: selezionare questa opzione per non visualizzare più la pagina introduttiva.  
+ Non **visualizzare più questa pagina** : selezionare questa opzione per ignorare la visualizzazione della pagina introduttiva in futuro.  
   
- **Avanti** : consente di passare alla pagina **Selezionare un'attività di configurazione** .  
+ **Avanti** : consente di passare alla pagina **Selezione attività di configurazione** .  
   
- **Annulla**: consente di terminare la procedura guidata senza configurare Posta elettronica database  
+ **Annulla** : consente di terminare la procedura guidata senza configurare posta elettronica database  
   
  
   
-###  <a name="ConfigTask"></a> Selezione attività di configurazione  
+###  <a name="ConfigTask"></a>Selezionare l'attività di configurazione  
  Usare la pagina **Selezione attività di configurazione** per indicare quali attività verranno eseguite ogni volta che si usa la procedura guidata. Se si vuole cambiare tali attività prima del completamento della procedura guidata, fare clic sul pulsante **Indietro** per tornare in questa pagina e selezionare un'attività diversa.  
   
 > [!NOTE]  
->  Se la caratteristica Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio: **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
+>  Se la funzionalità Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
   
- **Installa Posta elettronica database eseguendo le attività seguenti**  
+ **Configurare Posta elettronica database eseguendo le attività seguenti**  
  Consente di eseguire tutte le attività necessarie per installare Posta elettronica database per la prima volta. Questa opzione include tutte le altre tre.  
   
  **Gestisci account e profili di Posta elettronica database**  
  Utilizzare questa opzione per creare nuovi profili e account di Posta elettronica database oppure per visualizzare, modificare o eliminare quelli esistenti  
   
- **Gestisci sicurezza profilo**  
+ **Gestione della sicurezza del profilo**  
  Consente di configurare gli utenti che dispongono dell'accesso ai profili di Posta elettronica database.  
   
- **Visualizza o modifica i parametri di sistema**  
+ **Visualizzare o modificare i parametri di sistema**  
  Consente di configurare i parametri di sistema di Posta elettronica database, ad esempio le dimensioni massime di file consentite per gli allegati.  
   
 
   
-###  <a name="NewAccount"></a> Pagina Nuovo account  
+###  <a name="NewAccount"></a>Pagina nuovo account  
  Utilizzare questa pagina per creare un nuovo account di Posta elettronica database. In un account di Posta elettronica database sono contenute le informazioni per l'invio di messaggi di posta elettronica a un server SMTP.  
   
  In un account di Posta elettronica database sono presenti le informazioni utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per inviare messaggi di posta elettronica a un server SMTP. In ogni account sono incluse le informazioni per un singolo server di posta elettronica.  
@@ -119,25 +119,25 @@ ms.locfileid: "68418878"
  **Descrizione**  
  Digitare una descrizione dell'account. La descrizione è facoltativa.  
   
- **Indirizzo posta elettronica**  
+ **Indirizzo di posta elettronica**  
  Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, può inviare posta elettronica dall'indirizzo SqlAgent@Adventure-Works.com.  
   
  **Nome visualizzato**  
  Digitare il nome che deve essere visualizzato nei messaggi di posta elettronica inviati dall'account. Il nome visualizzato è facoltativo. Si tratta del nome visualizzato nei messaggi inviati da questo account. È ad esempio possibile che un account per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent visualizzi il nome "SQL Server Agent Automated Mailer" nei messaggi di posta elettronica.  
   
- **Indirizzo risposte**  
+ **Indirizzo di posta elettronica di risposta**  
  Consente di digitare l'indirizzo di posta elettronica che verrà utilizzato per le risposte ai messaggi di posta elettronica inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, possono essere indirizzate all'amministratore del database danw@Adventure-Works.com.  
   
  **Nome server**  
- Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Si tratta in genere di un formato simile `smtp.`a *< your_company >* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
+ Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Si tratta in genere di un formato simile `smtp.` a *<your_company>* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
  **Numero di porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  
   
- **Il server necessita di una connessione sicura (SSL)**  
+ **Questo server richiede una connessione sicura (SSL)**  
  Consente di crittografare le comunicazioni mediante SSL (Secure Sockets Layer).  
   
- **Autenticazione di Windows con credenziali del servizio Motore di database**  
+ **Autenticazione di Windows con credenziali del servizio motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticazione di base**  
@@ -157,7 +157,7 @@ ms.locfileid: "68418878"
   
  
   
-###  <a name="ExistingAccount"></a> Pagina Gestione account esistente  
+###  <a name="ExistingAccount"></a>Pagina Gestisci account esistente  
  Utilizzare questa pagina per gestire un account di Posta elettronica database esistente.  
   
  **Nome account**  
@@ -169,14 +169,14 @@ ms.locfileid: "68418878"
  **Descrizione**  
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
- **Indirizzo posta elettronica**  
- Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Un account di Microsoft SQL Server Agent, ad esempio, può inviare posta elettronica dall'indirizzo **SqlAgent@Adventure-Works.com** .  
+ **Indirizzo di posta elettronica**  
+ Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Ad esempio, un account per Microsoft SQL Server Agent può inviare messaggi di posta elettronica **SqlAgent@Adventure-Works.com**dall'indirizzo.  
   
  **Nome visualizzato**  
  Consente di visualizzare o aggiornare il nome da visualizzare nei messaggi di posta elettronica inviati da questo account. Il nome visualizzato è facoltativo. Si tratta del nome visualizzato nei messaggi inviati da questo account. Un account di SQL Server Agent, ad esempio, può visualizzare il nome **SQL Server Agent Automated Mailer** nei messaggi di posta elettronica.  
   
- **Indirizzo risposte**  
- Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di SQL Server Agent, ad esempio, possono essere indirizzate all'amministratore del database **danw@Adventure-Works.com** .  
+ **Indirizzo di posta elettronica di risposta**  
+ Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Ad esempio, le risposte a un account per SQL Server Agent possono accedere all'amministratore del database **danw@Adventure-Works.com**.  
   
  **Nome server**  
  Consente di visualizzare o aggiornare il nome del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.<nome_società>.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
@@ -184,10 +184,10 @@ ms.locfileid: "68418878"
  **Numero di porta**  
  Consente di visualizzare o aggiornare il numero di porta del server SMTP di questo account. La maggior parte dei server SMTP utilizza la porta 25.  
   
- **Il server necessita di una connessione sicura (SSL)**  
+ **Questo server richiede una connessione sicura (SSL)**  
  Consente di crittografare le comunicazioni mediante SSL (Secure Sockets Layer).  
   
- **Autenticazione di Windows con credenziali del servizio Motore di database**  
+ **Autenticazione di Windows con credenziali del servizio motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticazione di base**  
@@ -207,10 +207,10 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="NewProfile"></a> Pagina Nuovo profilo  
+###  <a name="NewProfile"></a>Pagina nuovo profilo  
  Utilizzare questa pagina per creare un profilo di Posta elettronica database, Un profilo di Posta elettronica database è una raccolta di account di Posta elettronica database. I profili consentono di migliorare l'affidabilità nei casi in cui non sia possibile raggiungere un server di posta elettronica, offrendo account di Posta elettronica database alternativi. È necessario almeno un account di Posta elettronica database. Per altre informazioni sull'impostazione della priorità degli account di Posta elettronica database, vedere [Creare un profilo di Posta elettronica database](create-a-database-mail-profile.md).  
   
- Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante**Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
+ Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. **Sposta su** abbassa il numero di sequenza e **Sposta giù** aumenta il numero di sequenza. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
   
  **Nome profilo**  
  Consente di digitare il nome del nuovo profilo. Il profilo verrà creato con il nome specificato. Non utilizzare il nome di un profilo esistente.  
@@ -221,7 +221,7 @@ ms.locfileid: "68418878"
  **Account SMTP**  
  Consente di selezionare uno o più account per il profilo. L'ordine in cui Posta elettronica utilizza gli account è determinato dal livello di priorità. Se non è elencato alcun account, è necessario fare clic su **Aggiungi** per continuare e aggiungere un nuovo account SMTP.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un account al profilo.  
   
  **Rimuovi**  
@@ -235,10 +235,10 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="ExistingProfile"></a> Pagina Gestione profilo esistente  
+###  <a name="ExistingProfile"></a>Pagina Gestisci profilo esistente  
  Utilizzare questa pagina per gestire un profilo di Posta elettronica database esistente. Un profilo di Posta elettronica database è una raccolta di account di Posta elettronica database. I profili consentono di migliorare l'affidabilità nei casi in cui non sia possibile raggiungere un server di posta elettronica, offrendo account di Posta elettronica database alternativi. È necessario almeno un account di Posta elettronica database. Per altre informazioni sull'impostazione della priorità degli account di Posta elettronica database, vedere [Creare un profilo di Posta elettronica database](create-a-database-mail-profile.md).  
   
- Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. Il pulsante**Sposta su** consente di ridurre il numero di sequenza, mentre il pulsante **Sposta giù** consente di aumentarlo. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
+ Usare i pulsanti **Sposta su** e **Sposta giù** per modificare l'ordine di uso degli account di Posta elettronica database. L'ordine viene stabilito in base a un valore definito come numero di sequenza. **Sposta su** abbassa il numero di sequenza e **Sposta giù** aumenta il numero di sequenza. Il numero di sequenza determina l'ordine in cui Posta elettronica database utilizza gli account nel profilo. Per un nuovo messaggio di posta elettronica, Posta elettronica database inizia con l'account che ha il numero di sequenza più basso. Se l'invio del messaggio con tale account ha esito negativo, Posta elettronica database prova con l'account con il numero di sequenza successivo e così via, finché il messaggio non viene inviato o finché anche l'invio con l'account con il numero di sequenza più alto non ha esito negativo. Se l'invio con l'account con il numero di sequenza più alto ha esito negativo, il tentativo di inviare il messaggio viene sospeso per il periodo di tempo specificato nel parametro **AccountRetryDelay** . Trascorso questo periodo di tempo, Posta elettronica database prova di nuovo a inviare il messaggio, iniziando con l'account con il numero di sequenza più basso. Usare il parametro **AccountRetryDelay** per specificare quante volte il processo di posta elettronica esterno deve provare a inviare il messaggio di posta elettronica usando ogni account del profilo specificato. È possibile configurare i parametri **AccountRetryDelay** e **AccountRetryAttempts** nella pagina **Configurazione parametri di sistema** di Configurazione guidata Posta elettronica database.  
   
  **Nome profilo**  
  Consente di selezionare il nome del profilo da gestire.  
@@ -252,7 +252,7 @@ ms.locfileid: "68418878"
  **Account SMTP**  
  Consente di selezionare uno o più account per il profilo. La proprietà di failover imposta l'ordine in cui Posta elettronica database utilizza l'account in caso si verifichi un failover.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un account al profilo.  
   
  **Rimuovi**  
@@ -270,18 +270,18 @@ ms.locfileid: "68418878"
  **Nome account**  
  Consente di visualizzare il nome dell'account.  
   
- **E-mail Address**  
+ **Indirizzo di posta elettronica**  
  Consente di visualizzare l'indirizzo di posta elettronica dell'account.  
   
 
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="AddAccount"></a>Pagina Aggiungi account al profilo  
  Utilizzare questa pagina per specificare l'account da aggiungere al profilo. Selezionare un account esistente dalla casella **Nome account** o fare clic su **Nuovo account**.  
   
  **Nome account**  
  Consente di selezionare il nome dell'account da aggiungere al profilo.  
   
- **Indirizzo posta elettronica**  
+ **Indirizzo di posta elettronica**  
  Consente di visualizzare l'indirizzo di posta elettronica per l'account selezionato. Non è possibile modificare l'indirizzo di posta elettronica da questa pagina. A questo scopo, tornare alla pagina principale della procedura guidata e selezionare l'opzione **Gestisci account e profili di Posta elettronica database** .  
   
  **Nome server**  
@@ -292,24 +292,24 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="AccountsProfiles"></a> Pagina Gestisci account e profili  
+###  <a name="AccountsProfiles"></a>Pagina Gestisci account e profili  
  Utilizzare questa pagina per selezionare un'attività per la gestione di un profilo o di un account.  
   
- **Crea nuovo account**  
+ **Creare un nuovo account**  
  Consente di creare un nuovo account.  
   
- **Visualizza, modifica o elimina un account esistente**  
+ **Visualizza, modifica o Elimina un account esistente**  
  Consente di gestire o eliminare un account esistente.  
   
- **Crea nuovo profilo**  
+ **Crea un nuovo profilo**  
  Consente di creare un nuovo profilo.  
   
- **Visualizza, modifica o elimina un profilo esistente. È inoltre possibile gestire gli account associati al profilo.**  
+ **Visualizza, modifica o Elimina un profilo esistente. È anche possibile gestire gli account associati al profilo.**  
  Consente di aggiornare o di eliminare un profilo esistente, nonché di gestire gli account associati al profilo.  
   
 
   
-###  <a name="ProfileSecurityPublic"></a> Gestione sicurezza profilo, scheda Pubblico  
+###  <a name="ProfileSecurityPublic"></a>Gestione sicurezza profilo, scheda pubblico  
  Utilizzare questa pagina per configurare un profilo pubblico.  
   
  I profili sono pubblici o privati. Un profilo privato è accessibile solo a ruoli o utenti specifici, mentre un profilo pubblico può essere usato per l'invio di messaggi di posta elettronica da tutti gli utenti o ruoli che dispongono dell'accesso al database host della posta elettronica (**msdb**).  
@@ -319,7 +319,7 @@ ms.locfileid: "68418878"
  **Pubblico**  
  Selezionare questa opzione per rendere pubblico il profilo specificato.  
   
- **Profile Name**  
+ **Nome profilo**  
  Consente di visualizzare il nome del profilo.  
   
  **Profilo predefinito**  
@@ -330,7 +330,7 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="ProfileSecurityPrivate"></a> Gestione sicurezza profilo, scheda Privato  
+###  <a name="ProfileSecurityPrivate"></a>Gestione sicurezza profilo, scheda privato  
  Utilizzare questa pagina per configurare un profilo privato.  
   
  I profili sono pubblici o privati. Un profilo privato è accessibile solo a ruoli o utenti specifici, mentre un profilo pubblico può essere usato per l'invio di messaggi di posta elettronica da tutti gli utenti o ruoli che dispongono dell'accesso al database host della posta elettronica (**msdb**).  
@@ -340,7 +340,7 @@ ms.locfileid: "68418878"
  **Nome utente**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
- **Accesso**  
+ **Accedere**  
  Consente di specificare se l'utente o il ruolo dispone dell'accesso al profilo specificato.  
   
  **Nome profilo**  
@@ -354,7 +354,7 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="SystemParameters"></a> Configurazione parametri di sistema  
+###  <a name="SystemParameters"></a>Configurare i parametri di sistema  
  Utilizzare questa pagina per specificare i parametri di sistema di Posta elettronica database. Visualizzare i parametri di sistema e i valori correnti di ognuno di essi. Selezionare un parametro per visualizzarne una breve descrizione nel riquadro informazioni.  
   
  **Tentativi account**  
@@ -367,13 +367,13 @@ ms.locfileid: "68418878"
  Dimensioni massime di un allegato, in byte.  
   
  **Estensioni file allegati non consentite**  
- Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia ( **...** ) per aggiungere altre estensioni.  
+ Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia (**...**) per aggiungere altre estensioni.  
   
  **Durata minima eseguibile Posta elettronica database (secondi)**  
  Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Il processo rimane attivo finché sono presenti messaggi di posta elettronica nella coda di Posta elettronica database. Questo parametro indica il periodo di tempo per cui il processo rimane attivo se non esiste alcun messaggio da elaborare.  
   
  **Livello di registrazione**  
- Consente di specificare i messaggi registrati nel log di Posta elettronica database. I valori possibili sono:  
+ Consente di specificare i messaggi registrati nel log di Posta elettronica database. Valori possibili:  
   
 -   Normale - Vengono registrati solo gli errori.  
   
@@ -388,18 +388,18 @@ ms.locfileid: "68418878"
   
 
   
-###  <a name="CompleteWizard"></a> Pagina Completamento procedura guidata  
+###  <a name="CompleteWizard"></a>Pagina Completamento procedura guidata  
  Usare questa pagina per controllare le azioni che verranno eseguite dalla **Configurazione guidata posta elettronica database** . Non verrà apportata alcuna modifica finché la procedura guidata non verrà completata.  
   
 
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Usare la finestra di dialogo **Invia messaggio di prova da** _<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
+###  <a name="TestEmail"></a>Pagina Invia messaggio di prova  
+ Utilizzare la pagina **Invia messaggio di posta elettronica di prova da** _<instance_name>_ per inviare un messaggio di posta elettronica utilizzando il profilo di posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
   
- **Profilo di Posta elettronica database**  
+ **Profilo Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  
   
- **Per**  
+ **A**  
  Indirizzo di posta elettronica dei destinatari del messaggio. È necessario specificare almeno un destinatario.  
   
  **Oggetto**  
@@ -413,13 +413,13 @@ ms.locfileid: "68418878"
  **Messaggio inviato**  
  Valore **mailitem_id** del messaggio di posta elettronica di prova.  
   
- **Risoluzione dei problemi**  
+ **Risolvere problemi**  
  Fare clic su questo pulsante per aprire la documentazione online relativa all'argomento [Risoluzione dei problemi relativi a Posta elettronica database](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
   
-##  <a name="Template"></a> Utilizzo di modelli  
- **Per creare uno script di configurazione di Posta elettronica database**  
+##  <a name="Template"></a>Utilizzo di modelli  
+ **Per creare uno script di configurazione Posta elettronica database**  
   
 1.  Scegliere **Esplora modelli** dal menu **Visualizza**.  
   

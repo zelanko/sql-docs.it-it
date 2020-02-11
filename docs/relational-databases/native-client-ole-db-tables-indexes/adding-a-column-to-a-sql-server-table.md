@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45048935e9d636a95af1c77eb8f7a88153d22106
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788516"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Aggiunta di una colonna a una tabella di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client espone la funzione **ITableDefinition:: AddColumn** . Questo consente ai consumer di aggiungere una colonna a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone la funzione **ITableDefinition:: AddColumn** . Questo consente ai consumer di aggiungere una colonna a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando si aggiunge una colonna a una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il consumer del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è vincolato nel modo seguente:  
+ Quando si aggiunge una colonna a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider di OLE DB di Native Client è vincolato come indicato di seguito:  
   
 -   Se DBPROP_COL_AUTOINCREMENT è VARIANT_TRUE, DBPROP_COL_NULLABLE deve essere VARIANT_FALSE.  
   
--   Se la colonna viene definita tramite il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]timestamp**di**, DBPROP_COL_NULLABLE deve essere VARIANT_FALSE.  
+-   Se la colonna viene definita tramite il tipo di dati timestamp[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** di **, DBPROP_COL_NULLABLE deve essere VARIANT_FALSE.  
   
 -   Per qualsiasi altra definizione di colonna, DBPROP_COL_NULLABLE deve essere VARIANT_TRUE.  
   

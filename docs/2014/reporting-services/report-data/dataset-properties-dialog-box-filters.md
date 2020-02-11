@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107334"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Finestra di dialogo Proprietà set di dati, Filtri
   Selezionare **Filtri** nella finestra di dialogo **Proprietà set di dati** per creare filtri per il set di dati.  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere all'elenco una nuova clausola di filtro.  
   
  **Elimina**  
@@ -37,19 +37,19 @@ ms.locfileid: "66107334"
  Sposta il filtro selezionato di una posizione verso il basso nell'elenco.  
   
  **Espressione**  
- Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante espressione (**FX**) per modificare l'espressione.  
   
- **Data type**  
+ **Tipo di dati**  
  Scegliere il tipo di dati per **Valore**. Se possibile, scegliere un tipo di dati che corrisponda al tipo di dati per **Espressione**. Per altre informazioni, vedere [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](../report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
  **Operatore**  
  Scegliere l'operatore da utilizzare per confrontare l'espressione e il valore.  
   
  **Valore**  
- Digitare l'espressione o il valore da usare durante la valutazione dell'espressione specificata nella casella **Espressione** . Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare l'espressione o il valore da usare durante la valutazione dell'espressione specificata nella casella **Espressione** . Fare clic sul pulsante espressione (**FX**) per modificare l'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)  
   
   

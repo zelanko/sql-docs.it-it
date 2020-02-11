@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771117"
 ---
 # <a name="look-up-infoobject"></a>Cerca InfoObject
@@ -37,9 +37,9 @@ ms.locfileid: "62771117"
   
     1.  Selezionare **InfoCube**. Scegliere quindi **Crea**. Nella finestra di dialogo **Crea InfoCube per dati transazione** fare clic su **Cerca** nella colonna **IObject** per una delle righe nell'elenco. Ogni riga rappresenta una colonna nel flusso di dati del pacchetto.  
   
-    2.  Selezionare **InfoSource**. Scegliere quindi **Crea**. Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**. Nella finestra di dialogo **Crea InfoSource per dati transazione** fare clic su **Cerca** nella colonna **IObject** per una delle righe nell'elenco. Ogni riga rappresenta una colonna nel flusso di dati del pacchetto.  
+    2.  Selezionare **InfoSource**. Fare quindi clic su **Crea**. Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**. Nella finestra di dialogo **Crea InfoSource per dati transazione** fare clic su **Cerca** nella colonna **IObject** per una delle righe nell'elenco. Ogni riga rappresenta una colonna nel flusso di dati del pacchetto.  
   
-    3.  Selezionare **InfoSource**. Scegliere quindi **Crea**. Nella finestra di dialogo **Crea InfoSource** selezionare **Dati master**. Nella finestra di dialogo **Crea InfoSource per dati master** scegliere **Cerca**.  
+    3.  Selezionare **InfoSource**. Fare quindi clic su **Crea**. Nella finestra di dialogo **Crea InfoSource** selezionare **Dati master**. Nella finestra di dialogo **Crea InfoSource per dati master** scegliere **Cerca**.  
   
  È inoltre possibile aprire la finestra di dialogo **Cerca InfoObject** facendo clic su **Aggiungi** nella sezione **Attributi** della finestra di dialogo **Crea nuovo InfoObject** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62771117"
  **Caratteristiche ora**  
  Cercare InfoObject che rappresentino le caratteristiche orarie.  
   
- **Name**  
+ **Nome**  
  Immettere il nome dell'InfoObject da cercare oppure un nome parziale con il carattere jolly asterisco (*). In alternativa, utilizzare il carattere jolly asterisco da solo per includere tutti gli InfoObject.  
   
  **Descrizione**  
