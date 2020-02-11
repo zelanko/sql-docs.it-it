@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154297"
 ---
 # <a name="connect-to-azure-storage"></a>Connettersi ad Archiviazione di Azure
-  Usare la finestra di dialogo di **connessione di archiviazione di Azure** per specificare un account di archiviazione e convalidare la connessione ad Azure.  
+  Usare la finestra di dialogo **Azure Storage Connection** (Connessione ad Archiviazione di Azure) per specificare un account di archiviazione e convalidare la connessione ad Azure.  
   
 ## <a name="options"></a>Opzioni  
- Specificare le informazioni seguenti sull'account Azure e quindi fare clic su **Avanti** per continuare.  
+ Specificare le informazioni seguenti sull'account di Azure e fare clic su **Avanti** per continuare.  
   
 1.  **Account di archiviazione** - specificare il nome dell'account di archiviazione.  
   

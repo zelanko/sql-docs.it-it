@@ -19,19 +19,19 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104397"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Imposta una coppia chiave-valore nel contesto della sessione.  
   
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,27 +42,27 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @key=] N'key'  
- La chiave viene impostata, di tipo **sysname**. La dimensione massima della chiave è 128 byte.  
+ [ @key= ] N'key'  
+ Chiave da impostare, di tipo **sysname**. Le dimensioni massime della chiave sono pari a 128 byte.  
   
- [ @value=] 'value'  
- Il valore della chiave specificata, di tipo **sql_variant**. Impostazione di un valore null libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
+ [ @value= ] valore  
+ Valore per la chiave specificata, di tipo **sql_variant**. L'impostazione di un valore NULL libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
   
- [ @read_only= ] { 0 | 1 }  
- Un flag di tipo **bit**. Se è 1, quindi il valore della chiave specificata non può essere più modificato in questa connessione logica. Se 0 (impostazione predefinita), quindi il valore può essere modificato.  
+ [ @read_only= ] {0 | 1}  
+ Flag di tipo **bit**. Se è 1, il valore per la chiave specificata non può essere modificato nuovamente in questa connessione logica. Se è 0 (impostazione predefinita), il valore può essere modificato.  
   
-## <a name="permissions"></a>Permissions  
- Qualsiasi utente può impostare un contesto di sessione per la propria sessione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Qualsiasi utente può impostare un contesto di sessione per la sessione.  
   
-## <a name="remarks"></a>Note  
- Analogamente alle altre stored procedure, solo i valori letterali e variabili (chiamate di funzione o espressioni not) possono essere passate come parametri.  
+## <a name="remarks"></a>Osservazioni  
+ Come altre stored procedure, solo i valori letterali e le variabili (non espressioni o chiamate di funzione) possono essere passati come parametri.  
   
- Le dimensioni totali del contesto della sessione sono limitata a 1 MB. Se si imposta un valore che determina il superamento del limite, l'istruzione ha esito negativo. È possibile monitorare l'utilizzo della memoria globale nel [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ Le dimensioni totali del contesto della sessione sono limitate a 1 MB. Se si imposta un valore che determina il superamento di questo limite, l'istruzione ha esito negativo. È possibile monitorare l'utilizzo complessivo della memoria in [sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- È possibile monitorare l'utilizzo della memoria globale eseguendo una query [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) come indicato di seguito: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ È possibile monitorare l'utilizzo complessivo della memoria eseguendo una query su [sys. dm_os_memory_cache_counters &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) come segue:`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come impostare e restituire quindi una chiave di contesto sessioni denominata linguaggio con un valore di lingua inglese.  
+ Nell'esempio seguente viene illustrato come impostare e restituire una chiave di contesto di sessioni denominata Language con un valore di English.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
@@ -77,7 +77,7 @@ EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;
   
 ## <a name="see-also"></a>Vedere anche  
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
- [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
+ [SESSION_CONTEXT &#40;&#41;Transact-SQL](../../t-sql/functions/session-context-transact-sql.md)   
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   
  [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  

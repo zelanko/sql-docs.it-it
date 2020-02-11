@@ -18,21 +18,21 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091913"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Chiama il **sqlmaint** utilità con una stringa che contiene **sqlmaint**commutatori. Il **sqlmaint** utilità esegue una serie di operazioni di manutenzione su uno o più database.  
+  Chiama l'utilità **SQLMaint** con una stringa che contiene le opzioni **SQLMaint**. L'utilità **SQLMaint** esegue un set di operazioni di manutenzione in uno o più database.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,17 +43,17 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>Argomenti  
  **'** *switch_string* **'**  
- È una stringa contenente il **sqlmaint** opzioni dell'utilità. Le opzioni e i relativi valori devono essere separati da uno spazio.  
+ Stringa contenente le opzioni dell'utilità **SQLMaint** . Le opzioni e i relativi valori devono essere separati da uno spazio.  
   
- Il **-?** non è valida per **xp_sqlmaint**.  
+ **-?** opzione non valida per **xp_sqlmaint**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- No. Restituisce un errore se il **sqlmaint** utilità ha esito negativo.  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ No. Restituisce un errore se l'utilità **SQLMaint** ha esito negativo.  
   
-## <a name="remarks"></a>Note  
- Se questa procedura viene chiamata da un utente l'accesso con autenticazione di SQL Server, il **- U "***login_id***"** e **-P "***password***"** commutatori vengono aggiunti all'inizio *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows *switch_string* viene passato senza apportare modifiche **sqlmaint**.  
+## <a name="remarks"></a>Osservazioni  
+ Se questa procedura viene chiamata da un utente connesso con SQL Server autenticazione, le opzioni **-U "***login_ID***"** e **-P "***password***"** vengono anteposti a *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows, *switch_string* viene passato senza apportare modifiche a **SQLMaint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  

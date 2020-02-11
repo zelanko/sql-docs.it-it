@@ -18,19 +18,19 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120233"
 ---
-# <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
+# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Viene eseguito il mapping di un utente di database esistente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) invece.  
+  Viene eseguito il mapping di un utente di database esistente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,28 +44,28 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @Action=] '*azione*'  
- Descrive l'azione che deve essere eseguita dalla procedura. *azione* viene **varchar (10)** . *azione* può avere uno dei valori seguenti.  
+ [ @Action= ] '*azione*'  
+ Descrive l'azione che deve essere eseguita dalla procedura. *Action* è di tipo **varchar (10)**. l' *azione* può avere uno dei valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Auto_Fix**|Collega una voce utente presente nella vista del catalogo di sistema sys.database_principals del database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso nome. Se non esiste un account di accesso con lo stesso nome, ne verrà creato uno. Esaminare il risultato di **Auto_Fix** istruzione per confermare che il collegamento corretto è stato stabilito. Evitare di usare **Auto_Fix** in situazioni sensibili alla sicurezza.<br /><br /> Quando si usa **Auto_Fix**, è necessario specificare *utente* e *password* se l'account di accesso non esiste già, in caso contrario, è necessario specificare *utente*, ma *password* verranno ignorati. *account di accesso* deve essere NULL. *utente* deve essere un utente valido nel database corrente. Non è possibile eseguire il mapping dell'account di accesso a un altro utente.|  
-|**Report**|Elenca gli utenti e gli ID di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso. *utente*, *login*, e *password* deve essere NULL o non specificato.<br /><br /> Per sostituire l'opzione di report con una query utilizzando le tabelle di sistema, confrontare le voci in **Sys. server_prinicpals** con le voci **Sys. database_principals**.|  
-|**Update_One**|Collega l'oggetto specificato *utente* nel database corrente a un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *login*. *utente* e *login* deve essere specificato. *password* deve essere NULL o non specificato.|  
+|**Auto_Fix**|Collega una voce utente presente nella vista del catalogo di sistema sys.database_principals del database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso nome. Se non esiste un account di accesso con lo stesso nome, ne verrà creato uno. Esaminare il risultato dell'istruzione **Auto_Fix** per verificare che sia effettivamente stato eseguito il collegamento corretto. Evitare l'uso di **Auto_Fix** in situazioni sensibili alla sicurezza.<br /><br /> Quando si utilizza **Auto_Fix**, è necessario specificare *utente* e *password* se l'account di accesso non esiste già. in caso contrario, è necessario specificare l' *utente* , ma la *password* verrà ignorata. l' *account di accesso* deve essere null. l' *utente* deve essere un utente valido nel database corrente. Non è possibile eseguire il mapping dell'account di accesso a un altro utente.|  
+|**Report**|Elenca gli utenti e gli ID di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso. l' *utente*, l' *account di accesso*e la *password* devono essere null o non specificati.<br /><br /> Per sostituire l'opzione del report con una query utilizzando le tabelle di sistema, confrontare le voci in **sys. server_prinicpals** con le voci in **sys. database_principals**.|  
+|**Update_One**|Collega l' *utente* specificato nel database corrente a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *accesso*esistente. è necessario specificare l' *utente* e l' *account di accesso* . la *password* deve essere null o non specificata.|  
   
- [ @UserNamePattern=] '*utente*'  
- Nome di un utente nel database corrente. *utente* viene **sysname**, con un valore predefinito è NULL.  
+ [ @UserNamePattern= ] '*User*'  
+ Nome di un utente nel database corrente. *User* è di **tipo sysname**e il valore predefinito è null.  
   
- [ @LoginName=] '*login*'  
- Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
+ [ @LoginName= ] '*login*'  
+ Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di **tipo sysname**e il valore predefinito è null.  
   
  [ @Password= ] '*password*'  
- Password assegnata a una nuova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato, specificando **Auto_Fix**. Se un account di accesso corrispondente esiste già, l'utente e account di accesso viene eseguito il mapping e *password* viene ignorato. Se un account di accesso corrispondente non esiste, sp_change_users_login crea un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e assegna *password* come password per il nuovo account di accesso. *la password* viene **sysname**, e non può essere NULL.  
+ Password assegnata a un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato specificando **Auto_Fix**. Se un account di accesso corrispondente esiste già, viene eseguito il mapping dell'utente e dell'account di accesso e la *password* viene ignorata. Se un account di accesso corrispondente non esiste, sp_change_users_login crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo account di accesso e assegna la *password* come password per il nuovo account di accesso. *password* è di **tipo sysname**e non può essere null.  
   
-> **IMPORTANTE** Usare sempre un [Password complessa.](../../relational-databases/security/strong-passwords.md)
+> **IMPORTANTE** Usare sempre una [password complessa.](../../relational-databases/security/strong-passwords.md)
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -74,8 +74,8 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Nome dell'utente del database.|  
 |UserSID|**varbinary(85)**|ID di sicurezza (SID) dell'utente.|  
   
-## <a name="remarks"></a>Note  
- Utilizzare sp_change_users_login per collegare un utente di database nel database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di accesso di un utente è stato modificato, utilizzare sp_change_users_login per collegare l'utente al nuovo account di accesso senza perdere le autorizzazioni corrispondenti. Il nuovo *account di accesso* non può essere "sa" e il *utente*non può essere dbo, guest o un utente INFORMATION_SCHEMA.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare sp_change_users_login per collegare un utente di database nel database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di accesso di un utente è stato modificato, utilizzare sp_change_users_login per collegare l'utente al nuovo account di accesso senza perdere le autorizzazioni corrispondenti. Il nuovo *account di accesso* non può essere SA e l' *utente*non può essere dbo, guest o un utente INFORMATION_SCHEMA.  
   
  La stored procedure sp_change_users_login non può essere utilizzata per eseguire il mapping degli utenti del database a entità, certificati o chiavi asimmetriche a livello di Windows.  
   
@@ -83,8 +83,8 @@ sp_change_users_login [ @Action = ] 'action'
   
  La stored procedure sp_change_users_login non può essere eseguita in una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al ruolo predefinito del database db_owner. Solo i membri del ruolo predefinito del server sysadmin possono specificare la **Auto_Fix** opzione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Richiede l'appartenenza al ruolo predefinito del database db_owner. Solo i membri del ruolo predefinito del server sysadmin possono specificare l'opzione **Auto_Fix** .  
   
 ## <a name="examples"></a>Esempi  
   
@@ -120,10 +120,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Crea account di accesso &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_adduser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_helplogins &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

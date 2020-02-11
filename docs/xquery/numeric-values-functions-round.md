@@ -1,5 +1,5 @@
 ---
-title: Funzione Round (XQuery) | Microsoft Docs
+title: Funzione round (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946548"
 ---
 # <a name="numeric-values-functions---round"></a>Funzioni per valori numerici - round
@@ -27,13 +27,13 @@ ms.locfileid: "67946548"
 
   Restituisce il numero senza parte frazionaria più vicino all'argomento. Se esiste più di un numero, viene restituito quello più vicino a infinito positivo. Ad esempio:  
   
- Se l'argomento è 2.5 **Round ()** restituisce 3.  
+ Se l'argomento è 2,5, **round ()** restituisce 3.  
   
- Se l'argomento, 2.4999 **Round ()** restituisce 2.  
+ Se l'argomento è 2,4999, **round ()** restituisce 2.  
   
- Se l'argomento è -2,5, **Round ()** restituisce -2.  
+ Se l'argomento è-2,5, **round ()** restituisce-2.  
   
- Se l'argomento è una sequenza vuota, **Round ()** restituisce una sequenza vuota.  
+ Se l'argomento è una sequenza vuota, **round ()** restituisce la sequenza vuota.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,27 +46,27 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Note  
- Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: double**, oppure **xs: decimal**, il tipo restituito è come il *$arg* tipo. Se il tipo della *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo di base numerico.  
+## <a name="remarks"></a>Osservazioni  
+ Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* . Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
   
- Se di input per il **: floor**, **fn: Ceiling**, o **Fn** funzioni è **xdt: untypedAtomic**, i dati non tipizzati, viene eseguito in modo implicito il cast **xs: double**.  
+ Se l'input per le funzioni **FN: floor**, **FN: Ceiling**o **FN: Round** è **xdt: untypedAtomic**, dati non tipizzati, viene eseguito il cast implicito a **xs: Double**.  
   
  Qualsiasi altro tipo di dati genera un errore statico.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
- È possibile usare l'esempio reale disponibile nella [funzione ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) per il **Round ()** funzione XQuery. È necessario eseguire è sostituire il **Ceiling ()** funzione nella query con la **Round ()** (funzione).  
+ È possibile utilizzare l'esempio funzionante nella [funzione ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) per la funzione XQuery **round ()** . È sufficiente sostituire la funzione **Ceiling ()** nella query con la funzione **round ()** .  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **Round ()** funzione esegue il mapping di valori interi a xs: decimal.  
+-   La funzione **round ()** esegue il mapping dei valori interi a xs: Decimal.  
   
--   Il **Round ()** funzione dei valori xs: Double e xs: float compreso tra - 0.5e0 e - 0e0 a 0e0 anziché a - 0e0 corrispondono.  
+-   Viene eseguito il mapping della funzione **round ()** dei valori xs: Double e xs: float compresi tra-0,5 E0 e-0e0 a 0e0 anziché-0e0.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [Funzione CEILING &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
+ [Funzione ceiling &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782879"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità (SQL Server)
-  In questo argomento viene illustrato come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
+  In questo argomento viene illustrato come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
   
  Dopo un failover forzato, la destinazione a cui è stato eseguito il failover del gruppo di disponibilità diventa la nuova replica primaria. I database secondari nelle repliche secondarie rimanenti vengono sospesi e dovranno essere ripresi manualmente. Quando la replica primaria precedente diventa disponibile, passa al ruolo secondario. In questo modo i database primari precedenti diventano database secondari e passano allo stato SUSPENDED. Prima di riprendere uno specifico database secondario, è possibile che si riesca a recuperare i dati perduti. Si tenga tuttavia presente che il troncamento del log delle transazioni viene ritardato in uno specifico database primario mentre i relativi database secondari sono sospesi.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72782879"
     > [!IMPORTANT]  
     >  Se il quorum viene recuperato naturalmente, senza bisogno di forzarlo, le repliche di disponibilità verranno sottoposte al normale processo di recupero. Se la replica primaria non risulta ancora disponibile dopo aver recuperato il quorum, è possibile eseguire un failover manuale pianificato in una replica secondaria sincronizzata.  
   
-     Per informazioni sulla forzatura del quorum, vedere [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Per informazioni sui motivi per cui il failover forzato è necessario dopo la forzatura del quorum, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+     Per informazioni sulla forzatura del quorum, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Per informazioni sui motivi per cui il failover forzato è necessario dopo la forzatura del quorum, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Se la replica primaria non è più disponibile dopo che il cluster WSFC ha conseguito un quorum integro, è possibile forzare il failover (con possibile perdita di dati) in qualsiasi replica con ruolo in stato SECONDARY o RESOLVING. Se possibile, forzare il failover in una replica secondaria con commit sincrono che era sincronizzata quando la replica primaria è andata persa.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72782879"
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   Il cluster WSFC dispone del quorum. Se il cluster non dispone del quorum, vedere [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+-   Il cluster WSFC dispone del quorum. Se il cluster non dispone del quorum, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   È necessario connettersi a un'istanza del server che ospita una replica con ruolo in stato SECONDARY o RESOLVING.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72782879"
     ```  
   
     > [!CAUTION]  
-    >  Se il nodo ripristinato non era attivo nel momento in cui il quorum è andato perso, **is_failover_ready** potrebbe non riflettere l'effettivo stato del cluster nel momento in cui la replica primaria è passata offline. Pertanto, il valore **is_failover_ready** è utile solo se il nodo dell'host era attivo nel momento in cui si è verificato l'errore. Per altre informazioni, vedere "Motivi per cui è necessario il failover forzato dopo aver forzato il quorum" in [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+    >  Se il nodo ripristinato non era attivo nel momento in cui il quorum è andato perso, **is_failover_ready** potrebbe non riflettere l'effettivo stato del cluster nel momento in cui la replica primaria è passata offline. Quindi il valore **is_failover_ready** è utile solo se il nodo dell'host era attivo nel momento in cui si è verificato l'errore. Per altre informazioni, vedere "Motivi per cui è necessario il failover forzato dopo aver forzato il quorum" in [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
      Se **is_failover_ready** è uguale a 1, il database viene contrassegnato come sincronizzato nel cluster ed è pronto per il failover. Se **is_failover_ready** è uguale a 1 in ogni database di una determinata replica secondaria, è possibile eseguire un failover forzato (FORCE_FAILOVER_ALLOW_DATA_LOSS) senza perdita di dati nella replica secondaria. La replica secondaria sincronizzata torna online nel ruolo primario, ovvero come nuova replica primaria, con tutti i dati intatti.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "72782879"
   
 2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
-3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover**.  
+3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover** .  
   
-4.  Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Per ulteriori informazioni, vedere [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+4.  Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Per ulteriori informazioni, vedere [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 5.  Dopo avere forzato il failover di un gruppo di disponibilità, completare i passaggi necessari. Per ulteriori informazioni, vedere [Completamento: Attività essenziali dopo un failover forzato](#FollowUp), più avanti in questo argomento.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "72782879"
 ##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per forzare il failover (con possibile perdita di dati)**  
   
-1.  Modificare la directory (`cd`) in un'istanza del server che ospita una replica il cui ruolo si trova nello stato SECONDARY o RESOLVING nel gruppo di disponibilità di cui è necessario eseguire il failover.  
+1.  Modificare la directory`cd`() in un'istanza del server che ospita una replica il cui ruolo si trova nello stato SECONDARY o RESOLVING nel gruppo di disponibilità di cui è necessario eseguire il failover.  
   
 2.  Utilizzare il cmdlet `Switch-SqlAvailabilityGroup` con il parametro `AllowDataLoss` in uno dei formati seguenti:  
   
@@ -199,7 +199,7 @@ ms.locfileid: "72782879"
   
         -   [Configurare le impostazioni NodeWeight per il quorum del cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-        -   [forzatura dell'avvio di un cluster WSFC senza quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+        -   [Forzare l'avvio di un cluster WSFC senza un quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
     -   **Se il failover viene eseguito al di fuori del [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]:** è consigliabile modificare la modalità di disponibilità e quella di failover nella nuova replica primaria e nelle repliche secondarie rimanenti per riflettere la configurazione desiderata del failover con commit sincrono e automatico.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "72782879"
      Quando un database secondario viene ripreso, inizia la sincronizzazione dei dati con il database primario corrispondente. Il database secondario esegue il rollback di qualsiasi record di log di cui non è mai stato eseguito il commit nel nuovo database primario. Se pertanto si desidera evitare possibili perdite di dati nei database primari dopo il failover, è consigliabile tentare di creare uno snapshot del database nei database sospesi in uno dei database secondari con commit sincrono.  
   
     > [!IMPORTANT]  
-    >  Il troncamento del log delle transazioni viene ritardato nel database primario mentre i relativi database secondari sono sospesi. Inoltre, l'integrità di sincronizzazione di una replica secondaria con commit sincrono non potrà passare allo stato HEALTHY finché un database locale qualsiasi rimane sospeso.  
+    >  Il troncamento del log delle transazioni viene ritardato nel database primario, mentre gli eventuali database secondari vengono sospesi. Inoltre, l'integrità di sincronizzazione di una replica secondaria con commit sincrono non potrà passare allo stato HEALTHY finché un database locale qualsiasi rimane sospeso.  
   
      **Per creare uno snapshot del database**  
   
@@ -240,9 +240,9 @@ ms.locfileid: "72782879"
   
      **Per eseguire un backup del log**  
   
-    -   [Backup di un log delle transazioni &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+    -   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> Scenario di esempio: Utilizzo di un failover forzato per il ripristino da un errore irreversibile  
+##  <a name="ExampleRecoveryFromCatastrophy"></a>Scenario di esempio: utilizzo di un failover forzato per il ripristino da un errore irreversibile  
  In caso di errore della replica primaria e qualora non sia disponibile una replica secondaria sincronizzata, il failover forzato del gruppo di disponibilità potrebbe costituire una risposta appropriata. Un failover forzato può risultare appropriato: (1) se si prevede che la replica primaria rimanga offline più a lungo di quanto sia consentito dal contratto di servizio (SLA, Service Level Agreement) e (2) se si è disposti a rischiare una possibile perdita di dati per rendere rapidamente disponibili i database primari. Se si stabilisce che un gruppo di disponibilità richiede un failover forzato, l'effettivo failover forzato sarà solo uno dei passaggi di un processo che comprende diversi passaggi.  
   
  Per illustrare i passaggi necessari per utilizzare un failover forzato per il ripristino da un errore irreversibile, in questo argomento viene presentato un possibile scenario di ripristino di emergenza. Nello scenario di esempio si considera un gruppo di disponibilità la cui topologia originale consiste in un data center principale che ospita tre repliche di disponibilità con commit sincrono, inclusa la replica primaria, e un data center remoto che ospita due repliche secondarie con commit asincrono. Nella figura seguente viene illustrata la topologia originale di questo gruppo di disponibilità di esempio. Il gruppo di disponibilità è ospitato da un cluster WSFC su più subnet con tre nodi nel data center principale (**Nodo 01**, **Nodo 02**e **Nodo 03**) e due nodi nel data center remoto (**Nodo 04** e **Nodo 05**).  
@@ -256,26 +256,26 @@ ms.locfileid: "72782879"
  L'amministratore del database (DBA) determina che la migliore risposta possibile consiste nel forzare il failover del gruppo di disponibilità su una delle repliche secondarie remote con commit asincrono. In questo esempio viene illustrata la procedura tipica eseguita per forzare il failover del gruppo di disponibilità su una replica remota e per ripristinare infine la topologia originale del gruppo di disponibilità.  
   
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a>Risposta all'errore irreversibile del data center principale  
  Nella figura seguente viene illustrata la serie di azioni eseguite nel data center remoto in risposta a un errore irreversibile nel data center principale.  
   
- ![Passaggi per la risposta all'errore del data cent principale](../../media/aoag-failurerecovery-actions-part1.gif "Passaggi per la risposta all'errore del data cent principale")  
+ ![Passaggi per la risposta all'errore del data center principale](../../media/aoag-failurerecovery-actions-part1.gif "Passaggi per la risposta all'errore del data center principale")  
   
  I passaggi riportati nella figura indicano quanto segue:  
   
-|Passaggio|Action|Collegamenti|  
+|Passaggio|Azione|Collegamenti|  
 |----------|------------|-----------|  
 |**1.**|Il DBA o l'amministratore di rete si accerta che il cluster WSFC disponga di un quorum integro. In questo esempio il quorum deve essere forzato.|[Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
-|**2.**|Il DBA si connette all'istanza del server con la latenza minima (sul **Node 04**) ed esegue un failover manuale forzato. Con il failover forzato questa replica secondaria assume il ruolo primario e i database secondari nella replica secondaria rimanente (sul **Nodo 05**) vengono sospesi.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) (query sulla colonna **end_of_log_lsn** . Per altre informazioni, vedere [Indicazioni](#Recommendations)più indietro in questo argomento.|  
+|**2.**|Il DBA si connette all'istanza del server con la latenza minima (sul **Node 04**) ed esegue un failover manuale forzato. Con il failover forzato questa replica secondaria assume il ruolo primario e i database secondari nella replica secondaria rimanente (sul **Node 05**) vengono sospesi.|[sys. dm_hadr_database_replica_states &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) (eseguire una query sulla colonna **end_of_log_lsn** . Per ulteriori informazioni, vedere [raccomandazioni](#Recommendations), più indietro in questo argomento.|  
 |**3.**|Il DBA riprende manualmente ogni database secondario nella replica secondaria rimanente.|[Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)|  
   
-###  <a name="ReturnToOrigTopology"></a> Ripristino della topologia originale del gruppo di disponibilità  
+###  <a name="ReturnToOrigTopology"></a>Ripristino della topologia originale del gruppo di disponibilità  
  Nella figura seguente viene illustrata la serie di azioni eseguite per ripristinare la topologia originale del gruppo di disponibilità dopo che il data center principale sarà ritornato online e che sarà stata ristabilita la comunicazione dei nodi WSFC con il cluster WSFC.  
   
 > [!IMPORTANT]  
->  Se il quorum del cluster WSFC è stato forzato, al riavvio dei nodi offline potrebbe essere formato un nuovo quorum in presenza di entrambe le seguenti condizioni: (a) tra i nodi del quorum forzato non è disponibile connettività di rete e (b) i nodi riavviati sono la maggioranza dei nodi del cluster. Questo porterebbe a una condizione "split brain" in cui il gruppo di disponibilità disporrebbe di due repliche primarie indipendenti, una in ogni data center. Prima di forzare il quorum per creare un set di quorum di minoranza, vedere [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Se il quorum del cluster WSFC è stato forzato, al riavvio dei nodi offline potrebbe essere formato un nuovo quorum in presenza di entrambe le seguenti condizioni: (a) tra i nodi del quorum forzato non è disponibile connettività di rete e (b) i nodi riavviati sono la maggioranza dei nodi del cluster. Questo porterebbe a una condizione "split brain" in cui il gruppo di disponibilità disporrebbe di due repliche primarie indipendenti, una in ogni data center. Prima di forzare il quorum per creare un set di quorum di minoranza, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
- ![Passaggi per ripristinare la topologia originale del gruppo](../../media/aoag-failurerecovery-actions-part2.gif "Passaggi per ripristinare la topologia originale del gruppo")  
+ ![Passaggi per il ripristino della topologia originale del gruppo](../../media/aoag-failurerecovery-actions-part2.gif "Passaggi per il ripristino della topologia originale del gruppo")  
   
  I passaggi riportati nella figura indicano quanto segue:  
   
@@ -283,7 +283,7 @@ ms.locfileid: "72782879"
 |-|----------|-----------|  
 |**1.**|I nodi nel data center principale ritornano online e ristabiliscono la comunicazione con il cluster WSFC. Le relative repliche di disponibilità vengono riportate online come repliche secondarie con database sospesi e il DBA dovrà presto riprendere manualmente ogni database.|[Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)<br /><br /> Suggerimento: per evitare possibili perdite di dati nei database primari dopo il failover, provare a creare uno snapshot del database sui database sospesi in uno dei database secondari con commit sincrono. Si tenga presente che il troncamento del log delle transazioni viene ritardato sul database primario mentre i relativi database secondari sono sospesi. Inoltre, l'integrità di sincronizzazione della replica secondaria con commit sincrono non potrà passare allo stato HEALTHY finché un database locale qualsiasi rimane sospeso.|  
 |**2.**|Una volta ripresi i database, il DBA modifica la nuova replica primaria impostandola temporaneamente sulla modalità commit sincrono. Questa operazione comporta due passaggi:<br /><br /> 1) Modificare una replica di disponibilità offline impostandola sulla modalità commit asincrono. <br />2) Modificare la nuova replica primaria impostandola sulla modalità commit sincrono.<br />Nota: questo passaggio consente ai database secondari con commit sincrono ripresi di passare allo stato SYNCHRONIZED.|[Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
-|**3.**|Dopo che la replica secondaria con commit sincrono nel **Node 03** (la replica primaria originale) è passata allo stato di sincronizzazione HEALTHY, il DBA esegue un failover manuale pianificato su tale replica, perché diventi di nuovo replica primaria. La replica nel **Nodo 04** tornerà a essere una replica secondaria.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [Usare i criteri AlwaysOn per visualizzare l'integrità di un gruppo &#40;di disponibilità SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
+|**3.**|Dopo che la replica secondaria con commit sincrono nel **Node 03** (la replica primaria originale) è passata allo stato di sincronizzazione HEALTHY, il DBA esegue un failover manuale pianificato su tale replica, perché diventi di nuovo replica primaria. La replica nel **Nodo 04** tornerà a essere una replica secondaria.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|Il DBA si connette alla nuova replica primaria ed effettua le seguenti operazioni:<br /><br /> 1) Modifica la replica primaria precedente nel data center remoto riportandola in modalità commit asincrono.<br />2) Modifica la replica secondaria con commit asincrono nel data center principale riportandola in modalità commit sincrono.|[Modificare la modalità di disponibilità di una replica di disponibilità &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
@@ -293,42 +293,42 @@ ms.locfileid: "72782879"
   
 -   [Configurare le impostazioni NodeWeight per il quorum del cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [forzatura dell'avvio di un cluster WSFC senza quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Forzare l'avvio di un cluster WSFC senza un quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
  **Failover manuale pianificato:**  
   
 -   [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
  **Per risolvere i problemi:**  
   
--   [Risolvere i problemi &#40;di configurazione gruppi di disponibilità AlwaysOn SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [Risolvere i problemi di Gruppi di disponibilità AlwaysOn &#40;di configurazione SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [Risolvere i problemi relativi a un'operazione &#40;di aggiunta file non riuscita gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Risolvere i problemi relativi a un'operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
 -   **Blog:**  
   
-     [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **White paper:**  
   
-     [Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
- [ &#40;Modalità di disponibilità&#41; gruppi di disponibilità AlwaysOn](availability-modes-always-on-availability-groups.md)   
- [Failover e modalità &#40;di failover&#41; gruppi di disponibilità AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modalità di disponibilità &#40;Gruppi di disponibilità AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
+ [Failover e modalità di failover &#40;Gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

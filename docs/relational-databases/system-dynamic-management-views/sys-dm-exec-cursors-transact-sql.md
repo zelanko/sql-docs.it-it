@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097845"
 ---
-# <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
+# <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sui cursori aperti in vari database.  
@@ -39,7 +39,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="arguments"></a>Argomenti  
  *session_id* | 0  
- ID della sessione. Se *session_id* è specificato, questa funzione restituisce informazioni sui cursori nella sessione specificata.  
+ ID della sessione. Se *session_id* viene specificato, questa funzione restituisce informazioni sui cursori nella sessione specificata.  
   
  Se viene specificato 0, la funzione restituisce informazioni su tutti i cursori per tutte le sessioni.  
   
@@ -49,29 +49,29 @@ dm_exec_cursors (session_id | 0 )
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID della sessione che include il cursore.|  
 |**cursor_id**|**int**|ID dell'oggetto cursore.|  
-|**name**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
-|**properties**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Ad esempio, il valore restituito in questa colonna potrebbe essere "TSQL &#124; dinamico &#124; ottimistico &#124; Global (0)".|  
-|**sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
-|**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere usato in combinazione con il **sql_handle**, il **statement_end_offset**e il [DM exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) funzione a gestione dinamica per recuperare l'attualmente esecuzione istruzione per la richiesta.|  
-|**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere usato in combinazione con il **sql_handle**, il **statement_start_offset**e il **DM exec_sql_text** funzione a gestione dinamica per recuperare l'attualmente esecuzione istruzione per la richiesta.|  
+|**nome**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
+|**Proprietà**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Il valore restituito in questa colonna, ad esempio, potrebbe essere "TSQL &#124; Dynamic &#124; ottimistica &#124; globale (0)".|  
+|**sql_handle**|**varbinary (64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
+|**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
+|**statement_end_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui termina l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_start_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo la ricompilazione.|  
 |**creation_time**|**datetime**|Timestamp relativo alla creazione del cursore.|  
 |**is_open**|**bit**|Specifica se il cursore è aperto.|  
 |**is_async_population**|**bit**|Specifica se il thread in background sta ancora popolando un cursore KEYSET o STATIC in modo asincrono.|  
 |**is_close_on_commit**|**bit**|Specifica se il cursore è stato dichiarato tramite CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = Il cursore verrà chiuso al termine della transazione.|  
-|**fetch_status**|**int**|Restituisce l'ultimo stato di recupero del cursore. Questa è l'ultima restituito@FETCH_STATUS valore.|  
+|**fetch_status**|**int**|Restituisce l'ultimo stato di recupero del cursore. Si tratta dell'ultimo valore @@FETCH_STATUS restituito.|  
 |**fetch_buffer_size**|**int**|Restituisce le informazioni sulle dimensioni del buffer di recupero.<br /><br /> 1 = Cursori Transact-SQL. Può essere impostato su un valore più elevato per i cursori API.|  
 |**fetch_buffer_start**|**int**|Per i cursori FAST_FORWARD e DYNAMIC, restituisce 0 se il cursore non è aperto o se è posizionato prima della riga iniziale. In caso contrario, restituisce -1.<br /><br /> Per i cursori STATIC e KEYSET, restituisce 0 se il cursore non è aperto e -1 se il cursore è posizionato oltre l'ultima riga.<br /><br /> In caso contrario, restituisce il numero di riga in cui è posizionato.|  
 |**ansi_position**|**int**|Posizione del cursore all'interno del buffer di recupero.|  
 |**worker_time**|**bigint**|Tempo impiegato, in microsecondi, dai thread worker che eseguono il cursore.|  
-|**Operazioni di lettura**|**bigint**|Numero di letture eseguite dal cursore.|  
-|**writes**|**bigint**|Numero di scritture eseguite dal cursore.|  
+|**legge**|**bigint**|Numero di letture eseguite dal cursore.|  
+|**scrive**|**bigint**|Numero di scritture eseguite dal cursore.|  
 |**dormant_duration**|**bigint**|Millisecondi trascorsi a partire dall'avvio dell'ultima query (apertura o recupero) sul cursore.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono fornite informazioni sull'interfaccia di dichiarazione del cursore e vengono indicati i possibili valori per la colonna delle proprietà.  
   
 |Proprietà|Descrizione|  
@@ -81,10 +81,10 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|type|Descrizione|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
-|Dynamic|Il cursore è stato dichiarato come Dynamic.|  
+|Dinamico|Il cursore è stato dichiarato come Dynamic.|  
 |Snapshot|Il cursore è stato dichiarato come Snapshot o Static.|  
 |Fast_Forward|Il cursore è stato dichiarato come Fast Forward.|  
   
@@ -98,9 +98,9 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sullo scopo dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|`Scope`|Descrizione|  
+|Scope|Descrizione|  
 |-----------|-----------------|  
-|Local|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
+|Locale|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Global|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  
   
 ## <a name="examples"></a>Esempi  

@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118130"
 ---
 # <a name="query-options-pages-f1-help"></a>Guida sensibile al contesto relativa alle pagine di Opzioni query
 
 Questa sezione contiene gli argomenti della Guida sensibile al contesto relativi alle pagine di **Opzioni query** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
-[Pagina generale opzioni &#40;esecuzione query Analysis Services&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services opzioni esecuzione query &#40;pagina generale&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Pagina generale dei &#40;risultati della query Analysis Services&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[Analysis Services i risultati della query &#40;pagina generale&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-[Pagina avanzate esecuzione &#40;opzioni query&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[Opzioni query esecuzione &#40;pagina avanzata&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[Pagina ANSI esecuzione &#40;opzioni query&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[Opzioni query esecuzione &#40;pagina ANSI&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[Pagina generale esecuzione &#40;opzioni query&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[Opzioni query esecuzione &#40;pagina generale&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[Pagina della griglia &#40;risultati opzioni query&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[Risultati delle opzioni query &#40;pagina della griglia&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[Pagina di testo &#40;risultati opzioni query&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[Risultati delle opzioni query &#40;pagina testo&#41;](../../2014/database-engine/query-options-results-text-page.md)

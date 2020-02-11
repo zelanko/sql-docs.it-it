@@ -1,5 +1,5 @@
 ---
-title: Installazione e configurazione del Software ODBC | Microsoft Docs
+title: Installazione e configurazione del software ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094028"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>Installazione e configurazione del software ODBC
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. È consigliabile installare solo in modo esplicito ODBC nelle versioni precedenti di Windows.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68094028"
   
 -   [Configurazione delle origini dati](../../../odbc/reference/install/configuring-data-sources.md)  
   
--   [Guida di riferimento per l'installazione e la configurazione dei componenti](../../../odbc/reference/install/installation-and-configuration-components-reference.md)  
+-   [Informazioni di riferimento sui componenti di installazione e di configurazione](../../../odbc/reference/install/installation-and-configuration-components-reference.md)  
   
 -   [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)  
   

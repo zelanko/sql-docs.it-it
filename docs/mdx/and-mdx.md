@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017092"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -37,8 +37,8 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce true se entrambi i parametri restituiscono **true**; in caso contrario, **false**.  
   
-## <a name="remarks"></a>Note  
- Il **AND** gestisce entrambe le espressioni come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima di eseguire la congiunzione logica. La tabella seguente illustra come la **AND** operatore esegue la congiunzione logica.  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore **and** considera entrambe le espressioni come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima che l'operatore esegua la congiunzione logica. Nella tabella seguente viene illustrato il modo in cui l'operatore **and** esegue la congiunzione logica.  
   
 |*Expression1*|*Expression2*|Valore restituito|  
 |-------------------|-------------------|------------------|  
@@ -68,6 +68,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

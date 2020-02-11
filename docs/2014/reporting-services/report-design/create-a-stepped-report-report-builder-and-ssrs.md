@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106125"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
   In un report con rientri le righe di dettaglio oppure i gruppi figlio vengono visualizzati rientrati sotto un gruppo padre della stessa colonna, come illustrato nell'esempio seguente:  
   
- ![Rendering del report con rientri](../media/steppedreportrendered.gif "Rendering del report con rientri")  
+ ![Rendering di un report con rientri](../media/steppedreportrendered.gif "Rendering di un report con rientri")  
   
  Nei tradizionali report tabella il gruppo padre viene inserito in una colonna adiacente del report. La nuova area dati Tablix consente di aggiungere un gruppo e righe di dettaglio o gruppi figlio alla stessa colonna. Per differenziare le righe di gruppo dalle righe di dettaglio o da quelle di gruppi figlio, è possibile applicare una formattazione, ad esempio il colore del carattere, o applicare il rientro alle righe di dettaglio.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66106125"
   
     2.  In **Allineamento**nel riquadro Proprietà espandere le proprietà relative a **Riempimento**.  
   
-    3.  Per la **sinistra**, digitare un nuovo valore di spaziatura interna, ad esempio `.5in`. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
+    3.  Per **Left**Digitare un nuovo valore di riempimento, ad esempio `.5in`. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
   
          Di seguito vengono riportati gli identificatori di dimensione:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106125"
   
      L'aspetto dell'area dati sarà simile a quello riportato nell'esempio seguente.  
   
-     ![Area dati per report con rientri](../media/steppedreportdataregion.gif "Area dati per report con rientri")  
+     ![Area dati per un report con rientri](../media/steppedreportdataregion.gif "Area dati per un report con rientri")  
   
      **Area dati per layout di report con rientri**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106125"
     1.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo, scegliere **Aggiungi gruppo**e quindi il tipo di gruppo da aggiungere.  
   
         > [!NOTE]  
-        >  È possibile aggiungere gruppi a un'area dati in modi diversi. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  È possibile aggiungere gruppi a un'area dati in modi diversi. Per ulteriori informazioni, vedere [aggiungere o eliminare un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Nella finestra di dialogo **Gruppo Tablix** digitare un nome.  
   

@@ -16,27 +16,27 @@ ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947438"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-Specifica gli attributi di transazione di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
+Specifica gli attributi di transazione di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|Esegue la conservazione interruzioni chiamando [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) avviare automaticamente una nuova transazione. Non tutti i provider supportano questo comportamento.|  
-|**adXactCommitRetaining**|131072|Esegue il commit conservando la chiamando [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) avviare automaticamente una nuova transazione. Non tutti i provider supportano questo comportamento.|  
+|**adXactAbortRetaining**|262144|Esegue le interruzioni di conservazione chiamando [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) per avviare automaticamente una nuova transazione. Questo comportamento non è supportato da tutti i provider.|  
+|**adXactCommitRetaining**|131072|Esegue i commit di conservazione chiamando [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) per avviare automaticamente una nuova transazione. Questo comportamento non è supportato da tutti i provider.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente di ADO o WFC  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+ Pacchetto: **com. ms. wfc. Data**  
   
 |Costante|  
 |--------------|  
-|AdoEnums.XactAttribute.ABORTRETAINING|  
-|AdoEnums.XactAttribute.COMMITRETAINING|  
+|AdoEnums. XactAttribute. ABORTRETAINING|  
+|AdoEnums. XactAttribute. COMMITRETAINING|  
   
 ## <a name="applies-to"></a>Si applica a  
- [Proprietà attributi (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Proprietà Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: DM exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097701"
 ---
-# <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
+# <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni su tutte le query che hanno richiesto e sono in attesa di una concessione di memoria o assegnato una concessione di memoria. Le query che non richiedono una concessione di memoria non verranno visualizzati in questa visualizzazione. Ad esempio, l'ordinamento e hash join operazioni hanno concessioni di memoria per l'esecuzione di query, mentre le query senza un' **ORDER BY** clausola non avrà una memoria concedere.  
+  Restituisce informazioni su tutte le query che hanno richiesto e sono in attesa di una concessione di memoria o di una concessione di memoria. Le query che non richiedono una concessione di memoria non verranno visualizzate in questa visualizzazione. Ad esempio, le operazioni di ordinamento e hash join hanno concessioni di memoria per l'esecuzione di query, mentre le query senza una clausola **Order by** non avranno una concessione di memoria.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata. Inoltre, i valori nelle colonne **scheduler_id**, **wait_order**, **pool_id**, **group_id** vengono filtrati; è impostato il valore della colonna su NULL.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata. Inoltre, i valori nelle colonne **scheduler_id**, **wait_order**, **pool_id** **group_id** vengono filtrati; il valore della colonna è impostato su NULL.  
   
 > [!NOTE]  
-> Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_query_memory_grants**.  
+> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "68097701"
 |**request_time**|**datetime**|Data e ora in cui la query ha richiesto la concessione di memoria.|  
 |**grant_time**|**datetime**|Data e ora in cui la memoria è stata concessa alla query. È NULL se la memoria non è stata ancora concessa.|  
 |**requested_memory_kb**|**bigint**|Quantità totale di memoria richiesta, espressa in kilobyte.|  
-|**granted_memory_kb**|**bigint**|Quantità totale di memoria effettivamente concessa, espressa in kilobyte. Può essere NULL se la memoria non è stata ancora concessa. Per una situazione tipica questo valore deve essere uguale **requested_memory_kb**. In caso di creazione di indici, il server può concedere ulteriore memoria su richiesta in aggiunta alla memoria concessa inizialmente.|  
+|**granted_memory_kb**|**bigint**|Quantità totale di memoria effettivamente concessa, espressa in kilobyte. Può essere NULL se la memoria non è stata ancora concessa. In una situazione tipica questo valore dovrebbe corrispondere al valore di **requested_memory_kb**. In caso di creazione di indici, il server può concedere ulteriore memoria su richiesta in aggiunta alla memoria concessa inizialmente.|  
 |**required_memory_kb**|**bigint**|Quantità minima di memoria necessaria per l'esecuzione della query, espressa in kilobyte. **requested_memory_kb** è uguale o maggiore di questa quantità.|  
 |**used_memory_kb**|**bigint**|Memoria fisica attualmente in uso, espressa in kilobyte.|  
 |**max_used_memory_kb**|**bigint**|Memoria fisica massima utilizzata fino a questo momento, espressa in kilobyte.|  
@@ -54,39 +54,39 @@ ms.locfileid: "68097701"
 |**timeout_sec**|**int**|Timeout in secondi prima che la query rinunci alla richiesta di concessione di memoria.|  
 |**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** Questo ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
 |**queue_id**|**smallint**|ID della coda nella quale la query sta attendendo la concessione di memoria. È NULL se la memoria è già stata concessa.|  
-|**wait_order**|**int**|Ordine sequenziale delle query in attesa specificata **queue_id**. Questo valore può cambiare per una determinata query finissero concessioni di memoria o il timeout di altre query. NULL se la memoria già concessa.|  
+|**wait_order**|**int**|Ordine sequenziale delle query in attesa all'interno del **queue_id** specificato. Questo valore può essere modificato per una determinata query se altre query ottengono la concessione di memoria o il timeout. NULL se la memoria è già stata concessa.|  
 |**is_next_candidate**|**bit**|Candidato alla concessione di memoria successiva.<br /><br /> 1 = Sì<br /><br /> 0 = No<br /><br /> NULL = Memoria già concessa|  
 |**wait_time_ms**|**bigint**|Periodo di attesa espresso in millisecondi. È NULL se la memoria è già stata concessa.|  
-|**plan_handle**|**varbinary(64)**|Identificatore del piano di query. Uso **DM exec_query_plan** per estrarre il piano XML effettivo.|  
-|**sql_handle**|**varbinary(64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Uso **DM exec_sql_text** per ottenere l'oggetto effettivo [!INCLUDE[tsql](../../includes/tsql-md.md)] testo.|  
+|**plan_handle**|**varbinary (64)**|Identificatore del piano di query. Utilizzare **sys.dm_exec_query_plan** per estrarre il piano XML effettivo.|  
+|**sql_handle**|**varbinary (64)**|Identificatore del testo [!INCLUDE[tsql](../../includes/tsql-md.md)] della query. Utilizzare **sys.dm_exec_sql_text** per ottenere il testo [!INCLUDE[tsql](../../includes/tsql-md.md)] effettivo.|  
 |**group_id**|**int**|ID per il gruppo del carico di lavoro nel quale viene eseguita la query.|  
 |**pool_id**|**int**|ID del pool di risorse a cui appartiene il gruppo del carico di lavoro.|  
 |**is_small**|**tinyint**|Se il valore è 1, questa concessione utilizza il semaforo piccolo di risorsa. Se il valore è 0, viene utilizzato un semaforo normale.|  
 |**ideal_memory_kb**|**bigint**|Dimensioni, in kilobyte (KB), della concessione di memoria per inserire tutto nella memoria fisica. Si basa su una stima della cardinalità.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
    
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Di seguito è illustrato un tipico scenario di debug per il timeout delle query:  
   
--   Controllare complessiva del sistema memoria stato usando [DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [DM os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)e diversi contatori di prestazioni.  
+-   Verificare lo stato complessivo della memoria di sistema utilizzando [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) e diversi contatori di prestazioni.  
   
--   Verificare la presenza di prenotazioni di memoria dell'esecuzione di query in **DM os_memory_clerks** dove `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
+-   Verificare le prenotazioni di memoria per l'esecuzione di query in **sys.dm_os_memory_clerks** dove `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Verificare la presenza di query in attesa<sup>1</sup> per la concessione di memoria utilizzando **DM exec_query_memory_grants**.  
+-   Verificare la presenza di query in attesa<sup>1</sup> per le concessioni tramite **sys. dm_exec_query_memory_grants**.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> In questo scenario il tipo di attesa è in genere RESOURCE_SEMAPHORE. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> in questo scenario il tipo di attesa viene in genere RESOURCE_SEMAPHORE. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Eseguire una ricerca della cache per le query con concessioni di memoria usando [DM exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [DM exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Cache di ricerca per le query con concessioni di memoria tramite [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -96,7 +96,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è richiesta l'autorizz
     GO  
     ```  
   
--   Esaminare in maggiore dettaglio le query a elevato utilizzo di memoria che utilizzano [exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
+-   Esaminare in maggiore dettaglio le query che utilizzano una quantità elevata di memoria utilizzando [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
     ```sql  
     --Find top 5 queries by average CPU time  
@@ -108,15 +108,15 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è richiesta l'autorizz
     GO  
     ```  
   
--   Se si sospetta una query runaway, esaminare il piano Showplan dalla [DM exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) e testo del batch di [DM exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+-   Se si sospetta la presenza di una query con eccessivo tempo di esecuzione, esaminare lo Showplan di [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) e il testo del batch di [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Le query che utilizzano viste a gestione dinamica che includono `ORDER BY` o funzioni di aggregazione potrebbero aumentare l'utilizzo della memoria e pertanto contribuire al problema che dovrebbero risolvere.  
+ Le query che utilizzano viste a gestione dinamica `ORDER BY` che includono o aggregazioni possono aumentare il consumo di memoria e quindi contribuire al problema che si sta risolvendo.  
   
- La funzionalità Resource Governor consente a un amministratore di database di distribuire risorse del server fra un massimo di 64 pool di risorse. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ogni pool si comporta come un'istanza di server indipendenti di piccole dimensioni e richiede 2 semafori. Il numero di righe restituite da **DM exec_query_resource_semaphores** può essere fino a 20 volte superiore alle righe restituite in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ La funzionalità Resource Governor consente a un amministratore di database di distribuire risorse del server fra un massimo di 64 pool di risorse. A partire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]da, ogni pool si comporta come una piccola istanza indipendente del server e richiede 2 semafori. Il numero di righe restituite da **sys. dm_exec_query_resource_semaphores** può essere fino a 20 volte superiore alle righe restituite in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys. dm_exec_query_resource_semaphores &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys. dm_os_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -16,18 +16,18 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117884"
 ---
-# <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
+# <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Regola l'intervallo di valori Identity in una pubblicazione e riassegna nuovi intervalli in base al valore soglia previsto per la pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,27 +39,27 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori identity. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publication = ] 'publication'`Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *Publication* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_name = ] 'table_name'` È il nome della tabella in cui vengono riallocati i nuovi intervalli di valori identity. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_name = ] 'table_name'`Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *table_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_owner = ] 'table_owner'` È il proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. Se *table_owner* viene omesso, viene usato il nome dell'utente corrente.  
+`[ @table_owner = ] 'table_owner'`Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. Se *TABLE_OWNER* viene omesso, viene utilizzato il nome dell'utente corrente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_adjustpublisheridentityrange** viene utilizzata in tutti i tipi di replica.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_adjustpublisheridentityrange** viene utilizzato in tutti i tipi di replica.  
   
- Nel caso di una pubblicazione per la quale è attivata la gestione automatica di intervalli di valori Identity, l'agente di distribuzione o di merge è responsabile della regolazione automatica dell'intervallo di valori Identity in una pubblicazione in base al valore soglia corrispondente. Tuttavia, se per qualche motivo l'agente di distribuzione o dell'agente di Merge non è stato eseguito per un periodo di tempo e la risorsa dell'intervallo identità è stata utilizzata fino al punto di soglia, gli utenti possono chiamare **sp_adjustpublisheridentityrange** per allocare un nuovo intervallo di valori per un server di pubblicazione.  
+ Nel caso di una pubblicazione per la quale è attivata la gestione automatica di intervalli di valori Identity, l'agente di distribuzione o di merge è responsabile della regolazione automatica dell'intervallo di valori Identity in una pubblicazione in base al valore soglia corrispondente. Tuttavia, se per qualche motivo il agente di distribuzione o agente di merge non è stato eseguito per un determinato periodo di tempo e la risorsa dell'intervallo di valori Identity è stata utilizzata in modo significativo fino al punto di soglia, gli utenti possono chiamare **sp_adjustpublisheridentityrange** per allocare un nuovo intervallo di valori per un server di pubblicazione.  
   
- Quando si esegue **sp_adjustpublisheridentityrange**, ad esempio *publication* oppure *table_name* deve essere specificato. Se vengono specificati entrambi oppure viene omesso uno dei due, viene restituito un errore.  
+ Quando si esegue **sp_adjustpublisheridentityrange**, è necessario specificare la *pubblicazione* o la *table_name* . Se vengono specificati entrambi oppure viene omesso uno dei due, viene restituito un errore.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_adjustpublisheridentityrange**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_adjustpublisheridentityrange**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)   
+ [Replica colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

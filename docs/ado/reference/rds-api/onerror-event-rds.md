@@ -1,5 +1,5 @@
 ---
-title: Evento onError (RDS) | Microsoft Docs
+title: Evento OnError (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963848"
 ---
 # <a name="onerror-event-rds"></a>Evento onError (Servizi Desktop remoto)
-Il **onError** eventi viene chiamato ogni volta che si verifica un errore durante un'operazione.  
+L'evento **OnError** viene chiamato ogni volta che si verifica un errore durante un'operazione.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,16 @@ onError SCode, Description, Source, CancelDisplay
   
 #### <a name="parameters"></a>Parametri  
  *SCode*  
- Numero intero che indica il codice di stato dell'errore.  
+ Intero che indica il codice di stato dell'errore.  
   
  *Descrizione*  
- Oggetto **stringa** che indica una descrizione dell'errore.  
+ **Stringa** che indica una descrizione dell'errore.  
   
  *Origine*  
- Oggetto **stringa** che indica la query o un comando che ha causato l'errore.  
+ **Stringa** che indica la query o il comando che ha causato l'errore.  
   
  *CancelDisplay*  
- Oggetto **booleana** valore, se impostato su **True**, che impedisce la visualizzazione in una finestra di dialogo di errore.  
+ Valore **booleano** che, se impostato su **true**, impedisce che l'errore venga visualizzato in una finestra di dialogo.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

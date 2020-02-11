@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798014"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backup di sola copia (SQL Server)
-  Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
+  Un *backup di sola copia* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup indipendente dalla sequenza di backup convenzionali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
   
  I tipi di backup di sola copia sono i seguenti:  
   
@@ -52,14 +52,14 @@ ms.locfileid: "72798014"
   
 -   Per un backup completo di sola copia:  
   
-     BACKUP DATABASE *database_name* per \<backup_device *>* ... CON COPY_ONLY...  
+     BACKUP del ** DATABASE database_name \<backup_device*>* ... CON COPY_ONLY...  
   
     > [!NOTE]  
     >  L'opzione COPY_ONLY non ha alcun effetto quando specificata con l'opzione DIFFERENTIAL.  
   
 -   Per un backup del log di sola copia:  
   
-     BACKUP del LOG *database_name* per *\<* backup_device *>* ... CON COPY_ONLY...  
+     BACKUP del ** LOG database_name *\<* backup_device*>* ... CON COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Con PowerShell  
   
@@ -71,7 +71,7 @@ Utilizzare il cmdlet `Backup-SqlDatabase` con il parametro `-CopyOnly`.
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 ### <a name="to-view-copy-only-backups"></a>Per visualizzare backup di sola copia
   

@@ -15,17 +15,17 @@ ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963231"
 ---
 # <a name="url-property-example-vbscript"></a>Esempio della proprietà URL (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il **URL** proprietà sul lato client per specificare un file. ASP che a sua volta gestisce l'invio delle modifiche apportate all'origine dati.  
+ Nel codice seguente viene illustrato come impostare la proprietà **URL** sul lato client per specificare un file ASP che a sua volta gestisce l'invio delle modifiche all'origine dati.  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -100,7 +100,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- Il codice lato server presente in **file URLServerVBS. asp** invia aggiornato **Recordset** all'origine dati.  
+ Il codice sul lato server esistente in **URLServerVBS. asp** invia il **Recordset** aggiornato all'origine dati.  
   
 ```  
 <!-- BeginURLServerVBS -->  

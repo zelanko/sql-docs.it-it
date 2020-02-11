@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione delle transazioni | Microsoft Docs
+title: Elaborazione delle transazioni | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923869"
 ---
 # <a name="transaction-processing"></a>Elaborazione di transazioni
-Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni di accesso ai dati eseguite attraverso una connessione. Soggetti alle funzionalità transazionali di origine dati, il **connessione** oggetto consente inoltre di creare e gestire le transazioni. Ad esempio, Usa il Provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi da eseguire.  
+Una *transazione* delimita l'inizio e la fine di una serie di operazioni di accesso ai dati eseguite in una connessione. In conformità alle funzionalità transazionali dell'origine dati, l'oggetto **connessione** consente inoltre di creare e gestire le transazioni. Se ad esempio si utilizza il provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi eseguiti.  
   
- ADO assicura che si verificano modifiche a un'origine dei dati risultanti dalle operazioni in una transazione correttamente tra loro o non ereditarli affatto.  
+ ADO garantisce che le modifiche apportate a un'origine dati risultanti da operazioni in una transazione vengano eseguite correttamente insieme.  
   
- Se si annulla la transazione o una delle relative operazioni non riesce, il risultato è come se nessuna delle operazioni nella transazione si è verificato. L'origine dati rimarranno com'era prima dell'inizio della transazione.  
+ Se si annulla la transazione o se una delle relative operazioni ha esito negativo, il risultato sarà come se nessuna delle operazioni nella transazione fosse stata eseguita. L'origine dati rimarrà come prima dell'inizio della transazione.  
   
- ADO fornisce i metodi seguenti per la gestione delle transazioni: **BeginTrans**, **CommitTrans**, e **RollbackTrans**. Usare questi metodi con un **connessione** dell'oggetto quando si desidera salvare o annullare una serie di modifiche apportate ai dati di origine come singola unità. Ad esempio, per il trasferimento di denaro tra conti, si sottrae un importo da uno e si aggiunge la stessa quantità a altro. Se l'aggiornamento ha esito negativo, l'account non è più bilanciare. Queste modifiche all'interno di una transazione aperta assicura che passano attraverso tutte o nessuna delle modifiche.  
+ ADO fornisce i metodi seguenti per il controllo delle transazioni: **BeginTrans**, **CommitTrans**e **RollbackTrans**. Utilizzare questi metodi con un oggetto **Connection** quando si desidera salvare o annullare una serie di modifiche apportate ai dati di origine come singola unità. Per trasferire il denaro tra gli account, ad esempio, si sottrae un importo da uno e si aggiunge la stessa quantità all'altra. Se uno degli aggiornamenti ha esito negativo, gli account non sono più bilanciati. Apportare queste modifiche all'interno di una transazione aperta garantisce che tutte o nessuna delle modifiche venga attraversata.  
   
 > [!NOTE]
->  Non tutti i provider supportano le transazioni. Verificare che la proprietà definito dal provider "**transazione DDL**" viene visualizzato nei **connessione** dell'oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta, che indica che il provider supporta transazioni. Se il provider non supporta le transazioni, una chiamata a uno di questi metodi restituirà un errore.  
+>  Non tutti i provider supportano le transazioni. Verificare che la proprietà definita dal provider "**Transaction DDL**" sia presente nella raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **Connection** , a indicare che il provider supporta le transazioni. Se il provider non supporta le transazioni, la chiamata a uno di questi metodi restituirà un errore.  
   
- Dopo aver chiamato il **BeginTrans** metodo, il provider non è più istantaneamente verrà commit le modifiche apportate fino a quando non si chiama **CommitTrans** oppure **RollbackTrans** per terminare il transazione.  
+ Dopo aver chiamato il metodo **BeginTrans** , il provider non eseguirà più immediatamente il commit delle modifiche apportate fino a quando non si chiama **CommitTrans** o **RollbackTrans** per terminare la transazione.  
   
- Chiama il **CommitTrans** metodo salva le modifiche apportate all'interno di una transazione aperta per la connessione e termina la transazione. Chiama il **RollbackTrans** metodo inverte le modifiche apportate all'interno di una transazione aperta e termina la transazione. La chiamata a dei metodi quando non sono presenti transazioni aperte genera un errore.  
+ La chiamata al metodo **CommitTrans** Salva le modifiche apportate all'interno di una transazione aperta sulla connessione e termina la transazione. La chiamata al metodo **RollbackTrans** inverte le modifiche apportate all'interno di una transazione aperta e termina la transazione. Se si chiama un metodo in assenza di una transazione aperta, viene generato un errore.  
   
- In base il **connessione** dell'oggetto [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà, la chiamata al **CommitTrans** o **RollbackTrans** potrebbe (metodo) avviare automaticamente una nuova transazione. Se il **attributi** è impostata su **adXactCommitRetaining**, il provider avvia automaticamente una nuova transazione dopo un **CommitTrans** chiamare. Se il **attributi** è impostata su **adXactAbortRetaining**, il provider avvia automaticamente una nuova transazione dopo un **RollbackTrans** chiamare.  
+ A seconda della proprietà [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) dell'oggetto **Connection** , la chiamata del metodo **CommitTrans** o **RollbackTrans** può avviare automaticamente una nuova transazione. Se la proprietà **Attributes** è impostata su **adXactCommitRetaining**, il provider avvia automaticamente una nuova transazione dopo una chiamata a **CommitTrans** . Se la proprietà **Attributes** è impostata su **adXactAbortRetaining**, il provider avvia automaticamente una nuova transazione dopo una chiamata a **RollbackTrans** .  
   
 ## <a name="transaction-isolation-level"></a>Livello di isolamento della transazione  
- Usare la **IsolationLevel** per impostare il livello di isolamento di una transazione in un **connessione** oggetto. L'impostazione ha effetto fino al successivo si chiama il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (metodo). Se il livello di isolamento che richiesto non è disponibile, il provider può restituire il successivo livello più alto di isolamento. Vedere le **IsolationLevel** proprietà nel riferimento del programmatore di ADO per ulteriori informazioni sui valori validi.  
+ Utilizzare la proprietà **IsolationLevel** per impostare il livello di isolamento di una transazione in un oggetto **Connection** . L'impostazione non ha effetto fino alla successiva chiamata del metodo [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Se il livello di isolamento richiesto non è disponibile, il provider può restituire il livello di isolamento successivo. Per ulteriori informazioni sui valori validi, vedere la proprietà **IsolationLevel** nella Guida di riferimento per programmatori ADO.  
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
- Per i provider che supportano le transazioni nidificate, chiama il **BeginTrans** metodo all'interno di una transazione aperta inizia una nuova transazione nidificata. Il valore restituito indica il livello di annidamento: indica un valore restituito pari a "1" è stata aperta una transazione di primo livello (vale a dire, la transazione non è annidata all'interno di un'altra transazione), "2" indica che è stato aperto una transazione di secondo livello (una transazione annidata all'interno di una transazione di primo livello), e così via. La chiamata **CommitTrans** oppure **RollbackTrans** interessa solo la maggior parte delle transazioni aperti di recente; è necessario chiudere o il rollback della transazione corrente prima che è possibile risolvere alcuna transazione di livello superiore.
+ Per i provider che supportano le transazioni nidificate, la chiamata al metodo **BeginTrans** all'interno di una transazione aperta avvia una nuova transazione nidificata. Il valore restituito indica il livello di annidamento: un valore restituito pari a "1" indica che è stata aperta una transazione di primo livello, ovvero che la transazione non è annidata all'interno di un'altra transazione, "2" indica che è stata aperta una transazione di secondo livello ( transazione nidificata all'interno di una transazione di primo livello e così via. La chiamata a **CommitTrans** o **RollbackTrans** interessa solo la transazione aperta più di recente; prima di poter risolvere le transazioni di livello superiore, è necessario chiudere o eseguire il rollback della transazione corrente.

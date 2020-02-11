@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Creazione di uno Scenario di previsione (esercitazione intermedia di Data Mining) | Microsoft Docs'
+title: 'Lezione 2: compilazione di uno scenario di previsione (Esercitazione intermedia sul data mining) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931524"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lezione 2: Creazione di uno Scenario di previsione (esercitazione intermedia di Data Mining)
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lezione 2: Compilazione di uno scenario di previsione (Esercitazione intermedia sul data mining)
   In qualità di analista delle vendite di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], si supponga di aver ricevuto la richiesta di stimare le vendite dei prodotti del prossimo anno. In particolare, viene richiesto di confrontare le previsioni per le diverse regioni e linee di prodotti. È stato inoltre richiesto di determinare se le vendite dei singoli prodotti sono da mettere in relazione al periodo dell'anno.  
   
- Per trovare le informazioni richieste, in questa lezione si riepilogano i dati di vendita dell'azienda a livello mensile e si visualizzerà un riepilogo anche dati relativi alle vendite suddivise in tre regioni: Europa, America del Nord e il Pacifico.  
+ Per trovare le informazioni richieste, in questa lezione si riepilogano i dati di vendita mensili dell'azienda e le cifre sulle vendite verranno suddivise in tre regioni: Europa, America del nord e Pacifico.  
   
  Dopo aver completato le attività di questa lezione, sarà possibile rispondere alle domande seguenti:  
   
@@ -38,56 +38,56 @@ ms.locfileid: "62931524"
   
 -   Nella prima parte si illustrano i concetti di base relativi alla creazione e all'utilizzo di un modello Time Series.  
   
--   Nella seconda parte viene illustrata la creazione di un modello Time Series generale, basato su tutte le aree. È possibile usare questo modello generale per *stime incrociate*.  
+-   Nella seconda parte viene illustrata la creazione di un modello Time Series generale, basato su tutte le aree. È possibile utilizzare questo modello generale per la *stima incrociata*.  
   
- Per completare le attività in questa lezione, elencate di seguito, si userà il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] dell'origine dati creata nel [lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ Per completare le attività di questa lezione, elencate di seguito, verrà utilizzata l' [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] origine dati creata nella [lezione 1: creazione della soluzione intermedia di data mining &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
 >  Le date nel database di esempio [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sono state aggiornate per questa versione. Se si utilizza una versione precedente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], è possibile compilare il modello seguendo questi passaggi, ma è possibile che vengano visualizzati risultati diversi.  
   
  **Creazione di un modello di stima semplice**  
   
--   [Aggiunta di dati di un vista di origine per la previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
+-   [Aggiunta di una vista origine dati per la previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
   
--   [Creazione di una struttura di previsione e il modello &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [Creazione di una struttura e di un modello di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Modifica della struttura di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
+-   [Modifica della struttura di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
--   [Personalizzazione ed elaborazione del modello di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
+-   [Personalizzazione ed elaborazione del modello di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
--   [Esplorazione del modello di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
+-   [Esplorazione del modello di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
--   [Creazione di stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
+-   [Creazione di stime basate su serie temporali &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
- **Creazione di un modello di stima generico per la stima incrociata**  
+ **Creazione di un modello di stima generico per l'esecuzione di stime incrociate**  
   
--   [Stime basate su serie temporali avanzate &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+-   [Stime avanzate basate su serie temporali &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
--   [Stime basate su serie utilizzando dati aggiornati di tempo &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+-   [Stime basate su serie temporali che utilizzano dati aggiornati &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
--   [Tempo di stime basate su serie utilizzando dati di sostituzione &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+-   [Stime basate su serie temporali che utilizzano dati sostitutivi &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
--   [Confronto delle stime per i modelli di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+-   [Confronto delle stime per i modelli di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Aggiunta di dati di un vista di origine per la previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
+ [Aggiunta di una vista origine dati per la previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
   
- [Informazioni sui requisiti per una serie temporale del modello &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
+ [Informazioni sui requisiti per un modello Time Series &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Tutte le lezioni  
- [Lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Lezione 1: creazione della soluzione intermedia di data mining &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- Lezione 2: Previsione Scenario (esercitazione intermedia di Data Mining)  
+ Lezione 2: Scenario di previsione (Esercitazione intermedia sul data mining)  
   
- [Lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: creazione di uno scenario Market basket &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Lezione 4: compilazione di uno scenario di clustering delle sequenze &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lezione 5: creazione di modelli di rete neurale e di regressione logistica &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Esercitazione intermedia sul data mining &#40;Analysis Services-&#41;di data mining](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798386"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "72798386"
   Aggiorna il record che identifica l'ultima transazione distribuita del server. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!CAUTION]  
->  Se si esegue **sp_repldone** manualmente, è possibile invalidare l'ordine e la coerenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto di replica esperto.  
+>  L'esecuzione manuale di **sp_repldone** potrebbe invalidare l'ordine e la coerenza delle transazioni recapitate. **sp_repldone** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto di replica esperto.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,17 +43,17 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @xactid = ] xactid` è il numero di sequenza del file di log (LSN) del primo record per l'ultima transazione distribuita del server. *xactid* è **binario (10)** e non prevede alcun valore predefinito.  
+`[ @xactid = ] xactid`Numero di sequenza del file di log (LSN) del primo record per l'ultima transazione distribuita del server. *xactid* è **binario (10)** e non prevede alcun valore predefinito.  
   
-`[ @xact_seqno = ] xact_seqno` è l'LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* è **binario (10)** e non prevede alcun valore predefinito.  
+`[ @xact_seqno = ] xact_seqno`LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* è **binario (10)** e non prevede alcun valore predefinito.  
   
-`[ @numtrans = ] numtrans` è il numero di transazioni distribuite. *numtrans* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @numtrans = ] numtrans`Numero di transazioni distribuite. *numtrans* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @time = ] time` è il numero di millisecondi, se specificato, necessario per distribuire l'ultimo batch di transazioni. *Time* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @time = ] time`Numero di millisecondi, se specificato, necessario per distribuire l'ultimo batch di transazioni. *Time* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @reset = ] reset` è lo stato di reimpostazione. *Reset* è di **tipo int**e non prevede alcun valore predefinito. Se è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Se è **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e nessuna transazione replicata viene contrassegnata come distribuita. *Reset* è valido solo quando *xactid* e *xact_seqno* sono null.  
+`[ @reset = ] reset`Stato di reimpostazione. *Reset* è di **tipo int**e non prevede alcun valore predefinito. Se è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Se è **0**, il log delle transazioni viene reimpostato sulla prima transazione replicata e nessuna transazione replicata viene contrassegnata come distribuita. *Reset* è valido solo quando *xactid* e *xact_seqno* sono null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -80,6 +80,6 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replflush &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

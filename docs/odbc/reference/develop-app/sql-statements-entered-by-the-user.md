@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni SQL immesse dall'utente | Microsoft Docs
+title: Istruzioni SQL immesse dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086067"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Istruzioni SQL immesse dall'utente
-Le applicazioni che eseguono l'analisi ad hoc anche comunemente consentono all'utente di immettere istruzioni SQL direttamente. Ad esempio:  
+Anche le applicazioni che eseguono l'analisi ad hoc consentono all'utente di immettere direttamente istruzioni SQL. Ad esempio:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Questo approccio semplifica la scrittura del codice dell'applicazione; l'applicazione si basa sull'utente per compilare l'istruzione SQL e nell'origine dei dati per controllare la validità dell'istruzione. Poiché è difficile scrivere un'interfaccia utente grafica che espone in modo adeguato le complicazioni del SQL, è sufficiente che chiede all'utente di immettere il testo dell'istruzione SQL può essere un'alternativa preferibile. Tuttavia, questo richiede all'utente di conoscere non solo SQL, ma anche lo schema dell'origine dati sottoposto a query. Alcune applicazioni forniscono un'interfaccia utente grafica mediante il quale l'utente può creare un'istruzione SQL di base e anche fornire un'interfaccia di testo con cui l'utente può modificarlo.
+ Questo approccio semplifica la codifica delle applicazioni; l'applicazione si basa sull'utente per compilare l'istruzione SQL e nell'origine dati per verificare la validità dell'istruzione. Poiché è difficile scrivere un'interfaccia utente grafica che espone adeguatamente le complessità di SQL, è sufficiente chiedere all'utente di immettere il testo dell'istruzione SQL potrebbe essere un'alternativa preferibile. Tuttavia, è necessario che l'utente conosca non solo SQL, ma anche lo schema dell'origine dati su cui si esegue la query. Alcune applicazioni forniscono un'interfaccia utente grafica in base alla quale l'utente può creare un'istruzione SQL di base e fornire anche un'interfaccia di testo con cui l'utente può modificarla.

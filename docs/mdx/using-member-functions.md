@@ -1,5 +1,5 @@
 ---
-title: Uso delle funzioni membro | Microsoft Docs
+title: Uso di funzioni membro | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097104"
 ---
 # <a name="using-member-functions"></a>Utilizzo delle funzioni membro
@@ -20,7 +20,7 @@ ms.locfileid: "68097104"
 
   Una funzione membro è una funzione MDX (Multidimensional Expressions) che restituisce un membro. Le funzioni membro, come le funzioni di tupla e le funzioni sui set, sono essenziali per la negoziazione delle strutture multidimensionali che si trovano in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Delle molte funzioni membro in MDX, la più importante è il **CurrentMember** funzione, che viene usato per determinare il membro corrente in una gerarchia. La query seguente illustra come usarlo, insieme con il **padre**, **predecessore**, e **Prevmember** funzioni:  
+ Tra le numerose funzioni membro in MDX, la più importante è la funzione **CurrentMember** , che viene utilizzata per determinare il membro corrente in una gerarchia. Nella query seguente viene illustrato come utilizzarla, insieme alle funzioni **padre**, **predecessore**e **PrevMember** :  
   
  `WITH`  
   
@@ -47,8 +47,8 @@ ms.locfileid: "68097104"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Uso delle funzioni di tupla](../mdx/using-tuple-functions.md)   
- [Uso delle funzioni sui set](../mdx/using-set-functions.md)  
+ [Utilizzo delle funzioni sui set](../mdx/using-set-functions.md)  
   
   

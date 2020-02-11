@@ -16,17 +16,17 @@ ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091199"
 ---
 # <a name="localdbgetversioninfo-function"></a>Funzione LocalDBGetVersionInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vengono restituite le informazioni per la versione del database locale di SQL Server Express specificata, se esistente, e il numero completo della versione del database locale, ovvero con i numeri di compilazione e della versione inclusi.  
   
- Vengono restituite le informazioni sotto forma di una **struct** denominate **LocalDBVersionInfo**, che presenta la seguente definizione.  
+ Le informazioni vengono restituite sotto forma di uno **struct** denominato **LocalDBVersionInfostruct**, che presenta la definizione seguente.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **File di intestazione:** SQLNCLI. h  
+ **File di intestazione:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ HRESULT LocalDBGetVersionInfo(
  [Output] Buffer per archiviare le informazioni sulla versione del database locale.  
   
  *dwVersionInfoSize*  
- [Input] Include le dimensioni dei *VersionInfo* buffer.  
+ Input Include le dimensioni del buffer *VERSIONINFO* .  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -82,14 +82,14 @@ HRESULT LocalDBGetVersionInfo(
  La versione del database locale specificata non esiste.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Errore imprevisto. Per informazioni, vedere il registro eventi.  
+ Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
 ## <a name="details"></a>Dettagli  
- La logica alla base dell'introduzione del **struct** argomento delle dimensioni (*lpVersionInfoSize*) consiste nell'abilitare l'API per versioni diverse di restituire il **LocalDBVersionInfostruct**, in modo efficace l'abilitazione di compatibilità con le versioni precedenti e successive.  
+ La logica alla base dell'introduzione dell'argomento di dimensioni **struct** (*lpVersionInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **LocalDBVersionInfostruct**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
   
- Se il **struct** argomento delle dimensioni (*lpVersionInfoSize*) corrisponde alle dimensioni di una versione nota dei **LocalDBVersionInfostruct**, che la versione del  **struct** viene restituito. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
+ Se l'argomento di dimensione della **struct** (*lpVersionInfoSize*) corrisponde alle dimensioni di una versione nota di **LocalDBVersionInfostruct**, viene restituita tale versione dello **struct** . In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un esempio tipico **LocalDBGetVersionInfo** utilizzo dell'API si presenta come segue:  
+ Un esempio tipico di utilizzo dell'API **LocalDBGetVersionInfo** è simile al seguente:  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -97,10 +97,10 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Note  
- Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
+## <a name="remarks"></a>Osservazioni  
+ Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+ [Informazioni sulla versione e intestazione del database locale di SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

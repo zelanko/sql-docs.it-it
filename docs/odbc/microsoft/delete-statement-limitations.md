@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096315"
 ---
 # <a name="delete-statement-limitations"></a>Limitazioni dell'istruzione DELETE
-L'istruzione DELETE non è supportata per il driver di Microsoft Excel o di testo. Si noti che l'istruzione INSERT è supportata per il driver di testo.  
+L'istruzione DELETE non è supportata per Microsoft Excel o driver di testo. Si noti che l'istruzione INSERT è supportata per il driver di testo.  
   
- Il driver dBASE non supporta la creazione di una tabella per rimuovere i valori "eliminato".  
+ Il driver dBASE non supporta la compressione di una tabella per rimuovere i valori "eliminati".  
   
- Per il driver Paradox eliminare una riga da una tabella, la tabella deve avere un indice univoco (chiave primaria Paradox).
+ Affinché il driver Paradox elimini una riga da una tabella, è necessario che la tabella disponga di un indice univoco (chiave primaria Paradox).

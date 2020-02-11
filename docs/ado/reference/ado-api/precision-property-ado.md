@@ -17,24 +17,24 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931632"
 ---
 # <a name="precision-property-ado"></a>Proprietà Precision (ADO)
-Indica il grado di precisione per i valori numerici in una [parametri](../../../ado/reference/ado-api/parameter-object.md) oggetto o per valori numerici [campo](../../../ado/reference/ado-api/field-object.md) oggetti.  
+Indica il grado di precisione per i valori numerici in un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) o per gli oggetti [campo](../../../ado/reference/ado-api/field-object.md) numerico.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un **Byte** valore che indica il numero massimo di cifre utilizzate per rappresentare i valori.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore **byte** che indica il numero massimo di cifre utilizzate per rappresentare i valori.  
   
-## <a name="remarks"></a>Note  
- Usare la **precisione** proprietà per determinare il numero massimo di cifre utilizzate per rappresentare i valori per un valore numerico **parametro** oppure **campo** oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **Precision** per determinare il numero massimo di cifre utilizzate per rappresentare i valori per un **parametro** numerico o un oggetto **campo** .  
   
- Il valore è di lettura/scrittura in un **parametro** oggetto.  
+ Il valore è di lettura/scrittura su un oggetto **Parameter** .  
   
- Per un **campo**oggetto **precisione** viene in genere di sola lettura. Tuttavia, per i nuovi **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md), **precisione** è solo di lettura/scrittura Dopo che il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà per il **campo** è stato specificato e il provider di dati è stato aggiunto il nuovo **campo** chiamando il [Update](../../../ado/reference/ado-api/update-method.md) metodo per il **campi** raccolta.  
+ Per un oggetto **campo**, la **precisione** è in genere di sola lettura. Tuttavia, per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un [record](../../../ado/reference/ado-api/record-object-ado.md), la **precisione** è di lettura/scrittura solo dopo che è stata specificata la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) per il **campo** e il provider di dati ha aggiunto correttamente il nuovo **campo** chiamando il metodo [Update](../../../ado/reference/ado-api/update-method.md) della raccolta **Fields** .  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -43,6 +43,6 @@ Indica il grado di precisione per i valori numerici in una [parametri](../../../
 |[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio NumericScale e Precision Properties (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Esempio NumericScale e Precision Properties (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [Esempio di proprietà NumericScale e Precision (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [Esempio di proprietà NumericScale e Precision (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Proprietà NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

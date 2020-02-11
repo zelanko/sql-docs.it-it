@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921288"
 ---
 # <a name="addnew-method-example-vbscript"></a>Esempio del metodo AddNew (VBScript)
-Questo esempio Usa la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato.  
+In questo esempio viene usato il metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) per creare un nuovo record con il nome specificato.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AddNewVBS**. È possibile visualizzare il risultato in qualsiasi browser client.  
+ Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AddNewVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser client.  
   
- Per usare l'esempio, aggiungere un nuovo record in formato HTML. Fare clic su **Aggiungi nuovo**. Vedere le [esempio di metodo Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) per rimuovere i record non desiderati.  
+ Per usare l'esempio, aggiungere un nuovo record nel formato HTML. Fare clic su **Aggiungi nuovo**. Per rimuovere i record indesiderati, vedere l' [esempio di metodo Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) .  
   
 ```  
 <!-- BeginAddNewVBS -->  

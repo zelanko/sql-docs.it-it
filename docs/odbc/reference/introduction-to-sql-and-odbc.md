@@ -11,14 +11,14 @@ ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 911f7b71f3d0ae555853560a33744a3fc333512d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093730"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>Introduzione a SQL e ODBC
-ODBC è stato creato per fornire un metodo uniforme di accesso ai sistemi di gestione diversi o eterogenei, database (DBMS). In questa introduzione illustra concetti relativi allo sviluppo di ODBC.  
+ODBC è stato creato per fornire un metodo di accesso uniforme a sistemi di gestione di database (DBMS) diversi o eterogenei. In questa introduzione vengono descritti i concetti relativi allo sviluppo di ODBC.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

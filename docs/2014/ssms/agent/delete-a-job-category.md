@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783195"
 ---
 # <a name="delete-a-job-category"></a>Eliminare una categoria di processi
-  In questo argomento viene descritto come eliminare una categoria di processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
+  In questo argomento viene descritto come eliminare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una categoria di processi [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent in [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando o SQL Server Management Objects.  
   
  Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database.  
 
@@ -33,10 +33,10 @@ ms.locfileid: "72783195"
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
  Quando si elimina una categoria di processi definita dall'utente, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene richiesto di riassegnare i processi appartenenti alla categoria a un'altra categoria. È possibile eliminare solo categorie di processi definite dall'utente.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
 
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 ### <a name="to-delete-a-job-category"></a>Per eliminare una categoria di processi  
   
@@ -46,15 +46,15 @@ ms.locfileid: "72783195"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e selezionare **Gestione categorie processi**.  
   
-4.  Nella finestra di dialogo **Gestisci categorie di processi**_nome_server_ selezionare la categoria di processi da eliminare.  
+4.  Nella finestra di dialogo **Gestisci categorie di processi**_server_name_ Selezionare la categoria di processi da eliminare.  
   
-5.  Fare clic su **Elimina**.  
+5.  Scegliere **Elimina**.  
   
 6.  Nella finestra di dialogo **Categorie di processi** fare clic su **Sì**.  
   
-7.  Chiudere la finestra di dialogo **Gestione categorie processi**_nome_server_ .  
+7.  Chiudere la finestra di dialogo **Gestisci categorie di processi**_server_name_ .  
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 ### <a name="to-delete-a-job-category"></a>Per eliminare una categoria di processi  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72783195"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_delete_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_delete_category &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
 
   
 ##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  

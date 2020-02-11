@@ -1,5 +1,5 @@
 ---
-title: Esempio di AbsolutePosition e CursorLocation (esempio di proprietà (JScript) | Microsoft Docs
+title: Esempio di proprietà AbsolutePosition e CursorLocation (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921791"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Esempio di AbsolutePosition e CursorLocation (esempio di proprietà (JScript)
-Questo esempio viene illustrato come la [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) proprietà può tenere traccia dell'avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà per abilitare il **AbsolutePosition** proprietà impostando il cursore su un cursore client. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **AbsolutePositionJS**.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Esempio di proprietà AbsolutePosition e CursorLocation (JScript)
+In questo esempio viene illustrato il modo in cui la proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) è in grado di tenere traccia dello stato di avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) per abilitare la proprietà **AbsolutePosition** impostando il cursore su un cursore client. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AbsolutePositionJS. asp**.  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  

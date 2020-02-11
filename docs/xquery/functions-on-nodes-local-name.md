@@ -16,16 +16,16 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038867"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce la parte locale del nome della *$arg* come xs: String che sarà la stringa di lunghezza zero o avrà il formato lessicale di un xs: NCName. Se non si specifica l'argomento, il valore predefinito è il nodo di contesto.  
+  Restituisce la parte locale del nome di *$arg* come xs: String che sarà la stringa di lunghezza zero o avrà il formato lessicale di XS: NCName. Se non si specifica l'argomento, il valore predefinito è il nodo di contesto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte local-name.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
--   In SQL Server **fn:local-name()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
+-   In SQL Server, **FN: local-name ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
 -   Se si specifica l'argomento e questo corrisponde alla sequenza vuota, la funzione restituisce la stringa di lunghezza zero.  
   
 -   Se il nodo di destinazione non dispone di un nome specifico, in quanto è un nodo di documento, un nodo di commento o un nodo di testo, la funzione restituisce la stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Recupero del nome locale di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione della query, `local-name(/ROOT[1])`, recupera la parte del nome locale del nodo specificato.  
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilizzo della funzione local-name senza argomento in un predicato  
- La query seguente viene specificata sulla colonna Instructions, tipizzata **xml** colonna della tabella ProductModel. L'espressione restituisce tutti gli elementi figli del <`root`> elemento la cui parte del nome locale dell'elemento QName è "Location". Il **Local** funzione è specificata nel predicato e non include argomenti nodo di contesto viene utilizzato dalla funzione.  
+ La query seguente viene specificata sulla colonna Instructions, colonna **XML** tipizzata, della tabella ProductModel. L'espressione restituisce tutti gli elementi figlio dell'elemento <`root`> la cui parte del nome locale del QName è "location". La funzione **local-name ()** è specificato nel predicato e non ha argomenti. il nodo di contesto viene usato dalla funzione.  
   
 ```  
 SELECT Instructions.query('  
@@ -81,10 +81,10 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La query restituisce tutti i <`Location`> figlio dell'elemento di <`root`> elemento.  
+ La query restituisce tutti gli elementi `Location` figlio <> dell'elemento <`root`>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni sui nodi](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [Funzione namespace-uri &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
+ [Funzione URI dello spazio dei nomi &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

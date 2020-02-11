@@ -18,18 +18,18 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107908"
 ---
-# <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
+# <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ottiene informazioni sull'errore di automazione OLE.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,58 +44,58 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>Argomenti  
  *objecttoken*  
- È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** oppure valore NULL. Se *vengono restituite le* è specificato, vengono restituite informazioni sull'errore per l'oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
+ Token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** o è null. Se viene specificato *objecttoken* , vengono restituite le informazioni sull'errore relative a tale oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
   
- _origine_ **OUTPUT**  
- Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+ __ **output** origine  
+ Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _Descrizione_ **OUTPUT**  
- Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+ __ **output** Descrizione  
+ Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _HelpFile_ **OUTPUT**  
- File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
+ __ **output** di fileguida  
+ File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**o **nvarchar** . Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- _HelpID_ **OUTPUT**  
- ID di contesto del file della Guida. Se specificato, deve essere una variabile locale **int** variabile.  
+ __ **output** HelpID  
+ ID di contesto del file della Guida. Se specificato, deve essere una variabile **int** locale.  
   
 > [!NOTE]  
 >  I parametri di questa stored procedure vengono specificati in base alla posizione, non in base al nome.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
   
- Per altre informazioni sui codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Per ulteriori informazioni sui codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Set di risultati  
  Se non viene specificato alcun parametro di output, le informazioni sull'errore vengono restituite al client come set di risultati.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |------------------|---------------|-----------------|  
-|**Errore**|**binary(4)**|Rappresentazione binaria del numero di errore.|  
-|**Origine**|**nvarchar(nn)**|Origine dell'errore.|  
-|**Descrizione**|**nvarchar(nn)**|Descrizione dell'errore.|  
-|**HelpFile**|**nvarchar(nn)**|File della Guida relativo all'origine.|  
+|**Error (Errore) (Error (Errore)e)**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
+|**Origine**|**nvarchar (nn)**|Origine dell'errore.|  
+|**Descrizione**|**nvarchar (nn)**|Descrizione dell'errore.|  
+|**HelpFile**|**nvarchar (nn)**|File della Guida relativo all'origine.|  
 |**HelpID**|**int**|ID di contesto della Guida nel file di origine della Guida.|  
   
-## <a name="remarks"></a>Note  
- Stored procedure di ogni chiamata a un'automazione OLE (tranne **sp_OAGetErrorInfo**) Reimposta le informazioni sull'errore, pertanto, **sp_OAGetErrorInfo** recupera informazioni sugli errori solo per i più recenti OLE Automazione di chiamata della stored procedure. Si noti che, poiché **sp_OAGetErrorInfo** non ripristina le informazioni sull'errore, può essere chiamato più volte per ottenere le informazioni sull'errore stesso.  
+## <a name="remarks"></a>Osservazioni  
+ Ogni chiamata a un stored procedure di automazione OLE (eccetto **sp_OAGetErrorInfo**) Reimposta le informazioni sull'errore. Pertanto, **sp_OAGetErrorInfo** ottiene informazioni sugli errori solo per la chiamata stored procedure di automazione OLE più recente. Si noti che poiché **sp_OAGetErrorInfo** non reimposta le informazioni sull'errore, può essere chiamato più volte per ottenere le stesse informazioni sull'errore.  
   
  Nella tabella seguente vengono elencati gli errori di automazione OLE e le cause più comuni.  
   
 |Errore e codice HRESULT|Causa più comune|  
 |-----------------------|------------------|  
-|**Tipo di variabile non valido (0x80020008)**|Tipo di dati di un [!INCLUDE[tsql](../../includes/tsql-md.md)] valore passato come parametro di metodo non corrisponde il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo di dati del parametro del metodo o un valore NULL è stato passato come parametro di metodo.|  
+|**Tipo di variabile non valido (0x80020008)**|Il tipo di dati [!INCLUDE[tsql](../../includes/tsql-md.md)] di un valore passato come parametro del metodo non corrisponde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] al tipo di dati del parametro del metodo oppure è stato passato un valore null come parametro del metodo.|  
 |**Nome sconosciuto (0x8002006)**|Il nome di proprietà o metodo specificato non è stato trovato per l'oggetto specificato.|  
-|**Stringa della classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Server di automazione OLE personalizzati devono essere registrati prima può essere implementati con **sp_OACreate**. Questa operazione può essere eseguita tramite l'utilità Regsvr32.exe per server in-process (DLL), o la **/REGSERVER** switch della riga di comando per i server locali (.exe).|  
-|**L'esecuzione del server fallita (0x80080005)**|L'oggetto OLE specificato è registrato come server OLE locale (file exe), ma non è stato possibile trovare o avviare il file.|  
-|**Il modulo specificato non è stato trovato (0x8007007e)**|L'oggetto OLE specificato è registrato come server OLE in-process (file dll), ma non è stato possibile trovare o caricare il file.|  
+|**Stringa della classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario registrare i server di automazione OLE personalizzati prima di potervi creare un'istanza utilizzando **sp_OACreate**. A tale scopo, è possibile utilizzare l'utilità regsvr32. exe per i server in-process (dll) o l'opzione della riga di comando **/regserver** per i server locali (exe).|  
+|**Esecuzione del server non completata (0x80080005)**|L'oggetto OLE specificato è registrato come server OLE locale (file exe), ma non è stato possibile trovare o avviare il file.|  
+|**Impossibile trovare il modulo specificato (0x8007007e)**|L'oggetto OLE specificato è registrato come server OLE in-process (file dll), ma non è stato possibile trovare o caricare il file.|  
 |**Tipo non corrispondente (0x80020005)**|Il tipo di dati di una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per l'archiviazione del valore restituito di una proprietà o un metodo non corrisponde al tipo di dati di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] del valore restituito della proprietà o del metodo oppure è stato richiesto il valore restituito di una proprietà o un metodo ma non viene restituito alcun valore.|  
-|**Tipo di dati o il valore del parametro 'context' di sp_OACreate non è valido. (0x8004275B)**|Il valore del parametro di contesto deve essere uno dei seguenti: 1, 4 o 5.|  
+|**Il tipo di dati o il valore del parametro ' context ' di sp_OACreate non è valido. (0x8004275B)**|Il valore del parametro di contesto deve essere 1, 4 o 5.|  
   
- Per altre informazioni sull'elaborazione dei codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Per ulteriori informazioni sull'elaborazione dei codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o execute direttamente su questa Stored Procedure. `Ole Automation Procedures` configurazione deve essere **abilitato** usare eventuali procedure di sistema correlate a automazione OLE.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate le informazioni sull'errore di automazione OLE.  
@@ -122,7 +122,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Automazione OLE Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: In cui limitazioni della clausola | Microsoft Docs
+title: Limitazioni della clausola WHERE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bb6194d93e545526a850443f5e97074d88e7e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911419"
 ---
 # <a name="where-clause-limitations"></a>Limitazioni della clausola WHERE
 Il numero massimo di clausole in una clausola WHERE è 40.  
   
- LONGVARCHAR e LONGVARBINARY colonne possono essere confrontati con i valori letterali di fino a 255 caratteri, ma non possono essere confrontate utilizzando i parametri.
+ Le colonne LONGVARBINARY e LONGVARCHAR possono essere confrontate con valori letterali fino a 255 caratteri di lunghezza, ma non possono essere confrontati utilizzando parametri.

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797933"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "72797933"
 > [!IMPORTANT]  
 >  Se un endpoint del mirroring del database è presente e già in uso, è consigliabile utilizzare quello. L'eliminazione di un endpoint in uso determina la chiusura delle sessioni esistenti.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Prima di iniziare:**  [sicurezza](#Security)  
   
--   **Per creare un endpoint del mirroring del database usando** [Transact-SQL](#TsqlProcedure)  
+-   **Per creare un endpoint del mirroring del database tramite:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -41,10 +41,11 @@ ms.locfileid: "72797933"
  I metodi di autenticazione e crittografia dell'istanza del server sono stabiliti dall'amministratore di sistema.  
   
 > [!IMPORTANT]  
->  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
+>  L'algoritmo RC4 è deprecato. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ È richiesta l'autorizzazione CREATE ENDPOINT o l'appartenenza al ruolo predefinito del server sysadmin. Per altre informazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
@@ -65,37 +66,37 @@ ms.locfileid: "72797933"
   
 4.  Per creare un endpoint utilizzabile con l'autenticazione di Windows, eseguire un'istruzione Transact-SQL CREATE ENDPOINT, Il formato generale dell'istruzione è il seguente:  
   
-     CREATE ENDPOINT *\<endpointName>*  
+     Creazione endpoint * \<EndpointName>*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = *\<listenerPortList>* )  
+     TCP (LISTENER_PORT = * \<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
+     [Autenticazione = **Windows** [ * \<authorizationMethod>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { *\<algorithm>* } ]  
+     [Algoritmo { * \<Algorithm>* }]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
   
      dove  
   
-    -   *\<endpointName>* è un nome univoco per l'endpoint del mirroring del database dell'istanza del server.  
+    -   EndpointName>è un nome univoco per l'endpoint del mirroring del database dell'istanza del server. * \<*  
   
     -   STARTED indica che l'endpoint deve essere avviato e deve rimanere in attesa delle connessioni. Lo stato di un endpoint del mirroring del database creato è in genere STARTED. In alternativa, è possibile avviare una sessione nello stato STOPPED (impostazione predefinita) o DISABLED.  
   
-    -   *\<listenerPortList>* è un solo numero di porta (*nnnn*) su cui il server deve attendere i messaggi di mirroring del database. È consentito solo il protocollo TCP. Tutti gli altri protocolli restituiranno un errore.  
+    -   listenerPortList>è un numero di porta singolo (*nnnn*) su cui si desidera che il server attenda i messaggi di mirroring del database. * \<* È consentito solo il protocollo TCP. Tutti gli altri protocolli restituiranno un errore.  
   
          È possibile utilizzare un numero di porta una sola volta per ciascun computer. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Per identificare le porte attualmente utilizzate dagli endpoint TCP nel sistema, utilizzare l'istruzione Transact-SQL seguente:  
   
@@ -106,7 +107,7 @@ ms.locfileid: "72797933"
         > [!IMPORTANT]  
         >  In ogni istanza del server è necessaria un'unica porta di attesa univoca.  
   
-    -   Per l'autenticazione di Windows, l'opzione AUTHENTICATION è facoltativa, a meno che non si desideri che l'endpoint utilizzi solo NTLM o Kerberos per autenticare connessioni. *\<authorizationMethod>* specifica il metodo usato per autenticare le connessioni come NTLM, KERBEROS o NEGOTIATE. Con il metodo predefinito NEGOTIATE l'endpoint utilizzerà il protocollo di negoziazione di Windows per scegliere tra NTLM e Kerberos. La negoziazione consente di utilizzare le connessioni con o senza autenticazione, a seconda del livello di autenticazione dell'endpoint opposto.  
+    -   Per l'autenticazione di Windows, l'opzione AUTHENTICATION è facoltativa, a meno che non si desideri che l'endpoint utilizzi solo NTLM o Kerberos per autenticare connessioni. authorizationMethod>specifica il metodo utilizzato per autenticare le connessioni in uno dei seguenti elementi: NTLM, Kerberos o Negotiate. * \<* Con il metodo predefinito NEGOTIATE l'endpoint utilizzerà il protocollo di negoziazione di Windows per scegliere tra NTLM e Kerberos. La negoziazione consente di utilizzare le connessioni con o senza autenticazione, a seconda del livello di autenticazione dell'endpoint opposto.  
   
     -   Per impostazione predefinita, ENCRYPTION è impostato su REQUIRED, pertanto verrà utilizzata la crittografia per tutte le connessioni a questo endpoint. È tuttavia possibile disabilitare la crittografia o renderla facoltativa in un endpoint. Sono disponibili le alternative seguenti:  
   
@@ -114,30 +115,31 @@ ms.locfileid: "72797933"
         |-----------|----------------|  
         |DISABLED|Specifica che i dati inviati tramite una connessione non vengano crittografati.|  
         |SUPPORTED|Specifica che i dati vengano crittografati solo se per l'endpoint opposto è stato specificato SUPPORTED o REQUIRED.|  
-        |REQUIRED|Specifica che i dati inviati tramite una connessione devono essere crittografati.|  
+        |OBBLIGATORIO|Specifica che i dati inviati tramite una connessione devono essere crittografati.|  
   
          Se è necessaria la crittografia per un endpoint, ENCRYPTION deve essere impostato su SUPPORTED o REQUIRED nell'altro endpoint.  
   
-    -   *\<algorithm>* consente di specificare gli standard di crittografia per l'endpoint. Il valore di *\<algorithm>* può essere uno degli algoritmi o delle combinazioni di algoritmi seguenti: RC4, AES, AES RC4 o RC4 AES.  
+    -   >dell'algoritmo consente di specificare gli standard di crittografia per l'endpoint. * \<* Il valore di * \<Algorithm>* può essere uno degli algoritmi o delle combinazioni di algoritmi seguenti: RC4, AES, AES RC4 o RC4 AES.  
   
          AES RC4 indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza a quello AES. RC4 AES indica che questo endpoint negozierà l'algoritmo di crittografia, dando la preferenza all'algoritmo RC4. Se i due endpoint specificano entrambi gli algoritmi, ma con un ordine diverso, l'algoritmo verrà definito dall'endpoint che accetta la connessione.  
   
         > [!NOTE]  
-        >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
+        >  L'algoritmo RC4 è deprecato. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
-    -   *\<role>* definisce il ruolo o i ruoli che il server può eseguire. Il valore di ROLE deve essere specificato. Tuttavia, il ruolo dell'endpoint è rilevante solo per il mirroring del database. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], viene ignorato il ruolo dell'endpoint.  
+    -   Role>definisce il ruolo o i ruoli che il server è in grado di eseguire. * \<* Il valore di ROLE deve essere specificato. Tuttavia, il ruolo dell'endpoint è rilevante solo per il mirroring del database. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], viene ignorato il ruolo dell'endpoint.  
   
          Per consentire a un'istanza del server di utilizzare un ruolo per una sessione di mirroring del database e un altro ruolo per un'altra sessione, specificare ROLE=ALL. Per limitare un'istanza del server in modo che funga da partner o da server di controllo del mirroring, specificare rispettivamente ROLE=PARTNER o ROLE=WITNESS.  
   
         > [!NOTE]  
-        >  Per ulteriori informazioni sulle opzioni di mirroring del database per le diverse edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Per ulteriori informazioni sulle opzioni di mirroring del database per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]diverse edizioni di, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Per una descrizione completa della sintassi di CREATE ENDPOINT, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
     > [!NOTE]  
     >  Per modificare un endpoint esistente, usare [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
-###  <a name="TsqlExample"></a> Esempio: Creazione di endpoint per supportare il mirroring del database (Transact-SQL)  
+###  <a name="TsqlExample"></a>Esempio: creazione di endpoint per supportare il mirroring del database (Transact-SQL)  
  Nell'esempio seguente si creano endpoint del mirroring del database per le istanze del server predefinite in tre sistemi di computer distinti:  
   
 |Ruolo dell'istanza del server|Nome del computer host|  
@@ -181,15 +183,15 @@ GO
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Per configurare un endpoint del mirroring del database
   
--   [Creazione di un endpoint del mirroring del &#40;Database per gruppi di disponibilità AlwaysOn SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Creazione di un endpoint del mirroring del database per Gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Specificare un indirizzo di rete del server &#40;mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)  
+-   [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)  
   
 -   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -199,8 +201,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
- [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Esempio: Impostazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [Scegliere un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [CREAZIONE di ENDPOINT &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)   
+ [Specificare un indirizzo di rete del server &#40;il mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [Esempio: impostazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: Provider Microsoft OLE DB per Oracle | Microsoft Docs
+title: provider Microsoft OLE DB per Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,60 +15,60 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926627"
 ---
-# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provider Microsoft OLE DB per Oracle Panoramica
+# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
 > [!IMPORTANT]
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Usare invece il provider OLE DB Oracle.
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Usare invece il provider di OLE DB di Oracle.
 
- Il Provider Microsoft OLE DB per Oracle consente di ADO accedere ai database di Oracle.
+ Il provider Microsoft OLE DB per Oracle consente a ADO di accedere ai database Oracle.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare il *Provider* argomento delle [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
+ Per connettersi a questo provider, impostare l'argomento del *provider* della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSDAORA
 ```
 
- Leggere il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà restituirà anche questa stringa.
+ La lettura della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
 
- Se una query join con un cursore dinamico o keyset viene eseguita in un database Oracle, si verifica un errore. Oracle supporta solo un cursore statico di sola lettura.
+ Se in un database Oracle viene eseguita una query di join con un keyset o un cursore dinamico, si verificherà un errore. Oracle supporta solo un cursore statico di sola lettura.
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
- Una stringa di connessione tipica per questo provider è:
+ Una stringa di connessione tipica per questo provider è la seguente:
 
 ```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
- La stringa è costituita da queste parole chiave:
+ La stringa è costituita dalle parole chiave seguenti:
 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
-|**Provider**|Specifica il Provider OLE DB per Oracle.|
-|**Data Source**|Specifica il nome di un server.|
+|**Provider**|Specifica il provider di OLE DB per Oracle.|
+|**Origine dati**|Specifica il nome di un server.|
 |**ID utente**|Specifica il nome utente.|
 |**Password**|Specifica la password dell'utente.|
 
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
-## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifica del provider
- Il provider supporta vari parametri di connessione specifica del provider oltre a quelli definiti da ADO. Come con le proprietà di connessione ADO, è possibile impostare queste proprietà specifiche del provider tramite il [delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o come parte del **ConnectionString**.
+## <a name="provider-specific-connection-parameters"></a>Parametri di connessione specifici del provider
+ Il provider supporta diversi parametri di connessione specifici del provider, oltre a quelli definiti da ADO. Come per le proprietà di connessione ADO, queste proprietà specifiche del provider possono essere impostate tramite la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) di una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o come parte di **ConnectionString**.
 
- Questi parametri sono descritti dettagliatamente nel [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Il [indice proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
+ Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). L' [indice della proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|**Handle di finestra**|Indica l'handle di finestra da usare per la richiesta di informazioni aggiuntive.|
-|**Locale Identifier**|Indica un numero a 32 bit univoco (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano vengono formattati come date e ore, gli elementi vengono ordinati in ordine alfabetico, le stringhe vengono confrontate e così via.|
-|**Servizi OLE DB**|Indica una maschera di bit che specifica i servizi OLE DB per abilitare o disabilitare.|
-|**Richiesta**|Indica se richiedere all'utente mentre viene stabilita una connessione.|
-|**Proprietà estese**|Stringa che contiene le informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifica del provider che non possono essere descritta mediante il meccanismo di proprietà.|
+|**Handle finestra**|Indica l'handle della finestra da utilizzare per richiedere ulteriori informazioni.|
+|**Identificatore delle impostazioni locali**|Indica un numero univoco a 32 bit, ad esempio 1033, che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano il modo in cui le date e le ore vengono formattate, gli elementi vengono ordinati alfabeticamente, le stringhe vengono confrontate e così via.|
+|**Servizi di OLE DB**|Indica una maschera di maschera che specifica OLE DB servizi da abilitare o disabilitare.|
+|**Prompt**|Indica se richiedere all'utente quando viene stabilita una connessione.|
+|**Extended Properties**|Stringa contenente informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifiche del provider che non possono essere descritte tramite il meccanismo della proprietà.|
 
 ## <a name="see-also"></a>Vedere anche
- [Proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [proprietà del Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ Proprietà [ConnectionString (](../../../ado/reference/ado-api/connectionstring-property-ado.md) ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

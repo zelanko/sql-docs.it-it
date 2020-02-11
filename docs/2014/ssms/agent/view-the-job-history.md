@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783385"
 ---
-# <a name="view-the-job-history"></a>View the Job History
-  In questo argomento viene descritto come visualizzare il log della cronologia processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
+# <a name="view-the-job-history"></a>Visualizzare la cronologia processi
+  In questo argomento viene descritto come visualizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il log cronologia processi di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]tramite [!INCLUDE[tsql](../../includes/tsql-md.md)], o SQL Server Management Objects.  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per visualizzare il log cronologia processi utilizzando:**  
+-   **Per visualizzare il log di cronologia processo utilizzando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,14 +40,14 @@ ms.locfileid: "72783385"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
  Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-the-job-history-log"></a>Per visualizzare il log cronologia processi  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**e quindi espandere **Processi**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783385"
   
 5.  Per aggiornare la cronologia processo, fare clic su **Aggiorna**. Per visualizzare un numero inferiore di righe, fare clic sul pulsante **Filtro** e immettere i parametri di filtro.  
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 #### <a name="to-view-the-job-history-log"></a>Per visualizzare il log cronologia processi  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72783385"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_help_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_help_jobhistory &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per visualizzare il log cronologia processi**  

@@ -15,15 +15,15 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925653"
 ---
 # <a name="data-providers"></a>Provider di dati
-Provider di dati rappresentano diverse origini dei dati, ad esempio database SQL, file sequenziali-indicizzate, fogli di calcolo, archivi di documenti e i file di posta elettronica. I provider di espongono i dati in modo uniforme tramite un'astrazione comune definita set di righe.  
+I provider di dati rappresentano diverse origini di dati, ad esempio database SQL, file indicizzati sequenziali, fogli di calcolo, archivi di documenti e file di posta elettronica. I provider espongono i dati in modo uniforme usando un'astrazione comune denominata set di righe.  
   
- ADO è potente e flessibile perché può connettersi a una qualsiasi di diversi provider di dati diversi e ancora esporre il modello di programmazione stesso, indipendentemente dalle funzionalità specifiche di qualsiasi altro provider specificato. Tuttavia, poiché ogni provider di dati è univoco, come l'applicazione interagisce con ADO dipendono dal provider di dati.  
+ ADO è potente e flessibile perché può connettersi a uno dei diversi provider di dati e comunque esporre lo stesso modello di programmazione, indipendentemente dalle funzionalità specifiche di un determinato provider. Tuttavia, poiché ogni provider di dati è univoco, il modo in cui l'applicazione interagisce con ADO varierà in base al provider di dati.  
   
- Ad esempio, le funzionalità e caratteristiche del Provider OLE DB per SQL Server, che viene usato per accedere ai database Microsoft SQL Server, sono considerevolmente diverse da quelle di Provider Microsoft OLE DB per Internet Publishing, che consente di accedere ai file archivi in un server Web.
+ Ad esempio, le funzionalità e le funzionalità del provider OLE DB per SQL Server, che viene utilizzato per accedere ai database Microsoft SQL Server, sono notevolmente diverse da quelle del provider Microsoft OLE DB per Internet Publishing, utilizzato per accedere al file. archivia in un server Web.

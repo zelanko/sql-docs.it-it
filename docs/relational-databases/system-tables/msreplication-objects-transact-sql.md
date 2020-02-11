@@ -18,16 +18,16 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079086"
 ---
-# <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (Transact-SQL)
+# <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSreplication_objects** tabella contiene una riga per ogni oggetto che è associato con la replica nel database del sottoscrittore. Questa tabella è archiviata nel database di sottoscrizione.  
+  La tabella **MSreplication_objects** contiene una riga per ogni oggetto associato alla replica nel database del Sottoscrittore. Questa tabella è archiviata nel database di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -35,8 +35,8 @@ ms.locfileid: "68079086"
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**object_name**|**sysname**|Nome dell'oggetto .|  
-|**object_type**|**char(2)**|Tipo di oggetto:<br /><br /> **u** = tabella.<br /><br /> **t** = Trigger.<br /><br /> **p** = Stored Procedure.|  
-|**article**|**sysname**|Nome dell'articolo a cui è associato l'oggetto.|  
+|**object_type**|**carattere (2)**|Tipo di oggetto:<br /><br /> **u** = tabella.<br /><br /> **t** = trigger.<br /><br /> **p** = stored procedure.|  
+|**articolo**|**sysname**|Nome dell'articolo a cui è associato l'oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

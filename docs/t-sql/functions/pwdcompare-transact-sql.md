@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168773"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Restituisce 1 se l'hash di *clear_text_password* corrisponde al parametro *password_hash*. In caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione PWDCOMPARE non costituisce un rischio per la sicurezza degli hash delle password, in quanto lo stesso test può essere eseguito tentando di accedere con la password fornita come primo parametro.  
   
  **PWDCOMPARE** non può essere usata con le password di utenti del database indipendente. Non esiste un equivalente per i database indipendenti.  
@@ -72,7 +72,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-identifying-logins-that-have-no-passwords"></a>A. Identificazione degli account di accesso che non dispongono di password  
+### <a name="a-identifying-logins-that-have-no-passwords"></a>R. Identificazione degli account di accesso che non dispongono di password  
  Nell'esempio seguente vengono identificati gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non dispongono di password.  
   
 ```  

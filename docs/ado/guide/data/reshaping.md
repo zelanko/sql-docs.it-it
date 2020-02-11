@@ -1,5 +1,5 @@
 ---
-title: Modifica della forma | Microsoft Docs
+title: Rimodellazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924357"
 ---
 # <a name="reshaping"></a>Modifica della forma
-Oggetto **Recordset** creato da una clausola di una forma comando può essere assegnato un *alias* nome (in genere con la parola chiave AS). L'alias di una data shaping **Recordset** possibile farvi riferimento in un comando di completamente diverso. Vale a dire, è possibile riutilizzare, oppure *reshape*, una forma precedentemente **Recordset** in un nuovo comando di forma. Per supportare questa funzionalità, ADO fornisce una proprietà, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+A un **Recordset** creato da una clausola di un comando Shape può essere assegnato un nome di *alias* (in genere con la parola chiave As). È possibile fare riferimento all'alias di un **Recordset** con forma in un comando completamente diverso. In altre condizioni, è possibile riutilizzare o *modificare la forma*di un **Recordset** precedentemente modellato in un nuovo comando Shape. Per supportare questa funzionalità, ADO fornisce una proprietà e un nome di modifica della [forma](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
   
- Modificare la forma ha due funzioni principali. Il primo consiste nell'associare un oggetto esistente **Recordset** con un nuovo elemento padre **Recordset**.  
+ Il rishaping ha due funzioni principali. Il primo consiste nell'associare un **Recordset** esistente a un nuovo **Recordset**padre.  
   
 ## <a name="example"></a>Esempio  
   
@@ -36,10 +36,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- La seconda funzione viene per abilitare l'accesso non faceva parte di un elemento figlio esistente **Recordset** oggetti, usando la sintassi "forma \<recordset proprietà dinamica reshape name >".  
+ La seconda funzione consiste nell'abilitare l'accesso non basato su un capitolo agli oggetti **Recordset** figlio esistenti, utilizzando la sintassi \<"Shape recordset reformate Name>".  
   
 > [!NOTE]
->  Non è possibile aggiungere colonne a un oggetto esistente **Recordset**, modificare la forma un con parametri **Recordset** o nella **Recordset** gli oggetti in una clausola COMPUTE interessata oppure eseguire operazioni su una qualsiasi di aggregazione **Recordset** discendente dalle **Recordset** quest'ultimo. Il **Recordset** quest'ultimo e la nuova forma comando devono usare lo stesso [connessione](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Non è possibile aggiungere colonne a un **Recordset**esistente, modificare la forma di un **Recordset** con parametri o degli oggetti **Recordset** in qualsiasi clausola COMPUTE corrispondente oppure eseguire operazioni di aggregazione su qualsiasi discendente del **Recordset** dal **Recordset** da rimodellare. Il **Recordset** da modificare e il nuovo comando Shape devono entrambi usare la stessa [connessione](../../../ado/reference/ado-api/connection-object-ado.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)

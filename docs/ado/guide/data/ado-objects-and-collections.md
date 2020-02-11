@@ -1,5 +1,5 @@
 ---
-title: Raccolte e gli oggetti ADO | Microsoft Docs
+title: Oggetti e raccolte ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,30 +13,30 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926048"
 ---
 # <a name="ado-objects-and-collections"></a>Oggetti e raccolte di ADO
-ADO è costituito da quattro raccolte e gli oggetti seguenti nove.  
+ADO è costituito dai nove oggetti seguenti e da quattro raccolte.  
   
-|Oggetto o una raccolta|Descrizione|  
+|Oggetto o raccolta|Descrizione|  
 |--------------------------|-----------------|  
-|**Connessione** oggetto|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, potrebbe essere equivalente a una connessione di rete effettivo al server. A seconda delle funzionalità supportate dal provider, alcune raccolte, metodi o proprietà di un **connessione** oggetto potrebbe non essere disponibile.|  
-|**Command**|Utilizzato per definire un comando specifico, ad esempio una query SQL, deve essere eseguita su un'origine dati.|  
-|**Recordset** oggetto|Rappresenta l'intero set di record da una tabella di base o i risultati di un comando eseguito. Tutti i **Recordset** gli oggetti sono costituiti da record (righe) e campi (colonne).|  
-|**Record** oggetto|Rappresenta una singola riga di dati, da un **Recordset** o dal provider. Questo record potrebbe rappresentare un record di database o un altro tipo di oggetto, ad esempio un file o directory, a seconda del provider.|  
-|**Stream** oggetto|Rappresenta un flusso di dati binari o testo. Ad esempio, un documento XML può essere caricato in un flusso di input o restituito da alcuni provider come i risultati di una query di comando. Oggetto **Stream** oggetto può essere utilizzato per modificare i campi o record che contengono questi flussi di dati.|  
-|**Parametro** oggetto|Rappresenta un parametro o un argomento associato a un **comando** oggetto, in base a una stored procedure o query con parametri.|  
-|**Campo** oggetto|Rappresenta una colonna di dati con un tipo di dati comune. Ciascuna **campo** corrisponde a una colonna in oggetto il **Recordset**.|  
-|**Proprietà** oggetto|Rappresenta una caratteristica di un oggetto ADO che viene definito dal provider. Gli oggetti ADO presentano due tipi di proprietà: predefinito e dinamico. Tali proprietà predefinite sono implementati in ADO e immediatamente disponibili per qualsiasi nuovo oggetto. Il **proprietà** oggetto è un contenitore per le proprietà dinamiche, definito dal provider sottostante.|  
-|**Error**|Contiene informazioni dettagliate sugli errori di accesso dati che si riferiscono a una singola operazione che interessa il provider.|  
-|**Campi** raccolta|Contiene tutti i **campo** gli oggetti di un **Recordset** oppure **Record** oggetto.|  
-|**Proprietà** raccolta|Contiene tutti i **proprietà** gli oggetti per un'istanza specifica di un oggetto.|  
-|**Parametri** raccolta|Contiene tutti i **parametri** gli oggetti di un **comando** oggetto.|  
-|**Errori** raccolta|Contiene tutti i **errore** gli oggetti creati in risposta a un singolo errore relativi al provider.|  
+|Oggetto **Connection**|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, può essere equivalente a una connessione di rete effettiva al server. A seconda della funzionalità supportata dal provider, alcune raccolte, metodi o proprietà di un oggetto **connessione** potrebbero non essere disponibili.|  
+|Oggetto **Command**|Utilizzato per definire un comando specifico, ad esempio una query SQL, progettato per l'esecuzione su un'origine dati.|  
+|Oggetto **Recordset**|Rappresenta l'intero set di record di una tabella di base o i risultati di un comando eseguito. Tutti gli oggetti **Recordset** sono costituiti da record (righe) e campi (colonne).|  
+|Oggetto **record**|Rappresenta una singola riga di dati, da un **Recordset** o dal provider. Questo record potrebbe rappresentare un record di database o un altro tipo di oggetto, ad esempio un file o una directory, a seconda del provider.|  
+|Oggetto **Stream**|Rappresenta un flusso di dati binari o di testo. Un documento XML, ad esempio, può essere caricato in un flusso per l'input del comando o restituito da determinati provider come risultato di una query. Un oggetto **flusso** può essere usato per modificare campi o record contenenti questi flussi di dati.|  
+|**Parameter** (oggetto)|Rappresenta un parametro o un argomento associato a un oggetto **Command** , in base a una query con parametri o a una stored procedure.|  
+|**Field** (oggetto)|Rappresenta una colonna di dati con un tipo di dati comune. Ogni oggetto **campo** corrisponde a una colonna nel **Recordset**.|  
+|Oggetto **Property**|Rappresenta una caratteristica di un oggetto ADO definito dal provider. Gli oggetti ADO hanno due tipi di proprietà: incorporata e dinamica. Le proprietà predefinite sono quelle implementate in ADO e immediatamente disponibili per un nuovo oggetto. L'oggetto **Property** è un contenitore per le proprietà dinamiche, definito dal provider sottostante.|  
+|**Error** (oggetto)|Contiene informazioni dettagliate sugli errori di accesso ai dati relativi a una singola operazione che interessa il provider.|  
+|Raccolta **Fields**|Contiene tutti gli oggetti **campo** di un **Recordset** o di un oggetto **record** .|  
+|Raccolta **Properties**|Contiene tutti gli oggetti **Property** per un'istanza specifica di un oggetto.|  
+|Raccolta **Parameters**|Contiene tutti gli oggetti **Parameter** di un oggetto **Command** .|  
+|Raccolta di **errori**|Contiene tutti gli oggetti **Error** creati in risposta a un singolo errore correlato al provider.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)

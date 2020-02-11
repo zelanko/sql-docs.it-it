@@ -18,18 +18,18 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085281"
 ---
-# <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
+# <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza le informazioni per uno o più proxy.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,58 +43,58 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] id` Il numero di identificazione per elencare le informazioni per il proxy. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_id = ] id`Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_name = ] 'proxy_name'`Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema per elenco di proxy. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Quando *subsystem_name* omette *nome* deve essere specificato anche.  
+`[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema per cui elencare i proxy. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *subsystem_name* , è necessario specificare anche il *nome* .  
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
 |Snapshot|Agente snapshot repliche|  
 |LogReader|Agente lettura log repliche|  
-|Distribuzione|Agente distribuzione repliche|  
-|Merge|Agente merge repliche|  
+|Distribuzione|agente di distribuzione di replica|  
+|Unione|Agente merge repliche|  
 |QueueReader|Agente di lettura coda repliche|  
 |ANALYSISQUERY|Comando di Analysis Services|  
 |ANALYSISCOMMAND|Query di Analysis Services|  
-|Dts|Esecuzione pacchetti SSIS|  
-|PowerShell|Script di PowerShell|  
+|Dts|Esecuzione di pacchetti SSIS|  
+|PowerShell|Script PowerShell|  
   
-`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per l'elenco dei proxy. Il nome è **nvarchar(256)** , con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
+`[ @name = ] 'name'`Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per cui elencare i proxy. Il nome è di **tipo nvarchar (256)** e il valore predefinito è null. Quando si specifica *Name* , è necessario specificare anche *subsystem_name* .  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
-|**name**|**sysname**|Nome del proxy.|  
+|**nome**|**sysname**|Nome del proxy.|  
 |**credential_identity**|**sysname**|Nome utente e del dominio Microsoft Windows per le credenziali associate al proxy.|  
-|**enabled**|**tinyint**|Indica se il proxy è attivato. { **0** = non abilitata, **1** = attivato}|  
-|**description**|**nvarchar(1024)**|Descrizione del proxy.|  
+|**abilitato**|**tinyint**|Indica se il proxy è attivato. { **0** = non abilitato, **1** = abilitato}|  
+|**Descrizione**|**nvarchar(1024)**|Descrizione del proxy.|  
 |**user_sid**|**varbinary(85)**|ID di sicurezza (SID) di Windows dell'utente di Windows per questo proxy.|  
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   
-## <a name="remarks"></a>Note  
- Quando viene specificato alcun parametro, **sp_help_proxy** Elenca le informazioni per tutti i proxy nell'istanza.  
+## <a name="remarks"></a>Osservazioni  
+ Se non vengono specificati parametri, **sp_help_proxy** elenca le informazioni per tutti i proxy nell'istanza di.  
   
- Per determinare quali proxy un account di accesso è possibile usare per un determinato sottosistema, specificare *name* e *subsystem_name*. Quando vengono specificati questi argomenti, **sp_help_proxy** proxy che l'account di accesso specificata possono accedere e che possono essere utilizzati per il sottosistema specificato.  
+ Per determinare quali proxy possono essere utilizzati da un account di accesso per un determinato sottosistema, specificare *Name* e *subsystem_name*. Quando vengono forniti questi argomenti, **sp_help_proxy** elenca i proxy a cui l'account di accesso specificato può accedere e che possono essere utilizzati per il sottosistema specificato.  
   
-## <a name="permissions"></a>Permissions  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
+## <a name="permissions"></a>Autorizzazioni  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono appartenere al ruolo predefinito del database **SQLAgentOperatorRole** nel database **msdb** .  
   
- Per informazioni dettagliate sui **SQLAgentOperatorRole**, vedere [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
 > [!NOTE]  
->  Il **credential_identity** e **user_sid** le colonne vengono restituite solo nel set di risultati quando i membri del **sysadmin** eseguire questa stored procedure.  
+>  Le colonne **credential_identity** e **user_sid** vengono restituite nel set di risultati solo quando i membri di **sysadmin** eseguono questa stored procedure.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -122,8 +122,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

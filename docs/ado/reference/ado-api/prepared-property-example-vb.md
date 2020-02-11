@@ -1,5 +1,5 @@
 ---
-title: Preparazione di esempio di proprietà (VB) | Microsoft Docs
+title: Esempio di proprietà preparata (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931592"
 ---
 # <a name="prepared-property-example-vb"></a>Esempio della proprietà Prepared (VB)
-Questo esempio viene illustrato il [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) proprietà aprendo due [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti - una preparazione e l'altra non preparato.  
+In questo esempio viene illustrata la proprietà [preparata](../../../ado/reference/ado-api/prepared-property-ado.md) aprendo due oggetti [comando](../../../ado/reference/ado-api/command-object-ado.md) , uno preparato e uno non preparato.  
   
 ```  
 'BeginPreparedVB  
@@ -116,4 +116,4 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Esempio di proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

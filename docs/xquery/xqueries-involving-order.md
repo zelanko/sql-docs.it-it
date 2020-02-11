@@ -1,5 +1,5 @@
 ---
-title: Query XQuery che implicano ordine | Microsoft Docs
+title: Query XQuery che coinvolgono l'ordine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946117"
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire query sui documenti XML e recuperare il primo \<cliente > elemento. In questo modo si otterrà lo stesso cliente.  
+  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire una query su un documento XML e \<recuperare il primo elemento Customer>. In questo modo si otterrà lo stesso cliente.  
   
  In questo argomento vengono illustrate le query basate sulla sequenza di visualizzazione dei nodi nel documento.  
   
@@ -59,15 +59,15 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Le espressioni tra parentesi graffe vengono sostituite dal risultato della relativa valutazione. Per altre informazioni, vedere [costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
+-   Le espressioni tra parentesi graffe vengono sostituite dal risultato della relativa valutazione. Per ulteriori informazioni, vedere la pagina relativa alla [costruzione XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
 -   **@\*** Recupera tutti gli attributi del secondo centro di lavorazione.  
   
--   L'iterazione di FLWOR (per... RETURN) recupera tutti i <`step`> gli elementi figlio del secondo centro di lavorazione.  
+-   Iterazione FLWOR (per... RETURN) recupera tutti i <`step`> elementi figlio del secondo centro di lavorazione.  
   
--   Il [funzione SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) include il valore relazionale nel XML che viene costruito.  
+-   La [funzione SQL: Column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) include il valore relazionale nell'XML che viene costruito.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -81,7 +81,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La query precedente recupera unicamente i nodi di testo. Se si desidera che l'intera <`step`> elemento restituito al contrario, rimuovere il **String ()** funzione della query:  
+ La query precedente recupera unicamente i nodi di testo. Se invece si desidera che venga `step` restituita l'intera <elemento>, rimuovere la funzione **String ()** dalla query:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Ricerca di tutti i materiali e gli strumenti utilizzati nel secondo centro di lavorazione per la produzione di un prodotto  
  La query seguente recupera gli strumenti e i materiali utilizzati per un modello di prodotto specifico nel secondo centro di lavorazione della sequenza di centri coinvolta nel processo di produzione.  
@@ -115,11 +115,11 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   La query costruisce il < Loca`tion`> elemento e recupera valori dei relativi attributi dal database.  
+-   La query crea l'elemento <loca`tion`> e recupera i relativi valori di attributo dal database.  
   
 -   La query utilizza due iterazioni di FLWOR (for...return), una per recuperare gli strumenti e l'altra per recuperare i materiali utilizzati.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -137,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recupero delle descrizioni delle prime due caratteristiche di un prodotto dal catalogo dei prodotti  
- Per un modello di prodotto specifico, la query recupera i primi due descrizioni di caratteristiche dal <`Features`> elemento del catalogo del modello di prodotto.  
+ Per un modello di prodotto specifico, la query recupera le prime due descrizioni delle funzioni dall' `Features` elemento <> nel catalogo del modello del prodotto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,11 +157,11 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
- Il corpo della query costruisce codice XML che include il <`ProductModel`> elemento che ha gli attributi ProductModelID e ProductModelName.  
+ Il corpo della query costruisce il codice XML che `ProductModel` include l'elemento <> con gli attributi ProductModelID e ProductModelName.  
   
--   La query utilizza un ciclo FOR... È impostata su RETURN per recuperare le descrizioni di funzionalità del modello di prodotto. Il **Position** funzione viene utilizzata per recuperare le prime due caratteristiche.  
+-   La query usa un per... Restituisce un ciclo per recuperare le descrizioni delle caratteristiche del modello di prodotto. La funzione **Position ()** viene utilizzata per recuperare le prime due funzionalità.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -181,7 +181,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Ricerca dei primi due strumenti utilizzati nel primo centro di lavorazione coinvolto nel processo di produzione del prodotto  
- La query seguente restituisce i primi due strumenti utilizzati per un modello di prodotto nel primo centro di lavorazione della sequenza di centri coinvolti nel processo di produzione. La query viene eseguita sulle istruzioni di produzione archiviati nel **istruzioni** della colonna della **Production. ProductModel** tabella.  
+ La query seguente restituisce i primi due strumenti utilizzati per un modello di prodotto nel primo centro di lavorazione della sequenza di centri coinvolti nel processo di produzione. La query viene specificata in base alle istruzioni di produzione archiviate nella colonna **instructions** della tabella **Production. ProductModel** .  
   
 ```sql
 SELECT Instructions.query('  
@@ -204,7 +204,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Ricerca delle ultime due fasi di produzione nel primo centro di lavorazione coinvolto nella produzione di un prodotto specifico  
- La query Usa la **Last** funzione per recuperare le ultime due fasi di produzione.  
+ La query usa la funzione **Last ()** per recuperare le ultime due fasi di produzione.  
   
 ```sql
 SELECT Instructions.query('   
@@ -234,7 +234,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```xml
 <LastTwoManuSteps>  
@@ -248,6 +248,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

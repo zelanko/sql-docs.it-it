@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797935"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>Conversione di URN in percorsi di provider di SQL Server
@@ -40,6 +40,6 @@ Get-Help Convert-UrnToPath -Examples
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)   
- [Provider PowerShell per SQL Server](../powershell/sql-server-powershell-provider.md)   
+ [Espressioni di query e nomi di risorse uniformi](../powershell/query-expressions-and-uniform-resource-names.md)   
+ [Provider di SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

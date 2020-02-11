@@ -1,5 +1,5 @@
 ---
-title: DLL di conversione | Microsoft Docs
+title: Dll di traduzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086036"
 ---
 # <a name="translation-dlls"></a>DDL di traslazione
-L'applicazione e l'origine dati spesso archiviano i dati in set di caratteri diversi. ODBC fornisce un meccanismo generico che consente al driver di convertire i dati da un set di caratteri da un altro. È costituito da una DLL che implementa le funzioni di conversione **SQLDriverToDataSource** e **SQLDataSourceToDriver**, che vengono chiamati dal driver per convertire tutti i dati trasmessi tra l'origine dati e il driver. Questa DLL può essere scritto dallo sviluppatore dell'applicazione, lo sviluppatore, driver o di terze parti.  
+L'applicazione e l'origine dati spesso archiviano i dati in set di caratteri diversi. ODBC fornisce un meccanismo generico che consente al driver di tradurre i dati da un set di caratteri a un altro. È costituito da una DLL che implementa le funzioni di conversione **SQLDriverToDataSource** e **SQLDataSourceToDriver**, che vengono chiamate dal driver per tradurre tutti i flussi di dati tra l'origine dati e il driver. Questa DLL può essere scritta dallo sviluppatore di applicazioni, dallo sviluppatore del driver o da terze parti.  
   
- La DLL di conversione per una determinata origine dati può essere specificato nelle informazioni di sistema per l'origine dati; per altre informazioni, vedere [sottochiavi di specifica origine dati](../../../odbc/reference/install/data-source-specification-subkeys.md). È possibile impostarla anche in fase di esecuzione con gli attributi di connessione SQL_ATTR_TRANSLATE_DLL e SQL_ATTR_TRANSLATE_OPTION.  
+ È possibile specificare la DLL di traduzione per una determinata origine dati nelle informazioni di sistema per l'origine dati. per altre informazioni, vedere [sottochiavi di specifica dell'origine dati](../../../odbc/reference/install/data-source-specification-subkeys.md). Può anche essere impostata in fase di esecuzione con gli attributi di connessione SQL_ATTR_TRANSLATE_DLL e SQL_ATTR_TRANSLATE_OPTION.  
   
- L'opzione di conversione è un valore che può essere interpretato solo da una DLL di conversione specifico. Ad esempio, se la traduzione DLL esegue la conversione tra tabelle codici diverse, l'opzione possibile assegnare i numeri delle tabelle codici utilizzate dall'applicazione e l'origine dati. Non è necessario per una DLL di conversione per usare un'opzione di conversione.  
+ L'opzione Translation è un valore che può essere interpretato solo da una particolare DLL di traduzione. Se, ad esempio, la DLL di traduzione si traduce tra tabelle codici diverse, l'opzione potrebbe fornire il numero delle tabelle codici utilizzate dall'applicazione e dall'origine dati. Non è necessario che una DLL di conversione usi un'opzione di conversione.  
   
- Dopo la conversione che DLL è stata specificata, il driver lo carica e lo chiama per convertire tutti i dati trasmessi tra l'applicazione e l'origine dati. Questo include tutte le istruzioni SQL e i parametri di tipo carattere inviati all'origine dati e tutti i risultati di carattere, i metadati di carattere, ad esempio nomi di colonna e i messaggi di errore recuperati dall'origine dati. Dati di connessione non viene convertiti, poiché la DLL di conversione non viene caricata fino a dopo che l'applicazione è connesso all'origine dati.
+ Dopo aver specificato una DLL di traduzione, il driver la carica e la chiama per tradurre tutti i flussi di dati tra l'applicazione e l'origine dati. Sono incluse tutte le istruzioni SQL e i parametri di tipo carattere inviati all'origine dati e tutti i risultati dei caratteri, come i nomi di colonna e i messaggi di errore recuperati dall'origine dati. I dati di connessione non vengono tradotti, perché la DLL di traduzione non viene caricata finché l'applicazione non si connette all'origine dati.

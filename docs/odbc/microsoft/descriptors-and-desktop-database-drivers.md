@@ -1,5 +1,5 @@
 ---
-title: Descrittori e Desktop driver di Database | Microsoft Docs
+title: Descrittori e driver di database desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68112053"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descrittori e driver di database desktop
-Un descrittore è una struttura di dati che contiene informazioni sui dati delle colonne o parametri dinamici. **SQLGetDescField** può essere utilizzato per recuperare i descrittori supportati elencati di seguito. I descrittori di parametri di implementazione (IPD) non vengono popolate automaticamente in quanto **SQLDescribeParam** non è supportato. I campi di descrizione che non sono disponibili tramite Jet (ad esempio SQL_DESC_BASE_TABLE_NAME) non sono inoltre supportati.  
+Un descrittore è una struttura di dati che include informazioni sui parametri dinamici o sui dati della colonna. **SQLGetDescField** può essere usato per recuperare i descrittori supportati elencati di seguito. I descrittori di parametri di implementazione (dpi) non vengono popolati automaticamente perché **SQLDescribeParam** non è supportato. Non sono inoltre supportati i campi di descrizione che non sono disponibili tramite Jet, ad esempio SQL_DESC_BASE_TABLE_NAME.  
   
- Per altre informazioni sui campi di descrizione Jet supportati, vedere la *Guida per programmatori di Microsoft Jet Database Engine*.  
+ Per ulteriori informazioni sui campi di descrizione supportati da Jet, vedere *Microsoft jet motore di database Programmer ' s Guide*.  
   
- Per altre informazioni sui descrittori, vedere gli argomenti in "Descrittori" nel *riferimento per programmatori ODBC*.  
+ Per ulteriori informazioni sui descrittori, vedere gli argomenti in "descrittori" in *ODBC Programmer ' s Reference*.  
   
-|Campi di descrizione|Livello di supporto|  
+|Campi del descrittore|Livello di supporto|  
 |-----------------------|-------------------|  
 |SQL_DESC_ALLOC_TYPE|Supportato|  
 |SQL_DESC_ARRAY_SIZE|Supportato solo per ARD|  
@@ -48,19 +48,19 @@ Un descrittore è una struttura di dati che contiene informazioni sui dati delle
 |SQL_DESC_DATETIME_INTERVAL_CODE|Supportato|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|Supportato per i tipi di intervallo C|  
 |SQL_DESC_DISPLAY_SIZE|Supportato|  
-|SQL_DESC_FIXED_PREC_SCALE|Supportato (TRUE per denaro)|  
+|SQL_DESC_FIXED_PREC_SCALE|Supportato (TRUE per Money)|  
 |SQL_DESC_INDICATOR_PTR|Supportato|  
 |SQL_DESC_LABEL|Supportato|  
 |SQL_DESC_LENGTH|Supportato|  
 |SQL_DESC_LITERAL_PREFIX|Supportato|  
 |SQL_DESC_LITERAL_SUFFIX|Supportato|  
-|SQL_DESC_LOCAL_TYPE_NAME|(Restituisce una stringa vuota) non è supportato|  
+|SQL_DESC_LOCAL_TYPE_NAME|Non supportato (restituisce una stringa vuota)|  
 |SQL_DESC_NAME|Supportato|  
-|SQL_DESC_NULLABLE|Supportato<br /><br /> **Nota** non è supportato nelle versioni precedenti di Jet 4.0|  
+|SQL_DESC_NULLABLE|Supportato<br /><br /> **Nota** Non supportato nelle versioni precedenti a Jet 4,0|  
 |SQL_DESC_NUM_PREC_RADIX|Supportato|  
 |SQL_DESC_OCTET_LENGTH|Supportato|  
 |SQL_DESC_OCTET_LENGTH_PTR|Supportato|  
-|SQL_DESC_PARAMETER_TYPE|Solo i parametri di input|  
+|SQL_DESC_PARAMETER_TYPE|Solo parametri di input|  
 |SQL_DESC_PRECISION|Supportato|  
 |SQL_DESC_SCALE|Supportato|  
 |SQL_DESC_SCHEMA_NAME|Non supportate|  

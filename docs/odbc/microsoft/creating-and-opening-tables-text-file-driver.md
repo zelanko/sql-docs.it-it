@@ -1,5 +1,5 @@
 ---
-title: Creazione e apertura di tabelle (Driver File di testo) | Microsoft Docs
+title: Creazione e apertura di tabelle (driver file di testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096538"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>Creazione e apertura di tabelle (driver file di testo)
-Quando viene usato il driver di testo, viene creata una nuova tabella utilizzando il formato specificato in Odbcinst. ini. Se non specificato, vengono create tabelle in formato CSVDELIMITED. Per impostazione predefinita, le colonne FLOAT per impostazione predefinita 22 caratteri e colonne di tipo INTEGER predefiniti a 11 caratteri. Le colonne data usano il formato AAAA-MM-GG. CHAR e le colonne LONGCHAR sono la larghezza specificata nell'istruzione CREATE.
+Quando si utilizza il driver di testo, viene creata una nuova tabella utilizzando il formato specificato in Odbcinst. ini. Se non specificato, le tabelle vengono create nel formato CSVDELIMITED. Per impostazione predefinita, le colonne di tipo INTEGER sono impostate su un valore predefinito di 11 caratteri e le colonne FLOAT vengono impostate su 22 Le colonne della data usano il formato AAAA-MM-GG. Le colonne CHAR e LONGCHAR sono la larghezza specificata nell'istruzione CREATE.

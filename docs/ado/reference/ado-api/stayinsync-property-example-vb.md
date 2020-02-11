@@ -15,16 +15,16 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930811"
 ---
 # <a name="stayinsync-property-example-vb"></a>Esempio della proprietà StayInSync (VB)
-Questo esempio viene illustrato come la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà semplifica l'accesso alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+In questo esempio viene illustrato il modo in cui la proprietà [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita l'accesso alle righe in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gerarchico.  
   
- Il ciclo esterno viene visualizzato il nome e cognome, stato e identificazione ogni autore. L'oggetto aggiunto **Recordset** per ogni riga viene recuperato dalle [campi](../../../ado/reference/ado-api/fields-collection-ado.md) insieme e assegnata automaticamente agli **rstTitleAuthor** dal **StayInSync**  proprietà ogni volta che l'elemento padre **Recordset** passa a una nuova riga. Il ciclo interno vengono visualizzati quattro campi di ogni riga nel set di record accodato.  
+ Il ciclo esterno Visualizza il nome, lo stato e l'identificazione di ogni autore. Il **Recordset** aggiunto per ogni riga viene recuperato dalla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) e assegnato automaticamente a **rstTitleAuthor** dalla proprietà **StayInSync** ogni volta che il **Recordset** padre si sposta in una nuova riga. Il ciclo interno Visualizza quattro campi da ogni riga del Recordset accodato.  
   
 ```  
 'BeginStayInSyncVB  
@@ -91,5 +91,5 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

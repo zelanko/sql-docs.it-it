@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251273"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72251273"
 
   Richiama l'attività di scaricamento dati per spostare tutte le righe di cui è stato eseguito il commit dalla tabella di staging in memoria alla tabella di cronologia basata su disco.  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,10 +47,10 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  *\@object_name*  
  Nome della tabella corrente o temporale  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o > 0 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (esito positivo) o >0 (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  

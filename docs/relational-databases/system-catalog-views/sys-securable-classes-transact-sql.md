@@ -1,5 +1,5 @@
 ---
-title: Sys.securable_classes (Transact-SQL) | Microsoft Docs
+title: sys. securable_classes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135279"
 ---
-# <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
+# <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce un elenco di classi a protezione diretta.  
@@ -35,10 +35,10 @@ ms.locfileid: "68135279"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|Nome della classe.|  
-|**class**|**int**|Designazione numerica della classe.|  
+|**classe**|**int**|Designazione numerica della classe.|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le classi di entità a protezione diretta supportate da questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

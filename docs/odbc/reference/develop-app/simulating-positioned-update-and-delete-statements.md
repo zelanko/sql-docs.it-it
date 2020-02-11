@@ -1,5 +1,5 @@
 ---
-title: Simulazione di posizionato istruzioni Update e Delete | Microsoft Docs
+title: Simulazione di istruzioni Update e Delete posizionate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,78 +17,78 @@ ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107528"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulazione di istruzioni di eliminazione e aggiornamento posizionato
-Se l'origine dati non supporta aggiornamento posizionato, quindi eliminare le istruzioni, il driver consente di simulare questi. Ad esempio, la libreria di cursori ODBC Simula aggiornamento posizionato ed eliminare le istruzioni. La strategia generale per la simulazione di istruzioni di eliminazione e aggiornamento posizionato consiste nel convertire le istruzioni posizionate quelle ricercata. Questa operazione viene eseguita sostituendo il **WHERE CURRENT OF** clausola con un ricercata **in cui** clausola che identifica la riga corrente.  
+Se l'origine dati non supporta le istruzioni Update e Delete posizionate, il driver può simulare tali istruzioni. La libreria di cursori ODBC, ad esempio, simula le istruzioni Update e Delete posizionate. La strategia generale per simulare le istruzioni Update e Delete posizionate consiste nel convertire le istruzioni posizionate in una ricerca. Questa operazione viene eseguita sostituendo la clausola **where current of** con una clausola **where** cercata che identifica la riga corrente.  
   
- Ad esempio, perché la colonna CustID identifica in modo univoco ogni riga nella tabella Customers, riga posizionata delete-istruzione  
+ Ad esempio, poiché la colonna CustID identifica in modo univoco ogni riga nella tabella Customers, l'istruzione DELETE posizionata  
   
 ```  
 DELETE FROM Customers WHERE CURRENT OF CustCursor  
 ```  
   
- potrebbero essere convertiti in  
+ potrebbe essere convertito in  
   
 ```  
 DELETE FROM Customers WHERE (CustID = ?)  
 ```  
   
- Il driver è possibile utilizzare uno dei seguenti *identificatori di riga* nel **in cui** clausola:  
+ Il driver può utilizzare uno dei seguenti *identificatori di riga* nella clausola **where** :  
   
--   Colonne i cui valori vengono utilizzati per identificare in modo univoco ogni riga della tabella. Ad esempio, chiamando **SQLSpecialColumns** con SQL_BEST_ROWID restituisce la colonna ottima o set di colonne che hanno questo scopo.  
+-   Colonne i cui valori servono per identificare in modo univoco ogni riga della tabella. Ad esempio, la chiamata di **SQLSpecialColumns** con SQL_BEST_ROWID restituisce la colonna o il set di colonne ottimale che soddisfano questo scopo.  
   
--   Pseudocolonne, forniti da alcune origini dati, allo scopo di identificazione univoca per ogni riga. Questi possono anche essere recuperati chiamando **SQLSpecialColumns**.  
+-   Pseudo-colonne, fornite da alcune origini dati, allo scopo di identificare in modo univoco ogni riga. Questi possono anche essere recuperabili chiamando **SQLSpecialColumns**.  
   
--   Un indice univoco, se disponibile.  
+-   Indice univoco, se disponibile.  
   
--   Tutte le colonne nel set di risultati.  
+-   Tutte le colonne del set di risultati.  
   
- Esattamente le colonne che debba usare un driver nel **in cui** clausola costruisce dipende dal driver. In alcuni dati di origini, che determina un identificatore di riga possono essere costose. Tuttavia, è più veloce per l'esecuzione e garantisce che un'istruzione simulata aggiorna o Elimina al massimo una riga. A seconda delle funzionalità del sistema DBMS sottostante, utilizzando un identificatore di riga può essere costoso da configurare. Tuttavia, è più veloce per l'esecuzione e garantisce che un'istruzione simulata aggiornerà o eliminerà solo una riga. La possibilità di usare tutte le colonne nel set di risultati è in genere molto più semplice da configurare. Tuttavia, risulta più lento per l'esecuzione e, se le colonne non identificare in modo univoco una riga, è possibile che nelle righe da aggiornare o eliminare accidentalmente, soprattutto se l'elenco di selezione per il risultato impostato non contiene tutte le colonne esistenti nella tabella sottostante.  
+ Esattamente le colonne che un driver deve utilizzare nella clausola **where** che costruisce dipende dal driver. In alcune origini dati, la determinazione di un identificatore di riga può essere costosa. Tuttavia, è più veloce da eseguire e garantisce che un'istruzione simulata aggiorni o elimini al massimo una riga. A seconda delle funzionalità del sistema DBMS sottostante, l'utilizzo di un identificatore di riga può essere costoso da configurare. Tuttavia, l'esecuzione è più veloce e garantisce che un'istruzione simulata aggiornerà o eliminerà una sola riga. L'opzione di utilizzo di tutte le colonne nel set di risultati è in genere molto più semplice da configurare. Tuttavia, è più lento eseguire e, se le colonne non identificano in modo univoco una riga, può comportare l'aggiornamento o l'eliminazione accidentale di righe, in particolare quando l'elenco di selezione per il set di risultati non contiene tutte le colonne presenti nella tabella sottostante.  
   
- A seconda che delle strategie elencate il driver supporta, un'applicazione può scegliere la strategia vuole che il driver da usare con l'attributo di istruzione SQL_ATTR_SIMULATE_CURSOR. Anche se potrebbe sembrare strano che un'applicazione a rischiare inavvertitamente l'aggiornamento o eliminazione di una riga, l'applicazione è possibile rimuovere questo rischio, garantendo che le colonne nel set di risultati identificano in modo univoco ogni riga nel set di risultati. In questo modo il driver lo sforzo di dover eseguire questa operazione.  
+ A seconda delle strategie precedenti supportate dal driver, un'applicazione può scegliere la strategia da usare con l'attributo dell'istruzione SQL_ATTR_SIMULATE_CURSOR. Sebbene possa sembrare strano che un'applicazione rischi di aggiornare o eliminare accidentalmente una riga, l'applicazione può rimuovere questo rischio garantendo che le colonne del set di risultati identifichino in modo univoco ogni riga nel set di risultati. Questo consente di risparmiare sul driver il lavoro necessario per eseguire questa operazione.  
   
- Se il driver viene scelto di utilizzare un identificatore di riga, intercetta il **SELECT FOR UPDATE** istruzione che crea il set di risultati. Se le colonne nell'elenco di selezione non consentono di identificare in modo efficace una riga, il driver aggiunge le colonne necessarie alla fine dell'elenco di selezione. Alcune origini dati dispongono di una singola colonna che identifica sempre in modo univoco una riga, ad esempio la colonna ROWID in Oracle; Se tale colonna è disponibile, il driver lo utilizza. In caso contrario, il driver chiama **SQLSpecialColumns** per ogni tabella di **FROM** clausola per recuperare un elenco delle colonne che identificano in modo univoco ogni riga. Una restrizione comune che deriva da questa tecnica è che la simulazione cursore ha esito negativo se è presente più di una tabella nel **FROM** clausola.  
+ Se il driver sceglie di utilizzare un identificatore di riga, intercetta l'istruzione **Select for Update** che crea il set di risultati. Se le colonne nell'elenco di selezione non identificano in modo efficace una riga, il driver aggiunge le colonne necessarie alla fine dell'elenco di selezione. Alcune origini dati dispongono di una singola colonna che identifica sempre in modo univoco una riga, ad esempio la colonna ROWID in Oracle. Se tale colonna è disponibile, il driver lo utilizzerà. In caso contrario, il driver chiama **SQLSpecialColumns** per ogni tabella nella clausola **from** per recuperare un elenco delle colonne che identificano in modo univoco ogni riga. Una restrizione comune che deriva da questa tecnica è che la simulazione del cursore ha esito negativo se nella clausola **from** sono presenti più tabelle.  
   
- Indipendentemente dal modo in cui il driver identifica le righe, in genere WPAD il **FOR UPDATE OF** clausola disattivare il **SELECT FOR UPDATE** istruzione prima dell'invio all'origine dati. Il **FOR UPDATE OF** clausola viene utilizzata solo con aggiornamento posizionato ed eliminare le istruzioni. Origini dati che non supportano posizionato aggiornamento e istruzioni di eliminazione a livello generale non la supportano.  
+ Indipendentemente dal modo in cui il driver identifica le righe, viene in genere eliminata la clausola **for Update of** dall'istruzione **Select for Update** prima dell'invio all'origine dati. La clausola **for Update of** viene utilizzata solo con le istruzioni Update e Delete posizionate. Le origini dati che non supportano le istruzioni Update e Delete posizionate in genere non lo supportano.  
   
- Quando l'applicazione invia un'istruzione delete per l'esecuzione o aggiornamento posizionato, il driver sostituisce i **WHERE CURRENT OF** clausola con un **in cui** clausola che contiene l'identificatore di riga. I valori di queste colonne vengono recuperati da una cache gestita dal driver per ogni colonna viene utilizzata la **in cui** clausola. Dopo che il driver ha sostituito il **in cui** clausola, invia l'istruzione all'origine dati per l'esecuzione.  
+ Quando l'applicazione invia un'istruzione Update o DELETE posizionata per l'esecuzione, il driver sostituisce la clausola **where current of** con una clausola **where** contenente l'identificatore di riga. I valori di queste colonne vengono recuperati da una cache gestita dal driver per ogni colonna utilizzata nella clausola **where** . Dopo aver sostituito la clausola **where** , il driver invia l'istruzione all'origine dati per l'esecuzione.  
   
- Ad esempio, si supponga che l'applicazione invia l'istruzione seguente per creare un set di risultati:  
+ Si supponga, ad esempio, che l'applicazione invii l'istruzione seguente per creare un set di risultati:  
   
 ```  
 SELECT Name, Address, Phone FROM Customers FOR UPDATE OF Phone, Address  
 ```  
   
- Se l'applicazione ha impostato SQL_ATTR_SIMULATE_CURSOR per richiedere una garanzia di univocità e se l'origine dati non fornisce una pseudo colonna che identifica sempre in modo univoco una riga, il driver chiama **SQLSpecialColumns** per il Tabella Customers, individua che CustID è essenziale per la tabella Customers e lo aggiunge all'elenco di selezione e rimuove il **FOR UPDATE OF** clausola:  
+ Se l'applicazione ha impostato SQL_ATTR_SIMULATE_CURSOR per richiedere una garanzia di univocità e se l'origine dati non fornisce una pseudo-colonna che identifica sempre in modo univoco una riga, il driver chiama **SQLSpecialColumns** per la tabella Customers, individua che CustID è la chiave per la tabella Customers e la aggiunge all'elenco SELECT e rimuove la clausola **for Update of** :  
   
 ```  
 SELECT Name, Address, Phone, CustID FROM Customers  
 ```  
   
- Se l'applicazione non ha richiesto una garanzia di univocità, il driver rimuove solo il **FOR UPDATE OF** clausola:  
+ Se l'applicazione non ha richiesto una garanzia di univocità, il driver rimuove solo la clausola **for Update of** :  
   
 ```  
 SELECT Name, Address, Phone FROM Customers  
 ```  
   
- Si supponga che l'applicazione scorre il set di risultati e invia l'istruzione seguente per gli aggiornamenti posizionati per l'esecuzione, in cui Cust è il nome del cursore all'interno del set di risultati:  
+ Si supponga che l'applicazione scorra il set di risultati e invii la seguente istruzione di aggiornamento posizionata per l'esecuzione, dove Cust è il nome del cursore sul set di risultati:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE CURRENT OF Cust  
 ```  
   
- Se l'applicazione non ha richiesto una garanzia di univocità, il driver sostituisce i **in cui** clausola e associa il parametro CustID alla variabile nella propria cache:  
+ Se l'applicazione non ha richiesto una garanzia di univocità, il driver sostituisce la clausola **where** e associa il parametro CustID alla variabile nella cache:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)  
 ```  
   
- Se l'applicazione non ha richiesto una garanzia di univocità, il driver sostituisce i **in cui** clausola e associa i parametri nome, indirizzo e telefono in questa clausola per le variabili nella relativa cache:  
+ Se l'applicazione non ha richiesto una garanzia di univocità, il driver sostituisce la clausola **where** e associa il nome, l'indirizzo e i parametri del telefono in questa clausola alle variabili nella relativa cache:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ?  

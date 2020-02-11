@@ -18,21 +18,21 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117897"
 ---
-# <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
+# <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo utente al database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,36 +44,36 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'` È il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows.  
+`[ @loginame = ] 'login'`Nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o dell'account di accesso di Windows. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* deve essere un account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso o un account di accesso di Windows esistente.  
   
-`[ @name_in_db = ] 'user'` È il nome per il nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, per impostazione predefinita il nome del nuovo utente del database di *login* nome. Che specifica *utente* assegna a un nome al nuovo utente del database diverso dal nome dell'account di accesso a livello di server.  
+`[ @name_in_db = ] 'user'`Nome del nuovo utente del database. *User* è di **tipo sysname**e il valore predefinito è null. Se l' *utente* non è specificato, il nome del nuovo utente del database viene impostato sul nome dell' *account di accesso* . Se si specifica *User* , al nuovo utente viene assegnato un nome nel database diverso dal nome dell'account di accesso a livello di server.  
   
-`[ @grpname = ] 'role'` È il ruolo del database di cui il nuovo utente diventa membro. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
+`[ @grpname = ] 'role'`Ruolo del database di cui il nuovo utente diventa membro. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* deve essere un ruolo del database valido nel database corrente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_adduser** creerà inoltre uno schema con il nome dell'utente.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_adduser** creerà anche uno schema con il nome dell'utente.  
   
  Dopo avere aggiunto un utente, utilizzare le istruzioni GRANT, DENY e REVOKE per definire le autorizzazioni per controllare le attività che l'utente può svolgere.  
   
- Uso **Sys. server_principals** per visualizzare un elenco di nomi di account di accesso valido.  
+ Utilizzare **sys. server_principals** per visualizzare un elenco di nomi di account di accesso validi.  
   
- Uso **sp_helprole** per visualizzare un elenco di nomi di ruolo validi. Se si specifica un ruolo, l'utente ottiene automaticamente le autorizzazioni definite per tale ruolo. Se non viene specificato un ruolo, l'utente ha le autorizzazioni concesse per impostazione predefinita **pubblica** ruolo. Per aggiungere un utente a un ruolo, un valore per il *nome utente* devono essere specificati. (*nomeutente* può essere identico *login_id*.)  
+ Utilizzare **sp_helprole** per visualizzare un elenco dei nomi di ruolo validi. Se si specifica un ruolo, l'utente ottiene automaticamente le autorizzazioni definite per tale ruolo. Se non si specifica un ruolo, l'utente ottiene le autorizzazioni concesse al ruolo **public** predefinito. Per aggiungere un utente a un ruolo, è necessario specificare un valore per il *nome utente* . il*nome utente* può essere lo stesso *login_ID*.  
   
- Utente **guest** già esiste in ogni database. Aggiunta dell'utente **guest** abiliterà questo utente, se è stata precedentemente disabilitata. Per impostazione predefinita, utente **guest** è disabilitato nei nuovi database.  
+ Il **Guest** utente esiste già in ogni database. L'aggiunta dell'utente **Guest** consentirà l'abilitazione di questo utente, se in precedenza era disabilitato. Per impostazione predefinita, il **Guest** utente è disabilitato nei nuovi database.  
   
- **sp_adduser** non può essere eseguita all'interno di una transazione definita dall'utente.  
+ Impossibile eseguire **sp_adduser** all'interno di una transazione definita dall'utente.  
   
- Non è possibile aggiungere un **guest** utente perché un **guest** utente esiste già all'interno di ogni database. Per abilitare la **guest** utente, concedere **guest** dell'autorizzazione CONNECT come illustrato:  
+ Non è possibile aggiungere un utente **Guest** perché un utente **Guest** esiste già all'interno di ogni database. Per abilitare l'utente **Guest** , concedere l'autorizzazione Connect **Guest** come indicato di seguito:  
   
 ```  
 GRANT CONNECT TO guest;  
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario essere il proprietario del database.  
   
 ## <a name="examples"></a>Esempi  
@@ -86,27 +86,27 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Aggiunta di un utente del database con lo stesso ID di accesso  
- Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. L'utente a cui appartiene il valore predefinito **pubblica** ruolo.  
+ Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Arvind`. Questo utente appartiene al ruolo **pubblico** predefinito.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
 ### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. Aggiunta di un utente del database con un nome diverso dall'account di accesso a livello di server  
- Nell'esempio seguente l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `BjornR` viene aggiunto al database corrente che include il nome utente `Bjorn`, quindi l'utente del database `Bjorn` viene aggiunto al ruolo del database `Production`.  
+ Nell'esempio seguente l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`BjornR` viene aggiunto al database corrente che include il nome utente `Bjorn`, quindi l'utente del database `Bjorn` viene aggiunto al ruolo del database `Production`.  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_addrole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [CREAZIONE di un utente &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153963"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  
   
- È possibile usare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ È possibile utilizzare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
  Tramite l'origine viene convertito qualsiasi tipo di dati di cui non è stato eseguito il mapping a un tipo di dati specifico di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel tipo di dati DT_NTEXT di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La conversione viene eseguita anche se il tipo di dati è `System.Object`.  
@@ -58,7 +58,7 @@ ms.locfileid: "70153963"
  Per altre informazioni sul mapping di tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="ado-net-source-troubleshooting"></a>Risoluzione dei problemi relativi all'origine ADO NET  
- È possibile registrare le chiamate eseguite dall'origine ADO NET a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al caricamento di dati da origini esterne da parte dell'origine ADO NET. Per registrare le chiamate eseguite dall'origine ADO NET a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** al livello di pacchetto. Per altre informazioni, vedere [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ È possibile registrare le chiamate eseguite dall'origine ADO NET a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al caricamento di dati da origini esterne da parte dell'origine ADO NET. Per registrare le chiamate eseguite dall'origine ADO NET a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** al livello di pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="ado-net-source-configuration"></a>Configurazione dell'origine ADO NET  
  Per configurare l'origine ADO NET, è necessario specificare l'istruzione SQL che definisce il set di risultati. Un'origine ADO NET che si connette ad esempio al database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] e usa l'istruzione SQL `SELECT * FROM Production.Product` estrae tutte le righe della tabella **Production.Product** e fornisce il set di dati a un componente a valle.  
@@ -69,7 +69,7 @@ ms.locfileid: "70153963"
 > [!NOTE]  
 >  Se si utilizza un'istruzione SQL per eseguire una stored procedure e l'esecuzione del pacchetto ha esito negativo con l'errore seguente, è possibile risolvere il problema aggiungendo l'istruzione `SET FMTONLY OFF` prima dell'istruzione exec.  
 >   
->  **Impossibile trovare la colonna <nome_colonna> nell'origine dati.**  
+>  **Impossibile trovare la colonna <column_name> nell'origine dati.**  
   
  Nell'origine ADO NET viene usata una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in cui è specificato il provider .NET per connettersi a un'origine dati. Per altre informazioni, vedere [Gestione connessione ADO.NET](../connection-manager/ado-net-connection-manager.md).  
   

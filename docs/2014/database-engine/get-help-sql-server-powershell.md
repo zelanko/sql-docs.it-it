@@ -15,13 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797881"
 ---
-# <a name="get-help-sql-server-powershell"></a>Visualizzazione della Guida di SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Vi sono diverse fonti di informazione per l'utilizzo dei cmdlet e del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell. Tra queste è inclusa la Guida disponibile nell'ambiente di Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
@@ -42,14 +42,14 @@ ms.locfileid: "72797881"
   
  L'input *-Query* o *-QueryFromFile* può contenere:  
   
--   Variabili e comandi di**sqlcmd** . Per informazioni su variabili e comandi, vedere la sezione Osservazioni di [Utilità sqlcmd](../tools/sqlcmd-utility.md).  
+-   variabili e comandi di **SQLCMD** . Per informazioni su variabili e comandi, vedere la sezione Osservazioni di [Utilità sqlcmd](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] . Per altre informazioni sul linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference).  
+-   Istruzioni[!INCLUDE[tsql](../includes/tsql-md.md)] . Per altre informazioni sul linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)], vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference).  
   
 -   Istruzioni XQuery. Per altre informazioni sul linguaggio XQuery supportato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Ottenere la Guida per un cmdlet di SQL Server  
- **Per ottenere la Guida per un cmdlet**  
+ **Per ottenere la guida per un cmdlet**  
   
 -   Eseguire Get-Help specificando il nome del cmdlet e il livello della Guida da restituire.  
   
@@ -89,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>Ottenere la Guida sul provider SQL Server  
- **Per ottenere la Guida sul provider**  
+ **Per ottenere informazioni sul provider**  
   
 1.  Eseguire Get-Help specificando il nome SQLServer  
   
@@ -123,5 +123,5 @@ $MyVar | Get-Member -Type Properties
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Provider PowerShell per SQL Server](../powershell/sql-server-powershell-provider.md)   
+ [Provider di SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [Utilizzo di cmdlet del motore di database](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

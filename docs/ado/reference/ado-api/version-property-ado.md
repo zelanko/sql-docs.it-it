@@ -18,26 +18,26 @@ ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938731"
 ---
 # <a name="version-property-ado"></a>Proprietà Version (ADO)
 Indica il numero di versione ADO.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **stringa** valore che indica la versione.  
+ Restituisce un valore **stringa** che indica la versione.  
   
-## <a name="remarks"></a>Note  
- Usare la **versione** proprietà per restituire il numero di versione dell'implementazione di ADO.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **Version** per restituire il numero di versione dell'implementazione ADO.  
   
- La versione del provider saranno disponibile come proprietà dinamiche nel [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
+ La versione del provider sarà disponibile come proprietà dinamica nella raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
- [Esempio di proprietà Version (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
+ [Esempio della proprietà Version (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

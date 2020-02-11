@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536212"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73536212"
   Visualizza o modifica le impostazioni di configurazione globali per il server corrente.
 
 > [!NOTE]  
-> Per le opzioni di configurazione a livello di database, vedere [ALTER database &#40;scoped Configuration&#41;Transact-SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Per configurare Soft-NUMA, vedere [SQL Server&#41;Soft- &#40;NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+> Per le opzioni di configurazione a livello di database, vedere [ALTER database scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Per configurare Soft-NUMA, vedere [&#41;Soft-numa &#40;SQL Server ](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,16 +60,17 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @configname = ] 'option_name'` è il nome di un'opzione di configurazione. *option_name* è **varchar(35)** e il valore predefinito è NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] riconosce qualsiasi stringa univoca che faccia parte del nome della configurazione. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
+`[ @configname = ] 'option_name'`Nome di un'opzione di configurazione. *option_name* è di tipo **varchar (35)** e il valore predefinito è null. 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] riconosce qualsiasi stringa univoca che faccia parte del nome della configurazione. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
   
- Per informazioni sulle opzioni di configurazione disponibili e sulle relative impostazioni, vedere [Opzioni &#40;di configurazione&#41;del server SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Per informazioni sulle opzioni di configurazione disponibili e sulle relative impostazioni, vedere [Opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'` è la nuova impostazione di configurazione. *value* è **int**e il valore predefinito è NULL. Il valore massimo dipende dalla singola opzione.  
+`[ @configvalue = ] 'value'`Nuova impostazione di configurazione. *value* è di **tipo int**e il valore predefinito è null. Il valore massimo dipende dalla singola opzione.  
   
  Per visualizzare il valore massimo per ogni opzione, vedere la colonna **Maximum** della vista del catalogo **sys. Configurations** .  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Quando viene eseguito senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne e ordina le opzioni alfabeticamente in ordine crescente, come illustrato nella tabella seguente.  
@@ -78,11 +79,11 @@ RECONFIGURE
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
-|**minimum**|**int**|Valore minimo dell'opzione di configurazione.|  
-|**maximum**|**int**|Valore massimo dell'opzione di configurazione.|  
-|**config_value**|**int**|Valore in cui è stata impostata l'opzione di configurazione utilizzando **sp_configure** (valore in **sys. Configurations. value**). Per ulteriori informazioni su queste opzioni, vedere [Opzioni &#40;di configurazione del&#41; server SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [sys &#40;. Configurations Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Valore corrente dell'opzione di configurazione (valore in **sys. Configurations. value_in_use**).<br /><br /> Per ulteriori informazioni, vedere [sys. Configurations &#40;Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**nome**|**nvarchar (35)**|Nome dell'opzione di configurazione.|  
+|**minimo**|**int**|Valore minimo dell'opzione di configurazione.|  
+|**massimo**|**int**|Valore massimo dell'opzione di configurazione.|  
+|**config_value**|**int**|Valore in cui è stata impostata l'opzione di configurazione utilizzando **sp_configure** (valore in **sys. Configurations. value**). Per ulteriori informazioni su queste opzioni, vedere [Opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [sys. configurations &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Valore corrente dell'opzione di configurazione (valore in **sys. Configurations. value_in_use**).<br /><br /> Per ulteriori informazioni, vedere [sys. configurations &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare **sp_configure** per visualizzare o modificare le impostazioni a livello di server. Per modificare le impostazioni a livello di database, utilizzare ALTER DATABASE. Per modificare le impostazioni che interessano solo la sessione utente corrente, utilizzare l'istruzione SET.  
@@ -99,21 +100,21 @@ RECONFIGURE
 > [!CAUTION]  
 > Un valore non corretto può compromettere la configurazione dell'istanza del server. Utilizzare RECONFIGURE WITH OVERRIDE con cautela.  
   
- L'istruzione RECONFIGURE aggiorna alcune opzioni in modo dinamico. Per altre è necessario arrestare e riavviare il server. Ad esempio, le opzioni memoria **min server memory** e **max server memory** server vengono aggiornate dinamicamente nell'[!INCLUDE[ssDE](../../includes/ssde-md.md)]; Pertanto, è possibile modificarli senza riavviare il server. Al contrario, la riconfigurazione del valore corrente dell'opzione **Fill Factor** richiede il riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ L'istruzione RECONFIGURE aggiorna alcune opzioni in modo dinamico. Per altre è necessario arrestare e riavviare il server. Ad esempio, le opzioni memoria **min server memory** e **max server memory** server vengono aggiornate dinamicamente in [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Pertanto, è possibile modificarli senza riavviare il server. Al contrario, per riconfigurare il valore corrente dell'opzione **Fill Factor** è necessario riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Dopo l'esecuzione di RECONFIGURE in un'opzione di configurazione, è possibile verificare se l'opzione è stata aggiornata dinamicamente eseguendo **sp_configure '***option_name***'** . I valori nelle colonne **run_value** e **config_value** devono corrispondere per un'opzione aggiornata dinamicamente. È anche possibile verificare quali opzioni sono dinamiche osservando la colonna **is_dynamic** della vista del catalogo **sys. Configurations** .  
+ Dopo l'esecuzione di RECONFIGURE in un'opzione di configurazione, è possibile verificare se l'opzione è stata aggiornata dinamicamente eseguendo **sp_configure '***option_name***'**. I valori nelle colonne **run_value** e **config_value** devono corrispondere per un'opzione aggiornata dinamicamente. È anche possibile verificare quali opzioni sono dinamiche osservando la colonna **is_dynamic** della vista del catalogo **sys. Configurations** .  
  
  La modifica viene inoltre scritta nel log degli errori di SQL Server.
   
 > [!NOTE]  
->  Se un *valore* specificato è troppo elevato per un'opzione, la colonna **run_value** riflette il fatto che la [!INCLUDE[ssDE](../../includes/ssde-md.md)] è stata impostata automaticamente sulla memoria dinamica invece di usare un'impostazione non valida.  
+>  Se un *valore* specificato è troppo elevato per un'opzione, la colonna **run_value** riflette il fatto che la [!INCLUDE[ssDE](../../includes/ssde-md.md)] memoria dinamica è stata impostata per impostazione predefinita anziché utilizzare un'impostazione non valida.  
   
- Per ulteriori informazioni, vedere [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ Per ulteriori informazioni, vedere [riconfigurare &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Opzioni avanzate  
  Alcune opzioni di configurazione, ad esempio **affinity mask** e **Recovery Interval**, sono designate come opzioni avanzate. Per impostazione predefinita non è possibile visualizzarle e modificarle. Per renderle disponibili, impostare l'opzione di configurazione **ShowAdvancedOptions** su 1.  
   
- Per ulteriori informazioni sulle opzioni di configurazione e le relative impostazioni, vedere [Opzioni &#40;di configurazione&#41;del server SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Per ulteriori informazioni sulle opzioni di configurazione e le relative impostazioni, vedere [Opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, è necessario concedere l'autorizzazione a livello di server ALTER Settings. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
@@ -138,7 +139,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>b. Modifica di un'opzione di configurazione  
+### <a name="b-changing-a-configuration-option"></a>B. Modifica di un'opzione di configurazione  
  Nell'esempio seguente viene impostato il valore di `recovery interval` del sistema su `3` minuti.  
   
 ```sql  
@@ -157,7 +158,8 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Il risultato restituisce il nome dell'opzione seguito dai valori minimi e massimo per l'opzione. Il **config_value** è il valore che [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizzerà al termine della riconfigurazione. **config_value** è il valore in uso. The **config_value** e **run_value** sono in genere uguali, a meno che il valore non sia in corso di modifica.  
+ Il risultato restituisce il nome dell'opzione seguito dai valori minimi e massimo per l'opzione. Il **config_value** è il valore che [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verrà utilizzato al termine della riconfigurazione. 
+  **config_value** è il valore in uso. The **config_value** e **run_value** sono in genere uguali, a meno che il valore non sia in corso di modifica.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Elencare le impostazioni di configurazione per un nome di configurazione  
   
@@ -166,7 +168,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Impostare la connettività Hadoop  
- Per impostare la connettività Hadoop sono necessari alcuni passaggi aggiuntivi, oltre a eseguire sp_configure. Per la procedura completa, vedere [creare un'origine &#40;dati esterna Transact-&#41;SQL](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Per impostare la connettività Hadoop sono necessari alcuni passaggi aggiuntivi, oltre a eseguire sp_configure. Per la procedura completa, vedere [creare un'origine dati esterna &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -174,8 +176,8 @@ EXEC sp_configure @configname='hadoop connectivity';
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+ [sys. Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [ALTER DATABASE SCOPEd CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

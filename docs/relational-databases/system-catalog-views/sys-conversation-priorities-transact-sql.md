@@ -1,5 +1,5 @@
 ---
-title: Sys. conversation_priorities (Transact-SQL) | Microsoft Docs
+title: sys. conversation_priorities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109473"
 ---
-# <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
+# <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni priorità di conversazione creata nel database corrente, come illustrato nella tabella seguente: 
@@ -40,10 +40,10 @@ ms.locfileid: "68109473"
 |service_contract_id|**int**|Identificatore del contratto specificato per la priorità di conversazione. Questa colonna può essere unita alla colonna service_contract_id in sys.service_contracts. Ammette valori Null.|  
 |local_service_id|**int**|Identificatore del servizio specificato come servizio locale per la priorità di conversazione. Questa colonna può essere unita alla colonna service_id in sys.services. Ammette valori Null.|  
 |remote_service_name|**nvarchar(256)**|Nome del servizio specificato come servizio remoto per la priorità di conversazione. Ammette valori Null.|  
-|priorità|**tinyint**|Livello di priorità specificato nella priorità di conversazione. Non ammette i valori Null.|  
+|priority|**tinyint**|Livello di priorità specificato nella priorità di conversazione. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono elencate le priorità di conversazione utilizzando join per mostrare i nomi del contratto e del servizio locale.  
@@ -68,7 +68,7 @@ ORDER BY priority_name, contract_name,
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.services &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
- [sys.service_contracts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
+ [sys. Services &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
+ [sys. service_contracts &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
   
   

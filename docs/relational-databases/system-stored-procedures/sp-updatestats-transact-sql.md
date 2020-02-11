@@ -19,20 +19,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085796"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Esecuzioni `UPDATE STATISTICS` su tutte le tabelle interne e definite dall'utente nel database corrente.  
+Viene `UPDATE STATISTICS` eseguito su tutte le tabelle interne e definite dall'utente nel database corrente.  
   
-Per altre informazioni sulle `UPDATE STATISTICS`, vedere [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Per altre informazioni sulle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
+Per ulteriori informazioni su `UPDATE STATISTICS`, vedere [UPDATE statistics &#40;&#41;Transact-SQL ](../../t-sql/statements/update-statistics-transact-sql.md). Per altre informazioni sulle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
     
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,25 +40,25 @@ Per altre informazioni sulle `UPDATE STATISTICS`, vedere [UPDATE STATISTICS &#40
 sp_updatestats [ [ @resample = ] 'resample']  
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @resample = ] 'resample'` Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **resample** è **varchar (8)** con valore predefinito 'NO'.  
+`[ @resample = ] 'resample'`Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Se **' resample '** non è specificato, **sp_updatestats** aggiorna le statistiche usando il campionamento predefinito. il **ricampionamento** è **varchar (8)** e il valore predefinito è no.  
   
-## <a name="remarks"></a>Note  
- **sp_updatestats** viene eseguito `UPDATE STATISTICS`, specificando il `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. La procedura sp_updatestats mostra i messaggi che indicano lo stato di avanzamento dell'esecuzione. Al termine dell'aggiornamento, viene mostrato un messaggio che indica l'effettivo aggiornamento delle statistiche di tutte le tabelle.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_updatestats** viene eseguito `UPDATE STATISTICS`, specificando la `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. sp_updatestats Visualizza i messaggi che indicano lo stato di avanzamento. Al termine dell'aggiornamento, viene segnalato che sono state aggiornate le statistiche di tutte le tabelle.  
   
 sp_updatestats aggiorna le statistiche negli indici non cluster disabilitati, mentre non le aggiorna negli indici cluster disabilitati.  
   
-Per le tabelle su disco, **sp_updatestats** aggiorna le statistiche in base al **modification_counter** contenuto nella vista del catalogo **sys.dm_db_stats_properties**, aggiornandole solo nel caso in cui sia stata modificata almeno una riga. Le statistiche sulle tabelle ottimizzate per la memoria vengono sempre aggiornate quando si esegue **sp_updatestats**. Pertanto, non eseguire **sp_updatestats** più del necessario.  
+Per le tabelle basate su disco, **sp_updatestats** aggiorna le statistiche in base alle informazioni **modification_counter** nella vista del catalogo **sys. dm_db_stats_properties** , aggiornando le statistiche in cui è stata modificata almeno una riga. Le statistiche sulle tabelle ottimizzate per la memoria vengono sempre aggiornate quando si eseguono **sp_updatestats**. Non eseguire pertanto **sp_updatestats** più del necessario.  
   
-**sp_updatestats** può attivare una ricompilazione di stored procedure o altro codice compilato. Tuttavia, nel caso in cui esista un solo piano di query per le tabelle e gli indici collegati, **sp_updatestats** potrebbe non causare alcuna ricompilazione. Una ricompilazione non è necessaria in tali casi, ma le statistiche vengono comunque aggiornate.  
+**sp_updatestats** possibile attivare una ricompilazione di stored procedure o altro codice compilato. Tuttavia, **sp_updatestats** potrebbe non provocare una ricompilazione, se è possibile solo un piano di query per le tabelle a cui si fa riferimento e gli indici. Una ricompilazione non sarebbe necessaria in tali casi anche se le statistiche vengono aggiornate.  
   
-Per i database con un livello di compatibilità inferiore a 90, l'esecuzione **sp_updatestats** non mantiene l'impostazione più recente di NORECOMPUTE per statistiche specifiche. Per i database con livello di compatibilità pari a 90 o superiore, sp_updatestats mantiene il più recente di NORECOMPUTE per statistiche specifiche. Per altre informazioni sulla disabilitazione e sulla riabilitazione degli aggiornamenti delle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
+Per i database con un livello di compatibilità inferiore a 90, l'esecuzione di **sp_updatestats** non mantiene l'impostazione più recente di NORECOMPUTE per statistiche specifiche. Per i database con un livello di compatibilità pari o superiore a 90, sp_updatestats mantiene l'opzione NORECOMPUTE più recente per statistiche specifiche. Per altre informazioni sulla disabilitazione e sulla riabilitazione degli aggiornamenti delle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
   
-## <a name="permissions"></a>Permissions  
- È necessario appartenere al ruolo server **sysadmin** o essere proprietari del database (**dbo**).  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o la proprietà del database (**dbo**).  
 
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente vengono aggiornate le statistiche per le tabelle del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -73,12 +73,12 @@ EXEC sp_updatestats;
 Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
 
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_createstats &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Stored procedure di sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
  

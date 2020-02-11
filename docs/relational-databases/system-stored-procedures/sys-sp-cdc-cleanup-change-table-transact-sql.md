@@ -21,10 +21,10 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909323"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
@@ -45,34 +45,34 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
  *capture_instance* necessario assegnare un nome a un'istanza di acquisizione esistente nel database corrente.  
   
- [@low_water_mark =] *low_water_mark*  
+ [ @low_water_mark = ] *low_water_mark*  
  Numero di sequenza del file di log (LSN) che deve essere utilizzato come nuovo limite minimo per l' *istanza di acquisizione*. *low_water_mark* è **binario (10)** e non prevede alcun valore predefinito.  
   
  Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
   
  Se il valore viene impostato in modo esplicito su NULL, il limite *minimo* corrente per l' *istanza di acquisizione* viene utilizzato per definire il limite superiore per l'operazione di pulizia.  
   
- [@threshold=] '*Elimina soglia*'  
+ [ @threshold= ] '*Elimina soglia*'  
  Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* è di tipo **bigint**e il valore predefinito è 5000.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  sys.sp_cdc_cleanup_change_table esegue le operazioni seguenti:  
   
-1.  Se il parametro @low_water_mark non è NULL, imposta il valore di start_lsn per l' *istanza di acquisizione* sul nuovo limite *minimo*.  
+1.  Se il @low_water_mark parametro non è null, imposta il valore di start_lsn per l' *istanza di acquisizione* sul nuovo limite *minimo*.  
   
     > [!NOTE]  
-    >  Il nuovo limite minimo potrebbe non essere quello specificato nella chiamata alla stored procedure. Se altre voci nella tabella cdc.lsn_time_mapping condividono la stessa ora di commit, il valore start_lsn più piccolo rappresentato nel gruppo di voci viene selezionato come limite minimo modificato. Se il parametro @low_water_mark è NULL o il limite minimo corrente è maggiore del nuovo LowWatermark, il valore di start_lsn per l'istanza di acquisizione viene lasciato invariato.  
+    >  Il nuovo limite minimo potrebbe non essere quello specificato nella chiamata alla stored procedure. Se altre voci nella tabella cdc.lsn_time_mapping condividono la stessa ora di commit, il valore start_lsn più piccolo rappresentato nel gruppo di voci viene selezionato come limite minimo modificato. Se il @low_water_mark parametro è null o il limite minimo corrente è maggiore del nuovo LowWatermark, il valore start_lsn per l'istanza di acquisizione viene lasciato invariato.  
   
 2.  Le voci della tabella delle modifiche con valori __$start_lsn inferiori al limite minimo vengono quindi eliminate. La soglia di eliminazione viene utilizzata per limitare il numero di righe eliminate in una singola transazione. Viene restituito un errore sull'eliminazione delle voci, che però non influisce sulle modifiche apportate al limite minimo dell'istanza di acquisizione in base alla chiamata.  
 
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   I report del processo Cleanup Agent eliminano gli errori.  
   
-     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys. sp_cdc_cleanup_change_table e specificare NULL per il parametro @low_water_mark.  
+     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys. sp_cdc_cleanup_change_table e specificare NULL per @low_water_mark il parametro.  
   
 -   I criteri basati sulla memorizzazione utilizzati dal processo di Cleanup Agent non sono adeguati.  
   
@@ -90,8 +90,8 @@ sys.sp_cdc_cleanup_change_table
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_increment_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

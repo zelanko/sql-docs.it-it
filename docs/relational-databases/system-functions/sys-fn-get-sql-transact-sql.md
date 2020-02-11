@@ -24,23 +24,23 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120255"
 ---
-# <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce il testo dell'istruzione SQL per l'handle SQL specificato.  
   
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per altre informazioni, vedere [DM exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Questa funzionalità verrà rimossa a partire da una delle prossime versioni di Microsoft SQL Server. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare sys.dm_exec_sql_text. Per ulteriori informazioni, vedere [sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Argomenti  
  *SqlHandle*  
- Valore dell'handle. *SqlHandle* viene **varbinary(64)** non prevede alcun valore predefinito.  
+ Valore dell'handle. *SQLHANDLE* è di tipo **varbinary (64)** e non prevede alcun valore predefinito.  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
@@ -59,26 +59,26 @@ sys.fn_get_sql ( SqlHandle )
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|ID del database. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
 |objectId|**int**|ID dell'oggetto di database. Per istruzioni SQL ad hoc viene restituito NULL.|  
-|number|**smallint**|Specifica il numero del gruppo, se le procedure sono raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.<br /><br /> NULL = Istruzioni SQL ad hoc.|  
+|d'acquisto|**smallint**|Specifica il numero del gruppo, se le procedure sono raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.<br /><br /> NULL = Istruzioni SQL ad hoc.|  
 |encrypted|**bit**|Specifica se l'oggetto è crittografato.<br /><br /> 0 = Non crittografato<br /><br /> 1 = Crittografato|  
 |text|**text**|Testo dell'istruzione SQL. Per gli oggetti crittografati viene restituito NULL.|  
   
-## <a name="remarks"></a>Note  
- È possibile ottenere un handle SQL valido dalla colonna sql_handle della [exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista a gestione dinamica.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile ottenere un handle SQL valido dalla colonna sql_handle della vista a gestione dinamica [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
- Se non si passa un handle che non è più presente nella cache, fn_get_sq**l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
+ Se si passa un handle che non è più presente nella cache, fn_get_sq**l** restituisce un set di risultati vuoto. Se si passa un handle non valido, il batch viene arrestato e viene visualizzato un messaggio di errore.  
   
- Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non è possibile memorizzare nella cache alcuni [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, ad esempio istruzioni per la copia bulk e istruzioni con valori letterali di stringa superiori a 8 KB. Gli handle relativi a tali istruzioni non possono essere recuperati tramite fn_get_sql.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Non è in grado [!INCLUDE[tsql](../../includes/tsql-md.md)] di memorizzare nella cache alcune istruzioni, ad esempio istruzioni per la copia bulk e istruzioni con valori letterali stringa di dimensioni maggiori di 8 KB. Gli handle relativi a tali istruzioni non possono essere recuperati tramite fn_get_sql.  
   
- Il **testo** colonna del set di risultati viene filtrata per il testo che potrebbe includere password. Per altre informazioni sulla sicurezza relativa stored procedure che non vengono monitorate, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
+ La colonna di **testo** del set di risultati viene filtrata per il testo che può contenere password. Per ulteriori informazioni sulle stored procedure correlate alla sicurezza non monitorate, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- La funzione fn_get_sql restituisce informazioni simili per il [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Di seguito sono riportati due esempi di situazioni in cui è possibile utilizzare fn_get_sql e non DBCC INPUTBUFFER:  
+ La funzione fn_get_sql restituisce informazioni simili a quelle del comando [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) . Di seguito sono riportati due esempi di situazioni in cui è possibile utilizzare fn_get_sql e non DBCC INPUTBUFFER:  
   
 -   Quando gli eventi includono più di 255 caratteri.  
   
 -   Quando è necessario ottenere il livello di nidificazione massimo corrente di una stored procedure. Si supponga, ad esempio, che esistano due stored procedure denominate sp_1 e sp_2. Se sp_1 chiama sp_2 e si ottiene l'handle dalla vista a gestione dinamica sys.dm_exec_requests mentre sp_2 è in esecuzione, la funzione fn_get_sql restituirà informazioni su sp_2. Inoltre, la funzione fn_get_sql restituisce il testo completo della stored procedure al livello di nidificazione massimo corrente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="examples"></a>Esempi  
@@ -94,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

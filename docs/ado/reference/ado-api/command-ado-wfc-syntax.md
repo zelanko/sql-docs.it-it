@@ -1,5 +1,5 @@
 ---
-title: Comando (ADO - WFC sintassi) | Microsoft Docs
+title: Command (sintassi ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919821"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (sintassi ADO/WFC)
-## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
+## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Costruttore  
   
@@ -44,7 +44,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Il **executeUpdate** è un metodo case speciale che chiama ADO sottostante **execute** metodo con determinati parametri. Il **executeUpdate** metodo non supporta la restituzione di un **Recordset** oggetto, in modo che il **eseguire** del metodo *opzioni* parametro Modifica con **AdoEnums.ExecuteOptions.NORECORDS**. Dopo il **execute** metodo viene completato, l'aggiornamento *RecordsAffected* parametro viene passato nuovamente al **executeUpdate** metodo, che viene infine restituito come un **int**.  
+ Il metodo **ExecuteUpdate** è un metodo di caso speciale che chiama il metodo ADO **Execute** sottostante con determinati parametri. Il **metodo ExecuteUpdate** non supporta la restituzione di un oggetto **Recordset** , quindi il parametro *options* del metodo **Execute** viene modificato con **AdoEnums. ExecuteOptions. NORECORDS**. Una volta completato il metodo **Execute** , il relativo parametro *RecordsAffected* aggiornato viene passato nuovamente al metodo **ExecuteUpdate** , che viene infine restituito come **int**.  
   
 ### <a name="properties"></a>Proprietà  
   

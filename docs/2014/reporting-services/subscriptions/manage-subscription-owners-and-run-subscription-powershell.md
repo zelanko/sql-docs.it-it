@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebb20180e96302ba2ee90e9ab90cb79be19b7e1b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796382"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione
@@ -24,9 +24,9 @@ ms.locfileid: "72796382"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modalità nativa &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modalità SharePoint|  
   
- **Contenuto dell'argomento:**  
+ **In questo argomento**  
   
 -   [Come usare gli script](#bkmk_how_to)  
   
@@ -34,30 +34,30 @@ ms.locfileid: "72796382"
   
 -   [Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico](#bkmk_list_all_one_user)  
   
--   [Script: modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_change_all)  
+-   [Script: modificare la proprietà per tutte le sottoscrizioni di proprietà di un utente specifico](#bkmk_change_all)  
   
 -   [Script: elencare tutte le sottoscrizioni associate a un report specifico](#bkmk_list_for_1_report)  
   
--   [Script: cambiare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
+-   [Script: modificare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
   
 -   [Script: eseguire (attivare) una singola sottoscrizione](#bkmk_run_1_subscription)  
   
-##  <a name="bkmk_how_to"></a> Come usare gli script  
+##  <a name="bkmk_how_to"></a>Come usare gli script  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  In questa sezione sono riepilogati i livelli di autorizzazione necessari per usare ogni metodo della modalità nativa e della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Gli script in questo argomento usano i metodi seguenti di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
--   [Metodo ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010. ListSubscriptions, metodo](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [Metodo ReportingService2010.ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010. ChangeSubscriptionOwner, metodo](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010. ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
 -   Il metodo [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) è usato solo nell'ultimo script per attivare l'esecuzione di una sottoscrizione specifica. Se non si prevede di usare tale sottoscrizione, è possibile ignorare i requisiti relativi alle autorizzazioni per il metodo FireEvent.  
   
  **Modalità nativa:**  
   
--   Elencare le sottoscrizioni: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription nel report e l'utente è il proprietario della sottoscrizione) o ReadAnySubscription  
+-   Elencare le sottoscrizioni:https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx(Hyperlink "" ReadSubscription nel report e l'utente è il proprietario della sottoscrizione) o ReadAnySubscription  
   
 -   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72796382"
   
  **Modalità SharePoint:**  
   
--   Elencare le sottoscrizioni: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts nel report e l'utente è il proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione temporizzata).  
+-   Elencare le sottoscrizioni: ManageAlerts ohttps://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx(Hyperlink "" CreateAlerts nel report e l'utente è il proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione temporizzata).  
   
 -   Change Subscriptions: ManageWeb  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72796382"
   
 2.  Creare un file di testo per ogni script e salvare i file nella cartella c:\scripts. Quando si creano i file con estensione ps1, usare il nome di ogni esempio di sintassi da riga di comando.  
   
-3.  Aprire un prompt dei comandi con privilegi amministrativi.  
+3.  Aprire un prompt dei comandi con privilegi di amministratore.  
   
 4.  Eseguire ogni file script, usando l'esempio di sintassi da riga di comando disponibile in ogni esempio.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72796382"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Script: elencare la proprietà di tutte le sottoscrizioni  
+##  <a name="bkmk_list_ownership_all"></a>Script: elencare la proprietà di tutte le sottoscrizioni  
  Questo script permette di elencare tutte le sottoscrizioni in un sito. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile anche per la semplice verifica delle sottoscrizioni esistenti e dei relativi proprietari.  
   
 ### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
@@ -135,7 +135,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico  
+##  <a name="bkmk_list_all_one_user"></a>Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico  
  Questo script permette di elencare tutte le sottoscrizioni di proprietà di un utente specifico. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile se un utente abbandona l'organizzazione e si vuole verificare le sottoscrizioni appartenenti a tale utente, in modo da potere modificare il proprietario o eliminare la sottoscrizione.  
   
 ### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
@@ -172,7 +172,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script: modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico  
+##  <a name="bkmk_change_all"></a>Script: modificare la proprietà per tutte le sottoscrizioni di proprietà di un utente specifico  
  Questo script permette di cambiare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico, impostando il parametro relativo al nuovo proprietario.  
   
 ### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
@@ -242,7 +242,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script: elencare tutte le sottoscrizioni associate a un report specifico  
+##  <a name="bkmk_list_for_1_report"></a>Script: elencare tutte le sottoscrizioni associate a un report specifico  
  Questo script permette di elencare tutte le sottoscrizioni associate a un report specifico. La sintassi del percorso del report è diversa in modalità SharePoint, che necessita di un URL completo. Nell'esempio di sintassi il nome usato per il report è "title only", che include uno spazio e quindi deve essere racchiuso da virgolette semplici.  
   
 ### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
@@ -280,7 +280,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Script: cambiare la proprietà di una sottoscrizione specifica  
+##  <a name="bkmk_change_all_1_subscription"></a>Script: modificare la proprietà di una sottoscrizione specifica  
  Questo script permette di cambiare la proprietà di una sottoscrizione specifica. La sottoscrizione è identificata dal valore SubscriptionID passato nello script. È possibile usare uno degli script per elencare le sottoscrizioni per determinare il valore SubscriptionID corretto.  
   
 ### <a name="native-mode-syntax"></a>Sintassi in modalità nativa
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Script: eseguire (attivare) una singola sottoscrizione  
+##  <a name="bkmk_run_1_subscription"></a>Script: eseguire (attivare) una singola sottoscrizione  
  Questo script eseguirà una sottoscrizione specifica usando il metodo FireEvent. Lo script eseguirà immediatamente la sottoscrizione, indipendentemente dalla pianificazione configurata per la sottoscrizione. EventType è verificato rispetto al set noto degli eventi definiti nel file di configurazione del server di report **rsreportserver.config** . Lo script usa il tipo di evento seguente per le sottoscrizioni standard:  
   
  `<Event>`  

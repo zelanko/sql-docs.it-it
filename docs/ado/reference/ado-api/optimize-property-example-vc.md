@@ -1,5 +1,5 @@
 ---
-title: Ottimizzare l'esempio di proprietà (VC + +) | Microsoft Docs
+title: Esempio di proprietà Optimize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931835"
 ---
 # <a name="optimize-property-example-vc"></a>Esempio della proprietà Optimize (VC++)
-Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) oggetti dinamici **Optimize** proprietà. Il **zip** campo del **autori** nella tabella di **Pubs** database non è indicizzato. Impostando il [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul **zip** campo autorizza ADO per compilare un indice che consente di migliorare le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  
+In questo esempio viene illustrata la proprietà Dynamic **optimize** dell'oggetto [campo](../../../ado/reference/ado-api/field-object.md) . Il campo **zip** della tabella **authors** nel database **pubs** non è indicizzato. L'impostazione della proprietà [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) su **true** nel campo **zip** autorizza ADO a compilare un indice che migliora le prestazioni del metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ## <a name="example"></a>Esempio  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto CT Silver 3 Autorità di certificazione Walnut Creek**   
+ **Yokomoto 3 Silver CT. Walnut Creek CA**   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà dinamica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

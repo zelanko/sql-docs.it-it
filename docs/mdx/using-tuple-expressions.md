@@ -1,5 +1,5 @@
 ---
-title: Utilizzo delle espressioni di tupla | Microsoft Docs
+title: Utilizzo di espressioni di tupla | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135126"
 ---
 # <a name="using-tuple-expressions"></a>Utilizzo delle espressioni di tupla
@@ -36,7 +36,7 @@ ms.locfileid: "68135126"
   
 -   Se la gerarchia con riferimento implicito dispone di un membro predefinito, tale membro sarà aggiunto alla tupla.  
   
--   Se la gerarchia con riferimento implicito non dispone di alcun membro predefinito, il **(tutti)** membro della gerarchia predefinita viene utilizzato.  
+-   Se la gerarchia a cui si fa riferimento in modo implicito non dispone di un membro predefinito, viene utilizzato il membro **(totale)** della gerarchia predefinita.  
   
 -   Se la gerarchia con riferimento implicito non dispone di un membro predefinito, verrà utilizzato il primo membro del livello più alto della gerarchia.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68135126"
  Se l'espressione di tupla ha un solo membro, per valutare l'espressione MDX convertirà il membro in una tupla con un solo membro. In altre parole, l'utilizzo dell'espressione di membro `[Measures].[TestMeasure]` al posto di un'espressione di tupla è equivalente, dal punto di vista funzionale, a utilizzare l'espressione di tupla `( [Measures].[TestMeasure] ).`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

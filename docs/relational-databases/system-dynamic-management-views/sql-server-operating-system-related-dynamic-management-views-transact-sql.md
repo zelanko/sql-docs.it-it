@@ -17,20 +17,20 @@ ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342045"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Viste a gestione dinamica relative al sistema operativo di SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-In questa sezione vengono documentate le viste a gestione dinamica (DMV) associate al sistema operativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOS). SQLOS è responsabile della gestione delle risorse del sistema operativo specifiche per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In questa sezione vengono documentate le viste a gestione dinamica (DMV [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) associate al sistema operativo (SQLOS). SQLOS è responsabile della gestione delle risorse del sistema operativo specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-SQLOS DMV sono elencati nel sommario. La maggior parte di questi e sono denominati `sys.dm_os_<description>`.
+SQLOS DMV sono elencati nel sommario. La maggior parte di questi e `sys.dm_os_<description>`sono denominati.
 
- Le seguenti viste a gestione dinamica relative al sistema operativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
+ Le viste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a gestione dinamica relative al sistema operativo seguenti [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]sono.  
   
 |||  
 |-|-|  
