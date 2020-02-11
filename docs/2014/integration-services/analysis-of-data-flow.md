@@ -1,5 +1,5 @@
 ---
-title: Analisi di flusso di dati | Microsoft Docs
+title: Analisi del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061594"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
-  È possibile usare la [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista per analizzare il flusso di dati dei pacchetti di database. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
+  È possibile utilizzare la vista [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` database per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
   
 > [!NOTE]  
 >  Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire informazioni con la vista catalog.execution_data_statistics.  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  Nell'esempio seguente viene calcolato il numero di righe per millisecondi inviate da ogni componente per un'esecuzione specifica. I valori calcolati sono:  
   
--   **total_rows** : somma di tutte le righe inviate dal componente  
+-   **total_rows** -la somma di tutte le righe inviate dal componente  
   
--   **wall_clock_time_ms**: tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
+-   **wall_clock_time_ms** : tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
   
--   **num_rows_per_millisecond**: numero di righe per millisecondi inviate da ogni componente  
+-   **num_rows_per_millisecond** : numero di righe per millisecondi inviate da ogni componente  
   
- Il `HAVING` clausola viene utilizzata per impedire un errore di divisione per zero nei calcoli.  
+ La `HAVING` clausola viene utilizzata per evitare un errore di divisione per zero nei calcoli.  
   
 ```  
 use SSISDB  

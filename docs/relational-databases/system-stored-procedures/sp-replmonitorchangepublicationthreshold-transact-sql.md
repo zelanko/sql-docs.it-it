@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322228"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322228"
 
   Modifica la metrica del valore soglia di monitoraggio di una pubblicazione. Questa stored procedure, utilizzata per il monitoraggio della replica, viene eseguita nel database di distribuzione del server di distribuzione.  
   
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
     [ , [ @mode = ] mode ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
 `[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @publisher_db = ] 'publisher_db'`Nome del database pubblicato. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
@@ -54,7 +54,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Se il tipo di pubblicazione. *publication_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
@@ -63,7 +63,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`ID della metrica della soglia della pubblicazione da modificare. *metric_id* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Value|Nome della metrica|  
+|valore|Nome della metrica|  
 |-----------|-----------------|  
 |**1**|**scadenza** : monitora la scadenza imminente delle sottoscrizioni di pubblicazioni transazionali.|  
 |**2**|**latenza** : esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione possono eseguire **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitorare la replica a livello di codice](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

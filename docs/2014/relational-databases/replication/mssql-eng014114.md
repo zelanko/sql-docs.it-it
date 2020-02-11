@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68810996"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
@@ -40,7 +40,7 @@ ms.locfileid: "68810996"
  Non sarà possibile eseguire la replica, se una qualsiasi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene registrata utilizzando l'indirizzo IP o il nome di dominio completo (FQDN, Fully Qualified Domain Name). Se durante la configurazione della replica una delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata registrata utilizzando l'indirizzo IP o il nome di dominio completo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è possibile che venga generato questo errore.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Se nel messaggio di errore viene specificata una particolare istanza, configurare il server come server di distribuzione. Per altre informazioni, vedere [Configurazione della distribuzione](configure-distribution.md).  
+ Se nel messaggio di errore viene specificata una particolare istanza, configurare il server come server di distribuzione. Per altre informazioni, vedere [Configure Distribution](configure-distribution.md).  
   
  Se nel messaggio non viene specificata una particolare istanza ('null'), verificare che l'istanza del server di distribuzione sia registrata correttamente. Se il nome di rete del computer e il nome dell'istanza di SQL Server sono diversi, procedere in uno dei modi seguenti:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68810996"
   
      10.193.17.129 inst1  
   
--   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, attenersi alla procedura seguente:  
+-   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire questa procedura:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

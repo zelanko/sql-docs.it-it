@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2597289894f3a037e9ad8ada499b5f2d259ff3f
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289396"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "72289396"
   Restituisce una riga per utilità di pianificazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dove è stato eseguito il mapping di ogni utilità di pianificazione a un singolo processore. Utilizzare questa vista per eseguire il monitoraggio delle condizioni di un'utilità di pianificazione oppure per identificare eventuali attività sfuggite al controllo. Per ulteriori informazioni sulle utilità di pianificazione, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).  
   
 > [!NOTE]  
->  Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys. dm _pdw_nodes_os_schedulers**.  
+>  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_os_schedulers**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary(8)**|Indirizzo di memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
+|scheduler_address|**varbinary (8)**|Indirizzo di memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
 |parent_node_id|**int**|ID del nodo a cui appartiene l'utilità di pianificazione, definito anche nodo padre. Rappresenta un nodo NUMA (Non-Uniform Memory Access). Non ammette i valori Null.|  
 |scheduler_id|**int**|ID dell'utilità di pianificazione. Tutte le utilità di pianificazione utilizzate per eseguire query normali sono identificate da numeri ID minori di 1048576. Quelle con ID maggiori o uguali a 1048576 vengono utilizzate internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio l'utilità di pianificazione della connessione amministrativa dedicata. Non ammette i valori Null.|  
-|cpu_id|**smallint**|ID CPU assegnato all'utilità di pianificazione.<br /><br /> Non ammette i valori Null.<br /><br /> **Nota:** 255 non indica alcuna affinità come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni sull'affinità, vedere [sys. dm _os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
-|status|**nvarchar(60)**|Indica lo stato dell'utilità di pianificazione. Il valore può essere uno dei seguenti:<br /><br /> -NASCOSTO ONLINE<br />-NASCOSTO OFFLINE<br />-VISIBILE ONLINE<br />-VISIBILE OFFLINE<br />-VISIBILE ONLINE (DAC)<br />- HOT_ADDED<br /><br /> Non ammette i valori Null.<br /><br /> Le utilità di pianificazione HIDDEN vengono utilizzate per l'elaborazione delle richieste interne a [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le utilità di pianificazione VISIBLE vengono utilizzate per l'elaborazione delle richieste dell'utente.<br /><br /> Le utilità di pianificazione OFFLINE eseguono il mapping ai processori che sono offline nella maschera di affinità e che non vengono pertanto utilizzati per l'elaborazione di alcuna richiesta. Le utilità di pianificazione ONLINE eseguono il mapping ai processori che sono online nella maschera di affinità e che sono disponibili per l'elaborazione di thread.<br /><br /> Il valore DAC indica che l'utilità di pianificazione è in esecuzione nell'ambito di una connessione amministrativa dedicata.<br /><br /> HOT ADDED indica le utilità di pianificazione aggiunte in risposta a un evento di aggiunta di CPU a caldo.|  
+|cpu_id|**smallint**|ID CPU assegnato all'utilità di pianificazione.<br /><br /> Non ammette i valori Null.<br /><br /> **Nota:** 255 non indica alcuna affinità come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni sull'affinità, vedere [sys. dm_os_threads &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
+|status|**nvarchar (60)**|Indica lo stato dell'utilità di pianificazione. Può avere uno dei valori seguenti:<br /><br /> -NASCOSTO ONLINE<br />-NASCOSTO OFFLINE<br />-VISIBILE ONLINE<br />-VISIBILE OFFLINE<br />-VISIBILE ONLINE (DAC)<br />-HOT_ADDED<br /><br /> Non ammette i valori Null.<br /><br /> Le utilità di pianificazione HIDDEN vengono utilizzate per l'elaborazione delle richieste interne a [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le utilità di pianificazione VISIBLE vengono utilizzate per l'elaborazione delle richieste dell'utente.<br /><br /> Le utilità di pianificazione OFFLINE eseguono il mapping ai processori che sono offline nella maschera di affinità e che non vengono pertanto utilizzati per l'elaborazione di alcuna richiesta. Le utilità di pianificazione ONLINE eseguono il mapping ai processori che sono online nella maschera di affinità e che sono disponibili per l'elaborazione di thread.<br /><br /> Il valore DAC indica che l'utilità di pianificazione è in esecuzione nell'ambito di una connessione amministrativa dedicata.<br /><br /> HOT ADDED indica le utilità di pianificazione aggiunte in risposta a un evento di aggiunta di CPU a caldo.|  
 |is_online|**bit**|Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato in modo da utilizzare solo alcuni dei processori disponibili nel server, è possibile che sia stato eseguito il mapping di alcune utilità di pianificazione a processori non inclusi nella maschera di affinità. In tal caso, questa colonna restituisce 0, a indicare che l'utilità di pianificazione non viene utilizzata per elaborare query o batch.<br /><br /> Non ammette i valori Null.|  
 |is_idle|**bit**|1 = L'utilità di pianificazione è inattiva. Nessun thread di lavoro è in esecuzione. Non ammette i valori Null.|  
 |preemptive_switches_count|**int**|Numero di volte in cui i thread di lavoro nell'utilità di pianificazione corrente sono passati alla modalità preemptive.<br /><br /> Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive.|  
@@ -53,23 +53,25 @@ ms.locfileid: "72289396"
 |active_workers_count|**int**|Numero di thread di lavoro attivi. Un thread di lavoro attivo non è mai preemptive, deve disporre sempre di un'attività associata e può essere in esecuzione, eseguibile o sospeso. Non ammette i valori Null.|  
 |work_queue_count|**bigint**|Numero di attività nella coda in sospeso in attesa di essere prelevate da un thread di lavoro. Non ammette i valori Null.|  
 |pending_disk_io_count|**int**|Numero di I/O in sospeso in attesa di essere completati. Ogni utilità di pianificazione dispone di un elenco di operazioni di I/O in sospeso che vengono verificate per determinarne il completamento ogni volta che si verifica uno scambio di contesto. Il conteggio viene incrementato quando la richiesta viene inserita e viene ridotto quando la richiesta viene completata. Questo numero non indica lo stato degli I/O. Non ammette i valori Null.|  
-|load_factor|**int**|Valore interno indicante il fattore di carico nell'utilità di pianificazione corrente. Questo valore viene utilizzato per determinare se una nuova attività deve essere inserita nell'utilità di pianificazione corrente oppure in un'altra utilità di pianificazione. Risulta utile per eseguire attività di debug nel caso in cui il carico delle utilità di pianificazione non sembra essere distribuito in modo uniforme. Il routing viene definito in base al carico dell'utilità di pianificazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza inoltre un fattore di caricamento di nodi e utilità di pianificazione per semplificare l'individuazione del percorso migliore per acquisire risorse. Quando un'attività viene accodata, il fattore di caricamento viene aumentato. Quando un'attività viene completata, il fattore di caricamento viene ridotto. L'utilizzo dei fattori di caricamento consente l'ottimizzazione del bilanciamento del carico di lavoro da parte del sistema operativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
+|load_factor|**int**|Valore interno indicante il fattore di carico nell'utilità di pianificazione corrente. Questo valore viene utilizzato per determinare se una nuova attività deve essere inserita nell'utilità di pianificazione corrente oppure in un'altra utilità di pianificazione. Risulta utile per eseguire attività di debug nel caso in cui il carico delle utilità di pianificazione non sembra essere distribuito in modo uniforme. Il routing viene definito in base al carico dell'utilità di pianificazione. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza inoltre un fattore di caricamento di nodi e utilità di pianificazione per semplificare l'individuazione del percorso migliore per acquisire risorse. Quando un'attività viene accodata, il fattore di caricamento viene aumentato. Quando un'attività viene completata, il fattore di caricamento viene ridotto. L'utilizzo dei fattori di caricamento consente l'ottimizzazione del bilanciamento del carico di lavoro da parte del sistema operativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
 |yield_count|**int**|Valore interno utilizzato per indicare lo stato dell'utilità di pianificazione corrente. Questo valore viene utilizzato dal sistema di monitoraggio dell'utilità di pianificazione per determinare se un thread di lavoro dell'utilità di pianificazione non restituisce tempestivamente il controllo ad altri thread di lavoro. Non indica il passaggio di un thread di lavoro o di un'attività a un nuovo thread di lavoro. Non ammette i valori Null.|  
 |last_timer_activity|**bigint**|Espresso in tick della CPU, indica l'ultimo controllo della coda del timer dell'utilità di pianificazione da parte dell'utilità stessa. Non ammette i valori Null.|  
 |failed_to_create_worker|**bit**|Impostare su 1 se risulta impossibile creare un nuovo thread di lavoro nell'utilità di pianificazione corrente. Ciò in genere si verifica a causa di vincoli a livello di memoria. Ammette i valori Null.|  
-|active_worker_address|**varbinary(8)**|Indirizzo di memoria del thread di lavoro attivo. Ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm _os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
-|task_memory_object_address|**varbinary(8)**|Indirizzo di memoria dell'oggetto memoria dell'attività. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm _os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Espone il quantum dell'utilità di pianificazione utilizzato da SQLOS.|  
+|active_worker_address|**varbinary (8)**|Indirizzo di memoria del thread di lavoro attivo. Ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|memory_object_address|**varbinary (8)**|Indirizzo di memoria dell'oggetto memoria dell'utilità di pianificazione. Non ammette i valori Null.|  
+|task_memory_object_address|**varbinary (8)**|Indirizzo di memoria dell'oggetto memoria dell'attività. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|quantum_length_us|**bigint**|
+  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Espone il quantum dell'utilità di pianificazione utilizzato da SQLOS.|  
 | total_cpu_usage_ms |**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive <br><br> CPU totale utilizzata dall'utilità di pianificazione come indicato dai thread di lavoro non preemptive. Non ammette i valori Null.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] indica una limitazione basata sull' [obiettivo del livello di servizio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sarà sempre 0 per le versioni non Azure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ammette i valori Null.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indica che la limitazione dipende dall' [obiettivo del livello di servizio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sarà sempre 0 per le versioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di Azure di. Ammette i valori Null.|
 |total_scheduler_delay_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive <br><br> Il tempo che intercorre tra un thread di lavoro e l'altro. Possono essere causati da processi di lavoro di tipo preemptive che ritardano la pianificazione del successivo thread di lavoro non preemptive o a causa dei thread di pianificazione del sistema operativo di altri processi. Non ammette i valori Null.|
 |ideal_workers_limit|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive <br><br> Il numero di ruoli di lavoro idealmente presenti nell'utilità di pianificazione. Se i thread di lavoro correnti superano il limite dovuto a un carico di attività sbilanciato, quando diventano inattivi, verranno eliminati. Non ammette i valori Null.|
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="permissions"></a>Permissions
-Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è richiesta l'autorizzazione `VIEW SERVER STATE`.   
-Nei livelli Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è necessaria l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli standard e Basic [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] richiede l'amministratore del **Server** o un account **amministratore Azure Active Directory** .   
+## <a name="permissions"></a>Autorizzazioni
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="examples"></a>Esempi  
   
@@ -127,17 +129,18 @@ active_workers_count work_queue_count
   
  L'output contiene le informazioni seguenti:  
   
--   Sono disponibili cinque utilità di pianificazione. Due utilità di pianificazione hanno un valore ID < 1048576. Le utilità di pianificazione con ID > = 1048576 sono note come utilità di pianificazione nascoste. L'utilità di pianificazione `255` rappresenta la connessione amministrativa dedicata. Per ogni istanza è prevista un'utilità di pianificazione DAC. I monitoraggi risorse che coordinano le richieste di memoria utilizzano le utilità di pianificazione `257` e `258`, una per ogni nodo NUMA.  
+-   Sono disponibili cinque utilità di pianificazione. Due utilità di pianificazione hanno un valore ID < 1048576. Le utilità di pianificazione con ID >= 1048576 sono note come utilità di pianificazione nascoste. L'utilità di pianificazione `255` rappresenta la connessione amministrativa dedicata. Per ogni istanza è prevista un'utilità di pianificazione DAC. I monitoraggi risorse che coordinano le richieste di memoria utilizzano le utilità di pianificazione `257` e `258`, una per ogni nodo NUMA.  
   
 -   Nell'output sono presenti 23 attività in corso, che includono le richieste utente e le attività di gestione delle risorse avviate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esempi di attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono RESOURCE MONITOR (una per ogni nodo NUMA), LAZY WRITER (una per ogni nodo NUMA), LOCK MONITOR, CHECKPOINT e LOG WRITER.  
   
--   Sono stati eseguiti i mapping del nodo NUMA `0` alla CPU `1` e del nodo NUMA `1` alla CPU `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato generalmente in un nodo NUMA diverso da 0.  
+-   Sono stati eseguiti i mapping del nodo NUMA `0` alla CPU `1` e del nodo NUMA `1` alla CPU `0`. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato generalmente in un nodo NUMA diverso da 0.  
   
 -   Se tramite `runnable_tasks_count` viene restituito `0`, significa che non sono presenti attività in esecuzione attiva. È tuttavia possibile che esistano sessioni attive.  
   
 -   All'utilità di pianificazione `255` che rappresenta la connessione DAC sono associati `3` thread di lavoro, che vengono allocati all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non subiscono modifiche. Tali thread vengono utilizzati esclusivamente per l'elaborazione delle query DAC. Le due attività presenti in questa utilità di pianificazione rappresentano una gestione connessione e un thread di lavoro inattivo.  
   
--   `active_workers_count` rappresenta tutti i thread di lavoro a cui sono associate attività e che sono in esecuzione in modalità non preemptive. Alcune attività, ad esempio i listener di rete, vengono eseguite nell'ambito di una pianificazione preemptive.  
+-   `active_workers_count`rappresenta tutti i thread di lavoro a cui sono associate attività e che sono in esecuzione in modalità non preemptive. Alcune attività, ad esempio i listener di rete, vengono eseguite nell'ambito di una pianificazione preemptive.  
   
 -   Le utilità di pianificazione nascoste non elaborano le richieste utente comuni. L'utilità di pianificazione DAC costituisce l'eccezione, poiché dispone di un thread per l'elaborazione delle richieste.  
   
@@ -145,7 +148,7 @@ active_workers_count work_queue_count
  Nella query seguente viene illustrato lo stato delle utilità di pianificazione non nascoste con carichi notevoli, in cui il numero delle richieste è maggiore di quello che può essere gestito dai thread di lavoro disponibili. In questo esempio le attività vengono assegnate a 256 thread di lavoro. Alcune attività sono in attesa dell'assegnazione a un thread di lavoro. Un conteggio di attività eseguibili inferiore indica che più attività sono in attesa di una risorsa.  
   
 > [!NOTE]  
->  Per individuare lo stato dei thread di lavoro, è possibile eseguire una query su sys.dm_os_workers. Per ulteriori informazioni, vedere [sys. dm _os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  Per individuare lo stato dei thread di lavoro, è possibile eseguire una query su sys.dm_os_workers. Per ulteriori informazioni, vedere [sys. dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
   
  La query è la seguente:  
   
@@ -191,4 +194,4 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Transact-SQL delle viste &#40;a gestione dinamica relative al sistema operativo&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

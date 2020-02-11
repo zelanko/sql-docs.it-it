@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809898"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dati spaziali-sys. dm _db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dati spaziali-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Elenca gli indici e i vincoli che saranno disabilitati come risultato della modifica del livello di compatibilità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indici e vincoli che contengono colonne calcolate persistenti le cui espressioni utilizzano tipi definiti dall'utente spaziali saranno disabilitati dopo l'aggiornamento o la modifica del livello di compatibilità. Utilizzare questa funzione a gestione dinamica per determinare l'impatto di una modifica nel livello di compatibilità.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,11 +48,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
-|**class_desc**|**nvarchar(60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
+|**classe**|**int**|1 = vincoli<br /><br /> 7 = indici e heap|  
+|**class_desc**|**nvarchar (60)**|OBJECT o COLUMN per i vincoli<br /><br /> INDEX per indici e heap|  
 |**major_id**|**int**|OBJECT ID dei vincoli<br /><br /> OBJECT ID della tabella che contiene indici e heap|  
 |**minor_id**|**int**|NULL per i vincoli<br /><br /> Index_id per indici e heap|  
-|**dependency**|**nvarchar(60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
+|**dipendenza**|**nvarchar (60)**|Descrizione della dipendenza che provoca la disabilitazione del vincolo o dell'indice. Gli stessi valori vengono utilizzati inoltre negli avvisi generati durante l'aggiornamento. Negli esempi vengono illustrati gli aspetti seguenti:<br /><br /> "space" per una funzione intrinseco<br /><br /> 'geometry' per un tipo definito dall'utente del sistema<br /><br /> 'geography::Parse' per un metodo di un tipo definito dall'utente del sistema|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Le colonne calcolate persistenti in cui sono utilizzate alcune funzioni intrinseche vengono disabilitate quando il livello di compatibilità viene modificato. In modo analogo, anche le colonne calcolate persistenti che utilizzano metodi geometry o geography vengono disabilitate quando un database viene aggiornato.  
@@ -66,58 +66,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **SOUNDEX**  
   
--   **Geografia:: GeomFromGML**  
+-   **Geography:: GeomFromGML**  
   
--   **Geografia:: STGeomFromText**  
+-   **Geography:: STGeomFromText**  
   
 -   **Geografia:: STLineFromText**  
   
--   **Geografia:: STPolyFromText**  
+-   **Geography:: STPolyFromText**  
   
--   **Geografia:: STMPointFromText**  
+-   **Geography:: STMPointFromText**  
   
--   **Geografia:: STMLineFromText**  
+-   **Geography:: STMLineFromText**  
   
--   **Geografia:: STMPolyFromText**  
+-   **Geography:: STMPolyFromText**  
   
--   **Geografia:: STGeomCollFromText**  
+-   **Geography:: STGeomCollFromText**  
   
--   **Geografia:: STGeomFromWKB**  
+-   **Geography:: STGeomFromWKB**  
   
--   **Geografia:: STLineFromWKB**  
+-   **Geography:: STLineFromWKB**  
   
--   **Geografia:: STPolyFromWKB**  
+-   **Geography:: STPolyFromWKB**  
   
--   **Geografia:: STMPointFromWKB**  
+-   **Geography:: STMPointFromWKB**  
   
--   **Geografia:: STMLineFromWKB**  
+-   **Geography:: STMLineFromWKB**  
   
--   **Geografia:: STMPolyFromWKB**  
+-   **Geography:: STMPolyFromWKB**  
   
--   **Geografia:: STUnion**  
+-   **Geography:: STUnion**  
   
--   **Geografia:: STIntersection**  
+-   **Geography:: STIntersection**  
   
--   **Geografia:: STDifference**  
+-   **Geography:: STDifference**  
   
--   **Geografia:: STSymDifference**  
+-   **Geography:: STSymDifference**  
   
--   **Geografia:: STBuffer**  
+-   **Geography:: STBuffer**  
   
--   **Geografia:: BufferWithTolerance**  
+-   **Geography:: BufferWithTolerance**  
   
--   **Geografia:: Analizzare**  
+-   **Geography:: Parse**  
   
--   **Geografia:: Ridurre**  
+-   **Geography:: Reduce**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento degli oggetti disabilitati  
  **Indici**  
   
- Se l'indice cluster è disabilitato o se viene forzato un indice non cluster, viene generato l'errore seguente: "Query processor non è in grado di generare un piano perché l'indice '%. \*ls ' nella tabella o nella vista '%. \*ls ' è disabilitato. " Per abilitare nuovamente questi oggetti, ricompilare gli indici dopo l'aggiornamento **chiamando alter index on... REBUILD**.  
+ Se l'indice cluster è disabilitato o se viene forzato un indice non cluster, viene generato l'errore seguente: "query processor non è in grado di generare un piano perché l'indice '%. \*ls ' nella tabella o nella vista '%. \*ls ' è disabilitato. " Per abilitare nuovamente questi oggetti, ricompilare gli indici dopo l'aggiornamento chiamando **alter index on... Ricompilare**.  
   
  **Cumuli**  
   
- Se viene utilizzata una tabella con un heap disabilitato, viene generato l'errore seguente. Per abilitare nuovamente questi oggetti, ricompilare dopo l'aggiornamento chiamando **alter index all on... REBUILD**.  
+ Se viene utilizzata una tabella con un heap disabilitato, viene generato l'errore seguente. Per abilitare nuovamente questi oggetti, ricompilare dopo l'aggiornamento chiamando **alter index all on... Ricompilare**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -132,21 +132,21 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Se si tenta di ricompilare l'heap durante un'operazione online, viene generato un errore.  
   
- **Vincoli check e chiavi esterne**  
+ **Vincoli CHECK e chiavi esterne**  
   
- Sebbene vincoli CHECK e chiavi esterne disabilitati non generino alcun errore, i vincoli non vengono applicati quando vengono modificate le righe. Per abilitare nuovamente questi oggetti, verificare i vincoli dopo l'aggiornamento chiamando **ALTER TABLE... VINCOLO**CHECK.  
+ Sebbene vincoli CHECK e chiavi esterne disabilitati non generino alcun errore, i vincoli non vengono applicati quando vengono modificate le righe. Per abilitare nuovamente questi oggetti, verificare i vincoli dopo l'aggiornamento chiamando **ALTER TABLE... VINCOLO CHECK**.  
   
- **Colonne calcolate rese permanente**  
+ **Colonne calcolate persistenti**  
   
  Poiché non è possibile disabilitare una sola colonna, l'intera tabella viene disabilitata applicando questa operazione all'indice cluster o all'heap.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una query su **sys. dm _db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dalla modifica del livello di compatibilità a 120.  
+ Nell'esempio seguente viene illustrata una query su **sys. dm_db_objects_disabled_on_compatibility_level_change** per trovare gli oggetti interessati dalla modifica del livello di compatibilità a 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

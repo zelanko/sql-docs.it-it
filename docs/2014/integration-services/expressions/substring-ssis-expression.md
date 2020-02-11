@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768733"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (espressione SSIS)
@@ -43,7 +43,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione SUBSTRING utilizza un indice in base uno. Se *position* ha valore 1, la sottostringa inizia dal primo carattere in *character_expression*.  
   
  È possibile utilizzare SUBSTRING solo con il tipo di dati DT_WSTR. Se l'argomento *character_expression* è un valore letterale stringa o una colonna di dati con tipo di dati DT_STR, prima di eseguire l'operazione prevista da SUBSTRING verrà eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](cast-ssis-expression.md).  

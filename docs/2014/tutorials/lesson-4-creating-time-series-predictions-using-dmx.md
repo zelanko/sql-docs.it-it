@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX | Microsoft Docs'
+title: 'Lezione 4: creazione di stime basate su serie temporali tramite DMX | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312084"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lezione 4: Creazione di stime basate su serie temporali con DMX
-  In questa lezione e nella lezione seguente, si utilizzerà Data Mining Extensions (DMX) per creare tipi diversi di stime basate su modelli time series creato nel [lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX
+  In questa lezione e nella lezione seguente si utilizzerà DMX (Data Mining Extensions) per creare diversi tipi di stime in base ai modelli Time Series creati nella [lezione 1: creazione di un modello di data mining Time Series e della struttura](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) di data mining e [lezione 2: aggiunta di modelli di data mining alla struttura di data mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Con un modello Time Series si dispone di numerose opzioni per l'esecuzione di stime:  
   
@@ -31,19 +31,19 @@ ms.locfileid: "63312084"
  La sintassi per effettuare questi tipi di stima è riportata di seguito:  
   
  Stima basata su serie temporali predefinita  
- Uso [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) per restituire il numero specificato di stime dal modello di data mining sottoposto a training.  
+ Utilizzare [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) per restituire il numero specificato di stime dal modello di data mining sottoposto a training.  
   
- Ad esempio, vedere [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) oppure [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
+ Vedere ad esempio [PredictTimeSeries &#40;&#41;DMX](/sql/dmx/predicttimeseries-dmx) o [esempi di query sul modello Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
   
  EXTEND_MODEL_CASES  
- Uso [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) con l'argomento EXTEND_MODEL_CASES per aggiungere nuovi dati, estendere la serie e creare stime basate sul modello di data mining aggiornato.  
+ Utilizzare [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) con l'argomento EXTEND_MODEL_CASES per aggiungere nuovi dati, estendere la serie e creare stime basate sul modello di data mining aggiornato.  
   
  Questa esercitazione contiene un esempio dell'utilizzo di EXTEND_MODEL_CASES.  
   
  REPLACE_MODEL_CASES  
- Uso [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) con l'argomento REPLACE_MODEL_CASES per sostituire i dati originali con una nuova serie di dati e quindi creare stime basate sull'applicazione degli schemi nel modello di data mining per i nuovi dati serie.  
+ Utilizzare [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) con l'argomento REPLACE_MODEL_CASES per sostituire i dati originali con una nuova serie di dati, quindi creare stime basate sull'applicazione dei modelli nel modello di data mining alla nuova serie di dati.  
   
- Per un esempio di come utilizzare REPLACE_MODEL_CASES, vedere [lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Per un esempio di come utilizzare REPLACE_MODEL_CASES, vedere [lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione verranno eseguite le attività seguenti:  
@@ -65,11 +65,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- Elenco di selezione può contenere colonne del modello, ad esempio il nome del prodotto di riga che si sta creando le stime, o funzioni di stima, ad esempio [Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx) oppure [ &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), che sono specifiche per i modelli di data mining time series.  
+ L'elenco di selezione può contenere colonne del modello, ad esempio il nome della linea di prodotti per cui si stanno creando le stime, o funzioni di stima, ad esempio [Lag &#40;dmx&#41;](/sql/dmx/lag-dmx) o [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), che sono specifici per i modelli di data mining Time Series.  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>Per creare una semplice query di stima basata su serie temporali  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -133,23 +133,23 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+6.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-7.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `SimpleTimeSeriesPrediction.dmx`.  
+7.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `SimpleTimeSeriesPrediction.dmx`il nome.  
   
-8.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+8.  Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
      La query restituisce sei stime per ognuna delle due combinazioni di prodotto e area specificate nella clausola `WHERE`.  
   
  Nella lezione successiva verrà creata una query che fornisce nuovi dati al modello e confronta i risultati di tale stima con quella appena creata.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Lezione 5: Estendere la serie temporale del modello](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lezione 5: Estensione del modello Time Series](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
- [Esempi di query sul modello di serie temporale](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Ritardo &#40;DMX&#41;](/sql/dmx/lag-dmx)   
+ [Esempi di query sul modello Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Lezione 2: compilazione di uno scenario di previsione &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   
