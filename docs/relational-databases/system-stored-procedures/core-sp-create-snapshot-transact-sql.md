@@ -1,5 +1,5 @@
 ---
-title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078223"
 ---
-# <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
+# <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inserisce una riga nella vista core.snapshots del data warehouse di gestione. Questa procedura viene chiamata tutte le volte che un pacchetto di caricamento avvia il caricamento dei dati nel data warehouse di gestione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,28 +47,28 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid =] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ GUID per il set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
  [ @collector_type_uid = ] '*collector_type_uid*'  
- GUID per un tipo agente di raccolta. *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
+ GUID per un tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
   
- [ @machine_name=] '*nome_computer*'  
- Nome del server in cui risiede l'insieme di raccolta. *machine_name* viene **sysname**, non prevede alcun valore predefinito.  
+ [ @machine_name= ] '*machine_name*'  
+ Nome del server in cui risiede l'insieme di raccolta. *machine_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @named_instance=] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, non prevede alcun valore predefinito.  
+ [ @named_instance= ] '*named_instance*'  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
  [ @log_id = ] *log_id*  
- Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* viene **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire query sulla visualizzazione syscollector_execution_log nel database msdb.  
+ Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è di tipo **bigint** e non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire una query sulla vista dbo. syscollector_execution_log nel database msdb.  
   
  [ @snapshot_id = ] *snapshot_id*  
- Identificatore univoco per una riga inserita nella vista snapshots. *snapshot_id* viene **int** e viene restituito come OUTPUT.  
+ Identificatore univoco di una riga inserita nella vista core. Snapshots. *snapshot_id* è di **tipo int** e viene restituito come output.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente runtime dell'agente di raccolta dati chiama core.sp_create_snapshot.  
   
  Tramite questa procedura viene verificato quanto segue:  
@@ -79,8 +79,8 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Se una delle due precedenti verifiche non ha esito positivo, la procedura ha esito negativo e viene restituito un errore.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **mdw_writer** (con autorizzazione EXECUTE) ruolo predefinito del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato uno snapshot per il set di raccolta Utilizzo disco, lo snapshot viene aggiunto al data warehouse di gestione e viene restituito l'identificatore dello snapshot. In questo esempio viene utilizzata l'istanza predefinita.  
@@ -100,6 +100,6 @@ EXEC core.sp_create_snapshot
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

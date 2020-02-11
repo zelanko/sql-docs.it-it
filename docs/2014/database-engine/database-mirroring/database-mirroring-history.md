@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754833"
 ---
 # <a name="database-mirroring-history"></a>Cronologia di mirroring del database
@@ -62,14 +62,14 @@ ms.locfileid: "62754833"
 > [!NOTE]  
 >  La finestra di dialogo non consente di aggiornare automaticamente l'elenco di cronologia. Per aggiornare l'elenco, fare clic su **Aggiorna** o scegliere un'altra opzione di filtro. Solo i membri del ruolo predefinito del server **sysadmin** possono aggiornare la cronologia di mirroring.  
   
- **Cronologia**  
+ **History**  
  Consente di visualizzare l'elenco di cronologia. Fare clic su un'intestazione di colonna per ordinare la griglia in base a tale colonna. L'elenco contiene le colonne seguenti:  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**Data e ora registrazione**|Timestamp della riga della cronologia.|  
 |**Ruolo**|Ruolo del mirroring corrente dell'istanza del server per il database, Principale o Mirror.|  
-|**Stato mirroring**|Stato del database:<br /><br /> Disconnesso<br /><br /> Failover in sospeso<br /><br /> Sospeso<br /><br /> Sincronizzato<br /><br /> Sincronizzazione in corso<br /><br /> Unknown|  
+|**Stato mirroring**|Stato del database:<br /><br /> Disconnesso<br /><br /> Failover in sospeso<br /><br /> Suspended<br /><br /> Sincronizzato<br /><br /> Sincronizzazione in corso<br /><br /> Unknown|  
 |**Connessione server di controllo del mirroring del database**|Stato della connessione del server di controllo del mirroring nella sessione di mirroring del database. I possibili valori Connesso o Disconnesso. Se non è presente alcun server di controllo del mirroring, il valore è NULL.|  
 |**Log non inviato**|Dimensioni, espresse in kilobyte (KB), del log non inviato nella coda di invio sull'istanza del server principale.|  
 |**Tempo invio**|Periodo di tempo approssimativo necessario all'istanza del server principale per inviare il log attualmente nella coda di invio all'istanza del server mirror ( *velocità di invio*). Dato che la frequenza delle transazioni in ingresso può variare notevolmente, il tempo di invio del log rappresenta una stima. Tuttavia, la velocità di invio può essere utile per stimare approssimativamente il tempo necessario per un failover manuale.|  
@@ -84,6 +84,6 @@ ms.locfileid: "62754833"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Avviare la Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

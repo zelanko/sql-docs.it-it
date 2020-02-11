@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062214"
 ---
 # <a name="active-operations-dialog-box"></a>Finestra di dialogo Operazioni attive
@@ -27,7 +27,7 @@ ms.locfileid: "66062214"
   
  **Per saperne di più**  
   
-1.  [Apertura della finestra di dialogo Operazioni attive](#open_dialog)  
+1.  [Aprire la finestra di dialogo operazioni attive](#open_dialog)  
   
 2.  [Configurare le opzioni](#options)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66062214"
   
 ### <a name="options"></a>Opzioni  
  **Tipo**  
- Consente di specificare il tipo di operazione. Di seguito sono riportati i valori possibili per il **tipo** campo e i valori corrispondenti nella colonna operations_type della finestra di Transact-SQL `catalog.operations` visualizzazione.  
+ Consente di specificare il tipo di operazione. Di seguito sono riportati i valori possibili per il campo **tipo** e i valori corrispondenti nella colonna operations_type della vista Transact-SQL `catalog.operations` .  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ ms.locfileid: "66062214"
 |Convalida del pacchetto|301|  
 |Configurazione del catalogo|1000|  
   
- **Arresta**  
+ **Stop**  
  Fare clic per arrestare un'operazione in esecuzione.  
   
   

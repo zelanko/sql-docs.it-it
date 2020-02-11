@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313779"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Utilizzare diagrammi di database (Visual Database Tools)
   È possibile creare una rappresentazione grafica del database, o diagramma, utilizzando Progettazione database. Negli argomenti riportati di seguito vengono fornite le nozioni fondamentali per l'utilizzo di tale strumento di progettazione con i diagrammi di database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un nuovo diagramma di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
  [Salvataggio di diagrammi di database &#40;Visual Database Tools&#41;](save-database-diagrams-visual-database-tools.md)  

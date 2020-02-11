@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810369"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurazione delle opzioni di avvio del server (Gestione configurazione SQL Server)
@@ -52,22 +52,22 @@ ms.locfileid: "62810369"
     >  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows.  
     >   
     >  -   **Windows 10**:  
-    >          Per aprire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, via il **pagina iniziale**, digitare SQLServerManager12.msc (per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Facendo clic su SQLServerManager12.msc apre Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare doppio clic su SQLServerManager12.msc e quindi fare clic su **Apri percorso file**. In Esplora File di Windows, fare doppio clic su SQLServerManager12.msc e quindi fare clic su **Aggiungi a Start** oppure **Pin alla barra delle applicazioni**.  
+    >          Per aprire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, nella **pagina iniziale**digitare SQLServerManager12. msc (per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Se si fa clic su SQLServerManager12.msc, viene aperto Gestione configurazione. Per aggiungere la Configuration Manager alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
     > -   **Windows 8**:  
-    >          Per aprire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, nel **ricerca** sull'accesso, in **app**, digitare **SQLServerManager\<versione >. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
+    >          Per aprire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** in **app**digitare **SQLServerManager\<Version>. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
   
-2.  Nel riquadro destro fare clic con il pulsante destro del mouse su **SQL Server(***<nome_istanza>***)** e scegliere **Proprietà**.  
+2.  Nel riquadro destro fare clic con il pulsante destro del mouse su **SQL Server (***<instance_name>***)**, quindi scegliere **proprietà**.  
   
 3.  Nella scheda **Parametri di avvio** della casella **Specificare un parametro di avvio** digitare il parametro e quindi fare clic su **Aggiungi**.  
   
-     Ad esempio, per avviare in modalità utente singolo, digitare `-m` nella **specificare un parametro di avvio** casella e quindi fare clic su **Add**. Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, arrestare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe eseguire per primo la connessione impedendo la connessione come secondo utente.  
+     Ad esempio, per avviare in modalità utente singolo, digitare `-m` nella casella **specificare un parametro di avvio** e quindi fare clic su **Aggiungi**. Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo, arrestare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe eseguire per primo la connessione impedendo la connessione come secondo utente.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  Riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
     > [!WARNING]  
-    >  Quando si finisce di usare la modalità utente singolo, nella casella dei parametri di avvio, selezionare la `-m` parametro il **parametri esistenti** casella e quindi fare clic su **rimuovere**. Riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ripristinare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella modalità tipica multiutente.  
+    >  Al termine dell'utilizzo della modalità utente singolo, nella casella parametri di avvio selezionare il `-m` parametro nella casella **parametri esistenti** , quindi fare clic su **Rimuovi**. Riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per ripristinare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella modalità tipica multiutente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio di SQL Server in modalità utente singolo](start-sql-server-in-single-user-mode.md)   
