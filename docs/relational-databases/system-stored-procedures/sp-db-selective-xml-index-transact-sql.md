@@ -18,21 +18,21 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108235"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Abilita e disabilita la funzionalità degli indici XML selettivi in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se chiamata senza parametri, la stored procedure restituisce 1 se l'indice XML selettivo è abilitato in un database specifico.  
   
 > [!NOTE]  
->  Per disabilitare l'indice XML selettivo tramite questa stored procedure, il database deve essere riportato in modalità di recupero con registrazione minima utilizzando il [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) comando.  
+>  Per disabilitare l'indice XML selettivo utilizzando questo stored procedure, è necessario attivare la modalità di recupero con registrazione minima utilizzando il comando [ALTER database set Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +43,16 @@ ms.locfileid: "68108235"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @ db_name = ] 'db_name'` Il nome del database per abilitare o disabilitare l'indice XML selettivo in. Se *db_name* è NULL, si presuppone che il database corrente.  
+`[ @ db_name = ] 'db_name'`Nome del database in cui abilitare o disabilitare l'indice XML selettivo. Se *db_name* è null, viene utilizzato il database corrente.  
   
-`[ @action = ] 'action'` Determina se abilitare o disabilitare l'indice. Se un altro valore ad eccezione del fatto 'on', 'true', 'off' o 'false' è passato, verrà generato un errore.  
+`[ @action = ] 'action'`Determina se abilitare o disabilitare l'indice. Se viene passato un altro valore tranne ' on ',' true ',' off ' o ' false ', verrà generato un errore.  
   
 ```  
   
 Allowed values: 'on', 'off', 'true', 'false'  
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **1** se l'indice XML selettivo è abilitato in un database specifico.  
   
 ## <a name="examples"></a>Esempi  

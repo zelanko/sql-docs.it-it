@@ -20,14 +20,14 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba5019b15fdbb8bce06f04d5109813b88c40647d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104838"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Funzione SQLDataSourceToDriver
-**SQLDataSourceToDriver** supportstranslations per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni basate su ODBC; le applicazioni richiedono traduzione attraverso **SQLSetConnectAttr**. Il driver associato con il *ConnectionHandle* specificato in **SQLSetConnectAttr** chiama la DLL specificata per eseguire le traduzioni di tutti i dati provenienti dall'origine dati del driver. Una DLL di conversione predefinita può essere specificato nel file di inizializzazione ODBC.  
+**SQLDataSourceToDriver** supportstranslations per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni abilitate per ODBC. le applicazioni richiedono la conversione tramite **SQLSetConnectAttr**. Il driver associato al *connectionHandle* specificato in **SQLSETCONNECTATTR** chiama la DLL specificata per eseguire le traduzioni di tutti i dati che scorrono dall'origine dati al driver. È possibile specificare una DLL di traduzione predefinita nel file di inizializzazione ODBC.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,64 +48,64 @@ BOOL SQLDataSourceToDriver(
   
 ## <a name="arguments"></a>Argomenti  
  *fOption*  
- [Input] Valore dell'opzione.  
+ Input Valore dell'opzione.  
   
  *fSqlType*  
- [Input] Il tipo di dati SQL. Questo argomento indica al driver come convertire *rgbValueIn* in un formato accettabile per l'applicazione. Per un elenco di tipi di dati SQL validi, vedere la [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione nell'appendice d: Tipi di dati.  
+ Input Tipo di dati SQL. Questo argomento indica al driver come convertire *rgbValueIn* in un modulo accettabile per l'applicazione. Per un elenco dei tipi di dati SQL validi, vedere la sezione tipi di dati [SQL](../../../odbc/reference/appendixes/sql-data-types.md) in Appendice D: tipi di dati.  
   
  *rgbValueIn*  
- [Input] Valore da convertire.  
+ Input Valore da tradurre.  
   
  *cbValueIn*  
- [Input] Lunghezza di *rgbValueIn*.  
+ Input Lunghezza di *rgbValueIn*.  
   
  *rgbValueOut*  
- [Output] Risultato della conversione.  
+ Output Risultato della conversione.  
   
 > [!NOTE]  
->  La DLL di conversione non null terminare questo valore.  
+>  La DLL di conversione non è null. terminare questo valore.  
   
  *cbValueOutMax*  
- [Input] Lunghezza di *rgbValueOut*.  
+ Input Lunghezza di *rgbValueOut*.  
   
  *pcbValueOut*  
- [Output] Il numero totale di byte (escluso il byte di terminazione null) disponibili per restituire *rgbValueOut*.  
+ Output Il numero totale di byte, escluso il byte di terminazione null, disponibile per restituire in *rgbValueOut*.  
   
- Per dati carattere o binario, se è maggiore o uguale a *cbValueOutMax*, i dati in *rgbValueOut* verrà troncato *cbValueOutMax* byte.  
+ Per i dati di tipo carattere o binario, se è maggiore o uguale a *cbValueOutMax*, i dati in *rgbValueOut* vengono troncati a *cbValueOutMax* byte.  
   
- Per tutti gli altri tipi di dati, il valore di *cbValueOutMax* viene ignorato e la DLL di conversione si presuppone che la dimensione del *rgbValueOut* è la dimensione del tipo di dati C predefinito del tipo di dati SQL specificato con *fSqlType*.  
+ Per tutti gli altri tipi di dati, il valore di *cbValueOutMax* viene ignorato e la dll di traduzione presuppone che la dimensione di *rgbValueOut* sia la dimensione del tipo di dati C predefinito del tipo di dati SQL specificato con *fSqlType*.  
   
- Il *pcbValueOut* argomento può essere un puntatore null.  
+ L'argomento *pcbValueOut* può essere un puntatore null.  
   
  *szErrorMsg*  
- [Output] Puntatore alla risorsa di archiviazione per un messaggio di errore. Si tratta di una stringa vuota, a meno che la conversione non riuscita.  
+ Output Puntatore alla risorsa di archiviazione per un messaggio di errore. Si tratta di una stringa vuota a meno che la traduzione non abbia esito negativo.  
   
  *cbErrorMsgMax*  
- [Input] Lunghezza di *szErrorMsg*.  
+ Input Lunghezza di *szErrorMsg*.  
   
  *pcbErrorMsg*  
- [Output] Puntatore al numero totale di byte (escluso il byte di terminazione null) disponibili per restituire *szErrorMsg*. Se è maggiore o uguale a *cbErrorMsg*, i dati in *szErrorMsg* verrà troncato *cbErrorMsgMax* meno il carattere di terminazione null. Il *pcbErrorMsg* argomento può essere un puntatore null.  
+ Output Puntatore al numero totale di byte, escluso il byte di terminazione null, disponibile per restituire in *szErrorMsg*. Se è maggiore o uguale a *cbErrorMsg*, i dati in *szErrorMsg* vengono troncati a *cbErrorMsgMax* meno il carattere di terminazione null. L'argomento *pcbErrorMsg* può essere un puntatore null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- TRUE se la conversione ha esito positivo, FALSE se la conversione ha esito negativo.  
+ TRUE se la conversione ha avuto esito positivo, FALSE se la conversione non è riuscita.  
   
 ## <a name="comments"></a>Commenti  
- Il driver chiama **SQLDataSourceToDriver** per tradurre alldata (i dati dei set di risultati, i nomi di tabella, i conteggi delle righe, i messaggi di errore e così via) passando dai dati di origine del driver. La DLL di conversione potrebbe non tradurre alcuni dati, a seconda del tipo dei dati e lo scopo della traduzione DLL. ad esempio, una DLL che converte i dati di tipo carattere da una tabella codici a altra ignora tutti i dati numerici e binari.  
+ Il driver chiama **SQLDataSourceToDriver** per tradurre ALLDATA (dati del set di risultati, nomi di tabella, conteggi di righe, messaggi di errore e così via) passando dall'origine dati al driver. La DLL di traduzione potrebbe non tradurre alcuni dati, a seconda del tipo di dati e dello scopo della DLL di traduzione. ad esempio, una DLL che converte i dati di tipo carattere da una tabella codici a un'altra ignora tutti i dati numerici e binari.  
   
- Il valore di *fOption* è impostata sul valore di *vParam* specificata chiamando **SQLSetConnectAttr** con l'attributo SQL_ATTR_TRANSLATE_OPTION. È un valore a 32 bit che ha un significato specifico per una determinata DLL di conversione. Ad esempio, è possibile specificare che conversione del set di un determinato carattere.  
+ Il valore di *fOption* è impostato sul valore di *parametro vParam* specificato chiamando **SQLSetConnectAttr** con l'attributo SQL_ATTR_TRANSLATE_OPTION. Si tratta di un valore a 32 bit che ha un significato specifico per una determinata DLL di traduzione. Ad esempio, è possibile specificare una determinata conversione del set di caratteri.  
   
- Se il buffer stesso viene specificato per *rgbValueIn* e *rgbValueOut*, verrà eseguita la conversione dei dati nel buffer di posto.  
+ Se viene specificato lo stesso buffer per *rgbValueIn* e *rgbValueOut*, la conversione dei dati nel buffer verrà eseguita sul posto.  
   
- Sebbene *cbValueIn*, *cbValueOutMax*, e *pcbValueOut* sono di tipo, SDWORD **SQLDataSourceToDriver** non necessariamente supporta i puntatori di grandi dimensioni.  
+ Anche se *cbValueIn*, *cbValueOutMax*e *pcbValueOut* sono di tipo SDWORD, **SQLDataSourceToDriver** non supporta necessariamente puntatori enormi.  
   
- Se **SQLDataSourceToDriver** restituisce FALSE, il troncamento dei dati sono stati generati durante la conversione. Se *pcbValueOut* (il numero di byte disponibili a tornare nel buffer di output) è maggiore *cbValueOutMax* (la lunghezza del buffer di output), quindi si è verificato un troncamento. Il driver deve determinare se il troncamento ha avuto accettabile. Se non si è verificato il troncamento, il **SQLDataSourceToDriver** ha restituito FALSE a causa di un altro errore. In entrambi i casi, viene restituito un messaggio di errore specifico nel *szErrorMsg*.  
+ Se **SQLDataSourceToDriver** restituisce false, il troncamento dei dati potrebbe essersi verificato durante la conversione. Se *pcbValueOut* (il numero di byte disponibili per restituire nel buffer di output) è maggiore di *cbValueOutMax* (lunghezza del buffer di output), si è verificato un troncamento. Il driver deve determinare se il troncamento è accettabile. Se non si è verificato il troncamento, **SQLDataSourceToDriver** ha restituito false a causa di un altro errore. In entrambi i casi, in *szErrorMsg*viene restituito un messaggio di errore specifico.  
   
- Per altre informazioni sulla conversione dei dati, vedere [DDL di traslazione](../../../odbc/reference/develop-app/translation-dlls.md).  
+ Per ulteriori informazioni sulla conversione dei dati, vedere [dll di traduzione](../../../odbc/reference/develop-app/translation-dlls.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Conversione di dati inviati all'origine dati|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
-|Restituisce l'impostazione di un attributo di connessione|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Impostare un attributo di connessione|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|Conversione dei dati inviati all'origine dati|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
+|Restituzione dell'impostazione di un attributo di connessione|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Impostazione di un attributo di connessione|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

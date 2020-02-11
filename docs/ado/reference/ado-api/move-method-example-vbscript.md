@@ -1,5 +1,5 @@
 ---
-title: Esempio del metodo Move (VBScript) | Microsoft Docs
+title: Esempio di metodo Move (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918160"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
-Questo esempio Usa la [spostare](../../../ado/reference/ado-api/move-method-ado.md) metodo per posizionare il puntatore di record, basato sull'input dell'utente.  
+Questo esempio usa il metodo [Move](../../../ado/reference/ado-api/move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Per visualizzare in questo esempio completamente funzionale, è necessario disporre di dati che si trova in C:\Program Files\Microsoft piattaforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb AdvWorks.mdb (installato con il SDK) di origine o modificare il percorso nel codice di esempio in modo da riflettere il percorso effettivo dei file. Si tratta di un file di database Microsoft Access.  
+ Utilizzare l'esempio seguente in una pagina di Active Server (ASP). Per visualizzare questo esempio completamente funzionante, è necessario che l'origine dati AdvWorks. mdb (installata con l'SDK) si trovi in C:\Programmi\Microsoft platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o modificare il percorso nel codice di esempio per riflettere percorso effettivo del file. Si tratta di un file di database di Microsoft Access.  
   
- Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **MoveVBS**. È possibile visualizzare il risultato in qualsiasi browser.  
+ Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **MoveVBS. asp**. È possibile visualizzare i risultati in qualsiasi browser.  
   
- Provare a immettere una lettera o un noninteger per visualizzare il lavoro di gestione degli errori.  
+ Provare a immettere una lettera o un valore non intero per visualizzare il lavoro di gestione degli errori.  
   
 ```  
 <!-- BeginMoveVBS -->  
