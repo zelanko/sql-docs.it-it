@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055964"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
@@ -30,7 +30,7 @@ Se il file di dati non contiene valori per la colonna dell'identificatore nella 
 
 |Riquadro|
 |---|
-|[Mantenere i valori Identity](#keep_identity)<br />[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di dati di esempio](#sample_data_file)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)<br />[Esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Identity senza un file di formato](#bcp_identity)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Identity con un file di formato non XML](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori Identity generati senza un file di formato](#bcp_default)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori Identity generati con un file di formato non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Identity senza un file di formato](#bulk_identity)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Identity con un file di formato non XML](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori Identity generati senza un file di formato](#bulk_default)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori Identity generati con un file di formato non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e mantenimento dei valori Identity con un file di formato non XML](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e dei valori Identity generati con un file di formato non XML](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
+|[Mantenere i valori Identity](#keep_identity)<br />[Condizioni di test di esempio](#etc)<br />&emsp;&#9679;&emsp;[Tabella di esempio](#sample_table)<br />&emsp;&#9679;&emsp;[File di dati di esempio](#sample_data_file)<br />&emsp;&#9679;&emsp;[File di formato non XML di esempio](#nonxml_format_file)<br />[esempi](#examples)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Identity senza un file di formato](#bcp_identity)<br />&emsp;&#9679;&emsp;[Uso di bcp e mantenimento dei valori Identity con un file di formato non XML](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori Identity generati senza un file di formato](#bcp_default)<br />&emsp;&#9679;&emsp;[Uso di bcp e dei valori Identity generati con un file di formato non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Identity senza un file di formato](#bulk_identity)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e mantenimento dei valori Identity con un file di formato non XML](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori Identity generati senza un file di formato](#bulk_default)<br />&emsp;&#9679;&emsp;[Uso di BULK INSERT e dei valori Identity generati con un file di formato non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e mantenimento dei valori Identity con un file di formato non XML](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Uso di OPENROWSET e dei valori Identity generati con un file di formato non XML](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## Mantenere i valori Identity <a name="keep_identity"></a>  
 Per impedire l'assegnazione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di valori Identity durante l'importazione bulk delle righe di dati in una tabella, utilizzare il qualificatore per il mantenimento dei valori Identity corretto.  Quando si specifica un qualificatore per il mantenimento dei valori Identity, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza i valori Identity nel file di dati.  Sono disponibili i qualificatori seguenti:
@@ -286,21 +286,21 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [Mantenimento dei valori Null o uso dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Preparare i dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Per utilizzare un file di formato**  
   
--   [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
+-   [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
@@ -316,11 +316,11 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
  **Per specificare i formati di dati per la compatibilità mediante bcp**  
   
-1.  [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
+1.  [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
 2.  [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Specificare il tipo di archiviazione di file con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 731550d385d073c7b2f2e2758d4fcaf2353db746
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74908989"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Ripristino di emergenza e disponibilità di PowerPivot (SQL Server 2014)

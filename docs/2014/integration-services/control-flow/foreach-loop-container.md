@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831582"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili i tipi di enumeratori seguenti:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] in sono disponibili i tipi di enumeratori seguenti:  
   
 -   Foreach ADO Enumerator, per enumerare righe nelle tabelle. Consente ad esempio di ottenere le righe in un recordset ADO.  
   
      Con la destinazione recordset è possibile salvare i dati in memoria in un recordset archiviato in una variabile del pacchetto il cui tipo di dati è `Object`. In genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. Il tipo di dati della variabile specificata per l'enumeratore Foreach ADO deve essere Object. Per ulteriori informazioni sulla destinazione recordset, vedere [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. Consente ad esempio di enumerare e ottenere un elenco delle tabelle presenti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Foreach ADO.NET Schema Rowset Enumerator, per enumerare le informazioni dello schema relative a un'origine dei dati. È possibile, ad esempio, enumerare e ottenere un elenco delle tabelle nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   
 -   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62831582"
   
 -   Enumeratore BLOB di Azure Foreach per enumerare i BLOB in un contenitore BLOB di Archiviazione di Azure.  
   
--   Enumeratore foreach File di ADLS per enumerare i file in una directory di Azure Data Lake Store.
+-   Foreach ADLS File Enumerator per enumerare i file in una directory ADLS.
   
  Nella figura seguente viene illustrato un contenitore Ciclo Foreach che include un'attività File system. Il ciclo Foreach utilizza Foreach File Enumerator e l'attività File system è configurata per la copia di un file. Se la cartella specificata dall'enumeratore contiene quattro file, il ciclo si ripeterà quattro volte e copierà quattro file.  
   
- ![Contenitore Ciclo Foreach che enumera una cartella](../media/ssis-foreachloop.gif "Contenitore Ciclo Foreach che enumera una cartella")  
+ ![Contenitore Foreach Loop per l'enumerazione di una cartella](../media/ssis-foreachloop.gif "Contenitore Foreach Loop per l'enumerazione di una cartella")  
   
- È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Ad esempio, il valore di raccolta dell'enumeratore Foreach File viene mappato a una variabile denominata `MyFile` e la variabile viene quindi usata nell'espressione di proprietà per la proprietà Subject dell'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md).  
+ È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Ad esempio, il valore della raccolta dell'enumeratore Foreach file viene mappato a una `MyFile` variabile denominata e la variabile viene quindi utilizzata nell'espressione di proprietà per la proprietà Subject di un'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md).  
   
  Le variabili sulle quali viene eseguito il mapping al valore della raccolta dell'enumeratore possono essere utilizzate anche in espressioni e script.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "62831582"
 |Foreach Item|Definire gli elementi nella raccolta di Foreach Item Enumerator, comprese le colonne e i tipi di dati delle colonne.|  
 |Foreach Nodelist|Specificare l'origine del documento XML e configurare l'operazione XPath.|  
 |Foreach SMO|Specificare una connessione a un database e gli oggetti SMO da enumerare.|  
-|Blob di Azure Foreach|Specificare il contenitore blob di Azure che contiene i BLOB da enumerare.|  
-|Foreach file di ADLS|Specificare la directory di Azure Data Lake Store che contiene i file da enumerare, insieme a alcuni filtri.|
+|Blob di Azure Foreach|Specificare il contenitore BLOB di Azure che contiene i BLOB da enumerare.|  
+|Foreach file di ADLS|Specificare la directory ADLS che contiene i file da enumerare, insieme ad alcuni filtri.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Espressioni di proprietà nei contenitori Ciclo Foreach  
  Un pacchetto può essere configurato in modo da eseguire più eseguibili contemporaneamente. Questo tipo di configurazione deve essere tuttavia utilizzato con cautela, se il pacchetto include un contenitore Ciclo Foreach che implementa espressioni di proprietà.  

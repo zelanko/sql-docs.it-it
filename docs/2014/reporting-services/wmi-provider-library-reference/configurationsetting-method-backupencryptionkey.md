@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098611"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Metodo BackupEncryptionKey (MSReportServer_ConfigurationSetting WMI)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Metodo BackupEncryptionKey (MSReportServer_ConfigurationSetting WMI)
   Esegue il backup della chiave di crittografia per l'istanza del server di report specificata. Tale chiave viene archiviata crittografata con una password.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,10 +46,10 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Password*  
  Stringa utilizzata per crittografare la chiave di crittografia prima che venga restituita.  
   
- *KeyFile[]*  
+ *File di file []*  
  [out] Matrice che contiene la chiave di crittografia crittografata.  
   
- *Lunghezza*  
+ *Length*  
  [out] Lunghezza della matrice restituita dal metodo.  
   
  *HRESULT*  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

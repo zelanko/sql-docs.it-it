@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110054"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Popolamento di una tabella gerarchica utilizzando metodi gerarchici
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ha 8 dipendenti che lavorano nel reparto Marketing. La gerarchia dei dipendenti è simile alla seguente:  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]ha 8 dipendenti che lavorano nel reparto marketing. La gerarchia dei dipendenti è simile alla seguente:  
   
- **David**, **EmployeeID** 6 è il responsabile marketing. Tre marketing specialist fanno riferimento a **David**:  
+ **David**, **EmployeeID** 6, è responsabile marketing. Tre marketing specialist fanno riferimento a **David**:  
   
 -   **Sariya**, **EmployeeID** 46  
   
@@ -32,7 +32,8 @@ ms.locfileid: "66110054"
   
 -   **Jill**, **EmployeeID** 119  
   
- **Wanida** , Marketing Assistant (**EmployeeID** 269), fa riferimento a **Sariya**, mentre **Mary** Marketing Assistant (**EmployeeID** 272), fa riferimento a **John**.  
+ 
+  **Wanida** , Marketing Assistant (**EmployeeID** 269), fa riferimento a **Sariya**, mentre **Mary** Marketing Assistant (**EmployeeID** 272), fa riferimento a **John**.  
   
 ### <a name="to-insert-the-root-of-the-hierarchy-tree"></a>Per inserire la radice dell'albero gerarchico  
   
@@ -64,7 +65,8 @@ ms.locfileid: "66110054"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Per inserire un dipendente subordinato  
   
-1.  **Sariya** fa riferimento a **David**. Per inserire **Sariya** nodo, è necessario creare un oggetto appropriato **OrgNode** valore del tipo di dati `hierarchyid`. Il codice seguente crea una variabile di tipo dato `hierarchyid` e la popola con il valore OrgNode radice della tabella. A questo punto usa la variabile con il metodo [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) per inserire la riga che è un nodo subordinato. `GetDescendant` accetta due argomenti. Rivedere le opzioni seguenti per i valori dell'argomento:  
+1.  **Sariya** segnala a **David**. Per inserire **il** nodo di Sariya, è necessario creare un valore **OrgNode** appropriato del tipo `hierarchyid`di dati. Il codice seguente crea una variabile di tipo dato `hierarchyid` e la popola con il valore OrgNode radice della tabella. A questo punto usa la variabile con il metodo [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) per inserire la riga che è un nodo subordinato. 
+  `GetDescendant` accetta due argomenti. Rivedere le opzioni seguenti per i valori dell'argomento:  
   
     -   Se il padre è NULL, `GetDescendant` restituisce NULL.  
   

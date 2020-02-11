@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: af2d52f176b67b27a29eafb662ca539ced53ebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139095"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
@@ -39,21 +39,21 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Target_Hierarchy*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
- *Ricorsivo*  
+ *Ricorsiva*  
  Una parola chiave che indica il confronto ricorsivo tra set.  
   
  *Include_Calc_Members*  
  Una parola chiave per consentire l'inclusione dei membri calcolati nei risultati del drill-down.  
   
-## <a name="remarks"></a>Note  
- Questa funzione restituisce un set di membri figlio ordinati in base alla gerarchia e comprende i membri specificati nel primo set che sono presenti anche nel secondo set. Il drill-down non verrà eseguito sui membri padre se il primo set contiene il membro padre e uno o più figli. Il primo set può avere qualsiasi dimensionalità, mentre il secondo deve contenere un set unidimensionale. L'ordine originale dei membri nel primo set viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente. La funzione ottiene il set di risultati recuperando il membro figlio di ogni membro del primo set presente anche nel secondo set. Se **RICORSIVA** viene specificata, continua la funzione Confronta ricorsivamente i membri del risultato impostati con il secondo set, recuperare gli elementi figlio per ogni membro nel set di risultati presente anche nel secondo set fino a non oltre i membri del set di risultati sono reperibile nel secondo set.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione restituisce un set di membri figlio ordinati in base alla gerarchia e comprende i membri specificati nel primo set che sono presenti anche nel secondo set. Il drill-down non verrà eseguito sui membri padre se il primo set contiene il membro padre e uno o più figli. Il primo set può avere qualsiasi dimensionalità, mentre il secondo deve contenere un set unidimensionale. L'ordine originale dei membri nel primo set viene mantenuto, con la sola differenza che nel set di risultati della funzione tutti i membri figlio vengono indicati immediatamente sotto il membro padre corrispondente. La funzione ottiene il set di risultati recuperando il membro figlio di ogni membro del primo set presente anche nel secondo set. Se viene specificato **RIcorsivo** , la funzione continua a confrontare in modo ricorsivo i membri del set di risultati in base al secondo set, recuperando gli elementi figlio per ogni membro nel set di risultati presente anche nel secondo set fino a quando non si trovano altri membri del set di risultati nel secondo set.  
   
- L'esecuzione di query la proprietà XMLA **MdpropMdxDrillFunctions** consente di verificare il livello di supporto che il server garantisce per le funzioni di drill, vedere [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)per informazioni dettagliate.  
+ Eseguendo una query sulla proprietà XMLA **MdpropMdxDrillFunctions** è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  Il primo set può contenere tuple anziché membri. La funzione per il drill-down di tuple è un'estensione di OLE DB e restituisce un set di tuple anziché di membri.  
   
 > [!IMPORTANT]  
->  Il drill-down di un membro non verrà eseguito se tale membro è immediatamente seguito da uno dei relativi figli. L'ordine dei membri nel set è rilevante per il drill-down * e il drill-up\* famiglie delle funzioni.  
+>  Il drill-down di un membro non verrà eseguito se tale membro è immediatamente seguito da uno dei relativi figli. L'ordine dei membri nel set è importante sia per le famiglie di funzioni drill\* -down * che drillup.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguito il drill-down nel membro Australia del primo set, presente anche nel secondo set.  
@@ -81,6 +81,6 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   
