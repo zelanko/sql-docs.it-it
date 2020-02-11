@@ -1,5 +1,5 @@
 ---
-title: Creazione di stime basate su serie temporali (esercitazione intermedia di Data Mining) | Microsoft Docs
+title: Creazione di stime basate su serie temporali (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313886"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Creazione di stime basate su serie temporali (Esercitazione intermedia sul data mining)
@@ -29,53 +29,53 @@ ms.locfileid: "63313886"
   
 #### <a name="to-select-a-model-and-input-table"></a>Per selezionare un modello e una tabella di input  
   
-1.  Nel **stima modello di Data Mining** scheda della finestra di progettazione Data Mining, nelle **modello di Data Mining** fare clic su **Seleziona modello**.  
+1.  Nella scheda **Stima modello** di data mining di progettazione modelli di data mining fare clic su **Seleziona modello**nella casella **modello di data mining** .  
   
-2.  Nel **Seleziona modello di Data Mining** finestra di dialogo espandere la struttura Forecasting, selezionare il **Forecasting** del modello dall'elenco e quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo **Seleziona modello di data mining** espandere la struttura Forecasting, selezionare il modello **Forecasting** dall'elenco, quindi fare clic su **OK**.  
   
-3.  Ignorare il **Seleziona tabelle di Input** casella.  
+3.  Ignorare la casella **Seleziona tabella/** e di input.  
   
     > [!NOTE]  
     >  Per i modelli Time Series non è necessario specificare un input distinto, a meno che non si stia eseguendo una stima incrociata.  
   
-4.  Nel **origine** colonna, nella griglia al **stima modello di Data Mining** scheda, fare clic sulla cella nella prima riga vuota e quindi selezionare **modello di data mining Forecasting**.  
+4.  Nella colonna **origine** , nella griglia della scheda **Stima modello di data mining** , fare clic sulla cella nella prima riga vuota, quindi selezionare **modello di data mining Forecasting**.  
   
-5.  Nel **campo** colonna, selezionare **Model Region**.  
+5.  Nella colonna **campo** selezionare area del **modello**.  
   
      L'identificatore della serie verrà aggiunto alla query di stima per indicare a quale combinazione di modello e area si applica la stima.  
   
-6.  Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare **funzione di stima**.  
+6.  Fare clic sulla riga vuota successiva nella colonna **origine** , quindi selezionare **funzione di stima**.  
   
-7.  Nel **campo** colonna, selezionare **PredictTimeSeries**.  
+7.  Nella colonna **campo** selezionare **PredictTimeSeries**.  
   
     > [!NOTE]  
-    >  Con i modelli Time Series è inoltre possibile utilizzare la funzione `Predict`. Per impostazione predefinita, tuttavia, la funzione Predict crea una sola stima per ogni serie. Pertanto, per specificare più intervalli per la stima, è necessario usare il **PredictTimeSeries** (funzione).  
+    >  Con i modelli Time Series è inoltre possibile utilizzare la funzione `Predict`. Per impostazione predefinita, tuttavia, la funzione Predict crea una sola stima per ogni serie. Pertanto, per specificare più passaggi di stima, è necessario utilizzare la funzione **PredictTimeSeries** .  
   
-8.  Nel **modello di Data Mining** riquadro, selezionare la colonna del modello di data mining **quantità.** Trascinare Amount per il **criteri/argomento** casella per il **PredictTimeSeries** funzione aggiunta in precedenza.  
+8.  Nel riquadro **modello di data mining** selezionare la colonna modello di data mining **Amount.** Trascinare Amount nella casella **criteri/argomento** per la funzione **PredictTimeSeries** aggiunta in precedenza.  
   
-9. Scegliere il **criteri/argomento** , quindi digitare una virgola, seguita da **5**, dopo il nome del campo.  
+9. Fare clic sulla casella **criteri/argomento** e digitare una virgola, seguita da **5**, dopo il nome del campo.  
   
-     Il testo nel **criteri/argomento** casella dovrebbe ora visualizzare quanto segue:  
+     Il testo nella casella **criteri/argomento** dovrebbe ora visualizzare quanto segue:  
   
      `[Forecasting].[Amount],5`  
   
-10. Nel **Alias** colonna, tipo `PredictAmount`.  
+10. Nella colonna **alias** Digitare `PredictAmount`.  
   
-11. Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare **funzione di stima** nuovamente.  
+11. Fare clic sulla riga vuota successiva nella colonna **origine** , quindi selezionare di nuovo **funzione di stima** .  
   
-12. Nel **campo** colonna, selezionare **PredictTimeSeries**.  
+12. Nella colonna **campo** selezionare **PredictTimeSeries**.  
   
-13. Nel **modello di Data Mining** riquadro, selezionare la colonna Quantity e trascinarla nella **criteri/argomento** finestra per la seconda **PredictTimeSeries** (funzione).  
+13. Nel riquadro **modello di data mining** selezionare la colonna Quantity e quindi trascinarla nella casella **criteri/argomento** della seconda funzione **PredictTimeSeries** .  
   
-14. Scegliere il **criteri/argomento** , quindi digitare una virgola, seguita da **5**, dopo il nome del campo.  
+14. Fare clic sulla casella **criteri/argomento** e digitare una virgola, seguita da **5**, dopo il nome del campo.  
   
-     Il testo nel **criteri/argomento** casella dovrebbe ora visualizzare quanto segue:  
+     Il testo nella casella **criteri/argomento** dovrebbe ora visualizzare quanto segue:  
   
      `[Forecasting].[ Quantity],5`  
   
-15. Nel **Alias** colonna, tipo `PredictQuantity`.  
+15. Nella colonna **alias** Digitare `PredictQuantity`.  
   
-16. Fare clic su **passare alla visualizzazione dei risultati della query**.  
+16. Fare clic su **passa alla visualizzazione risultati della query**.  
   
      I risultati della query verranno visualizzati in formato tabulare.  
   
@@ -87,15 +87,15 @@ ms.locfileid: "63313886"
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|99978.00|  
-|8/25/2008|145575.07|  
-|9/25/2008|116835.19|  
-|10/25/2008|116537.38|  
-|11/25/2008|107760.55|  
+|7/25/2008|99978,00|  
+|8/25/2008|145575,07|  
+|9/25/2008|116835,19|  
+|10/25/2008|116537,38|  
+|11/25/2008|107760,55|  
   
  **M200 Europe PredictQuantity**  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |7/25/2008|52|  
 |8/25/2008|67|  
@@ -103,19 +103,19 @@ ms.locfileid: "63313886"
 |10/25/2008|57|  
 |11/25/2008|54|  
   
- **M200 North America - PredictAmount**  
+ **M200 America del Nord-PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25/2008|348533.93|  
-|8/25/2008|340097.98|  
-|9/25/2008|257986.19|  
-|10/25/2008|374658.24|  
-|11/25/2008|379241.44|  
+|7/25/2008|348533,93|  
+|8/25/2008|340097,98|  
+|9/25/2008|257986,19|  
+|10/25/2008|374658,24|  
+|11/25/2008|379241,44|  
   
- **M200 North America - PredictQuantity**  
+ **M200 America del Nord-PredictQuantity**  
   
-|$TIME|Quantity|  
+|$TIME|Quantità|  
 |-----------|--------------|  
 |7/25/2008|272|  
 |8/25/2008|152|  
@@ -133,7 +133,7 @@ ms.locfileid: "63313886"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>Per convertire i dati in formato flat nel riquadro Risultati  
   
-1.  Nel generatore di Query di stima, fare clic su **passa alla visualizzazione di Progettazione query**.  
+1.  In Generatore di query di stima fare clic su **passa alla visualizzazione di progettazione query**.  
   
      La visualizzazione cambierà per consentire la modifica manuale del testo della query DMX.  
   
@@ -162,30 +162,30 @@ ms.locfileid: "63313886"
   
     ```  
   
-4.  Fare clic su **passare alla visualizzazione dei risultati della query**.  
+4.  Fare clic su **passa alla visualizzazione risultati della query**.  
   
 #### <a name="to-export-prediction-query-results"></a>Per esportare i risultati della query di stima  
   
 1.  Fare clic su **Salva risultati query**.  
   
-2.  Nel **salvare Query risultati di Data Mining** della finestra di dialogo per **Zdroj dat**, selezionare [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se si desidera salvare i dati in un database relazionale diverso, è inoltre possibile creare una nuova origine dati.  
+2.  Nella finestra di dialogo **Salva risultati query di data mining** selezionare [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]per **origine dati**. Se si desidera salvare i dati in un database relazionale diverso, è inoltre possibile creare una nuova origine dati.  
   
-3.  Nel **nome della tabella** colonna, tipo di nome, una variabile temporanea nuova tabella, ad esempio **stime di prova**.  
+3.  Nella colonna **nome tabella** Digitare un nuovo nome di tabella temporanea, ad esempio **stime dei test**.  
   
 4.  Fare clic su **Salva**.  
   
     > [!NOTE]  
     >  Per visualizzare la tabella creata, creare una connessione al motore di database dell'istanza in cui sono stati salvati i dati, quindi creare una query.  
   
-## <a name="conclusion"></a>Conclusione  
+## <a name="conclusion"></a>Conclusioni  
  Si è appreso come compilare un modello Time Series di base, interpretare le previsioni e creare stime.  
   
  Le attività restanti in questa esercitazione sono facoltative e descrivono stime avanzate basate su serie temporali. Se si decide di procedere, verrà illustrata la procedura per aggiungere nuovi dati al modello e creare stime nella serie estesa. Verrà inoltre illustrata la procedura per eseguire una stima incrociata, tramite la tendenza nel modello ma sostituendo i dati con una nuova serie di dati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Stime basate su serie temporali avanzate &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Stime avanzate basate su serie temporali &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di query sui modelli Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   
