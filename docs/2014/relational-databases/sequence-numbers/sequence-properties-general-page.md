@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184424"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
@@ -26,7 +26,7 @@ ms.locfileid: "63184424"
   
  Per informazioni e scenari in cui vengono usate entrambe le funzioni **CREATE SEQUENCE** e **NEXT VALUE FOR** , vedere [Numeri di sequenza](sequence-numbers.md).  
   
- È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza**oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà** non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql) oppure eliminare e ricreare l'oggetto sequenza.  
+ È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza**oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà**non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql) oppure eliminare e ricreare l'oggetto sequenza.  
   
 ## <a name="options"></a>Opzioni  
  **Nome sequenza**  
@@ -38,21 +38,22 @@ ms.locfileid: "63184424"
  **Tipo di dati**  
  Una sequenza può essere definita come qualsiasi tipo Integer. ad esempio:  
   
-|Tipo di dati|Intervallo|  
+|Tipo di dati|Range|  
 |---------------|-----------|  
 |`tinyint`|da 0 a 255|  
 |`smallint`|Da -32.768 a 32.767|  
 |`int`|Da -2.147.483.648 a 2.147.483.647|  
 |`bigint`|Da -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
   
--   `decimal` o `numeric` con scala 0.  
+-   
+  `decimal` o `numeric` con scala 0.  
   
 -   Qualsiasi tipo di dati definito dall'utente (tipo di alias) basato su uno di questi tipi.  
   
- **Precisione**  
+ **Precision**  
  Consente di specificare la precisione per i tipi di dati `decimal` o `numeric` (la scala è sempre 0).  
   
- **Valore iniziale**  
+ **Inizia con valore**  
  Primo valore che verrà restituito dall'oggetto sequenza. Il valore **START** deve essere minore o uguale al valore massimo e maggiore o uguale al valore minimo dell'oggetto sequenza. Il valore iniziale predefinito per un nuovo oggetto sequenza è il valore minimo per un oggetto sequenza con ordine crescente e il valore massimo per un oggetto sequenza con ordine decrescente.  
   
  **Incremento di**  
@@ -64,7 +65,7 @@ ms.locfileid: "63184424"
  **Valore massimo**  
  Specifica i limiti per l'oggetto sequenza. Il valore massimo predefinito per un nuovo oggetto sequenza è il valore massimo del tipo di dati dell'oggetto sequenza.  
   
- **Riavvio sequenza ciclica al raggiungimento del limite**  
+ **La sequenza di cicli viene riavviata al raggiungimento del limite**  
  Selezionare questa opzione per consentire il riavvio dell'oggetto sequenza dal valore minimo (o massimo per gli oggetti sequenza con ordine decrescente) quando viene superato il valore minimo o massimo.  
   
 > [!NOTE]  
@@ -77,16 +78,17 @@ ms.locfileid: "63184424"
   
 -   Nessuna cache: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i numeri di sequenza non vengono memorizzati nella cache.  
   
--   Memorizzazione nella cache con dimensione: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono memorizzati nella cache i valori di sequenza. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di tenere traccia del valore corrente e del numero di valori rimasti nella cache. La quantità di memoria richiesta per l'archiviazione della cache è pertanto sempre corrispondente a due istanze del tipo di dati dell'oggetto sequenza.  
+-   Memorizzazione nella cache con dimensione: in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono memorizzati nella cache i valori di sequenza. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di tenere traccia del valore corrente e del numero di valori rimasti nella cache. La quantità di memoria richiesta per l'archiviazione della cache è pertanto sempre corrispondente a due istanze del tipo di dati dell'oggetto sequenza.  
   
  In caso di creazione con l'opzione CACHE, un arresto imprevisto quale un'interruzione dell'alimentazione, può provocare la perdita dei numeri di sequenza nella cache.  
   
  Per informazioni aggiuntive sulle opzioni di creazione di una sequenza, vedere [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER**o **CONTROL** per l'oggetto SCHEMA.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+ [sys. Sequences &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

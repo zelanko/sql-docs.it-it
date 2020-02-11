@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150755"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
@@ -82,9 +82,10 @@ ms.locfileid: "63150755"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Monitoraggio attività  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Monitoraggio attività  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Showplan grafico  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Showplan grafico  
   
 -   Stored procedure  
   
@@ -120,11 +121,13 @@ ms.locfileid: "63150755"
   
 3.  Salvare i dati evento acquisiti.  
   
-     Il salvataggio dei dati evento acquisiti consente di poterli analizzare in un secondo momento o persino di riprodurli tramite Distributed Replay Utility o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. I dati evento acquisiti vengono salvati in un file che può essere ricaricato e analizzato nello strumento in cui è stato creato in origine. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente il salvataggio dei dati evento in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il salvataggio dei dati evento acquisiti è importante per la creazione di dati di riferimento per le prestazioni. I dati di riferimento per le prestazioni vengono salvati e utilizzati per il confronto con dati evento più recenti allo scopo di verificare se le prestazioni sono ottimali. Per altre informazioni, vedere [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     Il salvataggio dei dati evento acquisiti consente di poterli analizzare in un secondo momento o persino di riprodurli tramite Distributed Replay Utility o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. I dati evento acquisiti vengono salvati in un file che può essere ricaricato e analizzato nello strumento in cui è stato creato in origine. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente il salvataggio dei dati evento in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il salvataggio dei dati evento acquisiti è importante per la creazione di dati di riferimento per le prestazioni. I dati di riferimento per le prestazioni vengono salvati e utilizzati per il confronto con dati evento più recenti allo scopo di verificare se le prestazioni sono ottimali. Per altre informazioni, vedere [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Creare modelli di traccia contenenti le impostazioni specificate per l'acquisizione degli eventi.  
   
-     I modelli di traccia includono informazioni specifiche sugli eventi stessi, i dati di evento e i filtri utilizzati per l'acquisizione dei dati. È possibile utilizzare tali modelli per eseguire il monitoraggio di un set di eventi specifico in un secondo momento senza ridefinire gli eventi, i dati di evento e i filtri. Se, ad esempio, si desidera eseguire un monitoraggio frequente del numero di deadlock e degli utenti interessati, è possibile creare un modello per la definizione di tali eventi, dati evento e filtri evento, salvare il modello e quindi riapplicare il filtro in occasione del successivo monitoraggio dei deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa modelli di traccia per questo scopo. Per altre informazioni, vedere [Impostare i valori predefiniti per una definizione di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)e [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+     I modelli di traccia includono informazioni specifiche sugli eventi stessi, i dati di evento e i filtri utilizzati per l'acquisizione dei dati. È possibile utilizzare tali modelli per eseguire il monitoraggio di un set di eventi specifico in un secondo momento senza ridefinire gli eventi, i dati di evento e i filtri. Se, ad esempio, si desidera eseguire un monitoraggio frequente del numero di deadlock e degli utenti interessati, è possibile creare un modello per la definizione di tali eventi, dati evento e filtri evento, salvare il modello e quindi riapplicare il filtro in occasione del successivo monitoraggio dei deadlock. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa modelli di traccia per questo scopo. Per altre informazioni, vedere [Impostare i valori predefiniti per una definizione di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)e [Creare un modello di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
   
 5.  Analizzare i dati evento acquisiti.  
   

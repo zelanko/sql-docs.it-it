@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150600"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Creare la guida di piano nel formato con parametri della query, specificando l'hint per la query PARAMETERIZATION FORCED.  
   
     > [!IMPORTANT]  
-    >  Nell'ambito della parametrizzazione di una query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un tipo di dati ai parametri che sostituiscono i valori letterali, in base al valore e alle dimensioni del valore letterale specifico. Lo stesso processo viene eseguito per i valori letterali costanti passati al parametro di output **@stmt** della stored procedure **sp_get_query_template**. Poiché il tipo di dati specificato nell'argomento **@params** di **sp_create_plan_guide** deve corrispondere a quello della query con i parametri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], potrebbe essere necessario creare più guide di piano per coprire l'intervallo completo di valori di parametro possibili per la query.  
+    >  Nell'ambito della parametrizzazione di una query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un tipo di dati ai parametri che sostituiscono i valori letterali, in base al valore e alle dimensioni del valore letterale specifico. Lo stesso processo si verifica nel valore dei valori letterali costanti passati al parametro **@stmt** di output di **sp_get_query_template**. Poiché il tipo di dati specificato nell' **@params** argomento di **sp_create_plan_guide** deve corrispondere a quello della query in quanto è parametrizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da, potrebbe essere necessario creare più guide di piano per coprire l'intervallo completo di possibili valori di parametro per la query.  
   
  Lo script seguente può essere utilizzato sia per ottenere la query con parametri che per creare in seguito una guida di piano basata su tale query.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107792"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anteprima di report in Generatore report
@@ -76,7 +76,7 @@ ms.locfileid: "66107792"
  Se un sottoreport utilizzato dal report viene modificato dopo la creazione della sessione di modifica, non sarà possibile visualizzare in anteprima il report. Per visualizzare correttamente in anteprima il report, è necessario salvare il report o fare clic su **Aggiorna** per ottenere dati aggiornati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

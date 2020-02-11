@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204991"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generazione di XML da set di righe con FOR XML
-  È possibile generare una `xml` istanza del tipo di dati da un set di righe utilizzando FOR XML con il nuovo **tipo** direttiva.  
+  È possibile generare un' `xml` istanza del tipo di dati da un set di righe utilizzando for XML con la nuova direttiva **Type** .  
   
- Il risultato può essere assegnato a un `xml` colonna, variabile o parametro del tipo di dati. L'istruzione FOR XML può essere inoltre nidificata, consentendo di creare qualsiasi tipo di struttura gerarchica. Le istruzioni FOR XML nidificate sono molto più facili da scrivere rispetto a FOR XML EXPLICIT, ma forniscono prestazioni inferiori in caso di gerarchie con numerosi livelli. L'istruzione FOR XML introduce inoltre una nuova modalità PATH, che specifica il percorso dell'albero XML in cui compare un determinato valore di colonna.  
+ Il risultato può essere assegnato a una `xml` colonna, a una variabile o a un parametro del tipo di dati. L'istruzione FOR XML può essere inoltre nidificata, consentendo di creare qualsiasi tipo di struttura gerarchica. Le istruzioni FOR XML nidificate sono molto più facili da scrivere rispetto a FOR XML EXPLICIT, ma forniscono prestazioni inferiori in caso di gerarchie con numerosi livelli. L'istruzione FOR XML introduce inoltre una nuova modalità PATH, che specifica il percorso dell'albero XML in cui compare un determinato valore di colonna.  
   
  La nuova direttiva **FOR XML TYPE** consente di definire visualizzazioni XML in sola lettura su dati relazionali con la sintassi SQL. Su tale vista è possibile eseguire query utilizzando istruzioni SQL e istruzioni XQuery incorporate, come illustrato nell'esempio seguente. È possibile fare riferimento a tali viste SQL anche nelle stored procedure.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Esempio: Visualizzazione SQL che restituisce un tipo di dati xml generato  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Esempio: visualizzazione SQL che restituisce un tipo di dati xml generato  
  La definizione di vista SQL seguente crea una visualizzazione XML su una colonna relazionale, utilizzando la chiave primaria e gli autori dei libri recuperati da una colonna XML:  
   
 ```  
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- La vista V contiene una singola riga con un singolo columnxmlVal di tipo XML`.` è possibile eseguire query come una normale `xml` istanza del tipo di dati. La query seguente, ad esempio, restituisce il nome dell'autore, "David":  
+ La vista V contiene una singola riga con un singolo nome xmlVal e di tipo`.` XML su cui è possibile eseguire query come un' `xml` istanza del tipo di dati normale. La query seguente, ad esempio, restituisce il nome dell'autore, "David":  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

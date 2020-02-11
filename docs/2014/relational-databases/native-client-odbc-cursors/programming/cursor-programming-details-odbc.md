@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulla programmazione dei cursori (ODBC) | Microsoft Docs
+title: Dettagli sulla programmazione dei cursori (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207262"
 ---
 # <a name="cursor-programming-details-odbc"></a>Informazioni sulla programmazione dei cursori (ODBC)
   La scelta del tipo di cursore più appropriato può migliorare le prestazioni dell'applicazione. In determinate condizioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può convertire implicitamente un tipo di cursore quando si esegue un'istruzione SQL che non è supportata dal tipo di cursore richiesto.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Conversioni implicite dei cursori &#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
+-   [Conversioni implicite di cursori &#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
   
--   [Uso del recupero automatico con i cursori ODBC](using-autofetch-with-odbc-cursors.md)  
+-   [Utilizzo del recupero automatico con i cursori ODBC](using-autofetch-with-odbc-cursors.md)  
   
--   [Cursori Fast Forward-Only &#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
+-   [Cursori fast-only &#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di cursori &#40;ODBC&#41;](../using-cursors-odbc.md)  
+ [Utilizzo di cursori &#40;&#41;ODBC](../using-cursors-odbc.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184250"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Creazione di self-join in modo manuale (Visual Database Tools)
@@ -125,7 +125,7 @@ Cheryl Carson       Abraham Bennet
 7.  Specificare le altre opzioni per la query, quali le colonne di output, le condizioni di ricerca e il criterio di ordinamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare self-join in modo automatico &#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [Creazione di self-join automaticamente &#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [Eseguire query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

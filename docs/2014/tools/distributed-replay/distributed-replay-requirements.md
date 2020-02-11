@@ -1,5 +1,5 @@
 ---
-title: Requisiti relativi a riesecuzione distribuita | Microsoft Docs
+title: Requisiti di Riesecuzione distribuita | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149797"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
@@ -51,9 +51,9 @@ ms.locfileid: "63149797"
   
  È inoltre possibile creare un modello di traccia personalizzato e utilizzarlo per riprodurre eventi con Riesecuzione distribuita, purché contenga gli eventi seguenti:  
   
--   Audit Login  
+-   Connessione di controllo  
   
--   Audit Logout  
+-   Disconnessione di controllo  
   
 -   ExistingConnection  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63149797"
   
 -   TextData  
   
--   Application Name  
+-   Nome dell'applicazione  
   
 -   LoginName  
   
@@ -103,11 +103,11 @@ ms.locfileid: "63149797"
   
 -   HostName  
   
--   Binary Data  
+-   Dati binari  
   
 -   SPID  
   
--   Start Time  
+-   Ora di inizio  
   
 -   EndTime  
   
@@ -125,7 +125,7 @@ ms.locfileid: "63149797"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Requisiti del sistema operativo  
- I sistemi operativi supportati per l'esecuzione dello strumento di amministrazione e dei servizi client e del controller sono gli stessi dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sui sistemi operativi supportati per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'istanza, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ I sistemi operativi supportati per l'esecuzione dello strumento di amministrazione e dei servizi client e del controller sono gli stessi dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sui sistemi operativi supportati per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di, vedere [requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Le funzionalità di Riesecuzione distribuita sono supportate sia in sistemi operativi x86 che x64. Per i sistemi operativi basati su x64, è supportata solo la modalità Windows on Windows (WOW).  
   
@@ -134,9 +134,11 @@ ms.locfileid: "63149797"
   
 |Funzionalità di Riesecuzione distribuita|Numero massimo di installazioni per ambiente di riproduzione|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizio controller di Riesecuzione distribuita|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizio client Riesecuzione distribuita|16 (computer fisici o virtuali)|  
-|Strumento di amministrazione|Nessuna limitazione|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizio controller di Riesecuzione distribuita|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizio client Riesecuzione distribuita|16 (computer fisici o virtuali)|  
+|Strumento di amministrazione|Illimitato|  
   
 > [!NOTE]  
 >  Benché sia possibile installare solo un'istanza dello strumento di amministrazione in ogni computer, è possibile avviare più istanze dello strumento di amministrazione. I comandi eseguiti da più strumenti di amministrazione vengono risolti in base all'ordine di ricezione.  
@@ -158,8 +160,8 @@ ms.locfileid: "63149797"
  La riproduzione degli eventi associati ad account di accesso mancanti o non corretti genera errori di riproduzione, ma l'operazione non viene interrotta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md)   
+ [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
+ [Sicurezza Riesecuzione distribuita](distributed-replay-security.md)   
  [Installare Riesecuzione distribuita](install-distributed-replay-overview.md)  
   
   

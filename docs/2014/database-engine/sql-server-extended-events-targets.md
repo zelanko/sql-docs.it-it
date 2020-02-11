@@ -1,5 +1,5 @@
 ---
-title: Destinazioni degli eventi estesi di SQL Server | Microsoft Docs
+title: SQL Server destinazioni degli eventi estesi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088865"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -27,11 +27,11 @@ ms.locfileid: "66088865"
   
  Gli eventi estesi forniscono le seguenti destinazioni che è possibile utilizzare per una sessione relativa ad essi:  
   
--   [Contatore degli eventi](../../2014/database-engine/event-counter-target.md)  
+-   [Contatore eventi](../../2014/database-engine/event-counter-target.md)  
   
      Conta tutti gli eventi specificati che si verificano durante una sessione di eventi estesi. Consente di ottenere informazioni sulle funzionalità del carico di lavoro senza aggiungere l'overhead di un'intera raccolta di eventi. Si tratta di una destinazione sincrona.  
   
--   [File di eventi](../../2014/database-engine/event-file-target.md)  
+-   [File di evento](../../2014/database-engine/event-file-target.md)  
   
      Consente di scrivere l'output della sessione eventi restituito dai buffer di memoria completi su disco. Si tratta di una destinazione asincrona.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66088865"
   
      Molti tipi di eventi si verificano a coppie, ad esempio le acquisizioni e i rilasci del blocco. Consente di determinare quando un evento associato specificato non si verifica in un set corrispondente. Si tratta di una destinazione asincrona.  
   
--   [Event Tracing for Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Analisi eventi per Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Consente di correlare gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con dati evento del sistema operativo Windows o dell'applicazione. Si tratta di una destinazione sincrona.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66088865"
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
- [Pacchetti degli eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server pacchetti di eventi estesi](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [Sessioni Eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   

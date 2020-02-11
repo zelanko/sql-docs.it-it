@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150486"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Aprire il file del testo del batch nel Blocco note e copiare il testo.  
   
-8.  Creare la guida di piano e incollare il testo copiato tra le virgolette ( **"** ) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell'argomento **@stmt** facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''** .  
+8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell' **@stmt** argomento facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''** .  
   
  La guida di piano ottenuta è la seguente:  
   

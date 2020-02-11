@@ -1,5 +1,5 @@
 ---
-title: XTP Cursors | Microsoft Docs
+title: Cursori XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151058"
 ---
 # <a name="xtp-cursors"></a>XTP Cursors
   L'oggetto prestazione XTP Cursors contiene contatori correlati ai cursori interni del motore XTP. I cursori sono i blocchi predefiniti di basso livello utilizzati dal motore XTP per elaborare query [!INCLUDE[tsql](../../includes/tsql-md.md)]. Di conseguenza, in genere non si ha controllo diretto su di essi.  
   
- La tabella seguente descrive la **XTP Cursors** contatori.  
+ In questa tabella vengono descritti i contatori **XTP Cursors** .  
   
 |Contatore|Descrizione|  
 |-------------|-----------------|  
@@ -38,6 +38,6 @@ ms.locfileid: "63151058"
 |**Righe provvisoriamente eliminate interessate/sec**|Numero medio di righe in scadenza interessate dai cursori, al secondo. Una riga è in scadenza se la transazione che l'ha eliminata è ancora attiva (cioè non ne è stato ancora eseguito il commit o l'interruzione).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XTP &#40;OLTP In memoria&#41; i contatori delle prestazioni](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;i contatori delle prestazioni di OLTP in memoria&#41;](../../integration-services/performance/performance-counters.md)  
   
   

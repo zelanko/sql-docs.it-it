@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191930"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
@@ -35,9 +35,9 @@ ms.locfileid: "63191930"
 ## <a name="event-subscription"></a>Sottoscrizione di eventi  
  Per gestire gli eventi è necessario scrivere una classe del gestore evento, crearne un'istanza, assegnare il gestore evento all'oggetto padre e infine effettuare la sottoscrizione all'evento.  
   
- Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore evento ricevono informazioni sull'evento dal *ServerEventNotificatificationArgs* parametro che può essere usato per segnalare informazioni sull'evento.  
+ Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore eventi ricevono informazioni sull'evento dal parametro *ServerEventNotificatificationArgs* che può essere usato per segnalare le informazioni relative all'evento.  
   
- Sono elencati i tipi di eventi di database e server che possono essere gestiti nel <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classi e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ I tipi di eventi del database e del server che possono essere gestiti sono elencati <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> nella classe e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>nella classe.  
   
 ## <a name="example"></a>Esempio  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

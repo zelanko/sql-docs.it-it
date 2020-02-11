@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150446"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Visualizzazione del log degli errori di SQL Server (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "63150446"
   
 ### <a name="to-view-the-sql-server-error-log"></a>Per visualizzare il log degli errori di SQL Server  
   
-1.  Nella **Esplora oggetti**, espandere un server, espandere **Management**, quindi espandere **log di SQL Server**.  
+1.  In **Esplora oggetti**espandere un server, espandere **gestione**, quindi espandere **SQL Server log**.  
   
 2.  Fare clic con il pulsante destro del mouse su un log e quindi scegliere **Visualizza log di SQL Server**.  
   

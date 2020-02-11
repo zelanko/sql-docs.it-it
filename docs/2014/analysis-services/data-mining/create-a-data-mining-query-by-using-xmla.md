@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di Data Mining usando XMLA | Microsoft Docs
+title: Creazione di una query di data mining tramite XMLA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085553"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Creare una query di data mining usando XMLA
@@ -44,9 +44,9 @@ ms.locfileid: "66085553"
   
      Viene visualizzato un elenco di set di righe dello schema nel riquadro **Risultati** che contiene i nomi e le colonne di tutti i set di righe disponibili nell'istanza corrente.  
   
-2.  Nel **Query** riquadro, posizionare il cursore dopo  **\<Restriction List >** e premere INVIO per aggiungere una nuova riga.  
+2.  Nel riquadro **query** posizionare il cursore dopo ** \<l'elenco di restrizioni>** e premere INVIO per aggiungere una nuova riga.  
   
-3.  Posizionare il cursore sulla riga vuota e digitare  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Posizionare il cursore sulla riga vuota e digitare ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**  
   
      La sezione completa delle restrizioni visualizzata sarà simile alla seguente:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66085553"
   
      `</Restrictions>`  
   
-4.  Fare clic su **Esegui**.  
+4.  Fare clic su **Execute**.  
   
      Nel riquadro **Risultati** viene visualizzato un elenco dei nomi delle colonne relativo al set di righe dello schema specificato.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "66085553"
   
      `</Restrictions>`  
   
-5.  Fare clic su **Esegui**.  
+5.  Fare clic su **Execute**.  
   
      Nel riquadro Risultati viene visualizzata la definizione dello schema insieme ai valori del modello specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

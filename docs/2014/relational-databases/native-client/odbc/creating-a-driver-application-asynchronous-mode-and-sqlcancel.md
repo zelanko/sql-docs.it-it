@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144322"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modalità asincrona e SQLCancel
@@ -45,7 +45,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Durante il controllo del completamento del comando, viene effettuata la stessa chiamata di funzione con gli stessi parametri al driver. Se il driver non riceve una risposta dal server, restituirà nuovamente SQL_STILL_EXECUTING. È necessario controllare periodicamente il comando finché il codice restituito non sia diverso da SQL_STILL_EXECUTING. Quando si ottiene un codice restituito diverso, anche SQL_ERROR, è possibile determinare che il comando è stato completato.  
   
- A volte un comando rimane in attesa per molto tempo. Se l'applicazione deve annullare il comando senza attendere una risposta, è possibile farlo tramite una chiamata **SQLCancel** con la stessa istruzione handle del comando in attesa. Questa è l'unica volta **SQLCancel** deve essere utilizzato. Alcuni programmatori utilizzano **SQLCancel** durante l'elaborazione a metà tra il risultato impostato e si vuole annullare il resto del set di risultati. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) oppure [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) deve essere usato per annullare il resto di un set di risultati in attesa, non **SQLCancel**.  
+ A volte un comando rimane in attesa per molto tempo. Se l'applicazione deve annullare il comando senza attendere una risposta, è possibile eseguire questa operazione chiamando **SQLCancel** con lo stesso handle di istruzione del comando in attesa. Questa è l'unica volta in cui deve essere utilizzato **SQLCancel** . Alcuni programmatori utilizzano **SQLCancel** quando elaborano in modo parziale un set di risultati e desiderano annullare il resto del set di risultati. È necessario utilizzare [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) o [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) per annullare il resto di un set di risultati in attesa, non **SQLCancel**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione driver ODBC di SQL Server Native Client](creating-a-driver-application.md)  

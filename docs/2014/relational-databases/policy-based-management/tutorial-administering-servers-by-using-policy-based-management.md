@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63256062"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Esercitazione: Amministrazione di server tramite la gestione basata su criteri
@@ -28,7 +28,7 @@ ms.locfileid: "63256062"
   
  L'esercitazione è suddivisa in due lezioni:  
   
- [Lezione 1: Creare e applicare un disattivata per impostazione predefinita criteri](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  In questa lezione vengono creati i criteri che consentono di specificare la disabilitazione di Posta elettronica database nel server. Viene quindi verificato se il server è conforme ai criteri e viene configurato il server disabilitando Posta elettronica database.  
   
  [Lezione 2: Creare e applicare criteri per gli standard di denominazione](lesson-2-create-and-apply-a-naming-standards-policy.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "63256062"
  Per utilizzare l'esercitazione, è necessario che nel sistema sia installato [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="start-the-tutorial"></a>Avviare l'esercitazione  
- [Lezione 1: Creare e applicare un disattivata per impostazione predefinita criteri](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  

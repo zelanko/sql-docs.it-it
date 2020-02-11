@@ -11,23 +11,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63145478"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
   Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
   
   
   
-##  <a name="tools"></a> Strumenti per iniziare  
+##  <a name="tools"></a>Strumenti per Introduzione  
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è disponibile un'ampia gamma di strumenti. In questo argomento vengono illustrati i primi strumenti necessari e vengono fornite indicazioni utili per selezionare lo strumento appropriato per le operazioni da eseguire. A tutti gli strumenti è possibile accedere dal menu **Start** . Alcuni strumenti, quali [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], non vengono installati per impostazione predefinita. ma devono essere selezionati tra i componenti client durante l'installazione. Per una descrizione completa degli strumenti illustrati di seguito, eseguire una ricerca nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contiene solo un subset degli strumenti.  
   
 ### <a name="basic-tools"></a>Strumenti di base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ma è disponibile come download separato [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , ma è disponibile come download separato dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione viene installato sia con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che con gli strumenti client. Consente di abilitare protocolli server, configurare le opzioni relative ai protocolli quali le porte TCP, configurare i servizi server per l'avvio automatico e configurare i computer client per la connessione con le modalità preferite. Questo strumento consente di configurare gli elementi di connettività più avanzati ma non le funzionalità.  
   
@@ -36,13 +37,13 @@ ms.locfileid: "63145478"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Per avviare SQL Server Management Studio  
   
--   Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
+-   Dal menu **Start** scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Per avviare Gestione configurazione SQL Server  
   
 -   Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
-##  <a name="connect"></a> Connessione con Management Studio  
+##  <a name="connect"></a>Connessione con Management Studio  
  La connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] dagli strumenti in esecuzione nello stesso computer risulta semplice se si conosce il nome dell'istanza e se si esegue la connessione con un account membro del gruppo Administrators nel computer. Le procedure illustrate di seguito devono essere eseguite nello stesso computer che ospita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Per determinare il nome dell'istanza del Motore di database  
@@ -50,7 +51,7 @@ ms.locfileid: "63145478"
 1.  Accedere a Windows come membro del gruppo Administrators e aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Se ci si connette a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] sul [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] oppure [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o versioni più recenti), potrebbe essere necessario fare doppio clic su [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e quindi fare clic su **Esegui come amministratore** per potersi connettere utilizzando l'amministratore credenziali. A partire da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], in fase di installazione vengono aggiunti determinati account di accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e pertanto le credenziali di amministratore non sono necessarie.  
+    >  Se ci si connette a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] in [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (o più recenti), potrebbe essere necessario fare clic con il [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pulsante destro del mouse e quindi scegliere **Esegui come amministratore** per eseguire la connessione utilizzando le credenziali di amministratore. A partire da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], in fase di installazione vengono aggiunti determinati account di accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e pertanto le credenziali di amministratore non sono necessarie.  
   
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
   
@@ -72,11 +73,11 @@ ms.locfileid: "63145478"
   
 2.  Selezionare **Motore di database**.  
   
-3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è *<nome_computer>***\\***<nome_istanza>* , ad esempio **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è il *<computer_name ***\\***><* instance_name>, ad esempio **ACCTG_SRVR \SQLEXPRESS**.  
   
 4.  Fare clic su **Connetti**.  
   
-##  <a name="additional"></a> Autorizzazione di connessioni aggiuntive  
+##  <a name="additional"></a>Autorizzazione di connessioni aggiuntive  
  Dopo avere stabilito la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come amministratore, una delle prime attività da svolgere consiste nell'autorizzare altri utenti a connettersi. A questo scopo è necessario creare un account di accesso e autorizzare tale account ad accedere a un database come utente. È possibile configurare account di accesso con autenticazione di Windows, che utilizzano le credenziali di Windows, o account di accesso con autenticazione di SQL Server, che archiviano le informazioni autenticate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e sono indipendenti dalle credenziali di Windows. Se possibile, utilizzare l'autenticazione di Windows.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Creazione di un account di accesso con autenticazione di Windows  
@@ -85,7 +86,7 @@ ms.locfileid: "63145478"
   
      Viene visualizzata la finestra di dialogo **Account di accesso - Nuovo** .  
   
-2.  Nel **generali** nella pagina il **nome account di accesso** , digitare un account di accesso di Windows nel formato  *\<dominio >\\< login\>* .  
+2.  Nella casella **nome account di accesso** della pagina **generale** Digitare un account di accesso di Windows nel formato * \<dominio>\\<account\>di accesso*.  
   
 3.  Nella casella **Database predefinito** selezionare [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , se disponibile. In caso contrario, selezionare **master**.  
   

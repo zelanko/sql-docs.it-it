@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c77a06618cddddc06aae962c137433c4905cecb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282311"
 ---
 # <a name="security-extensions-overview"></a>Panoramica sulle estensioni di sicurezza
@@ -24,7 +24,7 @@ ms.locfileid: "63282311"
   
  Poiché le estensioni di sicurezza si basano su un'API aperta ed estensibile, è possibile creare nuove estensioni di autenticazione e autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Di seguito viene fornito un esempio di una tipica implementazione dell'estensione di sicurezza in cui l'autenticazione e l'autorizzazione sono basate su form:  
   
- ![Processo di estensione della sicurezza di Reporting Services](../../media/rosettasecurityextensionflow.gif "Processo di estensione della sicurezza di Reporting Services")  
+ ![Processo dell'estensione di sicurezza di Reporting Services](../../media/rosettasecurityextensionflow.gif "Processo dell'estensione di sicurezza di Reporting Services")  
   
  Come illustrato nella figura, l'autenticazione e l'autorizzazione vengono effettuate nel modo seguente:  
   

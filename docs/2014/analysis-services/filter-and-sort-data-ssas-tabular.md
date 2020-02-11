@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081255"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrare e ordinare dati (SSAS tabulare)
@@ -26,7 +26,7 @@ ms.locfileid: "66081255"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Ordinare i dati in una tabella &#40;tabulare di SSAS&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)ordinare i dati in una tabella|Nelle attività contenute in questo argomento viene descritto come ordinare i dati in una tabella in base alle lettere o ai numeri.|  
-|[Filtrare i dati in una tabella &#40;tabulare di SSAS&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Nelle attività contenute in questo argomento viene descritto come applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe.|  
+|[Ordinare i dati in una tabella &#40;SSAS tabulare&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md) Ordinare i dati in una tabella|Nelle attività contenute in questo argomento viene descritto come ordinare i dati in una tabella in base alle lettere o ai numeri.|  
+|[Filtrare i dati in una tabella &#40;SSAS tabulare&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Nelle attività contenute in questo argomento viene descritto come applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe.|  
   
   

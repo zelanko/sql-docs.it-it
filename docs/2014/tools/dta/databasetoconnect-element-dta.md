@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185419"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
@@ -37,18 +37,19 @@ ms.locfileid: "63185419"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. È possibile utilizzarlo una volta per ogni elemento `TuningOptions`.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
+|**Valore predefinito**|No.|  
+|**Occorrenza**|Facoltativa. È possibile utilizzarlo una volta per ogni elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementi figlio**|None|  
+|**Elementi figlio**|nessuno|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare `DatabaseToConnect` per specificare il nome del primo database al quale si desidera che Ottimizzazione guidata motore di database si connetta quando viene avviata la sessione di ottimizzazione. È possibile specificare un solo database con questo elemento. Se vengono specificati più nomi di database, Ottimizzazione guidata motore di database restituisce un errore.  
   
 ## <a name="example"></a>Esempio  

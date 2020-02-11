@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260744"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Impostazioni delle estensioni per il recapito di Reporting Services
@@ -38,29 +38,29 @@ ms.locfileid: "63260744"
 ## <a name="e-mail-delivery-settings"></a>Impostazioni di recapito tramite posta elettronica  
  Nella tabella seguente sono elencate le impostazioni di recapito tramite posta elettronica per le sottoscrizioni che utilizzano la posta elettronica del server di report.  
   
-|Impostazione|Value|  
+|Impostazione|valore|  
 |-------------|-----------|  
 |**TO**|Indirizzo di posta elettronica visualizzato nella riga `To` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Obbligatorio.|  
-|**CC**|Indirizzo di posta elettronica visualizzato nella riga `Cc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
-|**BCC**|Indirizzo di posta elettronica visualizzato nella riga `Bcc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
-|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione `Reply-To` del messaggio. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativo.|  
+|**CC**|Indirizzo di posta elettronica visualizzato nella riga `Cc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
+|**BCC**|Indirizzo di posta elettronica visualizzato nella riga `Bcc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
+|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione `Reply-To` del messaggio. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativa.|  
 |`IncludeReport`|Valore che indica se includere il report nel recapito tramite posta elettronica. Un valore `true` indica che il report viene recapitato nel corpo del messaggio di posta elettronica.|  
 |**RenderFormat**|Nome dell'estensione per il rendering da utilizzare per generare il report visualizzabile. Il nome deve corrispondere a una delle estensioni per il rendering visibili installate nel server di report. Questo valore è obbligatorio se l'impostazione di `IncludeReport` è `true`.|  
 |**Priorità**|Priorità per l'invio del messaggio di posta elettronica. I valori validi sono `LOW`, `NORMAL` e `HIGH`. Il valore predefinito è `NORMAL`.|  
 |**Oggetto**|Testo nella riga dell'oggetto del messaggio di posta elettronica.|  
-|**Commento**|Testo incluso nel corpo del messaggio di posta elettronica.|  
+|**Comment**|Testo incluso nel corpo del messaggio di posta elettronica.|  
 |**IncludeLink**|Valore che indica se includere un collegamento al report nel corpo del messaggio di posta elettronica.|  
   
 ## <a name="file-share-delivery-settings"></a>Impostazioni di recapito tramite condivisione file  
  Nella tabella seguente sono elencate le impostazioni di recapito tramite condivisione file per le sottoscrizioni.  
   
-|Impostazione|Value|  
+|Impostazione|valore|  
 |-------------|-----------|  
 |**FILENAME**|Nome del file salvato nel disco.|  
 |**FILEEXTN**|Indica se includere un'estensione di file per il report visualizzabile. Il valore può essere `true` o `false`.|  
-|**PATH**|Percorso della cartella o percorso della condivisione file UNC in cui salvare il report.|  
+|**PERCORSO**|Percorso della cartella o percorso della condivisione file UNC in cui salvare il report.|  
 |**RENDER_FORMAT**|Formato del report da salvare nel disco.|  
-|**USERNAME**|Nome utente necessario per accedere al disco o alla risorsa di rete.|  
+|**NOME utente**|Nome utente necessario per accedere al disco o alla risorsa di rete.|  
 |**PASSWORD**|Password necessaria per accedere al disco o alla risorsa di rete.|  
 |**WRITEMODE**|Modalità di scrittura da utilizzare per accedere al disco. I valori validi sono `None`, `Overwrite` e `AutoIncrement`.|  
   

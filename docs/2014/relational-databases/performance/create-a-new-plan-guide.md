@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151191"
 ---
 # <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
   È possibile creare una guida di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint o di un piano di query fisso. Nel piano di guida si specifica l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] da ottimizzare e la clausola OPTION che contiene gli hint che si desidera utilizzare per l'ottimizzazione della query o un piano di query specifico che si desidera utilizzare per ottimizzare la query. Quando viene eseguita la query, in Query Optimizer è possibile far corrispondere l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano e associare la clausola OPTION alla query in fase di esecuzione oppure utilizzare il piano di query specificato.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63151191"
   
      [Sicurezza](#Security)  
   
--   **Per creare una Guida di piano utilizzando:**  
+-   **Per creare una guida di piano utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +43,8 @@ ms.locfileid: "63151191"
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si specificano valori per i parametri di `sp_create_plan_guide`, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica `@name =`, è necessario specificare anche `@stmt =`, `@type =` e così via. Analogamente, se `@name =` viene omesso e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
+-   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si specificano valori per i parametri di `sp_create_plan_guide`, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica `@name =`, è necessario specificare anche `@stmt =`, `@type =` e così via. Analogamente, se `@name =` viene omesso e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
   
 -   È possibile creare più guide di piano OBJECT o SQL per la stessa query e batch o modulo. Tuttavia è possibile abilitare una sola guida di piano alla volta.  
   
@@ -56,13 +57,13 @@ ms.locfileid: "63151191"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare una guida di piano di tipo OBJECT, è necessario disporre dell'autorizzazione ALTER per l'oggetto a cui si fa riferimento. Per creare una guida di piano di tipo SQL o TEMPLATE, è necessario disporre dell'autorizzazione ALTER per il database corrente.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>Per creare una guida di piano  
   
 1.  Fare clic sul segno più per espandere il database in cui si desidera creare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
-2.  Fare doppio clic il **guide di piano** cartella e selezionare **nuova Guida di piano...** .  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **guide di piano** e selezionare **nuova guida di piano..**..  
   
 3.  Nella casella **Nome** della finestra di dialogo **Nuova guida di piano** immettere il nome della guida di piano.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "63151191"
   
 11. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>Per creare una guida di piano  
   

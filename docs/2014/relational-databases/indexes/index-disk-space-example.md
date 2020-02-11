@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161802"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
@@ -51,9 +51,9 @@ ms.locfileid: "63161802"
   
      Heap: 1 milione * 200 byte ~ 200 MB  
   
-     Indice non cluster a: 1 milione * 50 byte / 80% ~ 63 MB  
+     Indice non cluster A: 1 milione * 50 byte / 80% ~ 63 MB  
   
-     Indice non cluster b: 1 milione * 80 byte / 80% ~ 100 MB  
+     Indice non cluster B: 1 milione * 80 byte / 80% ~ 100 MB  
   
      Dimensioni totali delle strutture esistenti: 363 MB  
   
@@ -61,9 +61,9 @@ ms.locfileid: "63161802"
   
      Indice cluster: 1 milione * 200 byte / 80% ~ 250 MB  
   
-     Indice non cluster a: 1 milione * (50 8 + 24) byte / 80% ~ 83 MB  
+     Indice non cluster A: 1 milione * (50 - 8 + 24) byte / 80% ~ 83 MB  
   
-     Indice non cluster b: 1 milione * (80-8 + 24) byte / 80% ~ 120 MB  
+     Indice non cluster B: 1 milione * (80 - 8 + 24) byte / 80% ~ 120 MB  
   
      Dimensioni totali delle nuove strutture: 453 MB  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63161802"
   
 -   Determinare lo spazio per l'indice di mapping temporaneo.  
   
-     In questo esempio, il vecchio segnalibro è l'ID di riga (RID) dell'heap (8 byte) e il nuovo segnalibro è la chiave di clustering (24 byte incluso un `uniqueifier`). Tra i vecchi e i nuovi segnalibri non vi sono colonne sovrapposte.  
+     In questo esempio il vecchio segnalibro è l'ID di riga (RID) dell'heap (8 byte) e il nuovo segnalibro è la chiave di clustering (24 byte `uniqueifier`incluso un). Tra i vecchi e i nuovi segnalibri non vi sono colonne sovrapposte.  
   
      Dimensioni dell'indice di mapping temporaneo = 1 milione * (8 byte + 24 byte) / 80% ~ 40 MB.  
   
@@ -109,10 +109,10 @@ ms.locfileid: "63161802"
   
 |Operazione sull'indice|Requisiti di spazio su disco per i percorsi delle strutture seguenti|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1018 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB:<br /><br /> -Tabella e indici esistenti: 363 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1058 MB:<br /><br /> -Tabella e indici esistenti: 363 MB\*<br /><br /> -**tempdb** (include l'indice di mapping): 242 MB*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB:<br /><br /> -Tabella e indici esistenti: 363 MB*<br /><br /> -Indice di mapping temporaneo: 40 MB\*<br /><br /> -Nuovi indici: 453 MB<br /><br /> Spazio totale richiesto al termine dell'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1018 MB:<br /><br /> \- Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB:<br /><br /> \- Tabella e indici esistenti: 363 MB*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1058 MB:<br /><br /> \- Tabella e indici esistenti: 363 MB\*<br /><br /> -**tempdb** (include l'indice di mapping): 242 MB *<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB:<br /><br /> \- Tabella e indici esistenti: 363 MB*<br /><br /> \- Indice di mapping temporaneo: 40 MB\*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
   
  *Questo spazio viene deallocato dopo il commit dell'operazione sull'indice.  
   

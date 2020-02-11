@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270599"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Riquadro Criteri (Visual Database Tools)
@@ -57,24 +57,24 @@ ms.locfileid: "63270599"
   
 |**Colonna**|**Tipo di query**|**Descrizione**|  
 |----------------|--------------------|---------------------|  
-|colonna|All|Visualizza il nome di una colonna di dati utilizzata per la query o l'espressione per una colonna calcolata. Questa colonna è bloccata in modo da essere sempre visibile quando si scorre orizzontalmente.|  
+|Colonna|Tutti|Visualizza il nome di una colonna di dati utilizzata per la query o l'espressione per una colonna calcolata. Questa colonna è bloccata in modo da essere sempre visibile quando si scorre orizzontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica un nome alternativo per una colonna o il nome che è possibile utilizzare per una colonna calcolata.|  
 |Tabella|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica il nome della tabella o dell'oggetto con struttura a tabella per la colonna di dati associata. Questa colonna è vuota per le colonne calcolate.|  
-|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br /> Nota: Se il database lo consente, è possibile usare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br /> Nota: se il database lo consente, è possibile usare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
 |Tipo di ordinamento|SELECT, INSERT FROM|Specifica che la colonna di dati associata viene utilizzata per ordinare i risultati della query e indica se l'ordinamento è crescente o decrescente.|  
 |Ordinamento|SELECT, INSERT FROM|Specifica la priorità di ordinamento delle colonne di dati utilizzate per ordinare il set di risultati. Quando si modifica il criterio di ordinamento di una colonna di dati, il criterio di ordinamento di tutte le altre colonne verrà aggiornato di conseguenza.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Specifica che la colonna di dati associata viene utilizzata per creare una query di aggregazione. Questa colonna della griglia viene visualizzata solo se è stato scelto **Raggruppa** dal menu **Strumenti** o se è stata aggiunta una clausola GROUP BY al riquadro SQL.<br /><br /> Per impostazione predefinita, il valore di questa colonna è impostato su **Group By**e la colonna fa parte della clausola GROUP BY.<br /><br /> Quando ci si sposta in una cella di questa colonna e si seleziona una funzione di aggregazione da applicare alla colonna di dati associata, in base all'impostazione predefinita l'espressione risultante viene aggiunta come colonna di output al set di risultati.|  
-|Criteri|All|Specifica una condizione di ricerca (un filtro) per la colonna di dati associata. Immettere un operatore (quello predefinito è "=") e il valore da cercare. Racchiudere i valori di testo tra virgolette singole.<br /><br /> Se la colonna di dati associata fa parte di una clausola GROUP BY, l'espressione immessa viene utilizzata per una clausola HAVING.<br /><br /> Se si immettono valori per più celle nella colonna della griglia **Criteri**, le condizioni di ricerca risultanti verranno collegate automaticamente con un operatore AND logico.<br /><br /> Per specificare più espressioni di condizione di ricerca per un'unica colonna del database, ad esempio (fname > 'A') AND (fname < 'M'), aggiungere due volte la colonna di dati al riquadro Criteri e specificare nella colonna **Criteri** della griglia valori separati per ogni istanza della colonna di dati.|  
-|Or...|All|Specifica un'ulteriore espressione di condizione di ricerca per la colonna di dati, collegata alle espressioni precedenti con un operatore OR logico. È possibile aggiungere più colonne **Or...** nella griglia premendo TAB nella colonna **Or...** all'estrema destra.|  
+|Criteri|Tutti|Specifica una condizione di ricerca (un filtro) per la colonna di dati associata. Immettere un operatore (quello predefinito è "=") e il valore da cercare. Racchiudere i valori di testo tra virgolette singole.<br /><br /> Se la colonna di dati associata fa parte di una clausola GROUP BY, l'espressione immessa viene utilizzata per una clausola HAVING.<br /><br /> Se si immettono valori per più celle nella colonna della griglia **Criteri**, le condizioni di ricerca risultanti verranno collegate automaticamente con un operatore AND logico.<br /><br /> Per specificare più espressioni di condizione di ricerca per un'unica colonna del database, ad esempio (fname > 'A') AND (fname < 'M'), aggiungere due volte la colonna di dati al riquadro Criteri e specificare nella colonna **Criteri** della griglia valori separati per ogni istanza della colonna di dati.|  
+|Or...|Tutti|Specifica un'ulteriore espressione di condizione di ricerca per la colonna di dati, collegata alle espressioni precedenti con un operatore OR logico. È possibile aggiungere più colonne **Or...** nella griglia premendo TAB nella colonna **Or...** all'estrema destra.|  
 |Accoda|INSERT FROM|Specifica il nome della colonna di dati di destinazione per la colonna di dati associata. Quando si crea una query di accodamento, in Progettazione query e Progettazione viste si tenta di associare l'origine a una colonna di dati di destinazione appropriata. Se non è possibile scegliere una corrispondenza, sarà necessario specificare il nome della colonna.|  
 |Nuovo valore|UPDATE, INSERT INTO|Specifica il valore da inserire nella colonna associata. Immettere un valore letterale o un'espressione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Riquadro Diagramma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Riquadro diagramma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [Regole per l'immissione di valori di ricerca &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Riquadro dei risultati &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Riquadro risultati &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Riquadro SQL &#40;Visual Database Tools&#41;](sql-pane-visual-database-tools.md)  
   
   

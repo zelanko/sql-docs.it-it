@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157998"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
-  Lo strumento di report sulle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali tabelle del database trarranno vantaggio se trasferite per utilizzare OLTP in memoria. Una volta identificata la tabella da trasferire per l'utilizzo di OLTP in memoria, è possibile utilizzare Ottimizzazione guidata per la memoria per eseguire facilmente la migrazione della tabella di database basata su disco in OLTP in memoria.  
+  Lo strumento di report sulle prestazioni delle transazioni (vedere [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali tabelle del database trarranno vantaggio se trasferite per utilizzare OLTP in memoria. Una volta identificata la tabella da trasferire per l'utilizzo di OLTP in memoria, è possibile utilizzare Ottimizzazione guidata per la memoria per eseguire facilmente la migrazione della tabella di database basata su disco in OLTP in memoria.  
   
  Connettersi innanzitutto all'istanza contenente la tabella di database basata su disco. È possibile connettersi a un'istanza di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Tuttavia, se si desidera effettuare la migrazione con il supporto dell'Assistente compilazione nativa, è necessario connettersi a un'istanza di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] in cui la funzionalità OLTP in memoria sia abilitata. Per ulteriori informazioni sui requisiti di OLTP in memoria, vedere [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63157998"
 > [!WARNING]  
 >  Selezionare questa opzione solo se si comprende il rischio della perdita dei dati con le tabelle non durevoli.  
   
- Per continuare, fare clic su **Avanti** .  
+ Fare clic su **Avanti** per continuare.  
   
 ### <a name="review-primary-key-conversion"></a>Verifica conversione chiave primaria  
  La schermata successiva è denominata **Verifica conversione chiave primaria**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti una o più chiavi primarie e viene popolato l'elenco di colonne in base ai metadati delle chiavi primarie. Se non è presente alcuna chiave primaria, per eseguire la migrazione a una tabella ottimizzata per la memoria durevole, sarà necessario crearne una.  

@@ -1,5 +1,5 @@
 ---
-title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Documenti di Microsoft
+title: Tipi CLR definiti dall'utente di grandi dimensioni (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144308"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
   
- Per un esempio che illustra il supporto ODBC per i tipi UDT CLR di grandi dimensioni, vedere [supporto per i tipi UDT di grandi dimensioni](../../native-client-odbc-how-to/support-for-large-udts.md).  
+ Per un esempio che illustra il supporto ODBC per i tipi definiti dall'utente CLR di grandi dimensioni, vedere [supporto per tipi definiti dall'utente](../../native-client-odbc-how-to/support-for-large-udts.md)  
   
- Per altre informazioni sul supporto per i tipi UDT CLR di grandi dimensioni in SQL Server Native Client, vedere [Large CLR User-Defined tipi](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ Per ulteriori informazioni sul supporto di tipi definiti dall'utente CLR di grandi dimensioni in SQL Server Native Client, vedere [tipi CLR definiti dall'utente di grandi dimensioni](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Formato dati  
  SQL Server Native Client utilizza SQL_SS_LENGTH_UNLIMITED per indicare che le dimensioni di una colonna sono maggiori di 8.000 byte per i tipi LOB (Large Object). A partire da SQL Server 2008, lo stesso valore viene utilizzato per i tipi CLR definiti dall'utente quando le dimensioni sono maggiori di 8.000 byte.  
@@ -34,7 +34,7 @@ ms.locfileid: "63144308"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63144308"
 |SQL_CA_SS_UDT_TYPE_NAME|Nome del tipo definito dall'utente.|Nome del tipo definito dall'utente.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Nome completo del tipo definito dall'utente.|Nome completo del tipo definito dall'utente.|  
   
- Per i parametri di tipo definito dall'utente SQL_CA_SS_UDT_TYPE_NAME deve sempre essere impostata tramite **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME e SQL_CA_SS_UDT_SCHEMA_NAME sono facoltativi.  
+ Per i parametri UDT, è necessario impostare sempre SQL_CA_SS_UDT_TYPE_NAME tramite **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME e SQL_CA_SS_UDT_SCHEMA_NAME sono facoltativi.  
   
  Se il tipo definito dall'utente viene definito nello stesso database con uno schema diverso rispetto alla tabella, è necessario impostare SQL_CA_SS_UDT_SCHEMA_NAME.  
   
@@ -120,32 +120,32 @@ ms.locfileid: "63144308"
 |SS_UDT_SCHEMA_NAME|Nome dello schema che contiene il tipo definito dall'utente.|Nome dello schema che contiene il tipo definito dall'utente.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nome completo del tipo definito dall'utente.|Nome completo del tipo definito dall'utente.|  
   
- Le ultime tre colonne sono specifiche del driver. Vengono aggiunti dopo tutte le colonne definite da ODBC, ma prima di tutte le colonne specifiche del driver esistente del set di risultati di SQLColumns o SQLProcedureColumns.  
+ Le ultime tre colonne sono specifiche del driver. Vengono aggiunti dopo qualsiasi colonna definita da ODBC, ma prima di tutte le colonne specifiche del driver esistenti del set di risultati di SQLColumns o SQLProcedureColumns.  
   
- Viene restituita alcuna riga da SQLGetTypeInfo, per singoli tipi definiti dall'utente o per il tipo generico "udt".  
+ Non viene restituita alcuna riga da SQLGetTypeInfo, per i singoli tipi definiti dall'utente o per il tipo generico "UDT".  
   
 ## <a name="bindings-and-conversions"></a>Associazioni e conversioni  
  Di seguito sono riportate le conversioni supportate dai tipi di dati SQL ai tipi di dati C:  
   
 |Conversione da e verso:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Supportato *|  
+|SQL_C_WCHAR|Supportato|  
 |SQL_C_BINARY|Supportato|  
-|SQL_C_CHAR|Supportato *|  
+|SQL_C_CHAR|Supportato|  
   
- \* Dati binari vengono convertiti in una stringa esadecimale.  
+ \*I dati binari vengono convertiti in una stringa esadecimale.  
   
  Di seguito sono riportate le conversioni supportate dai tipi di dati C ai tipi di dati SQL:  
   
 |Conversione da e verso:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Supportato *|  
+|SQL_C_WCHAR|Supportato|  
 |SQL_C_BINARY|Supportato|  
-|SQL_C_CHAR|Supportato *|  
+|SQL_C_CHAR|Supportato|  
   
- \* Si verifica la stringa esadecimale alla conversione di dati binari.  
+ \*Viene eseguita la conversione da stringa esadecimale a dati binari.  
   
-## <a name="sqlvariant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
+## <a name="sql_variant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
  I tipi definiti dall'utente non sono supportati nelle colonne SQL_VARIANT.  
   
 ## <a name="bcp-support-for-udts"></a>Supporto di BCP per i tipi definiti dall'utente  
@@ -163,7 +163,7 @@ ms.locfileid: "63144308"
  In questa sezione vengono illustrate le modifiche apportate alle funzioni ODBC di SQL Server Native Client per supportare i tipi CLR definiti dall'utente di grandi dimensioni.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
+ I valori della colonna risultato definito dall'utente vengono convertiti dai tipi di oggetto SQL ai tipi di databases, come descritto nella sezione "associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  I valori necessari per i tipi definiti dall'utente sono i seguenti:  
@@ -196,13 +196,13 @@ ms.locfileid: "63144308"
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
+ I valori della colonna risultato definito dall'utente vengono convertiti dai tipi di oggetto SQL ai tipi di databases, come descritto nella sezione "associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
+ I valori della colonna risultato definito dall'utente vengono convertiti dai tipi di oggetto SQL ai tipi di databases, come descritto nella sezione "associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Valori di colonna di risultati di tipo definito dall'utente vengono convertiti da SQL ai tipi di dati C come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
+ I valori della colonna risultato definito dall'utente vengono convertiti dai tipi di oggetto SQL ai tipi di databases, come descritto nella sezione "associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  I campi di descrizione disponibili con i nuovi tipi sono descritti nelle sezioni "Campi di descrizione per i parametri" e "Campi di descrizione per i risultati" riportate in precedenza in questo argomento.  
@@ -210,7 +210,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Type|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|SubType|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -222,7 +222,7 @@ ms.locfileid: "63144308"
  I valori restituiti per i tipi definiti dall'utente sono uguali a quelli descritti nella sezione "Metadati della colonna restituiti da SQLColumns e SQLProcedureColumns (metadati del catalogo)" riportata in precedenza in questo argomento.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- I valori di parametro di tipo definito dall'utente vengono convertiti da C ai tipi di dati SQL come descritto nella sezione "Associazioni e conversioni", più indietro in questo argomento.  
+ I valori dei parametri UDT vengono convertiti da C ai tipi di oggetto SQL, come descritto nella sezione "associazioni e conversioni", più indietro in questo argomento.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  I campi di descrizione disponibili con i nuovi tipi sono descritti nelle sezioni "Campi di descrizione per i parametri" e "Campi di descrizione per i risultati" riportate in precedenza in questo argomento.  
@@ -230,7 +230,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Type|Sottotipo|Length|Precisione|Scala|  
+|Tipo di dati SQL|Type|SubType|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

@@ -16,28 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079751"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorare un'istanza di Analysis Services
-  È possibile monitorare le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor, un'applicazione talvolta denominata **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di creare e gestire le tracce, nonché analizzare e riprodurre i risultati delle tracce. Tramite Performance Monitor vengono creati report sullo stato del server, indicizzato tramite contatori specifici, che verranno trattati nella sezione successiva.  
+  È possibile monitorare le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor, un'applicazione talvolta denominata **PerfMon**. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di creare e gestire le tracce, nonché analizzare e riprodurre i risultati delle tracce. Tramite Performance Monitor vengono creati report sullo stato del server, indicizzato tramite contatori specifici, che verranno trattati nella sezione successiva.  
   
 > [!NOTE]  
 >  Per altre informazioni sul monitoraggio, vedere il documento [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida alle operazioni di SQL Server 2008 R2).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Vedere i collegamenti seguenti per ulteriori informazioni sul monitoraggio.  
   
  [Eventi di traccia di Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
  [Usare SQL Server Profiler per il monitoraggio di Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [Utilizzare eventi estesi di SQL Server &#40;XEvents&#41; per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Usare SQL Server eventi estesi &#40;&#41; XEvent per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Utilizzare DMV per monitorare Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Utilizzare le viste a gestione dinamica &#40;&#41; DMV per monitorare Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  [Contatori delle prestazioni &#40;SSAS&#41;](performance-counters-ssas.md)  
   

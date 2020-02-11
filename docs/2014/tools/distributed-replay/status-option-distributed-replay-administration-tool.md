@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150362"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opzione status (strumento di amministrazione Distributed Replay)
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile usare per comunicare con distributed replay controller. Questo argomento descrive l'opzione della riga di comando **status** e la sintassi corrispondente.  
+  Lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`,, è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **status** e la sintassi corrispondente.  
   
  L'opzione **status** esegue query sul controller e visualizza lo stato corrente.  
   
- ![Icona di collegamento all'argomento](../../database-engine/media/topic-link.gif "Icona di collegamento all'argomento")Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Icona di collegamento all'argomento](../../database-engine/media/topic-link.gif "Icona di collegamento a un argomento") Per ulteriori informazioni sulle convenzioni di sintassi utilizzate con la sintassi dello strumento di amministrazione, vedere [convenzioni della sintassi Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,12 +32,12 @@ dreplay status [-mcontroller] [-fstatus_interval]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **Controller** *-m*  
+ **-m** *controller*  
  Specifica il nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
   
  Se il parametro **-m** non è specificato, viene usato il computer locale.  
   
- *intervallo_stato* **-f**  
+ **-f** *status_interval*  
  Specifica la frequenza in secondi in base alla quale visualizzare lo stato.  
   
  Se il parametro **-f** non è specificato, l'intervallo predefinito è 30 secondi.  
@@ -49,13 +49,13 @@ dreplay status [-mcontroller] [-fstatus_interval]
 dreplay status -m localhost -f 60  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario eseguire lo strumento di amministrazione come utente interattivo, scegliendo tra utente locale e account utente di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.  
   
- Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).  
+ Per altre informazioni, vedere [Sicurezza di Riesecuzione distribuita](distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
  [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

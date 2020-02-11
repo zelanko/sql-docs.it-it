@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144650"
 ---
 # <a name="log-file-viewer"></a>Visualizzatore file di log
@@ -27,7 +27,7 @@ ms.locfileid: "63144650"
   
 -   Raccolta controlli  
   
--   Raccolta dati  
+-   Raccolta di dati  
   
 -   Posta elettronica database  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63144650"
 |Viene fornita la Guida sensibile al contesto del Visualizzatore file di log.|[Guida sensibile al contesto del Visualizzatore file di log](log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Audit &#40;Motore di database&#41;](../security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Log degli errori di SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà server di pubblicazione di replica di SQL Server | Microsoft Docs
+title: Proprietà del server di pubblicazione replica di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261980"
 ---
-# <a name="sql-server-replication-publisher-properties"></a>Proprietà server di pubblicazione di replica di SQL Server
-  In questa sezione contiene informazioni sulle proprietà di server di pubblicazione disponibili nel server di distribuzione e il server di pubblicazione. 
+# <a name="sql-server-replication-publisher-properties"></a>Proprietà del server di replica di SQL Server
+  In questa sezione vengono fornite informazioni sulle proprietà del server di pubblicazione disponibili nel server di distribuzione e nel server di pubblicazione. 
 
 ## <a name="general"></a>Generale  
   La pagina **Generale** della finestra di dialogo **Proprietà server di pubblicazione** visualizza informazioni di sola lettura sul server di distribuzione e sul database di distribuzione utilizzati dal server di pubblicazione. Per modificare il server di distribuzione o il database di distribuzione per un server di pubblicazione, eseguire le operazioni seguenti:  
@@ -66,13 +66,13 @@ ms.locfileid: "63261980"
 
 ## <a name="subscribers"></a>Sottoscrittori
 
-  La pagina **Sottoscrittori** della finestra di dialogo **Proprietà server di pubblicazione** viene utilizzata per i server di pubblicazione che eseguono versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Questa pagina consente di abilitare i Sottoscrittori al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. L'abilitazione di un Sottoscrittore al ricevimento di dati dal server di pubblicazione corrente non crea sottoscrizioni delle pubblicazioni incluse nel server di pubblicazione. Per creare una sottoscrizione è necessario utilizzare la Creazione guidata nuova sottoscrizione.  
+  La pagina **Sottoscrittori** della finestra di dialogo **Proprietà server di pubblicazione** viene usata per i server di pubblicazione che eseguono versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Questa pagina consente di abilitare i Sottoscrittori al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. L'abilitazione di un Sottoscrittore al ricevimento di dati dal server di pubblicazione corrente non crea sottoscrizioni delle pubblicazioni incluse nel server di pubblicazione. Per creare una sottoscrizione è necessario utilizzare la Creazione guidata nuova sottoscrizione.  
   
 ### <a name="options"></a>Opzioni  
  **Sottoscrittori**  
  La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un Sottoscrittore.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  
 
 ## <a name="see-also"></a>Vedere anche  

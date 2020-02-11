@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155569"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
@@ -38,7 +38,7 @@ ms.locfileid: "63155569"
   
 -   Non è necessario abilitare il filestream ([Abilitare e configurare FILESTREAM](../blob/enable-and-configure-filestream.md)) per creare un filegroup ottimizzato per la memoria. Il mapping al filestream viene eseguito dal motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
--   È possibile aggiungere nuovi contenitori a un filegroup ottimizzato per la memoria. Potrebbe essere necessario un nuovo contenitore per espandere l'archiviazione necessaria per la tabella con ottimizzazione per la memoria durevole nonché per distribuire i/o tra più contenitori.  
+-   È possibile aggiungere nuovi contenitori a un filegroup ottimizzato per la memoria. Potrebbe essere necessario un nuovo contenitore per espandere lo spazio di archiviazione necessario per la tabella ottimizzata per la memoria durevole e anche per distribuire I/O tra più contenitori.  
   
 -   Lo spostamento di dati a un filegroup ottimizzato per la memoria è ottimizzato in una configurazione del gruppo di disponibilità AlwaysOn. Diversamente dai file filestream inviati alle repliche secondarie, i file del checkpoint (dati e differenziali) nel filegroup ottimizzato per la memoria non vengono inviati alle repliche secondarie. I file di dati e differenziali vengono costruiti utilizzando il log delle transazioni sulla replica secondaria.  
   
@@ -51,20 +51,20 @@ Di seguito sono riportate le limitazioni del filegroup ottimizzato per la memori
 ## <a name="configuring-a-memory-optimized-filegroup"></a>Configurazione di un filegroup con ottimizzazione per la memoria  
 Creare più contenitori nel filegroup ottimizzato per la memoria e distribuirli in unità differenti per ottenere più larghezza di banda per trasmettere i dati in memoria.  
   
-Nel configurare l'archiviazione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle ottimizzate per la memoria durevoli. Verificare che il sottosistema dei / o supporti le operazioni di IOPS necessarie per il carico di lavoro. Se le coppie di file di dati e differenziali vengono popolati in un'operazione di IOPS specifica, tale IOPS è necessaria tre volte per le operazioni di merge e archiviazione. È possibile aggiungere capacità di archiviazione e IOPS aggiungendo uno o più contenitori al filegroup ottimizzato per la memoria.  
+Nel configurare l'archiviazione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle ottimizzate per la memoria durevoli. Verificare che il sottosistema di I/O supporti le operazioni di IOPS necessarie per il carico di lavoro. Se le coppie di file di dati e differenziali vengono popolati in un'operazione di IOPS specifica, tale IOPS è necessaria tre volte per le operazioni di merge e archiviazione. È possibile aggiungere capacità di archiviazione e IOPS aggiungendo uno o più contenitori al filegroup ottimizzato per la memoria.  
   
-In uno scenario con più contenitori e più unità, i file di dati e differenziali vengono allocati in contenitori con un meccanismo round robin. Il primo file di dati viene allocato dal primo contenitore e il file differenziale viene allocato dal contenitore successivo e questo modello di allocazione si ripete. Questo schema di allocazione distribuisce i file di dati e differenziali uniformemente nei contenitori se si dispone di un numero dispari di unità, ciascuna con il mapping a un solo contenitore. Tuttavia, se si dispone di un numero pari di unità, ciascuna con il mapping a un contenitore, è possibile che si verifichi un'archiviazione sbilanciata con i file di dati per cui è stato eseguito il mapping alle unità dispari e i file differenziali per cui è stato eseguito il mapping alle unità pari. Per ottenere un flusso bilanciato dei / o sul ripristino, è consigliabile inserire coppie di file di dati e differenziali su stessi spindle/archiviazione come descritto nell'esempio seguente.  
+In uno scenario con più contenitori e più unità, i file di dati e differenziali vengono allocati in contenitori con un meccanismo round robin. Il primo file di dati viene allocato dal primo contenitore e il file differenziale viene allocato dal contenitore successivo e questo modello di allocazione si ripete. Questo schema di allocazione distribuisce i file di dati e differenziali uniformemente nei contenitori se si dispone di un numero dispari di unità, ciascuna con il mapping a un solo contenitore. Tuttavia, se si dispone di un numero pari di unità, ciascuna con il mapping a un contenitore, è possibile che si verifichi un'archiviazione sbilanciata con i file di dati per cui è stato eseguito il mapping alle unità dispari e i file differenziali per cui è stato eseguito il mapping alle unità pari. Per ottenere un flusso di I/O bilanciato durante il ripristino, provare a inserire coppie di file di dati e differenziali sullo stesso mandrino/archiviazione come descritto nell'esempio riportato di seguito.  
 
 > [!CAUTION]
 > Se per il filegroup con ottimizzazione per la memoria è impostato un valore `MAXSIZE` e i file del checkpoint superano le dimensioni massime del contenitore, il database verrà contrassegnato come sospetto.   
 > In questo caso, non provare a impostare il database come OFFLINE o ONLINE, perché il database rimarrebbe nello stato RECOVERY_PENDING.
   
 ### <a name="example"></a>Esempio 
-Si consideri un filegroup ottimizzato per la memoria con due contenitori: il contenitore 1 nell'unità X e il contenitore 2 nell'unità Y.  
+Si consideri un filegroup ottimizzato per la memoria con due contenitori: il contenitore 1 sull'unità X e il contenitore 2 sulle unità Y.  
 Dal momento che l'allocazione dei file di dati e differenziali viene eseguita in modo round robin, il contenitore 1 includerà solo file di dati e il contenitore 2 avrà solo file differenziali, generando una persistenza sbilanciata per l'archiviazione e le operazioni di input/output al secondo, in quanto i file di dati sono molto più grandi dei file differenziali.    
-Per distribuire i file di dati e differenziali in modo uniforme tra le unità X e Y, creare quattro contenitori anziché due e associare i primi due contenitori all'unità X e dei due contenitori successivi all'unità Y.  
-Con allocazione round robin, l'innanzitutto i dati e il primo file differenziale verranno allocati dal contenitore 1 e dal contenitore 2 rispettivamente, che viene eseguito il mapping all'unità X.   
-Analogamente, il file di dati e differenziali successivo verrà allocato dal contenitore 3 e dal contenitore 4 per cui viene eseguito il mapping all'unità Y. Ciò consente di distribuire i file di dati e differenziali in due unità in modo uniforme.  
+Per distribuire i file di dati e differenziali in modo uniforme tra le unità X e Y, creare quattro contenitori anziché due ed eseguire il mapping dei primi due contenitori all'unità X e dei due contenitori successivi per l'unità Y.  
+Con l'allocazione round robin, i primi dati e il primo file differenziale verranno allocati rispettivamente dal contenitore-1 e dal contenitore-2, mappati all'unità X.   
+Analogamente, il file di dati e differenziali successivi verrà allocato da container-3 e container-4, mappati all'unità Y. In questo modo è possibile distribuire uniformemente i file di dati e differenziali in due unità.  
  
   
 ## <a name="see-also"></a>Vedere anche  

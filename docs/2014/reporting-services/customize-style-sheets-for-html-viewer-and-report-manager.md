@@ -1,5 +1,5 @@
 ---
-title: Personalizzare i fogli di stile per il visualizzatore HTML e gestione di Report | Microsoft Docs
+title: Personalizzare i fogli di stile per il Visualizzatore HTML e Gestione report | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "64568262"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce stile CSS predefiniti file sheets (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fornisce i fogli di stile CSS predefiniti che definiscono gli stili per la barra degli strumenti dei **report** nel Visualizzatore HTML e per Gestione report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
   
  L'errata modifica dei fogli di stile può causare errori all'apertura dei report. Se non si conoscono con esattezza le procedure per modificare i fogli di stile, utilizzare quelli predefiniti. Se si decide di personalizzare i fogli di stile, creare un backup di tutti i file con estensione css predefiniti prima di apportare qualsiasi modifica.  
   
@@ -35,16 +35,16 @@ ms.locfileid: "64568262"
 |ReportingServices.css|Definisce gli stili per Gestione report.|  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurazione di Reporting Services per l'utilizzo di un foglio di stile personalizzato  
- Il foglio di stile deve essere un file con estensione css valido e deve essere contenuto nella cartella Styles. Per impostazione predefinita, si trova nella cartella Styles \< *unità*>: \Programmi\Microsoft SQL Server\MSSQL. *n*services\reportserver\styles.  
+ Il foglio di stile deve essere un file con estensione css valido e deve essere contenuto nella cartella Styles. Per impostazione predefinita, la cartella stili si trova \<in *unità*>: \Programmi\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
   
  Per utilizzare un foglio di stile personalizzato per il Visualizzatore HTML in fase di esecuzione, è possibile procedere in uno dei modi seguenti:  
   
--   Aggiungere il <`HTMLViewerStyleSheet`> impostando sul [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file di configurazione.  
+-   Aggiungere l'impostazione `HTMLViewerStyleSheet` <> al file [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] di configurazione.  
   
 -   Specificare il foglio di stile nell'URL del report.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Modifica del file RSReportServer.config  
- È possibile modificare il file RSReportServer.config per specificare un foglio di stile personalizzato per il Visualizzatore HTML. Il <`HTMLViewerStyleSheet`> impostazione non è incluso nel file per impostazione predefinita. È necessario digitarla nella <`Configuration`> selezione di RSReportServer. config di file e quindi specificare il foglio di stile da usare. Non includere l'estensione del file css quando si specifica il foglio di stile.  
+ È possibile modificare il file RSReportServer.config per specificare un foglio di stile personalizzato per il Visualizzatore HTML. L'impostazione `HTMLViewerStyleSheet` di> <non è inclusa nel file per impostazione predefinita. È necessario digitarlo nella <`Configuration`> selezione del file RSReportServer. config e quindi specificare il foglio di stile che si desidera utilizzare. Non includere l'estensione del file css quando si specifica il foglio di stile.  
   
  Nell'esempio seguente viene illustrato come specificare il foglio di stile:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64568262"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Impostazione di un foglio di stile nell'URL del report  
- È possibile utilizzare il parametro di accesso dell'URL `rc:StyleSheet` per specificare un foglio di stile personalizzato nell'URL del report. Per altre informazioni su come specificare i parametri di accesso tramite URL, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md).  
+ È possibile utilizzare il parametro di accesso dell'URL `rc:StyleSheet` per specificare un foglio di stile personalizzato nell'URL del report. Per altre informazioni su come specificare i parametri di accesso con URL, vedere [riferimento ai parametri di accesso con URL](url-access-parameter-reference.md).  
   
  Nell'esempio seguente viene illustrato come aggiungere stili personalizzati:  
   
@@ -67,7 +67,7 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Visualizzatore HTML e barra degli strumenti Report](html-viewer-and-the-report-toolbar.md)   
- [File di configurazione RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
+ [Visualizzatore HTML e barra degli strumenti dei report](html-viewer-and-the-report-toolbar.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

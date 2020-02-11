@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162408"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
   In questo argomento si descrive come disabilitare un indice o i vincoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La disabilitazione di un indice impedisce all'utente di accedere all'indice e, per gli indici cluster, ai dati della tabella sottostante. La definizione dell'indice viene mantenuta nei metadati e le statistiche relative all'indice vengono preservate negli indici non cluster. La disabilitazione di un indice non cluster o cluster di una vista consente di eliminare fisicamente i dati dell'indice. La disabilitazione di un indice cluster in una tabella impedisce l'accesso ai dati. Questi ultimi vengono comunque mantenuti nella tabella, ma non sono disponibili per le operazioni DML (Data Manipulation Language) finché l'indice non viene eliminato o ricompilato.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63162408"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -127,9 +127,9 @@ ms.locfileid: "63162408"
  Visualizza il nome della tabella o della vista in cui l'indice è stato creato.  
   
  **Tipo di indice**  
- Visualizza il tipo di indice: **Clustered**, **Nonclustered**, **spaziale**, oppure **XML**.  
+ Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale**o **XML**.  
   
- **Stato**  
+ **Status**  
  Visualizza lo stato dell'operazione di disabilitazione. I valori possibili al termine dell'esecuzione sono:  
   
 -   Vuoto  
@@ -140,11 +140,11 @@ ms.locfileid: "63162408"
   
      L'operazione di disabilitazione degli indici è stata avviata ma non ancora completata.  
   
--   **Operazione completata**  
+-   **Success**  
   
      L'operazione di disabilitazione è stata completata.  
   
--   **Errore**  
+-   **Error (Errore) (Error (Errore)e)**  
   
      Si è verificato un errore durante la disabilitazione degli indici e non è stato possibile completare correttamente l'operazione.  
   
@@ -152,14 +152,14 @@ ms.locfileid: "63162408"
   
      La disabilitazione dell'indice non è stata completata poiché l'operazione è stata arrestata dall'utente.  
   
- **Message**  
+ **Messaggio**  
  Visualizza il testo dei messaggi di errore generati durante l'operazione. Durante l'esecuzione dell'operazione, gli errori vengono visualizzati come collegamenti ipertestuali. Nel testo di tali collegamenti è descritto l'errore verificatosi. La colonna **Messaggio** in genere non è sufficientemente ampia per contenere il testo completo del messaggio. Per leggere il messaggio completo, eseguire una delle seguenti operazioni:  
   
 -   Spostare il puntatore del mouse sulla cella del messaggio per visualizzare una descrizione comando contenente il testo dell'errore.  
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   

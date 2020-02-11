@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192966"
 ---
 # <a name="create-a-multiserver-environment"></a>Creazione di un ambiente multiserver
@@ -35,15 +35,15 @@ ms.locfileid: "63192966"
 ## <a name="considerations-for-multiserver-environments"></a>Considerazioni relative agli ambienti multiserver  
  Vedere la tabella seguente per le configurazioni MSX/TSX supportate.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8,0 < SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Yes|Yes|no|No|No|No|No|  
-|**MSX = 8.0 < SP3**|Yes|Yes|No|No|No|No|No|  
-|**MSX = 8.0 SP3 o versione successiva**|No|No|Yes|Yes|Yes|Yes|Yes|  
-|**MSX = 9.0**|No|no|No|Yes|Yes|Yes|Yes|  
-|**MSX = 10.0**|no|no|No|No|Yes|Yes|Yes|  
-|**MSX = 10.5**|No|No|No|No|No|Yes|Yes|  
-|**MSX = 11.0**|No|No|No|No|No|No|Yes|  
+|**MSX = 7.0**|Sì|Sì|No|No|No|No|No|  
+|**MSX = 8,0 < SP3**|Sì|Sì|No|No|No|No|No|  
+|**MSX = 8.0 SP3 o versione successiva**|No|No|Sì|Sì|Sì|Sì|Sì|  
+|**MSX = 9.0**|No|No|No|Sì|Sì|Sì|Sì|  
+|**MSX = 10.0**|No|No|No|No|Sì|Sì|Sì|  
+|**MSX = 10.5**|No|No|No|No|No|Sì|Sì|  
+|**MSX = 11.0**|No|No|No|No|No|No|Sì|  
   
  Al momento della creazione di un ambiente multiserver, è opportuno considerare i problemi seguenti:  
   
@@ -60,14 +60,14 @@ ms.locfileid: "63192966"
   
 |Descrizione|Argomento|  
 |-----------------|-----------|  
-|Viene illustrato come creare un server master.|[Configurare un server master](make-a-master-server.md)|  
+|Viene illustrato come creare un server master.|[Make a Master Server](make-a-master-server.md)|  
 |Viene illustrato come creare un server di destinazione.|[Configurare un server di destinazione](make-a-target-server.md)|  
 |Viene illustrato come integrare un server di destinazione in un server master.|[Integrare un server di destinazione in un server master](enlist-a-target-server-to-a-master-server.md)|  
 |Viene illustrato come escludere un server di destinazione da un server master.|[Escludere un server di destinazione da un server master](defect-a-target-server-from-a-master-server.md)|  
 |Viene illustrato come escludere più server di destinazione da un server master.|[Escludere più server di destinazione da un server master](defect-multiple-target-servers-from-a-master-server.md)|  
-|Viene illustrato come verificare lo stato di un server di destinazione.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|Viene illustrato come verificare lo stato di un server di destinazione.|[sp_help_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi relativi a processi multiserver che usano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [Risolvere i problemi relativi a processi multiserver che utilizzano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

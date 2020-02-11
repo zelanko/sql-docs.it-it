@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482744"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Area funzionale Amministrazione sistema (Gestione dati master)
@@ -23,7 +23,7 @@ ms.locfileid: "65482744"
 ## <a name="model"></a>Modello  
  [Modelli &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
- [Creare un modello &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Creazione di un modello &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
  [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "65482744"
   
  [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
- [Abilitare un'entità per gerarchie esplicite e raccolte di &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
+ [Abilitare un'entità per le gerarchie esplicite e le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
   
  [Attributi basati su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482744"
   
  [Gruppi di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)  
   
- [Creare un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Creazione di un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
  [Distribuzione di modelli &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
@@ -49,16 +49,16 @@ ms.locfileid: "65482744"
   
  [Creare un pacchetto di distribuzione di modelli tramite la procedura guidata](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Risoluzione dei problemi di distribuzione di modelli (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Risoluzione dei problemi di distribuzione del modello (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Regole business  
- [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
  [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
  [Condizioni della regola business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
   
- [Azioni Regola business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
+ [Azioni regola business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  

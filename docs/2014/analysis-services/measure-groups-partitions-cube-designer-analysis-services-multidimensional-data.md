@@ -1,5 +1,5 @@
 ---
-title: Misurare i gruppi (scheda partizioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Gruppi di misure (scheda partizioni, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077904"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Gruppi di misure (scheda Partizioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66077904"
  **Partizioni**  
  Consente di visualizzare una griglia contenente l'elenco delle partizioni che supportano il gruppo di misure selezionato. La griglia include le colonne seguenti:  
   
- **(Ordinale)**  
+ **Ordinale**  
  Consente di visualizzare la posizione ordinale della partizione all'interno del gruppo di misure.  
   
  Fare clic per selezionare l'intera riga per la partizione.  
@@ -62,15 +62,15 @@ ms.locfileid: "66077904"
   
 |Opzione|Definizione|  
 |------------|----------------|  
-|**Aggiungere funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo. Per altre informazioni sulla **Configurazione guidata funzionalità di Business Intelligence**, vedere [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md).|  
+|**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo. Per altre informazioni sulla **Configurazione guidata funzionalità di Business Intelligence**, vedere [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md).|  
 |**Nuova partizione**|Fare clic per visualizzare la **Creazione guidata partizione** e creare una nuova partizione nel gruppo di misure selezionato.|  
 |**Rinomina partizione**|Selezionare questa opzione per rinominare la partizione selezionata.|  
-|**Elimina**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: Questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
-|**Progettare le aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: Questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Elimina**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Progetta aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Impostazioni di archiviazione**|Fare clic per visualizzare la finestra di dialogo **Impostazioni di archiviazione** e specificare la modalità di archiviazione, la memorizzazione nella cache attiva e le impostazioni di notifica per la partizione selezionata.|  
 |**Impostazioni writeback**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Abilita/Disabilita writeback** e specificare le impostazioni writeback per il gruppo di misure contenente la partizione selezionata.|  
-|**Ottimizzazione basata sulle statistiche sull'utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle statistiche di utilizzo** e creare una progettazione delle aggregazioni basata su modelli di utilizzo esistenti per la partizione selezionata.<br /><br /> Nota: Questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
-|**Process**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare la partizione selezionata.|  
+|**Ottimizzazione basata sulle statistiche di utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle statistiche di utilizzo** e creare una progettazione delle aggregazioni basata su modelli di utilizzo esistenti per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Processo**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare la partizione selezionata.|  
 |**Copia**|Questa opzione è disabilitata.|  
 |**Incolla**|Questa opzione è disabilitata.|  
 |**Proprietà**|Selezionare questa opzione per visualizzare la finestra di dialogo **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la partizione selezionata.|  

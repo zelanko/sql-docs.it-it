@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157855"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
@@ -24,7 +24,7 @@ ms.locfileid: "63157855"
   
  OLTP in memoria viene integrato con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per fornire un'esperienza senza problemi in tutte le aree, ad esempio sviluppo, distribuzione, gestibilità e supporto. Un database può contenere sia oggetti in memoria che oggetti basati su disco.  
   
- Le righe delle tabelle ottimizzate per la memoria dispongono di versioni. Ciò significa che ogni riga nella tabella dispone potenzialmente di più versioni. Tutte le versioni delle righe vengono mantenute nella stessa struttura dei dati della tabella. Il controllo delle versioni delle righe viene utilizzato per consentire letture e scritture simultanee nella stessa riga. Per altre informazioni sulle letture e scritture nella stessa riga simultanee, vedere [transazioni in tabelle ottimizzate per la memoria](memory-optimized-tables.md).  
+ Le righe delle tabelle ottimizzate per la memoria dispongono di versioni. Ciò significa che ogni riga nella tabella dispone potenzialmente di più versioni. Tutte le versioni delle righe vengono mantenute nella stessa struttura dei dati della tabella. Il controllo delle versioni delle righe viene utilizzato per consentire letture e scritture simultanee nella stessa riga. Per ulteriori informazioni sulle letture e scritture simultanee nella stessa riga, vedere [transazioni nelle tabelle ottimizzate per la memoria](memory-optimized-tables.md).  
   
  Nella figura seguente viene illustrato il controllo di più versioni. Nella figura è illustrata una tabella con tre righe e ogni riga ha diverse versioni.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "63157855"
   
 |Funzionalità|Accesso tramite una stored procedure compilata in modo nativo|Accesso [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato|Accesso con CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Tabelle con ottimizzazione per la memoria|Yes|Yes|No <sup>1</sup>|  
-|[Variabili di tabella con ottimizzazione per la memoria](../../database-engine/memory-optimized-table-variables.md)|Yes|Yes|No|  
-|[Stored procedure compilate in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx)|Non è possibile utilizzare l'istruzione EXECUTE per eseguire una stored procedure qualsiasi da una stored procedure compilata in modo nativo.|Yes|No <sup>1</sup>|  
+|Tabelle ottimizzate per la memoria|Sì|Sì|Nessun <sup>1</sup>|  
+|[Variabili di tabella con ottimizzazione per la memoria](../../database-engine/memory-optimized-table-variables.md)|Sì|Sì|No|  
+|[Stored procedure compilate in modo nativo](https://msdn.microsoft.com/library/dn133184.aspx)|Non è possibile utilizzare l'istruzione EXECUTE per eseguire una stored procedure qualsiasi da una stored procedure compilata in modo nativo.|Sì|Nessun <sup>1</sup>|  
   
- <sup>1</sup> è possibile accedere a una tabella con ottimizzazione per la memoria o stored procedure compilata in modo nativo dalla connessione del contesto (la connessione da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante l'esecuzione di un modulo CLR). È tuttavia possibile creare e aprire un'altra connessione da cui accedere a tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo. Per altre informazioni, vedere [regolari Visual Studio. Connessioni di contesto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> non è possibile accedere a una tabella ottimizzata per la memoria o a una stored procedure compilata in modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo dalla connessione del contesto (la connessione da quando si esegue un modulo CLR). È tuttavia possibile creare e aprire un'altra connessione da cui accedere a tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo. Per altre informazioni, vedere [confronto tra normali e connessioni di contesto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Prestazioni e scalabilità  
  I seguenti fattori influiranno sui miglioramenti delle prestazioni che possono essere ottenuti con OLTP in memoria:  
@@ -66,7 +66,7 @@ ms.locfileid: "63157855"
  Comunicazione  
  Il miglioramento delle prestazioni per un'applicazione con molte chiamate a stored procedure brevi può risultare inferiore rispetto a un'applicazione con meno chiamate e più funzionalità implementate in ogni stored procedure.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Esecuzione  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]Esecuzione  
  In OLTP in memoria si ottengono le migliori prestazioni quando si utilizzano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. Le stored procedure che comportano l'esecuzione di altre stored procedure non possono essere compilate in modo nativo, ma l'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può offrire alcuni vantaggi.  
   
  Analisi dell'intervallo e ricerca di punti  

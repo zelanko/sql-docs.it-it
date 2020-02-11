@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157981"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo
@@ -26,7 +26,7 @@ ms.locfileid: "63157981"
   
 -   Creare tabelle e indici ottimizzati per la memoria. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretata, caricare dati nella tabella ottimizzata per la memoria e aggiornare le statistiche prima di creare stored procedure compilate in modo nativo. Per altre informazioni, vedere [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
+-   Usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretata, caricare dati nella tabella ottimizzata per la memoria e aggiornare le statistiche prima di creare stored procedure compilate in modo nativo. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
   
 -   Creare stored procedure compilate in modo nativo per l'accesso ai dati nelle tabelle ottimizzate per la memoria. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   

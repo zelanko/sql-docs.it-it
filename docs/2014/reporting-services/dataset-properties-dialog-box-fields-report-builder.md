@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà set di dati, campi (Generatore Report) | Microsoft Docs
+title: Finestra di dialogo Proprietà set di dati, campi (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109427"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Finestra di dialogo Proprietà set di dati, Campi (Generatore report)
@@ -25,13 +25,13 @@ ms.locfileid: "66109427"
  I campi calcolati sono supportati solo nei set di dati incorporati. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un nuovo campo di query o calcolato al set di dati.  
   
  **Elimina**  
  Consente di eliminare il campo selezionato dal set di dati.  
   
- **Nome del campo**  
+ **Nome campo**  
  Consente di digitare un nome per il campo. Il campo deve essere univoco nel set di dati. Per ogni campo esistente nel set di dati, il nome viene prepopolato.  
   
  **Origine campo**  
@@ -47,11 +47,11 @@ ms.locfileid: "66109427"
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Finestra di dialogo Proprietà set di dati, le opzioni &#40;Generatore Report&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [Finestra di dialogo Proprietà set di dati, filtri &#40;Generatore Report&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [Finestra di dialogo Proprietà set di dati, i parametri &#40;Generatore Report&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [Finestra di dialogo Proprietà set di dati, la Query &#40;Generatore Report&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Finestra di dialogo Proprietà set di dati, opzioni &#40;Generatore report&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [Finestra di dialogo Proprietà set di dati, filtri &#40;Generatore report&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [Finestra di dialogo Proprietà set di dati, parametri &#40;Generatore report&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [Finestra di dialogo Proprietà set di dati, query &#40;Generatore report&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

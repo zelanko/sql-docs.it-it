@@ -24,14 +24,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083865"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combinare ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e Usa i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combina ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e utilizza i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
   
  Un modello di data mining costruito con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network può includere più reti, a seconda del numero di colonne utilizzate sia per l'input che per la stima o solo per la stima. Il numero di reti incluse in un singolo modello di data mining dipende dal numero di stati contenuti nelle colonne di input e stimabili utilizzate dal modello.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66083865"
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network crea una rete composta da un massimo di tre livelli di neuroni. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
- **Livello di input:** Neuroni di input definiscono tutti i valori di attributo di input per il modello di data mining e le relative probabilità.  
+ **Livello di input:** I neuroni di input definiscono tutti i valori dell'attributo di input per il modello di data mining e le relative probabilità.  
   
- **Livello nascosto:** I neuroni nascosti ricevono gli input dai neuroni di input e inviano gli output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
+ **Livello nascosto:** I neuroni nascosti ricevono input dai neuroni di input e forniscono output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
   
- **Livello di output:** I neuroni di output rappresentano i valori degli attributi stimabili per il modello di data mining.  
+ **Livello di output:** I neuroni di output rappresentano valori di attributo stimabili per il modello di data mining.  
   
  Per una spiegazione dettagliata della creazione dei livelli di output, input e nascosti e dell'assegnazione dei punteggi a tali livelli, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -71,14 +71,14 @@ ms.locfileid: "66083865"
 ## <a name="viewing-a-neural-network-model"></a>Visualizzazione di un modello di rete neurale  
  Per usare i dati e osservare il modo in cui il modello mette in correlazione gli input con gli output, usare il **Visualizzatore Microsoft Neural Network**. Tramite questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di valori di input e output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Il modo più semplice per esplorare la struttura del modello consiste nell'usare il **Microsoft Generic Content Tree Viewer**. È possibile visualizzare gli input, gli output e le reti creati dal modello e fare clic su qualsiasi nodo per espanderlo e visualizzare le statistiche correlate ai nodi di input, output o dei livelli nascosti. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ Il modo più semplice per esplorare la struttura del modello consiste nell'usare il **Microsoft Generic Content Tree Viewer**. È possibile visualizzare gli input, gli output e le reti creati dal modello e fare clic su qualsiasi nodo per espanderlo e visualizzare le statistiche correlate ai nodi di input, output o dei livelli nascosti. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  Dopo avere elaborato il modello, è possibile utilizzare la rete e i pesi archiviati in ciascun nodo per fare delle stime. Un modello di rete neurale supporta l'analisi di regressione, classificazione e associazione. Pertanto, il significato di ogni stima potrebbe essere diverso. È anche possibile eseguire una query sul modello stesso, allo scopo di esaminare le correlazioni trovate e recuperare le statistiche correlate. Per alcuni esempi di come creare query su un modello di rete neurale, vedere [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md).  
   
  Per informazioni generali sulla creazione di query su un modello di data mining, vedere [Query di data mining](data-mining-queries.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 -   Non supporta il drill-through di dimensioni di data mining. Questo perché la struttura dei nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66083865"
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)  
   

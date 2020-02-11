@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087033"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connessione a Microsoft SQL Server Analysis Services (SSAS)
-  Questa pagina della finestra di **importazione guidata tabella** consente di specificare le impostazioni per importare dati da un cubo di Microsoft SQL Server Analysis Services o una cartella di lavoro di PowerPivot ospitata in SharePoint. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **importazione guidata tabella** consente di specificare le impostazioni per l'importazione di dati da un Microsoft SQL Server Analysis Services cubo o da una cartella di lavoro di PowerPivot ospitata in SharePoint. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66087033"
  **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
- **Nome File o server**  
+ **Nome file o server**  
  Eseguire una delle operazioni seguenti:  
   
 -   Digitare il nome o l'indirizzo IP del server SQL Server Analysis Services al quale connettersi.  
@@ -47,7 +47,7 @@ ms.locfileid: "66087033"
   
  Quando viene utilizzato questo tipo di autenticazione, le credenziali dell'utente corrente vengono utilizzate in caso di visualizzazione in anteprima e filtro dei dati nella finestra Proprietà tabella e nell'Importazione guidata. Non vengono utilizzate per importare o aggiornare dati; in tal caso vengono infatti utilizzate le credenziali di Windows specificate nella pagina Impostazioni di rappresentazione.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Specificare se utilizzare l'autenticazione di SQL Server per connettersi a un server SQL Server Analysis Services.  
   
  Con questo tipo di autenticazione, in SQL Server l'autenticazione viene eseguita verificando che sia stato impostato un account di accesso di SQL Server e che la password specificata corrisponda a quella registrata in precedenza.  
@@ -61,13 +61,13 @@ ms.locfileid: "66087033"
  Specificare una password per la connessione al database. Questa opzione è modificabile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
   
  **Salva password**  
- Specificare se la password immessa nella casella **Password** è stata archiviata. Questa opzione è disponibile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
+ Specificare se archiviare la password immessa nella casella **Password** . Questa opzione è disponibile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
   
  **Nome database**  
  Selezionare un database dall'elenco di database.  
   
- **Advanced**  
- Impostare ulteriori proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
+ **Funzionalità avanzate**  
+ Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test connessione**  
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  

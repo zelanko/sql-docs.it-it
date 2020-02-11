@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288761"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
@@ -66,7 +66,7 @@ ms.locfileid: "63288761"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di eliminazione necessario.  
   
-### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>R. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato come concedere autorizzazioni per consentire a un'entità di creare una raccolta di XML Schema. Nell'esempio vengono creati un database di esempio e un utente di prova, `TestLogin1`. `TestLogin1` viene fornita quindi l'autorizzazione `ALTER` per lo schema relazionale e l'autorizzazione `CREATE XML SCHEMA COLLECTION` per il database. Con tali autorizzazioni, `TestLogin1` può creare una raccolta di XML Schema di esempio.  
   
 ```  
@@ -506,6 +506,6 @@ GO
  [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

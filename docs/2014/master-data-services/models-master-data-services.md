@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482542"
 ---
 # <a name="models-master-data-services"></a>Modelli (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "65482542"
   
  La seguente immagine illustra la relazione tra gli oggetti di un modello.  
   
- ![Gggetti in un modello Master Data Services](../../2014/master-data-services/media/mds-conc-model-circles.gif "Oggetti in un modello Master Data Services")  
+ ![Oggetti in un modello Master Data Services](../../2014/master-data-services/media/mds-conc-model-circles.gif "Oggetti in un modello Master Data Services")  
   
 > [!NOTE]  
 >  Anche le gerarchie derivate sono oggetti modello, ma non sono presenti nell'immagine. Le gerarchie derivate sono basate sulle relazioni tra gli attributi basati su dominio che esistono in un modello. Vedere [Gerarchie derivate &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md) per altre informazioni.  
@@ -70,8 +70,8 @@ ms.locfileid: "65482542"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Creare un modello per organizzare i dati master.|[Creare un modello &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|Modificare il nome di un modello esistente.|[Modificare un nome di modello &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|Creare un modello per organizzare i dati master.|[Creazione di un modello &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Modificare il nome di un modello esistente.|[Modificare il nome di un modello &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |Eliminare un modello esistente.|[Eliminare un modello &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  

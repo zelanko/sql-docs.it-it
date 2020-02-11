@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Distribuire un'estensione di elaborazione dei dati in un Server di Report | Microsoft Docs"
+title: "Procedura: Distribuire un'estensione per l'elaborazione dati in un server di report | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164077"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedura: Distribuire un'estensione per l'elaborazione dati in un server di report
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedura: Distribuzione di un'estensione per l'elaborazione dati in un server di report
   I server di report utilizzano le estensioni per l'elaborazione dati per il recupero e l'elaborazione di dati nei report visualizzabili. È necessario distribuire l'assembly dell'estensione per l'elaborazione dati in un server di report come assembly privato. È inoltre necessario creare una voce nel file di configurazione del server di report, ovvero RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedure  
@@ -30,7 +30,7 @@ ms.locfileid: "63164077"
 1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per l'elaborazione dati. Il percorso predefinito della directory bin del server di report è %Programmi%\Microsoft SQL Server\MSRS10_50.\<*NomeIstanza*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  Con questo passaggio viene evitato l'aggiornamento a un'istanza di SQL Server più recente. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
+    >  Con questo passaggio viene evitato l'aggiornamento a un'istanza di SQL Server più recente. Per altre informazioni, vedere [Upgrade and migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config che si trova nella directory ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione in Visual Studio o in un semplice editor di testo, ad esempio Blocco note.  
   

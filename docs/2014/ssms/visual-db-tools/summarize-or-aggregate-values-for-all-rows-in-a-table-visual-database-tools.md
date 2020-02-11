@@ -1,5 +1,5 @@
 ---
-title: Riepilogare o aggregare valori per tutte le righe in una tabella (Visual Database Tools) | Microsoft Docs
+title: Riepilogare o aggregare valori per tutte le righe di una tabella (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204615"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
-  Con una funzione di aggregazione è possibile creare un riepilogo di tutti i valori di una tabella. Per visualizzare, ad esempio, il prezzo totale di tutti i libri nella tabella `titles`, è possibile creare una query analoga alla seguente:  
+  Con una funzione di aggregazione è possibile creare un riepilogo di tutti i valori di una tabella. Per visualizzare, ad esempio, il prezzo totale di tutti i libri nella tabella `titles` , è possibile creare una query analoga alla seguente:  
   
 ```  
 SELECT SUM(price)  
 FROM titles  
 ```  
   
- Se si utilizza la funzione di aggregazione con più colonne, sarà possibile creare più aggregazioni nella stessa query. È ad esempio possibile creare una query per il calcolo del totale della colonna `price` e la media della colonna `discount`.  
+ Se si utilizza la funzione di aggregazione con più colonne, sarà possibile creare più aggregazioni nella stessa query. È ad esempio possibile creare una query per il calcolo del totale della colonna `price` e la media della colonna `discount` .  
   
- Inoltre, è possibile aggregare la stessa colonna in modi diversi, calcolando ad esempio totale, conteggio e media nella stessa query. L'esempio seguente riguarda una query in cui viene calcolata la media ed eseguito il riepilogo della colonna `price` della tabella `titles`:  
+ Inoltre, è possibile aggregare la stessa colonna in modi diversi, calcolando ad esempio totale, conteggio e media nella stessa query. L'esempio seguente riguarda una query in cui viene calcolata la media ed eseguito il riepilogo della colonna `price` della tabella `titles` :  
   
 ```  
 SELECT AVG(price), SUM(price)  
@@ -78,7 +78,7 @@ FROM titles
 >  In Progettazione query e Progettazione viste le funzioni di aggregazione vengono mantenute nell'istruzione SQL nel riquadro SQL fino a quando non viene disabilitata esplicitamente la modalità di raggruppamento. Se pertanto si modifica la query cambiandone il tipo o cambiando le tabelle o gli oggetti con valori di tabella presenti nel riquadro Diagramma, la query risultante potrebbe includere funzioni di aggregazione non valide.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Scegliere ed eseguire il mapping dei dati di Input per una Query di stima | Microsoft Docs
+title: Scegliere ed eseguire il mapping dei dati di input per una query di stima | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085852"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
@@ -28,7 +28,7 @@ ms.locfileid: "66085852"
 > [!WARNING]  
 >  Non è possibile aggiungere nuove colonne né eseguire il mapping di colonne che si trovano in una vista origine dati diversa. La vista origine dati selezionata deve contenere tutte le colonne necessarie per la query di stima.  
   
- Dopo avere identificato le tabelle che contengono i dati che si utilizzeranno per le stime, è necessario eseguire il mapping delle colonne nei dati esterni alle colonne nel modello di data mining. Ad esempio, se il modello elabora una stima del comportamento di acquisto del cliente in base ai dati demografici e alle risposte ai sondaggi, i dati di input devono contiene informazioni che generalmente corrispondono al contenuto del modello. Non è necessario disporre di dati corrispondenti per ogni singola colonna, ovviamente maggiore sarà il numero di colonne corrispondenti, migliore sarà il risultato. Se si tenta di eseguire il mapping di colonne con tipi di dati diversi, è possibile che si verifichi un errore. In quel caso, è possibile definire un calcolo denominato nella vista origine dati per eseguire il cast o la conversione dei nuovi dati della colonna al tipo di dati richiesto dal modello. Per altre informazioni, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Dopo avere identificato le tabelle che contengono i dati che si utilizzeranno per le stime, è necessario eseguire il mapping delle colonne nei dati esterni alle colonne nel modello di data mining. Ad esempio, se il modello elabora una stima del comportamento di acquisto del cliente in base ai dati demografici e alle risposte ai sondaggi, i dati di input devono contiene informazioni che generalmente corrispondono al contenuto del modello. Non è necessario disporre di dati corrispondenti per ogni singola colonna, ovviamente maggiore sarà il numero di colonne corrispondenti, migliore sarà il risultato. Se si tenta di eseguire il mapping di colonne con tipi di dati diversi, è possibile che si verifichi un errore. In quel caso, è possibile definire un calcolo denominato nella vista origine dati per eseguire il cast o la conversione dei nuovi dati della colonna al tipo di dati richiesto dal modello. Per ulteriori informazioni, vedere [definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Quando si scelgono i dati da utilizzare per la stima, è possibile che venga eseguito il mapping automatico delle colonne dell'origine dati selezionata alle colonne del modello di data mining, in base alla somiglianza del nome e al tipo di dati corrispondente. È possibile utilizzare la finestra di dialogo **Modifica mapping** in **Stima modello di data mining** per cambiare le colonne di cui è stato eseguito il mapping, eliminare i mapping non appropriati o creare nuovi mapping per le colonne esistenti. L'area di progettazione **Stima modello di data mining** supporta anche il trascinamento delle connessioni selezionate.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "66085852"
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di stima &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
+ [Query di stima &#40;&#41;di data mining](prediction-queries-data-mining.md)  
   
   

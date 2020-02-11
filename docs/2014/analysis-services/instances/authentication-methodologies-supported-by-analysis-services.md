@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080336"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080336"
   
  Per altre informazioni sui flussi di autenticazione di Analysis Services e Business Intelligence, vedere [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
   
-##  <a name="bkmk_auth"></a> Individuazione delle possibilità di autenticazione  
+##  <a name="bkmk_auth"></a>Informazioni sulle alternative di autenticazione  
  Per la connessione a un database di Analysis Services è necessaria un'identità di gruppo o utente Windows e le relative autorizzazioni associate. L'identità può essere costituita da un account di accesso generico utilizzato da chiunque voglia visualizzare un report o, più probabilmente, dall'identità di singoli utenti.  
   
  In un modello tabulare o multidimensionale sono spesso presenti diversi livelli di accesso ai dati, per oggetto o all'interno dei dati stessi, in base all'autore della richiesta. Per soddisfare questo requisito, è possibile utilizzare NTLM, Kerberos, EffectiveUserName o l'autenticazione di base. Le tecniche sopra descritte permettono di passare identità utente diverse con ciascuna connessione. Tuttavia, la maggior parte di tali scelte è soggetta a una limitazione a un hop singolo. Soltanto nel caso di Kerberos con delega è possibile far passare l'identità utente originale tra più connessioni verso un archivio dati di back-end in un server remoto.  
@@ -72,7 +72,7 @@ ms.locfileid: "66080336"
   
  L'autenticazione di base e quella anonima sono disponibili solo quando si configura Analysis Services per l'accesso HTTP, utilizzando IIS e msmdpump.dll per stabilire la connessione. Per altre informazioni, vedere [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)(Autenticazione di Microsoft Business Intelligence e la delega dell'identità).  
   
- **Stored Credentials**  
+ **Credenziali archiviate**  
   
  La maggior parte dei servizi dell'applicazione di livello intermedio include funzionalità di memorizzazione di nomi utente e password utilizzati successivamente per recuperare dati da un archivio dati legacy, ad esempio Analysis Services o il motore relazionale di SQL Server. Di conseguenza, le credenziali archiviate forniscono una ulteriore alternativa per il recupero dei dati. Tra i limiti di questo approccio vi sono l'overhead di manutenzione associato all'aggiornamento di nomi utente e password e l'utilizzo di una identità singola per la connessione. Se la soluzione in uso richiede l'identità del chiamante originale, le credenziali archiviate non sono la scelta giusta.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66080336"
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo della rappresentazione con la sicurezza del trasporto](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Configurare l'accesso HTTP per Analysis Services in Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurare Analysis Services per la delega vincolata Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Registrazione del nome SPN per un'istanza di Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Connetti ad Analysis Services](connect-to-analysis-services.md)  

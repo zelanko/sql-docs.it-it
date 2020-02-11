@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Opzioni di esplorazione dei dati (Analysis Services - Data Mining) | Microsoft Docs
+title: Finestra di dialogo Opzioni di esplorazione dati (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086543"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Finestra di dialogo Opzioni di esplorazione dati (Analysis Services – Data Mining)
@@ -26,11 +26,11 @@ ms.locfileid: "66086543"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Conteggio superiore**|Selezionare questa opzione per recuperare il numero di righe dall'inizio specificato in **Conteggio campione** come dati di esempio.|  
-|**Campionamento casuale**|Selezionare questa opzione per eseguire il campionamento casuale e recuperare il numero di righe specificato in **Conteggio campione** come dati di esempio.|  
-|**Numero di campioni**|Consente di selezionare il numero di righe da restituire come dati di esempio.|  
+|**In ordine fino al conteggio campione**|Selezionare questa opzione per recuperare il numero di righe dall'inizio specificato in **Conteggio campione** come dati di esempio.|  
+|**Casuale**|Selezionare questa opzione per eseguire il campionamento casuale e recuperare il numero di righe specificato in **Conteggio campione** come dati di esempio.|  
+|**Conteggio campione**|Consente di selezionare il numero di righe da restituire come dati di esempio.|  
 |**Stati per grafico**|Consente di selezionare il numero di stati discreti da visualizzare nella scheda **Grafico** della finestra di dialogo **Esplora dati** .|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Come la rappresentazione della finestra di progettazione Query e visualizzare di join (Visual Database Tools) | Microsoft Docs
+title: Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155273"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
-  Se due o più tabelle sono unite tramite join, in [Progettazione query e Progettazione viste](visual-database-tools.md) il join verrà rappresentato in forma grafica all'interno del [riquadro Diagramma](diagram-pane-visual-database-tools.md) e mediante la sintassi SQL all'interno del [riquadro SQL](sql-pane-visual-database-tools.md).  
+  Se le tabelle sono unite in join, in [Progettazione query e Progettazione viste](visual-database-tools.md) il join viene rappresentato graficamente nel [riquadro diagramma](diagram-pane-visual-database-tools.md) e utilizzando la sintassi SQL nel [riquadro SQL](sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>riquadro Diagramma  
+## <a name="diagram-pane"></a>Riquadro Diagramma  
  Nel riquadro Diagramma verrà visualizzata una linea di join fra le colonne di dati coinvolte nel join. In Progettazione query e Progettazione viste verrà visualizzata una linea di join per ogni condizione di join. La seguente figura mostra, ad esempio, una linea di join fra due tabelle unite in join:  
   
- ![Linea di join che mostra la relazione tra due tabelle](../../database-engine/media//dv3wbig.gif "Linea di join che mostra la relazione tra due tabelle")  
+ ![Linea di join che illustra la relazione tra le due tabelle](../../database-engine/media//dv3wbig.gif "Linea di join che illustra la relazione tra le due tabelle")  
   
  Se le tabelle sono unite da più condizioni di join, verranno visualizzate più linee di join, come nel seguente esempio:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63155273"
   
  Le opzioni della sintassi per il join di tabelle comprendono:  
   
--   **Qualificatore JOIN per la clausola FROM**.   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
+-   **Qualificatore join per la clausola from**.   Le parole chiave INNER e OUTER specificano il tipo di join. La sintassi è quella standard per ANSI 92 SQL.  
   
      Se, ad esempio, si esegue il join delle tabelle `publishers` e `pub_info` in base alla colonna `pub_id` di ciascuna tabella, l'istruzione SQL risultante potrebbe essere simile alla seguente:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63155273"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire una query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [Eseguire query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Finestra di dialogo Join &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

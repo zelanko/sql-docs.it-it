@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151204"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -66,7 +66,7 @@ ms.locfileid: "63151204"
  Utilità**dta**  
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
- carico di lavoro  
+ workload  
  File script Transact-SQL, file di traccia, o tabella di traccia che contiene un carico di lavoro rappresentativo per i database che si desidera ottimizzare. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile specificare la cache dei piani come carico di lavoro.  
   
  file di input XML  
@@ -106,7 +106,7 @@ ms.locfileid: "63151204"
   
 -   Specificare unicamente le strutture di progettazione fisica del database che si desidera vengano analizzate da Ottimizzazione guidata motore di database. La procedura guidata offre numerose opzioni, ma specifica solo quelle necessarie.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dipendenza dalla stored procedure estesa xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Dipendenza dalla stored procedure estesa xp_msver  
  Per offrire funzionalità complete, Ottimizzazione guidata motore di database dipende dalla stored procedure estesa **xp_msver** . Questa stored procedure estesa è attiva per impostazione. Questa stored procedure estesa viene utilizzata da Ottimizzazione guidata motore di database per recuperare il numero di processori e la memoria disponibile sul computer che contiene il database da ottimizzare. Se **xp_msver** non è disponibile, l'Ottimizzazione guidata motore di database prende in considerazione le caratteristiche hardware del computer in cui è in esecuzione . Se le caratteristiche hardware del computer in cui è in esecuzione Ottimizzazione guidata motore di database non sono disponibili, vengono considerati un processore e 1024 megabyte (MB) di memoria.  
   
  La relazione di dipendenza influisce sulle indicazioni relative al partizionamento, in quanto il numero di partizioni consigliate dipende da questi due valori (numero di processori e memoria disponibile). La dipendenza influisce inoltre sui risultati dell'ottimizzazione quando si utilizza un server di prova per ottimizzare il server di produzione. In questo scenario Ottimizzazione guidata motore di database usa **xp_msver** per recuperare le proprietà hardware del server di produzione. Dopo avere ottimizzato il carico di lavoro nel server di prova, Ottimizzazione guidata motore di database utilizza queste proprietà hardware per generare un'indicazione. Per altre informazioni, vedere [xp_msver &#40; Transact-SQL &#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
@@ -116,7 +116,7 @@ ms.locfileid: "63151204"
   
 |Attività di Ottimizzazione guidata motore di database|Argomento|  
 |-----------------------------------------|-----------|  
-|Inizializzare e avviare Ottimizzazione guidata motore di database.<br /><br /> Creare un carico di lavoro specificando la cache dei piani, creando uno script o generando un file di traccia o una tabella di traccia.<br /><br /> Ottimizzare un database tramite lo strumento dell'interfaccia utente grafica Ottimizzazione guidata motore di database.<br /><br /> Creare file input XML per l'ottimizzazione di carichi di lavoro.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
-|Visualizzare i risultati dell'operazione di ottimizzazione del database.<br /><br /> Selezionare e implementare le indicazioni relative all'ottimizzazione.<br /><br /> Eseguire l'analisi di simulazione esplorativa nel carico di lavoro.<br /><br /> Rivedere le sessioni di ottimizzazione esistenti, clonare le sessioni in base a quelle esistenti <br />o modificare le indicazioni di ottimizzazione per un'ulteriore valutazione o implementazione.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
+|Inizializzare e avviare Ottimizzazione guidata motore di database.<br /><br /> Creare un carico di lavoro specificando la cache dei piani, creando uno script o generando un file di traccia o una tabella di traccia.<br /><br /> Ottimizzare un database tramite lo strumento dell'interfaccia utente grafica Ottimizzazione guidata motore di database.<br /><br /> Creare file input XML per l'ottimizzazione di carichi di lavoro.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Avviare e usare Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Visualizzare i risultati dell'operazione di ottimizzazione del database.<br /><br /> Selezionare e implementare le indicazioni relative all'ottimizzazione.<br /><br /> Eseguire l'analisi di simulazione esplorativa nel carico di lavoro.<br /><br /> Rivedere le sessioni di ottimizzazione esistenti, clonare le sessioni in base a quelle esistenti <br />o modificare le indicazioni di ottimizzazione per un'ulteriore valutazione o implementazione.<br /><br /> Visualizzare le descrizioni delle opzioni dell'interfaccia utente di Ottimizzazione guidata motore di database.|[Visualizzare e usare l'output di Ottimizzazione guidata motore di database](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   

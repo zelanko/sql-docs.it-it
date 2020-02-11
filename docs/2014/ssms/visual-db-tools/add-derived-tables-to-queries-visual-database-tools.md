@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311936"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle derivate a query (Visual Database Tools)
@@ -34,9 +34,9 @@ ms.locfileid: "63311936"
      Verrà aggiunta una nuova tabella con il nome derivedtbl_*N* e l'istruzione SELECT della tabella derivata verrà aggiunta alla clausola FROM della query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Creazione di query &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [Aprire le query &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
+ [Aprire query &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

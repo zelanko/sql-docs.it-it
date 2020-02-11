@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106723"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Aggiungere e modificare una linea (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106723"
 3.  Per modificare le proprietà della linea, selezionarla nell'area di progettazione, quindi modificare le proprietà nella sezione **Bordo** della scheda **Home** .  
   
     > [!NOTE]  
-    >  Se si imposta lo stile di linea su **doppie** e la lunghezza riga è 1 1/2 pt o più ristretto, la riga potrebbe non visualizzata come doppia quando si esegue il report in Generatore Report, progettazione Report o gestione Report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
+    >  Se si imposta lo stile di linea su **doppio** e la lunghezza riga è 1 1/2 PT o più stretta, è possibile che la linea non venga visualizzata come doppia quando si esegue il report in Generatore report, Progettazione report o Gestione report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  

@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad425c954526fabd6b9b1cf83b42fe5667979c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165434"
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
-  Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. Le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono modellate in base a un subset delle interfacce dei provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] estensioni per l'elaborazione dati vengono modellate dopo un subset delle interfacce del provider di dati.  
   
  Nella tabella seguente sono elencate le estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -34,7 +34,8 @@ ms.locfileid: "63165434"
  È possibile utilizzare le API di elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)] per aggiungere funzionalità personalizzate di elaborazione dati al server di report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] offre supporto predefinito per i provider di dati in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se è già stato implementato un provider di dati completo, non è necessario implementare un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È tuttavia consigliabile considerare di estendere il provider di dati per includere le funzionalità specifiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, tra cui credenziali di connessione protette e aggregazioni sul lato server.  
+>  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] offre supporto predefinito per i provider di dati in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se è già stato implementato un provider di dati completo, non è necessario implementare un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È tuttavia consigliabile considerare di estendere il provider di dati per includere le funzionalità specifiche di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, tra cui credenziali di connessione protette e aggregazioni sul lato server.  
   
  Ognuna delle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un set comune di interfacce. Questo garantisce che ogni estensione implementi funzionalità simili.  
   
@@ -54,7 +55,7 @@ Architettura delle estensioni per l'elaborazione dati di Reporting Services
 ## <a name="data-extension-process-flow"></a>Flusso di processo dell'estensione per i dati  
  Prima di sviluppare un'estensione per i dati personalizzata, è necessario capire in che modo le estensioni per i dati vengono utilizzate dal server di report per elaborare i dati. È inoltre necessario comprendere i costruttori e i metodi chiamati dal server di report.  
   
- ![Flusso del processo per l'estensione per l'elaborazione dati](../../media/bk-ext-01.gif "Flusso del processo per l'estensione per l'elaborazione dati")  
+ ![Flusso di processo per l'estensione per l'elaborazione dati](../../media/bk-ext-01.gif "Flusso di processo per l'estensione per l'elaborazione dati")  
 Flusso di processo dettagliato di un'estensione per i dati chiamata dal server di report  
   
  Nella figura è illustrata la sequenza di eventi seguente:  
@@ -70,13 +71,13 @@ Flusso di processo dettagliato di un'estensione per i dati chiamata dal server d
   
 -   Un computer di distribuzione in cui sia installato Progettazione report o un server di report.  
   
--   Un computer di sviluppo in cui sia installato [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o versioni successive o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
+-   Un computer di sviluppo [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] con o versioni successive o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installato.  
   
 -   Conoscenza approfondita delle caratteristiche e delle funzionalità di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Conoscenza approfondita dell'architettura di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], dei provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], degli oggetti DataSet ADO.NET e delle interfacce [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] comuni.  
+-   Una conoscenza approfondita dell' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] architettura, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dei provider di dati, degli oggetti DataSet ADO.NET e delle [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] interfacce comuni.  
   
--   Esperienza di sviluppo in un linguaggio [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Esperienza di sviluppo in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un linguaggio, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ad esempio Visual [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] C# o .NET.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](../reporting-services-extensions.md)   

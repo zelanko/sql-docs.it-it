@@ -15,21 +15,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254457"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navigare all'interno di Progettazione diagrammi di database (Visual Database Tools)
   In Progettazione diagrammi di database è possibile utilizzare sia la tastiera che il mouse. Nelle tabelle riportate di seguito vengono illustrati alcuni metodi specifici utilizzati in Progettazione diagrammi di database.  
   
-|**Per**|**Premere**|  
+|**To**|**Premere**|  
 |------------|---------------|  
 |Accedere al menu Diagramma di database|ALT+M|  
 |Spostarsi tra le tabelle e le eventuali relazioni|TAB o MAIUSC+TAB|  
 |Spostarsi tra le colonne di una tabella|Tasti di direzione|  
-|Rimuovere dal diagramma la tabella selezionata|DELETE|  
+|Rimuovere dal diagramma la tabella selezionata|Elimina|  
 |Rimuovere una tabella o una relazione dal database|MAIUSC+CANC|  
 |Spostare tabelle sulla superficie del diagramma|CTRL+FRECCIA SU o CTRL+FRECCIA GIÙ|  
 |Scorrere il testo verso destra o sinistra e verso l'alto o il basso|PGSU/PGGIÙ per gli spostamenti in verticale, CTRL+PGSU/PGGIÙ per gli spostamenti in orizzontale|  

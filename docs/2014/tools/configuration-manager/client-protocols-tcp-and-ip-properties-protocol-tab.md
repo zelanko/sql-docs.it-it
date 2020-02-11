@@ -1,5 +1,5 @@
 ---
-title: Protocolli client--TCP e le proprietà dell'IP (scheda protocollo) | Microsoft Docs
+title: Protocolli client-proprietà TCP e IP (scheda protocollo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253790"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolli client e Proprietà TCP IP (scheda Protocollo)
@@ -31,7 +31,7 @@ ms.locfileid: "63253790"
   
  Quando esegue la connessione a un'istanza denominata di [!INCLUDE[ssDE](../../includes/ssde-md.md)], il client tenta di ottenere il numero di porta dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in esecuzione nel computer server. Se il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non è in esecuzione, è necessario fornire il numero di porta mediante questa impostazione o come parte della stringa di connessione.  
   
- **Abilitata**  
+ **Enabled**  
  I valori possibili sono **Sì** e **No**.  
   
  **Keep-alive**  
@@ -42,7 +42,7 @@ ms.locfileid: "63253790"
   
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Nuovo alias &#40;scheda Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [Proprietà &#60;Alias&#62; &#40;scheda Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Nuovo alias &#40;scheda alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [&#60;&#62; proprietà alias &#40;scheda alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

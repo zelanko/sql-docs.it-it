@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187095"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
@@ -33,7 +33,7 @@ ms.locfileid: "63187095"
   
 ## <a name="server-and-network"></a>Server e rete  
   
--   Impostare la quantità minima e massima di memoria allocata a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+-   Impostare la quantità minima e massima di memoria allocata [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]a.  
   
      Per impostazione predefinita, nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili. Per evitare che durante le attività di replica la memoria risulti insufficiente, impostare la quantità minima di memoria disponibile tramite l'opzione **min server memory** . Per evitare che il sistema operativo richieda memoria del disco, è inoltre possibile impostare una quantità massima di memoria mediante l'opzione **max server memory** . Per altre informazioni, vedere [Opzioni di configurazione del server Server Memory](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63187095"
   
      Le modifiche possono essere partizionate pubblicando subset di dati in ogni Sottoscrittore oppure facendo in modo che un'applicazione indirizzi le modifiche relative a una specifica riga a uno determinato nodo:  
   
-    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni, vedere [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La replica transazionale supporta la pubblicazione dei subset di dati utilizzando filtri statici con più pubblicazioni. Per altre informazioni, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  
   
@@ -160,10 +160,10 @@ ms.locfileid: "63187095"
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
--   [Usare i profili agenti di replica](../agents/work-with-replication-agent-profiles.md)  
+-   [Utilizzo dei profili agenti di replica](../agents/work-with-replication-agent-profiles.md)  
   
 -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+-   [Concetti relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
   

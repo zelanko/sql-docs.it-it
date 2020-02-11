@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190351"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
@@ -30,28 +30,28 @@ ms.locfileid: "63190351"
   
 |Descrizione argomento|Argomento|  
 |-----------------------|-----------|  
-|Vengono descritti i concetti relativi al clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e vengono forniti collegamenti ad attività e contenuti associati.|[Istanze del Cluster di Failover AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Vengono descritti i concetti relativi ai criteri di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e vengono forniti collegamenti ad argomenti contenenti informazioni per una configurazione dei criteri di failover appropriata ai requisiti organizzativi.|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
-|Viene descritto come effettuare la gestione del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente.|[Gestione e manutenzione dell'istanza del cluster di failover](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
+|Vengono descritti i concetti relativi al clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e vengono forniti collegamenti ad attività e contenuti associati.|[Istanze del cluster di failover AlwaysOn (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Vengono descritti i concetti relativi ai criteri di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e vengono forniti collegamenti ad argomenti contenenti informazioni per una configurazione dei criteri di failover appropriata ai requisiti organizzativi.|[Criteri di failover per le istanze del cluster di failover](../windows/failover-policy-for-failover-cluster-instances.md)|  
+|Viene descritto come effettuare la gestione del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente.|[Amministrazione e manutenzione dell'istanza del cluster di failover](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Viene spiegato come installare [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un cluster di failover Windows Server.|[Come eseguire il clustering di SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
   
   
-##  <a name="BestPractices"></a> Procedure consigliate  
+##  <a name="BestPractices"></a>Procedure consigliate  
   
--   Vedere le [Note sulla versione di ](https://go.microsoft.com/fwlink/?LinkId=296445) [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+-   Vedere le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Note sulla versione di [](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Installare i prerequisiti software. Prima di eseguire il programma di installazione per installare o effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installare i prerequisiti riportati di seguito per ridurre il tempo di installazione. È possibile installare il software necessario in ogni nodo del cluster di failover, quindi riavviare i nodi prima di eseguire il programma di installazione.  
   
     -   Windows PowerShell non viene installato più dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell 2.0 è un prerequisito per l'installazione dei componenti [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se Windows PowerShell 2.0 non è installato nel computer, è possibile abilitarlo seguendo le istruzioni disponibili nella pagina relativa a [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per altre informazioni, vedere [Note sulla versione di](https://go.microsoft.com/fwlink/?LinkId=296445) [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per ulteriori informazioni, vedere [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Note sulla versione](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacchetto di aggiornamento:** Per evitare il riavvio del computer dovuto all'installazione di .NET Framework 4 durante il processo di installazione, è necessario che nel computer sia installato un aggiornamento di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in Windows 7 SP1 o in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, tale aggiornamento è incluso. Se si sta eseguendo l'installazione in un sistema operativo Windows precedente, scaricarlo da [Microsoft Update per .NET Framework 4.0 in Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   Pacchetto di aggiornamento: ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** Per evitare il riavvio del computer a causa dell'installazione di .NET Framework [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 4 durante l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] installazione, il programma di installazione richiede l'installazione di un aggiornamento nel computer.  Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in Windows 7 SP1 o in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, tale aggiornamento è incluso. Se si sta eseguendo l'installazione in un sistema operativo Windows precedente, scaricarlo da [Microsoft Update per .NET Framework 4.0 in Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4: il programma di installazione consente di installare .NET Framework 4 in un sistema operativo cluster. Per ridurre il tempo di installazione, è consigliabile installare .NET Framework 4 prima di eseguire il programma di installazione.  
+    -   .NET Framework 4: - il programma di installazione consente di installare .NET Framework 4 in un sistema operativo cluster. Per ridurre il tempo di installazione, è consigliabile installare .NET Framework 4 prima di eseguire il programma di installazione.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] File di supporto per l'installazione. Questi file possono essere installati eseguendo SqlSupport.msi, disponibile nel supporto di installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]File di supporto per l'installazione. Questi file possono essere installati eseguendo SqlSupport.msi, disponibile nel supporto di installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 -   Verificare che il software antivirus non sia installato nel cluster WSFC. Per altre informazioni, vedere l'articolo della [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base, [Il software antivirus che non è a conoscenza del cluster può causare problemi con i servizi Cluster](https://go.microsoft.com/fwlink/?LinkId=116986).  
   
@@ -75,7 +75,8 @@ ms.locfileid: "63190351"
   
 -   Prima di installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , disabilitare tutte le applicazioni e i servizi che potrebbero utilizzare componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante l'installazione, ma lasciare online le risorse disco.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione configura automaticamente le dipendenza tra il gruppo di cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i dischi che saranno inclusi nel cluster di failover. Non impostare le dipendenze per i dischi prima dell'installazione.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione configura automaticamente le dipendenza tra il gruppo di cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i dischi che saranno inclusi nel cluster di failover. Non impostare le dipendenze per i dischi prima dell'installazione.  
   
     -   Durante l'installazione del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene creato l'oggetto computer (account computer Active Directory) per il nome risorsa di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In un cluster di [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] , l'account del nome del cluster (account del computer del cluster) deve disporre delle autorizzazioni per la creazione di oggetti computer. Per altre informazioni, vedere [Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx)(Configurazione di account in Active Directory).  
   
@@ -83,7 +84,7 @@ ms.locfileid: "63190351"
   
  
   
-##  <a name="Hardware"></a> Verificare la soluzione hardware in uso  
+##  <a name="Hardware"></a>Verificare la soluzione hardware  
   
 -   Se nella soluzione cluster sono inclusi nodi del cluster geograficamente distanti, sarà necessario verificare elementi aggiuntivi, come latenza di rete e supporto per dischi condivisi.  
   
@@ -100,13 +101,15 @@ ms.locfileid: "63190351"
     >   
     >  Se si utilizza un'archiviazione di condivisione file SMB diversa dal file server di Windows, consultare il fornitore dell'archiviazione per un'impostazione equivalente sul lato del file server.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta punti di montaggio.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta punti di montaggio.  
   
      Un volume montato, o punto di montaggio, consente di utilizzare una singola lettera di unità per fare riferimento a più dischi o volumi. Se la lettera di unità D: fa riferimento a un disco o volume normale, è possibile collegare o "montare" dischi o volumi aggiuntivi sotto la lettera D: senza che per tali dischi o volumi siano necessarie lettere di unità specifiche.  
   
      Considerazioni aggiuntive sui punti di montaggio per il clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione richiede che all'unità di base di un'unità montata sia associata una lettera di unità. Per le installazioni di cluster di failover, questa unità di base deve essere un'unità del cluster. In questa versione non sono supportati i GUID del volume.  
+    -   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione richiede che all'unità di base di un'unità montata sia associata una lettera di unità. Per le installazioni di cluster di failover, questa unità di base deve essere un'unità del cluster. In questa versione non sono supportati i GUID del volume.  
   
     -   L'unità di base, a cui è associata la lettera di unità, non può essere condivisa tra le istanze del cluster di failover. Si tratta di una limitazione normale per i cluster di failover, ma non per i server autonomi a istanze multiple.  
   
@@ -117,7 +120,7 @@ ms.locfileid: "63190351"
   
     -   La formattazione di un'unità dopo il montaggio di unità aggiuntive non è supportata.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà riportata online. Per altre informazioni, vedere [Tipi di archiviazione per i file di dati](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configurazione Motore di database - Directory dati](../../install/database-engine-configuration-data-directories.md).  
+-   Il disco locale è supportato nell'installazione del cluster di failover di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo per l'installazione dei file tempdb. Assicurarsi che il percorso specificato per i file di dati tempdb e di log sia valido su tutti i nodi del cluster. Durante il failover, se le directory tempdb non sono disponibili nel nodo di destinazione del failover, la risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà riportata online. Per altre informazioni, vedere [Tipi di archiviazione per i file di dati](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) e [Configurazione Motore di database - Directory dati](../../install/database-engine-configuration-data-directories.md).  
   
 -   Se si distribuisce un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in componenti con tecnologia iSCSI, è consigliabile adottare precauzioni appropriate. Per altre informazioni, vedere [Supporto per SQL Server sui componenti della tecnologia iSCSI](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -129,7 +132,7 @@ ms.locfileid: "63190351"
   
   
   
-##  <a name="Security"></a> Esaminare le considerazioni sulla sicurezza  
+##  <a name="Security"></a>Esaminare le considerazioni sulla sicurezza  
   
 -   Per utilizzare la crittografia, installare il certificato server con il nome DNS completo del cluster WSFC in tutti i nodi del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In presenza, ad esempio, di un cluster a due nodi, con nodi denominati "Test1.DomainName.com" e "Test2.DomainName.com", e di un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] denominata "Virtsql", è necessario ottenere un certificato per "Virtsql.DomainName.com" e installarlo nei nodi test1 e test2. È quindi possibile selezionare la casella di controllo **Forza crittografia protocollo** in Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per configurare il cluster di failover per la crittografia.  
   
@@ -144,7 +147,8 @@ ms.locfileid: "63190351"
   
 -   I gruppi di dominio devono trovarsi nello stesso dominio degli account computer. Se ad esempio il computer in cui verrà installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si trova nel dominio SQLSVR, figlio di MYDOMAIN, è necessario specificare un gruppo nel dominio SQLSVR. Nel dominio SQLSVR possono essere contenuti account utente di MYDOMAIN.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il clustering di failover non può essere installato nelle configurazioni in cui i nodi del cluster sono controller di dominio.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il clustering di failover non può essere installato nelle configurazioni in cui i nodi del cluster sono controller di dominio.  
   
 -   Vedere [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../install/security-considerations-for-a-sql-server-installation.md).  
   
@@ -152,7 +156,7 @@ ms.locfileid: "63190351"
   
   
   
-##  <a name="Network"></a> Esaminare le considerazioni relative alla rete, alla porta e al firewall  
+##  <a name="Network"></a>Esaminare le considerazioni relative alla rete, alla porta e al firewall  
   
 -   Verificare di aver disabilitato NetBIOS per tutte le schede di rete private prima di avviare l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -185,40 +189,48 @@ ms.locfileid: "63190351"
   
   
   
-##  <a name="OS_Support"></a> Verificare il sistema operativo in uso  
+##  <a name="OS_Support"></a>Verificare il sistema operativo  
  Assicurarsi che il sistema operativo sia installato correttamente e sia configurato per il supporto del clustering di failover. Nella tabella seguente vengono elencate le edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i sistemi operativi in cui sono supportati.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|Edizione di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]Enterprise|
+  [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]Enterprise|
+  [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 bit) x64<sup>1</sup>|Yes|Yes|Sì<sup>2</sup>|Sì<sup>2</sup>|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 bit)|Yes|Yes|Sì <sup>2</sup>|Sì <sup>2</sup>|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 bit)|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 bit)|Yes|Yes|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Enterprise (64 bit) x64<sup>1</sup>|Sì|Sì|Sì<sup>2</sup>|Sì<sup>2</sup>|  
+|
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 bit)|Sì|Sì|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-bit) Developer (64|Sì|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|  
+|
+  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 bit)|Sì|Sì|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Standard (64 bit)|Sì|Sì|Sì|Sì|  
+|
+  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 bit)|Sì|Sì|||  
   
- <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster non sono supportati nella modalità WOW. inclusi gli aggiornamenti da versioni precedenti di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che, in origine, erano stati installati nella modalità WOW. Per tali cluster l'unica opzione di aggiornamento consiste nell'installazione side-by-side della nuova versione e nella successiva migrazione.  
+ <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i cluster non sono supportati nella modalità WOW. inclusi gli aggiornamenti da versioni precedenti di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che, in origine, erano stati installati nella modalità WOW. Per tali cluster l'unica opzione di aggiornamento consiste nell'installazione side-by-side della nuova versione e nella successiva migrazione.  
   
- <sup>2</sup> supportata per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clustering di failover su più subnet.  
+ <sup>2</sup> supportato per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il clustering di failover su più subnet.  
   
   
   
-##  <a name="MultiSubnet"></a> Considerazioni aggiuntive per le configurazioni di più subnet  
+##  <a name="MultiSubnet"></a>Considerazioni aggiuntive per le configurazioni di più subnet  
  Nelle sezioni seguenti si descrivono i requisiti da ricordare in caso di installazione di un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Una configurazione di più subnet comporta clustering attraverso più subnet, pertanto comporta utilizzando più indirizzi IP e viene modificata nelle dipendenze della risorsa indirizzo IP.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerazioni sul sistema operativo e sull'edizione  
+### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considerazioni sul sistema operativo e sull'edizione  
   
 -   Per informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supportano un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   Per creare un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario innanzitutto creare il cluster di failover multisito di [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] in più subnet.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il cluster di failover dipende dal cluster di failover di Windows Server per assicurarsi che le condizioni della dipendenza IP siano valide se si verifica un failover.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il cluster di failover dipende dal cluster di failover di Windows Server per assicurarsi che le condizioni della dipendenza IP siano valide se si verifica un failover.  
   
--   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] richiede che tutti i server del cluster si trovino nello stesso dominio di Active Directory. Pertanto, nel cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene richiesto che tutti i nodi del cluster si trovino nello stesso dominio Active Directory anche se sono presenti in subnet diverse.  
+-   
+  [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] richiede che tutti i server del cluster si trovino nello stesso dominio di Active Directory. Pertanto, nel cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene richiesto che tutti i nodi del cluster si trovino nello stesso dominio Active Directory anche se sono presenti in subnet diverse.  
   
 #### <a name="ip-address-and-ip-address-resource-dependencies"></a>L'indirizzo IP e la dipendenze della risorsa indirizzo IP  
   
-1.  La dipendenze della risorsa indirizzo IP è impostata su OR in una configurazione di più subnet. Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md).  
+1.  La dipendenze della risorsa indirizzo IP è impostata su OR in una configurazione di più subnet. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un nuovo SQL Server cluster di Failover &#40;installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
 2.  Le dipendenze AND-OR miste dell'indirizzo IP non sono supportate. Ad esempio, \<IP1> AND \<IP2> OR \<IP3> non è supportato.  
   
@@ -229,22 +241,27 @@ ms.locfileid: "63190351"
 #### <a name="related-content"></a>Contenuto correlato  
  Per altre informazioni sul failover multisito di [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , vedere [Windows Server 2008 R2 Failover Clustering Site](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Sito di clustering di failover di Windows Server 2008 R2) e [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=177873)(Progetto per un servizio o un'applicazione cluster in un cluster di failover multisito).  
   
-##  <a name="WSFC"></a> Configurare il cluster di failover di Windows Server  
+##  <a name="WSFC"></a>Configurare il cluster di failover di Windows Server  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) deve essere configurato in almeno un nodo del cluster di server. È inoltre necessario eseguire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in combinazione con WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise Edition supporta i cluster di failover con un massimo di 16 nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard supportano i cluster di failover con due nodi.  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) deve essere configurato in almeno un nodo del cluster di server. È inoltre necessario eseguire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in combinazione con WSFC. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise Edition supporta i cluster di failover con un massimo di 16 nodi. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard supportano i cluster di failover con due nodi.  
   
 -   Tramite la DLL della risorsa per il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono esportate due funzioni utilizzate da Gestione cluster WSFC per verificare la disponibilità della risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Criteri di failover per istanze del cluster di failover](../windows/failover-policy-for-failover-cluster-instances.md).  
   
 -   È necessario che WSFC sia in grado di verificare l'esecuzione dell'istanza del cluster di failover mediante il controllo IsAlive. A tale scopo, è necessario che venga stabilita una connessione trusted. Per impostazione predefinita, l'account che esegue il servizio cluster non è configurato come amministratore sui nodi del cluster e il gruppo BUILTIN\Administrators non dispone delle autorizzazioni per accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali impostazioni cambiano solo se vengono modificate le autorizzazioni sui nodi del cluster.  
   
--   Configurare Domain Name Service (DNS) e Windows Internet Name Service (WINS). Un server DNS o WINS deve essere in esecuzione nell'ambiente in cui sarà installato il cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione richiede la registrazione al servizio DDNS del riferimento virtuale all'interfaccia IP di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La configurazione del server DNS deve consentire ai nodi del cluster di registrare in modo dinamico la mappa di un indirizzo IP online sul nome di rete. Se non è possibile completare la registrazione dinamica, l'installazione non riesce e viene eseguito il rollback. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/947048)  
+-   Configurare Domain Name Service (DNS) e Windows Internet Name Service (WINS). Un server DNS o WINS deve essere in esecuzione nell'ambiente in cui sarà installato il cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione richiede la registrazione al servizio DDNS del riferimento virtuale all'interfaccia IP di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La configurazione del server DNS deve consentire ai nodi del cluster di registrare in modo dinamico la mappa di un indirizzo IP online sul nome di rete. Se non è possibile completare la registrazione dinamica, l'installazione non riesce e viene eseguito il rollback. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/947048)  
   
   
   
-##  <a name="MSDTC"></a> Installare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
+##  <a name="MSDTC"></a>Installa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Prima di installare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un cluster di failover determinare se è necessario creare la risorsa cluster [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC). Se si installa solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], la risorsa cluster MSDTC non sarà necessaria. Se si installano il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , SSIS e i componenti workstation oppure si utilizzano transazioni distribuite, è necessario installare MSDTC. MSDTC non è necessario per le istanze solo di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- In [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]è possibile installare più istanze di MSDTC in un singolo cluster di failover. La prima istanza di MSDTC installata sarà l'istanza predefinita del cluster di MSDTC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si avvale di un'istanza di MSDTC installata nel gruppo di risorse cluster locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando automaticamente l'istanza di MSDTC. Tuttavia, è possibile eseguire il mapping delle singole applicazioni a qualsiasi istanza di MSDTC nel cluster.  
+ In [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]è possibile installare più istanze di MSDTC in un singolo cluster di failover. La prima istanza di MSDTC installata sarà l'istanza predefinita del cluster di MSDTC. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si avvale di un'istanza di MSDTC installata nel gruppo di risorse cluster locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando automaticamente l'istanza di MSDTC. Tuttavia, è possibile eseguire il mapping delle singole applicazioni a qualsiasi istanza di MSDTC nel cluster.  
   
  Le regole seguenti vengono applicate per un'istanza di MSDTC che deve essere scelta da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
@@ -265,8 +282,8 @@ ms.locfileid: "63190351"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Parametri di controllo di Controllo configurazione sistema](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
- [Gestione e manutenzione dell'istanza del cluster di failover](../windows/failover-cluster-instance-administration-and-maintenance.md)  
+ [Requisiti hardware e software per l'installazione di SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Parametri di controllo per controllo configurazione sistema](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
+ [Amministrazione e manutenzione dell'istanza del cluster di failover](../windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   

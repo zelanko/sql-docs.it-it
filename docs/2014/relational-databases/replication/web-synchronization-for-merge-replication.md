@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200088"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronizzazione Web per la replica di tipo merge
@@ -29,7 +29,7 @@ ms.locfileid: "63200088"
   
 -   Sincronizzazione di dati da utenti mobili su Internet.  
   
--   Sincronizzazione di dati tra database [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall aziendale.  
+-   Sincronizzazione dei dati tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database attraverso un firewall aziendale.  
   
  Tale funzionalità può essere ad esempio utilizzata dai rappresentanti in trasferta, come nel caso dei rappresentanti della società [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]in visita a diversi magazzini e fornitori nelle rispettive aree. In occasione di viaggi di lunga durata essi alloggiano in alberghi e hanno bisogno di uno strumento di semplice utilizzo per caricare i dati delle vendite e scaricare eventuali aggiornamenti dei prodotti alla fine di ogni giornata.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63200088"
 3.  L'agente di merge nel Sottoscrittore accetta la risposta HTTPS e applica nel database di sottoscrizione le modifiche scaricate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+ [Configurare la sincronizzazione Web](configure-web-synchronization.md)   
+ [Topologie per la sincronizzazione Web](topologies-for-web-synchronization.md)  
   
   

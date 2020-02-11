@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144494"
 ---
 # <a name="open-log-file-viewer"></a>Aprire il visualizzatore file di log
@@ -24,7 +24,7 @@ ms.locfileid: "63144494"
   
 -   Raccolta controlli  
   
--   Raccolta dati  
+-   Raccolta di dati  
   
 -   Posta elettronica database  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63144494"
   
  Per accedere a file di log per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** sia alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](view-offline-log-files.md).  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Security  
  È necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
 ### <a name="view-log-files"></a>Visualizzare file di log  
@@ -100,7 +100,7 @@ ms.locfileid: "63144494"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzatore file di log](log-file-viewer.md)   
- [SQL Server Audit &#40;Motore di database&#41;](../security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Visualizzare file di log offline](view-offline-log-files.md)  
   
   

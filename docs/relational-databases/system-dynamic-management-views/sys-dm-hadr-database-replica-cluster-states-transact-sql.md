@@ -1,5 +1,5 @@
 ---
-title: DM hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
+title: sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900673"
 ---
-# <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
+# <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga contenente informazioni relative all'integrità dei database di disponibilità nei gruppi di disponibilità Always On nel cluster WSFC (Windows Server Failover Clustering). Query **DM hadr_database_replica_states** per rispondere alle domande seguenti:  
+  Restituisce una riga contenente informazioni relative all'integrità dei database di disponibilità nei gruppi di disponibilità Always On nel cluster WSFC (Windows Server Failover Clustering). Eseguire una query su **sys. dm_hadr_database_replica_states** per rispondere alle domande seguenti:  
   
 -   Tutti i database di un gruppo di disponibilità sono pronti per un failover?  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67900673"
   
 -   Se la replica primaria non è attualmente disponibile, quale replica secondaria limiterebbe la perdita di dati se diventasse la replica primaria?  
   
--   Quando il valore della [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log in un determinato database primario ?  
+-   Quando il valore della colonna [sys. databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc** è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log in un determinato database primario?  
    
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -48,12 +48,12 @@ ms.locfileid: "67900673"
 |**is_failover_ready**|**bit**|Indica se il database secondario è sincronizzato con il database primario corrispondente. uno di:<br /><br /> 0 = Il database non è contrassegnato come sincronizzato nel cluster. Il database non è pronto per un failover.<br /><br /> 1 = Il database non è contrassegnato come sincronizzato nel cluster. Il database è pronto per un failover.|  
 |**is_pending_secondary_suspend**|**bit**|Indica se, dopo un failover forzato, il database verrà sospeso, uno di:<br /><br /> 0 = Qualsiasi stato a eccezione di HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Al completamento di un failover forzato, ognuno dei database secondari viene impostato su HADR_SYNCHONIZED_SUSPENDED e rimane in questo stato finché la nuova replica primaria non riceverà un acknowledgement da quel database secondario per il messaggio SUSPEND.<br /><br /> NULL = Sconosciuto (senza quorum)|  
 |**is_database_joined**|**bit**|Indica se al database su questa replica di disponibilità è stato unito in join al gruppo di disponibilità, uno di:<br /><br /> 0 = Database non unito in join al gruppo di disponibilità su questa replica di disponibilità.<br /><br /> 1 = Database non unito in join al gruppo di disponibilità su questa replica di disponibilità.<br /><br /> NULL = Sconosciuto (la replica di disponibilità non dispone del quorum.)|  
-|**recovery_lsn**|**numeric(25,0)**|Sulla replica primaria la fine del log delle transazioni prima che la replica scriva qualsiasi nuovo record del log dopo il failover o il recupero. Sulla replica primaria la riga per un determinato database secondario conterrà il valore a cui la replica secondaria deve essere sincronizzata (ripristino e reinizializzazione).<br /><br /> Sulle repliche secondarie questo valore è NULL. Si noti che ogni replica secondaria avrà il valore MAX o un valore inferiore a cui la replica secondaria dovrà tornare.|  
-|**truncation_lsn**|**numeric(25,0)**|Il valore di troncamento del log di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] che potrebbe essere maggiore dell'LSN di troncamento locale se il troncamento del log locale è bloccato (ad esempio da un'operazione di backup).|  
+|**recovery_lsn**|**numerico (25, 0)**|Sulla replica primaria la fine del log delle transazioni prima che la replica scriva qualsiasi nuovo record del log dopo il failover o il recupero. Sulla replica primaria la riga per un determinato database secondario conterrà il valore a cui la replica secondaria deve essere sincronizzata (ripristino e reinizializzazione).<br /><br /> Sulle repliche secondarie questo valore è NULL. Si noti che ogni replica secondaria avrà il valore MAX o un valore inferiore a cui la replica secondaria dovrà tornare.|  
+|**truncation_lsn**|**numerico (25, 0)**|Il valore di troncamento del log di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] che potrebbe essere maggiore dell'LSN di troncamento locale se il troncamento del log locale è bloccato (ad esempio da un'operazione di backup).|  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

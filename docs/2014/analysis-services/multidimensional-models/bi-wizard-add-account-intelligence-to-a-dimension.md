@@ -1,5 +1,5 @@
 ---
-title: Aggiungere funzionalità di Business Intelligence a una dimensione | Microsoft Docs
+title: Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076895"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione
-  È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può usare le classificazioni per aggregare i conti nel tempo.  
+  È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare le classificazioni per aggregare i conti nel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tempo.  
   
 > [!NOTE]  
 >  La funzionalità di Business Intelligence per la contabilità è disponibile solo per le dimensioni basate su origini dei dati esistenti. Per le dimensioni create senza utilizzare un'origine dei dati, prima di aggiungere questa funzionalità è necessario eseguire la Generazione guidata schema per creare una vista origine dati.  
@@ -46,13 +46,13 @@ ms.locfileid: "66076895"
   
     |Tipo di conto del server|Aggregazione|Descrizione|  
     |-------------------------|-----------------|-----------------|  
-    |**Statistiche**|`None`|Rapporto calcolato oppure conteggio che non viene aggregato nel tempo. Questo tipo di conto non viene convertito da una valuta all'altra in base alle regole di conversione.|  
-    |**Liability**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
+    |**Statistica**|`None`|Rapporto calcolato oppure conteggio che non viene aggregato nel tempo. Questo tipo di conto non viene convertito da una valuta all'altra in base alle regole di conversione.|  
+    |**Responsabilità**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Asset**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è in possesso in un dato momento. Questo tipo di conto cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Balance**|`LastNonEmpty`|Conteggio risultante in un dato momento. Questo tipo di conto cresce, ma non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati.|  
-    |**Flow**|`Sum`|Conteggio incrementale. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo, ma non viene convertito in base alle regole di conversione della valuta.|  
-    |**Expense**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
-    |**Income**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
+    |**Flusso**|`Sum`|Conteggio incrementale. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo, ma non viene convertito in base alle regole di conversione della valuta.|  
+    |**Spese**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
+    |**Reddito**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
   
     > [!NOTE]  
     >  Se appropriato, è possibile eseguire il mapping di più tipi di conto nella dimensione a un tipo di conto del server specifico.  

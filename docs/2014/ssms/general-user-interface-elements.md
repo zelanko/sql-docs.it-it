@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316140"
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente
-  L' **Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+  L' **Editor**, la finestra **Proprietà** e la **casella degli strumenti** sono alcuni degli elementi di base [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]di.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Finestra di dialogo Informazioni su](about-dialog-box.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Informazioni su - finestra di dialogo](about-dialog-box.md)  
  Viene descritta la finestra di dialogo in cui sono riportate informazioni su [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sul computer in cui il prodotto è in esecuzione.  
   
  [Browser di SQL Server Management Studio](sql-server-management-studio-web-browser.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899713"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sul volume del sistema operativo (directory) in cui sono archiviati i database e i file specificati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare questa funzione a gestione dinamica per verificare gli attributi dell'unità disco fisica o restituire informazioni sullo spazio libero disponibile relative alla directory.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="Arguments"></a> Argomenti  
  *database_id*  
- ID del database. *database_id* è di tipo **int** e non prevede alcun valore predefinito. Non può essere NULL.  
+ ID del database. *database_id* è di **tipo int**e non prevede alcun valore predefinito. Non può essere NULL.  
   
  *file_id*  
- ID del file. *file_id* viene **int**, non prevede alcun valore predefinito. Non può essere NULL.  
+ ID del file. *file_id* è di **tipo int**e non prevede alcun valore predefinito. Non può essere NULL.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -64,9 +64,9 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|Indica se il volume è attualmente contrassegnato come di sola lettura. Non può essere null.|  
 |**is_compressed**|**bit**|Indica se il volume è attualmente compresso. Non può essere null.|  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="examples"></a>Esempi  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys. master_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

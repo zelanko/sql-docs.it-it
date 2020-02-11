@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150424"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvataggio di eventi Showplan XML in modo indipendente (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63150424"
   
     -   Selezionare la casella di controllo**Salva nel file** per acquisire la traccia in un file. Specificare un valore per l'opzione **Dimensioni massime del file**. Se lo si desidera, selezionare le caselle di controllo **Consenti rollover dei file** e **Dati di traccia elaborati dal server** .  
   
-    -   Selezionare la casella di controllo**Salva nella tabella** per acquisire la traccia in una tabella di database. Facoltativamente selezionare la casella di controllo **Numero massimo di righe**e specificare un valore.  
+    -   Selezionare la casella di controllo**Salva nella tabella** per acquisire la traccia in una tabella di database. Facoltativamente, fare clic su **Imposta numero massimo di righe**e specificare un valore.  
   
 5.  Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "63150424"
 11. Per visualizzare i file degli eventi **Showplan XML** in SQL Server Management Studio, scegliere **Apri** dal menu **File**e quindi fare clic su **File**. Passare alla directory in cui sono stati salvati i file o il file degli eventi **Showplan XML** per selezionarne uno e aprirlo. I file degli eventi**Showplan XML** hanno estensione SqlPlan.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analizzare query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analizzare le query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

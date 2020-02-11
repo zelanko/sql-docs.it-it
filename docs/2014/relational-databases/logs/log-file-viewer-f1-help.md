@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143833"
 ---
 # <a name="log-file-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore file di log
@@ -26,7 +26,7 @@ ms.locfileid: "63143833"
   
  I log disponibili dipendono dalla modalità di apertura del Visualizzatore file di log. Per altre informazioni, vedere [Aprire il visualizzatore file di log](open-log-file-viewer.md).  
   
- Il numero di righe visualizzate per i log di controllo può essere configurato nella pagina **Esplora oggetti di SQL Server/Comandi** della finestra di dialogo **Strumenti/Opzioni**. Per le descrizioni delle colonne visualizzate per i log di controllo, vedere [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).  
+ Il numero di righe visualizzate per i log di controllo può essere configurato nella pagina **Esplora oggetti di SQL Server/Comandi** della finestra di dialogo **Strumenti/Opzioni** . Per le descrizioni delle colonne visualizzate per i log di controllo, vedere [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).  
   
 ## <a name="options"></a>Opzioni  
  **Carica log**  
@@ -38,13 +38,13 @@ ms.locfileid: "63143833"
  **Aggiorna**  
  Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
- **Filtra**  
+ **Filter**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
- **Cerca**  
+ **Ricerca**  
  Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
  **Riepilogo file di log**  
@@ -54,7 +54,7 @@ ms.locfileid: "63143833"
  Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
   
  **Istanza**  
- Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come *nome computer*\\*nome istanza*.  
+ Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer*\\*nome istanza*.  
   
 ## <a name="frequently-displayed-columns"></a>Colonne generalmente visualizzate  
  **Data**  
@@ -63,23 +63,23 @@ ms.locfileid: "63143833"
  **Origine**  
  Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
- **Message**  
+ **Messaggio**  
  Consente di visualizzare i messaggi associati all'evento.  
   
- **Tipo log**  
+ **Tipo di log**  
  Consente di visualizzare il tipo di log cui appartiene l'evento. Tutti i log selezionati vengono visualizzati nella finestra di riepilogo dei log.  
   
  **Origine log**  
  Visualizza una descrizione del log di origine in cui viene acquisito l'evento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online, è necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
- Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** che alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](view-offline-log-files.md).  
+ Per accedere a file di log per istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** sia alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](view-offline-log-files.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzatore file di log](log-file-viewer.md)   
- [Aprire il visualizzatore file di log](open-log-file-viewer.md)   
+ [Apri Visualizzatore file di log](open-log-file-viewer.md)   
  [Visualizzare file di log offline](view-offline-log-files.md)  
   
   

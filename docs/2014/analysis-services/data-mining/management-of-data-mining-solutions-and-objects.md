@@ -1,5 +1,5 @@
 ---
-title: Gestione di soluzioni di Data Mining e oggetti | Microsoft Docs
+title: Gestione di soluzioni e oggetti di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084200"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include strumenti client che è possibile utilizzare per gestire strutture e modelli di data mining esistenti. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
   
  Oltre a questi strumenti, è possibile gestire a livello di programmazione oggetti di data mining mediante una libreria AMO o utilizzare gli altri client che si connettono a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio i componenti aggiuntivi Data mining per [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
@@ -28,30 +29,31 @@ ms.locfileid: "66084200"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Spostamento di oggetti di data mining](moving-data-mining-objects.md)  
   
- [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](processing-requirements-and-considerations-data-mining.md)  
   
- [Utilizzo di SQL Server Profiler per il monitoraggio di attività di data mining &#40;Analysis Services - Data Mining&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Utilizzo di SQL Server Profiler per monitorare Analysis Services di data mining &#40;&#41;di data mining](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Percorso degli oggetti di data mining  
  Le strutture e i modelli di data mining elaborati vengono archiviati in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Se si crea una connessione a un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del database in `Immediate` oggetti modalità durante lo sviluppo di dati mining, tutti gli oggetti creati vengono immediatamente aggiunte al server quando si lavora. Se invece si progettano oggetti di data mining in modalità **Offline** , ovvero l'impostazione predefinita quando si utilizza [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], gli oggetti di data mining creati sono solo contenitori di metadati fino a quando non vengono distribuiti a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pertanto, tutte le volte in cui si apporta una modifica a un oggetto, è necessario ridistribuire l'oggetto al server di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni sull'architettura di data mining, vedere [Architettura fisica &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Se si crea una connessione a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in `Immediate` modalità quando si sviluppano gli oggetti di data mining, tutti gli oggetti creati vengono immediatamente aggiunti al server mentre si lavora. Se invece si progettano oggetti di data mining in modalità **Offline** , ovvero l'impostazione predefinita quando si utilizza [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], gli oggetti di data mining creati sono solo contenitori di metadati fino a quando non vengono distribuiti a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pertanto, tutte le volte in cui si apporta una modifica a un oggetto, è necessario ridistribuire l'oggetto al server di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni sull'architettura di data mining, vedere [Architettura fisica &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Alcuni client, ad esempio i componenti aggiuntivi Data mining per [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, consentono inoltre di creare modelli e strutture di data mining di sessione che usano una connessione a un'istanza, ma archiviano la struttura e i modelli nel server solo per la durata della sessione. Sebbene sia possibile gestire questi modelli tramite il client, analogamente alle strutture e ai modelli archiviati in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , gli oggetti non vengono salvati in modo persistente dopo la disconnessione dall'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>Gestione di oggetti di data mining mediante gli strumenti dati di SQL Server  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili funzionalità che consentono di creare, esplorare e modificare oggetti di data mining in modo semplice.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili funzionalità che consentono di creare, esplorare e modificare oggetti di data mining in modo semplice.  
   
  I collegamenti seguenti consentono di accedere a informazioni sulla possibilità di modificare oggetti di data mining tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Modificare la vista origine dati usata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modificare la vista origine dati utilizzata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)  
   
 -   [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)  
   
--   [Visualizzare o modificare flag di modellazione &#40;Data mining &#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare i flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   
 -   [Visualizzare o modificare i parametri dell'algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -79,21 +81,21 @@ ms.locfileid: "66084200"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrizioni:** Nessuna.  
+ **Limitazioni:** Nessuno.  
   
 ### <a name="data-mining-extensions-dmx"></a>Data Mining Extensions (DMX)  
  È possibile utilizzare DMX con altre interfacce di comando, ad esempio [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net, per creare, eliminare ed eseguire query su strutture e modelli di data mining.  
   
--   [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](/sql/dmx/dmx-statements-data-definition)  
+-   [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](/sql/dmx/dmx-statements-data-definition)  
   
- **Restrizioni:** Alcune proprietà non possono essere modificate usando DMX.  
+ **Limitazioni:** Alcune proprietà non possono essere modificate tramite DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XMLA (XML for Analysis) è il linguaggio DDL (Data Definition Language) per Analysis Services. XMLA consente di controllare la maggior parte degli oggetti di data mining e delle operazioni del server. Tutte le operazioni di gestione tra il client e il server possono essere eseguite tramite XMLA. Per semplicità è possibile usare il linguaggio ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) per eseguire il wrapping degli elementi XML.  
   
- **Restrizioni:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera alcune istruzioni XMLA supportate solo per uso interno, che non possono essere usate negli script DDL XML.  
+ **Restrizioni:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera alcune istruzioni XMLA supportate solo per uso interno e non possono essere utilizzate negli script DDL XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [Guida per gli sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

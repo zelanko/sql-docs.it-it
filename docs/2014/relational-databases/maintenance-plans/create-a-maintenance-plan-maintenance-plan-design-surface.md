@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144342"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
   In questo argomento viene descritto come creare un piano di manutenzione multiserver o di un singolo server utilizzando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63144342"
   
      [Sicurezza](#Security)  
   
--   [Creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione](#SSMSProcedure)  
+-   [Creazione di un piano di manutenzione utilizzando il piano di manutenzione Area di progettazione](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -38,14 +38,14 @@ ms.locfileid: "63144342"
   
 -   Per creare un piano di manutenzione multiserver, è necessario configurare un ambiente multiserver composto da un server master e uno o più server di destinazione. I piani di manutenzione multiserver devono essere creati e gestiti nel server master. Questi piani possono essere visualizzati, ma non gestiti, nei server di destinazione.  
   
--   I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i privilegi a **sysadmin**. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I pacchetti possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
+-   I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i privilegi a **sysadmin**. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I pacchetti possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per proteggersi da questa elevazione dei privilegi quando si eseguono piani di manutenzione, set di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] raccolta dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altri pacchetti, configurare i processi di Agent che eseguono pacchetti per usare un account proxy con privilegi limitati o aggiungere solo membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
+##  <a name="SSMSProcedure"></a>Utilizzo del piano di manutenzione Area di progettazione  
   
 #### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   
@@ -74,16 +74,16 @@ ms.locfileid: "63144342"
      **Rimuovi pianificazione**  
      Consente di rimuovere una pianificazione dal sottopiano selezionato.  
   
-     **Gestisci connessioni**  
+     **Gestire le connessioni**  
      Consente di visualizzare la finestra di dialogo **Gestisci connessioni** . Questa finestra di dialogo viene utilizzata per aggiungere ulteriori connessioni a istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al piano di manutenzione. Per ulteriori informazioni su questa finestra di dialogo, vedere di seguito.  
   
-     **Report e registrazione**  
+     **Creazione di report e registrazione**  
      Consente di visualizzare la finestra di dialogo **Report e registrazione** . Per ulteriori informazioni su questa finestra di dialogo, vedere di seguito.  
   
      **Server**  
      Visualizza la finestra di dialogo **Server** usata per selezionare i server in cui verranno eseguite le attività del sottopiano. Questa opzione è abilitata solo nei server master in ambienti multiserver. Per altre informazioni, vedere [Creazione di un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md) e [Piano di manutenzione & #40;Server& #41;](maintenance-plan-servers.md).  
   
-     **Name**  
+     **Nome**  
      Consente di visualizzare il nome del piano di manutenzione. Il nome dei nuovi piani di manutenzione viene indicato in una finestra di dialogo visualizzata prima dell'apertura della finestra di progettazione dei piani di manutenzione. Per rinominare un piano di manutenzione, fare clic con il pulsante destro del mouse sul piano in Esplora oggetti e quindi scegliere **Rinomina**.  
   
      **Descrizione**  
@@ -98,16 +98,16 @@ ms.locfileid: "63144342"
   
      Nella finestra di dialogo **Proprietà sottopiano** sono disponibili le opzioni seguenti.  
   
-     **Name**  
+     **Nome**  
      Nome del sottopiano.  
   
      **Descrizione**  
      Breve descrizione del sottopiano.  
   
-     **Pianificazione**  
+     **Pianificare**  
      Indica la pianificazione in base alla quale verrà eseguito il sottopiano. Fare clic su **Pianificazione sottopiano** per aprire la finestra di dialogo **Nuova pianificazione processo** . Fare clic su **Rimuovi pianificazione** per eliminare la pianificazione dal sottopiano.  
   
-     Elenco**Esegui come**  
+     Elenco **RunAs**  
      Consente di selezionare l'account da utilizzare per l'esecuzione di questa sottoattività.  
   
 6.  Fare clic su **Pianificazione sottopiano** per immettere i dettagli della pianificazione nella finestra di dialogo **Nuova pianificazione processo** .  
@@ -126,15 +126,15 @@ ms.locfileid: "63144342"
   
     -   **Attività Pulizia contenuto cronologia**  
   
-    -   **Attività Pulizia file manutenzione**  
+    -   **Pulizia file manutenzione - attività**  
   
-    -   **Attività Notifica operatori**  
+    -   **Notifica operatori - attività**  
   
-    -   **Attività Ricompila indice**  
+    -   **Ricompila indice - attività**  
   
     -   **Attività Riorganizza indice**  
   
-    -   **Attività Compatta database**  
+    -   **Compatta database - attività**  
   
     -   **Attività Aggiorna statistiche**  
   
@@ -156,17 +156,17 @@ ms.locfileid: "63144342"
   
          Nella finestra di dialogo **Editor vincoli di precedenza** sono disponibili le opzioni seguenti.  
   
-         **Opzioni vincolo**  
+         **Opzione constraint**  
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
-         Elenco**Operazione valutazione**  
-         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
+         Elenco delle **operazioni di valutazione**  
+         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono **Vincolo**, **Espressione**, **Espressione e vincolo**e **Espressione o vincolo**.  
   
-         Elenco**Valore**  
-         Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**. Il valore predefinito è**Esito positivo** .  
+         Elenco di **valori**  
+         Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**. Il valore predefinito è **Success** .  
   
         > [!NOTE]  
-        >  La riga del vincolo di precedenza è verde in caso di **Esito positivo**, rossa in caso di **Esito negativo**e blu in caso di **Completamento**.  
+        >  La riga del vincolo di precedenza è verde per l' **esito positivo**, il colore rosso per l' **errore**e il blu per il **completamento**.  
   
          **Espressione**  
          Se si usano le operazioni **Espressione**, **Espressione e vincolo**oppure **Espressione o vincolo**, digitare un'espressione. L'espressione deve restituire un valore booleano.  
@@ -215,7 +215,7 @@ ms.locfileid: "63144342"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella -** _nome_server_ oppure **Individua file di Database -** _nome_server_  finestre di dialogo.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)** e selezionare il percorso della cartella o il nome del file nelle finestre di dialogo **Individua cartella-**_server_name_ o **Individua file di database-**_server_name_ .  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144342"
   
 12. Per visualizzare i risultati nel visualizzatore file di log, in **Esplora oggetti**fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** o sul piano di manutenzione specifico e selezionare **Visualizza cronologia**.  
   
-     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log -** _nome_server_ nella finestra di dialogo.  
+     Le opzioni seguenti sono disponibili nella finestra di dialogo **Visualizzatore file di log-**_server_name_ .  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
@@ -241,13 +241,13 @@ ms.locfileid: "63144342"
      **Aggiorna**  
      Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
-     **Filtra**  
+     **Filter**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
-     **Cerca**  
+     **Ricerca**  
      Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
-     **Arresta**  
+     **Stop**  
      Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
      **Riepilogo file di log**  
@@ -259,10 +259,10 @@ ms.locfileid: "63144342"
      **Origine**  
      Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
-     **Message**  
+     **Messaggio**  
      Consente di visualizzare i messaggi associati all'evento.  
   
-     **Tipo log**  
+     **Tipo di log**  
      Consente di visualizzare il tipo di log cui appartiene l'evento. Tutti i log selezionati vengono visualizzati nella finestra di riepilogo dei log.  
   
      **Origine log**  
@@ -272,6 +272,6 @@ ms.locfileid: "63144342"
      Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
   
      **Istanza**  
-     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come *nome computer*\\*nome istanza*.  
+     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer*\\*nome istanza*.  
   
   

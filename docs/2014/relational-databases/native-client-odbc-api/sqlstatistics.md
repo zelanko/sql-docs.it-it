@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188612"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  **SQLStatistics** può essere eseguito su un cursore statico. Un tentativo di eseguire **SQLStatistics** su un cursore aggiornabile (dinamico o gestito da keyset) restituirà SQL_SUCCESS_WITH_INFO a indicare che il tipo di cursore è stato modificato.  
+  **SQLStatistics** può essere eseguito su un cursore statico. Il tentativo di eseguire **SQLStatistics** su un oggetto aggiornabile (gestito da keyset o dinamico) restituisce SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Neural Network Model Query Examples | Microsoft Docs
+title: Esempi di query sul modello di rete neurale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083289"
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
@@ -43,7 +43,7 @@ ms.locfileid: "66083289"
 ## <a name="finding-information-about-a-neural-network-model"></a>Ricerca di informazioni su un modello di rete neurale  
  In tutti i modelli di data mining viene esposto il contenuto appreso dall'algoritmo secondo uno schema standardizzato, definito set di righe dello schema del modello di data mining. Queste informazioni forniscono dettagli sul modello e includono i metadati di base, le strutture individuate nell'analisi e i parametri utilizzati in fase di elaborazione. È possibile creare query sul contenuto del modello tramite istruzioni DMX (Data Mining Extension).  
   
-###  <a name="bkmk_Query1"></a> Esempio di Query 1: Recupero di metadati del modello tramite DMX  
+###  <a name="bkmk_Query1"></a>Esempio di query 1: recupero di metadati del modello tramite DMX  
  Nella query seguente vengono restituiti metadati di base relativi a un modello compilato tramite l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. In un modello di rete neurale il nodo padre include solo il nome del modello, il nome del database in cui questo è archiviato e il numero di nodi figlio. Il nodo delle statistiche marginali (NODE_TYPE = 24) fornisce tuttavia sia questi metadati di base, sia alcune statistiche derivate relative alle colonne di input utilizzate nel modello.  
   
  La query di esempio seguente è basata sul modello di data mining creato nell' [Esercitazione intermedia sul data mining](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), denominato `Call Center Default NN`. Il modello utilizza i dati di un call center per esplorare le possibili correlazioni tra personale e numero di chiamate, ordini e problemi. L'istruzione DMX recupera dati dal nodo delle statistiche marginali del modello di rete neurale. La query include la parola chiave FLATTENED, in quanto le statistiche di interesse degli attributi di input vengono archiviate in una tabella nidificata, NODE_DISTRIBUTION. Se tuttavia il provider della query supporta set di righe gerarchici, non è necessario utilizzare la parola chiave FLATTENED.  
@@ -63,14 +63,14 @@ WHERE NODE_TYPE = 24
   
  Risultati dell'esempio:  
   
-|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64,7094100096|11|0,407407407|5|  
   
  Per una definizione del significato delle colonne nel set di righe dello schema, nel contesto di un modello di rete neurale, vedere [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query2"></a> Esempio di Query 2: Recupero di metadati del modello dal set di righe dello schema  
+###  <a name="bkmk_Query2"></a>Esempio di query 2: recupero di metadati del modello dal set di righe dello schema  
  È possibile trovare le stesse informazioni restituite in una query sul contenuto DMX eseguendo una query sul set di righe dello schema di data mining. Tuttavia, il set di righe dello schema contiene alcune colonne aggiuntive, Nella query di esempio seguente vengono restituite la data di creazione, di modifica e dell'ultima elaborazione del modello. La query restituisce anche le colonne stimabili che non sono facilmente reperibili dal contenuto del modello e i parametri utilizzati per compilare il modello. Queste informazioni possono risultare utili per documentare il modello.  
   
 ```  
@@ -89,7 +89,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|Average Time Per Issue,<br /><br /> Grade Of Service,<br /><br /> Number Of Orders|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> Esempio di Query 3: Recupero degli attributi di input per il modello  
+###  <a name="bkmk_Query3"></a>Esempio di query 3: recupero degli attributi di input per il modello  
  È possibile recuperare le coppie valore/attributo di input utilizzate per creare il modello eseguendo una query sui nodi figlio (NODE_TYPE = 20) del livello di input (NODE_TYPE = 18). Nella query seguente viene restituito un elenco di attributi di input dalle descrizioni di nodo.  
   
 ```  
@@ -124,7 +124,7 @@ WHERE NODE_TYPE = 21
   
  Risultati dell'esempio:  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |-----------------------|------------------------|  
 |Average Time Per Issue|64,7094100096 - 77,4002099712|  
 |Day Of Week|Fri.|  
@@ -139,7 +139,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> Esempio di Query 4: Recupero di pesi dal livello nascosto  
+###  <a name="bkmk_Query4"></a>Esempio di query 4: recupero di pesi dal livello nascosto  
  Il contenuto di un modello di una rete neurale è strutturato in modo da agevolare il recupero dei dettagli relativi a un qualsiasi nodo della rete. Gli ID dei nodi forniscono inoltre informazioni che consentono di identificare le relazioni tra i tipi di nodo.  
   
  Nella query seguente viene indicato come recuperare i coefficienti archiviati in un particolare nodo del livello nascosto. Il livello nascosto è costituito da un nodo di libreria (NODE_TYPE = 19), che contiene solo metadati, e da più nodi figlio (NODE_TYPE = 22), che contengono i coefficienti per le varie combinazioni di attributi e valori. Tramite questa query vengono restituiti solo i nodi di coefficiente.  
@@ -155,7 +155,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Risultati dell'esempio:  
   
-|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0,178616518|7|  
 |70000000200000000|6000000000000000b|-0,267561918|7|  
@@ -173,15 +173,15 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Questi risultati suggeriscono pertanto che al nodo con ID 70000000200000000 vengono passati sei coefficienti diversi (VALUETYPE = 7), con i valori inclusi nella colonna ATTRIBUTE_VALUE. È possibile determinare esattamente a quale attributo di input si riferisce il coefficiente utilizzando l'ID del nodo presente nella colonna ATTRIBUTE_NAME. L'ID del nodo 6000000000000000a si riferisce, ad esempio, al valore e all'attributo di input `Day of Week = 'Tue.'` . È possibile usare l'ID del nodo per creare una query o passare al nodo usando [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
- Analogamente, se si esegue una query sulla tabella NODE_DISTRIBUTION dei nodi nel livello di output (NODE_TYPE = 23), è possibile vedere i coefficienti per ogni valore di output. Nel livello di output tuttavia i puntatori si riferiscono nuovamente ai nodi del livello nascosto. Per altre informazioni, vedere [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Analogamente, se si esegue una query sulla tabella NODE_DISTRIBUTION dei nodi nel livello di output (NODE_TYPE = 23), è possibile vedere i coefficienti per ogni valore di output. Nel livello di output tuttavia i puntatori si riferiscono nuovamente ai nodi del livello nascosto. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Utilizzo di un modello di rete neurale per eseguire stime  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta sia la classificazione sia la regressione. È possibile utilizzare funzioni di stima con questi modelli per fornire nuovi dati e creare stime batch o singleton.  
   
-###  <a name="bkmk_Query5"></a> Esempio di Query 5: Creazione di una stima singleton  
+###  <a name="bkmk_Query5"></a>Esempio di query 5: creazione di una stima singleton  
  Il modo più semplice per compilare una query di stima su un modello di rete neurale consiste nell'utilizzare il generatore delle query di stima, disponibile nella scheda **Stima modello di data mining** di Progettazione modelli di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile esplorare il modello nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network per filtrare gli attributi di interesse e visualizzare le tendenze, quindi passare alla scheda **Stima modello di data mining** per creare una query e stimare i nuovi valori per tali tendenze.  
   
- È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel visualizzatore e per **Input**, selezionare  **\<tutti >** .  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
+ È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel Visualizzatore e in **input**selezionare ** \<tutti>**.  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
   
  Esplorando i risultati nel visualizzatore, è possibile notare che in alcuni giorni della settimana i volumi degli ordini sono bassi e che sembra esserci una correlazione tra un aumento delle vendite e un aumento nel numero di operatori. È quindi possibile utilizzare una query di stima sul modello per testare un'ipotesi di simulazione e verificare se un aumento del numero degli operatori del livello 2 in un giorno in cui i volumi di ordini sono bassi comporta un aumento anche degli ordini. A questo scopo, creare una query simile alla seguente:  
   
@@ -198,7 +198,7 @@ NATURAL PREDICTION JOIN
   
 |Predicted Orders|Probabilità|  
 |----------------------|-----------------|  
-|364|0.9532...|  
+|364|0,9532...|  
   
  Il volume delle vendite stimato è più elevato dell'intervallo corrente di vendite per martedì (Tuesday) e la probabilità della stima è molto elevata. Potrebbe tuttavia essere necessario creare più stime tramite un'elaborazione batch per testare una varietà di ipotesi relative al modello.  
   
@@ -211,7 +211,7 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Funzione di stima|Uso|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
+|[&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Viene restituita una tabella di valori correlati ai valori stimati correnti.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Viene restituita la varianza per il valore stimato.|  
@@ -222,9 +222,9 @@ NATURAL PREDICTION JOIN
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lezione 5: creazione di modelli di rete neurale e di regressione logistica &#40;esercitazione intermedia sul data mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232409"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
-  Il `xml` tipo di dati e la [direttiva TYPE nelle query FOR XML](type-directive-in-for-xml-queries.md) Abilita l'elaborazione del XML restituito dalle query FOR XML sul server che sul client.  
+  Il `xml` tipo di dati e la [direttiva TYPE nelle query for XML](type-directive-in-for-xml-queries.md) consentono l'elaborazione del codice XML restituito dalle query for XML sul server e sul client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Elaborazione con variabili di tipo XML  
  È possibile assegnare il risultato di una query FOR XML a una variabile di tipo `xml` oppure utilizzare XQuery per eseguire query sul risultato, quindi assegnare tale risultato a una variabile di tipo `xml` per un'ulteriore elaborazione.  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <myRoot>  
@@ -76,7 +76,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
@@ -116,16 +116,16 @@ FOR XML AUTO, TYPE;
 ## <a name="examples"></a>Esempi  
  Negli argomenti seguenti vengono forniti esempi di query FOR XML nidificate.  
   
- [Query FOR XML e query nidificata FOR XML a confronto](../xml/for-xml-query-compared-to-nested-for-xml-query.md)  
+ [Query FOR XML e query FOR XML annidate a confronto](../xml/for-xml-query-compared-to-nested-for-xml-query.md)  
  Confronto di una query FOR XML con un solo livello con una query FOR XML nidificata. In questo esempio è inclusa una dimostrazione di come specificare valori XML incentrati sia sugli attributi sia sugli elementi come risultato della query.  
   
- [Generare elementi di pari livello tramite query nidificate in modalità AUTO](../xml/generate-siblings-with-a-nested-auto-mode-query.md)  
+ [Generare elementi di pari livello tramite query annidate in modalità AUTO](../xml/generate-siblings-with-a-nested-auto-mode-query.md)  
  Procedura di generazione di elementi di pari livello tramite query nidificate in modalità AUTO  
   
- [Utilizzo di query FOR XML nidificate in ASP.NET](use-nested-for-xml-queries-in-asp-net.md)  
+ [Usare query FOR XML annidate in ASP.NET](use-nested-for-xml-queries-in-asp-net.md)  
  Dimostrazione del modo in cui un'applicazione ASPX può utilizzare FOR XML per restituire XML da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Determinare la struttura dei valori XML tramite query nidificate FOR XML](../xml/shape-xml-with-nested-for-xml-queries.md)  
+ [Determinare la struttura dei valori XML tramite query FOR XML annidate](../xml/shape-xml-with-nested-for-xml-queries.md)  
  Utilizzo di query FOR XML nidificate per controllare la struttura di un documento XML creato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

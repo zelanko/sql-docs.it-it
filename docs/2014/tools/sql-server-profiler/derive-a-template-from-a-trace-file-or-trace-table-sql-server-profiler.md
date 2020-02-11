@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184262"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivare un modello da un file di traccia o da una tabella di traccia (SQL Server Profiler)
@@ -25,9 +25,9 @@ ms.locfileid: "63184262"
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>Per derivare un modello da un file di traccia o da una tabella di traccia  
   
-1.  Aprire il file o la tabella di traccia su cui si desidera basare il modello. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Aprire il file o la tabella di traccia su cui si desidera basare il modello. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o Ottimizzazione guidata [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
-2.  Scegliere **Salva con nome** dal menu **File** e quindi fare clic su **Modello di traccia**.  
+2.  Scegliere **Salva con nome** dal menu **File**e selezionare **Modello di traccia**.  
   
 3.  Digitare un nome o selezionarne uno nell'elenco. Fare clic su **OK**.  
   

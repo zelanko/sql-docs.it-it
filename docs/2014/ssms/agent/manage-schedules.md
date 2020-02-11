@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255067"
 ---
 # <a name="manage-schedules"></a>Gestione pianificazioni
-  Visualizza e modifica le proprietà per le pianificazioni dei processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Consente di visualizzare e modificare le proprietà per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pianificazioni dei processi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Pianificazioni disponibili**  
  Consente di visualizzare l'elenco delle pianificazioni disponibili per questo utente. Si noti che un processo e una pianificazione devono appartenere allo stesso proprietario. Nell'elenco sono pertanto incluse solo le pianificazioni appartenenti al proprietario del processo.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Abilitata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare la pianificazione.  
   
  **Descrizione**  
@@ -38,7 +38,7 @@ ms.locfileid: "63255067"
  **Processi nella pianificazione**  
  Consente di visualizzare l'elenco dei numeri di processo collegati alla pianificazione. Fare clic su un numero per visualizzare le proprietà del processo.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per creare una nuova pianificazione.  
   
  **Elimina**  

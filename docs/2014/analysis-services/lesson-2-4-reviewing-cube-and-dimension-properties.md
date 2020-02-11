@@ -1,5 +1,5 @@
 ---
-title: Esame delle proprietà di dimensione e del cubo | Microsoft Docs
+title: Revisione delle proprietà del cubo e della dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078995"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Esame delle proprietà del cubo e delle dimensioni
@@ -34,7 +34,7 @@ ms.locfileid: "66078995"
   
 4.  Nel riquadro **Dimensioni** della scheda **Struttura cubo** espandere **Customer**, quindi fare clic su **Modifica Customer** per aprire la dimensione in Progettazione dimensioni.  
   
-     Progettazione dimensioni contiene le schede: **Struttura dimensione**, **relazioni tra attributi**, **traduzioni**, e **Browser**. Si noti che il **struttura dimensione** scheda include tre riquadri: **Gli attributi**, **gerarchie**, e **vista origine dati**. Gli attributi contenuti nella dimensione vengono visualizzati nel riquadro **Attributi** . Per altre informazioni, vedere [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md).  
+     Progettazione dimensioni contiene le schede seguenti: **Struttura dimensione**, **Relazioni tra attributi**, **Traduzioni**ed **Esplorazione**. Si noti che la scheda **Struttura dimensione** include tre riquadri: **Attributi**, **Gerarchie**e **Vista origine dati**. Gli attributi contenuti nella dimensione vengono visualizzati nel riquadro **Attributi** . Per ulteriori informazioni, vedere [riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md), [creare gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Per passare a Progettazione cubi, fare clic con il pulsante destro del mouse sul cubo **Analysis Services Tutorial** nel nodo **Cubi** in Esplora soluzioni e fare clic su **Progettazione viste**.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "66078995"
   
      In questa vista del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial è possibile vedere le dimensioni del cubo utilizzate dal gruppo di misure Internet Sales. È inoltre possibile definire il tipo di relazione tra ogni dimensione e ogni gruppo di misure in cui essa viene utilizzata.  
   
-7.  Fare clic sulla scheda **Partizioni** .  
+7.  Fare clic sulla scheda **partizioni** .  
   
-     Tramite la Creazione guidata cubo viene definita una singola partizione per il cubo utilizzando la modalità di archiviazione MOLAP (Multidimensional OnLine Analytical Processing, elaborazione analitica in linea multidimensionale) senza aggregazioni. Con la modalità MOLAP, la memorizzazione di tutti i dati a livello foglia e di tutte le aggregazioni avviene all'interno del cubo per ottenere prestazioni ottimali. Le aggregazioni sono riepiloghi precalcolati dei dati che consentono di migliorare il tempo di risposta alle query predisponendo le risposte prima che vengano formulate le domande. Nella scheda **Partizioni** è possibile definire ulteriori partizioni, impostazioni di archiviazione e impostazioni writeback. Per altre informazioni, vedere [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [Aggregazioni e progettazione di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+     Tramite la Creazione guidata cubo viene definita una singola partizione per il cubo utilizzando la modalità di archiviazione MOLAP (Multidimensional OnLine Analytical Processing, elaborazione analitica in linea multidimensionale) senza aggregazioni. Con la modalità MOLAP, la memorizzazione di tutti i dati a livello foglia e di tutte le aggregazioni avviene all'interno del cubo per ottenere prestazioni ottimali. Le aggregazioni sono riepiloghi precalcolati dei dati che consentono di migliorare il tempo di risposta alle query predisponendo le risposte prima che vengano formulate le domande. È possibile definire ulteriori partizioni, impostazioni di archiviazione e impostazioni writeback nella scheda **partizioni** . Per ulteriori informazioni, vedere [partizioni &#40;Analysis Services di dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [aggregazioni e progettazioni di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 8.  Fare clic sulla scheda **Esplorazione** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66078995"
   
 9. In Esplora soluzioni fare clic con il pulsante destro del mouse su **Analysis Services Tutorial** nel nodo **Cubi** e fare clic su **Visualizza codice**. Potrebbe essere necessario attendere alcuni istanti.  
   
-     Il codice XML per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial viene visualizzato nella scheda **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** . Si tratta del codice effettivo utilizzato per creare il cubo in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante la distribuzione. Per altre informazioni, vedere [Visualizzare il codice XML per un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Il codice XML per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial viene visualizzato nella scheda ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Si tratta del codice effettivo utilizzato per creare il cubo in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante la distribuzione. Per altre informazioni, vedere [Visualizzare il codice XML per un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Chiudere la scheda del codice XML.  
   

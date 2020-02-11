@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155799"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
@@ -24,13 +24,13 @@ ms.locfileid: "63155799"
   
  I dati della tabella in genere cambiano nel corso del tempo quando le righe vengono inserite, aggiornate ed eliminate. Ciò significa che le statistiche devono essere periodicamente aggiornate. Per impostazione predefinita, le statistiche sulle tabelle basate su disco vengono aggiornate automaticamente quando l'utilità di ottimizzazione determina che potrebbero non essere aggiornate.  
   
- Le statistiche sulle tabelle ottimizzate per la memoria non vengono aggiornate per impostazione predefinita. È necessario quindi aggiornarle manualmente. Uso [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) per le singole colonne, indici o tabelle. Uso [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) per aggiornare le statistiche per tutti gli utenti e le tabelle interne nel database.  
+ Le statistiche sulle tabelle ottimizzate per la memoria non vengono aggiornate per impostazione predefinita. È necessario quindi aggiornarle manualmente. Utilizzare [update statistics &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql) per singole colonne, indici o tabelle. Utilizzare [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) per aggiornare le statistiche per tutte le tabelle utente e interne del database.  
   
- Quando si usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) oppure [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare `NORECOMPUTE` per disabilitare le statistiche automatiche aggiornamento per le tabelle ottimizzate per la memoria. Per le tabelle basate su disco [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) Aggiorna le statistiche solo se la tabella è stata modificata dall'ultima [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Per le tabelle ottimizzate per la memoria [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) genera sempre statistiche aggiornate. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) è uno strumento utile per le tabelle ottimizzate per la memoria; in caso contrario, è necessario sapere quali tabelle presentano modifiche significative in modo che è possibile aggiornare le statistiche singolarmente.  
+ Quando si utilizza [create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), `NORECOMPUTE` è necessario specificare per disabilitare l'aggiornamento automatico delle statistiche per le tabelle ottimizzate per la memoria. Per le tabelle basate su disco, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) aggiorna le statistiche solo se la tabella è stata modificata dopo l'ultimo [sp_updatestats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Per le tabelle ottimizzate per la memoria, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) genera sempre Statistiche aggiornate. [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) è un'opzione ottimale per le tabelle ottimizzate per la memoria. in caso contrario, è necessario stabilire quali tabelle presentano modifiche significative, in modo da poter aggiornare le statistiche singolarmente.  
   
  Le statistiche possono essere generate eseguendo il campionamento dei dati oppure un'analisi completa. Le statistiche campionate utilizzano solo un campione di dati della tabella per stimare la distribuzione dei dati. Le statistiche fullscan eseguono l'analisi dell'intera tabella per determinare la distribuzione dei dati. Le statistiche fullscan sono in genere più accurate, ma richiedono tempi di calcolo più lunghi. Le statistiche campionate possono essere raccolte più velocemente.  
   
- Le tabelle basate su disco utilizzano per impostazione predefinita le statistiche campionate. Le tabelle con ottimizzazione per la memoria supportano solo statistiche fullscan. Quando si usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) oppure [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare il `FULLSCAN` opzione ottimizzate per la memoria tabelle.  
+ Le tabelle basate su disco utilizzano per impostazione predefinita le statistiche campionate. Le tabelle con ottimizzazione per la memoria supportano solo statistiche fullscan. Quando si usa [create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è `FULLSCAN` necessario specificare l'opzione per le tabelle ottimizzate per la memoria.  
   
  Considerazioni aggiuntive per le statistiche delle tabelle ottimizzate per la memoria:  
   
@@ -64,11 +64,11 @@ ms.locfileid: "63155799"
   
  Per aggiornare le statistiche:  
   
--   Uso [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] al [creare un piano di manutenzione](../maintenance-plans/create-a-maintenance-plan.md) con un [attività Aggiorna statistiche](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per [creare un piano di manutenzione](../maintenance-plans/create-a-maintenance-plan.md) con un' [attività Aggiorna statistica](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
 -   In alternativa, aggiornare le statistiche tramite uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)], come illustrato di seguito.  
   
- Per aggiornare le statistiche per una singola tabella con ottimizzazione per la memoria (*myschema*. *MyTable*), eseguire lo script seguente:  
+ Per aggiornare le statistiche per una singola tabella ottimizzata per la memoria (*schema*. *MyTable*) eseguire lo script seguente:  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- Per aggiornare le statistiche per tutte le tabelle nel database, eseguire [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
+ Per aggiornare le statistiche per tutte le tabelle del database, eseguire [sp_updatestats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
   
  Nell'esempio seguente viene indicato quando è stato effettuato l'ultimo aggiornamento delle statistiche sulle tabelle ottimizzate per la memoria. Queste informazioni sono utili per stabilire se è necessario aggiornare le statistiche.  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
   
   

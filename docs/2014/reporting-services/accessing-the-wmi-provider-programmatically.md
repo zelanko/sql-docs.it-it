@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232419"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Accesso al provider WMI a livello di programmazione
@@ -127,7 +127,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accedere al provider WMI per Reporting Services](tools/access-the-reporting-services-wmi-provider.md)   
- [File di configurazione RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
+ [Accedere al provider WMI Reporting Services](tools/access-the-reporting-services-wmi-provider.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

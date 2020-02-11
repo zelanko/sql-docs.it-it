@@ -1,5 +1,5 @@
 ---
-title: Elenco di controllo della preparazione per il Data Mining | Microsoft Docs
+title: Elenco di controllo della preparazione per il data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088145"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
@@ -34,23 +34,23 @@ ms.locfileid: "66088145"
   
 -   È possibile eseguire il mapping dei nuovi dati di input ai risultati previsti?  
   
- **È possibile sapere il significato, i tipi di dati e la distribuzione dei dati di input.**  
+ **Si conoscono il significato, i tipi di dati e la distribuzione dei dati di input.**  
  Esplorare e comprendere i dati di origine. È importante che gli utenti che esaminano il modello comprendano quale tipo di dati di input sia stato utilizzato e sappiano come interpretare i tipi di dati e la variabilità, nonché il bilanciamento e la qualità.  
   
 -   Di quanti dati si dispone? Sono disponibili dati sufficienti per la modellazione?  
   
-     Non deve essere una quantità enorme - più piccola e bilanciato può offrire risultati migliore.  
+     Non è necessario disporre di una quantità enorme, più piccola e bilanciata, può risultare migliore.  
   
 -   I dati provengono da più origini o da un'unica origine?  
   
 -   I dati sono già stati elaborati e puliti? Sono disponibili più dati di input?  
   
--   È possibile sapere come lo è stato modificato prima della ricezione, - come dati potrebbero sono stati troncati, riepilogati o convertiti?  
+-   Si sa come è stato modificato prima della ricezione: come è possibile che i dati siano stati troncati, riepilogati o convertiti?  
   
 -   I dati di input presentano alcuni risultati di esempio da poter utilizzare per il training?  
   
- **Dichiaro di aver compreso il livello di integrità dei dati che è disponibile e il livello che necessario.**  
- Dati errati possono influire sulla qualità del modello o impedire completamente la compilazione del modello. È necessario disporre di una buona conoscenza della distribuzione e del significato dei dati e di come sono arrivati a questo stato. È necessario comprendere se è possibile o appropriato semplificare i dati assegnando etichette, troncando i tipi di dati numerici o creando un riepilogo.  
+ **Si comprende il livello di integrità dei dati di cui si dispone e il livello necessario.**  
+ Dati errati possono influire sulla qualità del modello o impedire completamente la compilazione del modello. È necessario disporre di una buona conoscenza della distribuzione e del significato dei dati e di come sono arrivati a questo stato. È necessario comprendere se è possibile o appropriato semplificare i dati mediante l'assegnazione di etichette, il troncamento dei tipi di dati numerici o il riepilogo.  
   
 -   Etichette di dati: sono chiare e corrette?  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66088145"
   
 -   Se sono stati combinati set di dati, si è verificata la presenza di più colonne che rappresentano gli stessi dati?  
   
- **È possibile sapere dove sono archiviati i dati di origine, ovvero la provenienza e modalità di elaborazione. Il processo può essere facilmente ripetuto se necessario.**  
- Set di dati occasionale vanno bene per esperimenti, ma se si desidera spostare il modello nell'ambiente di produzione, è opportuno considerare in anticipo come applicare il processo di pulizia ai dati operativi. Inoltre, se si dispone di dati operativi, è necessario sapere come si potrebbero essere stato modificato prima della ricezione, è necessario sapere come lo era arrotondato o riepilogato.  
+ **So dove sono archiviati i dati di origine, da dove provengono e come vengono elaborati. Se necessario, è possibile ripetere facilmente il processo.**  
+ I set di dati monouso sono buoni per gli esperimenti, ma se si desidera spostare il modello nell'ambiente di produzione, è opportuno pensare in anticipo in che modo è possibile applicare il processo di pulizia ai dati operativi. Inoltre, se si dispone di dati operativi, è necessario conoscerne il modo in cui potrebbe essere stato modificato prima di ottenerlo. è necessario comprendere come è stato arrotondato o riepilogato, certamente.  
   
 -   Si desidera poter ripetere il test?  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66088145"
   
      Quale unità si desidera utilizzare nei risultati?  
   
--   È possibile definire un'unità di base (ad esempio giorno / ora / minuto / chiamata istruzioni) per tutti i dati di input?  
+-   È possibile definire un'unità di base (ad esempio, una chiamata di giorno/ora/min/istruzione) per tutti i dati di input?  
   
      Si desidera eseguire il rollup a unità più elevate?  
   
@@ -103,8 +103,8 @@ ms.locfileid: "66088145"
   
 -   Si è deciso di utilizzare un valore di inizializzazione per il modello?  
   
- **Si hanno la conoscenza del dominio per convalidare i risultati, o avere accesso a esperti del settore che possono fornire consigli.**  
- Convalidare le variabili, il modello e i risultati. Richiedere l'aiuto di esperti per valutare interazioni e risultati. Tuttavia, non consentire ai presupposti di prevalere sull'evidenza. Mostrare piena apertura verso risultati nuovi e imprevisti.  
+ **Si dispone delle informazioni del dominio per convalidare i risultati o dell'accesso agli esperti del settore che possono fornire consigli.**  
+ Convalidare le variabili, il modello e i risultati. Richiedere l'aiuto di esperti per valutare interazioni e risultati. Tuttavia, non consentire ai presupposti di sovraregolare l'evidenza. Mostrare piena apertura verso risultati nuovi e imprevisti.  
   
 -   Sono disponibili informazioni di dominio che consentono di filtrare i dati e ridurre segnalazioni non significative di input?  
   

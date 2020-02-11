@@ -19,19 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150744"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Riduzione del carico di ottimizzazione del server di produzione
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata si basa su Query Optimizer per analizzare un carico di lavoro e fornire indicazioni di ottimizzazione. L'esecuzione di questa analisi sul server di produzione aumenta il carico del server e può ridurre le prestazioni del server durante la sessione di ottimizzazione. È possibile diminuire l'impatto sul carico del server durante una sessione di ottimizzazione utilizzando un server di prova oltre al server di produzione.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]Ottimizzazione guidata si basa sul Query Optimizer per analizzare un carico di lavoro e per apportare indicazioni sull'ottimizzazione. L'esecuzione di questa analisi sul server di produzione aumenta il carico del server e può ridurre le prestazioni del server durante la sessione di ottimizzazione. È possibile diminuire l'impatto sul carico del server durante una sessione di ottimizzazione utilizzando un server di prova oltre al server di produzione.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Modalità di utilizzo di un server di prova da parte di Ottimizzazione guidata motore di database  
  L'utilizzo tradizionale di un server di prova consiste nel copiare tutti i dati dal server di produzione sul server di prova, ottimizzare quest'ultimo e quindi implementare l'indicazione sul server di produzione. Questo processo elimina l'effetto sulle prestazioni del server di produzione, ma non rappresenta comunque la soluzione ideale. Ad esempio, la copia di grandi quantità di dati dal server di produzione sul server di prova può richiedere notevoli quantità di tempo e risorse. Inoltre, l'hardware del server di prova raramente è potente quanto quello utilizzato per i server di produzione. Il processo di ottimizzazione si basa su Query Optimizer e le indicazioni da esso generate dipendono in parte dall'hardware sottostante. Se l'hardware del server di prova e di produzione non sono identici, la qualità delle indicazioni di Ottimizzazione guidata [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ne risente.  
   
- Per evitare questi problemi, Ottimizzazione guidata [!INCLUDE[ssDE](../../../includes/ssde-md.md)] esegue l'ottimizzazione di un database in un server di produzione ripartendo la maggioranza del carico di ottimizzazione in un server di prova. Questo avviene utilizzando le informazioni di configurazione hardware del server di produzione e senza copiare effettivamente i dati dal server di produzione sul server di prova. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata non copia i dati effettivi dal server di produzione sul server di prova, ma solo i metadati e le statistiche necessarie.  
+ Per evitare questi problemi, Ottimizzazione guidata [!INCLUDE[ssDE](../../../includes/ssde-md.md)] esegue l'ottimizzazione di un database in un server di produzione ripartendo la maggioranza del carico di ottimizzazione in un server di prova. Questo avviene utilizzando le informazioni di configurazione hardware del server di produzione e senza copiare effettivamente i dati dal server di produzione sul server di prova. 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata non copia i dati effettivi dal server di produzione sul server di prova, ma solo i metadati e le statistiche necessarie.  
   
  Nella procedura seguente viene illustrato il processo per l'ottimizzazione di un database di produzione su un server di prova:  
   
@@ -45,11 +46,14 @@ ms.locfileid: "63150744"
   
      Durante il processo di ottimizzazione, Ottimizzazione guidata motore di database crea uno scheletro di database sul server di prova. Per creare questo scheletro di database e ottimizzarlo, Ottimizzazione guidata motore di database esegue chiamate al server di produzione per gli elementi seguenti:  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa i metadati dal database di produzione sullo scheletro di database del server di prova. Questi metadati includono tabelle vuote, indici, viste, stored procedure, trigger e così via. Questo rende possibile l'esecuzione delle query del carico di lavoro sullo scheletro di database del server di prova.  
+    1.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa i metadati dal database di produzione sullo scheletro di database del server di prova. Questi metadati includono tabelle vuote, indici, viste, stored procedure, trigger e così via. Questo rende possibile l'esecuzione delle query del carico di lavoro sullo scheletro di database del server di prova.  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa le statistiche dal server di produzione in modo che Query Optimizer possa ottimizzare in modo accurato le query sul server di prova.  
+    2.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa le statistiche dal server di produzione in modo che Query Optimizer possa ottimizzare in modo accurato le query sul server di prova.  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa i parametri hardware specificando il numero di processori e la memoria disponibile dal server di produzione per offrire a Query Optimizer le informazioni necessarie per generare un piano di query.  
+    3.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata importa i parametri hardware specificando il numero di processori e la memoria disponibile dal server di produzione per offrire a Query Optimizer le informazioni necessarie per generare un piano di query.  
   
 3.  Dopo aver ottimizzato lo scheletro di database del server di prova, Ottimizzazione guidata [!INCLUDE[ssDE](../../../includes/ssde-md.md)] genera un'indicazione di ottimizzazione.  
   
@@ -57,7 +61,7 @@ ms.locfileid: "63150744"
   
  Nella seguente figura viene illustrato lo scenario relativo al server di prova e al server di produzione:  
   
- ![Uso del server di prova con Ottimizzazione guidata motore di database](../../database-engine/media/testsvr.gif "Uso del server di prova con Ottimizzazione guidata motore di database")  
+ ![Utilizzo del server di prova con Ottimizzazione guidata motore di database](../../database-engine/media/testsvr.gif "Utilizzo del server di prova con Ottimizzazione guidata motore di database")  
   
 > [!NOTE]  
 >  La funzionalità di ottimizzazione del server di prova non è supportata nell'interfaccia utente grafica (GUI) di Ottimizzazione guidata [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
@@ -93,7 +97,7 @@ ms.locfileid: "63150744"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni relative all'utilizzo di server di prova](considerations-for-using-test-servers.md)   
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](database-engine-tuning-advisor.md)  
+ [Considerazioni sull'utilizzo di server di prova](considerations-for-using-test-servers.md)   
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](database-engine-tuning-advisor.md)  
   
   

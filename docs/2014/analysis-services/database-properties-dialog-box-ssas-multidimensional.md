@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà (SSAS - multidimensionale) del database | Microsoft Docs
+title: Finestra di dialogo Proprietà database (SSAS-multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082314"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Finestra di dialogo Proprietà database (SSAS - Multidimensionale)
@@ -24,21 +24,21 @@ ms.locfileid: "66082314"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Name**|Consente di modificare il nome del database.|  
+|**Nome**|Consente di modificare il nome del database.|  
 |**ID**|Consente di visualizzare l'identificatore del database.|  
 |**Descrizione**|Consente di modificare la descrizione del database.|  
-|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione del database.|  
+|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione del database.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati del database.|  
 |**Ultimo aggiornamento**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei dati del database.|  
-|**Impostazioni di rappresentazione origine dati**|Consente di selezionare le informazioni di rappresentazione utilizzate dal database per la connessione e l'interazione con le origini dei dati contenute nel database. I valori validi sono i seguenti:<br /><br /> **ImpersonateAccount** (usare un nome utente e una password specifici di Windows).<br /><br /> **ImpersonateService** (usare l'account del servizio).<br /><br /> **ImpersonateCurrentUser** (usare le credenziali dell'utente corrente).<br /><br /> **Default** (usare l'account del servizio per le operazioni MOLAP e l'utente corrente per il data mining).<br /><br /> Sebbene sia possibile definire le impostazioni di rappresentazione dell'origine dati al livello del database, questa operazione influirebbe unicamente sulle origini dati per cui è stato specificato **Eredita** per le impostazioni della rappresentazione. Le impostazioni di rappresentazione specificate direttamente sull'origine dati eseguiranno sempre l'override delle impostazioni specificate al livello del database.<br /><br /> Quando si sceglie un'opzione di rappresentazione, considerare i tipi di operazioni che dovranno essere supportati. Alcune operazioni, ad esempio l'elaborazione, non possono essere eseguite da|  
+|**Impostazioni di rappresentazione origine dati**|Consente di selezionare le informazioni di rappresentazione utilizzate dal database per la connessione e l'interazione con le origini dei dati contenute nel database. I valori validi sono i seguenti:<br /><br /> **ImpersonateAccount** (usare un nome utente e una password specifici di Windows).<br /><br /> **ImpersonateService** (usare l'account del servizio).<br /><br /> **ImpersonateCurrentUser** (usare le credenziali dell'utente corrente).<br /><br /> **Impostazione predefinita** (usare l'account del servizio per le operazioni MOLAP e l'utente corrente per data mining).<br /><br /> Sebbene sia possibile definire le impostazioni di rappresentazione dell'origine dati al livello del database, questa operazione influirebbe unicamente sulle origini dati per cui è stato specificato **Eredita** per le impostazioni della rappresentazione. Le impostazioni di rappresentazione specificate direttamente sull'origine dati eseguiranno sempre l'override delle impostazioni specificate al livello del database.<br /><br /> Quando si sceglie un'opzione di rappresentazione, considerare i tipi di operazioni che dovranno essere supportati. Alcune operazioni, ad esempio l'elaborazione, non possono essere eseguite da|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del database.|  
 |**Dimensioni stimate**|Consente di visualizzare le dimensioni stimate del database.|  
-|**Percorso di archiviazione**|Specifica la posizione del database. Se il database si trova nella directory dati predefinita, questo valore sarà vuoto.|  
+|**Posizione di archiviazione**|Specifica la posizione del database. Se il database si trova nella directory dati predefinita, questo valore sarà vuoto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150622"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Salvataggio della classe di eventi Showplan XML Statistics Profile Events in file distinti (SQL Server Profiler)
@@ -41,13 +41,13 @@ ms.locfileid: "63150622"
   
     -   Fare clic su**Salva nel file**per acquisire la traccia in un file. Specificare un valore per l'opzione **Dimensioni massime del file**.  
   
-         Facoltativamente selezionare le caselle di controllo **Consenti rollover dei file** e **Dati di traccia elaborati dal server**.  
+         Facoltativamente, selezionare **Abilita rollover dei file** e **dati di traccia dei processi server**.  
   
     -   Fare clic su**Salva nella tabella** per acquisire la traccia in una tabella del database.  
   
-         Facoltativamente selezionare la casella di controllo **Numero massimo di righe**e specificare un valore.  
+         Facoltativamente, fare clic su **Imposta numero massimo di righe**e specificare un valore.  
   
-5.  Facoltativamente selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare la data e l'ora di arresto desiderate.  
+5.  Facoltativamente, selezionare la casella di controllo **Abilita ora di arresto della traccia** e specificare una data e un'ora di arresto.  
   
 6.  Fare clic sulla scheda **Selezione eventi**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "63150622"
 11. Per visualizzare il file di eventi **Showplan XML Statistics Profile** in SQL Server Management Studio, scegliere **Apri** dal menu **File**e quindi fare clic su **File**. Spostarsi sulla directory in cui è stato salvato il file o i file di eventi **Showplan XML Statistics Profile** , selezionare il file desiderato e quindi aprirlo. I file di eventi**Showplan XML Statistics Profile** sono contraddistinti dall'estensione SQLPlan.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analizzare query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analizzare le query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

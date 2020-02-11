@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107165"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
@@ -56,7 +56,7 @@ ms.locfileid: "66107165"
 2.  Quando si esce da Generatore report o si avvia un nuovo report, viene richiesto di salvare il report. Se non si effettua questa operazione, alla successiva apertura del report e pubblicazione degli elementi del report, si potrebbero pubblicare nuove copie degli stessi set di dati. Per impedire il salvataggio di più copie di set di dati condivisi nel server di report, si consiglia di salvare il report.  
   
 > [!IMPORTANT]  
->  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per altre informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../security/secure-shared-dataset-items.md).  
+>  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../security/secure-shared-dataset-items.md).  
   
   
 ## <a name="see-also"></a>Vedere anche  

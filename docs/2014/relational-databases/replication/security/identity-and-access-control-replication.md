@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250323"
 ---
 # <a name="identity-and-access-control-replication"></a>Controllo di identità e accesso (replica)
@@ -27,11 +27,11 @@ ms.locfileid: "63250323"
   
  La sicurezza della replica si basa sull'autenticazione e sull'autorizzazione per controllare l'accesso agli oggetti di database replicati e ai computer e agli agenti coinvolti nell'elaborazione della replica. Questo processo viene eseguito mediante tre meccanismi:  
   
--   Sicurezza agente:  Il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account utilizzati per eseguire gli agenti e stabilire connessioni. Per informazioni dettagliate sul modello di sicurezza degli agenti, vedere [Replication Agent Security Model](replication-agent-security-model.md). Per informazioni sull'impostazione di account di accesso e password per gli agenti, vedere [Gestire gli account di accesso e le password nella replica](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+-   Sicurezza agente: il modello di sicurezza dell'agente di replica consente un controllo con granularità fine sugli account con cui gli agenti di replica eseguono ed eseguono le connessioni. Per informazioni dettagliate sul modello di sicurezza degli agenti, vedere [Replication Agent Security Model](replication-agent-security-model.md). Per informazioni sull'impostazione di account di accesso e password per gli agenti, vedere [Gestire gli account di accesso e le password nella replica](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
--   Ruoli di amministrazione:  Verificare che vengano utilizzati i ruoli appropriati del server e del database per la configurazione, la manutenzione e l'elaborazione della replica. Per altre informazioni, vedere [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
+-   Ruoli di amministrazione: assicurarsi che i ruoli del server e del database corretti vengano utilizzati per la configurazione, la manutenzione e l'elaborazione della replica. Per altre informazioni, vedere [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   
--   Elenco di accesso alla pubblicazione (pubblicazione): Concedere l'accesso alle pubblicazioni tramite l'elenco di accesso alla pubblicazione, che funziona in maniera analoga a un elenco di controllo di accesso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Quando un Sottoscrittore si connette al server di pubblicazione o al server di distribuzione e richiede l'accesso a una pubblicazione, le informazioni di autenticazione passate dall'agente vengono controllate in base all'elenco di accesso alla pubblicazione. Per altre informazioni e procedure consigliate relative all'elenco di accesso alla pubblicazione, vedere [Proteggere il server di pubblicazione](secure-the-publisher.md).  
+-   Elenco di accesso alla pubblicazione: concedere l'accesso alle pubblicazioni tramite l'elenco di accesso alla pubblicazione. che funziona in maniera analoga a un elenco di controllo di accesso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Quando un Sottoscrittore si connette al server di pubblicazione o al server di distribuzione e richiede l'accesso a una pubblicazione, le informazioni di autenticazione passate dall'agente vengono controllate in base all'elenco di accesso alla pubblicazione. Per altre informazioni e procedure consigliate relative all'elenco di accesso alla pubblicazione, vedere [Proteggere il server di pubblicazione](secure-the-publisher.md).  
   
 ## <a name="filtering-published-data"></a>Applicazione di filtri ai dati pubblicati  
  Oltre a utilizzare l'autenticazione e l'autorizzazione per controllare l'accesso ai dati e agli oggetti replicati, la replica include due opzioni per controllare quali dati rendere disponibili nel Sottoscrittore: applicazione di filtri a colonne e a righe. Per altre informazioni sui filtri, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  
@@ -46,8 +46,8 @@ ms.locfileid: "63250323"
 ## <a name="see-also"></a>Vedere anche  
  [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)   
- [Replica attenuazione di minacce e vulnerabilità](threat-and-vulnerability-mitigation-replication.md)   
+ [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
+ [Attenuazione di minacce e vulnerabilità della replica](threat-and-vulnerability-mitigation-replication.md)   
 
   
   

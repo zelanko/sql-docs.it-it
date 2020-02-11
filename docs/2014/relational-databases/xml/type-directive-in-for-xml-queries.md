@@ -14,17 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193282"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto per la [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) consente di richiedere facoltativamente che il risultato di una query FOR XML venga restituito come `xml` tipo di dati, specificando la direttiva TYPE. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. Ad esempio, è possibile specificare un'espressione XQuery, assegnare il risultato a un `xml` variabile di tipo oppure scrivere [query FOR XML annidate](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il supporto per [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql) consente di richiedere facoltativamente che il risultato di una query for XML venga restituito come `xml` tipo di dati specificando la direttiva Type. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. È ad esempio possibile specificare una query XQuery su di essa, assegnare il risultato a `xml` una variabile di tipo o scrivere [query for XML nidificate](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce dati di istanza di tipo XML al client come risultato di diversi costrutti server, ad esempio query FOR XML che utilizzano la direttiva TYPE o in cui il tipo di dati `xml` viene utilizzato per la restituzione di valori dei dati dell'istanza XML da colonne di tabella e parametri di output SQL. Nel codice delle applicazioni client, il provider ADO.NET richiede che le informazioni sui tipi di dati XML vengano inviate dal server in codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo stringa. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML. La clausola FOR XML di livello principale senza la direttiva TYPE non può essere utilizzata con i cursori.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce dati di istanza di tipo XML al client come risultato di diversi costrutti server, ad esempio query FOR XML che utilizzano la direttiva TYPE o in cui il tipo di dati `xml` viene utilizzato per la restituzione di valori dei dati dell'istanza XML da colonne di tabella e parametri di output SQL. Nel codice delle applicazioni client, il provider ADO.NET richiede che le informazioni sui tipi di dati XML vengano inviate dal server in codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo stringa. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML. La clausola FOR XML di livello principale senza la direttiva TYPE non può essere utilizzata con i cursori.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo della direttiva TYPE con le query FOR XML.  
@@ -50,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Assegnazione dei risultati di una query FOR XML a una variabile di tipo xml  
- Nell'esempio seguente il risultato di una query FOR XML viene assegnato a una variabile di tipo `xml`, `@x`. La query recupera le informazioni di contatto, ad esempio la `BusinessEntityID`, `FirstName`, `LastName`, aggiuntive e i numeri di telefono dal `AdditionalContactInfo` colonna di `xml``TYPE`. Poiché la clausola `FOR XML` specifica la direttiva `TYPE`, il codice XML viene restituito come tipo `xml` e assegnato a una variabile.  
+ Nell'esempio seguente il risultato di una query FOR XML viene assegnato a una variabile di tipo `xml`, `@x`. La query recupera le informazioni di contatto, ad `BusinessEntityID`esempio `FirstName`, `LastName`, e i numeri di telefono aggiuntivi dalla `AdditionalContactInfo` colonna di `xml``TYPE`. Poiché la clausola `FOR XML` specifica la direttiva `TYPE`, il codice XML viene restituito come tipo `xml` e assegnato a una variabile.  
   
 ```  
 USE AdventureWorks2012;  
@@ -89,7 +90,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  La query interna `SELECT ... FOR XML` restituisce un risultato di tipo `xml` al quale la query esterna `SELECT` applica il metodo `query()` al tipo `xml`. Si noti la direttiva `TYPE` specificata.  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   

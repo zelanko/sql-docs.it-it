@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, modelli (gestione Report) | Microsoft Docs
+title: Pagina delle proprietà generale, modelli (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109104"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
@@ -34,16 +34,16 @@ ms.locfileid: "66109104"
 3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà Generale per il modello.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare il nome del modello. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? : \@ & = +, $/* \< > | " /  
   
  **Descrizione**  
  Indica una descrizione del modello. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al modello.  
   
- **Nascondi in visualizzazione elenco**  
- Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire la modalità di visualizzazione di questo elemento in Gestione report. Per altre informazioni sulle modalità di visualizzazione in Gestione Report, vedere [pagina contenuto &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ **Nascondi in visualizzazione Elenco**  
+ Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire la modalità di visualizzazione di questo elemento in Gestione report. Per ulteriori informazioni sulle modalità di visualizzazione in Gestione report, vedere la pagina relativa ai [contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Applica**  
  Fare clic per salvare le modifiche.  
@@ -51,8 +51,8 @@ ms.locfileid: "66109104"
  **Elimina**  
  Fare clic per rimuovere il modello dal database del server di report. Eliminando un modello non si elimina l'origine dati condivisa dipendente che fornisce informazioni di connessione, né si eliminano i report che utilizzano il modello come origine dati. Dopo l'eliminazione del modello, tuttavia, non è più possibile eseguire i report che utilizzano tale modello.  
   
- **Sposta**  
- Fare clic per spostare un modello nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso. Per altre informazioni, vedere [pagina spostamento elementi &#40;gestione Report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Spostamento**  
+ Fare clic per spostare un modello nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso. Per ulteriori informazioni, vedere la [pagina di spostamento degli elementi &#40;Gestione report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Salvare**  
  Fare clic per salvare una copia di sola lettura della definizione del modello. In base alle associazioni di file definite nel computer, il file verrà aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione. Nella maggior parte dei casi, il modello viene aperto come file XML.  
@@ -63,7 +63,7 @@ ms.locfileid: "66109104"
   
  Si noti che se si desidera aprire il modello di report in Progettazione modelli, è necessario salvare il modello come file con estensione smdl, quindi aggiungere il file smdl a un progetto in Progettazione modelli.  
   
- **Sostituisci**  
+ **Sostituire**  
  Fare clic per sostituire la definizione del modello con una definizione diversa di un file smdl incluso nel file system. Se si aggiorna una definizione di un modello, al termine dell'aggiornamento è necessario reimpostare le impostazioni dell'origine dati condivisa.  
   
  **Rigenera modello**  

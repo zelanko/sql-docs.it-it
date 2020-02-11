@@ -1,5 +1,5 @@
 ---
-title: 'Attività 13: Aggiunta di destinazione OLE DB per scrivere dati nella tabella di Staging MDS | Microsoft Docs'
+title: 'Attività 13: aggiunta della destinazione OLE DB per la scrittura dei dati nella tabella di staging MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476991"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Attività 13: Aggiunta di Destinazione OLE DB a Scrivi dati fornitore nella tabella di gestione temporanea MDS
-  Ora che sono stati aggiunti **ImportType** e **BatchTag** valori a tutti i record, si è pronti per inviarli a MDS per la gestione temporanea. In questa attività si utilizza la destinazione OLE DB per scrivere i dati in **stg. supplier_leaf** tabella di staging.  
+  Ora che sono stati aggiunti i valori **ImportType** e **BatchTag** a tutti i record, si è pronti per inviarli a MDS per la gestione temporanea. In questa attività si utilizza la destinazione OLE DB per scrivere i dati in **STG. supplier_Leaf** tabella di staging.  
   
-1.  Trascinare **OLE DB Destination** dalla **altre destinazioni** sezione la **casella degli strumenti SSIS** per il **del flusso di dati** scheda e rilasciarlo sotto  **Aggiungi colonne richieste da MDS**.  
+1.  Trascinare **OLE DB destinazione** dalla sezione **altre destinazioni** nella **casella degli strumenti SSIS** nella scheda **flusso di dati** e rilasciarla in **Aggiungi colonne richieste da MDS**.  
   
-2.  Fare doppio clic su **OLE DB Destination** nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Scrivi dati fornitore nella tabella di gestione temporanea MDS** , quindi premere **invio**.  
+2.  Fare clic con il pulsante destro del mouse su **OLE DB destinazione** nella scheda **flusso di dati** e quindi scegliere **Rinomina**. Digitare **Scrivi dati fornitore nella tabella di staging di MDS** e premere **invio**.  
   
-3.  Connettere il **Aggiungi colonne richieste da MDS** al **Scrivi dati fornitore nella tabella di gestione temporanea MDS** usando il collegamento blu.  
+3.  Connettere l' **aggiunta di colonne richieste da MDS** per **scrivere i dati fornitore nella tabella di staging MDS** usando il connettore blu.  
   
-4.  Fare doppio clic su **Scrivi dati fornitore nella tabella di gestione temporanea MDS** nel **flusso di dati** scheda.  
+4.  Fare doppio clic su **Scrivi dati fornitore nella tabella di staging di MDS** nella scheda **flusso di dati** .  
   
-5.  Nel **Editor destinazione OLE DB** finestra di dialogo, assicurarsi che **(locale). MDS** (o **localhost. MDS**) sia selezionata per il **gestione connessione OLE DB** campo.  
+5.  Nella finestra di dialogo **Editor destinazione OLE DB** verificare che **(locale). MDS** (o **localhost). MDS**) è selezionato per il campo **gestione connessione OLE DB** .  
   
-6.  Selezionare **stg. Supplier_Leaf** tabella dall'elenco dei **nome tabella o vista**.  
+6.  Selezionare **STG. Supplier_Leaf** tabella dall'elenco di **nome della tabella o della vista**.  
   
-     ![Editor destinazione OLEDB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "Editor destinazione OLE DB")  
+     ![Editor destinazione OLEDB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "Editor destinazione OLEDB")  
   
-7.  Passare al **mapping** , facendo clic su **Mapping** nel menu a sinistra.  
+7.  Passare alla pagina **mapping** facendo clic su **mapping** nel menu a sinistra.  
   
-8.  Mappa **input** e **destinazione** colonne, come mostrato nella tabella seguente.  
+8.  Eseguire il mapping delle colonne di **input** e di **destinazione** , come illustrato nella tabella seguente.  
   
-     ![Editor destinazione ODBC - mapping](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "Editor destinazione ODBC - mapping")  
+     ![Editor destinazione ODBC - Mapping](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "Editor destinazione ODBC - Mapping")  
   
-9. Confermare che si usi **_Output** le colonne per le colonne di Input, non il **_Status** oppure **_Source** colonne. **Output** colonne contengono valori di output di DQS Cleansing.  
+9. Verificare che vengano utilizzate colonne **_Output** per le colonne di input, non le colonne **_Status** o **_source** . **_Output** colonne contengono i valori di output della pulizia DQS.  
   
-10. Fare clic su **OK** per chiudere la **Editor destinazione OLE DB** nella finestra di dialogo.  
+10. Fare clic su **OK** per chiudere la finestra di dialogo **Editor destinazione OLE DB** .  
   
 11. Il flusso di dati deve essere simile alla figura seguente.  
   
-     ![Completare il flusso di dati](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "completato il flusso di dati")  
+     ![Flusso di dati completato](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Flusso di dati completato")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Passaggio 14: Aggiunta di attività Esegui SQL al flusso di controllo per eseguire la Stored Procedure per MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 14: Aggiunta dell'Attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

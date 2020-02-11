@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63182925"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Finestra di dialogo Apri condizione, pagina Criteri dipendenti
-  Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento alla condizione della gestione basata su criteri corrente. Per altre informazioni sulla correlazione delle condizioni con facet e criteri, vedere [Amministrazione di server con la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  
+  Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento alla condizione della gestione basata su criteri corrente. Per altre informazioni sulla correlazione delle condizioni con facet e criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Indica il nome dei criteri che fanno riferimento alla condizione corrente.  
   
- **Abilitata**  
+ **Enabled**  
  Un segno di spunta indica che i criteri sono attualmente abilitati. Se i criteri non sono abilitati, questo campo è vuoto.  
   
- **Cronologia**  
+ **History**  
  Fare clic sul collegamento ipertestuale Visualizza cronologia per visualizzare il report della cronologia di esecuzione.  
   
- **Data creazione**  
+ **Creato**  
  Data di creazione dei criteri.  
   
 ## <a name="see-also"></a>Vedere anche  

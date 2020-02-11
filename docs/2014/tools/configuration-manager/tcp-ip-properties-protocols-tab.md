@@ -1,5 +1,5 @@
 ---
-title: TCP - proprietà IP (scheda protocolli) | Microsoft Docs
+title: Proprietà TCP-IP (scheda protocolli) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150461"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - proprietà IP (scheda protocolli)
+# <a name="tcp---ip-properties-protocols-tab"></a>Proprietà TCP-IP (scheda protocolli)
   La finestra di dialogo **Proprietà - TCP/IP** consente di configurare le opzioni relative al protocollo TCP/IP. Fare clic su **TCP/IP** nel riquadro sinistro per visualizzare le configurazioni dei singoli indirizzi IP nel riquadro dei dettagli.  
   
  Per rendere effettive le modifiche, è necessario riavviare Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  I valori possibili sono **Sì** e **No**.  
   
  **Keep-alive**  
@@ -35,7 +35,8 @@ ms.locfileid: "63150461"
  Specificare se SQL Server resterà in attesa su tutti gli indirizzi IP associati alle schede di rete del computer. Se è impostato su **No**, configurare separatamente ogni indirizzo IP usando la finestra di dialogo delle proprietà dei singoli indirizzi. Se è impostato su **Sì**, le impostazioni della casella delle proprietà relative a **IPAll** verranno applicate a tutti gli indirizzi IP. Il valore predefinito è **Sì**.  
   
  **Nessun ritardo**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa modifiche a questa proprietà.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa modifiche a questa proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

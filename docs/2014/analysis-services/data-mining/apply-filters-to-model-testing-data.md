@@ -1,5 +1,5 @@
 ---
-title: Applicare filtri ai dati di Testing del modello | Microsoft Docs
+title: Applicare filtri ai dati di test del modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086151"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
   Quando si specifica un'origine dati esterna da usare per il test di un modello, è possibile applicare un filtro per limitare i dati di input. È ad esempio possibile testare il modello in modo specifico per le stime sui clienti in una determinata fascia di reddito.  
   
- Nello scenario mailing diretto di AdventureWorks mirato, ad esempio, è possibile creare un'espressione di filtro come quello seguente in ProspectiveBuyer, ovvero la tabella che contiene i dati di test, e limitare i test case per fascia di reddito:  
+ In uno scenario di mailing diretto di AdventureWorks, ad esempio, è possibile creare un'espressione di filtro come la seguente in ProspectiveBuyer, ovvero la tabella che contiene i dati di test, e limitare i test case in base alla fascia di reddito:  
   
  `[YearlyIncome] = '50000'`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66086151"
   
 3.  Nell'area **Seleziona set di dati da usare per il grafico di accuratezza** della scheda **Selezione input**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante **(...)**  per aprire una finestra di dialogo e scegliere il set di dati esterno.  
+4.  Fare clic sul pulsante Sfoglia **(...)** per aprire una finestra di dialogo e scegliere il set di dati esterno.  
   
 5.  Scegliere la tabella del case e aggiungere, se necessario, una tabella nidificata. Se necessario, eseguire il mapping delle colonne del modello alle colonne del set di dati esterno. Chiudere la finestra di dialogo **Specifica mapping colonne** per salvare la definizione della tabella di origine.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66086151"
   
 8.  Usare le colonne **Operator**e **Value** per definire il modo in cui la colonna viene filtrata.  
   
-     **Note** Digitare i valori senza usare le virgolette.  
+     **Nota** Digitare i valori senza usare le virgolette.  
   
 9. Fare clic sulla casella di testo **And/Or** e selezionare un operatore logico per definire la modalità di combinazione di più condizioni.  
   
-10. Facoltativamente, fare clic sul pulsante Sfoglia **(...)**  a destra della **valore** casella di testo per aprire la **filtro** dialogo casella e impostare le condizioni sulla tabella nidificata o nelle colonne della tabella del case singolo.  
+10. Facoltativamente, fare clic sul pulsante Sfoglia **(...)** a destra della casella di testo **valore** per aprire la finestra di dialogo **filtro** e impostare le condizioni nella tabella nidificata o nelle singole colonne della tabella del case.  
   
 11. Verificare la correttezza delle condizioni di filtro completate visualizzando il testo nel riquadro **Espressione** .  
   

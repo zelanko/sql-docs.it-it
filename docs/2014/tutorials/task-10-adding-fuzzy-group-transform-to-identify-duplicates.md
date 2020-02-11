@@ -1,5 +1,5 @@
 ---
-title: 'Attività 10: Aggiunta della trasformazione Raggruppamento Fuzzy per identificare i duplicati | Microsoft Docs'
+title: 'Attività 10: aggiunta della trasformazione Raggruppamento fuzzy per identificare i duplicati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481256"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Attività 10: Aggiunta della trasformazione Raggruppamento fuzzy per l'identificazione di duplicati
-  In questa attività viene aggiunta una trasformazione Raggruppamento fuzzy al flusso di dati. La trasformazione Raggruppamento fuzzy consente di identificare i duplicati nei dati di origine. Visualizzare [la trasformazione Raggruppamento Fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) per altri dettagli.  
+  In questa attività viene aggiunta una trasformazione Raggruppamento fuzzy al flusso di dati. La trasformazione Raggruppamento fuzzy consente di identificare i duplicati nei dati di origine. Per altri dettagli, vedere [trasformazione Raggruppamento fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) .  
   
-1.  Trascinare **raggruppamento Fuzzy** trasforma nello **altre trasformazioni** sul **casella degli strumenti SSIS** per il **del flusso di dati** disponibile nella scheda  **Combina record corretti e**.  
+1.  Trascinare la trasformazione **Raggruppamento fuzzy** in **altre trasformazioni** nella **casella degli strumenti SSIS** nella scheda **flusso di dati** in **Combina record corretti e con correzione**.  
   
-2.  Fare doppio clic su **raggruppamento Fuzzy** trasformare nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Raggruppa fornitori con ID corrispondenti** , quindi premere **invio**.  
+2.  Fare clic con il pulsante destro del mouse su trasformazione **Raggruppamento fuzzy** nella scheda **flusso di dati** e scegliere **Rinomina**. Digitare **Group Suppliers con ID corrispondenti** e premere **invio**.  
   
-3.  Connettere **combina record corretti e** al **Raggruppa fornitori con ID corrispondenti** usando il collegamento blu.  
+3.  Connetti **Combina record corretti e con correzione** per **raggruppare i fornitori con ID corrispondenti** usando il connettore blu.  
   
-     ![Connessione a Raggruppa fornitori con ID corrispondenti](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "connessione a Raggruppa fornitori con ID corrispondenti")  
+     ![Connessione a Raggruppa fornitori con ID corrispondenti](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "Connessione a Raggruppa fornitori con ID corrispondenti")  
   
 4.  Fare doppio clic su **Raggruppa fornitori con ID corrispondenti**.  
   
-5.  Nel **Editor trasformazione Raggruppamento Fuzzy**, fare clic su **New** accanto a **gestione connessione OLE DB elenco a discesa elenco** per avviare **Configura connessione OLE DB Gestione** nella finestra di dialogo.  
+5.  **Nell'Editor trasformazione Raggruppamento fuzzy**fare clic su **nuovo** accanto all'elenco a **discesa Gestione connessione OLE DB** per avviare la finestra di dialogo **Configura OLE DB gestione connessione** .  
   
-6.  Nella finestra di dialogo, fare clic su **New** per avviare **Connection Manager** nella finestra di dialogo.  
+6.  Nella finestra di dialogo fare clic su **nuova** per avviare la finestra di dialogo **gestione connessione** .  
   
-7.  Tipo di **(locale)** oppure **periodo** (.) per il nome del Server.  
+7.  Digitare **(local)** o **period** (.) per il nome del server.  
   
-8.  Selezionare **MDS** per **selezionare o immettere un nome di database** campo. Si utilizzerà il database MDS come archiviazione temporanea per il **trasformazione Raggruppamento Fuzzy**. Il **raggruppamento Fuzzy** la trasformazione richiede una connessione a un'istanza di SQL Server per creare le tabelle temporanee di SQL Server che richiede l'algoritmo di trasformazione per l'esecuzione delle operazioni. A tal fine, è possibile creare un database o utilizzarne un altro esistente.  
+8.  Selezionare **MDS** per **selezionare un campo o immettere un nome di database** . Il database MDS sarà utilizzato come archivio temporaneo per la **trasformazione Raggruppamento fuzzy**. La trasformazione **Raggruppamento fuzzy** richiede una connessione a un'istanza di SQL Server creare le tabelle SQL Server temporanee necessarie all'algoritmo di trasformazione per eseguire il lavoro. A tal fine, è possibile creare un database o utilizzarne un altro esistente.  
   
 9. Fare clic su **Test connessione** per testare la connessione e fare clic su **OK** nella finestra di messaggio.  
   
-10. Nel **gestione connessione** finestra di dialogo, fare clic su **OK**.  
+10. Nella finestra di dialogo **gestione connessione** fare clic su **OK**.  
   
-11. Selezionare **(locale). MDS** (o **localhost. MDS**) dal **elenco di connessioni dati** e fare clic su **OK**.  
+11. Selezionare **(locale). MDS** (o **localhost). MDS**) nell' **elenco di connessioni dati** e fare clic su **OK**.  
   
-12. Nel **Editor trasformazione Raggruppamento Fuzzy**, verificare che **(locale). MDS** o **localhost. MDS** sia selezionata per il **gestione connessione OLE DB**.  
+12. In **Editor trasformazione Raggruppamento fuzzy**confermare che **(locale). MDS** o **localhost. MDS** è selezionato per la **gestione connessione OLE DB**.  
   
-13. Passare al **colonne** scheda.  
+13. Passare alla scheda **colonne** .  
   
-14. Selezionare (casella di controllo) **SupplierID_Output** dall'elenco dei **colonne di Input disponibili**. Per configurare la trasformazione, selezionare le colonne di input da utilizzare per l'identificazione dei duplicati. Per mantenerla semplice, utilizzare solo SupplierID in questo passaggio.  
+14. Selezionare (casella di controllo) **SupplierID_Output** dall'elenco delle **colonne di input disponibili**. Per configurare la trasformazione, selezionare le colonne di input da utilizzare per l'identificazione dei duplicati. Per mantenerla semplice, utilizzare solo SupplierID in questo passaggio.  
   
-     ![Editor trasformazione Raggruppamento fuzzy](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Editor trasformazione Raggruppamento Fuzzy")  
+     ![Editor trasformazione Raggruppamento fuzzy](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Editor trasformazione Raggruppamento fuzzy")  
   
-15. Fare clic su **OK** per chiudere la **Editor trasformazione Raggruppamento Fuzzy**.  
+15. Fare clic su **OK** per chiudere l' **Editor trasformazione Raggruppamento fuzzy**.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 11: Aggiunta della trasformazione Suddivisione condizionale a Filtra duplicati](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

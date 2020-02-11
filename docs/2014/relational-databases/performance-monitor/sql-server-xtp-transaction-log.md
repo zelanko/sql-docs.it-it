@@ -1,5 +1,5 @@
 ---
-title: Log delle transazioni XTP | Microsoft Docs
+title: Log delle transazioni di XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151016"
 ---
 # <a name="xtp-transaction-log"></a>XTP Transaction Log
@@ -28,6 +28,6 @@ ms.locfileid: "63151016"
 |**Record di log scritti/sec**|Numero medio di record scritti nel log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal motore XTP, al secondo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XTP &#40;OLTP In memoria&#41; i contatori delle prestazioni](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;i contatori delle prestazioni di OLTP in memoria&#41;](../../integration-services/performance/performance-counters.md)  
   
   

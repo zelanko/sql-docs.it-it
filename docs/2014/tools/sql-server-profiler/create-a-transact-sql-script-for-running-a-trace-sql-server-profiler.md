@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255810"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Creare uno script Transact-SQL per l'esecuzione di una traccia (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "63255810"
   
 1.  Aprire un file o una tabella di traccia. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o Ottimizzazione guidata [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
-2.  Scegliere **Esporta** dal menu **File**, fare clic su **Crea script per definizione di traccia** e quindi fare clic sulla versione corrispondente al server di cui si vuole eseguire la traccia.  
+2.  Scegliere**Esporta**dal menu **File**, fare clic su **Crea script per definizione di traccia**e quindi fare clic sulla versione corrispondente al server di cui si vuole eseguire la traccia.  
   
 3.  Nella finestra di dialogo **Salva con nome** specificare un nome per il file script e quindi fare clic su **Salva**.  
   

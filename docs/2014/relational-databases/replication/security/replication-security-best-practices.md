@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268668"
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
@@ -70,9 +70,9 @@ ms.locfileid: "63268668"
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replica su Internet](../replication-over-the-internet.md)   
- [Proteggere il sottoscrittore](secure-the-subscriber.md)   
+ [Proteggere il Sottoscrittore](secure-the-subscriber.md)   
  [Proteggere il database di distribuzione](secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](secure-the-publisher.md)   
- [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)  
+ [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)  
   
   

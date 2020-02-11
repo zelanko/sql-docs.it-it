@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150824"
 ---
 # <a name="plan-guides"></a>Guide di piano
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  Per guide di piano basate su SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue la corrispondenza tra i valori per gli argomenti @module_or_batch e @params e una query, confrontando i due valori carattere per carattere. Per questo motivo è necessario immettere il testo esattamente come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve nel batch.  
   
- Se @type = 'SQL' e @module_or_batch vengono impostate su NULL, il valore di @module_or_batch viene impostato sul valore di @stmt. Di conseguenza, il valore per *statement_text* deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
+ Quando @type =' SQL ' e @module_or_batch è impostato su null, il valore di @module_or_batch viene impostato sul valore di @stmt. Ciò significa che il valore di *statement_text* deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
   
  Quando è possibile applicare sia una guida di piano normale (SQL o OBJECT) sia una guida di piano TEMPLATE a un'istruzione, verrà utilizzata solo la guida di piano normale.  
   
@@ -149,10 +149,10 @@ sp_create_plan_guide
 |Viene descritto come convalidare una guida di piano.|[Convalidare le guide di piano dopo l'aggiornamento](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide_from_handle &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [sp_control_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [sys. plan_guides &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [sys. fn_validate_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

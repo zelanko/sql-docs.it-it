@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo file Database (Analysis Services - dati multidimensionali) individua | Microsoft Docs
+title: Finestra di dialogo Individua file di database (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078026"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Individua file di database (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66078026"
   
 -   Fare clic su **Sfoglia** nella pagina **Generale** della finestra di dialogo **Ripristina database** .  
   
--   Fare clic sul pulsante con i puntini di sospensione ( **...** ) nella colonna **File di backup** della griglia **Restore backup partitions** (Ripristina partizioni di backup) nella pagina **Partizioni** della finestra di dialogo **Ripristina database** .  
+-   Fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **File di backup** della griglia **Restore backup partitions** (Ripristina partizioni di backup) nella pagina **Partizioni** della finestra di dialogo **Ripristina database** .  
   
 ## <a name="options"></a>Opzioni  
  **Selezionare la cartella**  
@@ -37,8 +37,8 @@ ms.locfileid: "66078026"
  Consente di digitare un testo per modificare il file selezionato da **Selezionare la cartella**o per specificare un file non elencato in **Selezionare la cartella**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Generale &#40;dialogo Ripristina Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partizioni &#40;dialogo Ripristina Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Generale &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

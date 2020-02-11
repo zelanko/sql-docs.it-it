@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154829"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Raggruppare righe nei risultati di una query (Visual Database Tools)
@@ -54,7 +54,7 @@ GROUP BY pub_id, type
   
 1.  Iniziare la query aggiungendo le tabelle da riepilogare nel riquadro Diagramma.  
   
-2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma, quindi scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In Progettazione query e Progettazione viste verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
+2.  Fare clic con il pulsante destro del mouse sullo sfondo del riquadro Diagramma e scegliere **Aggiungi raggruppamento** dal menu di scelta rapida. In Progettazione query e Progettazione viste verrà aggiunta una colonna **Group By** alla griglia nel riquadro Criteri.  
   
 3.  Aggiungere al riquadro Criteri la colonna o la combinazione di colonne da raggruppare. Per visualizzare la colonna nell'output della query, assicurarsi che la colonna **Output** sia selezionata per l'output.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239054"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
@@ -24,9 +24,9 @@ ms.locfileid: "63239054"
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Per aggiungere il controllo ReportViewer a un'applicazione Windows  
   
-1.  Creare una nuova applicazione Windows usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Creare una nuova applicazione Windows utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \- oppure -  
+     \-O  
   
      Aprire un progetto Applicazione Windows esistente e aggiungere un nuovo form.  
   
@@ -40,13 +40,14 @@ ms.locfileid: "63239054"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo il  **\<Server di Report >** opzione è selezionata, vengono visualizzate due proprietà aggiuntive: **Url Server di report** e **percorso Report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, selezionare l'opzione ** \<report del server>** dall'elenco a discesa **Scegli report** . Dopo aver selezionato l'opzione ** \<>report del server** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **percorso report**. 
+  **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
- ![Selezionare report server](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selezionare report server")  
+ ![Selezione report del server](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selezione report del server")  
   
  Se il report da visualizzare è un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente.  
   
- ![Selezionare report locale](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Selezionare report locale")  
+ ![Seleziona report locale](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Seleziona report locale")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report mediante il controllo Windows Form ReportViewer. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -158,7 +159,7 @@ End Class
   
      Il file Sales Order Detail.rdl dovrebbe ora far parte del progetto.  
   
-     ![Report Sales Detail Order](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Report Sales Detail Order")  
+     ![Report Sales Order Detail](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Report Sales Order Detail")  
   
 5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in **Sales Order Detail.rdlc** e premere INVIO.  
   
@@ -169,7 +170,7 @@ End Class
   
 6.  Dopo aver rinominato il report, selezionare il file e individuare la finestra Proprietà. Modificare la proprietà **Copia nella directory di output** in **Copia se più recente**.  
   
-     ![Configurazione dell'impostazione Copia nella directory di output](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configurazione dell'impostazione Copia nella directory di output")  
+     ![Configurazione impostazione copia nell'output](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configurazione impostazione copia nell'output")  
   
      Se la finestra **Proprietà** non è visibile, è possibile aprirla scegliendo **Finestra Proprietà** dal menu **Visualizza**.  
   

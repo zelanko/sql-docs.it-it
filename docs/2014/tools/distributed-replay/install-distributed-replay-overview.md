@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita | Microsoft Docs
+title: Installare Riesecuzione distribuita | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149337"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
   Utilizzare gli argomenti seguenti per installare la funzionalità di Riesecuzione distribuita.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Installare riesecuzione distribuita &#40;programma di installazione&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Argomento contenente le procedure per l'esecuzione di un'installazione tipica di Riesecuzione distribuita tramite l'Installazione guidata.|  
+|[Installare Riesecuzione distribuita &#40;installazione&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Argomento contenente le procedure per l'esecuzione di un'installazione tipica di Riesecuzione distribuita tramite l'Installazione guidata.|  
 |[Installare Riesecuzione distribuita dal prompt dei comandi](install-distributed-replay-overview.md)|Argomento contenente le procedure, la sintassi di esempio e i parametri di installazione per l'esecuzione dell'installazione automatica.|  
 |[Installare i componenti Riesecuzione distribuita tramite un file di configurazione](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Argomento contenente le procedure, la sintassi di esempio e i parametri di installazione per l'esecuzione di Riesecuzione distribuita tramite un file di configurazione.|  
 |[Completare i passaggi successivi all'installazione](complete-the-post-installation-steps.md)|Argomento contenente le procedure per il completamento di un'installazione di Riesecuzione distribuita.|  

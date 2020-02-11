@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144713"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
-  In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. Quando il log delle transazioni è pieno, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generato un errore 9002. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, quest'ultimo rimane online anche se potrà soltanto essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
+  In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. Quando il log delle transazioni è pieno, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generato un errore 9002. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, il database rimane online, ma può solo essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Risposta a un log delle transazioni pieno  
  La risposta appropriata a un log delle transazioni pieno dipende in parte dalla condizione o dalle condizioni che hanno causato il riempimento del log. Per individuare la condizione che impedisce il troncamento del log in un caso specifico, usare le colonne **log_reuse_wait** e **log_reuse_wait_desc** della vista del catalogo **sys.database**. Per altre informazioni, vedere [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Per le descrizioni dei fattori che possono ritardare il troncamento del log, vedere [Log delle transazioni &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Se il database di ripristino durante l'errore 9002 si è verificato, dopo aver risolto il problema, ripristinare il database utilizzando ALTER DATABASE *database_name* SET ONLINE.  
+>  Se l'errore 9002 si è verificato durante il recupero del database, risolvere il problema, quindi recuperare il database tramite ALTER DATABASE *nome_database* SET ONLINE.  
   
  Per gestire un log delle transazioni pieno sono disponibili le soluzioni alternative seguenti:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63144713"
 ### <a name="increasing-the-size-of-a-log-file"></a>Aumento delle dimensioni di un file di log  
  Se nel disco del log è disponibile spazio, è possibile aumentare le dimensioni del file di log. La dimensione massima per i file di log è due terabyte per file di log.  
   
- **Per aumentare le dimensioni del file**  
+ **Per aumentare le dimensioni dei file**  
   
  Se l'aumento automatico dimensioni è disabilitato, il database è online ed è disponibile spazio sufficiente sul disco, eseguire una delle operazioni seguenti:  
   
@@ -100,6 +100,6 @@ ms.locfileid: "63144713"
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Gestione delle dimensioni del file di log delle transazioni](manage-the-size-of-the-transaction-log-file.md)   
  [Backup di log delle transazioni &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

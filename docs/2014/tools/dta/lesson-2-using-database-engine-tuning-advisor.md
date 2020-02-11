@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Ottimizzazione guidata motore di Database usando | Microsoft Docs'
+title: 'Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188582"
 ---
-# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Uso di Ottimizzazione guidata motore di database
+# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database
   Lo strumento Ottimizzazione guidata motore di database consente di ottimizzare i database, gestire le sessioni di ottimizzazione e visualizzare le indicazioni di ottimizzazione. Gli utenti esperti di strutture di progettazione fisica possono utilizzare questo strumento per analisi esplorative di ottimizzazione dei database. Gli utenti inesperti di ottimizzazione di database possono utilizzare lo strumento per individuare la migliore configurazione delle strutture di progettazione fisica per i carichi di lavoro che desiderano ottimizzare. Questa lezione illustra le tecniche di base per gli amministratori di database che non conoscono l'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database e per gli amministratori di sistema con una conoscenza limitata delle strutture di progettazione fisica.  
   
  Questa lezione contiene i seguenti argomenti:  

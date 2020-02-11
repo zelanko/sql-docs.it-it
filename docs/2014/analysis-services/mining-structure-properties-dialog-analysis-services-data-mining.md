@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà struttura di data mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Finestra di dialogo Proprietà struttura di data mining (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077658"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Finestra di dialogo Proprietà struttura di data mining (Analysis Services - Data Mining)
@@ -26,14 +26,14 @@ ms.locfileid: "66077658"
   
  Nella finestra di dialogo **Proprietà struttura di data mining** sono incluse le pagine seguenti:  
   
-## <a name="pages"></a>Pages  
+## <a name="pages"></a>Pagine  
   
 |Pagina|Descrizione|  
 |----------|-----------------|  
 |**Generale**|Utilizzare la pagina **Generale** per visualizzare e modificare le proprietà generali della struttura di data mining. Per altre informazioni su questa pagina, vedere [Generale &#40;finestra di dialogo Struttura di data mining&#41; &#40;Analysis Services - Data mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
-|**Configurazione degli errori**|Utilizzare la pagina **Configurazione errori** per visualizzare e modificare le impostazioni di configurazione degli errori per la struttura di data mining. Per altre informazioni su questa pagina, vedere [Errore &#40;finestra di dialogo Struttura di data mining&#41; &#40;Analysis Services - Dati multidimensionali&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
+|**Configurazione errori**|Utilizzare la pagina **Configurazione errori** per visualizzare e modificare le impostazioni di configurazione degli errori per la struttura di data mining. Per altre informazioni su questa pagina, vedere [Errore &#40;finestra di dialogo Struttura di data mining&#41; &#40;Analysis Services - Dati multidimensionali&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

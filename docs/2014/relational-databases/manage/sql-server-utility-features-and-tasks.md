@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190432"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
@@ -45,18 +45,18 @@ ms.locfileid: "63190432"
 |Viene descritto come creare un punto di controllo di Utilità SQL Server|[Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Viene descritto come effettuare la connessione a Utilità SQL Server.|[Effettuare la connessione a Utilità SQL Server.](connect-to-a-sql-server-utility.md)|  
 |Viene descritto come registrare un'istanza di SQL Server con un punto di controllo dell'utilità.|[Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)|  
-|Viene descritto come utilizzare Esplora utilità per gestire Utilità SQL Server.|[Utilizzo di Esplora utilità per gestire Utilità SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)|  
+|Viene descritto come utilizzare Esplora utilità per gestire Utilità SQL Server.|[Usare Esplora utilità per gestire Utilità SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)|  
 |Viene descritto come monitorare le istanze di SQL Server in Utilità SQL Server.|[Monitoraggio di istanze di SQL Server in Utilità SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
-|Viene descritto come visualizzare i risultati dei criteri di integrità delle risorse.|[Visualizzare i risultati dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)|  
+|Viene descritto come visualizzare i risultati dei criteri di integrità delle risorse.|[Visualizzare i risultati dei criteri di integrità delle risorse &#40;SQL Server Utility&#41;](view-resource-health-policy-results-sql-server-utility.md)|  
 |Viene descritto come modificare una definizione dei criteri di integrità delle risorse.|[Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|  
 |Viene descritto come configurare il data warehouse del punto di controllo dell'utilità.|[Configurare il data warehouse del punto di controllo dell'utilità &#40;Utilità SQL Server&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
 |Viene descritto come configurare i criteri di integrità dell'utilità.|[Configurare i criteri di integrità &#40;Utilità SQL Server&#41;](configure-health-policies-sql-server-utility.md)|  
-|Viene descritto come regolare l'attenuazione nei criteri di utilizzo della CPU.|[Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
+|Viene descritto come regolare l'attenuazione nei criteri di utilizzo della CPU.|[Riduzione delle segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
 |Viene descritto come rimuovere un'istanza di SQL Server da un punto di controllo dell'utilità.|[Rimuovere un'istanza di SQL Server da Utilità SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
 |Viene descritto come modificare l'account proxy per l'agente di raccolta dati dell'utilità in un'istanza gestita di SQL Server.|[Modificare l'account proxy per il set di raccolta dell'utilità in un'istanza gestita di SQL Server &#40;Utilità SQL Server&#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Viene descritto come spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra.|[Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra &#40;Utilità SQL Server&#41;](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Viene descritto come rimuovere un punto di controllo dell'utilità.|[Rimuovere un punto di controllo dell'utilità &#40;Utilità SQL Server&#41;](remove-a-utility-control-point-sql-server-utility.md)|  
-|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Risoluzione dei problemi relativi a Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
+|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
 |Viene descritto come risolvere i problemi relativi all'integrità delle risorse di SQL Server.|[Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Collegamenti agli argomenti della Guida sensibile al contesto di Gestione Utilità.|[Guida sensibile al contesto di Gestione Utilità](utility-explorer-f1-help.md)|  
   

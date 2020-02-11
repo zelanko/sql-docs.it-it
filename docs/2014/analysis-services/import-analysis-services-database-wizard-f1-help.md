@@ -1,5 +1,5 @@
 ---
-title: Importare la Guida F1 di Analysis Services Database guidata | Microsoft Docs
+title: Guida sensibile al contesto dell'importazione guidata database Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c38d70d73cfd80e15d8418f763f702e6a6eacf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080575"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>Guida sensibile al contesto dell'Importazione guidata database di Analysis Services 9.0
-  Utilizzare l'Importazione guidata database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Utilizzare la procedura [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] guidata Importa database di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 9,0 in per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generare un progetto da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un database esistente.  
   
  L'Importazione guidata database di Analysis Services 9.0 di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di eseguire in modo semplificato i passaggi seguenti:  
   

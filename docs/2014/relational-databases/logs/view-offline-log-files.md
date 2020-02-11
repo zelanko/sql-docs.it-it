@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144597"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
@@ -28,7 +28,7 @@ ms.locfileid: "63144597"
 > [!NOTE]  
 >  È possibile utilizzare questi metodi anche per connettersi a un'istanza a cui, benché online, non è possibile connettersi tramite una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per qualche motivo.  
   
-## <a name="before-you-begin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a>Operazioni preliminari  
  Per connettersi ai file di log offline, è necessario che nel computer utilizzato per visualizzare i file di log offline e nel computer in cui si trovano i file di log che si desidera visualizzare sia installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se in entrambi i computer è installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile visualizzare file offline per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e per istanze che eseguono versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno dei computer.  
   
  Se si usa Server registrati, l'istanza a cui ci si vuole connettere deve essere registrata in **Gruppi di server locali** o **Server di gestione centrale**. L'istanza può essere registrata in modo autonomo o essere un membro di un gruppo di server. Per ulteriori informazioni su come aggiungere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Server registrati, vedere gli argomenti seguenti:  
@@ -52,7 +52,7 @@ ms.locfileid: "63144597"
   
 -   Autorizzazione di lettura per la cartella che contiene i file di log degli errori. Per impostazione predefinita, i file di log degli errori si trovano nel percorso seguente, dove \<*Unità>* rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*NomeIstanza*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-     **\<Unità >: \Programmi\Microsoft SQL Server\MSSQL12. \<NomeIstanza > \mssql\log.**  
+     **\<Unità>: \Programmi\microsoft SQL Server\MSSQL12. \<NomeIstanza> \Mssql\Log**  
   
  Per verificare le impostazioni di sicurezza dello spazio dei nomi WMI, è possibile utilizzare lo snap-in Controllo WMI.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144597"
   
 1.  Aprire lo snap-in Controllo WMI. A tale scopo, effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare clic su **avviare**, digitare `wmimgmt.msc` nel **Inizia ricerca** casella e quindi premere INVIO.  
+    -   Fare **** clic su Start `wmimgmt.msc` , digitare nella casella **Inizia ricerca** , quindi premere INVIO.  
   
-    -   Fare clic su **avviare**, fare clic su **eseguito**, tipo `wmimgmt.msc`, quindi premere INVIO.  
+    -   Fare clic sul pulsante **Start**, scegliere `wmimgmt.msc` **Esegui**, digitare e quindi premere INVIO.  
   
 2.  Per impostazione predefinita, lo snap-in Controllo WMI gestisce il computer locale.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144597"
   
     3.  Immettere il nome del computer remoto, quindi fare clic su **OK**.  
   
-3.  Fare clic on il pulsante destro del mouse su **Controllo WMI (computer locale)** o **Controllo WMI (***NomeComputerRemoto***)** e scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **controllo WMI (locale)** o **controllo WMI (***NomeComputerRemoto***)**, quindi scegliere **Proprietà**.  
   
 4.  Nella finestra di dialogo delle proprietà di **Controllo WMI** fare clic sulla scheda **Sicurezza** .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63144597"
   
      **Root\Microsoft\SqlServer\ComputerManagement10**  
   
-6.  Fare clic su **Sicurezza**.  
+6.  Fare clic su **Security**.  
   
 7.  Verificare che l'account usato abbia l'autorizzazione **Abilita account** . Questa autorizzazione consente accesso in lettura a oggetti WMI.  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162469"
 ---
 # <a name="create-jobs"></a>Crea processi
@@ -27,7 +27,8 @@ ms.locfileid: "63162469"
   
  È possibile creare processi da eseguire nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure in più istanze all'interno di un'organizzazione. Per eseguire i processi in più server, è necessario impostare almeno un server master e uno o più server di destinazione. Per altre informazioni sui server master e di destinazione, vedere [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Agent i dati relativi al processo e ai passaggi di processo vengono registrati nella cronologia processo.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -36,13 +37,13 @@ ms.locfileid: "63162469"
 |**Descrizione**|**Argomento**|  
 |Viene illustrato come creare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Creazione di un processo](create-a-job.md)|  
 |Viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
-|Viene descritto come impostare il log di cronologia processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
+|Viene descritto come impostare il log di cronologia processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Impostare il log di cronologia processi](set-up-the-job-history-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire passaggi di processo](manage-job-steps.md)   
+ [Gestire i passaggi del processo](manage-job-steps.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)   
- [Creare e collegare pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
- [Eseguire i processi](run-jobs.md)   
+ [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
+ [Esegui processi](run-jobs.md)   
  [Visualizzare o modificare processi](view-or-modify-jobs.md)  
   
   

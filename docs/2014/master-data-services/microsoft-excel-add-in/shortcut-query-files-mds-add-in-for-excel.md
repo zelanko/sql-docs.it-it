@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482664"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>File di query collegamento (componente aggiuntivo MDS per Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "65482664"
   
  Quando si apre un file di query collegamento con questa applicazione, viene richiesto di rendere la connessione "sicura", cioè si è sicuri del contenuto di questo percorso. Ogni volta che si contrassegna una connessione come sicura, viene aggiunta a un elenco. Se si desidera deselezionare questo elenco, aprire la finestra di dialogo **Impostazioni** e nella sezione **Server aggiunti a elenco attendibili** , fare clic su **Deseleziona tutto**.  
   
- Il percorso predefinito per l'applicazione viene *unità*: \Programmi\Microsoft SQL Server\120\Master Data Services\Excel Add-in\microsoft.masterdataservices.queryopener.exe.  
+ Il percorso predefinito per l'applicazione è *unità*: \Programmi\microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   
  Sono disponibili due modalità per aprire i file di query collegamento: è possibile importarli o fare doppio clic per aprirli automaticamente.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65482664"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Salvare il contenuto del foglio di lavoro attivo come file di query collegamento.|[Salvare un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Inviare tramite posta elettronica un file di query collegamento che rappresenta il contenuto del foglio di lavoro attivo.|[Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Salvare il contenuto del foglio di lavoro attivo come file di query collegamento.|[Salvare un file di query collegamento &#40;Componente aggiuntivo MDS per Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Inviare tramite posta elettronica un file di query collegamento che rappresenta il contenuto del foglio di lavoro attivo.|[Inviare tramite posta elettronica un file di query collegamento &#40;Componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Connessioni &#40;componente aggiuntivo MDS per Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Connessioni &#40;Componente aggiuntivo MDS per Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [&#40;di sicurezza Master Data Services&#41;](../security-master-data-services.md)  
   
   

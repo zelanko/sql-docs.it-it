@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183016"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server - Oggetto Statistiche del pool di risorse
@@ -43,11 +43,11 @@ ms.locfileid: "63183016"
 |Memoria di destinazione (KB)|Quantità, in kilobyte (KB), di memoria di destinazione che il pool di risorse tenta di ottenere sulla base delle impostazioni del pool e dello stato del server.|  
 |I/O letti da disco/sec|Numero delle operazioni di lettura dal disco nell'ultimo secondo.|  
 |I/O limitati letti da disco/sec|Numero delle operazioni di lettura limitate nell'ultimo secondo.|  
-|Byte letti da disco/sec|Numero di byte letti dal disco nell'ultimo secondo.|  
+|Byte letti da disco/sec |Numero di byte letti dal disco nell'ultimo secondo.|  
 |I/O letti da disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di lettura dal disco.|  
 |I/O scritti su disco/sec|Numero delle operazioni di scrittura su disco nell'ultimo secondo.|  
 |I/O limitati scritti su disco/sec|Numero delle operazioni di scrittura limitate nell'ultimo secondo.|  
-|Byte scritti su disco/sec|Numero di byte scritti su disco nell'ultimo secondo.|  
+| Byte scritti su disco/sec|Numero di byte scritti su disco nell'ultimo secondo.|  
 |I/O scritti su disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di scrittura su disco.|  
   
 ## <a name="see-also"></a>Vedere anche  

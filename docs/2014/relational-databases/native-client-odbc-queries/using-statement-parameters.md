@@ -1,5 +1,5 @@
 ---
-title: Usando i parametri delle istruzioni | Documenti di Microsoft
+title: Utilizzo dei parametri dell'istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200242"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
@@ -32,9 +32,9 @@ ms.locfileid: "63200242"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire **testo**, **ntext**, e **immagine** dei dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici.  
+-   Gestire i dati di tipo **Text**, **ntext**e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Image** e i tipi di dati C specifici di.  
   
- Ad esempio, un **parti** tabella include colonne denominate **PartID**, **descrizione**, e **prezzo**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
+ Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -50,11 +50,11 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  A ogni marcatore di parametro è associato il numero ordinale assegnato ai parametri, da sinistra verso destra. Il marcatore di parametro all'estrema sinistra in un'istruzione SQL presenta un valore ordinale pari a 1, il successivo è l'ordinale 2 e così via.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Associazione di parametri](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
+ [Esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

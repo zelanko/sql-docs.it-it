@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106383"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
-  Quando si inserisce innanzitutto un grafico in un report, il **Seleziona tipo di grafico** viene visualizzata la finestra. Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
+  Quando si inserisce un grafico in un report per la prima volta, viene visualizzata la finestra di dialogo **Seleziona tipo di grafico** . Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
   
  In qualsiasi fase della progettazione del report, è possibile impostare il grafico su un tipo più appropriato in relazione al report. È importante selezionare il tipo di grafico adeguato per i dati utilizzati in modo che possa essere interpretato correttamente. È necessario comprendere le caratteristiche di ogni tipo di grafico per determinare il grafico più appropriato per i dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   

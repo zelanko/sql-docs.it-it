@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272823"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
@@ -52,7 +52,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Pubblicare l'esecuzione di una stored procedure in una pubblicazione transazionale &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e specificare un valore 'serializable proc exec' (consigliato) o 'proc exec' per il parametro **@type** . Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../publish/define-an-article.md).  
+-   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e specificare un valore ' serializable proc exec ' (consigliato) o ' proc exec ' per il parametro **@type**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modifica della procedura nel Sottoscrittore  
  Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si supponga, ad esempio, che la stored procedure **sp_big_delete**nel server di pubblicazione svolga due funzioni, ovvero elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorni la tabella non replicata **big_table2**. In questo caso, per ridurre la quantità di risorse di rete utilizzate, è necessario distribuire l'eliminazione del milione di righe come stored procedure pubblicando **sp_big_delete**. Nel Sottoscrittore è possibile modificare **sp_big_delete** in modo che esegua l'eliminazione delle righe, ma non l'aggiornamento successivo di **big_table2**.  
@@ -88,7 +88,7 @@ COMMIT TRANSACTION T2
   
  I blocchi verranno mantenuti più a lungo se si esegue la procedura in una transazione serializzabile e possono comportare una riduzione della concorrenza.  
   
-## <a name="the-xactabort-setting"></a>Impostazione XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>Impostazione XACT_ABORT  
  Durante la replica dell'esecuzione della stored procedure, l'impostazione XACT_ABORT della sessione nella quale avviene l'esecuzione della stored procedure deve essere impostata su ON. Se XACT_ABORT è impostata su OFF, durante l'esecuzione della procedura nel server di pubblicazione viene generato un errore, che si ripeterà anche nel Sottoscrittore, interrompendo l'attività dell'agente di distribuzione. Se si imposta XACT_ABORT su ON, per tutti gli errori rilevati durante l'esecuzione nel server di pubblicazione viene eseguito il rollback dell'intera esecuzione, il che impedisce che si verifichino errori nell'agente di distribuzione. Per altre informazioni sull'impostazione XACT_ABORT, vedere [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
  Se è necessario impostare XACT_ABORT su OFF, specificare il parametro **-SkipErrors** per l'agente di distribuzione. Ciò consente all'agente di continuare ad applicare eventuali modifiche nel Sottoscrittore anche in caso di errore.  

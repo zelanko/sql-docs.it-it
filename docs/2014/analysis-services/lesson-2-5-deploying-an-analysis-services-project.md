@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di un'analisi di progetto di servizi | Microsoft Docs
+title: Distribuzione di un progetto Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078991"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Distribuzione di un progetto di Analysis Services
-  Per visualizzare i dati del cubo e delle dimensioni relativi agli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+  Per visualizzare i dati del cubo e delle dimensioni relativi agli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi elaborare il cubo e le relative dimensioni. ** La distribuzione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di un progetto crea gli oggetti definiti in un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]istanza di. L' *elaborazione* degli oggetti in un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di copia i dati dalle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
  In questa fase del processo di sviluppo il cubo viene in genere distribuito in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un server di sviluppo. Al termine dello sviluppo del progetto di Business Intelligence, si utilizza in genere la Distribuzione guidata [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per distribuire il progetto dal server di sviluppo a un server di produzione. Per altre informazioni, vedere [Distribuzione di soluzioni di modelli multidimensionali](multidimensional-models/multidimensional-model-solution-deployment.md) e [Distribuire soluzioni di modelli tramite la Distribuzione guidata](multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66078991"
      Esaminare le proprietà di sviluppo del progetto. Per impostazione predefinita, il modello del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per la distribuzione incrementale di tutti i progetti nell'istanza predefinita di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel computer locale, per creare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con lo stesso nome del progetto ed elaborare gli oggetti dopo la distribuzione utilizzando l'opzione di elaborazione predefinita. Per altre informazioni, vedere [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    >  Se si desidera distribuire il progetto in un'istanza denominata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel computer locale o a un'istanza in un server remoto, modificare il **Server** nome di proprietà all'istanza appropriata, ad esempio \<  *ServerName **>\\<** NomeIstanza * * >* .  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Se si desidera distribuire il progetto in un'istanza denominata di nel computer locale o in un'istanza di in un server remoto, impostare la proprietà **Server** sul nome dell'istanza appropriata, ad esempio \< *NomeServer**>\\**NomeIstanza * * >*.  
   
 3.  Fare clic su **OK**.  
   
@@ -44,11 +44,12 @@ ms.locfileid: "66078991"
     > [!NOTE]  
     >  Se si verificano errori durante la distribuzione, utilizzare SQL Server Management Studio per controllare le autorizzazioni per il database. L'account specificato per la connessione all'origine dati deve disporre di un accesso sull'istanza di SQL Server. Fare doppio clic sull'account di accesso per visualizzare le proprietà Mapping utenti. L'account deve avere le autorizzazioni db_datareader per il database **AdventureWorksDW2012** .  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di compilare e quindi di distribuire il progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial nell'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando uno script di distribuzione. Viene visualizzato lo stato di avanzamento della distribuzione in due finestre: la **Output** finestra e il **stato distribuzione - Analysis Services Tutorial** finestra.  
+     
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di compilare e quindi di distribuire il progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial nell'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando uno script di distribuzione. Lo stato di avanzamento della distribuzione viene visualizzato in due finestre: la finestra **output** e la finestra **stato distribuzione-Analysis Services Esercitazione** .  
   
-     Se necessario, aprire la finestra Output scegliendo **Output** dal menu **Visualizza** . Nella finestra **Output** viene visualizzato lo stato di avanzamento generale della distribuzione. Il **avanzamento della distribuzione - Analysis Services Tutorial** finestra Visualizza i dettagli sui singoli passaggi durante la distribuzione. Per altre informazioni, vedere [Compilare progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) e [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
+     Se necessario, aprire la finestra Output scegliendo **Output** dal menu **Visualizza** . Nella finestra **Output** viene visualizzato lo stato di avanzamento generale della distribuzione. Nella finestra **avanzamento distribuzione-Analysis Services Esercitazione** vengono visualizzati i dettagli relativi a ogni passaggio effettuato durante la distribuzione. Per altre informazioni, vedere [Compilare progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) e [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-5.  Esaminare il contenuto del **Output** finestra e il **stato distribuzione - Analysis Services Tutorial** per verificare che il cubo è stato compilato, distribuito ed elaborato senza errori.  
+5.  Esaminare il contenuto della finestra **output** e la finestra stato **distribuzione-Analysis Services Esercitazione** per verificare che il cubo sia stato compilato, distribuito ed elaborato senza errori.  
   
 6.  Per nascondere la finestra **Stato distribuzione - Analysis Services Tutorial** , fare clic sull'icona **Nascondi automaticamente** (a forma di puntina da disegno) sulla barra degli strumenti della finestra.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "66078991"
  [Esplorazione del cubo](lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Distribuzione di progetti Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Configurare Analysis Services proprietà del progetto &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

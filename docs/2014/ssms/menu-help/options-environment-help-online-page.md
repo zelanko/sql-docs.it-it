@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina ambiente-Help-Online) | Microsoft Docs
+title: Opzioni (ambiente-Guida-pagina online) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283323"
 ---
-# <a name="options-environment-help-online-page"></a>Opzioni (ambiente-Help-Online pagina)
-  La finestra di dialogo **Opzioni** consente di specificare le origini della Guida da usare per le ricerche di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tra cui la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
+# <a name="options-environment-help-online-page"></a>Opzioni (ambiente-Guida-pagina online)
+  La finestra di dialogo **Opzioni** consente di specificare le origini della guida da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilizzare per le ricerche, inclusa la Guida sensibile al contesto. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** , selezionare **Guida**e quindi fare clic su **Online**. Se la pagina **Online** non viene visualizzata nell'elenco, selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** .  
   
- **Al caricamento della Guida**  
+ **Quando si carica il contenuto della Guida**  
  Impostare l'ordine di utilizzo delle origini della Guida sensibile al contesto e specifica le origini della Guida utilizzate.  
   
 -   **Prova prima online, quindi locale**  
@@ -37,16 +37,16 @@ ms.locfileid: "63283323"
   
      Viene utilizzata solo la Guida installata sul computer viene utilizzata per la Guida sensibile al contesto.  
   
- **Cerca provider**  
+ **Cerca in questi provider**  
  Specifica l'ordine di utilizzo delle origini della Guida quando si utilizzano le parole chiave nella ricerca all'interno della Guida.  
   
- **Codezone Community**  
+ **Community Codezone**  
  Contiene l'elenco dei siti Web della Codezone Community che è possibile includere nelle ricerche all'interno della Guida.  
   
  **Dettagli**  
  Visualizza una breve descrizione di ogni provider selezionato nell'elenco **Codezone Community** .  
   
- **Visualizza informativa sulla privacy**  
+ **Leggi l'informativa sulla privacy**  
  Visualizza l'Informativa sulla privacy di [!INCLUDE[msCoName](../../includes/msconame-md.md)] relativa all'utilizzo online.  
   
   

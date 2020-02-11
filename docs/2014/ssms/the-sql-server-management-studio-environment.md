@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156407"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Ambiente di SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre un ambiente completo per la gestione e lo sviluppo di query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Elementi generali dell'interfaccia utente](general-user-interface-elements.md)  
  Vengono definite le caratteristiche generali dell'interfaccia utente, ad esempio Esplora soluzioni, Esplora oggetti, la finestra Proprietà e il browser integrato.  
   

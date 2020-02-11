@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157095"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
@@ -72,14 +72,14 @@ ms.locfileid: "63157095"
   
     -   **Su richiesta**. Questa modalità consente di valutare i criteri quando questi vengono specificati direttamente dall'utente.  
   
-    -   **Su modifica: impedisci esecuzione**. Questa modalità automatica utilizza trigger DDL per impedire violazioni dei criteri.  
+    -   **Su modifica: Impedisci**esecuzione. Questa modalità automatica utilizza trigger DDL per impedire violazioni dei criteri.  
   
         > [!IMPORTANT]  
         >  Se l'opzione della configurazione del server relativa ai trigger nidificati è disabilitata, la modalità **Su modifica: impedisci esecuzione** non funzionerà correttamente. La gestione basata su criteri si basa su trigger DDL per rilevare ed eseguire il rollback di operazioni DDL non conformi ai criteri che utilizzano questa modalità di valutazione. La rimozione dei trigger DDL della gestione basata su criteri o la disabilitazione dei trigger nidificati provocherà un comportamento imprevisto o la mancata esecuzione di questa modalità di valutazione.  
   
     -   **Su modifica: solo log**. Questa modalità automatica utilizza la notifica degli eventi per valutare i criteri quando viene apportata una modifica importante.  
   
-    -   **Su pianificazione**. Questa modalità automatica utilizza un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per valutare periodicamente i criteri  
+    -   **In base alla pianificazione**. Questa modalità automatica utilizza un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per valutare periodicamente i criteri  
   
      Quando i criteri automatici non sono abilitati, la gestione basata su criteri non influisce sulle prestazioni del sistema.  
   
@@ -91,7 +91,8 @@ ms.locfileid: "63157095"
  Set di proprietà logiche che definiscono il comportamento o le caratteristiche di certi tipi di destinazioni gestite. Il numero e le caratteristiche delle proprietà vengono incorporati nel facet e possono essere aggiunti o rimossi solo dal creatore del facet. Un tipo di destinazione può implementare uno o più facet di gestione e un facet di gestione può essere implementato da uno o più tipi di destinazione. Alcune proprietà di un facet possono essere valide solo per una versione specifica.  
   
  Condizione della gestione basata su criteri  
- Espressione booleana che specifica un set di stati consentiti per una destinazione gestita tramite la gestione basata su criteri in relazione a un facet di gestione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di osservare le regole di confronto in caso di valutazione di una condizione. Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non corrispondono esattamente a quelle di Windows, testare la condizione per determinare come risolvere i conflitti dell'algoritmo.  
+ Espressione booleana che specifica un set di stati consentiti per una destinazione gestita tramite la gestione basata su criteri in relazione a un facet di gestione. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di osservare le regole di confronto in caso di valutazione di una condizione. Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non corrispondono esattamente a quelle di Windows, testare la condizione per determinare come risolvere i conflitti dell'algoritmo.  
   
  Criteri di gestione basata su criteri  
  Condizione della gestione basata su criteri e comportamento previsto, ad esempio la modalità di valutazione, i filtri di destinazione e la pianificazione. I criteri possono contenere solo una condizione. I criteri possono essere abilitati o disabilitati. I criteri vengono archiviati nel database msdb.  
@@ -129,9 +130,9 @@ ms.locfileid: "63157095"
 |Viene descritto come verificare che un'istanza server, un database, un oggetto server o un oggetto di database sia conforme ai criteri.|[Valutare i criteri della gestione basata su criteri da un oggetto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Valutare i criteri della gestione basata su criteri da quei criteri](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Valutare i criteri della gestione basata su criteri in una pianificazione](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Viene descritto come visualizzare e copiare uno stato facet di gestione basata su criteri in un file.|[Utilizzo della copia di facet della gestione basata su criteri](working-with-policy-based-management-facets.md)|  
 |È disponibile un set di file di criteri che è possibile importare per le procedure consigliate e viene descritto come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database.|[Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Sono inclusi gli argomenti della Guida F1 relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Gestione criteri di &#40;Esplora oggetti&#41;](../../ssms/object/object-explorer.md)|  
+|Sono inclusi gli argomenti della Guida F1 relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Gestione criteri &#40;Esplora oggetti&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+ [Viste della gestione basata su criteri &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

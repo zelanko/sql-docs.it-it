@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241297"
 ---
 # <a name="load-xml-data"></a>Caricamento dati XML
@@ -32,7 +32,7 @@ ms.locfileid: "63241297"
 ## <a name="bulk-loading-xml-data"></a>Caricamento bulk di dati XML  
  È possibile eseguire un caricamento bulk dei dati XML nel server utilizzando le funzionalità per il caricamento bulk disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio bcp. OPENROWSET consente di caricare dati in una colonna XML da uno o più file, come illustrato nell'esempio seguente.  
   
-##### <a name="example-loading-xml-from-files"></a>Esempio: Caricamento di dati XML da un file  
+##### <a name="example-loading-xml-from-files"></a>Esempio: caricamento di dati XML da un file  
  In questo esempio viene illustrato l'inserimento di una riga nella tabella T. Il valore della colonna XML viene caricato dal file C:\MyFile\xmlfile.xml come CLOB e alla colonna di tipo integer viene fornito il valore 10.  
   
 ```  
@@ -43,7 +43,7 @@ FROM    (SELECT *
  AS xCol) AS R(xCol)  
 ```  
   
-## <a name="text-encoding"></a>Codifica del testo  
+## <a name="text-encoding"></a>Codifica testo  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati XML in formato Unicode (UTF-16). I dati XML recuperati dal server vengono restituiti con la codifica UTF-16. Se si desidera una codifica diversa, sarà necessario eseguire la conversione appropriata sui dati recuperati. Per i dati XML viene talvolta utilizzata una codifica diversa. In questo caso è necessario prestare particolare attenzione durante il caricamento dei dati. Ad esempio:  
   
 -   Se il testo XML è in formato Unicode (UCS-2, UTF-16), sarà possibile assegnarlo senza problemi a una colonna, una variabile o un parametro XML.  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   Per utilizzare una codifica esplicita utilizzare il tipo di dati `varbinary()`, che non interagisce in alcun modo con le tabelle codici, oppure utilizzare un tipo stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: Impostazione di una codifica in modo esplicito  
+### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: impostazione di una codifica in modo esplicito  
  Si consideri un documento XML di nome vcdoc, archiviato come `varchar(max)` e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con la codifica "iso8859-1", concatena il documento XML, esegue il cast del risultato a `varbinary(max)`, in modo da mantenere la rappresentazione dei byte e infine esegue il cast al tipo di dati XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
   
 ```  

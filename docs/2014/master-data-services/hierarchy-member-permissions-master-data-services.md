@@ -14,33 +14,33 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482957"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
   Le autorizzazioni membri gerarchia sono facoltative e devono essere utilizzate solo quando si desidera che un utente abbia accesso limitato a membri specifici. Se non si assegnano autorizzazioni nella scheda **Membri gerarchia** , le autorizzazioni dell'utente sono basate esclusivamente su quelle assegnate nella scheda **Modelli** .  
   
- Le autorizzazioni dei membri della gerarchia vengono assegnate nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Autorizzazioni utenti e gruppi **della scheda** Membri gerarchia **nell'interfaccia utente di** . Queste autorizzazioni determinano a quali membri può accedere un utente nell'area funzionale **Esplora** dell'interfaccia utente.  
+ Le autorizzazioni dei [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] membri della gerarchia vengono assegnate nell'area funzionale **autorizzazioni utenti e gruppi** della scheda **membri gerarchia** nell'interfaccia utente (UI). Queste autorizzazioni determinano a quali membri può accedere un utente nell'area funzionale **Esplora** dell'interfaccia utente.  
   
  Nella scheda **Membri gerarchia** ogni gerarchia è rappresentata come albero. Quando si assegna un'autorizzazione a un nodo dell'albero, tutti i figli la ereditano, a meno che non sia stato assegnata in modo esplicito a un livello inferiore.  
   
 > [!NOTE]  
 >  Quando si assegna un'autorizzazione a un nodo di una gerarchia, a tutti i membri inclusi negli altri nodi dello stesso livello o di un livello superiore l'autorizzazione viene negata.  
   
- In **Esplora**le autorizzazioni per i membri vengono applicate in tutte le posizioni in cui il membro viene visualizzato. Ad esempio, un membro con **Read-only** l'autorizzazione è di sola lettura in qualsiasi entità, gerarchie e raccolte alle quali appartiene.  
+ In **Esplora**le autorizzazioni per i membri vengono applicate in tutte le posizioni in cui il membro viene visualizzato. Un membro con autorizzazione di sola **lettura** , ad esempio, è di sola lettura in tutte le entità, gerarchie e raccolte a cui appartiene.  
   
  Le autorizzazioni membri gerarchia si applicano alla versione del modello cui sono assegnate e a eventuali copie future della versione. Non si applicano a versioni precedenti a quella a cui sono assegnate.  
   
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
-|**Sola lettura**|I membri vengono visualizzati, ma l'utente non può modificarli. L'utente non può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.<br /><br /> Nota: Se si assegnano **Read-only** l'autorizzazione per **radice**, i membri in **radice** sono di sola lettura; nelle gerarchie esplicite e raccolte, tuttavia, l'utente può spostarsi ai membri di **Radice** e aggiungere nuovi membri a **radice**.|  
-|**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
+|**Sola lettura**|I membri vengono visualizzati, ma l'utente non può modificarli. L'utente non può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.<br /><br /> Nota: se si assegna l'autorizzazione di sola **lettura** a **root**, i membri nella **radice** sono di sola lettura. nelle gerarchie esplicite e nelle raccolte, tuttavia, l'utente può spostare i membri nella **radice** e aggiungere nuovi membri alla **radice**.|  
+|**Aggiornamento**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
 |**Nega**|I membri non vengono visualizzati.|  
   
- Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende dall'**impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
+ Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende dall'**impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
   
 > [!NOTE]  
 >  Non è possibile assegnare autorizzazioni membri gerarchie a gerarchie ricorsive, gerarchie derivate con estremità esplicite e a gerarchie derivate con livelli nascosti.  
@@ -51,9 +51,9 @@ ms.locfileid: "65482957"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>Quando un membro appartiene a più gerarchie  
  Due o più gerarchie possono contenere lo stesso membro.  
   
--   Se un nodo della gerarchia viene assegnato **Update** viene assegnata l'autorizzazione e l'altra **Read-only**, i membri nel nodo **Read-only**.  
+-   Se a un nodo della gerarchia viene assegnata l'autorizzazione **aggiornamento** e a un altro viene assegnata l'autorizzazione di sola **lettura**, i membri del nodo sono di sola **lettura**.  
   
--   Se un nodo della gerarchia viene assegnato **Update** oppure **Read-only** è assegnata l'autorizzazione e un altro nodo **Deny**, quindi non vengono visualizzati i membri nel nodo.  
+-   Se a un nodo della gerarchia viene assegnata l'autorizzazione **aggiornamento** o sola **lettura** e a un altro nodo viene assegnata l'autorizzazione **Nega**, i membri del nodo non verranno visualizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

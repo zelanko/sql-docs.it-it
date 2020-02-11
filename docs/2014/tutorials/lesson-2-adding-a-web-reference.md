@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Aggiunge un riferimento Web | Microsoft Docs'
+title: 'Lezione 2: aggiunta di un riferimento Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316006"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunta di un riferimento Web
@@ -22,37 +22,37 @@ ms.locfileid: "63316006"
   
  Nella descrizione del servizio vengono indicati i servizi disponibili e le modalità di interazione con tali servizi. Senza una descrizione del servizio non è possibile interagire con un servizio Web a livello di programmazione.  
   
- L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per altre informazioni, vedere "procedura: Generare un Proxy del servizio Web XML"nel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentazione.  
+ L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per ulteriori informazioni, vedere gli argomenti relativi alla generazione di un proxy del servizio Web XML nella documentazione di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-add-a-web-reference"></a>Per aggiungere un riferimento Web  
   
-1.  Nel **Project** menu, fare clic su **Aggiungi riferimento al servizio**.  
+1.  Scegliere **Aggiungi riferimento al servizio**dal menu **progetto** .  
   
-2.  Nel **Aggiungi riferimento al servizio** finestra di dialogo, fare clic su **avanzate**.  
+2.  Nella finestra di dialogo **Aggiungi riferimento al servizio** fare clic su **Avanzate**.  
   
-3.  Nel **Impostazioni riferimento al servizio** finestra di dialogo, fare clic su **Aggiungi riferimento Web**.  
+3.  Nella finestra di dialogo **Impostazioni riferimento al servizio** fare clic su **Aggiungi riferimento Web**.  
   
-4.  Nel **URL** finestra di **Aggiungi riferimento Web** della finestra di dialogo digitare l'URL per ottenere la descrizione del servizio Web ReportServer, ad esempio http://localhost/reportserver/reportservice2010.asmx. Scegliere il **Vai** pulsante per recuperare le informazioni sul servizio Web.  
+4.  Nella casella **URL** della finestra di dialogo **Aggiungi riferimento Web** digitare l'URL per ottenere la descrizione del servizio Web ReportServer, ad esempio http://localhost/reportserver/reportservice2010.asmx. Fare quindi clic sul pulsante **Vai** per recuperare le informazioni sul servizio Web.  
   
      \- - oppure -  
   
-     Se il servizio Web ReportServer presente nel computer locale, selezionare la **servizi Web sul computer locale** collegamento nel riquadro di esplorazione. quindi fare clic sul collegamento del servizio Web ReportService2010 nell'elenco visualizzato.  
+     Se il servizio Web ReportServer esiste nel computer locale, fare clic sul collegamento **servizi Web nel computer locale** nel riquadro del browser. quindi fare clic sul collegamento del servizio Web ReportService2010 nell'elenco visualizzato.  
   
-5.  Nel **nome riferimento Web** casella, rinominare il riferimento Web in ReportService2010, ovvero lo spazio dei nomi si userà per questo riferimento Web.  
+5.  Nella casella **nome riferimento Web** rinominare il riferimento Web in ReportService2010, ovvero lo spazio dei nomi che verrà utilizzato per questo riferimento Web.  
   
-6.  Fare clic su **Aggiungi riferimento** per aggiungere un riferimento Web al servizio Web di destinazione.  
+6.  Fare clic su **Aggiungi riferimento** per aggiungere un riferimento Web per il servizio Web di destinazione.  
   
      Tramite [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] verrà scaricata la descrizione del servizio e verrà generata una classe proxy che funge da interfaccia tra l'applicazione e il servizio Web ReportServer. È inoltre necessario aggiungere un riferimento allo spazio dei nomi <xref:System.Web.Services> per il riferimento Web da utilizzare.  
   
-7.  Nel menu progetto, fare clic su **Aggiungi riferimento**.  
+7.  Scegliere Aggiungi riferimento dal menu **Progetto**.  
   
-8.  Nel **Aggiungi riferimento** nella finestra di dialogo il **.NET** scheda, seleziona **System**, quindi fare clic su **OK**.  
+8.  Nella finestra di dialogo **Aggiungi riferimento** , nella scheda **.NET** selezionare **System. Web. Services**, quindi fare clic su **OK**.  
   
  Per altre informazioni, vedere [Accesso all'API SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Lezione 3: L'accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
- [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Lezione 3: accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
+ [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

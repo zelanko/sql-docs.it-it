@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265135"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
@@ -184,7 +184,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizzo delle aree di controllo  
- Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il `Adornment` definito nella classe la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` dello spazio dei nomi è un'implementazione pass-through del <xref:System.Windows.Forms.Design.Behavior.Adorner> trovare la classe in Windows Form. Per informazioni complete sulla `Adorner` classe, vedere [BehaviorService](https://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per esempi di codice che implementa una `Microsoft.ReportDesigner.Design.Adornment` classe, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
+ Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. La `Adornment` classe definita nello [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` spazio dei nomi è un'implementazione pass-through della <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trovata in Windows Forms. Per la `Adorner` documentazione completa sulla classe, vedere [Cenni preliminari sul servizio di comportamento](https://go.microsoft.com/fwlink/?LinkId=116673) in MSDN Library. Per il codice di esempio che `Microsoft.ReportDesigner.Design.Adornment` implementa una classe, vedere [SQL Server Reporting Services esempi del prodotto](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Per ulteriori informazioni sulla programmazione e sull'utilizzo di Windows Form in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vedere i seguenti argomenti in MSDN Library:  
   
@@ -192,12 +192,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componenti di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Procedura dettagliata: Creazione di un controllo di Windows Form che usufruisca delle caratteristiche offerte da Visual Studio in fase di progettazione  
+-   Procedura dettagliata: creazione di un controllo di Windows Form che usufruisca delle caratteristiche offerte da Visual Studio in fase di progettazione  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura di un elemento del report personalizzato](custom-report-item-architecture.md)   
+ [Architettura dell'elemento del report personalizzato](custom-report-item-architecture.md)   
  [Creazione di un componente runtime dell'elemento del report personalizzato](creating-a-custom-report-item-run-time-component.md)   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)   
- [Procedura: Distribuire un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuzione di un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
   
   
