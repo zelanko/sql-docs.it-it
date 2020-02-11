@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione ricerca (pagina Output degli errori) | Microsoft Docs
+title: Editor trasformazione Ricerca (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057851"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Editor trasformazione Ricerca (pagina Output degli errori)
@@ -31,7 +31,7 @@ ms.locfileid: "66057851"
  **Colonna**  
  Non usato.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare il tipo di errore che si verifica quando vengono gestite righe prive di voci corrispondenti nel set di dati di riferimento:  
   
 -   Ignorare l'errore e inviare le righe a un output.  
@@ -56,7 +56,7 @@ ms.locfileid: "66057851"
  **Descrizione**  
  Consente di visualizzare la descrizione dell'operazione.  
   
- **Imposta questo valore nelle celle selezionate**  
+ **Imposta le celle selezionate su questo valore**  
  Consente di specificare l'azione da eseguire su tutte le celle selezionate quando si verifica un errore o un troncamento:  
   
 -   Ignorare l'errore.  

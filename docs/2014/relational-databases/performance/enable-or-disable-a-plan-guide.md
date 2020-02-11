@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150936"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Abilitare o disabilitare una guida di piano
   È possibile disabilitare e abilitare guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile abilitare o disabilitare una sola guida di piano o tutte le guide di piano in un database.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63150936"
 ####  <a name="Permissions"></a> Autorizzazioni  
  La disabilitazione o l'abilitazione di una guida di piano OBJECT richiede l'autorizzazione ALTER per l'oggetto (ad esempio funzione, stored procedure) a cui fa riferimento la guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63150936"
   
 3.  Nella finestra di dialogo **Disabilita tutte le guide di piano** o **Abilita tutte le guide di piano** , verificare che l'azione scelta venga completata correttamente, quindi fare clic su **Chiudi**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   

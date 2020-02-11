@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770847"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor destinazione SAP BW (pagina Gestione connessione)
@@ -41,7 +41,7 @@ ms.locfileid: "62770847"
  **Gestione connessione SAP BW**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
   
  **Test del carico**  
@@ -59,7 +59,7 @@ ms.locfileid: "62770847"
  **Tipo**  
  Immettere il carattere singolo che identifica il tipo di InfoSource. Nella tabella seguente sono elencati i valori a carattere singolo accettabili.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**D**|Dati transazione|  
 |**M**|Dati master|  
@@ -85,7 +85,7 @@ ms.locfileid: "62770847"
  Immettere l'ID programma associato alla destinazione RFC.  
   
  **Cerca**  
- Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](look-up-rfc-destination.md).  
+ Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](look-up-rfc-destination.md).  
   
 ### <a name="create-sap-bw-objects-options"></a>Opzioni di Crea oggetti SAP BW  
  **Seleziona il tipo di oggetto**  
@@ -102,7 +102,7 @@ ms.locfileid: "62770847"
  **Creare**  
  Creare il tipo selezionato di oggetto SAP Netweaver BW.  
   
-|Tipo oggetto|Risultato|  
+|Tipo di oggetto|Risultato|  
 |-----------------|------------|  
 |**InfoObject**|Creare un nuovo InfoObject usando la finestra di dialogo **Crea nuovo InfoObject** . Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](create-new-infoobject.md).|  
 |**InfoCube**|Creare un nuovo InfoCube usando la finestra di dialogo **Crea InfoCube per dati transazione** . Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoCube per dati transazione](create-infocube-for-transaction-data.md).|  

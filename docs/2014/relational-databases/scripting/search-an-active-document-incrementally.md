@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243654"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
@@ -48,10 +48,10 @@ ms.locfileid: "75243654"
 >  Per un elenco completo dei tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cerca e Sostituisci](search-and-replace.md)   
- [Cerca in modo interattivo i documenti](search-documents-interactively.md)   
- [Eseguire ricerche nei documenti usando gli elenchi dei risultati](search-documents-using-results-lists.md)   
+ [Ricerca e sostituzione](search-and-replace.md)   
+ [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
+ [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

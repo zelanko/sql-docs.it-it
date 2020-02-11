@@ -1,5 +1,5 @@
 ---
-title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Microsoft Docs
+title: Richiamo di funzioni di aggregazione CLR definite dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919599"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Chiamata di funzioni di aggregazione CLR definite dall'utente
@@ -32,11 +32,11 @@ ms.locfileid: "62919599"
   
 -   L'utente corrente deve disporre dell'autorizzazione `EXECUTE` per la funzione di aggregazione definita dall'utente.  
   
--   Aggregazioni definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *udagg_name*.  
+-   Le funzioni di aggregazione definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *schema_name. udagg_name*.  
   
--   Il tipo di argomento della funzione di aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito per il *input_type* della funzione di aggregazione, come definito nel `CREATE AGGREGATE` istruzione.  
+-   Il tipo di argomento dell'aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito nell' *INPUT_TYPE* dell'aggregazione, come `CREATE AGGREGATE` definito nell'istruzione.  
   
--   Il tipo restituito della funzione di aggregazione definita dall'utente deve corrispondere il *return_type* nel `CREATE AGGREGATE` istruzione.  
+-   Il tipo restituito dell'aggregazione definita dall'utente deve corrispondere all' *return_type* nell' `CREATE AGGREGATE` istruzione.  
   
 ## <a name="example-1"></a>Esempio 1  
  Di seguito è riportato un esempio di funzione di aggregazione definita dall'utente che concatena un set di valori di stringa di una colonna in una tabella:  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
+ Una volta compilato il codice in **MyAgg. dll**, è possibile registrare l'aggregazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in come segue:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

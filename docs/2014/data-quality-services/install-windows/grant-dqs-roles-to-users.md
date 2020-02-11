@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480563"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Concedere ruoli DQS agli utenti
   In questo argomento si descrive come creare account di accesso SQL in un'entità di Windows e come assegnare i ruoli [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) nel database DQS_MAIN.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   È necessario aver completato l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] tramite l'esecuzione del file DQSInstaller.exe. Per altre informazioni, vedere [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65480563"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro destro selezionare la casella di controllo nella colonna **Mappa** per il database **DQS_MAIN** e quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN**, a seconda del livello di accesso necessario per l'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../dqs-security.md).  
+6.  Nel riquadro destro selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_MAIN** , quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor**o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN** , a seconda del livello di accesso necessario all'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../dqs-security.md).  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65480563"
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](install-data-quality-services.md)   
- [Creazione di un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

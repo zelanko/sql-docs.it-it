@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106445"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta di campi del set di dati (Generatore report e SSRS)
@@ -40,10 +40,10 @@ ms.locfileid: "66106445"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Rilevamento di campi mancanti per query dinamiche in fase di esecuzione  
- Per impostazione predefinita, agli elementi della raccolta Fields sono associate due proprietà, ovvero Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>* , in cui la definizione della tabella è stata modificata.  
+ Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
   
 > [!NOTE]  
->  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. IsMissing non può essere usata per rilevare membri vuoti in un cubo multidimensionale e non è correlata ai concetti di linguaggio di query MDX di `EMPTY` e `NON EMPTY`.  
+>  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. Non è possibile utilizzare l'oggetto per rilevare i membri vuoti in un cubo multidimensionale e non è correlato ai concetti del linguaggio di query `EMPTY` MDX `NON EMPTY`di e di.  
   
  È possibile eseguire il test della proprietà IsMissing con un codice personalizzato per determinare se un campo è presente nel set di risultati. Non è possibile eseguire il test relativo a tale presenza utilizzando un'espressione con una chiamata a una funzione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ad esempio `IIF` o `SWITCH`, poiché in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] vengono valutati tutti i parametri presenti nella chiamata alla funzione e viene restituito un errore quando viene valutato il riferimento al parametro mancante.  
   
@@ -92,6 +92,6 @@ End Function
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)  
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md)  
   
   

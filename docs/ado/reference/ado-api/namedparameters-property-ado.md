@@ -16,17 +16,17 @@ ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932066"
 ---
 # <a name="namedparameters-property-ado"></a>Proprietà NamedParameters (ADO)
-Indica se i nomi dei parametri deve essere passati al provider.  
+Indica se i nomi dei parametri devono essere passati al provider.  
   
-## <a name="remarks"></a>Note  
- Quando questa proprietà è true, ADO passa il valore del **Name** proprietà di ogni parametro nel **parametro** raccolta per il [oggetto comando](../../../ado/reference/ado-api/command-object-ado.md). Il provider utilizza un nome di parametro per corrispondere ai parametri in di **CommandText** oppure **CommandStream** proprietà. Se questa proprietà è false (impostazione predefinita), i nomi dei parametri vengono ignorati e il provider Usa l'ordine dei parametri in modo che corrispondano ai parametri in valori di **CommandText** oppure **CommandStream** proprietà.  
+## <a name="remarks"></a>Osservazioni  
+ Quando questa proprietà è true, ADO passa il valore della proprietà **Name** di ogni parametro nella raccolta di **parametri** per l' [oggetto Command](../../../ado/reference/ado-api/command-object-ado.md). Il provider usa un nome di parametro per trovare la corrispondenza con i parametri nelle proprietà **CommandText** o **CommandStream** . Se questa proprietà è false (impostazione predefinita), i nomi dei parametri vengono ignorati e il provider usa l'ordine dei parametri per confrontare i valori con i parametri nelle proprietà **CommandText** o **CommandStream** .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
@@ -34,4 +34,4 @@ Indica se i nomi dei parametri deve essere passati al provider.
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Proprietà CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

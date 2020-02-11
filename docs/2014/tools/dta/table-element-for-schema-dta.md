@@ -1,5 +1,5 @@
 ---
-title: Elemento di tabella per lo Schema (DTA) | Microsoft Docs
+title: Elemento Table per schema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138783"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento Table per Schema (DTA)
@@ -35,17 +35,17 @@ ms.locfileid: "63138783"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`NumberOfRows`|Facoltativo. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
+|`NumberOfRows`|Facoltativa. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|**string**, tra 1 e 255 caratteri.|  
-|**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
+|**Tipo di dati e lunghezza**|**stringa**con una lunghezza compresa tra 1 e 255 caratteri.|  
+|**Valore predefinito**|No.|  
+|**Occorrenza**|Facoltativa. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63138783"
 |**Elemento padre**|[Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**Elementi figlio**|[Elemento Name per Table &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non si specifica un elemento `Table`, l'Ottimizzazione guidata motore di database considererà ottimizzabili tutte le tabelle contenute nel database specificato.  
   
 ## <a name="example"></a>Esempio  

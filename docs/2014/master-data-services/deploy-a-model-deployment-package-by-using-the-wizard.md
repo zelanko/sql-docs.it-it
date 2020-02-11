@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479482"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Distribuire un pacchetto di distribuzione di modelli tramite la procedura guidata
@@ -26,14 +26,14 @@ ms.locfileid: "65479482"
 > [!IMPORTANT]  
 >  I pacchetti possono essere distribuiti solo nella versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata per crearli. Pertanto non è possibile distribuire pacchetti creati in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** nell'ambiente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] di destinazione.  
   
 -   È necessario che sia già disponibile un pacchetto di distribuzione di modelli. Per altre informazioni, vedere [Creare un pacchetto di distribuzione di modelli tramite la procedura guidata](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>Per distribuire un pacchetto di distribuzione di modelli di soli oggetti modello  
   
@@ -47,17 +47,17 @@ ms.locfileid: "65479482"
   
 5.  Individuare il pacchetto di distribuzione (file con estensione pkg) e fare clic su **Apri**.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Dopo aver caricato il pacchetto, fare clic su **Avanti**.  
   
 8.  Se il modello è già presente, è possibile aggiornarlo selezionando **Aggiorna il modello esistente**. Per creare un nuovo modello, selezionare **Crea un nuovo modello** e, dopo aver fatto clic su **Avanti** , è possibile digitare un nome per il nuovo modello.  
   
-9. Scegliere **Fine** per uscire dalla procedura guidata.  
+9. Fare clic su **Fine** per uscire dalla procedura guidata.  
   
- **Note:**  
+ **Note**  
   
--   Se una vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, la vista viene creata come *subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
+-   Se una vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, la vista viene creata come *modelname. subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
   
 -   Il processo di distribuzione si svolge in quattro passaggi:  
   

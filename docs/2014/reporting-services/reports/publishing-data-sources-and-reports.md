@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102507"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Pubblicazione di origini dati e report
@@ -28,7 +28,7 @@ ms.locfileid: "66102507"
   
  Se per la creazione del report è stata utilizzata un'origine dei dati condivisa, è necessario pubblicarla nello stesso percorso del report. Analogamente ai report, le origini dei dati condivise possono essere gestite separatamente sul server di report.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Anteprima dei report](previewing-reports.md)  
  Viene descritto come visualizzare l'anteprima di un report prima di pubblicarlo.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "66102507"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Layout di pagina e rendering &#40;Generatore report e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Stampa di report &#40;Generatore report e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

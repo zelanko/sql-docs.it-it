@@ -1,5 +1,5 @@
 ---
-title: Immagine di finestra di dialogo proprietà, generale (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà immagine, generale (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,42 +14,42 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a66c424bfe5bd4a2587140a0f5238f46833a061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109024"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Generale (Generatore report e SSRS)
   Selezionare **Generale** nella finestra di dialogo **Proprietà immagine** per aggiungere un'immagine, modificare il nome predefinito dell'immagine e aggiungere il testo della descrizione comando.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Digitare un nome per l'elemento. Il nome deve essere univoco nel report. Per impostazione predefinita, viene assegnato un nome generale, ad esempio Immagine1 o Immagine2.  
   
  **Descrizione comando**  
- Digitare un testo o un'espressione che restituisca una descrizione comando. Fare clic sul pulsante Espressione (*fx*) per modificare l'espressione. Il **descrizione comando** appare quando l'utente mette in pausa il puntatore sull'elemento in un report HTML.  
+ Digitare un testo o un'espressione che restituisca una descrizione comando. Fare clic sul pulsante espressione (*FX*) per modificare l'espressione. La descrizione comando viene visualizzata quando l'utente posiziona il puntatore del mouse sull'elemento in un report HTML. ****  
   
  **Selezionare l'origine dell'immagine**  
  Indicare il percorso di archiviazione dell'immagine in modo da specificare da dove il componente Elaborazione report recupererà l'immagine durante il rendering del report.  
   
--   **Esterna** Scegliere questa opzione se si desidera che l'immagine continui ad essere disponibile come file su un server di report o un server Web.  
+-   **Esterno** Scegliere questa opzione se si desidera che l'immagine continui a esistere come file in un server di report o in un server Web.  
   
--   **Incorporata** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
+-   Con **incorporamento** Scegliere questa opzione se si desidera incorporare l'immagine nel report.  
   
--   **Database** Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini da includere nel report.  
+-   **Database** di Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini che si desidera includere nel report.  
   
- **Usare questa immagine**  
+ **Utilizzare questa immagine**  
  Questa opzione viene visualizzata quando si seleziona l'opzione **Incorporata** o **Esterna** .  
   
  Se si intende incorporare l'immagine, selezionare l'immagine da aggiungere al report dall'elenco a discesa. Fare clic sul pulsante **Importa** per aggiungere l'immagine all'elenco a discesa.  
   
- Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://\<nomeserver > / Images/immagine1.jpg. Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, http://\<*NomeServerSharePoint*>/\<*sito*> / Documents/images/image1.jpg.  
+ Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://\<ServerName>/images/image1.jpg. Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, http://\<*NomeSharePointServer*>/\<*sito*>/Documents/images/image1.jpg.  
   
  **Importa**  
  Fare clic su questa opzione per aggiungere un'immagine all'elenco a discesa **Use this image** (Usa questa immagine).  
   
- **Usare questo campo**  
+ **Utilizzare questo campo**  
  Questa opzione viene visualizzata se si seleziona l'opzione **Database** . Selezionare il nome del campo.  
   
  **Utilizzare questo tipo MIME**  
@@ -58,6 +58,6 @@ ms.locfileid: "66109024"
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   
