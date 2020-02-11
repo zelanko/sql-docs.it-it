@@ -1,5 +1,5 @@
 ---
-title: Scegliere i calcoli temporali (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Selezione calcoli temporali (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088082"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Scelta calcoli e gerarchia di destinazione (Configurazione guidata funzionalità di Business Intelligence)
   La pagina **Scelta calcoli e gerarchia di destinazione** consente di definire la risoluzione dei nuovi calcoli temporali da creare per una gerarchia temporale esistente.  
   
 ## <a name="options"></a>Opzioni  
- **Usare la gerarchia seguente per analizzare i calcoli temporali**  
+ **Usa la gerarchia seguente per analizzare i calcoli temporali**  
  Consente di selezionare la gerarchia della dimensione temporale da utilizzare per la creazione dei nuovi calcoli temporali.  
   
  **Calcoli temporali disponibili**  
  Consente di selezionare i calcoli temporali da creare per la gerarchia selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

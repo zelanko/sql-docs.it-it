@@ -1,5 +1,5 @@
 ---
-title: Trasferire gli account di accesso attività Editor (pagina generale) | Microsoft Docs
+title: Editor attività Trasferisci account di accesso (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054956"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor attività Trasferisci account di accesso (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci account di accesso** per assegnare un nome e una descrizione all'attività Trasferisci account di accesso. Per altre informazioni su questa attività, vedere [Attività Trasferisci account di accesso](control-flow/transfer-logins-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per l'attività Trasferisci account di accesso. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  

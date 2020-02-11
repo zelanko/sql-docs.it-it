@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211191"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Esercitazione: Scrittura di istruzioni Transact-SQL
@@ -51,11 +51,12 @@ ms.locfileid: "68211191"
   
 -   Qualsiasi edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o Management Studio Express.  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o Management Studio Express.  
   
 -   Internet Explorer 6 o versione successiva.  
   
 > [!NOTE]  
->  Quando si esaminano le esercitazioni, è consigliabile aggiungere il **successivo** e **Previous** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
+>  Quando si esaminano le esercitazioni, è consigliabile aggiungere i pulsanti **Avanti** e **indietro** alla barra degli strumenti del Visualizzatore di documenti.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Attività 9: Creazione di una gerarchia derivata mediante gestione dati Master | Microsoft Docs'
+title: 'Attività 9: creazione di una gerarchia derivata utilizzando Gestione dati master | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,56 +11,56 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489529"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata tramite Gestione dati master
-  In questa attività viene creata una gerarchia derivata mediante Gestione dati master. Questa gerarchia derivata viene ricavata dalle relazioni tra attributi basati su dominio tra il **Supplier** e **stato** entità.  
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master
+  In questa attività viene creata una gerarchia derivata mediante Gestione dati master. Questa gerarchia derivata è derivata dalle relazioni tra attributi basati su dominio tra le entità **Supplier** e **state** .  
   
-1.  Passare alla pagina principale del **gestione dati Master** facendo clic **SQL Server 2012 Master Data Services** nella parte superiore della pagina.  
+1.  Passare alla pagina principale di **Gestione dati master** facendo clic **SQL Server Master Data Services 2012** nella parte superiore della pagina.  
   
-2.  Fare clic su **Amministrazione sistema** nel **le attività amministrative** sezione.  
+2.  Fare clic su **Amministrazione sistema** nella sezione **attività amministrative** .  
   
-3.  Posizionare il mouse sopra **Manage** nella barra dei menu e fare clic su **gerarchie derivate**.  
+3.  Posizionare il mouse su **Gestisci** sulla barra dei menu e fare clic su **gerarchie derivate**.  
   
-     ![Menu Gestisci - gerarchie derivate selezionate](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-01.jpg "Menu Gestisci - gerarchie derivate selezionate")  
+     ![Menu Gestisci - Gerarchie derivate selezionate](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-01.jpg "Menu Gestisci - Gerarchie derivate selezionate")  
   
-4.  Fare clic su **Aggiungi gerarchia derivata (+)** pulsante sulla barra degli strumenti.  
+4.  Sulla barra degli strumenti fare clic sul pulsante **Aggiungi gerarchia derivata (+)** .  
   
-     ![Pulsante Aggiungi gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-02.jpg "pulsante Aggiungi gerarchia derivata")  
+     ![Pulsante Aggiungi gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-02.jpg "Pulsante Aggiungi gerarchia derivata")  
   
-5.  Tipo di **SuppliersInState** per il **nome gerarchia derivata**.  
+5.  Digitare **SuppliersInState** per il **nome della gerarchia derivata**.  
   
-6.  Fare clic su **salvare** pulsante sulla barra degli strumenti.  
+6.  Fare clic sul pulsante **Salva** sulla barra degli strumenti.  
   
-     ![Salva derivata pulsante della gerarchia](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "Salva derivata pulsante della gerarchia")  
+     ![Pulsante Salva gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "Pulsante Salva gerarchia derivata")  
   
 7.  Trascinare **Supplier** da **livelli disponibili: SuppliersInState** a **livelli correnti: SuppliersInState**.  
   
-     ![Entità e gerarchie al livello corrente disponibili](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "entità e gerarchie al livello corrente disponibili")  
+     ![Entità e gerarchie disponibili a livello corrente](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "Entità e gerarchie disponibili a livello corrente")  
   
-8.  Trascinare **lo stato** da **livelli disponibili: SuppliersInState** a **livelli correnti: SuppliersInState**. Nella schermata debba già **livelli correnti** come illustrato nell'immagine seguente.  
+8.  Trascinare **lo stato** da **livelli disponibili: SuppliersInState** a **livelli correnti: SuppliersInState**. La schermata deve avere **livelli correnti** , come illustrato nell'immagine seguente.  
   
-     ![Livelli correnti e anteprima della gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "livelli correnti e anteprima della gerarchia derivata")  
+     ![Livelli correnti e anteprima della gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "Livelli correnti e anteprima della gerarchia derivata")  
   
-9. Nel **Preview** finestra, espandere **NY {New York}** dovrebbe essere possibile visualizzare un fornitore di quello stato come illustrato nell'immagine precedente.  
+9. Nella finestra di **Anteprima** , espandere **NY {New York}** . verrà visualizzato un fornitore in tale stato, come illustrato nell'immagine precedente.  
   
-10. Passare alla pagina principale del **gestione dati Master** facendo clic **SQL Server 2012 Master Data Services** nella parte superiore della pagina.  
+10. Passare alla pagina principale di **Gestione dati master** facendo clic **SQL Server Master Data Services 2012** nella parte superiore della pagina.  
   
 11. Fare clic su **Esplora**.  
   
-12. Posizionare il mouse sopra **gerarchie** e fare clic su **Derived: SuppliersInState**.  
+12. Posizionare il puntatore del mouse su **gerarchie** e fare clic su **derivato: SuppliersInState**.  
   
-     ![Gerarchie - derivate: Menu SuppliersInState](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-06.jpg "- gerarchie derivate: SuppliersInState Menu")  
+     ![Gerarchie - Menu Derived:SuppliersInState](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-06.jpg "Gerarchie - Menu Derived:SuppliersInState")  
   
-13. Fare clic su qualsiasi **lo stato** nodo il **visualizzazione ad albero** dovrebbe essere possibile visualizzare i fornitori dello stato nel riquadro di destra.  
+13. Fare clic su un nodo di **stato** nella **visualizzazione albero** per visualizzare i fornitori in tale stato nel riquadro di destra.  
   
-     ![In Esplora gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "Esplora gerarchia derivata")  
+     ![Gerarchia derivata in Esplora](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "Gerarchia derivata in Esplora")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Lezione 5: Automatizzazione della pulizia e corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

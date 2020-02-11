@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68290358"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue un'istruzione o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere riutilizzato più volte o che è stato compilato in modo dinamico. L'istruzione o il batch [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere parametri incorporati.  
@@ -34,7 +34,7 @@ ms.locfileid: "68290358"
 > [!IMPORTANT]  
 >  Istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] compilate in fase di esecuzione possono esporre le applicazioni ad attacchi dannosi, ad esempio intrusioni nel codice SQL.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,36 +49,36 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ \@stmt= ] *statement*  
- È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, devono essere preceduto da un **N**. Ad esempio, la costante Unicode **n' sp_who'** valido, ma la costante carattere **'sp_who'** non. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, la dimensione massima del **nvarchar (max)** .  
+ [ \@stmt =] *istruzione*  
+ Stringa Unicode che contiene un'istruzione o [!INCLUDE[tsql](../../includes/tsql-md.md)] un batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, è necessario che sia preceduta da un valore **N**. La costante Unicode **N'sp_who '** , ad esempio, è valida, ma la costante carattere **' sp_who '** non lo è. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, ovvero la dimensione massima di **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Ogni parametro incluso in \@stmt deve avere una voce corrispondente in entrambe le \@params elenco di definizioni di parametro e il parametro di elenco di valori.  
+ Ogni parametro incluso in \@stmt deve avere una voce corrispondente nell'elenco di \@definizioni dei parametri params e nell'elenco dei valori dei parametri.  
   
- [ \@params =] N'\@*parameter_name* *data_type* [,... *n* ] '  
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati in \@stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmt deve essere definito in \@params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel \@stmt non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ [ \@params =] \@N'*parameter_name* *data_type* [,... *n* ]'  
+ È una stringa che contiene le definizioni di tutti i parametri incorporati in \@stmt. La stringa deve essere una costante Unicode o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmt deve essere definito in \@params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch \@in stmt non contiene parametri, \@params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
  [ \@param1 =] '*value1*'  
- Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. Deve esistere un valore di parametro per ogni parametro incluso in \@stmt. I valori non sono necessari se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch in \@stmt non ha parametri.  
+ Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. È necessario specificare un valore di parametro per ogni parametro incluso in \@stmt. I valori non sono necessari se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch \@in stmt non dispone di parametri.  
   
  [ OUT | OUTPUT ]  
- Indica che si tratta di un parametro di output. **testo**, **ntext**, e **immagine** parametri possono essere utilizzati come parametri di OUTPUT, a meno che la procedura è una routine di runtime (CLR) di linguaggio comuni. Un parametro di output che utilizza la parola chiave OUTPUT può essere il segnaposto di un cursore, a meno che la procedura non sia una procedura CLR.  
+ Indica che si tratta di un parametro di output. i parametri di tipo **Text**, **ntext**e **Image** possono essere utilizzati come parametri di output, a meno che non si tratti di una procedura Common Language Runtime (CLR). Un parametro di output che utilizza la parola chiave OUTPUT può essere il segnaposto di un cursore, a meno che la procedura non sia una procedura CLR.  
   
  *n*  
  Segnaposto per i valori di parametri aggiuntivi. I valori possono essere solo costanti o variabili. Non sono consentite espressioni più complesse quali funzioni o espressioni compilate tramite operatori.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o valore diverso da zero (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce i set di risultati di tutte le istruzioni SQL compilate nella stringa SQL.  
   
-## <a name="remarks"></a>Note  
- i parametri di stored procedure sp_executesql devono essere immesso nell'ordine specifico, come descritto nella sezione "Sintassi" più indietro in questo argomento. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
+## <a name="remarks"></a>Osservazioni  
+ sp_executesql parametri devono essere inseriti nell'ordine specifico, come descritto nella sezione "sintassi" riportata in precedenza in questo argomento. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
- La stored procedure sp_executesql funziona in modo analogo a EXECUTE per quanto riguarda i batch, l'ambito dei nomi e il contesto del database. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o un batch di sp_executesql \@stmt parametro non viene compilato finché non viene eseguita l'istruzione sp_executesql. Il contenuto di \@stmt viene quindi compilato ed eseguito come piano di esecuzione distinto dal piano di esecuzione del batch che ha chiamato sp_executesql. Il batch di sp_executesql non può fare riferimento a variabili dichiarate nel batch che chiama sp_executesql. I cursori o le variabili locali del batch sp_executesql non sono visibili per il batch che chiama sp_executesql. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione sp_executesql.  
+ La stored procedure sp_executesql funziona in modo analogo a EXECUTE per quanto riguarda i batch, l'ambito dei nomi e il contesto del database. L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel sp_executesql \@parametro stmt non viene compilato finché non viene eseguita l'istruzione sp_executesql. Il contenuto di \@stmt viene quindi compilato ed eseguito come piano di esecuzione distinto dal piano di esecuzione del batch che ha chiamato sp_executesql. Il batch di sp_executesql non può fare riferimento a variabili dichiarate nel batch che chiama sp_executesql. I cursori o le variabili locali del batch sp_executesql non sono visibili per il batch che chiama sp_executesql. Le modifiche apportate al contesto del database durano solo fino al termine dell'esecuzione dell'istruzione sp_executesql.  
   
  È possibile utilizzare sp_executesql anziché stored procedure per eseguire un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] più volte quando l'unica variazione è costituita dalla modifica dei valori dei parametri. Poiché l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] stessa rimane costante e cambiano solo i valori dei parametri, è probabile che Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riutilizzi il piano di esecuzione generato per la prima esecuzione.  
   
@@ -134,7 +134,7 @@ SELECT @max_title;
   
 -   Il parametro integer viene specificato nel formato nativo. Non è necessario eseguire il cast a Unicode.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -205,7 +205,7 @@ GO
  L'utilizzo di sp_executesql in questa procedura è più funzionale rispetto all'utilizzo di EXECUTE per l'esecuzione di una stringa. Quando si utilizza sp_executesql, vengono generate solo 12 versioni della stringa INSERT, una per ogni tabella mensile. Con l'istruzione EXECUTE ogni stringa INSERT è univoca, in quanto i valori dei parametri sono diversi. Sebbene entrambi i metodi generino lo stesso numero di batch, data la similarità delle stringhe INSERT generate da sp_executesql è più probabile che Query Optimizer riutilizzi i piani di esecuzione.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Utilizzo del parametro OUTPUT  
- L'esempio seguente usa un' `OUTPUT` parametro per archiviare il set di risultati generato dal `SELECT` istruzione il `@SQLString` parametro. Due `SELECT` vengono quindi eseguite che utilizzano il valore di istruzioni il `OUTPUT` parametro.  
+ Nell'esempio seguente viene utilizzato `OUTPUT` un parametro per archiviare il set di risultati generato `SELECT` dall'istruzione nel `@SQLString` parametro. Vengono `SELECT` quindi eseguite due istruzioni che utilizzano il valore del `OUTPUT` parametro.  
   
 ```  
 USE AdventureWorks2012;  

@@ -14,23 +14,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780895"
 ---
 # <a name="metadata-ole-db"></a>Metadati (OLE DB)
   In questa sezione vengono descritti i metadati dei parametri, i metadati delle colonne dei set di risultati e i metadati dei set di righe dello schema.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Metadati per parametri e set di righe](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
  Vengono fornite informazioni sulle strutture e sui comandi relativi alle funzionalità avanzate di data e ora OLE DB.  
   
- [Data e ora e i set di righe dello Schema](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
+ [Data e ora e set di righe dello schema](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Sono contenute informazioni sugli aggiornamenti ai set di righe dello schema OLE DB.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Miglioramenti di data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

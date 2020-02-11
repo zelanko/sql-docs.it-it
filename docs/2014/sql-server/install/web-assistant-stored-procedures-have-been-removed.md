@@ -1,5 +1,5 @@
 ---
-title: Web Assistant stored procedure sono state rimosse | Microsoft Docs
+title: Le stored procedure di pubblicazione guidata sul Web sono state rimosse | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091036"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>Le stored procedure di Pubblicazione guidata sul Web sono state rimosse
@@ -24,7 +24,7 @@ ms.locfileid: "66091036"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Stored procedure di pubblicazione guidata sul Web **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**, e **sp_enumcodepages** sono stati rimosso.  
+ Le stored procedure di pubblicazione guidata sul Web **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**e **sp_enumcodepages** sono state rimosse.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  È consigliabile utilizzare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in alternativa.  

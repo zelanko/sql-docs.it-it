@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Test case (SybaseToSQL) | Microsoft Docs
+title: Esecuzione di test case (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,65 +12,65 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68021026"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di test case (SybaseToSQL)
-Quando si SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e viene creato un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test ha esito positivo. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
+Quando SSMA tester esegue un test case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici su entrambe le piattaforme, il test ha avuto esito positivo. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinata in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
   
-Un requisito necessario per un test ha esito positivo è che tutti gli oggetti di Sybase sono convertiti e caricati nel database di destinazione. Inoltre, i dati della tabella devono essere migrati in modo che il contenuto delle tabelle su entrambe le piattaforme siano sincronizzato.  
+Un requisito necessario per un test riuscito è che tutti gli oggetti Sybase vengono convertiti e caricati nel database di destinazione. Inoltre, è necessario eseguire la migrazione dei dati della tabella in modo da sincronizzare il contenuto delle tabelle in entrambe le piattaforme.  
   
-## <a name="run-test-case"></a>Eseguire Test Case  
-Per l'esecuzione preparata Test Case:  
+## <a name="run-test-case"></a>Esegui test case  
+Per eseguire il test case preparato:  
   
-1.  Scegliere il **eseguire** pulsante.  
+1.  Fare clic sul pulsante **Esegui**.  
   
-2.  Nel **connettersi a Sybase** della finestra di dialogo immettere le informazioni di connessione e quindi fare clic su **Connect**.  
+2.  Nella finestra di dialogo **Connetti a Sybase** immettere le informazioni di connessione e quindi fare clic su **Connetti**.  
   
-Una volta completato il test, viene creato il Report di Test Case. Fare clic sui **Report** pulsante per visualizzare i [visualizzazione di report di Test Case &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Il risultato del test (Report del Test Case) viene automaticamente archiviato nel [usando i repository di Test &#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) per un uso successivo.  
+Al termine del test, viene creato il report del test case. Fare clic sul pulsante **report** per visualizzare i [report dei test Case di visualizzazione &#40;&#41;SybaseToSQL ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Il risultato del test (report test case) viene archiviato automaticamente nell'uso dei [repository di test &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md) per un uso successivo.  
   
-## <a name="test-case-execution-steps"></a>Passaggi per l'esecuzione dei test Case  
+## <a name="test-case-execution-steps"></a>Passaggi di esecuzione del test case  
   
-### <a name="prerequisites"></a>Prerequisiti  
-SSMA Tester controlla se vengono soddisfatti tutti i prerequisiti per l'esecuzione di test prima dell'inizio del test. Se non vengono soddisfatte determinate condizioni, viene visualizzato un messaggio di errore.  
+### <a name="prerequisites"></a>Prerequisites  
+SSMA tester verifica se tutti i prerequisiti sono soddisfatti per l'esecuzione dei test prima dell'avvio del test. Se alcune condizioni non vengono soddisfatte, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
-In questa fase, Tester di SSMA crea ausiliari oggetti (tabelle, trigger e viste) sia di Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consentono di tracciamento delle modifiche apportate nelle tabelle interessate scelte per la verifica se la modalità tabella confronti **solo le modifiche**.  
+A questo punto, SSMA tester crea oggetti ausiliari (tabelle, trigger e visualizzazioni) sia in Sybase che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in. Consentono la traccia delle modifiche apportate alle tabelle interessate selezionate per la verifica se la modalità di confronto tabella è **solo modifiche**.  
   
-Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella, vengono creati i seguenti oggetti ausiliari in Sybase.  
+Si supponga che la tabella verificata sia denominata USER_TABLE. Per una tabella di questo tipo, vengono creati gli oggetti ausiliari seguenti in Sybase.  
   
-I seguenti oggetti vengono creati Sybase nel database SSMATESTER2005db o SSMATESTER2008db e a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database ssmatesterdb_syb.  
+Gli oggetti seguenti vengono creati in Sybase nel database SSMATESTER2005db o SSMATESTER2008db e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database di ssmatesterdb_syb.  
   
-|NOME|Type|Descrizione|  
+|Nome|Type|Descrizione|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
-|USER_TABLE$Aud|Tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
-|USER_TABLE$AudID|Tabella|Tabella in cui vengono salvate righe nuove e modificate.|  
-|USER_TABLE|visualizzazione|Rappresentazione semplificata delle modifiche nella tabella.|  
-|USER_TABLE$new|visualizzazione|Rappresentazione semplificata di righe inserite e sovrascritte.|  
-|USER_TABLE$new_id|visualizzazione|Identificazione di righe inserite e modificate.|  
-|USER_TABLE$old|visualizzazione|Rappresentazione semplificata di righe eliminate e sovrascritte.|  
+|USER_TABLE $ Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
+|USER_TABLE $ AUD|Tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
+|USER_TABLE $ AudId|Tabella|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|USER_TABLE|Visualizza|Rappresentazione semplificata delle modifiche della tabella.|  
+|USER_TABLE $ New|Visualizza|Rappresentazione semplificata delle righe inserite e sovrascritte.|  
+|USER_TABLE $ new_id|Visualizza|Identificazione delle righe inserite e modificate.|  
+|USER_TABLE $ Old|Visualizza|Rappresentazione semplificata delle righe eliminate e sovrascritte.|  
   
-L'oggetto seguente viene creato nel database della tabella verificato Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Il seguente oggetto viene creato nel database della tabella verificata in Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|NOME|Type|Descrizione|  
+|Nome|Type|Descrizione|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
+|USER_TABLE $ Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   
-### <a name="test-object-calls"></a>Chiamate a oggetti di test  
-In questa fase, Tester di SSMA richiama ogni oggetto selezionato per la sperimentazione, vengono confrontati i risultati e Mostra il report.  
+### <a name="test-object-calls"></a>Test delle chiamate all'oggetto  
+In questo passaggio, SSMA tester richiama ogni oggetto selezionato per il test, confronta i risultati e visualizza il report.  
   
 ### <a name="finalization"></a>Finalizzazione  
-Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari creati nel **inizializzazione** passaggio.  
+Durante la finalizzazione, SSMA tester pulisce gli oggetti ausiliari creati al passaggio di **inizializzazione** .  
   
-## <a name="next-step"></a>Passaggio successivo  
-[Visualizzazione dei report di Test Case &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+## <a name="next-step"></a>passaggio successivo  
+[Visualizzazione dei report del test case &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Selezione e configurazione degli oggetti da testare &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [Selezione e configurazione degli oggetti interessati &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[Test di oggetti di Database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di oggetti di database migrati &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

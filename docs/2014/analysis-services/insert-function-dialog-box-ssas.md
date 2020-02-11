@@ -1,5 +1,5 @@
 ---
-title: Dialogo Inserisci funzione (SSAS) | Microsoft Docs
+title: Finestra di dialogo Inserisci funzione (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080405"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Finestra di dialogo Inserisci funzione (SSAS)
@@ -25,14 +25,14 @@ ms.locfileid: "66080405"
 |||  
 |-|-|  
 |Elemento|Descrizione|  
-|**Selezionare una categoria**|Se si conosce a grandi linee il tipo di funzione necessario, scegliere una categoria dall'elenco o selezionare **Tutte** per visualizzare un elenco di funzioni in ordine alfabetico.|  
+|**Seleziona una categoria**|Se si conosce a grandi linee il tipo di funzione necessario, scegliere una categoria dall'elenco o selezionare **Tutte** per visualizzare un elenco di funzioni in ordine alfabetico.|  
 |**Selezionare una funzione**|Consente di visualizzare un elenco delle funzioni nella categoria selezionata.|  
 |**Descrizione**|Consente di visualizzare una descrizione della funzione, insieme a tutti gli argomenti richiesti o facoltativi, ad esempio nomi di colonne ed espressioni.|  
   
 ## <a name="function-categories"></a>Categorie delle funzioni  
  DAX (Data Analysis Expressions) offre i tipi di categorie di funzioni seguenti nella finestra di dialogo **Inserisci funzione** .  
   
- All  
+ Tutti  
   
  Data e ora  
   
@@ -42,9 +42,9 @@ ms.locfileid: "66080405"
   
  Matematiche e trig  
   
- Statistiche  
+ Statistica  
   
- Testo  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Misure e formule  
  La finestra di dialogo **Inserisci funzione** è disponibile solo quando si compila una formula. È possibile creare i calcoli in una colonna calcolata o in una tabella o grafico pivot. Le formule compilate espressamente per essere usate in una tabella pivot vengono chiamate anche *misure*. Per altre informazioni, vedere [Creare una colonna calcolata &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [Creare e gestire misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  

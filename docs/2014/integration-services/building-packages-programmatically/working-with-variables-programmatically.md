@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836810"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
@@ -44,9 +44,9 @@ ms.locfileid: "62836810"
   
 -   Compilare espressioni che includono valori di variabili.  
   
--   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+-   È possibile creare variabili personalizzate per tutti i tipi di contenitori, ovvero pacchetti, contenitori **Ciclo Foreach**, contenitori **Ciclo For**, contenitori **Sequenza**, TaskHost e gestori di eventi. Per ulteriori informazioni, vedere [Integration Services &#40;le variabili&#41; SSIS](../integration-services-ssis-variables.md) e [utilizzare variabili nei pacchetti](../use-variables-in-packages.md).  
   
-## <a name="scope"></a>`Scope`  
+## <a name="scope"></a>Scope  
  Ogni contenitore dispone di una propria raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Ogni nuova variabile creata si trova nell'ambito del relativo contenitore padre. Poiché il contenitore del pacchetto costituisce il livello principale della gerarchia dei contenitori, le variabili con ambito pacchetto sono variabili globali e sono visibili a tutti i contenitori del pacchetto. Alla raccolta di variabili per il contenitore possono accedere anche gli elementi figlio del contenitore tramite la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizzando il nome della variabile o il relativo indice nella raccolta.  
   
  Poiché la visibilità di una variabile ha un ambito dall'alto in basso, le variabili dichiarate a livello di pacchetto sono visibili a tutti i contenitori nel pacchetto. Pertanto, la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Variables> in un contenitore include tutte le variabili che appartengono al relativo oggetto padre in aggiunta alle proprie variabili.  
@@ -113,7 +113,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di output**  
+ **Esempio di output:**  
   
  `Variable: CancelEvent, Int32, 0`  
   
@@ -158,11 +158,11 @@ End Module
  Si noti che tutte le variabili che hanno come ambito lo spazio dei nomi **System** sono disponibili per il pacchetto. Per altre informazioni, vedere [Variabili di sistema](../system-variables.md).  
   
 ## <a name="namespaces"></a>Spazi dei nomi  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) sono disponibili due spazi dei nomi predefiniti in cui risiedono le variabili, ovvero gli spazi dei nomi **User** e **System**. Per impostazione predefinita, tutte le variabili personalizzate create dallo sviluppatore vengono aggiunte allo spazio dei nomi **User**. Le variabili di sistema risiedono nello spazio dei nomi **System**. È possibile creare altri spazi dei nomi diversi da **User** in cui includere variabili personalizzate, nonché modificare il nome dello spazio dei nomi **User**, ma non è possibile aggiungere o modificare variabili nello spazio dei nomi **System**, né assegnare variabili di sistema a uno spazio dei nomi diverso.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornisce due spazi dei nomi predefiniti in cui risiedono le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabili; Spazi dei nomi di **utente** e di **sistema** . Per impostazione predefinita, tutte le variabili personalizzate create dallo sviluppatore vengono aggiunte allo spazio dei nomi **User**. Le variabili di sistema risiedono nello spazio dei nomi **System**. È possibile creare altri spazi dei nomi diversi da **User** in cui includere variabili personalizzate, nonché modificare il nome dello spazio dei nomi **User**, ma non è possibile aggiungere o modificare variabili nello spazio dei nomi **System**, né assegnare variabili di sistema a uno spazio dei nomi diverso.  
   
  Le variabili di sistema disponibili variano a seconda del tipo di contenitore. Per un elenco delle variabili di sistema disponibili per pacchetti, contenitori, attività e gestori di eventi, vedere [Variabili di sistema](../system-variables.md).  
   
-## <a name="value"></a>Value  
+## <a name="value"></a>valore  
  Il valore di una variabile personalizzata può essere un valore letterale o un'espressione:  
   
 -   Se si desidera che la variabile contenga un valore letterale, impostare il valore della relativa proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  
@@ -217,7 +217,7 @@ Module Module1
 End Module  
 ```  
   
- **Esempio di output**  
+ **Esempio di output:**  
   
  `Expression for myVar: 100 * 2`  
   
@@ -228,10 +228,10 @@ End Module
 ## <a name="configuration-files"></a>File di configurazione  
  Se un file di configurazione include una variabile personalizzata, la variabile può essere aggiornata in fase di esecuzione. Questo significa che quando il pacchetto viene eseguito, il valore della variabile che si trovava originariamente nel pacchetto viene sostituito con un nuovo valore del file di configurazione. Questa tecnica di sostituzione risulta utile quando un pacchetto viene distribuito in più server che richiedono valori di variabili diversi. Ad esempio, una variabile può specificare il numero di volte in cui un contenitore **Ciclo Foreach** ripete il flusso di lavoro o elencare i destinatari a cui un gestore di eventi invia un messaggio di posta elettronica quando viene generato un errore oppure modificare il numero di errori che possono verificarsi prima che l'esecuzione del pacchetto abbia esito negativo. Queste variabili vengono fornite dinamicamente nei file di configurazione per ogni ambiente. Pertanto, nei file di configurazione sono consentite solo variabili di lettura/scrittura. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../create-package-configurations.md).  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md)  
+ [Uso di variabili nei pacchetti](../use-variables-in-packages.md)  
   
   

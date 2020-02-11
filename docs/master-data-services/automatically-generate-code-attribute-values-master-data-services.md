@@ -11,10 +11,10 @@ ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 85cfc3d3859712cdb53b7db58bb1729baca692b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729730"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Generare automaticamente valori per l'attributo Code (Master Data Services)
@@ -26,11 +26,11 @@ ms.locfileid: "73729730"
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Deve essere presente l'entità. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
+-   Deve essere presente l'entità. Per altre informazioni, vedere [creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
 ### <a name="to-automatically-generate-code-values"></a>Per generare automaticamente valori Code  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73729730"
 6.  Fare clic su **Salva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Generare automaticamente valori di attributi diversi da Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+ [Creazione automatica del codice &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [Generare automaticamente valori di attributo diversi dal codice &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   

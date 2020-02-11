@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889191"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
-  Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [upgrade PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per ulteriori informazioni sull'aggiornamento di un'istanza di SQL Server esistente, vedere [eseguire l'aggiornamento a SQL Server 2014 &#40;mediante&#41;l'installazione guidata di](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [upgrade PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per ulteriori informazioni sull'aggiornamento di un'istanza di SQL Server esistente, vedere [eseguire l'aggiornamento a SQL Server 2014 utilizzando l'installazione guidata &#40;&#41;di ](upgrade-sql-server-using-the-installation-wizard-setup.md)installazione.  
   
 ## <a name="known-upgrade-issues"></a>Problemi di aggiornamento noti  
- Prima di effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere gli argomenti seguenti:  
+ Prima di eseguire [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]l'aggiornamento a, esaminare gli elementi seguenti:  
   
 -   [Note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68889191"
   
 -   [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
--   [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 ## <a name="upgrading-analysis-services"></a>Aggiornamento di Analysis Services  
  È possibile scegliere diversi approcci per aggiornare il server e i dati:  
@@ -62,12 +62,12 @@ ms.locfileid: "68889191"
 -   È possibile inoltre installare Analysis Services in un nuovo hardware e, successivamente, eseguire la migrazione dei database esistenti in tale server.  
   
 ## <a name="in-place-upgrade"></a>Aggiornamento sul posto  
- È possibile aggiornare un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, come parte del processo di aggiornamento, eseguire automaticamente la migrazione dei database esistenti dall'istanza precedente a quella nuova. Poiché i metadati e i dati binari sono compatibili tra le due versioni, i dati verranno mantenuti in seguito all'aggiornamento e non sarà necessario eseguirne la migrazione manuale.  
+ È possibile aggiornare un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, come parte del processo di aggiornamento, eseguire automaticamente la migrazione dei database esistenti dall'istanza precedente alla nuova istanza di. Poiché i metadati e i dati binari sono compatibili tra le due versioni, i dati verranno mantenuti in seguito all'aggiornamento e non sarà necessario eseguirne la migrazione manuale.  
   
  Per aggiornare un'istanza esistente, eseguire il programma di installazione e specificare il nome dell'istanza esistente come nome della nuova istanza.  
   
 ## <a name="upgrading-databases"></a>Aggiornamento di database  
- I database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eseguiti nel server aggiornato con un'impostazione del livello di compatibilità di database precedente. I database creati nelle versioni seguenti dispongono di un livello di compatibilità del database pari a 105. È possibile modificare il livello di compatibilità se si desidera utilizzare funzionalità che richiedono un livello di compatibilità del database più recente. In caso contrario, i database possono essere eseguiti nel server aggiornato utilizzando le impostazioni originali. Per ulteriori informazioni, vedere [impostare il livello di compatibilità di un database &#40;multidimensionale Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
+ I database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eseguiti nel server aggiornato con un'impostazione del livello di compatibilità di database precedente. I database creati nelle versioni seguenti dispongono di un livello di compatibilità del database pari a 105. È possibile modificare il livello di compatibilità se si desidera utilizzare funzionalità che richiedono un livello di compatibilità del database più recente. In caso contrario, i database possono essere eseguiti nel server aggiornato utilizzando le impostazioni originali. Per ulteriori informazioni, vedere [impostare il livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68889191"
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Informazioni sull'architettura Microsoft OLAP](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [PowerPivot per SharePoint di aggiornamento](upgrade-power-pivot-for-sharepoint.md)   
- [Installazione di Analysis Services in modalità Multidimensionale e Data Mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Installazione di PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installare Analysis Services in modalità multidimensionale e di data mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

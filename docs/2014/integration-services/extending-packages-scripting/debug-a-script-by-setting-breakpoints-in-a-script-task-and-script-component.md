@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768487"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script
@@ -26,7 +26,7 @@ ms.locfileid: "62768487"
  Dopo aver impostato i punti di interruzione nello script, nella finestra di dialogo **Imposta punti di interruzione - \<nome oggetto>** vengono elencati i punti di interruzione insieme a quelli predefiniti.  
   
 > [!IMPORTANT]  
->  In determinate circostanze, i punti di interruzione nell'attività Script e il componente Script vengono ignorati. Per altre informazioni, vedere la **debug dell'attività Script** sezione [scrittura di codice e debug dell'attività Script](../control-flow/script-task.md) e il **debug del componente Script** sezione in [codice e il debug del componente Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+>  In determinate circostanze, i punti di interruzione nell'attività Script e il componente Script vengono ignorati. Per ulteriori informazioni, vedere la sezione **debug dell'attività script** in [codifica e debug dell'attività script](../control-flow/script-task.md) e la sezione **debug del componente script** in [codifica e debug del componente script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>Per impostare un punto di interruzione in uno script  
   

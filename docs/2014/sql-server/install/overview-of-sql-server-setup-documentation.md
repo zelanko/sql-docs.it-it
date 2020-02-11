@@ -1,5 +1,5 @@
 ---
-title: Panoramica della documentazione di installazione SQL Server | Microsoft Docs
+title: Panoramica della documentazione sull'installazione di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093555"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Panoramica sulla documentazione del programma di installazione di SQL Server
@@ -34,18 +34,18 @@ ms.locfileid: "66093555"
   
      Descrive le opzioni di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Installare le funzionalità di Business Intelligence di SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+-   [Installare le funzionalità di business intelligence di SQL Server 2014](install-sql-server-business-intelligence-features.md)  
   
      Descrive le opzioni di installazione delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fanno parte della piattaforma di Business Intelligence di Microsoft, che include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], e diverse applicazioni client utilizzate per la creazione o l'utilizzo di dati analitici.  
   
--   [Aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+-   [Eseguire l'aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
      Vengono descritte le opzioni per l'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se si sta installando un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere i seguenti argomenti:  
   
--   [Le istanze del Cluster di Failover AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   [Istanze del cluster di failover AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md).  
+-   [Prima di installare il clustering di failover](../failover-clusters/install/before-installing-failover-clustering.md).  
   
   

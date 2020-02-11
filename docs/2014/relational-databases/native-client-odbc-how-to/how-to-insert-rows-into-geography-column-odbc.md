@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Inserire righe in colonne geografiche (ODBC) | Microsoft Docs'
+title: 'Procedura: inserimento di righe in colonne geografiche (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206814"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserire righe in colonne geografiche (ODBC)
-  In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga della tabella e viene utilizzato:: stastext () per visualizzarlo. Il WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e l'applicazione visualizza nella console: PUNTO (56.4595-2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserimento di righe in colonne geografiche (ODBC)
+  In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga dalla tabella e viene utilizzato ::STAsText() per visualizzarla. Il valore di WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e tramite l'applicazione viene visualizzato nella console l'output: POINT(56.4595 -2.9842).  
   
  Questo esempio non richiede un'origine dati ODBC, tuttavia viene eseguito, per impostazione predefinita, nell'istanza locale di SQL Server.  
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per altre informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
+ Per ulteriori informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
