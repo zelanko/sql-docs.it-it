@@ -1,5 +1,5 @@
 ---
-title: Proprietà named pipe | Microsoft Docs
+title: Proprietà Named Pipes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911475"
 ---
 # <a name="named-pipes-properties"></a>Proprietà Named Pipes
   La pagina **Protocollo**della finestra di dialogo **Proprietà - Named Pipes** consente di visualizzare o modificare la named pipe sulla quale [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resta in attesa quando è in uso il protocollo Named Pipes.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere riavviato per abilitare o disabilitare il protocollo oppure modificare la named pipe.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere riavviato per abilitare o disabilitare il protocollo oppure modificare la named pipe.  
   
 ## <a name="options"></a>Opzioni  
- **Abilitata**  
+ **Enabled**  
  I valori possibili sono **Sì** e **No**.  
   
  **Nome pipe**  
@@ -38,9 +39,9 @@ ms.locfileid: "62911475"
  Per modificare la named pipe, digitare il nome della nuova pipe nella casella **Nome pipe** e quindi arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché è noto che **sql\query** è la named pipe usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], modificare la pipe può risultare utile per ridurre il rischio di attacco da parte di programmi dannosi.  
   
 ### <a name="example"></a>Esempio  
- Digitare **\\\\.\pipe\unit\app** per impostare l'attesa sulla pipe **unit\app** .  
+ ** \\Digitare \\.\pipe\unit\app** per restare in attesa sulla pipe **unit\app** .  
   
- Digitare **\\\\.\pipe\acct** per impostare l'attesa sulla pipe **acct** .  
+ ** \\Digitare \\.\pipe\acct** per restare in attesa sulla pipe **Acct** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   

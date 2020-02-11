@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832416"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
@@ -26,7 +26,7 @@ ms.locfileid: "62832416"
 > [!IMPORTANT]  
 >  Il file di output potrebbe contenere dati sensibili sul database e i dati inclusi nel database. Per suggerimenti su come rendere più sicuro questo file, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
-## <a name="data-profiles"></a>Profili dati  
+## <a name="data-profiles"></a>Profili dei dati  
  Per visualizzare i profili dati, è necessario configurare l'attività Profiling dati per inviare l'output a un file e quindi utilizzare il Visualizzatore profilo dati autonomo. Per aprire il Visualizzatore profilo dati, effettuare una delle azioni seguenti:  
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  

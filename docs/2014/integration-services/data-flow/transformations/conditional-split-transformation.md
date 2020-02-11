@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900825"
 ---
 # <a name="conditional-split-transformation"></a>Suddivisione condizionale - trasformazione
-  La trasformazione Suddivisione condizionale consente di indirizzare righe di dati verso output diversi a seconda del contenuto dei dati. L'implementazione della trasformazione Suddivisione condizionale è simile a una struttura decisionale CASE in un linguaggio di programmazione. La trasformazione valuta una o più espressioni e, in base ai risultati, dirige la riga di dati verso l'output specificato. Questa trasformazione prevede inoltre un output predefinito, verso il quale vengono indirizzate le righe che non corrispondono ad alcuna espressione.  
+  La trasformazione Suddivisione condizionale consente di indirizzare righe di dati verso output diversi a seconda del contenuto dei dati. L'implementazione della trasformazione Suddivisione condizionale è simile a una struttura decisionale CASE in un linguaggio di programmazione. La trasformazione valuta una o più espressioni e, in base ai risultati, dirige la riga di dati verso l'output specificato. Questa trasformazione prevede inoltre un output predefinito, in modo che se una riga non corrisponde ad alcuna espressione venga indirizzata all'output predefinito.  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>Configurazione della trasformazione Suddivisione condizionale  
  Per configurare la trasformazione Suddivisione condizionale, procedere nel modo seguente:  
@@ -62,7 +62,7 @@ ms.locfileid: "62900825"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](conditional-split-transformation.md)  
+-   [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](conditional-split-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   

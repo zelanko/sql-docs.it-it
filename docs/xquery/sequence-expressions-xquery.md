@@ -1,5 +1,5 @@
 ---
-title: Sequenza di espressioni (XQuery) | Microsoft Docs
+title: Espressioni Sequence (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946300"
 ---
 # <a name="sequence-expressions-xquery"></a>Espressioni di sequenze (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta gli operatori XQuery utilizzati per la costruzione, l'applicazione di filtri e la combinazione di una sequenza di elementi. Un elemento può essere un valore atomico o un nodo.  
   
 ## <a name="constructing-sequences"></a>Costruzione delle sequenze  
@@ -88,7 +89,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- È possibile contare gli elementi nella sequenza utilizzando il **fn:count()** (funzione).  
+ È possibile contare gli elementi nella sequenza usando la funzione **FN: Count ()** .  
   
 ```  
 declare @x xml  
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Esempio C  
- La query seguente viene specificata sulla colonna AdditionalContactInfo del **xml** tipo della tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Il \<telephoneNumber >, \<pager >, e altri nodi possono essere visualizzati in qualsiasi punto del documento. La query costruisce una sequenza che contiene tutti i \<telephoneNumber > gli elementi figlio del nodo di contesto, seguita dal \<cercapersone > gli elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
+ La query seguente viene specificata sulla colonna AdditionalContactInfo del tipo **XML** nella tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Il \<> telephoneNumber, \<> cercapersone e altri nodi possono comparire in qualsiasi punto del documento. La query crea una sequenza che contiene tutti gli \<elementi figlio di telephoneNumber> del nodo di contesto, seguiti \<dal cercapersone> elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -113,7 +114,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Applicazione di filtri alle sequenze  
- È possibile applicare filtri alla sequenza restituita da un'espressione, aggiungendo un predicato all'espressione. Per altre informazioni, vedere [espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Ad esempio, la query seguente restituisce una sequenza di tre <`a`> nodi elemento:  
+ È possibile applicare filtri alla sequenza restituita da un'espressione, aggiungendo un predicato all'espressione. Per altre informazioni, vedere [espressioni di percorso &#40;&#41;XQuery ](../xquery/path-expressions-xquery.md). Ad esempio, la query seguente restituisce una sequenza di tre <`a`> nodi elemento:  
   
 ```  
 declare @x xml  
@@ -143,7 +144,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <a attrA="1">111</a>  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Per recuperare solo <`a`> elementi con l'attributo attrA, è possibile specificare un filtro nel predicato. La sequenza risultante sarà presente un solo <`a`> elemento.  
+ Per recuperare solo <`a` elementi> con l'attributo attra, è possibile specificare un filtro nel predicato. La sequenza risultante avrà un solo elemento <`a`>.  
   
 ```  
 declare @x xml  
@@ -163,13 +164,13 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <a attrA="1">111</a>  
 ```  
   
- Per altre informazioni su come specificare predicati in un'espressione di percorso, vedere [specifica di predicati in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
+ Per ulteriori informazioni su come specificare i predicati in un'espressione di percorso, vedere [specifica di predicati in un passaggio dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
   
  Nell'esempio seguente viene compilata un'espressione di sequenza dei sottoalberi e quindi viene applicato un filtro alla sequenza.  
   
@@ -195,14 +196,14 @@ SELECT @x.query('
 ')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <c>C under a</c>  
 <c>C under b</c>  
 ```  
   
- Nell'esempio seguente viene applicato un filtro del predicato. L'espressione Trova gli elementi <`a`> e <`b`> che contengono elemento <`c`>.  
+ Nell'esempio seguente viene applicato un filtro del predicato. L'espressione trova gli elementi `a` <> e `b` <> che contengono l' `c` elemento <>.  
   
 ```  
 declare @x xml  
@@ -222,7 +223,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <a>  

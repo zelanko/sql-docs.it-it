@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915028"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
 ## <a name="details"></a>Dettagli  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62915028"
  L'esecuzione di REPAIR invalida la mappa di bit differenziale. Non è possibile eseguire un backup differenziale fino a che viene eseguito un backup completo del database. Il backup completo del database offre un riferimento per la ricompilazione della mappa di bit differenziale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un backup completo del database &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [Creazione di un backup completo del database &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

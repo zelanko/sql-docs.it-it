@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 366a938b2e90ce448cbcba2775f0eb7f327aab61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898056"
 ---
 # <a name="exp-ssis-expression"></a>EXP (espressione SSIS)
@@ -37,7 +37,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Prima del calcolo dell'esponente viene eseguito il cast dell'espressione numerica al tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
  Il risultato restituito è sempre un numero positivo.  

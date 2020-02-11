@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915429"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>Dettagli  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62915429"
 ## <a name="explanation"></a>Spiegazione  
  Il computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di elaborare il pacchetto di accesso client in quanto quest'ultimo potrebbe essere stato creato in modo errato o danneggiato durante la trasmissione. La mancata elaborazione può essere causata anche dalla configurazione del computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'indirizzo IP elencato è l'indirizzo del computer client.  
   
-### <a name="more-information"></a>Ulteriori informazioni  
+### <a name="more-information"></a>Altre informazioni  
  In caso di utilizzo dell'autenticazione di Windows in un ambiente Kerberos, un client riceve un ticket Kerberos che contiene un certificato attributi privilegi. Tale certificato contiene vari tipi di dati sull'autorizzazione, inclusi i gruppi di cui l'utente è membro, i diritti di cui dispone e i criteri validi. Quando il client riceve il ticket Kerberos, le informazioni contenute nel certificato attributi privilegi vengono utilizzate per generare il token di accesso dell'utente. Il client presenta il token al computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del pacchetto di accesso.  
   
  Se il token è stato creato in modo errato o è stato danneggiato durante la trasmissione, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono disponibili informazioni aggiuntive sul problema.  
@@ -51,11 +51,11 @@ ms.locfileid: "62915429"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Per modificare il valore di MaxTokenSize nel computer del server**  
+ **Per modificare il MaxTokenSize nel computer server**  
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Tipo di `regedit`, quindi fare clic su **OK**. Se viene visualizzata la finestra di dialogo **Controllo account utente**, fare clic su **Continua**.  
+2.  Digitare `regedit`e quindi fare clic su **OK**. Se viene visualizzata la finestra di dialogo **Controllo account utente**, fare clic su **Continua**.  
   
 3.  Passare a **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   

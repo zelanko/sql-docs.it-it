@@ -1,5 +1,5 @@
 ---
-title: Modificare la Query di origine OData in fase di esecuzione | Microsoft Docs
+title: Modificare la query di origine OData in fase di esecuzione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901188"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificare la query di origine OData in fase di esecuzione
@@ -52,11 +52,11 @@ ms.locfileid: "62901188"
   
 2.  Nella finestra **Proprietà** selezionare la proprietà **Espressioni** .  
   
-3.  Fare clic su di... pulsante (puntini di sospensione) per visualizzare il **Editor espressioni di proprietà**.  
+3.  Fare clic su... pulsante (ellissi) per visualizzare l' **Editor espressioni di proprietà**.  
   
 4.  Selezionare la proprietà **[Origine OData].[Query]** .  
   
-5.  Fare clic su di... pulsante (puntini di sospensione) **espressione**.  
+5.  Fare clic su... pulsante (ellissi) per **espressione**.  
   
 6.  Immettere l' **espressione**.  
   

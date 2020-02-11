@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876083"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62876083"
   
      Per informazioni sui ripristini a fasi di database OLTP in memoria, vedere [Backup e ripristino a fasi di database con tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../blob/filestream-sql-server.md) , il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Ripristino a fasi nel modello di recupero con registrazione minima  
@@ -140,7 +140,7 @@ ms.locfileid: "62876083"
   
 -   Le sequenze di ripristino dei filegroup portano online filegroup aggiuntivi rispetto a un punto coerente con il database.  
   
-     In Enterprise Edition, qualsiasi filegroup secondario offline può essere ripristinato e recuperato mentre il database rimane online. Se un file di sola lettura specifico è coerente con il database e non è danneggiato, non è necessario ripristinarlo. Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md).  
+     In Enterprise Edition, qualsiasi filegroup secondario offline può essere ripristinato e recuperato mentre il database rimane online. Se un file di sola lettura specifico è coerente con il database e non è danneggiato, non è necessario ripristinarlo. Per altre informazioni, vedere [Recupero di un database senza ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Applicazione dei backup del log  
  Se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. Se il filegroup è di lettura/scrittura, per aggiornare il filegroup rispetto al file di log attuale è necessario che venga applicata una catena ininterrotta di backup del log all'ultimo ripristino completo o differenziale.  
@@ -173,10 +173,10 @@ ms.locfileid: "62876083"
 4.  Il backup differenziale seguito da tutti i backup ripristinati durante la sequenza del ripristino a fasi originale per ripristinare i dati fino al punto di recupero originale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Applicare backup di log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Ripristino temporizzato di un database di SQL Server &#40;modello di recupero con esecuzione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Pianificare ed eseguire sequenze di ripristino &#40;modello di recupero con versione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

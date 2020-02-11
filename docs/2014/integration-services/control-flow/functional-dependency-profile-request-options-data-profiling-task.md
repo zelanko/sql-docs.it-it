@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831547"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
@@ -84,7 +84,7 @@ ms.locfileid: "62831547"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, **CompareOptions** è di sola lettura ed è impostato su **Default**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -92,7 +92,7 @@ ms.locfileid: "62831547"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -107,9 +107,9 @@ ms.locfileid: "62831547"
  **ThresholdSetting**  
  Consente di specificare l'impostazione della soglia. Il valore predefinito di questa proprietà è **Specified**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **FDStrengthThreshold**. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se la dipendenza funzionale tra le colonne selezionate è esatta.|  
   

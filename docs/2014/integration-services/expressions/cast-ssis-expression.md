@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899039"
 ---
 # <a name="cast-ssis-expression"></a>Cast (espressione SSIS)
@@ -38,13 +38,13 @@ ms.locfileid: "62899039"
  *type_spec*  
  Tipo di dati [!INCLUDE[ssIS](../../includes/ssis-md.md)] valido.  
   
- *expression*  
+ *espressione*  
  Espressione valida.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati *type_spec*. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nella figura seguente vengono illustrate alcune operazioni di cast valide.  
   
  ![Cast validi e non validi tra tipi di dati](../media/data-conversion.gif "Cast validi e non validi tra tipi di dati")  
@@ -53,12 +53,12 @@ ms.locfileid: "62899039"
   
 |Tipo di dati|Parametro|Esempio|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252): esegue il cast di 30 byte, ovvero 30 caratteri singoli, al tipo di dati DT_STR utilizzando la tabella codici 1252.|  
-|DT_WSTR|*Charcount*|(DT_WSTR,20): esegue il cast di 20 coppie di byte, ovvero 20 caratteri Unicode, al tipo di dati DT_WSTR.|  
-|DT_BYTES|*Bytecount*|(DT_BYTES,50): esegue il cast di 50 byte al tipo di dati DT_BYTES.|  
-|DT_DECIMAL|*Scala*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
-|DT_NUMERIC|*Precisione*<br /><br /> *Scala*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|  
+|DT_STR|*charCount*<br /><br /> *CodePage*|(DT_STR,30,1252): esegue il cast di 30 byte, ovvero 30 caratteri singoli, al tipo di dati DT_STR utilizzando la tabella codici 1252.|  
+|DT_WSTR|*CharCount*|(DT_WSTR,20): esegue il cast di 20 coppie di byte, ovvero 20 caratteri Unicode, al tipo di dati DT_WSTR.|  
+|DT_BYTES|*ByteCount*|(DT_BYTES,50): esegue il cast di 50 byte al tipo di dati DT_BYTES.|  
+|DT_DECIMAL|*Scalabilità*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
+|DT_NUMERIC|*Precision*<br /><br /> *Scalabilità*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
+|DT_TEXT|*CodePage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|  
   
  Quando si esegue il cast di una stringa a un tipo di dati DT_DATE, o viceversa, vengono utilizzate le impostazioni locali della trasformazione. Tuttavia, la data è nel formato ISO AAAA-MM-GG, indipendentemente dal fatto che le impostazioni locali utilizzino il formato ISO.  
   

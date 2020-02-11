@@ -21,17 +21,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d0feff8d95a8fb0d1e7b6279e36567e06c7f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896313"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Generazione e definizione di eventi in un componente del flusso di dati
   Gli sviluppatori di componenti possono generare un subset degli eventi definiti nell'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> chiamando i metodi esposti sulla proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. È anche possibile definire eventi personalizzati tramite la raccolta <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> e generarli durante l'esecuzione utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. In questa sezione viene descritto come creare e generare un evento e vengono fornite linee guida su quando è necessario generare eventi in fase di progettazione.  
   
 ## <a name="raising-events"></a>Generazione di eventi  
- I componenti generano eventi usando i metodi **Fire\<X>** dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. È possibile generare eventi durante la progettazione e l'esecuzione di componenti. In genere, durante la progettazione di componenti, i metodi <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> vengono chiamati durante la convalida. Questi eventi visualizzano messaggi nel riquadro **Elenco errori** di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e forniscono feedback agli utenti di un componente non correttamente configurato.  
+ I componenti generano eventi usando i metodi **Fire\<X>** dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. È possibile generare eventi durante la progettazione e l'esecuzione di componenti. In genere, durante la progettazione di componenti, i metodi <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> vengono chiamati durante la convalida. Questi eventi visualizzano messaggi nel riquadro **Elenco errori **di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e forniscono feedback agli utenti di un componente non correttamente configurato.  
   
  I componenti possono inoltre generare eventi in qualsiasi momento durante l'esecuzione. Gli eventi consentono agli sviluppatori di componenti di fornire feedback agli utenti del componente durante la relativa esecuzione. Se viene chiamato il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> durante l'esecuzione, è probabile che il pacchetto non riesca.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "62896313"
   
  Gli eventi personalizzati di un componente non sono persistenti nel codice XML del pacchetto. Pertanto, il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> viene chiamato sia durante la progettazione che durante l'esecuzione per consentire al componente di definire gli eventi che genera.  
   
- Il parametro *allowEventHandlers* del metodo <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> specifica se il componente consente la creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> per l'evento. Si noti che <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> sono sincroni. Pertanto, il componente riprende l'esecuzione solo al termine dell'esecuzione di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> connesso all'evento personalizzato. Se il *allowEventHandlers* parametro è `true`, ogni parametro dell'evento viene automaticamente reso disponibile per tutti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> oggetti tramite le variabili che vengono creati e popolati automaticamente per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
+ Il parametro *allowEventHandlers* del metodo <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> specifica se il componente consente la creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> per l'evento. Si noti che <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> sono sincroni. Pertanto, il componente riprende l'esecuzione solo al termine dell'esecuzione di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> connesso all'evento personalizzato. Se il parametro *AllowEventHandlers* è `true`, ogni parametro dell'evento viene automaticamente reso disponibile per tutti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> gli oggetti tramite variabili create e popolate automaticamente dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Runtime.  
   
 ### <a name="raising-a-custom-event"></a>Generazione di eventi personalizzati  
- I componenti generano eventi personalizzati chiamando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> e fornendo il nome, il testo e i parametri dell'evento. Se il *allowEventHandlers* parametro è `true`, qualsiasi <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> che vengono creati per l'evento personalizzato vengono eseguiti dal [!INCLUDE[ssIS](../../../includes/ssis-md.md)] motore di run-time.  
+ I componenti generano eventi personalizzati chiamando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> e fornendo il nome, il testo e i parametri dell'evento. Se il parametro *AllowEventHandlers* è `true`, gli <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> [!INCLUDE[ssIS](../../../includes/ssis-md.md)] eventuali creati per l'evento personalizzato vengono eseguiti dal motore di run-time.  
   
 ### <a name="custom-event-sample"></a>Esempio di evento personalizzato  
  Nell'esempio di codice seguente è illustrato un componente che definisce un evento personalizzato durante il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A>, quindi genera l'evento in fase di esecuzione chiamando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.  
@@ -90,7 +90,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md)   

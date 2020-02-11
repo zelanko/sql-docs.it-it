@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827963"
 ---
 # <a name="create-infosource-for-master-data"></a>Crea InfoSource per dati master
@@ -41,17 +41,17 @@ ms.locfileid: "62827963"
  **Nome InfoObject**  
  Immettere il nome dell'InfoObject su cui deve essere basato il nuovo InfoSource.  
   
- **Ricerca**  
+ **Cerca**  
  Cercare l'InfoObject. Tramite questa opzione viene visualizzata la finestra di dialogo **Cerca InfoObject** in cui è possibile selezionare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](look-up-infoobject.md).  
   
  Dopo aver selezionato un InfoObject, la casella di testo **Nome InfoObject** viene compilata dal componente con il nome dell'InfoObject selezionato.  
   
- **Nuova**  
+ **Nuovo**  
  Creare un nuovo InfoObject. Tramite questa opzione viene visualizzata la finestra di dialogo **Crea nuovo InfoObject** in cui è possibile creare il nuovo InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](create-new-infoobject.md).  
   
  Dopo aver creato un InfoObject, la casella di testo **Nome InfoObject** viene compilata dal componente con il nome del nuovo InfoObject.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per il nuovo InfoSource.  
   
  **Descrizione lunga**  
@@ -63,7 +63,7 @@ ms.locfileid: "62827963"
  **Applicazione**  
  Immettere il nome dell'applicazione da associare al nuovo InfoSource.  
   
- **Attributi**  
+ **Attributes (Attributi)**  
  Indica che i dati master sono costituiti da attributi.  
   
  **Testi**  

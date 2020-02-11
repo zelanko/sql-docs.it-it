@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827224"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
@@ -40,7 +40,7 @@ ms.locfileid: "62827224"
 ## <a name="usage-considerations"></a>Considerazioni sull'utilizzo  
  La gestione connessione Excel usa il provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet 4.0 e il relativo driver ISAM (Indexed Sequential Access Method, metodo di accesso sequenziale indicizzato) di Excel di supporto per stabilire la connessione con le origini dati Excel, quindi leggere e scrivere informazioni.  
   
- Il comportamento di questo provider e del relativo driver è documentato in molti articoli della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base e, sebbene tali articoli non siano specifici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o del suo predecessore, Data Transformation Services, consentono di ottenere informazioni circa i comportamenti che possono produrre risultati imprevisti. Per informazioni generali sull'uso e sul comportamento del driver per Excel, vedere [HOWTO: Utilizzo di ADO con dati di Excel da Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
+ Il comportamento di questo provider e del relativo driver è documentato in molti articoli della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base e, sebbene tali articoli non siano specifici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o del suo predecessore, Data Transformation Services, consentono di ottenere informazioni circa i comportamenti che possono produrre risultati imprevisti. Per informazioni generali sull'utilizzo e sul comportamento del driver per Excel, vedere [HOWTO: Utilizzare ADO con dati di Excel da Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
   
  I seguenti comportamenti del provider Jet incluso nel driver per Excel possono produrre risultati imprevisti durante il salvataggio di dati in una destinazione Excel.  
   
@@ -48,9 +48,10 @@ ms.locfileid: "62827224"
   
      Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
   
--   **Salvataggio di dati memo (ntext)** . Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, quindi l'istruzione CREATE TABLE deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna di tipo memo.  
+-   **Salvataggio di memo (ntext) da**ta. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, l'istruzione CREATE TABLE deve utilizzare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna di tipo Memo.  
   
--   **Tipi di dati**. Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue il mapping dei tipi di dati di Excel nel modo seguente:  
+-   **Tipi di dati**. Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esegue il mapping dei tipi di dati di Excel nel modo seguente:  
   
     -   Numero    Numero a virgola mobile e precisione doppia (DT_R8)  
   
@@ -64,7 +65,8 @@ ms.locfileid: "62827224"
   
     -   Memo     Flusso di testo Unicode (DT_NTEXT)  
   
--   **Conversione di tipi di dati e lunghezze**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene eseguita la conversione implicita dei tipi di dati. Può essere pertanto necessario usare le trasformazioni Colonna derivata o Conversione dati per convertire i dati di Excel in modo esplicito prima di caricarli in una destinazione diversa da Excel oppure per convertire dati non di Excel prima di caricarli in una destinazione Excel. In questo caso può essere conveniente creare il pacchetto iniziale usando Importazione/Esportazione guidata SQL Server, che configura automaticamente le conversioni necessarie. Di seguito sono riportati alcuni esempi di tali conversioni:  
+-   **Conversione di tipi di dati e lunghezze**. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene eseguita la conversione implicita dei tipi di dati. Può essere pertanto necessario usare le trasformazioni Colonna derivata o Conversione dati per convertire i dati di Excel in modo esplicito prima di caricarli in una destinazione diversa da Excel oppure per convertire dati non di Excel prima di caricarli in una destinazione Excel. In questo caso può essere conveniente creare il pacchetto iniziale usando Importazione/Esportazione guidata SQL Server, che configura automaticamente le conversioni necessarie. Di seguito sono riportati alcuni esempi di tali conversioni:  
   
     -   Conversione tra colonne di Excel di tipo stringa Unicode e colonne di tipo stringa non Unicode con tabelle codici specifiche  
   
@@ -83,9 +85,9 @@ ms.locfileid: "62827224"
   
 -   [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione Excel &#40;pagina Mapping&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Editor destinazione Excel &#40;pagina mapping&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Editor destinazione Excel &#40;pagina Output degli errori&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Editor destinazione Excel &#40;pagina output degli errori&#41;](../excel-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -97,19 +99,19 @@ ms.locfileid: "62827224"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
+-   [Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
   
--   [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
+-   [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog concernente [Excel in Integration Services, parte 1 di 3: Connessioni e componenti](https://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
+-   Intervento nel blog su [Excel in Integration Services, parte 1 di 3 relativa a connessioni e componenti](https://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
   
--   Intervento nel blog concernente [Excel in Integration Services, parte 2 di 3: Le tabelle e tipi di dati](https://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
+-   Intervento nel blog su [Excel in Integration Services, parte 2 di 3 relativa a tabelle e tipi di dati](https://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
   
--   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3: Problemi e alternative](https://go.microsoft.com/fwlink/?LinkId=217676), su dougbert.com.  
+-   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](https://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine Excel](excel-source.md)   

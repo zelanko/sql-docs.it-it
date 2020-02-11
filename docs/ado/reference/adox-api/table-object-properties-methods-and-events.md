@@ -1,5 +1,5 @@
 ---
-title: Le proprietà degli oggetti, metodi ed eventi di tabella | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto Table | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965171"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Table
-## <a name="propertiescollections"></a>Le proprietà e le raccolte  
- [Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+## <a name="propertiescollections"></a>Proprietà/raccolte  
+ [Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [Proprietà DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
   
  [Proprietà DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
- [Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Raccolta Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
- [Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Raccolta Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
  [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [Proprietà ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
- [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Proprietà Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

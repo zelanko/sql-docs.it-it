@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831425"
 ---
 # <a name="expression-task"></a>Attività Espressione
@@ -30,7 +30,7 @@ ms.locfileid: "62831425"
  Per esempi di utilizzo di espressioni per impostare le proprietà, vedere " **Espressioni di proprietà di esempio** in [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
+ [Usare un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  

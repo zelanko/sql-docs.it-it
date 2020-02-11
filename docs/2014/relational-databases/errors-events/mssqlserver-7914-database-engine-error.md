@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 098fc44f4a46a821c3e0f6d17d150d34f3d0d967
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913143"
 ---
-# <a name="mssqlserver7914"></a>MSSQLSERVER_7914
+# <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62913143"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|Testo del messaggio|Correzione: La pagina PAGE_TYPE in P_ID è stata ricreata.|  
+|Testo del messaggio|Correzione: la pagina PAGE_TYPE in P_ID è stata ricompilata.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Messaggio informativo inviato da REPAIR che indica che una pagina GAM o SGAM è stata ricompilata utilizzando la pagina di dati PFS.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

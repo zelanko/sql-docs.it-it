@@ -1,5 +1,5 @@
 ---
-title: Le proprietà di parole non significative Full-Text | Microsoft Docs
+title: Proprietà di parole non significative full-text | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779408"
 ---
 # <a name="full-text-stoplist-properties"></a>Proprietà elenco di parole non significative full-text
   Utilizzare questa finestra di dialogo per aggiungere o eliminare singole parole non significative, eliminare tutte le parole non significative per una lingua specifica oppure cancellare l'elenco di parole non significative corrente. Una parola non significativa è una parola di uso comune inclusa in un elenco di parole non significative. Le parole contenute in un elenco di questo tipo vengono omesse dall'indicizzazione full-text nelle tabelle che utilizzano l'elenco stesso. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md).  
   
- **Usare SQL Server Management Studio per modificare le proprietà di parole non significative**  
+ **Per utilizzare SQL Server Management Studio per modificare le proprietà dell'elenco di parole non significative**  
   
 -   [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md)  
   
@@ -43,11 +43,11 @@ ms.locfileid: "62779408"
  **Cancella elenco di parole non significative**  
  Consente di cancellare l'elenco di parole non significative eliminando tutte le parole non significative per tutte le lingue.  
   
- **Stopword**  
- Se è stato selezionato **Aggiungi parola non significativa** oppure **Elimina parola non significativa**, immettere la parola non significativa nel **parola non significativa** campo. Una nuova parola non significativa deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
+ **Parola non significativa**  
+ Se è stata selezionata l'opzione **Aggiungi parola non significativa** o **Elimina parola non significativa**, immettere parola non significativa nel campo **parola non significativa** . Una nuova parola non significativa deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
   
  **Lingua full-text**  
- Se è stato selezionato **Aggiungi parola non significativa**, **Elimina parola non significativa**, o **Elimina tutte le parole non significative**, selezionare la lingua della parola non significativa o le parole non significative dall'elenco. Nella casella sono elencate tutte le lingue full-text supportate dall'istanza del server.  
+ Se è stata selezionata l'opzione **Aggiungi parola non significativa**, **Elimina parola non significativa**o **Elimina tutti i parole non significative**, selezionare la lingua di parola non significativa o parole non significative nella casella di riepilogo. Nella casella sono elencate tutte le lingue full-text supportate dall'istanza del server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   

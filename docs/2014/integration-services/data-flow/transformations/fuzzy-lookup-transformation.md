@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900317"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
@@ -51,7 +51,7 @@ ms.locfileid: "62900317"
   
  Questa trasformazione include un input e un output.  
   
- Nella corrispondenza fuzzy è possibile utilizzare solo colonne di input con tipi di dati `DT_WSTR` e `DT_STR`. Per la corrispondenza esatta è possibile utilizzare qualsiasi tipo di dati DTS ad eccezione di `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Per altre informazioni, vedere [Tipi di dati di Integration Services](../integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS `DT_WSTR` e una colonna con tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar`, ma non una colonna con tipo di dati `DT_WSTR` e una colonna con tipo di dati `int`.  
+ Nella corrispondenza fuzzy è possibile utilizzare solo colonne di input con tipi di dati `DT_WSTR` e `DT_STR`. Per la corrispondenza esatta è possibile utilizzare qualsiasi tipo di dati DTS ad eccezione di `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Per altre informazioni, vedere [Tipi di dati di Integration Services](../integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio possibile aggiungere una colonna con tipo `DT_WSTR` di dati DTS a una colonna con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo di dati, ma non valida per aggiungere una colonna con il `DT_WSTR` tipo di dati a una colonna con tipo di `int` dati.  
   
  È possibile personalizzare questa trasformazione specificando la quantità di memoria massima, l'algoritmo di confronto tra righe, nonché la memorizzazione nella cache delle tabelle di riferimento e degli indici utilizzati dalla trasformazione.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "62900317"
   
  Le colonne di output della trasformazione corrispondono alle colonne di input contrassegnate come colonne pass-through, alle colonne selezionate nella tabelle di ricerca e alle colonne seguenti:  
   
--   **_Similarity**, colonna che descrive la somiglianza tra i valori delle colonne di input e di riferimento.  
+-   **_Similarity**, colonna che descrive la somiglianza tra i valori nelle colonne di input e di riferimento.  
   
--   **_Confidence**, colonna che descrive la probabilità della corrispondenza.  
+-   **_Confidence**, colonna che descrive la qualità della corrispondenza.  
   
  Sfruttando la connessione al database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la trasformazione crea le tabelle temporanee utilizzate dall'algoritmo per individuare le corrispondenze fuzzy.  
   
@@ -104,17 +104,17 @@ ms.locfileid: "62900317"
  Il comando SQL TRUNCATE TABLE non richiama trigger DELETE. Se si esegue il comando TRUNCATE TABLE sulla tabella di riferimento, la tabella e l'indice delle corrispondenze non saranno più sincronizzati e la trasformazione Ricerca fuzzy avrà esito negativo. Mentre i trigger per la manutenzione della tabella dell'indice delle corrispondenze sono installati nella tabella di riferimento, è necessario eseguire il comando SQL DELETE anziché TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione con Common Language Runtime (CLR) presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione di Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Considerato che l'opzione **Manutenzione indice archiviato** richiede l'integrazione con CLR, questa funzionalità può essere usata solo se si seleziona una tabella di riferimento in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è abilitata l'integrazione con CLR.  
   
 ## <a name="row-comparison"></a>Confronto tra righe  
- Quando si configura la trasformazione Ricerca fuzzy è possibile specificare l'algoritmo di confronto utilizzato per individuare i record corrispondenti nella tabella di riferimento. Se si imposta la proprietà Exhaustive su `True`, la trasformazione confronta ogni riga dell'input per ogni riga nella tabella di riferimento. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che la tabella di riferimento non includa un numero di righe ridotto. Se la proprietà Exhaustive è impostata su `True`, l'intera tabella di riferimento viene caricata in memoria. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive su `True` pacchetto solo durante lo sviluppo.  
+ Quando si configura la trasformazione Ricerca fuzzy è possibile specificare l'algoritmo di confronto utilizzato per individuare i record corrispondenti nella tabella di riferimento. Se si imposta la proprietà complete su `True`, la trasformazione confronta ogni riga nell'input con ogni riga della tabella di riferimento. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che la tabella di riferimento non includa un numero di righe ridotto. Se la proprietà complete è impostata su `True`, l'intera tabella di riferimento viene caricata in memoria. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà complete su `True` solo durante lo sviluppo del pacchetto.  
   
- Se la proprietà Exhaustive è impostata su `False`, la trasformazione Ricerca Fuzzy restituirà solo le corrispondenze che hanno almeno una sottostringa o un token indicizzato (la sottostringa viene chiamata un *q-gramma*) in comune con il record di input. Per ottimizzare l'efficienza delle ricerche, viene indicizzato solo un subset dei token in ogni riga della tabella nella struttura con indice invertito utilizzata dalla trasformazione Ricerca fuzzy per individuare le corrispondenze. Se il set di dati di input è ridotto, è possibile impostare la proprietà Exhaustive su `True` per evitare di ignorare le corrispondenze per cui non esistono token comuni nella tabella dell'indice.  
+ Se la proprietà complete è impostata su `False`, la trasformazione Ricerca fuzzy restituisce solo corrispondenze con almeno una sottostringa o un token indicizzato (la sottostringa è denominata *q-Gram*) in comune con il record di input. Per ottimizzare l'efficienza delle ricerche, viene indicizzato solo un subset dei token in ogni riga della tabella nella struttura con indice invertito utilizzata dalla trasformazione Ricerca fuzzy per individuare le corrispondenze. Quando il set di dati di input è di dimensioni ridotte `True` , è possibile impostare esauriente su per evitare corrispondenze mancanti per le quali non sono presenti token comuni nella tabella dell'indice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Memorizzazione nella cache di indici e tabelle di riferimento  
- Quando si configura la trasformazione Ricerca fuzzy, è possibile specificare se l'indice e la tabella di riferimento devono prima essere inseriti parzialmente nella memoria cache. Se si imposta la proprietà WarmCaches su `True`, la tabella dell'indice e di riferimento vengono caricati in memoria. Se l'input include molte righe, l'impostazione della proprietà WarmCaches su `True` può migliorare le prestazioni della trasformazione. Se il numero di righe di input è ridotto, impostare la proprietà WarmCaches su `False` può rendere più veloce il riutilizzo di un indice di grandi dimensioni.  
+ Quando si configura la trasformazione Ricerca fuzzy, è possibile specificare se l'indice e la tabella di riferimento devono prima essere inseriti parzialmente nella memoria cache. Se si imposta la proprietà della WarmCaches su `True`, l'indice e la tabella di riferimento vengono caricati in memoria. Quando l'input include molte righe, l'impostazione della proprietà della WarmCaches `True` su può migliorare le prestazioni della trasformazione. Quando il numero di righe di input è ridotto, l'impostazione della proprietà `False` della WarmCaches su può rendere più veloce il riutilizzo di un indice di grandi dimensioni.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione la trasformazione Ricerca fuzzy crea oggetti temporanei, ad esempio tabelle e indici, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici temporanei sono proporzionali al numero di righe e token della tabella di riferimento e al numero di token creati dalla trasformazione Ricerca fuzzy. Questi oggetti temporanei pertanto possono utilizzare potenzialmente una quantità di spazio su disco considerevole. La trasformazione esegue inoltre query sulle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Ricerca fuzzy a un'istanza di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  
@@ -126,7 +126,7 @@ ms.locfileid: "62900317"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca fuzzy** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca fuzzy &#40;scheda tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
@@ -139,11 +139,11 @@ ms.locfileid: "62900317"
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca](lookup-transformation.md)   
- [Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   
   

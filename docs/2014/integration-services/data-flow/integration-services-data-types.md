@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902444"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
   
- Alcuni componenti flusso di dati consentono di eseguire la conversione tra i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i tipi di dati gestiti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Alcuni componenti del flusso di dati convertono i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tipi di dati tra i tipi di dati e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]i tipi di dati gestiti di. Per altre informazioni sul mapping tra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e tipi di dati gestiti, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  La tabella seguente elenca i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alcuni dei tipi di dati nella tabella dispongono di informazioni sulla precisione e sulla scala. Per altre informazioni su precisione e scala, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
@@ -60,14 +60,15 @@ ms.locfileid: "62902444"
 |DT_UI4|Intero senza segno a 4 byte.|  
 |DT_UI8|Intero senza segno a 8 byte.|  
 |DT_WSTR|Stringa di caratteri Unicode con terminazione Null e lunghezza massima di 4000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
-|DT_IMAGE|Un valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. .|  
-|DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2<sup>30</sup> - 1 (1.073.741.823) caratteri.|  
-|DT_TEXT|Un' [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS carattere stringa con lunghezza massima pari a 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
+|DT_IMAGE|Valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. .|  
+|DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2<sup>30</sup> -1 (1.073.741.823) caratteri.|  
+|DT_TEXT|Una [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]stringa di caratteri/MBCS con lunghezza massima di 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
   
 ## <a name="conversion-of-data-types"></a>Conversione di tipi di dati  
  Se i dati in una colonna non richiedono l'intera larghezza allocata dal tipo di dati di origine, sarà possibile modificare il tipo di dati della colonna. Riducendo il più possibile la larghezza delle singole righe di dati è possibile ottimizzare le prestazioni delle operazioni di trasferimento dei dati, perché minore è la larghezza della riga, più rapido sarà lo spostamento dei dati dall'origine alla destinazione.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set completo di tipi di dati numerici ed è pertanto possibile scegliere quello più appropriato alle dimensioni dei dati. Se ad esempio i valori di una colonna con tipo di dati DT_UI8 sono sempre numeri interi da 0 a 3000, sarà possibile modificare il tipo di dati in DT_UI2. Analogamente, se una colonna con tipo di dati DT_CY può soddisfare i requisiti di dati del pacchetto anche utilizzando un tipo di dati Integer, sarà possibile modificare il tipo di dati in DT_I4.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set completo di tipi di dati numerici ed è pertanto possibile scegliere quello più appropriato alle dimensioni dei dati. Se ad esempio i valori di una colonna con tipo di dati DT_UI8 sono sempre numeri interi da 0 a 3000, sarà possibile modificare il tipo di dati in DT_UI2. Analogamente, se una colonna con tipo di dati DT_CY può soddisfare i requisiti di dati del pacchetto anche utilizzando un tipo di dati Integer, sarà possibile modificare il tipo di dati in DT_I4.  
   
  Per modificare il tipo di dati di una colonna, procedere nel modo seguente:  
   
@@ -77,7 +78,7 @@ ms.locfileid: "62902444"
   
 -   Utilizzare la trasformazione Conversione dati per eseguire il cast del tipo di dati di una colonna a un tipo di dati diverso. Per altre informazioni, vedere [trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
   
--   Utilizzare la trasformazione Colonna derivata per creare una copia di una colonna con un tipo di dati diverso rispetto alla colonna originale. Per altre informazioni, vedere [trasformazione Colonna derivata](transformations/derived-column-transformation.md).  
+-   Utilizzare la trasformazione Colonna derivata per creare una copia di una colonna con un tipo di dati diverso rispetto alla colonna originale. Per altre informazioni, vedere [Trasformazione Colonna derivata](transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Conversione tra stringhe e tipi di dati di data e ora  
  Nella tabella seguente sono elencati i risultati di esecuzione del cast o di conversione tra stringhe e tipi di dati di data e ora:  
@@ -105,7 +106,7 @@ ms.locfileid: "62902444"
 ### <a name="converting-datetime-data-types"></a>Conversione dei tipi di dati di data e ora  
  È possibile modificare il tipo di dati di una colonna contenente informazioni di data e ora in modo da estrarre la parte di dati relativa alla data o all'ora. Nella tabella seguente sono illustrati i risultati della conversione da un tipo di dati di data e ora a un altro tipo di dati di data e ora.  
   
-#### <a name="converting-from-dtfiletime"></a>Conversione da DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Conversione da DT_FILETIME  
   
 |Conversione di DT_FILETIME in|Risultato|  
 |-----------------------------|------------|  
@@ -118,7 +119,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Conversione da DT_DATE  
+#### <a name="converting-from-dt_date"></a>Conversione da DT_DATE  
   
 |Conversione di DT_DATE in|Risultato|  
 |-------------------------|------------|  
@@ -131,7 +132,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Conversione del tipo di dati.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### <a name="converting-from-dtdbdate"></a>Conversione da DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Conversione da DT_DBDATE  
   
 |Conversione di DT_DBDATE in|Risultato|  
 |---------------------------|------------|  
@@ -144,7 +145,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Impostazione dei campi dell'ora nel tipo di dati DT_DBTIMESTAMP su zero.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione dei campi dell'ora e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.|  
   
-#### <a name="converting-from-dtdbtime"></a>Conversione da DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Conversione da DT_DBTIME  
   
 |Conversione di DT_DBTIME in|Risultato|  
 |---------------------------|------------|  
@@ -157,7 +158,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Conversione da DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Conversione da DT_DBTIME2  
   
 |Conversione di DT_DBTIME2 in|Risultato|  
 |----------------------------|------------|  
@@ -170,7 +171,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Impostazione del campo della data nel tipo di dati DT_DBTIMESTAMP2 sulla data corrente.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo della data e del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET rispettivamente sulla data corrente e su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Conversione da DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Conversione da DT_DBTIMESTAMP  
   
 |Conversione di DT_DBTIMESTAMP in|Risultato|  
 |--------------------------------|------------|  
@@ -183,7 +184,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Conversione da DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Conversione da DT_DBTIMESTAMP2  
   
 |Conversione di DT_DBTIMESTAMP2 in|Risultato|  
 |---------------------------------|------------|  
@@ -196,7 +197,7 @@ ms.locfileid: "62902444"
 |DT_DBTIMESTAMP2|Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMP2 di destinazione può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Impostazione del campo del fuso orario nel tipo di dati DT_DBTIMESTAMPOFFSET su zero.<br /><br /> Rimozione del valore di secondi frazionari quando la scala è maggiore del numero di cifre per i secondi frazionari che il tipo di dati DT_DBTIMESTAMPOFFSET può contenere. Dopo la rimozione del valore di secondi frazionari, viene generato un report relativo al troncamento dei dati. Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Conversione da DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Conversione da DT_DBTIMESTAMPOFFSET  
   
 |Conversione di DT_DBTIMESTAMPOFFSET in|Risultato|  
 |--------------------------------------|------------|  
@@ -222,26 +223,26 @@ ms.locfileid: "62902444"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
+|DT_CY|smallmoney, money|smallmoney, money|Valuta||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||Data|Data|Data|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
-|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIME||||timestamp|time|time|  
+|DT_DBTIME2|[tempo &#40;&#41;Transact-SQL ](/sql/t-sql/data-types/time-transact-sql)(p)|[tempo &#40;&#41;Transact-SQL](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMPOFFSET|[&#41;Transact-SQL datetimeoffset &#40;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[&#41;Transact-SQL datetimeoffset &#40;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|smallint|smallint|Breve||SMALLINT|SMALLINT|  
+|DT_I4|INT|INT|long||INTEGER|INTEGER|  
+|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Singolo||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|float|float|DOUBLE|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

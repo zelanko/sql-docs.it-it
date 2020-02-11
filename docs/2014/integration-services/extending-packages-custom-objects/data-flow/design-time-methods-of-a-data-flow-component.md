@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d7d1a2d3b62578fc2fd627aea32112c218895d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896261"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Metodi della fase di progettazione di un componente del flusso di dati
@@ -80,7 +80,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY  
 ```  
   
- È possibile limitare gli utenti alla selezione di un valore della proprietà personalizzata da un'enumerazione utilizzando il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> proprietà, come illustrato nell'esempio seguente, che si presuppone che è stata definita un'enumerazione pubblica denominata `MyValidValues`.  
+ È possibile limitare gli utenti alla selezione di un valore di proprietà personalizzato da un'enumerazione <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> usando la proprietà, come illustrato nell'esempio seguente, in cui si presuppone che sia stata definita un' `MyValidValues`enumerazione pubblica denominata.  
   
 ```csharp  
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();  
@@ -136,7 +136,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  Per altre informazioni, vedere "implementazione di un editor di tipi con interfaccia utente" in [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di runtime di un componente flusso di dati](run-time-methods-of-a-data-flow-component.md)  

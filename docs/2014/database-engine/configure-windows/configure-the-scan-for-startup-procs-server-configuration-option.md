@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1af9aea2b4088c2a8d3753fd55feaa0f43ae6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811393"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Configurare l'opzione di configurazione del server scan for startup procs
   In questo argomento si illustra come configurare l'opzione di configurazione del server **scan for startup procs** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **scan for startup procs** è possibile eseguire un'analisi per l'esecuzione automatica di stored procedure all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se l'opzione è impostata su 1, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita l'analisi e vengono eseguite tutte le stored procedure a esecuzione automatica definite nel server. Il valore predefinito di **scan for startup procs** è 0 (nessuna analisi).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62811393"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver configurato l'opzione scan for startup procs](#FollowUp)  
+-   **Completamento:**  [Dopo la configurazione dell'opzione scan for startup procs](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62811393"
   
 3.  In **Varie**impostare il valore dell'opzione **Analisi per procedure di avvio** su True o False dall'elenco a discesa.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>Per configurare l'opzione scan for startup procs  
   
@@ -85,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione scan for startup procs  
+##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione scan for startup procs  
  Per poter rendere effettiva l'impostazione, è necessario riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

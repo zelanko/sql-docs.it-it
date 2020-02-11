@@ -15,16 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831865"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
-  L'attività Esegui processo consente di eseguire un'applicazione o un file batch nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  
+  L'attività Esegui processo esegue un'applicazione o un file batch come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un flusso di lavoro del pacchetto. Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include altre attività che consentono l'esecuzione di operazioni di flusso di lavoro, quale l'esecuzione di pacchetti. Per altre informazioni, vedere [Attività Esegui pacchetto](execute-package-task.md)  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include altre attività che consentono l'esecuzione di operazioni di flusso di lavoro, quale l'esecuzione di pacchetti. Per altre informazioni, vedere [Attività Esegui pacchetto](execute-package-task.md)  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Voci di log personalizzate disponibili nell'attività Esegui processo  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui processo. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
@@ -39,9 +40,9 @@ ms.locfileid: "62831865"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Esegui processo &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Esegui processo &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Esegui processo &#40;pagina Processo&#41;](../execute-process-task-editor-process-page.md)  
+-   [Editor attività Esegui processo &#40;pagina processo&#41;](../execute-process-task-editor-process-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
@@ -50,9 +51,9 @@ ms.locfileid: "62831865"
 ### <a name="property-settings"></a>Impostazioni delle proprietà  
  Quando l'attività Esegui processo esegue un'applicazione personalizzata, fornisce dati di input all'applicazione tramite uno o entrambi i metodi seguenti:  
   
--   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable**. Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+-   Una variabile specificata nell'impostazione della proprietà **StandardInputVariable** . Per altre informazioni sulle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
--   Un argomento specificato nell'impostazione della proprietà **Arguments**. Se, ad esempio, l'attività apre un documento in Word, l'argomento può assegnare un nome al file con estensione doc.  
+-   Un argomento specificato nell'impostazione della proprietà **Arguments** . Se, ad esempio, l'attività apre un documento in Word, l'argomento può assegnare un nome al file con estensione doc.  
   
  Per passare più argomenti a un'applicazione personalizzata in un'attività Esegui processo, utilizzare gli spazi per delimitarli. Un argomento non può includere uno spazio. In caso contrario, l'attività non verrà eseguita. È possibile utilizzare un'espressione per passare il valore di una variabile come argomento. Nell'esempio seguente l'espressione passa due valori di variabili come argomenti e utilizza uno spazio per delimitare gli argomenti:  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62831865"
   
  È possibile utilizzare un'espressione per impostare varie proprietà dell'attività Esegui processo.  
   
- Quando si usa la **StandardInputVariable** proprietà per configurare l'attività Esegui processo per un input, chiamare il `Console.ReadLine` metodo dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Quando si utilizza la proprietà **StandardInputVariable** per configurare l'attività Esegui processo in modo da fornire input, `Console.ReadLine` chiamare il metodo dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Quando si usa la proprietà **Arguments** per configurare l'attività Esegui processo in modo che fornisca dati di input, effettuare uno dei passaggi seguenti per ottenere gli argomenti:  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811325"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
@@ -34,20 +34,20 @@ ms.locfileid: "62811325"
   
 3.  Nella finestra di dialogo per la **selezione di utenti, computer, account del servizio o gruppi** fare clic su **Percorsi**sopra l'elenco di percorsi, selezionare il nome del computer e quindi fare clic su **OK**.  
   
-4.  Nel **immettere i nomi degli oggetti da selezionare** , digitare il nome del SID per servizio elencato nell'argomento della documentazione Online **autorizzazioni e configurare gli account del servizio Windows**. (Per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID per servizio, utilizzare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita, o **NT SERVICE\MSSQL$ InstanceName** per un'istanza denominata.)  
+4.  Nella casella **immettere i nomi degli oggetti da selezionare** Digitare il nome del SID per servizio elencato nell'argomento **configurare account di servizio e autorizzazioni di Windows**nella documentazione online. Per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID per servizio, utilizzare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita o **NT SERVICE\MSSQL $ InstanceName** per un'istanza denominata.  
   
 5.  Fare clic su **Controlla nomi** per convalidare la voce. La convalida spesso non viene completata e potrebbe essere indicato che il nome non è stato trovato. Quando si fa clic su **OK**, viene visualizzata la finestra di dialogo **Trovati più nomi** .  
   
-6.  A questo punto selezionare il SID per servizio, ovvero **MSSQLSERVER** oppure **NT SERVICE\MSSQL$ InstanceName**, quindi fare clic su **OK**.  
+6.  A questo punto, selezionare il SID per servizio, **MSSQLSERVER** o **NT SERVICE\MSSQL $ InstanceName**, quindi fare clic su **OK**.  
   
-7.  Fare clic su **OK** per tornare alla finestra la **autorizzazioni** nella finestra di dialogo.  
+7.  Fare di nuovo clic su **OK** per tornare alla finestra di dialogo **autorizzazioni** .  
   
-8.  Nel **gruppo o utente** nomi, selezionare il SID per servizio, quindi nel **le autorizzazioni per** \<nome >, quindi selezionare il **Consenti** casella di controllo  **Controllo completo**.  
+8.  Nella casella nome **gruppo o utente** selezionare il SID per servizio e quindi nella casella **autorizzazioni per** \<nome> selezionare la casella di controllo **Consenti** per **controllo completo**.  
   
 9. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire il servizio Motore di database](manage-the-database-engine-services.md)   
+ [Gestire i servizi di motore di database](manage-the-database-engine-services.md)   
  [Spostare i database di sistema](../../relational-databases/databases/system-databases.md)   
  [Spostare database utente](../../relational-databases/databases/move-user-databases.md)  
   

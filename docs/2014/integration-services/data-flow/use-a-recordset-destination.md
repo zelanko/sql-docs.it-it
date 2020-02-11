@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899999"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
@@ -98,7 +98,7 @@ ms.locfileid: "62899999"
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Flusso di dati nell'area di progettazione.  
   
-2.  Nella scheda **Flusso di dati** tab, add an OLE DB source to the Flusso di dati task, and then open the **Editor origine OLE DB**.  
+2.  Nella scheda **Flusso di dati** aggiungere un'origine OLE DB all'attività Flusso di dati e quindi aprire **Editor origine OLE DB.**  
   
 3.  Nella pagina **Gestione connessione** dell'editor configurare l'origine con le impostazioni seguenti:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62899999"
   
 5.  Aprire l' **editor destinazione recordset**e configurare la destinazione con le impostazioni seguenti:  
   
-    1.  Nel **proprietà del componente** scheda, per `VariableName` proprietà, selezionare `User::BonusRecordset`.  
+    1.  Nella scheda **Proprietà componente** , per `VariableName` proprietà selezionare `User::BonusRecordset`.  
   
     2.  Nella scheda **Colonne di input** selezionare tutte e tre le colonne disponibili.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "62899999"
   
 2.  Aprire **Editor ciclo Foreach**e configurare il contenitore con le impostazioni seguenti:  
   
-    1.  Nel **raccolta** pagina, per **enumeratore**, selezionare **Foreach ADO Enumerator**e per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset`.  
+    1.  Nella pagina **raccolta** , per **enumeratore**, selezionare **enumeratore Foreach ADO**e, per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset`.  
   
-    2.  Nel **mapping variabili** pagina, eseguire il mapping `User::EmailAddress` all'indice 0, `User::FirstName` all'indice 1 e `User::Bonus` all'indice 2.  
+    2.  Nella pagina **Mapping variabili** eseguire il mapping `User::EmailAddress` all'indice 0, `User::FirstName` all'indice 1 e `User::Bonus` all'indice 2.  
   
 3.  Nella scheda **Flusso di controllo** aggiungere un'attività Invia messaggi nel contenitore Ciclo Foreach.  
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2206980d241d3ef0aa683e4f987a4e337a86855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913806"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
     
 ## <a name="details"></a>Dettagli  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62913806"
  Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita avviata tramite un'istruzione BEGIN TRANSACTION o da una transazione implicita, se l'opzione IMPLICIT_TRANSACTIONS è impostata su ON, il livello di isolamento READ COMMITTED non è supportato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita o implicita READ COMMITTED, utilizzare l'istruzione SNAPSHOT per accedere alla tabella. Ciò può essere ottenuta usando l'hint di tabella WITH (SNAPSHOT) (per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../in-memory-oltp/memory-optimized-tables.md)) o impostare l'opzione database MEMORY_OPTIMIZED_ELEVATE_TO_ Per gli SNAPSHOT su ON (per altre informazioni, vedere [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
+ Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita o implicita READ COMMITTED, utilizzare l'istruzione SNAPSHOT per accedere alla tabella. Questa operazione può essere eseguita tramite l'hint di tabella WITH (SNAPSHOT) (per ulteriori informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../in-memory-oltp/memory-optimized-tables.md)) oppure impostando l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT su on (per ulteriori informazioni, vedere [Opzioni ALTER database set &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

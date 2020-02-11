@@ -1,5 +1,5 @@
 ---
-title: Integration Services Server (SSIS) | Microsoft Docs
+title: Server Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771737"
 ---
 # <a name="integration-services-ssis-server"></a>Server Integration Services (SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62771737"
   
 -   **Database SSISDB**  
   
-     Il `SSISDB` database viene visualizzato sotto la **database** nodo in Esplora oggetti. È possibile eseguire una query sulle viste e chiamare le stored procedure tramite cui vengono gestiti il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli oggetti archiviati nel server.  
+     Il `SSISDB` database viene visualizzato nel nodo **database** in Esplora oggetti. È possibile eseguire una query sulle viste e chiamare le stored procedure tramite cui vengono gestiti il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli oggetti archiviati nel server.  
   
 -   **Cataloghi di Integration Services**  
   

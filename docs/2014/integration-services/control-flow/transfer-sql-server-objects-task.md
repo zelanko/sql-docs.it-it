@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829467"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
@@ -29,10 +29,10 @@ ms.locfileid: "62829467"
   
  Nella tabella seguente sono elencati i tipi di oggetti che è possibile copiare.  
   
-|Object|  
+|Oggetto|  
 |------------|  
 |Tabelle|  
-|Visualizzazioni|  
+|Viste|  
 |Stored procedure|  
 |Funzioni definite dall'utente|  
 |Valori predefiniti|  
@@ -73,7 +73,7 @@ ms.locfileid: "62829467"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Trasferimento di oggetti tra istanze di SQL Server  
  L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un'origine e una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  L'attività genera un evento informativo in cui è indicato il numero di oggetti trasferiti. Genera inoltre un evento di avviso quando un oggetto viene sovrascritto. Viene generato un evento informativo anche in corrispondenza di azioni quale il troncamento delle tabelle di database.  
   
  L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riporta lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
@@ -106,7 +106,7 @@ ms.locfileid: "62829467"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci oggetti SQL Server &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Oggetti&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
