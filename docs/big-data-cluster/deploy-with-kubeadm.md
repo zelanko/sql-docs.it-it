@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165433"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurare Kubernetes in più computer per distribuzioni di cluster Big Data di SQL Server
 
@@ -104,12 +104,14 @@ Dopo aver eseguito i comandi precedenti in ogni computer, scegliere uno dei comp
    EOF
    ```
 
-1. Inizializzare il nodo master Kubernetes nel computer. Verrà visualizzato un messaggio per informare l'utente che il nodo master Kubernetes è stato inizializzato correttamente.
+1. Inizializzare il nodo master Kubernetes nel computer. Lo script di esempio seguente specifica la versione di Kubernetes `1.15.0`. La versione da usare dipende dal cluster Kubernetes.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Verrà visualizzato un messaggio per informare l'utente che il nodo master Kubernetes è stato inizializzato correttamente.
 
 1. Annotare il comando `kubeadm join` da usare negli altri server per unire in join il cluster Kubernetes. Copiare il comando per poterlo usare in seguito.
 
