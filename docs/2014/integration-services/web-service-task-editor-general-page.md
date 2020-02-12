@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054536"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
@@ -28,12 +28,12 @@ ms.locfileid: "66054536"
   
 ## <a name="options"></a>Opzioni  
  **HTTPConnection**  
- Selezionare una gestione connessione nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati:**  [Gestione connessione HTTP](connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Argomenti correlati:**  [gestione connessione http](connection-manager/http-connection-manager.md), [Editor gestione connessione http &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  
@@ -44,19 +44,19 @@ ms.locfileid: "66054536"
   
 -   Selezionare questo file vuoto per l'opzione **WSDLFile** .  
   
--   Impostare il valore della **OverwriteWSDLFile** a `True` per consentire al file vuoto di essere sovrascritto con il file WSDL effettivo.  
+-   Impostare il valore di **OverwriteWsdlFile** su `True` per consentire la sovrascrittura del file vuoto con il file WSDL effettivo.  
   
 -   Fare clic su **Scarica WSDL** per scaricare il file WSDL effettivo e sovrascrivere il file vuoto.  
   
     > [!NOTE]  
-    >  L'opzione **Scarica WSDL** non è abilitato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
+    >  L'opzione **Scarica WSDL** non è attivata fino a quando non si fornisce il nome di un file locale esistente nella casella **WsdlFile** .  
   
  **OverwriteWSDLFile**  
  Consente di specificare se il file WSDL per l'attività Servizio Web può essere sovrascritto.  
   
- Se si intende scaricare il file WSDL tramite il **Scarica WSDL** pulsante, impostare questo valore su `True`.  
+ Se si intende scaricare il file WSDL tramite il pulsante **Scarica WSDL** , impostare questo valore su `True`.  
   
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per l'attività Servizio Web. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -72,8 +72,8 @@ ms.locfileid: "66054536"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Servizio Web &#40;pagina Input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor attività Servizio Web &#40;pagina Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor attività servizio Web &#40;pagina di input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor attività servizio Web &#40;pagina output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   
