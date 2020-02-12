@@ -21,19 +21,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927089"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] la sicurezza è costituita da diversi livelli che forniscono un ambiente di sicurezza protetto e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  
+  La sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in è costituita da diversi livelli che forniscono un ambiente di sicurezza avanzato e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  
   
 ## <a name="identity-features"></a>Caratteristiche di identità  
  Implementando le caratteristiche di identità nei pacchetti, è possibile raggiungere l'obiettivo seguente:  
   
- **Aprire ed eseguire i pacchetti solo da origini attendibili**.  
+ **Assicurarsi di aprire ed eseguire i pacchetti solo da origini attendibili**.  
   
  Per aprire ed eseguire i pacchetti solo da origini attendibili, è necessario identificare innanzitutto l'origine dei pacchetti. È possibile identificare l'origine dei pacchetti tramite la firma con certificati. Quando si aprono o si eseguono i pacchetti, è possibile impostare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in modo che verifichi la presenza e la validità delle firme digitali. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -67,7 +67,9 @@ ms.locfileid: "62927089"
 #### <a name="saving-packages-to-the-msdb-database"></a>Salvataggio dei pacchetti nel database msdb  
  Con il salvataggio dei pacchetti nel database msdb la sicurezza viene implementata a livello di server, di database e di tabella. Nel database msdb i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono archiviati nella tabella sysssispackages. Poiché i pacchetti vengono salvati nelle tabelle sysssispackages e sysdtspackages del database msdb, quando si esegue il backup del database msdb automaticamente viene eseguito il backup dei pacchetti.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - I pacchetti archiviati nel database msdb possono essere protetti anche applicando i ruoli a livello di database di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include i tre ruoli predefiniti a livello di database db_ssisadmin, db_ssisltduser e db_ssisoperator per il controllo dell'accesso ai pacchetti. A ogni pacchetto è possibile associare un ruolo di lettore e un ruolo di scrittore. È inoltre possibile definire ruoli personalizzati a livello di database da usare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I ruoli possono essere implementati solo nei pacchetti salvati nel database msdb in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](integration-services-roles-ssis-service.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - I pacchetti archiviati nel database msdb possono essere protetti anche applicando i ruoli a livello di database di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include i tre ruoli predefiniti a livello di database db_ssisadmin, db_ssisltduser e db_ssisoperator per il controllo dell'accesso ai pacchetti. A ogni pacchetto è possibile associare un ruolo di lettore e un ruolo di scrittore. È inoltre possibile definire ruoli personalizzati a livello di database da usare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . I ruoli possono essere implementati solo nei pacchetti salvati nel database msdb in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](integration-services-roles-ssis-service.md).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Salvataggio di pacchetti nel file system  
  Se i pacchetti vengono archiviati nel file system anziché nel database msdb, è necessario proteggere i file di pacchetto e le cartelle che li contengono.  
@@ -75,7 +77,7 @@ ms.locfileid: "62927089"
 ### <a name="controlling-access-to-files-used-by-packages"></a>Controllo dell'accesso ai file utilizzati dai pacchetti  
  I pacchetti configurati per l'utilizzo di configurazioni, checkpoint e registrazione generano informazioni che vengono archiviate all'esterno dei pacchetti stessi. Tali informazioni potrebbero essere riservate e devono essere pertanto protette. I file di checkpoint possono essere salvati solo nel file system, mentre le configurazione e i log possono essere salvati sia nel file system che nelle tabelle di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le configurazioni e i log salvati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono protetti tramite la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma per le informazioni scritte ne file system è necessario implementare livelli di sicurezza aggiuntivi.  
   
- Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
+ Per ulteriori informazioni, vedere [accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 #### <a name="storing-package-configurations-securely"></a>Archiviazione sicura delle configurazioni del pacchetto  
  Le configurazioni dei pacchetti possono essere salvate in una tabella in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file system.  
@@ -87,7 +89,8 @@ ms.locfileid: "62927089"
  Per ulteriori informazioni sulle configurazioni, vedere [Package Configurations](../package-configurations.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controllo dell'accesso al servizio Integration Services  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l'elenco dei pacchetti archiviati viene visualizzato tramite il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impedire agli utenti non autorizzati di visualizzare informazioni sui pacchetti archiviati in computer locali e remoti, acquisendo quindi informazioni private, limitare l'accesso ai computer in cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l'elenco dei pacchetti archiviati viene visualizzato tramite il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impedire agli utenti non autorizzati di visualizzare informazioni sui pacchetti archiviati in computer locali e remoti, acquisendo quindi informazioni private, limitare l'accesso ai computer in cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per altre informazioni, vedere [Accesso al servizio Integration Services](../access-to-the-integration-services-service.md).  
   

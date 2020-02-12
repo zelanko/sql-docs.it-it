@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936696"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Finestra di dialogo Colore (Visual Database Tools)
@@ -38,10 +38,10 @@ ms.locfileid: "62936696"
  Barra Luminosità  
  Trascinare il dispositivo di scorrimento per modificare la luminosità relativa di un colore. Il valore numerico corrispondente viene visualizzato in **Lum**.  
   
- **Colore**  
+ **Color**  
  Visualizza il colore selezionato.  
   
- **Tonalità**  
+ **Hue**  
  Il valore relativo alla tonalità del colore selezionato.  
   
  **Sat**  
